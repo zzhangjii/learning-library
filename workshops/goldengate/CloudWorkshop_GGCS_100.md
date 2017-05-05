@@ -99,7 +99,7 @@ This lab will:
 
 	![](images/100/i14.png)
 
-- Note the Public IP (write this down).  Also note the Service Name (DBCS12c - you will need this when creating GGCS)
+- Note the Public IP (**write this down**).  Also note the Service Name (DBCS12c - you will need this when creating GGCS)
 
 	![](images/100/i15.png)
 
@@ -119,7 +119,7 @@ This lab will:
 
 	![](images/100/i19.png)
 
-- Note the public IP of the GG_Onpremise image:
+- Note the public IP of the GG_On-premise image (**write this down**):
 
 	![](images/100/i20.png)
 
@@ -137,22 +137,17 @@ This lab will:
 
 	![](images/100/i23.png)
 
+- Hit 'Next' and then submit.  The instance create process will take several minutes.
+
+### **STEP 4**: Review Compute Image (On-premise OGG)
+
+For the GoldenGate Cloud Service Workshop we will be using a compute Image that will represent your on-premises environment. In this image we have installed a 11g database that we will be migrating to our Oracle Public Cloud Database instance. The image also contains SQL Developer 4.1 that will be used to connect to both your local and cloud database.
+
+- Start your vnc viewer and enter the IP address of the Compute image noted above.  Enter the cloud login password.
+
+	![](images/100/i24.png)
 
 
-
-***************************************************************************************************************
-
-## Compute Image (on-premise data)
-
-For the GoldenGate Cloud Service Workshop we will be using a Client Image that will represent your on-premises environment. In this image we have installed an Oracle 12.1.0.2 database that contains a Pluggable database that we will be migrating to our Oracle Public Cloud Database instance. The image also contains SQL Developer 4.1 that will be used to connect
-to both your local and cloud database.
-
-The Client Image is a VM that is running on Oracle's IaaS Compute
-service.
-
-**Retrieve Public IP for Client Image**
-
-### **STEP 1**: Login to your Oracle Cloud account
 
 -   Open a browser and go to the following URL:
 
