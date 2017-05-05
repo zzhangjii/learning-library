@@ -27,7 +27,7 @@ This Oracle Public Cloud GoldenGate Cloud Services workshop will give you a basi
 
 ## Lab 100: Introduction to GoldenGate Cloud Service
 
-**Documentation**: [CloudWorkshop_GGCS_100.md](CloudWorkshop_GGCS_100.md)
+**Documentation**: [LabGuide100.md](LabGuide100.md)
 
 ### Objectives
 
@@ -35,7 +35,7 @@ This Oracle Public Cloud GoldenGate Cloud Services workshop will give you a basi
 
 ## Lab 200: On-Premise to Cloud Zero Downtime Migration
 
-**Documentation**: [CloudWorkshop_GGCS_200.md](CloudWorkshop_GGCS_200.md)
+**Documentation**: [LabGuide200.md](LabGuide200.md)
 
 ### Objectives
 
@@ -43,7 +43,7 @@ This Oracle Public Cloud GoldenGate Cloud Services workshop will give you a basi
 
 ## Lab 300: Cloud to On-Premise Replication with DDL
 
-**Documentation**: [CloudWorkshop_GGCS_300.md](CloudWorkshop_GGCS_300.md)
+**Documentation**: [LabGuide300.md](LabGuide300.md)
 
 ### Objectives
 
@@ -51,7 +51,7 @@ This Oracle Public Cloud GoldenGate Cloud Services workshop will give you a basi
 
 ## Lab 400: Cloud to Cloud Replication with Transformations and Real Time BI Analytics
 
-**Documentation**: [CloudWorkshop_GGCS_400.md](CloudWorkshop_GGCS_400.md)
+**Documentation**: [LabGuide400.md](LabGuide400.md)
 
 ### Objectives
 
@@ -59,7 +59,7 @@ This Oracle Public Cloud GoldenGate Cloud Services workshop will give you a basi
 
 ## Lab 500: GoldenGate Cloud Service Monitoring
 
-**Documentation**: [CloudWorkshop_GGCS_500.md](CloudWorkshop_GGCS_500.md)
+**Documentation**: [LabGuide500.md](LabGuide500.md)
 
 ### Objectives
 
