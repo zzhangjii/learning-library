@@ -8,15 +8,15 @@
              
 ## How to View the Lab Guides
 
-- The Labguides are best viewed using the Workshop's [GitHub Pages Website URL](https://pcdavies.github.io/GoldenGateCloudService/workshops/goldengate/) 
+- The lab guides are best viewed using the Workshop's [GitHub Pages Website URL](https://pcdavies.github.io/GoldenGateCloudService/workshops/goldengate/) 
 
 - Once you are viewing the Workshop's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
 
     ![](images/WorkshopMenu.png)  
 
-- To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/pcdavies/GoldenGateCloudService/tree/master/workshops/goldengate) repository.
+- To log issues and view the lab guide source, go to the [github oracle](https://github.com/pcdavies/GoldenGateCloudService/tree/master/workshops/goldengate) repository.
 
-## DevOps and Cloud Native Microservices Workshop
+## Oracle GoldenGate Cloud Services Workshop
 
 This Oracle Public Cloud GoldenGate Cloud Services workshop will give you a basic understanding of the Oracle GoldenGate Cloud Service and many of the capabilities around real time data replication and migration.  Three use cases will be covered.  The first will walk you through setting up zero downtime migration with one-way replication between an Oracle 11g database and a DBCS 12c database.  The second lab will show you how to configure GGCS to perform one-way DML and DDL replication between a DBCS 12c database and an on-prem Oracle 11g database.  The third lab is designed to configure GGCS to replicate data between two DBCS 12c Pluggable Databases with data transformations, and show BICS dashboards against replicated data.  Lastly you will review GGCS monitoring services.
 
