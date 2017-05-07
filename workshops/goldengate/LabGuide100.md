@@ -18,28 +18,31 @@ This is the first of several labs that are part of the Oracle Public Cloud Golde
 
 	![](images/100/i4.png)
 
-This lab will:
+## Objectives
+
 - Familiarize you with the Oracle Cloud environment and services that will be used in the following labs.
 - Familiarize you with an on-premise 11g Database environment that will be replicated to a DBCS 12c environment.  Note: this is set up as an image running in Oracle IAAS/compute, but process and configuration steps are the same as though the image was running outside the cloud.
 - Walk through the steps to create a GoldenGate Cloud Service that will manage data replication between on-premise and cloud environments, and manage replication between different cloud environments.
 - Walk you through creating a new GoldenGate enabled Database Cloud Service.
-
-	Not sure this will be in lab 100:  "You will then VNC into the Oracle GoldenGate (OGG) 'on-premise' image desktop and review the OGG configuration.  You will also set up the SQL Developer connections to the source 11g and target 12c databases and review the source data that will be replicated.  Next you will connect to the GGCS and review the environment and configuration.then connect to the database image using the ssh private key and familiarize yourself with the image layout. Next you will learn how to create an ssh configuration file that can be used to tunnel simultaneously multiple ports to a remote OPC instance. Using the tunnels, you will learn how to access various Database consoles."
- 
 - To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/pcdavies/GoldenGateCloudService/tree/master/workshops/goldengate) repository.
-
-## Objectives
-
--   Create a GoldenGate Cloud Service
-
--   SSH Configuration
-
--   Explore VM and Consoles
 
 ## Required Artifacts
 
--   The following lab requires a VNC Viewer to connect to an Image
-    running on Oracle's IaaS Compute Service.
+- The following lab requires a VNC Viewer to connect to an Image running on Oracle's IaaS Compute Service.
+- The following information will be required, and used throughout the labs.  For clarity this is listed below.  As you navigate the environments **write down** the necessary information on paper:
+	- **SSH Key:**  `ggcs_key`.  This is a private key that will be used to ssh to GGCS and DGCS.  It is located in the `GGCS\_Workshop\_Material\keys` folder on the desktop of the OGG 'On-premise' 11g Database Compute image (noted below).
+	- **Oracle Cloud Identity Domain:**
+		- Userid and password will be given to you by your instructor.  
+	- **OGG 'On-premise' 11g**
+		- **IP Address:**  `you will be given this`
+		- **VNC Password**  `ggcs2017_`
+		- **euro and ggcs_bu schema passwords:**  `ggcs2017_`
+	- **GGCS:**
+		- **IP Address**  `you will get this off the cloud console AFTER creating a new GGCS instance`
+		- **SSH Access:**  `ggcs_key`
+	- **DBCS:**
+		- **IP Address:**  `you will get this off the Cloud Console`  DBCS will be running when you start the labs.
+		- **SQL Developer Access from OGG to schemas `amer`, `dw`, and `ggcs_bu`:**  You will tunnel using the ggcs_key (with your IP address).  Passwords are `ggcs2017_`.  Other database details are already in pre-defined connections.
 
 ## Review Cloud Services
 
@@ -85,7 +88,11 @@ This lab will:
 
 	![](images/100/i11.png)
 
-### **STEP 2**: Gather Information Required for Access to Images and GG Configuration
+### **STEP 2**: Create a GoldenGate Enabled Database Cloud Service (note this has been done for you - this is a review step)
+
+- Go to the Cloud Console and select the Database Cloud Service
+
+### **STEP 3**: Gather Information Required for Access to Images and GG Configuration
 
 - Select the Database Cloud Service:
 
@@ -123,7 +130,7 @@ This lab will:
 
 	![](images/100/i20.png)
 
-### **STEP 3**: Create GoldenGate Cloud Service Instance
+### **STEP 4**: Create GoldenGate Cloud Service Instance
 
 - Return to Dashboard (upper right), select GGCS, then Open Service Console, and then Create Service Instance:
 
@@ -139,7 +146,7 @@ This lab will:
 
 - Hit 'Next' and then submit.  The instance create process will take several minutes.
 
-### **STEP 4**: Review Compute Image (On-premise OGG)
+### **STEP 5**: Review Compute Image (On-premise OGG)
 
 For the GoldenGate Cloud Service Workshop we will be using a compute Image that will represent your on-premises environment. In this image we have installed a 11g database that we will be migrating to our Oracle Public Cloud Database instance. The image also contains SQL Developer 4.1 that will be used to connect to both your local and cloud database.
 
@@ -161,7 +168,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/100/i27.png)
 
-### **STEP 5**: Set up GGCS For the Labs that Follow
+### **STEP 6**: Set up GGCS For the Labs that Follow
 
 - By now GolderGate Cloud Service (GGCS) should be available.  Go to the console to get the IP address.  Select GGCS.  Note that at any time you can collapse the region above the services.  Then open Service Console.
 
