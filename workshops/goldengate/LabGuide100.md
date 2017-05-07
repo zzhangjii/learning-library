@@ -30,19 +30,26 @@ This is the first of several labs that are part of the Oracle Public Cloud Golde
 
 - The following lab requires a VNC Viewer to connect to an Image running on Oracle's IaaS Compute Service.
 - The following information will be required, and used throughout the labs.  For clarity this is listed below.  As you navigate the environments **write down** the necessary information on paper:
-	- **SSH Key:**  `ggcs_key`.  This is a private key that will be used to ssh to GGCS and DGCS.  It is located in the `GGCS\_Workshop\_Material\keys` folder on the desktop of the OGG 'On-premise' 11g Database Compute image (noted below).
 	- **Oracle Cloud Identity Domain:**
 		- Userid and password will be given to you by your instructor.  
+	- **SSH Key:**  `ggcs_key`.  This is a private key that will be used to ssh to GGCS and DGCS.  It is located in the `GGCS\_Workshop\_Material\keys` folder on the desktop of the OGG 'On-premise' 11g Database Compute image (noted below).
 	- **OGG 'On-premise' 11g**
 		- **IP Address:**  `you will be given this`
-		- **VNC Password**  `ggcs2017_`
-		- **euro and ggcs_bu schema passwords:**  `ggcs2017_`
+		- **VNC (port 5902) Password**  `ggcs2017_`
+		- **Database Schemas:**
+			- `euro`
+			- `ggcs_bu`
+			- passwords:  `ggcs2017_`
 	- **GGCS:**
 		- **IP Address**  `you will get this off the cloud console AFTER creating a new GGCS instance`
 		- **SSH Access:**  `ggcs_key`
 	- **DBCS:**
 		- **IP Address:**  `you will get this off the Cloud Console`  DBCS will be running when you start the labs.
-		- **SQL Developer Access from OGG to schemas `amer`, `dw`, and `ggcs_bu`:**  You will tunnel using the ggcs_key (with your IP address).  Passwords are `ggcs2017_`.  Other database details are already in pre-defined connections.
+		- **Schemas:**
+			- `amer`
+			- `dw`
+			-`ggcs_bu`
+			- passwords are `ggcs2017_`
 
 ## Review Cloud Services
 
