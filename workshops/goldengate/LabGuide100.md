@@ -161,7 +161,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/100/i27.png)
 
-### **STEP 5**: Review Compute Image (On-premise OGG)
+### **STEP 5**: Obtain IP address of GGCS
 
 - By now GolderGate Cloud Service (GGCS) should be available.  Go to the console to get the IP address.  Select GGCS.  Note that at any time you can collapse the region above the services.  Then open Service Console.
 
