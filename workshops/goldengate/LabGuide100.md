@@ -147,6 +147,30 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/100/i24.png)
 
+- This is the 'On-premise' environment desktop.  All the lab material is in the GGCS\_Workshop\_Material folder on the desktop - double click on this folder and review the contents.  Note:
+	- The keys folder:  You will use a private key to access the GGCS and DBCS instances.  You will need the IP addresses of those environments after GGCS is up.
+	- The SQL Files folder:  These scripts are used to re-set your data if you need to restore it at some point, and to generate transactions for GoldenGate.
 
+	![](images/100/i25.png)
 
--
+- Double click on the SQL Developer desktop icon.  You will use SQL Developer to review data and execute SQL Scripts.  Three connections have been set up for you (highlighted).  These will need to be updated with the IP addresses of your assigned instances (On-premise 11g Database, DBCS 12c Database, and your GGCS instance.
+
+	![](images/100/i26.png)
+
+- Select the File Browser off the desktop and navigate to /u01/app/oracle/product.  This location is where GoldenGate On-premise is installed and configured.  We will review this in the next lab.  Note that Oracle Database 11g which is used in the following labs is installed in /opt/oracle.
+
+	![](images/100/i27.png)
+
+### **STEP 5**: Review Compute Image (On-premise OGG)
+
+- By now GolderGate Cloud Service (GGCS) should be available.  Go to the console to get the IP address.  Select GGCS.  Note that at any time you can collapse the region above the services.  Then open Service Console.
+
+	![](images/100/i28.png)
+
+- Open ggcsservice_ggcs_1
+
+	![](images/100/i29.png)
+
+- Note the public IP **write this down**.  You will need this later for various configuration steps.
+
+	![](images/100/i30.png)
