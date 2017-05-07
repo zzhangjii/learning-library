@@ -37,8 +37,8 @@ This is the first of several labs that are part of the Oracle Public Cloud Golde
 		- **IP Address:**  `you will be given this`
 		- **VNC (port 5902) Password**  `ggcs2017_`
 		- **Database Schemas:**
-			- `euro`
-			- `ggcs_bu`
+			- `euro` (your data source in lab 200 and target in lab 300)
+			- `ggcs_bu` (backup/restore copy of the data)
 			- passwords:  `ggcs2017_`
 	- **GGCS:**
 		- **IP Address**  `you will get this off the cloud console AFTER creating a new GGCS instance`
@@ -46,9 +46,9 @@ This is the first of several labs that are part of the Oracle Public Cloud Golde
 	- **DBCS:**
 		- **IP Address:**  `you will get this off the Cloud Console`  DBCS will be running when you start the labs.
 		- **Schemas:**
-			- `amer`
-			- `dw`
-			-`ggcs_bu`
+			- `amer` (target schema in lab 200, source schema in lab 300 and lab 400)
+			- `dw` (target schema in lab 400)
+			-`ggcs_bu` (backup/restore copy of the data)
 			- passwords are `ggcs2017_`
 
 ## Review Cloud Services
