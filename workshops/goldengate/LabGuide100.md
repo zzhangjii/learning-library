@@ -153,7 +153,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/100/i25.png)
 
-- Double click on the SQL Developer desktop icon.  You will use SQL Developer to review data and execute SQL Scripts.  Three connections have been set up for you (highlighted).  These will need to be updated with the IP addresses of your assigned instances (On-premise 11g Database, DBCS 12c Database, and your GGCS instance.
+- Double click on the SQL Developer desktop icon.  You will use SQL Developer to review data and execute SQL Scripts.  Three connections have been set up for you (highlighted).  These will need to be updated with the IP addresses of your assigned instances (On-premise 11g Database, DBCS 12c Database, and your GGCS instance).
 
 	![](images/100/i26.png)
 
@@ -161,7 +161,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/100/i27.png)
 
-### **STEP 5**: Obtain IP address of GGCS
+### **STEP 5**: Set up GGCS For the Labs that Follow
 
 - By now GolderGate Cloud Service (GGCS) should be available.  Go to the console to get the IP address.  Select GGCS.  Note that at any time you can collapse the region above the services.  Then open Service Console.
 
@@ -174,3 +174,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 - Note the public IP **write this down**.  You will need this later for various configuration steps.
 
 	![](images/100/i30.png)
+
+- Go back to the OGG Image running in Compute and execute a script to copy the GGCS configuration files.  Note these files exist on GGCS but need to modified for our use cases.  To simplify configuration we done most of the setup and will transfer the configuration from our compute image to GGCS.  Now go to the GGCS\_Workshop\_Material folder on the desktop and run the following script.
+	- script needs to be updated with the IP address, then run
+
