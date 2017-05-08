@@ -171,7 +171,8 @@ This is the first of several lab that are part of the Oracle Public Cloud Golden
 
 For the GoldenGate Cloud Service Workshop we will be using a compute Image that will represent your on-premises environment. In this image we have installed a 11g database that we will be migrating to our Oracle Public Cloud Database instance. The image also contains SQL Developer 4.1 that will be used to connect to both your local and cloud database.
 
-- Start your vnc viewer and enter the IP address of the Compute image noted above.  Enter the cloud login password.
+- Start your vnc viewer and enter the IP address of the Compute image noted above.
+	- **VNC Password:** `ggcs2017_`
 
 	![](images/100/i24.png)
 
@@ -181,7 +182,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/100/i25.png)
 
-- Double click on the SQL Developer desktop icon.  You will use SQL Developer to review data and execute SQL Scripts.  Three connections have been set up for you (highlighted).  These will need to be updated with the IP addresses of your assigned instances (On-premise 11g Database, DBCS 12c Database, and your GGCS instance).
+- Double click on the SQL Developer desktop icon.  You will use SQL Developer to review data and execute SQL Scripts.  Three connections have been set up for you (highlighted).  These will need to be updated with the IP addresses of your assigned instances (On-premise 11g Database, DBCS 12c Database, and your GGCS instance).  **This will be done in Lab 200**.
 
 	![](images/100/i26.png)
 
@@ -212,7 +213,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/100/i30.2.png)
 
-- To access GGCS we will use ssh on the OGG Compute image and log into GGCS from there.  Go to the OGG Compute Desktop, open the workshop folder, and navigate to the keys directory.
+- To access GGCS we will use ssh on the OGG Compute image and log into GGCS from there.  Go to the OGG Compute Desktop, open the workshop folder, and navigate to the keys directory.  Right click inside the folder to open a terminal window.
 
 	![](images/100/i31.png)
 
