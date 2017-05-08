@@ -97,7 +97,21 @@ This is the first of several labs that are part of the Oracle Public Cloud Golde
 
 ### **STEP 2**: Create a GoldenGate Enabled Database Cloud Service (note this has been done for you - this is a review step)
 
-- Go to the Cloud Console and select the Database Cloud Service
+- Go to the Cloud Console and select the Database Cloud Service, and then open Service Console.
+
+	![](images/100/i11.1.png)
+
+- Select Create Service.
+
+	![](images/100/i11.2.png)
+
+- Enter the following and hit next.
+
+	![](images/100/i11.3.png)
+
+- Then enter or review the following.  Note the GoldenGate option (need to expand 'advanced').  Be sure to hit cancel.  We will **NOT** create a new DBCS instance.  This is just a review exercise.
+
+	![](images/100/i11.4.png)
 
 ### **STEP 3**: Gather Information Required for Access to Images and GG Configuration
 
