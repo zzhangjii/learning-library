@@ -123,7 +123,7 @@ This is the first of several labs that are part of the Oracle Public Cloud Golde
 
 	![](images/100/i13.png)
 
-- Select the DBCS12c Service: 
+- Select the DBCS12c Service:
 
 	![](images/100/i14.png)
 
@@ -189,7 +189,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/100/i27.png)
 
-### **STEP 6**: Set up GGCS For the Labs that Follow
+### **STEP 6**: Review GGCS Instance
 
 - By now GolderGate Cloud Service (GGCS) should be available.  Go to the console to get the IP address.  Select GGCS.  Note that at any time you can collapse the region above the services.  Then open Service Console.
 
@@ -206,3 +206,131 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 - Go back to the OGG Image running in Compute and execute a script to copy the GGCS configuration files.  Note these files exist on GGCS but need to modified for our use cases.  To simplify configuration we done most of the setup and will transfer the configuration from our compute image to GGCS.  Now go to the GGCS\_Workshop\_Material folder on the desktop and run the following script.
 	- script needs to be updated with the IP address, then run
 
+- To access GGCS we will use ssh on the OGG Compute image and log into GGCS from there.  Go to the OGG Compute Desktop, open the workshop folder, and navigate to the keys directory.
+
+	![](images/100/i31.png)
+
+- Enter the following to ssh to the GGCS instance.
+	`ssh -i ggcs_key opc@<enter your ggcs IP here>`
+
+- Enter the following commands:
+	- **switch to user oracle:** `sudo su - oracle`
+	- **display the oracle home directory:** `pwd`
+	- **switch to the GG Home directory:** `cd $GGHOME`
+	- **display the GG home directory:** `pwd` (/u01/app/oracle/gghome)
+	- **display the GG configuration directories:** `ls`
+	- **display the key GG configuration files:** `ls dirprm`
+	- **switch to the network admin directory where connectivity to dbcs12c is configured:** `cd /u02/data/oci/network/admin`
+	- **display the tnsnames.ora file:** `cat tnsnames.ora`
+
+- This is the output of the preceding commands:
+
+```
+bash-4.1$ ssh -i ggcs_key opc@129.156.125.56
+[opc@ggcsservice-ggcs-1-ggcs-1 ~]$ sudo su - oracle
+[oracle@ggcsservice-ggcs-1-ggcs-1 ~]$ pwd
+/u01/app/oracle/tools/home/oracle
+[oracle@ggcsservice-ggcs-1-ggcs-1 ~]$ cd $GGHOME
+[oracle@ggcsservice-ggcs-1-ggcs-1 gghome]$ pwd
+/u01/app/oracle/gghome
+[oracle@ggcsservice-ggcs-1-ggcs-1 gghome]$ ls
+bcpfmt.tpl                       extract
+bcrypt.txt                       freeBSD.txt
+BR                               ggcmd
+cachefiledump                    ggMessage.dat
+cfgtoollogs                      ggparam.dat
+checkprm                         ggsci
+chkpt_ora_create.sql             ggserr.log
+convchk                          GLOBALS
+convprm                          help.txt
+CREDENTIAL_STORE_SETUP.sh        install
+db2cntl.tpl                      inventory
+ddl_cleartrace.sql               jdk
+ddl_create.sql                   keygen
+ddl_ddl2file.sql                 label.sql
+ddl_disable.sql                  lib12
+ddl_enable.sql                   libantlr3c.so
+ddl_filter.sql                   libdb-6.1.so
+ddl_ora10.sql                    libgglog.so
+ddl_ora10upCommon.sql            libggnnzitp.so
+ddl_ora11.sql                    libggparam.so
+ddl_ora9.sql                     libggperf.so
+ddl_pin.sql                      libggrepo.so
+ddl_remove.sql                   libicudata.so.48
+ddl_session1.sql                 libicudata.so.48.1
+ddl_session.sql                  libicui18n.so.48
+ddl_setup.sql                    libicui18n.so.48.1
+ddl_status.sql                   libicuuc.so.48
+ddl_staymetadata_off.sql         libicuuc.so.48.1
+ddl_staymetadata_on.sql          libxerces-c.so.28
+ddl_tracelevel.sql               libxml2.txt
+ddl_trace_off.sql                logdump
+ddl_trace_on.sql                 marker_remove.sql
+debug509.txt                     marker_setup.sql
+defgen                           marker_status.sql
+deinstall                        mgr
+demo_more_ora_create.sql         notices.txt
+demo_more_ora_insert.sql         oggerr
+demo_ora_create.sql              OPatch
+demo_ora_insert.sql              oraInst.loc
+demo_ora_lob_create.sql          oui
+demo_ora_misc.sql                params.sql
+demo_ora_pk_befores_create.sql   prvtclkm.plb
+demo_ora_pk_befores_insert.sql   prvtlmpg.plb
+demo_ora_pk_befores_updates.sql  prvtlmpg_uninstall.sql
+diagnostics                      README
+dirbdb                           remove_seq.sql
+dirchk                           replicat
+dircrd                           retrace
+dirdat                           reverse
+dirdef                           role_setup.sql
+dirdmp                           sequence.sql
+dirjar                           server
+dirout                           sqlldr.tpl
+dirpcs                           srvm
+dirprm                           SSH_SOCK5_SETUP.sh
+dirprm_orig                      tcperrs
+dirrpt                           ucharset.h
+dirsql                           ulg.sql
+dirtmp                           UserExitExamples
+dirwlt                           usrdecs.h
+dirwww                           zlib.txt
+emsclnt
+[oracle@ggcsservice-ggcs-1-ggcs-1 gghome]$ ls dirprm
+ADD_AMER_EXTRACT.oby   cleanup              EXTDW.prm   PAMER.prm
+ADD_AMER_REPLICAT.oby  CREDENTIALSTORE.oby  jagent.prm  RAMER.prm
+ADD_DW_ALL.oby         EAMER.prm            MGR.prm     REPDW.prm
+[oracle@ggcsservice-ggcs-1-ggcs-1 gghome]$ cd /u02/data/oci/network/admin
+[oracle@ggcsservice-ggcs-1-ggcs-1 admin]$ cat tnsnames.ora
+#GGCS generated file
+target =
+      (DESCRIPTION =
+          (ADDRESS_LIST =
+              (ADDRESS = (PROTOCOL = TCP)(HOST = DBCS12c)(PORT = 1521))
+      )
+      (CONNECT_DATA =
+      (SERVICE_NAME = PDB1.gse00011358.oraclecloud.internal)
+    )
+ )
+
+source =
+      (DESCRIPTION =
+          (ADDRESS_LIST =
+              (ADDRESS = (PROTOCOL = TCP)(HOST = DBCS12c)(PORT = 1521))
+      )
+      (CONNECT_DATA =
+      (SERVICE_NAME = ORCL.gse00011358.oraclecloud.internal)
+    )
+ )
+
+dw =
+      (DESCRIPTION =
+          (ADDRESS_LIST =
+              (ADDRESS = (PROTOCOL = TCP)(HOST = DBCS12c)(PORT = 1521))
+      )
+      (CONNECT_DATA =
+      (SERVICE_NAME = PDB1.gse00011358.oraclecloud.internal)
+    )
+ )
+[oracle@ggcsservice-ggcs-1-ggcs-1 admin]$
+```
