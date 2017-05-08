@@ -4,7 +4,7 @@ Update May 2, 2017
 
 ## Introduction
 
-This is the first of several labs that are part of the Oracle Public Cloud GoldenGate Cloud Service workshop. These labs will give you a basic understanding of the Oracle GoldenGate Cloud Service and many of the capabilities around real time data replication and migration.  Throughout the workshop the following use cases will be covered.  These will be covered in more detail in labs 200, 300, and 400.  In lab 500 you will review GGCS monitoring.
+This is the first of several lab that are part of the Oracle Public Cloud GoldenGate Cloud Service workshop. These labs will give you a basic understanding of the Oracle GoldenGate Cloud Service and many of the capabilities around real time data replication and migration.  Throughout the workshop the following use cases will be covered.  These will be covered in more detail in labs 200, 300, and 400.  In lab 500 you will review GGCS monitoring.
 
 - Lab 200: Migration and replication of data from an on-premise 11g database to a DBCS 12c multi-tenant database:
 
@@ -203,8 +203,14 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/100/i30.png)
 
-- Go back to the OGG Image running in Compute and execute a script to copy the GGCS configuration files.  Note these files exist on GGCS but need to modified for our use cases.  To simplify configuration we done most of the setup and will transfer the configuration from our compute image to GGCS.  Now go to the GGCS\_Workshop\_Material folder on the desktop and run the following script.
-	- script needs to be updated with the IP address, then run
+- Go back to the OGG Image running in Compute and execute a script to copy the GGCS configuration files.  Note these files exist on GGCS but need to modified for our use cases.  To simplify configuration we have done most of the setup and will transfer the configuration from our compute image to GGCS.  Now go to the GGCS\_Workshop\_Material folder\ggcs_configuration folder on the desktop and open a terminal window:
+
+	![](images/100/i30.1.png)
+
+- Enter the following
+`./copy_ggcs_config.sh <your ggcs IP address>`
+
+	![](images/100/i30.2.png)
 
 - To access GGCS we will use ssh on the OGG Compute image and log into GGCS from there.  Go to the OGG Compute Desktop, open the workshop folder, and navigate to the keys directory.
 
