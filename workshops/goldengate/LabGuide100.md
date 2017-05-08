@@ -222,6 +222,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 	- **display the key GG configuration files:** `ls dirprm`
 	- **switch to the network admin directory where connectivity to dbcs12c is configured:** `cd /u02/data/oci/network/admin`
 	- **display the tnsnames.ora file:** `cat tnsnames.ora`
+	- **close the connection:** `exit` and then `exit` again
 
 - This is the output of the preceding commands:
 
