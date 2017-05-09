@@ -89,7 +89,7 @@ This is the first of several lab that are part of the Oracle Public Cloud Golden
 
 - Review services that will be used in the GGCS Labs:
 	- The Compute node will serve as your on-premise 11g database instance.  It will be migrated in Lab 200 to a target DBCS 12c pluggable databse in lab 200, and a GG target (reverse data replication) in lab 300.
-	- The Database Service (DBCS) will be a GG target in lab 200 and a GG source in lab 300.
+	- The Database Service (DBCS) will be a GG target in lab 200 and a GG source in lab 300, and both a source and target in Lab 400.
 	- The GGCS instance is not yet in your identity domain.  You will create and configure this in Labs 200 - 500.
 	- Finally note that BICS is not available in this identiity domain.  That will be provided in a separate Identity Domain.
 
@@ -177,18 +177,23 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 	![](images/100/i24.png)
 
 - This is the 'On-premise' environment desktop.  All the lab material is in the GGCS\_Workshop\_Material folder on the desktop - double click on this folder and review the contents.  Note:
+	- This folder has scripts to start the SSH proxy and to start and stop the GoldenGate Cloud Control Agent.
 	- The keys folder:  You will use a private key to access the GGCS and DBCS instances.  You will need the IP addresses of those environments after GGCS is up.
-	- The SQL Files folder:  These scripts are used to re-set your data if you need to restore it at some point, and to generate transactions for GoldenGate.
+	- The SQL Files folder:  These scripts are used in SQLDeveloper to generate transactional data, do row counts, and re-set your data if necessary for the DW.
 
 	![](images/100/i25.png)
 
-- Double click on the SQL Developer desktop icon.  You will use SQL Developer to review data and execute SQL Scripts.  Three connections have been set up for you (highlighted).  These will need to be updated with the IP addresses of your assigned instances (On-premise 11g Database, DBCS 12c Database, and your GGCS instance).  **This will be done in Lab 200**.
+- Double click on the SQL Developer desktop icon.  You will use SQL Developer to review data and execute SQL Scripts.  Three connections have been set up for you (highlighted).  These will need to be updated with the domain name and IP addresses of your assigned instances (On-premise 11g Database, DBCS 12c Database, and your GGCS instance).  **This will be done in Lab 200**.
 
 	![](images/100/i26.png)
 
-- Select the File Browser off the desktop and navigate to /u01/app/oracle/product.  This location is where GoldenGate On-premise is installed and configured.  We will review this in the next lab.  Note that Oracle Database 11g which is used in the following labs is installed in /opt/oracle.
+- Select the File Browser off the desktop and navigate to /u01/app/oracle/product.  This location is where GoldenGate On-premise product is installed and configured.  We will review this in the next lab.  Note that Oracle Database 11g which is used in the following labs is installed in /opt/oracle.
 
 	![](images/100/i27.png)
+
+- There are many directories under the GoldenGate product homes.  One particularly important directory is dirprm.  The dirprm directory will contain all of the parameter (OGG process configuration) and obey (ggsci scripts) that will be used for the workshop. There is also a cleanup directory that contain obey files to clean up the processes if a lab needs to be restarted.
+
+	![](images/100/i27.1.png)
 
 ### **STEP 6**: Review GGCS Instance
 
@@ -340,5 +345,6 @@ dw =
       (SERVICE_NAME = PDB1.gse00011358.oraclecloud.internal)
     )
  )
-[oracle@ggcsservice-ggcs-1-ggcs-1 admin]$
+[oracle@ggcsservice-ggcs-1-ggcs-1 admin]$ exit
 ```
+- Note that the target entry is created automatically when the GGCS is associated with a DBCS during creations. Addition database sources and targets will need to be added manually. We have added entries representing the DBCS as a source (for Labs 300-400) and as a target for Lab 400.
