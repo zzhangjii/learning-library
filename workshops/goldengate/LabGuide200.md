@@ -125,9 +125,33 @@ Please direct comments to: [Derrick Cameron] (derrick.cameron@oracle.com)
 
  	![](images/200/i18.png)
 
-- Review extract configuration.  
+- Review extract configuration.  Note: if you go back and review the overview architecture diagram at the beggining if this lab you can identify these components (Extract, pump, trail file, etc.).  
 	- **Enter the following:** `view param ./dirprm/ADD_EURO_EXTRACT.oby`
+		- **DBLOGIN USERIDALIAS ogguser** log in
+		- **ADD EXTRACT EEURO, TRANLOG, BEGIN NOW**: Add extract
+		- **ADD EXTTRAIL ./dirdat/lt, EXTRACT EEURO, MEGABYTES 50**:  Add trail file prefix (trail files are lt0000000001..etc.)
+		- **ADD EXTRACT PEURO, EXTTRAILSOURCE ./dirdat/lt**  Add pump
+		- **ADD RMTTRAIL ./dirdat/rt, EXTRACT PEURO, MEGABYTES 50** Add remote trail file prefix
+		- **ADD TRANDATA euro.** This allows you to specify at the schema or table level what data is extracted (fine control)
+	
+ 	![](images/200/i19.png)
+	
+- Execute commands to add EURO extract:
+	- **Enter the following:** `obey ./dirprm/ADD_EURO_EXTRACT.oby`
 
+ 	![](images/200/i20.png)
+
+- Scroll through the terminal window to view the results.
+
+- Edit parameters PEURO and set the IP Address.  Note the other parameters.
+	- **Enter your DBCS IP address:** see highlighted text below
+
+ 	![](images/200/i21.png)
+
+- Save the updates when you are finished.
+	- **Select the following:** `Save Contents`
+
+ 	![](images/200/i22.png)
 
 ### **STEP 4**: Configure GGCS (Cloud/Target) 
 
