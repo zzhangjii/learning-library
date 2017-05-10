@@ -123,7 +123,7 @@ Please direct comments to: [Derrick Cameron] (derrick.cameron@oracle.com)
  - Run this set of gg commands using oby files.  
  	- **Enter the following:** `obey ./dirprm/CREDENTIALSTORE.oby`
 
- 	![](images/200/i18.png)
+	![](images/200/i18.png)
 
 - Review extract configuration.  Note: if you go back and review the overview architecture diagram at the beggining if this lab you can identify these components (Extract, pump, trail file, etc.).  
 	- **Enter the following:** `view param ./dirprm/ADD_EURO_EXTRACT.oby`
@@ -134,33 +134,83 @@ Please direct comments to: [Derrick Cameron] (derrick.cameron@oracle.com)
 		- **ADD RMTTRAIL ./dirdat/rt, EXTRACT PEURO, MEGABYTES 50** Add remote trail file prefix
 		- **ADD TRANDATA euro.** This allows you to specify at the schema or table level what data is extracted (fine control)
 	
- 	![](images/200/i19.png)
+	![](images/200/i19.png)
 	
 - Execute commands to add EURO extract:
 	- **Enter the following:** `obey ./dirprm/ADD_EURO_EXTRACT.oby`
 
- 	![](images/200/i20.png)
+	![](images/200/i20.png)
 
 - Scroll through the terminal window to view the results.
 
 - Edit parameters PEURO and set the IP Address.  Note the other parameters.
 	- **Enter your DBCS IP address:** see highlighted text below
 
- 	![](images/200/i21.png)
+	![](images/200/i21.png)
 
 - Save the updates when you are finished.
 	- **Select the following:** `Save Contents`
 
- 	![](images/200/i22.png)
+	![](images/200/i22.png)
+	
+- Review processes that you have added:
+	- **Enter the following:** `info all`
+ 
+	![](images/200/i23.png)
 
-### **STEP 4**: Configure GGCS (Cloud/Target) 
+-  Start new processes:
+	- **Enter the following:** `start *`
+	- **Wait a few seconds for the processes to start, and then enter:** `info all`
+
+	![](images/200/i24.png)
+
+### **STEP 4**: Migrate Baseline Data with Datapump
+
+- Navigate to the workshop folder and the to the datapump directory and copy the expdp command:
+	- **Enter the followingin a terminal window:** `expdp euro/ggcs2017_ schemas=euro dumpfile=export.dmp reuse_dumpfiles=yes`
+
+	![](images/200/i25.png)
+
+- Copy the export.dmp file to DBCS 12c:
+	- **Enter the following in a terminal window:** `scp -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key /home/oracle/export.dmp opc@129.156.125.50:/tmp`
+
+ 	![](images/200/i26.png)
+	
+- SSH to the DBCS 12c instance:
+	- **Enter the following in a terminal window and ssh to DBCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@129.156.125.50`
+	- **Change permissions of export.dmp:** `chmod a+r /tmp/export.dmp`
+	- **Change user to oracle:** `sudo su - oracle`
+	- **Change to the /tmp directory:** `cd /tmp`
+	- **Import the data:** `impdp amer/ggcs2017_@pdb1 SCHEMAS=euro REMAP_SCHEMA=euro:amer DIRECTORY=tmp DUMPFILE=export.dmp`
+
+	![](images/200/i27.png)
+
+- Compare row counts.  Open SQL Developer and then open file get_count.sql (upper left).
+
+	![](images/200/i28.png)
+
+- Disconnect from the EURO connection to avoid a potential read consistency error.
+
+	![](images/200/i30.png)
+
+- Select the EURO Connection:
+
+	![](images/200/i29.png)
+
+- Run the script.  Note the data is identical.
+
+	![](images/200/i31.png)
+
+
+
+### **STEP 5**: Configure GGCS (Cloud/Target) 
 
 Note this is:
 - Using our GGCS Service (which also runs on Compute) paired with a DBCS for both GGCS metadata and target data
 - Our target data configuration for 12c Pluggable Database (schema amer)
 - USes GGCS (not on-premise OGG) with Integrated Replicat
 
-### **STEP 5**: Start Extracts and Migrate Data with Datapump
+### **STEP 6**: Start Extracts and Migrate Data with Datapump
 
 Start..
 - start eeuro
@@ -170,7 +220,7 @@ Start..
 - impdp..
 - Review target data
 
-### **STEP 6**: Generate Transactions and Review Data Movement/Results
+### **STEP 7**: Generate Transactions and Review Data Movement/Results
 
 Start..
 - generate transactions
