@@ -50,11 +50,13 @@ Please direct comments to: [Derrick Cameron] (derrick.cameron@oracle.com)
 	
 	![](images/200/i5.png)
 
-- Next right click on the top connection - we need to set that to your assigned DBCS instance.  Set the Service Name.
+- Next right click on the top connection.  We need to set that to your assigned DBCS instance.  Set the Service Name.
 
 	![](images/200/i6.png)
 
-- Down the same thing for the next (DW) connection down.
+	![](images/200/i6.1.png)
+
+- Down the same thing for the next (DW) connection down.  Right click on the DBCS-DW connection, select properties, and edit the Service Name.
 
 	![](images/200/i7.png)
 
@@ -105,6 +107,27 @@ Please direct comments to: [Derrick Cameron] (derrick.cameron@oracle.com)
 	- **Start a gg command session:** `./ggsci`
 
 	![](images/200/i15.png)
+
+- Review OGG parameters.  
+	- **Open a file browser window and switch the the following directory:** `/u01/app/oracle/product/11gogg/dirprm`
+
+	![](images/200/i16.png)
+
+- In the ggsci terminal window view the parameter CREDENTIALSTORE.oby.  Note that you can also open the file with gedit in the file browser menu.  The command view param is a shortcut way to view gg parameter files without having to navigate to the directory.
+	- **Enter the following:** `view param ./dirprm/CREDENTIALSTORE.oby`
+
+	![](images/200/i17.png)
+ 
+ - In the screen above note that the this credential allow us to connect to the local 11g database with an alias without having to specify an OCI connection.  You will see reference to alias ogguser in other gg configuration files.
+
+ - Run this set of gg commands using oby files.  
+ 	- **Enter the following:** `obey ./dirprm/CREDENTIALSTORE.oby`
+
+ 	![](images/200/i18.png)
+
+- Review extract configuration.  
+	- **Enter the following:** `view param ./dirprm/ADD_EURO_EXTRACT.oby`
+
 
 ### **STEP 4**: Configure GGCS (Cloud/Target) 
 
