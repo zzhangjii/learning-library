@@ -209,13 +209,17 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/100/i30.png)
 
-- Go back to the OGG Compute image, open the workshop folder on the desktop, navigate to the ggcs_config folder, and update the tnsnames.ora file.  
+- Go back to the OGG Compute image, open the workshop folder on the desktop, and navigate to the sql_scripts folder.  Update the cr_dblink.sql file and set the DBCS IP and Identity Domain.  Note we will execute this script in Lab 200.
 
 	![](images/100/i30.1.1.png)
 
-- This needs to be updated with your Identity Domain information.
+- Next open navigate to the ggcs_config folder, and update the tnsnames.ora file.  
 
 	![](images/100/i30.1.2.png)
+
+- This needs to be updated with your Identity Domain information.
+
+	![](images/100/i30.1.3.png)
 
 - Next, execute a script to copy the GGCS configuration files.  Note these files exist on GGCS but need to modified for our use cases.  To simplify configuration we have done most of the setup and will transfer the configuration from our compute image to GGCS.  Now go to the GGCS\_Workshop\_Material folder\ggcs_configuration folder on the desktop and open a terminal window:
 
