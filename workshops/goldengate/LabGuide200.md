@@ -60,6 +60,14 @@ Please direct comments to: [Derrick Cameron] (derrick.cameron@oracle.com)
 
 	![](images/200/i7.png)
 
+- Next re-create the database link (from 11g Database to DBCS 12c) with your assigned IP address.  Note you updated the IP address in Lab 100, now you will execute it now that we are in SQLDeveloper.  Confirm you have updated this with the correct IP address.
+
+	![](images/200/i7.1.png)
+
+- Execute the script.
+
+	![](images/200/i7.2.png)
+
 ### **STEP 2**: Review Source Data in 11g Source Database (On-Premise/Compute image) and the DBCS 12c Target Database.
 
 - In SQLDevelper select (expand) the On-Premise-EURO connection, and then expand the tables.  Select the ORDERS table, and then the data tab.
