@@ -166,8 +166,8 @@ Please direct comments to: [Derrick Cameron] (derrick.cameron@oracle.com)
 
 ### **STEP 4**: Migrate Baseline Data with Datapump
 
-- Navigate to the workshop folder and the to the datapump directory and copy the expdp command:
-	- **Enter the followingin a terminal window:** `expdp euro/ggcs2017_ schemas=euro dumpfile=export.dmp reuse_dumpfiles=yes`
+- Export the 11g EURO schema data:
+	- **Enter the following in a terminal window:** `expdp euro/ggcs2017_ schemas=euro dumpfile=export.dmp reuse_dumpfiles=yes`
 
 	![](images/200/i25.png)
 
@@ -201,7 +201,20 @@ Please direct comments to: [Derrick Cameron] (derrick.cameron@oracle.com)
 
 	![](images/200/i31.png)
 
+- Run simulated transactions.
+	- **Open the gentrans.sql file**:
 
+	![](images/200/i32.png)
+
+- Execute it.  Be sure to select the EURO connection.
+
+	![](images/200/i33.png)
+
+- Enter 500 as the number of transactions to generate.
+
+	![](images/200/i34.png)
+
+	![](images/200/i35.png)
 
 ### **STEP 5**: Configure GGCS (Cloud/Target) 
 
@@ -210,22 +223,19 @@ Note this is:
 - Our target data configuration for 12c Pluggable Database (schema amer)
 - USes GGCS (not on-premise OGG) with Integrated Replicat
 
-### **STEP 6**: Start Extracts and Migrate Data with Datapump
+- Open a terminal window on the OGG Compute image and ssh to GGCS:
+	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@129.156.125.56`
+	- **Switch to user oracle:** `sudo su - oracle`
+	- **Start a gg command shell:** `ggsci`
 
-Start..
-- start eeuro
-- start peuro
-- expdp..
-- scp..
-- impdp..
-- Review target data
+	![](images/200/i36.png)
 
-### **STEP 7**: Generate Transactions and Review Data Movement/Results
+- View parameter CREDENTIALSTORE.oby
+	- **Enter the following:** `view param dirprm/CREDENTIALSTORE.oby` (note the addition of user and passwords for the admin schema and the amer and dw data schemas)
 
-Start..
-- generate transactions
-- review source and target data
-- start ramer
-- review source and target data
-- OGG: stats eeuro total
-- GGCS: stats ramer total
+	![](images/200/i37.png)
+
+- Add CREDENTIALSTORE
+	- **Enter the following:** `obey dirprm/CREDENTIALSTORE.oby`
+
+	![](images/200/i38.png)
