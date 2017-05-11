@@ -129,7 +129,7 @@ Please direct comments to: [Derrick Cameron] (derrick.cameron@oracle.com) or [Ch
 
 	![](images/300/i16.png)
 
-- Return to SQLDeveloper and run get_count.sql
+- **LEAVE THESE TWO WINDOWS OPEN AND Return to SQLDeveloper and run get_count.sql
 
 	![](images/300/i17.png)
 
@@ -156,8 +156,16 @@ Please direct comments to: [Derrick Cameron] (derrick.cameron@oracle.com) or [Ch
 
 	![](images/300/i23.png)
 
+- Compare with OGG/11g:
 
+	![](images/300/i24.png)
 
-- On prem: ggsci> stats reuro to show ddl count
+- Return to your OGG terminal window on the right and review stats:
+	- **Enter the following:** `stats reuro` scroll back up after the command
 
-- ggsci> view report reuro to show DDL report
+	![](images/300/i25.png)
+
+- Show DDL report	
+	- **Enter the following:** `view report reuro`.  Scroll up and down to view the entire report.
+
+	![](images/300/i26.png)
