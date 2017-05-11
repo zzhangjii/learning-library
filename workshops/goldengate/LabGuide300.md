@@ -103,17 +103,61 @@ Please direct comments to: [Derrick Cameron] (derrick.cameron@oracle.com) or [Ch
 
 - Open SQLDeveloper and open the sql file gentrans.sql using the amer connection:
 
+	![](images/300/i12.png)
+
+- Execute the script, enter 500 for the number of transactions:
+
+	![](images/300/i13.png)
+
+- Open a new terminal window for GGCS (DBCS 12c), and position it on the left.  SSH into GGCS.
+	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@129.156.125.56`
+	- **Switch to user oracle:** `sudo su - oracle`
+    - **Switch to GGHOME:** `cd $GGHOME`
+	- **Start a gg command shell:** `ggsci`
+	- **Enter:** `stats * total`
+
+	![](images/300/i14.png)
+
+- Open a new terminal window for OGG (11g On Prem) and position it on the right.
+	- **Change to gg home:** `cd $GGHOME`
+	- **Start ggsci:** `ggsci`
+	- **Enter stats reuro total`
+
+	![](images/300/i15.png)
+
+- Compare stats for GGCS and OGG:
+
+	![](images/300/i16.png)
+
+- Return to SQLDeveloper and run get_count.sql
+
+	![](images/300/i17.png)
+
+- Execute script against EURO.  Note the row counts match proving replication.
+
+	![](images/300/i18.png)
+
+- We will now replicate DDL (table definition changes and other SQL that creates objects, not just data inserts/updates/deletes).  Open file ddl.sql
+
+	![](images/300/i19.png)
+
+- Note the following and then run the script:
+	- Note the tables do not yet exist in connection AMER.
+	- Select AMER connection on the left.
+	- Execute the script.
+
+	![](images/300/i20.png)
+
+- Note table currency has been created in AMER and user CURRENCY_ADMIN has also been created.
+
+	![](images/300/i21.png)
+
+	![](images/300/i22.png)
+
+	![](images/300/i23.png)
 
 
 
-
-- On ggcs: ggsci> `stats * total`
-- On prem: ggsci> `stats reuro total`
-= ggsci> lag reuro  (we will have to redo screenshot when/if we fix timezone issue otherwise we drop this). Once “at EOF” all records have been replicated
-    - ggsci> !will repeat ;last command
-- SQLDeveloper:  run get_count.sql and show that counts match
-- use GUI to see that currency table and currency admin user do not exist in amer or euro
-- run ddl.sql againt AMER
-- use GUI to see that currency table and currency admin user now exist in amer and euro
 - On prem: ggsci> stats reuro to show ddl count
+
 - ggsci> view report reuro to show DDL report
