@@ -6,7 +6,7 @@ Update May 2, 2017
 
 This is the first of several lab that are part of the Oracle Public Cloud GoldenGate Cloud Service workshop. These labs will give you a basic understanding of the Oracle GoldenGate Cloud Service and many of the capabilities around real time data replication and migration.  Throughout the workshop the following use cases will be covered.  These will be covered in more detail in labs 200, 300, and 400.  In lab 500 you will review GGCS monitoring.
 
-- Lab 200: Migration and replication of data from an on-premise 11g database to a DBCS 12c multi-tenant database:
+- Lab 200: Zero Downtime Migration and replication of data from an on-premise 11g database to a DBCS 12c multi-tenant database:
 
 	![](images/100/i2.png)
 
@@ -17,6 +17,8 @@ This is the first of several lab that are part of the Oracle Public Cloud Golden
 - Lab 400: Replication and transformation of data from a DBCS 12c pluggable database to a DBCS 12c reporting data warehouse with Business Intelligence analytics access:
 
 	![](images/100/i4.png)
+
+Please direct comments to: [Derrick Cameron] (derrick.cameron@oracle.com) or [Charles Duncan] (charles.duncan@oracle.com). 
 
 ## Objectives
 
@@ -55,11 +57,11 @@ This is the first of several lab that are part of the Oracle Public Cloud Golden
 
 ### **STEP 1**: Login to your Oracle Cloud account and Review Services
 
--   Open a browser and go to the following URL:
+- Open a browser and go to the following URL:
 
 	https://cloud.oracle.com
 
--   Click **Sign In** in the upper right hand corner of the browser
+- Click **Sign In** in the upper right hand corner of the browser
 
 	![](images/100/i5.png)
 
@@ -67,23 +69,23 @@ This is the first of several lab that are part of the Oracle Public Cloud Golden
 
 	![](images/100/i6.png)
 
--   Enter the **identity domain** and click **Go**
+- Enter the **identity domain** and click **Go**
 
 	**NOTE**: The **Identity Domain, User Name** and **Password** values will be given to you from your instructor.
 
 	![](images/100/i7.png)
 
--   Once your Identity Domain is set, enter your User Name and Password and click **Sign In**
+- Once your Identity Domain is set, enter your User Name and Password and click **Sign In**
 
 	**NOTE**: the **Identity Domain, User Name** and **Password** values will be given to you from your instructor.
 
 	![](images/100/i8.png)
 
--   You will be presented with a Dashboard summarizing all of your available services.
+- You will be presented with a Dashboard summarizing all of your available services.
 
 	![](images/100/i9.png)
 
--   If all of your services are not visible, **click** on **Customize Dashboard.** You can then add services to the dashboard by clicking **Show**. If you do not want to see a specific service click **Hide**.
+- If all of your services are not visible, **click** on **Customize Dashboard.** You can then add services to the dashboard by clicking **Show**. If you do not want to see a specific service click **Hide**.
 
 	![](images/100/i10.png)
 

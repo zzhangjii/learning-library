@@ -4,13 +4,13 @@ Update May 2, 2017
 
 ## Introduction
 
-- This is the second of five GoldenGate Cloud Service labs, and covers the first use case - zero downtime migration and replication of data from a 11g Database on-premise to DBCS 12c Pluggable Dataabase.  
+This is the second of five GoldenGate Cloud Service labs, and covers the first use case - zero downtime migration and replication of data from a 11g Database on-premise to DBCS 12c Pluggable Dataabase.  
 
-	![](images/100/i2.png)
+![](images/100/i2.png)
 
 This workshop will walk you through a zero downtime use case that shows how you can use Oracle Datapump and Oracle GoldenGate to maintain an on-premise database that remains available while data is migrated and replicated to a remote instance with transactional consistency.
 
-Please direct comments to: [Derrick Cameron] (derrick.cameron@oracle.com)
+Please direct comments to: [Derrick Cameron] (derrick.cameron@oracle.com) or [Charles Duncan] (charles.duncan@oracle.com). 
 
 ## Objectives
 
