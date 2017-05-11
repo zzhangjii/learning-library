@@ -239,3 +239,15 @@ Note this is:
 	- **Enter the following:** `obey dirprm/CREDENTIALSTORE.oby`
 
 	![](images/200/i38.png)
+
+- View Replicat	
+	- **Enter the following:** `view param dirprm/ADD_AMER_REPLICAT.oby`
+
+	![](images/200/i39.png)
+
+- Add Replicat:
+	- **Enter the following:** `obey dirprm/ADD_AMER_REPLICAT.oby`
+
+	![](images/200/i40.png)
+
+- Compare data (remember that after we used datapump to migrate the base tables we generated an additional 500 transactions).  Go back to SQLDeveloper and open the 
