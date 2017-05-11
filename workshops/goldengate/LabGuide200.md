@@ -250,4 +250,15 @@ Note this is:
 
 	![](images/200/i40.png)
 
-- Compare data (remember that after we used datapump to migrate the base tables we generated an additional 500 transactions).  Go back to SQLDeveloper and open the 
+- start Replicat:
+	- **Enter the following:** `info all`
+	- **Start replicat:** `start RAMER`
+	- **Review processes:** `info all`
+
+	![](images/200/i41.png)
+
+- Compare data (remember that after we used datapump to migrate the base tables we generated an additional 500 transactions).  Go back to SQLDeveloper and open the row_counts script:
+
+	![](images/200/i42.png)
+
+	![](images/200/i43.png)
