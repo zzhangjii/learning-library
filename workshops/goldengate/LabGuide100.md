@@ -18,7 +18,7 @@ This is the first of several lab that are part of the Oracle Public Cloud Golden
 
 	![](images/100/i4.png)
 
-Please direct comments to: [Derrick Cameron] (derrick.cameron@oracle.com) or [Charles Duncan] (charles.duncan@oracle.com). 
+Please direct comments to: [Derrick Cameron](mailto:derrick.cameron@oracle.com) or [Charles Duncan](charles.duncan@oracle.com). 
 
 ## Objectives
 

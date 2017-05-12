@@ -4,13 +4,13 @@ Update May 2, 2017
 
 ## Introduction
 
-- This is the third of five GoldenGate Cloud Service labs, and covers the second use case: Replication of data from a DBCS 12c multi-tenant Pluggable Database back to an on-premise 11g Database
+This is the third of five GoldenGate Cloud Service labs, and covers the second use case: Replication of data from a DBCS 12c multi-tenant Pluggable Database back to an on-premise 11g Database
 
-	![](images/100/i3.png)
+![](images/100/i3.png)
 
 This workshop will walk you through replacation of data from a DBCS 12c Pluggable database back to an 11g On-premise Database.  Note that the 11g Database used in this Workshop is running on compute and does not require a VPN (or dedicated) network, but in practice you would need a VPN (or Corente or other) network connection to replicate data from the cloud to a customer database.
 
-Please direct comments to: [Derrick Cameron] (derrick.cameron@oracle.com) or [Charles Duncan] (charles.duncan@oracle.com). 
+Please direct comments to: [Derrick Cameron](derrick.cameron@oracle.com) or [Charles Duncan](charles.duncan@oracle.com). 
 
 ## Objectives
 
