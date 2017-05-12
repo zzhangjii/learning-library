@@ -8,14 +8,14 @@ This is the third of five GoldenGate Cloud Service labs, and covers the second u
 
 ![](images/100/i3.png)
 
-This workshop will walk you through replacation of data from a DBCS 12c Pluggable database back to an 11g On-premise Database.  Note that the 11g Database used in this Workshop is running on compute and does not require a VPN (or dedicated) network, but in practice you would need a VPN (or Corente or other) network connection to replicate data from the cloud to a customer database.
+This workshop will walk you through replacation of data from a DBCS 12c Pluggable database back to an 11g On-premise Database.  Note that the 11g Database used in this Workshop is running on compute and does not require a VPN (or dedicated) network, but in practice you would need a VPN (Corente or other) network connection to replicate data from the cloud to a customer database.
 
 To log issues and view the lab guide source, go to the [github oracle](https://github.com/pcdavies/GoldenGateCloudService/tree/master/workshops/goldengate/issues) repository.
 
 ## Objectives
 
 - Configure GGCS extract processes for data replication to 11g Database on-premise.
-- Configure OGG replicat processes for data replacation from DBCS 12c in the Cloud.
+- Configure OGG replicat processes for data replication from DBCS 12c in the Cloud.
 - Generate Transactions and view data movement statistics to monitor activity.
 
 ## Required Artifacts
@@ -24,7 +24,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ### **STEP 1**: Configure GoldenGate Cloud Service (GGCS)
 
-- Open a terminal window on the OGG Compute image and ssh to GGCS:
+- Open a terminal window on the OGG Compute image and ssh to GGCS (substitute your GGCS IP address):
 	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@129.156.125.56`
 	- **Switch to user oracle:** `sudo su - oracle`
     - **Switch to GGHOME:** `cd $GGHOME`
@@ -32,7 +32,12 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	    ![](images/300/i1.png)
 
-- Review amer extract configuration:
+- Review AMER extract configuration:
+    - **Enter the following:** `view param dirprm/EAMER.prm`  Read comments
+
+	![](images/300/i1.1.png)
+
+- Review add AMER extract configuration:
     - **Enter the following:** `view param dirprm/ADD_AMER_EXTRACT.oby`  Read comments
 
 	![](images/300/i2.png)
