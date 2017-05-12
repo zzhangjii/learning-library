@@ -14,7 +14,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ## Objectives
 
-- configure SQLDeveloper to access the source and target databases.
+- Configure SQLDeveloper to access the source and target databases.
 - Use Oracle Datapump to migrate data from 11g on-premise to DBCS 12c.
 - Configure an on-premise GoldenGate to extract data from a 11g Database.
 - Configure GoldenGate Cloud Service to replicate data to a DBCS 12c Pluggable Database.
@@ -30,7 +30,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/200/i2.png)
 
-- Go to the top menu and select ssh.  We need to create an SSH tunnel to tunnel through ssh port 22, to access 1521 in DBCS.  In fact we have opened port 1521 for other reasons, but this is normally how you would securely connect to DBCS when 1521 is closed.
+- Go to the top menu and select ssh.  We need to create an SSH tunnel to tunnel through ssh port 22, to access 1521 in DBCS.
 
 	![](images/200/i3.png)
 
@@ -102,13 +102,23 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/200/i11.png)
 
+- Edit the IP address and enter the GGCS IP.  Save the file.
+
 	![](images/200/i12.png)
 
 - Close the window (do not save), and double click on this file and select 'Run in Terminal'.  **LEAVE THIS WINDOW OPEN - DO NOT CLOSE IT..YOU CAN MINIMIZE IT**.
 
+	![](images/200/i14.png)
+
 	![](images/200/i13.png)
 
-	![](images/200/i14.png)
+ - Next we need to update the IP address of a database link that will be used in a query to compare data between On-Premise 11g Database and DBCS 12c Database.  Open SQLDeveloper and open cr_dblink.sql.
+
+	![](images/200/i17.1.png)
+
+- Execute the command against EURO (11g Database) connection:
+
+	![](images/200/i17.2.png)
 
 - Start a GoldenGate command session.  Open a terminal window (double click on terminal on the desktop), and enter the following:
 	- **Switch to the GG home directory:** `cd $GGHOME`
@@ -122,16 +132,21 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 	![](images/200/i16.png)
 
 - In the ggsci terminal window view the parameter CREDENTIALSTORE.oby.  Note that you can also open the file with gedit in the file browser menu.  The command view param is a shortcut way to view gg parameter files without having to navigate to the directory.
-	- **Enter the following:** `view param ./dirprm/CREDENTIALSTORE.oby`
+	- **Enter the following:** `view param dirprm/CREDENTIALSTORE.oby`
 
 	![](images/200/i17.png)
  
  - In the screen above note that the this credential allow us to connect to the local 11g database with an alias without having to specify an OCI connection.  You will see reference to alias ogguser in other gg configuration files.
 
  - Run this set of gg commands using oby files.  
- 	- **Enter the following:** `obey ./dirprm/CREDENTIALSTORE.oby`
+ 	- **Enter the following:** `obey dirprm/CREDENTIALSTORE.oby`
 
 	![](images/200/i18.png)
+
+- View Extract EEURO.prm using ggsci:
+	- **Enter the following:** `view param dirprm/EEURO.rpm`
+
+	![](images/200/i17.3.png)
 
 - Review extract configuration.  Note: if you go back and review the overview architecture diagram at the beggining if this lab you can identify these components (Extract, pump, trail file, etc.).  
 	- **Enter the following:** `view param ./dirprm/ADD_EURO_EXTRACT.oby`
@@ -145,23 +160,31 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 	![](images/200/i19.png)
 	
 - Execute commands to add EURO extract:
-	- **Enter the following:** `obey ./dirprm/ADD_EURO_EXTRACT.oby`
+	- **Enter the following:** `obey dirprm/ADD_EURO_EXTRACT.oby`
 
 	![](images/200/i20.png)
 
 - Scroll through the terminal window to view the results.
 
-- Edit parameters PEURO and set the IP Address.  Note the other parameters.
+- Edit parameters PEURO and set the IP Address.  This uses the 'VI' editor.  Note you can also edit this with gedit (see following step).
+	- **Enter the following:** `edit param PEURO`
+	- **Use the arrows on your keyboard to navigate to the IP address**
+	- **Use the `i` character to enter insert mode and the `[ESC]` key to exit insert mode**
 	- **Enter your DBCS IP address:** see highlighted text below
+	- **Use the `x` key to delete characters**
+	- **To save enter `:` character and then `x` character**
 
 	![](images/200/i21.png)
 
-- Save the updates when you are finished.
-	- **Select the following:** `Save Contents`
+- Alternatively edit parameters PEURO and set the IP Address using gedit.  Minimized the ggsci terminal window and Open a new windows browser and use gedit as follows:
 
 	![](images/200/i22.png)
-	
-- Review processes that you have added:
+
+- Edit the IP address, hit save, and exit the window.
+
+	![](images/200/i22.1.png)
+
+- Go back to ggsci and review processes that you have added:
 	- **Enter the following:** `info all`
  
 	![](images/200/i23.png)
@@ -231,7 +254,7 @@ Note this is:
 - Our target data configuration for 12c Pluggable Database (schema amer)
 - USes GGCS (not on-premise OGG) with Integrated Replicat
 
-- Open a terminal window on the OGG Compute image and ssh to GGCS:
+- Open a terminal window on the OGG Compute image and ssh to GGCS (substituting your own GGCS IP):
 	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@129.156.125.56`
 	- **Switch to user oracle:** `sudo su - oracle`
 	- **Start a gg command shell:** `ggsci`
@@ -248,7 +271,12 @@ Note this is:
 
 	![](images/200/i38.png)
 
-- View Replicat	
+- View Replicat	RAMER
+	- **Enter the following:** `view param dirprm/RAMER.prm`
+
+	![](images/200/i38.1.png)
+
+- View add Replicat	configuration.
 	- **Enter the following:** `view param dirprm/ADD_AMER_REPLICAT.oby`
 
 	![](images/200/i39.png)
