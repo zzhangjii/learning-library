@@ -10,7 +10,7 @@ This is the fourth of five GoldenGate Cloud Service labs, and covers the third u
 
 This workshop will walk you through replacation of data from a DBCS 12c Pluggable database to another DBCS 12c Pluggable database.  This lab will introduce data transformations as part of the replication process, and will show how you can deliver real-time analytics through Oracle Business Intelligence data visualizations and dashboards.
 
-To log issues and view the lab guide source, go to the [github oracle](https://github.com/pcdavies/GoldenGateCloudService/tree/master/workshops/goldengate) repository.
+To log issues and view the lab guide source, go to the [github oracle](https://github.com/pcdavies/GoldenGateCloudService/tree/master/workshops/goldengate/issues) repository.
 
 ## Objectives
 
@@ -39,12 +39,12 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
     ![](images/400/i2.png)
 
 - Create/add extract and replicat processes.
-    - **Enter the following:** `obey dirprm/ADD_DW_ALL.oby'
+    - **Enter the following:** `obey dirprm/ADD_DW_ALL.oby`
 
     ![](images/400/i3.png)
 
 - Review processes.
-    - **Enter the following:** `info all'
+    - **Enter the following:** `info all`
 
     ![](images/400/i4.png)
 
@@ -58,28 +58,51 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ### **STEP 2**: Generate Insert Transactions and Review Data on Source and Target
 
-SQLDeveloper:  run gen_DW_data.sql against Amer
-On ggcs:              ggsci> stats *DW total
-ggsci> lag reuro  (we will have to redo screenshot when/if we fix time zone issue otherwise we drop this). Once “at EOF” all records have been replicated
-ggsci> !                               will repeat last command
+- Start SQLDeveloper and run script `generate_dw_data.sql` to generate insert transactions.  Open the script.
+ 
+    ![](images/400/i6.png)
 
-SQLDeveloper:  run get_dw_count.sql and show that counts match
+- Run `generate_dw_data.sql` against Amer
 
-use GUI to compare amer and dw tables to see that the following transformations occurred
-- CUSTOMERS : customers_firstname and customers_lastname concatenated into customers_name column.
-- CUSTOMERS: email address stripped out and only domain mapped into customer_email_domain column.
-- ORDERS: split into CREDIT_ORDERS and NON_CREDIT_ORDERS tables based on content of  payment_method column.
-- ORDERS: orders_status_desc column filled in by SQL lookup of value from orders_status_lookup table.
-- ORDERS_PRODUCTS: final_price column calculated via  stored procedure (they can look at the stored procedure dw.sp_total via GUI if desired)
-- PRODUCTS:  products_tax_class_desc column filled in by using case statement
-- PRODUCTS_HISTORY auditing table populated by inserting all records (note additional columns).
+    ![](images/400/i7.png)
+
+- Review results.  Scroll up and down to see all stats.
+    - **Enter the following in ggsci:** `stats *DW total`
+
+    ![](images/400/i8.png)
+
+- Review results.  Run `get_dw_count.sql` and show that counts match.  Open the script.
+
+    ![](images/400/i9.png)
+
+- Run `get_dw_count.sql` against amer.
+
+    ![](images/400/i10.png)
+
+- Browse the following tables in SQLDeveloper to compare AMER and DW tables to see that the following transformations occurred.  **NO DETAILED SCREEN SHOTS**.
+- **CUSTOMERS:** `CUSTOMERS_FIRSTNAME` and `CUSTOMERS_LASTNAME` concatenated into `CUSTOMERS_NAME` column.
+- **CUSTOMERS:** mail address stripped out and only domain mapped into `CUSTOMER_EMAIL_DOMAIN` column.
+- **ORDERS:** split into `CREDIT_ORDERS` and `NON_CREDIT_ORDERS` tables based on content of  `PAYMENT_METHOD` column.
+- **ORDERS:** `ORDERS_STATUS_DESC` column filled in by SQL lookup of value from `ORDERS_STATUS_LOOKUP` table.
+- **ORDERS_PRODUCTS:** `FINAL_PRICE` column calculated via stored procedure (they can look at the stored procedure `DW.SP_TOTAL` via GUI if desired)
+- **PRODUCTS:**  `PRODUCTS_TAX_CLASS_DESC` column filled in by using case statement
+- **PRODUCTS_HISTORY** auditing table populated by inserting all records (note additional columns).
+
+    ![](images/400/i11.png)
 
 ### **STEP 3**: Generate Update Transactions and Review Audit Support
 
+- Open the script `gentrans.sql`.
 
-SQLDeveloper:  run gentrans.sql against Amer
+    ![](images/400/i12.png)
 
-Use GUI to review PRODUCTS_HISTORY auditing table to see that updates include the BEFORE and AFTER images of updates.
+- run the script against AMER.  Enter 500 for the transaction count.  **GET UNIQUE KEY VIOLATION**.
+
+    ![](images/400/i13.png)
+
+- Review `PRODUCTS_HISTORY` in `DW` auditing table to see that updates include the BEFORE and AFTER images of updates.
+
+    ![](images/400/i14.png)
 
 ### **STEP 4**: Access BICS Dashboards and Review GGCS Replicated Data
 

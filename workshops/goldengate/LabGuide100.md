@@ -18,7 +18,7 @@ This is the first of several lab that are part of the Oracle Public Cloud Golden
 
 	![](images/100/i4.png)
 
-To log issues and view the lab guide source, go to the [github oracle](https://github.com/pcdavies/GoldenGateCloudService/tree/master/workshops/goldengate) repository.
+To log issues and view the lab guide source, go to the [github oracle](https://github.com/pcdavies/GoldenGateCloudService/tree/master/workshops/goldengate/issues) repository.
 
 ## Objectives
 
