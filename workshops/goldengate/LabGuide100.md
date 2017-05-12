@@ -18,7 +18,7 @@ This is the first of several lab that are part of the Oracle Public Cloud Golden
 
 	![](images/100/i4.png)
 
-Please direct comments to: [Derrick Cameron](mailto:derrick.cameron@oracle.com) or [Charles Duncan](charles.duncan@oracle.com). 
+Please direct comments to: [Derrick Cameron]("mailto:derrick.cameron@oracle.com") or [Charles Duncan](charles.duncan@oracle.com). 
 
 ## Objectives
 
@@ -34,7 +34,7 @@ Please direct comments to: [Derrick Cameron](mailto:derrick.cameron@oracle.com) 
 - The following information will be required, and used throughout the labs.  For clarity this is listed below.  As you navigate the environments **write down** the necessary information on paper:
 	- **Oracle Cloud Identity Domain:**
 		- Userid and password will be given to you by your instructor.  
-	- **SSH Key:**  `ggcs_key`.  This is a private key that will be used to ssh to GGCS and DGCS.  It is located in the `GGCS\_Workshop\_Material\keys` folder on the desktop of the OGG 'On-premise' 11g Database Compute image (noted below).
+	- **SSH Key:**  `ggcs_key`.  This is a private key that will be used to ssh to GGCS and DGCS.  It is located in the `GGCS_Workshop_Material_keys` folder on the desktop of the OGG 'On-premise' 11g Database Compute image (noted below).
 	- **OGG 'On-premise' 11g**
 		- **IP Address:**  `you will be given this`
 		- **VNC (port 5902) Password**  `ggcs2017_`
