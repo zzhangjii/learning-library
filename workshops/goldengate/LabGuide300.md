@@ -10,7 +10,7 @@ This is the third of five GoldenGate Cloud Service labs, and covers the second u
 
 This workshop will walk you through replacation of data from a DBCS 12c Pluggable database back to an 11g On-premise Database.  Note that the 11g Database used in this Workshop is running on compute and does not require a VPN (or dedicated) network, but in practice you would need a VPN (or Corente or other) network connection to replicate data from the cloud to a customer database.
 
-Please direct comments to: [Derrick Cameron](derrick.cameron@oracle.com) or [Charles Duncan](charles.duncan@oracle.com). 
+To log issues and view the lab guide source, go to the [github oracle](https://github.com/pcdavies/GoldenGateCloudService/tree/master/workshops/goldengate) repository.
 
 ## Objectives
 
