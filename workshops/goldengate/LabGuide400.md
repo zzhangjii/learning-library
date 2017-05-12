@@ -90,15 +90,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
     ![](images/400/i11.png)
 
-### **STEP 3**: Generate Update Transactions and Review Audit Support
-
-- Open the script `gentrans.sql`.
-
-    ![](images/400/i12.png)
-
-- run the script against AMER.  Enter 500 for the transaction count.  **GET UNIQUE KEY VIOLATION**.
-
-    ![](images/400/i13.png)
+### **STEP 3**: Review Audit Support
 
 - Review `PRODUCTS_HISTORY` in `DW` auditing table to see that updates include the BEFORE and AFTER images of updates.
 
