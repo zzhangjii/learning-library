@@ -203,12 +203,12 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 	![](images/200/i25.png)
 
 - Copy the export.dmp file to DBCS 12c:
-	- **Enter the following in a terminal window:** `scp -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key /home/oracle/export.dmp opc@129.156.125.50:/tmp`
+	- **Enter the following in a terminal window:** `scp -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key /home/oracle/export.dmp opc@<your DBCS IP address>:/tmp`
 
  	![](images/200/i26.png)
 	
 - SSH to the DBCS 12c instance:
-	- **Enter the following in a terminal window and ssh to DBCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@129.156.125.50`
+	- **Enter the following in a terminal window and ssh to DBCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@<your ggcs IP address>`
 	- **Change permissions of export.dmp:** `chmod a+r /tmp/export.dmp`
 	- **Change user to oracle:** `sudo su - oracle`
 	- **Change to the /tmp directory:** `cd /tmp`
@@ -255,7 +255,7 @@ Note this is:
 - USes GGCS (not on-premise OGG) with Integrated Replicat
 
 - Open a terminal window on the OGG Compute image and ssh to GGCS (substituting your own GGCS IP):
-	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@129.156.125.56`
+	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@<your ggcs IP address>`
 	- **Switch to user oracle:** `sudo su - oracle`
 	- **Start a gg command shell:** `ggsci`
 

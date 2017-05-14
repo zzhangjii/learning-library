@@ -4,25 +4,26 @@ Update May 2, 2017
 
 ## Introduction
 
-This is the fourth of five GoldenGate Cloud Service labs, and covers the third use case: Replication and transformation of data from a DBCS 12c pluggable database to a DBCS 12c reporting data warehouse with Business Intelligence analytics access.
+This is the fifth of five GoldenGate Cloud Service labs, and will review GGCS monitoring.
 
-![](images/100/i4.png)
-
-This workshop will walk you through replacation of data from a DBCS 12c Pluggable database to another DBCS 12c Pluggable database.  This lab will introduce data transformations as part of the replication process, and will show how you can deliver real-time analytics through Oracle Business Intelligence data visualizations and dashboards.
-
-Please direct comments to: [Derrick Cameron](derrick.cameron@oracle.com) or [Charles Duncan](charles.duncan@oracle.com). 
+To log issues and view the lab guide source, go to the [github oracle](https://github.com/pcdavies/GoldenGateCloudService/tree/master/workshops/goldengate/issues) repository.
 
 ## Objectives
 
-- Configure GGCS extract processes for data replication to 11g Database on-premise.
-- Configure OGG replicat processes for data replacation from DBCS 12c in the Cloud.
-- Generate Transactions and view data movement statistics to monitor activity.
+- Configure GGCS for monitoring.
+- Start monitoring services and review activity.
 
 ## Required Artifacts
 
-- Access to your Oracle Cloud account (used in Lab 100 and Lab 200) and services DBCS, GGCS, and Compute.
+- Access to your Oracle Cloud account, and GGCS and the Compute image.
 
 ### **STEP 1**On Prem
+
+- Log into VNC and access the Compute desktop.  We will use this to in turn access the GGCS instance.
+- Open a terminal window on the OGG Compute image and ssh to GGCS:
+	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@<your ggcs IP address>`
+	- **Switch to user oracle:** `sudo su - oracle`
+    - **Switch to GGHOME:** `cd $GGHOME`
 
 1.      Edit /u01/app/oracle/product/ggcc_instance/conf/agent.properties file and replace <> placeholders with student ip addresses
 

@@ -25,7 +25,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 ### **STEP 1**: Configure GoldenGate Cloud Service (GGCS)
 
 - Open a terminal window on the OGG Compute image and ssh to GGCS (substitute your GGCS IP address):
-	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@129.156.125.56`
+	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@<your ggcs IP address>`
 	- **Switch to user oracle:** `sudo su - oracle`
     - **Switch to GGHOME:** `cd $GGHOME`
 	- **Start a gg command shell:** `ggsci`
@@ -115,7 +115,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 	![](images/300/i13.png)
 
 - Open a new terminal window for GGCS (DBCS 12c), and position it on the left.  SSH into GGCS.
-	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@129.156.125.56`
+	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@<your ggcs IP address>`
 	- **Switch to user oracle:** `sudo su - oracle`
     - **Switch to GGHOME:** `cd $GGHOME`
 	- **Start a gg command shell:** `ggsci`
