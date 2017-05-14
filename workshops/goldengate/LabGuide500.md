@@ -19,23 +19,31 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ### **STEP 1**On Prem
 
-- Log into VNC and access the Compute desktop.  We will use this to in turn access the GGCS instance.
-- Open a terminal window on the OGG Compute image and ssh to GGCS:
-	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@<your ggcs IP address>`
-	- **Switch to user oracle:** `sudo su - oracle`
-    - **Switch to GGHOME:** `cd $GGHOME`
+- Log into VNC and open file browser in the Compute instance.
+	- **Edit the following file and udate the IP address with the GGCS IP:** `/u01/app/oracle/product/ggcc_instance/conf/agent.properties`
 
-1.      Edit /u01/app/oracle/product/ggcc_instance/conf/agent.properties file and replace <> placeholders with student ip addresses
+![](images/500/i1.png)
 
-ggInstanceHost=<ip address of on prem vm>
-ggccServiceHost=<ip address of ggcs vm>
-proxy-127.0.0.1=<ip address of ggcs vm>
+- Update the following fields:
+    - **ggInstanceHost=** `<ip address of on prem vm>`
+    - **ggccServiceHost=** `<ip address of ggcs vm>`
+    - **proxy-127.0.0.1=** `<ip address of ggcs vm>`
 
-2.      Start GoldenGate Cloud Service agent by  opening a terminal window and running the /home/oracle/Desktop/GGCS_Workshop_Material/start_ggccagent.sh script
+![](images/500/i2.png)
 
-3.      Make sure there are no errors in the script output to terminal
+- Start GoldenGate Cloud Service agent:
+    - **Open the workshop folder on the desktop.**
+    - **Double click on the following file:** `start_ggccagent.sh` 
+    - **Select Run in Termainl.  LEAVE THIS WINDOW OPEN**
 
-4.      In GGSCi>  start jagent
+![](images/500/i3.png)
+
+-  Open a new terminal window:
+    - **Enter the following:** `cd $GGHOME`
+    - **Start ggsci:** `./ggsci`
+    - **Start jagent:** `start jagent`
+
+![](images/500/i4.png)
 
 ### **STEP 1**On GGCS
 
