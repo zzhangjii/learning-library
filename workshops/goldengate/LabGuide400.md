@@ -121,8 +121,22 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
     ![](images/400/i20.png)
 
-- Review Order Detail and Order Summary Dashboards.  In particular note the number of rows.  We will be generating more transactions and seeing the Dashboards update.
+- Review Order Detail and Order Summary Dashboards.  In particular note the number of rows.  **The data in your lab may differ from the screenshot here.**  We will be generating more transactions and seeing the Dashboards update.
 
     ![](images/400/i21.png)
 
     ![](images/400/i22.png)
+
+- Go back to your VNC Desktop (Compute image) and open SQLDeveloper.  Open the gen_trans.sql file.
+
+    ![](images/400/i23.png)
+
+- Execute the script and specify 500 transactions/orders.  Be sure to select the AMER connection.  GoldenGate will replicate and transform this data over to DW.  Note that, again, the number of orders in your BICS environment will likely differ from the totals here.  Also, the transaction generation process creates rows across several tables and you will not necessarily see the row count rise on the Dashboard by the number of rows you specify in the gen_trans.sql file.
+
+    ![](images/400/i24.png)
+
+- Go back to your browser and the BICS Dashboard, scroll to the bottom, and select `Refresh`.  Note that the row count (and other data) reflect the new transactions that were replicated and transformed in the DW.  The refresh may take several seconds to complete.
+
+    ![](images/400/i25.png)
+
+    ![](images/400/i26.png)

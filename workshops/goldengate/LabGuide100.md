@@ -32,7 +32,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 - The following lab requires a VNC Viewer to connect to an Image running on Oracle's IaaS Compute Service.
 - The following information will be required, and used throughout the labs.  For clarity this is listed below.  As you navigate the environments **write down** the necessary information on paper:
-	- **Oracle Cloud Identity Domain:**
+	- **GGCS Oracle Cloud Identity Domain:**
 		- Userid and password will be given to you by your instructor.  
 	- **SSH Key:**  `ggcs_key`.  This is a private key that will be used to ssh to GGCS and DGCS.  It is located in the `GGCS_Workshop_Material_keys` folder on the desktop of the OGG 'On-premise' 11g Database Compute image (noted below).
 	- **OGG 'On-premise' 11g**
@@ -52,6 +52,9 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 			- `dw` (target schema in lab 400)
 			-`ggcs_bu` (backup/restore copy of the data)
 			- passwords are `ggcs2017_`
+	- **BICS Cloud Identity Domain:**
+		- **Userid:**  `<your BICS Identity Domain/Cluud userid - you will get this from your instructor`  BICS will be running when you start the labs.
+		- **Password:** `<your BICS Identity Domain/Cluud password>`
 
 ## Review Cloud Services
 
