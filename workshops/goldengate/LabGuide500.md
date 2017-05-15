@@ -123,18 +123,30 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ![](images/500/i13.png)
 
-- Review Dashboard Hot Tables.  Hover over the various tables.
+- Review Dashboard Hot Tables.  Click on the largest bar graph.
 
 ![](images/500/i14.png)
+
+- Note the replication detail.
+
+![](images/500/i14.1.png)
+
+- Navigate to instances and not GGCS is up and available.
+
+![](images/500/i14.2.png)
 
 - Return to ggsci and stop EXTDW process.  You may need to open a new terminal window (if you closed it previously):
 	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@<your ggcs IP address>`
 	- **Switch to user oracle:** `sudo su - oracle` 
     - **Enter the following:**  `stop EXTDW`
 
-![](images/500/i15.png)
+![](images/500/i14.3.png)
 
-- Return to the Console and review Changes in status in instances, tasks.  Look at notifications. Should be a service unavailable notification.
+- Return to the Console and review Changes in status in instances, tasks.  
+
+![](images/500/i15.1.png)
+
+- Review Notifications.  Note the service is down.
 
 ![](images/500/i16.png)
 
@@ -143,5 +155,6 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ![](images/500/i17.png)
 
-- Return to the Console and review changes in status in instances, tasks. 
-    - Dashboard does not show EXTDW starting
+- Return to the Console and review changes in status in instances, tasks. Note service is back up.
+
+![](images/500/i18.png)
