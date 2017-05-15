@@ -98,8 +98,31 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ### **STEP 4**: Access BICS Dashboards and Review GGCS Replicated Data
 
-- Log into BICS with your assigned userid/password.  **NOTE this is a different userid/password that what you have been using thus far in labs 100 - 400.**
+- Log into BICS with your assigned userid/password.  **NOTE this is a different userid/password that what you have been using thus far in labs 100 - 400.  You MUST first log out of your other account, and clear browser cache.**
     - **Cloud Login:**  `<BICS userid and password>`
 
     ![](images/400/i15.png)
 
+    ![](images/400/i16.png)
+
+- Navigate to BI
+
+    ![](images/400/i17.png)
+
+- Click on the Service Instance URL:
+
+    ![](images/400/i18.png)
+
+- Click on Dashboards.
+
+    ![](images/400/i19.png)
+
+- Click on GGCS DW Dashboards
+
+    ![](images/400/i20.png)
+
+- Review Order Detail and Order Summary Dashboards.  In particular note the number of rows.  We will be generating more transactions and seeing the Dashboards update.
+
+    ![](images/400/i21.png)
+
+    ![](images/400/i22.png)
