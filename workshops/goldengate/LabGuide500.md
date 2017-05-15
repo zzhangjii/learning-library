@@ -101,6 +101,8 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ![](images/500/i9.png)
 
+### **STEP 3**: Review Monitoring Services
+
 - Return to your web browser and log into Oracle Cloud and open GoldenGate Control Console from GoldenGate Cloud Service Console (hamburger menu to right of service name)
     - **Log into Oracle cloud:** `<use your cloud account userid and password>`
 
@@ -112,19 +114,34 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ![](images/500/i11.png)
 
+![](images/500/i12.png)
+
 - Review
     - **Catalog/Instances**
     - **Catalog Tasks**
     - **Policies**
 
-- Review Dashboard Hot Tables (if data is not showing then use SQLDeveloper gentrans.sql to run some data through)
+![](images/500/i13.png)
 
-13.   GGSCI > stop EXTDW process
+- Review Dashboard Hot Tables.  Hover over the various tables.
 
-14.   Review Changes in status in instances, tasks.
+![](images/500/i14.png)
 
-15.   Look at notifications. Should be a service unavailable notification.
+- Return to ggsci and stop EXTDW process.  You may need to open a new terminal window (if you closed it previously):
+	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@<your ggcs IP address>`
+	- **Switch to user oracle:** `sudo su - oracle` 
+    - **Enter the following:**  `stop EXTDW`
 
-16.   GGSCI > start EXTDW process
+![](images/500/i15.png)
 
-17.   Review Changes in status in instances, tasks. 
+- Return to the Console and review Changes in status in instances, tasks.  Look at notifications. Should be a service unavailable notification.
+
+![](images/500/i16.png)
+
+- Go back to ggsci and start EXTDW process.
+    - **Enter the following:** `start EXTDW`
+
+![](images/500/i17.png)
+
+- Return to the Console and review changes in status in instances, tasks. 
+    - Dashboard does not show EXTDW starting
