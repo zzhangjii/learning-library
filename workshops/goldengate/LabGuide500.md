@@ -74,8 +74,13 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ![](images/500/i6.png)
 
-- Add weblogic credentials by executing the following:
+- Add weblogic credentials by executing the following: (**Note - screen shot below shows creds have already been created at the point of screen capture for this lab doc)
+    - **Exit ggsci:** `exit`
     - **Enter:** `/u01/app/oracle/middleware/ggccagent/bin/ggccAgent.sh /u02/data/ggcc/agent/conf/agent.properties createServerCred`
+
+![](images/500/i7.png)
+
+- ********************************************** START BACK HERE MONDAY AM TO FINISH DOC *******************************************
 
 - Enter and confirm (these are from the weblogic instance designated when GGCS instance was created):
     - **Username:**  `weblogic`
