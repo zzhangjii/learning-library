@@ -98,3 +98,8 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ### **STEP 4**: Access BICS Dashboards and Review GGCS Replicated Data
 
+- Log into BICS with your assigned userid/password.  **NOTE this is a different userid/password that what you have been using thus far in labs 100 - 400.**
+    - **Cloud Login:**  `<BICS userid and password>`
+
+    ![](images/400/i15.png)
+

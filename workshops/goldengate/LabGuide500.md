@@ -77,42 +77,47 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 - Add weblogic credentials by executing the following: (**Note - screen shot below shows creds have already been created at the point of screen capture for this lab doc)
     - **Exit ggsci:** `exit`
     - **Enter:** `/u01/app/oracle/middleware/ggccagent/bin/ggccAgent.sh /u02/data/ggcc/agent/conf/agent.properties createServerCred`
+    - **You will be prompted for weblogic username and password:**
+        - `weblogic`
+        - `ggcs2017_`
+        - **Following screenshot may need to be replaced.**
 
 ![](images/500/i7.png)
 
-- ********************************************** START BACK HERE MONDAY AM TO FINISH DOC *******************************************
+- Start the agent by running the following.  **BE SURE TO LEAVE THIS WINDOW OPEN, DO NOT CLOSE IT!**
+    - **Run the following:** `/u01/app/oracle/middleware/ggccagent/bin/ggccAgent.sh /u02/data/ggcc/agent/conf/agent.properties start`
 
-- Enter and confirm (these are from the weblogic instance designated when GGCS instance was created):
-    - **Username:**  `weblogic`
+![](images/500/i8.png)
+
+- Open a new terminal window and SSH into ggcs.  Run a process that Integrates the agent with the GoldenGate instance. 
+	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@<your ggcs IP address>`
+	- **Switch to user oracle:** `sudo su - oracle` 
+    - **Run the following:**  `/u01/app/oracle/middleware/ggccagent/bin/ggccAgent.sh /u02/data/ggcc/agent/conf/agent.properties intgGGSCI $GGHOME`
+
+- Start ggsci and then  jagent
+    - **Enter:** `ggsci`
+    - **Enter:**  `start jagent`
+    - **Confirm the agent is runnning:** `info all`
+
+![](images/500/i9.png)
+
+- Return to your web browser and log into Oracle Cloud and open GoldenGate Control Console from GoldenGate Cloud Service Console (hamburger menu to right of service name)
+    - **Log into Oracle cloud:** `<use your cloud account userid and password>`
+
+![](images/500/i10.png)
+
+- Access the console using the hamburger menu on the right and log into the Console:
+    - **Username:**  weblogic
     - **Password:**  `ggcs2017_`
 
-7.      Start the agent by running the following
+![](images/500/i11.png)
 
-/u01/app/oracle/middleware/ggccagent/bin/ggccAgent.sh /u02/data/ggcc/agent/conf/agent.properties start
+- Review
+    - **Catalog/Instances**
+    - **Catalog Tasks**
+    - **Policies**
 
-Note: If you ever need to stop the agents, in the above commands, replace start with stop.
-
-8.      Integrate the agent with the GoldenGate instance
-
-/u01/app/oracle/middleware/ggccagent/bin/ggccAgent.sh /u02/data/ggcc/agent/conf/agent.properties intgGGSCI $GGHOME
-
-9.      Start the jagent
-
-GGSCI > start jagent
-GGSCI > info all
-
-10.   Open GoldenGate Control Console from GoldenGate Cloud Service Console (hamburger menu to right of service name)
- 
-Log in with
-               Username:  weblogic
-               Password:  ggcs2017_
-
-11.   Review
-·        Catalog/Instances
-·        Catalog Tasks
-·        Policies
-
-12.   Review Dashboard Hot Tables (if data is not showing then use SQLDeveloper gentrans.sql to run some data through)
+- Review Dashboard Hot Tables (if data is not showing then use SQLDeveloper gentrans.sql to run some data through)
 
 13.   GGSCI > stop EXTDW process
 
