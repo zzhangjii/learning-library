@@ -198,7 +198,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 ### **STEP 4**: Migrate Baseline Data with Datapump
 
 - Export the 11g EURO schema data:
-	- **Enter the following in a terminal window:** `expdp euro/ggcs2017_ schemas=euro dumpfile=export.dmp reuse_dumpfiles=yes`
+	- **Enter the following in a terminal window:** `expdp euro/<password> schemas=euro dumpfile=export.dmp reuse_dumpfiles=yes`
 
 	![](images/200/i25.png)
 
@@ -212,7 +212,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 	- **Change permissions of export.dmp:** `chmod a+r /tmp/export.dmp`
 	- **Change user to oracle:** `sudo su - oracle`
 	- **Change to the /tmp directory:** `cd /tmp`
-	- **Import the data:** `impdp amer/ggcs2017_@pdb1 SCHEMAS=euro REMAP_SCHEMA=euro:amer DIRECTORY=tmp DUMPFILE=export.dmp`
+	- **Import the data:** `impdp amer/<password>@pdb1 SCHEMAS=euro REMAP_SCHEMA=euro:amer DIRECTORY=tmp DUMPFILE=export.dmp`
 
 	![](images/200/i27.png)
 

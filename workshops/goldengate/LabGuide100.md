@@ -162,7 +162,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/100/i21.png)
 
-- Enter Service Name ggcsservice-ggcs-1 as the name, take the defaults and then hit Next:
+- Enter Service Name `ggcsservice-ggcs-1` as the name, take the defaults and then hit Next:
 
 	![](images/100/i22.png)
 
@@ -177,11 +177,11 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 For the GoldenGate Cloud Service Workshop we will be using a compute Image that will represent your on-premises environment. In this image we have installed a 11g database that we will be migrating to our Oracle Public Cloud Database instance. The image also contains SQL Developer 4.1 that will be used to connect to both your local and cloud database.
 
 - Start your vnc viewer and enter the IP address of the Compute image noted above.
-	- **VNC Password:** `ggcs2017_`
+	- **VNC Password:** `provided by your instructor`
 
 	![](images/100/i24.png)
 
-- This is the 'On-premise' environment desktop.  All the lab material is in the GGCS\_Workshop\_Material folder on the desktop - double click on this folder and review the contents.  Note:
+- This is the 'On-premise' environment desktop.  All the lab material is in the `GGCS_Workshop_Material` folder on the desktop - double click on this folder and review the contents.  Note:
 	- This folder has scripts to start the SSH proxy and to start and stop the GoldenGate Cloud Control Agent.
 	- The keys folder:  You will use a private key to access the GGCS and DBCS instances.  You will need the IP addresses of those environments after GGCS is up.
 	- The SQL Files folder:  These scripts are used in SQLDeveloper to generate transactional data, do row counts, and re-set your data if necessary for the DW.
@@ -230,7 +230,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/100/i30.1.3.png)
 
-- Next, execute a script to copy the GGCS configuration files.  Note these files exist on GGCS but need to modified for our use cases.  To simplify configuration we have done most of the setup and will transfer the configuration from our compute image to GGCS.  Now go to the `GGCS_Workshop_Material\ggcs_config` folder on the desktop and open a terminal window:
+- Next, execute a script to copy the GGCS configuration files.  Note these files exist on GGCS but need to modified for our use cases.  To simplify configuration we have done most of the setup and will transfer the configuration from our compute image to GGCS.  Now go to the `GGCS_Workshop_Material/ggcs_config` folder on the desktop and open a terminal window:
 
 	![](images/100/i30.1.png)
 

@@ -79,7 +79,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
     - **Enter:** `/u01/app/oracle/middleware/ggccagent/bin/ggccAgent.sh /u02/data/ggcc/agent/conf/agent.properties createServerCred`
     - **You will be prompted for weblogic username and password:**
         - `weblogic`
-        - `ggcs2017_`
+        - `provided by your instructor`
         - **Following screenshot may need to be replaced.**
 
 ![](images/500/i7.png)
@@ -110,7 +110,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 - Access the console using the hamburger menu on the right and log into the Console:
     - **Username:**  weblogic
-    - **Password:**  `ggcs2017_`
+    - **Password:**  `provided by your instructor`
 
 ![](images/500/i11.png)
 
