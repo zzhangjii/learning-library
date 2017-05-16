@@ -34,14 +34,14 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 - The following information will be required, and used throughout the labs.  For clarity this is listed below.  As you navigate the environments **write down** the necessary information on paper:
 	- **GGCS Oracle Cloud Identity Domain:**
 		- Userid and password will be given to you by your instructor.  
-	- **SSH Key:**  `ggcs_key`.  This is a private key that will be used to ssh to GGCS and DGCS.  It is located in the `GGCS_Workshop_Material_keys` folder on the desktop of the OGG 'On-premise' 11g Database Compute image (noted below).
+	- **SSH Key:**  `ggcs_key`.  This is a private key that will be used to ssh to GGCS and DGCS.  It is located in the `GGCS_Workshop_Material/keys` folder on the desktop of the OGG 'On-premise' 11g Database Compute image (noted below).
 	- **OGG 'On-premise' 11g**
-		- **IP Address:**  `you will be given this`
-		- **VNC (port 5910) Password**  `ggcs2017_`
+		- **IP Address:**  `provided by your instructor`
+		- **VNC (port 5910) Password**  `provided by your instructor`
 		- **Database Schemas:**
 			- `euro` (your data source in lab 200 and target in lab 300)
 			- `ggcs_bu` (backup/restore copy of the data)
-			- passwords:  `ggcs2017_`
+			- passwords:  `provided by your instructor`
 	- **GGCS:**
 		- **IP Address**  `you will get this off the cloud console AFTER creating a new GGCS instance`
 		- **SSH Access:**  `ggcs_key`
@@ -51,10 +51,10 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 			- `amer` (target schema in lab 200, source schema in lab 300 and lab 400)
 			- `dw` (target schema in lab 400)
 			-`ggcs_bu` (backup/restore copy of the data)
-			- passwords are `ggcs2017_`
+			- passwords are `provided by your instructor`
 	- **BICS Cloud Identity Domain:**
-		- **Userid:**  `<your BICS Identity Domain/Cluud userid - you will get this from your instructor`  BICS will be running when you start the labs.
-		- **Password:** `<your BICS Identity Domain/Cluud password>`
+		- **Userid:**  `provided by your instructor`  BICS will be running when you start the labs.
+		- **Password:** `provided by your instructor`
 
 ## Review Cloud Services
 
