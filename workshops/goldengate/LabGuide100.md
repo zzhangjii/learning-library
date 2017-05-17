@@ -30,31 +30,8 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ## Required Artifacts
 
-- The following lab requires a VNC Viewer to connect to an Image running on Oracle's IaaS Compute Service.
-- The following information will be required, and used throughout the labs.  For clarity this is listed below.  As you navigate the environments **write down** the necessary information on paper:
-	- **GGCS Oracle Cloud Identity Domain:**
-		- **Userid and password:** `provided by your instructor` 
-	- **SSH Key:**  `ggcs_key`.  This is a private key that will be used to ssh to GGCS and DGCS.  It is located in the `GGCS_Workshop_Material/keys` folder on the desktop of the OGG 'On-premise' 11g Database Compute image (noted below).
-	- **OGG 'On-premise' 11g**
-		- **IP Address:**  `provided by your instructor`
-		- **VNC (port 5910) Password**  `provided by your instructor`
-		- **Database Schemas:**
-			- `euro` (your data source in lab 200 and target in lab 300)
-			- `ggcs_bu` (backup/restore copy of the data)
-			- passwords:  `provided by your instructor`
-	- **GGCS:**
-		- **IP Address**  `you will get this off the cloud console AFTER creating a new GGCS instance`
-		- **SSH Access:** `ggcs_key`
-	- **DBCS:**
-		- **IP Address:**  `you will get this off the Cloud Console`  DBCS will be running when you start the labs.
-		- **Schemas:**
-			- `amer` (target schema in lab 200, source schema in lab 300 and lab 400)
-			- `dw` (target schema in lab 400)
-			-`ggcs_bu` (backup/restore copy of the data)
-			- passwords are `provided by your instructor`
-	- **BICS Cloud Identity Domain:**
-		- **Userid:**  `provided by your instructor` 
-		- **Password:** `provided by your instructor`
+- The following lab requires a [VNC Viewer](https://www.realvnc.com/download/viewer/) to connect to an Image running on Oracle's IaaS Compute Service.
+- You will be accessing several Oracle Cloud Services throughout the labs.  Most of the services have been set up in advance for you, but you will need to configure these services and request new ones.  To simplify and clarify the services and their required credentials we have prepared a on-page handout with the required information.  You will also need to **write down** some information on this handout as you progress through the labs.  The handout will be provided prior to starting your labs.
 
 ## Review Cloud Services
 

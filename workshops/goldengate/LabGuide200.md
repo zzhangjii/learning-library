@@ -50,7 +50,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 	
 	![](images/200/i5.png)
 
-- Next right click on the top connection.  We need to set that to your assigned DBCS instance.  Set the Service Name.
+- Next right click on the top connection and select Properties.  We need to set that to your assigned DBCS instance.  Set the Service Name.
 
 	![](images/200/i6.png)
 
@@ -72,7 +72,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ### **STEP 2**: Review Source Data in 11g Source Database (On-Premise/Compute image) and the DBCS 12c Target Database.
 
-- In SQLDevelper select (expand) the On-Premise-EURO connection, and then expand the tables.  Select the ORDERS table, and then the data tab.
+- In SQLDevelper select (expand) the On-Premise-EURO connection, and then expand the tables.  Select the ORDERS table, and then the data tab.  At this point we are just reviewing data in EURO on 11g Database that will be replicated to DBCS 12c.
 
 	![](images/200/i8.png)
 
