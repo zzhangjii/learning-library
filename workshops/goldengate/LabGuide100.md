@@ -33,7 +33,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 - The following lab requires a VNC Viewer to connect to an Image running on Oracle's IaaS Compute Service.
 - The following information will be required, and used throughout the labs.  For clarity this is listed below.  As you navigate the environments **write down** the necessary information on paper:
 	- **GGCS Oracle Cloud Identity Domain:**
-		- Userid and password will be given to you by your instructor.  
+		- **Userid and password:** `provided by your instructor` 
 	- **SSH Key:**  `ggcs_key`.  This is a private key that will be used to ssh to GGCS and DGCS.  It is located in the `GGCS_Workshop_Material/keys` folder on the desktop of the OGG 'On-premise' 11g Database Compute image (noted below).
 	- **OGG 'On-premise' 11g**
 		- **IP Address:**  `provided by your instructor`
@@ -44,7 +44,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 			- passwords:  `provided by your instructor`
 	- **GGCS:**
 		- **IP Address**  `you will get this off the cloud console AFTER creating a new GGCS instance`
-		- **SSH Access:**  `ggcs_key`
+		- **SSH Access:** `ggcs_key`
 	- **DBCS:**
 		- **IP Address:**  `you will get this off the Cloud Console`  DBCS will be running when you start the labs.
 		- **Schemas:**
@@ -53,7 +53,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 			-`ggcs_bu` (backup/restore copy of the data)
 			- passwords are `provided by your instructor`
 	- **BICS Cloud Identity Domain:**
-		- **Userid:**  `provided by your instructor`  BICS will be running when you start the labs.
+		- **Userid:**  `provided by your instructor` 
 		- **Password:** `provided by your instructor`
 
 ## Review Cloud Services
@@ -84,16 +84,16 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/100/i8.png)
 
-- You will be presented with a Dashboard summarizing all of your available services.
+- You will be presented with a Dashboard summarizing all of your available services.  If all of your services are not visible, **click** on **Customize Dashboard.** 
 
 	![](images/100/i9.png)
 
-- If all of your services are not visible, **click** on **Customize Dashboard.** You can then add services to the dashboard by clicking **Show**. If you do not want to see a specific service click **Hide**.
+- You can then add services to the dashboard by clicking **Show**. If you do not want to see a specific service click **Hide**.
 
 	![](images/100/i10.png)
 
 - Review services that will be used in the GGCS Labs:
-	- The Compute node will serve as your on-premise 11g database instance.  It will be migrated in Lab 200 to a target DBCS 12c pluggable databse in lab 200, and a GG target (reverse data replication) in lab 300.
+	- The Compute node will serve as your on-premise 11g Database instance.  In Lab 200 Data from your 11g Database will be migrated to a target DBCS 12c pluggable Database (on-premise to Cloud).  In Lab 300 the data will flow the other way from DBCS12c back to 11g Database on-premise (Cloud to on-premise). In Lab 400 data will be replicated from one DBCS12c Pluggable Database to another (Cloud to Cloud replication).
 	- The Database Service (DBCS) will be a GG target in lab 200 and a GG source in lab 300, and both a source and target in Lab 400.
 	- The GGCS instance is not yet in your identity domain.  You will create and configure this in Labs 200 - 500.
 	- Finally note that BICS is not available in this identiity domain.  That will be provided in a separate Identity Domain.
@@ -206,7 +206,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/100/i28.png)
 
-- Open ggcsservice_ggcs_1
+- Open `ggcsservice-ggcs-1`
 
 	![](images/100/i29.png)
 
