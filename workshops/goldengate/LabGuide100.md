@@ -31,7 +31,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 ## Required Artifacts
 
 - The following lab requires a [VNC Viewer](https://www.realvnc.com/download/viewer/) to connect to an Image running on Oracle's IaaS Compute Service.
-- You will be accessing several Oracle Cloud Services throughout the labs.  Most of the services have been set up in advance for you, but you will need to configure these services and request new ones.  To simplify and clarify the services and their required credentials we have prepared a on-page handout with the required information.  You will also need to ***write down*** some information on this handout as you progress through the labs.  The handout will be provided prior to starting your labs.
+- You will be accessing several Oracle Cloud Services throughout the labs.  Most of the services have been set up in advance for you, but you will need to configure these services and request new ones.  To simplify and clarify the services and their required credentials we have prepared a ***one-page GoldenGate Cloud Services Workshop handout*** with the required information.  You will also need to ***write down*** some information on this handout as you progress through the labs.  The handout will be provided prior to starting your labs.  The different fields in the hands have been coded (eg CS1, CS2) to make it easy to locate the required field referenced in the lab guides.
 
 ## Review Cloud Services
 
@@ -45,13 +45,11 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/100/i5.png)
 
-- **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. If you are unsure of the data center you should select, and this is an in-person training event, ***ask your instructor*** which **Region** to select from the drop down list. If you received your account through an Oracle Trial, your Trial confirmation email should provide a URL that will pre-select the region for you.
+- **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. Review your handout for your assigned Cloud Service Login information.
 
 	![](images/100/i6.png)
 
-- Enter the **identity domain** and click **Go**
-
-	**NOTE**: The **Identity Domain, User Name** and **Password** values will be given to you from your instructor.
+- Enter the **identity domain** (***CS1*** in your handout) and click **Go**
 
 	![](images/100/i7.png)
 
