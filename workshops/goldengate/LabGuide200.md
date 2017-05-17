@@ -30,7 +30,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/200/i2.png)
 
-- Go to the top menu and select ssh.  We need to create an SSH tunnel to tunnel through ssh port 22, to access 1521 in DBCS.
+- Go to the top view menu and select ssh.  We need to create an SSH tunnel to tunnel through ssh port 22, to access 1521 in DBCS.
 
 	![](images/200/i3.png)
 
