@@ -54,6 +54,8 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/200/i6.png)
 
+- Update the Service Name and enter your student identity domain (eg: gse00001092).
+
 	![](images/200/i6.1.png)
 
 - Down the same thing for the next (DW) connection down.  Right click on the DBCS-DW connection, select properties, and edit the Service Name.
