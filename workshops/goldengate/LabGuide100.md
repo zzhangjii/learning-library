@@ -31,7 +31,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 ## Required Artifacts
 
 - The following lab requires a [VNC Viewer](https://www.realvnc.com/download/viewer/) to connect to an Image running on Oracle's IaaS Compute Service.
-- You will be accessing several Oracle Cloud Services throughout the labs.  Most of the services have been set up in advance for you, but you will need to configure these services and request new ones.  To simplify and clarify the services and their required credentials we have prepared a on-page handout with the required information.  You will also need to **write down** some information on this handout as you progress through the labs.  The handout will be provided prior to starting your labs.
+- You will be accessing several Oracle Cloud Services throughout the labs.  Most of the services have been set up in advance for you, but you will need to configure these services and request new ones.  To simplify and clarify the services and their required credentials we have prepared a on-page handout with the required information.  You will also need to ***write down*** some information on this handout as you progress through the labs.  The handout will be provided prior to starting your labs.
 
 ## Review Cloud Services
 
