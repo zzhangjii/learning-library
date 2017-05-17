@@ -31,7 +31,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 ## Required Artifacts
 
 - The following lab requires a [VNC Viewer](https://www.realvnc.com/download/viewer/) to connect to an Image running on Oracle's IaaS Compute Service.
-- You will be accessing several Oracle Cloud Services throughout the labs.  Most of the services have been set up in advance for you, but you will need to configure these services and request new ones.  To simplify and clarify the services and their required credentials we have prepared a ***one-page GoldenGate Cloud Services Workshop handout*** with the required information.  You will also need to ***write down*** some information on this handout as you progress through the labs.  The handout will be provided prior to starting your labs.  The different fields in the hands have been coded (eg CS1, CS2) to make it easy to locate the required field referenced in the lab guides.
+- You will be accessing several Oracle Cloud Services throughout the labs.  Most of the services have been set up in advance for you, but you will need to configure these services and request new ones.  To simplify and clarify the services and their required credentials we have prepared a ***one-page GoldenGate Cloud Services Workshop handout*** with the required information.  You will also need to ***write down some information on this handout*** as you progress through the labs.  The handout will be provided prior to starting your labs.  The different fields in the hands have been coded (eg CS1, CS2) to make it easy to locate the required field referenced in the lab guides.
 
 ## Review Cloud Services
 
@@ -53,13 +53,11 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/100/i7.png)
 
-- Once your Identity Domain is set, enter your User Name and Password and click **Sign In**
-
-	**NOTE**: the **Identity Domain, User Name** and **Password** values will be given to you from your instructor.
+- Once your Identity Domain is set, enter your User Name (***CS2***)and Password (***CS3***) and click **Sign In**
 
 	![](images/100/i8.png)
 
-- You will be presented with a Dashboard summarizing all of your available services.  If all of your services are not visible, **click** on **Customize Dashboard.** 
+- You will be presented with a Dashboard summarizing all of your available services.  You have access to several services, but only Database and Compute are visible.  **Click** on **Customize Dashboard** to add GGSC to your list of visible services. 
 
 	![](images/100/i9.png)
 
@@ -89,7 +87,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/100/i11.3.png)
 
-- Then enter or review the following.  Note the GoldenGate option (need to expand 'advanced').  Be sure to hit cancel.  We will **NOT** create a new DBCS instance.  This is just a review exercise.
+- Then enter or review the following.  Note the GoldenGate option (need to expand 'advanced').  Be sure to hit cancel.  We will ***NOT*** create a new DBCS instance.  This is just a review exercise.
 
 	![](images/100/i11.4.png)
 
@@ -103,11 +101,11 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/100/i13.png)
 
-- Select the DBCS12c Service:
+- Select the `DBCS12c` Service.  Note that each user will have their own set of services and will be assigned a number (eg DBCS12c-01, the screen shots do not show this numbered assignment):  Use the number assigned to you.
 
 	![](images/100/i14.png)
 
-- Note the Public IP (**write this down**).  Also note the Service Name (DBCS12c - you will need this when creating GGCS)
+- Note the DBCS Public IP (***DB1*** - **write this down**).  Also note the Service Name (DBCS12c - you will need this when creating GGCS)
 
 	![](images/100/i15.png)
 
