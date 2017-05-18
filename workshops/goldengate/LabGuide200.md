@@ -114,14 +114,6 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/200/i13.png)
 
- - Next we need to update the IP address of a database link that will be used in a query to compare data between On-Premise 11g Database and DBCS 12c Database.  Open SQLDeveloper and open cr_dblink.sql.
-
-	![](images/200/i17.1.png)
-
-- Execute the command against EURO (11g Database) connection:
-
-	![](images/200/i17.2.png)
-
 - Start a GoldenGate command session.  Open a terminal window (double click on terminal on the desktop), and enter the following:
 	- **Switch to the GG home directory:** `cd $GGHOME`
 	- **Start a gg command session:** `./ggsci`
