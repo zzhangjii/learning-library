@@ -79,6 +79,8 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/100/i11.1.png)
 
+	![](images/100/i11.1.1.png)
+
 - Select Create Service.
 
 	![](images/100/i11.2.png)
@@ -159,7 +161,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 ### **STEP 5**: Create GoldenGate Cloud Service Instance
 
-- Open a browser in your Compute desktop (VNC), **NOT** from your laptop desktop.  We will be needing to select a public key that is stored on the Compute Image.  Log into cloud.oracle.com:
+- Open a browser in your Compute desktop (VNC) either from the desktop shortcut or from the panel at the top.  Do **NOT** use your browswer from your laptop desktop.  We will be needing to select a public key that is stored on the Compute Image.  Log into cloud.oracle.com:
 	- **Enter your assigned Identity Domain and Region**: ***CS1*** and ***CS4***
 
  	![](images/100/i20.1.png) 
@@ -205,7 +207,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/100/i30.1.1.png)
 
-- Updated the IP address and identity domain of DBCS:
+- Updated the IP address and identity domain of DBCS field ***DB1***:
 
 	![](images/100/i30.1.1.1.png)
 
@@ -213,7 +215,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/100/i30.1.2.png)
 
-- This needs to be updated with your Identity Domain information.
+- This needs to be updated with your Identity Domain information field ***CS1***.
 
 	![](images/100/i30.1.3.png)
 
@@ -223,7 +225,6 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 - Enter the following
 `./copy_ggcs_config.sh <your ggcs IP address GG1>` Field ***GG1*** on your handout `eg: ./copy_ggcs_config.sh 141.144.83.2`
-- eg: 
 
 	![](images/100/i30.2.png)
 
@@ -232,7 +233,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 	![](images/100/i31.png)
 
 - Enter the following to ssh to the GGCS instance.
-	`ssh -i ggcs_key opc@<enter your ggcs IP here>`
+	`ssh -i ggcs_key opc@<enter your ggcs IP here>` Field ***GG1***
 
 - Enter the following commands:
 	- **switch to user oracle:** `sudo su - oracle`
@@ -245,7 +246,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 	- **display the tnsnames.ora file:** `cat tnsnames.ora`
 	- **close the connection:** `exit` and then `exit` again
 
-- This is the output of the preceding commands:
+- This is sample output of the preceding commands:
 
 ```
 bash-4.1$ ssh -i ggcs_key opc@129.156.125.56
