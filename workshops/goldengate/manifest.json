@@ -2,6 +2,7 @@
     "workshop": {
         "title": "GoldenGate Cloud Service Workshop",
         "description": "This is the first of several labs that are part of the Oracle Public Cloud GoldenGate Cloud Service workshop. These labs will give you a basic understanding of the Oracle GoldenGate Cloud Service and many of the capabilities around real time data replication and migration.  Throughout the workshop the following use cases will be covered.  These will be covered in more detail in labs 200, 300, and 400.  In lab 500 you will review GGCS monitoring.",
+        "theme": "ttc",
         "labs": [
             {
                 "number": "0",
