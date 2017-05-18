@@ -31,7 +31,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 ## Required Artifacts
 
 - The following lab requires a [VNC Viewer](https://www.realvnc.com/download/viewer/) to connect to an Image running on Oracle's IaaS Compute Service.
-- You will be accessing several Oracle Cloud Services throughout the labs.  Most of the services have been set up in advance for you, but you will need to configure these services and request new ones.  To simplify and clarify the services and their required credentials we have prepared a ***one-page GoldenGate Cloud Services Workshop handout*** with the required information.  You will also need to ***write down some information on this handout*** as you progress through the labs.  The handout will be provided prior to starting your labs.  The different fields in the hands have been coded (eg CS1, CS2) to make it easy to locate the required field referenced in the lab guides.
+- As noted in the readme, you will be accessing several Oracle Cloud Services throughout the labs. We have prepared a ***one-page GoldenGate Cloud Services Workshop handout*** with the required information.  You will also need to ***write down some information on this handout*** as you progress through Lab 100.
 
 ## Review Cloud Services
 
@@ -125,32 +125,16 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/100/i19.png)
 
-- Note the public IP of the GG_On-premise image (**write this down**):
+- Note the public IP of the GG_On-premise image (**write this down in field ***OG1*** on your handout**):
 
 	![](images/100/i20.png)
 
-### **STEP 4**: Create GoldenGate Cloud Service Instance
-
-- Return to Dashboard (upper right), select GGCS, then Open Service Console, and then Create Service Instance:
-
-	![](images/100/i21.png)
-
-- Enter Service Name `ggcsservice-ggcs-1` as the name, take the defaults and then hit Next:
-
-	![](images/100/i22.png)
-
-- Enter the following details:
-
-	![](images/100/i23.png)
-
-- Hit 'Next' and then submit.  The instance create process will take several minutes.
-
-### **STEP 5**: Review Compute Image (On-premise OGG)
+### **STEP 4**: Review Compute Image (On-premise OGG)
 
 For the GoldenGate Cloud Service Workshop we will be using a compute Image that will represent your on-premises environment. In this image we have installed a 11g database that we will be migrating to our Oracle Public Cloud Database instance. The image also contains SQL Developer 4.1 that will be used to connect to both your local and cloud database.
 
 - Start your vnc viewer and enter the IP address of the Compute image noted above.
-	- **VNC Password:** `provided by your instructor`
+	- **VNC Password:** ***OG2*** in your handout
 
 	![](images/100/i24.png)
 
@@ -173,9 +157,39 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/100/i27.1.png)
 
+### **STEP 5**: Create GoldenGate Cloud Service Instance
+
+- Open a browser in your Compute desktop (VNC), **NOT** from your laptop desktop.  We will be needing to select a public key that is stored on the Compute Image.  Log into cloud.oracle.com:
+	- **Enter your assigned Identity Domain and Region**: ***CS1*** and ***CS4***
+
+ 	![](images/100/i20.1.png) 
+
+- Select GGCS Service and then console.
+
+ 	![](images/100/i20.2.png)
+
+ 	![](images/100/i20.3.png)
+
+- Open Service Console, and then Create Service Instance:
+
+	![](images/100/i21.png)
+
+- Enter Service Name `ggcsservice-ggcs-1` as the name, take the defaults and then hit Next:
+
+	![](images/100/i22.png)
+
+- Enter the following details:
+
+	![](images/100/i23.png)
+
+- Hit 'Next' and then submit.  The instance create process will take several minutes.
+
+
 ### **STEP 6**: Review GGCS Instance
 
-- By now GolderGate Cloud Service (GGCS) should be available.  Go to the console to get the IP address.  Select GGCS.  Note that at any time you can collapse the region above the services.  Then open Service Console.
+- GolderGate Cloud Service (GGCS) create step should take about 15 minutes.  During this time your instructor will discuss Oracle Cloud topics.
+
+- Once GGCS is available go to the GGCS console to get the IP address.  Select GGCS.  Note that at any time you can collapse the region above the services.  Then open Service Console.
 
 	![](images/100/i28.png)
 
@@ -183,7 +197,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/100/i29.png)
 
-- Note the public IP **write this down**.  You will need this later for various configuration steps.
+- Note the public IP **write this down in field GG1 on your handout**.  You will need this later for various configuration steps.
 
 	![](images/100/i30.png)
 
