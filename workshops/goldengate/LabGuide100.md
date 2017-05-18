@@ -105,7 +105,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/100/i14.png)
 
-- Note the DBCS Public IP (***DB1*** - **write this down**).  Also note the Service Name (DBCS12c - you will need this when creating GGCS)
+- Note the DBCS Public IP (***DB1*** - **write this down in field ***DB1*** in your handout**).  Also note the Service Name (DBCS12c - you will need this when creating GGCS)
 
 	![](images/100/i15.png)
 
@@ -197,7 +197,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/100/i29.png)
 
-- Note the public IP **write this down in field GG1 on your handout**.  You will need this later for various configuration steps.
+- Note the public IP **write this down in field ***GG1*** on your handout**.  You will need this later for various configuration steps.
 
 	![](images/100/i30.png)
 
@@ -222,7 +222,8 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 	![](images/100/i30.1.png)
 
 - Enter the following
-`./copy_ggcs_config.sh <your ggcs IP address>`
+`./copy_ggcs_config.sh <your ggcs IP address ***GG1***> eg: ./copy_ggcs_config.sh 141.144.83.2`
+- eg: 
 
 	![](images/100/i30.2.png)
 
