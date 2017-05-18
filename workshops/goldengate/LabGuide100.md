@@ -1,228 +1,344 @@
+![](images/100/lab100.png)
 
-![](images/100/Picture100-lab.png)  
-Updated: February 10, 2017
+Update May 2, 2017
 
 ## Introduction
 
-This is the first of several labs that are part of the **Oracle Public Cloud DevOps Cloud Native Microservices workshop.** This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
+This is the first of several lab that are part of the Oracle Public Cloud GoldenGate Cloud Service workshop. These labs will give you a basic understanding of the Oracle GoldenGate Cloud Service and many of the capabilities around real time data replication and migration.  Throughout the workshop the following use cases will be covered.  These will be covered in more detail in labs 200, 300, and 400.  In lab 500 you will review GGCS monitoring.
 
-You will take on 3 Personas during the workshop. The **Project Manager Persona** will create the projects, add tasks and features to be worked on, and assign tasks to developers.  The Project Manager will then start the initial sprint. The Java Developer persona will develop a new twitter feed service that will allow for retrieval and filtering of twitter data. The **JavaScript Developer** persona will develop a new Twitter Marketing UI that will display the twitter data to allow for analysis.  During the workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service.
+- Lab 200: Zero Downtime Migration and replication of data from an on-premise 11g database to a DBCS 12c multi-tenant database:
 
-Please direct comments to: Dennis Foley (dennis.foley@oracle.com)
+	![](images/100/i2.png)
+
+- Lab 300: Replication of data from a DBCS 12c multi-tenant database back to an on-premise 11g datbase:
+
+	![](images/100/i3.png)
+
+- Lab 400: Replication and transformation of data from a DBCS 12c pluggable database to a DBCS 12c reporting data warehouse with Business Intelligence analytics access:
+
+	![](images/100/i4.png)
+
+To log issues and view the lab guide source, go to the [github oracle](https://github.com/pcdavies/GoldenGateCloudService/tree/master/workshops/goldengate/issues) repository.
 
 ## Objectives
-- Create Initial Project
-    - Add Users to Project
-- Create Product Issues
-    - Create Issues for Twitter Feed Microservice
-    - Create Issues for Twitter Feed Marketing UI
-- Create Agile Board and initial Sprint
-- Add Issues to Sprint
+
+- Familiarize you with the Oracle Cloud environment and services that will be used in the following labs.
+- Familiarize you with an on-premise 11g Database environment that will be replicated to a DBCS 12c environment.  Note: this is set up as an image running in Oracle IAAS/compute, but process and configuration steps are the same as though the image was running outside the cloud.
+- Walk through the steps to create a GoldenGate Cloud Service that will manage data replication between on-premise and cloud environments, and manage replication between different cloud environments.
+- Walk you through creating a new GoldenGate enabled Database Cloud Service.
+- To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/pcdavies/GoldenGateCloudService/tree/master/workshops/goldengate) repository.
 
 ## Required Artifacts
-- The following lab requires an Oracle Public Cloud account that will be supplied by your instructor.
 
+- The following lab requires a [VNC Viewer](https://www.realvnc.com/download/viewer/) to connect to an Image running on Oracle's IaaS Compute Service.
+- You will be accessing several Oracle Cloud Services throughout the labs.  Most of the services have been set up in advance for you, but you will need to configure these services and request new ones.  To simplify and clarify the services and their required credentials we have prepared a ***one-page GoldenGate Cloud Services Workshop handout*** with the required information.  You will also need to ***write down some information on this handout*** as you progress through the labs.  The handout will be provided prior to starting your labs.  The different fields in the hands have been coded (eg CS1, CS2) to make it easy to locate the required field referenced in the lab guides.
 
-# Create Twitter Feed Marketing Project
+## Review Cloud Services
 
-## Create Developer Cloud Service Project
+### **STEP 1**: Login to your Oracle Cloud account and Review Services
 
-### **STEP 1**: Login to your Oracle Cloud Account
-- From any browser, go to the URL:
-    `https://cloud.oracle.com`
+- Open a browser and go to the following URL:
 
-- click **Sign In** in the upper right hand corner of the browser
+	https://cloud.oracle.com
 
-    ![](images/100/Picture100-1.png)
+- Click **Sign In** in the upper right hand corner of the browser
 
-- **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. If you are unsure of the data center you should select, and this is an in-person training event, ***ask your instructor*** which **Region** to select from the drop down list. If you received your account through an Oracle Trial, your Trial confirmation email should provide a URL that will pre-select the region for you.
+	![](images/100/i5.png)
 
-    ![](images/100/Picture100-2.png)
+- **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. Review your handout for your assigned Cloud Service Login information.
 
-- Enter your identity domain and click **Go**.
+	![](images/100/i6.png)
 
-    **NOTE:** The **Identity Domain, User Name** and **Password** values will be given to you by the instructor or Trial confirmation email.
+- Enter the **identity domain** (***CS1*** in your handout) and click **Go**
 
-    ![](images/100/Picture100-3.png)
+	![](images/100/i7.png)
 
-- Once your Identity Domain is set, enter your User Name and Password and click **Sign In**
+- Once your Identity Domain is set, enter your User Name (***CS2***)and Password (***CS3***) and click **Sign In**
 
-  **NOTE:** For this lab you will assume the role of Project Manager ***Lisa Jones***. Although you are assuming the identify of Lisa Jones, you will log into the account using the **username** provided to you by your instructor, given to you by your corporation, or supplied to you as part of an Oracle Trial. As you progress through the workshop, you will remain logged in as a single user, but you will make “logical” changes from Lisa Jones the Project Manager to other personas.
+	![](images/100/i8.png)
 
-    ![](images/lisa.png)
+- You will be presented with a Dashboard summarizing all of your available services.  You have access to several services, but only Database and Compute are visible.  **Click** on **Customize Dashboard** to add GGSC to your list of visible services. 
 
-    ![](images/100/Picture100-3.5.png)
+	![](images/100/i9.png)
 
-- You will be presented with a Dashboard displaying the various cloud services available to this account.
+- You can then add services to the dashboard by clicking **Show**. If you do not want to see a specific service click **Hide**.
 
-    ![](images/100/Picture100-4.png)
+	![](images/100/i10.png)
 
-- If all your services are not visible, **click** on the **Customize Dashboard**, you can add services to the dashboard by clicking **Show.** For this workshop, you will want to ensure that you are showing at least the **Application Container, Developer and Storage** cloud services. If you do not want to see a specific service, click **Hide**
+- Review services that will be used in the GGCS Labs:
+	- The Compute node will serve as your on-premise 11g Database instance.  In Lab 200 Data from your 11g Database will be migrated to a target DBCS 12c pluggable Database (on-premise to Cloud).  In Lab 300 the data will flow the other way from DBCS12c back to 11g Database on-premise (Cloud to on-premise). In Lab 400 data will be replicated from one DBCS12c Pluggable Database to another (Cloud to Cloud replication).
+	- The Database Service (DBCS) will be a GG target in lab 200 and a GG source in lab 300, and both a source and target in Lab 400.
+	- The GGCS instance is not yet in your identity domain.  You will create and configure this in Labs 200 - 500.
+	- Finally note that BICS is not available in this identiity domain.  That will be provided in a separate Identity Domain.
 
-    ![](images/100/Picture100-5.png)
+	![](images/100/i11.png)
 
-### **STEP 2**: Check/Set Storage Replication Policy
+### **STEP 2**: Create a GoldenGate Enabled Database Cloud Service (note this has been done for you - this is a review step)
 
-Depending on the state of your Cloud Account, you may need to set the replication policy, if it has not been previously set. In this step you will got to the Storage Cloud Service to check on the status of the Replicaton Policy. 
+- Go to the Cloud Console and select the Database Cloud Service, and then open Service Console.
 
-- Click on the **Storage** Cloud Service
+	![](images/100/i11.1.png)
 
-    ![](images/100/Picture-01.png)
+- Select Create Service.
 
-- If you see a message requesting that you **Set Replication Policy** as is shown below, click on the message. If the message is not displayed, your replicatin policy has already been set and you can continue to the next step by clicking on the **Dashboard** icon in the top right corner of the page.
+	![](images/100/i11.2.png)
 
-    ![](images/100/Picture-02.png)
+- Enter the following and hit next.
 
-- Care must be taking when setting your replication policy, because it cannot be changed. With Trial accounts, the first option available will generatlly set the replication policy sufficient for this workshop, so we will take the Default, and click on the **Set** button. 
+	![](images/100/i11.3.png)
 
-    ![](images/100/Picture-03.png)
+- Then enter or review the following.  Note the GoldenGate option (need to expand 'advanced').  Be sure to hit cancel.  We will ***NOT*** create a new DBCS instance.  This is just a review exercise.
 
-- Click on the **Dashboard** button
+	![](images/100/i11.4.png)
 
-    ![](images/100/Picture-04.png)
+### **STEP 3**: Gather Information Required for Access to Images and GG Configuration
 
-### **STEP 3**: Login to Developer Cloud Service
+- Select the Database Cloud Service:
 
-Oracle Developer Cloud Service provides a complete development platform that streamlines team development processes and automates software delivery. The integrated platform includes an issue tracking system, agile development dashboards, code versioning and review platform, continuous integration and delivery automation, as well as team collaboration features such as wikis and live activity stream. With a rich web based dashboard and integration with popular development tools, Oracle Developer Cloud Service helps deliver better applications faster.
+	![](images/100/i12.png)
 
-- From the Cloud UI dashboard click on the **Developer** service. In our example, the Developer Cloud Service is named **developer99019**.
+- Open the Service Console:
 
-    ![](images/100/Picture100-6.png)
+	![](images/100/i13.png)
 
-- The Service Details page gives you a quick glance of the service status overview.
+- Select the `DBCS12c` Service.  Note that each user will have their own set of services and will be assigned a number (eg DBCS12c-01, the screen shots do not show this numbered assignment):  Use the number assigned to you.
 
-    ![](images/100/Picture100-7.png)
+	![](images/100/i14.png)
 
-- Click **Open Service Console** for the Oracle Developer Cloud Service. The Service Console will then list all projects for which you are currently a member.
+- Note the DBCS Public IP (***DB1*** - **write this down**).  Also note the Service Name (DBCS12c - you will need this when creating GGCS)
 
-    ![](images/100/Picture100-7.5.png)
+	![](images/100/i15.png)
 
-### **STEP 4**: Create Developer Cloud Service Project
+- Exit back out the the Cloud Dashboard:
 
-- Click **New Project** to start the project create wizard.
+	![](images/100/i16.png)
 
-    ![](images/100/Picture100-8.png)
+- Select the Compute Image:
 
-- On Details screen enter the following data and click on **Next**.
+	![](images/100/i17.png)
 
-    **Name:** `Twitter Feed Marketing Project`
+- Then open Service Console:
 
-    **Description:** `Project to gather and analyze twitter data`
+	![](images/100/i18.png)
 
-    **Note:** A Private project will only be seen by you. A Shared project will be seen by all Developer Cloud users. In either case, users need to be added to a project in order to interact with the project.
+- Identity Domains will have multiple sites. Please ask you instructor which site the Client Image is running on. If needed, click the Site drop down to access the Site Selector, and choose the correct site.
 
-    ![](images/100/Picture100-9.png)
+	![](images/100/i19.png)
 
-- Leave default template set to **Empty Project** and click **Next**
+- Note the public IP of the GG_On-premise image (**write this down**):
 
-    ![](images/100/Picture100-10.png)
+	![](images/100/i20.png)
 
-- Select your **Wiki Markup** preference to **MARKDOWN** and click **Finish**.
+### **STEP 4**: Create GoldenGate Cloud Service Instance
 
-    ![](images/100/Picture100-11.png)
+- Return to Dashboard (upper right), select GGCS, then Open Service Console, and then Create Service Instance:
 
-- The Project Creation will take about 1 minute.
+	![](images/100/i21.png)
 
-    ![](images/100/Picture100-12.png)
+- Enter Service Name `ggcsservice-ggcs-1` as the name, take the defaults and then hit Next:
 
-- You now have a new project, in which you can manage your software development.
+	![](images/100/i22.png)
 
-    ![](images/100/Picture100-13.png)
+- Enter the following details:
 
+	![](images/100/i23.png)
 
+- Hit 'Next' and then submit.  The instance create process will take several minutes.
 
-# Create Product Issues
+### **STEP 5**: Review Compute Image (On-premise OGG)
 
-## Create Issues for Twitter Feed Microservice
+For the GoldenGate Cloud Service Workshop we will be using a compute Image that will represent your on-premises environment. In this image we have installed a 11g database that we will be migrating to our Oracle Public Cloud Database instance. The image also contains SQL Developer 4.1 that will be used to connect to both your local and cloud database.
 
-### **STEP 5**: Create Issue for the initial GIT Repository Creation
+- Start your vnc viewer and enter the IP address of the Compute image noted above.
+	- **VNC Password:** `provided by your instructor`
 
-In this step you are still assuming the identity of the Project Manager, ***Lisa Jones***.
+	![](images/100/i24.png)
 
-![](images/lisa.png)
+- This is the 'On-premise' environment desktop.  All the lab material is in the `GGCS_Workshop_Material` folder on the desktop - double click on this folder and review the contents.  Note:
+	- This folder has scripts to start the SSH proxy and to start and stop the GoldenGate Cloud Control Agent.
+	- The keys folder:  You will use a private key to access the GGCS and DBCS instances.  You will need the IP addresses of those environments after GGCS is up.
+	- The SQL Files folder:  These scripts are used in SQLDeveloper to generate transactional data, do row counts, and re-set your data if necessary for the DW.
 
-- Click **Issues** on left hand navigation panel to display the Track Issues page.
+	![](images/100/i25.png)
 
-    ![](images/100/Picture100-16.png)
+- Double click on the SQL Developer desktop icon.  You will use SQL Developer to review data and execute SQL Scripts.  Three connections have been set up for you (highlighted).  These will need to be updated with the domain name and IP addresses of your assigned instances (On-premise 11g Database, DBCS 12c Database, and your GGCS instance).  **This will be done in Lab 200**.
 
-- Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
+	![](images/100/i26.png)
 
-    **Note:** Throughout the lab you will assign your own account as the “physical” owner of the issue, but for the sake of this workshop, **Bala Gupta** will be the “logical” owner of the following issues.
+- Select the File Browser off the desktop and navigate to /u01/app/oracle/product.  This location is where GoldenGate On-premise product is installed and configured.  We will review this in the next lab.  Note that Oracle Database 11g which is used in the following labs is installed in /opt/oracle.
 
-    ![](images/bala.png)
+	![](images/100/i27.png)
 
-    **Summary:**
-    `Create Initial GIT Repository for Twitter Feed Service`
+- There are many directories under the GoldenGate product homes.  One particularly important directory is dirprm.  The dirprm directory will contain all of the parameter (OGG process configuration) and obey (ggsci scripts) that will be used for the workshop. There is also a cleanup directory that contain obey files to clean up the processes if a lab needs to be restarted.
 
-    **Description:**
-    `Create Initial GIT Repository for Twitter Feed Service`
+	![](images/100/i27.1.png)
 
-    **Type:** `Task`
+### **STEP 6**: Review GGCS Instance
 
-    **Owner:** `Select your account provided in the dropdown [Logical Owner: Bala Gupta]`
+- By now GolderGate Cloud Service (GGCS) should be available.  Go to the console to get the IP address.  Select GGCS.  Note that at any time you can collapse the region above the services.  Then open Service Console.
 
-    **Story Points:** `1`
+	![](images/100/i28.png)
 
-    Note: Story point is an arbitrary measure used by Scrum teams. They are used to measure the effort required to implement a story. This [Site](https://agilefaq.wordpress.com/2007/11/13/what-is-a-story-point/) will provide more information. 
+- Open `ggcsservice-ggcs-1`
 
-    ![](images/100/Picture100-17.png)
+	![](images/100/i29.png)
 
-### **STEP 6**: Create Issue for Update Twitter Credentials
+- Note the public IP **write this down**.  You will need this later for various configuration steps.
 
-- Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
+	![](images/100/i30.png)
 
-    ![](images/bala.png)
+- Go back to the OGG Compute image, open the workshop folder on the desktop, and navigate to the `sql_scripts` folder.  Update the `cr_dblink.sql` file and set the DBCS IP and Identity Domain.  Note we will execute this script in Lab 200.
 
-    **Summary:** `Create Filter on Twitter Feed`
+	![](images/100/i30.1.1.png)
 
-    **Description:** `Create Filter to allow user to supply text to reduce the amount of data returned by the Twitter feed`
+- Updated the IP address and identity domain of DBCS:
 
-    **Type:** `Feature`
+	![](images/100/i30.1.1.1.png)
 
-    **Owner:** `Select your account provided in the dropdown [Logical Owner: Bala Gupta]`
+- Next open navigate to the ggcs_config folder, and update the tnsnames.ora file.  
 
-    **Story Points:** `2`
+	![](images/100/i30.1.2.png)
 
-    ![](images/100/Picture100-18.png)
+- This needs to be updated with your Identity Domain information.
 
-### **STEP 7**: Create Issue for initial GIT Repository creation
+	![](images/100/i30.1.3.png)
 
-- Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**. Note: The next two issues will logically be owned by John Dunbar.
+- Next, execute a script to copy the GGCS configuration files.  Note these files exist on GGCS but need to modified for our use cases.  To simplify configuration we have done most of the setup and will transfer the configuration from our compute image to GGCS.  Now go to the `GGCS_Workshop_Material/ggcs_config` folder on the desktop and open a terminal window:
 
-    ![](images/john.png)
-
-    **Summary:** `Create Initial GIT Repository for Twitter Feed Marketing UI`
-
-    **Description:** `Create Initial GIT Repository for Twitter Feed Marketing UI`
-
-    **Type:** `Task`
-
-    **Owner:** `Select your account provided in the dropdown [Logical Owner: John Dunbar]`
-
-    **Story Points:** `1`
-
-    ![](images/100/Picture100-19.png)
-
-### **STEP 8**: Create Issue for Displaying Twitter Feed
-
-- Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
-
-    ![](images/john.png)
-
-    **Summary:** `Display Twitter Feed in Table Format`
-
-    **Description:** `Display Twitter Feed in Table Format`
-
-    **Type:** `Feature`
-
-    **Owner:** `Select account provided in the dropdown [Logical Owner: John Dunbar]`
-
-    **Story Points:** `2`
-
-    ![](images/100/Picture100-20.png)
-
-- Click the back arrow ![](images/100/Picture100-21.png) on the **left side** of the window, or click on the **Issues** menu option to view all newly created issues.
-
-    ![](images/100/Picture100-22.png)
-
-
+	![](images/100/i30.1.png)
+
+- Enter the following
+`./copy_ggcs_config.sh <your ggcs IP address>`
+
+	![](images/100/i30.2.png)
+
+- To access GGCS we will use ssh on the OGG Compute image and log into GGCS from there.  Go to the OGG Compute Desktop, open the workshop folder, and navigate to the keys directory.  Right click inside the folder to open a terminal window.
+
+	![](images/100/i31.png)
+
+- Enter the following to ssh to the GGCS instance.
+	`ssh -i ggcs_key opc@<enter your ggcs IP here>`
+
+- Enter the following commands:
+	- **switch to user oracle:** `sudo su - oracle`
+	- **display the oracle home directory:** `pwd`
+	- **switch to the GG Home directory:** `cd $GGHOME`
+	- **display the GG home directory:** `pwd` (/u01/app/oracle/gghome)
+	- **display the GG configuration directories:** `ls`
+	- **display the key GG configuration files:** `ls dirprm`
+	- **switch to the network admin directory where connectivity to dbcs12c is configured:** `cd /u02/data/oci/network/admin`
+	- **display the tnsnames.ora file:** `cat tnsnames.ora`
+	- **close the connection:** `exit` and then `exit` again
+
+- This is the output of the preceding commands:
+
+```
+bash-4.1$ ssh -i ggcs_key opc@129.156.125.56
+[opc@ggcsservice-ggcs-1-ggcs-1 ~]$ sudo su - oracle
+[oracle@ggcsservice-ggcs-1-ggcs-1 ~]$ pwd
+/u01/app/oracle/tools/home/oracle
+[oracle@ggcsservice-ggcs-1-ggcs-1 ~]$ cd $GGHOME
+[oracle@ggcsservice-ggcs-1-ggcs-1 gghome]$ pwd
+/u01/app/oracle/gghome
+[oracle@ggcsservice-ggcs-1-ggcs-1 gghome]$ ls
+bcpfmt.tpl                       extract
+bcrypt.txt                       freeBSD.txt
+BR                               ggcmd
+cachefiledump                    ggMessage.dat
+cfgtoollogs                      ggparam.dat
+checkprm                         ggsci
+chkpt_ora_create.sql             ggserr.log
+convchk                          GLOBALS
+convprm                          help.txt
+CREDENTIAL_STORE_SETUP.sh        install
+db2cntl.tpl                      inventory
+ddl_cleartrace.sql               jdk
+ddl_create.sql                   keygen
+ddl_ddl2file.sql                 label.sql
+ddl_disable.sql                  lib12
+ddl_enable.sql                   libantlr3c.so
+ddl_filter.sql                   libdb-6.1.so
+ddl_ora10.sql                    libgglog.so
+ddl_ora10upCommon.sql            libggnnzitp.so
+ddl_ora11.sql                    libggparam.so
+ddl_ora9.sql                     libggperf.so
+ddl_pin.sql                      libggrepo.so
+ddl_remove.sql                   libicudata.so.48
+ddl_session1.sql                 libicudata.so.48.1
+ddl_session.sql                  libicui18n.so.48
+ddl_setup.sql                    libicui18n.so.48.1
+ddl_status.sql                   libicuuc.so.48
+ddl_staymetadata_off.sql         libicuuc.so.48.1
+ddl_staymetadata_on.sql          libxerces-c.so.28
+ddl_tracelevel.sql               libxml2.txt
+ddl_trace_off.sql                logdump
+ddl_trace_on.sql                 marker_remove.sql
+debug509.txt                     marker_setup.sql
+defgen                           marker_status.sql
+deinstall                        mgr
+demo_more_ora_create.sql         notices.txt
+demo_more_ora_insert.sql         oggerr
+demo_ora_create.sql              OPatch
+demo_ora_insert.sql              oraInst.loc
+demo_ora_lob_create.sql          oui
+demo_ora_misc.sql                params.sql
+demo_ora_pk_befores_create.sql   prvtclkm.plb
+demo_ora_pk_befores_insert.sql   prvtlmpg.plb
+demo_ora_pk_befores_updates.sql  prvtlmpg_uninstall.sql
+diagnostics                      README
+dirbdb                           remove_seq.sql
+dirchk                           replicat
+dircrd                           retrace
+dirdat                           reverse
+dirdef                           role_setup.sql
+dirdmp                           sequence.sql
+dirjar                           server
+dirout                           sqlldr.tpl
+dirpcs                           srvm
+dirprm                           SSH_SOCK5_SETUP.sh
+dirprm_orig                      tcperrs
+dirrpt                           ucharset.h
+dirsql                           ulg.sql
+dirtmp                           UserExitExamples
+dirwlt                           usrdecs.h
+dirwww                           zlib.txt
+emsclnt
+[oracle@ggcsservice-ggcs-1-ggcs-1 gghome]$ ls dirprm
+ADD_AMER_EXTRACT.oby   cleanup              EXTDW.prm   PAMER.prm
+ADD_AMER_REPLICAT.oby  CREDENTIALSTORE.oby  jagent.prm  RAMER.prm
+ADD_DW_ALL.oby         EAMER.prm            MGR.prm     REPDW.prm
+[oracle@ggcsservice-ggcs-1-ggcs-1 gghome]$ cd /u02/data/oci/network/admin
+[oracle@ggcsservice-ggcs-1-ggcs-1 admin]$ cat tnsnames.ora
+#GGCS generated file
+target =
+      (DESCRIPTION =
+          (ADDRESS_LIST =
+              (ADDRESS = (PROTOCOL = TCP)(HOST = DBCS12c)(PORT = 1521))
+      )
+      (CONNECT_DATA =
+      (SERVICE_NAME = PDB1.gse00011358.oraclecloud.internal)
+    )
+ )
+
+source =
+      (DESCRIPTION =
+          (ADDRESS_LIST =
+              (ADDRESS = (PROTOCOL = TCP)(HOST = DBCS12c)(PORT = 1521))
+      )
+      (CONNECT_DATA =
+      (SERVICE_NAME = ORCL.gse00011358.oraclecloud.internal)
+    )
+ )
+
+dw =
+      (DESCRIPTION =
+          (ADDRESS_LIST =
+              (ADDRESS = (PROTOCOL = TCP)(HOST = DBCS12c)(PORT = 1521))
+      )
+      (CONNECT_DATA =
+      (SERVICE_NAME = PDB1.gse00011358.oraclecloud.internal)
+    )
+ )
+[oracle@ggcsservice-ggcs-1-ggcs-1 admin]$ exit
+```
+- Note that the target entry is created automatically when the GGCS is associated with a DBCS during creations. Addition database sources and targets will need to be added manually. We have added entries representing the DBCS as a source (for Labs 300-400) and as a target for Lab 400.

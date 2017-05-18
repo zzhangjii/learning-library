@@ -1,8 +1,7 @@
 {
     "workshop": {
-        "title": "Workshop Title",
-        "description": "Description of this workshop.",
-        "theme": "ttc",
+        "title": "GoldenGate Cloud Service Workshop",
+        "description": "This is the first of several labs that are part of the Oracle Public Cloud GoldenGate Cloud Service workshop. These labs will give you a basic understanding of the Oracle GoldenGate Cloud Service and many of the capabilities around real time data replication and migration.  Throughout the workshop the following use cases will be covered.  These will be covered in more detail in labs 200, 300, and 400.  In lab 500 you will review GGCS monitoring.",
         "labs": [
             {
                 "number": "0",
@@ -11,34 +10,34 @@
                 "description": "Step-by-step workshop instructions"
             },
             {
-                "number": "0",
-                "filename": "StudentGuide.md",
-                "title": "Student Guide",
-                "description": "Workshop guidance and prerequisites"
-            },
-            {
                 "number": "100",
                 "filename": "LabGuide100.md",
-                "title": "Lab 100: Agile Project Management",
-                "description": "Use Developer Cloud Service to create issues, tasks, and sprints"
+                "title": "Lab 100: Introduction to GoldenGate Cloud Service",
+                "description": "This lab will introduce you to the Oracle Public Cloud and the services used in this workshop"
             },
             {
                 "number": "200",
                 "filename": "LabGuide200.md",
-                "title": "Lab 200:  Title of Lab 200",
-                "description": "Short description of lab 200"
+                "title": "Lab 200:  On-Premise to Cloud Zero Downtime Migration",
+                "description": "This lab is designed to configure GGCS to perform a zero downtime migration with one-way replication between an Oracle 11g database and a DBCS 12c database."
             },
             {
                 "number": "300",
                 "filename": "LabGuide300.md",
-                "title": "Lab 300:  Title of Lab 300",
-                "description": "Short description of lab 300"
+                "title": "Lab 300:  Cloud to On-Premise Replication with DDL",
+                "description": "This lab is designed to configure GGCS to perform one-way DML and DDL replication between a DBCS 12c database and an on-prem Oracle 11g database."
             },
             {
                 "number": "400",
                 "filename": "LabGuide400.md",
-                "title": "Lab 400: Title of Lab 400",
-                "description": "Short description of lab 400"
+                "title": "Lab 400: Cloud to Cloud Replication with Transformations and Real Time BI Analytics",
+                "description": "This lab is designed to configure GGCS to replicate data between two DBCS 12c Pluggable Databases with data transformations, and show BICS dashboards against replicated data"
+            },
+            {
+                "number": "500",
+                "filename": "LabGuide500.md",
+                "title": "Lab 500: GoldenGate Cloud Service Monitoring",
+                "description": "This lab show you the services available to monitor GGCS processes"
             }
         ]
     }
