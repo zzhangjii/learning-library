@@ -26,7 +26,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 ### **STEP 1**: Configure GoldenGate Cloud Service (GGCS)
 
 - Open a terminal window on the OGG Compute image and ssh to GGCS:
-	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@<your ggcs IP address>`
+	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@<your ggcs IP address>` Field ***GG1***
 	- **Switch to user oracle:** `sudo su - oracle`
     - **Switch to GGHOME:** `cd $GGHOME`
 	- **Start a gg command shell:** `ggsci`
@@ -99,7 +99,8 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 ### **STEP 4**: Access BICS Dashboards and Review GGCS Replicated Data
 
 - Log into BICS with your assigned userid/password.  **NOTE this is a different userid/password that what you have been using thus far in labs 100 - 400.  You MUST first log out of your other account, and clear browser cache.**
-    - **Cloud Login:**  `<BICS userid and password>`
+    - **Cloud Identity Domain:** <IdentityDomainBI> Field ***BI1***
+    - **Cloud Login:**  `<BICS userid and password>` Field ***BI2*** and ***BI3***
 
     ![](images/400/i15.png)
 
