@@ -40,7 +40,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 - Enter the following details
 	- **Name:** `DBCS12c`
-	- **Host:** `<Enter your DBCS IP here>`
+	- **Host:** `<Enter your DBCS IP here>` Field ***DB1***
 	- **Username:** `opc`
 	- **Use Keyfile:** `/home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key`
 	- **Add a local port forward:** `check this`
@@ -54,19 +54,19 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/200/i6.png)
 
-- Update the Service Name and enter your student identity domain (eg: gse00001092).
+- Update the Service Name and enter your student identity domain field ***CS1***.
 
 	![](images/200/i6.1.png)
 
-- Down the same thing for the next (DW) connection down.  Right click on the DBCS-DW connection, select properties, and edit the Service Name.
+- Do the same thing for the next (DW) connection down.  Right click on the DBCS-DW connection, select properties, and edit the Service Name, field ***CS1***.
 
 	![](images/200/i7.png)
 
-- Next re-create the database link (from 11g Database to DBCS 12c) with your assigned IP address.  Note you updated the IP address in Lab 100, now you will execute it now that we are in SQLDeveloper.  Confirm you have updated this with the correct IP address.
+- Next re-create the database link (from 11g Database to DBCS 12c) with your assigned IP address (field ***DB1***).  Note you updated the IP address in Lab 100, now you will execute it now that we are in SQLDeveloper.  Confirm you have updated this with the correct IP address.
 
 	![](images/200/i7.1.png)
 
-- Execute the script.
+- Execute the script.  Be sure to select the EURO connection on the right.
 
 	![](images/200/i7.2.png)
 
@@ -76,18 +76,21 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/200/i8.png)
 
-- Next close the SSH region (lower left) since we don't need that anymore.  Then select (expand) the DBCS-amer connection and then expand the tables. There are no tables in the target Schema at this point.  The data table still shows the 11g EURO data.
+- To avoid confusion close the Orders tab that is showing EURO data.
 
-	![](images/200/i7.png)
+	![](images/200/i8.2.png)
 
-- Next select (expand) the DBCS-amer connection and then expand the tables.
+- Next close the SSH region (lower left) since we don't need that anymore.  
 
-	![](images/200/i8.png)
+	![](images/200/i8.1.png)
 
-- Again, review data in the orders table (target this time) by first clicking on the table, then selecting the data tab.  This data currently mirrors
+- Then select (expand) the DBCS-Amer connection and then expand the tables. There are no tables in the target Schema at this point.
 
 	![](images/200/i9.png)
 
+- Lastly select (expand) the DBCS-DW connection and then expand the tables.  These are tranformed (and empty) tables ready for populating in Lab 400.
+
+	![](images/200/i9.1.png)
 
 ### **STEP 3**: Configure OGG (On-premise/Source)
 
@@ -104,7 +107,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/200/i11.png)
 
-- Edit the IP address and enter the GGCS IP.  Save the file.
+- Edit the IP address and enter the GGCS IP (field ***GG1***).  Save the file.
 
 	![](images/200/i12.png)
 
@@ -164,7 +167,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 	- **Enter the following:** `edit param PEURO`
 	- **Use the arrows on your keyboard to navigate to the IP address**
 	- **Use the `i` character to enter insert mode and the `[ESC]` key to exit insert mode**
-	- **Enter your DBCS IP address:** see highlighted text below
+	- **Enter your GGCS IP address (field ***GG1***):** see highlighted text below
 	- **Use the `x` key to delete characters**
 	- **To save enter `:` character and then `x` character**
 
@@ -191,22 +194,22 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ### **STEP 4**: Migrate Baseline Data with Datapump
 
-- Export the 11g EURO schema data:
+- Export the 11g EURO schema data.  See field ***OG1*** from your handout for the password:
 	- **Enter the following in a terminal window:** `expdp euro/<password> schemas=euro dumpfile=export.dmp reuse_dumpfiles=yes`
 
 	![](images/200/i25.png)
 
 - Copy the export.dmp file to DBCS 12c:
 	- **Enter the following in a terminal window:** `scp -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key /home/oracle/export.dmp opc@<your DBCS IP address>:/tmp`
+	- See field ***DB1*** for your DBCS IP.
 
  	![](images/200/i26.png)
 	
 - SSH to the DBCS 12c instance:
-	- **Enter the following in a terminal window and ssh to DBCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@<your ggcs IP address>`
+	- **Enter the following in a terminal window and ssh to DBCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key oracle@<your ggcs IP address>` field ***GG1*** for IP address
 	- **Change permissions of export.dmp:** `chmod a+r /tmp/export.dmp`
-	- **Change user to oracle:** `sudo su - oracle`
 	- **Change to the /tmp directory:** `cd /tmp`
-	- **Import the data:** `impdp amer/<password>@pdb1 SCHEMAS=euro REMAP_SCHEMA=euro:amer DIRECTORY=tmp DUMPFILE=export.dmp`
+	- **Import the data:** `impdp amer/<password>@pdb1 SCHEMAS=euro REMAP_SCHEMA=euro:amer DIRECTORY=tmp DUMPFILE=export.dmp` field ***OG1*** for password
 
 	![](images/200/i27.png)
 
@@ -249,7 +252,7 @@ Note this is:
 - USes GGCS (not on-premise OGG) with Integrated Replicat
 
 - Open a terminal window on the OGG Compute image and ssh to GGCS (substituting your own GGCS IP):
-	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@<your ggcs IP address>`
+	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@<your ggcs IP address>` field ***GG1*** for your ip address
 	- **Switch to user oracle:** `sudo su - oracle`
 	- **Start a gg command shell:** `ggsci`
 
