@@ -222,7 +222,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 	![](images/100/i30.1.png)
 
 - Enter the following
-`./copy_ggcs_config.sh <your ggcs IP address ***GG1***> eg: ./copy_ggcs_config.sh 141.144.83.2`
+`./copy_ggcs_config.sh <your ggcs IP address GG1>` Field ***GG1*** on your handout `eg: ./copy_ggcs_config.sh 141.144.83.2`
 - eg: 
 
 	![](images/100/i30.2.png)
