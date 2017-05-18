@@ -2,6 +2,7 @@
     "workshop": {
         "title": "Workshop Title",
         "description": "Description of this workshop.",
+        "theme": "ttc",
         "labs": [
             {
                 "number": "0",
