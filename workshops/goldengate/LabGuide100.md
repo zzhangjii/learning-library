@@ -45,7 +45,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/100/i5.png)
 
-- **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. Review your handout (***CS1***, ***CS2***, ***CS3***, and ***CS4***) for your assigned Cloud Service Login information.
+- **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. Review your handout (fields ***CS1***, ***CS2***, ***CS3***, and ***CS4***) for your assigned Cloud Service Login information.
 
 	![](images/100/i6.png)
 
@@ -107,7 +107,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/100/i14.png)
 
-- Note the DBCS Public IP (***DB1*** - **write this down in field ***DB1*** in your handout**).  Also note the Service Name (DBCS12c - you will need this when creating GGCS)
+- Note the DBCS Public IP.  This is field ***DB1*** in your handout.  We have already collected this information for you.  Also note the Service Name (DBCS12c - you will need this when creating GGCS)
 
 	![](images/100/i15.png)
 
@@ -127,13 +127,13 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/100/i19.png)
 
-- Note the public IP of the GG_On-premise image (**write this down in field ***OG1*** on your handout**):
+- Note the public IP of the GG_On-premise image.  This is field ***OG1*** on your handout, which we have collected for you.
 
 	![](images/100/i20.png)
 
 ### **STEP 4**: Review Compute Image (On-premise OGG)
 
-For the GoldenGate Cloud Service Workshop we will be using a compute Image that will represent your on-premises environment. In this image we have installed a 11g database that we will be migrating to our Oracle Public Cloud Database instance. The image also contains SQL Developer 4.1 that will be used to connect to both your local and cloud database.
+For the GoldenGate Cloud Service Workshop we will be using a compute Image that will represent your on-premises environment. In this image we have installed a 11g database that we will be migrating to our Oracle Public Cloud Database instance. The image also contains SQL Developer 4.1 that will be used to connect to both your local and cloud database.  If you do not have a VNC Viewer you can download and install from the [VNC Viewer Website](https://www.realvnc.com/download/viewer/).
 
 - Start your vnc viewer and enter the IP address of the Compute image noted above.
 	- **VNC Password:** ***OG2*** in your handout
@@ -180,7 +180,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/100/i22.png)
 
-- Enter the following details:
+- Enter the following details.  Passwords are in your handout and are noted in the screen shot.
 
 	![](images/100/i23.png)
 
@@ -207,15 +207,16 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/100/i30.1.1.png)
 
-- Updated the IP address and identity domain of DBCS field ***DB1***:
+- Update the IP address (field ***DB1***) and identity domain (field ***CS1***) of your DBCS instance.  Select `Save` when you are finished.
 
 	![](images/100/i30.1.1.1.png)
 
-- Next open navigate to the ggcs_config folder, and update the tnsnames.ora file.  
+- Next open navigate to the ggcs_config folder, and update the tnsnames.ora file. 
 
 	![](images/100/i30.1.2.png)
 
-- This needs to be updated with your Identity Domain information field ***CS1***.
+- This needs to be updated with your Identity Domain information field ***CS1***.  If this is a customer account that is hosting multiple users with multiple DBCS instances (eg: DBCS12c-01...DBCS12c-02...03..) then update your DBCS instance number with that which is assigned to you.  Otherwise leave this (default is 01).
+- Select `Save` when you are finished.  
 
 	![](images/100/i30.1.3.png)
 
@@ -224,7 +225,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 	![](images/100/i30.1.png)
 
 - Enter the following
-`./copy_ggcs_config.sh <your ggcs IP address GG1>` Field ***GG1*** on your handout `eg: ./copy_ggcs_config.sh 141.144.83.2`
+`./copy_ggcs_config.sh <your ggcs IP address GG1>` field ***GG1*** on your handout `eg: ./copy_ggcs_config.sh 141.144.83.2`
 
 	![](images/100/i30.2.png)
 
@@ -233,7 +234,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 	![](images/100/i31.png)
 
 - Enter the following to ssh to the GGCS instance.
-	`ssh -i ggcs_key opc@<enter your ggcs IP here>` Field ***GG1***
+	`ssh -i ggcs_key opc@<enter your ggcs IP here>` field ***GG1***
 
 - Enter the following commands:
 	- **switch to user oracle:** `sudo su - oracle`
