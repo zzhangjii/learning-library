@@ -6,7 +6,7 @@ Update May 2, 2017
 
 This is the fifth of five GoldenGate Cloud Service labs, and will review GGCS monitoring.
 
-To log issues and view the lab guide source, go to the [github oracle](https://github.com/pcdavies/GoldenGateCloudService/tree/master/workshops/goldengate/issues) repository.
+To log issues and view the lab guide source, go to the [github oracle](https://github.com/pcdavies/GoldenGateCloudService/issues) repository.
 
 ## Objectives
 

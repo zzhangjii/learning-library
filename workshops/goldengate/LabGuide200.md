@@ -10,7 +10,7 @@ This is the second of five GoldenGate Cloud Service labs, and covers the first u
 
 This workshop will walk you through a zero downtime use case that shows how you can use Oracle Datapump and Oracle GoldenGate to maintain an on-premise database that remains available while data is migrated and replicated to a remote instance with transactional consistency.
 
-To log issues and view the lab guide source, go to the [github oracle](https://github.com/pcdavies/GoldenGateCloudService/tree/master/workshops/goldengate/issues) repository.
+To log issues and view the lab guide source, go to the [github oracle](https://github.com/pcdavies/GoldenGateCloudService/issues) repository.
 
 ## Objectives
 
@@ -38,8 +38,8 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/200/i4.png)
 
-- Enter the following details
-	- **Name:** `DBCS12c`
+- Enter the following details.
+	- **Name:** `DBCS12c-01`
 	- **Host:** `<Enter your DBCS IP here>` Field ***DB1***
 	- **Username:** `opc`
 	- **Use Keyfile:** `/home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key`
@@ -54,7 +54,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/200/i6.png)
 
-- Update the Service Name and enter your student identity domain field ***CS1***.
+- Update the Service Name and enter your student identity domain with field ***CS1***.
 
 	![](images/200/i6.1.png)
 
@@ -62,11 +62,11 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/200/i7.png)
 
-- Next re-create the database link (from 11g Database to DBCS 12c) with your assigned IP address (field ***DB1***).  Note you updated the IP address in Lab 100, now you will execute it now that we are in SQLDeveloper.  Confirm you have updated this with the correct IP address.
+- Next re-create the database link (from 11g Database to DBCS 12c) with your assigned IP address (field ***DB1***). 
 
 	![](images/200/i7.1.png)
 
-- Execute the script.  Be sure to select the EURO connection on the right.
+- Upated the DBCS IP (field ***DB1***) and Identity Domain (field ***CS1***) and then execute the script.  Be sure to select the EURO connection on the right.
 
 	![](images/200/i7.2.png)
 
@@ -113,9 +113,9 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 - Close the window (do not save), and double click on this file and select 'Run in Terminal'.  **LEAVE THIS WINDOW OPEN - DO NOT CLOSE IT..YOU CAN MINIMIZE IT**.
 
-	![](images/200/i14.png)
-
 	![](images/200/i13.png)
+
+	![](images/200/i14.png)
 
 - Start a GoldenGate command session.  Open a terminal window (double click on terminal on the desktop), and enter the following:
 	- **Switch to the GG home directory:** `cd $GGHOME`
