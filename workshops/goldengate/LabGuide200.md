@@ -194,22 +194,19 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ### **STEP 4**: Migrate Baseline Data with Datapump
 
-- Export the 11g EURO schema data.  See field ***OG1*** from your handout for the password:
-	- **Enter the following in a terminal window:** `expdp euro/<password> schemas=euro dumpfile=export.dmp reuse_dumpfiles=yes`
+- Export the 11g EURO schema data.  See field ***OG2*** from your handout for the password:
+	- **Enter the following in a terminal window:** `expdp euro/<password> schemas=euro dumpfile=export.dmp reuse_dumpfiles=yes directory=oracle`
 
 	![](images/200/i25.png)
 
-- Copy the export.dmp file to DBCS 12c:
-	- **Enter the following in a terminal window:** `scp -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key /home/oracle/export.dmp opc@<your DBCS IP address>:/tmp`
-	- See field ***DB1*** for your DBCS IP.
+- Copy the export.dmp file to DBCS 12c.  Use field ***DB1*** for your password.
+	- **Enter the following in a terminal window:** `scp -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key /home/oracle/export.dmp oracle@<your DBCS IP address>:.`
 
  	![](images/200/i26.png)
 	
 - SSH to the DBCS 12c instance:
-	- **Enter the following in a terminal window and ssh to DBCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key oracle@<your ggcs IP address>` field ***GG1*** for IP address
-	- **Change permissions of export.dmp:** `chmod a+r /tmp/export.dmp`
-	- **Change to the /tmp directory:** `cd /tmp`
-	- **Import the data:** `impdp amer/<password>@pdb1 SCHEMAS=euro REMAP_SCHEMA=euro:amer DIRECTORY=tmp DUMPFILE=export.dmp` field ***OG1*** for password
+	- **Enter the following in a terminal window and ssh to DBCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key oracle@<your DBCS IP address>` field ***DB1*** for IP address
+	- **Import the data:** `impdp amer/<password>@pdb1 SCHEMAS=euro REMAP_SCHEMA=euro:amer DIRECTORY=dmpdir DUMPFILE=export.dmp` field ***DB2*** for password
 
 	![](images/200/i27.png)
 
