@@ -6,11 +6,11 @@ Update May 2, 2017
 
 This is the first of several lab that are part of the Oracle Public Cloud GoldenGate Cloud Service workshop. These labs will give you a basic understanding of the Oracle GoldenGate Cloud Service and many of the capabilities around real time data replication and migration.  Throughout the workshop the following use cases will be covered.  These will be covered in more detail in labs 200, 300, and 400.  In lab 500 you will review GGCS monitoring.
 
-- Lab 200: Zero Downtime Migration and replication of data from an on-premise 11g database to a DBCS 12c multi-tenant database:
+- Lab 200: Zero downtime migration and replication of data from an on-premise 11g database to a DBCS 12c multi-tenant database:
 
 	![](images/100/i2.png)
 
-- Lab 300: Replication of data from a DBCS 12c multi-tenant database back to an on-premise 11g datbase:
+- Lab 300: Replication of data from a DBCS 12c multi-tenant database back to an on-premise 11g database:
 
 	![](images/100/i3.png)
 
@@ -18,7 +18,7 @@ This is the first of several lab that are part of the Oracle Public Cloud Golden
 
 	![](images/100/i4.png)
 
-To log issues and view the lab guide source, go to the [github oracle](https://github.com/pcdavies/GoldenGateCloudService/tree/master/workshops/goldengate/issues) repository.
+To log issues and view the lab guide source, go to the [github oracle](https://github.com/pcdavies/GoldenGateCloudService/issues) repository.
 
 ## Objectives
 
@@ -31,7 +31,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 ## Required Artifacts
 
 - The following lab requires a [VNC Viewer](https://www.realvnc.com/download/viewer/) to connect to an Image running on Oracle's IaaS Compute Service.
-- As noted in the readme, you will be accessing several Oracle Cloud Services throughout the labs. We have prepared a ***one-page GoldenGate Cloud Services Workshop handout*** with the required information.  You will also need to ***write down some information on this handout*** as you progress through Lab 100.
+- As noted in the readme, you will be accessing several Oracle Cloud Services throughout the labs. We have prepared a ***one-page GoldenGate Cloud Services Workshop handout*** with the required information.  You will also need to ***write down the IP address of GGCS after you create it*** later in Lab 100.
 
 ## Review Cloud Services
 
@@ -45,7 +45,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/100/i5.png)
 
-- **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. Review your handout for your assigned Cloud Service Login information.
+- **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. Review your handout (***CS1***, ***CS2***, ***CS3***, and ***CS4***) for your assigned Cloud Service Login information.
 
 	![](images/100/i6.png)
 
