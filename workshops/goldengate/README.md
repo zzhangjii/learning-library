@@ -70,7 +70,6 @@ This Oracle Public Cloud GoldenGate Cloud Services workshop will give you a basi
 - Configure GGCS extract and replicat processes for data replication between DBCS 12c Pluggable Databases.
 - Process data transformations as part of the data replication process.
 - Review auditing support for before/after image (record) capture.
-- Show how real time data replication supports real time analytics and reporting.
 
 ## Lab 500: GoldenGate Cloud Service Monitoring
 

@@ -32,7 +32,7 @@
                 "number": "400",
                 "filename": "LabGuide400.md",
                 "title": "Lab 400: Cloud to Cloud Replication with Transformations and Real Time BI Analytics",
-                "description": "This lab is designed to configure GGCS to replicate data between two DBCS 12c Pluggable Databases with data transformations, and show BICS dashboards against replicated data"
+                "description": "This lab is designed to configure GGCS to replicate data between two DBCS 12c Pluggable Databases with data transformations."
             },
             {
                 "number": "500",

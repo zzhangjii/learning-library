@@ -4,11 +4,11 @@ Update May 2, 2017
 
 ## Introduction
 
-This is the fourth of five GoldenGate Cloud Service labs, and covers the third use case: Replication and transformation of data from a DBCS 12c pluggable database to a DBCS 12c reporting data warehouse with Business Intelligence analytics access.
+This is the fourth of five GoldenGate Cloud Service labs, and covers the third use case: Replication and transformation of data from a DBCS 12c pluggable database to a DBCS 12c reporting data warehouse.
 
 ![](images/100/i4.png)
 
-This workshop will walk you through replacation of data from a DBCS 12c Pluggable database to another DBCS 12c Pluggable database.  This lab will introduce data transformations as part of the replication process, and will show how you can deliver real-time analytics through Oracle Business Intelligence data visualizations and dashboards.
+This workshop will walk you through replacation of data from a DBCS 12c Pluggable database to another DBCS 12c Pluggable database.  This lab will introduce data transformations as part of the replication process.
 
 To log issues and view the lab guide source, go to the [github oracle](https://github.com/pcdavies/GoldenGateCloudService/issues) repository.
 
@@ -17,7 +17,6 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 - Configure GGCS extract and replicat processes for data replication between DBCS 12c Pluggable Databases.
 - Process data transformations as part of the data replication process.
 - Review auditing support for before/after image (record) capture.
-- Show how real time data replication supports real time analytics and reporting.
 
 ## Required Artifacts
 
@@ -103,49 +102,3 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 - Review `PRODUCTS_HISTORY` in `DW` auditing table to see that updates include the BEFORE and AFTER images of updates.
 
     ![](images/400/i14.png)
-
-### **STEP 4**: Access BICS Dashboards and Review GGCS Replicated Data
-
-- Log into BICS with your assigned userid/password.  **NOTE this is a different userid/password that what you have been using thus far in labs 100 - 400.  You MUST first log out of your other account, and clear browser cache.**
-    - **Cloud Identity Domain:** <IdentityDomainBI> Field ***BI1***
-    - **Cloud Login:**  `<BICS userid and password>` Field ***BI2*** and ***BI3***
-
-    ![](images/400/i15.png)
-
-    ![](images/400/i16.png)
-
-- Navigate to BI
-
-    ![](images/400/i17.png)
-
-- Click on the Service Instance URL:
-
-    ![](images/400/i18.png)
-
-- Click on Dashboards.
-
-    ![](images/400/i19.png)
-
-- Click on GGCS DW Dashboards
-
-    ![](images/400/i20.png)
-
-- Review Order Detail and Order Summary Dashboards.  In particular note the number of rows.  **The data in your lab may differ from the screenshot here.**  We will be generating more transactions and seeing the Dashboards update.
-
-    ![](images/400/i21.png)
-
-    ![](images/400/i22.png)
-
-- Go back to your VNC Desktop (Compute image) and open SQLDeveloper.  Open the gen_trans.sql file.
-
-    ![](images/400/i23.png)
-
-- Execute the script and specify 500 transactions/orders.  Be sure to select the AMER connection.  GoldenGate will replicate and transform this data over to DW.  Note that, again, the number of orders in your BICS environment will likely differ from the totals here.  Also, the transaction generation process creates rows across several tables and you will not necessarily see the row count rise on the Dashboard by the number of rows you specify in the gen_trans.sql file.
-
-    ![](images/400/i24.png)
-
-- Go back to your browser and the BICS Dashboard, scroll to the bottom, and select `Refresh`.  Note that the row count (and other data) reflect the new transactions that were replicated and transformed in the DW.  The refresh may take several seconds to complete.
-
-    ![](images/400/i25.png)
-
-    ![](images/400/i26.png)
