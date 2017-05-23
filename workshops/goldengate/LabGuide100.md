@@ -229,15 +229,18 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 	`ssh -i ggcs_key opc@<enter your ggcs IP here>` field ***GG1***
 
 - Enter the following commands:
-	- **switch to user oracle:** `sudo su - oracle`
-	- **display the oracle home directory:** `pwd`
-	- **switch to the GG Home directory:** `cd $GGHOME`
-	- **display the GG home directory:** `pwd` (/u01/app/oracle/gghome)
-	- **display the GG configuration directories:** `ls`
-	- **display the key GG configuration files:** `ls dirprm`
-	- **switch to the network admin directory where connectivity to dbcs12c is configured:** `cd /u02/data/oci/network/admin`
-	- **display the tnsnames.ora file:** `cat tnsnames.ora`
-	- **close the connection:** `exit` and then `exit` again
+	- **Switch to user oracle:** `sudo su - oracle`
+	- **Display the oracle home directory:** `pwd`
+	- **Switch to the GG Home directory:** `cd $GGHOME
+	- **Display the GG home directory:** `pwd` (/u01/app/oracle/gghome)
+	- **Display the GG configuration directories:** `ls`
+	- **Display the key GG configuration files:** `ls dirprm`
+	- **Log into ggsci (GoldenGate command shell):** `ggsci`
+	- **Start the GGCS manager:** `start mgr`
+	- **Exit the command shell:** `exit`
+	- **Switch to the network admin directory where connectivity to dbcs12c is configured:** `cd /u02/data/oci/network/admin`
+	- **Display the tnsnames.ora file:** `cat tnsnames.ora`
+	- **Close the connection:** `exit` and then `exit` again
 
 - This is sample output of the preceding commands:
 

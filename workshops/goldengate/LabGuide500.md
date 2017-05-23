@@ -62,7 +62,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ![](images/500/i5.png)
 
-- Open a ggsci command shell and enter the following.
+- Open a ggsci command shell and enter the following.  Note the data store may already exist, if so ignore messages that relate to this.
     - **Enter:** `cd $GGHOME`
     - **Start ggsci:** `./ggsci`
     - **Create datastore:** `create datastore`
@@ -132,7 +132,11 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ![](images/500/i14.1.png)
 
-- Navigate to instances and not GGCS is up and available.
+- Navigate to instances.  To help clarify which is the on-premise instance and which is the GGCS instance click on the name and rename it.  Provide the names GGCS and On-Prem.
+
+*** NEED SCREEN SHOT ***
+
+- Note the status of the two instances (up and available).
 
 ![](images/500/i14.2.png)
 
