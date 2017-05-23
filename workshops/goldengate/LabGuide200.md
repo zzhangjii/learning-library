@@ -99,7 +99,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 	- Our source data configuration for 11g Database (schema euro)
 	- USes OGG (not GGCS) with Classic Extract 
 
-- Open a terminal window and start a SOCKS5 Proxy Tunnel.  This will encrypt data and send it through an SSH tunnel.  First open the lab folder on the desktop.
+- Open a terminal window and start a SOCKS5 Proxy Tunnel.  This will encrypt data and send it through an SSH Tunnel.  First open the lab folder on the desktop.
 
 	![](images/200/i10.png)
 
@@ -111,13 +111,16 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/200/i12.png)
 
-- Close the window (do not save), and double click on this file and select 'Run in Terminal'.  **LEAVE THIS WINDOW OPEN - DO NOT CLOSE IT..YOU CAN MINIMIZE IT**.
+- Close the window edit window, and right click inside the folder to open a terminal window.
+
+	![](images/200/i12.1.png)
+
+- Execute the start_proxy.sh script. 
+	- **Enter the following:** `./start_proxy.sh`   **LEAVE THIS WINDOW OPEN - DO NOT CLOSE IT..YOU CAN MINIMIZE IT**.
 
 	![](images/200/i13.png)
 
-	![](images/200/i14.png)
-
-- Start a GoldenGate command session.  Open a terminal window (double click on terminal on the desktop), and enter the following:
+- Start a GoldenGate command session.  Open a new terminal window (double click on terminal on the desktop), and enter the following:
 	- **Switch to the GG home directory:** `cd $GGHOME`
 	- **Start a gg command session:** `./ggsci`
 
@@ -194,7 +197,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ### **STEP 4**: Migrate Baseline Data with Datapump
 
-- Export the 11g EURO schema data.  See field ***OG2*** from your handout for the password:
+- Export the 11g EURO schema data.  See field ***OG3*** from your handout for the password:
 	- **Enter the following in a terminal window:** `expdp euro/<password> schemas=euro dumpfile=export.dmp reuse_dumpfiles=yes directory=oracle`
 
 	![](images/200/i25.png)
