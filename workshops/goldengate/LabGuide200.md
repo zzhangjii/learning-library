@@ -30,25 +30,23 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/200/i2.png)
 
-- Go to the top view menu and select ssh.  We need to create an SSH tunnel to tunnel through ssh port 22, to access 1521 in DBCS.
+- Go to the top view menu and select SSH.  We need to update the IP address of the SSH tunnel that we use to connect to DBCS.  This tunnel encrypts database traffic and passes it through port 22.  Here we map local port 1521 through 22 to remote port 1521.
 
 	![](images/200/i3.png)
 
-- In the lower left region create new SSH Host.
+- In the lower left region right click on the DBCSWS tunnel and update the IP address (fild ***DB1***).  Note that in a new environment you would need to create a new tunnel yourself.
 
 	![](images/200/i4.png)
 
-- Enter the following details.
-	- **Name:** `DBCS12c-01`
-	- **Host:** `<Enter your DBCS IP here>` Field ***DB1***
-	- **Username:** `opc`
-	- **Use Keyfile:** `/home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key`
-	- **Add a local port forward:** `check this`
-	- **Name:** `database`
-	- **Host:** `localhost`
-	- **Port:** `1521`
+- Update the IP address.
 	
 	![](images/200/i5.png)
+
+- Then right click on the tunnel and select test.
+	
+	![](images/200/i5.1.png)
+
+	![](images/200/i5.2.png)
 
 - Next right click on the top connection and select Properties.  We need to set that to your assigned DBCS instance.  Set the Service Name.
 
