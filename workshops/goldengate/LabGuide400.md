@@ -92,6 +92,14 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ### **STEP 3**: Review Audit Support
 
+- We need to generate some transactions for the audit proess.  Open gentrans.sql.
+
+    ![](images/400/i12.png)
+
+- Execute with the AMER connection.
+
+    ![](images/400/i13.png)
+
 - Review `PRODUCTS_HISTORY` in `DW` auditing table to see that updates include the BEFORE and AFTER images of updates.
 
     ![](images/400/i14.png)

@@ -58,19 +58,18 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/300/i5.png)
 
-- Edit pump parameters and update the target IP address.  Also note/read other highlighted parameters.  **Note the use of linux 'vi' editor to update, which requires specific keys to navigate:**
+- Edit pump parameters and update the target IP address (field ***OG1***).  Also note/read other highlighted parameters.  **Note the use of linux 'vi' editor to update, which requires specific keys to navigate:**
 	- **Enter the following:** `edit params dirprm/PAMER.prm`
 	- **Use the arrow keys on your keyboard to navigate**
-	- **To set insert mode:** `i to insert (above keys no longer navigate), [ESC] to get out of insert mode`
+	- **To set insert mode:** `i to insert IP address (above keys no longer navigate), [ESC] to get out of insert mode`
 	- **To delete characters:** `x`
 	- **To save and exit:** `first :, then x`
 
 	![](images/300/i6.png)
 
-- Start new extract process and confirm process are running.  Stop RAMER (from last Lab).
+- Start new extract process and confirm process are running. 
 	- **Enter the following:** `start *`  This starts all processes
 	- **Enter the following:** `info all` note you may need to wait a few seconds
-	- **Stop Replicat:** `stop RAMER`
 	- **Confirm status:** `info all`
 	- **! will repeat last command**
 
@@ -171,6 +170,6 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 	![](images/300/i25.png)
 
 - Show DDL report	
-	- **Enter the following:** `view report reuro`.  Scroll up and down to view the entire report.
+	- **Enter the following:** `view report REURO001`.  Scroll up and down to view the entire report.
 
 	![](images/300/i26.png)
