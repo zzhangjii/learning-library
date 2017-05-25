@@ -1,13 +1,13 @@
 
 ![](images/100/PictureLab100.png) 
 
-Update: March 1, 2017
+Update: May 23, 2017
 
 # Introduction
 
 This is the first of several labs that are part of the **Oracle Public Cloud DevOps Cloud Native Microservices workshop.** This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
 
-You will take on 3 Personas during the workshop. The **Project Manager Persona** will create the projects, add tasks and features to be worked on, and assign tasks to developers.  The Project Manager will then start the initial sprint. The **Database Developer persona (Roland Dubois)** will provision a new test/development MySQL database and modify it to support the twitter feed.  The **Java Developer persona (Bala Gupta)** will develop a new twitter feed service that will create REST services to access data in the twitter feed and a MySql database.  The **JavaScript Developer persona (John Dunbar)** will develop a new Twitter Feed Marketing UI that will display the Alphaoffice products with links to tweets related to those products for analysis.  During the workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service.  You will also see how Developer Cloud Service works with open source solutions such as Maven and Flyway (and other open source solutions) to provide a complete development environment.
+You will take on 3 Personas during the workshop. The **Project Manager Persona** will create the projects, add tasks and features to be worked on, and assign tasks to developers.  The Project Manager will then start the initial sprint. The **Database Developer persona (Roland Dubois)** will provision a new test/development MySQL database and modify it to support the twitter feed.  The **Java Developer persona (Bala Gupta)** will develop a new twitter feed service that will create REST services to access data in the twitter feed and a MySql database.  The **JavaScript Developer persona (John Dunbar)** will develop a new Alphaoffice Marketing UI that will display the Alphaoffice products with links to tweets related to those products for analysis.  During the workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service.  You will also see how Developer Cloud Service works with open source solutions such as Maven and Flyway (and other open source solutions) to provide a complete development environment.
 
 Note that while we have four personas in this lab we will only by logging in with the userid given to you by the instructor for all four labs, but will assume the role of different users in the different labs.  Normally developers would log in with their own userids.
 
@@ -19,14 +19,14 @@ Note that while we have four personas in this lab we will only by logging in wit
 - Create Product Issues
     - Create Issues for MySQL Database Microservice
     - Create Issues for REST Service Microservices
-    - Create Issues for Twitter Feed Marketing UI
+    - Create Issues for Alphaoffice Marketing UI
 - Create Agile Board and initial Sprint
 - Add Issues to Sprint
 
 ## Required Artifacts
 - The following lab requires an Oracle Public Cloud account that will be supplied by your instructor.
 
-# Create Twitter Feed Marketing Project
+# Create Alphaoffice Marketing Project
 
 ## Create Developer Cloud Service Project
 
@@ -83,7 +83,7 @@ Oracle Developer Cloud Service provides a complete development platform that str
 - Click **New Project** to start the project create wizard.
 - On Details screen enter the following data and then click on **Next**.
 
-    **Name:** `Twitter Feed Marketing Project`
+    **Name:** `Alphaoffice Marketing Project`
 
     **Description:** `Project to access twitter information for Alphaoffice products`
 
@@ -91,7 +91,7 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
     **Click Next**
 
-    ![](images/100/Picture100-9.png)
+    ![](images/100/1.PNG)
 
 - Leave default template set to **Empty Project** and click **Next**
 
@@ -150,6 +150,8 @@ In this step you are still connected in the logical role of the Project Manager,
     **Type:** `Task`
   
     **Owner:** `Roland Dubois (or you, if another user is not available)`
+
+    **CC:** `Cloud Admin (If you are using that account)`
  
     **Story Points:** `1`
 
@@ -206,14 +208,14 @@ In this step you are still connected in the logical role of the Project Manager,
 
     **Click**  `"Create Issue"`
 
-## Create Issues for Twitter Feed Marketing UI
+## Create Issues for Alphaoffice Marketing UI
 
-### **STEP 9**: Create Issue for initial Twitter Feed Marketing UI GIT Repository
+### **STEP 9**: Create Issue for initial Alphaoffice Marketing UI GIT Repository
 - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
 
-    **Summary:** `Create Initial GIT Repository for Marketing UI`
+    **Summary:** `Create Initial GIT Repository for Alphaoffice Marketing UI`
 
-    **Description:** `Create Initial GIT Repository for Marketing UI`
+    **Description:** `Create Initial GIT Repository for Alphaoffice Marketing UI`
 
     **Type:** `Task`
 
@@ -223,12 +225,12 @@ In this step you are still connected in the logical role of the Project Manager,
 
     **Click**  `"Create Issue"`
 
-### **STEP 10**: Create Issue for Twitter Feed Marketing UI Development
+### **STEP 10**: Create Issue for Alphaoffice Marketing UI Development
 - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
 
-    **Summary:** `Create Twitter Feed Marketing UI`
+    **Summary:** `Create Alphaoffice Marketing UI`
 
-    **Description:** `Create Twitter Feed Marketing UI`
+    **Description:** `Create Alphaoffice Marketing UI`
 
     **Type:** `Feature`
 
@@ -278,9 +280,9 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 
     **Name:** `Sprint 1 - Initial Development`
 
-    **Story Points:** `6`
+    **Story Points:** `9`
 
-    ![](images/100/Picture100-25.png)
+    ![](images/100/2.PNG)
 
 ### **STEP 13**:	Add Backlog Issues to Sprint
 
@@ -288,13 +290,15 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 
     ![](images/100/Picture100-26.png)
 
-    ![](images/100/Picture100-27.png)
+    ![](images/100/3.PNG)
 
 ## Customize Agile Board
 
 ### **STEP 14**: Customize Board
 
 In the following step you will customize an Agile Board, and add a new Progress State. If you desire more information about States and Conditions, [this link will provide a tutorial:](http://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/developer/AgileDevelopment/AgileDevelopment.html) 
+
+- Click on the **Agile** tab on the left of the page. 
 
 - Now we will show you how you can customize your board. In the right hand side click **Board -> Configure**
 
@@ -310,23 +314,23 @@ In the following step you will customize an Agile Board, and add a new Progress 
 
     ![](images/100/Picture100-30.png)
 
-- Highlight all the **:RESOLVED**: unassigned conditions, and click ![](images/100/PictureLess.png) to move them over to the Conditions column.
+- Highlight all the **RESOLVED** unassigned conditions, and click ![](images/100/PictureLess.png) to move them over to the Conditions column.
 
     ![](images/100/Picture100-31.png)
 
 - With **Verify Code** highlighted, click ![](images/100/PictureUpArrow.png) to move **Verify Code** above the Completed Process State.
 
-    ![](images/100/Picture100-32.png)
+    ![](images/100/4.png)
 
-- Click **Save** to persist change.
+- Click **Save** in the upper right to persist change.
 
     ![](images/100/Picture100-33.png)
 
 ### **STEP 15**: Start Sprint
 
-- Click **Start Sprint.** Leave the defaults and click **Start**
+- Click **Start Sprint.** button and leave the defaults and click **Start**
 
-    ![](images/100/Picture100-34.png)
+    ![](images/100/5.PNG)
 
 - Now click on **Active Sprints** to view the Sprint Dashboard
 
