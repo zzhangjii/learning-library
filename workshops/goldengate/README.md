@@ -14,7 +14,7 @@
 
     ![](images/WorkshopMenu.png)  
 
-- You will be accessing several Oracle Cloud Services throughout the labs.  Most of the services have been set up in advance for you, but you will need to configure these services and request new ones.  To simplify and clarify the services and their required credentials we have prepared a ***one-page GoldenGate Cloud Services Workshop handout*** with the required information.  You will also need to ***write down some information on this handout*** as you progress through the labs.  The handout will be provided prior to starting your labs.  The different fields in the hands have been coded (eg CS1, CS2) to make it easy to locate the required field referenced in the lab guides.
+- You will be accessing several Oracle Cloud Services throughout the labs.  Most of the services have been set up in advance for you, but you will need to configure these services and request new ones.  To simplify and clarify the services and their required credentials we have prepared a ***one-page GoldenGate Cloud Services Workshop handout*** with the required information.  You will also need to ***write down some information on this handout*** as you progress through the labs.  The handout will be provided prior to starting your labs.  The different fields in the handout have been coded (eg CS1, CS2) to make it easy to locate the required field referenced in the lab guides.
 
 - To log issues and view the lab guide source, go to the [github oracle](https://github.com/pcdavies/GoldenGateCloudService/tree/master/workshops/goldengate) repository.
 
