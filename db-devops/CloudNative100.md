@@ -91,7 +91,7 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
     **Click Next**
 
-    ![](images/100/1.PNG)
+    ![](images/100/1.png)
 
 - Leave default template set to **Empty Project** and click **Next**
 
@@ -282,7 +282,7 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 
     **Story Points:** `9`
 
-    ![](images/100/2.PNG)
+    ![](images/100/2.png)
 
 ### **STEP 13**:	Add Backlog Issues to Sprint
 
@@ -290,7 +290,7 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 
     ![](images/100/Picture100-26.png)
 
-    ![](images/100/3.PNG)
+    ![](images/100/3.png)
 
 ## Customize Agile Board
 
@@ -330,7 +330,7 @@ In the following step you will customize an Agile Board, and add a new Progress 
 
 - Click **Start Sprint.** button and leave the defaults and click **Start**
 
-    ![](images/100/5.PNG)
+    ![](images/100/5.png)
 
 - Now click on **Active Sprints** to view the Sprint Dashboard
 

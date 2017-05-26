@@ -348,7 +348,7 @@ We now have an empty database.  We need to populate it with baseline data.  We w
 
 - This is how the Build Step should look:
 
-    ![](images/200/6.PNG)
+    ![](images/200/6.png)
 
 - Note this actually runs Maven/Flyway twice - once to create the test database AlphaofficeDB, and again to create/simulate a local development database AlphaofficeDB_Dev.
 
