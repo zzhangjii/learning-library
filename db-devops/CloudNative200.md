@@ -219,7 +219,6 @@ We will now create a MySQL Database using the Cloud Console.  But we will need t
 - On the next screen enter the following parameters and click **Next**
     - **Compute Shape:**  `OC3` (default)
     - **SSH Public Key:**  `labkey.pub` (This is the public key you generated above.  Click the **Edit** button then **Choose File** and navigate to where is was created. **/u01/OPCWorkshop/keys** and select **labkey.pub** )
-
     - **Usable Database Storage (GB):**  `25` (default)
     - **Administration Username:**  `root` (default)
     - **Password:**  `Alpha2014_`
