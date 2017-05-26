@@ -226,7 +226,6 @@ We will now create a MySQL Database using the Cloud Console.  But we will need t
     - **Server Character Set:** `utf8mb3 - UTF-8 Unicode` (default)
     - **Backkup Destination:**  `None`
     - **Configure MySQL Enterprise Monitor:**  `No` (default)
-
     - **Backup Destination:** `None`
 
     ![](images/200/31.PNG)
