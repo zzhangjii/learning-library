@@ -182,25 +182,25 @@ We will now create a MySQL Database using the Cloud Console.  But we will need t
 
 -  Log into the VNC client with the credentials supplied to
 
-    ![](images/200/23.png)
+    ![](images/200/23.PNG)
 
 - Open a **Terminal** window.  Click on **Applications** then select **Terminal**.
 
-    ![](images/200/24.png)
+    ![](images/200/24.PNG)
 
 - Create a **keys** directory, change its permissions, and cd into it.
 
-    ![](images/200/25.png)
+    ![](images/200/25.PNG)
 
 - Generate a public and private key using the "`ssh-keygen -b 2048 -t rsa`" command.  Save the key to a file called **labkey**.  We don't want to generate a passphrase so just hit **Enter** when prompted to supply one.  When you are done, you will have 2 files, **labkey** (private key) and **labkey.pub** (public key).
 
-    ![](images/200/26.png)
+    ![](images/200/26.PNG)
 
 - Now that we have our keys, open Chrome and log into the Cloud Console by navigating to `http://cloud.oracle.com` and supplying the proper credentials.  Select the **MySQL Cloud Service**, and then press the **Open Service Console** button on the right.
 
     ![](images/200/image031.1.1.png)
 
-    ![](images/200/27.png)
+    ![](images/200/27.PNG)
 
 - Click the **Create Service** button.
 
@@ -211,7 +211,7 @@ We will now create a MySQL Database using the Cloud Console.  But we will need t
     - **Service Description:**  `Test MYSQL DB for Microservices DB Workshop`
     - **Metering Frequency:**  `Hourly`
 
-    ![](images/200/28.png)
+    ![](images/200/28.PNG)
 
 - On the next screen enter the following parameters and click **Next**
     - **Compute Shape:**  `OC3` (default)
@@ -227,11 +227,11 @@ We will now create a MySQL Database using the Cloud Console.  But we will need t
 
     - **Backup Destination:** `None`
 
-    ![](images/200/31.png)
+    ![](images/200/31.PNG)
 
-    ![](images/200/29.png)
+    ![](images/200/29.PNG)
 
-    ![](images/200/30.png)
+    ![](images/200/30.PNG)
 
 - Confirm your choices and click **Create**.  Note the create process will take 10 - 20 minutes.
 
@@ -348,7 +348,7 @@ We now have an empty database.  We need to populate it with baseline data.  We w
 
 - This is how the Build Step should look:
 
-    ![](images/200/6.png)
+    ![](images/200/6.PNG)
 
 - Note this actually runs Maven/Flyway twice - once to create the test database AlphaofficeDB, and again to create/simulate a local development database AlphaofficeDB_Dev.
 
@@ -358,7 +358,7 @@ We now have an empty database.  We need to populate it with baseline data.  We w
 
 - Fill out the parameters (remember to change the **db_ip** to the MySQL public IP) and then press **Build**.  This should take no more than a minute or two.
 
-    ![](images/200/7.png)
+    ![](images/200/7.PNG)
 
 - Review the job results:
 
@@ -383,7 +383,7 @@ We now have an empty database.  We need to populate it with baseline data.  We w
 ### **STEP 9**: Create Connection to Developer Cloud Service
 - We will now create a connection to the Developer Cloud Service. To do this, first click on the menu options Window -> Show View ->Other
 
-    ![](images/200/8.png)
+    ![](images/200/8.PNG)
 
 - Enter oracle in the search field. Select Oracle Cloud, and click on OK.
 
@@ -409,12 +409,12 @@ We now have an empty database.  We need to populate it with baseline data.  We w
 - Expand Developer, and then double click on Alphaoffice Marketing
 Project to activate the project.
 
-    ![](images/200/9.png)
+    ![](images/200/9.PNG)
 
 - Expand the Code, and double click on the Git Repo
 [AlphaofficeDB.git], to cause the Repo to be cloned locally.
 
-    ![](images/200/10.png)
+    ![](images/200/10.PNG)
 
 - Import Projects - navigate to the top left file menu and select Import Projects.
 
@@ -426,7 +426,7 @@ Project to activate the project.
 
 - Select **Existing Local repository** 
 
-    ![](images/200/11.png)
+    ![](images/200/11.PNG)
 
 - Select the AlphaofficeDB git repository.
 
@@ -456,7 +456,7 @@ In the previous steps we updated the status of the Tasks assign to Roland Dubois
 
 - Optionally, if you return to the Developer Cloud Service web interface, you’ll see that the Eclipse interface caused the Feature 2 - Update Database, assigned to ronald.dubois, to be moved to the “In Progress” column of the Agile > Active Sprints.
 
-    ![](images/200/12.png)
+    ![](images/200/12.PNG)
 
 ## Update Database
 
@@ -464,7 +464,7 @@ In the previous steps we updated the status of the Tasks assign to Roland Dubois
 
 - Open perspective Database by clicking **Window > Perspective > Open Perspective > Other**
 
-    ![](images/200/13.png)
+    ![](images/200/13.PNG)
 
 - Select **Database Development** from the popup and press **OK**
 
@@ -480,7 +480,7 @@ In the previous steps we updated the status of the Tasks assign to Roland Dubois
 
 - Select New Driver Definition
 
-    ![](images/200/14.png)
+    ![](images/200/14.PNG)
 
 - Select MySQL JDBC Driver, version 5.1, then select the JAR tab.
 
@@ -509,9 +509,9 @@ In the previous steps we updated the status of the Tasks assign to Roland Dubois
 
 - Check **Save password** and click **Test Connection** to verify your credentional as correct.
 
-    ![](images/200/15.png)
+    ![](images/200/15.PNG)
 
-    ![](images/200/16.png)
+    ![](images/200/16.PNG)
 
 - Click **Finish** to save the connection.
 
@@ -589,7 +589,7 @@ The required updates are sitting in a versioned Flyway file in a backup director
 
 - Enter “Feature2: Applied database updates for twitterfeedapp” in the Commit Message box, and click on Commit and Push. Note: it is possible to change the default Author and Committer to match the current “persona.” However, for the sake of this lab guide, we will leave the defaults.
 
-    ![](images/200/17.png)
+    ![](images/200/17.PNG)
 
 - Click **Next**
 
@@ -619,7 +619,7 @@ The required updates are sitting in a versioned Flyway file in a backup director
 
 - Click on Active Sprints button. Notice that Feature 2 is now in the Verify Code column.
 
-    ![](images/200/19.png)
+    ![](images/200/19.PNG)
 
 - Next, on navigation panel click Code, select the Feature2 branch. i
 
@@ -627,7 +627,7 @@ The required updates are sitting in a versioned Flyway file in a backup director
 
 - Click on the **Logs** sub tab. Now view the recent commit made to branch from within Eclipse.
 
-    ![](images/200/20.png)
+    ![](images/200/20.PNG)
 
 - Now that Roland Dubois has completed the task of updating the database, a **Merge Request** can be created by Roland and assigned to Lisa Jones. Click on the **Merge Requests** on the left, and then click on the **New Merge Request** button.
 
@@ -644,11 +644,11 @@ The required updates are sitting in a versioned Flyway file in a backup director
     - **Summary:** `Merge Feature 2 into master`
     - **Reviewers:** `<assigned user>`
 
-    ![](images/200/21.png)
+    ![](images/200/21.PNG)
 
 - In the **Write** box, enter the comment “I have applied Alphaoffice Database Updates" and then click the **Comment** button to save.
 
-    ![](images/200/22.png)
+    ![](images/200/22.PNG)
 
 ## Merge the Branch
 
