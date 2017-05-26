@@ -189,6 +189,9 @@ We will now create a MySQL Database using the Cloud Console.  But we will need t
     ![](images/200/24.PNG)
 
 - Create a **keys** directory, change its permissions, and cd into it.
+    - `mkdir keys`
+    - `chmod 700 keys`
+    - `cd keys`
 
     ![](images/200/25.PNG)
 
