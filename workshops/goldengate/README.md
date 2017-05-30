@@ -27,7 +27,7 @@ This Oracle Public Cloud GoldenGate Cloud Services workshop will give you a basi
 
 ## Workshop Details
 
-**Reference the following Lab Guides by opening their Documentation Files.  ***Note if you are using Internet Explorer you will need to use the menu (upper left) rather than the lab docs listed below.  We recommend Firfox, CHrome, or Safari***:**
+**Reference the following Lab Guides by opening their Documentation Files.  ***Note if you are using Internet Explorer you will need to use the menu (upper left) to access the lab docs rather than using the links listed below.  We recommend Firefox, Chrome, or Safari***:**
 
 ## Lab 100: Introduction to GoldenGate Cloud Service
 
