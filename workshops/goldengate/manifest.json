@@ -39,6 +39,12 @@
                 "filename": "LabGuide500.md",
                 "title": "Lab 500: GoldenGate Cloud Service Monitoring",
                 "description": "This lab show you the services available to monitor GGCS processes"
+            },
+            {
+                "number": "600",
+                "filename": "faq.md",
+                "title": "FAQ",
+                "description": "If you run into issues check this FAQ."
             }
         ]
     }

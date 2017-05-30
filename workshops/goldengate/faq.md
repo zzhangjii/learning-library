@@ -7,7 +7,7 @@
 Each obey file from the lab has a cleanup “mirror” that will undo any process registrations/adds as well as delete the corresponding trails and report files. There is also a CLEAN_ALL.oby that will clean up everything in that environment.
 
 | Lab Number    | Create Obeys                   | Cleanup Obeys                       |
-| ------------- |:------------------------------:| -----------------------------------:|
+| ------------- |--------------------------------| ------------------------------------|
 | Lab 300       | ADD_EURO_EXTRACT.oby (On Prem) | CLEAN_EURO_EXTRACT.oby (On Prem)    |
 |               | ADD_AMER_REPLICAT.oby (GGCS)   | CLEAN_AMER_REPLICAT.oby (GGCS)      | 
 | Lab 300       | ADD_AMER_EXTRACT.oby (GGCS)    | CLEAN_AMER_EXTRACT.oby (GGCS)       |
