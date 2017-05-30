@@ -12,6 +12,8 @@
 
 - Once you are viewing the Workshop's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
 
+- Although these guides can be viewed on or off a corporate VPN, ***access to Oracle Cloud Services MUST BE OFF VPN***.
+
     ![](images/WorkshopMenu.png)  
 
 - You will be accessing several Oracle Cloud Services throughout the labs.  Most of the services have been set up in advance for you, but you will need to configure these services and request new ones.  To simplify and clarify the services and their required credentials we have prepared a ***one-page GoldenGate Cloud Services Workshop handout*** with the required information.  You will also need to ***write down some information on this handout*** as you progress through the labs.  The handout will be provided prior to starting your labs.  The different fields in the handout have been coded (eg CS1, CS2) to make it easy to locate the required field referenced in the lab guides.
@@ -25,7 +27,7 @@ This Oracle Public Cloud GoldenGate Cloud Services workshop will give you a basi
 
 ## Workshop Details
 
-**Reference the following Lab Guides by opening their Documentation Files:**
+**Reference the following Lab Guides by opening their Documentation Files.  ***Note if you are using Internet Explorer you will need to use the menu (upper left) rather than the lab docs listed below.  We recommend Firfox, CHrome, or Safari***:**
 
 ## Lab 100: Introduction to GoldenGate Cloud Service
 
