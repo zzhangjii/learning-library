@@ -79,3 +79,6 @@ This Oracle Public Cloud GoldenGate Cloud Services workshop will give you a basi
 
 - Configure GGCS for monitoring.
 - Start monitoring services and review activity.
+
+## FAQ:  [faq.md](faq.md)
+
