@@ -13,5 +13,5 @@
 
 	![](images/delivery/i3.png)
 
-.. clarify process here
+.. clarify process here   update
 
