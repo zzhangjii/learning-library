@@ -161,7 +161,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 ### **STEP 5**: Create GoldenGate Cloud Service Instance
 
-- Open a browser in your Compute desktop (VNC) either from the desktop shortcut or from the panel at the top.  Do **NOT** use your browswer from your laptop desktop.  We will be needing to select a public key that is stored on the Compute Image.  Log into cloud.oracle.com:
+- Open a browser in your Compute desktop (VNC) either from the desktop shortcut or from the panel at the top.  Do **NOT** use your browser from your laptop desktop.  We will be needing to select a public key that is stored on the Compute Image.  Log into cloud.oracle.com:
 	- **Enter your assigned Identity Domain and Region**: ***CS1*** and ***CS4***
 
  	![](images/100/i20.1.png) 
