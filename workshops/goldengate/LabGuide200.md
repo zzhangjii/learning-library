@@ -190,7 +190,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 -  Start new processes:
 	- **Enter the following:** `start *`
-	- **Wait a few seconds for the processes to start, and then enter:** `info all`
+	- **Wait a few seconds for the processes to start, and then enter:** `info all`.  Note you may see jagent running - that is used for monitoring in Lab 500.  
 
 	![](images/200/i24.png)
 

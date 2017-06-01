@@ -152,7 +152,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/300/i20.png)
 
-- Note table currency has been created in AMER and user CURRENCY_ADMIN has also been created.
+- Note table CURRENCY has been created in AMER and user CURRENCY_ADMIN has also been created.
 
 	![](images/300/i21.png)
 

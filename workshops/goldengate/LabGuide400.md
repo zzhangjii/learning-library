@@ -20,7 +20,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ## Required Artifacts
 
-- Access to your Oracle Cloud account and services DBCS, GGCS, Compute, and BI Cloud Service (BICS).
+- Access to your Oracle Cloud account and services DBCS, GGCS, and Compute.
 
 ### **STEP 1**: Configure GoldenGate Cloud Service (GGCS)
 
@@ -32,7 +32,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
     ![](images/400/i1.png)
 
-- View extract and replicat configuration.  Note we are configuring both extract (source) and replicat (target) in on oby file.  Note the use of two different credentials.
+- View extract and replicat configuration.  Note we are configuring both extract (source) and replicat (target) in an oby file.  Note the use of two different credentials.
     - **Enter the following:** `view param dirprm/ADD_DW_ALL.oby`  Read comments
 
     ![](images/400/i2.png)
@@ -70,11 +70,11 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
     ![](images/400/i8.png)
 
-- Review results.  Run `get_dw_count.sql` and show that counts match.  Open the script.
+- Review results.  open the sql script `get_dw_count.sql`.
 
     ![](images/400/i9.png)
 
-- Run `get_dw_count.sql` against amer.
+- Run `get_dw_count.sql` using connection DBCS - Amer.
 
     ![](images/400/i10.png)
 
@@ -91,11 +91,11 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ### **STEP 3**: Review Audit Support
 
-- We need to generate some transactions for the audit proess.  Open gentrans.sql.
+- We need to generate some transactions for the audit process.  Open gentrans.sql.
 
     ![](images/400/i12.png)
 
-- Execute with the AMER connection.
+- Execute with the AMER connection.  You will be prompted for number of transactions - enter 500.
 
     ![](images/400/i13.png)
 
