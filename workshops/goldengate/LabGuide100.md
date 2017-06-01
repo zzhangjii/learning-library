@@ -45,11 +45,11 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/100/i5.png)
 
-- **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. Review your handout (fields ***CS1***, ***CS2***, ***CS3***, and ***CS4***) for your assigned Cloud Service Login information.
+- **IMPORTANT** - Under my services, select Traditional Cloud Account from the drop down list, and the correct data center (Region) and click on **My Services**. Review your handout fields ***CS4*** for your assigned Cloud Service Region/Data Center information.
 
 	![](images/100/i6.png)
 
-- Enter the **identity domain** (***CS1*** in your handout) and click **Go**
+- Next enter the **identity domain** (***CS1*** in your handout) and click **Go**
 
 	![](images/100/i7.png)
 
@@ -57,7 +57,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/100/i8.png)
 
-- You will be presented with a Dashboard summarizing all of your available services.  You have access to several services, but only Database and Compute are visible.  **Click** on **Customize Dashboard** to add GGSC to your list of visible services. 
+- You will be presented with a Dashboard summarizing all of your available services.  You have access to several services, but only Database and Compute are visible.  **Click** on **Customize Dashboard** to add GoldenGate to your list of visible services. 
 
 	![](images/100/i9.png)
 
@@ -68,8 +68,8 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 - Review services that will be used in the GGCS Labs:
 	- The Compute node will serve as your on-premise 11g Database instance.  In Lab 200 Data from your 11g Database will be migrated to a target DBCS 12c pluggable Database (on-premise to Cloud).  In Lab 300 the data will flow the other way from DBCS12c back to 11g Database on-premise (Cloud to on-premise). In Lab 400 data will be replicated from one DBCS12c Pluggable Database to another (Cloud to Cloud replication).
 	- The Database Service (DBCS) will be a GG target in lab 200 and a GG source in lab 300, and both a source and target in Lab 400.
-	- The GGCS instance is not yet in your identity domain.  You will create and configure this in Labs 200 - 500.
-	- Finally note that BICS is not available in this identiity domain.  That will be provided in a separate Identity Domain.
+	- The GoldenGate instance is not yet in your identity domain.  You will create and configure this in Labs 200 - 500.
+	- You can collapse the Welcome region as we will not be using other services.
 
 	![](images/100/i11.png)
 
@@ -184,7 +184,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/100/i23.png)
 
-- Hit 'Next' and then submit.  The instance create process will take several minutes.
+- Hit 'Next' and then create.  The instance create process will take several minutes.
 
 
 ### **STEP 6**: Review GGCS Instance
