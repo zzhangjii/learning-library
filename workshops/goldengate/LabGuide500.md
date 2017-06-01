@@ -134,7 +134,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 - Navigate to instances.  To help clarify which is the on-premise instance and which is the GGCS instance click on the name and rename it.  Provide the names GGCS and On-Prem.
 
-*** NEED SCREEN SHOT ***
+![](images/500/i14.4.png)
 
 - Note the status of the two instances (up and available).
 
