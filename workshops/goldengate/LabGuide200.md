@@ -64,7 +64,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/200/i7.1.png)
 
-- Upated the DBCS IP (field ***DB1***) and Identity Domain (field ***CS1***) and then execute the script.  Be sure to select the EURO connection on the right.
+- Upated the DBCS IP (field ***DB1***) and Identity Domain (field ***CS1***), select the ***EURO*** connection on the right, and then execute the script.  
 
 	![](images/200/i7.2.png)
 
@@ -86,7 +86,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/200/i9.png)
 
-- Lastly select (expand) the DBCS-DW connection and then expand the tables.  These are tranformed (and empty) tables ready for populating in Lab 400.
+- Lastly select (expand) the DBCS-DW connection and then expand the tables.  These are transformed (and empty) tables ready for populating in Lab 400.
 
 	![](images/200/i9.1.png)
 
@@ -95,13 +95,13 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 - Note this is:
 	- Using our On-premise/Compute image through VNC
 	- Our source data configuration for 11g Database (schema euro)
-	- USes OGG (not GGCS) with Classic Extract 
+	- Uses OGG (not GGCS) with Classic Extract 
 
 - Open a terminal window and start a SOCKS5 Proxy Tunnel.  This will encrypt data and send it through an SSH Tunnel.  First open the lab folder on the desktop.
 
 	![](images/200/i10.png)
 
-- Then open the start_proxy.sh script.  Take a look at it.  It maps local port 1080 to port 22 and encrypts the traffic.  We will reference this port in OGG configuration in the following steps.
+- Then open the start_proxy.sh script.  Review the configuration.  A SOCKS 5 tunnel is a type of SSH tunnel in which specific applications (GoldenGate) forward their local traffic (on port 1080 in this case) down the tunnel to the server, and then on the server end, the proxy forwards the traffic out to the general Internet.  The traffic is encrypted, and uses open port 22 (SSH port) on GGCS to transport the data.  We will reference this port in OGG configuration in the following steps.
 
 	![](images/200/i11.png)
 
@@ -164,7 +164,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 - Scroll through the terminal window to view the results.
 
-- Edit parameters PEURO and set the IP Address.  This uses the 'VI' editor.  Note you can also edit this with gedit (see following step).
+- Edit parameter PEURO and set the IP Address.  This uses the 'VI' editor.  Note you can also edit this with gedit (see following step).
 	- **Enter the following:** `edit param PEURO`
 	- **Use the arrows on your keyboard to navigate to the IP address**
 	- **Use the `i` character to enter insert mode and the `[ESC]` key to exit insert mode**
@@ -178,11 +178,12 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/200/i22.png)
 
-- Edit the IP address, hit save, and exit the window.
+- Edit the IP address (set it to field ***GG1***), hit save, and exit the window.
 
 	![](images/200/i22.1.png)
 
-- Go back to ggsci and review processes that you have added:
+- Go back to ggsci and start the manager and review processes that you have added:
+	- **Enter the following:** `start mgr`
 	- **Enter the following:** `info all`
  
 	![](images/200/i23.png)
@@ -200,7 +201,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/200/i25.png)
 
-- Copy the export.dmp file to DBCS 12c.  Use field ***DB1*** for your password.
+- Copy the export.dmp file to DBCS 12c.  Use field ***DB1*** for your DBCS IP address.
 	- **Enter the following in a terminal window:** `scp -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key /home/oracle/export.dmp oracle@<your DBCS IP address>:.`
 
  	![](images/200/i26.png)
@@ -232,7 +233,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/200/i32.png)
 
-- Execute it.  Be sure to select the EURO connection.
+- Be sure to select the ***EURO*** connection and then execute it.  
 
 	![](images/200/i33.png)
 
@@ -247,7 +248,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 Note this is:
 - Using our GGCS Service (which also runs on Compute) paired with a DBCS for both GGCS metadata and target data
 - Our target data configuration for 12c Pluggable Database (schema amer)
-- USes GGCS (not on-premise OGG) with Integrated Replicat
+- Uses GGCS (not on-premise OGG) with Integrated Replicat
 
 - Open a terminal window on the OGG Compute image and ssh to GGCS (substituting your own GGCS IP):
 	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@<your ggcs IP address>` field ***GG1*** for your ip address
@@ -288,7 +289,7 @@ Note this is:
 
 	![](images/200/i41.png)
 
-- Compare data (remember that after we used datapump to migrate the base tables we generated an additional 500 transactions).  Go back to SQLDeveloper and open the row_counts script:
+- Compare data (remember that after we used datapump to migrate the base tables we generated an additional 500 transactions).  Go back to SQLDeveloper and open the get_count.sql script, select the EURO Connection, and then run the script:
 
 	![](images/200/i42.png)
 
