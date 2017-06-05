@@ -166,7 +166,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
  	![](images/100/i20.1.png) 
 
-- Select GGCS Service and then console.
+- Select GoldenGate Service and then console.
 
  	![](images/100/i20.2.png)
 
@@ -176,7 +176,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/100/i21.png)
 
-- Enter Service Name `ggcsservice-ggcs-1` as the name, take the defaults and then hit Next:
+- Enter Service Name `ggcsservice-ggcs-1` as the name and select Replication and Cloud Control option and then hit Next:
 
 	![](images/100/i22.png)
 
