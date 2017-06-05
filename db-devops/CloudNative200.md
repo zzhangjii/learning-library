@@ -180,7 +180,7 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
 We will now create a MySQL Database using the Cloud Console.  But we will need to access the web console from within the VNC client.
 
--  Log into the VNC client with the credentials supplied to
+-  Log into the VNC client with the credentials you have been supplied.
 
     ![](images/200/23.PNG)
 
@@ -216,16 +216,18 @@ We will now create a MySQL Database using the Cloud Console.  But we will need t
 
     ![](images/200/28.PNG)
 
-- On the next screen enter the following parameters and click **Next**
+- On the next screen enter the following parameters in each section and click **Next**
+  - **Configruation**
     - **Compute Shape:**  `OC3` (default)
     - **SSH Public Key:**  `labkey.pub` (This is the public key you generated above.  Click the **Edit** button then **Choose File** and navigate to where is was created. **/u01/OPCWorkshop/keys** and select **labkey.pub** )
+  - **MySQL Configuration**
     - **Usable Database Storage (GB):**  `25` (default)
     - **Administration Username:**  `root` (default)
     - **Password:**  `Alpha2014_`
     - **Database Schema Name:**  `AlphaofficeDB`
     - **Server Character Set:** `utf8mb3 - UTF-8 Unicode` (default)
-    - **Backkup Destination:**  `None`
     - **Configure MySQL Enterprise Monitor:**  `No` (default)
+  - **Backup and Recovery Configuration**
     - **Backup Destination:** `None`
 
     ![](images/200/31.PNG)
@@ -265,7 +267,7 @@ Currently traffic is blocked on 3306 to Developer Cloud Service so we need to sw
 
 - Using the terminal you opened to create the keys, run the following.  If you closed the terminal, open a new one and cd into the keys directory. 
 
-    (Remember to use the public IP of your MySQL instance.)
+    (Remember to use the public IP of your MySQL instance in the **ssh** command below.)
 
 ```
 ssh -i labkey opc@129.144.152.131
@@ -291,7 +293,7 @@ sudo su
 
 [root@alphaofficedb-mysql-1 opc]# echo 'port=1521'>>/u01/bin/mysql-5.7.17/my.cnf
 
-/etc/init.d/mysqlcsopr stop 
+/etc/init.d/mysqlcsoper stop 
 
 /etc/init.d/mysqlcsoper start
 
@@ -326,32 +328,36 @@ We now have an empty database.  We need to populate it with baseline data.  We w
 
     ![](images/200/image031.5.png)
 
-- Create a new job with the following specified:
+- Create a new job with the following specifications for each tab identified below:
     - **Main:**
-        - **Name:** `Apply Alphaoffice Database Versions`
-        - **Description:** `Apply Flyway database updates`
-        - **JDK:** 'JDK 8'
+      - **Name:** `Apply Alphaoffice Database Versions`
+      - **Description:** `Apply Flyway database updates`
+      - **JDK:** 'JDK 8'
     - **Build Parameters:**   ( 7 String Parameters )
-        - **flyway_user:** `root`
-        - **flyway_password:** `Alpha2014_`
-        - **flyway_driver:** `com.mysql.cj.jdbc.Driver`
-        - **flyway_url_prefix:** `jdbc:mysql://`
-        - **flyway_schemas:** `AlphaofficeDB`
-        - **db_ip:** `<your MySQL Database public IP>`
-        - **db_port:** `1521`
-    - **Source Control:** `git repository AlphaofficeDB.git`
-    - **Trigger:** `Based on SCM polling` (leave other fields blank)
-    - **Build Steps:** `Execute Shell`
-
-        `mvn clean compile -Dflyway.user=${flyway_user} -Dflyway.password=${flyway_password} -Dflyway.url=${flyway_url_prefix}${db_ip}:${db_port}?useSSL=false -Dflyway.driver=${flyway_driver} -Dflyway.schemas=${flyway_schemas} flyway:migrate`
-        
-        `mvn clean compile -Dflyway.user=${flyway_user} -Dflyway.password=${flyway_password} -Dflyway.url=${flyway_url_prefix}${db_ip}:${db_port}?useSSL=false -Dflyway.driver=${flyway_driver} -Dflyway.schemas=${flyway_schemas}_Dev flyway:migrate`
+      - **flyway_user:** `root`
+      - **flyway_password:** `Alpha2014_`
+      - **flyway_driver:** `com.mysql.cj.jdbc.Driver`
+      - **flyway_url_prefix:** `jdbc:mysql://`
+      - **flyway_schemas:** `AlphaofficeDB`
+      - **db_ip:** `<your MySQL Database public IP>`
+      - **db_port:** `1521`
+    - **Source Control:** 
+      - check `git` and select the repository `AlphaofficeDB.git`
+    - **Trigger:** 
+      - Check `Based on SCM polling` (leave Schedule field blank)
+    - **Build Steps:** 
+      - Add a build step of type `Execute Shell` and use the following commands...
+      ```
+      mvn clean compile -Dflyway.user=${flyway_user} -Dflyway.password=${flyway_password} -Dflyway.url=${flyway_url_prefix}${db_ip}:${db_port}?useSSL=false -Dflyway.driver=${flyway_driver} -Dflyway.schemas=${flyway_schemas} flyway:migrate
+      
+      mvn clean compile -Dflyway.user=${flyway_user} -Dflyway.password=${flyway_password} -Dflyway.url=${flyway_url_prefix}${db_ip}:${db_port}?useSSL=false -Dflyway.driver=${flyway_driver} -Dflyway.schemas=${flyway_schemas}_Dev flyway:migrate
+      ```
 
 - This is how the Build Step should look:
 
     ![](images/200/6.PNG)
 
-- Note this actually runs Maven/Flyway twice - once to create the test database AlphaofficeDB, and again to create/simulate a local development database AlphaofficeDB_Dev.
+  - **NOTE:** this actually runs Maven/Flyway twice - once to create the test database AlphaofficeDB, and again to create/simulate a local development database AlphaofficeDB_Dev.
 
 - Click **Save** and then run the **Build Job** 
 
@@ -398,7 +404,7 @@ We now have an empty database.  We need to populate it with baseline data.  We w
     - **Identity Domain:** `<your identity domain>`
     - **User name:** `<your assigned username>`
     - **Password:** `<your assigned ID Domain password>`
-    - **Connection Name:* `OracleConnection`
+    - **Connection Name:** `OracleConnection`
 
     ![](images/200/image037.png)
 
@@ -606,7 +612,7 @@ The required updates are sitting in a versioned Flyway file in a backup director
 
 ### **STEP 15**: Complete the Database Updates Task
 
-- Click the **Oracle Cloud** tab and navigate to ** Developer > Alphaoffice Marketing Project > Issues > Open** and double click on **Update Database** task.
+- Click the **Oracle Cloud** tab and navigate to **Developer > Alphaoffice Marketing Project > Issues > Open** and double click on **Update Database** task.
 
     ![](images/200/image070.png)
 
