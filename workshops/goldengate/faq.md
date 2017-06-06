@@ -8,7 +8,7 @@ Each obey file from the lab has a cleanup “mirror” that will undo any proces
 
 | Lab Number    | Create Obeys                   | Cleanup Obeys                       |
 | ------------- |--------------------------------| ------------------------------------|
-| Lab 300       | ADD_EURO_EXTRACT.oby (On Prem) | CLEAN_EURO_EXTRACT.oby (On Prem)    |
+| Lab 200       | ADD_EURO_EXTRACT.oby (On Prem) | CLEAN_EURO_EXTRACT.oby (On Prem)    |
 |               | ADD_AMER_REPLICAT.oby (GGCS)   | CLEAN_AMER_REPLICAT.oby (GGCS)      | 
 | Lab 300       | ADD_AMER_EXTRACT.oby (GGCS)    | CLEAN_AMER_EXTRACT.oby (GGCS)       |
 |               | ADD_EURO_REPLICAT.oby (On Prem)| CLEAN_EURO_REPLICAT.oby (On Prem)   |
