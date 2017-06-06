@@ -233,10 +233,12 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 	- **Display the oracle home directory:** `pwd`
 	- **Switch to the GG Home directory:** `cd $GGHOME
 	- **Display the GG home directory:** `pwd` (/u01/app/oracle/gghome)
-	- **Display the GG configuration directories:** `ls`
-	- **Display the key GG configuration files:** `ls dirprm`
+	- **Display the GG configuration directories:** `ls dir*`
 	- **Log into ggsci (GoldenGate command shell):** `ggsci`
+	- **Display status of services:** `info all`
+	- **Delete the datastore:** `delete datastore` (confirm y)
 	- **Start the GGCS manager:** `start mgr`
+	- **Confirm manager is started:** `info all`
 	- **Exit the command shell:** `exit`
 	- **Switch to the network admin directory where connectivity to dbcs12c is configured:** `cd /u02/data/oci/network/admin`
 	- **Display the tnsnames.ora file:** `cat tnsnames.ora`
@@ -245,112 +247,129 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 - This is sample output of the preceding commands:
 
 ```
-bash-4.1$ ssh -i ggcs_key opc@129.156.125.56
+bash-4.1$ ssh -i ggcs_key opc@140.86.38.87
 [opc@ggcsservice-ggcs-1-ggcs-1 ~]$ sudo su - oracle
 [oracle@ggcsservice-ggcs-1-ggcs-1 ~]$ pwd
 /u01/app/oracle/tools/home/oracle
 [oracle@ggcsservice-ggcs-1-ggcs-1 ~]$ cd $GGHOME
 [oracle@ggcsservice-ggcs-1-ggcs-1 gghome]$ pwd
 /u01/app/oracle/gghome
-[oracle@ggcsservice-ggcs-1-ggcs-1 gghome]$ ls
-bcpfmt.tpl                       extract
-bcrypt.txt                       freeBSD.txt
-BR                               ggcmd
-cachefiledump                    ggMessage.dat
-cfgtoollogs                      ggparam.dat
-checkprm                         ggsci
-chkpt_ora_create.sql             ggserr.log
-convchk                          GLOBALS
-convprm                          help.txt
-CREDENTIAL_STORE_SETUP.sh        install
-db2cntl.tpl                      inventory
-ddl_cleartrace.sql               jdk
-ddl_create.sql                   keygen
-ddl_ddl2file.sql                 label.sql
-ddl_disable.sql                  lib12
-ddl_enable.sql                   libantlr3c.so
-ddl_filter.sql                   libdb-6.1.so
-ddl_ora10.sql                    libgglog.so
-ddl_ora10upCommon.sql            libggnnzitp.so
-ddl_ora11.sql                    libggparam.so
-ddl_ora9.sql                     libggperf.so
-ddl_pin.sql                      libggrepo.so
-ddl_remove.sql                   libicudata.so.48
-ddl_session1.sql                 libicudata.so.48.1
-ddl_session.sql                  libicui18n.so.48
-ddl_setup.sql                    libicui18n.so.48.1
-ddl_status.sql                   libicuuc.so.48
-ddl_staymetadata_off.sql         libicuuc.so.48.1
-ddl_staymetadata_on.sql          libxerces-c.so.28
-ddl_tracelevel.sql               libxml2.txt
-ddl_trace_off.sql                logdump
-ddl_trace_on.sql                 marker_remove.sql
-debug509.txt                     marker_setup.sql
-defgen                           marker_status.sql
-deinstall                        mgr
-demo_more_ora_create.sql         notices.txt
-demo_more_ora_insert.sql         oggerr
-demo_ora_create.sql              OPatch
-demo_ora_insert.sql              oraInst.loc
-demo_ora_lob_create.sql          oui
-demo_ora_misc.sql                params.sql
-demo_ora_pk_befores_create.sql   prvtclkm.plb
-demo_ora_pk_befores_insert.sql   prvtlmpg.plb
-demo_ora_pk_befores_updates.sql  prvtlmpg_uninstall.sql
-diagnostics                      README
-dirbdb                           remove_seq.sql
-dirchk                           replicat
-dircrd                           retrace
-dirdat                           reverse
-dirdef                           role_setup.sql
-dirdmp                           sequence.sql
-dirjar                           server
-dirout                           sqlldr.tpl
-dirpcs                           srvm
-dirprm                           SSH_SOCK5_SETUP.sh
-dirprm_orig                      tcperrs
-dirrpt                           ucharset.h
-dirsql                           ulg.sql
-dirtmp                           UserExitExamples
-dirwlt                           usrdecs.h
-dirwww                           zlib.txt
-emsclnt
-[oracle@ggcsservice-ggcs-1-ggcs-1 gghome]$ ls dirprm
+[oracle@ggcsservice-ggcs-1-ggcs-1 gghome]$ ls dir*
+dirbdb:
+datatype.db       ggrepo-MGR.bin    MGR         profile.db
+__db.001          ggrepo-MGR.bin.1  mlayout.db  registry.db
+__db.register     log.0000000001    mpoint.db   shmid.txt
+ggrepo-GGSCI.bin  messages.db       procmap.db  status.db
+
+dirchk:
+
+dircrd:
+
+dirdat:
+
+dirdef:
+
+dirdmp:
+
+dirjar:
+
+dirout:
+README.txt
+
+dirpcs:
+
+dirprm:
 ADD_AMER_EXTRACT.oby   cleanup              EXTDW.prm   PAMER.prm
-ADD_AMER_REPLICAT.oby  CREDENTIALSTORE.oby  jagent.prm  RAMER.prm
+ADD_AMER_REPLICAT.oby  CREDENTIALSTORE.oby  JAGENT.prm  RAMER.prm
 ADD_DW_ALL.oby         EAMER.prm            MGR.prm     REPDW.prm
+
+dirprm_bu:
+ADD_EXTRACT.oby   EXTIN.prm  PUMP.prm   REPIN.prm
+ADD_REPLICAT.oby  MGR.prm    REPCO.prm
+
+dirrpt:
+MGR0.rpt  MGR1.rpt  MGR2.rpt  MGR.rpt
+
+dirsql:
+
+dirtmp:
+
+dirwlt:
+
+dirwww:
+image  schema  style
+[oracle@ggcsservice-ggcs-1-ggcs-1 gghome]$ ggsci
+
+Oracle GoldenGate Command Interpreter for Oracle
+Version 12.2.0.1.160517 OGGCORE_12.2.0.1.0OGGBP_PLATFORMS_160711.1401_FBO
+Linux, x64, 64bit (optimized), Oracle 12c on Jul 12 2016 02:21:38
+Operating system character set identified as UTF-8.
+
+Copyright (C) 1995, 2016, Oracle and/or its affiliates. All rights reserved.
+
+
+
+GGSCI (ggcsservice-ggcs-1-ggcs-1) 1> info all
+
+Program     Status      Group       Lag at Chkpt  Time Since Chkpt
+
+MANAGER     STOPPED                                           
+JAGENT      STOPPED                                           
+
+
+GGSCI (ggcsservice-ggcs-1-ggcs-1) 2> delete datastore
+Are you sure you want to delete the datastore? y
+
+GGSCI (ggcsservice-ggcs-1-ggcs-1) 3> start mgr
+Manager started.
+
+
+GGSCI (ggcsservice-ggcs-1-ggcs-1) 4> info all
+
+Program     Status      Group       Lag at Chkpt  Time Since Chkpt
+
+MANAGER     RUNNING                                           
+JAGENT      STOPPED                                           
+
+
+GGSCI (ggcsservice-ggcs-1-ggcs-1) 5> exit
 [oracle@ggcsservice-ggcs-1-ggcs-1 gghome]$ cd /u02/data/oci/network/admin
 [oracle@ggcsservice-ggcs-1-ggcs-1 admin]$ cat tnsnames.ora
 #GGCS generated file
 target =
       (DESCRIPTION =
           (ADDRESS_LIST =
-              (ADDRESS = (PROTOCOL = TCP)(HOST = DBCS12c)(PORT = 1521))
+              (ADDRESS = (PROTOCOL = TCP)(HOST = DBCS12c-01)(PORT = 1521))
       )
       (CONNECT_DATA =
-      (SERVICE_NAME = PDB1.gse00011358.oraclecloud.internal)
+      (SERVICE_NAME = PDB1.gse00002185.oraclecloud.internal)
     )
  )
 
 source =
       (DESCRIPTION =
           (ADDRESS_LIST =
-              (ADDRESS = (PROTOCOL = TCP)(HOST = DBCS12c)(PORT = 1521))
+              (ADDRESS = (PROTOCOL = TCP)(HOST = DBCS12c-01)(PORT = 1521))
       )
       (CONNECT_DATA =
-      (SERVICE_NAME = ORCL.gse00011358.oraclecloud.internal)
+      (SERVICE_NAME = ORCL.gse00002185.oraclecloud.internal)
     )
  )
 
 dw =
       (DESCRIPTION =
           (ADDRESS_LIST =
-              (ADDRESS = (PROTOCOL = TCP)(HOST = DBCS12c)(PORT = 1521))
+              (ADDRESS = (PROTOCOL = TCP)(HOST = DBCS12c-01)(PORT = 1521))
       )
       (CONNECT_DATA =
-      (SERVICE_NAME = PDB1.gse00011358.oraclecloud.internal)
+      (SERVICE_NAME = PDB1.gse00002185.oraclecloud.internal)
     )
  )
 [oracle@ggcsservice-ggcs-1-ggcs-1 admin]$ exit
+logout
+[opc@ggcsservice-ggcs-1-ggcs-1 ~]$ exit
+logout
+Connection to 140.86.38.87 closed.
+bash-4.1$ 
 ```
 - Note that the target entry is created automatically when the GGCS is associated with a DBCS during creations. Addition database sources and targets will need to be added manually. We have added entries representing the DBCS as a source (for Labs 300-400) and as a target for Lab 400.
