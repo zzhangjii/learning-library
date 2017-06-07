@@ -113,6 +113,10 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/200/i12.1.png)
 
+- Note as you work through the labs you may have more than one terminal window open at one time.  Optional - to make it clear which terminals are being used for which purpose change the profile to 'Proxy' to make it clear.  Generally you will be opening terminals for 11g On Premise activities or for 12c GGCS activities.  You can select these as you work through the labs (or create your own). Note profiles were not used when the labs were initially created.
+
+	![](images/200/i12.2.png)
+
 - Execute the start_proxy.sh script. 
 	- **Enter the following:** `./start_proxy.sh`   **LEAVE THIS WINDOW OPEN - DO NOT CLOSE IT..YOU CAN MINIMIZE IT**.
 

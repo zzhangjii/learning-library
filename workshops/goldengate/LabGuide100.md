@@ -135,7 +135,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 For the GoldenGate Cloud Service Workshop we will be using a compute Image that will represent your on-premises environment. In this image we have installed a 11g database that we will be migrating to our Oracle Public Cloud Database instance. The image also contains SQL Developer 4.1 that will be used to connect to both your local and cloud database.  If you do not have a VNC Viewer you can download and install from the [VNC Viewer Website](https://www.realvnc.com/download/viewer/).
 
-- Start your vnc viewer and enter the IP address of the Compute image noted above.
+- Start your vnc viewer and enter the IP address of the Compute image noted above.  ***You will be specifying port 10 (129.156.124.185:10)***.
 	- **VNC Password:** ***OG2*** in your handout
 
 	![](images/100/i24.png)
@@ -170,9 +170,11 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
  	![](images/100/i20.2.png)
 
+- Open Service Console, and then Create Service Instance.  Note first time you select GoldenGate you get a welcome page - select the 'Go to Console' link on this welcome page.  Screen shot below does not show the welcome page, but shows what you see after the first access.
+
  	![](images/100/i20.3.png)
 
-- Open Service Console, and then Create Service Instance:
+- Select `Create Service` Instance. 
 
 	![](images/100/i21.png)
 
