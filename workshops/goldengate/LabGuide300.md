@@ -52,7 +52,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/300/i4.png)
 
-- Note in the screen shot above we have added EXTRACT processes.  There is currently a REPLICAT (RAMER) running.  That is from the previous lab, and was used to apply updates to DBCS.  We will stop that process.
+- Note in the screen shot above we have added EXTRACT processes.  There is currently a REPLICAT (RAMER) running.  That is from the previous lab, and was used to apply updates to DBCS.  We will stop that process to make it clear that it is not being used in this lab.  It could remain up however as it does not affect other processes).
 	- **Enter the following:** `stop RAMER`
 	- **Wait a few seconds and then enter:** `info all`
 
@@ -160,7 +160,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/300/i23.png)
 
-- Compare with OGG/11g:
+- Compare with OGG/11g.  Note the new tables have been replicated (created) by GGCS:
 
 	![](images/300/i24.png)
 
