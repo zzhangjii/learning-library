@@ -19,7 +19,11 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ### **STEP 1**: Configure On-premise
 
-- Log into VNC and open file browser in the Compute instance.
+- Log into VNC on the Compute instance and open Firefox WEB browser and go to `<ip addresss of ggcs vm>:7809/groups`.  All processes should be up and running.  This is necessary to ensure the monitoring agent will start the first time.
+
+![](images/500/i1.1.png)
+
+- Next open a file browser in the Compute instance.
 	- **Edit the following file and udate the IP address with the GGCS IP:** `/u01/app/oracle/product/ggcc_instance/conf/agent.properties`
 
 ![](images/500/i1.png)
@@ -67,10 +71,9 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
     - **Start ggsci:** `./ggsci`
     - **Create datastore:** `create datastore`
     - **Review processes:** `info all`
-    - **Stop processes:** `stop *`
     - **Stop Manager:** `stop mgr`
     - **Start Manager:** `start mgr`
-    - **Start DW Processes:** `start *DW`
+    - **Start DW Processes:** `start *`
 
 ![](images/500/i6.png)
 
@@ -90,13 +93,12 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ![](images/500/i8.png)
 
-- Open a new terminal window and SSH into ggcs.  Run a process that Integrates the agent with the GoldenGate instance. 
+- Open a new terminal window and SSH into ggcs.  Run a process that Integrates the agent with the GoldenGate instance. Then log into ggsci and start jagent.
 	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@<your ggcs IP address>` Field ***GG1***
 	- **Switch to user oracle:** `sudo su - oracle` 
     - **Run the following:**  `/u01/app/oracle/middleware/ggccagent/bin/ggccAgent.sh /u02/data/ggcc/agent/conf/agent.properties intgGGSCI $GGHOME`
-
-- Start ggsci and then  jagent
     - **Enter:** `ggsci`
+    - **Enter:** `info all`
     - **Enter:**  `start jagent`
     - **Confirm the agent is runnning:** `info all`
 
@@ -132,13 +134,19 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ![](images/500/i14.1.png)
 
-- Navigate to instances.  To help clarify which is the on-premise instance and which is the GGCS instance click on the name and rename it.  Provide the names GGCS and On-Prem.
+- Navigate to instances.  To help clarify which is the on-premise instance and which is the GGCS instance click on the name and rename it.  Provide the names GGCS and On-Prem.  This particular screenshot uses IP addresses from a different instance and will not be consistent with others used throughout these labs.
+
+![](images/500/i14.5.png)
 
 ![](images/500/i14.4.png)
 
 - Note the status of the two instances (up and available).
 
 ![](images/500/i14.2.png)
+
+- Navigate to tasks.  Review activity.
+
+![](images/500/i14.6.png)
 
 - Return to ggsci and stop EXTDW process.  You may need to open a new terminal window (if you closed it previously):
 	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@<your ggcs IP address>` Field ***GG1***

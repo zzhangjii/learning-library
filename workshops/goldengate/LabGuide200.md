@@ -97,7 +97,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 	- Our source data configuration for 11g Database (schema euro)
 	- Uses OGG (not GGCS) with Classic Extract 
 
-- Open a terminal window and start a SOCKS5 Proxy Tunnel.  This will encrypt data and send it through an SSH Tunnel.  First open the lab folder on the desktop.
+- Open a terminal window and start a SOCKS5 Proxy Tunnel.  This will encrypt data and send it through an SSH Tunnel.  First open the lab folder on the desktop.  Note that you get an autentication error if you did NOT do step six in lab 100, which SSH's into GGCS.  The first time you SSH into GGCS (or any Linux server) a file called known_hosts is created in the /home/oracle/.ssh directory and the GGCS key is put in that file.  For this proxy step the file and entry must first exist (from step six, lab 100).
 
 	![](images/200/i10.png)
 
@@ -161,7 +161,8 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 	
 	![](images/200/i19.png)
 	
-- Execute commands to add EURO extract:
+- Execute commands to add a datastore and add the EURO extract:
+	- **Enter the following:** `add datastore` (not included in the screenshot below)
 	- **Enter the following:** `obey dirprm/ADD_EURO_EXTRACT.oby`
 
 	![](images/200/i20.png)
@@ -228,7 +229,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/200/i29.png)
 
-- Run the script.  Note the data is identical.
+- Run the script.  Note the data is identical.  Your totals may differ from the screenshot, but the source and target should be the same.
 
 	![](images/200/i31.png)
 

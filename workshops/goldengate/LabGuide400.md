@@ -47,9 +47,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
     ![](images/400/i4.png)
 
-- Stop Lab 300 processes and start new DW (Lab 400) processes.
-    - **Stop EAMER:** `stop EAMER`
-    - **Stop PAMER:** `stop PAMER`
+- Start a new DW processe.
     - **Start DW Processes:** `start *DW`
     - **Review results:** `info all`
 

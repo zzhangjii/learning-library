@@ -52,12 +52,6 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/300/i4.png)
 
-- Note in the screen shot above we have added EXTRACT processes.  There is currently a REPLICAT (RAMER) running.  That is from the previous lab, and was used to apply updates to DBCS.  We will stop that process to make it clear that it is not being used in this lab.  It could remain up however as it does not affect other processes).
-	- **Enter the following:** `stop RAMER`
-	- **Wait a few seconds and then enter:** `info all`
-
-	![](images/300/i5.png)
-
 - Edit pump parameters and update the target IP address (field ***OG1***).  Also note/read other highlighted parameters.  **Note the use of linux 'vi' editor to update, which requires specific keys to navigate:**
 	- **Enter the following:** `edit params dirprm/PAMER.prm`
 	- **Use the arrow keys on your keyboard to navigate**
@@ -96,8 +90,6 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 - Review processes, start manager, and start replicat, and confirm processes are running:
 	- **Enter the following:** `info all`
 	- **IF the manager is not running enter the following:** `start mgr`
-	- **Stop Extract EEURO (from Lab 200):** `stop EEURO`
-	- **Stop Pump PEURO (from Lab 200):** `stop PEURO`
 	- **Start new Replicat REURO:** `start REURO`
 	- **Confirm Lab 300 services are running:** `info all`
 
@@ -137,7 +129,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/300/i17.png)
 
-- Execute script against EURO.  Note the row counts match proving replication.
+- Execute script against EURO.  Note the row counts match proving replication.  Your totals may be different from the screenshots, but the source and target should match.
 
 	![](images/300/i18.png)
 
