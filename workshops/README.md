@@ -1,8 +1,5 @@
 # Workshop Catalog
 
-<center>
-<img src="https://cloudaccelerate.github.io/TTC-CommonContent/images/ttc-logo.png" />
-</center>
 
 ## Workshops and Hands-on-labs
 
