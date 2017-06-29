@@ -15,7 +15,7 @@
 
 **Third**, ***How to View the Lab Guides***
 
-- The Labguides are best viewed using the Workshop's [GitHub Pages Website URL](https://oracle.github.io/cloud-native-devops-workshop/microservices) 
+- The Labguides are best viewed using the Workshop's [GitHub Pages Website URL](https://oracle.github.io/learning-library/workshops/microservices) 
 
 - Once you are viewing the Workshop's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
 
