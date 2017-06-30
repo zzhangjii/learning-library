@@ -49,10 +49,6 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/100/i25.png)
 
-- Double click on the SQL Developer desktop icon.  You will use SQL Developer to review data and execute SQL Scripts.  Three connections have been set up for you (highlighted).  These will need to be updated with the domain name and IP addresses of your assigned instances (On-premise 11g Database, DBCS 12c Database, and your GGCS instance).  **This will be done in Lab 200**.
-
-	![](images/100/i26.png)
-
 - Select the File Browser off the desktop and navigate to /u01/app/oracle/product.  This location is where GoldenGate On-premise product is installed and configured.  We will review this in the next lab.  Note that Oracle Database 11g which is used in the following labs is installed in /opt/oracle.
 
 	![](images/100/i27.png)
