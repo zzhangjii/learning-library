@@ -127,12 +127,8 @@ After selecting a Source, all data objects in the Source are retrieved and displ
 Source field.
 
 ![](images/300/image013.png)
-```
 In this demo, select the Oracle Storage Cloud Source you just created.
-
 ![](images/300/image014.png)
-
-```
 For Oracle Storage Cloud Source, data objects are organized in the hierarchy of _Container -> Object_. User
 can choose a Container, which means all data objects in the Container will be selected as input. User can also
 choose an individual data object in a Container, which means only this data object will be input of the Transform.
