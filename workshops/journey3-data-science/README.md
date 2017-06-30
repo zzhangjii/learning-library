@@ -2,6 +2,7 @@
     
 ## Steps for creating a new workshop
 
+
 - To start a new workshop, use git to create a branch from this (workshop-template) branch.
 - Rename the workshop-template folder in your new branch to the title of your new workshop, observing the naming convention of the rest of the folders in the repository
 - Rename the lab guide md files to be more specific to your workshop, if desired.
