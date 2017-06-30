@@ -161,8 +161,8 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 	
 	![](images/200/i19.png)
 	
-- Execute commands to add a datastore and add the EURO extract:
-	- **Enter the following:** `add datastore` (not included in the screenshot below)
+- Execute commands to create a datastore and add the EURO extract:
+	- **Enter the following:** `create datastore` (not included in the screenshot below)
 	- **Enter the following:** `obey dirprm/ADD_EURO_EXTRACT.oby`
 
 	![](images/200/i20.png)

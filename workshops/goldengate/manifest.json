@@ -11,6 +11,12 @@
                 "description": "Step-by-step workshop instructions"
             },
             {
+                "number": "1",
+                "filename": "Demo_Cloud.md",
+                "title": "Instructor Cloud Introduction",
+                "description": "This is an introduction by the instructor to Oracle's Cloud Services"
+            },
+            {
                 "number": "100",
                 "filename": "LabGuide100.md",
                 "title": "Lab 100: Introduction to GoldenGate Cloud Service",
