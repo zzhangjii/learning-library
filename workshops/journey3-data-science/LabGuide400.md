@@ -4,6 +4,8 @@
 
 ## Purpose
 
+
+
 In this tutorial, you learn to install and use a new R package called oraobjectstore to connect to the Oracle
 Object Storage Cloud and interact with the data in the object store directly in the R environment.
 
