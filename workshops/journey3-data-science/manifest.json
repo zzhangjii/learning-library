@@ -1,7 +1,7 @@
 {
     "workshop": {
-        "title": "Workshop Title",
-        "description": "Description of this workshop.",
+        "title": "Data Science Acceleration",
+        "description": "Learn how to use R environment with Oracle Big Data Cloud Service - Compute Edition and Oracle Storage Cloud Object Store",
         "theme": "default",
         "interactive":"https://launch.oracle.com/?cloudnative",
         "labs": [
@@ -9,37 +9,43 @@
                 "number": "0",
                 "filename": "README.md",
                 "title": "Read Me First",
-                "description": "Step-by-step workshop instructions"
-            },
-            {
-                "number": "0",
-                "filename": "StudentGuide.md",
-                "title": "Student Guide",
-                "description": "Workshop guidance and prerequisites"
+                "description": "Overview of the Data Science Acceleration User Journey"
             },
             {
                 "number": "100",
                 "filename": "LabGuide100.md",
-                "title": "Lab 100: Agile Project Management",
-                "description": "Use Developer Cloud Service to create issues, tasks, and sprints"
+                "title": "Lab 100: Trial Account Signup",
+                "description": "Instructions to sign-up for a free trial of Oracle Public Cloud services"
+            },
+            {
+                "number": "100GSE",
+                "filename": "LabGuide100GSE.md",
+                "title": "Lab 100GSE: ALTERNATE VERSION",
+                "description": "Oracle Employee/Partner instructions to get access to a GSE/demo.oracle.com Oracle Public Cloud demo environment"
             },
             {
                 "number": "200",
                 "filename": "LabGuide200.md",
-                "title": "Lab 200:  Title of Lab 200",
-                "description": "Short description of lab 200"
+                "title": "Lab 200: Setup R and BDCS-CE",
+                "description": "Provision and configure R environment and RStudio Server with Orace Big Data Cloud Service - Compute Edition (BDCS-CE)"
             },
             {
                 "number": "300",
                 "filename": "LabGuide300.md",
-                "title": "Lab 300:  Title of Lab 300",
-                "description": "Short description of lab 300"
+                "title": "Lab 300: Analyze Data with R",
+                "description": "Use R, Rstudio Server, BDCS-CE and Oracle Storage Cloud Object Store to analyze data and store results"
             },
             {
                 "number": "400",
                 "filename": "LabGuide400.md",
-                "title": "Lab 400: Title of Lab 400",
-                "description": "Short description of lab 400"
+                "title": "Lab 400: More R and Object Store",
+                "description": "Download, install, and use R package to simplify working with the Oracle Storage Cloud Object Store"
+            },
+            {
+                "number": "9999",
+                "filename": "Cleanup.md",
+                "title": "Cleanup",
+                "description": "Instructions to cleanup your cloud service environment."
             }
         ]
     }
