@@ -146,18 +146,12 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 	![](images/200/i18.png)
 
 - View Extract EEURO.prm using ggsci:
-	- **Enter the following:** `view param dirprm/EEURO.rpm`
+	- **Enter the following:** `view param dirprm/EEURO.rpm` (Note you do NOT need to enter the commands highlighted in the screenshots - it is just showing you what you will see)
 
 	![](images/200/i17.3.png)
 
-- Review extract configuration.  Note: if you go back and review the overview architecture diagram at the beggining if this lab you can identify these components (Extract, pump, trail file, etc.).  
+- Review extract configuration.  Note: if you go back and review the overview architecture diagram at the beginning if this lab you can identify these components (Extract, pump, trail file, etc.).  
 	- **Enter the following:** `view param ./dirprm/ADD_EURO_EXTRACT.oby`
-		- **DBLOGIN USERIDALIAS ogguser** log in
-		- **ADD EXTRACT EEURO, TRANLOG, BEGIN NOW**: Add extract
-		- **ADD EXTTRAIL ./dirdat/lt, EXTRACT EEURO, MEGABYTES 50**:  Add trail file prefix (trail files are lt0000000001..etc.)
-		- **ADD EXTRACT PEURO, EXTTRAILSOURCE ./dirdat/lt**  Add pump
-		- **ADD RMTTRAIL ./dirdat/rt, EXTRACT PEURO, MEGABYTES 50** Add remote trail file prefix
-		- **ADD TRANDATA euro.** This allows you to specify at the schema or table level what data is extracted (fine control)
 	
 	![](images/200/i19.png)
 	

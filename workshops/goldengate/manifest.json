@@ -31,7 +31,7 @@
             {
                 "number": "300",
                 "filename": "LabGuide300.md",
-                "title": "Lab 300:  Cloud to On-Premise Replication with DDL",
+                "title": "Lab 300:  Cloud to On-Premise Replication with DDL (Optional)",
                 "description": "This lab is designed to configure GGCS to perform one-way DML and DDL replication between a DBCS 12c database and an on-prem Oracle 11g database."
             },
             {

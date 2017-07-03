@@ -10,6 +10,8 @@
 
 - The lab guides are best viewed using the Workshop's [GitHub Pages Website URL](https://pcdavies.github.io/GoldenGateCloudService/workshops/goldengate/) 
 
+- If you are using a hardcopy printed version but wish to access the on-line version (recommended) go to this URL:  https://pcdavies.github.io/GoldenGateCloudService/workshops/goldengate/
+
 - Once you are viewing the Workshop's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
 
 - Although these guides can be viewed on or off a corporate VPN, ***access to Oracle Cloud Services MUST BE OFF VPN***.
@@ -53,7 +55,7 @@ This Oracle Public Cloud GoldenGate Cloud Services workshop will give you a basi
 - Configure GoldenGate Cloud Service to replicate data to a DBCS 12c Pluggable Database.
 - Generate transactions to showcase real time data replication, while tracking data consistency between environments.
 
-## Lab 300: Cloud to On-Premise Replication with DDL
+## Lab 300: Cloud to On-Premise Replication with DDL (Optional)
 
 **Documentation**: [LabGuide300.md](LabGuide300.md)
 
@@ -63,7 +65,7 @@ This Oracle Public Cloud GoldenGate Cloud Services workshop will give you a basi
 - Configure OGG replicat processes for data replication from DBCS 12c in the Cloud.
 - Generate Transactions and view data movement statistics to monitor activity.
 
-## Lab 400: Cloud to Cloud Replication with Transformations and Real Time BI Analytics
+## Lab 400: Cloud to Cloud Replication with Transformations
 
 **Documentation**: [LabGuide400.md](LabGuide400.md)
 
