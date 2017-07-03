@@ -158,6 +158,7 @@ dependent variable for the model.
 coefficients are significant and the adjusted R-squared value is about 0.93.
 
 You got a model (math formula) as follows:
+
 Petal.Width = 0.42 * Petal.Length – 0.
 
 Given a specific value of length of a petal, you can calculate/predict the width of the petal by the formula.
@@ -181,6 +182,7 @@ compare the predicted values in the **my_iris** column to the real values of the
 **Run** Line 28 to save the prediction result, **my_iris** , into a file named **my_iris.csv** on your local computer.
 
 **Replace** the container name **BAM** with yours in Line 29.
+
 **Replace** the third parameter **/home/oracle** with the local file system directory where the my_iris.csv
 resides in Line 29.
 
@@ -193,6 +195,7 @@ To validate if the file is uploaded to the Oracle Storage Cloud successfully, yo
 container with the function **oos_ls** in Line 32.
 
 **Replace** the container name **BAM** with yours in Line 32.
+
 **Run** Line 32 and 33. The **my_iris.csv** file is displayed in the list.
 
 ![](images/400/image12_rm.png) 
