@@ -4,164 +4,99 @@ Update May 2, 2017
 
 ## Introduction
 
-This is the third of five GoldenGate Cloud Service labs, and covers the second use case: Replication of data from a DBCS 12c multi-tenant Pluggable Database back to an on-premise 11g Database.  Note this lab is optional and can be skipped.
+This is the third of five GoldenGate Cloud Service labs, and covers the second use case: Replication and transformation of data from a DBCS 12c pluggable database to a DBCS 12c reporting data warehouse.
 
-![](images/100/i3.png)
+![](images/100/i4.png)
 
-This workshop will walk you through replication of data from a DBCS 12c Pluggable database back to an 11g On-premise Database.  Note that the 11g Database used in this Workshop is running on compute and does not require a VPN (or dedicated) network, but in practice you would need a VPN (Corente or other) network connection to replicate data from the cloud to a customer database.
+This workshop will walk you through replication of data from a DBCS 12c Pluggable database to another DBCS 12c Pluggable database.  This lab will introduce data transformations as part of the replication process.
 
 To log issues and view the lab guide source, go to the [github oracle](https://github.com/pcdavies/GoldenGateCloudService/issues) repository.
 
 ## Objectives
 
-- Configure GGCS extract processes for data replication to 11g Database on-premise.
-- Configure OGG replicat processes for data replication from DBCS 12c in the Cloud.
-- Generate Transactions and view data movement statistics to monitor activity.
+- Configure GGCS extract and replicat processes for data replication between DBCS 12c Pluggable Databases.
+- Process data transformations as part of the data replication process.
+- Review auditing support for before/after image (record) capture.
 
 ## Required Artifacts
 
-- Access to your Oracle Cloud account (used in Lab 100 and Lab 200) and services DBCS, GGCS, and Compute.
+- Access to your Oracle Cloud account and services DBCS, GGCS, and Compute.
 
 ### **STEP 1**: Configure GoldenGate Cloud Service (GGCS)
 
-- Open a terminal window on the OGG Compute image and ssh to GGCS (substitute your GGCS IP address):
-	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@<your ggcs IP address>` field ***GG1***.
-	- **Switch to user oracle:** `sudo su - oracle`
-    - **Switch to GGHOME:** `cd $GGHOME`
-	- **Start a gg command shell:** `ggsci`
-
-	    ![](images/300/i1.png)
-
-- Review AMER extract configuration:
-    - **Enter the following:** `view param dirprm/EAMER.prm`  Read comments
-
-	![](images/300/i1.1.png)
-
-- Review add AMER extract configuration:
-    - **Enter the following:** `view param dirprm/ADD_AMER_EXTRACT.oby`  Read comments
-
-	![](images/300/i2.png)
-
-- Add amer extract:
-    - **Enter the following:** `obey dirprm/ADD_AMER_EXTRACT.oby`
-
-	![](images/300/i3.png)
-
-- Review the processes:
-	- **Enter the following:** `info all`
-
-	![](images/300/i4.png)
-
-- Edit pump parameters and update the target IP address (field ***OG1***).  Also note/read other highlighted parameters.  **Note the use of linux 'vi' editor to update, which requires specific keys to navigate:**
-	- **Enter the following:** `edit params dirprm/PAMER.prm`
-	- **Use the arrow keys on your keyboard to navigate**
-	- **To set insert mode:** `i to insert IP address (above keys no longer navigate), [ESC] to get out of insert mode`
-	- **To delete characters:** `x`
-	- **To save and exit:** `first :, then x`
-
-	![](images/300/i6.png)
-
-- Start new extract process and confirm process are running. 
-	- **Enter the following:** `start *`  This starts all processes
-	- **Enter the following:** `info all` note you may need to wait a few seconds
-	- **Confirm status:** `info all`
-	- **! will repeat last command**
-
-	![](images/300/i7.png)
-
-### **STEP 2**: Configure Oracle GoldenGate (OGG) On-Premise (11g Database)
-
-- Exit out of the current terminal window.  Enter exit at least twice to ensure you are NOT still in GGCS.  Open a NEW terminal window:
-	- **Enter the following:** `cd $GGHOME`
-	- **Start a new GG Command shell:** `./ggsci`
-
-	![](images/300/i8.png)
-
-- View pre-configured REPLICAT:
-	- **Enter the following:** `view param dirprm/ADD_EURO_REPLICAT.oby`  Read comments.
-
-	![](images/300/i9.png)
-
-- Add new REPLICAT:
-	- **Enter the following:** `obey ./dirprm/ADD_EURO_REPLICAT.oby`
-
-	![](images/300/i10.png)
-
-- Review processes, start manager, and start replicat, and confirm processes are running:
-	- **Enter the following:** `info all`
-	- **IF the manager is not running enter the following:** `start mgr`
-	- **Start new Replicat REURO:** `start REURO`
-	- **Confirm Lab 300 services are running:** `info all`
-
-	![](images/300/i11.png)
-
-### **STEP 3**: Generate Transactions and Review Results
-
-- Open SQLDeveloper and open the sql file gentrans.sql using the amer connection:
-
-	![](images/300/i12.png)
-
-- Execute the script, enter 500 for the number of transactions:
-
-	![](images/300/i13.png)
-
-- Open a new terminal window for GGCS (DBCS 12c), and position it on the left.  SSH into GGCS.
+- Open a terminal window on the OGG Compute image and ssh to GGCS:
 	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@<your ggcs IP address>` Field ***GG1***
 	- **Switch to user oracle:** `sudo su - oracle`
     - **Switch to GGHOME:** `cd $GGHOME`
 	- **Start a gg command shell:** `ggsci`
-	- **Enter:** `stats * total`
 
-	![](images/300/i14.png)
+    ![](images/300/i1.png)
 
-- Open a new terminal window for OGG (11g On Prem) and position it on the right.
-	- **Change to gg home:** `cd $GGHOME`
-	- **Start ggsci:** `ggsci`
-	- **Enter stats reuro total`
+- View extract and replicat configuration.  Note we are configuring both extract (source) and replicat (target) in an oby file.  Note the use of two different credentials.
+    - **Enter the following:** `view param dirprm/ADD_DW_ALL.oby`  Read comments
 
-	![](images/300/i15.png)
+    ![](images/300/i2.png)
 
-- Compare stats for GGCS and OGG:
+- Create/add extract and replicat processes.
+    - **Enter the following:** `obey dirprm/ADD_DW_ALL.oby`
 
-	![](images/300/i16.png)
+    ![](images/300/i3.png)
 
-- **LEAVE THESE TWO WINDOWS OPEN AND Return to SQLDeveloper and run get_count.sql
+- Review processes.
+    - **Enter the following:** `info all`
 
-	![](images/300/i17.png)
+    ![](images/300/i4.png)
 
-- Execute script against EURO.  Note the row counts match proving replication.  Your totals may be different from the screenshots, but the source and target should match.
+- Start a new DW processe.
+    - **Start DW Processes:** `start *DW`
+    - **Review results:** `info all`
 
-	![](images/300/i18.png)
+    ![](images/300/i5.png)
 
-- We will now replicate DDL (table definition changes and other SQL that creates objects, not just data inserts/updates/deletes).  Open file ddl.sql
+### **STEP 2**: Generate Insert Transactions and Review Data on Source and Target
 
-	![](images/300/i19.png)
+- Start SQLDeveloper and run script `generate_dw_data.sql` to generate insert transactions.  Open the script.
+ 
+    ![](images/300/i6.png)
 
-- Note the following and then run the script:
-	- Note the tables do not yet exist in connection AMER.
-	- Select AMER connection on the left.
-	- Execute the script.
+- Run `generate_dw_data.sql` against Amer
 
-	![](images/300/i20.png)
+    ![](images/300/i7.png)
 
-- Note table CURRENCY has been created in AMER and user CURRENCY_ADMIN has also been created.
+- Review results.  Scroll up and down to see all stats.
+    - **Enter the following in ggsci:** `stats *DW total`
 
-	![](images/300/i21.png)
+    ![](images/300/i8.png)
 
-	![](images/300/i22.png)
+- Review results.  open the sql script `get_dw_count.sql`.
 
-	![](images/300/i23.png)
+    ![](images/300/i9.png)
 
-- Compare with OGG/11g.  Note the new tables have been replicated (created) by GGCS:
+- Run `get_dw_count.sql` using connection DBCS - Amer.
 
-	![](images/300/i24.png)
+    ![](images/300/i10.png)
 
-- Return to your OGG terminal window on the right and review stats:
-	- **Enter the following:** `stats reuro` scroll back up after the command
+- Browse the following tables in SQLDeveloper to compare AMER and DW tables to see that the following transformations occurred.  **NO DETAILED SCREEN SHOTS**.
+- **CUSTOMERS:** `CUSTOMERS_FIRSTNAME` and `CUSTOMERS_LASTNAME` concatenated into `CUSTOMERS_NAME` column.
+- **CUSTOMERS:** mail address stripped out and only domain mapped into `CUSTOMER_EMAIL_DOMAIN` column.
+- **ORDERS:** split into `CREDIT_ORDERS` and `NON_CREDIT_ORDERS` tables based on content of  `PAYMENT_METHOD` column.
+- **ORDERS:** `ORDERS_STATUS_DESC` column filled in by SQL lookup of value from `ORDERS_STATUS_LOOKUP` table.
+- **ORDERS_PRODUCTS:** `FINAL_PRICE` column calculated via stored procedure (they can look at the stored procedure `DW.SP_TOTAL` via GUI if desired)
+- **PRODUCTS:**  `PRODUCTS_TAX_CLASS_DESC` column filled in by using case statement
+- **PRODUCTS_HISTORY** auditing table populated by inserting all records (note additional columns).
 
-	![](images/300/i25.png)
+    ![](images/300/i11.png)
 
-- Show DDL report	
-	- **Enter the following:** `view report REURO001`.  Scroll up and down to view the entire report.
+### **STEP 3**: Review Audit Support
 
-	![](images/300/i26.png)
+- We need to generate some transactions for the audit process.  Open gentrans.sql.
+
+    ![](images/300/i12.png)
+
+- Execute with the AMER connection.  You will be prompted for number of transactions - enter 500.
+
+    ![](images/300/i13.png)
+
+- Review `PRODUCTS_HISTORY` in `DW` auditing table to see that updates include the BEFORE and AFTER images of updates.
+
+    ![](images/300/i14.png)

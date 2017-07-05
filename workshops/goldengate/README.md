@@ -38,10 +38,7 @@ This Oracle Public Cloud GoldenGate Cloud Services workshop will give you a basi
 ### Objectives
 
 - Familiarize you with the Oracle Cloud environment and services that will be used in the following labs.
-- Familiarize you with an on-premise 11g Database environment that will be replicated to a DBCS 12c environment.  Note: this is set up as an image running in Oracle IAAS/compute, but process and configuration steps are the same as though the image was running outside the cloud.
 - Walk through the steps to create a GoldenGate Cloud Service that will manage data replication between on-premise and cloud environments, and manage replication between different cloud environments.
-- Walk you through creating a new GoldenGate enabled Database Cloud Service.
-- To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/pcdavies/GoldenGateCloudService/tree/master/workshops/goldengate) repository.
 
 ## Lab 200: On-Premise to Cloud Zero Downtime Migration
 
@@ -49,25 +46,16 @@ This Oracle Public Cloud GoldenGate Cloud Services workshop will give you a basi
 
 ### Objectives
 
+- Familiarize you with an on-premise 11g Database environment that will be replicated to a DBCS 12c environment.  Note: this is set up as an image running in Oracle IAAS/compute, but process and configuration steps are the same as though the image was running outside the cloud.
 - Configure SQLDeveloper to access the source and target databases.
 - Use Oracle Datapump to migrate data from 11g on-premise to DBCS 12c.
 - Configure an on-premise GoldenGate to extract data from a 11g Database.
 - Configure GoldenGate Cloud Service to replicate data to a DBCS 12c Pluggable Database.
 - Generate transactions to showcase real time data replication, while tracking data consistency between environments.
 
-## Lab 300: Cloud to On-Premise Replication with DDL (Optional)
+## Lab 300: Cloud to Cloud Replication with Transformations
 
 **Documentation**: [LabGuide300.md](LabGuide300.md)
-
-### Objectives
-
-- Configure GGCS extract processes for data replication to 11g Database on-premise.
-- Configure OGG replicat processes for data replication from DBCS 12c in the Cloud.
-- Generate Transactions and view data movement statistics to monitor activity.
-
-## Lab 400: Cloud to Cloud Replication with Transformations
-
-**Documentation**: [LabGuide400.md](LabGuide400.md)
 
 ### Objectives
 
@@ -75,14 +63,25 @@ This Oracle Public Cloud GoldenGate Cloud Services workshop will give you a basi
 - Process data transformations as part of the data replication process.
 - Review auditing support for before/after image (record) capture.
 
-## Lab 500: GoldenGate Cloud Service Monitoring
+## Lab 400: GoldenGate Cloud Service Monitoring
 
-**Documentation**: [LabGuide500.md](LabGuide500.md)
+**Documentation**: [LabGuide400.md](LabGuide400.md)
 
 ### Objectives
 
 - Configure GGCS for monitoring.
 - Start monitoring services and review activity.
+
+
+## Lab 500: Cloud to On-Premise Replication with DDL (Optional)
+
+**Documentation**: [LabGuide500.md](LabGuide500.md)
+
+### Objectives
+
+- Configure GGCS extract processes for data replication to 11g Database on-premise.
+- Configure OGG replicat processes for data replication from DBCS 12c in the Cloud.
+- Generate Transactions and view data movement statistics to monitor activity.
 
 ## FAQ:  [faq.md](faq.md)
 

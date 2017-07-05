@@ -14,6 +14,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ## Objectives
 
+- Familiarize you with an on-premise 11g Database environment that will be replicated to a DBCS 12c environment.  Note: this is set up as an image running in Oracle IAAS/compute, but process and configuration steps are the same as though the image was running outside the cloud.
 - Configure SQLDeveloper to access the source and target databases.
 - Use Oracle Datapump to migrate data from 11g on-premise to DBCS 12c.
 - Configure an on-premise GoldenGate to extract data from a 11g Database.

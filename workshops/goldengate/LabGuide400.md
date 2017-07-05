@@ -4,99 +4,170 @@ Update May 2, 2017
 
 ## Introduction
 
-This is the fourth of five GoldenGate Cloud Service labs, and covers the third use case: Replication and transformation of data from a DBCS 12c pluggable database to a DBCS 12c reporting data warehouse.
-
-![](images/100/i4.png)
-
-This workshop will walk you through replacation of data from a DBCS 12c Pluggable database to another DBCS 12c Pluggable database.  This lab will introduce data transformations as part of the replication process.
+This is the fourth of five GoldenGate Cloud Service labs, and will review GGCS monitoring.
 
 To log issues and view the lab guide source, go to the [github oracle](https://github.com/pcdavies/GoldenGateCloudService/issues) repository.
 
 ## Objectives
 
-- Configure GGCS extract and replicat processes for data replication between DBCS 12c Pluggable Databases.
-- Process data transformations as part of the data replication process.
-- Review auditing support for before/after image (record) capture.
+- Configure GGCS for monitoring.
+- Start monitoring services and review activity.
 
 ## Required Artifacts
 
-- Access to your Oracle Cloud account and services DBCS, GGCS, and Compute.
+- Access to your Oracle Cloud account, and GGCS and the Compute image.
 
-### **STEP 1**: Configure GoldenGate Cloud Service (GGCS)
+### **STEP 1**: Configure On-premise
+
+- Log into VNC on the Compute instance and open Firefox WEB browser and go to `<ip addresss of ggcs vm>:7809/groups`.  All processes should be up and running.  This is necessary to ensure the monitoring agent will start the first time.
+
+![](images/400/i1.1.png)
+
+- Next open a file browser in the Compute instance.
+	- **Edit the following file and udate the IP address with the GGCS IP:** `/u01/app/oracle/product/ggcc_instance/conf/agent.properties`
+
+![](images/400/i1.png)
+
+- Update the following fields:
+    - **ggInstanceHost=** `<ip address of on prem vm>` Field ***OG1***
+    - **ggccServiceHost=** `<ip address of ggcs vm>` Field ***GG1***
+    - **proxy-127.0.0.1=** `<ip address of ggcs vm>` Field ***GG1***
+
+![](images/400/i2.png)
+
+- Start GoldenGate Cloud Service agent:
+    - **Open the workshop folder on the desktop.**
+    - **Double click on the following file:** `start_ggccagent.sh` 
+    - **Select Run in Termainl.  LEAVE THIS WINDOW OPEN**
+
+![](images/400/i3.png)
+
+-  Open a new terminal window:
+    - **Enter the following:** `cd $GGHOME`
+    - **Start ggsci:** `./ggsci`
+    - **Start jagent:** `start jagent`
+
+![](images/400/i4.png)
+
+### **STEP 2**: Configure GGCS
 
 - Open a terminal window on the OGG Compute image and ssh to GGCS:
 	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@<your ggcs IP address>` Field ***GG1***
 	- **Switch to user oracle:** `sudo su - oracle`
-    - **Switch to GGHOME:** `cd $GGHOME`
-	- **Start a gg command shell:** `ggsci`
+    - **Enter the following:** `cp /u02/data/ggcc/agent/conf/agent.properties /u02/data/ggcc/agent/conf/agent.properties_bu`
+    - **Edit the file and replace 11.111.111.111 placeholders with student ip addresses of the ggcs VM. Leave other parameters at the default:** `vi /u02/data/ggcc/agent/conf/agent.properties`
+        - `ggInstanceHost=11.111.111.111` Field ***GG1***
+        - `ggccServiceHost=11.111.111.111` Field ***GG1***
+	- **Use the arrows on your keyboard to navigate to the IP address**
+	- **Use the `i` character to enter insert mode and the `[ESC]` key to exit insert mode**
+	- **Enter your DBCS IP address:** see highlighted text below
+	- **Use the `x` key to delete characters**
+	- **To save enter `:` character and then `x` character**
 
-    ![](images/400/i1.png)
+![](images/400/i5.png)
 
-- View extract and replicat configuration.  Note we are configuring both extract (source) and replicat (target) in an oby file.  Note the use of two different credentials.
-    - **Enter the following:** `view param dirprm/ADD_DW_ALL.oby`  Read comments
+- Open a ggsci command shell and enter the following.  Note the data store may already exist, if so ignore messages that relate to this.
+    - **Enter:** `cd $GGHOME`
+    - **Start ggsci:** `./ggsci`
+    - **Create datastore:** `create datastore`
+    - **Review processes:** `info all`
+    - **Stop Manager:** `stop mgr`
+    - **Start Manager:** `start mgr`
+    - **Start DW Processes:** `start *`
 
-    ![](images/400/i2.png)
+![](images/400/i6.png)
 
-- Create/add extract and replicat processes.
-    - **Enter the following:** `obey dirprm/ADD_DW_ALL.oby`
+- Add weblogic credentials by executing the following: (**Note - screen shot below shows creds have already been created at the point of screen capture for this lab doc)
+    - **Exit ggsci:** `exit`
+    - **Enter:** `/u01/app/oracle/middleware/ggccagent/bin/ggccAgent.sh /u02/data/ggcc/agent/conf/agent.properties createServerCred`
+    - **You will be prompted separately for weblogic username (enter twice) and password (enter twice):**
+        - **Userid:**: Field ***GG2***
+        - **Confirm Userid:** Field ***GG2***
+        - **Password:** Field ***GG3***
+        - **Confirm Password:** Field ***GG3***
 
-    ![](images/400/i3.png)
+![](images/400/i7.png)
 
-- Review processes.
-    - **Enter the following:** `info all`
+- Start the agent by running the following.  **BE SURE TO LEAVE THIS WINDOW OPEN, DO NOT CLOSE IT!**
+    - **Run the following:** `/u01/app/oracle/middleware/ggccagent/bin/ggccAgent.sh /u02/data/ggcc/agent/conf/agent.properties start`
 
-    ![](images/400/i4.png)
+![](images/400/i8.png)
 
-- Start a new DW processe.
-    - **Start DW Processes:** `start *DW`
-    - **Review results:** `info all`
+- Open a new terminal window and SSH into ggcs.  Run a process that Integrates the agent with the GoldenGate instance. Then log into ggsci and start jagent.
+	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@<your ggcs IP address>` Field ***GG1***
+	- **Switch to user oracle:** `sudo su - oracle` 
+    - **Run the following:**  `/u01/app/oracle/middleware/ggccagent/bin/ggccAgent.sh /u02/data/ggcc/agent/conf/agent.properties intgGGSCI $GGHOME`
+    - **Enter:** `ggsci`
+    - **Enter:** `info all`
+    - **Enter:**  `start jagent`
+    - **Confirm the agent is runnning:** `info all`
 
-    ![](images/400/i5.png)
+![](images/400/i9.png)
 
-### **STEP 2**: Generate Insert Transactions and Review Data on Source and Target
+### **STEP 3**: Review Monitoring Services
 
-- Start SQLDeveloper and run script `generate_dw_data.sql` to generate insert transactions.  Open the script.
- 
-    ![](images/400/i6.png)
+- Return to your web browser and log into Oracle Cloud and open GoldenGate Control Console from GoldenGate Cloud Service Console (hamburger menu to right of service name)
+    - **Log into Oracle cloud:** Fields ***CS1***, ***CS2***, ***CS3***, and ***CS4***
 
-- Run `generate_dw_data.sql` against Amer
+![](images/400/i10.png)
 
-    ![](images/400/i7.png)
+- Access the console using the hamburger menu on the right and log into the Console:
+    - **Username:**  Field ***GG2***
+    - **Password:**  Field ***GG3***
 
-- Review results.  Scroll up and down to see all stats.
-    - **Enter the following in ggsci:** `stats *DW total`
+![](images/400/i11.png)
 
-    ![](images/400/i8.png)
+![](images/400/i12.png)
 
-- Review results.  open the sql script `get_dw_count.sql`.
+- Review
+    - **Catalog/Instances**
+    - **Catalog Tasks**
+    - **Policies**
 
-    ![](images/400/i9.png)
+![](images/400/i13.png)
 
-- Run `get_dw_count.sql` using connection DBCS - Amer.
+- Review Dashboard Hot Tables.  Click on the largest bar graph.
 
-    ![](images/400/i10.png)
+![](images/400/i14.png)
 
-- Browse the following tables in SQLDeveloper to compare AMER and DW tables to see that the following transformations occurred.  **NO DETAILED SCREEN SHOTS**.
-- **CUSTOMERS:** `CUSTOMERS_FIRSTNAME` and `CUSTOMERS_LASTNAME` concatenated into `CUSTOMERS_NAME` column.
-- **CUSTOMERS:** mail address stripped out and only domain mapped into `CUSTOMER_EMAIL_DOMAIN` column.
-- **ORDERS:** split into `CREDIT_ORDERS` and `NON_CREDIT_ORDERS` tables based on content of  `PAYMENT_METHOD` column.
-- **ORDERS:** `ORDERS_STATUS_DESC` column filled in by SQL lookup of value from `ORDERS_STATUS_LOOKUP` table.
-- **ORDERS_PRODUCTS:** `FINAL_PRICE` column calculated via stored procedure (they can look at the stored procedure `DW.SP_TOTAL` via GUI if desired)
-- **PRODUCTS:**  `PRODUCTS_TAX_CLASS_DESC` column filled in by using case statement
-- **PRODUCTS_HISTORY** auditing table populated by inserting all records (note additional columns).
+- Note the replication detail.
 
-    ![](images/400/i11.png)
+![](images/400/i14.1.png)
 
-### **STEP 3**: Review Audit Support
+- Navigate to instances.  To help clarify which is the on-premise instance and which is the GGCS instance click on the name and rename it.  Provide the names GGCS and On-Prem.  This particular screenshot uses IP addresses from a different instance and will not be consistent with others used throughout these labs.
 
-- We need to generate some transactions for the audit process.  Open gentrans.sql.
+![](images/400/i14.5.png)
 
-    ![](images/400/i12.png)
+![](images/400/i14.4.png)
 
-- Execute with the AMER connection.  You will be prompted for number of transactions - enter 500.
+- Note the status of the two instances (up and available).
 
-    ![](images/400/i13.png)
+![](images/400/i14.2.png)
 
-- Review `PRODUCTS_HISTORY` in `DW` auditing table to see that updates include the BEFORE and AFTER images of updates.
+- Navigate to tasks.  Review activity.
 
-    ![](images/400/i14.png)
+![](images/400/i14.6.png)
+
+- Return to ggsci and stop EXTDW process.  You may need to open a new terminal window (if you closed it previously):
+	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@<your ggcs IP address>` Field ***GG1***
+	- **Switch to user oracle:** `sudo su - oracle` 
+    - **Enter the following:**  `stop EXTDW`
+
+![](images/400/i14.3.png)
+
+- Return to the Console and review Changes in status in instances, tasks.  
+
+![](images/400/i15.1.png)
+
+- Review Notifications.  Note the service is down.
+
+![](images/400/i16.png)
+
+- Go back to ggsci and start EXTDW process.
+    - **Enter the following:** `start EXTDW`
+
+![](images/400/i17.png)
+
+- Return to the Console and review changes in status in instances, tasks. Note service is back up.
+
+![](images/400/i18.png)
