@@ -1,4 +1,4 @@
-![](images/300/Picture-lab.png)  
+![](images/300/Picture300-lab.png)  
 
 # Demo Introduction
 
@@ -10,7 +10,7 @@
 
 To demonstrate how to develop and debug R scripts with R Studio IDE tool.
 
-## To explain an R script that does the following jobs:
+To explain an R script that does the following jobs:
 
  • Load raw data from Object Store for train in R environment
 
@@ -33,25 +33,31 @@ To demonstrate how to develop and debug R scripts with R Studio IDE tool.
 The data file ( iris.csv ) used in the demo is a popular R dataset. Users can find and download it from Internet. After downloaded to local desktop, the data file will then be uploaded into the Object Store in Oracle Storage Cloud. To upload data files into an Object Store, users can leverage any tool available, for example Cloudberry. In this demo, we will use built-in Storage Console of Oracle Storage Cloud. 
 
 To access Storage Console, open a browser and input the service URL. The URL is in the
+ format: https://storageconsole.<DATACENTERCODE>.oraclecloud.com/.  After login to the console, user can navigate to following Object Browser.
 
- format: https://storageconsole.<DATACENTERCODE>.oraclecloud.com/. After login to the console,
-
- user can navigate to following Object Browser.
+![](images/300/Lab300_1.png)
 
 
-If the container for the demo does not exist,click Create Container button in the page, and then assign a unique name for the container in the pop-up dialog.
+
+If the container for the demo does not exist,
+click Create Container button in the page, and then assign a unique name for the container in the pop-up dialog.
 
 Select the container from the list, then you can see following page to manage objects in the container.
+
+![](images/300/Lab300_2.png)
 
 If the data file is not in the container, click Upload Objects button in the page, a dialog will prompt to let user select a local file. Select the downloaded data file and upload it into the Object Store.
 
 After the data file is uploaded, user can see the file in the object list of the container.
+
 
 ## Step 2 : Develop and debug R Script
 
  In the demo, R Studio IDE in Base R Server is the tool to develop and debug R scripts. It can be accessed from any supported browser.
 
 Following is UI of R Studio IDE:
+
+![](images/300/Lab300_3.png)
 
 
 IDE UI is divided into two panels. On the top, the panel contains a menu bar and a toolbar,which allow users to access functions of the IDE. At the bottom, the panel has components to develop and debug R scripts. On the upper left, a tabbed editor is used to develop multiple R scripts. Below that editor is a console to display execution result of R scripts. On the upper right, a watch window will display both environmental and runtime variables. Below the watch is a window that can show various help information.
@@ -102,7 +108,7 @@ Line 17 to Line 24, all service URLs used in the R script are constructed with v
 
 ### 2. Load data from Object Store
 
-### In this part, we will load dataset from a data file in Object Store.
+In this part, we will load dataset from a data file in Object Store.
 
 ```
 25: # Get authentication token for storage cloud
@@ -116,36 +122,26 @@ storage_user, "X-Storage-Pass" = password), verbose())
 auth_token)), as = "text")
 32: my_data <- read.csv(file = textConnection(remote_file))
 33: my_data
-34:
+34 :
 ```
-### Oracle Storage Cloud provides a REST interface that allows external programs to request
+Oracle Storage Cloud provides a REST interface that allows external programs to request services from Object Store.
 
-### services from Object Store.
+Before sending any service request, clients must first authenticate to the Storage Cloud. Line 25 to line 29 shows how to authenticate and retrieve a token as the proof.
 
-### Before sending any service request, clients must first authenticate to the Storage Cloud. Line
+After got an authentication token, clients can get send service requests with token attached in the request. Line 31 retrieves name of remote object in Object Store. Line 32 loads data object from Object Store. Line 33 prints data in the dataset to console.
 
-### 25 to line 29 shows how to authenticate and retrieve a token as the proof.
+User can mark codes from line 1 to line 34 in the editor then client Run action in upper right.
 
-### After got an authentication token, clients can get send service requests with token attached
+R Studio will interpret and execute those codes on the fly. Output information is displayed in the console window.
 
-### in the request. Line 31 retrieves name of remote object in Object Store. Line 32 loads data object
-
-### from Object Store. Line 33 prints data in the dataset to console.
-
-### User can mark codes from line 1 to line 34 in the editor then client Run action in upper right.
-
-### R Studio will interpret and execute those codes on the fly. Output information is displayed in the
-
-### console window.
-
+![](images/300/Lab300_4.png)
 
 ### 3. Train the selected model with the dataset
 
-### This part will train the selected model with loaded data set.
-
-#### 35: ###########################################
+This part will train the selected model with loaded data set.
 
 ```
+#### 35: ###########################################
 36: # This uses Spark 1.6.
 37: # https://spark.apache.org/docs/1.6.1/sparkr.html
 38: #
@@ -199,23 +195,16 @@ mape = mape(result$label, result$prediction)
 81: result_metrics
 82:
 ```
-### Data analytic process leverages SparkR. From line 44 to line 51, we will first load and
+Data analytic process leverages SparkR. From line 44 to line 51, we will first load and initialize SparkR environment.
 
-### initialize SparkR environment.
+Spark can only process data in special data structure. So next, we need to construct required data structure for Spark. Line 52 to line 64 will demonstrate how to create data frames the data structure for Spark SQL.
 
-### Spark can only process data in special data structure. So next, we need to construct required
-
-### data structure for Spark. Line 52 to line 64 will demonstrate how to create data frames the data
-
-### structure for Spark SQL.
-
-### Next, we will train the model with loaded dataset. Results are two data frames: a
-
-### pre-training model (variable m ) and metrics of the result.
+Next, we will train the model with loaded dataset. Results are two data frames: a 
+pre-training model (variable m ) and metrics of the result.
 
 ### 4. Save pre-trained data back to Object Store
 
-### This part will save both pre-trained model and result script in to Object Store.
+This part will save both pre-trained model and result script in to Object Store.
 
 ```
 83: # Regression model performance metrics function definition
@@ -233,15 +222,9 @@ auth_token), body = upload_file("/home/rstudio/fitted_model.RData"))
 93: # Stop Spark Context
 94: sparkR.stop()
 ```
-### Data frames will first save to local files in the user’s desktop respectively. Then request
+Data frames will first save to local files in the user’s desktop respectively. Then request services to upload those files to Object Store. Finally, clear SparkR environment to release resources.
 
-### services to upload those files to Object Store. Finally, clear SparkR environment to release
+When all codes are executed, additional files will be created in the Object Store. User can monitor changes in the Container from Storage Console.
 
-### resources.
-
-### When all codes are executed, additional files will be created in the Object Store. User can
-
-### monitor changes in the Container from Storage Console.
-
-
+![](images/300/Lab300_5.png)
 
