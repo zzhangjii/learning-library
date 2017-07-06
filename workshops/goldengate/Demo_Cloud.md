@@ -2,7 +2,7 @@
 
 ### **STEP 1**: Login to your Oracle Cloud account and Review Services
 
-- Open a browser and go to the following URL:
+- Open a Browser and log into [cloud.oracle.com](cloud.oracle.com):
 
 	https://cloud.oracle.com
 

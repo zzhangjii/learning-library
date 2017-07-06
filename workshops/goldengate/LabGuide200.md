@@ -23,9 +23,38 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ## Required Artifacts
 
+- The following lab requires a [VNC Viewer](https://www.realvnc.com/download/viewer/) to connect to an Image running on Oracle's IaaS Compute Service.  If you do not have a VNC Viewer you can download and install from the [VNC Viewer Website](https://www.realvnc.com/download/viewer/).
 - Access to your Oracle Cloud account (used in Lab 100) and services DBCS, GGCS, and Compute.
 
-### **STEP 1**: Configure Database Connections in SQL Developer
+### **STEP 1**: Review Compute Image (On-premise OGG)
+
+For the GoldenGate Cloud Service Workshop we will be using a compute Image that will represent your on-premises environment. In this image we have installed a 11g database that we will be migrating to our Oracle Public Cloud Database instance. The image also contains SQL Developer 4.1 that will be used to connect to both your local and cloud database.  
+
+- Start your vnc viewer and enter the IP address of the Compute image noted above.  ***You will be specifying port 10 (129.156.124.185:10)***.
+	- **VNC Password:** ***OG2*** in your handout
+
+	![](images/100/i24.png)
+
+- This is the 'On-premise' environment desktop.  All the lab material is in the `GGCS_Workshop_Material` folder on the desktop.  We have created a `cheat_sheet` folder and some shortcuts to simplify your navigation through the labs.
+
+	![](images/100/i24.1.png)
+
+ - Double click on the `GGCS_Workshop_Material` folder and review the contents.  Note:
+	- This folder has scripts to start the SSH proxy and to start and stop the GoldenGate Cloud Control Agent.
+	- The keys folder:  You will use a private key to access the GGCS and DBCS instances.  You will need the IP addresses of those environments after GGCS is up.
+	- The SQL Files folder:  These scripts are used in SQLDeveloper to generate transactional data, do row counts, and re-set your data if necessary for the DW.
+
+	![](images/100/i25.png)
+
+- Select the File Browser off the desktop and navigate to /u01/app/oracle/product.  This location is where GoldenGate On-premise product is installed and configured.  We will review this in the next lab.  Note that Oracle Database 11g which is used in the following labs is installed in /opt/oracle.
+
+	![](images/100/i27.png)
+
+- There are many directories under the GoldenGate product homes.  One particularly important directory is dirprm.  The dirprm directory will contain all of the parameter (OGG process configuration) and obey (ggsci scripts) that will be used for the workshop. There is also a cleanup directory that contain obey files to clean up the processes if a lab needs to be restarted.
+
+	![](images/100/i27.1.png)
+
+### **STEP 2**: Configure Database Connections in SQL Developer
 
 - Go to the On-Premise Compute image desktop (VNC) and double click on SQLDeveloper on the desktop.
 
@@ -35,7 +64,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/200/i3.png)
 
-- In the lower left region right click on the DBCSWS tunnel and update the IP address (fild ***DB1***).  Note that in a new environment you would need to create a new tunnel yourself.
+- In the lower left region right click on the DBCSWS tunnel and update the IP address (field ***DB1***).  Note that in a new environment you would need to create a new tunnel yourself.
 
 	![](images/200/i4.png)
 
@@ -49,7 +78,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/200/i5.2.png)
 
-- Next right click on the top connection and select Properties.  We need to set that to your assigned DBCS instance.  Set the Service Name.
+- Next right click on the top connection `DBCS-Amer` and select Properties.  We need to set that to your assigned DBCS instance.  Set the Service Name.
 
 	![](images/200/i6.png)
 
@@ -57,19 +86,11 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/200/i6.1.png)
 
-- Do the same thing for the next (DW) connection down.  Right click on the DBCS-DW connection, select properties, and edit the Service Name, field ***CS1***.
+- Do the same thing for the next `DBCS-DW` connection.  Right click on the `DBCS-DW` connection, select properties, and edit the Service Name, field ***CS1***.
 
 	![](images/200/i7.png)
 
-- Next re-create the database link (from 11g Database to DBCS 12c) with your assigned IP address (field ***DB1***). 
-
-	![](images/200/i7.1.png)
-
-- Upated the DBCS IP (field ***DB1***) and Identity Domain (field ***CS1***), select the ***EURO*** connection on the right, and then execute the script.  
-
-	![](images/200/i7.2.png)
-
-### **STEP 2**: Review Source Data in 11g Source Database (On-Premise/Compute image) and the DBCS 12c Target Database.
+### **STEP 3**: Review Source Data in 11g Source Database (On-Premise/Compute image) and the DBCS 12c Target Database.
 
 - In SQLDevelper select (expand) the On-Premise-EURO connection, and then expand the tables.  Select the ORDERS table, and then the data tab.  At this point we are just reviewing data in EURO on 11g Database that will be replicated to DBCS 12c.
 
@@ -83,34 +104,58 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/200/i8.1.png)
 
-- Then select (expand) the DBCS-Amer connection and then expand the tables. There are no tables in the target Schema at this point.
+- Then select (expand) the `DBCS-Amer` connection and then expand the tables. There are no tables in the target Schema at this point.
 
 	![](images/200/i9.png)
 
-- Lastly select (expand) the DBCS-DW connection and then expand the tables.  These are transformed (and empty) tables ready for populating in Lab 400.
+- Lastly select (expand) the `DBCS-DW` connection and then expand the tables.  These are transformed (and empty) tables ready for populating in Lab 400.
 
 	![](images/200/i9.1.png)
 
-### **STEP 3**: Configure OGG (On-premise/Source)
+### **STEP 4**: Review GGCS
+
+- We will use ssh on the OGG Compute image and log into GGCS from there. Double click on the `GGCS_SSH` shortcut on the desktop.  This is just a simple SSH command to connect to your GGCS instance.
+
+	![](images/200/i9.2.png)
+
+- The first time you connect to GGCS via SSH (and later to DBCS with SSH) you will be prompted for authenticity of the host - respond yes to connect.
+
+	![](images/200/i9.3.png)
+
+- Enter the following commands:
+	- **Switch to user oracle:** `sudo su - oracle`
+	- **Display the oracle home directory:** `pwd`
+	- **Switch to the GG Home directory:** `cd $GGHOME
+	- **Display the GG home directory:** `pwd` (/u01/app/oracle/gghome)
+	- **Display the GG configuration directories:** `ls dir*`
+	- **Log into ggsci (GoldenGate command shell):** `ggsci`
+	- **Display status of services:** `info all`
+	- **Delete the datastore:** `delete datastore` (the data store may or may not exist.  confirm y to delete if it does exist, otherwise ignore errors)
+	- **Start the GGCS manager:** `start mgr`
+	- **Confirm manager is started:** `info all`
+	- **Exit the command shell:** `exit`
+	- **Switch to the network admin directory where connectivity to dbcs12c is configured:** `cd /u02/data/oci/network/admin`
+	- **Display the tnsnames.ora file:** `cat tnsnames.ora` (***Note*** this is where you configure GGCS sources and targets.  This has been done for you)
+	- **Close the connection:** `exit` and then `exit` again
+
+- Note that the target entry is created automatically when the GGCS is associated with a DBCS during creations. Additional database sources and targets will need to be added manually. We have added entries representing the DBCS as a source and target for your labs.
+
+### **STEP 5**: Configure OGG (On-premise/Source)
 
 - Note this is:
 	- Using our On-premise/Compute image through VNC
 	- Our source data configuration for 11g Database (schema euro)
 	- Uses OGG (not GGCS) with Classic Extract 
 
-- Open a terminal window and start a SOCKS5 Proxy Tunnel.  This will encrypt data and send it through an SSH Tunnel.  First open the lab folder on the desktop.  Note that you get an autentication error if you did NOT do step six in lab 100, which SSH's into GGCS.  The first time you SSH into GGCS (or any Linux server) a file called known_hosts is created in the /home/oracle/.ssh directory and the GGCS key is put in that file.  For this proxy step the file and entry must first exist (from step six, lab 100).
+- We are going to open a SOCKS5 Proxy Tunnel, which will encrypt data and send it through an SSH Tunnel.  First open the `GGCS_Workshop_Material` folder on the desktop.  Note that you get an autentication error if you did NOT first do step 4 above.  The first time you SSH into GGCS (or any Linux server) a file called known_hosts is created in the /home/oracle/.ssh directory and the GGCS key is put in that file.  For this proxy step the file and entry must first exist (from step six, lab 100).  Right click on the `start_proxy.sh` and select display.
 
 	![](images/200/i10.png)
 
 - Then open the start_proxy.sh script.  Review the configuration.  A SOCKS 5 tunnel is a type of SSH tunnel in which specific applications (GoldenGate) forward their local traffic (on port 1080 in this case) down the tunnel to the server, and then on the server end, the proxy forwards the traffic out to the general Internet.  The traffic is encrypted, and uses open port 22 (SSH port) on GGCS to transport the data.  We will reference this port in OGG configuration in the following steps.
 
-	![](images/200/i11.png)
-
-- Edit the IP address and enter the GGCS IP (field ***GG1***).  Save the file.
-
 	![](images/200/i12.png)
 
-- Close the window edit window, and right click inside the folder to open a terminal window.
+- Close the edit window, and right click inside the folder to open a terminal window.
 
 	![](images/200/i12.1.png)
 
@@ -119,22 +164,22 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 	![](images/200/i12.2.png)
 
 - Execute the start_proxy.sh script. 
-	- **Enter the following:** `./start_proxy.sh`   **LEAVE THIS WINDOW OPEN - DO NOT CLOSE IT..YOU CAN MINIMIZE IT**.
+	- **Enter the following:** `./start_proxy.sh`   **LEAVE THIS WINDOW OPEN - DO NOT CLOSE IT.  YOU CAN MINIMIZE IT**.
 
 	![](images/200/i13.png)
-
-- Start a GoldenGate command session.  Open a new terminal window (double click on terminal on the desktop), and enter the following:
-	- **Switch to the GG home directory:** `cd $GGHOME`
-	- **Start a gg command session:** `./ggsci`
-
-	![](images/200/i15.png)
 
 - Review OGG parameters.  
 	- **Open a file browser window and switch the the following directory:** `/u01/app/oracle/product/11gogg/dirprm`
 
 	![](images/200/i16.png)
 
-- In the ggsci terminal window view the parameter CREDENTIALSTORE.oby.  Note that you can also open the file with gedit in the file browser menu.  The command view param is a shortcut way to view gg parameter files without having to navigate to the directory.
+- Start a GoldenGate command session.  Open a new terminal window (double click on terminal on the desktop), and enter the following.
+	- **Switch to the GG home directory:** `cd $GGHOME`
+	- **Start a gg command session:** `./ggsci`
+
+	![](images/200/i15.png)
+
+- View the parameter CREDENTIALSTORE.oby.  The command view param is a shortcut way to view gg parameter files without having to navigate to the directory.  You could also go to the directory and open the file with a text editor such as gedit.
 	- **Enter the following:** `view param dirprm/CREDENTIALSTORE.oby`
 
 	![](images/200/i17.png)
@@ -174,15 +219,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/200/i21.png)
 
-- Alternatively edit parameters PEURO and set the IP Address using gedit.  Minimized the ggsci terminal window and Open a new windows browser and use gedit as follows:
-
-	![](images/200/i22.png)
-
-- Edit the IP address (set it to field ***GG1***), hit save, and exit the window.
-
-	![](images/200/i22.1.png)
-
-- Go back to ggsci and start the manager and review processes that you have added:
+- Start the manager and review processes that you have added:
 	- **Enter the following:** `start mgr`
 	- **Enter the following:** `info all`
  
@@ -194,20 +231,23 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/200/i24.png)
 
-### **STEP 4**: Migrate Baseline Data with Datapump
+### **STEP 6**: Migrate Baseline Data with Datapump
 
-- Export the 11g EURO schema data.  See field ***OG3*** from your handout for the password:
-	- **Enter the following in a terminal window:** `expdp euro/<password> schemas=euro dumpfile=export.dmp reuse_dumpfiles=yes directory=oracle`
+- Export the 11g EURO schema data.  You can copy the command from the cheat_sheet folder on your on-premise desktop or enter it as follows below.  See field ***OG3*** from your handout for the password:
+	- **Enter the following in a terminal window (or copy from the cheat_sheet folder):** `expdp euro/<password> schemas=euro dumpfile=export.dmp reuse_dumpfiles=yes directory=oracle`
 
 	![](images/200/i25.png)
 
-- Copy the export.dmp file to DBCS 12c.  Use field ***DB1*** for your DBCS IP address.
-	- **Enter the following in a terminal window:** `scp -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key /home/oracle/export.dmp oracle@<your DBCS IP address>:.`
+- Copy the export.dmp file to DBCS 12c.  You can copy the command from the cheat_sheet folder on your on-premise desktop or enter it as follows below.  Use field ***DB1*** for your DBCS IP address.
+	- **Enter the following in a terminal window (or copy from the cheat_sheet folder):** `scp -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key /home/oracle/export.dmp oracle@<your DBCS IP address>:.`
 
  	![](images/200/i26.png)
-	
-- SSH to the DBCS 12c instance:
-	- **Enter the following in a terminal window and ssh to DBCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key oracle@<your DBCS IP address>` field ***DB1*** for IP address
+
+- Double click on the GGCS_SSH shortcut on the desktop and open a GGCS SSH terminal window:
+
+ 	![](images/200/i26.1.png)
+
+- Import the data.  You can copy the command from the cheat_sheet folder on your on-premise desktop or enter it as follows below.
 	- **Import the data:** `impdp amer/<password>@pdb1 SCHEMAS=euro REMAP_SCHEMA=euro:amer DIRECTORY=dmpdir DUMPFILE=export.dmp` field ***DB2*** for password
 
 	![](images/200/i27.png)
@@ -243,15 +283,14 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/200/i35.png)
 
-### **STEP 5**: Configure GGCS (Cloud/Target) 
+### **STEP 7**: Configure GGCS (Cloud/Target) 
 
 Note this is:
 - Using our GGCS Service (which also runs on Compute) paired with a DBCS for both GGCS metadata and target data
 - Our target data configuration for 12c Pluggable Database (schema amer)
 - Uses GGCS (not on-premise OGG) with Integrated Replicat
 
-- Open a terminal window on the OGG Compute image and ssh to GGCS (substituting your own GGCS IP):
-	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@<your ggcs IP address>` field ***GG1*** for your ip address
+- Double click on the GGCS_SSH shortcut on your dekstop and open a terminal window on the OGG Compute image and ssh to GGCS.
 	- **Switch to user oracle:** `sudo su - oracle`
 	- **Start a gg command shell:** `ggsci`
 
