@@ -66,40 +66,8 @@ labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sa
                     $("#labguide h2").next("h3").addClass("first-in-section");
                     $("#labguide h3").nextUntil("#labguide h1, #labguide h2, #labguide h3").hide();
                     $("#labguide h3").addClass('plus');
-                    $("#labguide h3").click(function (e) {
-                        var fadeOutStep = function (step) {
-                            $(step).nextUntil("#labguide h1, #labguide h2, #labguide h3").fadeOut();
-                            $(step).addClass('plus');
-                            $(step).removeClass('minus');
-                        };
-                        var fadeInStep = function (step) {
-                            $(step).nextUntil("#labguide h1, #labguide h2, #labguide h3").fadeIn();
-                            $(step).addClass('minus');
-                            $(step).removeClass('plus');
-                        };
-                        if (e.offsetY < 0) { //user has clicked above the H3, in the expand/collapse all button
-                            if ($(this).hasClass('first-in-section') && $(this).hasClass('plus')) {
-                                fadeInStep($(this));
-                                $(this).nextUntil("#labguide h1, #labguide h2", "h3").each(function (i, e) {
-                                    return fadeInStep(e);
-                                });
-                            }
-                            else if ($(this).hasClass('first-in-section') && $(this).hasClass('minus')) {
-                                fadeOutStep($(this));
-                                $(this).nextUntil("#labguide h1, #labguide h2", "h3").each(function (i, e) {
-                                    return fadeOutStep(e);
-                                });
-                            }
-                        }
-                        else { //user has clicked in the H3, only work on this step
-                            if ($(this).hasClass('plus')) {
-                                fadeInStep($(this));
-                            }
-                            else if ($(this).hasClass('minus')) {
-                                fadeOutStep($(this));
-                            }
-                        }
-                    });
+                    $("#labguide h3").unbind('click', stepClickHandler);
+                    $("#labguide h3").click(stepClickHandler);
                 }, 0);
             }, function (msg) {
                 if(page === 'Home.md') {
@@ -135,6 +103,41 @@ labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sa
                 })
             }, 500);
         }
+        stepClickHandler = function (e) {
+            var fadeOutStep = function (step) {
+                $(step).nextUntil("#labguide h1, #labguide h2, #labguide h3").fadeOut();
+                $(step).addClass('plus');
+                $(step).removeClass('minus');
+            };
+            var fadeInStep = function (step) {
+                $(step).nextUntil("#labguide h1, #labguide h2, #labguide h3").fadeIn();
+                $(step).addClass('minus');
+                $(step).removeClass('plus');
+            };
+            if (e.offsetY < 0) { //user has clicked above the H3, in the expand/collapse all button
+                if ($(this).hasClass('first-in-section') && $(this).hasClass('plus')) {
+                    fadeInStep($(this));
+                    $(this).nextUntil("#labguide h1, #labguide h2", "h3").each(function (i, e) {
+                        return fadeInStep(e);
+                    });
+                }
+                else if ($(this).hasClass('first-in-section') && $(this).hasClass('minus')) {
+                    fadeOutStep($(this));
+                    $(this).nextUntil("#labguide h1, #labguide h2", "h3").each(function (i, e) {
+                        return fadeOutStep(e);
+                    });
+                }
+            }
+            else { //user has clicked in the H3, only work on this step
+                if ($(this).hasClass('plus')) {
+                    fadeInStep($(this));
+                }
+                else if ($(this).hasClass('minus')) {
+                    fadeOutStep($(this));
+                }
+            }
+        };
+        
         $scope.toggleLeft = function () {
             $mdSidenav('left').toggle();
         };
