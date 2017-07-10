@@ -14,13 +14,19 @@
 
 - Once you are viewing the Workshop's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
 
-- Although these guides can be viewed on or off a corporate VPN, ***access to Oracle Cloud Services MUST BE OFF VPN***.
-
     ![](images/WorkshopMenu.png)  
 
-- You will be accessing several Oracle Cloud Services throughout the labs.  Most of the services have been set up in advance for you, but you will need to configure these services and request new ones.  To simplify and clarify the services and their required credentials we have prepared a ***one-page GoldenGate Cloud Services Workshop handout*** with the required information.  You will also need to ***write down some information on this handout*** as you progress through the labs.  The handout will be provided prior to starting your labs.  The different fields in the handout have been coded (eg CS1, CS2) to make it easy to locate the required field referenced in the lab guides.
+- You will be accessing several Oracle Cloud Services throughout the labs.  Most of the services have been set up in advance for you, but you will need to configure these services and request new ones.  To simplify and clarify the services and their required credentials we have prepared a ***one-page GoldenGate Cloud Services Workshop handout*** with the required information.  The handout will be provided prior to starting your labs.  The different fields in the handout have been coded (eg CS1, CS2) to make it easy to locate the required field referenced in the lab guides.
 
 - To log issues and view the lab guide source, go to the [github oracle](https://github.com/pcdavies/GoldenGateCloudService/tree/master/workshops/goldengate) repository.
+
+## Prerequisites 
+
+- Ensure your laptop does not mandate the use of VPN.  Although these guides can be viewed on or off a corporate VPN, ***access to Oracle Cloud Services MUST BE OFF VPN***.
+
+- Confirm you can access https://cloud.oracle.com.
+
+- Install VNC.  The labs require a [VNC Viewer](https://www.realvnc.com/download/viewer/) to connect to an Image running on Oracle's IaaS Compute Service.  If you do not have a VNC Viewer you can download and install from the [VNC Viewer Website](https://www.realvnc.com/download/viewer/).
 
 ## Oracle GoldenGate Cloud Services Workshop
 
@@ -37,7 +43,7 @@ This Oracle Public Cloud GoldenGate Cloud Services workshop will give you a basi
 
 ### Objectives
 
-- Familiarize you with the Oracle Cloud environment and services that will be used in the following labs.
+- Introduce you to the Oracle Cloud environment and services that will be used in the following labs.
 - Walk through the steps to create a GoldenGate Cloud Service that will manage data replication between on-premise and cloud environments, and manage replication between different cloud environments.
 
 ## Lab 200: On-Premise to Cloud Zero Downtime Migration
@@ -46,7 +52,7 @@ This Oracle Public Cloud GoldenGate Cloud Services workshop will give you a basi
 
 ### Objectives
 
-- Familiarize you with an on-premise 11g Database environment that will be replicated to a DBCS 12c environment.  Note: this is set up as an image running in Oracle IAAS/compute, but process and configuration steps are the same as though the image was running outside the cloud.
+- Introduce you to an on-premise 11g Database environment that will be replicated to a DBCS 12c environment.  Note: this is set up as an image running in Oracle IAAS/compute, but process and configuration steps are the same as though the image was running outside the cloud.
 - Configure SQLDeveloper to access the source and target databases.
 - Use Oracle Datapump to migrate data from 11g on-premise to DBCS 12c.
 - Configure an on-premise GoldenGate to extract data from a 11g Database.

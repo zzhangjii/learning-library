@@ -14,7 +14,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ## Objectives
 
-- Familiarize you with an on-premise 11g Database environment that will be replicated to a DBCS 12c environment.  Note: this is set up as an image running in Oracle IAAS/compute, but process and configuration steps are the same as though the image was running outside the cloud.
+- Introduce you to an on-premise 11g Database environment that will be replicated to a DBCS 12c environment.  Note: this is set up as an image running in Oracle IAAS/compute, but process and configuration steps are the same as though the image was running outside the cloud.
 - Configure SQLDeveloper to access the source and target databases.
 - Use Oracle Datapump to migrate data from 11g on-premise to DBCS 12c.
 - Configure an on-premise GoldenGate to extract data from a 11g Database.
@@ -122,7 +122,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/200/i9.3.png)
 
-- Enter the following commands:
+- Enter the following commands and then review the output:
 	- **Switch to user oracle:** `sudo su - oracle`
 	- **Display the oracle home directory:** `pwd`
 	- **Switch to the GG Home directory:** `cd $GGHOME
@@ -134,11 +134,9 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 	- **Start the GGCS manager:** `start mgr`
 	- **Confirm manager is started:** `info all`
 	- **Exit the command shell:** `exit`
-	- **Switch to the network admin directory where connectivity to dbcs12c is configured:** `cd /u02/data/oci/network/admin`
+	- **Switch to the network admin directory where connectivity to dbcs12c is configured:** `cd /u02/data/oci/network/admin` 
 	- **Display the tnsnames.ora file:** `cat tnsnames.ora` (***Note*** this is where you configure GGCS sources and targets.  This has been done for you)
 	- **Close the connection:** `exit` and then `exit` again
-
-- Note that the target entry is created automatically when the GGCS is associated with a DBCS during creations. Additional database sources and targets will need to be added manually. We have added entries representing the DBCS as a source and target for your labs.
 
 ### **STEP 5**: Configure OGG (On-premise/Source)
 
@@ -147,11 +145,11 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 	- Our source data configuration for 11g Database (schema euro)
 	- Uses OGG (not GGCS) with Classic Extract 
 
-- We are going to open a SOCKS5 Proxy Tunnel, which will encrypt data and send it through an SSH Tunnel.  First open the `GGCS_Workshop_Material` folder on the desktop.  Note that you get an autentication error if you did NOT first do step 4 above.  The first time you SSH into GGCS (or any Linux server) a file called known_hosts is created in the /home/oracle/.ssh directory and the GGCS key is put in that file.  For this proxy step the file and entry must first exist (from step six, lab 100).  Right click on the `start_proxy.sh` and select display.
+- We are going to open a SOCKS5 Proxy Tunnel, which will encrypt data and send it through an SSH Tunnel.  First open the `GGCS_Workshop_Material` folder on the desktop.  Note that you get an autentication error if you did NOT first do step 4 above.  The first time you SSH into GGCS (or any Linux server) a file called `known_hosts` is created in the /home/oracle/.ssh directory and the GGCS key is put in that file.  For this proxy step the file and entry must first exist (from step six, lab 100).  Right click on the `start_proxy.sh` and select display.
 
 	![](images/200/i10.png)
 
-- Then open the start_proxy.sh script.  Review the configuration.  A SOCKS 5 tunnel is a type of SSH tunnel in which specific applications (GoldenGate) forward their local traffic (on port 1080 in this case) down the tunnel to the server, and then on the server end, the proxy forwards the traffic out to the general Internet.  The traffic is encrypted, and uses open port 22 (SSH port) on GGCS to transport the data.  We will reference this port in OGG configuration in the following steps.
+- Then open the `start_proxy.sh` script.  Review the configuration.  A SOCKS 5 tunnel is a type of SSH tunnel in which specific applications (GoldenGate) forward their local traffic (on port 1080 in this case) down the tunnel to the server, and then on the server end, the proxy forwards the traffic out to the general Internet.  The traffic is encrypted, and uses open port 22 (SSH port) on GGCS to transport the data.  We will reference this port in OGG configuration in the following steps.
 
 	![](images/200/i12.png)
 
@@ -159,11 +157,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/200/i12.1.png)
 
-- Note as you work through the labs you may have more than one terminal window open at one time.  Optional - to make it clear which terminals are being used for which purpose change the profile to 'Proxy' to make it clear.  Generally you will be opening terminals for 11g On Premise activities or for 12c GGCS activities.  You can select these as you work through the labs (or create your own). Note profiles were not used when the labs were initially created.
-
-	![](images/200/i12.2.png)
-
-- Execute the start_proxy.sh script. 
+- Execute the `start_proxy.sh` script. 
 	- **Enter the following:** `./start_proxy.sh`   **LEAVE THIS WINDOW OPEN - DO NOT CLOSE IT.  YOU CAN MINIMIZE IT**.
 
 	![](images/200/i13.png)
@@ -233,26 +227,26 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 ### **STEP 6**: Migrate Baseline Data with Datapump
 
-- Export the 11g EURO schema data.  You can copy the command from the cheat_sheet folder on your on-premise desktop or enter it as follows below.  See field ***OG3*** from your handout for the password:
-	- **Enter the following in a terminal window (or copy from the cheat_sheet folder):** `expdp euro/<password> schemas=euro dumpfile=export.dmp reuse_dumpfiles=yes directory=oracle`
+- Export the 11g EURO schema data.  You can copy the command from the `cheat_sheet` folder on your on-premise desktop or enter it as follows below.  See field ***OG3*** from your handout for the password:
+	- **Enter the following in a terminal window (or copy from the `cheat_sheet` folder):** `expdp euro/<password> schemas=euro dumpfile=export.dmp reuse_dumpfiles=yes directory=oracle`
 
 	![](images/200/i25.png)
 
-- Copy the export.dmp file to DBCS 12c.  You can copy the command from the cheat_sheet folder on your on-premise desktop or enter it as follows below.  Use field ***DB1*** for your DBCS IP address.
-	- **Enter the following in a terminal window (or copy from the cheat_sheet folder):** `scp -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key /home/oracle/export.dmp oracle@<your DBCS IP address>:.`
+- Copy the export.dmp file to DBCS 12c.  You can copy the command from the `cheat_sheet` folder on your on-premise desktop or enter it as follows below.  Use field ***DB1*** for your DBCS IP address.
+	- **Enter the following in a terminal window (or copy from the `cheat_sheet` folder):** `scp -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key /home/oracle/export.dmp oracle@<your DBCS IP address>:.`
 
  	![](images/200/i26.png)
 
-- Double click on the GGCS_SSH shortcut on the desktop and open a GGCS SSH terminal window:
+- Double click on the `GGCS_SSH` shortcut on the desktop and open a GGCS SSH terminal window:
 
  	![](images/200/i26.1.png)
 
-- Import the data.  You can copy the command from the cheat_sheet folder on your on-premise desktop or enter it as follows below.
+- Import the data.  You can copy the command from the `cheat_sheet` folder on your on-premise desktop or enter it as follows below.
 	- **Import the data:** `impdp amer/<password>@pdb1 SCHEMAS=euro REMAP_SCHEMA=euro:amer DIRECTORY=dmpdir DUMPFILE=export.dmp` field ***DB2*** for password
 
 	![](images/200/i27.png)
 
-- Compare row counts.  Open SQL Developer and then open file get_count.sql (upper left).
+- Compare row counts.  Open SQL Developer and then open file `get_count.sql` (upper left).
 
 	![](images/200/i28.png)
 
@@ -290,7 +284,7 @@ Note this is:
 - Our target data configuration for 12c Pluggable Database (schema amer)
 - Uses GGCS (not on-premise OGG) with Integrated Replicat
 
-- Double click on the GGCS_SSH shortcut on your dekstop and open a terminal window on the OGG Compute image and ssh to GGCS.
+- Double click on the `GGCS_SSH` shortcut on your dekstop and open a terminal window on the OGG Compute image and ssh to GGCS.
 	- **Switch to user oracle:** `sudo su - oracle`
 	- **Start a gg command shell:** `ggsci`
 
@@ -328,7 +322,7 @@ Note this is:
 
 	![](images/200/i41.png)
 
-- Compare data (remember that after we used datapump to migrate the base tables we generated an additional 500 transactions).  Go back to SQLDeveloper and open the get_count.sql script, select the EURO Connection, and then run the script:
+- Compare data (remember that after we used datapump to migrate the base tables we generated an additional 500 transactions).  Go back to SQLDeveloper and open the `get_count.sql` script, select the EURO Connection, and then run the script:
 
 	![](images/200/i42.png)
 

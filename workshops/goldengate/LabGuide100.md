@@ -27,7 +27,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 ## Objectives
 
 - Walk through the steps to create a GoldenGate Cloud Service that will manage data replication between on-premise and cloud environments, and manage replication between different cloud environments.
-- Familiarize you with the Oracle Cloud environment and services that will be used in the following labs.
+- Introduce you to the Oracle Cloud environment and services that will be used in the following labs.
 
 ## Required Artifacts
 
