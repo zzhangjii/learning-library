@@ -64,6 +64,10 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/200/i3.png)
 
+- The next step requires you to right click on your mouse or touch pad.  On a MAC computer this is done as follows:
+
+	![](images/200/i3.1.png)
+
 - In the lower left region right click on the DBCSWS tunnel and update the IP address (field ***DB1***).  Note that in a new environment you would need to create a new tunnel yourself.
 
 	![](images/200/i4.png)
