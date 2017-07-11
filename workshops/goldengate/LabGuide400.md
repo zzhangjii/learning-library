@@ -19,16 +19,16 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ### **STEP 1**: Configure On-premise
 
-- Log into VNC on the Compute instance and open Firefox WEB browser and go to `<ip addresss of ggcs vm>:7809/groups`.  All processes should be up and running.  This is necessary to ensure the monitoring agent will start the first time.
+- Log into VNC on the Compute instance and open Firefox WEB browser and go to `<ip addresss of ggcs vm>:7809/groups` (field ***GG1***).  All processes should be up and running.  This is necessary to ensure the monitoring agent will start the first time.
 
 ![](images/400/i1.1.png)
 
 - Next open a file browser in the Compute instance.
-	- **Edit the following file and udate the IP address with the GGCS IP:** `/u01/app/oracle/product/ggcc_instance/conf/agent.properties`
+	- **Open the following file and review key parameters:** `/u01/app/oracle/product/ggcc_instance/conf/agent.properties`
 
 ![](images/400/i1.png)
 
-- Update the following fields:
+- Review the following fields at the bottom of the file.  **Note we have updated the IP addresses for you:**
     - **ggInstanceHost=** `<ip address of on prem vm>` Field ***OG1***
     - **ggccServiceHost=** `<ip address of ggcs vm>` Field ***GG1***
     - **proxy-127.0.0.1=** `<ip address of ggcs vm>` Field ***GG1***
@@ -51,18 +51,14 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ### **STEP 2**: Configure GGCS
 
-- Open a terminal window on the OGG Compute image and ssh to GGCS:
-	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@<your ggcs IP address>` Field ***GG1***
+- Double click on the `GGCS_SSH` shortcut on your desktop to open a SSH terminal window into GGCS:
+
+    ![](images/400/i4.1.png)
+
+- Execute the following commands:
 	- **Switch to user oracle:** `sudo su - oracle`
-    - **Enter the following:** `cp /u02/data/ggcc/agent/conf/agent.properties /u02/data/ggcc/agent/conf/agent.properties_bu`
-    - **Edit the file and replace 11.111.111.111 placeholders with student ip addresses of the ggcs VM. Leave other parameters at the default:** `vi /u02/data/ggcc/agent/conf/agent.properties`
-        - `ggInstanceHost=11.111.111.111` Field ***GG1***
-        - `ggccServiceHost=11.111.111.111` Field ***GG1***
-	- **Use the arrows on your keyboard to navigate to the IP address**
-	- **Use the `i` character to enter insert mode and the `[ESC]` key to exit insert mode**
-	- **Enter your DBCS IP address:** see highlighted text below
-	- **Use the `x` key to delete characters**
-	- **To save enter `:` character and then `x` character**
+    - **Enter the following:** `more /u02/data/ggcc/agent/conf/agent.properties`
+    - **Review the key parameters highlighted below.  Note these have been updated for you.**
 
 ![](images/400/i5.png)
 
