@@ -55,7 +55,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/100/i8.png)
 
-- You will be presented with a Dashboard summarizing all of your available services.  You have access to several services, but only Database and Compute are visible.  **Click** on **Customize Dashboard** to add GoldenGate to your list of visible services. 
+- You will be presented with a Dashboard summarizing all of your available services.  You have access to several available services, but only services that have instances deployed will be visible.  You should see Database, Compute, and GoldenGate.  If you do not see GoldenGate **Click** on **Customize Dashboard** to add GoldenGate to your list of visible services. 
 
 	![](images/100/i9.png)
 

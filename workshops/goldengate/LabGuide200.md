@@ -166,12 +166,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/200/i13.png)
 
-- Review OGG parameters.  
-	- **Open a file browser window and switch the the following directory:** `/u01/app/oracle/product/11gogg/dirprm`
-
-	![](images/200/i16.png)
-
-- Start a GoldenGate command session.  Open a new terminal window (double click on terminal on the desktop), and enter the following.
+- Review OGG parametes.  Start a GoldenGate command session, open a new terminal window (double click on terminal on the desktop), and enter the following.
 	- **Switch to the GG home directory:** `cd $GGHOME`
 	- **Start a gg command session:** `./ggsci`
 
