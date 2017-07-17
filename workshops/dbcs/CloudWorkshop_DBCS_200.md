@@ -40,9 +40,7 @@ In this lab, you will explore some common use cases for moving your data from on
 
 	![](images/200/image3.png)
 
--   Double-click the **On-premises** folder to expand the list of
-    database connections. Please note the pre-configured connections to
-    the on-premises database.
+-   Double-click the **On-premises** folder to expand the list of database connections. Please note the pre-configured connections to the on-premises database.
 
 	![](images/200/image4.png)
 
@@ -62,9 +60,7 @@ In this lab, you will explore some common use cases for moving your data from on
 
 	![](images/200/image7.png)
 
--   Expand the **sys - CDB connect**, and then expand the **Container
-    Database** tree item. Click on the **ALPHAPDB** pluggable database
-    to show the details for the pluggable database.
+-   Expand the **sys - CDB connect**, and then expand the **Container Database** tree item. Click on the **ALPHAPDB** pluggable database to show the details for the pluggable database.
 
 	![](images/200/image8.png)
 
@@ -82,18 +78,13 @@ In this lab, you will explore some common use cases for moving your data from on
 	
 	![](images/200/image10.png)
 
--   Select **Custom Names** from File Name Conversions and review the
-    Source File names - note the "**/AlphaPDB/**" directory name of
-    the source file names. For a successful cloning operation, we must
-    create new target files different than the source files.
+-   Select **Custom Names** from File Name Conversions and review the Source File names - note the "**/AlphaPDB/**" directory name of the source file names. For a successful cloning operation, we must create new target files different than the source files.
 
 	![](images/200/image11.png)
 
 	**Note**: At this point we could manually change all the target files to point to a different directory, but there is an easier way.
 
--   Select **Custom Expressions** from the File Name Conversions drop
-    down. Click the **green plus icon** and enter the source directory
-    portion we want to change, followed by the target for the new files. 
+-   Select **Custom Expressions** from the File Name Conversions drop down. Click the **green plus icon** and enter the source directory portion we want to change, followed by the target for the new files. 
 	
 	Enter the following - please use the indicated upper and lower case letters:
 
@@ -135,9 +126,9 @@ In this lab, you will explore some common use cases for moving your data from on
 
 -   We will now configure an SSH connection to our DBCS instance
 
-	**Name**: `Alpha01-DBCS`
+	**Name**: `Alpha01A-DBCS`
 
-	**Host**: `<public IP you obtained in lab 100>`
+	**Host**: `<Database Image public IP you obtained in lab 100>`
 
 	**Username**: `oracle`
 	
@@ -151,7 +142,7 @@ In this lab, you will explore some common use cases for moving your data from on
 
 	**Name**: `Database`
 
-	**Host**: `<Public IP you obtained in lab 100>`
+	**Host**: `<Database Image Public IP you obtained in lab 100>`
 	
 -   Select **Use specific local port** and enter **1530**
 
@@ -187,8 +178,7 @@ In this lab, you will explore some common use cases for moving your data from on
 
 	![](images/200/image26.jpeg)
 
--   Click **Connect** to save the connection information which opens a
-    new SQL Worksheet.
+-   Click **Connect** to save the connection information which opens a new SQL Worksheet.
 
 	![](images/200/image27.png)
 
@@ -196,7 +186,7 @@ In this lab, you will explore some common use cases for moving your data from on
 
 ### **STEP 6**:  Copy ALPHACLONE pluggable database to the Cloud
 
--   Click on **View -> Task Progress** to open up the Task Progress window.
+-   Using the SQL Developer top menu, click on **View -> Task Progress** to open up the Task Progress window.
 
 -   In the DBA window right-click on **ALPHACLONE** and select “**Clone PDB to Oracle Cloud**”
 
@@ -212,33 +202,21 @@ In this lab, you will explore some common use cases for moving your data from on
 	
 	![](images/200/image29.jpeg)
 
--   You will note in the Task Progress window the progress of moving the
-    datafiles over to the cloud database. This task will take about a
-    minute to complete. ***Note: An Error/Warning will display*** at the end of this
-    task, which is **Normal**.
+-   You will note in the Task Progress window the progress of moving the datafiles over to the cloud database. This task will take about a minute to complete. ***Note: An Error/Warning will display*** at the end of this task, which is **Normal**.
 
 	![](images/200/image30.jpeg)
 
--   Upon completion, a couple of pop ups will reveal Plugin Violations.
-    This is because the patch level of the local ALPHACLONE pluggable
-    database is different than the Container database in the cloud. We
-    will remedy this shortly. Click **OK** as **each** of the popups is received. The
-    datafiles are transferred despite what the pop up implies.
+-   Upon completion, a couple of pop ups will reveal Plugin Violations. This is because the patch level of the local ALPHACLONE pluggable database is different than the Container database in the cloud. We will remedy this shortly. Click **OK** as **each** of the popups is received. The datafiles are transferred despite what the pop up implies.
 
 	![](images/200/image31.jpeg)  ![](images/200/image32.jpeg)
 
 ### **STEP 7**:  Access EM Express for the Cloud database
 
--   Open Chrome by clicking the icon on the menu bar or the Desktop.
+-   Open **Chrome** by clicking the icon on the menu bar or the Desktop.
 
 	![](images/200/image33.png)
 
--   Enter the following URL into the Address bar or click the "**EM
-    Express - DB**" link in the header bar - note: when using
-    localhost:5500 in the URL below, your browser request is routed
-    through the ssh proxy you loaded in a terminal window in Lab 100. If
-    for some reason that window was closed, or is not working, you
-    should refer back to lab 100:
+-   Enter the following URL into the Address bar or click the "**EM Express - DB**" link in the header bar - note: when using localhost:5500 in the URL below, your browser request is routed through the ssh proxy you loaded in a terminal window in Lab 100. If for some reason that window was closed, or is not working, you should refer back to lab 100:
 
 	https://localhost:5500/em
 
@@ -256,7 +234,7 @@ In this lab, you will explore some common use cases for moving your data from on
 
 ### **STEP 8**:  Plug the Alpha Clone database into the Cloud database
 
--   From the Database Home page, click the **CDB(1 PDBs)** link.
+-   From the Database Home page, click the **CDB(1 PDBs)** link located in the Status panel.
 
 	![](images/200/image36.png)
 
@@ -274,9 +252,7 @@ In this lab, you will explore some common use cases for moving your data from on
 	
 	![](images/200/image39.jpeg)
 
--   The Processing message displays for the 2 minutes (approximately)
-    required to plug the database into the container. Click the **OK**
-    button when the Confirmation message displays.
+-   The Processing message displays for the 2 minutes (approximately) required to plug the database into the container. Click the **OK** button when the Confirmation message displays.
 
 	![](images/200/image40.png)	![](images/200/image41.png)
 
@@ -284,9 +260,7 @@ In this lab, you will explore some common use cases for moving your data from on
 
 	![](images/200/image42.png)
 
--   Using your open Terminal window, you now need to SSH into your Cloud
-    database server. An Example is shown below. Substitute **your Cloud
-    database server IP address**:
+-   Using your open Terminal window, you now need to SSH into your Cloud database server. An Example is shown below. Substitute **your Cloud database server IP address**:
 
 	```
 	ssh -o ServerAliveInterval=60 -i /u01/OPCWorkshop/lab/labkey oracle@<your-IP-address>
@@ -308,15 +282,11 @@ In this lab, you will explore some common use cases for moving your data from on
 
 ### **STEP 9**:  Upgrade PDB
 
--   If the error message is “**The pluggable databases that need to be
-    patched must be in upgrade mode**” complete this Upgrade PDB Step.
-    If not, move to the next step titled **(Close and Reopen ALPHACLONE PDB)**.
+-   If the error message is “**The pluggable databases that need to be patched must be in upgrade mode**” complete this Upgrade PDB Step. If not, move to the next step titled **(Close and Reopen ALPHACLONE PDB)**.
 
 	![](images/200/image46.png)
 
--   Connect to container database using SQL Plus and place the database
-    in **upgrade mode**. Once completed run **datapatch** again and you
-    should have no errors.
+-   Connect to container database using SQL Plus and place the database in **upgrade mode**. Once completed run **datapatch** again and you should have no errors.
 
 	```
 	sqlplus / as sysdba
@@ -333,9 +303,7 @@ In this lab, you will explore some common use cases for moving your data from on
 
 ### **STEP 10**:  Close and Reopen the ALPHACLONE PDB
 
--   The final step is to close and reopen the ALPHACLONE pluggable
-    database. Go back to EM Express, with the ALPHACLONE row highlighted
-    (DO NOT CLICK THE ALPHACLONE LINK). Select **Actions -> Close**.
+-   The final step is to close and reopen the ALPHACLONE pluggable database. Go back to EM Express, with the ALPHACLONE row highlighted (DO NOT CLICK THE ALPHACLONE LINK). Select **Actions -> Close**.
 
 	![](images/200/image49.jpeg)
 
@@ -400,17 +368,13 @@ In this lab, you will explore some common use cases for moving your data from on
 
 ### **STEP 12**:  Create a Local Data Pump Directory
 
-**Note**: The default Data Pump directory object, DATA\_PUMP\_DIR, does
-not work with PDBs. Data Pump requires an explicit directory object
-within the PDB that is exporting or importing schemas or tables.
+**Note**: The default Data Pump directory object, DATA\_PUMP\_DIR, does not work with PDBs. Data Pump requires an explicit directory object within the PDB that is exporting or importing schemas or tables.
 
--   In the Connections Tab inside the "**On-Premise**" folder navigate to the **Alpha - PDB Directories** item, right-mouse click and select **Create Directory...**
+-   In the Connections Tab inside the "**On-Premise**" folder navigate to the **Alpha - PDB > Directories** item, right-mouse click and select **Create Directory...**
 
 	![](images/200/image58.png)
 
--   Enter the following values and click **Apply**. Remember to use the
-    SQL tab to review the actual DDL statement. Click **OK** to dismiss
-    the confirmation.
+-   Enter the following values and click **Apply**. Remember to use the SQL tab to review the actual DDL statement. Click **OK** to dismiss the confirmation.
 
 	**Directory Name**:				`alpha_backup_dir` (not case sensitive)
 
@@ -436,9 +400,7 @@ within the PDB that is exporting or importing schemas or tables.
 
 	![](images/200/image64.png)
 
--   Expand **Alpha - PDB**, expand **Data Pump**, then right-mouse-click
-    on **Export Jobs,** and then select **Data Pump Export Wizard...**
-    menu item.
+-   Expand **Alpha - PDB**, expand **Data Pump**, then right-mouse-click on **Export Jobs,** and then select **Data Pump Export Wizard...** menu item.
 
 	![](images/200/image65.png)
 
@@ -458,48 +420,29 @@ within the PDB that is exporting or importing schemas or tables.
 
 	![](images/200/image69.png)
 
--   We do want a log for this export, and just like the actual export
-    file, we must pick a directory from the list of directories in the
-    database. Select **ALPHA\_BACKUP\_DIR** from the list and click the
-    **Next** button.
+-   We do want a log for this export, and just like the actual export file, we must pick a directory from the list of directories in the database. Select **ALPHA\_BACKUP\_DIR** from the list and click the **Next** button.
 
 	![](images/200/image70.png)
 
--   The most important selection for any Data Pump operation is choosing
-    the directory where the export file will be written. Select
-    **ALPHA\_BACKUP\_DIR** from the Directories drop down list. Then,
-    select the **Delete Existing Dump Files** radio button and click the
-    **Next** button. 
+-   The most important selection for any Data Pump operation is choosing the directory where the export file will be written. Select **ALPHA\_BACKUP\_DIR** from the Directories drop down list. Then, select the **Delete Existing Dump Files** radio button and click the **Next** button. 
 	
 	**Note**: Data Pump always uses a server side directory for all export or import operations.
 
 	![](images/200/image71.png)
 
--   Data Pump jobs can be scheduled to run at any time and on any
-    desired times of the day, week or year. For this lab, the job will
-    be run immediately - click the **Next** button.
+-   Data Pump jobs can be scheduled to run at any time and on any desired times of the day, week or year. For this lab, the job will be run immediately - click the **Next** button.
 
 	![](images/200/image72.png)
 
--   On the Summary panel, click the **PL/SQL** tab to review the job
-    definition. Review the PL/SQL use of Oracle Supplied PL/SQL
-    subprograms for Data Pump. Click the **Finish** button to create the
-    job.
+-   On the Summary panel, click the **PL/SQL** tab to review the job definition. Review the PL/SQL use of Oracle Supplied PL/SQL subprograms for Data Pump. Click the **Finish** button to create the job.
 
 	![](images/200/image73.png)		![](images/200/image74.png)
 
--   For a brief time, SQL Developer shows a progress dialog while it
-    creates the job in the database. Note: the import actually runs as a
-    job in the database so this message is only about creating and
-    scheduling the export.
+-   For a brief time, SQL Developer shows a progress dialog while it creates the job in the database. Note: the import actually runs as a job in the database so this message is only about creating and scheduling the export.
 
 	![](images/200/image75.png)
 
--   While the job is running, you may view status information by
-    clicking on the export job added to the DBA Navigator panel. It may
-    take a couple of minutes so click the **Refresh**
-    ![](images/200/image76.jpeg) icon until the job is completed (NOT
-    RUNNING).
+-   While the job is running, you may view status information by clicking on the export job added to the DBA Navigator panel. It may take a couple of minutes so click the **Refresh** ![](images/200/image76.jpeg) icon until the job is completed (NOT RUNNING).
 
 	![](images/200/image77.png)		![](images/200/image78.png)
 
@@ -539,16 +482,11 @@ within the PDB that is exporting or importing schemas or tables.
 
 ### **STEP 15**:  Create a directory in the Alpha Clone PDB
 
--   Back in SQL Developer in the Connection panel, expand the **Alpha Clone - DBCS** connection.
-    Right-mouse-click on the **Directories** tree item and select the
-    **Create  Directory...** menu item.
+-   Back in SQL Developer in the Connection panel, expand the **Alpha Clone - DBCS** connection. Right-mouse-click on the **Directories** tree item and select the **Create  Directory...** menu item.
 
 	![](images/200/image83.png)
 
--   Enter the following values and click the **Apply** button. Click
-    **OK** to dismiss the confirmation message. This lets the database
-    access the same directory where the Data Pump export file was
-    copied.
+-   Enter the following values and click the **Apply** button. Click **OK** to dismiss the confirmation message. This lets the database access the same directory where the Data Pump export file was copied.
 
 	**Directory Name**:				`alpha_import_dir`
 
@@ -558,9 +496,7 @@ within the PDB that is exporting or importing schemas or tables.
 	
 ### **STEP 16**:  Create the Data Pump Import job
 
--   To access the Data Pump features, we need to add the clone
-    connection to the DBA Navigator. Click on the Add Connection icon on
-    the DBA Navigator panel
+-   To access the Data Pump features, we need to add the clone connection to the DBA Navigator. Click on the Add Connection icon on the DBA Navigator panel
 
 	![](images/200/image63.png)
 
@@ -568,9 +504,7 @@ within the PDB that is exporting or importing schemas or tables.
 
 	![](images/200/image86.png)
 
--   Expand **Alpha Clone - DBCS** > **Data Pumps**, Right-mouse on the
-    **Import Jobs** menu item, and select **Data Pump Import Wizard...**
-    menu item.
+-   Expand **Alpha Clone - DBCS** > **Data Pumps**, Right-mouse on the **Import Jobs** menu item, and select **Data Pump Import Wizard...** menu item.
 
 	![](images/200/image87.png)
 
@@ -586,10 +520,7 @@ within the PDB that is exporting or importing schemas or tables.
 
 	![](images/200/image90.png)
 
--   For this lab, we are creating a new schema, so we will enter the new
-    schema name as the destination. Under the Re-Map Schemas section
-    click **Add Row**. Enter the following values and click the **Next**
-    button.
+-   For this lab, we are creating a new schema, so we will enter the new schema name as the destination. Under the Re-Map Schemas section click **Add Row**. Enter the following values and click the **Next** button.
 
 	**Source**: 		`ALPHA`		(should be defaulted)
 
@@ -601,9 +532,7 @@ within the PDB that is exporting or importing schemas or tables.
 
 	![](images/200/image92.png)
 
--   For this lab, we will execute the import immediately. In a
-    real-world scenario, this job could be refreshing a development
-    database daily. Click the **Next** button.
+-   For this lab, we will execute the import immediately. In a real-world scenario, this job could be refreshing a development database daily. Click the **Next** button.
 
 	![](images/200/image93.png)
 
@@ -611,18 +540,11 @@ within the PDB that is exporting or importing schemas or tables.
 
 	![](images/200/image94.png)	![](images/200/image95.png)
 
--   For a period of time, SQL Developer shows a progress dialog while
-    the job is created. Remember, the job does not run locally so this
-    is only the progress of creating the job in the database.
+-   For a period of time, SQL Developer shows a progress dialog while the job is created. Remember, the job does not run locally so this is only the progress of creating the job in the database.
 
 	![](images/200/image75.png)
 
--   Locate and click on the job name to see the detailed status as the
-    job runs. When the job completes, the database automatically removes
-    the job. You will need to use the **Refresh** icon
-    ![](images/200/image76.jpeg) to see when the job finishes. The
-    Job **State** will display **NOT RUNNING** when the Job has
-    successfully completed.
+-   Locate and click on the job name to see the detailed status as the job runs. When the job completes, the database automatically removes the job. You will need to use the **Refresh** icon ![](images/200/image76.jpeg) to see when the job finishes. The Job **State** will display **NOT RUNNING** when the Job has successfully completed.
 
 	![](images/200/image96.png)
 	
@@ -636,12 +558,7 @@ within the PDB that is exporting or importing schemas or tables.
 
 ### **STEP 17**:  Create a new Cart
 
-The SQL Developer Cart is a convenient method for organizing the
-deployment of database objects and data from one database to another. In
-this trivial example, we want to update the data of just the CUSTOMERS
-and PRODUCTS table in the development cloud database. More elaborate
-usages of the cart can help package entire application deployments,
-including pre and post processes from multiple data sources.
+The SQL Developer Cart is a convenient method for organizing the deployment of database objects and data from one database to another. In this trivial example, we want to update the data of just the CUSTOMERS and PRODUCTS table in the development cloud database. More elaborate usages of the cart can help package entire application deployments, including pre and post processes from multiple data sources.
 
 -   Show the Cart using the **View -> Cart** menu option.
 
@@ -659,11 +576,7 @@ including pre and post processes from multiple data sources.
 
 	![](images/200/image102.png)
 
--   Include a script that runs before any other Cart activity. For this
-    lab, we are disabling all the referential integrity constraints so
-    we can delete and insert data without regard to foreign keys on our
-    tables. In the Cart window click **drop down arrow** next to the
-    **green plus** “+” and select **Add Initial Script**
+-   Include a script that runs before any other Cart activity. For this lab, we are disabling all the referential integrity constraints so we can delete and insert data without regard to foreign keys on our tables. In the Cart window click **drop down arrow** next to the **green plus** “+” and select **Add Initial Script**
 
 	![](images/200/image103.png)
 
@@ -681,10 +594,7 @@ including pre and post processes from multiple data sources.
 
 -   Click **OK**.
 
--   Click **drop down arrow** next to the **green plus** “+” again and
-    select **Add Final Script** that is included at the last operation
-    performed during the cart operations. **Note: there can only be one
-    Initial or Final script in a Cart.**
+-   Click **drop down arrow** next to the **green plus** “+” again and select **Add Final Script** that is included at the last operation performed during the cart operations. **Note: there can only be one Initial or Final script in a Cart.**
 
 	![](images/200/image106.png)
 
@@ -710,9 +620,7 @@ including pre and post processes from multiple data sources.
 
 	![](images/200/image109.png)
 
--   Before we can overwrite the new rows in the CUSTOMERS table, we need
-    to truncate the table. Click in the **Scripts** cell for the
-    CUSTOMERS table and then click the **pencil icon**.
+-   Before we can overwrite the new rows in the CUSTOMERS table, we need to truncate the table. Click in the **Scripts** cell for the CUSTOMERS table and then click the **pencil icon**.
 
 	![](images/200/image110.png)
 
@@ -738,15 +646,11 @@ including pre and post processes from multiple data sources.
 
 ### **STEP 18**:  Export the Cart
 
--   Now that the cart is complete, click the **Export Cart** toolbar
-    icon to generate the script of all the elements we inserted in the
-    cart.
+-   Now that the cart is complete, click the **Export Cart** toolbar icon to generate the script of all the elements we inserted in the cart.
 
 	![](images/200/image114.png)
 
--   Click the **Apply** button to generate script. Note: the selections
-    on this page may be saved and later reused if the cart is regularly
-    used the same way.
+-   Click the **Apply** button to generate script. Note: the selections on this page may be saved and later reused if the cart is regularly used the same way.
 
 	![](images/200/image115.png)
 
@@ -762,9 +666,7 @@ including pre and post processes from multiple data sources.
 
 	![](images/200/image118.png)
 
--   SQL Developer shows a progress bar while the script runs. Depending
-    on your window layout, you may see the command output scrolling by
-    while the script runs.
+-   SQL Developer shows a progress bar while the script runs. Depending on your window layout, you may see the command output scrolling by while the script runs.
 
 	![](images/200/image119.png)
 
