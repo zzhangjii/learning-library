@@ -30,9 +30,10 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 For the GoldenGate Cloud Service Workshop we will be using a compute Image that will represent your on-premises environment. In this image we have installed a 11g database that we will be migrating to our Oracle Public Cloud Database instance. The image also contains SQL Developer 4.1 that will be used to connect to both your local and cloud database.  
 
-- Start your vnc viewer and enter the IP address of the Compute image noted above.  ***You will be specifying port 10 (129.156.124.185:10)***.
+- Start your vnc viewer and enter the IP address of the Compute image noted above.  ***You will be specifying port 10 (eg: 129.156.124.185:**10**)***.
+	- **VNC IP:** ***OG1*** in your handout
 	- **VNC Password:** ***OG2*** in your handout
-
+	
 	![](images/100/i24.png)
 
 - This is the 'On-premise' environment desktop.  All the lab material is in the `GGCS_Workshop_Material` folder on the desktop.  We have created a `cheat_sheet` folder and some shortcuts to simplify your navigation through the labs.
@@ -41,7 +42,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
  - Double click on the `GGCS_Workshop_Material` folder and review the contents.  Note:
 	- This folder has scripts to start the SSH proxy and to start and stop the GoldenGate Cloud Control Agent.
-	- The keys folder:  You will use a private key to access the GGCS and DBCS instances.  You will need the IP addresses of those environments after GGCS is up.
+	- The keys folder contains the private key (already downloaded for you) to access the GGCS and DBCS instances.
 	- The SQL Files folder:  These scripts are used in SQLDeveloper to generate transactional data, do row counts, and re-set your data if necessary for the DW.
 
 	![](images/100/i25.png)
@@ -86,13 +87,21 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/200/i6.png)
 
-- Update the Service Name and enter your student identity domain with field ***CS1***.
+- Update the Service Name and enter your student identity domain with field ***CS1***, and then select `Test` to test the connection.
 
 	![](images/200/i6.1.png)
 
-- Do the same thing for the next `DBCS-DW` connection.  Right click on the `DBCS-DW` connection, select properties, and edit the Service Name, field ***CS1***.
+- Then save your connection update.
+
+	![](images/200/i6.2.png)
+
+- Do the same thing for the next `DBCS-DW` connection.  Right click on the `DBCS-DW` connection, select properties, and edit the Service Name, field ***CS1*** and then select `Test` to test the connection.
 
 	![](images/200/i7.png)
+
+- Then save your connection update.
+
+	![](images/200/i7.1.png)
 
 ### **STEP 3**: Review Source Data in 11g Source Database (On-Premise/Compute image) and the DBCS 12c Target Database.
 
@@ -166,7 +175,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/200/i13.png)
 
-- Review OGG parametes.  Start a GoldenGate command session, open a new terminal window (double click on terminal on the desktop), and enter the following.
+- Review OGG parameters.  Start a GoldenGate command session, open a new terminal window (double click on the Local Terminal icon on the desktop),
 	- **Switch to the GG home directory:** `cd $GGHOME`
 	- **Start a gg command session:** `./ggsci`
 

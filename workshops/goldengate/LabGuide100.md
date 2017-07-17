@@ -75,7 +75,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/100/i21.png)
 
-- Enter Service Name `practice_create_ggcs` as the name and select Replication and Cloud Control option and then hit Next:
+- Enter Service Name `practice-create-ggcs` as the name and select Replication and Cloud Control option and then hit Next:
 
 	![](images/100/i22.png)
 
