@@ -4,19 +4,10 @@ Update March 27, 2017
 
 ## Introduction
 
-This is the first of several labs that are part
-of the Oracle Public Cloud Database Cloud Service workshop. These labs
-will give you a basic understanding of the Oracle Database Cloud Service
-and many of the capabilities around administration and database
-development.
+This is the first of several labs that are part of the Oracle Public Cloud Database Cloud Service workshop. These labs will give you a basic understanding of the Oracle Database Cloud Service and many of the capabilities around administration and database development.
 
-This lab will walk you through creating a new Database Cloud Service
-instance. After the database has been created, you will connect into the
-Database image using the ssh private key and familiarize yourself with
-the image layout. Next you will learn how to create an ssh configuration
-file that can be used to tunnel simultaneously multiple ports to a
-remote OPC instance. Using the tunnels, you will learn how to access
-various Database consoles.
+This lab will walk you through creating a new Database Cloud Service instance. After the database has been created, you will connect into the Database image using the ssh private key and familiarize yourself with the image layout. Next you will learn how to create an ssh configuration file that can be used to tunnel simultaneously multiple ports to a
+remote OPC instance. Using the tunnels, you will learn how to access various Database consoles.
  
 - To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/pcdavies/DatabaseCloudService/tree/master/dbcs) repository.
 
@@ -30,20 +21,13 @@ various Database consoles.
 
 ## Required Artifacts
 
--   The following lab requires a VNC Viewer to connect to an Image
-    running on Oracle's IaaS Compute Service.
+-   The following lab requires a VNC Viewer to connect to an Image running on Oracle's IaaS Compute Service.
 
 ## Client Image
 
-For the Database Cloud Service Workshop we will be using a Client Image
-that will represent your on-premises environment. In this image we have
-installed an Oracle 12.1.0.2 database that contains a Pluggable database
-that we will be migrating to our Oracle Public Cloud Database instance.
-The image also contains SQL Developer 4.1 that will be used to connect
-to both your local and cloud database.
+For the Database Cloud Service Workshop we will be using a Client Image that will represent your on-premises environment. In this image we have installed an Oracle 12.1.0.2 database that contains a Pluggable database that we will be migrating to our Oracle Public Cloud Database instance. The image also contains SQL Developer 4.1 that will be used to connect to both your local and cloud database.
 
-The Client Image is a VM that is running on Oracle's IaaS Compute
-service.
+The Client Image is a VM that is running on Oracle's IaaS Compute service.
 
 **Retrieve Public IP for Client Image**
 
@@ -67,22 +51,17 @@ service.
 
 	![](images/100/image4.png)
 
--   Once your Identity Domain is set, enter your User Name and Password
-    and click **Sign In**
+-   Once your Identity Domain is set, enter your User Name and Password and click **Sign In**
 
 	**NOTE**: the **Identity Domain, User Name** and **Password** values will be given to you from your instructor.
 
 	![](images/100/image5.png)
 
--   You will be presented with a Dashboard summarizing all of your
-    available services.
+-   You will be presented with a Dashboard summarizing all of your available services.
 
 	![](images/100/image6.png)
 
--   If all of your services are not visible, **click** on **Customize
-    Dashboard.** You can then add services to the dashboard by clicking
-    **Show**. If you do not want to see a specific service click
-    **Hide**.
+-   If all of your services are not visible, **click** on **Customize Dashboard.** You can then add services to the dashboard by clicking **Show**. If you do not want to see a specific service click **Hide**.
 
 	![](images/100/image7.png)
 
@@ -92,59 +71,35 @@ service.
 
 	![](images/100/image8.png)
 
--   From this page you can view general information about this Compute
-    Cloud Service. Click on the **Open Service Console** button.
+-   From this page you can view general information about this Compute Cloud Service. Click on the **Open Service Console** button.
 
 	![](images/100/image9.png)
 
 ### **STEP 3**:  Copy Public IP for Client Image
 
--   The Compute Service Console will show you all running VM's. Note: If
-    a compute service is not visible, as shown below, the following task
-    will provide instructions on how to change to the correct zone.
+-   The Compute Service Console will show you all running VM's. Note: If a compute service is not visible, as shown below, the following task will provide instructions on how to change to the correct zone.
 
 	![](images/100/image10.png)
 
--   Identity Domains will have multiple sites. Please ask you instructor
-    which site the Client Image is running on. If needed, click the
-    **Site** drop down to access the **Site Selector,** and choose the
-    correct site.
+-   Identity Domains will have multiple sites. Please ask you instructor which site the Client Image is running on. If needed, click the **Site** drop down to access the **Site Selector,** and choose the correct site.
 
 	![](images/100/image11.png)
 
--   Now that you have the correct site selected, find the instance name
-    **ClientImage01** and copy down the **Public IP**
+-   Now that you have the correct site selected, find the instance name **ClientImage01** and copy down the **Public IP**
 
 	![](images/100/image12.png)
 
 ### **STEP 4**:  Connect to Client Image using VNC Viewer
 
--   If you do not already have a VNC Viewer installed on your computer,
-    you will want to download a Viewer, or ask the instructor for the
-    Real VNC Viewer executable. Run the VNC Viewer and enter the Public
-    IP you just copied, by first appending either the display port
-    **:443** or **:10**. Ask your instructor which port is active for
-    this workshop. Next, click **Connect**
+-   If you do not already have a VNC Viewer installed on your computer, you will want to download a Viewer, or ask the instructor for the Real VNC Viewer executable. To run the VNC Viewer, enter the Public IP you just copied, along with appending either the display port **:443** or **:10**. Ask your instructor which port is active for this workshop. Next, click **Connect**
 
 	![](images/100/image13.png)
 
--   Enter the password you used to log into the Oracle Cloud domain, and
-    click **OK**
+-   Enter the password you used to log into the Oracle Cloud domain, and click **OK**
 
 	![](images/100/image14.png)
 
--   You are now connected to the Client Image that will be used for all
-    labs. You might want to place the image in full screen mode so that
-    there is no confusion as to which environment you are working in.
-    Note: the use of the compute “Client” image provides us the
-    opportunity to simulate an on premises environment. We have
-    pre-installed several tools, a database, etc. within this compute
-    Client image. Of course, you could install the same tools and
-    database on your laptop or in an on premises environment to
-    accomplish the same functionality provided by the Client Image, but
-    to reduce the time required to complete the workshop, the Client
-    Image just simplifies the configuration you'd be required to
-    perform.
+-   You are now connected to the Client Image that will be used for all labs. You might want to place the image in full screen mode so that there is no confusion as to which environment you are working in. Note: the use of the compute “Client” image provides us the opportunity to simulate an on premises environment. We have pre-installed several tools, a database, etc. within this compute Client image. Of course, you could install the same tools and database on your laptop or in an on premises environment to accomplish the same functionality provided by the Client Image, but to reduce the time required to complete the workshop, the Client Image just simplifies the configuration you'd be required to perform.
 
 	![](images/100/image15.png)
 
@@ -154,7 +109,7 @@ service.
 
 ### **STEP 5**:  Login to your Oracle Cloud account
 
--   From within the VNC Session open **Chrome**
+-   From within the VNC Session, open **Chrome**
     ![](images/100/image16.png) and go to the following URL:
 
 	https://cloud.oracle.com
@@ -171,15 +126,13 @@ service.
 
 	![](images/100/image4.png)
 
--   Once your Identity Domain is set, enter your User Name and Password
-    and click **Sign In**
+-   Once your Identity Domain is set, enter your User Name and Password and click **Sign In**
 
 	**NOTE**: the **Identity Domain, User Name** and **Password** values will be given to you from your instructor.
 
 	![](images/100/image5.png)
 
--   You will be presented with a Dashboard summarizing all of your
-    available services.
+-   You will be presented with a Dashboard summarizing all of your available services.
 
 	![](images/100/image17.png)
 
@@ -189,8 +142,7 @@ service.
 
 	![](images/100/image18.png)
 
--   From this page you can view general information about this Database
-    Cloud Service. Click on the **Open Service Console** button.
+-   From this page you can view general information about this Database Cloud Service. Click on the **Open Service Console** button.
 
 	![](images/100/image19.png)
 
@@ -200,8 +152,7 @@ service.
 
 ### **STEP 7**:  Identify the Instance Configuration
 
-When providing a name, please note you may have another service instance
-already created in your account, so the name must be unique.
+When providing a name, please note you may have another service instance already created in your account, so the name must be unique.
 
 -   Enter `Apha01B-DBCS` in the **Service Name** field
 
@@ -298,10 +249,7 @@ already created in your account, so the name must be unique.
 
 	![](images/100/image36.png)
 
--   The creation of the DBCS instance will take approximately 20
-    minutes. While your DBCS instance is being created, you can monitor
-    the progress by clicking on the **Status** link, and view the
-    current status.
+-   The creation of the DBCS instance will take approximately 20 minutes. While your DBCS instance is being created, you can monitor the progress by clicking on the **Status** link, and view the current status.
 
 	**NOTE**: We will continue with the lab by utilizing **Alpha01A-DBCS** DBCS instance already created. Alpha01A-DBCS was created following the exact steps you just performed.
 
@@ -311,9 +259,7 @@ already created in your account, so the name must be unique.
 
 **Record IP address of Database Cloud Service**
 
-In the upcoming steps you will record the IP addresses of the Virtual
-Machine on which the cloud service runs. You will then update the ssh
-configuration file for **Alpha01A-DBCS**.
+In the upcoming steps you will record the IP addresses of the Virtual Machine on which the cloud service runs. You will then update the ssh configuration file for **Alpha01A-DBCS**.
 
 ### **STEP 8**:  Record the IP address of the Database Cloud Service
 
@@ -329,26 +275,19 @@ configuration file for **Alpha01A-DBCS**.
 
 ### **STEP 9**:  Run the SSH configuration script to start tunnels in the background
 
-For security reasons the default Oracle Public Cloud network
-configuration is locked down. You have the option of opening up ports to
-the various servers in your environment by ether using the Compute Cloud
-Service console and creating/re-using protocol definitions and access
-rules, OR you can create SSH tunnels to the specific server/port
-combinations as needed. This lab and the rest of the labs require access
-via development tools and the browser to various admin consoles running
-on the cloud servers themselves.
+For security reasons, the default Oracle Public Cloud network configuration is locked down. You have the option of opening up ports to the various servers in your environment by ether using the Compute Cloud Service console and creating/re-using protocol definitions and access rules, OR you can create SSH tunnels to the specific server/port combinations as needed. This lab and the rest of the labs require access via development tools and the browser to various admin consoles running on the cloud servers themselves.
 
-In this step you will run a script that creates and configures a SSH
-file used to connect to your various servers. Once the script is
-generated, it will create SSH tunnels in the background with connections
-via selected ports used in this and other labs.
+In this step you will run a script that creates and configures a SSH file used to connect to your various servers. Once the script is generated, it will create SSH tunnels in the background with connections via selected ports used in this and other labs.
 
--   Open a terminal Window by clicking the terminal icon in the screen's
-    top menu bar:
+-   Open a terminal Window by clicking the terminal icon in the screen's top menu bar:
 
 	![](images/100/image40.png)
 
--   cd into the lab directory **cd lab**
+-   Change Directories into the lab directory 
+
+	```
+	cd lab
+	```
 
 -   Type **./setssh.sh DBONLY**
 
@@ -356,31 +295,21 @@ via selected ports used in this and other labs.
 	./setssh.sh DBONLY
 	```
 	
-	If you make an error you'll see:
+	If you make an error, you'll see:
 
 	![](images/100/image41.jpeg)
 
--   If the script runs successfully, you will enter the DB IP address
-    obtained in Step 6. Click **OK**.
+-   If the script runs successfully, you will enter the DB IP address previoulsly obtained. Click **OK**.
 
 	![](images/100/image42.png)
 
--   The script will try a test connection to your server. If it
-    encounters errors, you will be re-prompted to enter the IP address.
-    If successful, a SSH configuration file is created and a SSH session
-    to the DB server will be placed in the background. A successful
-    completion will show:
+-   The script will try a test connection to your server. If it encounters errors, you will be re-prompted to enter the IP address. If successful, a SSH configuration file is created and a SSH session to the DB server will be placed in the background. A successful completion will show:
 
 	![](images/100/image43.png)
 
 -   Click **OK**
 
--   You can look at the generated configuration file by type **gedit
-    myssh** within the terminal window. Notice under the **Host
-    AlphaDBCS** section of the config file that the DBCS IP address has
-    been inserted in 5 areas defining LocalForward ports (1526, 443,
-    4848, and 5500). These ports can now be accessed locally using
-    “localhost” in connection information or URLs.
+-   You can look at the generated configuration file by typing **gedit myssh** within the terminal window. Notice under the **Host AlphaDBCS** section of the config file that the DBCS IP address has been inserted in 5 areas defining LocalForward ports (1526, 443, 4848, and 5500). These ports can now be accessed locally using “localhost” in connection information or URLs.
 
 	Example:
 
@@ -388,8 +317,7 @@ via selected ports used in this and other labs.
 
 -   Close the edit session.
 
--   You can also enter: `ps -ef | grep DBCS` to see the running background
-    session.
+-   You can also enter: `ps -ef | grep DBCS` to see the running background session.
 
 	```
 	ps -ef | grep DBCS
@@ -401,12 +329,9 @@ via selected ports used in this and other labs.
 
 ### **STEP 10**:  Open a new SSH Connection to browse the database image
 
-In the previous step, SSH tunnels were started in the background to
-support our browser and development tools. In this step, we will
-demonstrate how to do an explicit SSH into your DB cloud server.
+In the previous step, SSH tunnels were started in the background to support our browser and development tools. In this step, we will demonstrate how to do an explicit SSH into your DB cloud server.
 
--   In the same terminal window you ran the setssh.sh script; enter the
-    following command using the IP address for your DBCS cloud instance.
+-   In the same terminal window you ran the setssh.sh script; enter the following command using the IP address for your DBCS cloud instance.
 
 	```
 	ssh -o StrictHostKeyChecking=no -i ./labkey oracle@<your-DB-IP>;
@@ -418,8 +343,7 @@ demonstrate how to do an explicit SSH into your DB cloud server.
 
 	![](images/100/image47.png)
 
--   Issue the following command to view the Database environment
-    variable.
+-   Issue the following command to view the Database environment variable.
 
 	```
 	env | grep ORA
@@ -427,8 +351,7 @@ demonstrate how to do an explicit SSH into your DB cloud server.
 
 	![](images/100/image48.png)
 
--   Now let's change directories to the Oracle Home and list the
-    directories.
+-   Now let's change directories to the Oracle Home and list the directories.
 
 	```
 	cd $ORACLE_HOME
@@ -445,28 +368,17 @@ demonstrate how to do an explicit SSH into your DB cloud server.
 
 **Access DB Monitor, Apex, EM Consoles**
 
-***NOTE***: For any of the URLs mentioned in this section you can also use
-the predefined browser links. If blocked ports on the network cause an
-issue loading any of these consoles, the predefined browser links will
-help by routing the traffic through the SSH tunnel that should already
-be open:
+***NOTE***: For any of the URLs mentioned in this section you can also use the predefined browser links. If blocked ports on the network cause an issue loading any of these consoles, the predefined browser links will help by routing the traffic through the SSH tunnel that should already be open:
 
 ![](images/100/image50.png)
 
 ### **STEP 11**:  Access Database Monitor
 
-To gain access to the various consoles used by the Database Cloud
-Service you have two options. You can open up the port on which the
-monitor is listening, or you can create a SSH tunnels to the specific
-server/port combinations as needed. We have already created the SSH
-tunnel and that will be used to access most of the consoles.
+To gain access to the various consoles used by the Database Cloud Service you have two options. You can open up the port on which the monitor is listening, or you can create a SSH tunnels to the specific server/port combinations as needed. We have already created the SSH tunnel, and you will use that tunnel to access most of the consoles.
 
-In this step you will open the port 443 on the VM using a pre-create
-access rule and protocol definition.
+In this step you will open the port 443 on the VM using a pre-create access rule and protocol definition.
 
--   If not already on the **Alpha01A-DBCS** details page, navigate back
-    to Database Cloud Service console and click on **Alpha01A-DBCS** to get
-    to this page.
+-   If not already on the **Alpha01A-DBCS** details page, navigate back to Database Cloud Service console and click on **Alpha01A-DBCS** to get to this page.
 
 	![](images/100/image51.png)
 
@@ -474,8 +386,7 @@ access rule and protocol definition.
 
 	![](images/100/image53.png)
 
--   From this screen you see all the **Access Rules** that have been
-    created for this instance
+-   From this screen you see all the **Access Rules** that have been created for this instance
 
 	![](images/100/image54.png)
 
@@ -487,9 +398,7 @@ access rule and protocol definition.
 
 ![](images/100/image57.png)
 
--   You should now see that the Access Rule **ora\_p2\_httpssl** is
-    enabled. Click on **Oracle Database Cloud Service** link at the top of the window to navigate back
-    to the Service Console
+-   You should now see that the Access Rule **ora\_p2\_httpssl** is enabled. Click on **Oracle Database Cloud Service** link at the top of the window to navigate back to the Service Console
 
 	![](images/100/image58.png)
 
@@ -511,14 +420,11 @@ access rule and protocol definition.
 
 ### **STEP 12**:  Access Enterprise Manager DB Express
 
--   On the browser, open a new tab, and **enter** the following **URL**
-    to access the **EM Express** page. The first time the URL is used,
-    it can take a minute for the console to load. **Note**: The
-    setssh.sh script that you ran earlier in this lab created the ssh
-    tunnel that will cause all traffic referencing localhost:5500 to
-    actually be routed to the database cloud service.
+-   On the browser, open a new tab, and **enter** the following **URL** to access the **EM Express** page. The first time the URL is used, it can take a minute for the console to load. **Note**: The setssh.sh script that you ran earlier in this lab created the ssh tunnel that will cause all traffic referencing localhost:5500 to actually be routed to the database cloud service.
 
-https://localhost:5500/em
+	```
+	https://localhost:5500/em
+	```
 
 ![](images/100/image63.png)
 
@@ -542,10 +448,7 @@ https://localhost:5500/em
 
 ### **STEP 13**:  Access Apex Monitor
 
--   Enter the following URL into a browser window to access the **Apex
-    console** (click to add a security exception if necessary).
-    **Note**: All traffic to the default https port (443) on local host
-    is also routed through the ssh tunnel to the database cloud service.
+-   Enter the following URL into a browser window to access the **Apex console** (click to add a security exception if necessary). **Note**: All traffic to the default https port (443) on local host is also routed through the ssh tunnel to the database cloud service.
 
 	<https://localhost/apex/pdb1/>
 
@@ -565,8 +468,7 @@ https://localhost:5500/em
 	
 	![](images/100/image68.png)
 
--   You are now connected to Apex. Feel free to explore the menu
-    options.
+-   You are now connected to Apex. Feel free to explore the menu options.
 
 	![](images/100/image69.png)
 
