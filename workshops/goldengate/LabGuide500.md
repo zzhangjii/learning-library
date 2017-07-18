@@ -22,7 +22,17 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 - Access to your Oracle Cloud account (used in Lab 100 and Lab 200) and services DBCS, GGCS, and Compute.
 
-### **STEP 1**: Configure GoldenGate Cloud Service (GGCS)
+### **STEP 1**: Reset Data from previous labs
+
+- Open SQLDeveloper on the on-premise compute image and then open reset_data.sql file from the `\home\oracle\Desktop\GGCS_Workshop_Material\sql_scripts` folder:
+
+	    ![](images/500/i.2.png)
+	
+- Run the script.  Be sure to use the EURO connection:
+
+	    ![](images/500/i.3.png)
+
+### **STEP 2**: Configure GoldenGate Cloud Service (GGCS)
 
 - Double click on the GGCS_SSH shortcut on the OGG Compute image to ssh to GGCS and enter the following commands:
 	- **Switch to user oracle:** `sudo su - oracle`
@@ -68,7 +78,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/500/i7.png)
 
-### **STEP 2**: Configure Oracle GoldenGate (OGG) On-Premise (11g Database)
+### **STEP 3**: Configure Oracle GoldenGate (OGG) On-Premise (11g Database)
 
 - Exit out of the current terminal window.  Enter exit at least twice to ensure you are NOT still in GGCS.  Open a NEW terminal window:
 	- **Enter the following:** `cd $GGHOME`
@@ -94,7 +104,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/500/i11.png)
 
-### **STEP 3**: Generate Transactions and Review Results
+### **STEP 4**: Generate Transactions and Review Results
 
 - Open SQLDeveloper and open the sql file gentrans.sql using the amer connection:
 
