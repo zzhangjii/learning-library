@@ -19,7 +19,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ### **STEP 1**: Configure On-premise
 
-- Log into VNC on the Compute instance and open Firefox WEB browser and go to `<ip addresss of ggcs vm>:7809/groups` (field ***GG1***).  All processes should be up and running.  This is necessary to ensure the monitoring agent will start the first time.
+- Log into VNC on the Compute instance and open Firefox WEB browser and go to `<ip addresss of on prem vm>:7809/groups` (field ***OG1***).  All processes should be up and running.  This is necessary to ensure the monitoring agent will start the first time.
 
 ![](images/400/i1.1.png)
 
@@ -41,6 +41,8 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
     - **Select Run in Termainl.  LEAVE THIS WINDOW OPEN**
 
 ![](images/400/i3.png)
+
+![](images/400/i3.1.png)
 
 -  Open a new terminal window:
     - **Enter the following:** `cd $GGHOME`
@@ -65,7 +67,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 - Open a ggsci command shell and enter the following.  Note the data store may already exist, if so ignore messages that relate to this.
     - **Enter:** `cd $GGHOME`
     - **Start ggsci:** `./ggsci`
-    - **Create datastore:** `create datastore`
+    - **Create datastore:** `create datastore` (it may already exist, if so ignore messages about this)
     - **Review processes:** `info all`
     - **Stop Manager:** `stop mgr`
     - **Start Manager:** `start mgr`
@@ -89,8 +91,10 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ![](images/400/i8.png)
 
+![](images/400/i8.1.png)
+
 - Open a new terminal window and SSH into ggcs.  Run a process that Integrates the agent with the GoldenGate instance. Then log into ggsci and start jagent.
-	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@<your ggcs IP address>` Field ***GG1***
+	- **Double click on GGCS_SSH shortcut on Desktop**
 	- **Switch to user oracle:** `sudo su - oracle` 
     - **Run the following:**  `/u01/app/oracle/middleware/ggccagent/bin/ggccAgent.sh /u02/data/ggcc/agent/conf/agent.properties intgGGSCI $GGHOME`
     - **Enter:** `ggsci`
@@ -115,7 +119,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ![](images/400/i12.png)
 
-- Review
+- Review the following (note your screen shot/numbers may look slightly different).
     - **Catalog/Instances**
     - **Catalog Tasks**
     - **Policies**
@@ -145,8 +149,8 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 ![](images/400/i14.6.png)
 
 - Return to ggsci and stop EXTDW process.  You may need to open a new terminal window (if you closed it previously):
-	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@<your ggcs IP address>` Field ***GG1***
-	- **Switch to user oracle:** `sudo su - oracle` 
+	- **Double click on Desktop shortcut GGCS_SSH**
+    - **Switch to user oracle:** `sudo su - oracle` 
     - **Enter the following:**  `stop EXTDW`
 
 ![](images/400/i14.3.png)
@@ -164,6 +168,6 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ![](images/400/i17.png)
 
-- Return to the Console and review changes in status in instances, tasks. Note service is back up.
+- Return to the Console and review changes in status in instances, tasks. Note service is back up.  Note that when starting and stopping EXTDW a refresh should not be necessary.
 
 ![](images/400/i18.png)
