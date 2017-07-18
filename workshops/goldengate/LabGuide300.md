@@ -36,9 +36,14 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
     ![](images/300/i1.png)
 
 - View extract and replicat configuration.  Note we are configuring both extract (source) and replicat (target) in an oby file.  Note the use of two different credentials.
-    - **Enter the following:** `view param dirprm/ADD_DW_ALL.oby`  Read comments
+    - **Enter the following:** `view param dirprm/ADD_DW_ALL.oby`  Read comments.
 
     ![](images/300/i2.png)
+
+- View parameter file `repdw`.  This parameter file implements the data transformations you will see later in the lab.
+    - **Enter the following:** `view param repdw`  Scroll down to view transformations.
+
+    ![](images/300/i2.1.png)
 
 - Create/add extract and replicat processes.
     - **Enter the following:** `obey dirprm/ADD_DW_ALL.oby`
@@ -79,7 +84,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
     ![](images/300/i10.png)
 
-- Browse the following tables in SQLDeveloper to compare AMER and DW tables to see that the following transformations occurred.  **NO DETAILED SCREEN SHOTS**.
+- Browse the following tables in SQLDeveloper to compare AMER and DW tables to see that the following transformations occurred.  **NO DETAILED SCREEN SHOTS**.  Note the parameter file `repdw` in the `dirprm` directory implements the transformations you see in the database tables.
 - **CUSTOMERS:** `CUSTOMERS_FIRSTNAME` and `CUSTOMERS_LASTNAME` concatenated into `CUSTOMERS_NAME` column.
 - **CUSTOMERS:** mail address stripped out and only domain mapped into `CUSTOMER_EMAIL_DOMAIN` column.
 - **ORDERS:** split into `CREDIT_ORDERS` and `NON_CREDIT_ORDERS` tables based on content of  `PAYMENT_METHOD` column.
