@@ -26,11 +26,11 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 - Open SQLDeveloper on the on-premise compute image and then open reset_data.sql file from the `\home\oracle\Desktop\GGCS_Workshop_Material\sql_scripts` folder:
 
-	    ![](images/500/i.2.png)
+	![](images/500/i1.2.png)
 	
 - Run the script.  Be sure to use the EURO connection:
 
-	    ![](images/500/i.3.png)
+	![](images/500/i1.3.png)
 
 ### **STEP 2**: Configure GoldenGate Cloud Service (GGCS)
 
