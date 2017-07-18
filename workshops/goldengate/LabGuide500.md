@@ -114,19 +114,18 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/500/i13.png)
 
-- Open a new terminal window for GGCS (DBCS 12c), and position it on the left.  SSH into GGCS.
-	- **SSH to GGCS:** `ssh -i /home/oracle/Desktop/GGCS_Workshop_Material/keys/ggcs_key opc@<your ggcs IP address>` Field ***GG1***
+- Double click on the shortcut `GGCS_SSH` on the Desktop and position it on the left.
 	- **Switch to user oracle:** `sudo su - oracle`
     - **Switch to GGHOME:** `cd $GGHOME`
 	- **Start a gg command shell:** `ggsci`
-	- **Enter:** `stats * total`
+	- **Enter:** `stats eamer total`
 
 	![](images/500/i14.png)
 
-- Open a new terminal window for OGG (11g On Prem) and position it on the right.
+- Double Click on the shortcut `Local Terminal` on your desktop for OGG (11g On Prem) and position it on the right.
 	- **Change to gg home:** `cd $GGHOME`
 	- **Start ggsci:** `ggsci`
-	- **Enter stats reuro total`
+	- **Enterz;z** `stats reuro total`
 
 	![](images/500/i15.png)
 

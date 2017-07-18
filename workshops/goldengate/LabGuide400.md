@@ -134,7 +134,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 ![](images/400/i14.1.png)
 
-- Navigate to instances.  To help clarify which is the on-premise instance and which is the GGCS instance click on the name and rename it.  Provide the names GGCS and On-Prem.  This particular screenshot uses IP addresses from a different instance and will not be consistent with others used throughout these labs.
+- Navigate to instances.  To help clarify which is the on-premise instance and which is the GGCS instance click on the name and rename it.  Provide the names GGCS and On-Prem.  This particular screenshot uses IP addresses from a different instance and will not be consistent with others used throughout these labs.  Use the i.p. addresses from your handout to determine which instance is on-prem (***OG1***) and which is GGCS (***GG1***).
 
 ![](images/400/i14.5.png)
 
