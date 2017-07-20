@@ -55,7 +55,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
     ![](images/300/i4.png)
 
-- Start a new DW processe.
+- Start a new DW process.
     - **Start DW Processes:** `start *DW`
     - **Review results:** `info all`
 
@@ -101,7 +101,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
     ![](images/300/i12.png)
 
-- Execute with the AMER connection.  You will be prompted for number of transactions - enter 500.
+- Execute with the `DBCS-amer` connection.  You will be prompted for number of transactions - enter 500.
 
     ![](images/300/i13.png)
 

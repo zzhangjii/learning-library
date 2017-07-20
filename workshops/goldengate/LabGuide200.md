@@ -4,7 +4,7 @@ Update May 2, 2017
 
 ## Introduction
 
-This is the second of five GoldenGate Cloud Service labs, and covers the first use case - zero downtime migration and replication of data from a 11g Database on-premise to DBCS 12c Pluggable Dataabase.  
+This is the second of five GoldenGate Cloud Service labs, and covers the first use case - zero downtime migration and replication of data from a 11g Database on-premise to DBCS 12c Pluggable Database.  
 
 ![](images/100/i2.png)
 
@@ -158,11 +158,13 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 	- Our source data configuration for 11g Database (schema euro)
 	- Uses OGG (not GGCS) with Classic Extract 
 
-- We are going to open a SOCKS5 Proxy Tunnel, which will encrypt data and send it through an SSH Tunnel.  First open the `GGCS_Workshop_Material` folder on the desktop.  Note that you get an autentication error if you did NOT first do step 4 above.  The first time you SSH into GGCS (or any Linux server) a file called `known_hosts` is created in the /home/oracle/.ssh directory and the GGCS key is put in that file.  For this proxy step the file and entry must first exist (from step six, lab 100).  Right click on the `start_proxy.sh` and select display.
+- We are going to open a SOCKS5 Proxy Tunnel, which will encrypt data and send it through an SSH Tunnel.  First open the `GGCS_Workshop_Material` folder on the desktop.  Note that you get an authentication error if you did NOT first do step 4 above.  The first time you SSH into GGCS (or any Linux server) a file called `known_hosts` is created in the /home/oracle/.ssh directory and the GGCS key is put in that file.  For this proxy step the file and entry must first exist (created from step 4 above).  Right click on the `start_proxy.sh` and select `open`, and then `display`.
 
 	![](images/200/i10.png)
 
-- Then open the `start_proxy.sh` script.  Review the configuration.  A SOCKS 5 tunnel is a type of SSH tunnel in which specific applications (GoldenGate) forward their local traffic (on port 1080 in this case) down the tunnel to the server, and then on the server end, the proxy forwards the traffic out to the general Internet.  The traffic is encrypted, and uses open port 22 (SSH port) on GGCS to transport the data.  We will reference this port in OGG configuration in the following steps.
+	![](images/200/i10.1.png)
+
+- Review the configuration.  A SOCKS 5 tunnel is a type of SSH tunnel in which specific applications (GoldenGate) forward their local traffic (on port 1080 in this case) down the tunnel to the server, and then on the server end, the proxy forwards the traffic out to the general Internet.  The traffic is encrypted, and uses open port 22 (SSH port) on GGCS to transport the data.  We will reference this port in OGG configuration in the following steps.
 
 	![](images/200/i12.png)
 
@@ -194,7 +196,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 	![](images/200/i18.png)
 
 - View Extract EEURO.prm using ggsci:
-	- **Enter the following:** `view param dirprm/EEURO.rpm` (Note you do NOT need to enter the commands highlighted in the screenshots - it is just showing you what you will see)
+	- **Enter the following:** `view param dirprm/EEURO.prm` (Note you do NOT need to enter the commands highlighted in the screenshots - it is just showing you what you will see)
 
 	![](images/200/i17.3.png)
 
@@ -221,8 +223,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/200/i21.png)
 
-- Start the manager and review processes that you have added:
-	- **Enter the following:** `start mgr`
+- Review processes that you have added:
 	- **Enter the following:** `info all`
  
 	![](images/200/i23.png)
@@ -245,7 +246,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
  	![](images/200/i26.png)
 
-- Double click on the `GGCS_SSH` shortcut on the desktop and open a GGCS SSH terminal window:
+- Double click on the `DBCS_SSH` shortcut on the desktop and open a DBCS SSH terminal window:
 
  	![](images/200/i26.1.png)
 
