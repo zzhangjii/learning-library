@@ -38,7 +38,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 - Start GoldenGate Cloud Service agent:
     - **Open the workshop folder on the desktop.**
     - **Double click on the following file:** `start_ggccagent.sh` 
-    - **Select Run in Termainl.  LEAVE THIS WINDOW OPEN**
+    - **Select Run in Terminal.  LEAVE THIS WINDOW OPEN**
 
 ![](images/400/i3.png)
 
