@@ -230,7 +230,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 -  Start new processes:
 	- **Enter the following:** `start *`
-	- **Wait a few seconds for the processes to start, and then enter:** `info all`.  Note you may see jagent running - that is used for monitoring in Lab 500.  
+	- **Wait a few seconds for the processes to start, and then enter:** `info all`.  
 
 	![](images/200/i24.png)
 
