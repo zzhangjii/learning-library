@@ -222,7 +222,7 @@ ls -la
 
 ![](images/200/image18.png) 
 
-Retrieving the epel-release- 6 - 8.noarch.rpm file:
+Retrieving the epel-release-6-8.noarch.rpm file:
 
 cd /
 
