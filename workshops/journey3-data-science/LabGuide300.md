@@ -69,9 +69,11 @@ yum install libcurl-devel
 To install RSTudio
 
 $ wget https://download2.rstudio.org/rstudio-server-rhel-1.0.136-x86_64.rpm
+
 $ sudo yum install --nogpgcheck rstudio-server-rhel-1.0.136-x86_64.rpm
 
  #########  Add User rstudio (as root user)
+ 
 $ sudo useradd rstudio
 
 $ sudo passwd rstudio 
