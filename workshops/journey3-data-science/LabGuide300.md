@@ -32,9 +32,10 @@ To explain an R script that does the following jobs:
 
 The data file ( iris.csv ) used in the demo is a popular R dataset. Users can find and download it from Internet. After downloaded to local desktop, the data file will then be uploaded into the Object Store in Oracle Storage Cloud. To upload data files into an Object Store, users can leverage any tool available, for example Cloudberry. In this demo, we will use built-in Storage Console of Oracle Storage Cloud. 
 
-To access Storage Console, open a browser and input the service URL. The URL is in the
- format: https://storageconsole.<DATACENTERCODE>.oraclecloud.com/.  After login to the console, user can navigate to following Object Browser.
+Download the iris.csv file https://osdn.net/projects/sfnet_irisdss/downloads/IRIS.csv/
 
+To access Storage Console, Sign in to the Oracle Cloud My Services application. Then click on Storage from the menu on the left.  
+![](images/300/Lab300_6.png)
 ![](images/300/Lab300_1.png)
 
 
@@ -43,6 +44,8 @@ If the container for the demo does not exist,
 click Create Container button in the page, and then assign a unique name for the container in the pop-up dialog.
 
 Select the container from the list, then you can see following page to manage objects in the container.
+
+You can also use CloudBerry to create a container and upload a file.
 
 ![](images/300/Lab300_2.png)
 
