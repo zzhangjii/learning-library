@@ -63,6 +63,7 @@ After the data file is uploaded, user can see the file in the object list of the
 To install R Studion run the following commands from a terminal:
 
 yum install openssl-devel
+
 yum install libcurl-devel
 
 To install RSTudio
