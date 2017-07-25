@@ -35,7 +35,7 @@ Before starting this tutorial, you should:
 have not done this already.
 - Download iris.csv from [here](https://raw.githubusercontent.com/uiuc-cse/data-fa14/gh-pages/data/iris.csv) (save the content as iris.csv after you open the link), and upload to your
 Oracle Storage Cloud. You can refer to the appendix in the end of this tutorial to learn about how to
-upload data to Oracle Storage Cloud.
+upload data to Oracle Storage Cloud. This version may be different from the one in the previous lab.
 - Download the R script, oraobjectstore_journey.R, from [here](https://oracle.github.io/learning-library/workshops/journey3-data-science/rFiles/oraobjectstore_journey.R).
 
 
@@ -150,7 +150,7 @@ You can build a linear regression model based on the iris data set with the **lm
 [here](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/lm.html) if you want to learn more about the **lm** function.
 
 The **Petal.Length** column is used as the independent variable, the **Petal.Width** column is used as the
-dependent variable for the model.
+dependent variable for the model. You may need to change this to petal_width and petal_length to match the file.
 
 **Run** Line 18 to fit the model.
 
@@ -184,7 +184,7 @@ compare the predicted values in the **my_iris** column to the real values of the
 **Replace** the container name **BAM** with yours in Line 29.
 
 **Replace** the third parameter **/home/oracle** with the local file system directory where the my_iris.csv
-resides in Line 29.
+resides in Line 29. You may need to change this to . if you get a permission error.
 
 **Run** Line 29 to upload the **my_iris.csv** to Oracle Object Store with the function **oos_upload_file**. You can
 see a **NULL** output, which indicates the file is uploaded successfully.
