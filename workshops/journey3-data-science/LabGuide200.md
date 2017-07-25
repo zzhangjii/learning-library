@@ -171,7 +171,7 @@ We use PuTTY, a freely available SSH client program for Windows, in this demo. T
 Download the Public YUM repository related to the OS (Enterprise Linux 6) and put it on
 /etc/yum.repos.d :
 
-_sudo -s
+sudo -s
 
 cd /etc/yum.repos.d/
 
@@ -182,13 +182,13 @@ wget [http://public-yum.oracle.com/public-yum-ol6.repo](http://public-yum.oracle
 Edit the public-yum-ol6.repo file via **vi** command:
 
 
-_vi public-yum-ol6.repo_
+vi public-yum-ol6.repo
 
 ![](images/200/image16.png)
 
 Adjust both the **ol6_latest** and **ol6_addons** sections as follows:
 
-_[ol6_latest]
+[ol6_latest]
 
 ...
 
@@ -198,7 +198,7 @@ _..._
 
 **_enabled=1_**
 
-_[ol6_addons]
+ol6_addons]
 
 ...
 
@@ -222,19 +222,19 @@ ls -la
 
 ![](images/200/image18.png) 
 
-Retrieving the epel-release- 6 - 8.noarch.rpm file:
+Retrieving the epel-release-6-8.noarch.rpm file:
 
-_cd /
+cd /
 
-rpm -Uvh [http://download.fedoraproject.org/pub/epel/6/i386/epel-release-](http://download.fedoraproject.org/pub/epel/6/i386/epel-release-) 6 - 8.noarch.rpm_
+rpm -Uvh [http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm](http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm)
 
 ![](images/200/image19.png)
 
 Clean the YUM cache and install R.
 
-_yum clean all
+yum clean all
 
-yum install R.x86__
+yum install R.x86_64
 
 ![](images/200/image20.png)
 
@@ -244,11 +244,15 @@ The installation of R is **Complete**.
 
 Test loading the R session with the command “R”.
 
+Type R at the command line.
+
 Exit with the command “ q()” then replying “y” or “n” to the question.
 
 ![](images/200/image22.png) 
 
 Test loading the sparkR session with the command “sparkR”.
+
+Type sparkR at the command line.
 
 ![](images/200/image23.png) 
 

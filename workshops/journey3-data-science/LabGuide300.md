@@ -32,9 +32,14 @@ To explain an R script that does the following jobs:
 
 The data file ( iris.csv ) used in the demo is a popular R dataset. Users can find and download it from Internet. After downloaded to local desktop, the data file will then be uploaded into the Object Store in Oracle Storage Cloud. To upload data files into an Object Store, users can leverage any tool available, for example Cloudberry. In this demo, we will use built-in Storage Console of Oracle Storage Cloud. 
 
-To access Storage Console, open a browser and input the service URL. The URL is in the
- format: https://storageconsole.<DATACENTERCODE>.oraclecloud.com/.  After login to the console, user can navigate to following Object Browser.
+- Download iris.csv from [here](https://raw.githubusercontent.com/uiuc-cse/data-fa14/gh-pages/data/iris.csv) (save the content as iris.csv after you open the link), and upload to your
+Oracle Storage Cloud. 
 
+Download the R script, oraobjectstore_journey.R, from [here](https://oracle.github.io/learning-library/workshops/journey3-data-science/rFiles/Lab300script.R)
+
+
+To access Storage Console, Sign in to the Oracle Cloud My Services application. Then click on Storage from the menu on the left.  
+![](images/300/Lab300_6.png)
 ![](images/300/Lab300_1.png)
 
 
@@ -42,7 +47,8 @@ To access Storage Console, open a browser and input the service URL. The URL is 
 If the container for the demo does not exist,
 click Create Container button in the page, and then assign a unique name for the container in the pop-up dialog.
 
-Select the container from the list, then you can see following page to manage objects in the container.
+
+You can also use CloudBerry to create a container and upload a file.
 
 ![](images/300/Lab300_2.png)
 
@@ -54,6 +60,30 @@ After the data file is uploaded, user can see the file in the object list of the
 ## Step 2 : Develop and debug R Script
 
  In the demo, R Studio IDE in Base R Server is the tool to develop and debug R scripts. It can be accessed from any supported browser.
+To install R Studion run the following commands from a terminal:
+
+yum install openssl-devel
+
+yum install libcurl-devel
+
+To install RSTudio
+
+$ wget https://download2.rstudio.org/rstudio-server-rhel-1.0.136-x86_64.rpm
+
+$ sudo yum install --nogpgcheck rstudio-server-rhel-1.0.136-x86_64.rpm
+
+ #########  Add User rstudio (as root user)
+ 
+$ sudo useradd rstudio
+
+$ sudo passwd rstudio 
+
+ 
+##############################  From Big Data Console Create Access Rule to 8787
+
+public internet to Master port 8787
+
+ Then access the Rstudion from your IP:8787 using the userid and password you setup for rstudio
 
 Following is UI of R Studio IDE:
 
@@ -62,7 +92,7 @@ Following is UI of R Studio IDE:
 
 IDE UI is divided into two panels. On the top, the panel contains a menu bar and a toolbar,which allow users to access functions of the IDE. At the bottom, the panel has components to develop and debug R scripts. On the upper left, a tabbed editor is used to develop multiple R scripts. Below that editor is a console to display execution result of R scripts. On the upper right, a watch window will display both environmental and runtime variables. Below the watch is a window that can show various help information.
 
-In the IDE, create a new R script. Complete logic of the R script is composed of four parts:
+In the IDE, copy and paste the script or open it in the UI.  You can run each line one at a time or section by section
 
 ### 1. Define variables
 
