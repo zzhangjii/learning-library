@@ -140,11 +140,11 @@ Now that we have an automated build process, we will set up a deployment configu
 
     ![](images/300/image031.png)  
 
-- Right of Deployment Target click **New** and select **Application Container Cloud**
+- Click on **New** to the right of **Deployment Target** and select **Application Container Cloud**
 
     ![](images/300/image032.png)  
 
-- Enter the following data and click Test Connection. If Successful click Use Connection
+- Enter the following data and click Test Connection. If Successful click **Use Connection**
 
     **Data Center**: `<Your Assigned Datacenter>` ***(Ask instructor if needed)***
 
@@ -416,7 +416,7 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojtable'], function (oj, ko) {
 
 - Click ![](images/300/image070.png) Live Preview to test out the new changes.
 
-- Click ![](images/300/image071.png) and select **Graphics**
+- Click ![](images/300/image071.png) and select **Graphics**. Note: Depending on the screen resolution, the Graphics menu item may be at the top of the page. 
 
     ![](images/300/image072.png)
 
@@ -438,13 +438,15 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojtable'], function (oj, ko) {
 
     ![](images/300/image075.png)
 
-- Click  Git ![](images/300/image076.png) icon. Check the box next to **Commit** to select all modified files.
+- Click  Git ![](images/300/image076.png) icon. 
+
+- Check the box next to **Commit** to select all modified files.
 
     ![](images/300/image077.png)
 
 - Click **Commit**.
 
-- In popup enter the **comment** `Added code to display twitter feed in table format` and click **OK**. This will commit the changes to your local Git repository.
+- In popup enter the the following **comment:** `Added code to display twitter feed in table format` and click **OK**. This will commit the changes to your local Git repository.
 
     ![](images/300/image078.png)
 
@@ -478,7 +480,7 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojtable'], function (oj, ko) {
 
 ### **STEP 18**: Review Sprint Status and create Merge Request
 
-- Click on the **Code** tab, select the **Feature4** branch and then click on the **Commits** sub tab. Now view the recent commit that we made to branch from Brackets.
+- Click on the **Code** tab, select the **Feature4** branch and then click on the **doc_root** folder to view the recent commit that we made to branch from Brackets.
 
     ![](images/300/image084.png)
 
@@ -510,7 +512,7 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojtable'], function (oj, ko) {
 
 - In the **Write** box, enter the following comment and then click on the **Comment** button to save
 
-    **Comment:** `I added table of Twitter feed to graphics tab`
+    **Comment:** `I added a Twitter feed table to the graphics tab`
 
     ![](images/300/image088.png)
 
@@ -535,7 +537,7 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojtable'], function (oj, ko) {
 
     ![](images/300/image096.png)
 
-- Leave the defaults, and click on the **Merge** button in the confirmation dialog.
+- Leave the defaults, and click on the **Create a Merge Commit** button in the confirmation dialog.
 
     ![](images/300/image097.png)
 
