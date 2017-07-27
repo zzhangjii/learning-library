@@ -143,6 +143,7 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
 - Click the **Build Now** button to start the build immediately. Wait, as it may take 30 seconds to a few minutes for the queued job to execute, but when it does, the status will change to the following:
 
+    ![](images/200/Picture28_5.png)  
     ![](images/200/Picture29.png)  
 
   **NOTE:** Once the build begins, it should take about approximately 1 to 2 minutes for the build to complete. Once complete, you will be able to see the number of successful test runs in the Test Result Trend section. ***Wait for the build to complete before continuing to the next step***, as we need the build artifact to complete the deployment configuration.
@@ -245,7 +246,7 @@ Now that we have successfully deployed the build artifact to the Application Con
 
     ![](images/200/Picture42.png)  
 
-- Once the Oracle Public Cloud **Dashboard** is displayed, click on the  ![](images/200/PictureHamburger.png) menu to the right of the **Application Container** service. Then select **Open Service** Console. Note: If the **Application Container** service is not visible, it can be added using the Customize Dashboard button. 
+- Once the Oracle Public Cloud **Dashboard** is displayed, click on the  ![](images/200/PictureHamburger.png) menu to the bottom right of the **Application Container** service. Then select **Open Service** Console. Note: If the **Application Container** service is not visible, it can be added using the Customize Dashboard button. 
 
     ![](images/200/Picture43.png)  
 
@@ -321,7 +322,7 @@ In the following task we will provide screen shots taken from the optional virtu
 
     ![](images/200/Picture54.png)  
 
-- Enter the following information:
+- Enter the following information, then click on the **Finish** button:
 
   - **Identity Domain**: `<your identity domain>`
 
@@ -405,11 +406,11 @@ Depending on your eclipse configuration, you may need to point the project's Jav
 
     ![](images/200/Picture65.png)  
 
-- If your **Execution Environment JRE** release is **equal to or greater** than **1.8.0\_102**, as is shown in the example below, you will ***NOT*** need to complete the tasks in this STEP, and you can Click Cancel twice and continue to the next step.
+ - If your **Execution Environment JRE** release is **equal to or greater** than **1.8.0\_101**, as is shown in the example below, you will ***NOT need to complete the tasks in this STEP***, and you can Click Cancel twice and continue to the **Next Step**.
 
     ![](images/200/Picture65.5.png)  
 
-- If the Execution Environment JRE is **less than 1.8.0\_102**, as is the case in the example below, **Click** on the **Installed JREs** button.
+- If the Execution Environment JRE is **less than 1.8.0\_101**, **Click** on the **Installed JREs** button.
 
     ![](images/200/Picture66.png)   
 
@@ -522,7 +523,7 @@ The Code we cloned locally contains the entire source necessary to filter the St
     ![](images/200/image089.png)  
 
 - Enter “**Feature2: Added Support for Filtering**” in the Commit Message box.
-- **Drag and Drop** the **changed files** into the **Staged Changes** panel.
+- If the changed files are not already identified as Staged Changes, **Drag and Drop** the **changed files** into the **Staged Changes** panel.
 - Click on **Commit and Push**. Note: it is possible to change the default Author and Committer to match the current “persona.” However, for the sake of this lab guide, we will leave the defaults.  
 
     ![](images/200/image090.png)  
@@ -551,9 +552,11 @@ The Code we cloned locally contains the entire source necessary to filter the St
 
 - Click on **Active Sprints** button. Notice that **Feature 2** is now in the **Verify Code** column
 
-- Next, on navigation panel click **Code**, select the **Feature2** branch and then click on the **Commits sub tab**. Now view the recent commit made to branch from within Eclipse.
+- Next, on navigation panel click **Code**, select the **Feature2** branch. Notice the changes. Click on the **Src** folder to view the changes commited to the branch from Eclipse.
 
     ![](images/200/image094.png)  
+    ![](images/200/image093.5.png)  
+
 
 - Now that "Bala Gupta" has completed the task of adding the search filter, a **Merge Request** can be created by Bala and assigned to Lisa Jones. Click on **Merge Requests** on navigation panel and then click on the **New Merge Request** button.
 
@@ -580,7 +583,7 @@ The Code we cloned locally contains the entire source necessary to filter the St
 
     **Note**: **Bala Gupta** is logically sending this request to **Lisa Jones**
 
-- In the **Write box**, enter the following comment and then click on the **Comment** button to save:
+- In the **Write box**, enter the following comment and then click on the **Comment** button at the bottom of the page to save:
 
   `I added the ability to add a filter request to the end of the URL – e.g. statictweets/alpha`
 
@@ -612,7 +615,7 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 
     ![](images/200/image108.png)  
 
-- Leave the defaults, and click on the **Merge** button in the confirmation dialog.
+- Leave the defaults, and click on the **Create a Merge Commit** button in the confirmation dialog.
 
     ![](images/200/image109.png)  
 
@@ -622,7 +625,7 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 
 - Wait a minute or two for the build to complete. The **Last Success** will be set to **Just Now** when the build completes.
 
-    ![](images/200/Picture85.png)  
+    ![](images/200/image111.png)  
 
 ## Test the JavaTwitterMicroservice in the Cloud
 
