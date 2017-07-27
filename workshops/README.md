@@ -5,7 +5,7 @@
 
 | Title | Location | Desc |
 | ----- | -------- | ---- |
-| Cloud Native and DevOps Workshop (CaNDO workshop) | CaNDO | Set of small hands-on labs focused on the development of applications with Developer Cloud Service, Application Container Cloud Service, Java Cloud Service, Wercker and Container Cloud Service |
+| Cloud Native and DevOps Workshop (CaNDO workshop) | [CaNDO](https://github.com/oracle/learning-library/tree/master/workshops/cloud-native-devops-workshop) | Set of small hands-on labs focused on the development of applications with Developer Cloud Service, Application Container Cloud Service, Java Cloud Service, Wercker and Container Cloud Service |
 | DevOps Cloud Native Microservices-DB | [db-devops](https://oracle.github.io/cloud-native-devops-workshop/db-devops/) | Hands-on-labs showing MSQL Cloud Service, Oracle Developer Cloud Service and Application Container Cloud Service |
 | DevOps Starter Kit | [ttc-dev-ops-starter-kit](https://oracle.github.io/learning-library/workshops/ttc-dev-ops-starter-kit/) | Hands-on-labs that will walk you through using some of the AppDev services found in the Oracle Trial Cloud Account, while applying DevOps principles. |
 | iPaaS to Build a Quote to Order Process | [ttc-quote-to-order](https://oracle.github.io/learning-library/workshops/ttc-quote-to-order/) | Hands-on-labs that will use Integration PaaS Services to build a Quote to Order Process |
