@@ -62,11 +62,12 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 	![](images/500/i4.png)
 
 - Edit pump parameters and update the target IP address (field ***OG1***).  Also note/read other highlighted parameters.  **Note the use of linux 'vi' editor to update, which requires specific keys to navigate:**
-	- **Enter the following:** `edit params dirprm/PAMER.prm`
+	- **Enter the following:** `edit param dirprm/PAMER.prm`
 	- **Use the arrow keys on your keyboard to navigate**
 	- **To set insert mode:** `i to insert IP address (above keys no longer navigate), [ESC] to get out of insert mode`
 	- **To delete characters:** `x`
 	- **To save and exit:** `first :, then x`
+	- **Optional - confirm your changes were made correctly:** `view param dirprm/PAMER.prm`
 
 	![](images/500/i6.png)
 

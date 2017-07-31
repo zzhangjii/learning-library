@@ -180,6 +180,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 - Review OGG parameters.  Start a GoldenGate command session, open a new terminal window (double click on the Local Terminal icon on the desktop),
 	- **Switch to the GG home directory:** `cd $GGHOME`
 	- **Start a gg command session:** `./ggsci`
+	- **Start the manager:** `start mgr` (not shown in screenshot)
 
 	![](images/200/i15.png)
 
@@ -220,6 +221,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 	- **Enter your GGCS IP address (field ***GG1***):** see highlighted text below
 	- **Use the `x` key to delete characters**
 	- **To save enter `:` character and then `x` character**
+	- **Optional - review the file to ensure you entered the changes correctly:** `view param PEURO` (not in screenshot)
 
 	![](images/200/i21.png)
 
