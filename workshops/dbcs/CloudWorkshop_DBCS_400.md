@@ -31,30 +31,12 @@ The Alpha Clone database contains an unused APEX configuration. Just like enabli
 
 Note: The standard install of APEX for a 12c database creates many objects shared in both the container and pluggable database, but user and password information is always local to the database we access. In other words, the APEX password we set in Lab 100 does not set the password in the cloned database.
 
-### **STEP 1**: Unlock **APEX\_LISTENER** and **APEX\_REST\_PUBLIC\_USER**
-
--   Make sure the SSH tunnels you set up in lab 100 are still active in your terminal window, if not refer to lab 100 to set up the SSH tunnels.
-
--   During the plug-in operation, many of the common objects in the pluggable database were evaluated by the database and some changes were made to the new database to work with its new container. One of these adjustments was locking the database accounts used to provide REST services. We need to unlock these accounts. Using SQL Developer, locate the **Alpha Clone - DBCS** item (created in Lab 200) in the **DBA Navigator** and open the **SecurityUsers** item.
-
-	![](images/400/image2.png)
-
--   Right-mouse on **APEX\_LISTENER** and select **Unlock User...**
-
-	![](images/400/image3.png)
-
--   Click the **Apply** button to unlock APEX\_LISTENER. You may also use the SQL tab to review the unlock statement.
-
-	![](images/400/image4.png)	![](images/400/image5.png)
-
--   Repeat the **Unlock User...** operation for the **APEX\_REST\_PUBLIC\_USER**.
-
-### **STEP 2**: Access APEX in the Alpha Clone database
+### **STEP 1**: Access APEX in the Alpha Clone database
 
 -   In the **Chrome** browser, open up a new tab and test the updated rule by accessing the APEX instance in the container database from the Internet. Substitute your Public IP address from lab 100. (**Make sure the protocol is HTTPS**).
 
 	```
-	https://<your-Public-IP>/apex/alphaclone/apex_admin
+	https://<your-Alpha01A-DBCS-Public-IP>/apex/PDB1/apex_admin
 	```
 
 	![](images/400/image6.png)
@@ -77,7 +59,7 @@ Note: The standard install of APEX for a 12c database creates many objects share
 
 	![](images/400/image8.png)
 
-### **STEP 3**: Create the Alpha Office workspace
+### **STEP 2**: Create the Alpha Office workspace
 
 -   Click the **Create Workspace** button
 
@@ -133,7 +115,7 @@ Note: The standard install of APEX for a 12c database creates many objects share
 
 ## Build REST services
 
-### **STEP 4**: Login to APEX
+### **STEP 3**: Login to APEX
 
 -   Login into to the new Alpha Office Development workspace using the following credentials:
 
@@ -155,7 +137,7 @@ Note: The standard install of APEX for a 12c database creates many objects share
 	
 	![](images/400/image8.png)
 
-### **STEP 5**:  Create a Simple REST Services Module
+### **STEP 4**:  Create a Simple REST Services Module
 
 -   Click the **SQL Workshop** button.
 
@@ -213,7 +195,7 @@ Note: The standard install of APEX for a 12c database creates many objects share
 
 	![](images/400/image30.png)
 
-### **STEP 6**:  Create a Parameterized REST Service
+### **STEP 5**:  Create a Parameterized REST Service
 
 -   Now we are going to create a REST service that takes a product number and returns only one database row as a JSON object. Click the **Create Template** link.
 
@@ -259,7 +241,7 @@ Note: The standard install of APEX for a 12c database creates many objects share
 
 ## Install APEX Mobile Application
 
-### **STEP 7**:  Import the Alpha Office Mobile Application
+### **STEP 6**:  Import the Alpha Office Mobile Application
 
 -   Click the **Application Builder** menu item on the APEX page.
 
