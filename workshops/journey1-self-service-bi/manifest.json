@@ -3,7 +3,6 @@
         "title": "Self Service BI",
         "description": "Learn how to enable the business to make better decisions faster with the self-service BI cloud services in the Oracle Cloud.",
         "theme": "default",
-        "interactive":"https://launch.oracle.com/?cloudnative",
         "labs": [
             {
                 "number": "0",
