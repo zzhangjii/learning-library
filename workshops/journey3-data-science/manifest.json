@@ -12,32 +12,32 @@
             },
             {
                 "number": "100",
-                "filename": "LabGuide100.md",
-                "title": "Lab 100: Trial Account Signup",
-                "description": "Instructions to sign-up for a free trial of Oracle Public Cloud services"
-            },
-            {
-                "number": "100GSE",
-                "filename": "LabGuide100GSE.md",
-                "title": "Lab 100GSE: ALTERNATE VERSION",
-                "description": "Oracle Employee/Partner instructions to get access to a GSE/demo.oracle.com Oracle Public Cloud demo environment"
+                "filename": "LabGuide100StartHere.md",
+                "title": "Lab 100: START HERE - Provisioning",
+                "description": "Instructions to provision Oracle Big Data Cloud Service - Compute Edition (BDCS-CE) in your Oracle Public Cloud identity domain for use with this journey"
             },
             {
                 "number": "200",
                 "filename": "LabGuide200.md",
                 "title": "Lab 200: Setup R and BDCS-CE",
-                "description": "Provision and configure R environment and RStudio Server with Orace Big Data Cloud Service - Compute Edition (BDCS-CE)"
+                "description": "Setup and configure your R environment and tools with BDCS-CE"
             },
             {
                 "number": "300",
                 "filename": "LabGuide300.md",
-                "title": "Lab 300: Analyze Data with R",
-                "description": "Use R, Rstudio Server, BDCS-CE and Oracle Storage Cloud Object Store to analyze data and store results"
+                "title": "Lab 300: R and Zeppelin",
+                "description": "Use R, SparkR, BDCS-CE and Oracle Storage Cloud Object Store to analyze data and store results"
             },
             {
                 "number": "400",
                 "filename": "LabGuide400.md",
-                "title": "Lab 400: More R and Object Store",
+                "title": "Lab 400: R and RStudio Server",
+                "description": "Use RStudio Server to work with BDCS-CE and Oracle Storage Cloud Object Store"
+            },
+            {
+                "number": "500",
+                "filename": "LabGuide500.md",
+                "title": "Lab 500: More R and Object Store",
                 "description": "Download, install, and use R package to simplify working with the Oracle Storage Cloud Object Store"
             },
             {
