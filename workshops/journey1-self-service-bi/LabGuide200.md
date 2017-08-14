@@ -5,6 +5,9 @@
 Oracle Integration Cloud Service, Oracle Storage Cloud Service
 ```
 
+![](https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/f4a5b21d-66fa-4885-92bf-c4e81c06d916/Image/55d948c4e07007e169299a02b4dfe6db/construction.png) -- This lab (Integration Cloud Service) is under construction and a new version is in the works.  The instructions currently listed below may be **inaccurate** or **incomplete**.
+
+
 ## Goal of Demo:
 
 To demonstrate how easily it is to leverage Oracle Integration Cloud Service and build integrations to pull Twitter feeds which the user cares about and store the data into Data Lake in Oracle Storage Cloud.

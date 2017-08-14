@@ -2,6 +2,8 @@
 # Big Data Journey: Self-Service BI Workshop
 Oracle offers a set of Big Data Journeys to help users get started using Oracle Cloud services with a purpose. This particular journey is designed to show you techniques you can use to easily build your own Business Intelligence environment.
 
+![](https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/f4a5b21d-66fa-4885-92bf-c4e81c06d916/Image/55d948c4e07007e169299a02b4dfe6db/construction.png) -- This journey (Self Service BI) is under construction and a new version is in the works.  The instructions currently listed below may be **inaccurate** or **incomplete**.
+
 
 ![](images/snap0012064.jpg) 
 
@@ -35,7 +37,7 @@ You will learn how to use Oracle Integration Cloud Service (a lightweight integr
 
 - To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/oracle/learning-library/tree/master/workshops/journey1-self-service-bi) repository.
 
-- Visit the [Workshop Interactive Labguide](http://launch.oracle.com/?cloudnative) for a visual overview of the workshop content. 
+
 
 
 
@@ -44,22 +46,7 @@ You will learn how to use Oracle Integration Cloud Service (a lightweight integr
 
 **Reference the following Lab Guides by opening their Documentation Files:**
 
-## Lab 100: Signup for the Oracle Public Cloud Trial
 
-**Documenation**: [LabGuide100.md](LabGuide100.md)
-
-**Objectives**:
-
-- Signup for a Oracle Cloud Trial
-
-## Lab 100GSE: ALTERNATIVE VERSION of Lab 100 for Oracle Employees and Partners with access to GSE "Deal Server" environments
-
-**Documenation**: [LabGuide100GSE.md](LabGuide100GSE.md)
-
-**Objectives**:
-
-- Request a GSE Deal Server environment
-- How to access the GSE Deal Server environment when ready
 
 ## Lab 200: Provisioning Integration Cloud Service and Connecting to Twitter
 

@@ -11,18 +11,6 @@
                 "description": "Overview of the Big Data Self-Service BI User Journey"
             },
             {
-                "number": "100",
-                "filename": "LabGuide100.md",
-                "title": "Lab 100: Trial Account Signup",
-                "description": "Instructions to sign-up for a free trial of Oracle Public Cloud services"
-            },
-            {
-                "number": "100GSE",
-                "filename": "LabGuide100GSE.md",
-                "title": "Lab 100GSE: ALTERNATE VERSION",
-                "description": "Oracle Employee/Partner instructions to get access to a GSE/demo.oracle.com Oracle Public Cloud demo environment"
-            },
-            {
                 "number": "200",
                 "filename": "LabGuide200.md",
                 "title": "Lab 200: Integration Cloud Service",
