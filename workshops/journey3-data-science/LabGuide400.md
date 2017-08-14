@@ -1,268 +1,248 @@
-# Interacting with data in Oracle Object Store in R
-
-# Before You Begin
-
-## Purpose
+![](images/300/Picture300-lab.png)  
 
 
+![](https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/f4a5b21d-66fa-4885-92bf-c4e81c06d916/Image/55d948c4e07007e169299a02b4dfe6db/construction.png) -- This lab (Rstudio Server) is under construction and a new version is in the works.  The instructions currently listed below may be **inaccurate** or **incomplete**.
 
-In this tutorial, you learn to install and use a new R package called oraobjectstore to connect to the Oracle
-Object Storage Cloud and interact with the data in the object store directly in the R environment.
 
-## Time to Complete
 
-20 minutes
+# Demo Introduction
 
-## Background
+## Keywords:
 
-The Oracle Object Store Cloud is a great place to store the corporate data that you want to do data
-science on. R is a language and environment for statistical computing and graphics. To help data scientists
-or genernal R users interact with the data stored in the Oracle Object Store Cloud in a more direct and
-efficient way, Brian Macdonald, who is a data scientist in Oracle, developed a new R package called
-oraobjectstore.
+ Oracle Storage Cloud Service, R Studio, Spark
 
-You will walk through the functions in the package in this tutorial. The package is put on Github for public
-download.
+## Goal of Demo:
 
-Keep in mind that the package is still under development. Brian will be adding new functionality to it, and
-occasionlly you might meet potiential bugs. Please provide feedback for us to improve it.
+To demonstrate how to develop and debug R scripts with R Studio IDE tool.
 
-# What Do You Need?
+To explain an R script that does the following jobs:
 
-Before starting this tutorial, you should:
-- Have an Oracle Storage Cloud Service account and login credentials ready.
-- Download and install R from [here](https://cran.r-project.org/mirrors.html) and the R Studio Desktop open source edition from [here](https://www.rstudio.com/products/rstudio/) if you
-have not done this already.
+ • Load raw data from Object Store for train in R environment
+
+ • Analyze the data with selected method and model
+
+ • Store the pre-trained data back to Object Store
+
+## Pre-requisites:
+
+ Users must have subscribed for Oracle Storage Cloud Service and Oracle Big Data Cloud
+
+## Service – Compute Edition.
+
+ R Server has been installed in Big Data Cloud Service.
+
+# Demo Steps
+
+## Step 1: Load raw data file into Object Store
+
+The data file ( iris.csv ) used in the demo is a popular R dataset. Users can find and download it from Internet. After downloaded to local desktop, the data file will then be uploaded into the Object Store in Oracle Storage Cloud. To upload data files into an Object Store, users can leverage any tool available, for example Cloudberry. In this demo, we will use built-in Storage Console of Oracle Storage Cloud. 
+
 - Download iris.csv from [here](https://raw.githubusercontent.com/uiuc-cse/data-fa14/gh-pages/data/iris.csv) (save the content as iris.csv after you open the link), and upload to your
-Oracle Storage Cloud. You can refer to the appendix in the end of this tutorial to learn about how to
-upload data to Oracle Storage Cloud. This version may be different from the one in the previous lab.
-- Download the R script, oraobjectstore_journey.R, from [here](https://oracle.github.io/learning-library/workshops/journey3-data-science/rFiles/oraobjectstore_journey.R).
+Oracle Storage Cloud. 
 
+Download the R script, oraobjectstore_journey.R, from [here](https://oracle.github.io/learning-library/workshops/journey3-data-science/rFiles/Lab300script.R)
 
-# Downloading and Installing the oraobjectstore Package
 
-![](images/400/image1.png) 
+To access Storage Console, Sign in to the Oracle Cloud My Services application. Then click on Storage from the menu on the left.  
+![](images/300/Lab300_6.png)
+![](images/300/Lab300_1.png)
 
-Log into your Oracle Object Store first, make sure you have uploaded the **iris.csv** file there. From the
-screenshot, you can see that there are a file named **iris.csv** and other files in the BAM container of my
-Oracle Object Store Cloud. The names appear in the screenshot might be different from yours.
 
-![](images/400/image2.png) 
 
-Run the **R Studio** from your desktop and open the R script, **oraobjectstore_journey.R** , which you have downloaded at the beginning.
+If the container for the demo does not exist,
+click Create Container button in the page, and then assign a unique name for the container in the pop-up dialog.
 
-For those not who might not be familar with R Studio, there are four panes in RStudio as shown in the
-screenshot. The R script appears in the top left pane. The bottow left is the Consol pane, the code
-execution and output will show up there. The lower right-hand side is a list of pacakges that have been
-installed. The uper right-hand side is the Global Environment pane where the revelant variables and
-objects will show up there when you run the R script.
 
-![](images/400/image3_install.png)
+You can also use CloudBerry to create a container and upload a file.
 
-You can click the **Run** icon on the top right corner of the source code pane to run the script one line at a
-time.
+![](images/300/Lab300_2.png)
 
-**Run** Line 3. It loads the **devtools** package, which contains the function called **install_github**. Install the
-devtools package if you have not done so already.
+If the data file is not in the container, click Upload Objects button in the page, a dialog will prompt to let user select a local file. Select the downloaded data file and upload it into the Object Store.
 
-**Run** Line 5. This command installs the oraobjectstore package from the github repository
-**brianmacdonald-ml/oraobjectstore.** The package is installed successfully as shown in the output.
+After the data file is uploaded, user can see the file in the object list of the container.
 
-**Run** Line 6 to load the package into R.
 
-Click the **Update** icon in the **Packages** pane in the right-hand side; you can see the oraobjectstore package
-is listed there. Click the link of **oraobjectstore** in the list to the view the Help page.
+## Step 2 : Develop and debug R Script
 
-![](images/400/image4_help.png) 
 
-In the Help page, you can see the functions available in the oraobjectstore package. Read through the
-functions and descriptions in detail.
 
+ 
+##############################  From Big Data Console Create Access Rule to 8787
 
-# Interacting with data in Oracle Object Store
+public internet to Master port 8787
 
-![](images/400/image5_credentials.png) 
+ Then access the Rstudion from your IP:8787 using the userid and password you setup for rstudio
 
-The **oos_authenticate** function in Line 10 will authenticate the session with an Oracle Object Store.
+Following is UI of R Studio IDE:
 
-There are three parameters in the function.
+![](images/300/Lab300_3.png)
 
-- **id** – The identity domain to be connected to
 
-- **username** - Oracle Object Store username
+IDE UI is divided into two panels. On the top, the panel contains a menu bar and a toolbar,which allow users to access functions of the IDE. At the bottom, the panel has components to develop and debug R scripts. On the upper left, a tabbed editor is used to develop multiple R scripts. Below that editor is a console to display execution result of R scripts. On the upper right, a watch window will display both environmental and runtime variables. Below the watch is a window that can show various help information.
 
-- **password** - Oracle Object Store password for the username
+In the IDE, copy and paste the script or open it in the UI.  You can run each line one at a time or section by section
 
-**Replace** the parameters with your domain, user name, and password in the function.
+### 1. Define variables
 
-Run **Line 10**. Make sure you see **HTTP/1.1 200 OK** in the output. It indicates that you authenticate against
-an Oracle Object Store successfully.
+In this part, basic library need to be loaded, required variables will be initialized. Following are code snippet.
 
-The function returns an R list with the following 5 elements.
-
-- **auth_token** - the authorization token needed for other commands
-- **url** - the full url command used for curl commands
-- **user_id** - the well formed user id of the form storage_domain:user
-- **identity_domain** - domain identity used to authenticate
-- **auth_url** - url in the form used for authentication
-
-You can see the return values in the Global Environment pane on the top-right side.
-
-
-The retuned list is assigned to the variable named **my_credentials** , which will be passed to other
-functions.
-
-![](images/400/image6_ls.png)
-
-The function **oos_ls** in Line 12 lists the contents of a container and all sub containers.
-
-There are two parameters for this function, one is for the credentials, and the other is the full container
-name to be listed.
-
-The function returns a dataframe which contains the container path and file name, the size in bytes of the
-file, and the time it was last modified.
-
-**Replace** the container name **BAM** with your container name. **Run** Line 12.
-
-The contents of your container will be listed in the output as shown in the screenshot. The **iris.csv** file
-should be there.
-
-![](images/400/image7_get.png)
-
-The function **oos_get_file** in Line 14 downloads a file as a stream from the Oracle Object store and loads
-the file into a dataframe.
-
-The parameters for this function are credentials, container name where a file resides, and the file name to
-download.
-
-**Replace** the container name **BAM** with your container name.
-**Run** Line 14. The dataset is assigned to the variable named **my_data**.
-
-**Run** Line 15, you can see that there are 150 rows and 6 columns of data in the iris.csv file in the output.
-
-**Run** Line 16, the column names and the data of the first 6 rows are displayed in the output.
-
-Now the dataset is ready in R Studio for further analysis.
-
-![](images/400/image8_lm.png)
-
-You can build a linear regression model based on the iris data set with the **lm** function in Line 18. Refer
-[here](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/lm.html) if you want to learn more about the **lm** function.
-
-The **Petal.Length** column is used as the independent variable, the **Petal.Width** column is used as the
-dependent variable for the model. You may need to change this to petal_width and petal_length to match the file.
-
-**Run** Line 18 to fit the model.
-
-**Run** Line 19 to see the summary information of the model in the output. The model is well fitted, the
-coefficients are significant and the adjusted R-squared value is about 0.93.
-
-You got a model (math formula) as follows:
-
-Petal.Width = 0.42 * Petal.Length – 0.
-
-Given a specific value of length of a petal, you can calculate/predict the width of the petal by the formula.
-
-![](images/400/image9_head.png)
-
-Now we can use the model to do some predictions.
-
-For simplicity’s sake, we use the existing values of Length.Petal in **my_data** as the input data for the
-**predict** function in Line 21.
-
-**Run** Line 21. The predicted values of width of petals are assigned to the variable **my_iris**.
-
-**Run** Line 22. The first 6 predicted values are listed in the output.
-
-**Run** Line 24, 25, and 26. The predicted values are combined with the existing data set; you can easily
-compare the predicted values in the **my_iris** column to the real values of the width of petals in the output.
-
-![](images/400/image10_write.png) 
-
-**Run** Line 28 to save the prediction result, **my_iris** , into a file named **my_iris.csv** on your local computer.
-
-**Replace** the container name **BAM** with yours in Line 29.
-
-**Replace** the third parameter **/home/oracle** with the local file system directory where the my_iris.csv
-resides in Line 29. You may need to change this to . if you get a permission error.
-
-**Run** Line 29 to upload the **my_iris.csv** to Oracle Object Store with the function **oos_upload_file**. You can
-see a **NULL** output, which indicates the file is uploaded successfully.
-
-![](images/400/image11_ls.png)
-
-To validate if the file is uploaded to the Oracle Storage Cloud successfully, you can also list the files in your
-container with the function **oos_ls** in Line 32.
-
-**Replace** the container name **BAM** with yours in Line 32.
-
-**Run** Line 32 and 33. The **my_iris.csv** file is displayed in the list.
-
-![](images/400/image12_rm.png) 
-
-Finally, you can use function **oos_rm** to remove a file in the Oracle Object Store.
-
-**Replace** the container name **BAM** with yours in Line 37 and 38 respectively.
-
-**Run** Line 37 and 38. The my_iris.csv file is removed and it disappears in the output.
-
-
-# Appendix: Moving Data Across Your Local and Cloud Storage
-
-![](images/400/image13_appendix.png)
-
-Sign in to the Oracle Cloud My Services application. The My Services Dashboard is displayed. It lists the
-services that are assigned to your account.
-
-Look for and click **Storage**.
-
-![](images/400/image14_appendix2.png)
-
-The Service Details page is displayed.
-
-Look at the identity domain name, data jurisdiction, and URLs displayed in the REST Endpoint and Auth V
-Endpoint fields under Additional Information.
-
-You will need to refer back to the information in this page when you setup CloudBerry for Oracle Storage
-Cloud Service in the following steps.
-
-![](images/400/image15_cloudberry.png)
-
-CloudBerry Explorer for OpenStack provides a user interface to cloud storage accounts allowing managing
-and moving data across your local and cloud storage.
-
-Download and install [CloudBerry Explorer for OpenStack freeware](https://www.cloudberrylab.com/explorer/openstack.aspx) if you have not done this already.
-
-Launch CloudBerry Explorer, click **File** , and select **New Oracle Cloud Account** option.
-
-![](images/400/image16_cloudberry_login.png)
-
-In the Add New Oracle Cloud Storage Account dialog:-
-- Insert a **display name** of your choice.
-- Insert the user name, the **user name** is in the format **Storage-<identity-domain>:<username>** ,
-where <username> is the username of your Oracle Public Cloud, that has the correct rights to the
-Oracle Storage Cloud Service. For example, _Storage-myDomainID555:myCloudAdminName_
-- Insert the **password** that matches the previous username.
-- Insert the **Authentication Service URL** , it will look like this:
-**https://<identity-domain>.storage.oraclecloud.com/auth/v1.**.
-- In the **account location** select the data jurisdiction, for example, US Commercial 2(us2).
-
-Click **Test Connection** to validate your setup. Then click **OK**.
-
-![](images/400/image17_cloudberry_explore.png)
-
-Once you set up the Oracle Storage Cloud account successfully, you can manage and move data across
-your local and cloud storage. You can drag and drop a data file from your local computer to the cloud
-storage easily.
-
-Besides CloudBerry Explorer, you can also move data across your local and cloud storage with [Oracle
-Storage Cloud Service - File Transfer Manager CLI](http://www.oracle.com/technetwork/topics/cloud/downloads/storage-cloud-upload-cli-3424297.html). It is a Java-based command line tool (CLI) that simplifies
-uploading to and downloading from Oracle Storage Cloud Service. Please refer [here](https://docs.oracle.com/en/cloud/iaas/storage-cloud/csclr/preparing-use-oracle-storage-cloud-file-transfer-manager-cli.html#GUID-5BB8647F-DDAD-4371-A519-1116402245FB) for more details about it.
-
-# Want to Learn More?
-
-- [The R Project for Statistical Computing](https://www.r-project.org/)
-- [Oracle Storage Cloud Service Tutorials](https://cloud.oracle.com/en_US/storage/tutorials)
-
-
+```
+1: # Load library for sending HTTP request
+2: library(httr)
+3:
+4: # Identity Domain name
+5: identity_domain <- "********"
+6:
+7: # Storage Cloud credential
+8: user_id <- "********"
+9: password <- "********"
+10:
+11: # Storage Cloud container & object
+12: container <- "HA_test"
+13: input_file_name <- "iris.csv"
+14: output_result_file_name <- "iris_results.csv"
+15: output_fitted_model_file_name <- "fitted_model.RData"
+16:
+17: storage_name <- paste("Storage-", identity_domain, sep="")
+18:
+19: base_url <- paste("https://", identity_domain, ".storage.oraclecloud.com",
+sep="")
+20: auth_url <- paste(base_url, "/auth/1.0", sep="")
+21: get_url <- paste(base_url, "/v1/", storage_name, "/", container, "/",
+input_file_name, sep="")
+22: put_result_url <- paste(base_url, "/v1/", storage_name, "/", container, "/",
+output_result_file_name, sep="")
+23: put_fitted_model_url <- paste(base_url, "/v1/", storage_name, "/",
+container, "/", output_fitted_model_file_name, sep="")
+24:
+```
+In line 2, the library is loaded. It will be used to send HTTP requests to REST endpoint of the Storage Cloud Service.
+
+Line 4 to line 10, user identity variables are defined and initialized. We obscure the value of password variable for security reason.
+
+Lines 11 to line 15, names of data objects in Object Store are declared.
+
+Line 17 to Line 24, all service URLs used in the R script are constructed with variables  defined before.
+
+### 2. Load data from Object Store
+
+In this part, we will load dataset from a data file in Object Store.
+
+```
+25: # Get authentication token for storage cloud
+26: storage_user <- paste(storage_name, ":", user_id, sep="")
+27: auth_string <- httr::GET(url=auth_url, add_headers("X-Storage-User" =
+storage_user, "X-Storage-Pass" = password), verbose())
+28: auth_token <- auth_string$headers$'x-auth-token'
+29:
+30: # Load data object from Object Store
+31: remote_file <- content(httr::GET(url=get_url, add_headers("X-Auth-Token" =
+auth_token)), as = "text")
+32: my_data <- read.csv(file = textConnection(remote_file))
+33: my_data
+34 :
+```
+Oracle Storage Cloud provides a REST interface that allows external programs to request services from Object Store.
+
+Before sending any service request, clients must first authenticate to the Storage Cloud. Line 25 to line 29 shows how to authenticate and retrieve a token as the proof.
+
+After got an authentication token, clients can get send service requests with token attached in the request. Line 31 retrieves name of remote object in Object Store. Line 32 loads data object from Object Store. Line 33 prints data in the dataset to console.
+
+User can mark codes from line 1 to line 34 in the editor then client Run action in upper right.
+
+R Studio will interpret and execute those codes on the fly. Output information is displayed in the console window.
+
+![](images/300/Lab300_4.png)
+
+### 3. Train the selected model with the dataset
+
+This part will train the selected model with loaded data set.
+
+```
+#### 35: ###########################################
+36: # This uses Spark 1.6.
+37: # https://spark.apache.org/docs/1.6.1/sparkr.html
+38: #
+39:
+40: # Regression model performance metrics function definition
+41: mape <- function(y, yhat) {mean(abs((y - yhat)/y))}
+42: rmse <- function(error) {sqrt(mean(error^2))}
+43:
+44: # Load SparkR
+45: library("SparkR", lib.loc="/u01/bdcsce/use/hdp/2.4.2.0-258/spark/R/lib")
+46: Sys.setenv(SPARK_HOME="/u01/bdcsce/usr/hdp/2.4.2.0-258/spark")
+47:
+48: # Initialize Spark Context
+49: sc <- sparkR.init()
+50: sqlContext <- sparkRSQL.init(sc)
+51:
+52: # Drop column
+53: data = my_data[-c(1)]
+54:
+55: # Rename columns
+56: names(data) = c('sep_len', 'sep_w', 'pet_len', 'pet_w', 'class')
+57:
+58: # Randomly split data into 70% train and 30% test
+59: test_index = base::sample((l:nrow(data)), trunc(length(l:nrow(data))/3))
+60:
+61: # Convert train and test dataframes into Spark Dataframes
+62: train = createDataFrame(sqlContext, data[-test_index,])
+63: test = createDataFrame(sqlContext, data[test_index,])
+64:
+65: # Build regression model
+66: m <- glm(pet_len ~ ., data = train, family = "gaussian")
+67:
+68: # Summarize model
+69: summary(m)
+70:
+71: # Deploy model against out of sample test data and generate predictions
+72: pred = predict(m, test)
+73:
+74: # Using collect, convert the Spark dataframe bck into an R dataframe
+75: result = collect(select(pred,"label","prediction"))
+76:
+```
+
+```
+77: # Calculate out of sample model performance metrics: RMSE (Root Mean Square
+Error) and MAPE (Mean Absolute Percentage Error)
+78: result_metrics = data.frame(rmse = rmse(result$prediction - result$label),
+mape = mape(result$label, result$prediction)
+79:
+80: # Show out of sample model performance metrics
+81: result_metrics
+82:
+```
+Data analytic process leverages SparkR. From line 44 to line 51, we will first load and initialize SparkR environment.
+
+Spark can only process data in special data structure. So next, we need to construct required data structure for Spark. Line 52 to line 64 will demonstrate how to create data frames the data structure for Spark SQL.
+
+Next, we will train the model with loaded dataset. Results are two data frames: a 
+pre-training model (variable m ) and metrics of the result.
+
+### 4. Save pre-trained data back to Object Store
+
+This part will save both pre-trained model and result script in to Object Store.
+
+```
+83: # Regression model performance metrics function definition
+84: # Save performance metrics and fitted model
+85: write.csv(result_metrics, "/home/rstudio/result_metrics.csv")
+86: save(m, file="/home/rstudio/fitted_model.RData")
+87:
+88: # Write results and model back to object store
+89: httr::PUT(url = put_result_url, add_headers("X-Auth-Token" = auth_token),
+body = upload_file("/home/rstudio/result_metrics.csv"))
+90:
+91: httr::PUT(url = put_fitted_model_url, add_headers("X-Auth-Token" =
+auth_token), body = upload_file("/home/rstudio/fitted_model.RData"))
+92:
+93: # Stop Spark Context
+94: sparkR.stop()
+```
+Data frames will first save to local files in the user’s desktop respectively. Then request services to upload those files to Object Store. Finally, clear SparkR environment to release resources.
+
+When all codes are executed, additional files will be created in the Object Store. User can monitor changes in the Container from Storage Console.
+
+![](images/300/Lab300_5.png)
 
