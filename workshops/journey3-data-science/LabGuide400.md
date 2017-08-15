@@ -7,7 +7,7 @@ Updated: August 15, 2017 for BDCSCE Version 17.3.3-20
 
 # Introduction
 
-This lab provides the same examples in Data Science Acceleration Lab 300: R and Zeppelin but focusing on how to use R with RStudio.
+This lab provides the same examples from Data Science Acceleration Lab 300: R and Zeppelin but focusing on how to use R with RStudio.
 
 In particular, this lab will show you how to use R/SparkR functionality within RStudio. This functionality will allow you to use R to query hive tables and read data directly from the Object Store. It will also allow you to query R data with Spark SQL and to leverage some of Spark's advanced machine learning algorithms.
 
@@ -32,7 +32,7 @@ If you completed Data Science Acceleration Lab 300: R and Zeppelin the following
 
 
 
-## Connect to the BDCS-CE Console and OPen RStudio Port
+## Connect to the BDCS-CE Console and Open RStudio Port 8787
 
 ### **STEP 1**: Navigate/login to the Oracle Cloud My Services Dashboard  
 
@@ -81,16 +81,16 @@ Click on Create.
 
 ![](images/400/rstudio_login.gif) 
 
-### **STEP 3**: Download and Open the Lab400script.R R script located in the /home/ruser directory.
+### **STEP 3**: Download and Open the Lab400.R R script located in the /home/ruser directory.
 
-To download the R script, type the following command into the **Console** window in RStudio.
+To download the R script, type or copy/paste the following command into the **Console** window in RStudio.
 
 download.file("https://raw.github.com/millerhoo/journey3-data-science/master/workshops/journey3-data-science/rFiles/Lab400script.R","/home/ruser/lab400.R") 
 
 This will copy the file into the /home/ruser directory.
 
-
 ![](images/400/get_lab400_script.gif)
+
 
 Click on the Open an Existing File icon ![](images/400/open.jpg) to open the Lab400script.R script. 
 
