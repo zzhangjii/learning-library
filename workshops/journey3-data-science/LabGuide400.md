@@ -1,4 +1,4 @@
-![](images/300/Picture300-lab.png)  
+![](images/400/400.JPG)  
 
 Updated: August 15, 2017 for BDCSCE Version 17.3.3-20
 
