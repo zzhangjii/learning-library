@@ -98,7 +98,7 @@ Click on the Open an Existing File icon ![](images/400/open.jpg) to open the Lab
 ### **STEP 4**: Read and follow the instructions in the script by clicking on the run icon ![](images/400/run.JPG).
 
 
-![](images/400/lab400_script.JPG)
+![](images/400/lab400_Script.JPG)
 
 
 
