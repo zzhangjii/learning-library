@@ -81,13 +81,25 @@ Click on Create.
 
 ![](images/400/rstudio_login.gif) 
 
-### **STEP 3**: Open the lab400_r_script.R R script located in the XXXXX directory.
+### **STEP 3**: Download and Open the Lab400script.R R script located in the /home/ruser directory.
+
+To download the R script, type the following command into the **Console** window in RStudio.
+
+download.file("https://raw.github.com/millerhoo/journey3-data-science/master/workshops/journey3-data-science/rFiles/Lab400script.R","/home/ruser/lab400.R") 
+
+This will copy the file into the /home/ruser directory.
 
 
-### **STEP 4**: Read and follow the instructions in the script
+![](images/400/get_lab400_script.gif)
+
+Click on the Open an Existing File icon ![](images/400/open.jpg) to open the Lab400script.R script. 
+
+![](images/400/open_lab400_script.gif)
+
+### **STEP 4**: Read and follow the instructions in the script by clicking on the run icon ![](images/400/run.jpg).
 
 
-![](images/300/snap0012221.jpg)
+![](images/400/lab400_script.jpg)
 
 
 
