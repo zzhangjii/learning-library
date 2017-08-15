@@ -21,7 +21,6 @@ Please direct comments to: Brian Macdonald (brian.macdonald@oracle.com)
  - Use R and SparkR with RStudio
 
 
-
 ## Required Artifacts
 
 If you completed Data Science Acceleration Lab 300: R and Zeppelin the following requirments will have been met.  
