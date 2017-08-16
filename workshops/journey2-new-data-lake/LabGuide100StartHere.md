@@ -1,6 +1,6 @@
 ![](images/100/100.JPG)  
 
-Updated: Auggust 13, 2017 for BDCS-CE Version 17.3-3-20
+Updated: August 16, 2017 for BDCS-CE Version 17.3-3-20
 
     
 
@@ -32,6 +32,8 @@ In any case, follow one of the above approaches to obtain access to an Oracle Pu
 Write down the name of your Identity Domain in a document as you will need it later: 
 ![](images/100/snap0012186.jpg) 
 
++ Hint: you should also write down the data center if you have it (for instance, "US Commerical 2")
+
 # Create a container in the Storage Cloud and upload a file
 
 Next, we will create a container in the Storage Cloud to hold the files and data used by this workshop.  This container will be the "default" container used by the BDCS-CE instance we will create.  And we will upload to this container a special "bootstrap.sh" file that will be used to customize our BDCS-CE instance as it is provisioned.
@@ -41,6 +43,10 @@ Next, we will create a container in the Storage Cloud to hold the files and data
 ### **STEP 1**: Navigate/login to the Oracle Cloud My Services Dashboard  
 
 ![](images/300/snap0011988.jpg) 
+
+  + You should already know the URL to login to Oracle Cloud My Services dashboard and should use that to login directly.  But if you don't, navigate to https://cloud.oracle.com/home . Then click Sign In:
+  ![](images/100/snap0012287.jpg) 
+  + Then you will need to specify the data center (hint: if you an internal employee and were given credentials via email, try US-Commericial 2 for the data center).  And then click My Services.
 
 ### **STEP 2**: Using the upper right popup menu, navigate to Storage page
 
@@ -52,18 +58,17 @@ Next, we will create a container in the Storage Cloud to hold the files and data
 
 ### **STEP 4**: Click on Create Container.  Name the container journeyC.  Write down the container name.
 
-You are **strongly** advised to name your container "journeyC" (case-sensitive).  The code snippets in the workshop expect the container to use this name.  If you use a different container name, you will need to manually change the container name in some of our provided code examples.  And if you choose your own container name, do not use an underscore in the name.
+You are **strongly** advised to name your container "journeyC" (case-sensitive).  The code snippets in the workshop expect the container to use this name.  If you use a different container name, you may need to manually change the container name in some of our provided code examples.  And if you choose your own container name, do not use an underscore in the name.
 
 ![](images/100/StorageContainer.gif) 
 
-
 ## Upload the bootstrap.sh file to the container
 
-### **STEP 1**: Download the bootstrap.sh file to your computer and save it in a directory you can easily find.
+### **STEP 1**: Download the bootstrap.zip file to your computer, unzip it, and save the bootstrap.sh file in a directory you can easily find.
 
-Download the bootstrap.sh file from here: [https://github.com/millerhoo/journey2-new-data-lake/raw/master/workshops/journey2-new-data-lake/files/100/bootstrap.sh](https://github.com/millerhoo/journey2-new-data-lake/raw/master/workshops/journey2-new-data-lake/files/100/bootstrap.sh)
+Download the bootstrap.zip file from here: [https://github.com/millerhoo/journey2-new-data-lake/raw/master/workshops/journey2-new-data-lake/files/100/bootstrap.zip](https://github.com/millerhoo/journey2-new-data-lake/raw/master/workshops/journey2-new-data-lake/files/100/bootstrap.zip)
 
-If the contents of this file are displayed in your browser (as compared to being downloaded/saved as a file), you may need to use your browser's File..Save Page As.. feature to get it written to a file on your computer.
+Be sure to unzip the bootstrap.zip file to extract/save the bootstrap.sh file to a directory on your local computer.
 
 
 ### **STEP 2**: Click on the journeyC container to open it.  Click on Upload Objects.  Select the bootstrap.sh file.  

@@ -11,22 +11,22 @@
                 "description": "Overview of the Big Data Self-Service BI User Journey"
             },
             {
+                "number": "100",
+                "filename": "LabGuide100StartHere.md",
+                "title": "Lab 100: Oracle Data Visualization Desktop",
+                "description": "Download, install, and use Oracle Data Visualization Desktop to visualize your twitter data from the Oracle Database Cloud Service"
+            },
+            {
                 "number": "200",
                 "filename": "LabGuide200.md",
-                "title": "Lab 200: Integration Cloud Service",
+                "title": "Lab 200: (draft) Integration Cloud Service",
                 "description": "Provision and configure Oracle Integration Cloud Service to collect Twitter data and store in the Oracle Storage Cloud Object Store"
             },
             {
                 "number": "300",
                 "filename": "LabGuide300.md",
-                "title": "Lab 300: Big Data Preparation Cloud Service",
+                "title": "Lab 300: (draft) Big Data Preparation Cloud Service",
                 "description": "Leverage the Oracle Big Data Preparation Cloud Service to massage your twitter data and store in the Oracle Database Cloud Service"
-            },
-            {
-                "number": "400",
-                "filename": "LabGuide400.md",
-                "title": "Lab 400: Data Visualization Desktop",
-                "description": "Download, install, and use Oracle Data Visualization Desktop to visualize your twitter data from the Oracle Database Cloud Service"
             },
             {
                 "number": "9999",

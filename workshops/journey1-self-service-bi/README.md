@@ -2,7 +2,8 @@
 # Big Data Journey: Self-Service BI Workshop
 Oracle offers a set of Big Data Journeys to help users get started using Oracle Cloud services with a purpose. This particular journey is designed to show you techniques you can use to easily build your own Business Intelligence environment.
 
-![](https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/f4a5b21d-66fa-4885-92bf-c4e81c06d916/Image/55d948c4e07007e169299a02b4dfe6db/construction.png) -- This journey (Self Service BI) is under construction and a new version is in the works.  The instructions currently listed below may be **inaccurate** or **incomplete**.
+![](https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/f4a5b21d-66fa-4885-92bf-c4e81c06d916/Image/55d948c4e07007e169299a02b4dfe6db/construction.png)
++ This journey (Self Service BI) is under construction and a new version is in the works.  The instructions currently listed below may be **inaccurate** or **incomplete**.
 
 
 ![](images/snap0012064.jpg) 
@@ -48,7 +49,23 @@ You will learn how to use Oracle Integration Cloud Service (a lightweight integr
 
 
 
-## Lab 200: Provisioning Integration Cloud Service and Connecting to Twitter
+
+## Lab 100:  Visualize Data with Oracle Data Visualization Desktop
+
+**Documenation**: [LabGuide100StartHere.md](LabGuide100StartHere.md)
+
+**Objectives**:
+
+- Download and Install Oracle Data Visualization Desktop (DVD)
+- Connect DVD to Oracle Database as a Service
+- Visualize Citibike data
+
+
+
+
+# Other labs (under construction)
+
+## Lab 200: (DRAFT) Provisioning Integration Cloud Service and Connecting to Twitter
 
 **Documenation**: [LabGuide200.md](LabGuide200.md)
 
@@ -59,7 +76,7 @@ You will learn how to use Oracle Integration Cloud Service (a lightweight integr
 - Configure ICS to connect to Twitter.com
 - Use ICS to deliver Twitter.com data to Oracle Storage Cloud Object Store
 
-## Lab 300: Massaging data with Oracle Big Data Preparation Cloud Service
+## Lab 300: (DRAFT) Massaging data with Oracle Big Data Preparation Cloud Service
 
 **Documenation**: [LabGuide300.md](LabGuide300.md)
 
@@ -68,14 +85,3 @@ You will learn how to use Oracle Integration Cloud Service (a lightweight integr
 - Provision Oracle Big Data Preparation Cloud Service
 - Prepare a dataset containing Twitter data
 - Store revised data in Oracle Database as a Service
-
-## Lab 400:  Visualize Data with Oracle Data Visualization Desktop
-
-**Documenation**: [LabGuide400.md](LabGuide400.md)
-
-**Objectives**:
-
-- Download and Install Oracle Data Visualization Desktop (DVD)
-- Connect DVD to Oracle Database as a Service
-- Visualize your Twitter.com data
-
