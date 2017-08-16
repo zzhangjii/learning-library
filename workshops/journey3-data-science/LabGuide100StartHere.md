@@ -17,7 +17,7 @@ As such, this workshop will re-use parts of the New Data Lake journey.  Specific
 Please 
 
 + Navigate to the New Data Lake journey at [https://oracle.github.io/learning-library/workshops/journey2-new-data-lake/](https://oracle.github.io/learning-library/workshops/journey2-new-data-lake/) 
-+ Complete New Data Lake Lab 100 "Start Here - Provisiong"
++ Complete New Data Lake Lab 100 "Start Here - Provisioning"
 + Complete New Data Lake Lab 200 "Getting to know BDCS-CE"
 
 before returning to the Data Science Acceleration journey.
