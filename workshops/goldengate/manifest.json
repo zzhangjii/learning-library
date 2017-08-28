@@ -52,6 +52,12 @@
                 "title": "FAQ",
                 "description": "If you run into issues check this FAQ."
             }
+            {
+                "number": "700",
+                "filename": "WorkshopRequest.md",
+                "title": "Workshop Request Process",
+                "description": "This shows how to request a workshop from GSE"
+            }
         ]
     }
 }
