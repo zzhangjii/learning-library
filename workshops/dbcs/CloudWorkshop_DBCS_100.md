@@ -9,7 +9,7 @@ This is the first of several labs that are part of the Oracle Public Cloud Datab
 This lab will walk you through creating a new Database Cloud Service instance. After the database has been created, you will connect into the Database image using the ssh private key and familiarize yourself with the image layout. Next you will learn how to create an ssh configuration file that can be used to tunnel simultaneously multiple ports to a
 remote OPC instance. Using the tunnels, you will learn how to access various Database consoles.
  
-- To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/pcdavies/DatabaseCloudService/tree/master/dbcs) repository.
+- To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/oracle/learning-library/tree/master/workshops/dbcs) repository.
 
 ## Objectives
 
