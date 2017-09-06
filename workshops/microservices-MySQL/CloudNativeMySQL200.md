@@ -3,11 +3,11 @@ Update: March 31, 2017
 
 ## Introduction
 
-This is the second of several labs that are part of the **Oracle Cloud DevOps Cloud Native Microservices workshop.** This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
+This is the second of several labs that are part of the **Oracle Cloud DevOps and Cloud Native Microservices MySQL workshop.** This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
 
-In the first lab (100), the Project Manager created a new project in the Developer Cloud Service and also created and assigned tasks to the developers of this application. In this lab you will assume the persona of the Java developer, who will be tasked with creating several microservices that will supply data to any front-end or analytics applications (one of which you will build in the following lab, lab 300).
+In the first lab (100), the Project Manager created a new project in the Developer Cloud Service and also created and assigned tasks to the developers of this application. In this lab you will assume the persona of the Java developer, who will be tasked with creating a microservices that will allow for retrieval and filtering of twitter data to any front-end or analytics applications (one of which you will build in lab 400).
 
-***To log issues***, click here to go to the [github oracle](https://github.com/oracle/cloud-native-devops-workshop/issues/new) repository issue submission form.
+***To log issues***, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
 ## Objectives
 
@@ -18,7 +18,7 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
 ## Required Artifacts
 
-- The following lab requires an Oracle Public Cloud account that will be supplied by your instructor. You will need to download and install latest version of Eclipse. Instructions are found in the Student Guide.
+- The following lab requires an Oracle Public Cloud account that will be supplied by your instructor. You will need to download and install latest version of Eclipse or used supplied compute VM. Instructions are found in the Student Guide.
 
 # Create Initial Static Twitter Feed Service
 
@@ -34,7 +34,7 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
     ![](images/bala.png)  
 
-- Within the **Twitter Feed Marketing Project**, click on **Agile** found on the left hand navigation.
+- Within the **Alpha Office Product Catalog Project**, click on **Agile** found on the left hand navigation.
 
     ![](images/200/Picture11.png)  
 
@@ -202,6 +202,18 @@ Now that you have successfully built your project, you need to create a deployme
 
     ![](images/200/Picture35.3.png)  
 
+- To reduce the number of resources that are used we will modify the default deployment of 2 instances. Click **Include ACCS Deployment** and enter the following in the text box:
+
+...
+{
+  "memory": "2G",
+  "instances": "1"
+}
+...
+
+![](images/200/Picture35.4.png)  
+
+
 - Click **Save**
 
     ![](images/200/Picture36.2.png)  
@@ -218,44 +230,22 @@ Now that you have successfully built your project, you need to create a deployme
 
 ## Verify Twitter Feed Microservice deployment
 
-### **STEP 6**: Change status to Verified
-
-Now that we have successfully deployed the build artifact to the Application Container Cloud Service, we will update our agile board to reflect that status. Although the complexity of the next task (verification) is quite simple, we will still move the task to the “Verify Code” column before manually verifying the new functionality.
-
-- On navigation panel click **Agile**, followed by clicking **Active Sprints**. 
-
-- Drag and drop **Task 1** from **In Progress** to the **Verify Code** column.
-
-    ![](images/200/Picture39.2.png)  
-
-- In the Change Progress pop up, click on **Next**
-
-    ![](images/200/Picture39.5.png)  
-
-- In the **Add Time Spent** popup, set the **Time Spent** to `1` and click **OK**
-
-    ![](images/200/Picture40.png)  
-
-- The code is now ready for verification before moving to Completed
-
-    ![](images/200/Picture41.3.png)  
-
-### **STEP 7**: Login to Oracle Application Container Cloud Service
+### **STEP 6**: Login to Oracle Application Container Cloud Service
 
 - Return to the Developer Service Cloud Dashboard tab if it’s still available, then select the Dashboard icon to return to the Oracle Public Cloud Dashboard. Note: It’s possible that you may be required to once again login, if the session has expired.
 
     ![](images/200/Picture42.png)  
 
-- Once the Oracle Public Cloud **Dashboard** is displayed, click on the  ![](images/200/PictureHamburger.png) menu to the bottom right of the **Application Container** service. Then select **Open Service** Console. Note: If the **Application Container** service is not visible, it can be added using the Customize Dashboard button. 
+- Once the Oracle Public Cloud **Dashboard** is displayed, click on the  ![](images/200/PictureHamburger.png) menu in the upper left and select **Application Container** service. 
 
-    ![](images/200/Picture43.png)  
+    ![](images/200/Picture43.1.png)  
 
 - On the Application Container Cloud Service (ACCS) Service Console you can view all the deployed applications, including our newly created **JavaTwitterMicroservice**. Click on the **URL**, and it will load a new browser tab. Alternatively, copy and paste the URL into the address bar of a new browser tab.
 
     ![](images/200/Picture44.png)  
 
-- Append `/statictweets` to the end of the URL in the browser, and press return (e.g.):
-`https://javatwittermicroservice-.apaas.em2.oraclecloud.com/statictweets`
+- Append **/statictweets** to the end of the URL in the browser, and press return (e.g.):
+**https://javatwittermicroservice-.apaas.em2.oraclecloud.com/statictweets**
 
     Note: The URL should return a JSON array containing a Static Twitter feed. Note: If you desire to see a formatted view of the JSON, and you are using Chrome, open a new tab and search Google for “JSONViewer chrome plugin” – After you install the Chrome Plugin and re-submit the URL, you will be able to view the JSON in a more readable format.
 
