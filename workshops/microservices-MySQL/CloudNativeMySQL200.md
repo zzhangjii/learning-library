@@ -294,10 +294,6 @@ In the following task we will provide screen shots taken from the optional virtu
 
     ![](images/200/Picture50.png)  
 
-- Once Eclipse loads, **close** the **Welcome Window** if it is visible.
-
-    ![](images/200/Picture51.png)  
-
 ### **STEP 10**: Create connection to Oracle Developer Cloud Service
 
 - We will now create a connection to the Developer Cloud Service. To do this, first click on the menu options **Window -> Show View ->Other**  
@@ -335,7 +331,7 @@ In the following task we will provide screen shots taken from the optional virtu
 
 ### **STEP 11**: Create a local clone of the repository
 
-- **Expand Developer**, and then **double click** on **Twitter Feed Marketing Project** to activate the project.
+- **Expand Developer**, and then **double click** on **Alpha Office Product Catalog** project to activate the project.
 
     ![](images/200/Picture58.png)  
 
@@ -343,86 +339,29 @@ In the following task we will provide screen shots taken from the optional virtu
 
     ![](images/200/Picture59.png)  
 
-- **Right Click** on the **TwitterFeedMicroservice** cloned repository and **click** on **Import Projects**.
+- To import project into Eclipe navigate to the top left **File** menu and select **Import Projects**.
 
-    ![](images/200/Picture60.png)  
+    ![](images/200/Picture59.1.png)  
 
-- If the following screen is displayed, Keep the wizard defaults and **click** on **Next**:
+- In Import wizard, expand the **Git** menu item and select **Projects from Git**. Click **Next**
 
-    ![](images/200/Picture61.png)  
+    ![](images/200/Picture59.2.png)  
 
+- Select **Existing local repository** and click **Next**
 
-- Accept the Import defaults, and **click on Finish**. Note: If nothing imports, that will be resolved in the next step. 
+    ![](images/200/Picture59.3.png)  
 
-    ![](images/200/Picture62.png)  
+- Select the **TwitterFeedMicroservice** git repository and click **Next**
 
-### **STEP 12**: Import Projects
+    ![](images/200/Picture59.4.png)  
 
-- ***If projects were NOT imported*** into your Project Explorer, as is show in the screen capture below, perform this step. If **TwitterFeedMicroService** was imported, go to the next step.
+- Take the defaults and click **Next**
 
-    ![](images/200/Picture62.5.png)  
+    ![](images/200/Picture59.5.png)  
 
-- Choose **Import** from the Eclipse **File** menu.
+- Review configuration and click **Finish**
 
-    ![](images/200/Picture62.1.png)
-
-- In the Import dialog, expand **General** > **Existing Projects into Workspace** and click on **Next**
-
-    ![](images/200/Picture62.2.png)
-
-- In the Import dialog, click **Browse** next to the **Select root directory** input field.
-
-- Navigate to your **Workspace** > **TwitterFeedMicroservice.git-xxxx** folder and click **OK**. Then click **Finish**.
-
-    ![](images/200/Picture62.3.png)
-
-### **STEP 13**: Select the correct Java JDE
-
-Depending on your eclipse configuration, you may need to point the project's Java Runtime Environment to a different JRE than the default. (e.g. with the Workshop's companion Virtual Box Image). In this step you will first check to see if your environment is correctly set. If the JRE is not correct, you will configure the Project Settings to point to the correct JRE.
-
-- **Click** on the **TwitterFeedMicroservice** Project, then from the **top menu**, select **Project > Properties**
-
-    ![](images/200/Picture63.png)  
-
-- Select the **Java Build Path** option.
-
-    ![](images/200/Picture64.png)  
-
-- **Click** on the **Libraries tab**.
-
-- Select the **JRE System Library**.
-
-- **Click** on the **Edit** button.
-
-    ![](images/200/Picture65.png)  
-
- - If your **Execution Environment JRE** release is **equal to or greater** than **1.8.0\_101**, as is shown in the example below, you will ***NOT need to complete the tasks in this STEP***, and you can Click Cancel twice and continue to the **Next Step**.
-
-    ![](images/200/Picture65.5.png)  
-
-- If the Execution Environment JRE is **less than 1.8.0\_101**, **Click** on the **Installed JREs** button.
-
-    ![](images/200/Picture66.png)   
-
-- **Select** the Standard VM, which in this case is **java-1.8.0-openjdk**. Then, **click** on **Edit**
-
-    ![](images/200/Picture67.png)  
-
-- **Click** on the **JRE home: Directory** button
-
-    ![](images/200/Picture68.png)  
-
-- **Navigate** to **usr/java**, select **jdk1.8.0\_102**, and **click** on **OK**
-
-    **Note**: On Windows, the JDK Path will differ. It is likely similar to: **C:\Program Files\Java\jdk1.8.0_31**
-
-    ![](images/200/Picture69.png)  
-
-- Change the JRE Name to **jdk1.8.0\_102**, and click on **Finish**
-
-    ![](images/200/Picture70.png)  
-
-- Click **OK, Finish** and **OK** when prompted on the following dialogs to complete the  Library changes.
+    ![](images/200/Picture59.6.png)  
 
 ## Test the Local Cloned Services
 
