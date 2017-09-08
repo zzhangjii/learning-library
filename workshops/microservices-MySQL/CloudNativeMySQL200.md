@@ -461,27 +461,11 @@ The Code we cloned locally contains the entire source necessary to filter the St
 - Click on the **Finish button** in the Push Confirmation dialog
 - Click on **Ok** in Push Result dialog
 
-### **STEP 18**: Complete the Create Filter Task
-
-- In the lower left Eclipse Task List, double click on **Create Filter on Twitter Feed** task
-
-    ![](images/200/image091.png)  
-
-- In the **Create Filter on Twitter Feed** window, scroll down to the **Actions** Section. Click on **Resolve as FIXED**, and then click on the **Submit** button
-
-    ![](images/200/image092.png)  
-
 ## Create Merge Request
 
-### **STEP 19**: Review Sprint Status and create Merge Request
+### **STEP 19**: Create Merge Request
 
-- Return to the Developer Cloud Service Dashboard in the browser, and select **Agile**. If your default Board is not set to Microservices, then set the Find Board Filter to All, and select the Microservices board.
-
-    ![](images/200/image093.png)  
-
-- Click on **Active Sprints** button. Notice that **Feature 2** is now in the **Verify Code** column
-
-- Next, on navigation panel click **Code**, select the **Feature2** branch. Notice the changes. Click on the **Src** folder to view the changes commited to the branch from Eclipse.
+- Return to the Developer Cloud Service Dashboard in the browser. On navigation panel click **Code**, select the **Feature2** branch. Notice the changes. Click on the **Src** folder to view the changes commited to the branch from Eclipse.
 
     ![](images/200/image094.png)  
     ![](images/200/image093.5.png)  

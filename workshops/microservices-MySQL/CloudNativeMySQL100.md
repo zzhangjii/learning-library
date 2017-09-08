@@ -240,7 +240,7 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 
     **Name:** `Sprint 1 - Initial Development`
 
-    **Story Points:** `6`
+    **Story Points:** `7`
 
     ![](images/100/Picture100-25.png)
 
