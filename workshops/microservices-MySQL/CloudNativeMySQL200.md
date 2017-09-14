@@ -468,7 +468,11 @@ The Code we cloned locally contains the entire source necessary to filter the St
 - Return to the Developer Cloud Service Dashboard in the browser. On navigation panel click **Code**, select the **Feature2** branch. Notice the changes. Click on the **Src** folder to view the changes commited to the branch from Eclipse.
 
     ![](images/200/image094.png)  
+
+- Click **Logs** to view latest commit.  Click commit link on left hand side to view code changes.
+
     ![](images/200/image093.5.png)  
+    ![](images/200/image093.6.png)  
 
 
 - Now that "Bala Gupta" has completed the task of adding the search filter, a **Merge Request** can be created by Bala and assigned to Lisa Jones. Click on **Merge Requests** on navigation panel and then click on the **New Merge Request** button.
@@ -496,10 +500,6 @@ The Code we cloned locally contains the entire source necessary to filter the St
 
     **Note**: **Bala Gupta** is logically sending this request to **Lisa Jones**
 
-- In the **Write box**, enter the following comment and then click on the **Comment** button at the bottom of the page to save:
-
-  `I added the ability to add a filter request to the end of the URL – e.g. statictweets/alpha`
-
 ## Merge the Branch as Lisa Jones
 
 In the following steps “Lisa” will merge the branch create by “Bala” into the master.
@@ -507,14 +507,6 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 ### **STEP 20**: Merge Requests
 
 ![](images/lisa.png)  
-
-- Before moving forward, “Lisa Jones” can take a look at the **Burndown** and **Sprint Reports** by clicking on the **Agile** navigation, then the **Reports** button
-
-    ![](images/200/image104.png)  
-
-- Click **Sprint Report**
-
-    ![](images/200/image105.png)  
 
 - On navigation panel click **Merge Requests**. Select the **Assigned to Me** search. After the search completes, click on the **Merge Feature 2 into master** assigned request.
 
@@ -548,11 +540,11 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 
     ![](images/200/image113.png)  
 
-- When the new browser tab loads, Append `/statictweets` to the end of the URL and **press enter** to test the original static twitter service
+- When the new browser tab loads, Append **/statictweets** to the end of the URL and **press enter** to test the original static twitter service
 
     ![](images/200/image114.png)  
 
-- Now change the appended URL to `/statictweets/alpha` and **press enter**. This will cause records containing the text ""**alpha**"" in the tweet’s text or hashtags to be returned.
+- Now change the appended URL to **/statictweets/alpha** and **press enter**. This will cause records containing the text ""**alpha**"" in the tweet’s text or hashtags to be returned.
 
     ![](images/200/image115.png)  
 
@@ -560,11 +552,11 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 
     ![](images/200/image116.png)  
 
-- Complete the feature request by Dragging and Dropping **Feature 2** (Create Filter on Twitter Feed) from the **Verify Column** to the **Completed Column**.
+- Complete the feature request by Dragging and Dropping **Feature 2** (Create Filter on Twitter Feed) from the **In Progress** to the **Completed** Column.
 
     ![](images/200/image117.png)  
 
-- Set the Status to **VERIFIED – FIXED** and click **Next**.
+- Leave defaults and click **Next**.
 
     ![](images/200/image118.png)  
 
