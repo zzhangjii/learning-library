@@ -3,30 +3,29 @@ Update: October 1, 2017
 
 ## Introduction
 
-This is the second of several labs that are part of the **Oracle Cloud DevOps Cloud Native Microservices workshop.** This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
+This is the third of several labs that are part of the **Oracle Cloud DevOps and Cloud Native Microservices MySQL workshop.** This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
 
-In the first lab (100), the Project Manager created a new project in the Developer Cloud Service and also created and assigned tasks to the developers of this application. In this lab you will assume the persona of the Java developer, who will be tasked with creating several microservices that will supply data to any front-end or analytics applications (one of which you will build in the following lab, lab 300).
+In the first lab (100), the Project Manager created a new project in the Developer Cloud Service and also created and assigned tasks to the developers of this application. In the second lab (100), the java developer created a new microservice to retrieve and filter twitter data. In this lab you will assume the persona of the full stack developer, who will be tasked with creating a microservices that will supply data from MySQL database.
 
-***To log issues***, click here to go to the [github oracle](https://github.com/oracle/cloud-native-devops-workshop/issues/new) repository issue submission form.
+**To log issues***, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
 ## Objectives
 
 - Access Developer Cloud Service
 - Import Code from external Git Repository
-- Import Project into Eclipse
 - Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
 
 ## Required Artifacts
 
-- The following lab requires an Oracle Public Cloud account that will be supplied by your instructor. You will need to download and install latest version of Eclipse. Instructions are found in the Student Guide.
+- The following lab requires an Oracle Public Cloud account that will be supplied by your instructor. This lab assumes that the MySQL service has already been created. If you are using these labs outside of an Oracle event please following the instructions outlined in the addendum at the end of the lab guide.
 
-# Create Initial Static Twitter Feed Service
+# Create MySQL REST Microservice
 
 ## Explore Developer Cloud Service
 
 ### **STEP 1**: Review Agile Board
 
-- This Lab assumes that you just completed Lab 100 and are still connected to the Oracle Cloud, that you're still in the Developer cloud Service Dashboard, and you're viewing the "Twitter Feed Marketing Project". If for some reason that is not the case, follow the first several Steps of Lab 100 to once again view the Developer Cloud Service Console.
+- This Lab assumes that you just completed Lab 200 and are still connected to the Oracle Cloud, that you're still in the Developer cloud Service Dashboard, and you're viewing the "Alpha Office Product Catalog Project". If for some reason that is not the case, follow the first several Steps of Lab 100 to once again view the Developer Cloud Service Console.
 
     ![](images/200/Picture10.5.png)  
 

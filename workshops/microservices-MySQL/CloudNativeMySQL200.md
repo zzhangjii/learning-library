@@ -5,7 +5,7 @@ Update: October 1, 2017
 
 This is the second of several labs that are part of the **Oracle Cloud DevOps and Cloud Native Microservices MySQL workshop.** This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
 
-In the first lab (100), the Project Manager created a new project in the Developer Cloud Service and also created and assigned tasks to the developers of this application. In this lab you will assume the persona of the Java developer, who will be tasked with creating a microservices that will allow for retrieval and filtering of twitter data to any front-end or analytics applications (one of which you will build in lab 400).
+In the first lab (100), the Project Manager created a new project in the Developer Cloud Service and also created and assigned tasks to the developers of this application. In this lab you will assume the persona of the Java developer, who will be tasked with creating a microservices that will allow for retrieval and filtering of twitter data.
 
 ***To log issues***, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
@@ -564,7 +564,7 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 
     ![](images/200/image118.5.png)  
 
-- You are now done with this lab.
+- **You are now done with this lab.**
 
 # Supplementary Assignment – Twitter Live Feed Credentials
 
