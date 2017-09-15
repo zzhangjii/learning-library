@@ -204,12 +204,12 @@ Now that you have successfully built your project, you need to create a deployme
 
 - To reduce the number of resources that are used we will modify the default deployment of 2 instances. Click **Include ACCS Deployment** and enter the following in the text box:
 
-...
+```
 {
   "memory": "2G",
   "instances": "1"
 }
-...
+```
 
 ![](images/200/Picture35.4.png)  
 
