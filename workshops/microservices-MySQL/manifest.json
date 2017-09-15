@@ -19,31 +19,31 @@
             },
             {
                 "number": "100",
-                "filename": "CloudNative100MySQL.md",
+                "filename": "CloudNativeMySQL100.md",
                 "title": "Lab 100: Agile Project Management",
                 "description": "Use Developer Cloud Service to create issues, tasks, and sprints"
             },
             {
                 "number": "200",
-                "filename": "CloudNative200MySQL.md",
+                "filename": "CloudNativeMySQL200.md",
                 "title": "Lab 200: Continuous Delivery of Java Microservices",
                 "description": "Access Developer Cloud Service, Import external GIT Repository, Import project into Elicpse, and Build and Delpoy a project using Developer Cloud Service and Oracle Application Container Cloud Service."
             },
             {
                 "number": "300",
-                "filename": "CloudNative300MySQL.md",
+                "filename": "CloudNativeMySQL300.md",
                 "title": "Lab 300: Continuous Delivery of Database Microservices",
                 "description": "Access Developer Cloud Service, Import external GIT Repository, and Build and Delpoy a project using Developer Cloud Service and Oracle Application Container Cloud Service."
             },
             {
                 "number": "400",
-                "filename": "CloudNative400MySQL.md",
+                "filename": "CloudNativeMySQL400.md",
                 "title": "Lab 400: Cloud Native Rapid Javascript Devlopment with node.js",
                 "description": "Access Developer Cloud Service, Import Code from external Git Repository, Import Project into Brackets, then Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service"
             },
             {
                 "number": "500",
-                "filename": "CloudNative500MySQL.md",
+                "filename": "CloudNativeMySQL500.md",
                 "title": "Lab 500: Cloud Native Developer Cloud Service Administration",
                 "description": "Access Developer Cloud Service, Complete Sprint, Run Backlog and Sprint Reports and Review Administrative Tasks"
             }

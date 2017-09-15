@@ -44,7 +44,7 @@ This Oracle Public Cloud DevOps and Cloud Native Microservices MySQL workshop wi
 
 ## Lab 100: Agile Project Management
 
-**Documentation**: [CloudNative100MySQL.md](CloudNative100MySQL.md)
+**Documentation**: [CloudNativeMySQL100.md](CloudNativeMySQL100.md)
 
 ### Objectives
 
@@ -79,7 +79,7 @@ This Oracle Public Cloud DevOps and Cloud Native Microservices MySQL workshop wi
 
 ## Lab 400: Cloud Native Rapid JavaScript Development with node.js
 
-**Documentation**: [CloudNative400MySQL.md](CloudNative400MySQL.md)
+**Documentation**: [CloudNativeMySQL400.md](CloudNativeMySQL400.md)
 
 ### Objectives
 
@@ -90,7 +90,7 @@ This Oracle Public Cloud DevOps and Cloud Native Microservices MySQL workshop wi
 
 ## Lab 500:  Cloud Native Developer Cloud Service Administration
 
-**Documentation**: [CloudNative500MySQL.md](CloudNative500MySQL.md)
+**Documentation**: [CloudNativeMySQL500.md](CloudNativeMySQL500.md)
 
 ### Objectives
 
