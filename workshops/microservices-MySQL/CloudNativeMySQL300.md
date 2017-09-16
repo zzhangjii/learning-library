@@ -206,7 +206,7 @@ Now that we have an automated build process, we will setup up a deployment confi
 
 ## Verify MySQL REST Microservice deployment
 
-### **STEP 7**: Test REST services
+### **STEP 6**: Test REST services
 
 - We are able to access the application directly from Developer Cloud Service. Click **AlphaOfficeMySQLREST** to launch the application.
 
@@ -224,7 +224,7 @@ Now that we have an automated build process, we will setup up a deployment confi
 
     ![](images/300/Picture44.png)  
 
-### **STEP 8**: Complete Task
+### **STEP 7**: Complete Task
 
 We have now verified that the MySQL REST microservice has been deployed and functions properly. To finish up this lab, we will mark the Issue as completed in the Sprint.
 
