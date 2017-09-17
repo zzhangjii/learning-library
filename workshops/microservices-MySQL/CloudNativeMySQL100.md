@@ -56,7 +56,7 @@ Although you will login as a single user, you will take on 4 Personas during the
 
     ![](images/100/Picture100-4.png)
 
-- **Click** on the **Customize Dashboard** to add services to the dashboard. Services are added by selecting **Show.** For this workshop, you will want to ensure that you are showing the **Application Container, Developer and Storage** cloud services. 
+- **Click** on the **Customize Dashboard** to add services to the dashboard. Services are added by selecting **Show.** For this workshop, you will want to ensure that you are showing the **Application Container and Developer** cloud services. 
 
     ![](images/100/Picture100-5.png)
 
@@ -64,7 +64,7 @@ Although you will login as a single user, you will take on 4 Personas during the
 
 Oracle Developer Cloud Service provides a complete development platform that streamlines team development processes and automates software delivery. The integrated platform includes an issue tracking system, agile development dashboards, code versioning and review platform, continuous integration and delivery automation, as well as team collaboration features such as wikis and live activity stream. With a rich web based dashboard and integration with popular development tools, Oracle Developer Cloud Service helps deliver better applications faster.
 
-- From the Cloud UI dashboard click on the **Developer** service. In our example, the Developer Cloud Service is named **developer99019**.
+- From the Cloud UI dashboard click on the **Developer** service. In our example, the Developer Cloud Service is named **developer#####**.
 
     ![](images/100/Picture100-6.png)
 
@@ -146,7 +146,7 @@ In this step you are still assuming the identity of the Project Manager, ***Lisa
 
     ![](images/100/Picture100-17.png)
 
-### **STEP 5**: Create Issue for Update Twitter Credentials
+### **STEP 5**: Create Issue for Update Twitter Service
 
 - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
 
@@ -166,7 +166,7 @@ In this step you are still assuming the identity of the Project Manager, ***Lisa
 
 ### **STEP 6**: Create Issue for development of Database Microservice
 
-- Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**. Note: The next two issues will logically be owned by Roland Dubois.
+- Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**. Issue will logically be owned by **Roland Dubois**.
 
     ![](images/Roland.png)
 
@@ -174,7 +174,7 @@ In this step you are still assuming the identity of the Project Manager, ***Lisa
 
     **Description:** `Create Microservice to allow access to Product Catalog data`
 
-    **Type:** `Task`
+    **Type:** `Feature`
 
     **Owner:** `Select your account provided in the dropdown [Logical Owner: Roland Dubois]`
 
@@ -184,13 +184,13 @@ In this step you are still assuming the identity of the Project Manager, ***Lisa
 
 ### **STEP 7**: Create Issue for Development of Product Catalog UI
 
-- Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
+- Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**. Issue will logically be owned by **John Dunbar**.
 
     ![](images/john.png)
 
-    **Summary:** Create Alpha Office Product Catalog UI `
+    **Summary:** `Create Alpha Office Product Catalog UI`
 
-    **Description:** Create Alpha Office Product Catalog UI making use of the new Microservices.`
+    **Description:** `Create Alpha Office Product Catalog UI making use of the new Microservices`
 
     **Type:** `Feature`
 
@@ -268,4 +268,4 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 
     ![](images/100/Picture100-36.png)
 
-- You are now ready to move to the next lab.
+- **You are now ready to move to the next lab.**
