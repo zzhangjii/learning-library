@@ -86,7 +86,7 @@ This Oracle Public Cloud DevOps and Cloud Native Microservices MySQL workshop wi
 - Import Project into Brackets
 - Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
 
-## Lab 500:  Cloud Native Developer Cloud Service Administration
+## Lab 500:  Oracle Developer Cloud Service Administration
 
 **Documentation**: [CloudNativeMySQL500.md](CloudNativeMySQL500.md)
 
