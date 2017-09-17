@@ -26,7 +26,7 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
 ### **STEP 1**: Review Agile Board
 
-- This Lab assumes that you just completed Lab 100 and are still connected to the Oracle Cloud, that you're still in the Developer cloud Service Dashboard, and you're viewing the "Twitter Feed Marketing Project". If for some reason that is not the case, follow the first several Steps of Lab 100 to once again view the Developer Cloud Service Console.
+- This Lab assumes that you just completed Lab 100 and are still connected to the Oracle Cloud, that you're still in the Developer cloud Service Dashboard, and you're viewing the "Alpha Office Product Catalog Project". If for some reason that is not the case, follow the first several Steps of Lab 100 to once again view the Developer Cloud Service Console.
 
     ![](images/200/Picture10.5.png)  
 
@@ -54,13 +54,9 @@ To begin development on our Twitter feed microservices, we could start coding fr
 
     ![](images/200/Picture14.2.png)  
 
-- Click on **Next** in the Change Progress popup.
-
-    ![](images/200/Picture14.5.png)  
-
 - Leave the defaults, and Click **OK**.
 
-    ![](images/200/Picture15.png)  
+    ![](images/200/Picture14.6.png)  
 
 - Your Sprint progress will appear as shown below.
 
@@ -148,7 +144,7 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
   **NOTE:** Once the build begins, it should take about approximately 1 to 2 minutes for the build to complete. Once complete, you will be able to see the number of successful test runs in the Test Result Trend section. ***Wait for the build to complete before continuing to the next step***, as we need the build artifact to complete the deployment configuration.
 
-- After the build begins, you can also click on the **Console Icon** to monitor the build log details.
+- After the build begins, you can also click on the **Console Icon** ![](images/200/Picture30.1.png) to monitor the build log details.
 
     ![](images/200/Picture30.png)  
 
@@ -186,7 +182,7 @@ Now that you have successfully built your project, you need to create a deployme
 
     ![](images/200/Picture34.3.png)  
 
-    Note: If you are not able to connect, double check you credentials. If your connection still does not work, and this is an **Oracle Trial account**, please review the Student Guide for this workshop, and follow the steps outlining how to set your **Storage Replication Policy**.  
+    **Note:** If you are not able to connect, double check you credentials. If your connection still does not work, and this is an **Oracle Trial account**, please review the Student Guide for this workshop, and follow the steps outlining how to set your **Storage Replication Policy**.  
 
 - Set the following Properties as follows:
 
@@ -244,10 +240,9 @@ Now that you have successfully built your project, you need to create a deployme
 
     ![](images/200/Picture44.png)  
 
-- Append **/statictweets** to the end of the URL in the browser, and press return (e.g.):
-**https://javatwittermicroservice-.apaas.em2.oraclecloud.com/statictweets**
+- Append **/statictweets** to the end of the URL in the browser.
 
-    Note: The URL should return a JSON array containing a Static Twitter feed. Note: If you desire to see a formatted view of the JSON, and you are using Chrome, open a new tab and search Google for “JSONViewer chrome plugin” – After you install the Chrome Plugin and re-submit the URL, you will be able to view the JSON in a more readable format.
+    **Note:** The URL should return a JSON array containing a Static Twitter feed. If you desire to see a formatted view of the JSON, and you are using Chrome, open a new tab and search Google for **JSONViewer chrome plugin** – After you install the Chrome Plugin and re-submit the URL, you will be able to view the JSON in a more readable format.
 
     ![](images/200/Picture45.png)  
 
