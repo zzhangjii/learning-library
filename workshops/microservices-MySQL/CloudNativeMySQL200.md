@@ -281,7 +281,7 @@ Now that we have completed the import, build, deployment, and verification of ou
 
 ### **STEP 9**: Load Eclipse IDE
 
-In the following task we will provide screen shots taken from the optional virtual box image provided with the workshop. If you are using Eclipse and Brackets on your local hardware, your screens may vary slightly.
+In the following task we will provide screen shots taken from the optional compute image provided with the workshop. If you are using Eclipse and Brackets on your local hardware, your screens may vary slightly.
 
 - Right Click and select **Run** on the **Eclipse** Desktop Icon.
 
@@ -334,7 +334,7 @@ In the following task we will provide screen shots taken from the optional virtu
 
     ![](images/200/Picture59.png)  
 
-- To import project into Eclipe navigate to the top left **File** menu and select **Import Projects**.
+- To import project into Eclipe navigate to the top left **File** menu and select **Import**.
 
     ![](images/200/Picture59.1.png)  
 
@@ -372,7 +372,7 @@ In the previous steps we updated the status of the Tasks assigned to "Bala Gupta
 
     ![](images/200/Picture72.2.png)  
 
-- Optionally, if you return to the Developer Cloud Service web interface, you’ll see that the Eclipse interface caused the Feature 2 to be moved to the “In Progress” column of the Agile > Active Sprints.
+- Optionally, if you return to the Developer Cloud Service web interface, you’ll see that the Eclipse interface caused the Feature 2 to be moved to the **In Progress** column of the **Agile > Active Sprints**.
 
     ![](images/200/Picture73.2.png)  
 
@@ -537,7 +537,7 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 
 - When the new browser tab loads, Append **/statictweets** to the end of the URL and **press enter** to test the original static twitter service
 
-    ![](images/200/image114.png)  
+    ![](images/200/Picture45.png)  
 
 - Now change the appended URL to **/statictweets/alpha** and **press enter**. This will cause records containing the text ""**alpha**"" in the tweet’s text or hashtags to be returned.
 
