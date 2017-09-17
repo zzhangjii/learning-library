@@ -1,11 +1,11 @@
-![](images/300/Picturelab.png)  
+![](images/300/PictureLab.png)  
 Update: October 1, 2017
 
 ## Introduction
 
 This is the third of several labs that are part of the **Oracle Cloud DevOps and Cloud Native Microservices MySQL workshop.** This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
 
-In the first lab (100), the Project Manager created a new project in the Developer Cloud Service and also created and assigned tasks to the developers of this application. In the second lab (100), the java developer created a new microservice to retrieve and filter twitter data. In this lab you will assume the persona of the full stack developer, who will be tasked with creating a microservices that will supply data from MySQL database.
+In the first lab (100), the Project Manager created a new project in the Developer Cloud Service and also created and assigned tasks to the developers of this application. In the second lab (200), the java developer created a new microservice to retrieve and filter twitter data. In this lab you will assume the persona of the full stack developer, who will be tasked with creating a microservices that will supply data from MySQL database.
 
 **To log issues***, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
@@ -29,7 +29,7 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
 - Although you will remain connected to the Oracle Cloud using the user account you were provided, you will take on the Persona of ***Roland Dubois*** as you perform the following steps.
 
-    ![](images/roland.png)  
+    ![](images/Roland.png)  
 
 - Within the **Alpha Office Product Catalog Project**, click on **Agile** found on the left hand navigation.
 
