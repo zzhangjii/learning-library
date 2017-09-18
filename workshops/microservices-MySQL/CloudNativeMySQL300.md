@@ -51,13 +51,9 @@ To begin development on our Catalog REST microservices, we could start coding fr
 
     ![](images/300/Picture14.1.png)  
 
-- Click on **Next** in the Change Progress popup.
-
-    ![](images/300/Picture14.2.png)  
-
 - Leave the defaults, and Click **OK**.
 
-    ![](images/300/Picture15.png)  
+    ![](images/300/Picture14.2.png)  
 
 - Your Sprint progress will appear as shown below.
 
@@ -65,7 +61,7 @@ To begin development on our Catalog REST microservices, we could start coding fr
 
 - In the left hand navigation panel, click **Project**
 
-- In the New Repository wizard enter the following information and click **Create**.
+- Click **New Repository**. In the New Repository wizard enter the following information and click **Create**.
 
     **Name:** `AlphaOfficeMySQLREST`
 
@@ -89,7 +85,7 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
 - On the left side navigation panel, click **Build** to access the build page and click **New Job**.
 
-- In the New Job popup enter `Twitter Feed Build` for the Job Name, and then click **Save**.
+- In the New Job popup enter `Alpha MySQL REST Build` for the Job Name, and then click **Save**.
 
     ![](images/300/Picture21.png)  
 
@@ -216,11 +212,11 @@ Now that we have an automated build process, we will setup up a deployment confi
 
     ![](images/300/Picture42.png)  
 
-- First lets test out the **products** REST call.  Append /products to the end of the URL and hit **enter**.  All of the Alpha Office products should be returned in a JSON payload. 
+- First lets test out the **products** REST call.  Append **/products** to the end of the URL and hit **enter**.  All of the Alpha Office products should be returned in a JSON payload. 
 
     ![](images/300/Picture43.png)  
 
-- Now lets search for just on product.  Change products to **product/1020**.  This will just return the product with the Product Id of 1020.
+- Now lets search for just on product.  Change **products** to **product/1020**.  This will just return the product with the Product Id of 1020.
 
     ![](images/300/Picture44.png)  
 
@@ -228,7 +224,7 @@ Now that we have an automated build process, we will setup up a deployment confi
 
 We have now verified that the MySQL REST microservice has been deployed and functions properly. To finish up this lab, we will mark the Issue as completed in the Sprint.
 
-- Back in the Developer Cloud Service window, click **Agile**, followed by clicking Active Sprints.
+- Back in the Developer Cloud Service window, click **Agile**, followed by clicking **Active Sprints**.
 
 - Drag and drop **Feature 3** from **In Progress** to **Completed**.
 
@@ -252,3 +248,9 @@ We have now verified that the MySQL REST microservice has been deployed and func
     ![](images/300/Picture49.png)  
 
 - **You are now done with this lab.**
+
+# Supplementary Assignment – Provision and Setup MySQL Instance
+
+## Create MySQL Instance
+
+- This section of the lab has not yet been completed.
