@@ -6,7 +6,7 @@ Update: October 1, 2017
 
 This is the first of several labs that are part of the **Oracle Public Cloud DevOps and Cloud Native Microservices MySQL workshop.** This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
 
-Although you will login as a single user, you will take on 4 Personas during the workshop. The **Project Manager** Persona will create the projects, add tasks and features to be worked on, and assign tasks to developers.  The Project Manager will then start the initial sprint. The **Java Developer** persona will develop a new twitter feed service that will allow for retrieval and filtering of twitter data. The **Full Stack Developer** persona will develop a new database microservice that allows access to the product catalog data. The **JavaScript Developer** persona will make enhancements to the Product Catalog UI that will display the twitter data related to a select catalog item.  During this workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service.
+Although you will login as a single user, you will take on 4 Personae during the workshop. The **Project Manager** Persona will create the projects, add tasks and features to be worked on, and assign tasks to developers.  The Project Manager will then start the initial sprint. The **Java Developer** persona will develop a new twitter feed service that will allow for retrieval and filtering of twitter data. The **Full Stack Developer** persona will develop a new database microservice that allows access to the product catalog data. The **JavaScript Developer** persona will make enhancements to the Product Catalog UI that will display the twitter data related to a select catalog item.  During this workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service.
 
 ***To log issues***, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
@@ -56,7 +56,7 @@ Although you will login as a single user, you will take on 4 Personas during the
 
     ![](images/100/Picture100-4.png)
 
-- **Click** on the **Customize Dashboard** to add services to the dashboard. Services are added by selecting **Show.** For this workshop, you will want to ensure that you are showing the **Application Container and Developer** cloud services. 
+- **Click** on the **Customize Dashboard** to add services to the dashboard. Services are added by selecting **Show.** For this workshop, you will want to ensure that you are showing the **Application Container** and the **Developer cloud** services. 
 
     ![](images/100/Picture100-5.png)
 
