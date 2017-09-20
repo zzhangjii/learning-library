@@ -88,7 +88,7 @@ To begin development on our Twitter feed microservices, we could start coding fr
 
 ### **STEP 4**: Create Default Build Process
 
-Now that we have the source code in our managed GIT repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. We will set up a Maven build process in this section.
+Now that we have the source code in the Developer Cloud Service managed GIT repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. We will set up a Maven build process in this section.
 
 - On the left side navigation panel, click **Build** to access the build page and click **New Job**.
 
@@ -142,7 +142,7 @@ Now that we have the source code in our managed GIT repository, we need to creat
     ![](images/200/Picture28_5.png)  
     ![](images/200/Picture29.png)  
 
-  **NOTE:** Once the build begins, it should take about approximately 1 to 2 minutes for the build to complete. Once complete, you will be able to see the number of successful test runs in the Test Result Trend section. ***Wait for the build to complete before continuing to the next step***, as we need the build artifact to complete the deployment configuration.
+  **NOTE:** Once the build begins, it should take about approximately 1 to 2 minutes for the build to complete. Once complete, you will see the number of successful test runs in the Test Result Trend section. ***Wait for the build to complete before continuing to the next step***, as we need the build artifact to complete the deployment configuration.
 
 - After the build begins, you can also click on the **Console Icon** ![](images/200/Picture30.1.png) to monitor the build log details.
 
@@ -250,7 +250,7 @@ Now that you have successfully built your project, you need to create a deployme
 
 We have now verified that the statictweets microservice has been deployed and functions properly. To finish up this part of the lab, we will mark the Issue as completed in the Sprint.
 
-- Back in the Developer Cloud Service window, click **Agile**, followed by clicking Active Sprints.
+- Back in the Developer Cloud Service window, click **Agile**, followed by clicking **Active Sprints**.
 
 - Drag and drop **Task 1** from **Verify Code** to **Completed**.
 
@@ -448,7 +448,7 @@ The Code we cloned locally contains the entire source necessary to filter the St
 
 - Enter “**Feature2: Added Support for Filtering**” in the Commit Message box.
 - If the changed files are not already identified as Staged Changes, **Drag and Drop** the **changed files** into the **Staged Changes** panel.
-- Click on **Commit and Push**. Note: it is possible to change the default Author and Committer to match the current “persona.” However, for the sake of this lab guide, we will leave the defaults.  
+- Click on **Commit and Push**. Note: it is possible to change the default Author and Committer to match the current “persona." However, for the sake of this lab guide, we will leave the defaults.  
 
     ![](images/200/image090.png)  
 
