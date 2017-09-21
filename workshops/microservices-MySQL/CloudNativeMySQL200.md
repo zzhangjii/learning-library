@@ -539,7 +539,7 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 
     ![](images/200/Picture45.png)  
 
-- Now change the appended URL to **/statictweets/alpha** and **press enter**. This will cause records containing the text ""**alpha**"" in the tweet’s text or hashtags to be returned.
+- Now change the appended URL to **/statictweets/%23Expo** and **press enter**. This will cause records containing **#Expo** in the tweet’s text or hashtags to be returned. This is how our Product Catalog will retrieve tweet's associated to a product.
 
     ![](images/200/image115.png)  
 

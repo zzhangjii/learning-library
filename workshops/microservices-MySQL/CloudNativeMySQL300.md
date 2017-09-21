@@ -111,6 +111,8 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
 - For **Command** enter: `npm install`
 
+  **NOTE:** **npm** can manage packages that are local dependencies of a particular project, as well as globally-installed JavaScript tools. When used as a dependency manager for a local project, npm can install, in one command, all the dependencies of a project through the package.json file.
+
     ![](images/300/Picture27.png)  
 
 - Click the **Post Build** tab and complete the following:
