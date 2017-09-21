@@ -523,7 +523,7 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 
     ![](images/200/image110.png)  
 
-- Wait a minute or two for the build to complete. The **Last Success** will be set to **Just Now** when the build completes.
+- Wait a minute or two for the build to start and to complete. The **Last Success** will be set to **Just Now** when the build completes.
 
     ![](images/200/image111.png)  
 
@@ -565,7 +565,7 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 
 ## Create Twitter App
 
-***This is an optional assignment***, during which you’ll have an opportunity to put your new knowledge of the Developer Cloud Service to work by extending our static twitter microservices to use live twitter data. In this exercise, you will acquire Twitter Application Credentials and use them to operate on a live twitter feed in your microservices. For the purposes of this assignment, you will use a personal account to log in to twitter and generate the credentials. However, in the context of our application, assume that these credentials have been provided by Product Management and represent the approved credentials for our production application.
+***This is an optional assignment. We recommend that this section only be attempted if you have ample time to complete the other labs. Otherwise, return to this section later***. During this assignment you’ll have an opportunity to put your new knowledge of the Developer Cloud Service to work by extending our static twitter microservices to use live twitter data. In this exercise, you will acquire Twitter Application Credentials and use them to operate on a live twitter feed in your microservices. For the purposes of this assignment, you will use a personal account to log in to twitter and generate the credentials. However, in the context of our application, assume that these credentials have been provided by Product Management and represent the approved credentials for our production application.
 
 You have two options for managing this code change in the version control system. If you would like more practice with the multi-user workflow, you can start a new branch for this feature, commit to that branch, create a merge request, and approve the merge. We’ll refer to this in the instructions as **Method A**. If you’re comfortable with that workflow, you can switch to master in your local repository, pull the latest revision from the cloud, and commit and push directly to master for this exercise. This will be **Method B**.
 
