@@ -7,7 +7,7 @@ This is the third of several labs that are part of the **Oracle Cloud DevOps and
 
 In the first lab (100), the Project Manager created a new project in the Developer Cloud Service and also created and assigned tasks to the developers of this application. In the second lab (200), the java developer created a new microservice to retrieve and filter twitter data. In this lab you will assume the persona of the full stack developer, who will be tasked with creating a microservices that will supply data from MySQL database.
 
-**To log issues***, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
+**To log issues**, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
 ## Objectives
 
@@ -25,7 +25,7 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
 ### **STEP 1**: Review Agile Board
 
-- This Lab assumes that you just completed Lab 200 and are still connected to the Oracle Cloud, that you're still in the Developer cloud Service Dashboard, and you're viewing the "Alpha Office Product Catalog Project". If for some reason that is not the case, follow the first several Steps of Lab 100 to once again view the Developer Cloud Service Console.
+- This Lab assumes that you just completed Lab 200 and are still connected to the Oracle Cloud, that you're still in the Developer cloud Service Dashboard, and you're viewing the "Alpha Office Product Catalog Project." If for some reason that is not the case, follow the first several Steps of Lab 100 to once again view the Developer Cloud Service Console.
 
 - Although you will remain connected to the Oracle Cloud using the user account you were provided, you will take on the Persona of ***Roland Dubois*** as you perform the following steps.
 
@@ -47,7 +47,7 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
 To begin development on our Catalog REST microservices, we could start coding from scratch. However, prior to the formal kickoff of this project, you (as Roland Dubois) have already started doing some proof-of-concept development outside of the Developer Cloud Service in order to assess the feasibility of your assignment. You want to bring that existing code into the Developer Cloud Service as a starting point for your microservices. You will do that by cloning your external GIT repository into the Developer Cloud Service. Your first step will be to accept your task using the agile board.
 
-- Drag and drop **Feature4 - Create Microservice to allow acces to Product Catalog data** into the **In Progress** swim-lane.  
+- Drag and drop **Feature 3 - Create Microservice to allow acces to Product Catalog data** into the **In Progress** swim-lane.  
 
     ![](images/300/Picture14.1.png)  
 
@@ -83,7 +83,9 @@ To begin development on our Catalog REST microservices, we could start coding fr
 
 Now that we have the source code in our managed GIT repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. We will set up a Maven build process in this section.
 
-- On the left side navigation panel, click **Build** to access the build page and click **New Job**.
+- On the left side navigation panel click **Build** to access the build page.
+
+- Click **New Job**.
 
 - In the New Job popup enter `Alpha MySQL REST Build` for the Job Name, and then click **Save**.
 
@@ -190,7 +192,7 @@ Now that we have an automated build process, we will setup up a deployment confi
 
     ![](images/200/Picture36.2.png)  
 
-- Click the gear drop down and select **Start**
+- Click the gear drop down for **AlphaOfficeMySQLREST** and select **Start**
 
     ![](images/300/Picture37.2.png)  
 
@@ -253,4 +255,4 @@ We have now verified that the MySQL REST microservice has been deployed and func
 
 ## Create MySQL Instance
 
-- This section of the lab has not yet been completed.
+- This section of the lab has not yet been completed, but in the future will show the simple steps required to create the MySQL Cloud Service that was pre-created for this lab.
