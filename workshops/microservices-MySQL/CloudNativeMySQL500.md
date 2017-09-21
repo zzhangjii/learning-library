@@ -8,7 +8,7 @@ This is the Fifth of several labs that are part of the **Oracle DevOps and Cloud
 In this lab, Lisa Jones (The Project Manager) will complete the Sprint and view the Agile reports provided by the Oracle Developer Cloud Service
 
 
-**To log issues***, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
+**To log issues**, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
 ## Objectives
 - Access Developer Cloud Service
@@ -78,15 +78,15 @@ In this lab, Lisa Jones (The Project Manager) will complete the Sprint and view 
 
     ![](images/500/image011.png)
 
-- From the Menu options list select **Issues Tracking** to view the options available for Issue configuration.
+- From the Administration Menu options list select **Issues Tracking** to view the options available for Issue configuration.
 
     ![](images/500/image012.png)
 
-- From the Menu options list, select **Repositories**. From this screen you can manage both Hosted and External Repositories.
+- From the Administration Menu options list, select **Repositories**. From this screen you can manage both Hosted and External Repositories.
 
     ![](images/500/image013.png)
 
-- From the Menu options list, select **Branches** to view the repository branches by User or Branch.
+- From the Administration Menu options list, select **Branches** to view the repository branches by User or Branch.
 
     ![](images/500/image014.2.png)
 
