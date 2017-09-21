@@ -1,585 +1,258 @@
-![](images/400/PictureTitle.png)  
-
-Update: October 11, 2017
+![](images/300/PictureLab.png)  
+Update: October 1, 2017
 
 ## Introduction
 
-This is the fourth of several labs that are part of the **Oracle Cloud Native Microservices** workshop. This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
+This is the third of several labs that are part of the **Oracle Cloud DevOps and Cloud Native Microservices MySQL workshop.** This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
 
-In the previous lab (200), the Java Developer (Bala Gupta) created several microservices that pull data from twitter and allow for dynamic filtering based on keywords. In this lab, you will assume the role of the front-end JavaScript developer who will create a web application that incorporates the data from those microservices. This node.js application will be developed in the Developer Cloud Service taking advantage of automated builds and deployments to the Application Container Cloud Service.
+In the first lab (100), the Project Manager created a new project in the Developer Cloud Service and also created and assigned tasks to the developers of this application. In the second lab (200), the java developer created a new microservice to retrieve and filter twitter data. In this lab you will assume the persona of the full stack developer, who will be tasked with creating a microservices that will supply data from MySQL database.
 
-***To log issues***, click here to go to the [github oracle](https://github.com/oracle/cloud-native-devops-workshop/issues/new) repository issue submission form.
+**To log issues**, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
 ## Objectives
 
 - Access Developer Cloud Service
 - Import Code from external Git Repository
-- Import Project into Brackets
 - Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
 
 ## Required Artifacts
 
-- The following lab requires an Oracle Cloud account that will be supplied by your instructor. You will need to download and install latest version of the Brackets text editor.
+- The following lab requires an Oracle Public Cloud account that will be supplied by your instructor. This lab assumes that the MySQL service has already been created. If you are using these labs outside of an Oracle event please following the instructions outlined in the addendum at the end of the lab guide.
 
-
-# Create Initial Twitter Marketing UI Service
+# Create MySQL REST Microservice
 
 ## Explore Developer Cloud Service
 
 ### **STEP 1**: Review Agile Board
 
-- This Lab assumes that you completed Lab 100 and 200 and are still connected to the Oracle Cloud, that you're still in the Developer cloud Service Dashboard, and you're viewing the "Twitter Feed Marketing Project". If for some reason that is not the case, follow the first several Steps of Lab 100 to once again view the Developer Cloud Service Console.
+- This Lab assumes that you just completed Lab 200 and are still connected to the Oracle Cloud, that you're still in the Developer cloud Service Dashboard, and you're viewing the "Alpha Office Product Catalog Project." If for some reason that is not the case, follow the first several Steps of Lab 100 to once again view the Developer Cloud Service Console.
 
-    ![](images/200/Picture10.5.png)  
+- Although you will remain connected to the Oracle Cloud using the user account you were provided, you will take on the Persona of ***Roland Dubois*** as you perform the following steps.
 
-- Although you will remain connected to the Oracle Cloud using the user account you were provided, you are to take on the Persona of ***John Dunbar*** as you perform the following steps.
+    ![](images/Roland.png)  
 
-    ![](images/john.png)  
+- Within the **Alpha Office Product Catalog Project**, click on **Agile** found on the left hand navigation.
 
-- Click on **Agile** on the navigation panel.
+    ![](images/300/Picture11.png)  
 
-    ![](images/300/image012.png)  
+### **STEP 2**: Display the Active Sprint
 
-- Click on the **Microservices** Board **Active Sprints**.
+- On the **Microservices** Board, click **Active Sprints**
 
-    ![](images/400/image014.5.png)  
+    ![](images/300/Picture13.png)  
 
 ## Create Initial Git Repository
 
-### **STEP 2**: Create Initial Git Repository
+### **STEP 3**: Create Initial Git Repository
 
-As in the previous lab, we could start coding this application from scratch at this point. However, one of our colleagues has already begun working on the shell for our web application outside of the Developer Cloud Service. We want to use his work as a starting point and extend it to incorporate our twitter microservices. To pull his code into the Developer Cloud Service, we will clone his external GIT repository. First let’s update our agile board to show that we are working on this task:
+To begin development on our Catalog REST microservices, we could start coding from scratch. However, prior to the formal kickoff of this project, you (as Roland Dubois) have already started doing some proof-of-concept development outside of the Developer Cloud Service in order to assess the feasibility of your assignment. You want to bring that existing code into the Developer Cloud Service as a starting point for your microservices. You will do that by cloning your external GIT repository into the Developer Cloud Service. Your first step will be to accept your task using the agile board.
 
-- Drag and drop **Task 3 - Create Initial GIT Repository for Twitter Marketing UI** into the **In Progress** swim-lane.  Click **OK** on Change Progress popup.
+- Drag and drop **Feature 3 - Create Microservice to allow acces to Product Catalog data** into the **In Progress** swim-lane.  
 
-    ![](images/300/image015.png)  
+    ![](images/300/Picture14.1.png)  
 
-    ![](images/300/image016.5.png)  
+- Leave the defaults, and Click **OK**.
 
-- Click on **Project** on the navigation panel.
+    ![](images/300/Picture14.2.png)  
 
-- Click on **New Repository** to create a new Git Repository
+- Your Sprint progress will appear as shown below.
 
-    ![](images/300/image017.png)  
+    ![](images/300/Picture16.2.png)  
 
-- In the New Repository wizard enter the following information and click **Create**.
+- In the left hand navigation panel, click **Project**
 
-    **Name:** `TwitterMarketingUIMicroservice`
+- Click **New Repository**. In the New Repository wizard enter the following information and click **Create**.
 
-    **Description:** `Twitter Marketing UI Microservice`
+    **Name:** `AlphaOfficeMySQLREST`
 
-    **Initial content:** Import existing repository and enter the URL: `https://github.com/pcdavies/JETTwitterQuickStart.git`
+    **Description:** `AlphaOffice MySQL REST`
 
-    ![](images/300/image018.5.png)  
+    **Initial content:** `Import existing repository`
 
-- You have now created a new GIT repository based on an existing repository.
+    **Enter the URL:** `https://github.com/pcdavies/AlphaOfficeMySQLREST.git`
 
-    ![](images/300/image019.png)  
+    ![](images/300/Picture18.2.png)  
+
+- You have now created a new GIT repository stored within the Developer Cloud Services that is based on an existing repository.
+
+    ![](images/300/Picture19.png)  
 
 ## Create Default Build and Deployment Process
 
-### **STEP 3**: Create Default Build Process
+### **STEP 4**: Create Default Build Process
 
-Now that we have the source code in our managed GIT repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. We will set up a shell script build process in this section.
+Now that we have the source code in our managed GIT repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. We will set up a Maven build process in this section.
 
-- Click **Build** on the navigation panel to access the build page and click **New Job**.
+- On the left side navigation panel click **Build** to access the build page.
 
-    ![](images/300/image020.png)  
+- Click **New Job**.
 
-- In the New Job popup enter `Twitter Marketing UI Build` for Job Name and click **Save**.
+- In the New Job popup enter `Alpha MySQL REST Build` for the Job Name, and then click **Save**.
 
-    ![](images/300/image021.png)  
+    ![](images/300/Picture21.png)  
 
 - You are now placed into the job configuration screen.
 
-    ![](images/300/image022.png)  
+    ![](images/300/Picture22.png)  
 
-- Click the **Source Control** tab. Click Git and select **TwitterMarketingUIMicroservice.git** from the URL drop down.
+- Click the **Source Control** tab. Click **Git** and select the **AlphaOfficeMySQLREST.git** from the drop down.
 
-    **Note:** Make sure you select the Git repository for the Twitter Marketing UI Microservice.
+    ![](images/300/Picture24.png)  
 
-    ![](images/300/image023.png)  
+- Click the **Triggers** tab.
 
-- Click the **Triggers** tab.  Select Based on **SCM polling schedule**.
+  **Select**: `Based on SCM polling schedule`
 
-    ![](images/300/image024.png)  
+    ![](images/300/Picture25.png)  
 
 - Click the **Build Steps** tab. Click **Add Build Step**, and select **Execute shell**.
 
-    ![](images/300/image025.png)  
+    ![](images/300/Picture26.png)  
 
 - For **Command** enter: `npm install`
 
-    ![](images/300/image026.png)  
+    ![](images/300/Picture27.png)  
 
-- Click the **Post Build** tab. Check **Archive the artifacts** and enter `**/target/*` for Files to Archive.  Verify **GZIP** in the Compression Type.
+- Click the **Post Build** tab and complete the following:
+  - Check **Archive the artifacts**.
+  - Enter `**/target/*` for **Files to Archive**.  
+  - Verify **GZIP** in the Compression Type.
+  
+    ![](images/300/Picture28.png)  
 
-    ![](images/300/image027.png)  
+- Click **Save** to complete the configuration.
 
-- Click **Save** to complete the configuration. A build should start automatically within a minute or two.  If it does not start automatically, click on the **Build Now** button. The status will change to the following:
+- Click the **Build Now** button to start the build immediately. Wait, as it may take 30 seconds to a few minutes for the queued job to execute, but when it does, the status will change to the following:
 
-    ![](images/300/image028.png)  
+    ![](images/300/Picture28_5.png)  
 
-- Once the build begins, it should take about approximately 1 to 2 minutes for the build to complete. Wait for the build to complete before continuing on to the next step, as we need the build artifact to create the deployment configuration.
+- Wait, as it may take 30 seconds to a few minutes for the queued job to execute, but when it does, the status will change to the following:
 
-    ![](images/300/image029.png)  
+    ![](images/300/Picture29.png)  
 
-### **STEP 4**: Create Default Deployment Process
+  **NOTE:** Once the build begins, it should take about approximately 1 to 2 minutes for the build to complete. Once complete, you will be able to see the number of successful test runs in the Test Result Trend section. ***Wait for the build to complete before continuing to the next step***, as we need the build artifact to complete the deployment configuration.
 
-Now that we have an automated build process, we will set up a deployment configuration that will push our build artifacts to a node.js environment running on the Application Container Cloud Service whenever a successful build occurs.
+- After the build begins, you can also click on the **Console Icon** ![](images/300/Picture29.1.png) to monitor the build log details.
 
-- Click **Deploy** to access the Deployment page and click **New Configuration**.
+    ![](images/300/Picture30.png)  
 
-    ![](images/300/image030.png)  
+### **STEP 5**: Create Default Deployment Process
+
+Now that we have an automated build process, we will setup up a deployment configuration that will push out build artifacts to a node.js environment running on Application Container Cloud Service whenever a successful build occurs.
+
+- On the navigation panel click **Deploy** to access the Deployment page. Click **New Configuration**.
 
 - Enter the following data:
 
-    **Configuration Name:** `TwitterMarketingUIDeploy`
+  **Configuration Name**: `DeployMySQLREST`
 
-    **Application Name:** `JETFrontEndApp`
+  **Application Name**: `AlphaOfficeMySQLREST`
 
-    ![](images/300/image031.png)  
+    ![](images/300/Picture32.png)  
 
-- Click on **New** to the right of **Deployment Target** and select **Application Container Cloud**
+- Click on **Deployment Target** drop down and select deployment defined in lab 200.
 
-    ![](images/300/image032.png)  
+    ![](images/300/Picture33.png)  
 
-- Enter the following data and click Test Connection. If Successful click **Use Connection**
+- In Deployment window, click **Test Connection**. If Successful, click **Use Connection**:
 
-    **Data Center**: `<Your Assigned Datacenter>` ***(Ask instructor if needed)***
+    ![](images/300/Picture34.3.png)  
 
-    **Identity Domain**: `<Your Identity Domain>`
+- Set the following Properties as follows:
 
-    **Username**: `<Your User Name>`
+  - **Runtime**: `Node`
 
-    **Password**: `<Supplied Password>`
+  - **Subscription**: `Hourly`
 
-    ![](images/300/image033.2.png)  
+  - **Type:** `Automatic` and `Deploy stable builds only`
 
-- Set ACCS Properties to Runtime **Node** and Subscription **Hourly**. 
-- Click Type **Automatic**. 
-- Select Job **Twitter Marketing UI** Build.
-- Select **target/jet-quickstart-client-dist.zip** for Artifact.
+  - **Job:** `Alpha MySQL REST Build`
 
-    ![](images/300/image034.png)  
+  - **Artifact:** `target/msdbw-mysqlmicroservice.zip`
+
+    ![](images/300/Picture35.3.png)  
+
+- We will use the ACCS Deployment to define the service binding to our MySQL instance. Click **Include ACCS Deployment** and enter the following into the text box:
+
+```
+{
+  "services": [{
+    "name": "AlphaOfficeDB",
+    "type": "MYSQLCS",
+    "username": "alpha",
+    "password": "Alpha2017_" 
+  }],
+  "memory": "1G",
+  "instances": "1"
+}  
+```
+![](images/300/Picture35.4.png)  
 
 - Click **Save**
 
-    ![](images/300/image035.png)  
+    ![](images/200/Picture36.2.png)  
 
-- Click the gear drop down and select **Start**
+- Click the gear drop down for **AlphaOfficeMySQLREST** and select **Start**
 
-    ![](images/300/image036.png)  
+    ![](images/300/Picture37.2.png)  
 
 - Wait until the message **Starting application** changes to **Last deployment succeeded**
 
-    ![](images/300/image037.png)  
+    ![](images/300/Picture38.2.png)  
 
-## Verify default deployment of Twitter Marketing UI
+    ![](images/300/Picture38.3.png)  
 
-### **STEP 5**: Change status to Verified
+## Verify MySQL REST Microservice deployment
 
-Now that we have successfully deployed the build artifact to the Application Container Cloud Service, we will update our agile board to reflect that status. Although the complexity of the next task (verification) is quite simple, we will still move the task to the “Verify Code” column before manually verifying the new functionality.
+### **STEP 6**: Test REST services
 
-- Click on **Agile**, followed by clicking **Active Sprints**. Drag and drop **Task 3** from **In Progress** to the **Verify Code** column.
+- We are able to access the application directly from Developer Cloud Service. Click **AlphaOfficeMySQLREST** to launch the application.
 
-    ![](images/300/image039.2.png)  
+    ![](images/300/Picture39.png)  
 
-- In the Change Progress popup, Click on **Next**
+- A new tab in the browser should open with application running.
 
-    ![](images/300/image040.png)  
+    ![](images/300/Picture42.png)  
 
-- Enter `1` in the **Time Spent** field and click on **OK**.
+- First lets test out the **products** REST call.  Append **/products** to the end of the URL and hit **enter**.  All of the Alpha Office products should be returned in a JSON payload. 
 
-    ![](images/300/image040.5.png)  
+    ![](images/300/Picture43.png)  
 
-- The code is now ready for verification before moving to Completed
+- Now lets search for just on product.  Change **products** to **product/1020**.  This will just return the product with the Product Id of 1020.
 
-    ![](images/300/image041.2.png)  
-
-### **STEP 6**: Login to Oracle Application Container Cloud Service
-
-- Navigate back to the Oracle Public Cloud tab. Click **Dashboard** to return back to main Cloud Service Dashboard.
-
-    ![](images/300/image042.2.png)  
-
-- On the Application Container Cloud Service (ACCS) click ![](images/300/image043.png)  and select **Open Service Console**
-
-    ![](images/300/image044.png)  
-
-- On the ACCS Service Console you can view all the deployed applications including our newly create **JETFrontEndApp**.
-
-    ![](images/300/image045.png)  
-
-- Click on URL or copy and paste the URL into the address bar of a new tab to bring up the application.
-
-    ![](images/300/image046.png)  
+    ![](images/300/Picture44.png)  
 
 ### **STEP 7**: Complete Task
 
-We have now verified that our application has been deployed and is functional. To finish up this part of the lab we will want to mark the Issue as completed in our Sprint.
+We have now verified that the MySQL REST microservice has been deployed and functions properly. To finish up this lab, we will mark the Issue as completed in the Sprint.
 
-- Back in the Developer Cloud Service, click **Agile**, followed by clicking **Active Sprints**.
+- Back in the Developer Cloud Service window, click **Agile**, followed by clicking **Active Sprints**.
 
-- Drag and drop **Task 3** from **Verify Code** to **Completed**.
+- Drag and drop **Feature 3** from **In Progress** to **Completed**.
 
-    ![](images/300/image047.png)  
+    ![](images/300/Picture46.2.png)  
+
 
 - In the Change Progress popup click **Next**.
 
-    ![](images/300/image048.png)  
+    ![](images/300/Picture47.png)  
 
-- Change the **Time Spent** to `1` and click on **OK**.
+- In the **Add Time Spent** popup, set the **Time Spent** to `1` and click **OK**.
 
-    ![](images/300/image048.5.png)  
-
+    ![](images/200/Picture47.5.png)  
 
 - Your Sprint should now look like the following:
 
-    ![](images/300/image049.2.png)  
+    ![](images/300/Picture48.2.png)  
 
-# Extend default application to Display Twitter Feed
+- You can also click on the **Reports** button and view your progress in the **Burndown Chart** and **Sprint Report**.
 
-Now that we have our default application we want to extend this application to add the display of the twitter feed. For this task we will use Brackets text editor to pull down the code from Developer Cloud Service and add in our modifications. Once the new code is ready for deployment we will check the code in on a branch so that it can go through a code review prior to build and deployment.
+    ![](images/300/Picture49.png)  
 
-### **STEP 8**: Move Task to In Progress
+- **You are now done with this lab.**
 
-To start this part of the lab we will want to mark the Issue as In Progress in our Sprint.
+# Supplementary Assignment – Provision and Setup MySQL Instance
 
-- Back in the Developer Cloud Service, click **Agile**, followed by clicking **Active Sprints**.
+## Create MySQL Instance
 
-- Drag and drop **Feature 4** from **To Do** to **In Progress**.
-
-    ![](images/300/image050.2.png)  
-
-- In the Change Progress popup click **OK**
-
-    ![](images/300/image051.png)  
-
-## Clone Project to Brackets Text Editor
-
-### **STEP 9**:	Start Brackets Text Editor
-
-- Start **Brackets** text editor. How you start Brackets will depend on your OS. We have documented how to start Brackets from our OEL image.
-
-***Note***: If you do not have Brackets installed, please follow the **Student Guide** that is part of this Workshop. You will find instruction on how to install Git and Configure Brackets.
-
-- Right click **Brackets** desktop icon and select **Open**
-
-    ![](images/300/image052.png)  
-
-- Brackets should open with the **TwitterMarketingUI** folder already loaded.
-
-    ![](images/300/image053.2.png)  
-
-### **STEP 10**: Copy GIT URL
-
-- Back in Developer Cloud Service, click on **Project**. On right side, select the URL for **TwitterMarketingUIMicroservice.git**. Right click and select **Copy**
-
-    ![](images/300/image054.2.png)  
-
-### **STEP 11**: Clone GIT Repository
-
-- Back in the Brackets editor, Click on ![](images/300/image055.png) GIT icon found on the right side of the editor.
-
-  ![](images/300/image055.5.png)  
-
-- Click **Clone**
-
-  ![](images/300/image056.png)  
-
-- Paste in Git URL that you captured from Developer Cloud Service. Username should be populated automatically. Enter your **Password** and click **Save credentials**. Once completed click **OK** to start the cloning process.
-
-    ![](images/300/image057.png)  
-
-- While the clone is running a dialog box will show you the progress.
-
-    ![](images/300/image058.png)  
-
-- You now have a local copy of the repository.
-
-    ![](images/300/image059.png)  
-
-### **STEP 12**: Run Live Preview.
-
-- Before we make our code changes lets first run the code locally.
-
-- Expand **doc_root** and select **index.html**
-
-    ![](images/300/image060.png)  
-
-- On right hand panel, click ![](images/300/image061.png) Live Preview. This will start your JavaScript application in a browser. Once you verify the application is working you can close the browser.
-
-![](images/300/image062.png)  
-
-## Add Code to display Twitter Feed in Table Format
-
-### **STEP 13**:	Modify graphics.html
-
-- Expand **doc_root -> js -> views** and click **graphics.html**.
-
-    ![](images/300/image063.png)  
-
-- Replace the existing code with the code block below:
-
-```
-<h1>Graphics Content</h1>
-
-<table id="table" summary="Tweet List" data-bind="ojComponent:{component:'ojTable',
-        data: tweets,
-        columns: [
-               {headerText: 'User Name', field: 'User', id: 'name', sortable: 'enabled'},
-               {headerText: 'User Location', field: 'Location', id: 'location', sortable: 'enabled'},
-               {headerText: 'Source', field: 'Source', id: 'source', sortable: 'enabled'},
-               {headerText: 'Tweet', field: 'Text', id: 'text'}
-               ],
-        rootAttributes: {'style':'width: 100%; height:100%;'},
-        scrollPolicy: 'loadMoreOnScroll',
-        scrollPolicyOptions: {'fetchSize': 10}}">
-</table>
-```
-
-![](images/300/image064.png)  
-
-### **STEP 14**: Modify graphics.js
-
-- Expand **doc_root -> js -> viewModels** and click **graphics.js**.
-
-    ![](images/300/image065.png)  
-
-- Add the code block below to the bottom on the **graphics.js** file:
-
-```
-/*global $, define, console*/
-/*jslint sloppy:true*/
-
-define(['ojs/ojcore', 'knockout', 'ojs/ojtable'], function (oj, ko) {
-
-    function mainContentViewModel() {
-
-        // change this root variable to point to YOUR environment
-        var root = 'https://javatwittermicroservice-metcsgse00210.apaas.em2.oraclecloud.com/',
-            self = this,
-            uri = 'statictweets/',
-            prettySource = function (source) {
-                return source.substring(source.indexOf('>') + 1, source.lastIndexOf('<'));
-            },
-            url = root + uri;
-
-        self.items = ko.observableArray([]);
-        self.tweets = new oj.ArrayTableDataSource(self.items, {
-            idAttribute: 'Id'
-        });
-
-        $.ajax({
-            url: url,
-            method: 'GET'
-        }).success(function (result) {
-            console.log(result.tweets);
-            var items = self.items();
-            ko.utils.arrayForEach(result.tweets, function (value) {
-                // make sure this is a creation tweet
-                if (!!value.user) {
-                    items.push({
-                        Id: value.id,
-                        Location: value.user.location,
-                        Text: value.text,
-                        Source: prettySource(value.source),
-                        User: value.user.name
-                    });
-                }
-            });
-            self.items.valueHasMutated();
-        });
-    }
-    return mainContentViewModel;
-});
-```
-
-- Back in the browser; navigate back to the Application Container Cloud Service service console. Copy URL for **JavaTwitterMicroservice** that was created in Lab 200.
-
-    ![](images/300/image066.png)  
-
-- Replace the existing URL with your URL for the **root variable**. ***Make sure*** there is a '`/`' (front slash) at the **end of the URL**.
-
-    ![](images/300/image067.png)  
-
-- Completed graphics should look something like the image below:
-
-    ![](images/300/image068.png)  
-
-- Save all files by clicking **File -> Save All**
-
-![](images/300/image069.png)  
-
-### **STEP 15**: Test new changes
-
-- Click ![](images/300/image070.png) Live Preview to test out the new changes.
-
-- Click ![](images/300/image071.png) and select **Graphics**. Note: Depending on the screen resolution, the Graphics menu item may be at the top of the page. 
-
-    ![](images/300/image072.png)
-
-- In the graphics sections you can now see all the twitter feed data:
-
-    ![](images/300/image073.png)
-
-# Create a new Branch and Commit Code
-
-## Create a Branch and Commit Code
-
-### **STEP 16**: Create a new Branch and Commit Code
-
-- First we need to create a new branch to check in all of our changes for this feature. In the left hand navigation panel, select **master** and click **Create new branch**.
-
-    ![](images/300/image074.png)
-
-- In popup window, **enter** `Feature4` for branch name and click **OK**.
-
-    ![](images/300/image075.png)
-
-- Click  Git ![](images/300/image076.png) icon. 
-
-- Check the box next to **Commit** to select all modified files.
-
-    ![](images/300/image077.png)
-
-- Click **Commit**.
-
-- In popup enter the the following **comment:** `Added code to display twitter feed in table format` and click **OK**. This will commit the changes to your local Git repository.
-
-    ![](images/300/image078.png)
-
-- Click ![](images/300/image079.png) Git Push icon.
-
-- In popup window leave all defaults and click **OK**
-
-    ![](images/300/image080.png)
-
-- Once Git Push completes click **OK**.
-
-    ![](images/300/image081.png)
-
-### **STEP 17**: Complete the Display Twitter Feed Task
-
-- Back in the Developer Cloud Service window, click **Agile**, followed by clicking **Active Sprints**.  Make Sure you are viewing the **Microservices** board.
-
-- Drag and drop **Feature 4** from **In Progress** to **Verify Code**.
-
-    ![](images/300/image082.png)
-
-- In the Change Progress popup click **Next**.
-
-    ![](images/300/image083.png)
-
-- In the **Time Spent** field enter `1` and click on **OK**.
-
-    ![](images/300/image083.5.png)
-
-## Create Merge Request
-
-### **STEP 18**: Review Sprint Status and create Merge Request
-
-- Click on the **Code** tab, select the **Feature4** branch and then click on the **doc_root** folder to view the recent commit that we made to branch from Brackets.
-
-    ![](images/300/image084.png)
-
-- Now that "John Dunbar" has completed the task of displaying twitter feed in table format, a Merge Request can be created by John and assigned to "Lisa Jones." 
-
-    ![](images/300/image084.5.png)
-
-- Click on **Merge Requests**, and then click on the **New Merge Request button**.
-
-    ![](images/300/image085.png)
-
-- Enter the following information into the New Merge Request and click **Next**
-
-    **Repository:** `TwitterMarketingUIMicroservice.git`
-
-    **Target Branch:** `master`
-
-    **Review Branch:** `Feature4`
-
-    ![](images/300/image086.png)
-
-- Enter the following information into Details and click **Create**
-
-    **Summary:** `Merge Feature 4 into master`
-
-    **Reviewers:** `<Your Username>`
-
-    ![](images/300/image087.5.png)
-
-- In the **Write** box, enter the following comment and then click on the **Comment** button to save
-
-    **Comment:** `I added a Twitter feed table to the graphics tab`
-
-    ![](images/300/image088.png)
-
-## Merge the Branch as Lisa Jones
-
-
-### **STEP 19**: Merge Requests
-
-- In the following steps the logical persona “Lisa” will merge the branch created by “John” into the master.
-
-    ![](images/lisa.png)
-
-- Click on **Merge Requests**. Select the **Assigned to Me** search. After the search completes, click on the **Merge Feature 4 into master** assigned request.
-
-    ![](images/300/image094.png)
-
-- Once the request has loaded, select the **Changed Files tab**. As the persona Lisa, you will now have the opportunity to review the changes in the branch, make comments, request more information, etc. before Approving, Rejecting or Merging the Branch.
-
-    ![](images/300/image095.2.png)
-
-- Click on the **Merge** button.
-
-    ![](images/300/image096.png)
-
-- Leave the defaults, and click on the **Create a Merge Commit** button in the confirmation dialog.
-
-    ![](images/300/image097.png)
-
-- Now that the code has been committed to the Developer Cloud Service repository, the build and deployment will automatically start. Click on **Build**, and you should see a **Twitter Marketing UI Build** in the Queue
-
-    ![](images/300/image098.png)
-
-- Wait a minute or two for the build to complete. The **Last Success** will be set to **Just Now** when the build completes.
-
-    ![](images/300/image099.png)
-
-- Click on Deploy. Wait for the **Deploy** Status to change to **Deployment update in progress**, and then change to **Last deployment succeeded** – **Just now**.
-
-    ![](images/300/image100.png)
-
-## Test the JETFrontEndAPP UI in the Cloud
-
-### **STEP 20**: Test the Front End
-
-- Once the service has successfully deployed, click on the **JETFrontEndApp** link
-
-    ![](images/300/image101.png)
-
-- When the new browser tab loads, click **Graphics** to display twitter feed data.
-
-    ![](images/300/image102.png)
-
-- To complete the Sprint Feature, click on **Agile** in the Twitter Feed Marketing Project Dashboard. Then click on the **Active Sprints** button.
-
-    ![](images/300/image103.png)
-
-- Complete the feature request by Dragging and Dropping **Feature 4** (Display Twitter Feed in Table Format) from the **Verify** Column to the **Completed** Column.
-
-    ![](images/300/image104.png)
-
-- Set the Status to **VERIFIED – FIXED** and click **Next**.
-
-    ![](images/300/image105.png)
-
-- Enter '`' into the **Time Spent** field and click on **OK**.
-
-    ![](images/300/image105.5.png)
-
-- You are now ready to move to the next lab.
-
+- This section of the lab has not yet been completed, but in the future will show the simple steps required to create the MySQL Cloud Service that was pre-created for this lab.
