@@ -1,10 +1,10 @@
-![](images/400/PictureLab.png)  
+![](images/400/PictureTitle.png)  
 
 Update: October 11, 2017
 
 ## Introduction
 
-This is the third of several labs that are part of the **Oracle Cloud Native Microservices** workshop. This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
+This is the fourth of several labs that are part of the **Oracle Cloud Native Microservices** workshop. This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
 
 In the previous lab (200), the Java Developer (Bala Gupta) created several microservices that pull data from twitter and allow for dynamic filtering based on keywords. In this lab, you will assume the role of the front-end JavaScript developer who will create a web application that incorporates the data from those microservices. This node.js application will be developed in the Developer Cloud Service taking advantage of automated builds and deployments to the Application Container Cloud Service.
 
@@ -42,7 +42,7 @@ In the previous lab (200), the Java Developer (Bala Gupta) created several micro
 
 - Click on the **Microservices** Board **Active Sprints**.
 
-    ![](images/300/image014.5.png)  
+    ![](images/400/image014.5.png)  
 
 ## Create Initial Git Repository
 
