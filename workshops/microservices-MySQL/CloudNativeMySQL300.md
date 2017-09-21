@@ -81,7 +81,7 @@ To begin development on our Catalog REST microservices, we could start coding fr
 
 ### **STEP 4**: Create Default Build Process
 
-Now that we have the source code in our managed GIT repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. We will set up a Maven build process in this section.
+Now that we have the source code in our managed GIT repository, we need to create a build process that will be triggered whenever a commit is made to the master branch.We will NPM package manager to set up a Node.js build process in this section.
 
 - On the left side navigation panel click **Build** to access the build page.
 

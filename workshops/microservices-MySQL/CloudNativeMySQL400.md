@@ -40,92 +40,92 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
 - On the **Microservices** Board, click **Active Sprints**
 
-    ![](images/300/Picture13.png)  
+    ![](images/400/Picture13.png)  
 
 ## Create Initial Git Repository
 
 ### **STEP 3**: Create Initial Git Repository
 
-To begin development on our Catalog REST microservices, we could start coding from scratch. However, prior to the formal kickoff of this project, you (as Roland Dubois) have already started doing some proof-of-concept development outside of the Developer Cloud Service in order to assess the feasibility of your assignment. You want to bring that existing code into the Developer Cloud Service as a starting point for your microservices. You will do that by cloning your external GIT repository into the Developer Cloud Service. Your first step will be to accept your task using the agile board.
+To begin development on our Product Catalog UI, we could start coding from scratch. However, prior to the formal kickoff of this project, you (as John Dunbar) have already started doing some proof-of-concept development outside of the Developer Cloud Service in order to assess the feasibility of your assignment. You want to bring that existing code into the Developer Cloud Service as a starting point for your UI. You will do that by cloning your external GIT repository into the Developer Cloud Service. Your first step will be to accept your task using the agile board.
 
-- Drag and drop **Feature 3 - Create Microservice to allow acces to Product Catalog data** into the **In Progress** swim-lane.  
+- Drag and drop **Feature 4 - Create Alpha Office Product Catalog UI** into the **In Progress** swim-lane.  
 
-    ![](images/300/Picture14.1.png)  
+    ![](images/400/Picture14.1.png)  
 
 - Leave the defaults, and Click **OK**.
 
-    ![](images/300/Picture14.2.png)  
+    ![](images/400/Picture14.2.png)  
 
 - Your Sprint progress will appear as shown below.
 
-    ![](images/300/Picture16.2.png)  
+    ![](images/400/Picture16.2.png)  
 
 - In the left hand navigation panel, click **Project**
 
 - Click **New Repository**. In the New Repository wizard enter the following information and click **Create**.
 
-    **Name:** `AlphaOfficeMySQLREST`
+    **Name:** `AlphaOfficeProductCatalogUI`
 
-    **Description:** `AlphaOffice MySQL REST`
+    **Description:** `Alpha Office Product Catalog UI`
 
     **Initial content:** `Import existing repository`
 
-    **Enter the URL:** `https://github.com/pcdavies/AlphaOfficeMySQLREST.git`
+    **Enter the URL:** `https://github.com/pcdavies/ProductCatalogUI.git`
 
-    ![](images/300/Picture18.2.png)  
+    ![](images/400/Picture18.2.png)  
 
 - You have now created a new GIT repository stored within the Developer Cloud Services that is based on an existing repository.
 
-    ![](images/300/Picture19.png)  
+    ![](images/400/Picture19.png)  
 
 ## Create Default Build and Deployment Process
 
 ### **STEP 4**: Create Default Build Process
 
-Now that we have the source code in our managed GIT repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. We will set up a Maven build process in this section.
+Now that we have the source code in our managed GIT repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. We will NPM package manager to set up a Node.js build process in this section.
 
 - On the left side navigation panel click **Build** to access the build page.
 
 - Click **New Job**.
 
-- In the New Job popup enter `Alpha MySQL REST Build` for the Job Name, and then click **Save**.
+- In the New Job popup enter `Product Catalog UI Build` for the Job Name, and then click **Save**.
 
-    ![](images/300/Picture21.png)  
+    ![](images/400/Picture21.png)  
 
 - You are now placed into the job configuration screen.
 
-    ![](images/300/Picture22.png)  
+    ![](images/400/Picture22.png)  
 
-- Click the **Source Control** tab. Click **Git** and select the **AlphaOfficeMySQLREST.git** from the drop down.
+- Click the **Source Control** tab. Click **Git** and select the **AlphaOfficeMyProductCatalogUI.git** from the drop down.
 
-    ![](images/300/Picture24.png)  
+    ![](images/400/Picture24.png)  
 
 - Click the **Triggers** tab.
 
   **Select**: `Based on SCM polling schedule`
 
-    ![](images/300/Picture25.png)  
+    ![](images/400/Picture25.png)  
 
 - Click the **Build Steps** tab. Click **Add Build Step**, and select **Execute shell**.
 
-    ![](images/300/Picture26.png)  
+    ![](images/400/Picture26.png)  
 
 - For **Command** enter: `npm install`
 
-    ![](images/300/Picture27.png)  
+    ![](images/400/Picture27.png)  
 
 - Click the **Post Build** tab and complete the following:
   - Check **Archive the artifacts**.
   - Enter `**/target/*` for **Files to Archive**.  
   - Verify **GZIP** in the Compression Type.
   
-    ![](images/300/Picture28.png)  
+    ![](images/400/Picture28.png)  
 
 - Click **Save** to complete the configuration.
 
 - Click the **Build Now** button to start the build immediately. Wait, as it may take 30 seconds to a few minutes for the queued job to execute, but when it does, the status will change to the following:
 
-    ![](images/300/Picture28_5.png)  
+    ![](images/400/Picture28_5.png)  
 
 - Wait, as it may take 30 seconds to a few minutes for the queued job to execute, but when it does, the status will change to the following:
 
@@ -145,9 +145,9 @@ Now that we have an automated build process, we will setup up a deployment confi
 
 - Enter the following data:
 
-  **Configuration Name**: `DeployMySQLREST`
+  **Configuration Name**: `DeployProductCatalogUI`
 
-  **Application Name**: `AlphaOfficeMySQLREST`
+  **Application Name**: `AlphaOfficeProductCatalogUI`
 
     ![](images/300/Picture32.png)  
 
@@ -167,22 +167,16 @@ Now that we have an automated build process, we will setup up a deployment confi
 
   - **Type:** `Automatic` and `Deploy stable builds only`
 
-  - **Job:** `Alpha MySQL REST Build`
+  - **Job:** `Product Catalog UI Build`
 
   - **Artifact:** `target/msdbw-mysqlmicroservice.zip`
 
     ![](images/300/Picture35.3.png)  
 
-- We will use the ACCS Deployment to define the service binding to our MySQL instance. Click **Include ACCS Deployment** and enter the following into the text box:
+- To reduce the number of resources that are used we will modify the default deployment of 2 instances. Click **Include ACCS Deployment** and enter the following in the text box:
 
 ```
 {
-  "services": [{
-    "name": "AlphaOfficeDB",
-    "type": "MYSQLCS",
-    "username": "alpha",
-    "password": "Alpha2017_" 
-  }],
   "memory": "1G",
   "instances": "1"
 }  
@@ -193,7 +187,7 @@ Now that we have an automated build process, we will setup up a deployment confi
 
     ![](images/200/Picture36.2.png)  
 
-- Click the gear drop down for **AlphaOfficeMySQLREST** and select **Start**
+- Click the gear drop down for **AlphaOfficeProductCatalogUI** and select **Start**
 
     ![](images/300/Picture37.2.png)  
 
@@ -203,11 +197,11 @@ Now that we have an automated build process, we will setup up a deployment confi
 
     ![](images/300/Picture38.3.png)  
 
-## Verify MySQL REST Microservice deployment
+## Verify Product Catalog UI deployment
 
 ### **STEP 6**: Test REST services
 
-- We are able to access the application directly from Developer Cloud Service. Click **AlphaOfficeMySQLREST** to launch the application.
+- We are able to access the application directly from Developer Cloud Service. Click **AlphaOfficeProductCatalogUI** to launch the application.
 
     ![](images/300/Picture39.png)  
 
@@ -225,35 +219,25 @@ Now that we have an automated build process, we will setup up a deployment confi
 
 ### **STEP 7**: Complete Task
 
-We have now verified that the MySQL REST microservice has been deployed and functions properly. To finish up this lab, we will mark the Issue as completed in the Sprint.
+We have now verified that the Product Catalog UI has been deployed and functions properly. To finish up this lab, we will mark the Issue as completed in the Sprint.
 
 - Back in the Developer Cloud Service window, click **Agile**, followed by clicking **Active Sprints**.
 
-- Drag and drop **Feature 3** from **In Progress** to **Completed**.
+- Drag and drop **Feature 4** from **In Progress** to **Completed**.
 
-    ![](images/300/Picture46.2.png)  
+    ![](images/400/Picture46.2.png)  
 
 
 - In the Change Progress popup click **Next**.
 
-    ![](images/300/Picture47.png)  
+    ![](images/400/Picture47.png)  
 
 - In the **Add Time Spent** popup, set the **Time Spent** to `1` and click **OK**.
 
-    ![](images/200/Picture47.5.png)  
+    ![](images/400/Picture47.5.png)  
 
 - Your Sprint should now look like the following:
 
-    ![](images/300/Picture48.2.png)  
-
-- You can also click on the **Reports** button and view your progress in the **Burndown Chart** and **Sprint Report**.
-
-    ![](images/300/Picture49.png)  
+    ![](images/400/Picture48.2.png)  
 
 - **You are now done with this lab.**
-
-# Supplementary Assignment – Provision and Setup MySQL Instance
-
-## Create MySQL Instance
-
-- This section of the lab has not yet been completed, but in the future will show the simple steps required to create the MySQL Cloud Service that was pre-created for this lab.
