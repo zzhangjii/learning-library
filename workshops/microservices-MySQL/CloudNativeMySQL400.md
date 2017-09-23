@@ -245,17 +245,17 @@ Now that we have our default application we want to modify this application to u
 
 ### **STEP 11**: Clone GIT Repository
 
-- Back in the Brackets editor, Click on ![](images/300/image055.png) GIT icon found on the right side of the editor.
+- Back in the Brackets editor, Click on ![](images/400/image055.png) GIT icon found on the right side of the editor.
 
-  ![](images/300/image055.5.png)  
+  ![](images/400/image055.5.png)  
 
 - Click **Clone**
 
-  ![](images/300/image056.png)  
+  ![](images/400/image056.png)  
 
 - Paste in Git URL that you captured from Developer Cloud Service. Username should be populated automatically. Enter your **Password** and click **Save credentials**. Once completed click **OK** to start the cloning process.
 
-    ![](images/300/image057.png)  
+    ![](images/400/image057.png)  
 
 - While the clone is running a dialog box will show you the progress.
 
@@ -263,7 +263,7 @@ Now that we have our default application we want to modify this application to u
 
 - You now have a local copy of the repository.
 
-    ![](images/300/image059.png)  
+    ![](images/400/image059.png)  
 
 ### **STEP 7**: Complete Task
 
