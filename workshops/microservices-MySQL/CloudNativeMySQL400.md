@@ -199,7 +199,7 @@ Now that we have an automated build process, we will setup up a deployment confi
 
 ## Verify Product Catalog UI deployment
 
-### **STEP 6**: Test REST services
+### **STEP 6**: Test Product Catalog UI
 
 - We are able to access the application directly from Developer Cloud Service. Click **AlphaOfficeProductCatalogUI** to launch the application.
 
@@ -216,6 +216,54 @@ Now that we have an automated build process, we will setup up a deployment confi
 - Now lets search for just on product.  Change **products** to **product/1020**.  This will just return the product with the Product Id of 1020.
 
     ![](images/300/Picture44.png)  
+
+# Add Microservice endpoints
+
+Now that we have our default application we want to modify this application to use the deployed Microserivces from lab 200 and lab 300. For this task we will use Brackets text editor to pull down the code from Developer Cloud Service and add in our modifications. Once the new code is ready for deployment we will check the code which will trigger a new build and deployment. Normally we would want to check the code into a branch and go through the code review and merge process defined in lab 200. TO save time we are not including that step.
+
+## Clone Project to Brackets Text Editor
+
+### **STEP 9**:	Start Brackets Text Editor
+
+- Start **Brackets** text editor. How you start Brackets will depend on your OS. We have documented how to start Brackets from our OEL image.
+
+***Note***: If you do not have Brackets installed, please follow the **Student Guide** that is part of this Workshop. You will find instruction on how to install Git and Configure Brackets.
+
+- Right click **Brackets** desktop icon and select **Open**
+
+    ![](images/400/image052.png)  
+
+- Brackets should open with the **TwitterMarketingUI** folder already loaded.
+
+    ![](images/400/image053.2.png)  
+
+### **STEP 10**: Copy GIT URL
+
+- Back in Developer Cloud Service, click on **Project**. On right side, select the URL for **AlphaOfficeProductCatalogUI.git**. Right click and select **Copy**
+
+    ![](images/400/image054.2.png)  
+
+### **STEP 11**: Clone GIT Repository
+
+- Back in the Brackets editor, Click on ![](images/300/image055.png) GIT icon found on the right side of the editor.
+
+  ![](images/300/image055.5.png)  
+
+- Click **Clone**
+
+  ![](images/300/image056.png)  
+
+- Paste in Git URL that you captured from Developer Cloud Service. Username should be populated automatically. Enter your **Password** and click **Save credentials**. Once completed click **OK** to start the cloning process.
+
+    ![](images/300/image057.png)  
+
+- While the clone is running a dialog box will show you the progress.
+
+    ![](images/300/image058.png)  
+
+- You now have a local copy of the repository.
+
+    ![](images/300/image059.png)  
 
 ### **STEP 7**: Complete Task
 
