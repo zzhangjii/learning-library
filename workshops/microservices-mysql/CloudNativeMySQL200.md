@@ -259,7 +259,7 @@ We have now verified that the statictweets microservice has been deployed and fu
 
 - In the Change Progress popup click **Next**.
 
-    ![](images/200/Picture47.png)  
+    ![](images/200/Picture47.1.jpg)  
 
 - In the **Add Time Spent** popup, set the **Time Spent** to `1` and click **OK**.
 
