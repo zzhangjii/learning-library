@@ -1,87 +1,41 @@
+![](images/100/100.JPG)  
 
-# Big Data Journey: Self-Service BI Workshop
-Oracle offers a set of Big Data Journeys to help users get started using Oracle Cloud services with a purpose. This particular journey is designed to show you techniques you can use to easily build your own Business Intelligence environment.
+Updated: September 14, 2017 for BDCS-CE Version 17.3.5-20
 
-![](https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/f4a5b21d-66fa-4885-92bf-c4e81c06d916/Image/55d948c4e07007e169299a02b4dfe6db/construction.png)
-+ This journey (Self Service BI) is under construction and a new version is in the works.  The instructions currently listed below may be **inaccurate** or **incomplete**.
+    
 
+# Introduction
 
-![](images/snap0012064.jpg) 
+In this workshop, you will learn how to use **Oracle Data Visualization Desktop** to explore and visualize the data within the **Oracle Big Data Cloud Service - Compute Edition (BDCS-CE)**.
 
+# How this workshop is organized
 
+This journey workshop builds upon the New Data Lake journey.
 
-You will learn how to use Oracle Integration Cloud Service (a lightweight integration solution) to allow business analysts to populate an Object Storage data lake by connecting and mining cloud applications. Once in the object store, you will learn how to use Oracle’s meta-data curation technologies and highly intuitive BI solutions to quickly create turn-key analytics that drive business value.
-
-
-![](images/500/DemoLiveMap.gif) 
-
-## Goals
-
- - Get comfortable with Oracle's public cloud services
- - Learn a repeatable way to integrate cloud data sources and build reports
- - See techniques and patterns other organizations are using to enable their business users
+As such, this workshop will re-use parts of the New Data Lake journey.  Specifically, it will re-use Lab100, Lab200 and Lab300 from the New Data Lake journey. You will also need to review the setup in the xtra Connecting DV Desktop and Hive/Spark notebooks.
 
 
-## To learn more
- - [Big Data Cloud Service - Compute Edition (BDCS-CE)](https://cloud.oracle.com/big-data-compute-edition)
- - [Event Hub Cloud Service (OEHCS)](https://cloud.oracle.com/en_US/event-hub)
- - [Storage Cloud Service Object Store](https://cloud.oracle.com/en_US/storage)
+## Mandatory Steps
 
-      
-## How to View the Lab Guides
++ Navigate to the New Data Lake Journey at [https://oracle.github.io/learning-library/workshops/journey2-new-data-lake/](https://oracle.github.io/learning-library/workshops/journey2-new-data-lake/) 
++ Complete New Data Lake Lab 100 "Start Here - Provisioning"
++ Complete New Data Lake Lab 200 "Getting to know BDCS-CE"
 
-- The Labguides are best viewed using the Workshop's [GitHub Pages Website URL](https://oracle.github.io/learning-library/workshops/journey1-self-service-bi/) 
+Once you have completed Lab 100 and LAB 200 from the New Data Lake Journey, you can proceed to the **SelfServeBI Exploring CitiBike data with DVD** notebook (should be pre-loaded) in your BDCS-CE environment. In the notebook, do the "Working with CitiBike Data Off Line" exercises.
 
-- Once you are viewing the Workshop's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
 
-    ![](images/WorkshopMenu.png)  
+## Optional Steps - If you want to connect live from DVD to BDCS-CE
++ Complete New Data Lake Lab xtra: Connecting with DV Desktop and Hive
++ Complete New Data Lake Lab xtra: Connecting with DV Desktop and Spark
 
-- To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/oracle/learning-library/tree/master/workshops/journey1-self-service-bi) repository.
+Once you have setup the connectivity between DVD and Hive/Spark, you can work on the "Working with CitiBike Data Using Spark" exercise in the **SelfServeBI Exploring CitiBike data with DVD** notebook.
 
 
 
+# Want to Learn More?
+
+- [Data Visualization Desktop](https://www.oracle.com/solutions/business-analytics/data-visualization.html)
+
+- [DVD Demos](https://www.youtube.com/user/OracleBITechDemos)
 
 
-
-## Workshop Details
-
-**Reference the following Lab Guides by opening their Documentation Files:**
-
-
-
-
-## Lab 100:  Visualize Data with Oracle Data Visualization Desktop
-
-**Documenation**: [LabGuide100StartHere.md](LabGuide100StartHere.md)
-
-**Objectives**:
-
-- Download and Install Oracle Data Visualization Desktop (DVD)
-- Connect DVD to Oracle Database as a Service
-- Visualize Citibike data
-
-
-
-
-# Other labs (under construction)
-
-## Lab 200: (DRAFT) Provisioning Integration Cloud Service and Connecting to Twitter
-
-**Documenation**: [LabGuide200.md](LabGuide200.md)
-
-**Objectives**:
-
-- Provision Oracle Integration Cloud Service (ICS)
-- Register ICS as an application at Twitter.com
-- Configure ICS to connect to Twitter.com
-- Use ICS to deliver Twitter.com data to Oracle Storage Cloud Object Store
-
-## Lab 300: (DRAFT) Massaging data with Oracle Big Data Preparation Cloud Service
-
-**Documenation**: [LabGuide300.md](LabGuide300.md)
-
-**Objectives**:
-
-- Provision Oracle Big Data Preparation Cloud Service
-- Prepare a dataset containing Twitter data
-- Store revised data in Oracle Database as a Service

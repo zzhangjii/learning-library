@@ -29,7 +29,7 @@ before returning to the Self Service BI Journey
 
 # Next Steps
 
-Once you have completed Lab 100, LAB 200 and Lab 300 from the New Data Lake Journey, you can proceed to the Exploring CitiBike data with DVD notebook (should be pre-loaded) in your BDCS-CE environment.
+Once you have completed Lab 100, LAB 200 and Lab 300 from the New Data Lake Journey, you can proceed to the **SelfServeBI Exploring CitiBike data with DVD** notebook (should be pre-loaded) in your BDCS-CE environment.
 
 # Want to Learn More?
 
