@@ -47,7 +47,7 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
 To begin development on our Catalog REST microservices, we could start coding from scratch. However, prior to the formal kickoff of this project, you (as Roland Dubois) have already started doing some proof-of-concept development outside of the Developer Cloud Service in order to assess the feasibility of your assignment. You want to bring that existing code into the Developer Cloud Service as a starting point for your microservices. You will do that by cloning your external GIT repository into the Developer Cloud Service. Your first step will be to accept your task using the agile board.
 
-- Drag and drop **Feature 3 - Create Microservice to allow acces to Product Catalog data** into the **In Progress** swim-lane.  
+- Drag and drop **Feature 3 - Create Microservice to allow access to Product Catalog data** into the **In Progress** swim-lane.  
 
     ![](images/300/Picture14.1.png)  
 
