@@ -17,11 +17,13 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 ## Required Artifacts
 
 - A running BDCS-CE instance and Storage Cloud Object Store instance, created as per the instructions in the New Data Lake Journey Lab 100.  These instructions included the use of a special "bootstrap.sh" script which setup the BDCS-CE environment for this workshop.
-- You completed the tutorials in the New Data Lake Journey Lab 200 Getting to know BDCS-CE
+- **You completed the tutorials in the New Data Lake Journey Lab 200 Getting to know BDCS-CE**
 
 
 
 ## Connect to the BDCS-CE Console
+
+**Make sure you completed the tutorials in the New Data Lake Journey Lab 200 Getting to know BDCS-CE before starting this lab.  They create certain objects (like hive tables and object store files) needed by this lab.**
 
 ### **STEP 1**: Navigate/login to the Oracle Cloud My Services Dashboard  
 
@@ -32,7 +34,8 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 ![](images/200/snap0011989.jpg)  
 
 ### **STEP 3**: Launch the Big Data Cluster Console
-
+- Launch the Big Data Cluster Console for your BDCS-CE cluster.  If this is your first time, you will likely need to allow your browser to accept the self-signed certificate for the web console application.
+- You will be asked to provide a username/password.  Use the username and password you defined earlier when you created the BDCS-CE instance (the username defaults to bdcsce_admin).  
 ![](images/200/snap0012205.jpg)  
 
 
