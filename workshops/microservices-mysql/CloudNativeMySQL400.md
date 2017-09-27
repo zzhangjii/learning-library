@@ -284,7 +284,7 @@ Now that we have our default application, we want to modify this application to 
     ![](images/400/image062.1.png)
 
 
-- You will be pasting the URLs of the two microservices into the code in order to access these services.  Paste the URL for the **AlphaOfficeMySQLREST** microservice as the value for the Javascript variable **dbServiceURL**. ***Note:*** You must append **/products** to the end of the URL you coppied and pasted. 
+- You will be putting the URLs of the two microservices into the code in order to access these services.  Paste the URL for the **AlphaOfficeMySQLREST** microservice as the value for the Javascript variable **dbServiceURL**. ***Note:*** You must append **/products** to the end of the URL you coppied and pasted. 
 
     ![](images/400/image062.2.png)
 
