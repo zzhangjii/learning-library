@@ -3,9 +3,9 @@ Update: October 1, 2017
 
 ## Introduction
 
-This is the fourth of several labs that are part of the **Oracle Cloud DevOps: Cloud Native Microservices MySQL workshop.** This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
+This is the fourth of several labs that are part of the **Oracle Cloud DevOps: Cloud Native Microservices MySQL Workshop.** This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several microservices.
 
-In the first lab (100), the Project Manager created a new project in the Developer Cloud Service and also created and assigned tasks to the developers of this application. In the second lab (200), the Java developer created a new microservice to retrieve and filter Twitter data. In the third lab (300), the full stack developer created a microservice to extract data from the MySQL database. In this lab (400), you will assume the persona of the UI developer, who will create a next generation product catalog UI. The product catalog will combine both the Twitter Feed Microservice and the Product Catalog Microservice into a single unified view for the consumer.
+In the first lab (100), the Project Manager created a new project in the Developer Cloud Service and also created and assigned tasks to the developers of this application. In the second lab (200), the Java developer created a new microservice to retrieve and filter Twitter data. In the third lab (300), the full stack developer created a microservice to extract data from the MySQL database. In this lab (400), you will assume the persona of the UI developer, who will create a new generation product catalog UI that consumes REST services. This product catalog UI will combine both the Twitter Feed Microservice and the Product Catalog Microservice into a single unified view for the user.
 
 **To log issues**, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
@@ -26,7 +26,7 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
 ### **STEP 1**: Review Agile Board
 
-- This Lab assumes that you just completed Lab 300 and are still connected to the Oracle Cloud, that you're still in the Developer cloud Service Dashboard, and you're viewing the "Alpha Office Product Catalog Project." If for some reason that is not the case, follow the first several Steps of Lab 100 to once again view the Developer Cloud Service Console.
+- This Lab assumes that you just completed Lab 300 and are still connected to the Oracle Cloud, that you're still in the Developer Cloud Service Console, and you're viewing the "Alpha Office Product Catalog Project." If for some reason that is not the case, follow the first several Steps of Lab 100 to once again view the Developer Cloud Service Console.
 
 - Although you will remain connected to the Oracle Cloud using the user account you were provided, you will take on the Persona of ***John Dunbar*** as you perform the following steps.
 
@@ -82,7 +82,7 @@ To begin development on our Product Catalog UI, we could start coding from scrat
 
 ### **STEP 4**: Create Default Build Process
 
-Now that we have the source code in our managed GIT repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. We will use NPM package manager to set up a Node.js build process in this section.
+Now that we have the source code in our managed GIT repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. We will use NPM Package Manager to set up a Node.js build process in this section.
 
 - On the left side navigation panel click **Build** to access the build page.
 
@@ -139,7 +139,7 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
 ### **STEP 5**: Create Default Deployment Process
 
-Now that we have an automated build process, we will setup up a deployment configuration that will push out build artifacts to a node.js environment running on Application Container Cloud Service whenever a successful build occurs.
+Now that we have an automated build process, we will set up a deployment configuration that will push out build artifacts to a node.js environment running on Application Container Cloud Service whenever a successful build occurs.
 
 - On the navigation panel click **Deploy** to access the Deployment page. Click **New Configuration**.
 
@@ -151,11 +151,11 @@ Now that we have an automated build process, we will setup up a deployment confi
 
     ![](images/400/Picture32.png)  
 
-- Click on **Deployment Target** drop down and select deployment defined in lab 200.
+- Click on the **Deployment Target** drop down and select the deployment defined in lab 200.
 
     ![](images/400/Picture33.png)  
 
-- In Deployment window, click **Test Connection**. If Successful, click **Use Connection**:
+- In the Deployment window, click **Test Connection**. If Successful, click **Use Connection**:
 
     ![](images/400/Picture34.3.png)  
 
@@ -173,7 +173,7 @@ Now that we have an automated build process, we will setup up a deployment confi
 
     ![](images/400/Picture35.3.png)  
 
-- To reduce the number of resources that are used we will modify the default deployment of 2 instances. Click **Include ACCS Deployment** and enter the following in the text box:
+- To reduce the number of resources that are used, we will modify the default deployment of 2 instances. Click **Include ACCS Deployment** and enter the following in the text box:
 
 ```
 {
@@ -181,17 +181,19 @@ Now that we have an automated build process, we will setup up a deployment confi
   "instances": "1"
 }  
 ```
+- The bottom of the page will look like this:
+
 ![](images/400/Picture35.4.png)  
 
 - Click **Save**
 
     ![](images/400/Picture36.2.png) 
 
-- A message shows the deployment has been created
+- A message shows the deployment has been created.
 
     ![](images/400/Picture37.1.png) 
 
-- Click the gear drop down for **AlphaOfficeProductCatalogUI** and select **Start**
+- Click the gear drop down for **AlphaOfficeProductCatalogUI** and select **Start**.
 
     ![](images/400/Picture37.2.png)  
 
@@ -209,7 +211,7 @@ Now that we have an automated build process, we will setup up a deployment confi
 
     ![](images/400/Picture39.png)  
 
-- A new tab in the browser should open with application running.
+- A new tab in the browser should open with the UI application running.
 
     ![](images/400/Picture42.png)  
 
@@ -217,17 +219,19 @@ Now that we have an automated build process, we will setup up a deployment confi
 
 # Add Microservice endpoints
 
-Now that we have our default application, we want to modify this application to use the deployed Microserivces from lab 200 and lab 300. For this task we will use the Brackets text editor to download code from Developer Cloud Service and make our modifications. Once the new code is ready for deployment, we will check in the code which will trigger a new build and deployment. Normally we would want to check the code into a branch and go through the code review and merge process defined in lab 200. To save time we are not including that step.
+Now that we have our default application, we want to modify this application to use the deployed microserivces from Labs 200 and 300. For this task we will use the Brackets text editor to download code from Developer Cloud Service and make our modifications. Once the edited code is ready for deployment, we will push the edited code to the master branch in the Developer Cloud Service which will trigger a new build and deployment. 
 
-## Clone Project to Brackets Text Editor
+**Note:** Normally in a real-life scenario, you would create a Git branch, make all the changes documented in this section of the lab, commit those changes to the branch and then create a merge request. However, for the sake of time, and since the branch and merge concepts have already been covered, we will bypass best practices and make changes directly to the master branch.
 
-### **STEP 7**:	Start Brackets Text Editor
+## Clone Project to the Brackets Text Editor
 
-- Start **Brackets** text editor. How you start Brackets will depend on your OS. We have documented how to start Brackets from our OEL image.
+### **STEP 7**:	Start the Brackets Text Editor
+
+- Start the **Brackets** text editor. How you start Brackets will depend on your OS. We have documented how to start Brackets from our OEL image.
 
 ***Note***: If you do not have Brackets installed, please follow the **Student Guide** that is part of this Workshop. You will find instruction on how to install Git and Configure Brackets.
 
-- Right click **Brackets** desktop icon and select **Open**
+- Right click the **Brackets** desktop icon and select **Open**
 
     ![](images/400/image052.png)  
 
@@ -237,13 +241,13 @@ Now that we have our default application, we want to modify this application to 
 
 ### **STEP 8**: Copy GIT URL
 
-- Back in Developer Cloud Service, click on **Project**. On right side, select the URL for **AlphaOfficeProductCatalogUI.git**. Right click and select **Copy**
+- Back in Developer Cloud Service, click on **Project**. On the right side, select the URL for **AlphaOfficeProductCatalogUI.git**. Select the URL, right click and select **Copy**.
 
     ![](images/400/image054.2.png)  
 
 ### **STEP 9**: Clone GIT Repository
 
-- Back in the Brackets editor, Click on ![](images/400/image055.png) GIT icon found on the right side of the editor.
+- Back in the Brackets editor, Click on the ![](images/400/image055.png) GIT icon found on the right side of the editor.
 
   ![](images/400/image055.5.png)  
 
@@ -251,7 +255,7 @@ Now that we have our default application, we want to modify this application to 
 
   ![](images/400/image056.png)  
 
-- Paste in Git URL that you captured from Developer Cloud Service. Username should be populated automatically. Enter your **Password** and click **Save credentials**. Once completed click **OK** to start the cloning process.
+- Paste in the Git URL that you captured from Developer Cloud Service. Username should be populated automatically. Enter your **Password** and click **Save credentials**. Once completed click **OK** to start the cloning process.
 
     ![](images/400/image057.png)  
 
@@ -265,9 +269,7 @@ Now that we have our default application, we want to modify this application to 
 
 ### **STEP 10**: Edit the UI Code
 
-- Note to Pat's team - Lab Guide 400 Steps 10 and Step 11 are works in progress - I'm having problems with the Brackets editor and I am not clear on Dennis' intentions for merging into the DCS master branch.  See below. 
-
-- First go back to Developer Cloud Service to obtain the URLs for the two microservices created in Labs 200 and 300.  Click on **Deploy** in the dashboard, and then right click on the name AlphaOfficeMySQLREST to copy the URL for the microservice.  Do the same for the JavaTwitterMicroservice.  Save these URLs because you will be pasting them into the UI code.
+- First go back to Developer Cloud Service to obtain the URLs for the two microservices created in Labs 200 and 300.  Click on **Deploy** in the console, and then right click on the name **AlphaOfficeMySQLREST** to copy the URL for the microservice.  Do the same for the **JavaTwitterMicroservice**.  Save these URLs because you will be pasting them into the UI code.
 
     ![](images/400/image060.png)
 
@@ -281,37 +283,44 @@ Now that we have our default application, we want to modify this application to 
 
 ### **STEP 11**: Push the Edited Code Back to the Developer Cloud Service
 
-- Note to Pat's team - Again this step is a work in progress.  Dennis intended this step to be the shortest and simplest way to push this edit to the DCS master branch.  His text is "Normally we would want to check the code into a branch and go through the code review and merge process defined in lab 200. To save time we are not including that step."  Any suggestions of the best way to do this?  Below are the images and verbiage I used for the Devops MySQL lab I helped Derrick create last spring:
+- Click the checkbox to the left of the row for the Staged, Modified public/js/alphaOffice.js.
 
-- Make sure both check boxes are checked at the bottom left of the Brackets screen. (One checkbox is on the same line as the Commit button, and one is on the same line as alphOffice.js.)
+- Then click **Commit**. 
 
-- Then click Commit. 
-
-    ![](images/400/image070.png)
+    ![](images/400/image063.1.png)
 
 - Note: there are a number of formatting and other non-fatal warnings that will be reported for the server.js file. Ignore these.
 
-- Enter a comment for the commit and click OK.
+- Enter a comment for the commit and click **OK**.
 
-    ![](images/400/image071.png)
+    ![](images/400/image063.2.png)
 
-- You may need to enter a Git username. (Enter your username for your cloud service.) And you may need to enter some email address. (Any will do.) Finally, click OK.
+- You may need to enter a Git username. (Enter your username for your cloud service.) And you may need to enter some email address. (Any will do.) Finally, click **OK**.
 
-    ![](images/400/image072.png)
+    ![](images/400/image063.3.png)
 
-- Click on the Git Push Icon.
+- The pageClick on the Git Push Icon.
 
-    ![](images/400/image073.png)
+    ![](images/400/image063.4.png)
 
 - Enter your cloud username and password that you were given. Make sure Save credentials to remote url (in plain text) is checked. Finally, click OK.
 
-    ![](images/400/image074.png)
+    ![](images/400/image063.5.png)
 
-- The edited branch within the local Git repository has been successfully pushed to the repository in the Oracle Developer Cloud Service. Click OK.
 
-    ![](images/400/image075.png)
+- The edited branch within the local Git repository has been successfully pushed to the repository in the Oracle Developer Cloud Service.
 
-- At this point I don't know what the best way is to proceed.  If someone has some extra cycles and can help me figure out the best way to update the master branch without creating another branch, I would appreciate the help.  
+    ![](images/400/image063.6.png)
+
+- Go to the Cloud Developer Service dashboard.  Click on Code and an the Refs tab
+
+    ![](images/400/image063.7.png)
+
+- Go txxxx
+
+    ![](images/400/image063.9.png)
+
+
 
 ### **STEP 12**: Test Product Catalog UI with Edited Code
 
