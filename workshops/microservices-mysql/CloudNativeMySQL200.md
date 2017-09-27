@@ -52,7 +52,7 @@ To begin development on our Twitter feed microservices, we could start coding fr
 
 - Drag and drop **Task1 - Create Initial GIT Repository for Twitter Feed Service** into the **In Progress** swim-lane.  
 
-    ![](images/200/Picture14.2.png)  
+    ![](images/200/Picture13.5.png)  
 
 - Leave the defaults, and Click **OK**.
 
@@ -137,7 +137,7 @@ Now that we have the source code in the Developer Cloud Service managed GIT repo
 
 - Click **Save** to complete the configuration.
 
-- Click the **Build Now** button to start the build immediately. Wait, as it may take 30 seconds to a few minutes for the queued job to execute, but when it does, the status will change to the following:
+- Click the **Build Now** button to start the build immediately. Wait, as it may a few minutes for the queued job to execute, but when it does, the status will change to the following:
 
     ![](images/200/Picture28_5.png)  
     ![](images/200/Picture29.png)  
@@ -320,7 +320,7 @@ In the following task we will provide screen shots taken from the optional compu
 
     ![](images/200/Picture56.png)  
 
-  - If prompted to enter a Password Hint, click on **No**
+  - If prompted to enter a Password Hint, click on ***No***
 
     ![](images/200/Picture57.png)  
 
