@@ -271,11 +271,29 @@ Now that we have our default application, we want to modify this application to 
 
 ### **STEP 10**: Edit the UI Code
 
-- First go back to Developer Cloud Service to obtain the URLs for the two microservices created in Labs 200 and 300.  Click on **Deploy** in the console, and then right click on the name **AlphaOfficeMySQLREST** to copy the URL for the microservice.  Do the same for the **JavaTwitterMicroservice**.  Save these URLs because you will be pasting them into the UI code.
+- First go back to Developer Cloud Service to obtain the URLs for the two microservices created in Labs 200 and 300.  Click on **Deploy** in the console, and then right click on the name **AlphaOfficeMySQLREST** to copy the URL for the microservice. Save this URL, as you will use it later. 
 
     ![](images/400/image060.png)
 
-- In Brackets, choose the **public/js/alphaOffice.js** file to edit.  You will be pasting the URLs of the two microservices into the code in order to access these services.  Paste the URL for the **AlphaOfficeMySQLREST** microservice as the value for the Javascript variable **dbServiceURL**.  Paste the URL for the **JavaTwitterMicroservice** microservice as the value for the Javascript variable **twitterServiceBaseURL**.
+- Right click on the name **JavaTwitterMicroservice** to copy the URL for this microservice. Save this URL, as you will use it later. 
+
+    ![](images/400/image060.1.png)
+
+- In Brackets, choose the **public/js/alphaOffice.js** file to edit. 
+
+    ![](images/400/image062.1.png)
+
+
+- You will be pasting the URLs of the two microservices into the code in order to access these services.  Paste the URL for the **AlphaOfficeMySQLREST** microservice as the value for the Javascript variable **dbServiceURL**. ***Note:*** You must append **/products** to the end of the URL you coppied and pasted. 
+
+    ![](images/400/image062.2.png)
+
+
+- Paste the URL for the **JavaTwitterMicroservice** microservice as the value for the Javascript variable **twitterServiceBaseURL**. ***Note:*** You must append **/statictweets** to the end of the URL you coppied and pasted.
+
+    ![](images/400/image062.3.png)
+
+- The modified alphaOffice.js file shoudl appear as follows
 
     ![](images/400/image062.png)
 
