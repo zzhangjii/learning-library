@@ -78,7 +78,7 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
 ### **STEP 3**: Create Developer Cloud Service Project
 
-- Click **New Project** to start the project create wizard.
+- Click **New Project** to start the project create wizard. **Note**: Depending on the status of your developer cloud serivce, it is possible that the button may be labled **Create Project** 
 
     ![](images/100/Picture100-8.png)
 
