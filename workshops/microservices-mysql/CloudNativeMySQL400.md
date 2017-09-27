@@ -273,7 +273,7 @@ Now that we have our default application, we want to modify this application to 
 
     ![](images/400/image060.png)
 
-- In Brackets, choose the public/js/alphaOffice.js file to edit.  You will be pasting the URLs of the two microservices into the code in order to access these services.  Paste the URL for the AlphaOfficeMySQLREST microservice as the value for the Javascript variable dbServiceURL.  Paste the URL for the JavaTwitterMicroservice microservice as the value for the Javascript variable twitterServiceBaseURL.
+- In Brackets, choose the **public/js/alphaOffice.js** file to edit.  You will be pasting the URLs of the two microservices into the code in order to access these services.  Paste the URL for the **AlphaOfficeMySQLREST microservice** as the value for the Javascript variable **dbServiceURL**.  Paste the URL for the **JavaTwitterMicroservice** microservice as the value for the Javascript variable **twitterServiceBaseURL**.
 
     ![](images/400/image062.png)
 
