@@ -293,7 +293,7 @@ Now that we have our default application, we want to modify this application to 
 
     ![](images/400/image062.3.png)
 
-- The modified alphaOffice.js file shoudl appear as follows
+- The modified alphaOffice.js file should appear as follows
 
     ![](images/400/image062.png)
 
