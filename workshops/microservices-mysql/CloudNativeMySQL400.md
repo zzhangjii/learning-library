@@ -221,7 +221,7 @@ Now that we have an automated build process, we will set up a deployment configu
 
 # Add Microservice endpoints
 
-Now that we have our default application, we want to modify this application to use the deployed microserivces from Labs 200 and 300. For this task we will use the Brackets text editor to download code from Developer Cloud Service and make our modifications. Once the edited code is ready for deployment, we will push the edited code to the master branch in the Developer Cloud Service which will trigger a new build and deployment. 
+Now that we have our default application, we want to modify this application to use the deployed microservices from Labs 200 and 300. For this task we will use the Brackets text editor to download code from Developer Cloud Service and make our modifications. Once the edited code is ready for deployment, we will push the edited code to the master branch in the Developer Cloud Service which will trigger a new build and deployment. 
 
 **Note:** Normally in a real-life scenario, you would create a Git branch, make all the changes documented in this section of the lab, commit those changes to the branch and then create a merge request. However, for the sake of time, and since the branch and merge concepts have already been covered, we will bypass best practices and make changes directly to the master branch.
 
