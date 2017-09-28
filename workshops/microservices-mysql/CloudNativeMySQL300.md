@@ -251,6 +251,27 @@ We have now verified that the MySQL REST microservice has been deployed and func
 
     ![](images/300/Picture49.png)  
 
+
+## View MySQL Console
+
+### **STEP 8**: Open MySQL Console
+
+- Return to the **Main Dashboard**, click on the **Hamburger Menu** at the top left side of the window, and click on **MySQL**.  
+
+    ![](images/300/Picture60.png)  
+
+- From the MySQL Cloud Service Console, click on the **AlphaOfficeDB** link
+
+    ![](images/300/Picture61.png)  
+
+- At the bottom of the page, expand the **Associations** link to view the link to the REST Microservice you previously deployed.
+
+    ![](images/300/Picture62.png)  
+
+- Click on the **Hamburger Menu** at the top left side of the window to return to any of the other Cloud Service Consoles.
+
+    ![](images/300/Picture63.png)  
+
 - **You are now done with this lab.**
 
 # Supplementary Assignment – Provision and Setup MySQL Instance
