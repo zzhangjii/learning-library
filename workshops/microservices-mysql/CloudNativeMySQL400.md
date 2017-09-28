@@ -335,7 +335,7 @@ Now that we have our default application, we want to modify this application to 
 
     ![](images/400/image063.7.png)
 
-- Click the **Files** tab and note the recent timestamp for the alphaOffice.js file.
+- Click the **Files** tab, then the **public** folder, followed by the **jz** folder, and then and note the recent timestamp for the **alphaOffice.js** file.
 
     ![](images/400/image063.9.png)
 
