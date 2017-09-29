@@ -23,7 +23,7 @@
 
 - To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository.
 
-- Visit the [Workshop Interactive Labguide](https://launch.oracle.com/?mysql) for a visual overview of the workshop content. 
+- Visit the [Workshop Interactive Labguide](https://launch.oracle.com/?microservices-mysql) for a visual overview of the workshop content. 
 
 **Fourth**, ***Cloud Accelerate for the Developer***
 
