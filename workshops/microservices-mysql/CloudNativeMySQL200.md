@@ -378,7 +378,7 @@ In the previous steps we updated the status of the Tasks assigned to "Bala Gupta
 
 ### **STEP 15**: Build and test the TwitterFeedMicroservice
 
-- **Right Click** on the **TwitterFeedMicroservice** project. Select **Maven > Update Project**
+- **Right Click** on the **TwitterFeedMicroservice** project. Select **Maven > Update Project**. ***Note***: Eclipse does not display any status for the Update Project command, so it is recommend that you wait for approximately 30 seconds to give this command time to complete before moving forward.   
 
     ![](images/200/Picture74.png)  
 
