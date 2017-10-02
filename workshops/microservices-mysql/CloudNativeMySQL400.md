@@ -361,6 +361,15 @@ Now that we have our default application, we want to modify this application to 
 
    ![](images/400/Picture50.png)  
 
+- Click on any **product** to display the Tweets associated with that product. 
+
+   ![](images/400/Picture62.png) 
+
+- After viewing the tweets, click on the **Close** button. 
+  
+   ![](images/400/Picture63.png)  
+
+
 ### **STEP 13**: Complete Task
 
 We have now verified that the Product Catalog UI has been deployed and functions properly. To complete this lab, we will mark the Issue as completed in the Sprint.
