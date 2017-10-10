@@ -42,11 +42,13 @@ You have two options for configuring your workshop client environment.
 
 **NOTE:** The **Identity Domain, User Name** and **Password** values will be given to you by the instructor or within your Trial confirmation email.
 
-    ![](images/100/Picture100-3.png)
+![](images/100/Picture100-3.png)
+
 
 - Once your Identity Domain is set, enter your User Name and Password and click **Sign In**
 
     ![](images/100/Picture100-3.5.png)
+
 
 - You will be presented with a Dashboard displaying the various cloud services available to this account.
 
