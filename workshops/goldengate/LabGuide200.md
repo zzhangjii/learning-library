@@ -297,6 +297,7 @@ Note this is:
 
 - Double click on the `GGCS_SSH` shortcut on your dekstop and open a terminal window on the OGG Compute image and ssh to GGCS.
 	- **Switch to user oracle:** `sudo su - oracle`
+	- **Change to GGHOME:** `cd $GGHOME` (not shown below)
 	- **Start a gg command shell:** `ggsci`
 
 	![](images/200/i36.png)
