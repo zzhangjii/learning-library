@@ -235,7 +235,7 @@ Before we can configure deployment of our application we need to make note of th
 
 - Open a new tab in the browser and enter the following URL:
 
-    **https://** ***\<Public IP of Load Balancer\>*** **/AlphaProducts**
+    **https://\<Public IP of Load Balancer>/AlphaProducts**
 
 - On the security warning click **ADVANCED** and then click **Proceed to ...**
 
