@@ -20,11 +20,9 @@ You will take on 3 Personas during the workshop. The **Project Manager** Person
 ## Required Artifacts
 - The following lab requires an Oracle Public Cloud account that will be supplied by your instructor.
 
-# Client Image
+# Create Developer Cloud Service Project
 
-For this workshop we will be using a Client Image that will represent your on-premises environment. In this image we have installed an Eclipse that will be used during some of the labs. The Client Image is a VM that is running on Oracle’s IaaS Compute service. If you prefer to run Eclipse locally you can download from [Oracle Technology Network](http://www.oracle.com/technetwork/developer-tools/eclipse/downloads/index.html)
-
-## Retrieve Public IP for Client Image
+## Create Developer Cloud Service Project
 
 ### **STEP 1:** Login to your Oracle Cloud Account
 - From any browser, go to the URL:
@@ -34,82 +32,13 @@ For this workshop we will be using a Client Image that will represent your on-pr
 
     ![](images/100/Picture100-1.png)
 
-- **IMPORTANT** - Under my services, ***ask your instructor*** which **Region** to select from the drop down list, and click on the **My Services** button. ***NOTE***: In this example we are selecting "Public Cloud Services - EMEA," but your data center may vary. If you received your account through an Oracle Trial, your Trial confirmation email should provide a URL that will pre-select the region for you.
+- **IMPORTANT** - Und3r my services, ***ask your instructor*** which **Region** to select from the drop down list, and click on the **My Services** button. ***NOTE***: In this example we are selecting "Public Cloud Services - EMEA," but your data center may vary. If you received your account through an Oracle Trial, your Trial confirmation email should provide a URL that will pre-select the region for you.
 
     ![](images/100/Picture100-2.png)
 
 - Enter your identity domain and click **Go**.
 
     **NOTE:** The **Identity Domain, User Name** and **Password** values will be given to you by the instructor or Trial confirmation email.
-
-    ![](images/100/Picture100-3.png)
-
-- Once you Identity Domain is set, enter your User Name and Password and click **Sign In**
-
-    ![](images/100/Picture100-4.png)
-
-- You will be presented with a Dashboard displaying the various cloud services available to this account.
-
-    ![](images/100/Picture100-5.png)
-
-- If all of your services are not visible, **click** on the **Customize Dashboard**, and you can add services to the dashboard by clicking **Show.** If you do not want to see a specific service click **Hide**
-
-    ![](images/100/Picture100-6.png)
-
-### **STEP 2:** Access Compute Service Console
-- From the main dashboard, click on the **Compute** service link
-
-    ![](images/100/Picture100-33.png)
-
-- From this page you can view general information about this Compute Cloud Service. **Click** on the **Open Service Console** button
-
-    ![](images/100/Picture100-34.png)
-
-### **STEP 3:** Copy Public IP for Client Image
-- The Compute Service Console will show you all running VM’s. Note: If a compute service is not visible, as shown below, the following task will provide instructions on how to change to the correct zone.
-
-    ![](images/100/Picture100-35.png)
-
-- Identity Domains will have multiple sites. Please ask you instructor which site the Client Image is running on. If needed, click the **Site** drop down to access the **Site Selector**, and choose the correct site.
-
-    ![](images/100/Picture100-36.png)
-
-- Now that you have the correct site selected, find the instance name **ClientImage01** and copy down the **Public IP**
-
-    ![](images/100/Picture100-37.png)
-
-### **STEP 4:** Connect to Client Image using VNC Viewer
-- If you do not already have a VNC Viewer installed on your computer, you will want to download a Viewer, or ask the instructor for the Real VNC Viewer executable. Run the VNC Viewer and enter the Public IP you just copied, by first appending either the display port **:443** or **:10**. Ask your instructor which port is active for this workshop. Next, click **Connect**.
-
-    ![](images/100/Picture100-38.png)
-
-- Enter the password you used to log into the Oracle Cloud domain, and click **OK**.
-
-    ![](images/100/Picture100-39.png)
-
-- You are now connected to the Client Image that will be used for all labs. You might want to place the image in full screen mode so that there is no confusion as to which environment you are working in. Note: the use of the compute “Client” image provides us the opportunity to simulate an on premises environment. We have pre-installed several tools within this compute Client image. Of course, you could install the same tools on your laptop to accomplish the same functionality provided by the Client Image, but to reduce the time required to complete the workshop, the Client Image just simplifies the configuration you’d be required to perform.
-
-    ![](images/100/Picture100-40.png)
-
-# Create Developer Cloud Service Project
-
-## Create Developer Cloud Service Project
-
-### **STEP 5:** Login to your Oracle Cloud Account
-- From any browser, go to the URL:
-    `https://cloud.oracle.com`
-
-- click **Sign In** in the upper right hand corner of the browser
-
-    ![](images/100/Picture100-1.png)
-
-- **IMPORTANT** - Under my services, ***ask your instructor*** which **Region** to select from the drop down list, and click on the **My Services** button.
-
-    ![](images/100/Picture100-2.png)
-
-- Enter your identity domain and click **Go**.
-
-    **NOTE:** The **Identity Domain, User Name** and **Password** values will be given to you by the instructor.
 
     ![](images/100/Picture100-3.png)
 
@@ -125,11 +54,15 @@ For this workshop we will be using a Client Image that will represent your on-pr
 
     ![](images/100/Picture100-5.png)
 
+- If all of your services are not visible, **click** on the **Customize Dashboard**, and you can add services to the dashboard by clicking **Show.** If you do not want to see a specific service click **Hide**. Make sure that the **Developer** service is marked as show.
+
+    ![](images/100/Picture100-6.png)
+
 ### **STEP 6:** Login to Developer Cloud Service
 
 Oracle Developer Cloud Service provides a complete development platform that streamlines team development processes and automates software delivery. The integrated platform includes an issue tracking system, agile development dashboards, code versioning and review platform, continuous integration and delivery automation, as well as team collaboration features such as wikis and live activity stream. With a rich web based dashboard and integration with popular development tools, Oracle Developer Cloud Service helps deliver better applications faster.
 
-- From the Cloud UI dashboard click on the **Developer** service. In our example, the Developer Cloud Service is named **developer99019**.
+- From the Cloud UI dashboard click on the **Developer** service. In our example, the Developer Cloud Service is named **developer#####**.
 
     ![](images/100/Picture100-7.png)
 
