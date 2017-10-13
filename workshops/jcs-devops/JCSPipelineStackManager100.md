@@ -70,7 +70,7 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
     ![](images/100/Picture100-8.png)
 
-- Click **Open Service Console** for the Oracle Developer Cloud Service. The Service Console will list all projects for which you are currently a member.
+- Click **New Project** to start the project create wizard. **Note**: Depending on the status of your developer cloud serivce, it is possible that the button may be labled **Create Project** 
 
     ![](images/100/Picture100-9.png)
 
