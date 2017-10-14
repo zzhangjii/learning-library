@@ -1,6 +1,6 @@
 ![](images/200/Picture200-title.png)  
 
-Update: March 3, 2017
+Update: October 14, 2017
 
 ## Introduction
 
@@ -148,9 +148,13 @@ curl --request POST \
 
     ![](images/200/Picture200-21.png)
 
-- Click on **Alpha-JCS-DBCS-Template** to view details about your template. The **Topology** gives you a graphical view of the Stack.  Our template has **JCS**, **DBCS** and **Storage Cloud** (backupContainer). If you expand the **Template** section you can view the entire template file.
+- Click on **Alpha-JCS-DBCS-Template** to view details about your template. The **Topology** gives you a graphical view of the Stack.  Our template has **JCS**, **DBCS** and **Storage Cloud** (backupContainer).
 
     ![](images/200/Picture200-22.png)
+
+- If you click **Template** section you can view the entire template file.
+
+    ![](images/200/Picture200-22.5.png)
 
 ## Create Default Build for Stack Create
 
@@ -202,7 +206,7 @@ curl --request POST \
 
 ![](images/200/Picture200-32.png)
 
-- Click **Save** to complete the configuration. We will execute a build at this time, as we want to trigger the build by updating the **JCSBuild.conf** file.
+- Click **Save** to complete the configuration. We will not execute a build at this time, as we want to trigger the build by updating the **JCSBuild.conf** file.
 
     ![](images/200/Picture200-33.png)
 
@@ -314,7 +318,7 @@ In the previous steps we updated the status of the Tasks using the web interface
 
     **ServiceName=Alpha02**
 
-    **BackupStroageContainer=Storage-\<Your OPC identity Domain\>/Alpha02Backup**
+    **BackupStroageContainer=Storage-`Your OPC identity Domain`/Alpha02Backup**
 
     ![](images/200/Picture200-47.png)
 
@@ -338,7 +342,7 @@ In the previous steps we updated the status of the Tasks using the web interface
 
 ### **STEP 13:** Verify Build job ran
 
-- Click **Code** on left hand navigation then click **Commits**. Notice that the file has been committed to the Git repository.
+- Click **Code** on left hand navigation then click **Logs**. Notice that the file has been committed to the Git repository.
 
     ![](images/200/Picture200-51.png)
 
@@ -362,4 +366,4 @@ In the previous steps we updated the status of the Tasks using the web interface
 
 ![](images/200/Picture200-58.png)
 
-- You have completed Lab 200. For the next lab we will use an already provisioned environment.
+- **You have completed Lab 200. For the next lab we will use an already provisioned environment.**
