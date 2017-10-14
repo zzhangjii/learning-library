@@ -235,7 +235,7 @@ Before we can configure deployment of our application we need to make note of th
 
 - Open a new tab in the browser and enter the following URL:
 
-    **https://\<Public IP of Load Balancer>/AlphaProducts**
+    **https://`Public IP of Load Balancer`/AlphaProducts**
 
 - On the security warning click **ADVANCED** and then click **Proceed to ...**
 
@@ -379,12 +379,6 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
     ![](images/300/Picture300-60.png)
 
-- In the **Write box**, enter the following comment and then click on the **Comment** button to save:    
-
-    `I have updated the displayrecords.jsp to correctly display the Price.`
-
-    ![](images/300/Picture300-61.png)
-
 ## Merge the Branch as Lisa Jones
 
 ### **STEP 13:** Merge Requests
@@ -405,7 +399,7 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
     ![](images/300/Picture300-64.png)
 
-- Leave the defaults, and click on the **Merge** button in the confirmation dialog.
+- Leave the defaults, and click on the **Create a Merge Commit** button in the confirmation dialog.
 
     ![](images/300/Picture300-65.png)
 
@@ -427,7 +421,7 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
 - Open a new tab in the browser and enter the following URL:
 
-    **https://** ***\<Public IP of Load Balancer\>*** **/AlphaProducts**
+    **https://`Public IP of Load Balancer`/AlphaProducts**
 
 - You should now see the update **Alpha Office Product Catalog UI**
 
