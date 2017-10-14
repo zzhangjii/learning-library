@@ -52,22 +52,6 @@ In this lab, Lisa Jones (The Project Manager) will complete the Sprint and view 
 
     ![](images/400/Picture400-5.png)  
 
-## Run Sprint Reports
-
-### **STEP 3**: Run Sprint Reports
-
-- Return to the **Reports** Page
-
-    ![](images/400/Picture400-2.png)  
-
-- Review the Burndown Report by Story Points. Note: normally it would take several days to complete this project, and the report would provide information about the Burndown Rate per Day.
-
-    ![](images/400/Picture400-6.png)  
-
-- Click on the **Sprint Report** tab. In this lab, the results will be skewed because the Sprint was completed in a single day. However, the dotted line shows the starting point, and the red line shows the current remaining points. Normally this would step down towards the end of the sprint.
-
-    ![](images/400/Picture400-7.png)  
-
 # Project Administrative Features
 
 ## Review Administrative Features
