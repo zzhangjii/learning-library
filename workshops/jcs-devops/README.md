@@ -10,7 +10,7 @@ This workshop will walk you through the Software Development Lifecycle (SDLC) fo
 
 - The Labguides are best viewed using the Workshop's [GitHub Pages Website URL](https://oracle.github.io/learning-library/workshops/jcs-devops) 
 
-- Once you are viewing the Workshop's GitHub Pages website, you will see a list of Lab Guides at any time by clicking on the **Menu Icon**
+- Once you view the Workshop's GitHub Pages website, you will see a list of Lab Guides at any time by clicking on the **Menu Icon**
 
     ![](images/WorkshopHeader.png)  
 
