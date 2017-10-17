@@ -283,7 +283,7 @@ Note: The standard install of APEX for a 12c database creates many objects share
 
 	![](images/400/image46.png)
 
-### **STEP 8**:  Access the Alpha Office Mobile Application on your Smart Device
+### **STEP 7**:  Access the Alpha Office Mobile Application on your Smart Device
 
 -   Using any Internet connected smart phone or tablet, we will access the mobile application using the port we opened earlier in the lab. This example is using an Apple iPhone 5s.
 	
