@@ -5,7 +5,7 @@
 
 In Lab 300 we will be adding a MySQL database to our microservice from lab 200. We will be using an automated build process to load our baseline schema onto the database after we have provisioned it.
 
-Please direct comments to: Cam Crockett (cam.crockett@oracle.com)
+**To log issues**, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
 ## Objectives
 - Provision a MySQL Database
