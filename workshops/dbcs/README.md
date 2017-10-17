@@ -18,7 +18,7 @@ These labs will give you a basic understanding of the Oracle Database Cloud Serv
 
 ## Lab 100: Introduction to Database Cloud Services
 
-**Documenation**: [CloudWorkshop\_DBCS\_100.md](CloudWorkshop\_DBCS\_100.md)
+**Documentation**: [CloudWorkshop\_DBCS\_100.md](CloudWorkshop\_DBCS\_100.md)
 
 ### Objectives
 
@@ -28,7 +28,7 @@ These labs will give you a basic understanding of the Oracle Database Cloud Serv
 
 ## Lab 200: Cloud Migration
 
-**Documenation**: [CloudWorkshop\_DBCS\_200.md](CloudWorkshop\_DBCS\_200.md)
+**Documentation**: [CloudWorkshop\_DBCS\_200.md](CloudWorkshop\_DBCS\_200.md)
 
 ### Objectives
 
@@ -38,7 +38,7 @@ These labs will give you a basic understanding of the Oracle Database Cloud Serv
 
 ## Lab 300: Backup and Recovery Database Cloud Services
 
-**Documenation**: [CloudWorkshop\_DBCS\_300.md](CloudWorkshop\_DBCS\_300.md)
+**Documentation**: [CloudWorkshop\_DBCS\_300.md](CloudWorkshop\_DBCS\_300.md)
 
 ### Objectives
 
@@ -48,7 +48,7 @@ These labs will give you a basic understanding of the Oracle Database Cloud Serv
 
 ## Lab 400:  Database Development Cloud Services
 
-**Documenation**: [CloudWorkshop\_DBCS\_400.md](CloudWorkshop\_DBCS\_400.md)
+**Documentation**: [CloudWorkshop\_DBCS\_400.md](CloudWorkshop\_DBCS\_400.md)
 
 ### Objectives
 

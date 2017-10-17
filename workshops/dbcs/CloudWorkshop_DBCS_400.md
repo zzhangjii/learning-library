@@ -279,7 +279,7 @@ Note: The standard install of APEX for a 12c database creates many objects share
 
 	![](images/400/image45.png)
 
--   APEX renders the first page of the mobile application in the desktop Chrome - this doesn\'t look quite right since we are using a mobile template.
+-   APEX renders the first page of the mobile application in the desktop Chrome - this doesn\'t look quite right since we are using a mobile template.  Also note the home button on this application is not functional.
 
 	![](images/400/image46.png)
 
@@ -290,7 +290,7 @@ Note: The standard install of APEX for a 12c database creates many objects share
     Use the device's browser (Safari), navigate to the following URL:
 
 	```
-	https://{your Public IP Address}/ords/alphaclone/f?p=101
+	https://{your Public IP Address}/ords/pdb1/f?p=101
 	```
 
 	![](images/400/image47.png)
