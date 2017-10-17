@@ -381,7 +381,7 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
 ## Merge the Branch as Lisa Jones
 
-### **STEP 13:** Merge Requests
+### **STEP 14:** Merge Requests
 
 - In the following steps the logical persona “Lisa” will merge the branch created by “John” into the master.
 
@@ -403,7 +403,7 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
     ![](images/300/Picture300-65.png)
 
-### **STEP 14:** Monitor Build and Deloyment
+### **STEP 15:** Monitor Build and Deloyment
 
 - Now that the code has been commited to the master branch, I may take a minute or two, but the build and deployment will automatically start. On the navigation panel click **Build**, and you should see **Alpha Office Product Catalog UI** in the queue.
 
@@ -417,7 +417,7 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
     ![](images/300/Picture300-68.png)
 
-### **STEP 15:** Open UI in browser
+### **STEP 16:** Open UI in browser
 
 - Open a new tab in the browser and enter the following URL:
 
@@ -427,7 +427,7 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
     ![](images/300/Picture300-69.png)
 
-### **STEP 16:** Complete Task
+### **STEP 17:** Complete Task
 
 We have now verified that **Alpha Office Product Catalog UI** is now displaying the price corectly. To finish up this part of the lab, we will mark the Issue as completed in the Sprint.
 

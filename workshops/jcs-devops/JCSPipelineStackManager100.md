@@ -58,7 +58,7 @@ You will take on 3 Personas during the workshop. The **Project Manager** Person
 
     ![](images/100/Picture100-6.png)
 
-### **STEP 6:** Login to Developer Cloud Service
+### **STEP 2:** Login to Developer Cloud Service
 
 Oracle Developer Cloud Service provides a complete development platform that streamlines team development processes and automates software delivery. The integrated platform includes an issue tracking system, agile development dashboards, code versioning and review platform, continuous integration and delivery automation, as well as team collaboration features such as wikis and live activity stream. With a rich web based dashboard and integration with popular development tools, Oracle Developer Cloud Service helps deliver better applications faster.
 
@@ -74,7 +74,7 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
     ![](images/100/Picture100-9.png)
 
-### **STEP 7:** Create Developer Cloud Service Project
+### **STEP 3:** Create Developer Cloud Service Project
 
 - Click **New Project** to start the project create wizard.
 - On Details screen enter the following data and click on **Next**.
@@ -107,7 +107,7 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
 ## Create Issues for the Opperations Pipeline
 
-### **STEP 8:** Create Issue for the initial GIT Repository Creation
+### **STEP 4:** Create Issue for the initial GIT Repository Creation
 
 In this step you are still assuming the identity of the Project Manager, ***Lisa Jones***.
 
@@ -138,7 +138,7 @@ Note: Story point is an arbitrary measure used by Scrum teams. They are used to 
 
 ![](images/100/Picture100-16.png)
 
-### **STEP 9:** Create Issue for Provision New Alpha Office Environment
+### **STEP 5:** Create Issue for Provision New Alpha Office Environment
 
 - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
 
@@ -160,7 +160,7 @@ Note: Story point is an arbitrary measure used by Scrum teams. They are used to 
 
 ## Create Issues for Alpha Office UI
 
-### **STEP 10:** Create Issue for initial GIT Repository creation and setup
+### **STEP 6:** Create Issue for initial GIT Repository creation and setup
 
 - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
 
@@ -180,7 +180,7 @@ Note: Story point is an arbitrary measure used by Scrum teams. They are used to 
 
     ![](images/100/Picture100-18.png)
 
-### **STEP 11:** Create Issue for Displaying Price
+### **STEP 7:** Create Issue for Displaying Price
 
 - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
 
@@ -222,7 +222,7 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 - **Active Sprints view** – Lists all active Sprints of the Board and enables you to update an Issue status simply by dragging and dropping it to the respective status columns.
 - **Reports view** – select the Burndown Chart tab to display the amount of work left to do in a Sprint or use the Sprint Report tab to list open and completed Issues of a Sprint.
 
-### **STEP 12:** Create Agile Board
+### **STEP 8:** Create Agile Board
 
 - Click **Agile** on the Left Side Menu to display a page listing all existing Boards.
 
@@ -236,7 +236,7 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 
     ![](images/100/Picture100-22.png)
 
-### **STEP 13:** Create Sprint
+### **STEP 9:** Create Sprint
 
 - We will now Create our first Sprint. Click **New Sprint**. Enter the following data and click **OK**.
 
@@ -246,7 +246,7 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 
     ![](images/100/Picture100-23.png)
 
-### **STEP 14:** Add Backlog Issues to Sprint
+### **STEP 10:** Add Backlog Issues to Sprint
 
 - Next we want to add the backlog issues to the newly created spring. **Drag and drop** the **4 issues** one at a time upward onto the **Sprint 1** section. This will add the issues to the sprint.
 
@@ -254,7 +254,7 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 
     ![](images/100/Picture100-25.png)
 
-### **STEP 15:** View Active Sprint and Reports
+### **STEP 11:** View Active Sprint and Reports
 
 - Click **Start Sprint.** Leave defaults and click **Start**
 

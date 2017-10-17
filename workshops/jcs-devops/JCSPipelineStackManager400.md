@@ -56,7 +56,7 @@ In this lab, Lisa Jones (The Project Manager) will complete the Sprint and view 
 
 ## Review Administrative Features
 
-### **STEP 4**: Review Administrative Options
+### **STEP 3**: Review Administrative Options
 
 - Click on **Administration** navigation to view the available administrative options. Click on the **Properties icon**.
 
