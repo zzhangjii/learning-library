@@ -73,7 +73,7 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
 ### **STEP 3:** Create Template Update Build Process
 
-Now that we have the configuration code in our managed GIT repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. This build process will trigger any time the Alpha Office Stack template is modified and upload a new version via REST to the Oracle Cloud.
+Now that we have the configuration code in our managed GIT repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. This build process will trigger any time the Alpha Office Stack template is modified and upload a new version via PSMcli (PaaS Serivice Manager command line interface) to the Oracle Cloud.
 
 - On navigation panel click **Build** to access the build page and click **New Job**.
 
@@ -95,26 +95,25 @@ Now that we have the configuration code in our managed GIT repository, we need t
 
     ![](images/200/Picture200-15.png)    
 
-- Click the **Build Steps** tab. Click **Add Build Step**, and select **Execute shell**.
+- Click the **Build Steps** tab. Click **Add Build Step**, and select **InvokePSMcli**.
 
     ![](images/200/Picture200-12.png)
 
-- Enter the following REST call for the **Execute Shell Command:**
+- Enter you Oracle Cloud credentials give to you by the instructor or Trail confirmation email.
+
+    ![](images/200/Picture200-12.2.png)
+
+- Next we will add a second build step. Click **Add Build Step** and select **Execute Shell**
+
+    ![](images/200/Picture200-12.4.png)
+
+-  Enter the following PSM CLI call for the **Execute Shell Command:**
 
 ```
-curl --request POST \
-  --user <opc username>:<opc password> \
-  --url https://psm.europe.oraclecloud.com/paas/api/v1.1/instancemgmt/<OPC Identity Domain>/templates/cst/instances \
-  --header 'X-ID-TENANT-NAME: <OPC Identity Domain>' \
-  --header 'content-type: multipart/form-data' \
-  --form template=@Alpha-JCS-DBCS-Template.yaml
+psm stack import-template -f Alpha-JCS-DBCS-Template.yaml -of json
 ```
 
-**Note:** Replace <OPC > with your OPC credentials
-
-![](images/200/Picture200-13.5.png)
-
-![](images/200/Picture200-13.png)
+    ![](images/200/Picture200-12.6.png)
 
 - Click **Save** to complete the configuration.
 
@@ -182,29 +181,31 @@ Now we will create a build process that will provision a new Oracle Stack every 
 
     ![](images/200/Picture200-30.png)    
 
-- Click the **Build Steps** tab. Click **Add Build Step**, and select **Execute shell**.
+- Click the **Build Steps** tab. Click **Add Build Step**, and select **Invoke PSMcli**.
 
     ![](images/200/Picture200-31.png)
 
-- Enter the following REST call for the **Execute Shell Command:**
+- Enter you Oracle Cloud credentials give to you by the instructor or Trail confirmation email.
+
+    ![](images/200/Picture200-30.2.png)
+
+- Next we will add a second build step. Click **Add Build Step** and select **Execute Shell**
+
+    ![](images/200/Picture200-30.4.png)
+
+-  Enter the following PSM CLI call for the **Execute Shell Command:**
 
 ```
 source ./JCSBuild.conf
-curl --request POST \
-  --user <OPC username>:<OPC password> \
-  --url https://psm.europe.oraclecloud.com/paas/api/v1.1/instancemgmt/<OPC Identity Domain>/services/stack/instances \
-  --header 'X-ID-TENANT-NAME: <OPC Identity Domain>' \
-  --header 'content-type: multipart/form-data' \
-  --form name=$ServiceName \
-  --form template=Alpha-JCS-DBCS-Template \
-  --form 'parameterValues={"commonPwd":"'"$CommonPassword"'", "backupStorageContainer":"'"$BackupStorageContainer"'", "cloudStoragePassword":"<OPC password>"}}'
+psm stack create -n $ServiceName -t Alpha-JCS-DBCS-Template \
+  -p commonPwd:$CommonPassword \
+      backupStorageContainer:$BackupStorageContainer \
+      cloudStoragePassword:<OPC Password>
 ```
 
-**Note:** Replace <OPC > with your OPC credentials
+**Note:** Replace OPC Password 
 
-![](images/200/Picture200-32.5.png)
-
-![](images/200/Picture200-32.png)
+![](images/200/Picture200-30.6.png)
 
 - Click **Save** to complete the configuration. We will not execute a build at this time, as we want to trigger the build by updating the **JCSBuild.conf** file.
 
