@@ -113,7 +113,7 @@ Now that we have the configuration code in our managed GIT repository, we need t
 psm stack import-template -f Alpha-JCS-DBCS-Template.yaml -of json
 ```
 
-    ![](images/200/Picture200-12.6.png)
+![](images/200/Picture200-12.6.png)
 
 - Click **Save** to complete the configuration.
 
