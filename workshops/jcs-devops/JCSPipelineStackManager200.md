@@ -23,14 +23,13 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
 - The following lab requires an Oracle Public Cloud account that will be supplied by your instructor. You will need to download and install latest version of Eclipse or use supplied compute VM.
 
-
 # Create Initial Git Repository for Infrastructure
 
 ## Create Initial Git Repository
 
  Although you will remain connected to the Oracle Cloud using the user account you were provided, you are to take on the Persona of ***Bala Gupta*** as you perform the following steps. Bala is our operations engineer and will be handling all operations issues.
 
-![](images/bala.png)  
+![](images/bala.png)
 
 ### **STEP 1:** Update Issue Status
 
@@ -38,7 +37,7 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
     ![](images/200/Picture200-1.png)
 
-- Drag and drop **Task1 - Create Initial GIT Repository for Infrastructure and configure build** into the **In Progress** swim-lane.  
+- Drag and drop **Task1 - Create Initial GIT Repository for Infrastructure and configure build** into the **In Progress** swim-lane.
 
     ![](images/200/Picture200-2.png)
 
@@ -87,7 +86,7 @@ Now that we have the configuration code in our managed GIT repository, we need t
 
     ![](images/200/Picture200-9.png)
 
-- You are now placed into the job configuration screen.        
+- You are now placed into the job configuration screen.
 
     ![](images/200/Picture200-10.png)
 
@@ -97,7 +96,7 @@ Now that we have the configuration code in our managed GIT repository, we need t
 
 - Click the **Triggers** tab. Select **Based on SCM polling schedule**.
 
-    ![](images/200/Picture200-15.png)    
+    ![](images/200/Picture200-15.png)
 
 - Click the **Build Steps** tab. Click **Add Build Step**, and select **InvokePSMcli**.
 
@@ -125,7 +124,7 @@ psm stack import-template -f Alpha-JCS-DBCS-Template.yaml -of json
 
     ![](images/200/Picture200-14.png)
 
-- Once the build has completed you should see a green check.  
+- Once the build has completed you should see a green check.
 
     ![](images/200/Picture200-16.png)
 
@@ -173,7 +172,7 @@ Now we will create a build process that will provision a new Oracle Stack every 
 
     ![](images/200/Picture200-27.png)
 
-- You are now placed into the job configuration screen.        
+- You are now placed into the job configuration screen.
 
     ![](images/200/Picture200-28.png)
 
@@ -183,7 +182,7 @@ Now we will create a build process that will provision a new Oracle Stack every 
 
 - Click the **Triggers** tab. Select **Based on SCM polling schedule**.
 
-    ![](images/200/Picture200-30.png)    
+    ![](images/200/Picture200-30.png)
 
 - Click the **Build Steps** tab. Click **Add Build Step**, and select **Invoke PSMcli**.
 
@@ -207,7 +206,7 @@ psm stack create -n $ServiceName -t Alpha-JCS-DBCS-Template \
       cloudStoragePassword:<OPC Password>
 ```
 
-**Note:** Replace OPC Password 
+**Note:** Replace OPC Password
 
 ![](images/200/Picture200-30.6.png)
 
@@ -245,7 +244,7 @@ We have now completed our task. To finish up this part of the lab we will want t
 
     ![](images/200/Picture200-35.png)
 
-### **STEP 8:** Create connection to Oracle Developer Cloud Service    
+### **STEP 8:** Create connection to Oracle Developer Cloud Service
 
 - We will now create a connection to the Developer Cloud Service. To do this, first click on the menu options **Window -> Show View ->Other**
 
