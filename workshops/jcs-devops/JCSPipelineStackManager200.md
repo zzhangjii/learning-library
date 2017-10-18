@@ -11,6 +11,7 @@ In the first lab (100), the Project Manager created a new project in the Develop
 ***To log issues***, click here to go to the [github oracle](https://github.com/oracle/cloud-native-devops-workshop/issues/new) repository issue submission form.
 
 ## Objectives
+
 - Access Developer Cloud Service
 - Import configuration from external Git Repository
 - Build Infrastructure as Code pipeline
@@ -19,6 +20,7 @@ In the first lab (100), the Project Manager created a new project in the Develop
 - Check in configuration file to provision new JCS environment.
 
 ## Required Artifacts
+
 - The following lab requires an Oracle Public Cloud account that will be supplied by your instructor. You will need to download and install latest version of Eclipse or use supplied compute VM.
 
 
@@ -31,6 +33,7 @@ In the first lab (100), the Project Manager created a new project in the Develop
 ![](images/bala.png)  
 
 ### **STEP 1:** Update Issue Status
+
 - Click on the **AlphaOffice** Board **Active Sprints**.
 
     ![](images/200/Picture200-1.png)
@@ -45,6 +48,7 @@ In the first lab (100), the Project Manager created a new project in the Develop
     ![](images/200/Picture200-4.png)
 
 ### **STEP 2:** Create Repository
+
 - In the left hand navigation panel, click **Project**.
 
 - Click on **New Repository** to create a new Git Repository.
@@ -107,9 +111,9 @@ Now that we have the configuration code in our managed GIT repository, we need t
 
     ![](images/200/Picture200-12.4.png)
 
--  Enter the following PSM CLI call for the **Execute Shell Command:**
+- Enter the following PSM CLI call for the **Execute Shell Command:**
 
-```
+```bash
 psm stack import-template -f Alpha-JCS-DBCS-Template.yaml -of json
 ```
 
@@ -193,9 +197,9 @@ Now we will create a build process that will provision a new Oracle Stack every 
 
     ![](images/200/Picture200-30.4.png)
 
--  Enter the following PSM CLI call for the **Execute Shell Command:**
+- Enter the following PSM CLI call for the **Execute Shell Command:**
 
-```
+```bash
 source ./JCSBuild.conf
 psm stack create -n $ServiceName -t Alpha-JCS-DBCS-Template \
   -p commonPwd:$CommonPassword \
@@ -233,7 +237,7 @@ We have now completed our task. To finish up this part of the lab we will want t
 
 # Provision new Alpha Office Environment by modifying configuration file
 
-##  Clone Project to Eclipse IDE
+## Clone Project to Eclipse IDE
 
 ### **STEP 7:** Load Eclipse IDE
 
@@ -323,7 +327,7 @@ In the previous steps we updated the status of the Tasks using the web interface
 
     ![](images/200/Picture200-47.png)
 
-##  Commit Code
+## Commit Code
 
 ### **STEP 12:** Commit Code
 
@@ -339,7 +343,7 @@ In the previous steps we updated the status of the Tasks using the web interface
 
     ![](images/200/Picture200-50.png)
 
-##  Verify Provisioning
+## Verify Provisioning
 
 ### **STEP 13:** Verify Build job ran
 
