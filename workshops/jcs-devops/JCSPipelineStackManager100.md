@@ -134,10 +134,9 @@ In this step you are still assuming the identity of the Project Manager, ***Lisa
 
     **Story Points:** `1`
 
-Note: Story point is an arbitrary measure used by Scrum teams. They are used to measure the effort required to implement a story. This [Site](https://agilefaq.wordpress.com/2007/11/13/what-is-a-story-point/) will provide more information.
+    Note: Story point is an arbitrary measure used by Scrum teams. They are used to measure the effort required to implement a story. This [Site](https://agilefaq.wordpress.com/2007/11/13/what-is-a-story-point/) will provide more information.
 
-
-![](images/100/Picture100-16.png)
+    ![](images/100/Picture100-16.png)
 
 ### **STEP 5:** Create Issue for Provision New Alpha Office Environment
 
@@ -205,7 +204,6 @@ Note: Story point is an arbitrary measure used by Scrum teams. They are used to 
 
     ![](images/100/Picture100-20.png)
 
-
 # Create Agile Board
 
 ## Create Agile Board and Initial Sprint
@@ -214,12 +212,9 @@ Note: Story point is an arbitrary measure used by Scrum teams. They are used to 
 
 Before you start using the Agile methodology in Oracle Developer Cloud Service, it is important that you know the following key components of the Agile page.
 
-- **Board** – A Board is used to display and update issues of the project. When you create a Board, you associate it with an Issue Query. The Board shows Issues returned by the Query.
-You can either use a Board created by a team member, or create your own Board. You can create as many Boards as you like.
-- **Sprint** – A Sprint is a short duration (usually, a week or two) during which your team members try to implement a product component.
-You add the product component related issues to a Sprint. When you start working on a product component, you start (or activate) the related Sprints. To update issues using a Sprint, you must first activate the Sprint and add the Sprint to the Active Sprints view.
-- **Backlog view** – Lists all Issues returned by the Board’s Query. The view also displays all active and inactive Sprints of the Board, and the sprints from other Boards that contain Issues matching the Board’s Query.
-Each Sprint lists issues that are added to it. The Backlog section (the last section of the Backlog page) lists all open issues that are not part of any Sprint yet. The Backlog view does not show the resolved and closed Issues.
+- **Board** – A Board is used to display and update issues of the project. When you create a Board, you associate it with an Issue Query. The Board shows Issues returned by the Query. You can either use a Board created by a team member, or create your own Board. You can create as many Boards as you like.
+- **Sprint** – A Sprint is a short duration (usually, a week or two) during which your team members try to implement a product component. You add the product component related issues to a Sprint. When you start working on a product component, you start (or activate) the related Sprints. To update issues using a Sprint, you must first activate the Sprint and add the Sprint to the Active Sprints view.
+- **Backlog view** – Lists all Issues returned by the Board’s Query. The view also displays all active and inactive Sprints of the Board, and the sprints from other Boards that contain Issues matching the Board’s Query. Each Sprint lists issues that are added to it. The Backlog section (the last section of the Backlog page) lists all open issues that are not part of any Sprint yet. The Backlog view does not show the resolved and closed Issues.
 - **Active Sprints view** – Lists all active Sprints of the Board and enables you to update an Issue status simply by dragging and dropping it to the respective status columns.
 - **Reports view** – select the Burndown Chart tab to display the amount of work left to do in a Sprint or use the Sprint Report tab to list open and completed Issues of a Sprint.
 
