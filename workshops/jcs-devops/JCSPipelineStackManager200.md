@@ -1,4 +1,4 @@
-![](images/200/Picture200-title.png)  
+![](images/200/Picture200-title.png)
 
 Update: October 14, 2017
 
