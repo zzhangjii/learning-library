@@ -1,4 +1,3 @@
-
 ![](images/100/Picture100-title.png)  
 Update: October 14, 2017
 
@@ -8,16 +7,17 @@ This is the first of several labs that are part of the **DevOps JCS Pipeline usi
 
 You will take on 3 Personas during the workshop. The **Project Manager** Persona will create the projects, add tasks and features to be worked on, and assign tasks to team memebers.  The Project Manager will then start the initial sprint. The **Operations Engineer** persona will develop a new pipeline for deployment of JCS and DBCS environment. The **Java Developer** persona will develop a new struts based UI to display the product catalog. During the workshop, you will get exposure to Oracle Developer Cloud Service, Java Cloud Service and Oracle Stack Manager.
 
-
 ***To log issues***, click here to go to the [github oracle](https://github.com/oracle/cloud-native-devops-workshop/issues/new) repository issue submission form.
 
 ## Objectives
+
 - Create Initial Project
 - Create Issues / Task
 - Create Agile Board and initial Sprint
 - Add Issues to Sprint
 
 ## Required Artifacts
+
 - The following lab requires an Oracle Public Cloud account that will be supplied by your instructor.
 
 # Create Developer Cloud Service Project
@@ -25,6 +25,7 @@ You will take on 3 Personas during the workshop. The **Project Manager** Person
 ## Create Developer Cloud Service Project
 
 ### **STEP 1:** Login to your Oracle Cloud Account
+
 - From any browser, go to the URL:
     `https://cloud.oracle.com`
 
@@ -44,7 +45,7 @@ You will take on 3 Personas during the workshop. The **Project Manager** Person
 
 - Once you Identity Domain is set, enter your User Name and Password and click **Sign In**
 
-    **NOTE:** For this lab you will assume the role of Project Manager ***Lisa Jones***. Although you are assuming the identify of Lisa Jones, you will log into the account using the **username** provided to you by your instructor, given to you by your corporation, or supplied to you as part of an Oracle Trial. As you progress through the workshop, you will remain logged in as a single user, but you will make “logical” changes from Lisa Jones the Project Manager to other personas.
+    **NOTE:** For this lab you will assume the role of Project Manager ***Lisa Jones***. Although you are assuming the identify of Lisa Jones, you will log into the account using the **username** provided to you by your instructor, given to you by your corporation, or supplied to you as part of an Oracle Trial. As you progress through the workshop, you will remain logged in as a single user, but you will make “logical” changes from Lisa Jones the Project Manager to the other personas.
 
     ![](images/lisa.png)
 
@@ -54,7 +55,7 @@ You will take on 3 Personas during the workshop. The **Project Manager** Person
 
     ![](images/100/Picture100-5.png)
 
-- If all of your services are not visible, **click** on the **Customize Dashboard**, and you can add services to the dashboard by clicking **Show.** If you do not want to see a specific service click **Hide**. Make sure that the **Developer** service is marked as show.
+- If all of your services are not visible, **click** on the **Customize Dashboard**, and you can add services to the dashboard by clicking **Show.** If you do not want to see a specific service, click **Hide**. Make sure that the **Developer** service is marked as show.
 
     ![](images/100/Picture100-6.png)
 
@@ -66,7 +67,7 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
     ![](images/100/Picture100-7.png)
 
-- The Service Details page gives you a quick glance of the service status overview.
+- The Service Details page gives you a quick glance of the service status overview. **Click** on the **Open Service Console** button.
 
     ![](images/100/Picture100-8.png)
 
