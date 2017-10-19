@@ -23,7 +23,7 @@ In this lab, Lisa Jones (The Project Manager) will complete the Sprint and view 
 
 - The following lab requires an Oracle Public Cloud account that will be supplied by your instructor.
 
-## Close the Sprint
+# Close the Sprint
 
 ## Connect to the Develop Cloud Service
 
@@ -57,7 +57,7 @@ In this lab, Lisa Jones (The Project Manager) will complete the Sprint and view 
 
     ![](images/400/Picture400-5.png)  
 
-## Project Administrative Features
+# Project Administrative Features
 
 ## Review Administrative Features
 
@@ -83,7 +83,7 @@ In this lab, Lisa Jones (The Project Manager) will complete the Sprint and view 
 
     ![](images/400/Picture400-12.png)
 
-- From the Menu options list, select **Repositories**. From this page you can create and delete repositores. You also have the ability to create reference to **External Repositories**.
+- From the Menu options list, select **Repositories**. From this page you can create and delete repositories. You also have the ability to create reference to **External Repositories**.
 
     ![](images/400/Picture400-13.png)
 

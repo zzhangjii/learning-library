@@ -2,7 +2,7 @@
 
 ![](images/300/Picture300-title.png)  
 
-Update: October 14, 2017
+Update: October 19, 2017
 
 ## Introduction
 
