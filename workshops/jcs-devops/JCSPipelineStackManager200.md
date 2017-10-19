@@ -1,6 +1,8 @@
+# DevOps: JCS Pipeline Using Oracle Stack Manager
+
 ![](images/200/Picture200-title.png)
 
-Update: October 14, 2017
+Update: October 19, 2017
 
 ## Introduction
 
@@ -33,7 +35,7 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
 ### **STEP 1:** Update Issue Status
 
-- Click on the **AlphaOffice** Board **Active Sprints**.
+- From the left have navigation panel, select **Agile** , then click on the **AlphaOffice** Board **Active Sprints**.
 
     ![](images/200/Picture200-1.png)
 
@@ -41,7 +43,7 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
     ![](images/200/Picture200-2.png)
 
-- Click **OK** on Change Progress popup.
+- Leave the defaults, and click **OK** on the **Change Progress** popup.
 
     ![](images/200/Picture200-3.png)
     ![](images/200/Picture200-4.png)
@@ -78,7 +80,7 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
 Now that we have the configuration code in our managed GIT repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. This build process will trigger any time the Alpha Office Stack template is modified and upload a new version via PSMcli (PaaS Serivice Manager command line interface) to the Oracle Cloud.
 
-- On navigation panel click **Build** to access the build page and click **New Job**.
+- On navigation panel, click **Build** to access the build page and click **New Job**.
 
     ![](images/200/Picture200-8.png)
 
@@ -90,7 +92,8 @@ Now that we have the configuration code in our managed GIT repository, we need t
 
     ![](images/200/Picture200-10.png)
 
-- Click the **Source Control** tab. Click **Git** and select **JCSStackAlphaInfrastructure.git** from the drop down. Expand **Advanced Git Settings** and enter `Alpha-JCS-DBCS-Template.yaml`
+- Click the **Source Control** tab. Click **Git** and select **JCSStackAlphaInfrastructure.git** from the drop down.
+- Under the **Branches** section, expand the **Advanced Git Settings** and enter `Alpha-JCS-DBCS-Template.yaml` in the **Included Regions** field. 
 
     ![](images/200/Picture200-11.png)
 
@@ -102,7 +105,7 @@ Now that we have the configuration code in our managed GIT repository, we need t
 
     ![](images/200/Picture200-12.png)
 
-- Enter you Oracle Cloud credentials give to you by the instructor or Trail confirmation email.
+- Enter your Oracle Cloud credentials given to you by the instructor or Trail confirmation email. Ensure that you enter the correct values for **Username**, **Password** and **Identity Domain**. ***Note*** that the default set for the **Region** may not be correct, and must be properly set. The value for the **Output Format** should be set to **JSON**.
 
     ![](images/200/Picture200-12.2.png)
 
@@ -158,6 +161,8 @@ psm stack import-template -f Alpha-JCS-DBCS-Template.yaml -of json
 
     ![](images/200/Picture200-22.5.png)
 
+- Click **Done** to close the Template.
+
 ## Create Default Build for Stack Create
 
 ### **STEP 5:** Create Stack Create Build Process
@@ -168,7 +173,7 @@ Now we will create a build process that will provision a new Oracle Stack every 
 
     ![](images/200/Picture200-26.png)
 
-- In the New Job popup enter **Infrastructure Create Stack** for the Job Name, and then click **Save**.
+- In the New Job popup, leave the **Create a free-style job** selected and enter `Infrastructure Create Stack` for the Job Name, and then click **Save**.
 
     ![](images/200/Picture200-27.png)
 
@@ -176,7 +181,7 @@ Now we will create a build process that will provision a new Oracle Stack every 
 
     ![](images/200/Picture200-28.png)
 
-- Click the **Source Control** tab. Click **Git** and select **JCSStackAlphaInfrastructure.git** from the drop down. Expand **Advanced Git Settings** and enter `JCSBuild.conf`
+- Click the **Source Control** tab. Click **Git** and select **JCSStackAlphaInfrastructure.git** from the drop down. Expand **Advanced Git Settings** and enter `JCSBuild.conf` in the **Included Regions** field.
 
     ![](images/200/Picture200-29.png)
 
@@ -188,7 +193,7 @@ Now we will create a build process that will provision a new Oracle Stack every 
 
     ![](images/200/Picture200-31.png)
 
-- Enter you Oracle Cloud credentials give to you by the instructor or Trail confirmation email.
+- Enter your Oracle Cloud credentials given to you by the instructor or Trail confirmation email. Ensure that you enter the correct values for **Username**, **Password** and **Identity Domain**. ***Note*** that the default set for the **Region** may not be correct, and must be properly set. The value for the **Output Format** should be set to **JSON**.
 
     ![](images/200/Picture200-30.2.png)
 
@@ -198,7 +203,7 @@ Now we will create a build process that will provision a new Oracle Stack every 
 
 - Enter the following PSM CLI call for the **Execute Shell Command:**
 
-```bash
+```
 source ./JCSBuild.conf
 psm stack create -n $ServiceName -t Alpha-JCS-DBCS-Template \
   -p commonPwd:$CommonPassword \
@@ -314,7 +319,7 @@ In the previous steps we updated the status of the Tasks using the web interface
 
 ### **STEP 11:** Modify Configuration File
 
-- Expand the project and double click on **JCSBuild.conf** to open
+- In the Exclipse **Project Explorer** panel, expand the project and double click on **JCSBuild.conf** to open
 
     ![](images/200/Picture200-46.png)
 
@@ -356,7 +361,7 @@ In the previous steps we updated the status of the Tasks using the web interface
 
 ### **STEP 14:** Monitor in Oracle Cloud
 
-- Switch back to browser tab with **Oracle Stack Manager**.  Click on **Stack** and you should see that Alpha02 stack is "Creating" and building out an Oracle Database Cloud Service and a Java Cloud Service.
+- Switch back to browser tab with **Oracle Stack Manager**.  Click on the **Stacks** tab. You should see that Alpha02 stack is "Creating" and building out an Oracle Database Cloud Service and a Java Cloud Service. You may need to click on the refresh button if the stack is not immediately visibile.
 
     ![](images/200/Picture200-53.png)
 
@@ -370,4 +375,4 @@ In the previous steps we updated the status of the Tasks using the web interface
 
 ![](images/200/Picture200-58.png)
 
-- **You have completed Lab 200. For the next lab we will use an already provisioned environment.**
+- **You have completed Lab 200**. For the next lab, you will not need to wait for the environment provisioning to complete, as we will use an **already provisioned environment**.
