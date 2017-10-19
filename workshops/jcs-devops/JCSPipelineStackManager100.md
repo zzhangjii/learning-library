@@ -1,4 +1,6 @@
-![](images/100/Picture100-title.png)  
+# DevOps: JCS Pipeline Using Oracle Stack Manager
+
+![](images/100/Picture100-title.png)
 Update: October 14, 2017
 
 ## Introduction
@@ -20,7 +22,7 @@ You will take on 3 Personas during the workshop. The **Project Manager** Person
 
 - The following lab requires an Oracle Public Cloud account that will be supplied by your instructor.
 
-# Create Developer Cloud Service Project
+## Start Project
 
 ## Create Developer Cloud Service Project
 
@@ -104,7 +106,7 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
     ![](images/100/Picture100-14.png)
 
-# Create Project Issues
+## Create Project Issues
 
 ## Create Issues for the Opperations Pipeline
 
@@ -204,7 +206,7 @@ In this step you are still assuming the identity of the Project Manager, ***Lisa
 
     ![](images/100/Picture100-20.png)
 
-# Create Agile Board
+## Create Agile Board
 
 ## Create Agile Board and Initial Sprint
 

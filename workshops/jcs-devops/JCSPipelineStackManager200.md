@@ -25,7 +25,7 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
 - The following lab requires an Oracle Public Cloud account that will be supplied by your instructor. You will need to download and install latest version of Eclipse or use supplied compute VM.
 
-# Create Initial Git Repository for Infrastructure
+## Create Initial Git Repository for Infrastructure
 
 ## Create Initial Git Repository
 
@@ -203,7 +203,7 @@ Now we will create a build process that will provision a new Oracle Stack every 
 
 - Enter the following PSM CLI call for the **Execute Shell Command:**
 
-```
+```bash
 source ./JCSBuild.conf
 psm stack create -n $ServiceName -t Alpha-JCS-DBCS-Template \
   -p commonPwd:$CommonPassword \
@@ -239,7 +239,7 @@ We have now completed our task. To finish up this part of the lab we will want t
 
     ![](images/200/Picture200-25.png)
 
-# Provision new Alpha Office Environment by modifying configuration file
+## Provision new Alpha Office Environment by modifying configuration file
 
 ## Clone Project to Eclipse IDE
 

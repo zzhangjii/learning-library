@@ -1,4 +1,6 @@
-![](images/300/Picture300-title.png)  
+# DevOps: JCS Pipeline Using Oracle Stack Manager
+
+![](images/300/Picture300-title.png)
 
 Update: October 14, 2017
 
@@ -11,23 +13,26 @@ In the first lab (100), the Project Manager created a new project in the Develop
 ***To log issues***, click here to go to the [github oracle](https://github.com/oracle/cloud-native-devops-workshop/issues/new) repository issue submission form.
 
 ## Objectives
+
 - Access Developer Cloud Service
 - Import configuration from external Git Repository
 - Import Project into Eclipse
 - Setup Build and Deployment of UI using Developer Cloud Service and Java Cloud Service
 
 ## Required Artifacts
+
 - The following lab requires an Oracle Public Cloud account that will be supplied by your instructor. You will need to download and install latest version of Eclipse or use supplied compute VM.
 
-# Create Initial Git Repository for Alpha Office Catalog UI
+## Create Initial Git Repository for Alpha Office Catalog UI
 
 ## Create Initial Git Repository
 
 Although you will remain connected to the Oracle Cloud using the user account you were provided, you are to take on the Persona of ***John Dunbar*** as you perform the following steps. John is our Java developer who will be making the enhancements to our product catalog UI.
 
-![](images/john.png)  
+![](images/john.png)
 
 ### **STEP 1:** Update Issue Status
+
 - Click on the **AlphaOffice** Board **Active Sprints**.
 
     ![](images/300/Picture300-1.png)
@@ -78,7 +83,7 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
     ![](images/300/Picture300-8.png)
 
-- You are now placed into the job configuration screen.        
+- You are now placed into the job configuration screen.
 
     ![](images/300/Picture300-9.png)
 
@@ -92,7 +97,7 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
 - Click the **Triggers** tab. Select **Based on SCM polling schedule**.
 
-    ![](images/300/Picture300-12.png)    
+    ![](images/300/Picture300-12.png)
 
 - Click the **Build Steps** tab. Click **Add Build Step**, and select **Invoke Maven 3**.
 
@@ -100,11 +105,9 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
 - In the Maven Build Step set the following:
 
-    **Goal**: `clean -Dmaven.test.skip=true install` 
-    
+    **Goal**: `clean -Dmaven.test.skip=true install`
     (Note: This new Goal will allow integration tests to be run after the deployment of the application)
-    
-    **POM File**: `AlphaProducts/pom.xml`  
+    **POM File**: `AlphaProducts/pom.xml`
 
     ![](images/300/Picture300-14.png)
 
@@ -116,7 +119,7 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
 - Click the **Build Now** button to start the build. This will trigger for the build to be placed in the build queue.
 
-- Click on the **Jobs Overview** link to return to the jobs dashboard. 
+- Click on the **Jobs Overview** link to return to the jobs dashboard.
 
     ![](images/300/Picture300-16.5.png)
 
@@ -127,8 +130,6 @@ Now that we have the source code in our managed GIT repository, we need to creat
 - Once the build has completed, you should see a green check next to the build name.  Wait for the build to complete before continuing to the next step, as we need the build artifact to complete the deployment configuration.
 
     ![](images/300/Picture300-16.7.png)
-
-
 
 ### **STEP 4:** Retrieve Public IP of JCS Instance for Deployment
 
@@ -164,7 +165,7 @@ Before we can configure deployment of our application we need to make note of th
 
     ![](images/300/Picture300-23.png)
 
-- To the right of the Deployment Target, click **New** and select **Java Cloud Service**    
+- To the right of the Deployment Target, click **New** and select **Java Cloud Service**
 
     ![](images/300/Picture300-24.png)
 
@@ -235,7 +236,7 @@ Before we can configure deployment of our application we need to make note of th
 
 - Open a new tab in the browser and enter the following URL:
 
-    **https://`Public IP of Load Balancer`/AlphaProducts**
+    `https://<Public IP of Load Balancer>/AlphaProducts`
 
 - On the security warning click **ADVANCED** and then click **Proceed to ...**
 
@@ -291,7 +292,7 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
 - click the **Issues** to expand, then double click on **Mine** to expand your list. Once you see the list of your Issues, then double click on **Add dollar sign in the display of the price**.
 
-    ![](images/300/Picture300-46.png)   
+    ![](images/300/Picture300-46.png)
 
 - Scroll down to the bottom of the **Add dollar sign in the display of the price** window. In the **Actions section**, and change the Actions to **Accept (change status to ASSIGNED)**, then click on **Submit**.
 
@@ -307,7 +308,6 @@ Our next activity is to work on the defect issue that has been assigned to us. W
  Switch To > New Branch**
 
  ![](images/300/Picture300-49.png)
-
 
 - Enter **Defect4** for the Branch name, and click **Finish**. It may take minute to update the Maven dependencies. 
 
@@ -328,9 +328,9 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
  ![](images/300/Picture300-53.png)
 
-- Drag **displayrecords.jsp** from **Unstaged Changes** to **Staged Changes**. 
+- Drag **displayrecords.jsp** from **Unstaged Changes** to **Staged Changes**.
 
-- Enter `Added dollar sign to display of Price` for Commit Message. 
+- Enter `Added dollar sign to display of Price` for Commit Message.
 
 - Click **Commit and Push**
 
@@ -359,7 +359,6 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 - Now that John Dunbar has completed the task of adding dollar sign, a **Merge Request** can be created and assigned to Lisa Jones for review. Click on **Merge Requests** on the navigation panel, and then click on the **New Merge Request** button.
 
     ![](images/300/image084.5.png)
-
 
 - Enter the following information into the **New Merge Request** and click **Next**
 
@@ -421,7 +420,7 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
 - Open a new tab in the browser and enter the following URL:
 
-    **https://`Public IP of Load Balancer`/AlphaProducts**
+    `https://<Public IP of Load Balancer>/AlphaProducts`
 
 - You should now see the update **Alpha Office Product Catalog UI**
 
