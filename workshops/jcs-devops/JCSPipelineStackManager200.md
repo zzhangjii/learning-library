@@ -25,7 +25,7 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
 - The following lab requires an Oracle Public Cloud account that will be supplied by your instructor. You will need to download and install latest version of Eclipse or use supplied compute VM.
 
-## Create Initial Git Repository for Infrastructure
+# Create Initial Git Repository for Infrastructure
 
 ## Create Initial Git Repository
 
@@ -78,7 +78,7 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
 ### **STEP 3:** Create Template Update Build Process
 
-Now that we have the configuration code in our managed GIT repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. This build process will trigger any time the Alpha Office Stack template is modified and upload a new version via PSMcli (PaaS Serivice Manager command line interface) to the Oracle Cloud.
+Now that we have the configuration code in our managed GIT repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. This build process will trigger any time the Alpha Office Stack template is modified and upload a new version via PSMcli (PaaS Service Manager command line interface) to the Oracle Cloud.
 
 - On navigation panel, click **Build** to access the build page and click **New Job**.
 
@@ -93,7 +93,8 @@ Now that we have the configuration code in our managed GIT repository, we need t
     ![](images/200/Picture200-10.png)
 
 - Click the **Source Control** tab. Click **Git** and select **JCSStackAlphaInfrastructure.git** from the drop down.
-- Under the **Branches** section, expand the **Advanced Git Settings** and enter `Alpha-JCS-DBCS-Template.yaml` in the **Included Regions** field. 
+
+- Under the **Branches** section, expand the **Advanced Git Settings** and enter `Alpha-JCS-DBCS-Template.yaml` in the **Included Regions** field.
 
     ![](images/200/Picture200-11.png)
 
@@ -105,7 +106,7 @@ Now that we have the configuration code in our managed GIT repository, we need t
 
     ![](images/200/Picture200-12.png)
 
-- Enter your Oracle Cloud credentials given to you by the instructor or Trail confirmation email. Ensure that you enter the correct values for **Username**, **Password** and **Identity Domain**. ***Note*** that the default set for the **Region** may not be correct, and must be properly set. The value for the **Output Format** should be set to **JSON**.
+- Enter your Oracle Cloud credentials given to you by the instructor or Trail confirmation email. Ensure that you enter the correct values for **Username**, **Password** and **Identity Domain**. Note that the default set for the **Region** may not be correct, and must be properly set. The value for the **Output Format** should be set to **JSON**.
 
     ![](images/200/Picture200-12.2.png)
 
@@ -193,7 +194,7 @@ Now we will create a build process that will provision a new Oracle Stack every 
 
     ![](images/200/Picture200-31.png)
 
-- Enter your Oracle Cloud credentials given to you by the instructor or Trail confirmation email. Ensure that you enter the correct values for **Username**, **Password** and **Identity Domain**. ***Note*** that the default set for the **Region** may not be correct, and must be properly set. The value for the **Output Format** should be set to **JSON**.
+- Enter your Oracle Cloud credentials given to you by the instructor or Trail confirmation email. Ensure that you enter the correct values for **Username**, **Password** and **Identity Domain**. Note that the default set for the **Region** may not be correct, and must be properly set. The value for the **Output Format** should be set to **JSON**.
 
     ![](images/200/Picture200-30.2.png)
 
@@ -239,7 +240,7 @@ We have now completed our task. To finish up this part of the lab we will want t
 
     ![](images/200/Picture200-25.png)
 
-## Provision new Alpha Office Environment by modifying configuration file
+# Provision new Alpha Office Environment by modifying configuration file
 
 ## Clone Project to Eclipse IDE
 
@@ -319,7 +320,7 @@ In the previous steps we updated the status of the Tasks using the web interface
 
 ### **STEP 11:** Modify Configuration File
 
-- In the Exclipse **Project Explorer** panel, expand the project and double click on **JCSBuild.conf** to open
+- In the Eclipse **Project Explorer** panel, expand the project and double click on **JCSBuild.conf** to open
 
     ![](images/200/Picture200-46.png)
 
@@ -327,7 +328,7 @@ In the previous steps we updated the status of the Tasks using the web interface
 
     **ServiceName=Alpha02**
 
-    **BackupStroageContainer=Storage-`Your OPC identity Domain`/Alpha02Backup**
+    **BackupStorageContainer=Storage-`Your OPC identity Domain`/Alpha02Backup**
 
     ![](images/200/Picture200-47.png)
 
@@ -361,7 +362,7 @@ In the previous steps we updated the status of the Tasks using the web interface
 
 ### **STEP 14:** Monitor in Oracle Cloud
 
-- Switch back to browser tab with **Oracle Stack Manager**.  Click on the **Stacks** tab. You should see that Alpha02 stack is "Creating" and building out an Oracle Database Cloud Service and a Java Cloud Service. You may need to click on the refresh button if the stack is not immediately visibile.
+- Switch back to browser tab with **Oracle Stack Manager**.  Click on the **Stacks** tab. You should see that Alpha02 stack is "Creating" and building out an Oracle Database Cloud Service and a Java Cloud Service. You may need to click on the refresh button if the stack is not immediately visible.
 
     ![](images/200/Picture200-53.png)
 
