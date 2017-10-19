@@ -29,7 +29,7 @@ In this lab, Lisa Jones (The Project Manager) will complete the Sprint and view 
 
 ### **STEP 1**: Login to your Oracle Cloud Account
 
-- This Lab assumes that you completed Lab 100, 200, and 300 and are still connected to the Oracle Cloud, that you're still in the Developer cloud Service Dashboard, and you're viewing the "Alpha Office Product Catalog Project". If for some reason that is not the case, follow the first several Steps of Lab 100 to once again view the Developer Cloud Service Console.
+- This Lab assumes that you completed Lab 100, 200, and 300 and are still connected to the Oracle Cloud, that you're still in the Developer cloud Service Dashboard, and you're viewing the "Alpha Office Product Catalog Project." If for some reason that is not the case, follow the first several Steps of Lab 100 to once again view the Developer Cloud Service Console.
 
 - Although you will remain connected to the Oracle Cloud using the user account you were provided, you are to take on the Persona of ***Lisa Jones*** as you perform the following steps.
 
