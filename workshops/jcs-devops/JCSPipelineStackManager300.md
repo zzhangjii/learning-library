@@ -23,13 +23,13 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
 - The following lab requires an Oracle Public Cloud account that will be supplied by your instructor. You will need to download and install latest version of Eclipse or use supplied compute VM.
 
-## Create Initial Git Repository for Alpha Office Catalog UI
+# Create Initial Git Repository for Alpha Office Catalog UI
 
 ## Create Initial Git Repository
 
 Although you will remain connected to the Oracle Cloud using the user account you were provided, you are to take on the Persona of ***John Dunbar*** as you perform the following steps. John is our Java developer who will be making the enhancements to our product catalog UI.
 
-![](images/john.png)  
+![](images/john.png)
 
 ### **STEP 1:** Update Issue Status
 
@@ -97,7 +97,7 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
 - Click the **Triggers** tab. Select **Based on SCM polling schedule**.
 
-    ![](images/300/Picture300-12.png)    
+    ![](images/300/Picture300-12.png)
 
 - Click the **Build Steps** tab. Click **Add Build Step**, and select **Invoke Maven 3**.
 
@@ -149,7 +149,7 @@ Before we can configure deployment of our application we need to make note of th
 
     ![](images/300/Picture300-20.png)
 
-- Expland the **Load Balancer** section and copy down the **Public IP** to be used later in the lab.
+- Expand the **Load Balancer** section and copy down the **Public IP** to be used later in the lab.
 
     ![](images/300/Picture300-21.png)
 
@@ -167,7 +167,7 @@ Before we can configure deployment of our application we need to make note of th
 
     ![](images/300/Picture300-23.png)
 
-- To the right of the Deployment Target, click **New** and select **Java Cloud Service**    
+- To the right of the Deployment Target, click **New** and select **Java Cloud Service**
 
     ![](images/300/Picture300-24.png)
 
@@ -330,7 +330,7 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
  ![](images/300/Picture300-53.png)
 
-- Drag **displayrecords.jsp** from **Unstaged Changes** to **Staged Changes**. 
+- Drag **displayrecords.jsp** from **Unstaged Changes** to **Staged Changes**.
 
 - Enter `Added dollar sign to display of Price` for Commit Message. 
 
@@ -354,7 +354,7 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
 ### **STEP 13:** Create Merge request
 
-- Return to the Developer Cloud Service Dasboard in the browser. Click on **Code**. Select the **Defect4** from the branch selection dropdown, and then click on the **Logs** sub tab. Now view the commit made to the branch from within Eclipse.
+- Return to the Developer Cloud Service Dashboard in the browser. Click on **Code**. Select the **Defect4** from the branch selection dropdown, and then click on the **Logs** sub tab. Now view the commit made to the branch from within Eclipse.
 
     ![](images/300/Picture300-58.png)
 
@@ -404,9 +404,9 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
     ![](images/300/Picture300-65.png)
 
-### **STEP 15:** Monitor Build and Deloyment
+### **STEP 15:** Monitor Build and Deployment
 
-- Now that the code has been commited to the master branch, ***it may take a minute or two***, but the build and deployment will automatically start. On the navigation panel click **Build**, and you should see **Alpha Office Product Catalog UI** in the queue.
+- Now that the code has been committed to the master branch, ***it may take a minute or two***, but the build and deployment will automatically start. On the navigation panel click **Build**, and you should see **Alpha Office Product Catalog UI** in the queue.
 
     ![](images/300/Picture300-66.png)
 
@@ -414,7 +414,7 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
     ![](images/300/Picture300-67.png)
 
-- On the navaigation panel click **deploy**. The **Last deployment** will be set to **Just Now** when the deployment completes.
+- On the navigation panel click **deploy**. The **Last deployment** will be set to **Just Now** when the deployment completes.
 
     ![](images/300/Picture300-68.png)
 
@@ -430,7 +430,7 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
 ### **STEP 17:** Complete Task
 
-We have now verified that **Alpha Office Product Catalog UI** is now displaying the price corectly. To finish up this part of the lab, we will mark the Issue as completed in the Sprint.
+We have now verified that **Alpha Office Product Catalog UI** is now displaying the price correctly. To finish up this part of the lab, we will mark the Issue as completed in the Sprint.
 
 - Back in the Developer Cloud Service window, click **Agile**, followed by clicking **Active Sprints**.
 
