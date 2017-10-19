@@ -1,3 +1,5 @@
+# DevOps: JCS Pipeline Using Oracle Stack Manager
+
 ![](images/300/Picture300-title.png)  
 
 Update: October 14, 2017
@@ -11,15 +13,17 @@ In the first lab (100), the Project Manager created a new project in the Develop
 ***To log issues***, click here to go to the [github oracle](https://github.com/oracle/cloud-native-devops-workshop/issues/new) repository issue submission form.
 
 ## Objectives
+
 - Access Developer Cloud Service
 - Import configuration from external Git Repository
 - Import Project into Eclipse
 - Setup Build and Deployment of UI using Developer Cloud Service and Java Cloud Service
 
 ## Required Artifacts
+
 - The following lab requires an Oracle Public Cloud account that will be supplied by your instructor. You will need to download and install latest version of Eclipse or use supplied compute VM.
 
-# Create Initial Git Repository for Alpha Office Catalog UI
+## Create Initial Git Repository for Alpha Office Catalog UI
 
 ## Create Initial Git Repository
 
@@ -28,7 +32,8 @@ Although you will remain connected to the Oracle Cloud using the user account yo
 ![](images/john.png)  
 
 ### **STEP 1:** Update Issue Status
-- Click on the **AlphaOffice** Board **Active Sprints**.
+
+- From the Developer Cloud console, click on the **AlphaOffice** Agile Board **Active Sprints**.
 
     ![](images/300/Picture300-1.png)
 
@@ -70,15 +75,15 @@ Although you will remain connected to the Oracle Cloud using the user account yo
 
 Now that we have the source code in our managed GIT repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. We will set up a Maven build process in this section.
 
-- On navigation panel click **Build** to access the build page and click **New Job**.
+- On navigation panel, click **Build** to access the build page and click **New Job**.
 
     ![](images/300/Picture300-7.png)
 
-- In the New Job popup enter **Alpha Office Product Catalog UI** for the Job Name, and then click **Save**.
+- In the New Job popup enter `Alpha Office Product Catalog UI` for the Job Name, and then click **Save**.
 
     ![](images/300/Picture300-8.png)
 
-- You are now placed into the job configuration screen.        
+- You are now placed into the job configuration screen.
 
     ![](images/300/Picture300-9.png)
 
@@ -100,11 +105,11 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
 - In the Maven Build Step set the following:
 
-    **Goal**: `clean -Dmaven.test.skip=true install` 
-    
+    **Goal**: `clean -Dmaven.test.skip=true install`
+
     (Note: This new Goal will allow integration tests to be run after the deployment of the application)
-    
-    **POM File**: `AlphaProducts/pom.xml`  
+
+    **POM File**: `AlphaProducts/pom.xml`
 
     ![](images/300/Picture300-14.png)
 
@@ -124,11 +129,9 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
     ![](images/300/Picture300-16.6.png)
 
-- Once the build has completed, you should see a green check next to the build name.  Wait for the build to complete before continuing to the next step, as we need the build artifact to complete the deployment configuration.
+- Once the build has completed, you should see a green check next to the build name.  **Wait for the build to complete*** before continuing to the next step, as we need the build artifact to complete the deployment configuration.
 
     ![](images/300/Picture300-16.7.png)
-
-
 
 ### **STEP 4:** Retrieve Public IP of JCS Instance for Deployment
 
@@ -235,7 +238,7 @@ Before we can configure deployment of our application we need to make note of th
 
 - Open a new tab in the browser and enter the following URL:
 
-    **https://`Public IP of Load Balancer`/AlphaProducts**
+    `https://<Public IP of Load Balancer>/AlphaProducts`
 
 - On the security warning click **ADVANCED** and then click **Proceed to ...**
 
@@ -308,16 +311,15 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
  ![](images/300/Picture300-49.png)
 
-
 - Enter **Defect4** for the Branch name, and click **Finish**. It may take minute to update the Maven dependencies. 
 
     ![](images/300/Picture300-50.png)
 
-- Expand **AlpahProducts > WebContent** then double click on **displayrecords.jsp**
+- Expand **AlphaProducts > WebContent** then double click on **displayrecords.jsp**
 
     ![](images/300/Picture300-51.png)
 
-- On line 20 of **displayrecords.jsp** add **$** after the Price and click **Save All** ![](images/SaveAll.png)
+- On line 20 of **displayrecords.jsp** add **$** after the Price and click **Save All** ![](images/SaveAll.png). Note: The line number is displayed at the bottom right-hand side of the Eclipse window.
 
     ![](images/300/Picture300-52.png)
 
@@ -352,14 +354,13 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
 ### **STEP 13:** Create Merge request
 
-- Return to the Developer Cloud Service Dasboard in the browser. Click on **Code**. Select the **Defect4** branch and then click on the **Commits** sub tab. Now view the commit made to the branch from within Eclipse.
+- Return to the Developer Cloud Service Dasboard in the browser. Click on **Code**. Select the **Defect4** from the branch selection dropdown, and then click on the **Logs** sub tab. Now view the commit made to the branch from within Eclipse.
 
     ![](images/300/Picture300-58.png)
 
 - Now that John Dunbar has completed the task of adding dollar sign, a **Merge Request** can be created and assigned to Lisa Jones for review. Click on **Merge Requests** on the navigation panel, and then click on the **New Merge Request** button.
 
     ![](images/300/image084.5.png)
-
 
 - Enter the following information into the **New Merge Request** and click **Next**
 
@@ -381,7 +382,7 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
 ## Merge the Branch as Lisa Jones
 
-### **STEP 13:** Merge Requests
+### **STEP 14:** Merge Requests
 
 - In the following steps the logical persona “Lisa” will merge the branch created by “John” into the master.
 
@@ -403,9 +404,9 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
     ![](images/300/Picture300-65.png)
 
-### **STEP 14:** Monitor Build and Deloyment
+### **STEP 15:** Monitor Build and Deloyment
 
-- Now that the code has been commited to the master branch, I may take a minute or two, but the build and deployment will automatically start. On the navigation panel click **Build**, and you should see **Alpha Office Product Catalog UI** in the queue.
+- Now that the code has been commited to the master branch, ***it may take a minute or two***, but the build and deployment will automatically start. On the navigation panel click **Build**, and you should see **Alpha Office Product Catalog UI** in the queue.
 
     ![](images/300/Picture300-66.png)
 
@@ -417,17 +418,17 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
     ![](images/300/Picture300-68.png)
 
-### **STEP 15:** Open UI in browser
+### **STEP 16:** Open UI in browser
 
 - Open a new tab in the browser and enter the following URL:
 
-    **https://`Public IP of Load Balancer`/AlphaProducts**
+    `https://<Public IP of Load Balancer>/AlphaProducts`
 
 - You should now see the update **Alpha Office Product Catalog UI**
 
     ![](images/300/Picture300-69.png)
 
-### **STEP 16:** Complete Task
+### **STEP 17:** Complete Task
 
 We have now verified that **Alpha Office Product Catalog UI** is now displaying the price corectly. To finish up this part of the lab, we will mark the Issue as completed in the Sprint.
 

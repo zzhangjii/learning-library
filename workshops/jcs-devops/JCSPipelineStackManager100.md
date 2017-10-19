@@ -1,5 +1,6 @@
+# DevOps: JCS Pipeline Using Oracle Stack Manager
 
-![](images/100/Picture100-title.png)  
+![](images/100/Picture100-title.png)
 Update: October 14, 2017
 
 ## Introduction
@@ -8,23 +9,25 @@ This is the first of several labs that are part of the **DevOps JCS Pipeline usi
 
 You will take on 3 Personas during the workshop. The **Project Manager** Persona will create the projects, add tasks and features to be worked on, and assign tasks to team memebers.  The Project Manager will then start the initial sprint. The **Operations Engineer** persona will develop a new pipeline for deployment of JCS and DBCS environment. The **Java Developer** persona will develop a new struts based UI to display the product catalog. During the workshop, you will get exposure to Oracle Developer Cloud Service, Java Cloud Service and Oracle Stack Manager.
 
-
 ***To log issues***, click here to go to the [github oracle](https://github.com/oracle/cloud-native-devops-workshop/issues/new) repository issue submission form.
 
 ## Objectives
+
 - Create Initial Project
 - Create Issues / Task
 - Create Agile Board and initial Sprint
 - Add Issues to Sprint
 
 ## Required Artifacts
+
 - The following lab requires an Oracle Public Cloud account that will be supplied by your instructor.
 
-# Create Developer Cloud Service Project
+## Start Project
 
 ## Create Developer Cloud Service Project
 
 ### **STEP 1:** Login to your Oracle Cloud Account
+
 - From any browser, go to the URL:
     `https://cloud.oracle.com`
 
@@ -44,7 +47,7 @@ You will take on 3 Personas during the workshop. The **Project Manager** Person
 
 - Once you Identity Domain is set, enter your User Name and Password and click **Sign In**
 
-    **NOTE:** For this lab you will assume the role of Project Manager ***Lisa Jones***. Although you are assuming the identify of Lisa Jones, you will log into the account using the **username** provided to you by your instructor, given to you by your corporation, or supplied to you as part of an Oracle Trial. As you progress through the workshop, you will remain logged in as a single user, but you will make “logical” changes from Lisa Jones the Project Manager to other personas.
+    **NOTE:** For this lab you will assume the role of Project Manager ***Lisa Jones***. Although you are assuming the identify of Lisa Jones, you will log into the account using the **username** provided to you by your instructor, given to you by your corporation, or supplied to you as part of an Oracle Trial. As you progress through the workshop, you will remain logged in as a single user, but you will make “logical” changes from Lisa Jones the Project Manager to the other personas.
 
     ![](images/lisa.png)
 
@@ -54,11 +57,11 @@ You will take on 3 Personas during the workshop. The **Project Manager** Person
 
     ![](images/100/Picture100-5.png)
 
-- If all of your services are not visible, **click** on the **Customize Dashboard**, and you can add services to the dashboard by clicking **Show.** If you do not want to see a specific service click **Hide**. Make sure that the **Developer** service is marked as show.
+- If all of your services are not visible, **click** on the **Customize Dashboard**, and you can add services to the dashboard by clicking **Show.** If you do not want to see a specific service, click **Hide**. Make sure that the **Developer** service is marked as show.
 
     ![](images/100/Picture100-6.png)
 
-### **STEP 6:** Login to Developer Cloud Service
+### **STEP 2:** Login to Developer Cloud Service
 
 Oracle Developer Cloud Service provides a complete development platform that streamlines team development processes and automates software delivery. The integrated platform includes an issue tracking system, agile development dashboards, code versioning and review platform, continuous integration and delivery automation, as well as team collaboration features such as wikis and live activity stream. With a rich web based dashboard and integration with popular development tools, Oracle Developer Cloud Service helps deliver better applications faster.
 
@@ -66,7 +69,7 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
     ![](images/100/Picture100-7.png)
 
-- The Service Details page gives you a quick glance of the service status overview.
+- The Service Details page gives you a quick glance of the service status overview. **Click** on the **Open Service Console** button.
 
     ![](images/100/Picture100-8.png)
 
@@ -74,7 +77,7 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
     ![](images/100/Picture100-9.png)
 
-### **STEP 7:** Create Developer Cloud Service Project
+### **STEP 3:** Create Developer Cloud Service Project
 
 - Click **New Project** to start the project create wizard.
 - On Details screen enter the following data and click on **Next**.
@@ -103,11 +106,11 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
     ![](images/100/Picture100-14.png)
 
-# Create Project Issues
+## Create Project Issues
 
 ## Create Issues for the Opperations Pipeline
 
-### **STEP 8:** Create Issue for the initial GIT Repository Creation
+### **STEP 4:** Create Issue for the initial GIT Repository Creation
 
 In this step you are still assuming the identity of the Project Manager, ***Lisa Jones***.
 
@@ -133,12 +136,11 @@ In this step you are still assuming the identity of the Project Manager, ***Lisa
 
     **Story Points:** `1`
 
-Note: Story point is an arbitrary measure used by Scrum teams. They are used to measure the effort required to implement a story. This [Site](https://agilefaq.wordpress.com/2007/11/13/what-is-a-story-point/) will provide more information.
+    Note: Story point is an arbitrary measure used by Scrum teams. They are used to measure the effort required to implement a story. This [Site](https://agilefaq.wordpress.com/2007/11/13/what-is-a-story-point/) will provide more information.
 
+    ![](images/100/Picture100-16.png)
 
-![](images/100/Picture100-16.png)
-
-### **STEP 9:** Create Issue for Provision New Alpha Office Environment
+### **STEP 5:** Create Issue for Provision New Alpha Office Environment
 
 - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
 
@@ -160,7 +162,7 @@ Note: Story point is an arbitrary measure used by Scrum teams. They are used to 
 
 ## Create Issues for Alpha Office UI
 
-### **STEP 10:** Create Issue for initial GIT Repository creation and setup
+### **STEP 6:** Create Issue for initial GIT Repository creation and setup
 
 - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
 
@@ -180,7 +182,7 @@ Note: Story point is an arbitrary measure used by Scrum teams. They are used to 
 
     ![](images/100/Picture100-18.png)
 
-### **STEP 11:** Create Issue for Displaying Price
+### **STEP 7:** Create Issue for Displaying Price
 
 - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
 
@@ -204,8 +206,7 @@ Note: Story point is an arbitrary measure used by Scrum teams. They are used to 
 
     ![](images/100/Picture100-20.png)
 
-
-# Create Agile Board
+## Create Agile Board
 
 ## Create Agile Board and Initial Sprint
 
@@ -213,16 +214,13 @@ Note: Story point is an arbitrary measure used by Scrum teams. They are used to 
 
 Before you start using the Agile methodology in Oracle Developer Cloud Service, it is important that you know the following key components of the Agile page.
 
-- **Board** – A Board is used to display and update issues of the project. When you create a Board, you associate it with an Issue Query. The Board shows Issues returned by the Query.
-You can either use a Board created by a team member, or create your own Board. You can create as many Boards as you like.
-- **Sprint** – A Sprint is a short duration (usually, a week or two) during which your team members try to implement a product component.
-You add the product component related issues to a Sprint. When you start working on a product component, you start (or activate) the related Sprints. To update issues using a Sprint, you must first activate the Sprint and add the Sprint to the Active Sprints view.
-- **Backlog view** – Lists all Issues returned by the Board’s Query. The view also displays all active and inactive Sprints of the Board, and the sprints from other Boards that contain Issues matching the Board’s Query.
-Each Sprint lists issues that are added to it. The Backlog section (the last section of the Backlog page) lists all open issues that are not part of any Sprint yet. The Backlog view does not show the resolved and closed Issues.
+- **Board** – A Board is used to display and update issues of the project. When you create a Board, you associate it with an Issue Query. The Board shows Issues returned by the Query. You can either use a Board created by a team member, or create your own Board. You can create as many Boards as you like.
+- **Sprint** – A Sprint is a short duration (usually, a week or two) during which your team members try to implement a product component. You add the product component related issues to a Sprint. When you start working on a product component, you start (or activate) the related Sprints. To update issues using a Sprint, you must first activate the Sprint and add the Sprint to the Active Sprints view.
+- **Backlog view** – Lists all Issues returned by the Board’s Query. The view also displays all active and inactive Sprints of the Board, and the sprints from other Boards that contain Issues matching the Board’s Query. Each Sprint lists issues that are added to it. The Backlog section (the last section of the Backlog page) lists all open issues that are not part of any Sprint yet. The Backlog view does not show the resolved and closed Issues.
 - **Active Sprints view** – Lists all active Sprints of the Board and enables you to update an Issue status simply by dragging and dropping it to the respective status columns.
 - **Reports view** – select the Burndown Chart tab to display the amount of work left to do in a Sprint or use the Sprint Report tab to list open and completed Issues of a Sprint.
 
-### **STEP 12:** Create Agile Board
+### **STEP 8:** Create Agile Board
 
 - Click **Agile** on the Left Side Menu to display a page listing all existing Boards.
 
@@ -236,7 +234,7 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 
     ![](images/100/Picture100-22.png)
 
-### **STEP 13:** Create Sprint
+### **STEP 9:** Create Sprint
 
 - We will now Create our first Sprint. Click **New Sprint**. Enter the following data and click **OK**.
 
@@ -246,7 +244,7 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 
     ![](images/100/Picture100-23.png)
 
-### **STEP 14:** Add Backlog Issues to Sprint
+### **STEP 10:** Add Backlog Issues to Sprint
 
 - Next we want to add the backlog issues to the newly created spring. **Drag and drop** the **4 issues** one at a time upward onto the **Sprint 1** section. This will add the issues to the sprint.
 
@@ -254,7 +252,7 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 
     ![](images/100/Picture100-25.png)
 
-### **STEP 15:** View Active Sprint and Reports
+### **STEP 11:** View Active Sprint and Reports
 
 - Click **Start Sprint.** Leave defaults and click **Start**
 
