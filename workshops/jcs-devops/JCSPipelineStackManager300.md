@@ -1,6 +1,6 @@
 # DevOps: JCS Pipeline Using Oracle Stack Manager
 
-![](images/300/Picture300-title.png)
+![](images/300/Picture300-title.png)  
 
 Update: October 14, 2017
 
@@ -29,11 +29,11 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
 Although you will remain connected to the Oracle Cloud using the user account you were provided, you are to take on the Persona of ***John Dunbar*** as you perform the following steps. John is our Java developer who will be making the enhancements to our product catalog UI.
 
-![](images/john.png)
+![](images/john.png)  
 
 ### **STEP 1:** Update Issue Status
 
-- Click on the **AlphaOffice** Board **Active Sprints**.
+- From the Developer Cloud console, click on the **AlphaOffice** Agile Board **Active Sprints**.
 
     ![](images/300/Picture300-1.png)
 
@@ -75,11 +75,11 @@ Although you will remain connected to the Oracle Cloud using the user account yo
 
 Now that we have the source code in our managed GIT repository, we need to create a build process that will be triggered whenever a commit is made to the master branch. We will set up a Maven build process in this section.
 
-- On navigation panel click **Build** to access the build page and click **New Job**.
+- On navigation panel, click **Build** to access the build page and click **New Job**.
 
     ![](images/300/Picture300-7.png)
 
-- In the New Job popup enter **Alpha Office Product Catalog UI** for the Job Name, and then click **Save**.
+- In the New Job popup enter `Alpha Office Product Catalog UI` for the Job Name, and then click **Save**.
 
     ![](images/300/Picture300-8.png)
 
@@ -97,7 +97,7 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
 - Click the **Triggers** tab. Select **Based on SCM polling schedule**.
 
-    ![](images/300/Picture300-12.png)
+    ![](images/300/Picture300-12.png)    
 
 - Click the **Build Steps** tab. Click **Add Build Step**, and select **Invoke Maven 3**.
 
@@ -106,7 +106,9 @@ Now that we have the source code in our managed GIT repository, we need to creat
 - In the Maven Build Step set the following:
 
     **Goal**: `clean -Dmaven.test.skip=true install`
+
     (Note: This new Goal will allow integration tests to be run after the deployment of the application)
+
     **POM File**: `AlphaProducts/pom.xml`
 
     ![](images/300/Picture300-14.png)
@@ -119,7 +121,7 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
 - Click the **Build Now** button to start the build. This will trigger for the build to be placed in the build queue.
 
-- Click on the **Jobs Overview** link to return to the jobs dashboard.
+- Click on the **Jobs Overview** link to return to the jobs dashboard. 
 
     ![](images/300/Picture300-16.5.png)
 
@@ -127,7 +129,7 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
     ![](images/300/Picture300-16.6.png)
 
-- Once the build has completed, you should see a green check next to the build name.  Wait for the build to complete before continuing to the next step, as we need the build artifact to complete the deployment configuration.
+- Once the build has completed, you should see a green check next to the build name.  **Wait for the build to complete*** before continuing to the next step, as we need the build artifact to complete the deployment configuration.
 
     ![](images/300/Picture300-16.7.png)
 
@@ -165,7 +167,7 @@ Before we can configure deployment of our application we need to make note of th
 
     ![](images/300/Picture300-23.png)
 
-- To the right of the Deployment Target, click **New** and select **Java Cloud Service**
+- To the right of the Deployment Target, click **New** and select **Java Cloud Service**    
 
     ![](images/300/Picture300-24.png)
 
@@ -292,7 +294,7 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
 - click the **Issues** to expand, then double click on **Mine** to expand your list. Once you see the list of your Issues, then double click on **Add dollar sign in the display of the price**.
 
-    ![](images/300/Picture300-46.png)
+    ![](images/300/Picture300-46.png)   
 
 - Scroll down to the bottom of the **Add dollar sign in the display of the price** window. In the **Actions section**, and change the Actions to **Accept (change status to ASSIGNED)**, then click on **Submit**.
 
@@ -313,11 +315,11 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
     ![](images/300/Picture300-50.png)
 
-- Expand **AlpahProducts > WebContent** then double click on **displayrecords.jsp**
+- Expand **AlphaProducts > WebContent** then double click on **displayrecords.jsp**
 
     ![](images/300/Picture300-51.png)
 
-- On line 20 of **displayrecords.jsp** add **$** after the Price and click **Save All** ![](images/SaveAll.png)
+- On line 20 of **displayrecords.jsp** add **$** after the Price and click **Save All** ![](images/SaveAll.png). Note: The line number is displayed at the bottom right-hand side of the Eclipse window.
 
     ![](images/300/Picture300-52.png)
 
@@ -328,9 +330,9 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
  ![](images/300/Picture300-53.png)
 
-- Drag **displayrecords.jsp** from **Unstaged Changes** to **Staged Changes**.
+- Drag **displayrecords.jsp** from **Unstaged Changes** to **Staged Changes**. 
 
-- Enter `Added dollar sign to display of Price` for Commit Message.
+- Enter `Added dollar sign to display of Price` for Commit Message. 
 
 - Click **Commit and Push**
 
@@ -352,7 +354,7 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
 ### **STEP 13:** Create Merge request
 
-- Return to the Developer Cloud Service Dasboard in the browser. Click on **Code**. Select the **Defect4** branch and then click on the **Commits** sub tab. Now view the commit made to the branch from within Eclipse.
+- Return to the Developer Cloud Service Dasboard in the browser. Click on **Code**. Select the **Defect4** from the branch selection dropdown, and then click on the **Logs** sub tab. Now view the commit made to the branch from within Eclipse.
 
     ![](images/300/Picture300-58.png)
 
@@ -404,7 +406,7 @@ Our next activity is to work on the defect issue that has been assigned to us. W
 
 ### **STEP 15:** Monitor Build and Deloyment
 
-- Now that the code has been commited to the master branch, I may take a minute or two, but the build and deployment will automatically start. On the navigation panel click **Build**, and you should see **Alpha Office Product Catalog UI** in the queue.
+- Now that the code has been commited to the master branch, ***it may take a minute or two***, but the build and deployment will automatically start. On the navigation panel click **Build**, and you should see **Alpha Office Product Catalog UI** in the queue.
 
     ![](images/300/Picture300-66.png)
 
