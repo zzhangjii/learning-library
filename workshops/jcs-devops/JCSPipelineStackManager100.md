@@ -1,15 +1,15 @@
 # DevOps: JCS Pipeline Using Oracle Stack Manager
 
 ![](images/100/Picture100-title.png)
-Update: October 14, 2017
+Update: October 19, 2017
 
 ## Introduction
 
 This is the first of several labs that are part of the **DevOps JCS Pipeline using Oracle Stack Manger workshop**. This workshop will walk you through the Software Development Lifecycle (SDLC) for a Java Cloud Service (JCS) project that goes through Infrastructure as Code and deployment of Struts application.
 
-You will take on 3 Personas during the workshop. The **Project Manager** Persona will create the projects, add tasks and features to be worked on, and assign tasks to team memebers.  The Project Manager will then start the initial sprint. The **Operations Engineer** persona will develop a new pipeline for deployment of JCS and DBCS environment. The **Java Developer** persona will develop a new struts based UI to display the product catalog. During the workshop, you will get exposure to Oracle Developer Cloud Service, Java Cloud Service and Oracle Stack Manager.
+You will take on 3 Personas during the workshop. The **Project Manager** Persona will create the projects, add tasks and features to be worked on, and assign tasks to team members.  The Project Manager will then start the initial sprint. The **Operations Engineer** persona will develop a new pipeline for deployment of JCS and DBCS environment. The **Java Developer** persona will develop a new struts based UI to display the product catalog. During the workshop, you will get exposure to Oracle Developer Cloud Service, Java Cloud Service and Oracle Stack Manager.
 
-***To log issues***, click here to go to the [github oracle](https://github.com/oracle/cloud-native-devops-workshop/issues/new) repository issue submission form.
+***To log issues***, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
 ## Objectives
 
@@ -22,7 +22,7 @@ You will take on 3 Personas during the workshop. The **Project Manager** Person
 
 - The following lab requires an Oracle Public Cloud account that will be supplied by your instructor.
 
-## Start Project
+# Start Project
 
 ## Create Developer Cloud Service Project
 
@@ -73,7 +73,7 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
     ![](images/100/Picture100-8.png)
 
-- Click **New Project** to start the project create wizard. **Note**: Depending on the status of your developer cloud serivce, it is possible that the button may be labled **Create Project** 
+- Click **New Project** to start the project create wizard. **Note**: Depending on the status of your developer cloud service, it is possible that the button may be labeled **Create Project** 
 
     ![](images/100/Picture100-9.png)
 
@@ -106,9 +106,9 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
     ![](images/100/Picture100-14.png)
 
-## Create Project Issues
+# Create Project Issues
 
-## Create Issues for the Opperations Pipeline
+## Create Issues for the Operations Pipeline
 
 ### **STEP 4:** Create Issue for the initial GIT Repository Creation
 
@@ -206,7 +206,7 @@ In this step you are still assuming the identity of the Project Manager, ***Lisa
 
     ![](images/100/Picture100-20.png)
 
-## Create Agile Board
+# Create Agile Board
 
 ## Create Agile Board and Initial Sprint
 

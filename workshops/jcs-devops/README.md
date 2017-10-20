@@ -6,7 +6,7 @@
 
     ![](images/WorkshopHeader.png)  
 
-***To log issues***, click here to go to the [github oracle](https://github.com/oracle/learning-library/workshops/issues/new) repository issue submission form.
+***To log issues***, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
 - Visit the [Workshop Interactive Labguide](http://launch.oracle.com/?devopsjcs) for a visual overview of the workshop content. 
 
