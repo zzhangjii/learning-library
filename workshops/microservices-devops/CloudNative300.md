@@ -103,11 +103,11 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
   **Select**: `Based on SCM polling schedule`
 
-    ![](images/300/Picture25.3.png)  
+    ![](images/300/Picture25.3.png)
 
 - Click the **Build Steps** tab. Click **Add Build Step**, and select **Execute shell**.
 
-    ![](images/300/Picture26.png)  
+    ![](images/300/Picture26.png)
 
 - For **Command** enter: `npm install`
 
@@ -136,7 +136,7 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
 - After the build begins, you can also click on the **Console Icon** ![](images/300/Picture29.1.png) to monitor the build log details.
 
-    ![](images/300/Picture30.png)  
+    ![](images/300/Picture30.png)
 
 ### **STEP 5**: Create Default Deployment Process
 
@@ -212,7 +212,7 @@ Now that we have an automated build process, we will setup up a deployment confi
 
 - Now lets test out the **products** REST call.  Append **/products** to the end of the URL and hit **enter**.  All of the Alpha Office products should be returned in a JSON payload. 
 
-    ![](images/300/Picture43.3.png)  
+    ![](images/300/Picture43.3.png)
  
 
 ### **STEP 7**: Complete Task
