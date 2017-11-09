@@ -16,7 +16,7 @@ You will need to complete the following **3 Tasks** to successfully perform the 
 
 # Acquire an Oracle Cloud Trial Account
 
-### **Step x***: Getting your Trial Account
+### **Step x**: Getting your Trial Account
 
 - Click on this URL [oracle.cloud.com/tryit](http://oracle.cloud.com/tryit), and complete all the required steps to get your free Oracle Cloud Trial Account.
 - While waiting for your trial account, you can continue with Section 2 - (Installing the Open Source Tools), but you must wait for your account to complete Section 3 - (Create and Configure the MySQL Database).
