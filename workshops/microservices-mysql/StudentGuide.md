@@ -10,9 +10,9 @@ Update: November 8, 2017
 
 You will need to complete the following **3 Tasks** to successfully perform the other Labs contained in this workshop
 
-- Acquire an Oracle Cloud Trial Account
-- Install the required open source tools locally on your computer (e.g. Eclipse, Maven, Git, and Brackets)
-- Create and Configure the MySQL Database
+- **Acquire an Oracle Cloud Trial Account**
+- **Install the required open source tools locally on your computer (e.g. Eclipse, Maven, Git, and Brackets)**
+- **Create and Configure the MySQL Database**
 
 # Acquire an Oracle Cloud Trial Account
 
@@ -25,11 +25,9 @@ You will need to complete the following **3 Tasks** to successfully perform the 
 
 ## Verify your version of the Java JDK
 
-Eclipse requires that you have the **JDK 8** installed.
-
 ### **Step x (Mac Option)**: JDK Verification on a MAC
 
-**Note**: Eclipse requires that you have the a Java JDK 8 installed. Even if you have a JRE version 8, you still need to verify that you have a JDK 8 installed. 
+**Note**: Eclipse requires that you have the a Java JDK 8 installed. Even if you have a JRE version 8, you still need to verify that you have a JDK 8 installed.
 
 - Open Terminal window and execute the following command: 
 
@@ -40,6 +38,8 @@ ls /Library/java/JavaVirtualMachines/
 - If you do not have a JDK 1.8 folder, you will need to download the [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) from the Oracle Technology Network website, and install.
 
 ### **Step x (Windows Option)**: JDK Verification on Windows
+
+**Note**: Eclipse requires that you have the a Java JDK 8 installed. Even if you have a JRE version 8, you still need to verify that you have a JDK 8 installed.
 
 - On Windows, open a **cmd** window and enter `java -version` 
 
@@ -298,15 +298,15 @@ Depending on the state of your Cloud Account, you may need to set the replicatio
 
 ## SSH into the Database Image
 
-From Windows using PuTTy, or from a Terminal window on a Mac, you will now **ssh** into MySQL Host using the **Public IP**.
-
 ### **Step x (option Windows)**: Connection from Windows
+
+From Windows using PuTTy you will now **ssh** into the MySQL Host using the **Public IP**.
 
 ### **Step x (option Mac)**: Connecting from a Mac
 
-The following steps show how to connect from a Mac using ssh.
+From your Mac us a Terminal, you will now **ssh** into the MySQL Host using the **Public IP**.
 
-- Open a Terminal Window, change to the directory where you saved your **privateKey** file, and change the file permission of to the private key file to **600** using the following command: 
+- Open a Terminal Window, change to the directory where you saved your **privateKey** file, and change the file permission of the private key file to **600** using the following command: 
 
     ```
     chmod 600 <privateKeyFileName>
