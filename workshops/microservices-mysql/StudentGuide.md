@@ -8,13 +8,15 @@ Update: November 8, 2017
 
 ## Overview of Tasks
 
-You will need to complete the following **3 Tasks** to successfully complete this workshop
+You will need to complete the following **3 Tasks** to successfully perform the other Labs contained in this workshop
 
-1. Acquire an Oracle Cloud Trial Account
-2. Install the required open source tools locally on your computer (e.g. Eclipse, Maven, Git, and Brackets)
-3. Create and Configure the MySQL Database
+- Acquire an Oracle Cloud Trial Account
+- Install the required open source tools locally on your computer (e.g. Eclipse, Maven, Git, and Brackets)
+- Create and Configure the MySQL Database
 
 # Acquire an Oracle Cloud Trial Account
+
+### **Step x***: Getting your Trial Account
 
 - Click on this URL [oracle.cloud.com/tryit](http://oracle.cloud.com/tryit), and complete all the required steps to get your free Oracle Cloud Trial Account.
 - While waiting for your trial account, you can continue with Section 2 - (Installing the Open Source Tools), but you must wait for your account to complete Section 3 - (Create and Configure the MySQL Database).
