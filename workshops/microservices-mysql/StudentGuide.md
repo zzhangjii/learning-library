@@ -19,9 +19,9 @@ You will need to complete the following **3 Tasks** to successfully perform the 
 ### **Step x**: Getting your Trial Account
 
 - Click on this URL [oracle.cloud.com/tryit](http://oracle.cloud.com/tryit), and complete all the required steps to get your free Oracle Cloud Trial Account.
-- While waiting for your trial account, you can continue with Section 2 - (Installing the Open Source Tools), but you must wait for your account to complete Section 3 - (Create and Configure the MySQL Database).
+- While waiting for your trial account to provision, you can continue with the **Installing the Open Source Tools** Section, but you must wait for your account to complete before starting the **Create and Configure the MySQL Database** Section.
 
-# Install the open source tools used during the workshop
+# Install the Open Source Tools
 
 ## Verify your version of the Java JDK
 
@@ -202,9 +202,6 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 
     ![](images/studentguide/Picture21.png)
 
-
-
-
 # Create and Configure the MySQL Database
 
 During this Workshop you'll use a MySQL Database. The purpose of this workshop is to create microservices, one of which will access data from database. In the following steps we'll show you how to create and seed the MySQL Database with sample data.
@@ -376,5 +373,4 @@ From your Mac us a Terminal, you will now **ssh** into the MySQL Host using the 
     ```
     ![](images/studentguide/Picture120.png)
 
-- You can now exit and close your terminal session.
-
+- You can now exit and close your terminal session, and start on [Lab 100](CloudNativeMySQL100.md) Lab
