@@ -25,7 +25,7 @@ You will need to complete the following **3 Tasks** to successfully complete thi
 
 Eclipse requires that you have the **JDK 8** installed.
 
-## JDK Verification on a MAC
+### **Step x (Mac Option)**: JDK Verification on a MAC
 
 **Note**: Eclipse requires that you have the a Java JDK 8 installed. Even if you have a JRE version 8, you still need to verify that you have a JDK 8 installed. 
 
@@ -37,7 +37,7 @@ ls /Library/java/JavaVirtualMachines/
 
 - If you do not have a JDK 1.8 folder, you will need to download the [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) from the Oracle Technology Network website, and install.
 
-## JDK Verification on Windows
+### **Step x (Windows Option)**: JDK Verification on Windows
 
 - On Windows, open a **cmd** window and enter `java -version` 
 
@@ -52,7 +52,7 @@ Java HotSpot(TM) Client VM (build 25.121-b13, mixed mode, sharing)
 
 ## Download and Install Eclipse
 
-### **Step 1**: Download Eclipse
+### **Step x**: Download Eclipse
 
 ***Note***: Even if you already have Eclipse installed, you will still want to install and use the version documented below, for this version of Eclipse contains the ***Oracle Enterprise Pack for Eclipse***, which will be used during the workshop.
 
@@ -213,15 +213,22 @@ During this Workshop you'll use a MySQL Database. The purpose of this workshop i
 
 - Follow the instruction you received in your Trial Account email to login into your Oracle Cloud Account
 
+### **Step x**: Check/Set Storage Replication Policy
 
+Depending on the state of your Cloud Account, you may need to set the replication policy, if it has not been previously set. In this step you will go to the Storage Cloud Service to check on the status of the Replication Policy. 
 
-If you are using an **Oracle Trial/Try It** account, there is an ***Account Configuration*** Step you must perform before attempting the Hands on Workshop labs.  
+- Click on the **Storage** Cloud Service
+    ![](images/100/Picture-01.png)
 
-- You must **Configure Your Storage Replication Policy**. After you receive your account credentials, you can set the replication policy by follow the steps in the ***Setting the Storage Replication*** section of this document. 
+- Click on the **Open Service Console** icon at the top of the screen.
 
+    ![](images/100/Picture-01.5.png)
 
-## Configure Your Storage Replication Policy
+- If the follow dialog is displayed, care must be taking when setting your replication policy, because it cannot be changed. Take the default and click on the **Set Policy** button. If the message is not displayed, your replication policy has already been set, and your Cloud Account is ready for the Workshop.
 
+    ![](images/100/Picture-02.5.png)
+
+- Your replication policy is now set, and you can close your browser window. 
 
 ## Create the MySQL Database
 
@@ -289,7 +296,7 @@ If you are using an **Oracle Trial/Try It** account, there is an ***Account Conf
 
 ## SSH into the Database Image
 
-- From Windows using PuTTy, or from a Terminal window on a Mac, **ssh** into MySQL Host using the **Public IP**.
+From Windows using PuTTy, or from a Terminal window on a Mac, you will now **ssh** into MySQL Host using the **Public IP**.
 
 ### **Step x (option Windows)**: Connection from Windows
 
@@ -368,34 +375,4 @@ The following steps show how to connect from a Mac using ssh.
     ![](images/studentguide/Picture120.png)
 
 - You can now exit and close your terminal session.
-
-# Stuff to use if needed!!!
-
-
-
-
-
-
-
-- If all your **Storage** cloud service is not visible, **click** on the **Customize Dashboard**, you can add services to the dashboard by clicking **Show.** For this workshop, you will want to ensure that you are showing at least the **Application Container, Developer and Storage** cloud services. If you do not want to see a specific service, click **Hide**
-
-    ![](images/100/Picture100-5.png)
-
-### Check/Set Storage Replication Policy
-
-Depending on the state of your Cloud Account, you may need to set the replication policy, if it has not been previously set. In this step you will go to the Storage Cloud Service to check on the status of the Replication Policy. 
-
-- Click on the **Storage** Cloud Service
-    ![](images/100/Picture-01.png)
-
-- Click on the **Open Service Console** icon at the top of the screen.
-
-    ![](images/100/Picture-01.5.png)
-
-- If the follow dialog is displayed, care must be taking when setting your replication policy, because it cannot be changed. Take the default and click on the **Set Policy** button. If the message is not displayed, your replication policy has already been set, and your Cloud Account is ready for the Workshop.
-
-    ![](images/100/Picture-02.5.png)
-
-- Your replication policy is now set, and you can close your browser window. 
-
 
