@@ -98,7 +98,7 @@ Some services that we will use in this workshop require that your account's Repl
 
     ![](images/studentguide/Picture106.png)
 
-- **Unzip** and **save** the **privateKey** and **publicKey** files, as you will need these files when accessing the Cloud Image on which the MySQL Database will be installed.
+- **Unzip/Extract** and **save** the **privateKey** and **publicKey** files, as you will need these files when accessing the Cloud Image on which the MySQL Database will be installed.
 
     ![](images/studentguide/Picture109.png)
 
@@ -114,7 +114,7 @@ Some services that we will use in this workshop require that your account's Repl
 
     ![](images/studentguide/Picture108.png)
 
-- It will take several minutes for the MySQL Database to be fully configured. You can click on the refresh Icon to refresh the status page. You can Also click on the Status Link to view the provisioning log.
+- It will take several minutes for the MySQL Database to be fully configured. You can click on the refresh Icon to refresh the status page. You can Also click on the Status Link to view the provisioning log. Take a break for an hour while the database and database image are provisioning.
 
     ![](images/studentguide/Picture110.png)
 
@@ -178,6 +178,10 @@ Some services that we will use in this workshop require that your account's Repl
 
     ![](images/studentguide/Picture216.png)
 
+- If you receive a PuTTY Security Alert about the server's host key not in the registry, click on **Yes** to trust the host.
+
+    ![](images/studentguide/Picture216.2.png)
+
 - Enter in the username `opc` and press the **return** key.
 
     ![](images/studentguide/Picture217.png)
@@ -188,7 +192,7 @@ Some services that we will use in this workshop require that your account's Repl
 
 ### **Step 7 (option Mac)**: Connecting from a Mac
 
-From a Mac Terminal window, you will now **ssh** into the MySQL Host using the **Public IP**.
+If you are using a Mac, you will perform this step from a Mac Terminal window. First **ssh** into the MySQL Host using the **Public IP**.
 
 - Open a Terminal Window, change to the directory where you saved your **privateKey** file, and change the file permission of the private key file to **600** using the following command: 
 
@@ -208,11 +212,17 @@ From a Mac Terminal window, you will now **ssh** into the MySQL Host using the *
 
 ### **Step 8**: Install git in the MySQL Image
 
-- Enter the **yum** command shown below to Install **git**. When prompted with the question, "**Is this OK**" enter `Yes`
+- From either your Window's PuTTY connection, or from you Mac Terminal window, enter the **yum** command shown below to Install **git**. 
 
     ```
     sudo yum install git
     ```
+
+    ![](images/studentguide/Picture114.2.png)
+
+- When prompted with the question, "**Is this OK**" enter `y` and press the return key.
+
+    ![](images/studentguide/Picture114.3.png)
 
 ### **Step 9**: Clone the Script repository
 
@@ -248,7 +258,7 @@ From a Mac Terminal window, you will now **ssh** into the MySQL Host using the *
 
     ![](images/studentguide/Picture119.png)
 
-- Run the **setupAlphaUser.sh** script with the following command - ignore the warnings:
+- Run the **setupAlphaUser.sh** script with the following command. Ignore the warnings. **Note**: the setupAlphaUser.sh script use the Password suggested in previous steps. If you used a different password when creating the Database than what was documented, you will need to update the the password in the script.
 
     ```
     ./setupAlphaUser.sh
@@ -259,6 +269,8 @@ From a Mac Terminal window, you will now **ssh** into the MySQL Host using the *
     mysql -ualpha -pAlpha2017_ AlphaOfficeDB -e 'SHOW TABLES;'
     ```
     ![](images/studentguide/Picture120.png)
+
+- You can now exit and close the Terminal/PuTTY window.
 
 # Install the Open Source Tools
 
@@ -393,7 +405,7 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 
     ![](images/studentguide/Picture11.png)
 
-- Run through the installation process
+- Run through the installation process. In our tests, we used the default installation settings.
 
     ![](images/studentguide/Picture12.png)
 
@@ -415,17 +427,17 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 
 ![](images/studentguide/Picture16.png)
 
-- Run through the installation process
+- Run through the installation process. In our tests, we used the default installation settings.
 
 ### **Step 17**: Start Brackets and Configure Git
 
-- Create a directory called **TwitterMarketingUI**. From Windows Explorer navigate to the directory **TwitterMarketingUI**, right click and select **Open as Brackets Project**
+- From a location of your choice, create a directory called **TwitterMarketingUI**. From Windows Explorer navigate to the directory **TwitterMarketingUI**, right click and select **Open as Brackets Project**
 
     ![](images/studentguide/Picture17.png)
 
 - Select **File -> Extension Manager…**
 
-- In the search field, type `Git`. Click **Install** for **Brackets Git**
+- In the search field, type `integration of git`. Click **Install** for **Brackets Git**
 
     ![](images/studentguide/Picture18.png)
 
