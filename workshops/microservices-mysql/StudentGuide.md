@@ -14,7 +14,7 @@ You will need to **complete the following 3 Tasks** prior to attempting the Labs
 
 # Acquire an Oracle Cloud Trial Account
 
-### **Step x**: Getting your Trial Account
+### **Step 1**: Getting your Trial Account
 
 - Click on this URL [oracle.cloud.com/tryit](http://oracle.cloud.com/tryit), and complete all the required steps to get your free Oracle Cloud Trial Account.
 - You must wait before continuing to the "**Create and Configure the MySQL Database**" Section.
@@ -25,7 +25,7 @@ During this Workshop you'll use a MySQL Database. The purpose of this workshop i
 
 ## Login to your Oracle Cloud Account
 
-### **Step x**: Record information from email for future reference
+### **Step 2**: Record information from the welcome email
 
 - After your account is fully provisioned, you will receive an email from Oracle that will allow you to connect to the cloud account. Follow the instructions in that email. However, for later use during the workshop labs, **record the following fields**, some of which you'll find in the email. The other fields will be provided shortly. This information during the workshops Labs.
 
@@ -33,14 +33,14 @@ During this Workshop you'll use a MySQL Database. The purpose of this workshop i
     - **(2) Password** - The first time you login, you will be required to change the default password.
     - **(3) Account-Name or Domain-Name** - Within the Lab Guides, this field will often be referenced as your **Domain Name**
     - **(4) My Services URL** - The lab guides provide examples of how to login to a traditional account. Saving, or bookmarking this URL will allow you to more easily login to your account.
-    - **(5)Data Center** - We'll locate this information shortly.
+    - **(5)Data Center** - We'll locate this information in an upcoming step.
 
     ![](images/studentguide/Picture200.png)
 
-- Click on the **My Services URL** provided in email.
+- Click on the **My Services URL** provided in the email.
 - Follow the instructions to **Reset your Password**, and then record your new password for later use.
 
-### **Step x**: Check/Set Storage Replication Policy
+### **Step 3**: Check/Set Storage Replication Policy
 
 Some services that we will use in this workshop require that your account's Replication Policy is set. The following steps will show you how to set your replication policy.
 
@@ -48,11 +48,11 @@ Some services that we will use in this workshop require that your account's Repl
 
     ![](images/studentguide/Picture201.png)
 
-- If your replication policy has not yet been set, the following dialog will be displayed. **Record** the **Data Center**. In this example, you will record **US** for the Data Center. Another Data Center Options could be EMEA. 
+- If your replication policy has not yet been set, the following dialog will be displayed. **Record** the **Data Center** name. In this example, you will record **US** for the US Data Center. You may receive other Data Center names, such as EMEA. 
 
     ![](images/studentguide/Picture203.png)
 
-- Leave the Default **Georeplication Policy**, and click on **Set Policy**.
+- Use the Default **Georeplication Policy**, and click on **Set Policy**.
 
     ![](images/studentguide/Picture202.png)
 
@@ -62,7 +62,7 @@ Some services that we will use in this workshop require that your account's Repl
 
 ## Create the MySQL Database
 
-### **Step x**: Load the MySQL Dashboard
+### **Step 4**: Load the MySQL Dashboard
 
 - The **Oracle CLOUD My Services** Dashboard should be displayed. Click on the **Hamburger Menu** on the top left side of the Dashboard.
 
@@ -76,9 +76,9 @@ Some services that we will use in this workshop require that your account's Repl
 
     ![](images/studentguide/Picture205.png)
 
-### **Step x**: Create a new MySQL Instance
+### **Step 5**: Create a new MySQL Instance
 
-- Click on the **Create Service** button.
+- From the MySQL Service Console, Click on the **Create Service** button.
 
     ![](images/studentguide/Picture102.png)
 
@@ -86,7 +86,7 @@ Some services that we will use in this workshop require that your account's Repl
 
     ![](images/studentguide/Picture103.png)
 
-- Click on the **Edit** button to for the **SSH Public Key** field.
+- Click on the **Edit** button next to the **SSH Public Key** field.
 
     ![](images/studentguide/Picture104.png)
 
@@ -94,7 +94,7 @@ Some services that we will use in this workshop require that your account's Repl
 
     ![](images/studentguide/Picture105.png)
 
- - Once the SSH Keys have been created, click on the **Download** button. A file named **sshkeybundle.zip** will download to your Browser's configured download directory. Click on **Done** to close the dialog. 
+ - Once the SSH Keys have been created, click on the **Download** button. A file named **sshkeybundle.zip** will download to your Browser's configured download directory. Once the zip file has downloaded, click on **Done** to close the dialog.
 
     ![](images/studentguide/Picture106.png)
 
@@ -118,7 +118,7 @@ Some services that we will use in this workshop require that your account's Repl
 
     ![](images/studentguide/Picture110.png)
 
-### **Step x**: Record the Database Host IP Address
+### **Step 6**: Record the Database Host IP Address
 
 - Once the Database is provisioned, click on **AlphaOfficeDB** to view the Database details.
 
@@ -130,13 +130,65 @@ Some services that we will use in this workshop require that your account's Repl
 
 ## SSH into the Database Image
 
-### **Step x (option Windows)**: Connection from Windows
+### **Step 7 (option Windows)**: Connection from Windows
 
-From Windows using PuTTy you will now **ssh** into the MySQL Host using the **Public IP**.
+- If you do not already have PuTTY on your computer, go to [http://putty.org](http://putty.org) and download and install the appropriate version of PuTTY. 
 
-### **Step x (option Mac)**: Connecting from a Mac
+- Load the PuTTYgen utility, select **RSA** from the type of key to generate, and click on the **Load** button.
 
-From your Mac us a Terminal, you will now **ssh** into the MySQL Host using the **Public IP**.
+    ![](images/studentguide/Picture206.png)
+
+- Change the file types to **All Files(\*.\*)**, and navigate to the folder where you saved the privateKey and publicKey files. Select the **privateKey** file, and click on the **Open** button.
+
+    ![](images/studentguide/Picture207.png)
+
+- Click on **OK** to close the PuTTYgen Notice.
+
+    ![](images/studentguide/Picture208.png)
+
+- Click on **Save private key**.
+
+    ![](images/studentguide/Picture209.png)
+
+- Click on **Yes** to close the PuTTYgen Warning message.
+
+    ![](images/studentguide/Picture210.png)
+
+- Enter `privateKey.ppk` for the **File name** to be saved, and click on the **Save** button.
+
+    ![](images/studentguide/Picture211.png)
+
+- Now that the new privateKey has been generated, close **PuTTYgen**.
+
+- Run **PuTTY** to connect using the privateKey file.
+
+- Enter the **MySQL Image Public IP** into the **Host Name (or IP address)** filed. Expand the **SSH** tree, and click on **Auth** 
+
+    ![](images/studentguide/Picture213.png)
+
+- From the **Auth** panel, click on the **Browse** button.
+
+    ![](images/studentguide/Picture214.png)
+
+- Select the **privateKey** ppk file, and click on **Open**.
+
+    ![](images/studentguide/Picture215.png)
+
+- Click on the **Open** button to connect to the image using the ssh private key.
+
+    ![](images/studentguide/Picture216.png)
+
+- Enter in the username `opc` and press the **return** key.
+
+    ![](images/studentguide/Picture217.png)
+
+- You should now be connected to the MySQL Image.
+
+    ![](images/studentguide/Picture218.png)
+
+### **Step 7 (option Mac)**: Connecting from a Mac
+
+From a Mac Terminal window, you will now **ssh** into the MySQL Host using the **Public IP**.
 
 - Open a Terminal Window, change to the directory where you saved your **privateKey** file, and change the file permission of the private key file to **600** using the following command: 
 
@@ -154,17 +206,17 @@ From your Mac us a Terminal, you will now **ssh** into the MySQL Host using the 
 
     ![](images/studentguide/Picture114.png)
 
-### **Step x**: Install git in the MySQL Image
+### **Step 8**: Install git in the MySQL Image
 
-- Install **git** using **yum**. When prompted with **Is this OK**, enter `Y`
+- Enter the **yum** command shown below to Install **git**. When prompted with the question, "**Is this OK**" enter `Yes`
 
     ```
     sudo yum install git
     ```
 
-### **Step x**: Clone the Script repository
+### **Step 9**: Clone the Script repository
 
-- Once, using the **sudo** command, connected as **oracle** user. Then change to the Oracle User's home directory. Next, create a **repo** directory, and change to that directory.
+- Using the **sudo** command, connected as the **oracle** user, then change to the Oracle User's home directory. Next, create a **repo** directory, and change to that directory.
 
     ```
     sudo -s -u oracle
@@ -175,7 +227,7 @@ From your Mac us a Terminal, you will now **ssh** into the MySQL Host using the 
 
     ![](images/studentguide/Picture117.png)
 
-- Clone a local copy of the git repository containing the scripts used to load the seed database with the Product Catalog. This seed database will be used in subsequent labs.
+- Clone a local copy of the git repository containing the scripts used to load the database with the Product Catalog tables. This seed database will be used in subsequent labs.
 
     ```
     git clone https://github.com/pcdavies/AlphaOfficeMySQLSetup.git
@@ -183,7 +235,7 @@ From your Mac us a Terminal, you will now **ssh** into the MySQL Host using the 
 
     ![](images/studentguide/Picture118.png)
 
-### **Step x**: Run the scripts
+### **Step 10**: Run the scripts
 
 - Change directories to the **AlphaOfficeMySQLSetup** directory. Run the `ls` command to see all the files in this repository. View the contents of the **setupAlphaUser.sh** script. Notice that this script runs all the other scripts contained in the directory. Then change the permission on the script so it can be run.
 
@@ -212,7 +264,7 @@ From your Mac us a Terminal, you will now **ssh** into the MySQL Host using the 
 
 ## Verify your version of the Java JDK
 
-### **Step x (Windows Option)**: JDK Verification on Windows
+### **Step 11 (Windows Option)**: JDK Verification on Windows
 
 **Note**: Eclipse requires that you have the a Java JDK 8 installed. Even if you have a JRE version 8, you still need to verify that you have a JDK 8 installed.
 
@@ -227,7 +279,7 @@ Java HotSpot(TM) Client VM (build 25.121-b13, mixed mode, sharing)
 
 - If JDK/**Java version 1.8** is not installed,  you will need to download a [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) from the Oracle Technology Network website, and install.
 
-### **Step x (Mac Option)**: JDK Verification on a MAC
+### **Step 11 (Mac Option)**: JDK Verification on a MAC
 
 **Note**: Eclipse requires that you have the a Java **JDK** 8 installed. Even if you have a **JRE** version 8, you still need to verify that you have a JDK 8 installed.
 
@@ -241,7 +293,7 @@ ls /Library/java/JavaVirtualMachines/
 
 ## Download and Install Eclipse
 
-### **Step x**: Download Eclipse
+### **Step 12**: Download Eclipse
 
 ***Note***: Even if you already have Eclipse installed, you need to install and use the version documented below. This version of Eclipse contains the ***Oracle Enterprise Pack for Eclipse***, which will be used during the workshop.
 
@@ -253,7 +305,7 @@ ls /Library/java/JavaVirtualMachines/
 
 - Once you’ve downloaded eclipse, extract the zip file and install.
 
-### **Step x**: Optionally Configure Proxies (if behind a firewall)
+### **Step 13**: Optionally Configure Proxies (if behind a firewall)
 
 If you are running Eclipse behind a firewall, you need to configure the proxy setting. First, you need to ensure that Eclipse’s proxy is set. Next, you need to update the maven proxy setting, and then finally, you need to ensure that the Oracle Plugin will work with your proxy settings.
 
@@ -277,7 +329,7 @@ If you are running Eclipse behind a firewall, you need to configure the proxy se
 
 ![](images/studentguide/Picture6.png)
 
-### **Step x**: Optionally Update the Eclipse / Maven proxy (if behind a firewall)
+### **Step 14**: Optionally Update the Eclipse / Maven proxy (if behind a firewall)
 
 ***Note:*** You will only do this optional Eclipse/Maven Proxy setup if you are behind a firewall. Otherwise, skip this step, and go to next step where you will download and install Brackets.
 
@@ -323,7 +375,7 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 
 ## Download and Install Git and Brackets
 
-### **Step x**: Download/Install Git
+### **Step 15**: Download/Install Git
 
 - Go to the following URL: https://git-scm.com/downloads
 
@@ -345,7 +397,7 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 
     ![](images/studentguide/Picture12.png)
 
-### **Step x**: Download/Install the Brackets Text Editor
+### **Step 16**: Download/Install the Brackets Text Editor
 
 - Go to the following URL: http://brackets.io    
 
@@ -365,7 +417,7 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 
 - Run through the installation process
 
-### **Step x**: Start Brackets and Configure Git
+### **Step 17**: Start Brackets and Configure Git
 
 - Create a directory called **TwitterMarketingUI**. From Windows Explorer navigate to the directory **TwitterMarketingUI**, right click and select **Open as Brackets Project**
 
@@ -391,4 +443,4 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 
 
 
-- You can now exit and close your terminal session, and start on [Lab 100](CloudNativeMySQL100.md) Lab
+- You can now ready to start on [Lab 100](CloudNativeMySQL100.md) Lab
