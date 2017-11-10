@@ -1,14 +1,12 @@
 
-# Workshop/Student Setup Guide
-
-***Note:*** Work in progress
+# Trial Account Student Guide
 
 ![](images/studentguide/Picture-Title.png)
 Update: November 8, 2017
 
 ## Overview of Tasks
 
-You will need to complete the following **3 Tasks** to successfully perform the other Labs contained in this workshop
+You will need to **complete the following 3 Tasks** prior to attempting the Labs contained in this workshop
 
 - **Acquire an Oracle Cloud Trial Account**
 - **Install the required open source tools locally on your computer (e.g. Eclipse, Maven, Git, and Brackets)**
@@ -27,7 +25,7 @@ You will need to complete the following **3 Tasks** to successfully perform the 
 
 ### **Step x (Mac Option)**: JDK Verification on a MAC
 
-**Note**: Eclipse requires that you have the a Java JDK 8 installed. Even if you have a JRE version 8, you still need to verify that you have a JDK 8 installed.
+**Note**: Eclipse requires that you have the a Java **JDK** 8 installed. Even if you have a **JRE** version 8, you still need to verify that you have a JDK 8 installed.
 
 - Open Terminal window and execute the following command: 
 
@@ -50,13 +48,13 @@ Java(TM) SE Runtime Environment (build 1.8.0_121-b13)
 Java HotSpot(TM) Client VM (build 25.121-b13, mixed mode, sharing)
 ```
 
-- If JDK/**Java version 1.8** is not installed,  you will need to download a [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) from the Oracle Technology Network website, and install.
+- If JDK/**Java version 1.8** is not installed,  you will need to download a [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) from the Oracle Technology Network website, and install.
 
 ## Download and Install Eclipse
 
 ### **Step x**: Download Eclipse
 
-***Note***: Even if you already have Eclipse installed, you will still want to install and use the version documented below, for this version of Eclipse contains the ***Oracle Enterprise Pack for Eclipse***, which will be used during the workshop.
+***Note***: Even if you already have Eclipse installed, you need to install and use the version documented below. This version of Eclipse contains the ***Oracle Enterprise Pack for Eclipse***, which will be used during the workshop.
 
 - Go to the [Eclipse](http://www.oracle.com/technetwork/developer-tools/eclipse/downloads/index.html) installation website
 
@@ -68,7 +66,7 @@ Java HotSpot(TM) Client VM (build 25.121-b13, mixed mode, sharing)
 
 ### **Step x**: Optionally Configure Proxies (if behind a firewall)
 
-If you are running Eclipse behind a firewall and need to configure the proxy setting, there are several updates to be made. First, you need to ensure that Eclipse’s proxy is set, next you need to update the maven proxy setting, and then finally, you need to ensure that the Oracle Plugin will work with your proxy settings.
+If you are running Eclipse behind a firewall, you need to configure the proxy setting. First, you need to ensure that Eclipse’s proxy is set. Next, you need to update the maven proxy setting, and then finally, you need to ensure that the Oracle Plugin will work with your proxy settings.
 
 - To set configure Eclipse’s proxy, open Eclipse and navigate to the Properties menu. Depending on the operating system, this drop down is found either from the **Eclipse > Preferences, or Window > Preferences**
 
@@ -208,26 +206,40 @@ During this Workshop you'll use a MySQL Database. The purpose of this workshop i
 
 ## Login to your Oracle Cloud Account
 
-### **Step x**: Follow the Email Instructions
+### **Step x**: Record information from email for future reference
 
-- Follow the instruction you received in your Trial Account email to login into your Oracle Cloud Account
+- After your account is fully provisioned, you will receive an email from Oracle that will allow you to connect to the cloud account. Follow the instructions in that email. However, for later use during the workshop labs, **record the following fields**, some of which you'll find in the email. The other fields will be provided shortly. This information during the workshops Labs.
+
+    - **(1)Username** - With a trial account, this will be your email address. However, in the labs, an example username of cloud.admin will be referenced.
+    - **(2) Password** - The first time you login, you will be required to change the default password.
+    - **(3) Account-Name or Domain-Name** - Within the Lab Guides, this field will often be referenced as your **Domain Name**
+    - **(4) My Services URL** - The lab guides provide examples of how to login to a traditional account. Saving, or bookmarking this URL will allow you to more easily login to your account.
+    - **(5)Data Center** - We'll locate this information shortly.
+
+    ![](images/studentguide/Picture200.png)
+
+- Click on the **My Services URL** provided in email.
+- Follow the instructions to **Reset your Password**, and then record your new password for later use.
 
 ### **Step x**: Check/Set Storage Replication Policy
 
-Depending on the state of your Cloud Account, you may need to set the replication policy, if it has not been previously set. In this step you will go to the Storage Cloud Service to check on the status of the Replication Policy. 
+Some services that we will use in this workshop require that your account's Replication Policy is set. The following steps will show you how to set your replication policy.
 
-- Click on the **Storage** Cloud Service
-    ![](images/100/Picture-01.png)
+- Click on the **Hamburger Menu** in the upper left corner of the browser window to expose the **Dashboard Menu**, then click on the **Storage Classic** menu option.
 
-- Click on the **Open Service Console** icon at the top of the screen.
+    ![](images/studentguide/Picture201.png)
 
-    ![](images/100/Picture-01.5.png)
+- If your replication policy has not yet been set, the following dialog will be displayed. **Record** the **Data Center**. In this example, you will record **US** for the Data Center. Another Data Center Options could be EMEA. 
 
-- If the follow dialog is displayed, care must be taking when setting your replication policy, because it cannot be changed. Take the default and click on the **Set Policy** button. If the message is not displayed, your replication policy has already been set, and your Cloud Account is ready for the Workshop.
+    ![](images/studentguide/Picture203.png)
 
-    ![](images/100/Picture-02.5.png)
+- Leave the Default **Georeplication Policy**, and click on **Set Policy**.
 
-- Your replication policy is now set, and you can close your browser window. 
+    ![](images/studentguide/Picture202.png)
+
+- To return to the main **Dashboard**, click on the **Hamburger Menu**, and then click on the **My Services** menu option.
+
+    ![](images/studentguide/Picture204.png)
 
 ## Create the MySQL Database
 
@@ -240,6 +252,10 @@ Depending on the state of your Cloud Account, you may need to set the replicatio
 - Select **MySQL** from the menu options.
 
     ![](images/studentguide/Picture101.png)
+
+- If the following Welcome screen is displayed, click on **Go to Console**.
+
+    ![](images/studentguide/Picture205.png)
 
 ### **Step x**: Create a new MySQL Instance
 
