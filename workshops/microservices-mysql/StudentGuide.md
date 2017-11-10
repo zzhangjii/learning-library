@@ -16,7 +16,7 @@ You will need to **complete the following 3 Tasks** prior to attempting the Labs
 
 ### **Step 1**: Getting your Trial Account
 
-- Click on this URL [oracle.cloud.com/tryit](http://oracle.cloud.com/tryit), and complete all the required steps to get your free Oracle Cloud Trial Account.
+- Click on this URL [cloud.oracle.com/tryit](http://cloud.oracle.com/tryit), and complete all the required steps to get your free Oracle Cloud Trial Account.
 - You must wait before continuing to the "**Create and Configure the MySQL Database**" Section.
 
 # Create and Configure the MySQL Database
