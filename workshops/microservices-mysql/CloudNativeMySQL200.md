@@ -224,6 +224,10 @@ Now that you have successfully built your project, you need to create a deployme
 
     ![](images/200/Picture38.3.png)  
 
+- **Note**: You possibly may receive the following message in the header. If the status of the deployment is still showing **Starting** or **Deploying**, close this error message and wait for the deployment status to show failed or success, as the deployment may automatically retry and successfully complete.
+
+    ![](images/200/Picture38.4.png)
+
 ## Verify Twitter Feed Microservice deployment
 
 ### **STEP 6**: Login to Oracle Application Container Cloud Service
