@@ -256,7 +256,7 @@ We have now verified that the MySQL REST microservice has been deployed and func
 
 ### **STEP 8**: Open MySQL Console
 
-- Return to the **Main Dashboard**, click on the **Hamburger Menu** at the top left side of the window, and click on **MySQL**.  
+- Return to the **Main Dashboard**, click on the **Hamburger Menu** at the top left side of the window, and click on **MySQL**. **Note**: for those using the Trial account, this is your Standard Identity Cloud Service based account/dashboard.
 
     ![](images/300/Picture60.png)  
 
