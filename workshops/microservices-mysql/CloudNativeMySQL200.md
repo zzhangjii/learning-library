@@ -172,7 +172,7 @@ Now that you have successfully built your project, you need to create a deployme
 
   - **Data Center**: `<Your Assigned Datacenter>` 
 
-  - **Identity Domain**: `<Your Identity Domain>`
+  - **Identity Domain**: `<Your Identity Domain>` ***Note***: If you are using a **Trial account** and followed the instructions in the [Trial Account Student Guide](StudentGuide.md), then in place of the Identity Domain, you populate this field with the **Identity Tenant ID** you recorded.
 
   - **Username**: `<Your User Name>`
 
@@ -228,9 +228,8 @@ Now that you have successfully built your project, you need to create a deployme
 
 ### **STEP 6**: Login to Oracle Application Container Cloud Service
 
-- Return to the Developer Service Cloud Dashboard tab if it’s still available, then select the Dashboard icon to return to the Oracle Public Cloud Dashboard. Note: It’s possible that you may be required to once again login, if the session has expired.
-
-    ![](images/200/Picture42.png)  
+- Return to the tab where your **Main Cloud Dashboard** window is loaded. If your dashboard Window is not available, simply open a tab and go to cloud.oracle.com, and re-login as previously instructed.
+ 
 
 - Once the Oracle Public Cloud **Dashboard** is displayed, click on the  ![](images/200/PictureHamburger.png) menu in the upper left and select **Application Container** service. 
 

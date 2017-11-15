@@ -18,17 +18,16 @@ Although you will login as a single user, you will take on 4 Personae during the
     - Create Issues for Product Catalog UI enhancements
 - Create Agile Board and initial Sprint
 - Add Issues to Sprint
-- Start Sprintt
+- Start Sprint
 
 ## Required Artifacts
 - The following lab requires an Oracle Public Cloud account that will be supplied by your instructor.
-
 
 # Create Alpha Office Product Catalog Project
 
 ## Create Developer Cloud Service Project
 
-### **STEP 1**: Login to your Oracle Cloud Account
+### **STEP 1**: Login to your **Traditional** Oracle Cloud Account
 
 - From any browser, go to the URL below, or if using a trial account, use the URL emailed to you in your confirmation email:
 
@@ -38,7 +37,7 @@ Although you will login as a single user, you will take on 4 Personae during the
 
     ![](images/100/Picture100-1.png)
 
-- **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. If you are unsure of the data center you should select, and this is an in-person training event, ***ask your instructor*** which **Region** to select from the drop down list. If you received your account through an Oracle Trial, your Trial confirmation email should provide a URL that will pre-select the region for you.
+- **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. If you are unsure of the data center you should select, and this is an in-person training event, ***ask your instructor*** which **Region** to select from the drop down list. If you received your account through an ***Oracle Trial***, you should have recorded the needed information while following the instruction in the [Trial Account Student Guide](StudentGuide.md).
 
     ![](images/100/Picture100-2.png)
 
@@ -58,7 +57,7 @@ Although you will login as a single user, you will take on 4 Personae during the
 
     ![](images/100/Picture100-4.png)
 
-- **Click** on the **Customize Dashboard** to add services to the dashboard. Services are added by selecting **Show.** For this workshop, you will want to ensure that you are showing the **Application Container** and the **Developer cloud** services. 
+- **Click** on the **Customize Dashboard** to add services to the dashboard. Services are added by selecting **Show.** For this workshop, you will want to ensure that you are showing **Developer cloud** service. 
 
     ![](images/100/Picture100-5.png)
 
@@ -66,7 +65,7 @@ Although you will login as a single user, you will take on 4 Personae during the
 
 Oracle Developer Cloud Service provides a complete development platform that streamlines team development processes and automates software delivery. The integrated platform includes an issue tracking system, agile development dashboards, code versioning and review platform, continuous integration and delivery automation, as well as team collaboration features such as wikis and live activity stream. With a rich web based dashboard and integration with popular development tools, Oracle Developer Cloud Service helps deliver better applications faster.
 
-- From the Cloud UI dashboard click on the **Developer** service. In our example, the Developer Cloud Service is named **developer#####**.
+- From the Cloud UI dashboard click on the **Developer** service Hamburger menu, and then **Right Click** on **Open Service Console**, and open the console in a new tab. This will keep the Dashboard loaded on another tab.
 
     ![](images/100/Picture100-6.png)
 

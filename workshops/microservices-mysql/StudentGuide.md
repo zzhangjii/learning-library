@@ -31,17 +31,20 @@ During this Workshop you'll use a MySQL Database. The purpose of this workshop i
 
     ```
     Username:
-    Password:
+    Temporary Password (for Both Account):
+
     Cloud Account Name:
     Cloud Account Password:
+
     Identity Domain Name:
     Traditional Account Password:
+
     Identity Tenant ID:
     Data Center:
     ```
 
     - ***(1)*** **Username**: With a trial account, this will be your email address. However, in the labs, an example username of cloud.admin will be referenced.
-    - ***(2)*** **Password**: The first time you login, you will be required to change the default password.
+    - ***(2)*** **Temporary Password**: The first time you login, you will use this temporary password.
     - ***(3)*** **Cloud Account Name**: This name will be used when you login  using the **Cloud Account with Identity Cloud Service**. ***Note***: When you click on Link **(5)** in the email, you will use this Cloud Account Name. This is the method by which all Oracle Services will eventually be authenticated.
     - **Cloud Account Password**: You will shortly login to your Cloud Account to set this password.
     - ***(4)*** **Identity Domain Name**: This name will be used when you login with the **Traditional Cloud Services**. During this workshop, we will be use the Developer Cloud Services, which is currently a Traditional Cloud Services. ***Note***: When you click on Link **(6)** in the email, you will use this Identity Domain Name.
@@ -118,9 +121,62 @@ Some services that we will use in this workshop require that your account's Repl
 
     ![](images/studentguide/Picture204.png)
 
+### **Step 4**: Practice the multi Account/login concepts
+
+Since as part of this workshop we are using Developer Cloud Service, and that Service is currently a **Traditional** cloud service, then it is important for us to fully understand how to login to both the **Standard Identity Cloud Service** managed account, and then login to the **Traditional** account at the same time. After this step, we'll assume you know how to switch between accounts and services during the upcoming labs. 
+
+- Fully exit/close your browser to log out and remove all session cookies
+
+- Re-open your browser.
+
+- got to [cloud.oracle.com](http://cloud.oracle.com)
+
+- Click on **Sign In** at the top of the page.
+
+    ![](images/studentguide/Picture204.1.png)
+
+- Set the first field to **Cloud Account with Identity Cloud Service**, enter your **Cloud Account Name** in the second field, and click on **My Services**
+
+    ![](images/studentguide/Picture204.2.png)
+
+- Enter the **Username** and **Cloud Account Password** recorded earlier, and click on **Sign in**.
+
+    ![](images/studentguide/Picture204.3.png)
+
+- Notice the available services after clicking on the Dashboard **Hamburger Menu**.
+
+    ![](images/studentguide/Picture204.4.png)
+
+- Let's now connect to the **Traditional Account** at the same time. Open a new Browser tab window, got to [cloud.oracle.com](http://cloud.oracle.com) again, and click on **Sign In**.
+
+    ![](images/studentguide/Picture204.1.png)
+
+- Select **Tradition Cloud Account** from the top drop-down. Next select your **Data Center**. In our example, our Data Center was US Commercial 2 - both "US Commercial 2" or "Public Cloud Services - US" work in that example. **Your selection will vary** based on what you recorded earlier in this guide.
+
+- Click on **My Services**
+
+    ![](images/studentguide/Picture204.5.png)
+
+- Enter the **Identity Domain Name** you recorded earlier, and click on **Go**
+
+    ![](images/studentguide/Picture204.6.png)
+
+- Enter the **Username** and **Traditional Account Password** you recorded earlier, and click on **Sign In**
+
+    ![](images/studentguide/Picture204.7.png)
+
+- Click on the Traditional Dashboard **Hamburger Menu**, and notice the limited set of available services
+
+    ![](images/studentguide/Picture204.8.png)
+
+- **Note**: you can change the account on the dashboard page between **Traditional** and the Standard **Identity Cloud Services** accounts, but one approach is to keep a tab/window open for each Account's dashboard.
+
+    ![](images/studentguide/Picture204.9.png)
+
+
 ## Create the MySQL Database
 
-### **Step 4**: Load the MySQL Dashboard
+### **Step 5**: Load the MySQL Dashboard
 
 - The **Oracle CLOUD My Services** Dashboard should be displayed. Click on the **Hamburger Menu** on the top left side of the Dashboard.
 
@@ -134,7 +190,7 @@ Some services that we will use in this workshop require that your account's Repl
 
     ![](images/studentguide/Picture205.png)
 
-### **Step 5**: Create a new MySQL Instance
+### **Step 6**: Create a new MySQL Instance
 
 - From the MySQL Service Console, Click on the **Create Service** button.
 
@@ -176,7 +232,7 @@ Some services that we will use in this workshop require that your account's Repl
 
     ![](images/studentguide/Picture110.png)
 
-### **Step 6**: Record the Database Host IP Address
+### **Step 7**: Record the Database Host IP Address
 
 - Once the Database is provisioned, click on **AlphaOfficeDB** to view the Database details.
 
@@ -188,7 +244,7 @@ Some services that we will use in this workshop require that your account's Repl
 
 ## SSH into the Database Image
 
-### **Step 7 (option Windows)**: Connection from Windows
+### **Step 8 (option Windows)**: Connection from Windows
 
 - If you do not already have PuTTY on your computer, go to [http://putty.org](http://putty.org) and download and install the appropriate version of PuTTY. 
 
@@ -248,7 +304,7 @@ Some services that we will use in this workshop require that your account's Repl
 
     ![](images/studentguide/Picture218.png)
 
-### **Step 7 (option Mac)**: Connecting from a Mac
+### **Step 8 (option Mac)**: Connecting from a Mac
 
 If you are using a Mac, you will perform this step from a Mac Terminal window. First **ssh** into the MySQL Host using the **Public IP**.
 
@@ -268,7 +324,7 @@ If you are using a Mac, you will perform this step from a Mac Terminal window. F
 
     ![](images/studentguide/Picture114.png)
 
-### **Step 8**: Install git in the MySQL Image
+### **Step 9**: Install git in the MySQL Image
 
 - From either your Window's PuTTY connection, or from you Mac Terminal window, enter the **yum** command shown below to Install **git**. 
 
@@ -282,7 +338,7 @@ If you are using a Mac, you will perform this step from a Mac Terminal window. F
 
     ![](images/studentguide/Picture114.3.png)
 
-### **Step 9**: Clone the Script repository
+### **Step 10**: Clone the Script repository
 
 - Using the **sudo** command, connected as the **oracle** user, then change to the Oracle User's home directory. Next, create a **repo** directory, and change to that directory.
 
@@ -303,7 +359,7 @@ If you are using a Mac, you will perform this step from a Mac Terminal window. F
 
     ![](images/studentguide/Picture118.png)
 
-### **Step 10**: Run the scripts
+### **Step 11**: Run the scripts
 
 - Change directories to the **AlphaOfficeMySQLSetup** directory. Run the `ls` command to see all the files in this repository. View the contents of the **setupAlphaUser.sh** script. Notice that this script runs all the other scripts contained in the directory. Then change the permission on the script so it can be run.
 
@@ -334,7 +390,7 @@ If you are using a Mac, you will perform this step from a Mac Terminal window. F
 
 ## Verify your version of the Java JDK
 
-### **Step 11 (Windows Option)**: JDK Verification on Windows
+### **Step 12 (Windows Option)**: JDK Verification on Windows
 
 **Note**: Eclipse requires that you have the a Java JDK 8 installed. Even if you have a JRE version 8, you still need to verify that you have a JDK 8 installed.
 
@@ -349,7 +405,7 @@ Java HotSpot(TM) Client VM (build 25.121-b13, mixed mode, sharing)
 
 - If JDK/**Java version 1.8** is not installed,  you will need to download a [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) from the Oracle Technology Network website, and install.
 
-### **Step 11 (Mac Option)**: JDK Verification on a MAC
+### **Step 12 (Mac Option)**: JDK Verification on a MAC
 
 **Note**: Eclipse requires that you have the a Java **JDK** 8 installed. Even if you have a **JRE** version 8, you still need to verify that you have a JDK 8 installed.
 
@@ -363,7 +419,7 @@ ls /Library/java/JavaVirtualMachines/
 
 ## Download and Install Eclipse
 
-### **Step 12**: Download Eclipse
+### **Step 13**: Download Eclipse
 
 ***Note***: Even if you already have Eclipse installed, you need to install and use the version documented below. This version of Eclipse contains the ***Oracle Enterprise Pack for Eclipse***, which will be used during the workshop.
 
@@ -375,7 +431,7 @@ ls /Library/java/JavaVirtualMachines/
 
 - Once you’ve downloaded eclipse, extract the zip file and install.
 
-### **Step 13**: Optionally Configure Proxies (if behind a firewall)
+### **Step 14**: Optionally Configure Proxies (if behind a firewall)
 
 If you are running Eclipse behind a firewall, you need to configure the proxy setting. First, you need to ensure that Eclipse’s proxy is set. Next, you need to update the maven proxy setting, and then finally, you need to ensure that the Oracle Plugin will work with your proxy settings.
 
@@ -399,7 +455,7 @@ If you are running Eclipse behind a firewall, you need to configure the proxy se
 
 ![](images/studentguide/Picture6.png)
 
-### **Step 14**: Optionally Update the Eclipse / Maven proxy (if behind a firewall)
+### **Step 15**: Optionally Update the Eclipse / Maven proxy (if behind a firewall)
 
 ***Note:*** You will only do this optional Eclipse/Maven Proxy setup if you are behind a firewall. Otherwise, skip this step, and go to next step where you will download and install Brackets.
 
@@ -445,7 +501,7 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 
 ## Download and Install Git and Brackets
 
-### **Step 15**: Download/Install Git
+### **Step 16**: Download/Install Git
 
 - Go to the following URL: https://git-scm.com/downloads
 
@@ -467,7 +523,7 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 
     ![](images/studentguide/Picture12.png)
 
-### **Step 16**: Download/Install the Brackets Text Editor
+### **Step 17**: Download/Install the Brackets Text Editor
 
 - Go to the following URL: http://brackets.io    
 
@@ -487,7 +543,7 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 
 - Run through the installation process. In our tests, we used the default installation settings.
 
-### **Step 17**: Start Brackets and Configure Git
+### **Step 18**: Start Brackets and Configure Git
 
 - From a location of your choice, create a directory called **TwitterMarketingUI**. From Windows Explorer navigate to the directory **TwitterMarketingUI**, right click and select **Open as Brackets Project**
 
