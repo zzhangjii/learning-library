@@ -304,7 +304,7 @@ In the following task we will provide screen shots taken from the optional compu
 
 - Enter the following information, then click on the **Finish** button:
 
-  - **Identity Domain**: `<your identity domain>`
+  - **Identity Domain**: `<your identity domain>` ***Note:*** if you're using a trial account, since you are connecting to the Developer Cloud Services, which is a Traditional Service, you populate this field with the **Identity Domain Name** you recorded.
 
   - **User name**: `<your Username>`
 
@@ -362,7 +362,7 @@ In the following task we will provide screen shots taken from the optional compu
 
 In the previous steps we updated the status of the Tasks assigned to "Bala Gupta" using the web interface to the Developer Cloud Service. In this step we will use the Eclipse connection to the Developer Cloud Service to update the status of Bala’s tasks.
 
-- Within the Oracle Cloud Connection tab, double click the **Issues** to expand, then double click on **Mine** to expand your list. Once you see the list of your Issues, then double click on **Create Filter on Twitter Feed**.
+- Within the Oracle Cloud Connection tab, double click the **Issues** to expand, then double click on **Mine** to expand your list. Once you see the list of your Issues, then double click on **Create Filter on Twitter Feed**. You can adjust what Eclipse views are visible using the right side and top Window menu options. 
 
     ![](images/200/Picture71.png)  
 
@@ -493,17 +493,19 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 
 - Now that the code has been committed to the Developer Cloud Service repository, the build and deployment will automatically start. On the navigation panel click **Build**, and you should see a **Twitter Feed Build** in the Queue
 
-    ![](images/200/image110.png)  
+    ![](images/200/image110.png)
 
 - Wait a minute or two for the build to start and to complete. The **Last Success** will be set to **Just Now** when the build completes.
 
-    ![](images/200/image111.png)  
+    ![](images/200/image111.png)
 
 ## Test the JavaTwitterMicroservice in the Cloud
 
 ### **STEP 16**: Test Microservice
 
-- Once the service has successfully deployed, click **Deploy** in the left-hand menu and click on the **JavaTwitterMicroservice** link
+- Click **Deploy** in the left-hand menu to load the **Deployments** screen.
+
+- Once the Deploy completes Successfully, click on the **JavaTwitterMicroservice** link
 
     ![](images/200/image113.png)  
 
@@ -511,7 +513,7 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 
     ![](images/200/Picture45.png)  
 
-- Now change the appended URL to **/statictweets/%23Expo** and **press enter**. This will cause records containing **#Expo** in the tweet’s text or hashtags to be returned. This is how our Product Catalog will retrieve tweet's associated to a product.
+- Now appended `/statictweets/%23Expo` to the end of the URL and **press enter**. This will cause records containing **#Expo** in the tweet’s text or hashtags to be returned. This is how our Product Catalog will retrieve tweet's associated to a product.
 
     ![](images/200/image115.png)  
 
