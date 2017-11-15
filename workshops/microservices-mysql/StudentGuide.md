@@ -1,161 +1,398 @@
 
-![](images/studentguide/Picture-Title.png)  
-Update: January 28, 2017
+# Trial Account Student Guide
 
-## Trial Account Student Guide
+![](images/studentguide/Picture-Title.png)
+Update: November 8, 2017
 
-This Oracle Trial Account Student Guide will provide you with the instructions nessesary to install the Client Tools used during this workshop. This Workshop will allow you to gain exposure to the Oracle Developer Cloud Service, the Oracle Application Container Cloud Service, and open source products such as Eclipse, Maven, Git, and Brackets. ***Complete Steps 1 and 2***
+## Overview of Tasks
 
-## 1. Oracle Cloud Environment Setup
+You will need to **complete the following 3 Tasks** prior to attempting the Labs contained in this workshop
 
-If you are using an **Oracle Trial/Try It** account, there is an ***Account Configuration*** Step you must perform before attempting the Hands on Workshop labs.  
-- You must **Configure Your Storage Replication Policy**. After you receive your account credentials, you can set the replication policy by follow the steps in the ***Setting the Storage Replication*** section of this document. 
+- **Acquire an Oracle Cloud Trial Account**
+- **Create and Configure the MySQL Database**
+- **Install the required open source tools locally on your computer (e.g. Eclipse, Maven, Git, and Brackets)**
 
-## 2. Client Enviroment Options
+# Acquire an Oracle Cloud Trial Account
 
-Your client enviroment ***must be configured prior*** to attempting the Hands on Workshop, or you will not be able to complete the Workshop labs. 
+### **Step 1**: Getting your Trial Account
 
-You have two options for configuring your workshop client environment. 
+- Click on this URL [cloud.oracle.com/tryit](http://cloud.oracle.com/tryit), and complete all the required steps to get your free Oracle Cloud Trial Account.
+- You must wait to receive our account before continuing to the "**Create and Configure the MySQL Database**" Section.
 
-- ***Option 1***: You can install Virtual Box and download and run a pre-configured **Virtual Box Image**. 
-- Refer to the ***Virtual Box Client Installation*** section of this document to use this option
-- **This option is best**, if you don't want to worry about installing and configuring multiple Open Source Software tools on your laptop. 
-- ***Option 2***: You can **install and configure** Eclipse, Brackets and Git on your laptop.
-- Refer to the ***Configure Client Tools Locally*** section of this document to use this option.
-- **This option is best** if you want to install and configure the opensource software on your laptop, or your corporate standards will not let you install a hypervisor, or your laptop's resorces are not adequate to run virtual images. 
+# Create and Configure the MySQL Database
 
-# Configure Your Storage Replication Policy
+During this Workshop you'll use a MySQL Database. The purpose of this workshop is to create microservices, one of which will access data from the database. In the following steps we'll show you how to create and seed the MySQL Database with sample data.
 
-### Login to your Oracle Cloud Account
-- From any browser, go to the URL:
-`https://cloud.oracle.com`
+## Login to your Oracle Cloud Account
 
-- click **Sign In** in the upper right hand corner of the browser
+### **Step 2**: Record information from the welcome email
 
-    ![](images/100/Picture100-1.png)
+- After your account is fully provisioned, you will receive an **email from Oracle** that will allow you to connect to your cloud account. Follow the instructions in that email. However, for later use during the workshop labs, **record the following fields**, some of which you'll find in the email. The other **fields not found in the email** will be located shortly. This information will be ***used multiple times*** during the workshops Labs, so we recommend that you **copy the following list to a text document**, and then populate the fields as they are collected.
 
-- **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. If you are unsure of the data center you should select, and this is an in-person training event, ***ask your instructor*** which **Region** to select from the drop down list. If you received your account through an Oracle Trial, your Trial confirmation email should provide a URL that will pre-select the region for you.
+    ```
+    Username:
+    Temporary Password (for Both Accounts):
 
-![](images/100/Picture100-2.png)
+    Cloud Account Name:
+    Cloud Account Password:
 
-- Enter your identity domain and click **Go**.
+    Identity Domain Name:
+    Traditional Account Password:
 
-**NOTE:** The **Identity Domain, User Name** and **Password** values will be given to you by the instructor or within your Trial confirmation email.
+    Identity Tenant ID:
+    Data Center:
+    ```
 
-    ![](images/100/Picture100-3.png)
+    - ***(1)*** **Username**: With a trial account, this should be your email address.
+    - ***(2)*** **Temporary Password**: The first time you login, you will use this temporary password.
+    - ***(3)*** **Cloud Account Name**: This name will be used when you login  using the **Cloud Account with Identity Cloud Service**. ***Note***: When you click on Link **(5)** in the email, you will use this Cloud Account Name. This is the method by which all Oracle Services will eventually be authenticated.
+    - **Cloud Account Password**: You will login to your Cloud Account to set this password.
+    - ***(4)*** **Identity Domain Name**: This name will be used when you login with the **Traditional Cloud Services**. During this workshop, we will be use the Developer Cloud Services, which is currently a Traditional Cloud Services. ***Note***: When you click on Link **(6)** in the email, you will use this Identity Domain Name.
+    - **Traditional Account Password**: You will login to your Traditional Cloud Account to set this password.
+    - **Identity Tenant ID**: We will locate this information later, but make a holding place in your notes for this field. This field will be used when creating a connection between the Developer Cloud Service (DevCS) and the Application Cloud Service (ACCS), allowing automatic deployment of Applications.
+    - **Data Center**: We'll locate this information in an upcoming step, and this fields will also be used when creating the connection between DevCS and ACCS.
 
-- Once your Identity Domain is set, enter your User Name and Password and click **Sign In**
+    - Click on the link ***(5)*** **Cloud Account My Services URL** provided in the email.
+    - Follow the instructions to **set your password**, and then record in your notes the new password for this **Cloud Account Password** field.
+    - Click on the link ***(6)*** **Traditional Cloud Account My Services URL** provided in the email.
+    - Follow the instructions to **set your password**, and then record in your notes the new password for this **Traditional Account Password** field.
 
-    ![](images/100/Picture100-3.5.png)
+    ![](images/studentguide/Picture200.png)
 
-- You will be presented with a Dashboard displaying the various cloud services available to this account.
+- Click on the **Cloud Account** drop down, and select the regular **Cloud Account**, NOT the (traditional) account. This will allow you to access all cloud services for this workshop, with the exception of the Developer Cloud Service. ***Note: Oracle will soon have all services merged under the Standard Identity Cloud Service Account. However, until that time, you need to be aware of your dashboard Account settings, and at times you will need to switch between the Regular Cloud Account and Traditional Cloud Account to view the right services in the Dashboard and Dashboard Menus.***
 
-    ![](images/100/Picture100-4.png)
+    ![](images/studentguide/Picture200.1.png)
 
-- If all your **Storage** cloud service is not visible, **click** on the **Customize Dashboard**, you can add services to the dashboard by clicking **Show.** For this workshop, you will want to ensure that you are showing at least the **Application Container, Developer and Storage** cloud services. If you do not want to see a specific service, click **Hide**
+- Click on the **Customize Dashboard** box to add the some select services to the Dashboard.
 
-    ![](images/100/Picture100-5.png)
+    ![](images/studentguide/Picture200.2.png)
 
-### Check/Set Storage Replication Policy
+- Located the **Identity Cloud** Services, and click on **Show**.
 
-Depending on the state of your Cloud Account, you may need to set the replication policy, if it has not been previously set. In this step you will go to the Storage Cloud Service to check on the status of the Replicaton Policy. 
+    ![](images/studentguide/Picture200.3.png)
 
-- Click on the **Storage** Cloud Service
-    ![](images/100/Picture-01.png)
+- Also locate and **Show** the **MySQL**, **Storage Classic** and **Application Container** cloud services. Exit the Customization popup by clicking on the **X** in the upper right corner of the dialog.
 
-- Click on the **Open Service Console** icon at the top of the screen.
+    ![](images/studentguide/Picture200.4.png)
 
-    ![](images/100/Picture-01.5.png)
+- Ensure that the Dashboard is still set to the **Cloud Account**, and **NOT** the **Traditional Account**.
 
-- If the follow dialog is displayed, care must be taking when setting your replication policy, because it cannot be changed. Take the default and click on the **Set Policy** button. If the message is not displayed, your replication policy has already been set, and your Cloud Account is ready for the Workshop.
+    ![](images/studentguide/Picture200.6.png)
 
-    ![](images/100/Picture-02.5.png)
+- Click on the **Identity Cloud** service's **Hamburger menu**, then click on **View Details**.
 
-- Your replication policy is now set, and you can close your browser window. 
+    ![](images/studentguide/Picture200.5.png)
 
-# Virtual Box Client Installation
+- Scroll to the bottom of the page and click on the **Service Instance URL**. Note: This is the current method for capturing the **Tenant ID**. In an upcoming release, this information will be more easily accessible directly from the dashboard.
 
-As an alternative to installing Eclipse, Brackets and Git on your laptop, you can follow these steps to download a Virtual Box image that will contain all those products pre-integrated together.
+    ![](images/studentguide/Picture200.7.png)
 
-### Hardware Requirements
+- You will now copy and store in your notes the **Identity Tenant ID**. The ID is comprised of all the characters and numbers between the `"https://"` and the `".identity"` characters found in the URL. This ID Will be used when connecting to ACCS from DevCS. You can close the Identity Cloud Services Dashboard.
 
-- You will need a machine capable of running the wokrshop image within Oracle Virtual Box (MAC or PC / Minumum of 50GB of free storage / 8GB RAM)
+    ![](images/studentguide/Picture200.8.png)
 
-- You will need full Administrator privileges on your machines, and in some cases will need to set Hardware Virtualization in the BIOS.
+- Return to the main dashboard by clicking on the **Dashboard** icon in the upper right corner of the Identity Cloud Service Console.
 
-- Hardware Virtualization needs to be enabled in the BIOS to properly run Virtual Box.  If you getting virtualization errors, reboot into the BIOS and make sure that the setting to enable Hardware Virtualization is enabled. 
+    ![](images/studentguide/Picture200.9.png)
 
-- The latest version of Virtual Box should be installed and tested prior to the workhop.
+- Ensure that you are still on the **Standard Cloud Account** dashboard, and not the Traditional Account Dashboard by checking the account drop-down at the top of the page as previously described.
 
-### Copy OVA file
+- From the Dashboard, ***Right Click*** on **Application Container**, and select **Open Link in New Tab**.
 
-**Note**: you will download all 6 zip files. You can then use software such as winzip or 7zip to automatically unzip all 6 files into a single *.ova file that can be imported into virtual box. 
+    ![](images/studentguide/Picture200.10.png)
 
-- [Download](https://www.virtualbox.org/wiki/Downloads) and install Virtual box 
+- View the Tab just opened, and save the **Data Region** in your notes. In this example, the data Region is US Commercial 2. You now have the important user and connection information that will be used during the remainder of this workshop. You can now close this browser tab, and return to the main Dashboard.
 
-- Download this workshops [Virtual box OVA zip files](https://publicdocs-corp.documents.us2.oraclecloud.com/documents/link/LFF42D5B385ADB4324B055CBF6C3FF17C1177E4725F3/folder/FA853951DE14FED12E559568F6C3FF17C1177E4725F3/_VM), and unzip.
+    ![](images/studentguide/Picture200.11.png)
 
-### Unzip and import OVA File
+### **Step 3**: Check/Set Storage Replication Policy
 
-- Startup **Oracle Virtual Box**
+Some services that we will use in this workshop require that your account's Replication Policy is set. The following steps will show you how to set your replication policy.
 
-    ![](images/studentguide/Picture22.png)
+- Click on the **Hamburger Menu** in the upper left corner of the browser window to expose the **Dashboard Menu**, then click on the **Storage Classic** menu option.
 
-- From top left menu select **File -> Import Appliance**
+    ![](images/studentguide/Picture201.png)
 
-    ![](images/studentguide/Picture23.png)
+- If your replication policy has not yet been set, the following dialog will be displayed. Use the Default **Georeplication Policy**, and click on **Set Policy**.
 
-- Click on **browse** icon to select file to import.
+    ![](images/studentguide/Picture202.png)
 
-- Navigate to the unzipped OVA file, and Click **Open**
+- To return to the main **Dashboard**, click on the **Hamburger Menu**, and then click on the **My Services** menu option.
 
-    ![](images/studentguide/Picture24.png)
+    ![](images/studentguide/Picture204.png)
 
-- Once the File is selected click **Next** to continue.
+### **Step 4**: Test Logging into your Multiple Accounts
 
-    ![](images/studentguide/Picture25.png)
+Since as part of this workshop we are using Developer Cloud Service, and that Service is currently a **Traditional** cloud service, then it is important to fully understand how to login to both the **Standard Identity Cloud Service** managed account, and then login to the **Traditional** account at the same time. After this step, we'll assume you know how to switch between accounts and services during the upcoming labs. 
 
-- Keep all the defaults and click **Import**
+- Fully exit/close your browser to logout and remove all session cookies
 
-    ![](images/studentguide/Picture26.png)
+- Re-open your browser.
 
-- Wait for import to complete. The time required to import will vary depending on the speed of your hard disk.
+- got to [cloud.oracle.com](http://cloud.oracle.com)
 
-    ![](images/studentguide/Picture27.png)
+- Click on **Sign In** at the top of the page.
 
-### Start Virtual Box Image
+    ![](images/studentguide/Picture204.1.png)
 
-- After completion of the import, you should see the Oracle Public Cloud image in a Powered Off state. The default settings will work, but if you are familiar with Virtual Box, you are welcome to change any of the settings.
+- Set the first field to **Cloud Account with Identity Cloud Service**, enter your **Cloud Account Name** recorded earlier in the second field, and click on **My Services**
 
-![](images/studentguide/Picture28.png)
+    ![](images/studentguide/Picture204.2.png)
 
-- With the **Oracle Public Cloud** selected, click **Start**.
+- Enter the **Username** and **Cloud Account Password** recorded earlier, and click on **Sign in**.
 
-    ![](images/studentguide/Picture29.png)
+    ![](images/studentguide/Picture204.3.png)
 
-- After a few minutes you will have a running image that will be used for all of the labs.
+- View the available services after clicking on the Dashboard **Hamburger Menu**.
 
-    ![](images/studentguide/Picture30.png)
+    ![](images/studentguide/Picture204.4.png)
 
-# Configure Client Tools Locally
+- Let's now connect to the **Traditional Account** at the same time. Open a new Browser tab window, got to [cloud.oracle.com](http://cloud.oracle.com) again, and click on **Sign In**.
+
+    ![](images/studentguide/Picture204.1.png)
+
+- Select **Tradition Cloud Account** from the top drop-down. Next select your **Data Center**. In our example, our Data Center was US Commercial 2 - both "US Commercial 2" or "Public Cloud Services - US" work in that example. **Your selection will vary** based on what you recorded earlier in this guide.
+
+- Click on **My Services**
+
+    ![](images/studentguide/Picture204.5.png)
+
+- Enter the **Identity Domain Name** you recorded earlier, and click on **Go**
+
+    ![](images/studentguide/Picture204.6.png)
+
+- Enter the **Username** and **Traditional Account Password** you recorded earlier, and click on **Sign In**
+
+    ![](images/studentguide/Picture204.7.png)
+
+- Click on the Traditional Dashboard **Hamburger Menu**, and view the limited set of available services
+
+    ![](images/studentguide/Picture204.8.png)
+
+- **Note**: you can change the account on the dashboard page between **Traditional** and the Standard **Identity Cloud Services** accounts, but one approach is to keep a tab/window open for each Account's dashboard.
+
+    ![](images/studentguide/Picture204.9.png)
+
+
+## Create the MySQL Database
+
+### **Step 5**: Load the MySQL Dashboard
+
+- The **Oracle CLOUD My Services** Dashboard should be displayed. Click on the **Hamburger Menu** on the top left side of the Dashboard.
+
+    ![](images/studentguide/Picture100.png)
+
+- Select **MySQL** from the menu options.
+
+    ![](images/studentguide/Picture101.png)
+
+- If the following Welcome screen is displayed, click on **Go to Console**.
+
+    ![](images/studentguide/Picture205.png)
+
+### **Step 6**: Create a new MySQL Instance
+
+- From the MySQL Service Console, Click on the **Create Service** button.
+
+    ![](images/studentguide/Picture102.png)
+
+- Enter `AlphaOfficeDB` for the **Service Name**, and then click on the **Next** button.
+
+    ![](images/studentguide/Picture103.png)
+
+- Click on the **Edit** button next to the **SSH Public Key** field.
+
+    ![](images/studentguide/Picture104.png)
+
+- Select the **Create a New Key** option, and the click on the **Enter** button.
+
+    ![](images/studentguide/Picture105.png)
+
+ - Once the SSH Keys have been created, click on the **Download** button. A file named **sshkeybundle.zip** will download to your Browser's configured download directory. Once the zip file has downloaded, click on **Done** to close the dialog.
+
+    ![](images/studentguide/Picture106.png)
+
+- **Unzip/Extract** and **save** the **privateKey** and **publicKey** files, as you will need these files when accessing the Cloud Image on which the MySQL Database will be installed.
+
+    ![](images/studentguide/Picture109.png)
+
+ - Change the following default fields on the **Service Details** page, and then click on **Next**.
+
+    - **Password**: `Alpha2017_`
+    - **Database Schema Name**: `AlphaOfficeDB`
+    - **Backup Destination**: Select the **None** option
+
+    ![](images/studentguide/Picture107.png)
+
+- Review the **Confirmation** Screen, and click on **Create**
+
+    ![](images/studentguide/Picture108.png)
+
+- It will take several minutes for the MySQL Database to be fully configured. You can click on the refresh Icon to refresh the status page. You can Also click on the Status Link to view the provisioning log. Take a break for an hour while the database and database image are provisioning.
+
+    ![](images/studentguide/Picture110.png)
+
+### **Step 7**: Record the Database Host IP Address
+
+- Once the Database is provisioned, click on **AlphaOfficeDB** to view the Database details.
+
+    ![](images/studentguide/Picture111.png)
+
+- Make note of the **Public IP** for the Database Service host.
+
+    ![](images/studentguide/Picture112.png)
+
+## SSH into the Database Image
+
+### **Step 8 (option Windows)**: Connection from Windows
+
+- If you do not already have PuTTY on your computer, go to [http://putty.org](http://putty.org) and download and install the appropriate version of PuTTY. 
+
+- Load the PuTTYgen utility, select **RSA** from the type of key to generate, and click on the **Load** button.
+
+    ![](images/studentguide/Picture206.png)
+
+- Change the file types to **All Files(\*.\*)**, and navigate to the folder where you saved the privateKey and publicKey files. Select the **privateKey** file, and click on the **Open** button.
+
+    ![](images/studentguide/Picture207.png)
+
+- Click on **OK** to close the PuTTYgen Notice.
+
+    ![](images/studentguide/Picture208.png)
+
+- Click on **Save private key**.
+
+    ![](images/studentguide/Picture209.png)
+
+- Click on **Yes** to close the PuTTYgen Warning message.
+
+    ![](images/studentguide/Picture210.png)
+
+- Enter `privateKey.ppk` for the **File name** to be saved, and click on the **Save** button.
+
+    ![](images/studentguide/Picture211.png)
+
+- Now that the new privateKey has been generated, close **PuTTYgen**.
+
+- Run **PuTTY** to connect using the privateKey file.
+
+- Enter the **MySQL Image Public IP** into the **Host Name (or IP address)** filed. Expand the **SSH** tree, and click on **Auth** 
+
+    ![](images/studentguide/Picture213.png)
+
+- From the **Auth** panel, click on the **Browse** button.
+
+    ![](images/studentguide/Picture214.png)
+
+- Select the **privateKey** ppk file, and click on **Open**.
+
+    ![](images/studentguide/Picture215.png)
+
+- Click on the **Open** button to connect to the image using the ssh private key.
+
+    ![](images/studentguide/Picture216.png)
+
+- If you receive a PuTTY Security Alert about the server's host key not in the registry, click on **Yes** to trust the host.
+
+    ![](images/studentguide/Picture216.2.png)
+
+- Enter in the username `opc` and press the **return** key.
+
+    ![](images/studentguide/Picture217.png)
+
+- You should now be connected to the MySQL Image.
+
+    ![](images/studentguide/Picture218.png)
+
+### **Step 8 (option Mac)**: Connecting from a Mac
+
+If you are using a Mac, you will perform this step from a Mac Terminal window. First **ssh** into the MySQL Host using the **Public IP**.
+
+- Open a Terminal Window, change to the directory where you saved your **privateKey** file, and change the file permission of the private key file to **600** using the following command: 
+
+    ```
+    chmod 600 <privateKeyFileName>
+    ```
+
+    ![](images/studentguide/Picture113.png)
+
+- Enter the ssh command to connect into the MySQL Database image instance. ***Note***: the  **opc** user has rights to **sudo** as other users:
+
+    ```
+    ssh -i <privateKeyFileName> opc@<yourHostIPAddress>
+    ```
+
+    ![](images/studentguide/Picture114.png)
+
+### **Step 9**: Install git in the MySQL Image
+
+- From either your Window's PuTTY connection, or from you Mac Terminal window, enter the **yum** command shown below to Install **git**. 
+
+    ```
+    sudo yum install git
+    ```
+
+    ![](images/studentguide/Picture114.2.png)
+
+- When prompted with the question, "**Is this OK**" enter `y` and press the return key.
+
+    ![](images/studentguide/Picture114.3.png)
+
+### **Step 10**: Clone the Script repository
+
+- Using the **sudo** command, connected as the **oracle** user, then change to the Oracle User's home directory. Next, create a **repo** directory, and change to that directory.
+
+    ```
+    sudo -s -u oracle
+    cd ~oracle
+    mkdir repo
+    cd repo
+    ```
+
+    ![](images/studentguide/Picture117.png)
+
+- Clone a local copy of the git repository containing the scripts used to load the database with the Product Catalog tables. This seed database will be used in subsequent labs.
+
+    ```
+    git clone https://github.com/pcdavies/AlphaOfficeMySQLSetup.git
+    ```
+
+    ![](images/studentguide/Picture118.png)
+
+### **Step 11**: Run the scripts
+
+- Change directories to the **AlphaOfficeMySQLSetup** directory. Run the `ls` command to see all the files in this repository. View the contents of the **setupAlphaUser.sh** script. Notice that this script runs all the other scripts contained in the directory. Then change the permission on the script so it can be run.
+
+    ```
+    cd AlphaOfficeMySQLSetup
+    ls
+    more setupAlphaUser.sh
+    chmod +x ./setupAlphaUser.sh
+    ```
+
+    ![](images/studentguide/Picture119.png)
+
+- Run the **setupAlphaUser.sh** script with the following command. Ignore the warnings. **Note**: the setupAlphaUser.sh script use the Password suggested in previous steps. If you used a different password when creating the Database than what was documented, you will need to update the the password in the script.
+
+    ```
+    ./setupAlphaUser.sh
+    ```
+- After the script completes, you can check to see if the **alpha** user was created, and the database tables where loaded by running the following command - you should see the **Product** tables:
+
+    ```
+    mysql -ualpha -pAlpha2017_ AlphaOfficeDB -e 'SHOW TABLES;'
+    ```
+    ![](images/studentguide/Picture120.png)
+
+- You can now exit and close the Terminal/PuTTY window.
+
+# Install the Open Source Tools
 
 ## Verify your version of the Java JDK
 
-Eclipse requires that you have the **JDK 8** installed.
+### **Step 12 (Windows Option)**: JDK Verification on Windows
 
-### JDK Verification on a MAC
-
-**Note**: Eclipse requires that you have the a Java JDK 8 installed. Even if you have a JRE version 8, you still need to verify that you have a JDK 8 installed. 
-
-- Open Terminal window and execute the following command: 
-
-```
-ls /Library/java/JavaVirtualMachines/
-```
-
-- If you do not have a JDK 1.8 folder, you will need to download the [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) from the Oracle Technology Network website, and install.
-
-### JDK Verification on Windows
+**Note**: Eclipse requires that you have the a Java JDK 8 installed. Even if you have a JRE version 8, you still need to verify that you have a JDK 8 installed.
 
 - On Windows, open a **cmd** window and enter `java -version` 
 
@@ -166,13 +403,25 @@ Java(TM) SE Runtime Environment (build 1.8.0_121-b13)
 Java HotSpot(TM) Client VM (build 25.121-b13, mixed mode, sharing)
 ```
 
-- If JDK/**Java version 1.8** is not installed,  you will need to download a [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) from the Oracle Technology Network website, and install.
+- If JDK/**Java version 1.8** is not installed,  you will need to download a [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) from the Oracle Technology Network website, and install.
+
+### **Step 12 (Mac Option)**: JDK Verification on a MAC
+
+**Note**: Eclipse requires that you have the a Java **JDK** 8 installed. Even if you have a **JRE** version 8, you still need to verify that you have a JDK 8 installed.
+
+- Open Terminal window and execute the following command: 
+
+```
+ls /Library/java/JavaVirtualMachines/
+```
+
+- If you do not have a JDK 1.8 folder, you will need to download the [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) from the Oracle Technology Network website, and install.
 
 ## Download and Install Eclipse
 
-### Download Eclipse
+### **Step 13**: Download Eclipse
 
-***Note***: If you already have Eclipse installed, you will still want to install and use the version documented below, for this version of Eclipse contains the **Oracle Enterprise Pack for Eclipse**, which will be used during the workshop.
+***Note***: Even if you already have Eclipse installed, you need to install and use the version documented below. This version of Eclipse contains the ***Oracle Enterprise Pack for Eclipse***, which will be used during the workshop.
 
 - Go to the [Eclipse](http://www.oracle.com/technetwork/developer-tools/eclipse/downloads/index.html) installation website
 
@@ -182,16 +431,15 @@ Java HotSpot(TM) Client VM (build 25.121-b13, mixed mode, sharing)
 
 - Once you’ve downloaded eclipse, extract the zip file and install.
 
+### **Step 14**: Optionally Configure Proxies (if behind a firewall)
 
-### Optionally Configure Proxies (if behind a firewall)
-
-If you are running Eclipse behind a firewall and need to configure the proxy setting, there are several updates to be made. First, you need to ensure that Eclipse’s proxy is set, next you need to update the maven proxy setting, and then finally, you need to ensure that the Oracle Plugin will work with your proxy settings.
+If you are running Eclipse behind a firewall, you need to configure the proxy setting. First, you need to ensure that Eclipse’s proxy is set. Next, you need to update the maven proxy setting, and then finally, you need to ensure that the Oracle Plugin will work with your proxy settings.
 
 - To set configure Eclipse’s proxy, open Eclipse and navigate to the Properties menu. Depending on the operating system, this drop down is found either from the **Eclipse > Preferences, or Window > Preferences**
 
     ![](images/studentguide/Picture2.png)
 
-- From the preferences panel, enter “**proxy**” into the search window, and click on **Network Connections**. Select **Native** for the Active Provider. This setting works well, but it requires that you have the proxy setting configured correctly on the system running Eclipse – e.g. Windows, MAC OS or Linux. Selecting Manual should also work, but some of the plugins require the underlying operating system’s proxy to be configured.
+- From the preferences panel, enter “**proxy**” into the search window, and click on **Network Connections**. Select **Native** for the Active Provider and click on **OK**. This setting works well, but it requires that you have the proxy setting configured correctly on the system running Eclipse – e.g. Windows, MAC OS or Linux. Selecting Manual should also work, but some of the plugins require the underlying operating system’s proxy to be configured.
 
     ![](images/studentguide/Picture3.png)
 
@@ -207,13 +455,16 @@ If you are running Eclipse behind a firewall and need to configure the proxy set
 
 ![](images/studentguide/Picture6.png)
 
-### Optionally Update the Eclipse / Maven proxy (if behind a firewall)
+### **Step 15**: Optionally Update the Eclipse / Maven proxy (if behind a firewall)
 
-- From the **Eclipse > Preference or Window > Preferences** panel, enter **Maven** into the search box. Click on the Maven User Settings. Make note of the directory where the settings.xml file is to be located. In the example below, the Maven User Settings are to be located in the **/home/oracle/.m2** directory
+***Note:*** You will only do this optional Eclipse/Maven Proxy setup if you are behind a firewall. Otherwise, skip this step, and go to next step where you will download and install Brackets.
+
+- From the **Eclipse > Preference or Window > Preferences** panel, type **Maven** into the search box. 
+- Click on the Maven **User Settings**. Make note of the directory where the settings.xml file is to be located. In the example below, the Maven User Settings will be located in the **/home/oracle/.m2** directory
 
     ![](images/studentguide/Picture7.png)
 
-- Close Eclipse    
+- **Cancel** out of the Maven dialog, and **Close** Eclipse
 
 - If the directory does not exist where the settings.xml file is to be located, **create the directory**. In this example, we will create the **.m2** directory. 
 
@@ -248,9 +499,9 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 
 - Reload Eclipse to use the new maven settings
 
-## Download Installing Brackets and Git
+## Download and Install Git and Brackets
 
-### Download Git
+### **Step 16**: Download/Install Git
 
 - Go to the following URL: https://git-scm.com/downloads
 
@@ -264,15 +515,15 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 
     ![](images/studentguide/Picture10.png)
 
-- Open Windows Explorer and navigate you where you downloaded the Git executable. Double click on the Git executable to start the install process.
+- Open Windows Explorer and navigate to where you downloaded the Git executable. Double click on the Git executable to start the install process.
 
     ![](images/studentguide/Picture11.png)
 
-- Run through the installation process
+- Run through the installation process. In our tests, we used the default installation settings.
 
     ![](images/studentguide/Picture12.png)
 
-### Download Brackets Text Editor
+### **Step 17**: Download/Install the Brackets Text Editor
 
 - Go to the following URL: http://brackets.io    
 
@@ -290,17 +541,17 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 
 ![](images/studentguide/Picture16.png)
 
-- Run through the installation process
+- Run through the installation process. In our tests, we used the default installation settings.
 
-### Start Brackets and Configure Git
+### **Step 18**: Start Brackets and Configure Git
 
-- Create a directory called **TwitterMarketingUI**. From Windows Explorer navigate to the directory **TwitterMarketingUI**, right click and select **Open as Brackets Project**
+- From a location of your choice, create a directory called **TwitterMarketingUI**. From Windows Explorer navigate to the directory **TwitterMarketingUI**, right click and select **Open as Brackets Project**
 
     ![](images/studentguide/Picture17.png)
 
 - Select **File -> Extension Manager…**
 
-- In the search field, type **GIT**. Click **Install** for Brackets Git
+- In the search field, type `integration of git`. Click **Install** for **Brackets Git**
 
     ![](images/studentguide/Picture18.png)
 
@@ -316,3 +567,6 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 
     ![](images/studentguide/Picture21.png)
 
+
+
+- You can now ready to start on [Lab 100](CloudNativeMySQL100.md) Lab

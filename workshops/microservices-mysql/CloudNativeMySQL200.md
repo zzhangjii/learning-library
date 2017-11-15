@@ -172,7 +172,7 @@ Now that you have successfully built your project, you need to create a deployme
 
   - **Data Center**: `<Your Assigned Datacenter>` 
 
-  - **Identity Domain**: `<Your Identity Domain>`
+  - **Identity Domain**: `<Your Identity Domain>` ***Note***: If you are using a **Trial account** and followed the instructions in the [Trial Account Student Guide](StudentGuide.md), then in place of the Identity Domain, you populate this field with the **Identity Tenant ID** you recorded.
 
   - **Username**: `<Your User Name>`
 
@@ -224,13 +224,16 @@ Now that you have successfully built your project, you need to create a deployme
 
     ![](images/200/Picture38.3.png)  
 
+- **Note**: You possibly may receive the following message in the header. If the status of the deployment is still showing **Starting** or **Deploying**, close this error message and wait for the deployment status to show failed or success, as the deployment may automatically retry and successfully complete.
+
+    ![](images/200/Picture38.4.png)
+
 ## Verify Twitter Feed Microservice deployment
 
 ### **STEP 6**: Login to Oracle Application Container Cloud Service
 
-- Return to the Developer Service Cloud Dashboard tab if it’s still available, then select the Dashboard icon to return to the Oracle Public Cloud Dashboard. Note: It’s possible that you may be required to once again login, if the session has expired.
-
-    ![](images/200/Picture42.png)  
+- Return to the tab where your **Main Cloud Dashboard** window is loaded. If your dashboard Window is not available, simply open a tab and go to cloud.oracle.com, and re-login as previously instructed. **Note:** for those using a Trial account, this is will be your Standard Identity Cloud Service based account/dashboard.
+ 
 
 - Once the Oracle Public Cloud **Dashboard** is displayed, click on the  ![](images/200/PictureHamburger.png) menu in the upper left and select **Application Container** service. 
 
@@ -246,7 +249,7 @@ Now that you have successfully built your project, you need to create a deployme
 
     ![](images/200/Picture45.png)  
 
-### **STEP 8**: Complete Task
+### **STEP 7**: Complete Task
 
 We have now verified that the statictweets microservice has been deployed and functions properly. To finish up this part of the lab, we will mark the Issue as completed in the Sprint.
 
@@ -275,11 +278,11 @@ We have now verified that the statictweets microservice has been deployed and fu
 
 # Add Filter to Static Twitter Feed Service
 
-Now that we have completed the import, build, deployment, and verification of our initial static twitter microservice, it is time to extend the project by adding a new microservice that allows us to dynamically filter the incoming tweets based on their contents. We will use the Eclipse IDE to clone the managed GIT repository to our local workstation, test the local copy, and add the filtering feature to the local copy. We will test the new feature in Eclipse, create a new code branch for it, and commit the branch. Then we will create a merge request and switch to the Project Manager persona to approve that request. We will also see how we can manage our agile task status directly from Eclipse.
+Now that we have completed the import, build, deployment, and verification of our initial static twitter microservice, it is time to extend the project by adding a new microservice that allows us to dynamically filter the incoming tweets based on their contents. We will use the Eclipse IDE to clone the managed GIT repository to our local workstation and add the filtering feature to the local copy. We will create a new code branch for it and commit the branch. Then we will create a merge request and switch to the Project Manager persona to approve that request. We will also see how we can manage our agile task status directly from Eclipse.
 
 ## Clone Project to Eclipse IDE
 
-### **STEP 9**: Load Eclipse IDE
+### **STEP 8**: Load Eclipse IDE
 
 In the following task we will provide screen shots taken from the optional compute image provided with the workshop. If you are using Eclipse and Brackets on your local hardware, your screens may vary slightly.
 
@@ -289,7 +292,7 @@ In the following task we will provide screen shots taken from the optional compu
 
     ![](images/200/Picture50.png)  
 
-### **STEP 10**: Create connection to Oracle Developer Cloud Service
+### **STEP 9**: Create connection to Oracle Developer Cloud Service
 
 - We will now create a connection to the Developer Cloud Service. To do this, first click on the menu options **Window -> Show View ->Other**  
 
@@ -305,7 +308,7 @@ In the following task we will provide screen shots taken from the optional compu
 
 - Enter the following information, then click on the **Finish** button:
 
-  - **Identity Domain**: `<your identity domain>`
+  - **Identity Domain**: `<your identity domain>` ***Note:*** if you're using a trial account, since you are connecting to the Developer Cloud Services, which is a Traditional Service, you populate this field with the **Identity Domain Name** you recorded.
 
   - **User name**: `<your Username>`
 
@@ -324,7 +327,7 @@ In the following task we will provide screen shots taken from the optional compu
 
     ![](images/200/Picture57.png)  
 
-### **STEP 11**: Create a local clone of the repository
+### **STEP 10**: Create a local clone of the repository
 
 - **Expand Developer**, and then **double click** on **Alpha Office Product Catalog** project to activate the project.
 
@@ -358,13 +361,12 @@ In the following task we will provide screen shots taken from the optional compu
 
     ![](images/200/Picture59.6.png)  
 
-## Test the Local Cloned Services
 
-### **STEP 14**: Set Feature 2 Status to In Progress
+### **STEP 11**: Set Feature 2 Status to In Progress
 
 In the previous steps we updated the status of the Tasks assigned to "Bala Gupta" using the web interface to the Developer Cloud Service. In this step we will use the Eclipse connection to the Developer Cloud Service to update the status of Bala’s tasks.
 
-- Within the Oracle Cloud Connection tab, double click the **Issues** to expand, then double click on **Mine** to expand your list. Once you see the list of your Issues, then double click on **Create Filter on Twitter Feed**.
+- Within the Oracle Cloud Connection tab, double click the **Issues** to expand, then double click on **Mine** to expand your list. Once you see the list of your Issues, then double click on **Create Filter on Twitter Feed**. You can adjust what Eclipse views are visible using the right side and top Window menu options. 
 
     ![](images/200/Picture71.png)  
 
@@ -376,29 +378,11 @@ In the previous steps we updated the status of the Tasks assigned to "Bala Gupta
 
     ![](images/200/Picture73.2.png)  
 
-### **STEP 15**: Build and test the TwitterFeedMicroservice
-
-- **Right Click** on the **TwitterFeedMicroservice** project. Select **Maven > Update Project**. ***Note***: Eclipse does not display any status for the Update Project command, so it is recommend that you wait for approximately 30 seconds to give this command time to complete before moving forward.   
-
-    ![](images/200/Picture74.png)  
-
-- Keep the defaults, and click **OK**. This will run Maven, and build the project.
-
-    ![](images/200/Picture75.png)  
-
-- To test the local copy of the project code, right click on the **TwitterFeedMicroservice** project and select **Run As > Maven Test**
-
-    ![](images/200/Picture76.png)  
-
-- Double Clicking on the **Console tab** will expand The Window. You can minimize the Window by double clicking the tab again. If the TwitterFeedMicroservices test runs successfully, your console window will contain the following – Notice the message with “### Tweets in Static Tweets”. You should see that there were zero Failures. Depending on your installation, you may see an exception as Eclipse's network listener is shutdown.
-
-    ![](images/200/Picture77.png)  
-
 ## Add the Filter to the Service
 
 The Code we cloned locally contains the entire source necessary to filter the Static Twitter Feed. In this section of the lab, we will un-comment the code and test the filter.
 
-### **STEP 16**: Add Filter
+### **STEP 12**: Add Filter
 
 - In the Project Explorer, **expand** the **TwitterFeedMicroservice > src/main/java > com.example** and **double click** on **StaticTweets.java** to open the source code.
 
@@ -424,15 +408,9 @@ The Code we cloned locally contains the entire source necessary to filter the St
 
     ![](images/200/Picture82.png)  
 
-## Test the Local Filtered Services
+## Create Branch and Merge Request
 
-### **STEP 17**: Run Test and Create Branch
-
-- Run the Test by right clicking on **TwitterFeedMicroservice** and selecting **Run As > Maven Test**
-
-    ![](images/200/Picture83.png)  
-
-- Once the test runs, you’ll see the Static Twitter feed returned for both the unfiltered and filtered tests. You should not see any Failures.
+### **STEP 13**: Create Branch
 
 - right click on **TwitterFeedMicroservice** and select **Team > Switch To > New Branch**
 
@@ -456,11 +434,9 @@ The Code we cloned locally contains the entire source necessary to filter the St
 - Click on the **Finish button** in the Push Confirmation dialog
 - Click on **Ok** in Push Result dialog
 
-## Create Merge Request
+### **STEP 14**: Create Merge Request
 
-### **STEP 19**: Create Merge Request
-
-- Return to the Developer Cloud Service Dashboard in the browser. On navigation panel click **Code**, select the **Feature2** branch. Notice the changes. Click on the **Src** folder to view the changes commited to the branch from Eclipse.
+- Return to the Developer Cloud Service Dashboard in the browser.  If the session has timed out you may have to navigate to it again. On navigation panel click **Code**, select the **Feature2** branch. Notice the changes. Click on the **Src** folder to view the changes commited to the branch from Eclipse.
 
     ![](images/200/image094.png)  
 
@@ -499,7 +475,7 @@ The Code we cloned locally contains the entire source necessary to filter the St
 
 In the following steps “Lisa” will merge the branch create by “Bala” into the master.
 
-### **STEP 20**: Merge Requests
+### **STEP 15**: Merge Requests
 
 ![](images/lisa.png)  
 
@@ -521,17 +497,19 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 
 - Now that the code has been committed to the Developer Cloud Service repository, the build and deployment will automatically start. On the navigation panel click **Build**, and you should see a **Twitter Feed Build** in the Queue
 
-    ![](images/200/image110.png)  
+    ![](images/200/image110.png)
 
 - Wait a minute or two for the build to start and to complete. The **Last Success** will be set to **Just Now** when the build completes.
 
-    ![](images/200/image111.png)  
+    ![](images/200/image111.png)
 
 ## Test the JavaTwitterMicroservice in the Cloud
 
-### **STEP 21**: Test Microservice
+### **STEP 16**: Test Microservice
 
-- Once the service has successfully deployed, click **Deploy** in the left-hand menu and click on the **JavaTwitterMicroservice** link
+- Click **Deploy** in the left-hand menu to load the **Deployments** screen.
+
+- Once the Deploy completes Successfully, click on the **JavaTwitterMicroservice** link
 
     ![](images/200/image113.png)  
 
@@ -539,7 +517,7 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 
     ![](images/200/Picture45.png)  
 
-- Now change the appended URL to **/statictweets/%23Expo** and **press enter**. This will cause records containing **#Expo** in the tweet’s text or hashtags to be returned. This is how our Product Catalog will retrieve tweet's associated to a product.
+- Now appended `/statictweets/%23Expo` to the end of the URL and **press enter**. This will cause records containing **#Expo** in the tweet’s text or hashtags to be returned. This is how our Product Catalog will retrieve tweet's associated to a product.
 
     ![](images/200/image115.png)  
 
@@ -569,7 +547,7 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 
 You have two options for managing this code change in the version control system. If you would like more practice with the multi-user workflow, you can start a new branch for this feature, commit to that branch, create a merge request, and approve the merge. We’ll refer to this in the instructions as **Method A**. If you’re comfortable with that workflow, you can switch to master in your local repository, pull the latest revision from the cloud, and commit and push directly to master for this exercise. This will be **Method B**.
 
-### **STEP 22**: Create New Twitter App
+### **STEP 17**: Create New Twitter App
 
 To generate the unique twitter credentials for our microservices, we need to sign in to twitter and create a new application for this project, then generate access tokens for it.
 

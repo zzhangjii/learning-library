@@ -216,11 +216,11 @@ Now that we have an automated build process, we will setup up a deployment confi
 
     ![](images/300/Picture42.png)  
 
-- First lets test out the **products** REST call.  Append **/products** to the end of the URL and hit **enter**.  All of the Alpha Office products should be returned in a JSON payload. 
+- First we will test the **products** REST call.  Append `products` to the end of the URL and hit **enter**.  All of the Alpha Office products should be returned in a JSON payload. 
 
     ![](images/300/Picture43.png)  
 
-- Now lets search for just on product.  Change **products** to **product/1020**.  This will just return the product with the Product Id of 1020.
+- Now we will search for an individual product.  Change **products** to `product/1020`.  This will just return the product with the Product Id of 1020.
 
     ![](images/300/Picture44.png)  
 
@@ -256,7 +256,9 @@ We have now verified that the MySQL REST microservice has been deployed and func
 
 ### **STEP 8**: Open MySQL Console
 
-- Return to the **Main Dashboard**, click on the **Hamburger Menu** at the top left side of the window, and click on **MySQL**.  
+- Return to the **Main Dashboard**. Note: For Trial Accounts, your Standard Identity Cloud Service based account/dashboard.
+
+- Click on the **Hamburger Menu** at the top left side of the window, and click on **MySQL**. 
 
     ![](images/300/Picture60.png)  
 
