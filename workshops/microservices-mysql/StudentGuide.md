@@ -27,11 +27,11 @@ During this Workshop you'll use a MySQL Database. The purpose of this workshop i
 
 ### **Step 2**: Record information from the welcome email
 
-- After your account is fully provisioned, you will receive an email from Oracle that will allow you to connect to your cloud account. Follow the instructions in that email. However, for later use during the workshop labs, **record the following fields**, some of which you'll find in the email. The other **fields not found in the email** will be located shortly. This information ***used multiple times*** during the workshops Labs, so we recommend that you copy the following list to a text document, and then populate the fields as they are collected.
+- After your account is fully provisioned, you will receive an **email from Oracle** that will allow you to connect to your cloud account. Follow the instructions in that email. However, for later use during the workshop labs, **record the following fields**, some of which you'll find in the email. The other **fields not found in the email** will be located shortly. This information will be ***used multiple times*** during the workshops Labs, so we recommend that you **copy the following list to a text document**, and then populate the fields as they are collected.
 
     ```
     Username:
-    Temporary Password (for Both Account):
+    Temporary Password (for Both Accounts):
 
     Cloud Account Name:
     Cloud Account Password:
@@ -43,7 +43,7 @@ During this Workshop you'll use a MySQL Database. The purpose of this workshop i
     Data Center:
     ```
 
-    - ***(1)*** **Username**: With a trial account, this will be your email address. However, in the labs, an example username of cloud.admin will be referenced.
+    - ***(1)*** **Username**: With a trial account, this should be your email address.
     - ***(2)*** **Temporary Password**: The first time you login, you will use this temporary password.
     - ***(3)*** **Cloud Account Name**: This name will be used when you login  using the **Cloud Account with Identity Cloud Service**. ***Note***: When you click on Link **(5)** in the email, you will use this Cloud Account Name. This is the method by which all Oracle Services will eventually be authenticated.
     - **Cloud Account Password**: You will shortly login to your Cloud Account to set this password.
