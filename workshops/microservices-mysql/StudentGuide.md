@@ -27,18 +27,80 @@ During this Workshop you'll use a MySQL Database. The purpose of this workshop i
 
 ### **Step 2**: Record information from the welcome email
 
-- After your account is fully provisioned, you will receive an email from Oracle that will allow you to connect to the cloud account. Follow the instructions in that email. However, for later use during the workshop labs, **record the following fields**, some of which you'll find in the email. The other fields will be provided shortly. This information during the workshops Labs.
+- After your account is fully provisioned, you will receive an email from Oracle that will allow you to connect to the cloud account. Follow the instructions in that email. However, for later use during the workshop labs, **record the following fields**, some of which you'll find in the email. The **other fields will be located** shortly. This information ***used multiple times*** during the workshops Labs.
 
-    - **(1)Username** - With a trial account, this will be your email address. However, in the labs, an example username of cloud.admin will be referenced.
-    - **(2) Password** - The first time you login, you will be required to change the default password.
-    - **(3) Account-Name or Domain-Name** - Within the Lab Guides, this field will often be referenced as your **Domain Name**
-    - **(4) My Services URL** - The lab guides provide examples of how to login to a traditional account. Saving, or bookmarking this URL will allow you to more easily login to your account.
-    - **(5)Data Center** - We'll locate this information in an upcoming step.
+    ```
+    Username:
+    Password:
+    Cloud Account Name:
+    Cloud Account Password:
+    Identity Domain Name:
+    Traditional Account Password:
+    Identity Tenant ID:
+    Data Center:
+    ```
+
+    - ***(1)*** **Username**: With a trial account, this will be your email address. However, in the labs, an example username of cloud.admin will be referenced.
+    - ***(2)*** **Password**: The first time you login, you will be required to change the default password.
+    - ***(3)*** **Cloud Account Name**: This name will be used when logging into your **Cloud Account with Identity Cloud Service** option. ***Note***: When you click on Link **(5)** in the email, you will use this Cloud Account Name. This is the future method by which all Oracle Services will be protected.
+    - **Cloud Account Password**: You will shortly log into your Cloud Account to set this password.
+    - ***(4)*** **Identity Domain Name**: This name will be used when logging into **Traditional Cloud Services**. For the sake of this workshop, we will be using the Developer Cloud Services, which is currently a Traditional Cloud Services. ***Note***: When you click on Link **(6)** in the email, you will use this Identity Domain Name.
+    - **Traditional Account Password**: You will shortly log into your Traditional Cloud Account to set this password.
+    - **Identity Tenant ID**: We will locate this information later, but make a holding place in your notes for this field. This field will be used when creating a connection between the Developer Cloud Service (DevCS) and the Application Cloud Service (ACCS), allowing automatic deployment of Applications.
+    - **Data Center**: We'll locate this information in an upcoming step, and this fields will also be used when creating the connection between DevCS and ACCS.
+
+    - Click on the link ***(5)*** **Cloud Account My Services URL** provided in the email.
+    - Follow the instructions to **set your password**, and then record in your notes the new password in the **Cloud Account Password** field.
+    - Click on the link ***(6)*** **Traditional Cloud Account My Services URL** provided in the email.
+    - Follow the instructions to **set your password**, and then record in your notes the new password in the **Traditional Account Password** field.
 
     ![](images/studentguide/Picture200.png)
 
-- Click on the **My Services URL** provided in the email.
-- Follow the instructions to **Reset your Password**, and then record your new password for later use.
+- Click on the **Cloud Account** drop down, and select the regular **Cloud Account**, NOT the (traditional) account. This will allow you to access all cloud services for this workshop, with the exception of the Developer Cloud Service. ***Note: Oracle will soon have all services merged under the Standard Identity Cloud Service managed Account. However, until that time, you need to be aware of your dashboard Account setting, and at times, you will need to switch between the Regular Cloud Account and Traditional Cloud Account to view the right services in the Dashboard and Dashboard Menus.***
+
+    ![](images/studentguide/Picture200.1.png)
+
+- Click on the **Customize Dashboard** box to add the Identity Cloud service to the Dashboard.
+
+    ![](images/studentguide/Picture200.2.png)
+
+- Located the **Identity Cloud** Services, and click on **Show**.
+
+    ![](images/studentguide/Picture200.3.png)
+
+- Also locate and **Show** the **MySQL**, **Storage Classic** and **Application Container** cloud services. Exit the Customization popup by clicking on the X in the upper right corner of the dialog.
+
+    ![](images/studentguide/Picture200.4.png)
+
+- Ensure that you Dashboard is still set to the **Cloud Account**, and not the Traditional Account. 
+
+    ![](images/studentguide/Picture200.6.png)
+
+- Click on the **Identity Cloud** service's **Hamburger menu**, then select **View Details**.
+
+    ![](images/studentguide/Picture200.5.png)
+
+- Scroll to the bottom of the page and click on the **Service Instance URL**. Note: This is the current method for capturing the **Tenant ID**. In an upcoming release this information will easily accessible directly from the dashboard.
+
+    ![](images/studentguide/Picture200.7.png)
+
+- You will now copy and store in your notes the **Identity Tenant ID**. The ID will be all the characters and numbers between the `https://` and the `.identity` characters found in the URL. This ID Will be used when connecting to ACCS from DevCS. You can close the Identity Cloud Services Dashboard loaded when clicking on the Service Instance URL.
+
+    ![](images/studentguide/Picture200.8.png)
+
+- Return to the main dashboard by clicking on the **Dashboard** icon in the upper right corner of the Identity Cloud Service Console.
+
+    ![](images/studentguide/Picture200.9.png)
+
+- Ensure that you are still on the **Cloud Account** dashboard, and not the Traditional Account Dashboard, by checking the account dropdown at the top of the page as previously described. 
+
+- From the Dashboard, **Right Click** on **Application Container**, and select **Open Link in New Tab**. Opening the Application Container this was will leave the Dashboard loaded.
+
+    ![](images/studentguide/Picture200.10.png)
+
+- View the Tab just opened, and save the **Data Region** in your notes. In this example, the data Region is US Commercial 2. You now have all the information used during the remainder of this workshop. You can now close this browser tab, and return to the main Dashboard.
+
+    ![](images/studentguide/Picture200.11.png)
 
 ### **Step 3**: Check/Set Storage Replication Policy
 
@@ -48,11 +110,7 @@ Some services that we will use in this workshop require that your account's Repl
 
     ![](images/studentguide/Picture201.png)
 
-- If your replication policy has not yet been set, the following dialog will be displayed. **Record** the **Data Center** name. In this example, you will record **US** for the US Data Center. You may receive other Data Center names, such as EMEA. 
-
-    ![](images/studentguide/Picture203.png)
-
-- Use the Default **Georeplication Policy**, and click on **Set Policy**.
+- If your replication policy has not yet been set, the following dialog will be displayed. Use the Default **Georeplication Policy**, and click on **Set Policy**.
 
     ![](images/studentguide/Picture202.png)
 

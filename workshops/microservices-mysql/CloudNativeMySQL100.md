@@ -29,7 +29,9 @@ Although you will login as a single user, you will take on 4 Personae during the
 ## Create Developer Cloud Service Project
 
 ### **STEP 1**: Login to your Oracle Cloud Account
-- From any browser, go to the URL:
+
+- From any browser, go to the URL below, or if using a trial account, use the URL emailed to you in your confirmation email:
+
     `https://cloud.oracle.com`
 
 - click **Sign In** in the upper right hand corner of the browser
