@@ -46,9 +46,9 @@ During this Workshop you'll use a MySQL Database. The purpose of this workshop i
     - ***(1)*** **Username**: With a trial account, this should be your email address.
     - ***(2)*** **Temporary Password**: The first time you login, you will use this temporary password.
     - ***(3)*** **Cloud Account Name**: This name will be used when you login  using the **Cloud Account with Identity Cloud Service**. ***Note***: When you click on Link **(5)** in the email, you will use this Cloud Account Name. This is the method by which all Oracle Services will eventually be authenticated.
-    - **Cloud Account Password**: You will shortly login to your Cloud Account to set this password.
+    - **Cloud Account Password**: You will login to your Cloud Account to set this password.
     - ***(4)*** **Identity Domain Name**: This name will be used when you login with the **Traditional Cloud Services**. During this workshop, we will be use the Developer Cloud Services, which is currently a Traditional Cloud Services. ***Note***: When you click on Link **(6)** in the email, you will use this Identity Domain Name.
-    - **Traditional Account Password**: You will shortly log into your Traditional Cloud Account to set this password.
+    - **Traditional Account Password**: You will login to your Traditional Cloud Account to set this password.
     - **Identity Tenant ID**: We will locate this information later, but make a holding place in your notes for this field. This field will be used when creating a connection between the Developer Cloud Service (DevCS) and the Application Cloud Service (ACCS), allowing automatic deployment of Applications.
     - **Data Center**: We'll locate this information in an upcoming step, and this fields will also be used when creating the connection between DevCS and ACCS.
 
@@ -97,7 +97,7 @@ During this Workshop you'll use a MySQL Database. The purpose of this workshop i
 
 - Ensure that you are still on the **Standard Cloud Account** dashboard, and not the Traditional Account Dashboard by checking the account drop-down at the top of the page as previously described.
 
-- From the Dashboard, **Right Click** on **Application Container**, and select **Open Link in New Tab**.
+- From the Dashboard, ***Right Click*** on **Application Container**, and select **Open Link in New Tab**.
 
     ![](images/studentguide/Picture200.10.png)
 
@@ -121,11 +121,11 @@ Some services that we will use in this workshop require that your account's Repl
 
     ![](images/studentguide/Picture204.png)
 
-### **Step 4**: Practice the multi Account/login concepts
+### **Step 4**: Test Logging into your Multiple Accounts
 
-Since as part of this workshop we are using Developer Cloud Service, and that Service is currently a **Traditional** cloud service, then it is important for us to fully understand how to login to both the **Standard Identity Cloud Service** managed account, and then login to the **Traditional** account at the same time. After this step, we'll assume you know how to switch between accounts and services during the upcoming labs. 
+Since as part of this workshop we are using Developer Cloud Service, and that Service is currently a **Traditional** cloud service, then it is important to fully understand how to login to both the **Standard Identity Cloud Service** managed account, and then login to the **Traditional** account at the same time. After this step, we'll assume you know how to switch between accounts and services during the upcoming labs. 
 
-- Fully exit/close your browser to log out and remove all session cookies
+- Fully exit/close your browser to logout and remove all session cookies
 
 - Re-open your browser.
 
@@ -135,7 +135,7 @@ Since as part of this workshop we are using Developer Cloud Service, and that Se
 
     ![](images/studentguide/Picture204.1.png)
 
-- Set the first field to **Cloud Account with Identity Cloud Service**, enter your **Cloud Account Name** in the second field, and click on **My Services**
+- Set the first field to **Cloud Account with Identity Cloud Service**, enter your **Cloud Account Name** recorded earlier in the second field, and click on **My Services**
 
     ![](images/studentguide/Picture204.2.png)
 
@@ -143,7 +143,7 @@ Since as part of this workshop we are using Developer Cloud Service, and that Se
 
     ![](images/studentguide/Picture204.3.png)
 
-- Notice the available services after clicking on the Dashboard **Hamburger Menu**.
+- View the available services after clicking on the Dashboard **Hamburger Menu**.
 
     ![](images/studentguide/Picture204.4.png)
 
@@ -165,7 +165,7 @@ Since as part of this workshop we are using Developer Cloud Service, and that Se
 
     ![](images/studentguide/Picture204.7.png)
 
-- Click on the Traditional Dashboard **Hamburger Menu**, and notice the limited set of available services
+- Click on the Traditional Dashboard **Hamburger Menu**, and view the limited set of available services
 
     ![](images/studentguide/Picture204.8.png)
 
