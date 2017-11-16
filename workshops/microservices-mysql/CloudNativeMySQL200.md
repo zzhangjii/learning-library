@@ -1,5 +1,8 @@
-![](images/200/Picture-lab.png)  
-Update: October 1, 2017
+# Continuous Delivery of Java Microservices
+
+![](images/200/Picture-lab.png)
+
+Updated: November 15, 2017
 
 ## Introduction
 
