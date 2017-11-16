@@ -25,43 +25,38 @@ During this Workshop you'll use a MySQL Database. The purpose of this workshop i
 
 ## Login to your Oracle Cloud Account
 
-### **Step 2**: Record information from the welcome email
+### **Step 2**: Record information from the welcome email and login
 
 - After your account is fully provisioned, you will receive an **email from Oracle** that will allow you to connect to your cloud account. Follow the instructions in that email. However, for later use during the workshop labs, **record the following fields**, some of which you'll find in the email. The other **fields not found in the email** will be located shortly. This information will be ***used multiple times*** during the workshops Labs, so we recommend that you **copy the following list to a text document**, and then populate the fields as they are collected.
 
-    ```
-    Username:
-    Temporary Password (for Both Accounts):
+```
+Username:
+Temporary Password (for Both Accounts):
 
-    Cloud Account Name:
-    Cloud Account Password:
+Cloud Account Name:
+Cloud Account Password:
 
-    Identity Domain Name:
-    Traditional Account Password:
+Identity Domain Name:
+Traditional Account Password:
 
-    Identity Tenant ID:
-    Data Center:
-    ```
+Identity Tenant ID:
+Data Center:
+```
 
-    - ***(1)*** **Username**: With a trial account, this should be your email address.
-    - ***(2)*** **Temporary Password**: The first time you login, you will use this temporary password.
-    - ***(3)*** **Cloud Account Name**: This name will be used when you login  using the **Cloud Account with Identity Cloud Service**. ***Note***: When you click on Link **(5)** in the email, you will use this Cloud Account Name. This is the method by which all Oracle Services will eventually be authenticated.
-    - **Cloud Account Password**: You will login to your Cloud Account to set this password.
-    - ***(4)*** **Identity Domain Name**: This name will be used when you login with the **Traditional Cloud Services**. During this workshop, we will be use the Developer Cloud Services, which is currently a Traditional Cloud Services. ***Note***: When you click on Link **(6)** in the email, you will use this Identity Domain Name.
-    - **Traditional Account Password**: You will login to your Traditional Cloud Account to set this password.
-    - **Identity Tenant ID**: We will locate this information later, but make a holding place in your notes for this field. This field will be used when creating a connection between the Developer Cloud Service (DevCS) and the Application Cloud Service (ACCS), allowing automatic deployment of Applications.
-    - **Data Center**: We'll locate this information in an upcoming step, and this fields will also be used when creating the connection between DevCS and ACCS.
-
-    - Click on the link ***(5)*** **Cloud Account My Services URL** provided in the email.
-    - Follow the instructions to **set your password**, and then record in your notes the new password for this **Cloud Account Password** field.
-    - Click on the link ***(6)*** **Traditional Cloud Account My Services URL** provided in the email.
-    - Follow the instructions to **set your password**, and then record in your notes the new password for this **Traditional Account Password** field.
+- ***(1)*** **Username**: With a trial account, this should be your email address.
+- ***(2)*** **Temporary Password**: The first time you login, you will use this temporary password.
+- ***(3)*** **Cloud Account Name**: This name will be used when you login  using the **Cloud Account with Identity Cloud Service**. ***Note***: When you click on Link **(5)** in the email, you will use this Cloud Account Name. This is the method by which all Oracle Services will eventually be authenticated.
+- **Cloud Account Password**: You will login to your Cloud Account to set this password.
+- ***(4)*** **Identity Domain Name**: This name will be used when you login with the **Traditional Cloud Services**. During this workshop, we will be use the Developer Cloud Services, which is currently a Traditional Cloud Services. ***Note***: When you click on Link **(6)** in the email, you will use this Identity Domain Name.
+- **Traditional Account Password**: You will login to your Traditional Cloud Account to set this password in an upcoming step.
+- **Identity Tenant ID**: We will locate this information later, but make a holding place in your notes for this field. This field will be used when creating a connection between the Developer Cloud Service (DevCS) and the Application Cloud Service (ACCS), allowing automatic deployment of Applications.
+- **Data Center**: We'll locate this information in an upcoming step, and this fields will also be used when creating the connection between DevCS and ACCS.
+- Click on the link ***(5)*** **Cloud Account My Services URL** provided in the email.
+- Follow the instructions to **set your password**, and then record in your notes the new password for this **Cloud Account Password** field.
 
     ![](images/studentguide/Picture200.png)
 
-- Click on the **Cloud Account** drop down, and select the regular **Cloud Account**, NOT the (traditional) account. This will allow you to access all cloud services for this workshop, with the exception of the Developer Cloud Service. ***Note: Oracle will soon have all services merged under the Standard Identity Cloud Service Account. However, until that time, you need to be aware of your dashboard Account settings, and at times you will need to switch between the Regular Cloud Account and Traditional Cloud Account to view the right services in the Dashboard and Dashboard Menus.***
-
-    ![](images/studentguide/Picture200.1.png)
+- You are now have viewing the dashboard used to access all the Cloud Services managed by the Oracle Identity Cloud Services.
 
 - Click on the **Customize Dashboard** box to add the some select services to the Dashboard.
 
@@ -75,9 +70,7 @@ During this Workshop you'll use a MySQL Database. The purpose of this workshop i
 
     ![](images/studentguide/Picture200.4.png)
 
-- Ensure that the Dashboard is still set to the **Cloud Account**, and **NOT** the **Traditional Account**.
 
-    ![](images/studentguide/Picture200.6.png)
 
 - Click on the **Identity Cloud** service's **Hamburger menu**, then click on **View Details**.
 
@@ -94,8 +87,6 @@ During this Workshop you'll use a MySQL Database. The purpose of this workshop i
 - Return to the main dashboard by clicking on the **Dashboard** icon in the upper right corner of the Identity Cloud Service Console.
 
     ![](images/studentguide/Picture200.9.png)
-
-- Ensure that you are still on the **Standard Cloud Account** dashboard, and not the Traditional Account Dashboard by checking the account drop-down at the top of the page as previously described.
 
 - From the Dashboard, ***Right Click*** on **Application Container**, and select **Open Link in New Tab**.
 
@@ -121,15 +112,24 @@ Some services that we will use in this workshop require that your account's Repl
 
     ![](images/studentguide/Picture204.png)
 
-### **Step 4**: Test Logging into your Multiple Accounts
+### **Step 4**: Set the Traditional Account Password
 
-Since as part of this workshop we are using Developer Cloud Service, and that Service is currently a **Traditional** cloud service, then it is important to fully understand how to login to both the **Standard Identity Cloud Service** managed account, and then login to the **Traditional** account at the same time. After this step, we'll assume you know how to switch between accounts and services during the upcoming labs. 
+We will now set the Password for the **Traditional Account** User. This Account will allow you to access the **Developer Cloud Service**.
+
+- Click on the link ***(6)*** **Traditional Cloud Account My Services URL** provided in the Welcome email sent from Oracle.
+- Follow the instructions to **set your password**, and then record in your notes the new password for  **Traditional Account Password**.
+
+    ![](images/studentguide/Picture200.png)
+
+### **Step 5**: Test Logging into your Multiple Accounts
+
+It is important to fully understand how to login to both the **Standard Identity Cloud Service** managed account, and then login to the **Traditional** account at the same time. After this step, we'll assume you know how to switch between accounts and services during the upcoming labs. ***Note: Oracle will soon have all services merged under the Standard Identity Cloud Service Account.*** However, until that time, you need to be aware of your dashboard Account settings, and at times you will need to switch between the Regular Cloud Account and Traditional Cloud Account to view the right services in the Dashboard and Dashboard Menus.
 
 - Fully exit/close your browser to logout and remove all session cookies
 
 - Re-open your browser.
 
-- got to [cloud.oracle.com](http://cloud.oracle.com)
+- Go to [cloud.oracle.com](http://cloud.oracle.com)
 
 - Click on **Sign In** at the top of the page.
 
@@ -176,7 +176,7 @@ Since as part of this workshop we are using Developer Cloud Service, and that Se
 
 ## Create the MySQL Database
 
-### **Step 5**: Load the MySQL Dashboard
+### **Step 6**: Load the MySQL Dashboard
 
 - The **Oracle CLOUD My Services** Dashboard should be displayed. Click on the **Hamburger Menu** on the top left side of the Dashboard.
 
@@ -190,7 +190,7 @@ Since as part of this workshop we are using Developer Cloud Service, and that Se
 
     ![](images/studentguide/Picture205.png)
 
-### **Step 6**: Create a new MySQL Instance
+### **Step 7**: Create a new MySQL Instance
 
 - From the MySQL Service Console, Click on the **Create Service** button.
 
@@ -232,7 +232,7 @@ Since as part of this workshop we are using Developer Cloud Service, and that Se
 
     ![](images/studentguide/Picture110.png)
 
-### **Step 7**: Record the Database Host IP Address
+### **Step 8**: Record the Database Host IP Address
 
 - Once the Database is provisioned, click on **AlphaOfficeDB** to view the Database details.
 
@@ -244,7 +244,7 @@ Since as part of this workshop we are using Developer Cloud Service, and that Se
 
 ## SSH into the Database Image
 
-### **Step 8 (option Windows)**: Connection from Windows
+### **Step 9 (option Windows)**: Connection from Windows
 
 - If you do not already have PuTTY on your computer, go to [http://putty.org](http://putty.org) and download and install the appropriate version of PuTTY. 
 
@@ -304,7 +304,7 @@ Since as part of this workshop we are using Developer Cloud Service, and that Se
 
     ![](images/studentguide/Picture218.png)
 
-### **Step 8 (option Mac)**: Connecting from a Mac
+### **Step 9 (option Mac)**: Connecting from a Mac
 
 If you are using a Mac, you will perform this step from a Mac Terminal window. First **ssh** into the MySQL Host using the **Public IP**.
 
@@ -324,7 +324,7 @@ If you are using a Mac, you will perform this step from a Mac Terminal window. F
 
     ![](images/studentguide/Picture114.png)
 
-### **Step 9**: Install git in the MySQL Image
+### **Step 10**: Install git in the MySQL Image
 
 - From either your Window's PuTTY connection, or from you Mac Terminal window, enter the **yum** command shown below to Install **git**. 
 
@@ -338,7 +338,7 @@ If you are using a Mac, you will perform this step from a Mac Terminal window. F
 
     ![](images/studentguide/Picture114.3.png)
 
-### **Step 10**: Clone the Script repository
+### **Step 11**: Clone the Script repository
 
 - Using the **sudo** command, connected as the **oracle** user, then change to the Oracle User's home directory. Next, create a **repo** directory, and change to that directory.
 
@@ -359,7 +359,7 @@ If you are using a Mac, you will perform this step from a Mac Terminal window. F
 
     ![](images/studentguide/Picture118.png)
 
-### **Step 11**: Run the scripts
+### **Step 12**: Run the scripts
 
 - Change directories to the **AlphaOfficeMySQLSetup** directory. Run the `ls` command to see all the files in this repository. View the contents of the **setupAlphaUser.sh** script. Notice that this script runs all the other scripts contained in the directory. Then change the permission on the script so it can be run.
 
@@ -390,7 +390,7 @@ If you are using a Mac, you will perform this step from a Mac Terminal window. F
 
 ## Verify your version of the Java JDK
 
-### **Step 12 (Windows Option)**: JDK Verification on Windows
+### **Step 13 (Windows Option)**: JDK Verification on Windows
 
 **Note**: Eclipse requires that you have the a Java JDK 8 installed. Even if you have a JRE version 8, you still need to verify that you have a JDK 8 installed.
 
@@ -405,7 +405,7 @@ Java HotSpot(TM) Client VM (build 25.121-b13, mixed mode, sharing)
 
 - If JDK/**Java version 1.8** is not installed,  you will need to download a [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) from the Oracle Technology Network website, and install.
 
-### **Step 12 (Mac Option)**: JDK Verification on a MAC
+### **Step 13 (Mac Option)**: JDK Verification on a MAC
 
 **Note**: Eclipse requires that you have the a Java **JDK** 8 installed. Even if you have a **JRE** version 8, you still need to verify that you have a JDK 8 installed.
 
@@ -419,7 +419,7 @@ ls /Library/java/JavaVirtualMachines/
 
 ## Download and Install Eclipse
 
-### **Step 13**: Download Eclipse
+### **Step 14**: Download Eclipse
 
 ***Note***: Even if you already have Eclipse installed, you need to install and use the version documented below. This version of Eclipse contains the ***Oracle Enterprise Pack for Eclipse***, which will be used during the workshop.
 
@@ -431,7 +431,7 @@ ls /Library/java/JavaVirtualMachines/
 
 - Once you’ve downloaded eclipse, extract the zip file and install.
 
-### **Step 14**: Optionally Configure Proxies (if behind a firewall)
+### **Step 15**: Optionally Configure Proxies (if behind a firewall)
 
 If you are running Eclipse behind a firewall, you need to configure the proxy setting. First, you need to ensure that Eclipse’s proxy is set. Next, you need to update the maven proxy setting, and then finally, you need to ensure that the Oracle Plugin will work with your proxy settings.
 
@@ -455,7 +455,7 @@ If you are running Eclipse behind a firewall, you need to configure the proxy se
 
 ![](images/studentguide/Picture6.png)
 
-### **Step 15**: Optionally Update the Eclipse / Maven proxy (if behind a firewall)
+### **Step 16**: Optionally Update the Eclipse / Maven proxy (if behind a firewall)
 
 ***Note:*** You will only do this optional Eclipse/Maven Proxy setup if you are behind a firewall. Otherwise, skip this step, and go to next step where you will download and install Brackets.
 
@@ -501,7 +501,7 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 
 ## Download and Install Git and Brackets
 
-### **Step 16**: Download/Install Git
+### **Step 17**: Download/Install Git
 
 - Go to the following URL: https://git-scm.com/downloads
 
@@ -523,7 +523,7 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 
     ![](images/studentguide/Picture12.png)
 
-### **Step 17**: Download/Install the Brackets Text Editor
+### **Step 18**: Download/Install the Brackets Text Editor
 
 - Go to the following URL: http://brackets.io    
 
@@ -543,7 +543,7 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 
 - Run through the installation process. In our tests, we used the default installation settings.
 
-### **Step 18**: Start Brackets and Configure Git
+### **Step 19**: Start Brackets and Configure Git
 
 - From a location of your choice, create a directory called **TwitterMarketingUI**. From Windows Explorer navigate to the directory **TwitterMarketingUI**, right click and select **Open as Brackets Project**
 
