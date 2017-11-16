@@ -1,5 +1,8 @@
-![](images/400/PictureTitle.png)  
-Update: October 1, 2017
+# Cloud Native Rapid JavaScript Development with node.js
+
+![](images/400/PictureTitle.png)
+
+Updated: November 15, 2017
 
 ## Introduction
 
@@ -171,7 +174,7 @@ Now that we have an automated build process, we will set up a deployment configu
 
   - **Job:** `Product Catalog UI Build`
 
-  - **Artifact:** `target/msdbw-mysqlmicroservice.zip`
+  - **Artifact:** `target/msdbw-mysqlmicroserviceui.zip`
 
     ![](images/400/Picture35.3.png)  
 
@@ -221,7 +224,7 @@ Now that we have an automated build process, we will set up a deployment configu
 
 # Add Microservice endpoints
 
-Now that we have our default application, we want to modify this application to use the deployed microservices from Labs 200 and 300. For this task we will use the Brackets text editor to download code from Developer Cloud Service and make our modifications. Once the edited code is ready for deployment, we will push the edited code to the master branch in the Developer Cloud Service which will trigger a new build and deployment. 
+Now that we have our default application, we want to modify this application to use the deployed microservices from Labs 200 and 300. For this task we will use the Brackets text editor to download code from Developer Cloud Service and make our modifications. Once the edited code is ready for deployment, we will push the edited code to the master branch in the Developer Cloud Service which will trigger a new build and deployment.
 
 **Note:** Normally in a real-life scenario, you would create a Git branch, make all the changes documented in this section of the lab, commit those changes to the branch and then create a merge request. However, for the sake of time, and since the branch and merge concepts have already been covered, we will bypass best practices and make changes directly to the master branch.
 
@@ -229,13 +232,11 @@ Now that we have our default application, we want to modify this application to 
 
 ### **STEP 7**:	Start the Brackets Text Editor
 
-- Start the **Brackets** text editor. How you start Brackets will depend on your OS. We have documented how to start Brackets from our OEL image.
-
-***Note***: If you do not have Brackets installed, please follow the **Student Guide** that is part of this workshop. You will find instruction on how to install Git and configure Brackets.
+- Start the **Brackets** text editor. How you start Brackets will depend on your OS. We have documented how to start Brackets from our OEL image. ***Note***: If you do not have Brackets installed, please follow the **Student Guide** that is part of this workshop. You will find instruction on how to install Git, configure Brackets and start Brackets.
 
 - Right click the **Brackets** desktop icon and select **Open**.
 
-    ![](images/400/image052.png)  
+    ![](images/400/image052.png)
 
 - Brackets should open with the **ProductCatalogUI** folder already loaded.
 
@@ -271,7 +272,7 @@ Now that we have our default application, we want to modify this application to 
 
 ### **STEP 10**: Edit the UI Code
 
-- First go back to Developer Cloud Service to obtain the URLs for the two microservices created in Labs 200 and 300.  Click on **Deploy** in the console, and then right click on the name **AlphaOfficeMySQLREST** to copy the URL for the microservice. Save this URL, as you will use it later. 
+- Now go back to Developer Cloud Service to obtain the URLs for the two microservices created in Labs 200 and 300.  Click on **Deploy** in the console, and then right click on the name **AlphaOfficeMySQLREST** to copy the URL for the microservice. Save this URL, as you will use it later. 
 
     ![](images/400/image060.png)
 
@@ -279,7 +280,7 @@ Now that we have our default application, we want to modify this application to 
 
     ![](images/400/image060.1.png)
 
-- In Brackets, choose the **public/js/alphaOffice.js** file to edit. 
+- In Brackets, choose the **public/js/alphaOffice.js** file to edit. Ignore and close any Lint warnings that might appear.
 
     ![](images/400/image062.1.png)
 
@@ -297,7 +298,7 @@ Now that we have our default application, we want to modify this application to 
 
     ![](images/400/image062.png)
 
-- Choose **Save** from the Brackets file menu.
+- Choose **Save** from the Brackets **File** menu.
 
     ![](images/400/image063.png)
 
@@ -311,7 +312,7 @@ Now that we have our default application, we want to modify this application to 
 
 - Note: there are a number of formatting and other non-fatal warnings that will be reported for the alphaOffice.js file. Ignore these.
 
-- Enter a message for the commit and click **OK**.
+- Enter the following **Commit** message and then click **OK**: `Update to REST URLs to activate deployed services`
 
     ![](images/400/image063.2.png)
 
@@ -349,26 +350,25 @@ Now that we have our default application, we want to modify this application to 
 
     ![](images/400/Picture59.png)
 
-- Click on the **Deploy** Developer Cloud Services option, and wait for a current build of the **AlphaOfficeProductCatalogUI** to complete. Note: Sometimes you may need to refresh the screen to see the timestamp update.
+- Click on the **Deploy** Developer Cloud Services option, and wait for a current Deployment of the **AlphaOfficeProductCatalogUI** to start and then complete. Note: Sometimes you may need to refresh the screen to see the timestamp update.
 
     ![](images/400/Picture60.png)
 
-- To test the edited code, refresh the browser window that was opened in Step 6, or you can click on the **AlphaOfficeProductCatalogUI**. 
+- Once the new UI has successfully deployed, Click on the **AlphaOfficeProductCatalogUI** link to open the Application that now accesses the MySQL Database using the REST API.
 
-   ![](images/400/Picture61.png)  
+   ![](images/400/Picture61.png)
 
 - The REST services have now been activated, and the UI application is fully functional.
 
-   ![](images/400/Picture50.png)  
+   ![](images/400/Picture50.png)
 
-- Click on any **product** to display the Tweets associated with that product. 
+- Click on any **product** to display the Tweets associated with that product. The Tweets are also accessed using a REST API.
 
-   ![](images/400/Picture62.png) 
+   ![](images/400/Picture62.png)
 
-- After viewing the tweets, click on the **Close** button. 
-  
-   ![](images/400/Picture63.png)  
+- After viewing the tweets, click on the **Close** button.
 
+   ![](images/400/Picture63.png)
 
 ### **STEP 13**: Complete Task
 
@@ -391,6 +391,6 @@ We have now verified that the Product Catalog UI has been deployed and functions
 
 - Your Sprint should now look like the following:
 
-    ![](images/400/Picture58.2.png)  
+    ![](images/400/Picture58.2.png) 
 
 - **You are now done with this lab.**

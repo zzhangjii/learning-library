@@ -1,6 +1,8 @@
+# Agile Project Management
 
-![](images/100/Picture100-lab.png)  
-Update: October 1, 2017
+![](images/100/Picture100-lab.png)
+
+Updated: November 15, 2017
 
 ## Introduction
 
