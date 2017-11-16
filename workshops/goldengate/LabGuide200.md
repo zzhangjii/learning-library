@@ -138,7 +138,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 - Enter the following commands and then review the output:
 	- **Switch to user oracle:** `sudo su - oracle`
 	- **Display the oracle home directory:** `pwd`
-	- **Switch to the GG Home directory:** `cd $GGHOME
+	- **Switch to the GG Home directory:** `cd $GGHOME`
 	- **Display the GG home directory:** `pwd` (/u01/app/oracle/gghome)
 	- **Display the GG configuration directories:** `ls dir*`
 	- **Log into ggsci (GoldenGate command shell):** `ggsci`
