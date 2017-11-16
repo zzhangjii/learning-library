@@ -33,7 +33,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 - Start your vnc viewer and enter the IP address of the Compute image noted above.  ***You will be specifying port 10 (eg: 129.156.124.185:**10**)***.
 	- **VNC IP:** ***OG1*** in your handout
 	- **VNC Password:** ***OG2*** in your handout
-	
+
 	![](images/100/i24.png)
 
 - This is the 'On-premise' environment desktop.  All the lab material is in the `GGCS_Workshop_Material` folder on the desktop.  We have created a `cheat_sheet` folder and some shortcuts to simplify your navigation through the labs.
@@ -74,11 +74,11 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 	![](images/200/i4.png)
 
 - Update the IP address.
-	
+
 	![](images/200/i5.png)
 
 - Then right click on the tunnel and select test.
-	
+
 	![](images/200/i5.1.png)
 
 	![](images/200/i5.2.png)
@@ -147,7 +147,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 	- **Start the GGCS manager:** `start mgr`
 	- **Confirm manager is started:** `info all`
 	- **Exit the command shell:** `exit`
-	- **Switch to the network admin directory where connectivity to dbcs12c is configured:** `cd /u02/data/oci/network/admin` 
+	- **Switch to the network admin directory where connectivity to dbcs12c is configured:** `cd /u02/data/oci/network/admin`
 	- **Display the tnsnames.ora file:** `cat tnsnames.ora` (***Note*** this is where you configure GGCS sources and targets.  This has been done for you)
 	- **Close the connection:** `exit` and then `exit` again
 
@@ -156,7 +156,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 - Note this is:
 	- Using our On-premise/Compute image through VNC
 	- Our source data configuration for 11g Database (schema euro)
-	- Uses OGG (not GGCS) with Classic Extract 
+	- Uses OGG (not GGCS) with Classic Extract
 
 - We are going to open a SOCKS5 Proxy Tunnel, which will encrypt data and send it through an SSH Tunnel.  First open the `GGCS_Workshop_Material` folder on the desktop.  Note that you get an authentication error if you did NOT first do step 4 above.  The first time you SSH into GGCS (or any Linux server) a file called `known_hosts` is created in the /home/oracle/.ssh directory and the GGCS key is put in that file.  For this proxy step the file and entry must first exist (created from step 4 above).  Right click on the `start_proxy.sh` and select `open`, and then `display`.
 
@@ -172,7 +172,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/200/i12.1.png)
 
-- Execute the `start_proxy.sh` script. 
+- Execute the `start_proxy.sh` script.
 	- **Enter the following:** `./start_proxy.sh`   **LEAVE THIS WINDOW OPEN - DO NOT CLOSE IT.  YOU CAN MINIMIZE IT**.
 
 	![](images/200/i13.png)
@@ -188,7 +188,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 	- **Enter the following:** `view param dirprm/CREDENTIALSTORE.oby`
 
 	![](images/200/i17.png)
- 
+
  - In the screen above note that the this credential allow us to connect to the local 11g database with an alias without having to specify an OCI connection.  You will see reference to alias ogguser in other gg configuration files.
 
  - Run this set of gg commands using oby files.  
@@ -203,9 +203,9 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 - Review extract configuration.  Note: if you go back and review the overview architecture diagram at the beginning if this lab you can identify these components (Extract, pump, trail file, etc.).  
 	- **Enter the following:** `view param ./dirprm/ADD_EURO_EXTRACT.oby`
-	
+
 	![](images/200/i19.png)
-	
+
 - Execute commands to create a datastore and add the EURO extract:
 	- **Enter the following:** `create datastore` (not included in the screenshot below)
 	- **Enter the following:** `obey dirprm/ADD_EURO_EXTRACT.oby`
@@ -227,7 +227,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 - Review processes that you have added:
 	- **Enter the following:** `info all`
- 
+
 	![](images/200/i23.png)
 
 -  Start new processes:
@@ -235,6 +235,15 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 	- **Wait a few seconds for the processes to start, and then enter:** `info all`.  
 
 	![](images/200/i24.png)
+
+- Note : If you find that Extract is 'Abended' then follow the steps below :
+	- **SSH into GGSH:**
+	![](images/200/i45.png)
+	- **Change user to Oracle:** `sudo su - oracle`
+	- **Then type:** `cd $GGHOME`
+	- **Start Manager:** `start mgr`
+	![](images/200/i46.png)
+
 
 ### **STEP 6**: Migrate Baseline Data with Datapump
 
@@ -288,7 +297,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/200/i35.png)
 
-### **STEP 7**: Configure GGCS (Cloud/Target) 
+### **STEP 7**: Configure GGCS (Cloud/Target)
 
 Note this is:
 - Using our GGCS Service (which also runs on Compute) paired with a DBCS for both GGCS metadata and target data
