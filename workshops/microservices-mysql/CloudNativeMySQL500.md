@@ -1,5 +1,8 @@
-![](images/500/PictureTitle.png)  
-Update: October 1, 2017
+# Oracle Developer Cloud Service Administration
+
+![](images/500/PictureTitle.png)
+
+Updated: November 15, 2017
 
 ## Introduction
 
@@ -7,18 +10,18 @@ This is the Fifth of several labs that are part of the **Oracle DevOps and Cloud
 
 In this lab, Lisa Jones (The Project Manager) will complete the Sprint and view the Agile reports provided by the Oracle Developer Cloud Service
 
-
 **To log issues**, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
 ## Objectives
+
 - Access Developer Cloud Service
 - Complete Sprint
 - Run Backlog and Sprint Reports
 - Review Administrative Tasks
 
 ## Required Artifacts
-- The following lab requires an Oracle Public Cloud account that will be supplied by your instructor.
 
+- The following lab requires an Oracle Public Cloud account that will be supplied by your instructor.
 
 # Close the Sprint
 
@@ -30,11 +33,11 @@ In this lab, Lisa Jones (The Project Manager) will complete the Sprint and view 
 
 - Although you will remain connected to the Oracle Cloud using the user account you were provided, you are to take on the Persona of ***Lisa Jones*** as you perform the following steps.
 
-    ![](images/lisa.png)  
+    ![](images/lisa.png)
 
-- Click on **Agile** on the Microservice Board.
+- Click on **Agile** on the Developer Services menu.
 
-    ![](images/400/image002.png)
+    ![](images/500/image002.png)
 
 - Click on the **Reports** Button and explore the **Burndown Chart**.
 
@@ -44,7 +47,6 @@ In this lab, Lisa Jones (The Project Manager) will complete the Sprint and view 
 
     ![](images/500/image003.1.png)
 
-
 ### **STEP 2**: Complete the Sprint
 
 - Click on to the **Active Sprints** button, then click **Complete Sprint**.
@@ -53,8 +55,7 @@ In this lab, Lisa Jones (The Project Manager) will complete the Sprint and view 
 
 - **Confirm** and **Complete** the Sprint
 
-![](images/400/image006.png)
-
+![](images/500/image006.png)
 
 # Project Administrative Features
 

@@ -1,5 +1,8 @@
-![](images/300/PictureLab.png)  
-Update: October 1, 2017
+# Continuous Delivery of Database Microservices
+
+![](images/300/PictureLab.png)
+
+Updated: November 15, 2017
 
 ## Introduction
 
