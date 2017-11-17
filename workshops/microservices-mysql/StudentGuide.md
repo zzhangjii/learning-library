@@ -70,17 +70,11 @@ Data Center:
 
     ![](images/studentguide/Picture200.4.png)
 
-
-
-- Click on the **Identity Cloud** service's **Hamburger menu**, then click on **View Details**.
+- To capture the **Tenant ID**, we'll load up the Compute Classic console by clicking on the **Hamburger Menu** at the top of the dashboard. Click on **Compute Classic**.
 
     ![](images/studentguide/Picture200.5.png)
 
-- Scroll to the bottom of the page and click on the **Service Instance URL**. Note: This is the current method for capturing the **Tenant ID**. In an upcoming release, this information will be more easily accessible directly from the dashboard.
-
-    ![](images/studentguide/Picture200.7.png)
-
-- You will now copy and store in your notes the **Identity Tenant ID**. The ID is comprised of all the characters and numbers between the `"https://"` and the `".identity"` characters found in the URL. This ID Will be used when connecting to ACCS from DevCS. You can close the Identity Cloud Services Dashboard.
+- The **Tenant ID** is located at the top of the Classic Console Dashboard. This ID Will be used when connecting to Application Container Cloud Service from the Developer Cloud Services. Copy the ID and save it in your notes.
 
     ![](images/studentguide/Picture200.8.png)
 
@@ -340,11 +334,10 @@ If you are using a Mac, you will perform this step from a Mac Terminal window. F
 
 ### **Step 11**: Clone the Script repository
 
-- Using the **sudo** command, connected as the **oracle** user, then change to the Oracle User's home directory. Next, create a **repo** directory, and change to that directory.
+- Using the **sudo** command, connected as the **oracle** user. Next, create a **repo** directory, and change to that directory.
 
     ```
-    sudo -s -u oracle
-    cd ~oracle
+    sudo -s oracle
     mkdir repo
     cd repo
     ```
@@ -545,7 +538,7 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 
 ### **Step 19**: Start Brackets and Configure Git
 
-- From a location of your choice, create a directory called **TwitterMarketingUI**. From Windows Explorer navigate to the directory **TwitterMarketingUI**, right click and select **Open as Brackets Project**
+- From a location of your choice, create a directory called **ProductCatalogUI**. From Windows Explorer navigate to the directory **ProductCatalogUI**, right click and select **Open as Brackets Project**
 
     ![](images/studentguide/Picture17.png)
 
@@ -566,7 +559,5 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 - You will now see the Git icon on the right-hand panel
 
     ![](images/studentguide/Picture21.png)
-
-
 
 - You can now ready to start on [Lab 100](CloudNativeMySQL100.md) Lab

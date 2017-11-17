@@ -23,6 +23,7 @@ Although you will login as a single user, you will take on 4 Personae during the
 - Start Sprint
 
 ## Required Artifacts
+
 - The following lab requires an Oracle Public Cloud account that will be supplied by your instructor.
 
 # Create Alpha Office Product Catalog Project
