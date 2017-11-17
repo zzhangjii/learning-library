@@ -538,7 +538,7 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 
 ### **Step 19**: Start Brackets and Configure Git
 
-- From a location of your choice, create a directory called **TwitterMarketingUI**. From Windows Explorer navigate to the directory **TwitterMarketingUI**, right click and select **Open as Brackets Project**
+- From a location of your choice, create a directory called **ProductCatalogUI**. From Windows Explorer navigate to the directory **ProductCatalogUI**, right click and select **Open as Brackets Project**
 
     ![](images/studentguide/Picture17.png)
 
@@ -559,7 +559,5 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 - You will now see the Git icon on the right-hand panel
 
     ![](images/studentguide/Picture21.png)
-
-
 
 - You can now ready to start on [Lab 100](CloudNativeMySQL100.md) Lab
