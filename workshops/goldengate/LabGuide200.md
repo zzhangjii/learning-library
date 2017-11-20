@@ -241,8 +241,8 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 	![](images/200/i45.png)
 	- **Change user to Oracle:** `sudo su - oracle`
 	- **Then type:** `cd $GGHOME`
-	- **Start Manager:** `Start PEURO` ***Note : Doesn't auto start, Need to manually restart PEURO***
-
+	- **Start Manager:** `Start PEURO`
+***Note : Does not auto start, Need to manually restart PEURO***
 	![](images/200/i46.png)
 
 
