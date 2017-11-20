@@ -337,7 +337,7 @@ If you are using a Mac, you will perform this step from a Mac Terminal window. F
 - Using the **sudo** command, connected as the **oracle** user. Next, create a **repo** directory, and change to that directory.
 
     ```
-    sudo -s oracle
+    sudo su - oracle
     mkdir repo
     cd repo
     ```
@@ -357,7 +357,7 @@ If you are using a Mac, you will perform this step from a Mac Terminal window. F
 - Change directories to the **AlphaOfficeMySQLSetup** directory. Run the `ls` command to see all the files in this repository. View the contents of the **setupAlphaUser.sh** script. Notice that this script runs all the other scripts contained in the directory. Then change the permission on the script so it can be run.
 
     ```
-    cd AlphaOfficeMySQLSetup
+    cd alphaOfficeMySQLSetup
     ls
     more setupAlphaUser.sh
     chmod +x ./setupAlphaUser.sh
