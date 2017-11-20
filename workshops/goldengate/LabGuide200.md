@@ -144,7 +144,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 	- **Log into ggsci (GoldenGate command shell):** `ggsci`
 	- **Display status of services:** `info all`
 	- **Delete the datastore:** `delete datastore` (the data store may or may not exist.  confirm y to delete if it does exist, otherwise ignore errors)
-	- **Start the GGCS manager:** ***start mgr***
+	- **Start the GGCS manager:** ***Start Mgr***
 	- **Confirm manager is started:** `info all`
 	- **Exit the command shell:** `exit`
 	- **Switch to the network admin directory where connectivity to dbcs12c is configured:** `cd /u02/data/oci/network/admin`
@@ -236,12 +236,13 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/200/i24.png)
 
-- Note : If you find that Extract is 'Abended' then follow the steps below :
+- Note : If you find that Extract is 'Abended' (PEURO fails) then follow the steps below :
 	- **SSH into GGSH:**
 	![](images/200/i45.png)
 	- **Change user to Oracle:** `sudo su - oracle`
 	- **Then type:** `cd $GGHOME`
-	- **Start Manager:** `start mgr`
+	- **Start Manager:** `Start PEURO` ***Note : Doesn't auto start, Need to manually restart PEURO***
+
 	![](images/200/i46.png)
 
 
