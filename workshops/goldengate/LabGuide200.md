@@ -237,7 +237,9 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 	![](images/200/i24.png)
 
 - Note : If you find that PEURO fails (see image below) then follow the steps below :
+
 	![](images/200/i44.png)
+
 	- **Ensure that Manager is "Running" on GGCS :** `See commands above near the end of step 4`
 	- **Restart PEURO by typing :** `start PEURO`
 ***Note : Does not auto start, need to manually restart PEURO***
