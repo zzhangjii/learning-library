@@ -1,16 +1,16 @@
 ## IMPORTANT: How to prepare for this workshop
 
-**Get an Oracle Cloud Account** 
-- Oracle provides several methods for gaining access to Oracle Cloud Accounts used to complete the Labs in this Hands-on-Workshop. 
-    - For some workshop events, cloud environments will be provided. 
-    - For others events (e.g. **Oracle Code**), or when completing this workshop in a self-service model, you must gain access to your own Trial account. Trial accounts can be obtained at [Try It](http://cloud.oracle.com/tryit) 
+**Get an Oracle Cloud Account**
+- Oracle provides several methods for gaining access to Oracle Cloud Accounts used to complete the Labs in this Hands-on-Workshop.
+    - For some workshop events, cloud environments will be provided.
+    - For others events (e.g. **Oracle Code**), or when completing this workshop in a self-service model, you must gain access to your own Trial account. Trial accounts can be obtained at [Try It](http://cloud.oracle.com/tryit)
     - If you are attending an Oracle sponsored event, please **review your Event invitation** for more instruction on how to gain access to your Workshop Account.
-             
+
 ## How to View the Lab Guides
 
-- The lab guides are best viewed using the Workshop's [GitHub Pages Website URL](https://pcdavies.github.io/GoldenGateCloudService/workshops/goldengate/) 
+- The lab guides are best viewed using the Workshop's [GitHub Pages Website URL](https://oracle.github.io/learning-library/GoldenGateCloudService/workshops/goldengate/)
 
-- If you are using a hardcopy printed version but wish to access the on-line version (recommended) go to this URL:  https://pcdavies.github.io/GoldenGateCloudService/workshops/goldengate/
+- If you are using a hardcopy printed version but wish to access the on-line version (recommended) go to this URL:  https://oracle.github.io/learning-library/GoldenGateCloudService/workshops/goldengate/
 
 - Once you are viewing the Workshop's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
 
@@ -20,7 +20,7 @@
 
 - To log issues and view the lab guide source, go to the [github oracle](https://github.com/pcdavies/GoldenGateCloudService/tree/master/workshops/goldengate) repository.
 
-## Prerequisites 
+## Prerequisites
 
 - Ensure your laptop does not mandate the use of VPN.  Although these guides can be viewed on or off a corporate VPN, ***access to Oracle Cloud Services MUST BE OFF VPN***.
 
@@ -90,4 +90,3 @@ This Oracle Public Cloud GoldenGate Cloud Services workshop will give you a basi
 - Generate Transactions and view data movement statistics to monitor activity.
 
 ## FAQ:  [faq.md](faq.md)
-
