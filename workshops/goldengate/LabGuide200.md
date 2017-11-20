@@ -144,7 +144,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 	- **Log into ggsci (GoldenGate command shell):** `ggsci`
 	- **Display status of services:** `info all`
 	- **Delete the datastore:** `delete datastore` (the data store may or may not exist.  confirm y to delete if it does exist, otherwise ignore errors)
-	- **Start the GGCS manager:** `***start mgr***`
+	- **Start the GGCS manager:** ***start mgr***
 	- **Confirm manager is started:** `info all`
 	- **Exit the command shell:** `exit`
 	- **Switch to the network admin directory where connectivity to dbcs12c is configured:** `cd /u02/data/oci/network/admin`
