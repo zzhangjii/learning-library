@@ -37,7 +37,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 - Start GoldenGate Cloud Service agent:
     - **Open the workshop folder on the desktop.**
-    - **Double click on the following file:** `start_ggccagent.sh` 
+    - **Double click on the following file:** `start_ggccagent.sh`
     - **Select Run in Terminal.  LEAVE THIS WINDOW OPEN**
 
 ![](images/400/i3.png)
@@ -95,7 +95,7 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 - Open a new terminal window and SSH into ggcs.  Run a process that Integrates the agent with the GoldenGate instance. Then log into ggsci and start jagent.
 	- **Double click on GGCS_SSH shortcut on Desktop**
-	- **Switch to user oracle:** `sudo su - oracle` 
+	- **Switch to user oracle:** `sudo su - oracle`
     - **Run the following:**  `/u01/app/oracle/middleware/ggccagent/bin/ggccAgent.sh /u02/data/ggcc/agent/conf/agent.properties intgGGSCI $GGHOME`
     - **Enter:** `ggsci`
     - **Enter:** `info all`
@@ -149,10 +149,14 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 ![](images/400/i14.6.png)
 
 - Return to ggsci and stop EXTDW process.  You may need to open a new terminal window (if you closed it previously):
-	- **Double click on Desktop shortcut GGCS_SSH**
-    - **Switch to user oracle:** `sudo su - oracle` 
-    - **Enter the following:**  `stop EXTDW`
-
+- **Double click on GGCS_SSH shortcut on Desktop**
+- **Switch to user oracle:** `sudo su - oracle`
+	- **Run the following:**  `/u01/app/oracle/middleware/ggccagent/bin/ggccAgent.sh /u02/data/ggcc/agent/conf/agent.properties intgGGSCI $GGHOME`
+	- **Enter:** `ggsci`
+	- **Enter:** `info all`
+	- **Enter:**  `stop EXTDW`
+	- **Confirm the agent is stopped:** `info all`
+	 
 ![](images/400/i14.3.png)
 
 - Return to the Console and review Changes in status in instances, tasks.  
