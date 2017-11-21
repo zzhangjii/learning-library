@@ -357,13 +357,21 @@ If you are using a Mac, you will perform this step from a Mac Terminal window. F
 - Change directories to the **AlphaOfficeMySQLSetup** directory. Run the `ls` command to see all the files in this repository. View the contents of the **setupAlphaUser.sh** script. Notice that this script runs all the other scripts contained in the directory. Then change the permission on the script so it can be run.
 
     ```
-    cd alphaOfficeMySQLSetup
+    cd AlphaOfficeMySQLSetup
     ls
     more setupAlphaUser.sh
     chmod +x ./setupAlphaUser.sh
     ```
 
     ![](images/studentguide/Picture119.png)
+
+- Use the `vi` command to edit the **setupAlphaUser.sh** script
+
+    ```
+    vi setupAlphaUser.sh
+    ```
+
+- 
 
 - Run the **setupAlphaUser.sh** script with the following command. Ignore the warnings. **Note**: the setupAlphaUser.sh script use the Password suggested in previous steps. If you used a different password when creating the Database than what was documented, you will need to update the the password in the script.
 
@@ -526,7 +534,7 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 
     ![](images/studentguide/Picture14.png)
 
-- Select you download location and click **Save**. We will use D:\Software
+- Select your download location and click **Save**. We will use D:\Software
 
     ![](images/studentguide/Picture15.png)
 
