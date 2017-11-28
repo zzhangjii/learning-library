@@ -12,6 +12,7 @@
 
 - Visit the [Workshop Interactive Labguide](https://launch.oracle.com/?microservices-mysql) for a visual overview of the workshop content. 
 
+- **Step #3**: All setup steps and lab replays have been posted on [youtube](https://www.youtube.com/playlist?list=PLPIzp-E1msrY6J_zl7Iv36dteSutyDpV4). You can **watch the videos** to gain an overview what's required to successfully complete the labs.
 
 
 ## DevOps and Cloud Native Microservices MySQL Workshop
