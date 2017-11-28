@@ -365,14 +365,6 @@ If you are using a Mac, you will perform this step from a Mac Terminal window. F
 
     ![](images/studentguide/Picture119.png)
 
-- Use the `vi` command to edit the **setupAlphaUser.sh** script
-
-    ```
-    vi setupAlphaUser.sh
-    ```
-
-- 
-
 - Run the **setupAlphaUser.sh** script with the following command. Ignore the warnings. **Note**: the setupAlphaUser.sh script use the Password suggested in previous steps. If you used a different password when creating the Database than what was documented, you will need to update the the password in the script.
 
     ```
@@ -395,7 +387,7 @@ If you are using a Mac, you will perform this step from a Mac Terminal window. F
 
 **Note**: Eclipse requires that you have the a Java JDK 8 installed. Even if you have a JRE version 8, you still need to verify that you have a JDK 8 installed.
 
-- On Windows, open a **cmd** window and enter `java -version` 
+- On Windows, open a **cmd** window and enter `java -version`
 
 ```
 C:\Users\usr>java -version
@@ -430,7 +422,7 @@ ls /Library/java/JavaVirtualMachines/
 
     ![](images/studentguide/Picture1.png)
 
-- Once you’ve downloaded eclipse, extract the zip file and install.
+- Once you’ve downloaded eclipse, extract the zip file and install. ***Note:*** If you encounter an error when extracting Eclipse due to a "Path name too long" error on Windows, there are solutions that can be found by performing an internet search on the error to change the Windows allowed file length. Also, we have found that using the open source [7-zip](http://www.7-zip.org/download.html) tool can help overcome the file length errors encountered by the default windows zip file extraction tools.
 
 ### **Step 15**: Optionally Configure Proxies (if behind a firewall)
 
