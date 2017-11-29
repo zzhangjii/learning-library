@@ -320,11 +320,11 @@ Now that we have our default application, we want to modify this application to 
 
     ![](images/400/image063.3.png)
 
-- The page now shows there is nothing to commit, and the working directory is clean. Click on the Git **Push** icon.
+- The page now shows there is nothing to commit, and the working directory is clean. Click on the Git **Push** icon. **Note:** If the number (1) is not showing next to Push Icon as shown below, you will need to repeat the commit steps.
 
     ![](images/400/image063.4.png)
 
-- Enter your cloud username and password that you were given. Make sure **Save credentials** to remote url (in plain text) is checked. Finally, click **OK**.
+- Enter the cloud **username** and **password** that you were given. Make sure **Save credentials** to remote url (in plain text) is checked. Finally, click **OK**.
 
     ![](images/400/image063.5.png)
 
@@ -336,7 +336,7 @@ Now that we have our default application, we want to modify this application to 
 
     ![](images/400/image063.7.png)
 
-- Click the **Files** tab, then the **public** folder, followed by the **jz** folder, and then and note the recent timestamp for the **alphaOffice.js** file.
+- Click the **Files** tab, then the **public** folder, followed by the **js** folder, and then and note the recent timestamp for the **alphaOffice.js** file.
 
     ![](images/400/image063.9.png)
 
