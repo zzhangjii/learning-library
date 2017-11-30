@@ -72,13 +72,7 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
     ![](images/100/Picture100-6.png)
 
-- The Service Details page gives you a quick glance of the service status overview.
-
-    ![](images/100/Picture100-7.png)
-
-- Click **Open Service Console** for the Oracle Developer Cloud Service. The Service Console will then list all projects for which you are currently a member.
-
-    ![](images/100/Picture100-7.5.png)
+- If you receive an error while loading the Console, return to the dashboard and ensure you follow the previous tasks instructions to "Open Service Console." 
 
 ### **STEP 3**: Create Developer Cloud Service Project
 
