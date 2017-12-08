@@ -1,11 +1,14 @@
-![](images/400/PictureTitle.png)  
-Update: October 1, 2017
+# Cloud Native Rapid JavaScript Development with node.js
+
+![](images/400/PictureTitle.png)
+
+Updated: Dec 7, 2017
 
 ## Introduction
 
 This is the fourth of several labs that are part of the **Oracle Cloud DevOps: Cloud Native Microservices Workshop.** This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several microservices.
 
-In the first lab (100), the Project Manager created a new project in the Developer Cloud Service and also created and assigned tasks to the developers of this application. In the second lab (200), the Java developer created a new microservice to retrieve and filter Twitter data. In the third lab (300), the full stack developer created a microservice to extract data from the database. In this lab (400), you will assume the persona of the UI developer who will create a new generation product catalog UI that consumes REST services. This product catalog UI will combine both the Twitter Feed Microservice and the Product Catalog Microservice into a single unified view for the user.
+In the first lab (100), the Project Manager created a new project in the Developer Cloud Service and also created and assigned tasks to the developers of this application. In the second lab (200), the Java developer created a new microservice to retrieve and filter Twitter data. In the third lab (300), the full stack developer created a microservice to extract data from a database. In this lab (400), you will assume the persona of the UI developer who will create a new generation product catalog UI that consumes REST services. This product catalog UI will combine both the Twitter Feed Microservice and the Product Catalog Microservice into a single unified view for the user.
 
 **To log issues**, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
@@ -110,7 +113,7 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
     ![](images/400/Picture26.png)  
 
-- For **Command** enter: `npm install`.
+- For **Command** enter: `npm install`
 
     ![](images/400/Picture27.png)  
 
@@ -221,7 +224,7 @@ Now that we have an automated build process, we will set up a deployment configu
 
 # Add Microservice endpoints
 
-Now that we have our default application, we want to modify this application to use the deployed microservices from Labs 200 and 300. For this task we will use the Brackets text editor to download code from Developer Cloud Service and make our modifications. Once the edited code is ready for deployment, we will push the edited code to the master branch in the Developer Cloud Service which will trigger a new build and deployment. 
+Now that we have our default application, we want to modify this application to use the deployed microservices from Labs 200 and 300. For this task we will use the Brackets text editor to download code from Developer Cloud Service and make our modifications. Once the edited code is ready for deployment, we will push the edited code to the master branch in the Developer Cloud Service which will trigger a new build and deployment.
 
 **Note:** Normally in a real-life scenario, you would create a Git branch, make all the changes documented in this section of the lab, commit those changes to the branch and then create a merge request. However, for the sake of time, and since the branch and merge concepts have already been covered, we will bypass best practices and make changes directly to the master branch.
 
@@ -229,15 +232,13 @@ Now that we have our default application, we want to modify this application to 
 
 ### **STEP 7**:	Start the Brackets Text Editor
 
-- Start the **Brackets** text editor. How you start Brackets will depend on your OS. We have documented how to start Brackets from our OEL image.
-
-***Note***: If you do not have Brackets installed, please follow the **Student Guide** that is part of this workshop. You will find instruction on how to install Git and configure Brackets.
+- Start the **Brackets** text editor. How you start Brackets will depend on your OS. We have documented how to start Brackets from our OEL image. ***Note***: If you do not have Brackets installed, please follow the **Student Guide** that is part of this workshop. You will find instruction on how to install Git, configure Brackets and start Brackets.
 
 - Right click the **Brackets** desktop icon and select **Open**.
 
-    ![](images/400/image052.png)  
+    ![](images/400/image052.png)
 
-- Brackets should open with the **UI** folder already loaded.
+- Brackets should open with the **ProductCatalogUI** folder already loaded.
 
     ![](images/400/image053.2.png)  
 
@@ -271,7 +272,7 @@ Now that we have our default application, we want to modify this application to 
 
 ### **STEP 10**: Edit the UI Code
 
-- First go back to Developer Cloud Service to obtain the URLs for the two microservices created in Labs 200 and 300.  Click on **Deploy** in the console, and then right click on the name **AlphaOfficeREST** to copy the URL for the microservice. Save this URL, as you will use it later. 
+- Now go back to Developer Cloud Service to obtain the URLs for the two microservices created in Labs 200 and 300.  Click on **Deploy** in the console, and then right click on the name **AlphaOfficeREST** to copy the URL for the microservice. Save this URL, as you will use it later. 
 
     ![](images/400/image060.png)
 
@@ -279,7 +280,7 @@ Now that we have our default application, we want to modify this application to 
 
     ![](images/400/image060.1.png)
 
-- In Brackets, choose the **public/js/alphaOffice.js** file to edit. 
+- In Brackets, choose the **public/js/alphaOffice.js** file to edit. Ignore and close any Lint warnings that might appear.
 
     ![](images/400/image062.1.png)
 
@@ -297,7 +298,7 @@ Now that we have our default application, we want to modify this application to 
 
     ![](images/400/image062.png)
 
-- Choose **Save** from the Brackets file menu.
+- Choose **Save** from the Brackets **File** menu.
 
     ![](images/400/image063.png)
 
@@ -311,7 +312,7 @@ Now that we have our default application, we want to modify this application to 
 
 - Note: there are a number of formatting and other non-fatal warnings that will be reported for the alphaOffice.js file. Ignore these.
 
-- Enter a message for the commit and click **OK**.
+- Enter the following **Commit** message and then click **OK**: `Update to REST URLs to activate deployed services`
 
     ![](images/400/image063.2.png)
 
@@ -319,11 +320,11 @@ Now that we have our default application, we want to modify this application to 
 
     ![](images/400/image063.3.png)
 
-- The page now shows there is nothing to commit, and the working directory is clean. Click on the Git **Push** icon.
+- The page now shows there is nothing to commit, and the working directory is clean. Click on the Git **Push** icon. **Note:** If the number (1) is not showing next to Push Icon as shown below, you will need to repeat the commit steps.
 
     ![](images/400/image063.4.png)
 
-- Enter your cloud username and password that you were given. Make sure **Save credentials** to remote url (in plain text) is checked. Finally, click **OK**.
+- Enter the cloud **username** and **password** that you were given. Make sure **Save credentials** to remote url (in plain text) is checked. Finally, click **OK**.
 
     ![](images/400/image063.5.png)
 
@@ -349,26 +350,25 @@ Now that we have our default application, we want to modify this application to 
 
     ![](images/400/Picture59.png)
 
-- Click on the **Deploy** Developer Cloud Services option, and wait for a current build of the **AlphaOfficeProductCatalogUI** to complete. Note: Sometimes you may need to refresh the screen to see the timestamp update.
+- Click on the **Deploy** Developer Cloud Services option, and wait for a current Deployment of the **AlphaOfficeProductCatalogUI** to start and then complete. Note: Sometimes you may need to refresh the screen to see the timestamp update.
 
     ![](images/400/Picture60.png)
 
-- To test the edited code, refresh the browser window that was opened in Step 6, or you can click on the **AlphaOfficeProductCatalogUI**. 
+- Once the new UI has successfully deployed, Click on the **AlphaOfficeProductCatalogUI** link to open the Application that now accesses the Data using the REST API.
 
-   ![](images/400/Picture61.png)  
+   ![](images/400/Picture61.png)
 
 - The REST services have now been activated, and the UI application is fully functional.
 
-   ![](images/400/Picture50.png)  
+   ![](images/400/Picture50.png)
 
-- Click on any **product** to display the Tweets associated with that product. 
+- Click on any **product** to display the Tweets associated with that product. The Tweets are also accessed using a REST API.
 
-   ![](images/400/Picture62.png) 
+   ![](images/400/Picture62.png)
 
-- After viewing the tweets, click on the **Close** button. 
-  
-   ![](images/400/Picture63.png)  
+- After viewing the tweets, click on the **Close** button.
 
+   ![](images/400/Picture63.png)
 
 ### **STEP 13**: Complete Task
 
@@ -391,6 +391,6 @@ We have now verified that the Product Catalog UI has been deployed and functions
 
 - Your Sprint should now look like the following:
 
-    ![](images/400/Picture58.2.png)  
+    ![](images/400/Picture58.2.png) 
 
 - **You are now done with this lab.**
