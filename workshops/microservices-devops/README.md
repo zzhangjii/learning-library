@@ -1,38 +1,18 @@
+# README First
+
 ## IMPORTANT: How to prepare for this Workshop
 
-**First**, ***Get an Oracle Cloud Account*** 
-- Oracle provides several methods for gaining access to Oracle Cloud Accounts used to complete the Labs in this Hands-on-Workshop. 
-- For some workshop events, cloud environments will be provided. 
-- For others events (e.g. **Oracle Code**), or when completing this workshop in a self-service model, you must gain access to your own Trial account. Trial accounts can be obtained at [Try It](https://shop.oracle.com/r/promo?sc=codeny_hol2_cloudpromotion) 
-- If you are attending an Oracle sponsored event, please **review your Event invitation** for more instruction on how to gain access to your Workshop Account.
+- **Step #1**: The Lab documentation is **best viewed** by using the Workshop's [GitHub Pages Website URL](https://oracle.github.io/learning-library/workshops/microservices-devops). Once you are viewing the Workshop's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
 
-**Second**, ***Configure your Client Environment***
-- Your client environment **must be configured prior** to attempting the Hands-on-Workshop labs. 
-- You have two options for configuring your workshop client environment. 
-- ***Option 1:*** You can install Virtual Box and download and run a pre-configured **Virtual Box Image**.
-- ***Option 2:*** You can **install and configure** Eclipse, Brackets and Git on your laptop. 
-- Both **Option 1 and 2 are documented** in the [Trial Account Student Guide](StudentGuide.md). ***Please follow the instruction in the Student Guide*** prior to attempting the Labs. 
+    ![](images/WorkshopMenu.png)
 
-**Third**, ***How to View the Lab Guides***
-
-- The Labguides are best viewed using the Workshop's [GitHub Pages Website URL](https://oracle.github.io/learning-library/workshops/microservices-devops) 
-
-- Once you are viewing the Workshop's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
-
-    ![](images/WorkshopMenu.png)  
+- **Step #2**: To get your Trial Account, ***Please follow the instruction*** found in the [Trial Account Student Guide](StudentGuide.md) prior to starting the Labs found in this workshop.
 
 - To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository.
 
 - Visit the [Workshop Interactive Labguide](https://launch.oracle.com/?microservices-devops) for a visual overview of the workshop content. 
 
-**Fourth**, ***Cloud Accelerate for the Developer***
-
-This DevOps and Cloud Native Microservices Workshop is part of a **Free** Sales Program that Oracle offers. The Program is called **Cloud Accelerate for the Developer**. During this program Oracle can work with you to do the following:
-
-- Understand your Development Interests and Capabilities
-- Build your personalized Enablement Plan, including Hands-on Technical Enablement.
-- Help you Exercise your acquired knowledge. 
-- If you are interested, simply [Click on this Link](https://launch.oracle.com/?developeraccelerate), and provide us with your contact information. 
+- **Step #3**: All setup steps and lab replays have been posted on [youtube](https://www.youtube.com/playlist?list=PLPIzp-E1msrY6J_zl7Iv36dteSutyDpV4). You can **watch the videos** to gain an overview of the workshop and what's required to successfully complete the labs.
 
 ## DevOps and Cloud Native Microservices Workshop
 
@@ -67,7 +47,7 @@ This Oracle Public Cloud DevOps and Cloud Native Microservices workshop will wal
 
 ## Lab 300: Continuous Delivery of Database Microservices
 
-**Documentation**: [CloudNative300.md](CloudNative300.md)
+**Documentation**: [CloudNativeMy300.md](CloudNative300.md)
 
 ### Objectives
 
