@@ -16,9 +16,10 @@ This lab supports the following use cases:
 
 ## Objectives
 
--   Clone, unplug, transfer and plug the AlphaPDB pluggable database using SQL Developer.
--   Export and import a schema using SQL Developer to execute Oracle Data Pump jobs.
--   Export and import a small collection of tables using SQL Developer.
+-   Migrate a pluggable database from on-premise to the Cloud.
+-   Migrate a schema using Oracle Data Pump.
+-   Migrate data using a Transportable Tablespace.
+-   Copy data using Database Links.
 
 ## Required Artifacts
 
