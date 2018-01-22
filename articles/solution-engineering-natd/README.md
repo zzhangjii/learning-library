@@ -1,6 +1,6 @@
 # Solution Engineering North American Technology Division Interviews
 
-***Note:*** This document is best viewed by clicking on this [github.io link](https://oracle.github.io/learning-library/articles/solution-engineering-natd/)
+***Note:*** This document is best viewed by clicking on this [github.io link](https://sblack4.github.io/solution-engineering-natd/articles/solution-engineering-natd/)
 
 ## Interview Schedule 
 
