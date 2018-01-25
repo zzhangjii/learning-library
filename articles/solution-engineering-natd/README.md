@@ -1,12 +1,12 @@
 # Solution Engineering North American Technology Division Interviews
 
-***Note:*** This document is best viewed by clicking on this [github.io link](https://oracle.github.io/learning-library/articles/solution-engineering-natd/)
+***Note:*** This document is best viewed by clicking on this [github.io link](https://sblack4.github.io/learning-library/articles/solution-engineering-natd/)
 
 ## Interview Schedule 
 
 The face to face interview process consists of a technical interview outlined below:
 
-### Technical Presentation and Demo - up to 45 minutes
+## Technical Presentation and Demo - up to 45 minutes
 
 | Interview Section | Minutes | Description |
 | --- | --- | --- | 
@@ -48,7 +48,17 @@ Below are some links to study Oracle’s cloud platform, yet feel free to use ot
 
 During this presentation, we ask that you provide a brief summary of the Oracle Cloud Products you have investigated, and that you feel are of interest and relevance. You can find the information you need from Oracle's main [Cloud Home Page](https://cloud.oracle.com/) website. From this website you can investigate Oracle's three categories of Cloud Offerings: [Platform as a Service](https://cloud.oracle.com/en_US/paas), [Infrastructure as a Service](https://cloud.oracle.com/en_US/iaas) and [Software as a Service](https://cloud.oracle.com/en_US/saas). Note: The job for which you are applying will focus primarily on **Platform as a Service** and **Infrastructure as a Service**.  
 
-Using an [Oracle Trial](https://github.com/oracle/learning-library/blob/master/articles/solution-engineering-natd/README.md#Oracle-Trial-Account) account you can research more in-depth any of the Oracle **Infrastructure** or **Platform** Cloud Services, and <u>**present or demonstrate in up to 15 minutes**</u> what you learned from your hands-on experience and interest in these products. ***The Trial account is a $300 credit for a 30 day use.*** Many of Oracle's **Platform** Services (e.g: Application Container Cloud Service, Container Cloud Service, Developer Cloud Service, Oracle Database / MSQL Cloud Services and Java Cloud Service provide simple demonstrations. Examples are also available using Oracle's **Infrastructure** Cloud Services.
+In this section of the interview, you will select from the 2 options below:
+
+**Option 1: Obtain an Oracle Trial Account**
+Using an Oracle Trial account you can research more in-depth any of the Oracle Infrastructure or Platform Cloud Services, and present or demonstrate in up to 15 minutes what you have learned from hands-on experience and interest in these products.  Instructions for how to secure an Oracle Trial Account are provided below.
+
+**Option 2: Oracle Cloud Investigation**
+As an alternative to getting a Trial Account, you can investigate the Platform and Infrastructure Services and present back some of your findings and interests. You are given flexibility in what you present, so have fun with it. A few pointers: We are mostly interested in your understanding of the technical functionality of Oracle's Cloud Services, what you feel Oracle's Cloud capabilities are, and how they may compare to Oracle's competitor's solutions.  
+
+**Instructions to register for Oracle Trial Account (Option1)**
+
+Using an [Oracle Trial](https://github.com/sblack4/learning-library/blob/master/articles/solution-engineering-natd/README.md#oracle-trial-account) account you can research more in-depth any of the Oracle **Infrastructure** or **Platform** Cloud Services, and <u>**present or demonstrate in up to 15 minutes**</u> what you learned from your hands-on experience and interest in these products. ***The Trial account is a $300 credit for a 30 day use.*** Many of Oracle's **Platform** Services (e.g: Application Container Cloud Service, Container Cloud Service, Developer Cloud Service, Oracle Database / MSQL Cloud Services and Java Cloud Service provide simple demonstrations. Examples are also available using Oracle's **Infrastructure** Cloud Services.
 
 - ***Note***: ensure you ***Do NOT*** select "***Yes, convert my account to Pay as you go at the end of the free promotion***" located in the Billing Section, as Checking this option would convert your account to Pay as you go after the $300.00 credit or 30 days have been fulfilled. 
 - **Note**: You would need a valid credit card to register for an account. If you don't have a credit card - please let a recruiter know ASAP - so they can work with you to help you out. 
