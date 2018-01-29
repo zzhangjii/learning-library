@@ -48,10 +48,12 @@ Below are some links to study Oracle’s cloud platform, yet feel free to use ot
 
 During this presentation, we ask that you provide a brief summary of the Oracle Cloud Products you have investigated, and that you feel are of interest and relevance. You can find the information you need from Oracle's main [Cloud Home Page](https://cloud.oracle.com/) website. From this website you can investigate Oracle's three categories of Cloud Offerings: [Platform as a Service](https://cloud.oracle.com/en_US/paas), [Infrastructure as a Service](https://cloud.oracle.com/en_US/iaas) and [Software as a Service](https://cloud.oracle.com/en_US/saas). Note: The job for which you are applying will focus primarily on **Platform as a Service** and **Infrastructure as a Service**.  
 
-In this section of the interview, you will select from the 2 options below:
+In this section of the interview, you will select a single option from the 2 options below:
 
 **Option 1: Obtain an Oracle Trial Account**
 Using an Oracle Trial account you can research more in-depth any of the Oracle Infrastructure or Platform Cloud Services, and present or demonstrate in up to 15 minutes what you have learned from hands-on experience and interest in these products.  Instructions for how to secure an Oracle Trial Account are provided below.
+
+**-OR-**
 
 **Option 2: Recent Project Presentation**
 During this presentation, we would like you to provide an overview (or demonstration) of a development project on which you have recently worked. Provide examples of the technology, programming languages, and methodologies you used during this project. Feel free to use the whiteboard or laptop available in the interview room. If you use powerpoint, please keep your presentation to approximately 5 slides.
