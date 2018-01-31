@@ -26,6 +26,8 @@ labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sa
         };
 //        READ MANIFEST - THEME, INTERACTIVE, MENU
         $http.get('manifest.json').then(function (res) {
+            $scope.version = {};
+            $scope.version.selected = 'Instructor Led';
             $scope.manifest = res.data;
             console.log("json",$scope.manifest)
             if($scope.manifest.workshop.interactive){
@@ -42,6 +44,29 @@ labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sa
                     $scope.theme = 'ttc';
                 }
             }
+            $scope.versionsAvailable = [...new Set($scope.manifest.workshop.labs.map(lab => lab.labels && lab.labels.version))].filter(version => version != undefined);
+            if($scope.versionsAvailable.length > 1) {
+              $scope.version.selected = $scope.versionsAvailable[0];
+            }
+            $scope.openDialog = function() {
+              $mdDialog.show(
+                $mdDialog.alert()
+                  .clickOutsideToClose(true)
+                  .title('About Workshop Versions')
+                  .textContent('This workshop has multiple versions. You are currently viewing the ' + $scope.version.selected + ' version of the lab guides. You can change the version any time using the selector at the top of the page.')
+                  .ariaLabel('Version Dialog')
+                  .ok('Done')
+                  .openFrom('#version-selector')
+                  .closeTo(angular.element(document.querySelector('#version-selector')))
+                );
+            };
+            storage = window.localStorage;
+            if(!storage.getItem('dialog-shown') && $scope.versionsAvailable.length > 1) {
+              $scope.openDialog();
+              storage.setItem('dialog-shown', 'true');
+            }
+
+
         }, function (msg) {
             console.log('Error getting manifest.json!');
             console.log(msg);
@@ -49,6 +74,14 @@ labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sa
         $scope.trustSrc = function (src) {
             return $sce.trustAsResourceUrl(src);
         }
+
+        $scope.$watch('version', function() {
+          if($scope.manifest) {
+            var newLab = $scope.manifest.workshop.labs.filter(lab => lab.labels && lab.labels.version == $scope.version.selected && lab.filename.includes("README"))[0]
+            $scope.getLabGuide(newLab);
+          }
+        }, true);
+
         $scope.loadContent = function (page) {
             $http.get(page).then(function (res) {
               var converter = new showdown.Converter({tables: true})
@@ -137,7 +170,7 @@ labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sa
                 }
             }
         };
-        
+
         $scope.toggleLeft = function () {
             $mdSidenav('left').toggle();
         };
@@ -161,3 +194,11 @@ labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sa
             filename: 'Home.md'
         });
     }]);
+
+    labGuide.filter('versionFilter', function() {
+      return function(labs, version) {
+        if(labs) {
+          return labs.filter(lab => lab.labels && lab.labels.version == version);
+        }
+      }
+    });
