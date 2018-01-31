@@ -62,8 +62,8 @@ Finally click **Create**.
 
 On the detail page of the new push-docker pipeline you can immediately add the required environment variables.
 
-+ **OCCS_USERNAME** = Oracle Container Cloud Service username
-+ **DOCKER_PASSWORD** = Oracle Container Cloud Service password
++ **OCCS_USER** = Oracle Container Cloud Service username
++ **OCCS_PASSWORD** = Oracle Container Cloud Service password
 + **REST_SERVER_URL** = https://<IP_ADDRESS_OF_OCCS_CONSOLE> (what was discovered in previous step)
 + **FUNCTION** = *stop* The OCCS configured to try restart of the service if that is stopped or failed for any reason.
 + **DEPLOYMENT_NAME** = the name of the OCCS deployment name. If you followe the prerequisite tutorial it has to be *wercker-springboot-1* 
