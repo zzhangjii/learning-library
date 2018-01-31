@@ -227,6 +227,8 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 
 - Click **New Board** and enter the following data. When done click **Create**.
 
+  **Type:** `Scrum`
+
   **Name:** `Microservices`
 
   **Estimation:** `Story Points`
