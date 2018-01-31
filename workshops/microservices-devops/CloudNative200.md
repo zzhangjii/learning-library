@@ -418,7 +418,7 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 
 ## Deploy Test the JavaTwitterMicroservice in the Cloud
 
-### **STEP 14**: Deploy Microserice
+### **STEP 14**: Deploy Microservice
 
 - Return to the tab where your **Main Cloud Dashboard** window is loaded. If your dashboard Window is not available, simply open a tab and go to cloud.oracle.com, and re-login as previously instructed. **Note:** for those using a Trial account, this is will be your Standard Identity Cloud Service based account/dashboard.
 
