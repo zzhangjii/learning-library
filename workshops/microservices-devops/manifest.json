@@ -46,12 +46,6 @@
                 "filename": "CloudNative500.md",
                 "title": "Lab 500: Oracle Developer Cloud Service Administration",
                 "description": "Access Developer Cloud Service, Complete Sprint, Run Backlog and Sprint Reports and Review Administrative Tasks"
-            },
-            {
-                "number": "600",
-                "filename": "DeploymentWorkaround.md",
-                "title": "Manual Deployment to ACCS from DevCS Workaround",
-                "description": "Due to a temporary DevCS bug, this document will describe how to manually deploy DevCS build artifacts to ACCS"
             }
         ]
     }

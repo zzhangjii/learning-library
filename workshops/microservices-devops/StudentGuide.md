@@ -68,15 +68,15 @@ Data Center:
 
     ![](images/studentguide/Picture200.4.png)
 
-- To capture the **Tenant ID**, we'll load up the Compute Classic console by clicking on the **Hamburger Menu** at the top of the dashboard. Click on **Compute Classic**.
+- To capture the **Tenant ID**, click on the **Identity Cloud** service you just added to the Dashboard.
 
     ![](images/studentguide/Picture200.5.png)
 
-- Once the Console has loaded, Click on the **User Image Icon**, and copy **Tenant ID**, which in this example is enclosed in the red box. This ID Will be used when connecting to Application Container Cloud Service from the Developer Cloud Services. Copy the ID and save it in your notes.
+- Once the Console has loaded, The **Tenant ID** is labeled Identity Services ID. Copy and save the text enclosed in the red box. This ID Will be used when connecting to Application Container Cloud Service from the Developer Cloud Services. Copy the ID and save it in your notes.
 
     ![](images/studentguide/Picture200.8.png)
 
-- Return to the main dashboard by clicking on the **Dashboard** icon in the upper right corner of the Identity Cloud Service Console.
+- Return to the main dashboard by clicking on the **Hamburger Menu** and then on the **Dashboard** icon.
 
     ![](images/studentguide/Picture200.9.png)
 
