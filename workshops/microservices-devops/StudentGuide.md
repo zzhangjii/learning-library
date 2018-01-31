@@ -72,7 +72,7 @@ Data Center:
 
     ![](images/studentguide/Picture200.5.png)
 
-- The **Tenant ID** is located at the top of the Classic Console Dashboard. This ID Will be used when connecting to Application Container Cloud Service from the Developer Cloud Services. Copy the ID and save it in your notes.
+- Once the Console has loaded, Click on the **User Image Icon**, and copy **Tenant ID**, which in this example is enclosed in the red box. This ID Will be used when connecting to Application Container Cloud Service from the Developer Cloud Services. Copy the ID and save it in your notes.
 
     ![](images/studentguide/Picture200.8.png)
 
