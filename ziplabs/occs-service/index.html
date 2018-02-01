@@ -18,69 +18,14 @@
         <meta name="description" content="This tutorial shows you how to create an Oracle Container Cloud Service instance, then you deploy a Ruby image as a Docker container.">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://docs.oracle.com/en/dcommon/css/forms.css">
-    <link rel="stylesheet" href="http://docs.oracle.com/en/dcommon/css/fonts.css">
-    <link rel="stylesheet" href="http://docs.oracle.com/en/dcommon/css/normalize.min.css">
-    <link rel="stylesheet" href="http://docs.oracle.com/en/dcommon/css/main.css">
-    <link rel="stylesheet" href="http://docs.oracle.com/en/dcommon/css/respond-480-tablet.css">
-    <link rel="stylesheet" href="http://docs.oracle.com/en/dcommon/css/respond-768-laptop.css">
-    <link rel="stylesheet" href="http://docs.oracle.com/en/dcommon/css/respond-1140-deskop.css">
-    <link rel="stylesheet" href="http://docs.oracle.com/en/dcommon/css/header.css">
-    <link rel="stylesheet" href="http://docs.oracle.com/en/dcommon/css/footer.css">
-    <link rel="stylesheet" href="http://docs.oracle.com/en/dcommon/css/leftnav.css">
-    <link rel="stylesheet" href="http://docs.oracle.com/en/dcommon/css/simpletree.css">
-    <link rel="stylesheet" href="http://docs.oracle.com/en/dcommon/css/home.css">
-    <!--
-                <link rel="stylesheet" href="http://www.oracle.com/webfolder/technetwork/tutorials/infographics/common/css/obe_poc.css">
-        -->
-    <link rel="stylesheet" href="./css/obe_poc.css">
-    <link rel="stylesheet" href="http://docs.oracle.com/en/dcommon/css/print.css">
-    <!--jquery-->
-    <script src="http://docs.oracle.com/en/dcommon/js/jquery-1.11.0.min.js"></script>
-    <link href="http://docs.oracle.com/en/dcommon/css/jquery-ui-1.10.4.custom.css" rel="stylesheet">
-    <!--needed for tocify tutorial toc-->
-    <script src="http://docs.oracle.com/en/dcommon/js/jquery-ui-1.10.4.custom.js"></script>
-    <script src="http://docs.oracle.com/en/dcommon/js/jquery.tocify.jd.js"></script>
-    <script src="http://docs.oracle.com/en/dcommon/js/header.js"></script>
-    <script src="http://docs.oracle.com/en/dcommon/js/leftnav.js"></script>
-    <!--//bootstrap components
-            <link rel="stylesheet" href="./bootstrap/bootstrap.min.css"><script src="./bootstrap/bootstrap.min.js"></script>-->
-    <!--fonts-->
-    <!--[if lt IE 9]>
-            <link rel="stylesheet" href="./css/ltIE9.css"><![endif]-->
-    <!--[if IE ]>
-             <link rel="stylesheet" href="./css/IE.css"> <![endif]-->
-    <!--[if IE 9]>
-             <link rel="stylesheet" href="./css/IE9.css"> <![endif]-->
-    <!--[if gte IE 9]>
-              <style type="text/css">    .gradient {       filter: none;    }
-              </style><![endif]-->
-    <!-- keep select menu's sticking when hit back button (DIVYA)-->
-    <script>
-    $(window).load(function() {
-        $("select#lodpages").each(function() {
-            $(this).val($(this).find('option[selected]').val());
-        });
-    });
-    </script>
-    <script>
-    function addCss(rules, id) {
-        var style = document.createElement('style');
-        style.setAttribute("id", id);
-        style.type = 'text/css';
-        if (style.styleSheet) {
-            style.styleSheet.cssText = rules;
-        } else {
-            style.appendChild(document.createTextNode(rules));
-        }
-        document.getElementsByTagName("head")[0].appendChild(style);
-    };
-    if (window.top !== window) {
-        var rules = "body > header, #content > .margin-left, .footer-container { display: none; }";
-        rules += "#content, #content > .w1024 { margin-top: 0 !important; }";
-        addCess(rules, "hideChromeStyle");
-    }
-    </script>
+    <link rel="stylesheet" href="../common/css/normalize.min.css">
+    <link rel="stylesheet" href="../common/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../common/css/obe-lite.css">
+    <script src="../common/js/jquery-1.11.0.min.js"></script>
+    <script src="../common/js/jquery-ui-1.10.4.custom.js"></script>
+    <script src="../common/js/jquery.tocify.jd.js"></script>
+    <script src="../common/js/leftnav.js"></script>
+  
 </head>
 
 <body>
