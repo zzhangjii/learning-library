@@ -13,8 +13,7 @@ Oracle Application Builder Cloud Service is a visual development tool for creati
 * A desktop or laptop computer running Microsoft Windows 7 or later, Apple MacOS 10.9 or later, or Linux with a web browser
 * Access to an instance of Oracle Application Builder Cloud Service
 
-
-## Log In to Oracle Application Builder Cloud Service ## 
+## Log In to Oracle Application Builder Cloud Service ##
 
 1. Sign in to your Oracle Cloud account and change the temporary password, if you haven't already done so.
 2. Log in to your Cloud instance.
@@ -59,8 +58,8 @@ Oracle Application Builder Cloud Service is a visual development tool for creati
     * <code><strong>ISBN</strong>: 123-456-789-0 </code>
     * <code><strong>Published Date</strong>: today's date </code>
     
-    The row is displayed in the books table on the **Book Catalog** page of your web app.
- <br>![](img/abcs-12.png)<br>
+The row is displayed in the books table on the **Book Catalog** page of your web app.
+<br>![](img/abcs-12.png)<br>
 [Description of the illustration abcs-12.png](files/abcs-12.txt)
 
 ## Complete and Test the App ##
