@@ -24,8 +24,8 @@ For your application to run properly on Oracle Application Container Cloud Servi
 ## Create the Manifest.json File ##
 1. Extract the content of the `book-service.zip` file in your local system.
 2. Create a `manifest.json` file at the same level than the `pom.xml` file and open it in a text editor.
-3. Add the following content and save the file.
-````json
+3. Add the following content and save the file.<br>
+```json
 {
     "runtime": {
         "majorVersion": "8"
@@ -38,28 +38,25 @@ For your application to run properly on Oracle Application Container Cloud Servi
     },
     "notes": "Book REST Application using Spring Data REST"
 }
-````
+```
+
 ## Prepare the Application to Read the PORT Environment Variable ##
 1. In the src/main directory, create the resources folder.
 2. In the resources directory, create the application.properties file.
-3. Add the following content:
-
-   `server.port=${PORT}`
+3. Add the following content:<br>
+`server.port=${PORT}`
 
 ## Compile and Package Your Application ##
 
 1. Open a command-line window (or Terminal in Linux) and go to the `book-service` directory.
-2. Compile and package your application using the Maven command:
-
-    `mvn compile package`
+2. Compile and package your application using the Maven command:<br>
+`mvn compile package`
     
 ## Deploy your Application to Oracle Application Container Cloud Service ##
 1. Log in to Oracle Cloud at [http://cloud.oracle.com/](http://cloud.oracle.com/). Enter the **Identity Domain**, **User Name**, and **Password** for your account.
 2. In the Dashboard, click **Instances** to open the Oracle Application Container Cloud Service console.
-   ![deploy-02.jpg](img/deploy-02.png)
-
-   [Description of the illustration deploy-02.png](files/deploy-02.txt)
-
+<br>![deploy-02.jpg](img/deploy-02.png)
+<br>[Description of the illustration deploy-02.png](files/deploy-02.txt)
 3. In the **Applications** list view, click **Create Application**.
 4. Click **Java SE**.
 5. In the Application section, enter a name for your application and click Browse.
@@ -70,21 +67,14 @@ For your application to run properly on Oracle Application Container Cloud Servi
 ## Test Your Application ##
 1. Open a command-line window (or Terminal in Linux).
 2. Create a new book record using the following cURL command. Replace the app_endpoint placeholder with the URL of your application.
-
-   <code>curl -i -X POST -H "Content-Type:application/json" -d "{ \"title\" : \"Hamlet\",  \"author\" : \"William Shakespeare\",\"isbn\":\"978-0486272788\", \"published\":\"1937\",\"genre\":\"Novel\" }" <b>app_endpoint</b>/books</code>
+<br><code>curl -i -X POST -H "Content-Type:application/json" -d "{ \"title\" : \"Hamlet\",  \"author\" : \"William Shakespeare\",\"isbn\":\"978-0486272788\", \"published\":\"1937\",\"genre\":\"Novel\" }" <b>app_endpoint</b>/books</code>
 3. Query all book entities.
-
-   <code>curl <b>app_endpoint</b>/books</code>
-
+<br><code>curl <b>app_endpoint</b>/books</code>
 4. Update the published property of the book. 
-
-   <code>curl -i -X PUT -H "Content-Type:application/json" -d "{ \"title\" : \"Hamlet\",  \"author\" : \"William Shakespeare\",\"isbn\":\"978-0486272788\", \"published\":\"1980\",\"genre\":\"Novel\"}" <b>app_endpoint</b>/books/1</code>
-   
-   **Note:** The PUT method, update all the properties of the entity, if you don't specify one, the property is replaced with null.
-
+<br><code>curl -i -X PUT -H "Content-Type:application/json" -d "{ \"title\" : \"Hamlet\",  \"author\" : \"William Shakespeare\",\"isbn\":\"978-0486272788\", \"published\":\"1980\",\"genre\":\"Novel\"}" <b>app_endpoint</b>/books/1</code>
+<br>**Note:** The PUT method, update all the properties of the entity, if you don't specify one, the property is replaced with null.
 5. Delete the book.
-
-   <code>curl -i -X DELETE curl -i -X DELETE app_endpoint/books/1/books/1</code>
+<br><code>curl -i -X DELETE curl -i -X DELETE app_endpoint/books/1/books/1</code>
 
 ## Want to Learn More? ##
 

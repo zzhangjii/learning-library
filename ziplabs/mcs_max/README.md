@@ -26,8 +26,8 @@ Oracle Mobile Application Accelerator (Oracle MAX) is a free mobile app. With it
 5. Close the **Customize Dashboard** window.
 6. In the **Mobile Environment Service** tile, click the **Action** menu ![](img/hamburger.png) and select **View Details**. 
 7. On the **Service Details** page, click the **Service Instance URL** link. 
-<br>![](img/t01_02_mcs_details.png)<br>
-[Description of the illustration t01_02_mcs_details.png](files/t01_02_mcs_details.txt)
+<br>![](img/t01_02_mcs_details.png)
+<br>[Description of the illustration t01_02_mcs_details.png](files/t01_02_mcs_details.txt)
 
 ## Import the Backend Service ##
 
@@ -38,19 +38,19 @@ In this section, you import the customer relationship management (CRM) backend s
 3. On the **Applications** page, click **Packages**. 
 4. On the **Packages** page, click **New Import**. 
 5. On the **Import** page, click **Choose a package file**. 
-<br>![](img/t02_04_import_package_overlay.png)<br>
-[Description of the illustration t02_04_import_package_overlay.png](files/t02_04_import_package_overlay.txt)
+<br>![](img/t02_04_import_package_overlay.png)
+<br>[Description of the illustration t02_04_import_package_overlay.png](files/t02_04_import_package_overlay.txt)
 6. In the **Open File** dialog box, navigate to the path where you saved the `package-crm.zip` file and click **Open**. 
-<br>![](img/t02_05_open_file_dialog_crm_pkg.png)<br>
-[Description of the illustration t02_05_open_file_dialog_crm_pkg.png](files/t02_05_open_file_dialog_crm_pkg.txt)
+<br>![](img/t02_05_open_file_dialog_crm_pkg.png)
+<br>[Description of the illustration t02_05_open_file_dialog_crm_pkg.png](files/t02_05_open_file_dialog_crm_pkg.txt)
 7. On the **Import Package** page, confirm that the following message appears: `package-CRM.zip is loaded`.
 8. For the following steps on the Import overlay, click Next: 
     * **Upload**
     * **Confirm**
     * **Import Results**
 9. For the **Policies** step on the **Import** overlay, click **Skip**. The **CRM 3.7** package is imported and listed on the **Packages** page. 
-<br>![](img/t02_07_imported_pkg.png)<br>
-[Description of the illustration t02_07_imported_pkg.png](files/t02_07_imported_pkg.txt)
+<br>![](img/t02_07_imported_pkg.png)
+<br>[Description of the illustration t02_07_imported_pkg.png](files/t02_07_imported_pkg.txt)
 
 ## Import the Phone App ##
 
@@ -60,36 +60,29 @@ In this section, you import the customer relationship management (CRM) backend s
 4. On the **Mobile Application Accelerator** page, click **New Application** and follow the steps in the **New Application Wizard** to create a dummy app. 
 5. On the **Mobile Application Accelerator** page, click **Import**. 
 6. On the **Import Application** page, click **Upload a MAX application package file**. 
- 
-![](img/t03_03_import_overlay.png)<br>
-[Description of the illustration t03_03_import_overlay.png](files/t03_03_import_overlay.txt)
-
+<br>![](img/t03_03_import_overlay.png)
+<br>[Description of the illustration t03_03_import_overlay.png](files/t03_03_import_overlay.txt)
 7. In the **Open File** dialog box, navigate to the path where you saved `package-CRM-phone-app.zip` and click **Open**. 
- 
-![](img/t03_04_open_file_dialog.png)<br>
-[Description of the illustration t03_04_open_file_dialog.png](files/t03_04_open_file_dialog.txt)
-
+<br>![](img/t03_04_open_file_dialog.png)
+<br>[Description of the illustration t03_04_open_file_dialog.png](files/t03_04_open_file_dialog.txt)
 8. On the **Import** Application page, confirm that the following message appears: `package-CRM-phone-app.zip: loaded and validated`.
 9. Click **Import**. The mobile app is opened in the **Application Designer** on the **Mobile Application Accelerator** page. 
 
 ## Create a Mobile Test User ##
-
 In this section, you create a mobile test user in Oracle Mobile Cloud Service. This user is required to test your mobile app.
 1. If you aren't logged in to your Mobile Cloud Service instance, log in now.
 2. Click ![The DEVELOPMENT menu](img/t02_01_dev_menu.png), and then click Applications.
 3. On the **DEVELOPMENT** menu, click **Mobile User Management**. 
 4. On the **Mobile User Management** page, click **Users**, and then click **New User**. 
- 
-![](img/t04_02_user_mgt.png)<br>
-[Description of the illustration t04_02_user_mgt.png](files/t04_02_user_mgt.txt)
-
+<br>![](img/t04_02_user_mgt.png)
+<br>[Description of the illustration t04_02_user_mgt.png](files/t04_02_user_mgt.txt)
 5. On the **New User** page, enter the values for the following fields, and then click **Create**: 
     * **Username**
     * **Email**
     * **First Name**
     * **Last Name**
-    
-    After the mobile test user is created, you receive an email message containing the user name and temporary password.
+
+After the mobile test user is created, you receive an email message containing the user name and temporary password.
 
 ## Test the Mobile App in Oracle Mobile Cloud Service ##
 
@@ -100,26 +93,26 @@ In this section, you create a mobile test user in Oracle Mobile Cloud Service. T
 5. On the **Application Designer** page, click **Test** ![The Test icon](img/t03_00_test_icon.png).
 6. Enter your mobile test user name and password and click **Sign In**. 
 7. Explore the mobile app in a web browser. When you finish, click **Back to Designer**. 
-<br>![](img/t05_02_test_app_browser.png)<br>
-[Description of the illustration t05_02_test_app_browser.png](files/t05_02_test_app_browser.txt)
+<br>![](img/t05_02_test_app_browser.png)
+<br>[Description of the illustration t05_02_test_app_browser.png](files/t05_02_test_app_browser.txt)
 
 ## Test the Mobile App on Your Mobile Phone ##
 
 1. On the **Application Designer** page, click **Test on Phone**. 
 2. Click **BUILD TEST APPLICATION**. Wait until your mobile app builds. 
 3. On the **Web Test** page, confirm that the quick response (QR) code appears: 
-<br>![](img/t06_03_qr_code.png)<br>
-[Description of the illustration t06_03_qr_code.png](files/t06_03_qr_code.txt)
+<br>![](img/t06_03_qr_code.png)
+<br>[Description of the illustration t06_03_qr_code.png](files/t06_03_qr_code.txt)
 4. On your mobile phone, tap the **Oracle MAX** icon ![The Oracle MAX icon on an Android mobile phone](img/t06_04_phone_app_icon.png). 
 5. In the app, tap the add **(+)** icon and search for a MAX-powered app. 
-<br>![](img/t06_05_max.png)<br>
-[Description of the illustration t06_05_max.png](files/t06_05_max.txt)
+<br>![](img/t06_05_max.png)
+<br>[Description of the illustration t06_05_max.png](files/t06_05_max.txt)
 <br>The MAX QR scanner loads. 
 6. Point your mobile phone at the test QR code and scan it with the QR code scanner. After it's scanned, wait until the **CRM-OBELAB** app is downloaded and installed. 
 7. On the sign-in screen, enter your user name and password, and click **Sign In**. 
 8. Explore the mobile app on your mobile phone. 
-<br>![](img/t06_08_mobile_app.png)<br>
-[Description of the illustration t06_08_mobile_app.png](files/t06_08_mobile_app.txt)
+<br>![](img/t06_08_mobile_app.png)
+<br>[Description of the illustration t06_08_mobile_app.png](files/t06_08_mobile_app.txt)
 
 ## Want to Learn More? ##
 

@@ -18,13 +18,17 @@
     <meta name="description" content="Learn how to quickly develop a business application by using Oracle Visual Builder Cloud Service.">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="../common/css/normalize.min.css">
     <link rel="stylesheet" href="../common/css/font-awesome.min.css">
     <link rel="stylesheet" href="../common/css/obe-lite.css">
     <script src="../common/js/jquery-1.11.0.min.js"></script>
     <script src="../common/js/jquery-ui-1.10.4.custom.js"></script>
     <script src="../common/js/jquery.tocify.jd.js"></script>
-    <script src="../common/js/leftnav.js"></script>
+    <script src='https://cdn.rawgit.com/showdownjs/showdown/1.6.2/dist/showdown.min.js'></script>
+    <script src="../common/js/ziplabs.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 </head>
 
 <body>
@@ -38,7 +42,6 @@
     <!--end header-->
 
     <div id="content">
-
         <h1>
             <img src="../common/img/obe_tag.png" align="middle" alt="Oracle by Example branding" />Developing a Business Application by Using Oracle Visual Builder Cloud Service</h1>
         <div class="w1024" style="position:relative; margin-top:40px;">
@@ -51,25 +54,6 @@
                         <div id="toc" class="tocify"></div>
                     </div>
                 </div>
-                <script>
-                    $(function () {
-
-                        var toc = $("#toc").tocify({
-                            selectors: "h2,h3,h4,h5"
-                        }).data("toc-tocify");
-
-                        //prettyPrint();
-                        //$(".optionName").popover({ trigger: "hover" });
-
-                        //sets options
-                        toc.setOptions({ extendPage: false, showEffect: "fadeIn", smoothScroll: false });
-
-                        // Writes all of the current plugin options to the console
-                        console.log(toc.options);
-
-                    });
-
-                </script>
             </div>
             <div id="bookContainer">
                 <article>

@@ -59,8 +59,8 @@ Oracle Visual Builder Cloud Service is a visual development tool for creating we
     * <code><strong>ISBN</strong>: 123-456-789-0 </code>
     * <code><strong>Published Date</strong>: today's date </code>
     
-    The row is displayed in the books table on the **Book Catalog** page of your web app.
- <br>![](img/abcs-12.png)<br>
+The row is displayed in the books table on the **Book Catalog** page of your web app.
+<br>![](img/abcs-12.png)<br>
 [Description of the illustration abcs-12.png](files/abcs-12.txt)
 
 ## Complete and Test the App ##
