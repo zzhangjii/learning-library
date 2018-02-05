@@ -25,7 +25,11 @@ You will need to **complete the following 3 Tasks** prior to attempting the Labs
 
 ### **Step 2**: Record information from the welcome email and login
 
-- After your account is fully provisioned, you will receive an **email from Oracle** that will allow you to connect to your cloud account. Follow the instructions in that email. However, for later use during the workshop labs, **record the following fields**, some of which you'll find in the email. The other **fields not found in the email** will be located shortly. This information will be ***used multiple times*** during the workshops Labs, so we recommend that you **copy the following list to a text document**, and then populate the fields as they are collected.
+- During the provisioning of your account, you will receive two welcome email message. ***Note: You must wait for the 2nd email shown below***, as it contains information about the ***Traditional Account***, which is required for this workshop. If the second email does not appear withing 30 minutes, please check your Junk or Promotions email folders (based on your email provider).
+
+![](images/studentguide/Picture199.png)
+
+- For latest use during the workshop labs, **record the following fields**, some of which you'll find in the email. The other **fields not found in the email** will be located shortly. This information will be ***used multiple times*** during the workshops Labs, so we recommend that you **copy the following list to a text document**, and then populate the fields as they are collected.
 
 ```
 Username:
