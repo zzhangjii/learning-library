@@ -25,7 +25,7 @@ You will need to **complete the following 3 Tasks** prior to attempting the Labs
 
 ### **Step 2**: Record information from the welcome email and login
 
-- During the provisioning of your account, you will receive two welcome email message. ***Note: You must wait for the 2nd email shown below***, as it contains information about the ***Traditional Account***, which is required for this workshop. If the second email does not appear withing 30 minutes, please check your Junk or Promotions email folders (based on your email provider).
+- During the provisioning of your account, you will receive two welcome email message. ***Note: You must wait for the 2nd email shown below***, as it contains information about the ***Traditional Account***, which is required for this workshop. If the second email does not appear within 30 minutes, please check your Junk or Promotions email folders (based on your email provider).
 
 ![](images/studentguide/Picture199.png)
 
