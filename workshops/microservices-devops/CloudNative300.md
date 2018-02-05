@@ -1,4 +1,4 @@
-# Continuous Deployment of Database Microservices
+# Continuous Delivery of Database Microservices
 
 ![](images/300/PictureLab.png)  
 Update: Dec 7, 2017
@@ -15,7 +15,7 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
 - Access Developer Cloud Service
 - Import Code from external Git Repository
-- Build project using Developer Cloud Service
+- Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
 
 ## Required Artifacts
 
@@ -79,7 +79,7 @@ To begin development on our Catalog REST microservices, we could start coding fr
 
     ![](images/300/Picture19.2.png)  
 
-## Create Default Build Process
+## Create Default Build and Deployment Process
 
 ### **STEP 4**: Create Default Build Process
 
@@ -121,7 +121,7 @@ Now that we have the source code in our managed GIT repository, we need to creat
   - Check **Archive the artifacts**.
   - Enter `**/target/*` for **Files to Archive**.  
   - Verify **GZIP** in the Compression Type.
-
+  
     ![](images/300/Picture28.3.png)  
 
 - Click **Save** to complete the configuration.
@@ -134,80 +134,92 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
     ![](images/300/Picture29.png)  
 
-  **NOTE:** Once the build begins, it should take about approximately 1 to 2 minutes for the build to complete. Once complete, you will be able to see the number of successful test runs in the Test Result Trend section. ***Wait for the build to complete before continuing to the next step***, as we need the build artifact to complete the deployment in the next step.
+  **NOTE:** Once the build begins, it should take about approximately 1 to 2 minutes for the build to complete. Once complete, you will be able to see the number of successful test runs in the Test Result Trend section. ***Wait for the build to complete before continuing to the next step***, as we need the build artifact to complete the deployment configuration.
 
 - After the build begins, you can also click on the **Console Icon** ![](images/300/Picture29.1.png) to monitor the build log details.
 
     ![](images/300/Picture30.png)
 
-- From the **Build overview page**, once your build is complete, click the job title **Alpha REST Build** to view the details.
+### **STEP 5**: Create Default Deployment Process
 
-    ![](images/300/image120.png)
+Now that we have an automated build process, we will setup up a deployment configuration that will push out build artifacts to a node.js environment running on Application Container Cloud Service whenever a successful build occurs.
 
-- From the build details page, in the **Artifacts of Last Successful Build** region, click the triangle next to the **target** link to expand the artifacts. Then click the **msdbw-microservice.zip** link to download the built microservice.
+- On the navigation panel click **Deploy** to access the Deployment page. Click **New Configuration**.
 
-    ![](images/300/image121.png)
+- Enter the following data:
 
-- Now we are ready to use the **Application Container Cloud Service** to deploy the application.
+  **Configuration Name**: `DeployREST`
 
-## Deploy the Microservice
+  **Application Name**: `AlphaOfficeREST`
 
-### **STEP 5**: Deploy to Application Container Cloud Service
+    ![](images/300/Picture32.3.png)  
 
-- Return to the tab where your **Main Cloud Dashboard** window is loaded. If your dashboard Window is not available, simply open a tab and go to cloud.oracle.com, and re-login as previously instructed. **Note:** for those using a Trial account, this is will be your Standard Identity Cloud Service based account/dashboard.
+- Click on **Deployment Target** drop down and select deployment defined in lab 200.
 
-- Once the Oracle Public Cloud **Dashboard** is displayed, click on the  <img src="images/200/PictureHamburger.png" class="infra"> menu in the lower left corner of the **Application Container** service card. Right-click **Open Service Console** and click **Open Link in New Tab**.
+    ![](images/300/Picture33.png)  
 
-  ![](images/300/image127.png)  
+- In Deployment window, click **Test Connection**. If Successful, click **Use Connection**:
 
-**NOTE**: If the **Application Container** card is not displayed, you can add it to your dashboard by clicking **Customize Dashboard**, scrolling to **Application Container**, and clicking **Show**. Then open the service console by following the previous instruction.
+    ![](images/300/Picture34.3.png)  
 
-  ![](images/300/image128.png)
+- Set the following Properties as follows:
 
-- From the service console, click **Create Application**.
+  - **Runtime**: `Node`
 
-    ![](images/200/image142.png)
+  - **Subscription**: `Hourly`
 
-- From the application platform list, click **Node**.
+  - **Type:** `Automatic` and `Deploy stable builds only`
 
-    ![](images/300/image122.png)
+  - **Job:** `Alpha REST Build`
 
-- In the **name** field, type `AlphaOfficeREST`.
+  - **Artifact:** `target/msdbw-microservice.zip`
 
-    ![](images/300/image123.png)
+    ![](images/300/Picture36.png)  
 
-- Next to the **Upload Archive** radio button, click **Choose File**. Choose the `msdbw-microservice.zip` file that you downloaded in the previous step and click **open**.
+- To reduce the number of resources that are used, we will modify the default deployment of 2 instances. Click Include ACCS Deployment and enter the following in the text box:
 
-    ![](images/300/image124.png)
+```
+{
+  "memory": "1G",
+  "instances": "1"
+}
+```
+![](images/300/Picture36.3.png)  
 
-- In the **Instances** and **Memory (GB)** fields, click the down arrow to reduce both values to **1**. Then click **Create**.
+- Click **Save**
 
-    ![](images/300/image125.png)
+    ![](images/200/Picture36.2.png)  
 
-- The zip archive will be uploaded to the service, expanded into a Docker container, and started up using the commands outlined by our build process. The process will take a couple of minutes. After the process is finished, you will see the URL of your running microservice displayed on the console. You may need to refresh the page to see the updated status.
+- Click the gear drop down for **AlphaOfficeREST** and select **Start**
 
-    ![](images/300/image126.png)
+    ![](images/300/Picture37.3.png)  
 
+- Wait until the message **Starting application** changes to **Last deployment succeeded**
+
+    ![](images/300/Picture38.2.png)  
+
+    ![](images/300/Picture38.4.png)  
 
 ## Verify REST Microservice deployment
 
 ### **STEP 6**: Test REST services
 
-- To launch the application after the deployment is complete, click the **URL** listed in the AlphaOfficeREST application details.
+- We are able to access the application directly from Developer Cloud Service. Click **AlphaOfficeREST** to launch the application.
 
-    ![](images/300/image126.png)  
+    ![](images/300/Picture39.3.png)  
 
 - A new tab in the browser should open with application running.
 
     ![](images/300/Picture42.png)  
 
-- Now lets test out the **products** REST call.  Append **/products** to the end of the URL and hit **enter**.  All of the Alpha Office products should be returned in a JSON payload.
+- Now lets test out the **products** REST call.  Append **/products** to the end of the URL and hit **enter**.  All of the Alpha Office products should be returned in a JSON payload. 
 
     ![](images/300/Picture43.3.png)
+ 
 
 ### **STEP 7**: Complete Task
 
-We have now automated the build process of the REST microservice. To finish up this lab, we will mark the Issue as completed in the Sprint.
+We have now verified that the REST microservice has been deployed and functions properly. To finish up this lab, we will mark the Issue as completed in the Sprint.
 
 - Back in the Developer Cloud Service window, click **Agile**, followed by clicking **Active Sprints**.
 
@@ -234,3 +246,4 @@ We have now automated the build process of the REST microservice. To finish up t
 
 
 - **You are now done with this lab.**
+

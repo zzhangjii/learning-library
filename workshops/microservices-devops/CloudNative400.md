@@ -81,7 +81,7 @@ To begin development on our Product Catalog UI, we could start coding from scrat
 
     ![](images/400/Picture19.png)  
 
-## Create Default Build Process
+## Create Default Build and Deployment Process
 
 ### **STEP 4**: Create Default Build Process
 
@@ -121,12 +121,12 @@ Now that we have the source code in our managed GIT repository, we need to creat
   - Check **Archive the artifacts**.
   - Enter `**/target/*` for **Files to Archive**.  
   - Verify **GZIP** in the Compression Type.
-
+  
     ![](images/400/Picture28.png)  
 
 - Click **Save** to complete the configuration.
 
-- Click the **Build Now** button to start the build immediately.
+- Click the **Build Now** button to start the build immediately. 
 
     ![](images/400/Picture28_5.png)  
 
@@ -134,16 +134,79 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
     ![](images/400/Picture29.png)  
 
-  **NOTE:** Once the build begins, it should take approximately 1 to 2 minutes for the build to complete. Once complete, you will be able to see the number of successful test runs in the Test Result Trend section.
+  **NOTE:** Once the build begins, it should take approximately 1 to 2 minutes for the build to complete. Once complete, you will be able to see the number of successful test runs in the Test Result Trend section. ***Wait for the build to complete before continuing to the next step***, as we need the build artifact to complete the deployment configuration.
 
-- After the build begins, you can also click on the **Console Icon** to monitor the build log details. ![](images/400/Picture29.1.png)
+- After the build begins, you can also click on the **Console Icon** to monitor the build log details. ![](images/400/Picture29.1.png) 
 
 - The completed status will look as follows:
 
     ![](images/400/Picture30.png)  
 
-<!-- ### **STEP 5**:
+### **STEP 5**: Create Default Deployment Process
 
+Now that we have an automated build process, we will set up a deployment configuration that will push out build artifacts to a node.js environment running on Application Container Cloud Service. This will happen whenever a successful build occurs.
+
+- On the navigation panel click **Deploy** to access the Deployment page. Click **New Configuration**.
+
+- Enter the following data:
+
+  **Configuration Name**: `DeployProductCatalogUI`
+
+  **Application Name**: `AlphaOfficeProductCatalogUI`
+
+    ![](images/400/Picture32.png)  
+
+- Click on the **Deployment Target** drop down and select the deployment defined in lab 200.
+
+    ![](images/400/Picture33.png)  
+
+- In the Deployment window, click **Test Connection**. If Successful, click **Use Connection**:
+
+    ![](images/400/Picture34.3.png)  
+
+- Set the following Properties:
+
+  - **Runtime**: `Node`
+
+  - **Subscription**: `Hourly`
+
+  - **Type:** `Automatic` and `Deploy stable builds only`
+
+  - **Job:** `Product Catalog UI Build`
+
+  - **Artifact:** `target/msdbw-microserviceui.zip`
+
+    ![](images/400/Picture35.3.png)  
+
+- To reduce the number of resources that are used, we will modify the default deployment of 2 instances. Click **Include ACCS Deployment** and enter the following in the text box:
+
+```
+{
+  "memory": "1G",
+  "instances": "1"
+}  
+```
+- The bottom of the page will look like this:
+
+![](images/400/Picture35.4.png)  
+
+- Click **Save**.
+
+    ![](images/400/Picture36.2.png) 
+
+- A message shows the deployment has been created.
+
+    ![](images/400/Picture37.1.png) 
+
+- Click the gear drop down for **AlphaOfficeProductCatalogUI** and select **Start**.
+
+    ![](images/400/Picture37.2.png)  
+
+- Wait until the message **Starting application** changes to **Last deployment succeeded**.
+
+    ![](images/400/Picture38.2.png)  
+
+    ![](images/400/Picture38.3.png)  
 
 ## Verify Product Catalog UI deployment
 
@@ -157,17 +220,17 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
     ![](images/400/Picture42.png)  
 
-- The UI application is running, but REST services have not been activated. -->
+- The UI application is running, but REST services have not been activated.
 
 # Add Microservice endpoints
 
-Now that we have our application build process configured, we want to modify this application to use the deployed microservices from Labs 200 and 300. For this task we will use the Brackets text editor to download code from Developer Cloud Service and make our modifications. Once the edited code is ready for deployment, we will push the edited code to the master branch in the Developer Cloud Service which will trigger a new build and deployment.
+Now that we have our default application, we want to modify this application to use the deployed microservices from Labs 200 and 300. For this task we will use the Brackets text editor to download code from Developer Cloud Service and make our modifications. Once the edited code is ready for deployment, we will push the edited code to the master branch in the Developer Cloud Service which will trigger a new build and deployment.
 
 **Note:** Normally in a real-life scenario, you would create a Git branch, make all the changes documented in this section of the lab, commit those changes to the branch and then create a merge request. However, for the sake of time, and since the branch and merge concepts have already been covered, we will bypass best practices and make changes directly to the master branch.
 
 ## Clone Project to the Brackets Text Editor
 
-### **STEP 5**:	Start the Brackets Text Editor
+### **STEP 7**:	Start the Brackets Text Editor
 
 - Start the **Brackets** text editor. How you start Brackets will depend on your OS. We have documented how to start Brackets from our OEL image. ***Note***: If you do not have Brackets installed, please follow the **Student Guide** that is part of this workshop. You will find instruction on how to install Git, configure Brackets and start Brackets.
 
@@ -179,15 +242,15 @@ Now that we have our application build process configured, we want to modify thi
 
     ![](images/400/image053.2.png)  
 
-### **STEP 6**: Copy GIT URL
+### **STEP 8**: Copy GIT URL
 
 - Back in Developer Cloud Service, click on **Project**. On the right side, find the URL for **AlphaOfficeProductCatalogUI.git**. Select the URL, right click and select **Copy** from the drop down menu.
 
     ![](images/400/image054.2.png)  
 
-### **STEP 7**: Clone GIT Repository
+### **STEP 9**: Clone GIT Repository
 
-- Back in the Brackets editor, Click on the **Git** icon found on the right side of the editor.
+- Back in the Brackets editor, Click on the **Git** icon found on the right side of the editor. 
 
   ![](images/400/image055.5.png)  
 
@@ -207,13 +270,13 @@ Now that we have our application build process configured, we want to modify thi
 
     ![](images/400/image059.png)
 
-### **STEP 8**: Edit the UI Code
+### **STEP 10**: Edit the UI Code
 
-- Now go back to Application Container Cloud Service to obtain the URLs for the two microservices created in Labs 200 and 300. From the **Application Container service console**, right click on the **AlphaOfficeREST URL** to copy it. Save this URL, as you will use it later. Also copy and save the URL for the **JavaTwitterMicroservice**
+- Now go back to Developer Cloud Service to obtain the URLs for the two microservices created in Labs 200 and 300.  Click on **Deploy** in the console, and then right click on the name **AlphaOfficeREST** to copy the URL for the microservice. Save this URL, as you will use it later. 
 
     ![](images/400/image060.png)
 
-- Right click on the **JavaTwitterMicroservice URL** to copy it. Save this URL, as you will use it later.
+- Right click on the name **JavaTwitterMicroservice** to copy the URL for this microservice. Save this URL, as you will use it later. 
 
     ![](images/400/image060.1.png)
 
@@ -222,7 +285,7 @@ Now that we have our application build process configured, we want to modify thi
     ![](images/400/image062.1.png)
 
 
-- You will be putting the URLs of the two microservices into the code in order to access these services.  Paste the URL for the **AlphaOfficeREST** microservice as the value for the Javascript variable **dbServiceURL**. ***Note:*** You must append **/products** to the end of the URL you coppied and pasted.
+- You will be putting the URLs of the two microservices into the code in order to access these services.  Paste the URL for the **AlphaOfficeREST** microservice as the value for the Javascript variable **dbServiceURL**. ***Note:*** You must append **/products** to the end of the URL you coppied and pasted. 
 
     ![](images/400/image062.2.png)
 
@@ -239,11 +302,11 @@ Now that we have our application build process configured, we want to modify thi
 
     ![](images/400/image063.png)
 
-### **STEP 9**: Push the Edited Code Back to the Developer Cloud Service
+### **STEP 11**: Push the Edited Code Back to the Developer Cloud Service
 
 - In the Git portion of the screen, Click the checkbox to the left of the row for **Staged, Modified public/js/alphaOffice.js**.
 
-- Then click **Commit**.
+- Then click **Commit**. 
 
     ![](images/400/image063.1.png)
 
@@ -277,9 +340,9 @@ Now that we have our application build process configured, we want to modify thi
 
     ![](images/400/image063.9.png)
 
-### **STEP 10**: Deploy and Test the Product Catalog UI with Edited Code
+### **STEP 12**: Test Product Catalog UI with Edited Code
 
-- Return to the Developer Cloud Service, and click on the **Build** menu option.
+- Return to the Developer Cloud Service, and click on the **Build** menu option. 
 
     ![](images/400/Picture59.2.png)
 
@@ -287,31 +350,15 @@ Now that we have our application build process configured, we want to modify thi
 
     ![](images/400/Picture59.png)
 
-- Once it is complete, click the **Product Catalog UI** build link to view the build details page.
+- Click on the **Deploy** Developer Cloud Services option, and wait for a current Deployment of the **AlphaOfficeProductCatalogUI** to start and then complete. Note: Sometimes you may need to refresh the screen to see the timestamp update.
 
-    ![](images/400/image75.png)
+    ![](images/400/Picture60.png)
 
-- On the build details page, in the **Artifacts of Last Successful Build** region, click the triangle next to **target** to expand the list of artifacts, then click the **msdbw-microservicesui.zip** link to download the build artifact.
+- Once the new UI has successfully deployed, Click on the **AlphaOfficeProductCatalogUI** link to open the Application that now accesses the Data using the REST API.
 
-    ![](images/400/image76.png)
+   ![](images/400/Picture61.png)
 
-- Switch to your browser tab with the **Application Container Cloud Service console** and click **Create Application**.
-
-    ![](images/400/image77.png)
-
-- Click **Node** from the application platform list.
-
-    ![](images/400/image78.png)
-
-- In the **Name** field, type `AlphaOfficeProductCatalogUI`. Then click **Choose File** and select the build artifact you downloaded earlier, `msdbw-microservicesui.zip`. Reduce the number of **Instances** and amount of **Memory** to `1` and click **Create**.
-
-    ![](images/400/image79.png)
-
-- Wait for the deployment to complete. When it has finished, you will see a **URL** field displayed under your **AlphaOfficeProductCatalogUI** application. Click the **URL** to launch the application.
-
-    ![](images/400/image80.png)
-
-- You'll see that the UI successfully pulls data from the REST services and the application is fully functional.
+- The REST services have now been activated, and the UI application is fully functional.
 
    ![](images/400/Picture50.png)
 
@@ -323,7 +370,7 @@ Now that we have our application build process configured, we want to modify thi
 
    ![](images/400/Picture63.png)
 
-### **STEP 11**: Complete Task
+### **STEP 13**: Complete Task
 
 We have now verified that the Product Catalog UI has been deployed and functions properly. To complete this lab, we will mark the Issue as completed in the Sprint.
 
@@ -344,6 +391,6 @@ We have now verified that the Product Catalog UI has been deployed and functions
 
 - Your Sprint should now look like the following:
 
-    ![](images/400/Picture58.2.png)
+    ![](images/400/Picture58.2.png) 
 
 - **You are now done with this lab.**
