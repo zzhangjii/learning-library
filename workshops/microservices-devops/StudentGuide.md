@@ -29,7 +29,7 @@ You will need to **complete the following 3 Tasks** prior to attempting the Labs
 
 ![](images/studentguide/Picture199.png)
 
-- For latest use during the workshop labs, **record the following fields**, some of which you'll find in the email. The other **fields not found in the email** will be located shortly. This information will be ***used multiple times*** during the workshops Labs, so we recommend that you **copy the following list to a text document**, and then populate the fields as they are collected.
+- For later use during the workshop labs, **record the following fields**, some of which you'll find in the email. The other **fields not found in the email** will be located shortly. This information will be ***used multiple times*** during the workshops Labs, so we recommend that you **copy the following list to a text document**, and then populate the fields as they are collected from the **Welcome Email** documented above.
 
 ```
 Username:
@@ -55,8 +55,6 @@ Data Center:
 - **Data Center**: We'll locate this information in an upcoming step, and this fields will also be used when creating the connection between DevCS and ACCS.
 - Click on the link ***(5)*** **Cloud Account My Services URL** provided in the email.
 - Follow the instructions to **set your password**, and then record in your notes the new password for this **Cloud Account Password** field.
-
-    ![](images/studentguide/Picture200.png)
 
 - You are now have viewing the dashboard used to access all the Cloud Services managed by the Oracle Identity Cloud Services.
 
@@ -113,9 +111,10 @@ Some services that we will use in this workshop require that your account's Repl
 We will now set the Password for the **Traditional Account** User. This Account will allow you to access the **Developer Cloud Service**.
 
 - Click on the link ***(6)*** **Traditional Cloud Account My Services URL** provided in the Welcome email sent from Oracle.
-- Follow the instructions to **set your password**, and then record in your notes the new password for  **Traditional Account Password**.
 
-    ![](images/studentguide/Picture200.png)
+    ![](images/studentguide/Picture199.png)
+
+- Follow the instructions to **set your password**, and then record in your notes the new password for  **Traditional Account Password**.
 
 ### **Step 5**: Test Logging into your Multiple Accounts
 
