@@ -27,7 +27,11 @@ During this Workshop you'll use a MySQL Database. The purpose of this workshop i
 
 ### **Step 2**: Record information from the welcome email and login
 
-- After your account is fully provisioned, you will receive an **email from Oracle** that will allow you to connect to your cloud account. Follow the instructions in that email. However, for later use during the workshop labs, **record the following fields**, some of which you'll find in the email. The other **fields not found in the email** will be located shortly. This information will be ***used multiple times*** during the workshops Labs, so we recommend that you **copy the following list to a text document**, and then populate the fields as they are collected.
+- During the provisioning of your account, you will receive two welcome email message. ***Note: You must wait for the 2nd email shown below***, as it contains information about the ***Traditional Account***, which is required for this workshop. If the second email does not appear within 30 minutes, please check your Junk or Promotions email folders (based on your email provider).
+
+![](images/studentguide/Picture199.png)
+
+- For later use during the workshop labs, **record the following fields**, some of which you'll find in the email. The other **fields not found in the email** will be located shortly. This information will be ***used multiple times*** during the workshops Labs, so we recommend that you **copy the following list to a text document**, and then populate the fields as they are collected from the **Welcome Email** documented above.
 
 ```
 Username:
@@ -53,8 +57,6 @@ Data Center:
 - **Data Center**: We'll locate this information in an upcoming step, and this fields will also be used when creating the connection between DevCS and ACCS.
 - Click on the link ***(5)*** **Cloud Account My Services URL** provided in the email.
 - Follow the instructions to **set your password**, and then record in your notes the new password for this **Cloud Account Password** field.
-
-    ![](images/studentguide/Picture200.png)
 
 - You are now have viewing the dashboard used to access all the Cloud Services managed by the Oracle Identity Cloud Services.
 
@@ -111,9 +113,10 @@ Some services that we will use in this workshop require that your account's Repl
 We will now set the Password for the **Traditional Account** User. This Account will allow you to access the **Developer Cloud Service**.
 
 - Click on the link ***(6)*** **Traditional Cloud Account My Services URL** provided in the Welcome email sent from Oracle.
-- Follow the instructions to **set your password**, and then record in your notes the new password for  **Traditional Account Password**.
 
-    ![](images/studentguide/Picture200.png)
+    ![](images/studentguide/Picture199.png)
+
+- Follow the instructions to **set your password**, and then record in your notes the new password for  **Traditional Account Password**.
 
 ### **Step 5**: Test Logging into your Multiple Accounts
 
