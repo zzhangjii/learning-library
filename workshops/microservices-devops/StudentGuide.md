@@ -16,7 +16,7 @@ You will need to **complete the following 3 Tasks** prior to attempting the Labs
 
 ### **Step 1**: Getting your Trial Account
 
-- Click on this URL [cloud.oracle.com/tryit](http://cloud.oracle.com/tryit), and complete all the required steps to get your free Oracle Cloud Trial Account.
+- Click on this URL [cloud.oracle.com/tryit](http://cloud.oracle.com/tryit&intcmp=DeveloperInnovation-HOL-11NOV17), and complete all the required steps to get your free Oracle Cloud Trial Account.
 - You must wait to receive our account before continuing to the "**Configure Oracle Cloud Identity Information**" Section.
 
 # Configure Oracle Cloud Identity Information
@@ -86,7 +86,7 @@ Data Center:
 
     ![](images/studentguide/Picture200.10.png)
 
-- View the Tab just opened, and save the **Data Region** in your notes. In this example, the data Region is US Commercial 2. You now have the important user and connection information that will be used during the remainder of this workshop. You can now close this browser tab, and return to the main Dashboard.
+- View the Tab just opened, and save the **Data Region** in your notes. In this example, the data Region is North America. Later on in the workshop you will be asked to select a Data Center for Deployment to the Application Container Cloud Service, and you can use one of the North American Data Centers, e.g. US Commercial 1 or 2. You now have the important user and connection information that will be used during the remainder of this workshop. You can now close this browser tab, and return to the main Dashboard.
 
     ![](images/studentguide/Picture200.11.png)
 
