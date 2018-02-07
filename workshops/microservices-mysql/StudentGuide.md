@@ -112,9 +112,9 @@ Some services that we will use in this workshop require that your account's Repl
 
 We will now set the Password for the **Traditional Account** User. This Account will allow you to access the **Developer Cloud Service**.
 
-- Click on the link ***(6)*** **Traditional Cloud Account My Services URL** provided in the Welcome email sent from Oracle.
+- Click on the link **Traditional Cloud Account My Services URL** provided in the Welcome email sent from Oracle.
 
-    ![](images/studentguide/Picture199.png)
+    ![](images/studentguide/Picture204.0.png)
 
 - Follow the instructions to **set your password**, and then record in your notes the new password for  **Traditional Account Password**.
 
