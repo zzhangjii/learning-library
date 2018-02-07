@@ -11,14 +11,14 @@ You will need to **complete the following 3 Tasks** prior to attempting the Labs
 - **Configure Oracle Cloud Identity Information**
 - **Install the required open source tools locally on your computer (e.g. Eclipse)**
 
-## Acquire an Oracle Cloud Trial Account
+# Acquire an Oracle Cloud Trial Account
 
 ### **Step 1**: Getting your Trial Account
 
 - Click on this URL [cloud.oracle.com/tryit](http://cloud.oracle.com/tryit&intcmp=DeveloperInnovation-HOL-11NOV17), and complete all the required steps to get your free Oracle Cloud Trial Account.
 - You must wait to receive our account before continuing to the "**Configure Oracle Cloud Identity Information**" Section.
 
-## Configure Oracle Cloud Identity Information
+# Configure Oracle Cloud Identity Information
 
 ## Login to your Oracle Cloud Account
 
@@ -111,7 +111,7 @@ We will now set the Password for the **Traditional Account** User. This Account 
 
 - Click on the link ***(6)*** **Traditional Cloud Account My Services URL** provided in the Welcome email sent from Oracle.
 
-    ![](images/studentguide/Picture199.png)
+    ![](images/studentguide/Picture204.0.png)
 
 - Follow the instructions to **set your password**, and then record in your notes the new password for  **Traditional Account Password**.
 
