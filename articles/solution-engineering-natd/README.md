@@ -106,6 +106,10 @@ To get an Oracle Trial account, please go the [Oracle Try It](https://cloud.orac
 
 ## Step by step instructions on Provisioning your Account
 
+I've tried to keep this information as up-to-date as possible 
+but the crew who creates our [workshops](https://github.com/oracle/learning-library/tree/master/workshops) 
+makes sure the documentation in their [microservices-devops](https://oracle.github.io/learning-library/workshops/microservices-devops/) workshop. 
+
 ### Prerequisites (have these ready)
 * Cell Phone 
 * Credit Card
