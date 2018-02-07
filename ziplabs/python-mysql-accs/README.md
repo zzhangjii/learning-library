@@ -1,3 +1,9 @@
+---
+layout: ziplab
+description: Learn how to deploy a Python application to Oracle Application Container Cloud Service and then integrate Oracle MySQL Cloud Service with your application.
+tags: ziplab, oracle cloud
+permalink: /ziplabs/python-mysql-accs/index.html
+---
 # Connect a Python Application to Oracle MySQL Cloud Service #
 
 ## Before You Begin ##

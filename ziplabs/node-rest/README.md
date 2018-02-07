@@ -1,3 +1,9 @@
+---
+layout: ziplab
+description: Learn how to create a simple REST service by using Node.js and Oracle Application Container Cloud Service.
+tags: ziplab, oracle cloud, Oracle Application Container Cloud Service, exploration, integration
+permalink: /ziplabs/node-rest/index.html
+---
 # Creating a Node.js RESTful Application in Oracle Application Container Cloud Service #
 
 ## Before You Begin ##

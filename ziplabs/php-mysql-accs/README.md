@@ -1,3 +1,9 @@
+---
+layout: ziplab
+description: Learn how to deploy a PHP application that uses Oracle MySQL Cloud Service to Oracle Application Container Cloud Service.
+tags: ziplab, oracle cloud, Oracle Application Container Cloud Service, Oracle MySQL Cloud Service
+permalink: /ziplabs/php-mysql-accs/index.html
+---
 # Deploying a PHP Application to Oracle Application Container Cloud Service #
 
 ## Before You Begin ##

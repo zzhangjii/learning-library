@@ -1,3 +1,9 @@
+---
+layout: ziplab
+description: Learn how to create an Oracle MySQL Cloud Service instance.
+tags: ziplab, oracle cloud, Oracle MySQL Cloud Service
+permalink: /ziplabs/mysql-instance/index.html
+---
 # Creating an Instance of Oracle MySQL Cloud Service #
 
 ## Before You Begin ##

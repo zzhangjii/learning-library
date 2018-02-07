@@ -1,13 +1,10 @@
 ---
 layout: ziplab
-title: Developing a Business Application by Using Oracle Visual Builder Cloud Service
 description: Learn how to quickly develop a business application by using Oracle Visual Builder Cloud Service.
 tags: Oracle Cloud, Visual Builder Cloud Service
 permalink: /ziplabs/abcs_obe_lab/index.html
 ---
 # Developing a Business Application by Using Oracle Visual Builder Cloud Service #
-
-Version 2
 
 ## Before You Begin ##
 
