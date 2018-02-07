@@ -7,6 +7,8 @@ permalink: /ziplabs/abcs_obe_lab/
 ---
 # Developing a Business Application by Using Oracle Visual Builder Cloud Service #
 
+Version 1
+
 ## Before You Begin ##
 
 This tutorial shows you how to quickly develop a business app by using Oracle Visual Builder Cloud Service. This tutorial takes approximately 15 minutes to complete.
