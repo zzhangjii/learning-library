@@ -1,26 +1,24 @@
-
 # Trial Account Student Guide
 
 ![](images/studentguide/Picture-Title.png)
-Update: February 7, 2018
+Update: December 7, 2017
 
 ## Overview of Tasks
 
-You will need to **complete the following Tasks** prior to attempting the Labs contained in this workshop
+You will need to **complete the following 3 Tasks** prior to attempting the Labs contained in this workshop
 
 - **Acquire an Oracle Cloud Trial Account**
+- **Configure Oracle Cloud Identity Information**
 - **Install the required open source tools locally on your computer (e.g. Eclipse)**
 
-# Acquire an Oracle Cloud Trial Account
+## Acquire an Oracle Cloud Trial Account
 
 ### **Step 1**: Getting your Trial Account
 
 - Click on this URL [cloud.oracle.com/tryit](http://cloud.oracle.com/tryit&intcmp=DeveloperInnovation-HOL-11NOV17), and complete all the required steps to get your free Oracle Cloud Trial Account.
-- You must wait to receive our account before continuing to the "**Create and Configure the MySQL Database**" Section.
+- You must wait to receive our account before continuing to the "**Configure Oracle Cloud Identity Information**" Section.
 
-# Create and Configure the MySQL Database
-
-During this Workshop you'll use a MySQL Database. The purpose of this workshop is to create microservices, one of which will access data from the database. In the following steps we'll show you how to create and seed the MySQL Database with sample data.
+## Configure Oracle Cloud Identity Information
 
 ## Login to your Oracle Cloud Account
 
@@ -67,27 +65,27 @@ Data Center:
 
     ![](images/studentguide/Picture200.3.png)
 
-- Also locate and **Show** the **MySQL**, **Storage Classic** and **Application Container** cloud services. Exit the Customization popup by clicking on the **X** in the upper right corner of the dialog.
+- Also locate and **Show** the **Storage Classic** and **Java** cloud services. Exit the Customization popup by clicking on the **X** in the upper right corner of the dialog.
 
     ![](images/studentguide/Picture200.4.png)
 
-- To capture the **Tenant ID**, we'll load up the Compute Classic console by clicking on the **Hamburger Menu** at the top of the dashboard. Click on **Compute Classic**.
+- To capture the **Tenant ID**, click on the **Identity Cloud** service you just added to the Dashboard.
 
     ![](images/studentguide/Picture200.5.png)
 
-- The **Tenant ID** is located at the top of the Classic Console Dashboard. This ID Will be used when connecting to Application Container Cloud Service from the Developer Cloud Services. Copy the ID and save it in your notes.
+- Once the Console has loaded, The **Tenant ID** is labeled Identity Services ID. Copy and save the text enclosed in the red box. This ID Will be used when connecting to Application Container Cloud Service from the Developer Cloud Services. Copy the ID and save it in your notes.
 
     ![](images/studentguide/Picture200.8.png)
 
-- Return to the main dashboard by clicking on the **Dashboard** icon in the upper right corner of the Identity Cloud Service Console.
+- Return to the main dashboard by clicking on the **Hamburger Menu** and then on the **Dashboard** icon.
 
     ![](images/studentguide/Picture200.9.png)
 
-- From the Dashboard, ***Right Click*** on **Application Container**, and select **Open Link in New Tab**.
+- From the Dashboard, ***Right Click*** on **Java**, and select **Open Link in New Tab**.
 
     ![](images/studentguide/Picture200.10.png)
 
-- View the Tab just opened, and save the **Data Region** in your notes. In this example, the data Region is North America. Later on in the workshop you will be asked to select a Data Center for Deployment to the Application Container Cloud Service, and you can use one of the North American Data Centers, e.g. US Commercial 1 or 2. You now have the important user and connection information that will be used during the remainder of this workshop. You can now close this browser tab, and return to the main Dashboard.
+- View the Tab just opened, and save the **Data Region** in your notes. In this example, the data Region is North America. Later on in the workshop you will be asked to select a Data Center for Deployment to the Java Cloud Service, and you can use one of the North American Data Centers, e.g. US Commercial 1 or 2. You now have the important user and connection information that will be used during the remainder of this workshop. You can now close this browser tab, and return to the main Dashboard.
 
     ![](images/studentguide/Picture200.11.png)
 
@@ -189,7 +187,7 @@ Java HotSpot(TM) Client VM (build 25.121-b13, mixed mode, sharing)
 
 - If JDK/**Java version 1.8** is not installed,  you will need to download a [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) from the Oracle Technology Network website, and install.
 
-### **Step 7 (Mac Option)**: JDK Verification on a MAC
+### **Step 6 (Mac Option)**: JDK Verification on a MAC
 
 **Note**: Eclipse requires that you have the a Java **JDK** 8 installed. Even if you have a **JRE** version 8, you still need to verify that you have a JDK 8 installed.
 
@@ -203,7 +201,7 @@ ls /Library/java/JavaVirtualMachines/
 
 ## Download and Install Eclipse
 
-### **Step 8**: Download Eclipse
+### **Step 7**: Download Eclipse
 
 ***Note***: Even if you already have Eclipse installed, you need to install and use the version documented below. This version of Eclipse contains the ***Oracle Enterprise Pack for Eclipse***, which will be used during the workshop.
 
@@ -215,7 +213,7 @@ ls /Library/java/JavaVirtualMachines/
 
 - Once you’ve downloaded eclipse, extract the zip file and install. ***Note:*** If you encounter an error when extracting Eclipse due to a "Path name too long" error on Windows, there are solutions that can be found by performing an internet search on the error to change the Windows allowed file length. Also, we have found that using the open source [7-zip](http://www.7-zip.org/download.html) tool can help overcome the file length errors encountered by the default windows zip file extraction tools.
 
-### **Step 9**: Optionally Configure Proxies (if behind a firewall)
+### **Step 8**: Optionally Configure Proxies (if behind a firewall)
 
 If you are running Eclipse behind a firewall, you need to configure the proxy setting. First, you need to ensure that Eclipse’s proxy is set. Next, you need to update the maven proxy setting, and then finally, you need to ensure that the Oracle Plugin will work with your proxy settings.
 
@@ -239,7 +237,7 @@ If you are running Eclipse behind a firewall, you need to configure the proxy se
 
 ![](images/studentguide/Picture6.png)
 
-### **Step 10**: Optionally Update the Eclipse / Maven proxy (if behind a firewall)
+### **Step 9**: Optionally Update the Eclipse / Maven proxy (if behind a firewall)
 
 ***Note:*** You will only do this optional Eclipse/Maven Proxy setup if you are behind a firewall. Otherwise, skip this step, and go to next step where you will download and install Brackets.
 
@@ -283,4 +281,4 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 
 - Reload Eclipse to use the new maven settings
 
-- You can now ready to start on [Lab 100](JCSPipelineStackManger100.md) Lab
+- You can now ready to start on [Lab 100](JCSPipelineStackManager100.md) Lab

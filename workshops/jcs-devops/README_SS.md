@@ -1,4 +1,4 @@
-***How to View the Lab Guides***
+# ***How to View the Lab Guides***
 
 - The Labguides are best viewed using the Workshop's [GitHub Pages Website URL](https://oracle.github.io/learning-library/workshops/jcs-devops) 
 
@@ -16,8 +16,7 @@ This JCS Pipeline using Stack Manager Workshop is part of a **Free** Sales Progr
 
 - Understand your Development Interests and Capabilities
 - Build your personalized Enablement Plan, including Hands-on Technical Enablement.
-- Help you Exercise your acquired knowledges. 
-- If you are interested, simply [Click on this Link](https://launch.oracle.com/?developeraccelerate), and provide us with your contact information. 
+- Help you Exercise your acquired knowledges.
 
 ## DevOps JCS Pipeline using Oracle Stack Manager
 
