@@ -1,7 +1,7 @@
 # DevOps: JCS Pipeline Using Oracle Stack Manager
 
 ![](images/100/Picture100-title.png)
-Update: October 19, 2017
+Update: February 7, 2018
 
 ## Introduction
 
