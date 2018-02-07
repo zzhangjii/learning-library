@@ -7,7 +7,7 @@ permalink: /ziplabs/abcs_obe_lab/index.html
 ---
 # Developing a Business Application by Using Oracle Visual Builder Cloud Service #
 
-Version 1
+Version 2
 
 ## Before You Begin ##
 
