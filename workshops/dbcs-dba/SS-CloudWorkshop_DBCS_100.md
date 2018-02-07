@@ -166,22 +166,7 @@ When providing a name, please note you may have another service instance already
 
 	![](images/SS-100/030.png)
 
-### **STEP 7**:start a SSH tunnel in the background
-
-For security reasons, the default Oracle Public Cloud network configuration is locked down. You have the option of opening up ports to the various servers in your environment by ether using the Compute Cloud Service console and creating/re-using protocol definitions and access rules, OR you can create SSH tunnels to the specific server/port combinations as needed. This lab and the rest of the labs require access via development tools and the browser to various admin consoles running on the cloud servers themselves.
-
-In this step you will create a SSH tunnel in the background for port 5500, which is not open.
-
--	Open a terminal Window by right clicking anywhere on the desktop, and then enter the following:
-	- `ssh -o StrictHostKeyChecking=no -i /home/oracle/privateKey -L 5555:<your Alpha01A-DBCS IP>:5500 opc@<Alpha01A-DBCS IP>`
-
-	![](images/SS-100/027.png)
-
-	![](images/SS-100/028.png)
-
-## Explore DB image via SSH
-
-### **STEP 8**:  Record the IP address of the Database Cloud Service
+### **STEP 7**:  Record the IP address of the Database Cloud Service
 
 -   Return to the dashboard, select Database, and then click on **Alpha01A-DBCS** from the list of Database Instances
 
@@ -191,9 +176,23 @@ In this step you will create a SSH tunnel in the background for port 5500, which
 
 	![](images/SS-100/033.png)
 
--   Note the IP address of **Alpha01A-DBCS**. In this example, we will note the IP address of 129.144.19.238
+-   Note the IP address of **Alpha01A-DBCS**. 
 
 	![](images/SS-100/034.png)
+
+### **STEP 8**:start a SSH tunnel in the background
+
+For security reasons, the default Oracle Public Cloud network configuration is locked down. You have the option of opening up ports to the various servers in your environment by ether using the Compute Cloud Service console and creating/re-using protocol definitions and access rules, OR you can create SSH tunnels to the specific server/port combinations as needed. This lab and the rest of the labs require access via development tools and the browser to various admin consoles running on the cloud servers themselves.
+
+In this step you will create a SSH tunnel in the background for port 5500, which is not open.
+-	Open a terminal Window by right clicking anywhere on the desktop, and then enter the following.  Do not close the window when finished:
+	- `ssh -o StrictHostKeyChecking=no -i /home/oracle/privateKey -L 5555:<your Alpha01A-DBCS IP>:5500 opc@<Alpha01A-DBCS IP>`
+
+	![](images/SS-100/027.png)
+
+	![](images/SS-100/028.png)
+
+## Explore DB image via SSH
 
 ### **STEP 9**:  Open a new SSH Connection to browse the database image
 
