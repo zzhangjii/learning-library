@@ -236,7 +236,7 @@ psm stack create -n $ServiceName -t Alpha-JCS-DBCS-Template \
       backupStorageContainer:$BackupStorageContainer \
       cloudStorageUser:<Your User Name> \
       cloudStoragePassword:<Supplied Password> \
-      publicKeyText:$publicKey
+      publicKeyText:"$publicKey"
 ```
 
 **Note:** Replace Username and Password
@@ -347,15 +347,38 @@ In the previous steps we updated the status of the Tasks using the web interface
 
     ![](images/200/Picture200-46.png)
 
-- Modify the values as defined below and click **Save All**. Replace `<IdentityDomain>` with your Identity Domain
+- Modify the values as defined below and click **Save All**. Replace `<Storage REST Endpoint>` with information captured during setup.
 
 ```bash
 export ServiceName=Alpha01
 export CommonPassword=Alpha2018_
-export BackupStorageContainer=Storage-<IdentityDomain>/Alpha01Backup
+export BackupStorageContainer=<Storage REST Endpoint>/Alpha01Backup
+export publicKey=$(cat labkey.pub)
 ```
 
 ![](images/200/Picture200-47.png)
+
+### **STEP 12:** Generate Seure Shell (SSH) Files
+
+- To access an Oracle Cloud Instance such as DBCS and JCS we need to supply the ssh public key at the time of provisioning.  Later we will use the ssh private key to access the newly provisioned DBCS instance.
+
+- Open a terminal windows. For **Windows** users we will be using **Git Bash** that should have been installed during the workshop setup.
+
+- To generate the SSH keys enter the command below. **Note** the keys will be placed in the current directory. If you would like them in a specific directly please first change to that directory location.
+
+```bash
+ssh-keygen -b 2048 -t rsa -f labkey
+```
+
+![](images/200/Picture200-46.1.png)
+
+- Next we will copy the public key, labkey.pub, to the JCSStackAlphaInfrastructure project. **Note:** These instructions assume the Eclipe workspace was created under the home directory.
+
+```bash
+cp labkey.pub ~/workspace/JCSStackAlphaInfrastructure.git-ec36/.
+```
+
+![](images/200/Picture200-46.2.png)
 
 ## Commit Code
 
@@ -365,7 +388,7 @@ export BackupStorageContainer=Storage-<IdentityDomain>/Alpha01Backup
 
     ![](images/200/Picture200-48.png)
 
-- Enter `Provision Stack Alpha01` in the Commit Message box and click **Commit and Push**.
+- Move **labkey.pub** and **JCSBuild.conf** to the Staged Changes. Enter `Provision Stack Alpha01` in the Commit Message box and click **Commit and Push**.
 
     ![](images/200/Picture200-49.png)
 
