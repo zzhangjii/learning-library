@@ -20,16 +20,17 @@ In the first lab (100), the Project Manager created a new project in the Develop
 - Check in new template file
 - Import Project into Eclipse
 - Check in configuration file to provision new JCS environment.
+- Setup application database and data source conneciton.
 
 ## Required Artifacts
 
-- The following lab requires an Oracle Public Cloud account that will be supplied by your instructor. You will need to download and install latest version of Eclipse or use supplied compute VM.
+- The following lab requires an Oracle Public Cloud account. You will need to download and install latest version of Eclipse. Instructions can be found in  [Student Guide](StudentGuide.md).
 
 # Create Initial Git Repository for Infrastructure
 
 ## Create Initial Git Repository
 
- Although you will remain connected to the Oracle Cloud using the user account you were provided, you are to take on the Persona of ***Bala Gupta*** as you perform the following steps. Bala is our operations engineer and will be handling all operations issues.
+ Although you will remain connected to the Oracle Cloud using your user account, you are to take on the Persona of ***Bala Gupta*** as you perform the following steps. Bala is our operations engineer and will be handling all operations issues.
 
 ![](images/bala.png)
 
@@ -106,7 +107,17 @@ Now that we have the configuration code in our managed GIT repository, we need t
 
     ![](images/200/Picture200-12.png)
 
-- Enter your Oracle Cloud credentials given to you by the instructor or Trail confirmation email. Ensure that you enter the correct values for **Username**, **Password** and **Identity Domain**. Note that the default set for the **Region** may not be correct, and must be properly set. The value for the **Output Format** should be set to **JSON**.
+- Enter the following data:
+
+  - **Username**: `<Your User Name>`
+
+  - **Password**: `<Supplied Password>`
+
+  - **Identity Domain**: `<Your Identity Domain>` ***Note***: If you are using a **Trial account** and followed the instructions in the [Trial Account Student Guide](StudentGuide.md), then in place of the Identity Domain, you populate this field with the **Identity Tenant ID** you recorded.
+
+- **Region**: `<Your Assigned Region>`
+
+- **Output Format**: `JSON`
 
     ![](images/200/Picture200-12.2.png)
 
@@ -138,11 +149,18 @@ psm stack import-template -f Alpha-JCS-DBCS-Template.yaml -of json
 
 ### **STEP 4:** Verify Template Upload to Oracle Cloud
 
-- Now we will navigate to the Oracle Stack Manager console to view the newly uploaded template. Click back on the browser tab that you launched the Developer Console. Click on the far left navigation icon ![](images/Menu.png) and select **Database**
+- Now we will navigate to the Oracle Stack Manager console to view the newly uploaded template. Return to the tab where your Main Cloud Dashboard window is loaded. If your dashboard Window is not available, simply open a tab and go to cloud.oracle.com, and re-login as previously instructed. Note: for those using a Trial account, this is will be your Standard Identity Cloud Service based account/dashboard.
+
+- Once the Oracle Public Cloud **Dashboard** is displayed, click on the navigation icon ![](images/Menu.png) for the **Java** Cloud Service and select **Open Service Console**.
+
+    ![](images/200/Picture200-18.1.png)
+
+
+- Click back on the browser tab that you launched the Developer Console. Click on the far left navigation icon ![](images/Menu.png) and select **Database**
 
     ![](images/200/Picture200-18.png)
 
-- Click on the far left navigation icon and select **Oracle Cloud Stack**
+- Click on the far left navigation icon and select **Cloud Stack**
 
     ![](images/200/Picture200-19.png)
 
@@ -194,7 +212,17 @@ Now we will create a build process that will provision a new Oracle Stack every 
 
     ![](images/200/Picture200-31.png)
 
-- Enter your Oracle Cloud credentials given to you by the instructor or Trail confirmation email. Ensure that you enter the correct values for **Username**, **Password** and **Identity Domain**. Note that the default set for the **Region** may not be correct, and must be properly set. The value for the **Output Format** should be set to **JSON**.
+- Enter the following data:
+
+  - **Username**: `<Your User Name>`
+
+  - **Password**: `<Supplied Password>`
+
+  - **Identity Domain**: `<Your Identity Domain>` ***Note***: If you are using a **Trial account** and followed the instructions in the [Trial Account Student Guide](StudentGuide.md), then in place of the Identity Domain, you populate this field with the **Identity Tenant ID** you recorded.
+
+- **Region**: `<Your Assigned Region>`
+
+- **Output Format**: `JSON`
 
     ![](images/200/Picture200-30.2.png)
 
@@ -216,7 +244,7 @@ psm stack create -n $ServiceName -t Alpha-JCS-DBCS-Template \
 
 ![](images/200/Picture200-30.6.png)
 
-- Click **Save** to complete the configuration. We will not execute a build at this time, as we want to trigger the build by updating the **JCSBuild.conf** file.
+- Click **Save** to complete the configuration. We will **NOT** execute a build at this time, as we want to trigger the build by updating the **JCSBuild.conf** file.
 
     ![](images/200/Picture200-33.png)
 
@@ -246,7 +274,11 @@ We have now completed our task. To finish up this part of the lab we will want t
 
 ### **STEP 7:** Load Eclipse IDE
 
-- Right Click and select **Run** on the **Eclipse** Desktop Icon
+In the following task we will provide screen shots taken from the optional compute image provided with the workshop. If you are using Eclipse and Brackets on your local hardware, your screens may vary slightly.
+
+- Right Click and select **Run** on the **Eclipse** Desktop Icon.
+
+    Note: If you have not already installed and configured Eclipse, please see this Workshop's **Student Guide** for instructions on how to install and configure it.
 
     ![](images/200/Picture200-35.png)
 
@@ -264,25 +296,17 @@ We have now completed our task. To finish up this part of the lab we will want t
 
     ![](images/200/Picture200-38.png)
 
-- Enter the following information and click **Finish**
+- Enter the following information, then click on the **Finish** button:
 
-    **Identity Domain:** `<your identity domain>`
+  - **Identity Domain**: `<your identity domain>` ***Note:*** if you're using a trial account, since you are connecting to the Developer Cloud Services, which is a Traditional Service, you populate this field with the **Identity Domain Name** you recorded.
 
-    **User name:** `<your identity domain username>`
+  - **User name**: `<your Username>`
 
-    **Password:** `<your identity domain password>`
+  - **Password**: `<your Identity domain password>`
 
-    **Connection Name:** `OracleConnection`
+  - **Connection Name**: `OracleConnection`
 
     ![](images/200/Picture200-39.png)
-
-- If prompted, enter and confirm a Master Password for the Eclipse Secure Storage. In our example we use the **password** of `oracle`. Next, press **OK**.
-
-    ![](images/200/Picture200-40.png)
-
-- If prompted to enter a Password Hint, click on **No**
-
-    ![](images/200/Picture200-41.png)
 
 ### **STEP 9:** Create a local clone of the repository
 
@@ -324,13 +348,15 @@ In the previous steps we updated the status of the Tasks using the web interface
 
     ![](images/200/Picture200-46.png)
 
-- Modify the values as defined below and click **Save All**
+- Modify the values as defined below and click **Save All**. Replace `<IdentityDomain>` with your Identity Domain
 
-    **ServiceName=Alpha02**
+```bash
+export ServiceName=Alpha01
+export CommonPassword=Alpha2018_
+export BackupStorageContainer=Storage-<IdentityDomain>/Alpha01Backup
+```
 
-    **BackupStorageContainer=Storage-`Your OPC identity Domain`/Alpha02Backup**
-
-    ![](images/200/Picture200-47.png)
+![](images/200/Picture200-47.png)
 
 ## Commit Code
 
@@ -340,7 +366,7 @@ In the previous steps we updated the status of the Tasks using the web interface
 
     ![](images/200/Picture200-48.png)
 
-- Enter `Provision Stack Alpha02` in the Commit Message box and click **Commit and Push**.
+- Enter `Provision Stack Alpha01` in the Commit Message box and click **Commit and Push**.
 
     ![](images/200/Picture200-49.png)
 
@@ -362,11 +388,11 @@ In the previous steps we updated the status of the Tasks using the web interface
 
 ### **STEP 14:** Monitor in Oracle Cloud
 
-- Switch back to browser tab with **Oracle Stack Manager**.  Click on the **Stacks** tab. You should see that Alpha02 stack is "Creating" and building out an Oracle Database Cloud Service and a Java Cloud Service. You may need to click on the refresh button if the stack is not immediately visible.
+- Switch back to browser tab with **Oracle Stack Manager**.  Click on the **Stacks** tab. You should see that Alpha01 stack is "Creating" and building out an Oracle Database Cloud Service and a Java Cloud Service. You may need to click on the refresh button if the stack is not immediately visible.
 
     ![](images/200/Picture200-53.png)
 
-- Click on **Alpha02** to view details.
+- Click on **Alpha01** to view details.
 
     ![](images/200/Picture200-54.png)
 
