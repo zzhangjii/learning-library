@@ -1,3 +1,9 @@
+---
+layout: ziplab
+description: Learn how to prepare a REST application built using Spring Data REST to be deployed to Oracle Application Container Cloud Service.
+tags: ziplab, oracle cloud
+permalink: /ziplabs/java-spring-accs/index.html
+---
 # Deploy a Spring Application to Oracle Cloud #
 
 ## Before You Begin ##

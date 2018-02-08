@@ -1,3 +1,9 @@
+---
+layout: ziplab
+description: This tutorial shows you how to create an Oracle Container Cloud Service instance, then you deploy a Ruby image as a Docker container.
+tags: ziplab, oracle cloud
+permalink: /ziplabs/occs-service/index.html
+---
 # Deploying a Ruby Docker image to Oracle Container Cloud Service #
 
 ## Before You Begin ##

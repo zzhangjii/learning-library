@@ -1,3 +1,9 @@
+---
+layout: ziplab
+description: Learn how to import and run a mobile phone app with Oracle Mobile Cloud Service.
+tags: ziplab, oracle cloud, Oracle Mobile Cloud Service, MAX, import, run, mobile app
+permalink: /ziplabs/mcs_max/index.html
+---
 # Running an App in Oracle Mobile Cloud Service #
 
 ## Before You Begin ##
