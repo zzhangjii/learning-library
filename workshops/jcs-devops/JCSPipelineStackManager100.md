@@ -20,7 +20,7 @@ You will take on 3 Personas during the workshop. The **Project Manager** Person
 
 ## Required Artifacts
 
-- The following lab requires an Oracle Public Cloud account that will be supplied by your instructor.
+- The following lab requires an Oracle Public Cloud account.
 
 # Start Project
 
@@ -263,4 +263,4 @@ Before you start using the Agile methodology in Oracle Developer Cloud Service, 
 
     ![](images/100/Picture100-32.png)
 
-- You are now ready to move to the next lab.
+- **You are now ready to move to the next lab.**
