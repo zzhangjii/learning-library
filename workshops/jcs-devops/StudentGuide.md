@@ -9,7 +9,7 @@ You will need to **complete the following 3 Tasks** prior to attempting the Labs
 
 - **Acquire an Oracle Cloud Trial Account**
 - **Configure Oracle Cloud Identity Information**
-- **Install the required open source tools locally on your computer (e.g. Eclipse)**
+- **Install the required open source tools locally on your computer (e.g. Eclipse and Git)**
 
 # Acquire an Oracle Cloud Trial Account
 
@@ -278,7 +278,28 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 </proxies>
 </settings>
 ```
-
 - Reload Eclipse to use the new maven settings
+
+### **Step 10 (Windows Only)**: Download/Install Git
+
+- Go to the following URL: https://git-scm.com/downloads
+
+    ![](images/studentguide/Picture8.png)
+
+- Select your OS. In our example, we will show how to install on Windows. Click **Windows** Download and click **Save File**
+
+    ![](images/studentguide/Picture9.png)
+
+- Select your download location and click **Save**. We will use D:\Software    
+
+    ![](images/studentguide/Picture10.png)
+
+- Open Windows Explorer and navigate to where you downloaded the Git executable. Double click on the Git executable to start the install process.
+
+    ![](images/studentguide/Picture11.png)
+
+- Run through the installation process. In our tests, we used the default installation settings.
+
+    ![](images/studentguide/Picture12.png)
 
 - You can now ready to start on [Lab 100](JCSPipelineStackManager100.md) Lab
