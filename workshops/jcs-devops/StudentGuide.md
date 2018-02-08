@@ -40,8 +40,9 @@ Cloud Account Password:
 Identity Domain Name:
 Traditional Account Password:
 
-Identity Tenant ID:
+Identity Service ID:
 Data Center:
+Storage REST Endpoint:
 ```
 
 - ***(1)*** **Username**: With a trial account, this should be your email address.
@@ -50,7 +51,7 @@ Data Center:
 - **Cloud Account Password**: You will login to your Cloud Account to set this password.
 - ***(4)*** **Identity Domain Name**: This name will be used when you login with the **Traditional Cloud Services**. During this workshop, we will be use the Developer Cloud Services, which is currently a Traditional Cloud Services. ***Note***: When you click on Link **(6)** in the email, you will use this Identity Domain Name.
 - **Traditional Account Password**: You will login to your Traditional Cloud Account to set this password in an upcoming step.
-- **Identity Tenant ID**: We will locate this information later, but make a holding place in your notes for this field. This field will be used by PaaS Stack Manager for provisioning of Infrustructure.
+- **Identity Service ID**: We will locate this information later, but make a holding place in your notes for this field. This field will be used by PaaS Stack Manager for provisioning of Infrustructure.
 - **Data Center**: We'll locate this information in an upcoming step, and this fields will also be used by PaaS Stack Manager for provisioning of Infrustructure.
 - **Storage REST Endpoint**: We'll locate this information in an upcoming step, and this fields will also be used by PaaS Stack Manager for provisioning of Infrustructure.
 
@@ -73,11 +74,11 @@ Data Center:
 
     ![](images/studentguide/Picture200.4.png)
 
-- To capture the **Tenant ID, Data Center and Storage REST Endpoint**, click on the **Storage Classic** cloud service you just added to the Dashboard.
+- To capture the **Identiy Service ID, Data Center** and **Storage REST Endpoint**, click on the **Storage Classic** cloud service you just added to the Dashboard.
 
     ![](images/studentguide/Picture200.5.png)
 
-- Once the Console has loaded, The **Tenant ID** is labeled Identity Services ID. Copy and save the text enclosed in the red box's.
+- Once the Console has loaded, copy and save the text enclosed in the red box's.
 
     ![](images/studentguide/Picture200.8.png)
 
