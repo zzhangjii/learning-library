@@ -30,6 +30,8 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
 ## Create Initial Git Repository
 
+### Logical Persona Overview
+
  Although you will remain connected to the Oracle Cloud using your user account, you are to take on the Persona of ***Bala Gupta*** as you perform the following steps. Bala is our operations engineer and will be handling all operations issues.
 
 ![](images/bala.png)
@@ -113,7 +115,7 @@ Now that we have the configuration code in our managed GIT repository, we need t
 
   - **Password**: `<Supplied Password>`
 
-  - **Identity Domain**: `<Your Identity Domain>` ***Note***: If you are using a **Trial account** and followed the instructions in the [Trial Account Student Guide](StudentGuide.md), then in place of the Identity Domain, you populate this field with the **Identity Tenant ID** you recorded.
+  - **Identity Domain**: `<Your Identity Domain>` ***Note***: If you are using a **Trial account** and followed the instructions in the [Trial Account Student Guide](StudentGuide.md), then in place of the Identity Domain, you populate this field with the **Identity Service ID** you recorded.
 
 - **Region**: `<Your Assigned Region>`
 
@@ -154,11 +156,6 @@ psm stack import-template -f Alpha-JCS-DBCS-Template.yaml -of json
 - Once the Oracle Public Cloud **Dashboard** is displayed, click on the navigation icon ![](images/Menu.png) for the **Java** Cloud Service and select **Open Service Console**.
 
     ![](images/200/Picture200-18.1.png)
-
-
-- Click back on the browser tab that you launched the Developer Console. Click on the far left navigation icon ![](images/Menu.png) and select **Database**
-
-    ![](images/200/Picture200-18.png)
 
 - Click on the far left navigation icon and select **Cloud Stack**
 
@@ -218,7 +215,7 @@ Now we will create a build process that will provision a new Oracle Stack every 
 
   - **Password**: `<Supplied Password>`
 
-  - **Identity Domain**: `<Your Identity Domain>` ***Note***: If you are using a **Trial account** and followed the instructions in the [Trial Account Student Guide](StudentGuide.md), then in place of the Identity Domain, you populate this field with the **Identity Tenant ID** you recorded.
+  - **Identity Domain**: `<Your Identity Domain>` ***Note***: If you are using a **Trial account** and followed the instructions in the [Trial Account Student Guide](StudentGuide.md), then in place of the Identity Domain, you populate this field with the **Identity Service ID** you recorded.
 
 - **Region**: `<Your Assigned Region>`
 
@@ -237,10 +234,12 @@ source ./JCSBuild.conf
 psm stack create -n $ServiceName -t Alpha-JCS-DBCS-Template \
   -p commonPwd:$CommonPassword \
       backupStorageContainer:$BackupStorageContainer \
-      cloudStoragePassword:<OPC Password>
+      cloudStorageUser:<Your User Name> \
+      cloudStoragePassword:<Supplied Password> \
+      publicKeyText:$publicKey
 ```
 
-**Note:** Replace OPC Password
+**Note:** Replace Username and Password
 
 ![](images/200/Picture200-30.6.png)
 
