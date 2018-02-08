@@ -22,7 +22,7 @@ You will need to **complete the following 3 Tasks** prior to attempting the Labs
 
 ## Login to your Oracle Cloud Account
 
-### **Step 2**: Record information from the welcome email and login
+### **Step 2**: Record information from the welcome email
 
 - During the provisioning of your account, you will receive two welcome email message. ***Note: You must wait for the 2nd email shown below***, as it contains information about the ***Traditional Account***, which is required for this workshop. If the second email does not appear within 30 minutes, please check your Junk or Promotions email folders (based on your email provider).
 
@@ -50,8 +50,12 @@ Data Center:
 - **Cloud Account Password**: You will login to your Cloud Account to set this password.
 - ***(4)*** **Identity Domain Name**: This name will be used when you login with the **Traditional Cloud Services**. During this workshop, we will be use the Developer Cloud Services, which is currently a Traditional Cloud Services. ***Note***: When you click on Link **(6)** in the email, you will use this Identity Domain Name.
 - **Traditional Account Password**: You will login to your Traditional Cloud Account to set this password in an upcoming step.
-- **Identity Tenant ID**: We will locate this information later, but make a holding place in your notes for this field. This field will be used when creating a connection between the Developer Cloud Service (DevCS) and the Application Cloud Service (ACCS), allowing automatic deployment of Applications.
-- **Data Center**: We'll locate this information in an upcoming step, and this fields will also be used when creating the connection between DevCS and ACCS.
+- **Identity Tenant ID**: We will locate this information later, but make a holding place in your notes for this field. This field will be used by PaaS Stack Manager for provisioning of Infrustructure.
+- **Data Center**: We'll locate this information in an upcoming step, and this fields will also be used by PaaS Stack Manager for provisioning of Infrustructure.
+- **Storage REST Endpoint**: We'll locate this information in an upcoming step, and this fields will also be used by PaaS Stack Manager for provisioning of Infrustructure.
+
+### **Step 3**: Login to the Oracle CLoud
+
 - Click on the link ***(5)*** **Cloud Account My Services URL** provided in the email.
 - Follow the instructions to **set your password**, and then record in your notes the new password for this **Cloud Account Password** field.
 
@@ -69,33 +73,19 @@ Data Center:
 
     ![](images/studentguide/Picture200.4.png)
 
-- To capture the **Tenant ID**, click on the **Identity Cloud** service you just added to the Dashboard.
+- To capture the **Tenant ID, Data Center and Storage REST Endpoint**, click on the **Storage Classic** cloud service you just added to the Dashboard.
 
     ![](images/studentguide/Picture200.5.png)
 
-- Once the Console has loaded, The **Tenant ID** is labeled Identity Services ID. Copy and save the text enclosed in the red box. This ID Will be used when connecting to Application Container Cloud Service from the Developer Cloud Services. Copy the ID and save it in your notes.
+- Once the Console has loaded, The **Tenant ID** is labeled Identity Services ID. Copy and save the text enclosed in the red box's.
 
     ![](images/studentguide/Picture200.8.png)
-
-- Return to the main dashboard by clicking on the **Hamburger Menu** and then on the **Dashboard** icon.
-
-    ![](images/studentguide/Picture200.9.png)
-
-- From the Dashboard, ***Right Click*** on **Java**, and select **Open Link in New Tab**.
-
-    ![](images/studentguide/Picture200.10.png)
-
-- View the Tab just opened, and save the **Data Region** in your notes. In this example, the data Region is North America. Later on in the workshop you will be asked to select a Data Center for Deployment to the Java Cloud Service, and you can use one of the North American Data Centers, e.g. US Commercial 1 or 2. You now have the important user and connection information that will be used during the remainder of this workshop. You can now close this browser tab, and return to the main Dashboard.
-
-    ![](images/studentguide/Picture200.11.png)
 
 ### **Step 3**: Check/Set Storage Replication Policy
 
 Some services that we will use in this workshop require that your account's Replication Policy is set. The following steps will show you how to set your replication policy.
 
-- Click on the **Hamburger Menu** in the upper left corner of the browser window to expose the **Dashboard Menu**, then click on the **Storage Classic** menu option.
-
-    ![](images/studentguide/Picture201.png)
+- On the same screen, Click **Open Service Console**
 
 - If your replication policy has not yet been set, the following dialog will be displayed. Use the Default **Georeplication Policy**, and click on **Set Policy**.
 
