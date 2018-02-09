@@ -501,6 +501,11 @@ article p{
     margin-left: 62px;
 }
 
+li p{
+	margin: 0;
+	line-height: 1;
+}
+
 /* TMM 10/14/17 */
 article > figure, section > figure {
     margin-left: 62px;
