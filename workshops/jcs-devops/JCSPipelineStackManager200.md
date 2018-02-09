@@ -519,7 +519,7 @@ EOF
  
 - Enter the following data and click **Login**
 
-    **Usernaame:** `weblogic`
+    **Username:** `weblogic`
 
     **Password:** `Alpha2018_`
 
@@ -539,12 +539,48 @@ EOF
 
     ![](images/200/Picture200-76.png)
 
+- Enter the following and click **Next**
 
-### **STEP 15:** Set Task 2 Status to In Progress
+    **Name:** `Alpha01-DBCS-ds`
+
+    **JNDI Name:** `jdbc/Alpha01-DBCS-ds`
+
+    ![](images/200/Picture200-77.png)
+
+- Accept defaults, click **Next** twice.
+
+- Enter the following and click **Next**
+
+    **Database Name:** `PDB1.<your Identity Domain>.oraclecloud.internal`
+
+    **Host Name:** `Alpha01-DBCS`
+
+    **Database User Name:** `alpha`
+
+    **Password:** `oracle`
+
+    ![](images/200/Picture200-79.png)
+
+- Click **Test Connection**. If test succedded click **Next**.
+
+    ![](images/200/Picture200-80.png)
+
+- Click **Alpha01-_cluster** to target the deployment to the WebLogic customer. Click **Finsh**.
+
+    ![](images/200/Picture200-80.1.png)
+
+- Click **Activate Changes**. If test succedded click **Finish**.
+
+    ![](images/200/Picture200-81.png)
+
+- Your Infrustructure is now ready for deployment of the Alpha Office Product Catalog.
+
+    ![](images/200/Picture200-82.png)
+
+### **STEP 23:** Set Task 2 Status to In Progress
 
 - From either Eclipse or Developer Cloud Service console update the status of **Task 2** to **Completed**. Your sprint should now look like the following.
 
 ![](images/200/Picture200-58.png)
 
-- **You have completed Lab 200**. For the next lab, you will not need to wait for the environment provisioning to complete, as we will use an **already provisioned environment**.
-
+- **You have completed Lab 200**
