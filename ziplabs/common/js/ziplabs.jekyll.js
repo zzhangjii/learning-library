@@ -50,6 +50,20 @@ $(function () {
     //run on document load and on window resize
     sidebarfun();
 
+    $("input.in").each(function (i, source) {
+        source = $(source);
+        var query = "input.out[name=" + source.attr('name') + "]";
+        var query2 = "span.out-" + source.attr('name');
+        var targetIn = $(query);
+        var targetSpan=$(query2);
+        $(source).on("input", function () {
+            targetIn.val(source.val());
+            targetSpan.empty();
+            targetSpan.text(source.val());
+        });
+        source.trigger("input");
+        targetIn.attr('readonly', true);
+    });
 
 });
 

@@ -10,6 +10,10 @@ permalink: /ziplabs/abcs_obe_lab/index.html
 
 This tutorial shows you how to quickly develop a business app by using Oracle Visual Builder Cloud Service. This tutorial takes approximately 15 minutes to complete.
 
+<input type="text" value="something" name="a" class="in">
+<input type="text" value="" name="a" class="out">
+<span class="out-a"></span>
+
 ### Background ###
 
 Oracle Visual Builder Cloud Service is a visual development tool for creating web and mobile apps by simply dragging and dropping user interface (UI) components onto a page. 
