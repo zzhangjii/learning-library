@@ -382,7 +382,7 @@ cp labkey.pub ~/workspace/JCSStackAlphaInfrastructure.git-ec36/.
 
 ## Commit Code
 
-### **STEP 12:** Commit Code
+### **STEP 13:** Commit Code
 
 - Right click on **JCSStackAlphaInfrastructure** and then Select **Team > Commit**
 
@@ -398,7 +398,7 @@ cp labkey.pub ~/workspace/JCSStackAlphaInfrastructure.git-ec36/.
 
 ## Verify Provisioning
 
-### **STEP 13:** Verify Build job ran
+### **STEP 14:** Verify Build job ran
 
 - Click **Code** on left hand navigation then click **Logs**. Notice that the file has been committed to the Git repository.
 
@@ -408,7 +408,7 @@ cp labkey.pub ~/workspace/JCSStackAlphaInfrastructure.git-ec36/.
 
     ![](images/200/Picture200-52.png)
 
-### **STEP 14:** Monitor in Oracle Cloud
+### **STEP 15:** Monitor in Oracle Cloud
 
 - Switch back to browser tab with **Oracle Stack Manager**.  Click on the **Stacks** tab. You should see that Alpha01 stack is "Creating" and building out an Oracle Database Cloud Service and a Java Cloud Service. You may need to click on the refresh button if the stack is not immediately visible.
 
@@ -418,6 +418,91 @@ cp labkey.pub ~/workspace/JCSStackAlphaInfrastructure.git-ec36/.
 
     ![](images/200/Picture200-54.png)
 
+# Setup Application Database and Data Source Connection
+
+## Setup Application Database
+
+### **STEP 16:** Record Database Host IP Address
+
+- Provisioning of the **Alpha01** Stack will take almost an hour.  Once completed Status will go away along with hourglass icon.
+
+    ![](images/200/Picture200-60.png)
+
+- Click **Alpha01** to view Stack OVerview of all resources.
+
+    ![](images/200/Picture200-61.png)
+
+- Click **Alpha01-DBCS** to view Database Instance details.  Make not of the **Public IP** for the Database.
+
+    ![](images/200/Picture200-62.png)
+
+### **STEP 17:** SSH inot the Database Image
+
+- From the same terminal windows (Git Bash for Windows) used earlier, enter the following command. Replace **<DBCS Public IP>** with your instance IP.
+
+```bash
+ssh -i labkey opc@<DBCS Public IP>
+```
+
+![](images/200/Picture200-63.png)
+
+### **STEP 18:** Install git in the Image
+
+- Enter the **yum** command show below to install **git**.
+
+```bash
+sudo yum install git
+```
+
+![](images/200/Picture200-64.png)
+
+- When prompted with the **Is this ok** enter **y** and press the return key.
+
+    ![](images/200/Picture200-65.png)
+
+### **STEP 19:** Clone the Script repository
+
+- Using the sudo command connect as the **oracle** user.
+
+```bash
+sudo su - oracle
+```
+
+![](images/200/Picture200-66.png)
+
+- Clone a local copy of the git repository containing the scripts used to load the database with the Product Catalog tables.
+
+```bash
+git clone https://github.com/pcdavies/AlphaOfficeDBCSSetup.git
+```
+
+![](images/200/Picture200-67.png)
+
+### **STEP 20:** Run the script
+
+- Change directories to the **AlphaOfficeDBCSSetup** directory. Run the `ls` command to see all the files in this repository. View the contents of the **setupAlphaUser.sh** script.
+
+    ![](images/200/Picture200-68.png)
+
+- Run the **setupAlphaUser.sh** script with the following command. Ignore the warnings. **Note**: the setupAlphaUser.sh script use the Password suggested in previous steps. If you used a different password when creating the Database than what was documented, you will need to update the the password in the script.
+
+```bash
+sh ./setupAlphaUser.sh
+```
+
+![](images/200/Picture200-69.png)
+
+- After the script completes, you can check to see if the **alpha** user was created, and the database tables where loaded by running the following command - you should see the **Product** tables:
+
+```bash
+sqlplus alpha/oracle@PDB1 <<EOF
+SELECT count(*) FROM products;
+EXIT;
+EOF
+```
+
+![](images/200/Picture200-70.png)
+
 ### **STEP 15:** Set Task 2 Status to In Progress
 
 - From either Eclipse or Developer Cloud Service console update the status of **Task 2** to **Completed**. Your sprint should now look like the following.
@@ -425,3 +510,4 @@ cp labkey.pub ~/workspace/JCSStackAlphaInfrastructure.git-ec36/.
 ![](images/200/Picture200-58.png)
 
 - **You have completed Lab 200**. For the next lab, you will not need to wait for the environment provisioning to complete, as we will use an **already provisioned environment**.
+
