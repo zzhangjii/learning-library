@@ -77,6 +77,8 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
 ## Create Default Build for Template Upload
 
+### Cloud Stack Overview
+
 **Oracle Cloud Stack Manager** is a feature of Oracle Cloud that allows for the provisioning of multiple services within the Oracle Cloud. In order to build and deploy their applications, businesses often require sophisticated environments that consist of multiple, integrated cloud services. Consider a development environment whose needs include a Java application server along with a relational database. Provisioning each of these services for every member of your development team is time consuming and error prone, regardless of whether you’re using service consoles or REST APIs to provision the services. Oracle Cloud Stack Manager uses templates to provision a group of services (called a stack) and in the correct order.
 
 ### **STEP 3:** Create Template Update Build Process
