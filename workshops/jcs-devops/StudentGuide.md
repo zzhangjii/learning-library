@@ -43,6 +43,7 @@ Traditional Account Password:
 Identity Service ID:
 Data Center:
 Storage REST Endpoint:
+DBCS Service Instance ID:
 ```
 
 - ***(1)*** **Username**: With a trial account, this should be your email address.
@@ -52,8 +53,9 @@ Storage REST Endpoint:
 - ***(4)*** **Identity Domain Name**: This name will be used when you login with the **Traditional Cloud Services**. During this workshop, we will be use the Developer Cloud Services, which is currently a Traditional Cloud Services. ***Note***: When you click on Link **(6)** in the email, you will use this Identity Domain Name.
 - **Traditional Account Password**: You will login to your Traditional Cloud Account to set this password in an upcoming step.
 - **Identity Service ID**: We will locate this information later, but make a holding place in your notes for this field. This field will be used by PaaS Stack Manager for provisioning of Infrustructure.
-- **Data Center**: We'll locate this information in an upcoming step, and this fields will also be used by PaaS Stack Manager for provisioning of Infrustructure.
-- **Storage REST Endpoint**: We'll locate this information in an upcoming step, and this fields will also be used by PaaS Stack Manager for provisioning of Infrustructure.
+- **Data Center**: We'll locate this information in an upcoming step, and this field will also be used by PaaS Stack Manager for provisioning of Infrustructure.
+- **Storage REST Endpoint**: We'll locate this information in an upcoming step, and this field will also be used by PaaS Stack Manager for provisioning of Infrustructure.
+- **DBCS Service Instance ID**: We'll locate this information in an upcoming step, and this field will be used to create connection to database.
 
 ### **Step 3**: Login to the Oracle CLoud
 
@@ -74,6 +76,16 @@ Storage REST Endpoint:
 
     ![](images/studentguide/Picture200.4.png)
 
+### **Step 4**: Record Instance Information 
+
+- To capture the **DBCS Service Instance ID**, click on the **Database** cloud service you just added to the Dashboard.
+
+    ![](images/studentguide/Picture200.5.1.png)
+
+- Once the Console has loaded, copy and save the text enclosed in the red box.
+
+    ![](images/studentguide/Picture200.8.1.png)
+
 - To capture the **Identiy Service ID, Data Center** and **Storage REST Endpoint**, click on the **Storage Classic** cloud service you just added to the Dashboard.
 
     ![](images/studentguide/Picture200.5.png)
@@ -82,7 +94,7 @@ Storage REST Endpoint:
 
     ![](images/studentguide/Picture200.8.png)
 
-### **Step 4**: Check/Set Storage Replication Policy
+### **Step 5**: Check/Set Storage Replication Policy
 
 Some services that we will use in this workshop require that your account's Replication Policy is set. The following steps will show you how to set your replication policy.
 
@@ -96,7 +108,7 @@ Some services that we will use in this workshop require that your account's Repl
 
     ![](images/studentguide/Picture204.png)
 
-### **Step 5**: Set the Traditional Account Password
+### **Step 6**: Set the Traditional Account Password
 
 We will now set the Password for the **Traditional Account** User. This Account will allow you to access the **Developer Cloud Service**.
 
@@ -106,7 +118,7 @@ We will now set the Password for the **Traditional Account** User. This Account 
 
 - Follow the instructions to **set your password**, and then record in your notes the new password for  **Traditional Account Password**.
 
-### **Step 6**: Test Logging into your Multiple Accounts
+### **Step 7**: Test Logging into your Multiple Accounts
 
 It is important to fully understand how to login to both the **Standard Identity Cloud Service** managed account, and then login to the **Traditional** account at the same time. After this step, we'll assume you know how to switch between accounts and services during the upcoming labs. ***Note: Oracle will soon have all services merged under the Standard Identity Cloud Service Account.*** However, until that time, you need to be aware of your dashboard Account settings, and at times you will need to switch between the Regular Cloud Account and Traditional Cloud Account to view the right services in the Dashboard and Dashboard Menus.
 
@@ -163,7 +175,7 @@ It is important to fully understand how to login to both the **Standard Identity
 
 ## Verify your version of the Java JDK
 
-### **Step 7 (Windows Option)**: JDK Verification on Windows
+### **Step 8 (Windows Option)**: JDK Verification on Windows
 
 **Note**: Eclipse requires that you have the a Java JDK 8 installed. Even if you have a JRE version 8, you still need to verify that you have a JDK 8 installed.
 
@@ -178,7 +190,7 @@ Java HotSpot(TM) Client VM (build 25.121-b13, mixed mode, sharing)
 
 - If JDK/**Java version 1.8** is not installed,  you will need to download a [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) from the Oracle Technology Network website, and install.
 
-### **Step 8 (Mac Option)**: JDK Verification on a MAC
+### **Step 9 (Mac Option)**: JDK Verification on a MAC
 
 **Note**: Eclipse requires that you have the a Java **JDK** 8 installed. Even if you have a **JRE** version 8, you still need to verify that you have a JDK 8 installed.
 
@@ -192,7 +204,7 @@ ls /Library/java/JavaVirtualMachines/
 
 ## Download and Install Eclipse
 
-### **Step 9**: Download Eclipse
+### **Step 10**: Download Eclipse
 
 ***Note***: Even if you already have Eclipse installed, you need to install and use the version documented below. This version of Eclipse contains the ***Oracle Enterprise Pack for Eclipse***, which will be used during the workshop.
 
@@ -204,7 +216,7 @@ ls /Library/java/JavaVirtualMachines/
 
 - Once you’ve downloaded eclipse, extract the zip file and install. ***Note:*** If you encounter an error when extracting Eclipse due to a "Path name too long" error on Windows, there are solutions that can be found by performing an internet search on the error to change the Windows allowed file length. Also, we have found that using the open source [7-zip](http://www.7-zip.org/download.html) tool can help overcome the file length errors encountered by the default windows zip file extraction tools.
 
-### **Step 10**: Optionally Configure Proxies (if behind a firewall)
+### **Step 11**: Optionally Configure Proxies (if behind a firewall)
 
 If you are running Eclipse behind a firewall, you need to configure the proxy setting. First, you need to ensure that Eclipse’s proxy is set. Next, you need to update the maven proxy setting, and then finally, you need to ensure that the Oracle Plugin will work with your proxy settings.
 
@@ -228,7 +240,7 @@ If you are running Eclipse behind a firewall, you need to configure the proxy se
 
 ![](images/studentguide/Picture6.png)
 
-### **Step 11**: Optionally Update the Eclipse / Maven proxy (if behind a firewall)
+### **Step 12**: Optionally Update the Eclipse / Maven proxy (if behind a firewall)
 
 ***Note:*** You will only do this optional Eclipse/Maven Proxy setup if you are behind a firewall. Otherwise, skip this step, and go to next step where you will download and install Brackets.
 
@@ -271,7 +283,7 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 ```
 - Reload Eclipse to use the new maven settings
 
-### **Step 12 (Windows Only)**: Download/Install Git
+### **Step 13 (Windows Only)**: Download/Install Git
 
 - Go to the following URL: https://git-scm.com/downloads
 
