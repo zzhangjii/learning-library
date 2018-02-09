@@ -551,7 +551,7 @@ EOF
 
 - Enter the following and click **Next**
 
-    **Database Name:** `PDB1.<your Identity Domain>.oraclecloud.internal`
+    **Database Name:** `PDB1.<DBCS Service Instance ID>.oraclecloud.internal`
 
     **Host Name:** `Alpha01-DBCS`
 
