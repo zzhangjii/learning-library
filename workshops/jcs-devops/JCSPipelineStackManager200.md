@@ -503,6 +503,43 @@ EOF
 
 ![](images/200/Picture200-70.png)
 
+## Setup Data Source Connection
+
+### **STEP 21:** Open WebLogic Service Console
+
+- Navigate back to the **Cloud Stack** Service Console. Click **Alpha01** to view details for the stack. 
+
+- Click navigation icon ![](images/Menu.png) for **Alpha01-JCS** and click **Open WebLogic Service Console**
+
+    ![](images/200/Picture200-71.png)
+
+- On security warning page click **ADVANCED** followed by **Proceed**
+
+    ![](images/200/Picture200-72.png)
+ 
+- Enter the following data and click **Login**
+
+    **Usernaame:** `weblogic`
+
+    **Password:** `Alpha2018_`
+
+    ![](images/200/Picture200-73.png)
+
+- In **Domain Structure** expand **Services** and click *Data Sources**
+
+    ![](images/200/Picture200-74.png)
+
+### **STEP 22:** Create Data Source
+
+- In Change Center, click **Lock & Edit** to enable editting of the confirguration.
+
+    ![](images/200/Picture200-75.png)
+
+- Click New and select **Generic Data Source**
+
+    ![](images/200/Picture200-76.png)
+
+
 ### **STEP 15:** Set Task 2 Status to In Progress
 
 - From either Eclipse or Developer Cloud Service console update the status of **Task 2** to **Completed**. Your sprint should now look like the following.
