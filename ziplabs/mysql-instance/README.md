@@ -43,33 +43,43 @@ When you create an instance of Oracle MySQL Cloud Service, you must associate a 
 3. Select **Show** for **MySQL Cloud Service**.
 4. Close the **Customize Dashboard** window.
 5. On the **MySQL Cloud Service** tile, click the **Action Menu Action Menu** and select **Open Service Console**.
-6. If there are no existing services, click the **Services** tab.
-7. Click **Create Service**.
+6. If there are no existing services, click the **Instances** tab.
+7. Click **Create Instance**.
 8. Enter or select the following information, and then click **Next**:
-     * **Service Name**: `TestDB`
-     * **Service Description**: (optional)
-     * **Metering Frequency:**: Hourly
-<br>![mysql04.png](img/mysql04.png)
-<br>[Description of the illustration mysql04.png](files/mysql04.txt)
+     * **Instance Name**: `TestDB`
+     * **Description**: (optional)
+     * **Notification Email**: (default)
+     * **Region:**: No Preference
+
+    ![mysql04.png](img/mysql04.png)
+
+    [Description of the illustration mysql04.png](files/mysql04.txt)
 9. Enter or select the following information, and then click **Next**:
      * **Compute Shape: OC3-1.0 OCPU, 7.5GB RAM**
-     *  **SSH Public Key** (Enter the public key that you generated in the previous section.)
+     *  **SSH Public Key** (Click Edit and browse to the location of your public key.)
      * **Usable Database Storage(GB)**: 25
      * **Administration User**: root
-     * **Administration Password**
+     * **Administration Password** (Be sure to use a password with at least 8 characters, one upper case character, one number and one special character.)
      * **Confirm Administration Password**
      * **Database Schema Name**: `mydatabase`
-     * **Server Character Set**: utf8mb4 - UTF-8 Unicode
-     * **Configure MySQL Enterprise Monitor**: No
+     * **Server Character Set**: `utf8mb4 - UTF-8 Unicode`
+     * **Configure MySQL Enterprise Monitor**: `No`
      * **Backup Destination**: None
-   <br>![mysql05.png](img/mysql05.png)
-   <br>[Description of the illustration mysql05.png](files/mysql05.txt)  
+     * **Create Instance from Existing Backup**: No
+
+    ![mysql05.png](img/mysql05.png)
+
+    [Description of the illustration mysql05.png](files/mysql05.txt)  
 10. Review the details of your instance and then click **Create**.
-   <br>![mysql06.png](img/mysql06.png)
-   <br>[Description of the illustration mysql06.png](files/mysql06.txt) 
+
+    ![mysql06.png](img/mysql06.png)
+
+    [Description of the illustration mysql06.png](files/mysql06.txt) 
 11. Wait until the instance is created.
-   <br>![mysql07.png](img/mysql07.png)
-   <br>[Description of the illustration mysql06.png](files/mysql07.txt) 
+
+    ![mysql07.png](img/mysql07.png)
+
+    [Description of the illustration mysql06.png](files/mysql07.txt) 
 
 ## Want to Learn More? ##
 

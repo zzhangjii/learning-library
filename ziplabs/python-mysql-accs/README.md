@@ -15,48 +15,55 @@ Oracle Application Container Cloud Service provides a lightweight infrastructure
 ### What Do You Need? ###
 
 * Access to an instance of Oracle Application Container Cloud Service (Make a note of your account information: identity domain, user name, and password.)
-* Access to an instance of Oracle MySQL Cloud Service. (See [Creating an Instance of Oracle MySQL Cloud Service](https://apexapps.oracle.com/pls/apex/f?p=44785:112:0::::P112_CONTENT_ID:19922).
+* Access to an instance of Oracle MySQL Cloud Service. (See [Creating an Instance of Oracle MySQL Cloud Service](https://apexapps.oracle.com/pls/apex/f?p=44785:112:0::::P112_CONTENT_ID:19922))
 * [Python 3.6+](https://www.python.org/downloads/)
 * The [pip](https://pip.pypa.io/en/stable/installing/) package management system
-* Python Employee application project [employee-python-app.zip](file:///C:/Users/tmcginn/Documents/GitHub/learning-library/ziplabs/python-mysql-accs/files/employee-python-app.zip)
+* Python Employee application project [employee-python-app.zip](files/employee-python-app.zip)
 * [cURL 7.0+](http://curl.haxx.se/download.html) with SSL support
 
 ## Download the Project Dependencies ##
-1. Extract the contents of the employee-python-app.zip file in your local system.
-2. Open a command-line window (or terminal in Linux) and go to the employee-python-app directory.
+1. Extract the contents of the `employee-python-app.zip` file in your local system.
+
+    `unzip employee-python-app.zip`
+
+2. Open a command-line window (or terminal in Linux) and go to the `employee-python-app` directory.
 3. Install the project dependencies.
 
    `pip install -r requirements.txt -t modules`
-4. Create the python-service-dist.zip file with the content of the employee-python-app directory. Make sure that the zip file doesn't contain any subdirectories and all the files are at the root of the zip file.
+4. Create the `python-service-dist.zip` file with the content of the `employee-python-app` directory. Make sure that the zip file doesn't contain any subdirectories and all the files are at the root of the zip file.
+
+    `zip -r ../python-service-dist.zip .`
 
 ## Deploy Your Application to Oracle Application Container Cloud Service ##
-1. In a web browser, go to https://cloud.oracle.com/home and click Sign In.
-2. From the Cloud Account drop-down menu, select Traditional Cloud Account, then select your data center, and click My Services.
-3. Enter your identity domain and click Go.
-4. Enter your cloud account credentials and click Sign In.
-5. In the Oracle Cloud My Services dashboard, click Action menu and select Oracle Application Container Cloud Service.
-6. In the Applications list view, click Create Application.
-7. In the Create Application dialog box, click Python.
-8. In the Application section, enter EmployeeService for the name of your application. Click Browse next to Archive.
-9. In the File Upload dialog box, select python-service-dist.zip and click Open.
-10. Keep the default values in the Topology section and click Create. Processing takes a few minutes.
+1. In a web browser, go to [https://cloud.oracle.com/home](https://cloud.oracle.com/home) and click **Sign In**.
+2. From the **Cloud Account** drop-down menu, select **Cloud Account with Identity Cloud Service**.
+3. Enter your Cloud Account Name and click **My Services**.
+4. Enter your cloud account credentials and click **Sign In**.
+5. In the **Oracle Cloud My Services** dashboard, click **Action** and select **Oracle Application Container Cloud Service**.
+6. In the Applications list view, click **Create Application**.
+7. In the **Create Application** dialog, click **Python**.
+8. In the **Application** section, enter `EmployeeService` for the name of your application. Be sure **Upload Archive** is selected and click **Browse**.
+9. In the **File Upload** dialog, select `python-service-dist.zip` and click **Open**.
+10. Keep the remaining default values and click **Create**. Processing takes a few minutes.
 
 ## Add the MySQLCS Service Binding ##
 1. Wait until the application is created.
-2. Click the Deployments tab. In the Service Binding section, click Add.
+2. Click on **EmployeeService** to open the application services window.
+3. Click the **Deployments** tab. In the **Service Binding** section, click **Add**.
 
    ![deployments_tab.jpg](img/deployments_tab.png)
 
    [Description of the illustration deployments_tab.png](files/deployments_tab.txt)
 
-3. In the Service Type field, select MySQLCS Service. Enter or select values in the Service Name, Username, and Password fields, and click Save.
+4. In the **Service Type** field, select **Oracle MySQL Cloud Service**. Enter or select values in the **Service Name**, **Username**, and **Password** fields, and click **Save**.
 
    ![add_service_binding.jpg](img/add_service_binding.png)
 
    [Description of the illustration add_service_binding.png](files/add_service_binding.txt)
 
-4. In the Deployments dialog box, click Apply Edits.
-5. Wait until the application is restarted and then copy the URL of your application. You'll use it in the next section.
+5. In the **Deployments** dialog, click **Apply Edits**.
+6. Leave the default **Rolling Restart** selected and click **Restart**.
+7. Wait until the application is restarted and then copy the URL of your application. You'll use it in the next section.
 
 ## Test Your Application ##
 1. Open a command-line window (or terminal in Linux).
