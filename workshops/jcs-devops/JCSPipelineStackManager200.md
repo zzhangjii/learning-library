@@ -377,7 +377,7 @@ ssh-keygen -b 2048 -t rsa -f labkey
 - Next we will copy the public key, labkey.pub, to the JCSStackAlphaInfrastructure project. **Note:** These instructions assume the Eclipe workspace was created under the home directory.
 
 ```bash
-cp labkey.pub ~/workspace/JCSStackAlphaInfrastructure.git-ec36/.
+cp labkey.pub ~/workspace/JCSStackAlphaInfrastructure.git-*/.
 ```
 
 ![](images/200/Picture200-46.2.png)
