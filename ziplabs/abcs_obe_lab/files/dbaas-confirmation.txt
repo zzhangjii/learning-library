@@ -1,0 +1,1 @@
+The image shows the Confirmation window for a Database service instance quick start. The word Download is highlighted and a Create button is greyed out (not active.)
