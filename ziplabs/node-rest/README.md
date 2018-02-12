@@ -7,7 +7,7 @@ permalink: /ziplabs/node-rest/index.html
 # Creating a Node.js RESTful Application in Oracle Application Container Cloud Service #
 
 ## Before You Begin ##
-This tutorial shows you how to develop a simple message board application. Using REST calls, you can read existing comments and create new comments on the message board. This tutorial takes 10 minutes to complete.
+This 10 minute tutorial shows you how to develop a simple message board application. Using REST calls, you can read existing comments and create new comments on the message board.
 
 ### Background ###
 Oracle Application Container Cloud Service provides a lightweight infrastructure that lets you deploy Java Platform, Standard Edition (SE), PHP, and Node.js applications to Oracle Cloud. You can use Node.js cloud service in Oracle Application Container Cloud Service to develop RESTful web services, and then integrate them with your client applications.
@@ -126,8 +126,10 @@ Oracle Application Container Cloud Service provides a lightweight infrastructure
     ````javascript
     var PORT = process.env.PORT || 80;
     ````
+
 ##  Prepare the Package for deployment ##
 Oracle Application Container Cloud Service requires a `manifest.json` file, which contains information about which Node.js command the service should run.
+
 1. Create a `manifest.json` file and add: 
 
    ````json
@@ -220,6 +222,7 @@ Oracle Application Container Cloud Service requires a `manifest.json` file, whic
 
    [{"title":"Topic 1","id":124},{"title":"Topic 2","id":125},{"title":"Hello","id":126}]
    ````
+
 ## Want to Learn More ##
 
 * Node.js website [nodejs.org](https://nodejs.org/)

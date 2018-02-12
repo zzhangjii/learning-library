@@ -1,20 +1,18 @@
 ---
 layout: ziplab
-description: Learn how to deploy a Java EE application on Oracle Application Container Cloud Service.
+description: Learn how to deploy a Dropwizard REST application to Oracle Application Container Cloud service.
 tags: Oracle Cloud, Application Container Cloud Service
-permalink: /ziplabs/java-ee-acces/index.html
+permalink: /ziplabs/dropwizard-accs/index.html
 ---
 # Deploy a Dropwizard Application to Oracle Cloud #
 
 ## Before You Begin ##
-
-    This 15-minute tutorial shows you how to deploy a web service to Oracle Application Container Cloud Service using the Dropwizard framework. 
+This 15-minute tutorial shows you how to deploy a web service to Oracle Application Container Cloud Service using the Dropwizard framework. 
 
 ### Background ###
+Dropwizard is an open source Java framework that you can use to quickly create RESTful web services. Dropwizard integrates several components and Java frameworks that can help you build more robust applications.
 
-    Dropwizard is an open source Java framework that you can use to quickly create RESTful web services. Dropwizard integrates several components and Java frameworks that can help you build more robust applications.
-
-    In this tutorial, you create a web service for an employee directory application and then deploy it to Oracle Application Container Cloud Service. Data for the application is stored in an in-memory database. You test the REST service by using an HTML5 JavaScript client.
+In this tutorial, you create a web service for an employee directory application and then deploy it to Oracle Application Container Cloud Service. Data for the application is stored in an in-memory database. You test the REST service by using an HTML5 JavaScript client.
 
 ### What Do You Need? ###
 * Access to an instance of Oracle Application Container Cloud Service

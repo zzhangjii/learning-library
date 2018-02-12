@@ -72,8 +72,7 @@ Use Oracle Container Cloud Service to deploy a Ruby Docker image.
 
     ![](img/deployment_ready.png)
 
-    [Description of the illustration deployment_ready.png]
-    (files/deployment_ready.txt)
+    [Description of the illustration deployment_ready.png](files/deployment_ready.txt)
 
 ## Test Your Deployment ##
 
