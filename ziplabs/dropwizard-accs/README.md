@@ -97,6 +97,7 @@ In this tutorial, you create a web service for an employee directory application
     <pre><code>mvn clean package</code></pre>
 
 7. In the `target` directory locate the `employee-service-dropwizard-1.0-SNAPSHOT.zip` file which will be used to deploy your application to Oracle Application Contianer Cloud Service.
+
 ## Deploy the Application ##
 1. In a web browser, go to [https://cloud.oracle.com/home](https://cloud.oracle.com/home) and click **Sign In**.
 2. From the **Cloud Account** drop-down menu, select **Cloud Account with Identity Cloud Service**.
@@ -136,6 +137,7 @@ In this tutorial, you create a web service for an employee directory application
 
     [Description of the illustration testing-04.png](files/testing-04.txt)
 8. Test the delete, update, and search options.
+
 ## Want to Learn More? ##
 * [Oracle Application Container Cloud Service](http://www.oracle.com/pls/topic/lookup?ctx=cloud&id=apaasgs) in the Oracle Help Center
 * Dropwizard website [dropwizard.io](http://www.dropwizard.io/)
