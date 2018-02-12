@@ -1,0 +1,32 @@
+package com.dropwizard.employee.service;
+
+    import io.dropwizard.Application;
+    import io.dropwizard.configuration.EnvironmentVariableSubstitutor;
+    import io.dropwizard.configuration.SubstitutingSourceProvider;
+    import io.dropwizard.setup.Bootstrap;
+    import io.dropwizard.setup.Environment;
+    import org.glassfish.jersey.media.multipart.MultiPartFeature;
+
+    public class EmployeeApplication extends Application<EmployeeConfiguration> {
+
+    public static void main(String[] args) throws Exception {
+        new EmployeeApplication().run(args);
+    }
+
+    @Override
+    public void initialize(Bootstrap<EmployeeConfiguration> bootstrap) {
+        bootstrap.setConfigurationSourceProvider(
+            new SubstitutingSourceProvider(bootstrap.getConfigurationSourceProvider(),
+            new EnvironmentVariableSubstitutor(false)
+            )
+        );
+    }
+
+    @Override
+    public void run(EmployeeConfiguration t, Environment e) throws Exception {
+        final EmployeeResource eResource = new EmployeeResource();
+        e.jersey().register(eResource);        
+        e.jersey().register(MultiPartFeature.class);
+        e.jersey().register(CrossOriginEmployeeFilter.class);
+    }
+}
