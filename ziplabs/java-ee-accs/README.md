@@ -2,17 +2,15 @@
 layout: ziplab
 description: Learn how to deploy a Java EE application on Oracle Application Container Cloud Service.
 tags: Oracle Cloud, Application Container Cloud Service
-permalink: /ziplabs/java-ee-acces/index.html
+permalink: /ziplabs/java-ee-accs/index.html
 ---
 # Deploy a Java EE Application to Oracle Cloud #
 
 ## Before You Begin ##
-
-    This 10-minute tutorial shows you how to deploy a Java EE application to Oracle Application Container Cloud Service.
+This 10-minute tutorial shows you how to deploy a Java EE application to Oracle Application Container Cloud Service.
 
 ### Background ###
-
-    Oracle Application Container Cloud Service lets you deploy Java SE, Node.js, PHP, Python, Ruby, and Java EE applications to the Oracle Cloud.
+Oracle Application Container Cloud Service lets you deploy Java SE, Node.js, PHP, Python, Ruby, and Java EE applications to the Oracle Cloud.
 
 ### What Do You Need? ###
 

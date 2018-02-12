@@ -32,7 +32,7 @@ For your application to run properly on Oracle Application Container Cloud Servi
 ## Create the Manifest.json File ##
 1. Extract the content of the `book-service.zip` file in your local system.
 
-    <pre><code>unzip book-service.zip</code>/pre>
+    <pre><code>unzip book-service.zip</code></pre>
 2. Create a `manifest.json` file at the same level than the `pom.xml` file and open it in a text editor.
 3. Add the following content and save the file.<br>
     ```json
