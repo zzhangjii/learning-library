@@ -32,7 +32,7 @@ For your application to run properly on Oracle Application Container Cloud Servi
 ## Create the Manifest.json File ##
 1. Extract the content of the `book-service.zip` file in your local system.
 
-    `unzip book-service.zip`
+    <pre><code>unzip book-service.zip</code>/pre>
 2. Create a `manifest.json` file at the same level than the `pom.xml` file and open it in a text editor.
 3. Add the following content and save the file.<br>
     ```json
@@ -55,14 +55,14 @@ For your application to run properly on Oracle Application Container Cloud Servi
 2. In the `resources` directory, create the `application.properties` file.
 3. Add the following content to the file:
 
-    `server.port=${PORT}`
+    <pre><code>server.port=${PORT}</code></pre>
 
 ## Compile and Package Your Application ##
 
 1. Open a command-line window (or Terminal in Linux) and go to the `book-service` directory.
 2. Compile and package your application using the Maven command:
 
-    `mvn compile package`
+    <pre><code>mvn compile package</code></pre>
     
 ## Deploy your Application to Oracle Application Container Cloud Service ##
 1. In a web browser, go to [https://cloud.oracle.com/home](https://cloud.oracle.com/home) and click **Sign In**.
@@ -81,21 +81,21 @@ For your application to run properly on Oracle Application Container Cloud Servi
 1. Open a command-line window (or Terminal in Linux).
 2. Create a new book record using the following cURL command. Replace the app_endpoint placeholder with the URL of your application.
 
-    <code>curl -i -X POST -H "Content-Type:application/json" -d "{ \"title\" : \"Hamlet\",  \"author\" : \"William Shakespeare\",\"isbn\":\"978-0486272788\", \"published\":\"1937\",\"genre\":\"Novel\" }" <b>app_endpoint</b>/books</code>
+    <pre><code>curl -i -X POST -H "Content-Type:application/json" -d "{ \"title\" : \"Hamlet\",  \"author\" : \"William Shakespeare\",\"isbn\":\"978-0486272788\", \"published\":\"1937\",\"genre\":\"Novel\" }" <b>app_endpoint</b>/books</code></pre>
 
 3. Query all book entities.
 
-    <code>curl <b>app_endpoint</b>/books</code>
+    <pre><code>curl <b>app_endpoint</b>/books</code></pre>
 
 4. Update the published property of the book. 
 
-    <code>curl -i -X PUT -H "Content-Type:application/json" -d "{ \"title\" : \"Hamlet\",  \"author\" : \"William Shakespeare\",\"isbn\":\"978-0486272788\", \"published\":\"1980\",\"genre\":\"Novel\"}" <b>app_endpoint</b>/books/1</code>
+    <pre><code>curl -i -X PUT -H "Content-Type:application/json" -d "{ \"title\" : \"Hamlet\",  \"author\" : \"William Shakespeare\",\"isbn\":\"978-0486272788\", \"published\":\"1980\",\"genre\":\"Novel\"}" <b>app_endpoint</b>/books/1</code></pre>
 
     **Note:** The PUT method will update all the properties of the entity. If you don't specify a value, the property is replaced with null.
 
 5. Delete the book.
 
-    <code>curl -i -X DELETE <b>app_endpoint</b>/books/1</code>
+    <pre><code>curl -i -X DELETE <b>app_endpoint</b>/books/1</code></pre>
 
 ## Want to Learn More? ##
 

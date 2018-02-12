@@ -38,7 +38,7 @@ Oracle Application Container Cloud Service provides a lightweight infrastructure
    This code fragment creates a service that listens on `HTTP` port `8089`. In a later step, you will change this port with an Oracle Application Container Cloud Service variable.
 3. Test your server.
 
-    `node server.js`
+    <pre><code>node server.js`</code></pre>
 4. In a browser window, go to http://localhost:8089 and look for the following message: `"LATER ON, YOU WILL PLACE CODE HERE."`
 5. To stop the server, press CTRL+C.
 6. Add the following variable declarations after the `var PORT` declaration: 
@@ -142,7 +142,7 @@ Oracle Application Container Cloud Service requires a `manifest.json` file, whic
    ````
 2. Compress the `server.js` and `manifest.json` files and bundle them into a single zip file named `sample.zip`.
 
-    `zip sample.zip server.js manifest.json`
+    <pre><code>zip sample.zip server.js manifest.json</code></pre>
 
 ## Open the Oracle Application Container Cloud Service Console ##
 1. In a web browser, go to [https://cloud.oracle.com/home](https://cloud.oracle.com/home) and click **Sign In**.
@@ -181,7 +181,7 @@ Oracle Application Container Cloud Service requires a `manifest.json` file, whic
    [Description of the illustration test-sample-accs-07.jpg](files/test-sample-accs-07.jpg)
 3. In a Git CMD window, access the URL as a REST endpoint:
 
-   <code>curl -i -X GET <i>application URL</i></code>
+   <pre><code>curl -i -X GET <i>application URL</i></code></pre>
 
    The sample data that you entered in `server.js` is displayed.
 
@@ -202,7 +202,7 @@ Oracle Application Container Cloud Service requires a `manifest.json` file, whic
 
 4. Add a message.
 
-   <code>curl -i -X POST -H "Content-Type: application/json" -d '{"title":"Hello", "id":126}' <b><i>application URL</i></b></code>
+   <pre><code>curl -i -X POST -H "Content-Type: application/json" -d '{"title":"Hello", "id":126}' <b><i>application URL</i></b></code></pre>
 
 5. Repeat step 2. The sample data is updated.
 

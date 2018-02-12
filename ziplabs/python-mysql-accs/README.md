@@ -24,15 +24,15 @@ Oracle Application Container Cloud Service provides a lightweight infrastructure
 ## Download the Project Dependencies ##
 1. Extract the contents of the `employee-python-app.zip` file in your local system.
 
-    `unzip employee-python-app.zip`
+    <pre><code>unzip employee-python-app.zip</code></pre>
 
 2. Open a command-line window (or terminal in Linux) and go to the `employee-python-app` directory.
 3. Install the project dependencies.
 
-   `pip install -r requirements.txt -t modules`
+   <pre><code>pip install -r requirements.txt -t modules</code></pre>
 4. Create the `python-service-dist.zip` file with the content of the `employee-python-app` directory. Make sure that the zip file doesn't contain any subdirectories and all the files are at the root of the zip file.
 
-    `zip -r ../python-service-dist.zip .`
+    <pre><code>zip -r ../python-service-dist.zip .</code></pre>
 
 ## Deploy Your Application to Oracle Application Container Cloud Service ##
 1. In a web browser, go to [https://cloud.oracle.com/home](https://cloud.oracle.com/home) and click **Sign In**.
@@ -69,23 +69,23 @@ Oracle Application Container Cloud Service provides a lightweight infrastructure
 1. Open a command-line window (or terminal in Linux).
 2. Create the EMPLOYEE table. Replace the app_endpoint placeholder with the URL
 
-   <code>curl -X GET -i <strong>app_endpoint</strong>/employees/setupdb</code>
+   <pre><code>curl -X GET -i <strong>app_endpoint</strong>/employees/setupdb</code></pre>
 
 3. Create an employee. 
    
-   <code>curl -X POST -i -H "Content-Type: application/json" -d "{\"firstName\":\"Luis\",\"lastName\":\"Gray\",\"email\":\"john.gray@example.com\",\"phone\":\"1203123\",\"birthDate\":\"1975-05-14\",\"title\":\"Developer Manager\",\"dept\":\"IT\"}" <strong>app_endpoint</strong>/employees</code>
+   <pre><code>curl -X POST -i -H "Content-Type: application/json" -d "{\"firstName\":\"Luis\",\"lastName\":\"Gray\",\"email\":\"john.gray@example.com\",\"phone\":\"1203123\",\"birthDate\":\"1975-05-14\",\"title\":\"Developer Manager\",\"dept\":\"IT\"}" <strong>app_endpoint</strong>/employees</code></pre>
 
 4. Get all employees.
 
-   <code>curl -X GET -i <strong>app_endpoint</strong>/employees</code>
+   <pre><code>curl -X GET -i <strong>app_endpoint</strong>/employees</code></pre>
 
 5. Delete the employee.
 
-   <code>curl -X DELETE -i <strong>app_endpoint</strong>/employees/1</code>
+   <pre><code>curl -X DELETE -i <strong>app_endpoint</strong>/employees/1</code></pre>
 
 6. Get the employee by ID.
 
-   <code>curl -X GET -i <strong>app_endpoint</strong>/employees/1</code>
+   <pre><code>curl -X GET -i <strong>app_endpoint</strong>/employees/1</code></pre>
 
 ## Want to Learn More ##
 

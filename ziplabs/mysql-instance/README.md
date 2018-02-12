@@ -23,7 +23,8 @@ When you create an instance of Oracle MySQL Cloud Service, you must associate a 
 <ol>
 <li>Open a Git bash command-line window (or terminal in Linux).</li>
 <li>Generate the SSH key pair: 
-<br><code>ssh-keygen -t rsa -N "<i>passphrase</i>" -b "<i>2048</i>" -C "<i>key comment</i>" -f <i>path/root_name</i></code>
+
+<pre><code>ssh-keygen -t rsa -N "<i>passphrase</i>" -b "<i>2048</i>" -C "<i>key comment</i>" -f <i>path/root_name</i></code></pre>
 <table><thead><tr>
 <th>Argument</th><th>Description</th>
 </tr></thead>
@@ -38,14 +39,17 @@ When you create an instance of Oracle MySQL Cloud Service, you must associate a 
 </li></ol>
 
 ## Create an Instance of Oracle MySQL Cloud Service ##
-1. Log in to your Oracle Cloud account. Enter your account credentials in the Identity Domain, User Name, and Password fields.
-2. Click **Customize Dashboard**.
-3. Select **Show** for **MySQL Cloud Service**.
-4. Close the **Customize Dashboard** window.
-5. On the **MySQL Cloud Service** tile, click the **Action Menu Action Menu** and select **Open Service Console**.
-6. If there are no existing services, click the **Instances** tab.
-7. Click **Create Instance**.
-8. Enter or select the following information, and then click **Next**:
+1. In a web browser, go to [https://cloud.oracle.com/home](https://cloud.oracle.com/home) and click **Sign In**.
+2. From the **Cloud Account** drop-down menu, select **Cloud Account with Identity Cloud Service**.
+3. Enter your Cloud Account Name and click **My Services**.
+4. Enter your cloud account credentials and click **Sign In**.
+5. Click **Customize Dashboard**.
+6. Select **Show** for **MySQL Cloud Service**.
+7. Close the **Customize Dashboard** window.
+8. On the **MySQL Cloud Service** tile, click the **Action Menu Action Menu** and select **Open Service Console**.
+9. If there are no existing services, click the **Instances** tab.
+10. Click **Create Instance**.
+11. Enter or select the following information, and then click **Next**:
      * **Instance Name**: `TestDB`
      * **Description**: (optional)
      * **Notification Email**: (default)
@@ -54,7 +58,7 @@ When you create an instance of Oracle MySQL Cloud Service, you must associate a 
     ![mysql04.png](img/mysql04.png)
 
     [Description of the illustration mysql04.png](files/mysql04.txt)
-9. Enter or select the following information, and then click **Next**:
+12. Enter or select the following information, and then click **Next**:
      * **Compute Shape: OC3-1.0 OCPU, 7.5GB RAM**
      *  **SSH Public Key** (Click Edit and browse to the location of your public key.)
      * **Usable Database Storage(GB)**: 25
@@ -70,12 +74,12 @@ When you create an instance of Oracle MySQL Cloud Service, you must associate a 
     ![mysql05.png](img/mysql05.png)
 
     [Description of the illustration mysql05.png](files/mysql05.txt)  
-10. Review the details of your instance and then click **Create**.
+13. Review the details of your instance and then click **Create**.
 
     ![mysql06.png](img/mysql06.png)
 
     [Description of the illustration mysql06.png](files/mysql06.txt) 
-11. Wait until the instance is created.
+14. Wait until the instance is created.
 
     ![mysql07.png](img/mysql07.png)
 

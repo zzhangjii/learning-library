@@ -515,7 +515,7 @@ article > figure, section > figure {
 article > figure img, section > figure img, article > p img, section > p img {
     border-color: #9B9B9B;
     border-style: solid;
-    border-width: 1px;
+	border-width: 1px;
 }
 
 article p.note {
@@ -589,10 +589,12 @@ article ol p img{
     border-style: solid;
     border-width: 1px;
     display: block;
-    margin-left: -40px;
+    /*margin-left: -40px;*/
     max-width: 600px;
     position: static;
-    /*width: 75vw;*/
+	/*width: 75vw;*/
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 /* TMM: Added 3/29/17 */
@@ -604,10 +606,12 @@ article ul p img{
     border-style: solid;
     border-width: 1px;
     display: block;
-    margin-left: -40px;
+    /*margin-left: -40px;*/
     max-width: 600px;
     position: static;
-    /*width: 75vw;*/
+	/*width: 75vw;*/
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 /* TMM: Added 3/29/17 */
@@ -636,7 +640,7 @@ article ol ul li::before {
 }
 
 /* TMM: how GitHub defines code blocks */
-pre, code.highlighter-rouge {
+pre, p > pre > code {
     -webkit-overflow-scrolling: touch ;
     background-color: #EEF5FC;
     border: 1px solid #E4F0FA;
@@ -647,8 +651,10 @@ pre, code.highlighter-rouge {
     padding: 10px;
     display: block;
     white-space: pre !important;
-    word-wrap: normal !important;
+	word-wrap: normal !important;
+	margin-top: 15px;
 }
+
 
 code, kbd, pre, samp {
     font-size: 110%;
