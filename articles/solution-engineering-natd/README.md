@@ -72,7 +72,7 @@ If you are not able to secure an Oracle Trial account please notify your recruit
 
 
 ### **Option 2: Recent Project Presentation**
-During this presentation, we would like you to provide an overview (or demonstration) of a development project on which you have recently worked. Provide examples of the technology, programming languages, and methodologies you used during this project. Feel free to use the whiteboard or laptop available in the interview room. If you use powerpoint, please keep your presentation to approximately 5 slides. ***Please Note: If you are going to use Oracle Cloud Trial Account and demonstrate Option 1 you DO NOT need to present your project.*** 
+During this presentation, we would like you to provide an overview (or demonstration) of a development project on which you have recently worked. Provide examples of the technology, programming languages, and methodologies you used during this project. Feel free to use the whiteboard or laptop available in the interview room. If you use powerpoint, please keep your presentation to approximately 5 slides. ***Please Note: If you are going to use Oracle Cloud Trial Account and demonstrate Option 1 you DO NOT need to present your project.*** ***Also Note: we do expect to see code! :)***
 
 
 ### **Expectation** 
