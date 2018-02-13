@@ -29,7 +29,7 @@ This workshop will walk you through the Software Development Lifecycle (SDLC) fo
 
 ## Lab 100: Agile Project Management
 
-**Documenation**: [JCSPipelineStackManager100.md](JCSPipelineStackManager100.md)
+**Documenation**: [JCSPipelineStackManager100.md](JCSPipelineStackManager100_IL.md)
 
 ### Objectives
 
@@ -39,7 +39,7 @@ This workshop will walk you through the Software Development Lifecycle (SDLC) fo
 
 ## Lab 200: Infrastructure as Code
 
-**Documenation**: [JCSPipelineStackManager200.md](JCSPipelineStackManager200.md)
+**Documenation**: [JCSPipelineStackManager200.md](JCSPipelineStackManager200_IL.md)
 
 ### Objectives
 
@@ -51,7 +51,7 @@ This workshop will walk you through the Software Development Lifecycle (SDLC) fo
 
 ## Lab 300: Continuous Deliver of Java Struts application
 
-**Documenation**: [JCSPipelineStackManager300.md](JCSPipelineStackManager300.md)
+**Documenation**: [JCSPipelineStackManager300.md](JCSPipelineStackManager300_IL.md)
 
 ### Objectives
 
@@ -63,7 +63,7 @@ This workshop will walk you through the Software Development Lifecycle (SDLC) fo
 
 ## Lab 400: Sprint Wrap-Up and Reporting
 
-**Documenation**: [JCSPipelineStackManager400.md](JCSPipelineStackManager400.md)
+**Documenation**: [JCSPipelineStackManager400.md](JCSPipelineStackManager400_IL.md)
 
 ### Objectives
 
