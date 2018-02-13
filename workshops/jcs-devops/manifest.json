@@ -55,28 +55,28 @@
             },
             {
                 "number": "100",
-                "filename": "JCSPipelineStackManager100.md",
+                "filename": "JCSPipelineStackManager100_IL.md",
                 "title": "Lab 100: Agile Project Management",
                 "description": "Use Developer Cloud Service to create issues, tasks, and sprints",
                 "labels": {"version": "Instructor Led"}
             },
             {
                 "number": "200",
-                "filename": "JCSPipelineStackManager200.md",
+                "filename": "JCSPipelineStackManager200_IL.md",
                 "title": "Lab 200: Infrastructure as Code",
                 "description": "In this lab, you will assume the persona of Operations, who will be tasked with creating an Infrastructure as Code pipeline for the provisioning of Alpha Office Java Cloud Service (JCS) environment.",
                 "labels": {"version": "Instructor Led"}
             },
             {
                 "number": "300",
-                "filename": "JCSPipelineStackManager300.md",
+                "filename": "JCSPipelineStackManager300_IL.md",
                 "title": "Lab 300: Continuous Deliver of Java Struts application",
                 "description": "In this lab, you will assume the persona of Java Developer who will be tasked with making enhancements to the Alpha Office Product Catalog UI.",
                 "labels": {"version": "Instructor Led"}
             },
             {
                 "number": "400",
-                "filename": "JCSPipelineStackManager400.md",
+                "filename": "JCSPipelineStackManager400_IL.md",
                 "title": "Lab 400: Develper Cloud Service Administration",
                 "description": "Access Developer Cloud Service, Complete Sprint, Run Backlog and Sprint Reports and Review Administrative Tasks.",
                 "labels": {"version": "Instructor Led"}
