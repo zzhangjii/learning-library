@@ -2,7 +2,7 @@
 
 ![](images/300/Picture300-title.png)  
 
-Update: October 19, 2017
+Update: February 7, 2018
 
 ## Introduction
 
@@ -21,11 +21,13 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
 ## Required Artifacts
 
-- The following lab requires an Oracle Public Cloud account that will be supplied by your instructor. You will need to download and install latest version of Eclipse or use supplied compute VM.
+- The following lab requires an Oracle Public Cloud account. You will need to download and install latest version of Eclipse. Instructions can be found in  [Student Guide](StudentGuide.md).
 
 # Create Initial Git Repository for Alpha Office Catalog UI
 
 ## Create Initial Git Repository
+
+### Logical Persona Overview
 
 Although you will remain connected to the Oracle Cloud using the user account you were provided, you are to take on the Persona of ***John Dunbar*** as you perform the following steps. John is our Java developer who will be making the enhancements to our product catalog UI.
 
@@ -135,23 +137,19 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
 ### **STEP 4:** Retrieve Public IP of JCS Instance for Deployment
 
-Before we can configure deployment of our application we need to make note of the IP for our JCS instance. The **Alpha01A-JCS** instance has already been provisioned.
+Before we can configure deployment of our application we need to make note of the IP for our JCS instance. The **Alpha01-JCS** instance was provisioned as part of lab 200.
 
-- Switch over to browser tab for cloud services. Click on the far left navigation icon and select **Oracle Java Cloud Service**.
+- Switch over to browser tab for cloud services. On the main dashboard, click on the navigation icon ![](images/Menu.png) for the **Java** Cloud Service and select **Open Service Console**.
 
     ![](images/300/Picture300-18.png)
 
-- The Java Cloud Service console shows all the provisioned instances of JCS.  You should see the instance **Alpha01A-JCS** which has been provisioned in advance.
+- The Java Cloud Service console shows all the provisioned instances of JCS.  You should see the instance **Alpha01-JCS** which has been provisioned in advance.
 
     ![](images/300/Picture300-19.png)
 
-- Click on **Alpha01A-JCS** to view the details of the service. Copy down the **Public IP** to be used later in the lab.
+- Click on **Alpha01-JCS** to view the details of the service. Copy down the **Public IP** to be used later in the lab.
 
     ![](images/300/Picture300-20.png)
-
-- Expand the **Load Balancer** section and copy down the **Public IP** to be used later in the lab.
-
-    ![](images/300/Picture300-21.png)
 
 ### **STEP 5:** Create Alpha Office Product Catalog UI Deployment Process
 
@@ -177,7 +175,7 @@ Before we can configure deployment of our application we need to make note of th
 
     **Username:** `weblogic`
 
-    **Password:** `Alpha2014_`
+    **Password:** `Alpha2018_`
 
     ![](images/300/Picture300-25.png)
 
@@ -185,7 +183,7 @@ Before we can configure deployment of our application we need to make note of th
 
     ![](images/300/Picture300-26.png)
 
-- Check **Alpha01A_cluster** to deploy to the entire cluster and click **OK**
+- Check **Alpha01-_cluster** to deploy to the entire cluster and click **OK**
 
     ![](images/300/Picture300-27.png)
 
@@ -210,19 +208,15 @@ Before we can configure deployment of our application we need to make note of th
 
 ### **STEP 6:** Verify deployment in Weblogic Console
 
-- Switch back to the Java Cloud Service Console browser tab, in which you are viewing **Alpha01A-JCS**. Click the hamburger menu ![](images/menu.png) and select **Open WebLogic Server Console**
+- Switch back to the Java Cloud Service Console browser tab, in which you are viewing **Alpha01-JCS**. Click the hamburger menu ![](images/menu.png) and select **Open WebLogic Server Console**
 
     ![](images/300/Picture300-32.png)
-
-- A new browser tab will open. On the security warning click **ADVANCED** and then click **Proceed to ...**
-
-    ![](images/300/Picture300-33.png)
 
 - You will be presented with the **WebLogic Server Console** login. Enter the following and click **Login**
 
     **Username:** `weblogic`
 
-    **Password:** `Alpha2014_`
+    **Password:** `Alpha2018_`
 
     ![](images/300/Picture300-34.png)
 
@@ -238,11 +232,7 @@ Before we can configure deployment of our application we need to make note of th
 
 - Open a new tab in the browser and enter the following URL:
 
-    `https://<Public IP of Load Balancer>/AlphaProducts`
-
-- On the security warning click **ADVANCED** and then click **Proceed to ...**
-
-    ![](images/300/Picture300-37.png)
+    `https://<Public IP of Alpha01-JCS>/AlphaProducts`
 
 - You should now see the **Alpha Office Product Catalog UI**
 
