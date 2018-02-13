@@ -1,7 +1,7 @@
 # DevOps: JCS Pipeline Using Oracle Stack Manager
 
 ![](images/100/Picture100-title.png)
-Update: October 19, 2017
+Update: February 7, 2018
 
 ## Introduction
 
@@ -20,34 +20,33 @@ You will take on 3 Personas during the workshop. The **Project Manager** Person
 
 ## Required Artifacts
 
-- The following lab requires an Oracle Public Cloud account that will be supplied by your instructor.
+- The following lab requires an Oracle Public Cloud account.
 
 # Start Project
 
 ## Create Developer Cloud Service Project
 
-### **STEP 1:** Login to your Oracle Cloud Account
+### **STEP 1**: Login to your **Traditional** Oracle Cloud Account
 
-- From any browser, go to the URL:
+- From any browser, go to the URL below, or if using a trial account, use the URL emailed to you in your confirmation email:
+
     `https://cloud.oracle.com`
 
 - click **Sign In** in the upper right hand corner of the browser
 
     ![](images/100/Picture100-1.png)
 
-- **IMPORTANT** - Under my services, ***ask your instructor*** which **Region** to select from the drop down list, and click on the **My Services** button. ***NOTE***: In this example we are selecting "Public Cloud Services - EMEA," but your data center may vary. If you received your account through an Oracle Trial, your Trial confirmation email should provide a URL that will pre-select the region for you.
+- **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. If you are unsure of the data center you should select, and this is an in-person training event, ***ask your instructor*** which **Region** to select from the drop down list. If you received your account through an ***Oracle Trial***, you should have recorded the needed information while following the instruction in the [Trial Account Student Guide](StudentGuide.md).
 
     ![](images/100/Picture100-2.png)
 
 - Enter your identity domain and click **Go**.
 
-    **NOTE:** The **Identity Domain, User Name** and **Password** values will be given to you by the instructor or Trial confirmation email.
-
     ![](images/100/Picture100-3.png)
 
 - Once you Identity Domain is set, enter your User Name and Password and click **Sign In**
 
-    **NOTE:** For this lab you will assume the role of Project Manager ***Lisa Jones***. Although you are assuming the identify of Lisa Jones, you will log into the account using the **username** provided to you by your instructor, given to you by your corporation, or supplied to you as part of an Oracle Trial. As you progress through the workshop, you will remain logged in as a single user, but you will make “logical” changes from Lisa Jones the Project Manager to the other personas.
+    **NOTE:** For this lab you will assume the role of Project Manager ***Lisa Jones***. Although you are assuming the identify of Lisa Jones, you will log into the account using the **username** supplied to you as part of an Oracle Trial. As you progress through the workshop, you will remain logged in as a single user, but you will make “logical” changes from Lisa Jones the Project Manager to the other personas.
 
     ![](images/lisa.png)
 
@@ -73,7 +72,7 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
     ![](images/100/Picture100-8.png)
 
-- Click **New Project** to start the project create wizard. **Note**: Depending on the status of your developer cloud service, it is possible that the button may be labeled **Create Project** 
+- Click **Create Project** to start the project create wizard. **Note**: Depending on the status of your developer cloud service, it is possible that the button may be labeled **New Project** 
 
     ![](images/100/Picture100-9.png)
 
@@ -132,7 +131,7 @@ In this step you are still assuming the identity of the Project Manager, ***Lisa
 
     **Type:** `Task`
 
-    **Owner:** `Cloud Admin (or you, if another user is not available)`
+    **Owner:** `Select your account provided in the dropdown [Logical Owner = Bala Gupta]`
 
     **Story Points:** `1`
 
@@ -154,7 +153,7 @@ In this step you are still assuming the identity of the Project Manager, ***Lisa
 
     **Type:** `Task`
 
-    **Owner:** `Cloud Admin (or you, if another user is not available)`
+    **Owner:** `Select your account provided in the dropdown [Logical Owner = Bala Gupta]`
 
     **Story:**  `2`
 
@@ -168,15 +167,13 @@ In this step you are still assuming the identity of the Project Manager, ***Lisa
 
     ![](images/john.png)
 
-    **Note:** no matter who you assign as the task “physical” owner, for the sake of this workshop, ***John Dunbar*** will be the “logical” owner.
-
     **Summary:** `Create Initial GIT Repository for Alpha Office UI`
 
     **Description:** `Create Initial GIT Repository for Alpha Office UI and setup Build and Deployment configuration`
 
     **Type:** `Task`
 
-    **Owner:** `Cloud Admin (or you, if another user is not available)`
+    **Owner:** `Select your account provided in the dropdown [Logical Owner: John Dunbar]`
 
     **Story:**  `1`
 
@@ -188,15 +185,13 @@ In this step you are still assuming the identity of the Project Manager, ***Lisa
 
     ![](images/john.png)
 
-    **Note:** no matter who you assign as the task “physical” owner, for the sake of this workshop, ***John Dunbar*** will be the “logical” owner.
-
     **Summary:** `Add dollar sign in the display of the price`
 
     **Description:** `Add dollar sign in the display of the price`
 
     **Type:** `Defect`
 
-    **Owner:** `Cloud Admin`
+    **Owner:** `Select your account provided in the dropdown [Logical Owner: John Dunbar]`
 
     **Story:**  `2`
 
@@ -227,6 +222,8 @@ Before you start using the Agile methodology in Oracle Developer Cloud Service, 
     ![](images/100/Picture100-21.png)
 
 - Click **New Board** and enter the following data. When done click **Create**.
+
+    **Type:** `Scrum`
 
     **Name:** `AlphaOffice`
 
@@ -266,4 +263,4 @@ Before you start using the Agile methodology in Oracle Developer Cloud Service, 
 
     ![](images/100/Picture100-32.png)
 
-- You are now ready to move to the next lab.
+- **You are now ready to move to the next lab.**
