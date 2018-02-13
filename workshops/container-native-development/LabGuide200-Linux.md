@@ -25,7 +25,6 @@ During this lab, you will take on the **DevOps Engineer Persona**. You will prov
 ## Required Artifacts
 
 - The following lab requires:
-  - an Oracle-provided VirtualBox or Cloud-hosted Client Image
   - an Oracle Public Cloud account that will be supplied by your instructor, or a Trial Account
   - a [GitHub account](https://github.com/join)
   - a [Docker Hub account](https://hub.docker.com)
@@ -95,12 +94,16 @@ An API key is required for Terraform to authenticate to OCI in order to create c
 - Open a terminal window and run each of the following commands, one at a time, pressing **Enter** between each one. These commands will create a new directory called `.oci`, generate a new PEM private key, generate the corresponding public key, and copy the public key to the clipboard. For more information on this process, including the alternate commands to protect your key file with a passphrase, see the [official documentation](https://docs.us-phoenix-1.oraclecloud.com/Content/API/Concepts/apisigningkey.htm#two).
 
 
-  ```bash
-  mkdir ~/.oci
-  openssl genrsa -out ~/.oci/oci_api_key.pem 2048
-  openssl rsa -pubout -in ~/.oci/oci_api_key.pem -out ~/.oci/oci_api_key_public.pem
-  cat ~/.oci/oci_api_key_public.pem | xclip -sel clip
-  ```
+```bash
+mkdir ~/.oci
+openssl genrsa -out ~/.oci/oci_api_key.pem 2048
+openssl rsa -pubout -in ~/.oci/oci_api_key.pem -out ~/.oci/oci_api_key_public.pem
+cat ~/.oci/oci_api_key_public.pem
+```
+
+- Select the entire public key, beginning with `-----BEGIN PUBLIC KEY-----` and ending with `-----END PUBLIC KEY-----` and **copy** it to the clipboard.
+
+  ![](images/200/11.png)
 
 - In your browser window showing the OCI Console, click the **Identity** menu item. You will be brought to the **Users** menu. Find your username in the list and hover over the **three dots** menu at the far right of the row, then click **View User Details**.
 
@@ -116,15 +119,29 @@ An API key is required for Terraform to authenticate to OCI in order to create c
 
 - **Leave this browser window open**, as we will need to copy and paste some of this information into the Terraform configuration file.
 
+### **STEP 4**: Download Terraform
+
+- If you are using the Oracle-provided client image, this step has been done for you. Skip to the next step. Otherwise, continue with this step to install Terraform.
+
+- Download the appropriate Terraform package for your operating system from the [terraform.io downloads page](https://www.terraform.io/downloads.html).
+
+  ![](images/200/58.png)
+
+- **Unzip** the file you downloaded into the folder ~/terraform. You can use the command line or a graphical zip program for this operation. The example command below assumes you don't have other zip files in the current directory beginning with the string `terraform_`.
+
+  `mkdir ~/terraform && cat terraform_*.zip | tar -xvf - -C ~/terraform && cd ~/terraform`
+
+- Add Terraform to your PATH in the **terminal window** that you will use for the next two steps using the following command:
+
+  ``export PATH=$PATH:`pwd` ``
+
 ### **STEP 5**: Download the OCI Terraform Provider
 
-- Since you are using the Oracle-provided client image, Terraform has been **pre-installed** for you. All you need to do is install the latest Terraform provider for OCI.
-
-- Download the **OCI Terraform Provider** from the [GitHub release page](https://github.com/oracle/terraform-provider-oci/releases/latest). Select the package for your operating system. Since you are using the Oracle-provided client linux image, you will download the **linux.tar.gz** file.
+- Download the **OCI Terraform Provider** from the [GitHub release page](https://github.com/oracle/terraform-provider-oci/releases/latest). Select the package for your operating system.
 
   ![](images/200/59.png)
 
-- Click on the **Save File** option and then click on **OK** to download the file.
+- Click on the **Save File** option if you are prompted and then click on **OK** to download the file.
 
   ![](images/200/59.1.png)
 
@@ -139,7 +156,9 @@ An API key is required for Terraform to authenticate to OCI in order to create c
 
 ### **STEP 6**: Download and Configure the OCI Terraform Kubernetes Installer
 
-- From the same **terminal window**, run the following commands to download the OCI Terraform Kubernetes Installer:
+- Terraform requires `kubectl`, the Kubernetes command line interface, to interact with Kubernetes from your local machine. If you don't have it already, install it by following the instructions for your OS in the **[Kubernetes docs](https://kubernetes.io/docs/tasks/tools/install-kubectl/)**.
+
+- From the same **terminal window** you used in the previous step, run the following commands to download the OCI Terraform Kubernetes Installer:
 
   ```bash
   cd ~
@@ -161,6 +180,8 @@ An API key is required for Terraform to authenticate to OCI in order to create c
   You should see a version for `Terraform` as well as a version for the `provider.oci` plugin. It is OK if those versions differ from the screenshot below.
 
   ![](images/200/57.png)
+
+- If you got the expected output from `terraform --version`, proceed to the next instruction. Otherwise, go back to the previous step and complete the instructions to **Download Terraform and the OCI Terraform Provider**. Also ensure that Terraform is in your PATH for the current terminal window.
 
 - Once you have Terraform and the OCI provider set up, you are ready to configure the Kubernetes installer with your OCI account information. Start by making a copy of the included TFVARS example file to edit. Run the following from your **terminal window**:
 
@@ -193,13 +214,13 @@ An API key is required for Terraform to authenticate to OCI in order to create c
   compartment_ocid = "Compartment OCID"
   ```
 
-- The last piece of information we need to provide about your OCI tenant is the private key corresponding to the public API key you uploaded to the OCI console previously. Provide the path and the private key file on **line 5** using the path below:
+- The last piece of information we need to provide about your OCI tenant is the private key corresponding to the public API key you uploaded to the OCI console previously. Provide the path the the private key file on **line 5**. Note that _your path may differ_ from the example given below. Your public key was created as a first task in Step 3, and the location of your oci_api_key.pem file can be determined from how you completed those instructions.
 
   ```
-  private_key_path = "/home/oracle/.oci/oci_api_key.pem"
+  private_key_path = "/Users/your-local-username/.oci/oci_api_key.pem"
   ```
 
-- The rest of the terraform.tfvars file controls the parameters used when creating your Kubernetes cluster. You can control how many OCPUs each node receives, whether nodes should be virtual machines or bare metal instances, how many availability domains to use, and more. We will modify five of the lines in the remainder of the file.
+- The rest of the terraform.tfvars file controls the parameters used when creating your Kubernetes cluster. You can control how many OCPUs each node receives, whether nodes should be virtual machines or bare metal instances, how many availability domains to use, and more. We will modify three of the lines in the remainder of the file.
 
 - First, we will specify that we want only one OCPU in each of the worker and master nodes. This reduces the hourly cost of running our cluster. On **lines 15 and 16**, uncomment the **k8sMasterShape** and **k8sWorkerShape** parameters, and set both values to **VM.Standard1.1**:
 
@@ -247,13 +268,12 @@ An API key is required for Terraform to authenticate to OCI in order to create c
 
   ![](images/200/63.png)
 
-- During provisioning, Terraform generated a `kubeconfig` file that will authenticate you to the cluster. Let's configure and start the kubectl proxy server to make sure our cluster is accessible. Since you are using an Oracle-provided client image, `kubectl` -- the Kubernetes command line interface, has been **pre-installed** for you.
+- During provisioning, Terraform generated a `kubeconfig` file that will authenticate you to the cluster. Let's configure and start the kubectl proxy server to make sure our cluster is accessible.
 
-- You will need to set an environment variable to point `kubectl` to the location of your Terraform-generated `kubeconfig` file. Then you can start the Kubernetes proxy server, which will let you view the cluster dashboard at a localhost URL. Since you're using the Oracle-provided client image, we'll add the `KUBECONFIG` environment variable to your bash profile; that way it will be set for all new shells that you open:
+- You will need to set an environment variable to point `kubectl` to the location of your Terraform-generated `kubeconfig` file. Then you can start the Kubernetes proxy server, which will let you view the cluster dashboard at a localhost URL.
 
   ```bash
-  echo "export KUBECONFIG=`pwd`/generated/kubeconfig" >> ~/.bashrc
-  source ~/.bash_profile
+  export KUBECONFIG=`pwd`/generated/kubeconfig
   kubectl proxy
   ```
 
@@ -408,20 +428,20 @@ deploy-to-cluster:
 
 ### **STEP 10**: Set up environment variables in Wercker
 
-- Our first step is to set our cluster's authentication token as a Wercker environment variable. In your **terminal window**, run the following command to copy the token to your clipboard:
+- Our first step is to set our cluster's authentication token as a Wercker environment variable. In your **terminal window**, run the following command to output the token, then **select it and copy it** to your clipboard:
 
   ```bash
-  terraform output api_server_admin_token | xclip -sel clip
+  terraform output api_server_admin_token
   ```
 
 - Back in your Wercker browser tab, click the **Environment** tab. In the key field of the empty row below the last environment variable, enter the key **KUBERNETES_TOKEN**. In the value field, **paste** the token we just copied. Check the **Protected** box and click **Add**.
 
   ![](images/200/37.png)
 
-- The other environment variable we need to add is the address of the Kubernetes master we want to deploy to. We can get the URL from `kubectl`. Run the following command in your **terminal window** to copy the URL to your clipboard:
+- The other environment variable we need to add is the address of the Kubernetes master we want to deploy to. We can get the URL from `kubectl`. Run the following command in your **terminal window** to output the URL, then **select it and copy it** to your clipboard:
 
   ```bash
-  echo $(kubectl config view | grep server | cut -f 2- -d ":" | tr -d " ") | xclip -sel clip
+  echo $(kubectl config view | grep server | cut -f 2- -d ":" | tr -d " ")
   ```
 
 - In your Wercker browser tab, add a new environment variable with the key **KUBERNETES_MASTER**. In the value field, **paste** the value you copied from `kubectl`. The value **must start with https://** for Wercker to communicate with the cluster. When finished, click **Add**.
