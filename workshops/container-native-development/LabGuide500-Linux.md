@@ -15,7 +15,7 @@ During this lab, you will take on the **Lead Developer Persona** and extend your
 **Extend Your Application Using a Function**
 
 - Run Your Function Locally
-  - Start an Fn Server on Your Local Machine
+  - Install Fn Server on Your Local Machine
   - Clone the Function Repository
   - Deploy the Function Locally
   - Test the Function Using curl
@@ -27,7 +27,6 @@ During this lab, you will take on the **Lead Developer Persona** and extend your
 
 ## Required Artifacts
 - The following lab requires:
-  - an Oracle-provided VirtualBox or Cloud-hosted Client Image
   - an Oracle Public Cloud account that will be supplied by your instructor, or a Trial Account
   - a [GitHub account](https://github.com/join)
   - a [Docker Hub account](https://hub.docker.com/)
@@ -36,9 +35,19 @@ During this lab, you will take on the **Lead Developer Persona** and extend your
 
 ## Run Your Function Locally
 
-### **STEP 1**: Start an Fn Server on Your Local Machine
+### **STEP 1**: Install Fn Server on Your Local Machine
 
-- Since you are using the Oracle-provided client image, **Fn is pre-installed** for you. Let's start up a local Fn Server. From a terminal, run `fn start`.
+- Fn has one prerequisite--Docker--that we'll need to install before we begin (unless you already have it). From a browser, navigate to the [Docker CE download page](https://www.docker.com/community-edition). Download and run the installer and follow the prompts to **install Docker**. Be sure to log in with your Docker Hub account, either by clicking the Docker icon in the system tray or by running `docker login` from a terminal.
+
+  ![](images/500/7.png)
+
+- Now that Docker is installed, we can download Fn. From a browser, navigate to the [Fn CLI releases GitHub page](https://github.com/fnproject/cli/releases/latest) and download the binary from the latest release that is appropriate for your operating system.
+
+  ![](images/500/6.png)
+
+**NOTE**: See the [Fn Project Quickstart](https://github.com/fnproject/fn#quickstart) for more details on installation.
+
+- Let's start a local Fn Server. From a terminal, run `fn start`.
 
   ![](images/500/8.png)
 
@@ -48,7 +57,7 @@ During this lab, you will take on the **Lead Developer Persona** and extend your
 
 ### **STEP 2**: Clone the Function Repository
 
-- Now we're ready to get a copy of the image resizing function and test it out on our local Fn Server. From a new **terminal window**, clone the Git repository into the home directory using the following command:
+- Now we're ready to get a copy of the image resizing function and test it out on our local Fn Server. From a new **terminal window**, clone the Git repository into your home directory using the following command. If you choose to clone the repository into a different directory, modify the command in **STEP 8** to reflect your choice.
 
   `cd ~ && git clone https://github.com/derekoneil/image-resize.git && cd image-resize`
 
@@ -76,7 +85,11 @@ During this lab, you will take on the **Lead Developer Persona** and extend your
 
 - Open both the **original and resized images** using one of the following commands to verify that the function did it's job -- which is to resize the image to 128px x 128px.
 
-  `eog sample-image.jpg & eog thumbnail.jpg &`
+  - Git Bash: `start sample-image.jpg && start thumbnail.jpg`
+  - Windows Command Prompt: `sample-image.jpg && thumbnail.jpg`
+  - macOS: `open sample-image.jpg && open thumbnail.jpg`
+  - Linux (using Image Viewer): `eog sample-image.jpg & eog thumbnail.jpg &`
+  - Linux (if ImageMagick is installed): `display sample-image.jpg && display thumbnail.jpg`
 
 **NOTE**: You can also use your OS's file explorer to open the images if the above commands don't work.
 
@@ -86,23 +99,42 @@ During this lab, you will take on the **Lead Developer Persona** and extend your
 
 ## Deploy Your Function to Fn on Kubernetes
 
-### **STEP 5**: Deploy Fn Server to Kubernetes Using Helm
+### **STEP 5**: Install Helm on Your Local Machine
 
-- Since you are using the Oracle-provided client image, the **fn-helm installer** has been downloaded for you. Change directories to the installer with the following command:
+- Helm is a package manager for Kubernetes that streamlines installing and managing applications on your Kubernetes cluster. We'll use Helm in this lab to install Fn on our cluster. If you are using an Oracle-provided client image, this step has been done for you. Skip to the next step. Otherwise, download the latest release for your operating system from the [Helm releases page](https://github.com/kubernetes/helm/releases/latest) in the **Installation and Upgrading** section.
 
-  `cd ~/fn-helm`
+  ![](images/500/1.png)
 
-- Specify the version of Fn we want to install by modifying the `values.yaml` file using this command:
+  **NOTE**: See the [Fn Helm GitHub page](https://github.com/fnproject/fn-helm#prerequisites) for more details.
 
-  `sed -i.bak 's/fnproject\/fnserver:latest/fnproject\/fnserver:0.3.327/' fn/values.yaml`
+- Open a **terminal window** and run the following commands to extract and initialize **Helm**. Replace ~/Downloads with the directory where you download the Helm archive in the previous step, and replace the filename of the Helm tar.gz file with the name of the one you downloaded.
 
-- Initialize Helm and upgrade the server-side version (Tiller) by running:
+  **NOTE**: `kubectl` needs to be in your PATH for Helm to run. If you did not modify your system PATH when you installed kubectl in a previous lab, you can run `export PATH=$PATH:/the/directory/where/you/downloaded/kubectl` to alter the path in this shell. Do this before running `helm init` below.
 
-  `helm init --upgrade`
+  ```bash
+  cd ~/terraform-kubernetes-installer
+  export KUBECONFIG=`pwd`/generated/kubeconfig
+  cd ~/Downloads
+  mkdir helm
+  tar -xf helm-v2.7.2-linux-amd64.tar.gz -C helm
+  cd helm/*
+  ./helm init --upgrade
+  ```
+
+  ![](images/500/2.png)
+
+
+### **STEP 6**: Deploy Fn Server to Kubernetes Using Helm
+
+- Clone the **fn-helm git repository** using the following command.
+
+  `git clone https://github.com/fnproject/fn-helm.git && cd fn-helm`
+
+  ![](images/500/3.png)
 
 - Prepare the **dependencies** of the Fn chart by running:
 
-  `helm dep build fn`
+  `../helm dep build fn`
 
   ![](images/500/4.png)
 
@@ -114,9 +146,10 @@ During this lab, you will take on the **Lead Developer Persona** and extend your
   kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'      
   helm init --service-account tiller --upgrade
   ```
+
 - Install the **Fn chart** by running:
 
-  `helm install --name my-release fn`
+  `../helm install --name my-release fn`
 
   ![](images/500/5.png)
 
@@ -146,7 +179,7 @@ During this lab, you will take on the **Lead Developer Persona** and extend your
 
     ![](images/500/17.png)
 
-### **STEP 6**: Deploy Your Function to Fn Server on Kubernetes
+### **STEP 8**: Deploy Your Function to Fn Server on Kubernetes
 
 - In the same **terminal window** from the previous step, change directories to cloned function directory from **STEP 2**.
 
@@ -159,12 +192,6 @@ During this lab, you will take on the **Lead Developer Persona** and extend your
   `export FN_REGISTRY=your-docker-hub-registry`
 
   ![](images/500/26.png)
-
-- Log in to **Docker Hub** by running the following command and entering your Docker Hub **username and password** at the prompts:
-
-  `docker login`
-
-  ![](images/500/27.png)
 
 - **Deploy the function** (and application) to the remote Fn Server using the same command you used in **STEP 3**, but without the --local flag.
 
@@ -182,13 +209,17 @@ During this lab, you will take on the **Lead Developer Persona** and extend your
 
 - Open **thumbnail-remote.jpg** (using the same method you used in the local test) to verify the function was successful:
 
-    `eog thumbnail-remote.jpg`
+    - Git Bash: `start thumbnail-remote.jpg`
+    - Windows Command Prompt: `thumbnail-remote.jpg`
+    - macOS: `open thumbnail-remote.jpg`
+    - Linux (using Image Viewer): `eog thumbnail-remote.jpg`
+    - Linux (if ImageMagick is installed): `display thumbnail-remote.jpg`
 
   ![](images/500/21.png)
 
 - Our function is deployed and available on our remote Fn Server, which is running in our Kubernetes cluster. The last thing to verify is that the product catalog application is able to find and use our function. Let's test out the upload image feature.
 
-### **STEP 7**: Test Your Function in the Product Catalog
+### **STEP 9**: Test Your Function in the Product Catalog
 
 - Open the **product catalog** website in a browser. If you don't have the URL, you can look in the Kubernetes dashboard for the **external endpoint** of the product-catalog-service, or you can run the following command from your terminal window:
 
