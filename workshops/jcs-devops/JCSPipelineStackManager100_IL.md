@@ -1,6 +1,6 @@
 # DevOps: JCS Pipeline Using Oracle Stack Manager
 
-![](images/100/Picture100-title.png)
+![](images/100_IL/Picture100-title.png)
 Update: October 19, 2017
 
 ## Introduction
@@ -33,17 +33,17 @@ You will take on 3 Personas during the workshop. The **Project Manager** Person
 
 - click **Sign In** in the upper right hand corner of the browser
 
-    ![](images/100/Picture100-1.png)
+    ![](images/100_IL/Picture100-1.png)
 
 - **IMPORTANT** - Under my services, ***ask your instructor*** which **Region** to select from the drop down list, and click on the **My Services** button. ***NOTE***: In this example we are selecting "Public Cloud Services - EMEA," but your data center may vary. If you received your account through an Oracle Trial, your Trial confirmation email should provide a URL that will pre-select the region for you.
 
-    ![](images/100/Picture100-2.png)
+    ![](images/100_IL/Picture100-2.png)
 
 - Enter your identity domain and click **Go**.
 
     **NOTE:** The **Identity Domain, User Name** and **Password** values will be given to you by the instructor or Trial confirmation email.
 
-    ![](images/100/Picture100-3.png)
+    ![](images/100_IL/Picture100-3.png)
 
 - Once you Identity Domain is set, enter your User Name and Password and click **Sign In**
 
@@ -51,15 +51,15 @@ You will take on 3 Personas during the workshop. The **Project Manager** Person
 
     ![](images/lisa.png)
 
-    ![](images/100/Picture100-4.png)
+    ![](images/100_IL/Picture100-4.png)
 
 - You will be presented with a Dashboard displaying the various cloud services available to this account.
 
-    ![](images/100/Picture100-5.png)
+    ![](images/100_IL/Picture100-5.png)
 
 - If all of your services are not visible, **click** on the **Customize Dashboard**, and you can add services to the dashboard by clicking **Show.** If you do not want to see a specific service, click **Hide**. Make sure that the **Developer** service is marked as show.
 
-    ![](images/100/Picture100-6.png)
+    ![](images/100_IL/Picture100-6.png)
 
 ### **STEP 2:** Login to Developer Cloud Service
 
@@ -67,15 +67,15 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
 - From the Cloud UI dashboard click on the **Developer** service. In our example, the Developer Cloud Service is named **developer#####**.
 
-    ![](images/100/Picture100-7.png)
+    ![](images/100_IL/Picture100-7.png)
 
 - The Service Details page gives you a quick glance of the service status overview. **Click** on the **Open Service Console** button.
 
-    ![](images/100/Picture100-8.png)
+    ![](images/100_IL/Picture100-8.png)
 
 - Click **New Project** to start the project create wizard. **Note**: Depending on the status of your developer cloud service, it is possible that the button may be labeled **Create Project** 
 
-    ![](images/100/Picture100-9.png)
+    ![](images/100_IL/Picture100-9.png)
 
 ### **STEP 3:** Create Developer Cloud Service Project
 
@@ -88,23 +88,23 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
     **Note:** A Private project will only be seen by you. A Shared project will be seen by all Developer Cloud users. In either case, users need to be added to a project in order to interact with the project.
 
-    ![](images/100/Picture100-10.png)
+    ![](images/100_IL/Picture100-10.png)
 
 - Leave default template set to **Empty Project** and click **Next**
 
-    ![](images/100/Picture100-11.png)
+    ![](images/100_IL/Picture100-11.png)
 
 - Select your **Wiki Markup** preference to **MARKDOWN** and click **Finish**.
 
-    ![](images/100/Picture100-12.png)
+    ![](images/100_IL/Picture100-12.png)
 
 - The Project Creation will take about 1 minute.
 
-    ![](images/100/Picture100-13.png)
+    ![](images/100_IL/Picture100-13.png)
 
 - You now have a new project, in which you can manage your software development.
 
-    ![](images/100/Picture100-14.png)
+    ![](images/100_IL/Picture100-14.png)
 
 # Create Project Issues
 
@@ -118,7 +118,7 @@ In this step you are still assuming the identity of the Project Manager, ***Lisa
 
 - Click **Issues** on left hand navigation panel to display the Track Issues page.
 
-    ![](images/100/Picture100-15.png)
+    ![](images/100_IL/Picture100-15.png)
 
 - Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
 
@@ -138,7 +138,7 @@ In this step you are still assuming the identity of the Project Manager, ***Lisa
 
     Note: Story point is an arbitrary measure used by Scrum teams. They are used to measure the effort required to implement a story. This [Site](https://agilefaq.wordpress.com/2007/11/13/what-is-a-story-point/) will provide more information.
 
-    ![](images/100/Picture100-16.png)
+    ![](images/100_IL/Picture100-16.png)
 
 ### **STEP 5:** Create Issue for Provision New Alpha Office Environment
 
@@ -158,7 +158,7 @@ In this step you are still assuming the identity of the Project Manager, ***Lisa
 
     **Story:**  `2`
 
-    ![](images/100/Picture100-17.png)
+    ![](images/100_IL/Picture100-17.png)
 
 ## Create Issues for Alpha Office UI
 
@@ -180,7 +180,7 @@ In this step you are still assuming the identity of the Project Manager, ***Lisa
 
     **Story:**  `1`
 
-    ![](images/100/Picture100-18.png)
+    ![](images/100_IL/Picture100-18.png)
 
 ### **STEP 7:** Create Issue for Displaying Price
 
@@ -200,11 +200,11 @@ In this step you are still assuming the identity of the Project Manager, ***Lisa
 
     **Story:**  `2`
 
-    ![](images/100/Picture100-19.png)
+    ![](images/100_IL/Picture100-19.png)
 
 - Click the **<  Defect 4** on the **left** side of the window, or click on **Issues** menu option to view all newly created issues.
 
-    ![](images/100/Picture100-20.png)
+    ![](images/100_IL/Picture100-20.png)
 
 # Create Agile Board
 
@@ -224,7 +224,7 @@ Before you start using the Agile methodology in Oracle Developer Cloud Service, 
 
 - Click **Agile** on the Left Side Menu to display a page listing all existing Boards.
 
-    ![](images/100/Picture100-21.png)
+    ![](images/100_IL/Picture100-21.png)
 
 - Click **New Board** and enter the following data. When done click **Create**.
 
@@ -232,7 +232,7 @@ Before you start using the Agile methodology in Oracle Developer Cloud Service, 
 
     **Estimation:** `Story Points`
 
-    ![](images/100/Picture100-22.png)
+    ![](images/100_IL/Picture100-22.png)
 
 ### **STEP 9:** Create Sprint
 
@@ -242,28 +242,28 @@ Before you start using the Agile methodology in Oracle Developer Cloud Service, 
 
     **Story Points:** `6`
 
-    ![](images/100/Picture100-23.png)
+    ![](images/100_IL/Picture100-23.png)
 
 ### **STEP 10:** Add Backlog Issues to Sprint
 
 - Next we want to add the backlog issues to the newly created spring. **Drag and drop** the **4 issues** one at a time upward onto the **Sprint 1** section. This will add the issues to the sprint.
 
-    ![](images/100/Picture100-24.png)
+    ![](images/100_IL/Picture100-24.png)
 
-    ![](images/100/Picture100-25.png)
+    ![](images/100_IL/Picture100-25.png)
 
 ### **STEP 11:** View Active Sprint and Reports
 
 - Click **Start Sprint.** Leave defaults and click **Start**
 
-    ![](images/100/Picture100-30.png)
+    ![](images/100_IL/Picture100-30.png)
 
 - Now click on **Active Sprints** to view the Sprint dashboard.
 
-    ![](images/100/Picture100-31.png)
+    ![](images/100_IL/Picture100-31.png)
 
 - Click on **Reports** button to view the Burndown Sprint reports.
 
-    ![](images/100/Picture100-32.png)
+    ![](images/100_IL/Picture100-32.png)
 
 - You are now ready to move to the next lab.

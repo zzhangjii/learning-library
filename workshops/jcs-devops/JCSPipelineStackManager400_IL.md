@@ -1,6 +1,6 @@
 # DevOps: JCS Pipeline Using Oracle Stack Manager
 
-![](images/400/Picture400-title.png)
+![](images/400_IL/Picture400-title.png)
 
 Update: October 19, 2017
 
@@ -37,25 +37,25 @@ In this lab, Lisa Jones (The Project Manager) will complete the Sprint and view 
 
 - Click on **Agile** on the AlphaOffice Board.
 
-    ![](images/400/Picture400-1.png)
+    ![](images/400_IL/Picture400-1.png)
 
 - Click on the **Reports** Button and explore the **Burndown Chart**.
 
-    ![](images/400/Picture400-2.png)
+    ![](images/400_IL/Picture400-2.png)
 
 - Click on the **Sprint** report.
 
-    ![](images/400/Picture400-3.png)
+    ![](images/400_IL/Picture400-3.png)
 
 ### **STEP 2**: Complete the Sprint
 
 - Click on to the **Active Sprints** button, then click **Complete Sprint**.
 
-    ![](images/400/Picture400-4.png)
+    ![](images/400_IL/Picture400-4.png)
 
 - **Confirm** and **Complete** the Sprint
 
-    ![](images/400/Picture400-5.png)  
+    ![](images/400_IL/Picture400-5.png)  
 
 # Project Administrative Features
 
@@ -65,30 +65,30 @@ In this lab, Lisa Jones (The Project Manager) will complete the Sprint and view 
 
 - Click on **Administration** navigation to view the available administrative options. Click on the **Properties icon**.
 
-    ![](images/400/Picture400-8.png)
+    ![](images/400_IL/Picture400-8.png)
 
 - From this panel you are able to set the default properties for the Project. This is also the where the project can be deleted.
 
-    ![](images/400/Picture400-9.png)
+    ![](images/400_IL/Picture400-9.png)
 
 - Click on the Administration drop down to view the other Administration options. Select the **Usage Metrics**.
 
-    ![](images/400/Picture400-10.png)
+    ![](images/400_IL/Picture400-10.png)
 
 - The Usage Metrics will display the available storage allocation and usage for Git, Maven, Hudson, Tasks and the Wiki.
 
-    ![](images/400/Picture400-11.png)
+    ![](images/400_IL/Picture400-11.png)
 
 - From the Menu options list select **Issues Tracking** to view the options available for Issue configuration.
 
-    ![](images/400/Picture400-12.png)
+    ![](images/400_IL/Picture400-12.png)
 
 - From the Menu options list, select **Repositories**. From this page you can create and delete repositories. You also have the ability to create reference to **External Repositories**.
 
-    ![](images/400/Picture400-13.png)
+    ![](images/400_IL/Picture400-13.png)
 
 - From the Menu options list, select **Branches** to view the repository branches by User or Branch.
 
-    ![](images/400/Picture400-14.png)
+    ![](images/400_IL/Picture400-14.png)
 
 - You have now completed this lab
