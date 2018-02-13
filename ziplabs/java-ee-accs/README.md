@@ -4,6 +4,7 @@ description: Learn how to deploy a Java EE application on Oracle Application Con
 tags: Oracle Cloud, Application Container Cloud Service
 permalink: /ziplabs/java-ee-accs/index.html
 ---
+
 # Deploy a Java EE Application to Oracle Cloud #
 
 ## Before You Begin ##
@@ -30,7 +31,7 @@ Oracle Application Container Cloud Service lets you deploy Java SE, Node.js, PHP
 6. In the **Oracle Cloud My Services** dashboard, click **Action** and select **Oracle Application Container Cloud Service**.
 7. In the **Applications** list view, click **Create Application** and select **Java EE**.
 8. In the **Application** section, enter `EmployeeApp` for your application and click **Browse**.
-9. On the **File Upload** dialog box, select the `employee-app.war` file located in the target directory and click **Open**.
+9. On the **File Upload** dialog box, select the `employee-app.war` file located in the `target` directory and click **Open**.
 10. Keep the default values in the **Instances** and **Memory** fields and click **Create**.
 11. Wait until the application is created. The URL is enabled when the creation is completed.
 12. Click the URL of your application.
