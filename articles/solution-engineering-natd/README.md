@@ -2,6 +2,15 @@
 
 ***Note:*** This document is best viewed by clicking on this [github.io link](https://sblack4.github.io/learning-library/articles/solution-engineering-natd/)
 
+## The Role 
+Solutions Engineering is more BREADTH than depth. You take the products that is already been built - extend it with your coding skills and integrate it with other products thereby building a “SOLUTION”. **This is primarily a technical job** with client interactions (60-70% technical, 40-30% communication/business).
+
+For a successful solution engineer - you need the following traits
+* Solutions Engineering is more BREADTH than depth. You take the products that is already been built - extend it with your coding skills and integrate it with other products thereby building a “SOLUTION”. This is primarily a technical job with client interactions (60-70% technical, 40-30% communication/business).
+* Good communication skills - you don’t build solutions for yourself -you build it for customers and REAL world!
+* Desire to push yourself to understand a little of lot of things (you may touch upon Machine Learning, Analytics and at the same time core database or file parsing).  This is probably the most critical -do you have the drive and motivation to learn a lot!!
+* Working under tight deadlines - our projects can be 2-6-week bursts.
+
 ## Interview Schedule 
 
 The face to face interview process consists of a technical interview outlined below:
