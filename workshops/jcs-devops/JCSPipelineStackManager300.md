@@ -131,7 +131,7 @@ Now that we have the source code in our managed GIT repository, we need to creat
 
     ![](images/300/Picture300-16.6.png)
 
-- Once the build has completed, you should see a green check next to the build name.  **Wait for the build to complete*** before continuing to the next step, as we need the build artifact to complete the deployment configuration.
+- Once the build has completed, you should see a green check next to the build name.  ***Wait for the build to complete*** before continuing to the next step, as we need the build artifact to complete the deployment configuration.
 
     ![](images/300/Picture300-16.7.png)
 
@@ -169,7 +169,7 @@ Before we can configure deployment of our application we need to make note of th
 
     ![](images/300/Picture300-24.png)
 
-- Enter the following data:
+- Enter the following data, and leave to other fields set to their defaults:
 
     **Host:** `<Public IP for JCS Service capture in previous step>`
 
