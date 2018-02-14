@@ -18,7 +18,7 @@ During this lab, you will take on the **DevOps Engineer Persona**. You will prov
 
 - Create and Deploy to a Kubernetes Cluster
   - Set Up Oracle Cloud infrastructure
-  - Configure Wercker Cluster
+  - Provision Kubernetes Using Terraform
   - Configure and Run Wercker Deployment Pipelines
   - Deploy and Test the Product Catalog Application
 
@@ -119,6 +119,8 @@ cat ~/.oci/oci_api_key_public.pem
 
 - **Leave this browser window open**, as we will need to copy and paste some of this information into the Terraform configuration file.
 
+## Provision Kubernetes Using Terraform
+
 ### **STEP 4**: Download Terraform
 
 - If you are using the Oracle-provided client image, this step has been done for you. Skip to the next step. Otherwise, continue with this step to install Terraform.
@@ -129,7 +131,10 @@ cat ~/.oci/oci_api_key_public.pem
 
 - **Unzip** the file you downloaded into the folder ~/terraform. You can use the command line or a graphical zip program for this operation. The example command below assumes you don't have other zip files in the current directory beginning with the string `terraform_`.
 
-  `mkdir ~/terraform && cat terraform_*.zip | tar -xvf - -C ~/terraform && cd ~/terraform`
+```
+cd ~/Downloads
+mkdir ~/terraform && cat terraform_*.zip | tar -xvf - -C ~/terraform && cd ~/terraform
+```
 
 - Add Terraform to your PATH in the **terminal window** that you will use for the next two steps using the following command:
 
@@ -137,7 +142,7 @@ cat ~/.oci/oci_api_key_public.pem
 
 ### **STEP 5**: Download the OCI Terraform Provider
 
-- Download the **OCI Terraform Provider** from the [GitHub release page](https://github.com/oracle/terraform-provider-oci/releases/latest). Select the package for your operating system.
+- Download the **OCI Terraform Provider** from the [GitHub release page](https://github.com/oracle/terraform-provider-oci/releases/latest). Select the package for your operating system. **Note:** for **Mac** use **darwin.tar.gz**
 
   ![](images/200/59.png)
 
@@ -189,13 +194,15 @@ cat ~/.oci/oci_api_key_public.pem
   cp terraform.example.tfvars terraform.tfvars
   ```
 
-- Open the `terraform.tfvars` file in your text editor of choice. On Linux you could run:
+- Open the `terraform.tfvars` file in your text editor of choice. On Linux you could run gedit. On a Mac, you can install gedit or use vi, but if you use TextEdit, ensure that any quotes (") you insert are not special characters:
 
   ```bash
   gedit terraform.tfvars
   ```
 
-- You should still have a browser tab open to your **User Details** page in the OCI Console. You will first remove the **#** comment character and replace in the values  in the terraform.tfvars file on lines **2, 4, 6, and 7**. **NOTE**: The **region** parameter may not already be present in your tfvars file. If it is not there, add it on a new line after the user_ocid parameter on line 6.
+- You should still have a browser tab open to your **User Details** page in the OCI Console. If not, you can get to the User Details by selecting **Identity** then **Users** from the top menu of the Console. Then click on your **User's Name**.
+
+- While editing the file, you will first remove the **#** comment character and replace in the values in the terraform.tfvars file on lines **2, 4, 6, and 7** using the examples in the next two images below. **NOTE**: The **region** parameter may not already be present in your tfvars file. If it is not there, add it on a new line after the user_ocid parameter on line 6.
 
   ![](images/200/57.1.png)
 
@@ -244,6 +251,10 @@ cat ~/.oci/oci_api_key_public.pem
 
   **NOTE**: The 0.0.0.0/0 value means that any IP address can access your cluster. A better security practice would be to determine your externally-facing IP address and restrict access to only that address. If you'd like, you can find out your IP address by running `curl ifconfig.co` in a terminal window, and place that address into the `master_https_ingress` parameter (e.g. `master_https_ingress = "11.12.13.14/32"`). Note that if you need remote assistance with the workshop, you may need to open this back up to 0.0.0.0/0 to allow access to your cluster.
 
+- **Double check** to ensure you removed the **#** character from in front of all the entries you modified 
+
+### **STEP 7**: Provision Kubernetes on OCI
+
 - Now we are ready to have Terraform provision our Kubernetes cluster. **Save and close** your terraform.tfvars file. In your open **terminal window**, run the following command to have Terraform evaluate the various network and compute infrastructure that we are asking to be provisioned.
 
   ```bash
@@ -289,7 +300,7 @@ cat ~/.oci/oci_api_key_public.pem
 
 ## Configure and Run Wercker Deployment Pipelines
 
-### **STEP 7**: Define Wercker Deployment Pipelines
+### **STEP 8**: Define Wercker Deployment Pipelines
 
 - From a browser, navigate to your forked twitter-feed repository on GitHub. If you've closed the tab, you can get back by going to [GitHub](https://github.com/), scrolling down until you see the **Your repositories** box on the right side of the page, and clicking the **twitter-feed** link.
 
@@ -359,7 +370,7 @@ spec:
 
 - Since you've committed to the repository, Wercker will trigger another execution of your workflow. We haven't defined the deployment pipelines yet, so this will just result in a new entry in Wercker's Runs tab and a new image pushed to the container registry. You don't need to do anything with those; you can move on to the next step.
 
-### **STEP 8**: Define Wercker Deployment Pipelines
+### **STEP 9**: Define Wercker Deployment Pipelines
 
 - Click the file **wercker.yml** and then click the **pencil** button to begin editing the file.
 
@@ -400,13 +411,13 @@ deploy-to-cluster:
 
 - Since you've committed to the repository again, Wercker will once again trigger an execution of your workflow. We still haven't configured the deployment pipelines in Wercker yet, so we'll still end up with a new Run and a new image, but not a deployment to Kubernetes.
 
-### **STEP 9**: Set up deployment pipelines in Wercker
+### **STEP 10**: Set up deployment pipelines in Wercker
 
 - Open **[Wercker](https://app.wercker.com)** in a new tab or browser window, or switch to it if you already have it open. In the top navigation bar, click **Pipelines**, then click on your **twitter-feed** application.
 
   ![](images/200/30.png)
 
-- On the **Runs** tab you can see that Wercker has triggered another execution of our build and publish workflow, but it has not executed our new inject-secret and deploy-to-cluster pipelines. This is because we have not added the new pipelines to the workflow definition yet. Let's do that now -- click on the **Workflows** tab, then click the **Add new pipeline** button.
+- On the **Runs** tab you can see that Wercker has triggered another execution of our build and publish workflow, but it has not executed our new deploy-to-cluster pipeline. This is because we have not added the new pipeline to the workflow definition yet. Let's do that now -- click on the **Workflows** tab, then click the **Add new pipeline** button.
 
   ![](images/200/31.png)
 
@@ -426,7 +437,7 @@ deploy-to-cluster:
 
 - Now we've got our workflow updated with our deployment pipelines, but there's one more thing we need to do before we can actually deploy. We need to set two environment variables that tell Wercker the address of our Kubernetes master and provide an authentication token for Wercker to issue commands to Kubernetes.
 
-### **STEP 10**: Set up environment variables in Wercker
+### **STEP 11**: Set up environment variables in Wercker
 
 - Our first step is to set our cluster's authentication token as a Wercker environment variable. In your **terminal window**, run the following command to output the token, then **select it and copy it** to your clipboard:
 
@@ -450,7 +461,7 @@ deploy-to-cluster:
 
 - Now we're ready to try out our workflow from start to finish. We could do that by making another commit on GitHub, since Wercker is monitoring our source code. We can also trigger a workflow execution right from Wercker. We'll see how in the next step.
 
-### **STEP 11**: Trigger a retry of the pipeline
+### **STEP 12**: Trigger a retry of the pipeline
 
 - On your Wercker application page in your browser, click the **Runs** tab. Your most recent run should have successful build and push-release pipelines. Click the **push-release** pipeline.
 
@@ -468,7 +479,7 @@ deploy-to-cluster:
 
   ![](images/200/42.png)
 
-### **STEP 12**: Validate deployment
+### **STEP 13**: Validate deployment
 
 - In a terminal window, start the **kubectl proxy** using the following command. Your `KUBECONFIG` environment variable should still be set from a previous step. If not, reset it.
 
@@ -500,7 +511,7 @@ deploy-to-cluster:
 
 ## Deploy and Test the Product Catalog Application
 
-### **STEP 13**: Download the Product Catalog Kubernetes YAML file
+### **STEP 14**: Download the Product Catalog Kubernetes YAML file
 
 - From a browser, navigate to your forked twitter-feed repository on GitHub. If you've closed the tab, you can get back by going to [GitHub](https://github.com/), scrolling down until you see the **Your repositories** box on the right side of the page, and clicking the **twitter-feed** link.
 
@@ -516,7 +527,7 @@ deploy-to-cluster:
 
 **NOTE**: This YAML file contains the configuration for a Kubernetes deployment and service, much like the configuration for our twitter feed microservice. In a normal development environment, the product catalog application would be managed by Wercker as well, so that builds and deploys would be automated. In this workshop, however, you will perform a one-off deployment of a pre-built Docker image containing the product catalog application from within the Kubernetes dashboard.
 
-### **STEP 14**: Deploy and test the Product Catalog using the Kubernetes dashboard
+### **STEP 15**: Deploy and test the Product Catalog using the Kubernetes dashboard
 
 - Switch back to your **Kubernetes dashboard** browser tab. If you have closed it, navigate to the Kubernetes dashboard at [**Kubernetes dashboard**](http://localhost:8001/api/v1/namespaces/kube-system/services/http:kubernetes-dashboard:/proxy/)
 
