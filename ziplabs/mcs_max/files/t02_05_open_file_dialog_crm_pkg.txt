@@ -1,9 +1,0 @@
-This illustration shows the Operating System Open File dialog box that is used to select and upload an export package for Oracle Mobile Cloud Service. 
-
-It contains 2 sections, 2 fields, and 2 buttons:
-* Folder Tree section: Displays the tree structure where the export package is located
-* Folder Content section: Displays 1 file (package-CRM.zip)
-* File name field
-* Filter field: Compressed (zipped) Folder
-* Open button
-* Cancel button

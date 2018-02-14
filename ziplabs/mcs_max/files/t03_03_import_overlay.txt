@@ -1,8 +1,0 @@
-This illustration shows the Import Application page.
-
-It contains 3 fields:
-* Description: Upload a MAX application package file and import to the server.
-* Link: Learn how to import/export MAX application.
-* Link: Upload a MAX application package file.
-
-
