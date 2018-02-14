@@ -159,7 +159,7 @@ psm stack import-template -f Alpha-JCS-DBCS-Template.yaml -of json
 
     ![](images/200/Picture200-18.1.png)
 
-- Click on the far left navigation icon and select **Cloud Stack**
+- From the Java Cloud Service Dashboard, Click on the far left navigation icon and select **Cloud Stack**
 
     ![](images/200/Picture200-19.png)
 
@@ -371,6 +371,7 @@ export publicKey=$(cat labkey.pub)
 ```bash
 ssh-keygen -b 2048 -t rsa -f labkey
 ```
+- Press **Enter** when prompted for the passpharase
 
 ![](images/200/Picture200-46.1.png)
 
@@ -412,7 +413,7 @@ cp labkey.pub ~/workspace/JCSStackAlphaInfrastructure.git-*/.
 
 ### **STEP 15:** Monitor in Oracle Cloud
 
-- Switch back to browser tab with **Oracle Stack Manager**.  Click on the **Stacks** tab. You should see that Alpha01 stack is "Creating" and building out an Oracle Database Cloud Service and a Java Cloud Service. You may need to click on the refresh button if the stack is not immediately visible.
+- Switch back to browser tab with **Oracle Stack Manager**.  Click on the **Stacks** tab. You should see that **Alpha01** stack is "Creating" and building out an Oracle Database Cloud Service and a Java Cloud Service. You may need to click on the refresh button if the stack is not immediately visible.
 
     ![](images/200/Picture200-53.png)
 
@@ -426,7 +427,7 @@ cp labkey.pub ~/workspace/JCSStackAlphaInfrastructure.git-*/.
 
 ### **STEP 16:** Record Database Host IP Address
 
-- Provisioning of the **Alpha01** Stack will take almost an hour.  Once completed Status will go away along with hourglass icon.
+- Provisioning of the **Alpha01** Stack will take almost an hour.  Once completed Status will go away, as will the hourglass icon.
 
     ![](images/200/Picture200-60.png)
 
@@ -438,7 +439,7 @@ cp labkey.pub ~/workspace/JCSStackAlphaInfrastructure.git-*/.
 
     ![](images/200/Picture200-62.png)
 
-### **STEP 17:** SSH inot the Database Image
+### **STEP 17:** SSH into the Database Image
 
 - From the same terminal windows (Git Bash for Windows) used earlier, enter the following command. Replace **<DBCS Public IP>** with your instance IP.
 
@@ -551,7 +552,7 @@ EOF
 
 - Accept defaults, click **Next** twice.
 
-- Enter the following and click **Next**
+- Enter the following and click **Next**. Note: the **DBCS Services Instance ID** was captured during the Trial Account Student Guide steps.
 
     **Database Name:** `PDB1.<DBCS Service Instance ID>.oraclecloud.internal`
 
