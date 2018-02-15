@@ -38,7 +38,7 @@ Oracle Application Container Cloud Service provides a lightweight infrastructure
    This code fragment creates a service that listens on `HTTP` port `8089`. In a later step, you will change this port with an Oracle Application Container Cloud Service variable.
 3. Test your server.
 
-    <pre><code>node server.js`</code></pre>
+    <pre><code>node server.js</code></pre>
 4. In a browser window, go to http://localhost:8089 and look for the following message: `"LATER ON, YOU WILL PLACE CODE HERE."`
 5. To stop the server, press CTRL+C.
 6. Add the following variable declarations after the `var PORT` declaration: 
