@@ -16,27 +16,6 @@ When you create an instance of Oracle MySQL Cloud Service, you must associate a 
 
 ### What Do You Need? ###
 - An Oracle Cloud account
-- [Git](https://git-scm.com/downloads) (Git Bash shell)
-
-## Create an SSH Key Pair ##
-
-<ol>
-<li>Open a Git bash command-line window (or terminal in Linux).</li>
-<li>Generate the SSH key pair: 
-
-<pre><code>ssh-keygen -t rsa -N "<i>passphrase</i>" -b "<i>2048</i>" -C "<i>key comment</i>" -f <i>path/root_name</i></code></pre>
-<table><thead><tr>
-<th>Argument</th><th>Description</th>
-</tr></thead>
-<tbody>
-<tr><td><code>-t rsa</code> </td><td> Use the RSA algorithm</td></tr>
-<tr><td><code>-N "<i>passphrase</i>"</code> </td><td> Passphrase to protect the use of the key (like a password). If you don't want to set a passphrase, don't enter anything between the quotation marks. <strong>Note</strong>: Although a passphrase isn't required, you should specify one as a security measure to protect the private key from unauthorized use.</td></tr>
-<tr><td><code>-b "<i>2048</i>"</code> </td><td> Generate a 2048-bit key (default). A minimum of 2048 bits is recommended for SSH-2 RSA.</td></tr>
-<tr><td><code>-C "<i>key commment</i>"</code> </td><td> A name to identify the key.</td></tr>
-<tr><td><code>-f <i>path/root_name</i></code> </td><td> The location where the key pair is saved and the root name for the files. For example, if you make <code>id_rsa</code> the root name, then the name of the private key is <code>id_rsa</code>, and the name of the public is <code>id_rsa.pub</code>.</td></tr>
-</tbody>
-</table>
-</li></ol>
 
 ## Create an Instance of Oracle MySQL Cloud Service ##
 1. In a web browser, go to [https://cloud.oracle.com/home](https://cloud.oracle.com/home) and click **Sign In**.
@@ -53,14 +32,17 @@ When you create an instance of Oracle MySQL Cloud Service, you must associate a 
      * **Instance Name**: `TestDB`
      * **Description**: (optional)
      * **Notification Email**: (default)
-     * **Region:**: No Preference
+     * **Region**: No Preference
 
     ![mysql04.png](img/mysql04.png)
 
     [Description of the illustration mysql04.png](files/mysql04.txt)
-12. Enter or select the following information, and then click **Next**:
+12. Generate the SSH Public Key
+    * Beside the **SSH Public Key** field, click **Edit**. 
+    * Select **Create a New Key**, and then click **Enter**. A message appears to confirm that your SSH Key pair was successfully created. 
+    * Click **Download**, save the file, and then click **Done**.
+13. Enter or select the following information, and then click **Next**:
      * **Compute Shape: OC3-1.0 OCPU, 7.5GB RAM**
-     *  **SSH Public Key** (Click Edit and browse to the location of your public key.)
      * **Usable Database Storage(GB)**: 25
      * **Administration User**: root
      * **Administration Password** (Be sure to use a password with at least 8 characters, one upper case character, one number and one special character.)
@@ -74,12 +56,12 @@ When you create an instance of Oracle MySQL Cloud Service, you must associate a 
     ![mysql05.png](img/mysql05.png)
 
     [Description of the illustration mysql05.png](files/mysql05.txt)  
-13. Review the details of your instance and then click **Create**.
+14. Review the details of your instance and then click **Create**.
 
     ![mysql06.png](img/mysql06.png)
 
     [Description of the illustration mysql06.png](files/mysql06.txt) 
-14. Wait until the instance is created.
+15. Wait until the instance is created.
 
     ![mysql07.png](img/mysql07.png)
 
