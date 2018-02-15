@@ -20,6 +20,8 @@ Oracle Application Container Cloud Service provides a lightweight infrastructure
 * The [pip](https://pip.pypa.io/en/stable/installing/) package management system
 * Python Employee application project [employee-python-app.zip](files/employee-python-app.zip)
 * [cURL 7.0+](http://curl.haxx.se/download.html) with SSL support
+* [A storage replication policy for your service instance](https://docs.oracle.com/en/cloud/iaas/storage-cloud/cssto/selecting-replication-policy-your-account.html)
+* [A storage container](https://docs.oracle.com/en/cloud/iaas/storage-cloud/cssto/creating-containers.html)
 
 ## Download the Project Dependencies ##
 1. Extract the contents of the `employee-python-app.zip` file in your local system.

@@ -20,6 +20,8 @@ In this tutorial, you create and deploy a web service for an employee directory 
 * [Apache Maven 3.0+](http://maven.apache.org/download.cgi)
 * The HTML5 JavaScript client files: [employees-client.zip](files/employees-client.zip)
 * The Dropwizard Maven project: [employee-service-dropwizard.zip](files/employee-service-dropwizard.zip)
+* [A storage replication policy for your service instance](https://docs.oracle.com/en/cloud/iaas/storage-cloud/cssto/selecting-replication-policy-your-account.html)
+* [A storage container](https://docs.oracle.com/en/cloud/iaas/storage-cloud/cssto/creating-containers.html)
 
 ## Create the Java Project with Maven ##
 

@@ -17,6 +17,8 @@ Oracle Application Container Cloud Service lets you deploy Java SE, Node.js, PHP
 
 * Access to an instance of Oracle Application Container Cloud Service
 * Employee sample application: [employees-app.zip](files/employees-app.zip)
+* [A storage replication policy for your service instance](https://docs.oracle.com/en/cloud/iaas/storage-cloud/cssto/selecting-replication-policy-your-account.html)
+* [A storage container](https://docs.oracle.com/en/cloud/iaas/storage-cloud/cssto/creating-containers.html)
 
 ## Deploy Your Application to Oracle Application Container Cloud Service ##
 
