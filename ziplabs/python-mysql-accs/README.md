@@ -28,11 +28,11 @@ Oracle Application Container Cloud Service provides a lightweight infrastructure
 
     <pre><code>unzip employee-python-app.zip</code></pre>
 
-2. Open a command-line window (or terminal in Linux) and go to the `employee-python-app` directory.
+2. Open a command-line window (or terminal in Linux) and change directories to the `employee-python-app` directory.
 3. Install the project dependencies.
 
    <pre><code>pip install -r requirements.txt -t modules</code></pre>
-4. Create the `python-service-dist.zip` file with the content of the `employee-python-app` directory. Make sure that the zip file doesn't contain any subdirectories and all the files are at the root of the zip file.
+4. Create the `python-service-dist.zip` file with the content of the `employee-python-app` directory. Make sure that the zip file contains the `manifest.json`, `myapp.py`, `start.sh` and `modules` directory in the root of the zip file.
 
     <pre><code>zip -r ../python-service-dist.zip .</code></pre>
 
