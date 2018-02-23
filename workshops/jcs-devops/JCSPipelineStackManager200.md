@@ -2,7 +2,7 @@
 
 ![](images/200/Picture200-title.png)
 
-Update: October 19, 2017
+Update: February 7, 2018
 
 ## Introduction
 
@@ -20,16 +20,19 @@ In the first lab (100), the Project Manager created a new project in the Develop
 - Check in new template file
 - Import Project into Eclipse
 - Check in configuration file to provision new JCS environment.
+- Setup application database and data source conneciton.
 
 ## Required Artifacts
 
-- The following lab requires an Oracle Public Cloud account that will be supplied by your instructor. You will need to download and install latest version of Eclipse or use supplied compute VM.
+- The following lab requires an Oracle Public Cloud account. You will need to download and install latest version of Eclipse. Instructions can be found in  [Student Guide](StudentGuide.md).
 
 # Create Initial Git Repository for Infrastructure
 
 ## Create Initial Git Repository
 
- Although you will remain connected to the Oracle Cloud using the user account you were provided, you are to take on the Persona of ***Bala Gupta*** as you perform the following steps. Bala is our operations engineer and will be handling all operations issues.
+### Logical Persona Overview
+
+ Although you will remain connected to the Oracle Cloud using your user account, you are to take on the Persona of ***Bala Gupta*** as you perform the following steps. Bala is our operations engineer and will be handling all operations issues.
 
 ![](images/bala.png)
 
@@ -74,6 +77,8 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
 ## Create Default Build for Template Upload
 
+### Cloud Stack Overview
+
 **Oracle Cloud Stack Manager** is a feature of Oracle Cloud that allows for the provisioning of multiple services within the Oracle Cloud. In order to build and deploy their applications, businesses often require sophisticated environments that consist of multiple, integrated cloud services. Consider a development environment whose needs include a Java application server along with a relational database. Provisioning each of these services for every member of your development team is time consuming and error prone, regardless of whether you’re using service consoles or REST APIs to provision the services. Oracle Cloud Stack Manager uses templates to provision a group of services (called a stack) and in the correct order.
 
 ### **STEP 3:** Create Template Update Build Process
@@ -106,7 +111,17 @@ Now that we have the configuration code in our managed GIT repository, we need t
 
     ![](images/200/Picture200-12.png)
 
-- Enter your Oracle Cloud credentials given to you by the instructor or Trail confirmation email. Ensure that you enter the correct values for **Username**, **Password** and **Identity Domain**. Note that the default set for the **Region** may not be correct, and must be properly set. The value for the **Output Format** should be set to **JSON**.
+- Enter the following data:
+
+  - **Username**: `<Your User Name>`
+
+  - **Password**: `<Supplied Password>`
+
+  - **Identity Domain**: `<Your Identity Domain>` ***Note***: If you are using a **Trial account** and followed the instructions in the [Trial Account Student Guide](StudentGuide.md), then in place of the Identity Domain, you populate this field with the **Identity Service ID** you recorded.
+
+- **Region**: `<Your Assigned Region>`
+
+- **Output Format**: `JSON`
 
     ![](images/200/Picture200-12.2.png)
 
@@ -138,11 +153,13 @@ psm stack import-template -f Alpha-JCS-DBCS-Template.yaml -of json
 
 ### **STEP 4:** Verify Template Upload to Oracle Cloud
 
-- Now we will navigate to the Oracle Stack Manager console to view the newly uploaded template. Click back on the browser tab that you launched the Developer Console. Click on the far left navigation icon ![](images/Menu.png) and select **Database**
+- Now we will navigate to the Oracle Stack Manager console to view the newly uploaded template. Return to the tab where your Main Cloud Dashboard window is loaded. If your dashboard Window is not available, simply open a tab and go to cloud.oracle.com, and re-login as previously instructed. Note: for those using a Trial account, this is will be your Standard Identity Cloud Service based account/dashboard.
 
-    ![](images/200/Picture200-18.png)
+- Once the Oracle Public Cloud **Dashboard** is displayed, click on the navigation icon ![](images/Menu.png) for the **Java** Cloud Service and select **Open Service Console**.
 
-- Click on the far left navigation icon and select **Oracle Cloud Stack**
+    ![](images/200/Picture200-18.1.png)
+
+- From the Java Cloud Service Dashboard, Click on the far left navigation icon and select **Cloud Stack**
 
     ![](images/200/Picture200-19.png)
 
@@ -194,7 +211,17 @@ Now we will create a build process that will provision a new Oracle Stack every 
 
     ![](images/200/Picture200-31.png)
 
-- Enter your Oracle Cloud credentials given to you by the instructor or Trail confirmation email. Ensure that you enter the correct values for **Username**, **Password** and **Identity Domain**. Note that the default set for the **Region** may not be correct, and must be properly set. The value for the **Output Format** should be set to **JSON**.
+- Enter the following data:
+
+  - **Username**: `<Your User Name>`
+
+  - **Password**: `<Supplied Password>`
+
+  - **Identity Domain**: `<Your Identity Domain>` ***Note***: If you are using a **Trial account** and followed the instructions in the [Trial Account Student Guide](StudentGuide.md), then in place of the Identity Domain, you populate this field with the **Identity Service ID** you recorded.
+
+- **Region**: `<Your Assigned Region>`
+
+- **Output Format**: `JSON`
 
     ![](images/200/Picture200-30.2.png)
 
@@ -209,14 +236,16 @@ source ./JCSBuild.conf
 psm stack create -n $ServiceName -t Alpha-JCS-DBCS-Template \
   -p commonPwd:$CommonPassword \
       backupStorageContainer:$BackupStorageContainer \
-      cloudStoragePassword:<OPC Password>
+      cloudStorageUser:<Your User Name> \
+      cloudStoragePassword:<Supplied Password> \
+      publicKeyText:"$publicKey"
 ```
 
-**Note:** Replace OPC Password
+**Note:** Replace Username and Password
 
 ![](images/200/Picture200-30.6.png)
 
-- Click **Save** to complete the configuration. We will not execute a build at this time, as we want to trigger the build by updating the **JCSBuild.conf** file.
+- Click **Save** to complete the configuration. We will **NOT** execute a build at this time, as we want to trigger the build by updating the **JCSBuild.conf** file.
 
     ![](images/200/Picture200-33.png)
 
@@ -246,7 +275,11 @@ We have now completed our task. To finish up this part of the lab we will want t
 
 ### **STEP 7:** Load Eclipse IDE
 
-- Right Click and select **Run** on the **Eclipse** Desktop Icon
+In the following task we will provide screen shots taken from the optional compute image provided with the workshop. If you are using Eclipse and Brackets on your local hardware, your screens may vary slightly.
+
+- Right Click and select **Run** on the **Eclipse** Desktop Icon.
+
+    Note: If you have not already installed and configured Eclipse, please see this Workshop's **Student Guide** for instructions on how to install and configure it.
 
     ![](images/200/Picture200-35.png)
 
@@ -264,25 +297,17 @@ We have now completed our task. To finish up this part of the lab we will want t
 
     ![](images/200/Picture200-38.png)
 
-- Enter the following information and click **Finish**
+- Enter the following information, then click on the **Finish** button:
 
-    **Identity Domain:** `<your identity domain>`
+  - **Identity Domain**: `<your identity domain>` ***Note:*** if you're using a trial account, since you are connecting to the Developer Cloud Services, which is a Traditional Service, you populate this field with the **Identity Domain Name** you recorded.
 
-    **User name:** `<your identity domain username>`
+  - **User name**: `<your Username>`
 
-    **Password:** `<your identity domain password>`
+  - **Password**: `<your Identity domain password>`
 
-    **Connection Name:** `OracleConnection`
+  - **Connection Name**: `OracleConnection`
 
     ![](images/200/Picture200-39.png)
-
-- If prompted, enter and confirm a Master Password for the Eclipse Secure Storage. In our example we use the **password** of `oracle`. Next, press **OK**.
-
-    ![](images/200/Picture200-40.png)
-
-- If prompted to enter a Password Hint, click on **No**
-
-    ![](images/200/Picture200-41.png)
 
 ### **STEP 9:** Create a local clone of the repository
 
@@ -324,23 +349,49 @@ In the previous steps we updated the status of the Tasks using the web interface
 
     ![](images/200/Picture200-46.png)
 
-- Modify the values as defined below and click **Save All**
+- Modify the values as defined below and click **Save All**. Replace `<Storage REST Endpoint>` with information captured during setup.
 
-    **ServiceName=Alpha02**
+```bash
+export ServiceName=Alpha01
+export CommonPassword=Alpha2018_
+export BackupStorageContainer=<Storage REST Endpoint>/Alpha01Backup
+export publicKey=$(cat labkey.pub)
+```
 
-    **BackupStorageContainer=Storage-`Your OPC identity Domain`/Alpha02Backup**
+![](images/200/Picture200-47.png)
 
-    ![](images/200/Picture200-47.png)
+### **STEP 12:** Generate Seure Shell (SSH) Files
+
+- To access an Oracle Cloud Instance such as DBCS and JCS we need to supply the ssh public key at the time of provisioning.  Later we will use the ssh private key to access the newly provisioned DBCS instance.
+
+- Open a terminal windows. For **Windows** users we will be using **Git Bash** that should have been installed during the workshop setup.
+
+- To generate the SSH keys enter the command below. **Note** the keys will be placed in the current directory. If you would like them in a specific directly please first change to that directory location.
+
+```bash
+ssh-keygen -b 2048 -t rsa -f labkey
+```
+- Press **Enter** when prompted for the passpharase
+
+![](images/200/Picture200-46.1.png)
+
+- Next we will copy the public key, labkey.pub, to the JCSStackAlphaInfrastructure project. **Note:** These instructions assume the Eclipe workspace was created under the home directory.
+
+```bash
+cp labkey.pub ~/workspace/JCSStackAlphaInfrastructure.git-*/.
+```
+
+![](images/200/Picture200-46.2.png)
 
 ## Commit Code
 
-### **STEP 12:** Commit Code
+### **STEP 13:** Commit Code
 
 - Right click on **JCSStackAlphaInfrastructure** and then Select **Team > Commit**
 
     ![](images/200/Picture200-48.png)
 
-- Enter `Provision Stack Alpha02` in the Commit Message box and click **Commit and Push**.
+- Move **labkey.pub** and **JCSBuild.conf** to the Staged Changes. Enter `Provision Stack Alpha01` in the Commit Message box and click **Commit and Push**.
 
     ![](images/200/Picture200-49.png)
 
@@ -350,7 +401,7 @@ In the previous steps we updated the status of the Tasks using the web interface
 
 ## Verify Provisioning
 
-### **STEP 13:** Verify Build job ran
+### **STEP 14:** Verify Build job ran
 
 - Click **Code** on left hand navigation then click **Logs**. Notice that the file has been committed to the Git repository.
 
@@ -360,20 +411,179 @@ In the previous steps we updated the status of the Tasks using the web interface
 
     ![](images/200/Picture200-52.png)
 
-### **STEP 14:** Monitor in Oracle Cloud
+### **STEP 15:** Monitor in Oracle Cloud
 
-- Switch back to browser tab with **Oracle Stack Manager**.  Click on the **Stacks** tab. You should see that Alpha02 stack is "Creating" and building out an Oracle Database Cloud Service and a Java Cloud Service. You may need to click on the refresh button if the stack is not immediately visible.
+- Switch back to browser tab with **Oracle Stack Manager**.  Click on the **Stacks** tab. You should see that **Alpha01** stack is "Creating" and building out an Oracle Database Cloud Service and a Java Cloud Service. You may need to click on the refresh button if the stack is not immediately visible.
 
     ![](images/200/Picture200-53.png)
 
-- Click on **Alpha02** to view details.
+- Click on **Alpha01** to view details.
 
     ![](images/200/Picture200-54.png)
 
-### **STEP 15:** Set Task 2 Status to In Progress
+# Setup Application Database and Data Source Connection
+
+## Setup Application Database
+
+### **STEP 16:** Record Database Host IP Address
+
+- Provisioning of the **Alpha01** Stack will take almost an hour.  Once completed Status will go away, as will the hourglass icon.
+
+    ![](images/200/Picture200-60.png)
+
+- Click **Alpha01** to view Stack OVerview of all resources.
+
+    ![](images/200/Picture200-61.png)
+
+- Click **Alpha01-DBCS** to view Database Instance details.  Make not of the **Public IP** for the Database.
+
+    ![](images/200/Picture200-62.png)
+
+### **STEP 17:** SSH into the Database Image
+
+- From the same terminal windows (Git Bash for Windows) used earlier, enter the following command. Replace **<DBCS Public IP>** with your instance IP.
+
+```bash
+ssh -i labkey opc@<DBCS Public IP>
+```
+
+![](images/200/Picture200-63.png)
+
+### **STEP 18:** Install git in the Image
+
+- Enter the **yum** command show below to install **git**.
+
+```bash
+sudo yum install git
+```
+
+![](images/200/Picture200-64.png)
+
+- When prompted with the **Is this ok** enter **y** and press the return key.
+
+    ![](images/200/Picture200-65.png)
+
+### **STEP 19:** Clone the Script repository
+
+- Using the sudo command connect as the **oracle** user.
+
+```bash
+sudo su - oracle
+```
+
+![](images/200/Picture200-66.png)
+
+- Clone a local copy of the git repository containing the scripts used to load the database with the Product Catalog tables.
+
+```bash
+git clone https://github.com/pcdavies/AlphaOfficeDBCSSetup.git
+```
+
+![](images/200/Picture200-67.png)
+
+### **STEP 20:** Run the script
+
+- Change directories to the **AlphaOfficeDBCSSetup** directory. Run the `ls` command to see all the files in this repository. View the contents of the **setupAlphaUser.sh** script.
+
+    ![](images/200/Picture200-68.png)
+
+- Run the **setupAlphaUser.sh** script with the following command. Ignore the warnings. **Note**: the setupAlphaUser.sh script use the Password suggested in previous steps. If you used a different password when creating the Database than what was documented, you will need to update the the password in the script.
+
+```bash
+sh ./setupAlphaUser.sh
+```
+
+![](images/200/Picture200-69.png)
+
+- After the script completes, you can check to see if the **alpha** user was created, and the database tables where loaded by running the following command - you should see the **Product** tables:
+
+```bash
+sqlplus alpha/oracle@PDB1 <<EOF
+SELECT count(*) FROM products;
+EXIT;
+EOF
+```
+
+![](images/200/Picture200-70.png)
+
+## Setup Data Source Connection
+
+### **STEP 21:** Open WebLogic Service Console
+
+- Navigate back to the **Cloud Stack** Service Console. Click **Alpha01** to view details for the stack. 
+
+- Click navigation icon ![](images/Menu.png) for **Alpha01-JCS** and click **Open WebLogic Service Console**
+
+    ![](images/200/Picture200-71.png)
+
+- On security warning page click **ADVANCED** followed by **Proceed**
+
+    ![](images/200/Picture200-72.png)
+ 
+- Enter the following data and click **Login**
+
+    **Username:** `weblogic`
+
+    **Password:** `Alpha2018_`
+
+    ![](images/200/Picture200-73.png)
+
+- In **Domain Structure** expand **Services** and click *Data Sources**
+
+    ![](images/200/Picture200-74.png)
+
+### **STEP 22:** Create Data Source
+
+- In Change Center, click **Lock & Edit** to enable editting of the confirguration.
+
+    ![](images/200/Picture200-75.png)
+
+- Click New and select **Generic Data Source**
+
+    ![](images/200/Picture200-76.png)
+
+- Enter the following and click **Next**
+
+    **Name:** `Alpha01-DBCS-ds`
+
+    **JNDI Name:** `jdbc/Alpha01-DBCS-ds`
+
+    ![](images/200/Picture200-77.png)
+
+- Accept defaults, click **Next** twice.
+
+- Enter the following and click **Next**. Note: the **DBCS Services Instance ID** was captured during the Trial Account Student Guide steps.
+
+    **Database Name:** `PDB1.<DBCS Service Instance ID>.oraclecloud.internal`
+
+    **Host Name:** `Alpha01-DBCS`
+
+    **Database User Name:** `alpha`
+
+    **Password:** `oracle`
+
+    ![](images/200/Picture200-79.png)
+
+- Click **Test Connection**. If test succedded click **Next**.
+
+    ![](images/200/Picture200-80.png)
+
+- Click **Alpha01-_cluster** to target the deployment to the WebLogic customer. Click **Finsh**.
+
+    ![](images/200/Picture200-80.1.png)
+
+- Click **Activate Changes**. If test succedded click **Finish**.
+
+    ![](images/200/Picture200-81.png)
+
+- Your Infrustructure is now ready for deployment of the Alpha Office Product Catalog.
+
+    ![](images/200/Picture200-82.png)
+
+### **STEP 23:** Set Task 2 Status to In Progress
 
 - From either Eclipse or Developer Cloud Service console update the status of **Task 2** to **Completed**. Your sprint should now look like the following.
 
 ![](images/200/Picture200-58.png)
 
-- **You have completed Lab 200**. For the next lab, you will not need to wait for the environment provisioning to complete, as we will use an **already provisioned environment**.
+- **You have completed Lab 200**

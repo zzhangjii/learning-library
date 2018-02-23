@@ -20,14 +20,15 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
 ## Required Artifacts
 
-- The following lab requires an Oracle Public Cloud account that will be supplied by your instructor. This lab assumes that the MySQL service has already been created. If you are using these labs outside of an Oracle event please following the instructions outlined in the addendum at the end of the lab guide.
+- If you are working throught this workshop in a ***Self Service Mode, you must first complete the steps outlined in the Trial Account Student guide***, as this lab expects the MySQL Database to be present. If you did not complete the Trail Account Student Guide Steps to create the Database, please return to that guide and create your MySQL Database. 
+- If you are running in an **Instructor Lead training** mode, then the instructor will tell you if your database has already been created.
 
 # Create MySQL REST Microservice
 
 ## Explore Developer Cloud Service
 
 ### **STEP 1**: Review Agile Board
-
+ 
 - This Lab assumes that you just completed Lab 200 and are still connected to the Oracle Cloud, that you're still in the Developer cloud Service Dashboard, and you're viewing the "Alpha Office Product Catalog Project." If for some reason that is not the case, follow the first several Steps of Lab 100 to once again view the Developer Cloud Service Console.
 
 - Although you will remain connected to the Oracle Cloud using the user account you were provided, you will take on the Persona of ***Roland Dubois*** as you perform the following steps.
@@ -279,8 +280,3 @@ We have now verified that the MySQL REST microservice has been deployed and func
 
 - **You are now done with this lab.**
 
-# Supplementary Assignment – Provision and Setup MySQL Instance
-
-## Create MySQL Instance
-
-- This section of the lab has not yet been completed, but in the future will show the simple steps required to create the MySQL Cloud Service that was pre-created for this lab.

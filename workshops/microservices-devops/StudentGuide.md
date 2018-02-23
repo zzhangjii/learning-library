@@ -16,7 +16,7 @@ You will need to **complete the following 3 Tasks** prior to attempting the Labs
 
 ### **Step 1**: Getting your Trial Account
 
-- Click on this URL [cloud.oracle.com/tryit](http://cloud.oracle.com/tryit), and complete all the required steps to get your free Oracle Cloud Trial Account.
+- Click on this URL [cloud.oracle.com/tryit](http://cloud.oracle.com/tryit&intcmp=DeveloperInnovation-HOL-11NOV17), and complete all the required steps to get your free Oracle Cloud Trial Account.
 - You must wait to receive our account before continuing to the "**Configure Oracle Cloud Identity Information**" Section.
 
 # Configure Oracle Cloud Identity Information
@@ -25,7 +25,11 @@ You will need to **complete the following 3 Tasks** prior to attempting the Labs
 
 ### **Step 2**: Record information from the welcome email and login
 
-- After your account is fully provisioned, you will receive an **email from Oracle** that will allow you to connect to your cloud account. Follow the instructions in that email. However, for later use during the workshop labs, **record the following fields**, some of which you'll find in the email. The other **fields not found in the email** will be located shortly. This information will be ***used multiple times*** during the workshops Labs, so we recommend that you **copy the following list to a text document**, and then populate the fields as they are collected.
+- During the provisioning of your account, you will receive two welcome email message. ***Note: You must wait for the 2nd email shown below***, as it contains information about the ***Traditional Account***, which is required for this workshop. If the second email does not appear within 30 minutes, please check your Junk or Promotions email folders (based on your email provider).
+
+![](images/studentguide/Picture199.png)
+
+- For later use during the workshop labs, **record the following fields**, some of which you'll find in the email. The other **fields not found in the email** will be located shortly. This information will be ***used multiple times*** during the workshops Labs, so we recommend that you **copy the following list to a text document**, and then populate the fields as they are collected from the **Welcome Email** documented above.
 
 ```
 Username:
@@ -52,8 +56,6 @@ Data Center:
 - Click on the link ***(5)*** **Cloud Account My Services URL** provided in the email.
 - Follow the instructions to **set your password**, and then record in your notes the new password for this **Cloud Account Password** field.
 
-    ![](images/studentguide/Picture200.png)
-
 - You are now have viewing the dashboard used to access all the Cloud Services managed by the Oracle Identity Cloud Services.
 
 - Click on the **Customize Dashboard** box to add the some select services to the Dashboard.
@@ -68,15 +70,15 @@ Data Center:
 
     ![](images/studentguide/Picture200.4.png)
 
-- To capture the **Tenant ID**, we'll load up the Compute Classic console by clicking on the **Hamburger Menu** at the top of the dashboard. Click on **Compute Classic**.
+- To capture the **Tenant ID**, click on the **Identity Cloud** service you just added to the Dashboard.
 
     ![](images/studentguide/Picture200.5.png)
 
-- The **Tenant ID** is located at the top of the Classic Console Dashboard. This ID Will be used when connecting to Application Container Cloud Service from the Developer Cloud Services. Copy the ID and save it in your notes.
+- Once the Console has loaded, The **Tenant ID** is labeled Identity Services ID. Copy and save the text enclosed in the red box. This ID Will be used when connecting to Application Container Cloud Service from the Developer Cloud Services. Copy the ID and save it in your notes.
 
     ![](images/studentguide/Picture200.8.png)
 
-- Return to the main dashboard by clicking on the **Dashboard** icon in the upper right corner of the Identity Cloud Service Console.
+- Return to the main dashboard by clicking on the **Hamburger Menu** and then on the **Dashboard** icon.
 
     ![](images/studentguide/Picture200.9.png)
 
@@ -84,7 +86,7 @@ Data Center:
 
     ![](images/studentguide/Picture200.10.png)
 
-- View the Tab just opened, and save the **Data Region** in your notes. In this example, the data Region is US Commercial 2. You now have the important user and connection information that will be used during the remainder of this workshop. You can now close this browser tab, and return to the main Dashboard.
+- View the Tab just opened, and save the **Data Region** in your notes. In this example, the data Region is North America. Later on in the workshop you will be asked to select a Data Center for Deployment to the Application Container Cloud Service, and you can use one of the North American Data Centers, e.g. US Commercial 1 or 2. You now have the important user and connection information that will be used during the remainder of this workshop. You can now close this browser tab, and return to the main Dashboard.
 
     ![](images/studentguide/Picture200.11.png)
 
@@ -108,10 +110,11 @@ Some services that we will use in this workshop require that your account's Repl
 
 We will now set the Password for the **Traditional Account** User. This Account will allow you to access the **Developer Cloud Service**.
 
-- Click on the link ***(6)*** **Traditional Cloud Account My Services URL** provided in the Welcome email sent from Oracle.
-- Follow the instructions to **set your password**, and then record in your notes the new password for  **Traditional Account Password**.
+- Click on the link **Traditional Cloud Account My Services URL** provided in the Welcome email sent from Oracle.
 
-    ![](images/studentguide/Picture200.png)
+    ![](images/studentguide/Picture204.0.png)
+
+- Follow the instructions to **set your password**, and then record in your notes the new password for  **Traditional Account Password**.
 
 ### **Step 5**: Test Logging into your Multiple Accounts
 

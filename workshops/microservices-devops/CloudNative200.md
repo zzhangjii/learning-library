@@ -516,7 +516,7 @@ In the following steps “Lisa” will merge the branch create by “Bala” int
 
     ![](images/200/image113.png)  
 
-- When the new browser tab loads, Append **/statictweets** to the end of the URL and **press enter** to test the original static twitter service
+- When the new browser tab loads, Append **/statictweets** to the end of the URL and **press enter** to test the original static twitter service. Note, if your browser  shows the JSON in a raw format, you can install a JSON formatter extension, if you desire the formatting to appear as below.
 
     ![](images/200/Picture45.png)  
 
