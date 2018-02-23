@@ -7,7 +7,7 @@
         "versions": [
             {
                 "name": "Self-Service",
-                "description": "Individual self-guided learning using a Trial Account",
+                "description": "Using a Trial Environment - Both Self-guided or Instructor Lead",
                 "imageUrl": "images/Self-Service.png"
             },  
             {
