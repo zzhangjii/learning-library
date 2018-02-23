@@ -171,6 +171,7 @@ md-toolbar.layout-padding.infra {
   align-items: center;
   padding-left: 10px;
   padding-right: 10px;
+  overflow-x: hidden;
 }
 
 #interactive {
@@ -178,9 +179,9 @@ md-toolbar.layout-padding.infra {
   width: calc(100vw - 4px)}
 
 #labguide {
-  height: 100vh;
+  /* height: 100vh; */
   /* overflow-y: hidden !important; */
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 #toastHolder {
