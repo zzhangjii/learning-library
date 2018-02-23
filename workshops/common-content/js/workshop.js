@@ -46,9 +46,11 @@ labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sa
           var primus = Primus.connect(primusEndpointUrl);
           if(primus) {
             primus.on('data', function received(data) {
-              console.log(data);
-              // output.value += data.text +'\n';
-              $scope.showCustomToast(data);
+              console.log('primus received data: ' + data);
+              if(data && data.includes('GitHub')) {
+                $scope.showCustomToast(data);
+                console.log('sent toast');
+              }
             });
             primus.on('open', () =>
               {
