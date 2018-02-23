@@ -45,7 +45,7 @@ You will use various Docker commands to setup, run and connect into containers. 
 
 ## Required Artifacts
 
-- Docker Hub Account
+- Docker Hub Account: [Docker Hub](https://hub.docker.com/)
 - Docker and GIT installed in your own Linux environment (this guide is tailored to Linux) you can decide if you want to run locally or, you can use an available Linux based VirtualBox image
 
 # Start up and login into your Linux environment
@@ -77,7 +77,7 @@ The information on your docker engine should be displayed:
 
 ### **STEP 3**: See What is running
 
-Let's take a quick look at what is running in the docker engine, if this is a new environment, you should see no docker images running.
+Let's take a quick look at what is running in the docker engine, if this is a new environment, you should see no docker containers running.
 
 - **Type** the following:
 
@@ -89,7 +89,7 @@ docker ps
 
 ### **STEP 4**: Run the restclient docker image from docker hub
 
-We will now download and run an existing docker image which was created so that it will run with as a stand-alone application.  It uses a JSON formatted datafile to serve the test data via its exposed REST service. Docker looks for the designated image locally first before going to Docker HUB.
+We will now download and create a container based on an existing docker image stored in the Docker Hub. It uses a JSON formatted datafile to serve the test data via its exposed REST service. Docker looks for the designated image locally first before going to Docker HUB.
 
 - Let's take a look at what the docker **run** command options do:
     - "-d" flag runs the container in the background
@@ -100,7 +100,7 @@ We will now download and run an existing docker image which was created so that 
     - "-p" Port 8002 is mapped from the container to port 8002 on the HOST
     - "-e" Environment variables used by the application. "DS" setting designates the JSON datasource.
 
-- **Type** the following (all on one line):
+- **Type OR cut and paste** the following (all on one line):
 
 ``` 
 docker run -d -it --rm --name restclient -p=8002:8002 -e DS='json' wvbirder/restclient
@@ -108,7 +108,7 @@ docker run -d -it --rm --name restclient -p=8002:8002 -e DS='json' wvbirder/rest
 
 ![](images/100Linux/Picture100-4.png)
 
-### **STEP 5**: Check the running image's container
+### **STEP 5**: Check running containers
 
 Again using the `docker ps` command, we should see our newly spawned docker container
 
@@ -138,7 +138,7 @@ http://localhost:8002/
 
 ### **STEP 7**: Stop the Container
 
-- Since we started the restclient container with the --rm option upon stopping it docker will remove ALL allocated resources
+- Since we started the `restclient` container with the --rm option upon stopping it docker will remove ALL allocated resources
 
 - **Type** the following:
 
@@ -182,11 +182,11 @@ docker run -d -it --rm --name restclient -p=18002:8002 -e DS='json' wvbirder/res
 docker network inspect bridge
 ```
 
-- This returns information about all the containers running on the default bridge. We see that our "restclient" container is assigned IP Address 172.17.0.1. You can ping that address from the Host server.
+- This returns information about all the containers running on the default bridge. We see that our `restclient` container is assigned IP Address 172.17.0.1. You can ping that address from the Host server.
 
 ![](images/100Linux/Picture100-10.png)
 
-- Ping the restclient container IP Address: (in this example the IP was 172.17.0.2)
+- Ping the `restclient` container IP Address: (in this example the IP was 172.17.0.2)
 
 - **Type** the following:
 
@@ -195,5 +195,11 @@ ping 172.17.0.2
 ```
 
 ![](images/100Linux/Picture100-11.png)
+
+- Finally, **STOP** the `restclient` container as we will be re-using it in Lab 200 by **typing**:
+
+```
+docker stop restclient
+```
 
 **This completes the Lab!**
