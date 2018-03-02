@@ -1,76 +1,51 @@
-# DevOps and Cloud Native Microservices Workshop Overview
+# DevOps and Cloud Native Microservices Workshop Overview 
 
-## IMPORTANT: How to prepare for this Workshop
+![](images/studentguide/Picture-Title.png)
+Update: March 2, 2017
 
-- You can see a list of Lab Guides at any time by clicking on the **Menu Icon**
-
-    ![](images/WorkshopMenu.png)
-
-- To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository.
-
-- Visit the [Workshop Interactive Labguide](https://launch.oracle.com/?microservices-devops) for a visual overview of the workshop content. 
-
-- All setup steps and lab replays have been posted on [youtube](https://www.youtube.com/playlist?list=PLPIzp-E1msrY6J_zl7Iv36dteSutyDpV4). You can **watch the videos** to gain an overview of the workshop and what's required to successfully complete the labs.
-
-## DevOps and Cloud Native Microservices Workshop
+## Overview
 
 This Oracle Public Cloud DevOps and Cloud Native Microservices workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project, during which you will create and use several Microservices. During this workshop you will take on the role of 4 personae. As the first persona - the Project Manager - you will create the projects, add tasks and features to be worked on, and assign tasks to developers.  The Project Manager will then start the initial sprint. The Java Developer persona will develop a new twitter feed microservice that will allow for retrieval and filtering of twitter data. The Full Stack Developer persona will develop a new database microservice that allows access to the product catalog data. The JavaScript Developer persona will make enhancements to the Product Catalog UI that will display the twitter data related to a select catalog item.  During the workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service.
 
-## Workshop Details
+- All setup steps and lab replays have been posted on [youtube](https://www.youtube.com/playlist?list=PLPIzp-E1msrZhDmRUnNBSYY6LJ2yWh3Ro). You can **watch the videos** to gain an overview of the workshop and what's required to successfully complete the labs.
 
-## Lab 100: Agile Project Management
+![](images/oraclecode/code_0.png)
 
-**Documentation**: [CloudNative100.md](CloudNative100.md)
+# Workshop Prerequisites 
 
-### Objectives
+## _Login to Hosted Development Environment_
 
-- Create Initial Project
-- Create Product Issues
-- Create Issues for Twitter Feed Microservice
-- Create Issues for Database Microservice
-- Create Issues for Product Catalog UI enhancements
-- Create Agile Board and initial Sprint
-- Add Issues to Sprint
+### **Step 1**: Install and VNC into Development Image
 
-## Lab 200: Continuous Delivery of Java Microservices
+To provide the best possible experience during your time at Oracle Code your instructor has created a development environment prior to your arrival. The environment contains all the development software required to perform today's labs. To access the environments please follow the steps below.
 
-**Documentation**: [CloudNative200.md](CloudNative200.md)
+- Download [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/).  
 
-### Objectives
+![](images/oraclecode/code_1.png)
 
-- Access Developer Cloud Service
-- Import Code from external Git Repository
-- Import Project into Eclipse
-- Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
+- Double Click on the downloaded file to open VNC Viewer.
 
-## Lab 300: Continuous Delivery of Database Microservices
+![](images/oraclecode/code_2.png)
 
-**Documentation**: [CloudNativeMy300.md](CloudNative300.md)
+- Your Instructor will you with access to a Linux image with all the required development software to complete today's Lab. Please look at the handout provided by your instructor and take not of the VNC host and password fields.
 
-### Objectives
+![](images/studentguide/gse_1.png)
 
-- Access Developer Cloud Service
-- Import Code from external Git Repository
-- Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
+- Enter your VNC Host IP address into the VNC Viewer and press enter.
 
-## Lab 400: Cloud Native Rapid JavaScript Development with node.js
+![](images/oraclecode/code_4.png)
 
-**Documentation**: [CloudNative400.md](CloudNative400.md)
+- Enter your VNC Host password into the VNC Viewer prompt and press enter.
 
-### Objectives
+![](images/oraclecode/code_5.png)
 
-- Access Developer Cloud Service
-- Import Code from external Git Repository
-- Import Project into Brackets
-- Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
+- You receive the unecrypted connection message below, please check the box and press continue.
 
-## Lab 500:  Oracle Developer Cloud Service Administration
+![](images/oraclecode/code_8.png)
 
-**Documentation**: [CloudNative500.md](CloudNative500.md)
+- You can now begin Lab 100. Please click on the Hamburger icon at the top of the page, then select Lab 100.
 
-### Objectives
+![](images/oraclecode/code_6.png)
 
-- Access Developer Cloud Service
-- Complete Sprint
-- Run Backlog and Sprint Reports
-- Review Administrative Tasks
+![](images/oraclecode/code_7.png)
+
