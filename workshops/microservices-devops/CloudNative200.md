@@ -246,7 +246,7 @@ Now that you have successfully built your project, you need to create a deployme
 
     ![](images/200/Picture44.png)  
 
-- Append **/statictweets** to the end of the URL in the browser.
+- _Append_ **/statictweets** to the end of the URL in the browser.
 
     **Note:** The URL should return a JSON array containing a Static Twitter feed. If you desire to see a formatted view of the JSON, and you are using Chrome, open a new tab and search Google for **JSONViewer chrome plugin** – After you install the Chrome Plugin and re-submit the URL, you will be able to view the JSON in a more readable format.
 
