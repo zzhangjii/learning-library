@@ -54,6 +54,9 @@ Data Center:
 - **Traditional Account Password**: You will login to your Traditional Cloud Account to set this password in an upcoming step.
 - **Identity Tenant ID**: We will locate this information later, but make a holding place in your notes for this field. This field will be used when creating a connection between the Developer Cloud Service (DevCS) and the Application Cloud Service (ACCS), allowing automatic deployment of Applications.
 - **Data Center**: We'll locate this information in an upcoming step, and this fields will also be used when creating the connection between DevCS and ACCS.
+
+### **Step 3**: Log into your Cloud Account
+
 - Click on the link ***(5)*** **Cloud Account My Services URL** provided in the email.
 - Follow the instructions to **set your password**, and then record in your notes the new password for this **Cloud Account Password** field.
 
@@ -91,7 +94,7 @@ Data Center:
 
     ![](images/studentguide/Picture200.11.png)
 
-### **Step 3**: Check/Set Storage Replication Policy
+### **Step 4**: Check/Set Storage Replication Policy
 
 Some services that we will use in this workshop require that your account's Replication Policy is set. The following steps will show you how to set your replication policy.
 
@@ -107,7 +110,7 @@ Some services that we will use in this workshop require that your account's Repl
 
     ![](images/studentguide/Picture204.png)
 
-### **Step 4**: Set the Traditional Account Password
+### **Step 5**: Set the Traditional Account Password
 
 We will now set the Password for the **Traditional Account** User. This Account will allow you to access the **Developer Cloud Service**.
 
@@ -117,7 +120,7 @@ We will now set the Password for the **Traditional Account** User. This Account 
 
 - Follow the instructions to **set your password**, and then record in your notes the new password for  **Traditional Account Password**.
 
-### **Step 5**: Test Logging into your Multiple Accounts
+### **Step 6**: Test Logging into your Multiple Accounts
 
 It is important to fully understand how to login to both the **Standard Identity Cloud Service** managed account, and then login to the **Traditional** account at the same time. After this step, we'll assume you know how to switch between accounts and services during the upcoming labs. ***Note: Oracle will soon have all services merged under the Standard Identity Cloud Service Account.*** However, until that time, you need to be aware of your dashboard Account settings, and at times you will need to switch between the Regular Cloud Account and Traditional Cloud Account to view the right services in the Dashboard and Dashboard Menus.
 

@@ -59,7 +59,7 @@ Data Center:
 - **Identity Tenant ID**: We will locate this information later, but make a holding place in your notes for this field. This field will be used when creating a connection between the Developer Cloud Service (DevCS) and the Application Cloud Service (ACCS), allowing automatic deployment of Applications.
 - **Data Center**: We'll locate this information in an upcoming step, and this fields will also be used when creating the connection between DevCS and ACCS.
 
-### **Step 3**: Log into you Cloud Account
+### **Step 3**: Log into your Cloud Account
 
 - Click on the link ***(5)*** **Cloud Account My Services URL** provided in the email.
 - Follow the instructions to **set your password**, and then record in your notes the new password for this **Cloud Account Password** field.
