@@ -58,6 +58,9 @@ Data Center:
 - **Traditional Account Password**: You will login to your Traditional Cloud Account to set this password in an upcoming step.
 - **Identity Tenant ID**: We will locate this information later, but make a holding place in your notes for this field. This field will be used when creating a connection between the Developer Cloud Service (DevCS) and the Application Cloud Service (ACCS), allowing automatic deployment of Applications.
 - **Data Center**: We'll locate this information in an upcoming step, and this fields will also be used when creating the connection between DevCS and ACCS.
+
+### **Step 3**: Log into you Cloud Account
+
 - Click on the link ***(5)*** **Cloud Account My Services URL** provided in the email.
 - Follow the instructions to **set your password**, and then record in your notes the new password for this **Cloud Account Password** field.
 
@@ -95,7 +98,7 @@ Data Center:
 
     ![](images/studentguide/Picture200.11.png)
 
-### **Step 3**: Check/Set Storage Replication Policy
+### **Step 4**: Check/Set Storage Replication Policy
 
 Some services that we will use in this workshop require that your account's Replication Policy is set. The following steps will show you how to set your replication policy.
 
@@ -111,7 +114,7 @@ Some services that we will use in this workshop require that your account's Repl
 
     ![](images/studentguide/Picture204.png)
 
-### **Step 4**: Set the Traditional Account Password
+### **Step 5**: Log into the Traditional Account and set the Password
 
 We will now set the Password for the **Traditional Account** User. This Account will allow you to access the **Developer Cloud Service**.
 
@@ -121,7 +124,7 @@ We will now set the Password for the **Traditional Account** User. This Account 
 
 - Follow the instructions to **set your password**, and then record in your notes the new password for  **Traditional Account Password**.
 
-### **Step 5**: Test Logging into your Multiple Accounts
+### **Step 6**: Test Logging into your Multiple Accounts
 
 It is important to fully understand how to login to both the **Standard Identity Cloud Service** managed account, and then login to the **Traditional** account at the same time. After this step, we'll assume you know how to switch between accounts and services during the upcoming labs. ***Note: Oracle will soon have all services merged under the Standard Identity Cloud Service Account.*** However, until that time, you need to be aware of your dashboard Account settings, and at times you will need to switch between the Regular Cloud Account and Traditional Cloud Account to view the right services in the Dashboard and Dashboard Menus.
 
@@ -177,7 +180,7 @@ It is important to fully understand how to login to both the **Standard Identity
 
 ## Java JDK
 
-### **Step 6 (Windows Option)**: JDK Verification on Windows
+### **Step 7 (Windows Option)**: JDK Verification on Windows
 
 **Note**: Eclipse requires that you have the a Java JDK 8 installed. Even if you have a JRE version 8, you still need to verify that you have a JDK 8 installed.
 
@@ -192,7 +195,7 @@ Java HotSpot(TM) Client VM (build 25.121-b13, mixed mode, sharing)
 
 - If JDK/**Java version 1.8** is not installed,  you will need to download a [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) from the Oracle Technology Network website, and install.
 
-### **Step 6 (Mac Option)**: JDK Verification on a MAC
+### **Step 7 (Mac Option)**: JDK Verification on a MAC
 
 **Note**: Eclipse requires that you have the a Java **JDK** 8 installed. Even if you have a **JRE** version 8, you still need to verify that you have a JDK 8 installed.
 
@@ -206,7 +209,7 @@ ls /Library/java/JavaVirtualMachines/
 
 ## Eclipse
 
-### **Step 7**: Download Eclipse
+### **Step 8**: Download Eclipse
 
 ***Note***: Even if you already have Eclipse installed, you need to install and use the version documented below. This version of Eclipse contains the ***Oracle Enterprise Pack for Eclipse***, which will be used during the workshop.
 
@@ -218,7 +221,7 @@ ls /Library/java/JavaVirtualMachines/
 
 - Once you've downloaded eclipse, extract the zip file and install. ***Note:*** If you encounter an error when extracting Eclipse due to a "Path name too long" error on Windows, there are solutions that can be found by performing an internet search on the error to change the Windows allowed file length. Also, we have found that using the open source [7-zip](http://www.7-zip.org/download.html) tool can help overcome the file length errors encountered by the default windows zip file extraction tools.
 
-### **Step 8**: Optionally Configure Proxies (if behind a firewall)
+### **Step 9**: Optionally Configure Proxies (if behind a firewall)
 
 If you are running Eclipse behind a firewall, you need to configure the proxy setting. First, you need to ensure that Eclipse's proxy is set. Next, you need to update the maven proxy setting, and then finally, you need to ensure that the Oracle Plugin will work with your proxy settings.
 
@@ -242,7 +245,7 @@ If you are running Eclipse behind a firewall, you need to configure the proxy se
 
 ![](images/studentguide/Picture6.png)
 
-### **Step 9**: Optionally Update the Eclipse / Maven proxy (if behind a firewall)
+### **Step 10**: Optionally Update the Eclipse / Maven proxy (if behind a firewall)
 
 ***Note:*** You will only do this optional Eclipse/Maven Proxy setup if you are behind a firewall. Otherwise, skip this step, and go to next step where you will download and install Brackets.
 
@@ -288,7 +291,7 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 
 ## Git and Brackets
 
-### **Step 10**: Download/Install Git
+### **Step 11**: Download/Install Git
 
 - Go to the following URL: https://git-scm.com/downloads
 
@@ -310,7 +313,7 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 
     ![](images/studentguide/Picture12.png)
 
-### **Step 11**: Download/Install the Brackets Text Editor
+### **Step 12**: Download/Install the Brackets Text Editor
 
 - Go to the following URL: http://brackets.io    
 
@@ -330,7 +333,7 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 
 - Run through the installation process. In our tests, we used the default installation settings.
 
-### **Step 12**: Start Brackets and Configure Git
+### **Step 13**: Start Brackets and Configure Git
 
 - From a location of your choice, create a directory called **ProductCatalogUI**. From Windows Explorer navigate to the directory **ProductCatalogUI**, right click and select **Open as Brackets Project**
 
