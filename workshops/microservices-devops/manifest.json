@@ -12,12 +12,12 @@
             },  
             {
               "name": "Instructor Led",
-              "description": "An in-person workshop using an Instructor Provided Environment",
+              "description": "An in-person workshop using an Instructor Provided Cloud Environment",
               "imageUrl": "images/InstructorLed.png"
             },  
             {
-              "name": "Oracle Code Events",
-              "description": "An in-person workshop tailored for trial accounts at Oracle Code Events.",
+              "name": "Oracle Events",
+              "description": "An in-person workshop tailored for Trial Cloud Accounts at Oracle Event (e.g. Code/SMB/Virtual).",
               "imageUrl": "images/OracleCode.png"
             }
           ],
