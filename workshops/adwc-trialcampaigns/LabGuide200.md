@@ -1,16 +1,17 @@
 Update: March 12, 2018
 
+
+
+# Introduction
+
 This is the second of several labs that are part of the **Oracle Autonomous Data Warehouse Cloud Workshop**. This workshop will walk you through several use cases of using an autonomous data warehouse.
-
-**Please direct comments to: Tom Huang (tom.huang@oracle.com).**
-
-
-## Introduction
 
 This lab walks you through some examples using the Oracle
 Autonomous Data Warehouse Cloud with Object Storage. You will create and Object Storage bucket, upload data files, and use SQL developer to query those data files.
 
 This lab shows you only the functional aspects of ADWC. It does not have exercises to test the performance of ADWC as the lab environment is not running on Exadata.
+
+**Please direct comments to: Tom Huang (tom.huang@oracle.com).**
 
 ## Objectives
 - Learn how to use OCI Object Storage
@@ -25,7 +26,7 @@ This lab shows you only the functional aspects of ADWC. It does not have exercis
 - The following lab requires an Oracle Public Cloud trial account.
 
 
-## OCI Object Storage
+# OCI Object Storage
 Oracle Object Storage is a web-based interface that provides the ability to accelerate a broad range of high performance applications with your choice of high IO block storage, and durable, high-throughput object storage.
 
 Key features of Oracle Machine Learning:
@@ -43,11 +44,11 @@ Key features of Oracle Machine Learning:
 ### **Step 3**: Enter the Object Storage Console.
 - Click the **Storage** tab in the navigation bar
 
-<picture>
+\<picture\>
 
 - click **Object Storage** in the side menu
 
-<picture>
+\<picture\>
 
 ### **Step 4**: Click Create Bucket to create the storage bucket to upload your source files into. You will later copy this data into database tables in your Autonomous Data Warehouse Cloud.
 
@@ -61,7 +62,7 @@ Key features of Oracle Machine Learning:
 
 Click **Create Bucket**.
 
-  <picture>
+  \<picture\>
 
 ### **Step 5**:  Upload files to your storage bucket.
 
@@ -81,22 +82,22 @@ Here we will download two files. One CSV and one JSON file. In later steps, we w
 
 - Click your bucket name in the list of buckets. i.e. &lt;yourname&gt;OS
 
-<picture>
+\<picture\>
 
 - Click **Upload Object**
 
-<picture>
+\<picture\>
 
 - Click **Browse** and select your recently saved csv file.
 
-<picture>
+\<picture\>
 
 - Click **Upload Object**
 
 
 - Click **Browse** and select your recently saved json file.
 
-<picture>
+\<picture\>
 
 - Click **Upload Object**
 
@@ -105,19 +106,19 @@ Here we will download two files. One CSV and one JSON file. In later steps, we w
 
  - Click <username> dropdown and select **User Settings**.
 
- <picture>
+ \<picture\>
 
  - Click **Swift Passwords**.
 
- <picture>
+ \<picture\>
 
  - Click **Generate Password**.
 
-<picture>
+\<picture\>
 
  - Give a brief description, i.e. "dbms cloud api credential" and click **Generate Password**
 
-<picture>
+\<picture\>
 
  - Record the newly generated password for the next step.
 
@@ -125,7 +126,7 @@ Here we will download two files. One CSV and one JSON file. In later steps, we w
 Next, we are going to use our Autonomous Data Warehouse Cloud instance connected with SQL Developer to interact with the data files residing in our recently create Object Storage bucket.
 
 
-## Querying Data Files in Object Storage
+# Querying Data Files in Object Storage
 
 ### **Step 1**:  Connect Autonomous Data Warehouse Cloud instance to data in Object Storage
 
@@ -170,7 +171,7 @@ CREATE TABLE INSURANCE (policyID NUMBER(20), statecode VARCHAR(20), county VARCH
 In your OCI Console, you can get the following information:
 Tenant, Region, Bucket, and file name.
 
-<picture>
+\<picture\>
 
 Use this information for the **file_uri_list** parameter in the DBMS_CLOUD function.
 
@@ -195,7 +196,7 @@ Now you can query this table and retrieve data that previously only existed in O
 
 If for whatever reason you'd like to keep your data in Object Storage, you can create external tables. Instead of storing the data, it will store the connection to Object Storage so that it can quickly retrieve the data.
 
-**Note:** you will need to replace <region>,<tenant>, and <bucket> in the file_uri_list parameter again.
+**Note:** you will need to replace \<region\> , \<tenant\> , and \<bucket\> in the file_uri_list parameter again.
 
 ```
 
