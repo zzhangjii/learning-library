@@ -145,7 +145,7 @@
                 "title": "Lab 100: Agile Project Management",
                 "description": "Use Developer Cloud Service to create issues, tasks, and sprints",
                 "labels": {
-                    "version": "Oracle Code Events"
+                    "version": "Oracle Events"
                 }
             },
             {
@@ -154,7 +154,7 @@
                 "title": "Lab 200: Continuous Delivery of Java Microservices",
                 "description": "Access Developer Cloud Service, Import external GIT Repository, Import project into Elicpse, and Build and Deploy a project using Developer Cloud Service and Oracle Application Container Cloud Service.",
                 "labels": {
-                    "version": "Oracle Code Events"
+                    "version": "Oracle Events"
                 }
             },
             {
@@ -163,7 +163,7 @@
                 "title": "Lab 300: Continuous Delivery of Database Microservices",
                 "description": "Access Developer Cloud Service, Import external GIT Repository, and Build and Deploy a project using Developer Cloud Service and Oracle Application Container Cloud Service.",
                 "labels": {
-                    "version": "Oracle Code Events"
+                    "version": "Oracle Events"
                 }
             },
             {
@@ -172,7 +172,7 @@
                 "title": "Lab 400: Cloud Native Rapid Javascript Development with node.js",
                 "description": "Access Developer Cloud Service, Import Code from external Git Repository, Import Project into Brackets, then Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service",
                 "labels": {
-                    "version": "Oracle Code Events"
+                    "version": "Oracle Events"
                 }
             },
             {
@@ -181,7 +181,7 @@
                 "title": "Lab 500: Oracle Developer Cloud Service Administration",
                 "description": "Access Developer Cloud Service, Complete Sprint, Run Backlog and Sprint Reports and Review Administrative Tasks",
                 "labels": {
-                    "version": "Oracle Code Events"
+                    "version": "Oracle Events"
                 }
             }
 
