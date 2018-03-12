@@ -33,26 +33,29 @@ Key features of Oracle Machine Learning:
 - Persistent IO-intensive block storage and high-throughput object storage options to handle multiple application types, and data at different lifecycle stages.
 - Each is manageable through the console and by CLI.
 
-### **Step 1**: Go to OCI console <https://console.us-phoenix-1.oraclecloud.com>. Enter &lt;Cloud Tenant&gt; in the **Cloud Tenant** field and click **Continue**.
+### **Step 1**: Go to OCI console <https://console.us-phoenix-1.oraclecloud.com>. Enter the Clout Tenant provided by your Oracle Cloud administrator in the **Cloud Tenant** field and Select **Continue**.
 ### **Step 2**: Log in to your Oracle Cloud Infrastructure Console with the following credentials provided by your Oracle Cloud administrator.
 
 **Username**: &lt;username&gt;
 
 **Password**: &lt;password&gt;
 
+![](images/200/1.PNG)
 
 ### **Step 3**: Enter the Object Storage Console.
-- Click the **Storage** tab in the navigation bar
+- Select the **Storage** tab in the navigation bar
 
-\<picture\>
+![](images/200/2.PNG)
 
-- click **Object Storage** in the side menu
+- Select **Object Storage** in the side menu
 
-\<picture\>
+![](images/200/3.PNG)
 
-### **Step 4**: Click Create Bucket to create the storage bucket to upload your source files into. You will later copy this data into database tables in your Autonomous Data Warehouse Cloud.
+### **Step 4**: Select Create Bucket to create the storage bucket to upload your source files into. You will later copy this data into database tables in your Autonomous Data Warehouse Cloud.
 
-- Click **Create Bucket**
+- Select **Create Bucket**
+
+![](images/200/4.PNG)
 
 - Enter the following information:
 
@@ -60,67 +63,74 @@ Key features of Oracle Machine Learning:
 
   -   **Storage Tier** - Standard &lt;&lt; Do not select Archive as this tier will store its data differently.
 
-Click **Create Bucket**.
+Select **Create Bucket**.
 
-  \<picture\>
+![](images/200/5.PNG)
 
 ### **Step 5**:  Upload files to your storage bucket.
 
 Here we will download two files. One CSV and one JSON file. In later steps, we will use SQL Developer to query the data inside these files.
 
 - Download Insurance.csv from github repository:
-    - Go to: <https://raw.githubusercontent.com/unofficialoraclecloudhub/autonomous-campaign/master/workshops/adwc-trialcampaigns/objectstorage/Insurance.csv>
+    - Open the following link in a new tab: <https://raw.githubusercontent.com/unofficialoraclecloudhub/autonomous-campaign/master/workshops/adwc-trialcampaigns/objectstorage/Insurance.csv>
     - Right Click anywhere on browser page and select **Save as...**
     - Save file
 
 - Download colors.json from github repository:
-  - Go to: <https://raw.githubusercontent.com/unofficialoraclecloudhub/autonomous-campaign/master/workshops/adwc-trialcampaigns/objectstorage/colors.json>
+  - Open the following link in a new tab: <https://raw.githubusercontent.com/unofficialoraclecloudhub/autonomous-campaign/master/workshops/adwc-trialcampaigns/objectstorage/colors.json>
   - Right Click anywhere on browser page and select **Save as...**
 
 
 - Go back to OCI Object Storage Console
 
-- Click your bucket name in the list of buckets. i.e. &lt;yourname&gt;OS
+- Select your bucket name in the list of buckets. i.e. &lt;yourname&gt;OS
 
-\<picture\>
+![](images/200/6.PNG)
 
-- Click **Upload Object**
+- Let's upload the CSV file.
 
-\<picture\>
+  - Select **Upload Object**
 
-- Click **Browse** and select your recently saved csv file.
+  ![](images/200/7.PNG)
 
-\<picture\>
+  - Select **Browse** and select your recently saved csv file.
 
-- Click **Upload Object**
+  ![](images/200/8.PNG)
 
+  - Select **Upload Object** and the popup will disappear.
 
-- Click **Browse** and select your recently saved json file.
+- Now lets upload the Json file.
 
-\<picture\>
+  - Select **Upload Object**
 
-- Click **Upload Object**
+  ![](images/200/7.PNG)
+
+  - Select **Browse** and select your recently saved json file.
+
+  ![](images/200/8.PNG)
+
+  - Select **Upload Object** and the popup will disappear.
 
 
 ### **Step 6**: Retrieve swift password.
 
- - Click <username> dropdown and select **User Settings**.
+ - Select \<username\> dropdown and select **User Settings**.
 
- \<picture\>
+  ![](images/200/9.PNG)
 
- - Click **Swift Passwords**.
+ - Select **Swift Passwords**.
 
- \<picture\>
+  ![](images/200/10.PNG)
 
- - Click **Generate Password**.
+ - Select **Generate Password**.
 
-\<picture\>
+  ![](images/200/11.PNG)
 
- - Give a brief description, i.e. "dbms cloud api credential" and click **Generate Password**
+ - Give a brief description, i.e. "dbms cloud api credential" and Select **Generate Password**
 
-\<picture\>
+  ![](images/200/12.PNG)
 
- - Record the newly generated password for the next step.
+ - Record / Copy the newly generated password for the next step.
 
 
 Next, we are going to use our Autonomous Data Warehouse Cloud instance connected with SQL Developer to interact with the data files residing in our recently create Object Storage bucket.
@@ -135,7 +145,7 @@ Next, we are going to use our Autonomous Data Warehouse Cloud instance connected
 
 - Use DBMS_CLOUD API to create credentials.
 
-As the user you created, run the following command, replacing <oci-username> with your OCI username, and <swift-password> with the swift password you generated in step 6
+As the user you created, run the following command, replacing \<oci-username\> with your OCI username, and \<swift-password\> with the swift password you generated in step 6
 
 ```
 
@@ -197,6 +207,11 @@ Now you can query this table and retrieve data that previously only existed in O
 If for whatever reason you'd like to keep your data in Object Storage, you can create external tables. Instead of storing the data, it will store the connection to Object Storage so that it can quickly retrieve the data.
 
 **Note:** you will need to replace \<region\> , \<tenant\> , and \<bucket\> in the file_uri_list parameter again.
+
+You can find tenancy and region here:
+
+  ![](images/200/13.PNG)
+
 
 ```
 
