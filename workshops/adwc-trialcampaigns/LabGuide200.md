@@ -40,22 +40,22 @@ Key features of Oracle Machine Learning:
 
 **Password**: &lt;password&gt;
 
-![](./images/200/1.PNG)
+![](./images/200/1.png)
 
 ### **Step 3**: Enter the Object Storage Console.
 - Select the **Storage** tab in the navigation bar
 
-![](./images/200/2.PNG)
+![](./images/200/2.png)
 
 - Select **Object Storage** in the side menu
 
-![](./images/200/3.PNG)
+![](./images/200/3.png)
 
 ### **Step 4**: Select Create Bucket to create the storage bucket to upload your source files into. You will later copy this data into database tables in your Autonomous Data Warehouse Cloud.
 
 - Select **Create Bucket**
 
-![](./images/200/4.PNG)
+![](./images/200/4.png)
 
 - Enter the following information:
 
@@ -65,7 +65,7 @@ Key features of Oracle Machine Learning:
 
 Select **Create Bucket**.
 
-![](./images/200/5.PNG)
+![](./images/200/5.png)
 
 ### **Step 5**:  Upload files to your storage bucket.
 
@@ -85,17 +85,17 @@ Here we will download two files. One CSV and one JSON file. In later steps, we w
 
 - Select your bucket name in the list of buckets. i.e. &lt;yourname&gt;OS
 
-![](./images/200/6.PNG)
+![](./images/200/6.png)
 
 - Let's upload the CSV file.
 
   - Select **Upload Object**
 
-  ![](./images/200/7.PNG)
+  ![](./images/200/7.png)
 
   - Select **Browse** and select your recently saved csv file.
 
-  ![](./images/200/8.PNG)
+  ![](./images/200/8.png)
 
   - Select **Upload Object** and the popup will disappear.
 
@@ -103,11 +103,11 @@ Here we will download two files. One CSV and one JSON file. In later steps, we w
 
   - Select **Upload Object**
 
-  ![](./images/200/7.PNG)
+  ![](./images/200/7.png)
 
   - Select **Browse** and select your recently saved json file.
 
-  ![](./images/200/8.PNG)
+  ![](./images/200/8.png)
 
   - Select **Upload Object** and the popup will disappear.
 
@@ -116,19 +116,19 @@ Here we will download two files. One CSV and one JSON file. In later steps, we w
 
  - Select \<username\> dropdown and select **User Settings**.
 
-  ![](./images/200/9.PNG)
+  ![](./images/200/9.png)
 
  - Select **Swift Passwords**.
 
-  ![](./images/200/10.PNG)
+  ![](./images/200/10.png)
 
  - Select **Generate Password**.
 
-  ![](./images/200/11.PNG)
+  ![](./images/200/11.png)
 
  - Give a brief description, i.e. "dbms cloud api credential" and Select **Generate Password**
 
-  ![](./images/200/12.PNG)
+  ![](./images/200/12.png)
 
  - Record / Copy the newly generated password for the next step.
 
@@ -182,7 +182,7 @@ CREATE TABLE INSURANCE (policyID NUMBER(20), statecode VARCHAR(20), county VARCH
 
 You can find tenancy and region here:
 
-  ![](./images/200/13.PNG)
+  ![](./images/200/13.png)
 
 Use this information for the **file_uri_list** parameter in the DBMS_CLOUD function.
 
@@ -211,7 +211,7 @@ If for whatever reason you'd like to keep your data in Object Storage, you can c
 
 You can find tenancy and region here:
 
-  ![](./images/200/13.PNG)
+  ![](./images/200/13.png)
 
 
 ```
