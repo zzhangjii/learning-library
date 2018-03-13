@@ -1,4 +1,4 @@
-# ADWC Journey: Hands-On Test Drive Workshop
+# Oracle Autonomous Data Warehouse Cloud Workshop
 
 This lab walks you through the steps to get started using the Oracle Autonomous Data Warehouse Cloud (ADWC).
 
