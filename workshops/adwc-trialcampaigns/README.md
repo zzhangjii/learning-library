@@ -1,6 +1,8 @@
 # Oracle Autonomous Data Warehouse Cloud Workshop
 
 This lab walks you through the steps to get started using the Oracle Autonomous Data Warehouse Cloud (ADWC).
+The Lab guides are best viewed using the Workshop's [GitHub Pages Website URL](https://oracle.github.io/learning-library/workshops/adwc-trialcampaigns/) 
+**Temporary GitHub Page link is here [GitHub Pages Website URL](https://unofficialoraclecloudhub.github.io/autonomous-campaign/workshops/adwc-trialcampaigns/)
 
 ## Goals
 
@@ -24,7 +26,9 @@ This lab walks you through the steps to get started using the Oracle Autonomous 
 
 **Third**, ***How to View the Lab Guides***
 
-- The Labguides are best viewed using the Workshop's [GitHub Pages Website URL](https://oracle.github.io/learning-library/workshops/adwc-trialcampaigns/) 
+- The Lab guides are best viewed using the Workshop's [GitHub Pages Website URL](https://oracle.github.io/learning-library/workshops/adwc-trialcampaigns/) 
+
+**Temporary GitHub Page link is here [GitHub Pages Website URL](https://unofficialoraclecloudhub.github.io/autonomous-campaign/workshops/adwc-trialcampaigns/)
 
 - Once you are viewing the Workshop's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
 
