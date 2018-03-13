@@ -1,3 +1,14 @@
+# ADWC Journey: Hands-On Test Drive Workshop
+
+This lab walks you through the steps to get started using the Oracle Autonomous Data Warehouse Cloud (ADWC).
+
+## Goals
+
+- Learn how to provision an ADWC and connect to it
+- Learn how to load data into ADWC
+- Learn how to use Oracle Machine Learning SQL Notebook and ADWC console
+- Learn how to create business intelligence from ADWC using Data Visualization Desktop
+
 ## IMPORTANT: How to prepare for this Workshop
 
 **First**, ***Get an Oracle Cloud Account*** 
@@ -13,15 +24,17 @@
 
 **Third**, ***How to View the Lab Guides***
 
-- The Labguides are best viewed using the Workshop's [GitHub Pages Website URL](https://github.com/unofficialoraclecloudhub/autonomous-campaign/blob/master/workshops/adwc-trialcampaigns/README.md) 
+- The Labguides are best viewed using the Workshop's [GitHub Pages Website URL](https://oracle.github.io/learning-library/workshops/adwc-trialcampaigns/) 
 
 - Once you are viewing the Workshop's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
 
+- To **log issues** and view the Lab Guide source, go to the [github oracle](https://github.com/oracle/learning-library/tree/master/workshops/adwc-trialcampaigns) repository.
+
 **Fourth**, ***Want to learn more?***
 
-**To see a video overview of ADWC, watch this link:** [Video-update this link](http://www.oracle.com)
+**To see a video overview of ADWC, watch this link:** [Video-update this link](https://www.youtube.com/watch?v=f4BurlkdEQM)
 
-**To learn more** [Autonomous Data Warehouse Cloud-update link](https://cloud.oracle.com/big-data-compute-edition)
+**To learn more** [Autonomous Data Warehouse Cloud-update link](https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/index.html)
 
 
 ## Workshop Details
@@ -43,15 +56,28 @@
 
 ## Lab 200: 
 
-**Documentation**: 
+**Documentation**: [LabGuide200.md](LabGuide200.md)
 
 ### Objectives
+- Learn how to use OCI Object Storage
+    - Create buckets
+    - Upload Files
+- Learn how to use SQL Developer with ADWC and Object Storage
+    - Copy object storage file data to internal tables in Autonomous Data Warehouse Cloud using SQL Developer
+    - Create external tables that reference files in object storage
 
 ## Lab 300: 
 
-**Documentation**: 
+**Documentation**: [LabGuide300.md](LabGuide300.md)
 
 ### Objectives
+- Access Oracle Machine Learning Interface
+    - Create OML user
+- Work in Oracle Machine Learning Interface
+    - Create OML SQL notebook
+    - Create machine learning notebook using OML Gallery template
+- Monitor Oracle Autonomous Data Warehouse Cloud and SQL statements
+- Scaling ADWC Service
 
 ## Lab 400:  
 

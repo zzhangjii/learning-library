@@ -1,175 +1,33 @@
 {
     "workshop": {
-        "title": "Workshop Title",
-        "description": "Description of this workshop.",
+        "title": "Oracle Autonomous Data Warehouse Cloud Workshop",
+        "description": "This lab walks you through the steps to get started using the Oracle Autonomous Data Warehouse Cloud.",
         "theme": "default",
-        "interactive":"https://launch.oracle.com/?",
-        "versions": [
-          {
-            "name": "Instructor Led",
-            "description": "An in-person workshop with an Oracle instructor",
-            "imageUrl": "images/Instructor Led.png"
-          },
-          {
-            "name": "Self-Service",
-            "description": "Individual self-guided learning",
-            "imageUrl": "images/Self-Service.png"
-          },
-          {
-            "name": "Virtual Workshop",
-            "description": "An Oracle-organized remote session",
-            "imageUrl": "images/Virtual Workshop.png"
-          }
-        ],
         "labs": [
-            {
-                "number": "0",
-                "filename": "Intro-Instructor-Led.md",
-                "title": "Intro - Instructor Led",
-                "description": "Step-by-step workshop instructions",
-                "labels": {
-                    "version": "Instructor Led"
-                }
-            },
             {
                 "number": "100",
                 "filename": "LabGuide100.md",
-                "title": "Lab 100: Agile Project Management, plus an even longer section of text that will almost assuredly wrap unto the proximate lineage.",
-                "description": "Use Developer Cloud Service to create issues, tasks, and sprints, plus an even longer section of text that will almost assuredly wrap unto the proximate lineage, plus an even longer section of text that will almost assuredly wrap unto the proximate lineage.",
-                "labels": {
-                    "version": "Instructor Led"
-                }
+                "title": "Lab 100:  Provision a new ADWC database, Connect to the database using Oracle SQL Developer, and create DW users",
+                "description": "Use ADWC to provision a new instance, connect to the instance using Oracle SQL Developer, and create data warehouse user"
             },
             {
                 "number": "200",
                 "filename": "LabGuide200.md",
-                "title": "Lab 200:  Title of Lab 200",
-                "description": "Short description of lab 200",
-                "labels": {
-                    "version": "Instructor Led"
-                }
+                "title": "Lab 200:  Loading Data to ADWC",
+                "description": "Use ADWC to create external table on files in Oracle Cloud Infrastructure (OCI) Object Storage, load data from OCI Object Storage and query"
             },
             {
                 "number": "300",
                 "filename": "LabGuide300.md",
-                "title": "Lab 300:  Title of Lab 300",
-                "description": "Short description of lab 300",
-                "labels": {
-                    "version": "Instructor Led"
-                }
+                "title": "Lab 300:  Use Oracle Machine Learning and Monitor ADWC",
+                "description": "Use Oracle Machine Learning SQL notebook to query data from ADWC and use ADWC console to monitor ADWC and SQL statements, and then scale ADWC service"
             },
             {
                 "number": "400",
                 "filename": "LabGuide400.md",
                 "title": "Lab 400: Title of Lab 400",
-                "description": "Short description of lab 400",
-                "labels": {
-                    "version": "Instructor Led"
-                }
-            },
-            {
-                "number": "0",
-                "filename": "Intro-Self-Service.md",
-                "title": "Intro - Self Service",
-                "description": "Step-by-step workshop instructions",
-                "labels": {
-                    "version": "Self-Service"
-                }
-            },
-            {
-                "number": "0",
-                "filename": "StudentGuide.md",
-                "title": "Student Guide",
-                "description": "Workshop guidance and prerequisites"
-            },
-            {
-                "number": "100",
-                "filename": "LabGuide100-SS.md",
-                "title": "Lab 100: Agile Project Management",
-                "description": "SS: Use Developer Cloud Service to create issues, tasks, and sprints",
-                "labels": {
-                    "version": "Self-Service"
-                }
-            },
-            {
-                "number": "200",
-                "filename": "LabGuide200-SS.md",
-                "title": "Lab 200: Title of Lab 200",
-                "description": "SS: Short description of lab 200",
-                "labels": {
-                    "version": "Self-Service"
-                }
-            },
-            {
-                "number": "300",
-                "filename": "LabGuide300-SS.md",
-                "title": "Lab 300:  Title of Lab 300",
-                "description": "SS: Short description of lab 300",
-                "labels": {
-                    "version": "Self-Service"
-                }
-            },
-            {
-                "number": "400",
-                "filename": "LabGuide400-SS.md",
-                "title": "Lab 400: Title of Lab 400",
-                "description": "SS: Short description of lab 400",
-                "labels": {
-                    "version": "Self-Service"
-                }
-            },
-            {
-                "number": "0",
-                "filename": "Intro-Virtual-Workshop.md",
-                "title": "Intro - Virtual Workshop",
-                "description": "Step-by-step workshop instructions",
-                "labels": {
-                    "version": "Virtual Workshop"
-                }
-            },
-            {
-                "number": "0",
-                "filename": "StudentGuide.md",
-                "title": "Student Guide",
-                "description": "Workshop guidance and prerequisites"
-            },
-            {
-                "number": "100",
-                "filename": "LabGuide100-SS.md",
-                "title": "Lab 100: Agile Project Management",
-                "description": "SS: Use Developer Cloud Service to create issues, tasks, and sprints",
-                "labels": {
-                    "version": "Virtual Workshop"
-                }
-            },
-            {
-                "number": "200",
-                "filename": "LabGuide200-SS.md",
-                "title": "Lab 200: Title of Lab 200",
-                "description": "SS: Short description of lab 200",
-                "labels": {
-                    "version": "Virtual Workshop"
-                }
-            },
-            {
-                "number": "300",
-                "filename": "LabGuide300-SS.md",
-                "title": "Lab 300:  Title of Lab 300",
-                "description": "SS: Short description of lab 300",
-                "labels": {
-                    "version": "Virtual Workshop"
-                }
-            },
-            {
-                "number": "400",
-                "filename": "LabGuide400-SS.md",
-                "title": "Lab 400: Title of Lab 400",
-                "description": "SS: Short description of lab 400",
-                "labels": {
-                    "version": "Virtual Workshop"
-                }
+                "description": "Short description of lab 400"
             }
-
 
         ]
     }
