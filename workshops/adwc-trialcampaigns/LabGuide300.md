@@ -93,9 +93,9 @@ Key features of Oracle Machine Learning:
 # Work in Oracle Machine Learning Console
 
 ## Create your first Oracle Machine Learning Notebook
-Oracle Machine Learning uses Zeppelin Notebook, a collaborative interface where you can write code, equations, and text, create visualizations, and perform data analytics. Notebooks work with interpreters in the back-end. In Oracle Machine Learning, notebooks are available in a project, where you can create, edit, delete, and even save notebooks as templates.
 
 ### **STEP 4**: Create a new project
+Oracle Machine Learning uses Zeppelin Notebook, a collaborative interface where you can write code, equations, and text, create visualizations, and perform data analytics. Notebooks work with interpreters in the back-end. In Oracle Machine Learning, notebooks are available in a project, where you can create, edit, delete, and even save notebooks as templates.
 
 - Before creating a notebook, it is a good idea to create a new project first where your notebook is contained in. To do that, click on **Workspace** next to your user name on the upper right screen and click on **New Project...**
 
@@ -178,9 +178,10 @@ SELECT * FROM ALL_OBJECTS WHERE OBJECT_TYPE = ‘${OBJ}’;
 - One of the interesting things from this notebook is that it uses ``DBMS_DATA_MINING`` PL/SQL package which is an analytical technology that derives actionable information from data in an Oracle Database or Oracle Data Warehouse. This is a out-of-box function in ADWC that you can utilize to perform machine learning just using SQL scripts. Please refer to this for more information: `https://docs.oracle.com/cd/E18283_01/appdev.112/e16760/d_datmin.htm`
 
 ## Monitor Oracle Autonomous Data Warehouse Cloud and SQL statements
-At this point, you have ran some queries in ADWC. We can use ADWC built-in console and dashboard to monitor the performance of ADWC and SQL statements. 
+ 
 
 ### **STEP 9**: Monitoring ADWC 
+At this point, you have ran some queries in ADWC. We can use ADWC built-in console and dashboard to monitor the performance of ADWC and SQL statements.
 
 - Go to your ADWC instance service console
 
