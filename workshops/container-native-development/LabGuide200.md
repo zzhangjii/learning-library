@@ -92,7 +92,7 @@ Compartments are used to isolate resources within your OCI tenant. User-based ac
 
 An API key is required for Terraform to authenticate to OCI in order to create compute instances for your Kubernetes master and worker nodes.
 
-- Open a terminal window and run each of the following commands, one at a time, pressing **Enter** between each one. These commands will create a new directory called `.oci`, generate a new PEM private key, generate the corresponding public key, and copy the public key to the clipboard. For more information on this process, including the alternate commands to protect your key file with a passphrase, see the [official documentation](https://docs.us-phoenix-1.oraclecloud.com/Content/API/Concepts/apisigningkey.htm#two).
+- Open a terminal window (by right clicking on the desktop and and selecting Open Terminal) and run each of the following commands, one at a time, pressing **Enter** between each one. These commands will create a new directory called `.oci`, generate a new PEM private key, generate the corresponding public key, and copy the public key to the clipboard. For more information on this process, including the alternate commands to protect your key file with a passphrase, see the [official documentation](https://docs.us-phoenix-1.oraclecloud.com/Content/API/Concepts/apisigningkey.htm#two).
 
 
   ```bash
@@ -118,7 +118,7 @@ An API key is required for Terraform to authenticate to OCI in order to create c
 
 ## Provision Kubernetes Using Terraform
 
-### **STEP 4**: Download and Configure the OCI Terraform Kubernetes Installer
+### **STEP 4**: Configure the OCI Terraform Kubernetes Installer
 
 - The Oracle OCI Terraform Provider has already been installed for you, so the next step is to change to the Terraform Kubernetes Installer directory from the same **terminal window**:
 
@@ -174,13 +174,13 @@ An API key is required for Terraform to authenticate to OCI in order to create c
 
 - The last piece of information we need to provide about your OCI tenant is the private key corresponding to the public API key you uploaded to the OCI console previously. Provide the path and the private key file on **line 5** using the path below:
 
-  _Note:_ If using the VNC Provided environment, use this private_key_path
+  _Note:_ If using the **VNC** Provided environment, use this private_key_path
 
   ```
   private_key_path = "/u01/app/demo/homes/oracle/.oci/oci_api_key.pem"
   ```
 
-  _Note:_ If using the Virtual Box Image, use this private_key_path
+  _Note:_ If using the **Virtual Box Image**, use this private_key_path
 
   ```
   private_key_path = "/home/oracle/.oci/oci_api_key.pem"
@@ -407,7 +407,7 @@ deploy-to-cluster:
   terraform output api_server_admin_token | xclip -sel clip
   ```
 
-- Back in your Wercker browser tab, click the **Environment** tab. In the key field of the empty row below the last environment variable, enter the key **KUBERNETES_TOKEN**. In the value field, **paste** the token we just copied. Check the **Protected** box and click **Add**.
+- Back in your Wercker browser tab, click the **Environment** tab. In the key field of the empty row below the last environment variable, enter the key **KUBERNETES_TOKEN**. In the value field, **paste** the token we just copied. Check the **Protected** box and click **Add**. _NOTE:_ when you paste into the environment field, ensure that you **remove any Line Feed character** that might be included.
 
   ![](images/200/37.png)
 
@@ -517,9 +517,7 @@ deploy-to-cluster:
 
   ![](images/200/54.png)
 
-  **NOTE**: You may have noticed that we did not need to alter the pre-built product catalog container with the URLs of the twitter feed pods or service. The product catalog app makes use of Kubernetes DNS to resolve the service name (twitter-feed) into its IP address. Kubernetes DNS assigns a DNS name to every service defined in your cluster, so any service can be looked up by doing a DNS query for the name of the service (prefixed by _`namespace.`_ if the service is in a different namespace from the requester). The product catalog server uses the following JavaScript code to make an HTTP request to the twitter feed microservice:
-
-  `request('http://twitter-feed:30000/statictweets/color', function (error, response, body) { ... });`
+  **NOTE**: You may have noticed that we did not need to alter the pre-built product catalog container with the URLs of the twitter feed pods or service. The product catalog app makes use of Kubernetes DNS to resolve the service name (twitter-feed) into its IP address. Kubernetes DNS assigns a DNS name to every service defined in your cluster, so any service can be looked up by doing a DNS query for the name of the service (prefixed by _`namespace.`_ if the service is in a different namespace from the requester). The product catalog server uses the following JavaScript code to make an HTTP request to the twitter feed microservice:`request('http://twitter-feed:30000/statictweets/color', function (error, response, body) { ... });`
 
 - Some tweets are indeed displayed, but they aren't relevant to this product. It looks like there is a bug in our twitter feed microservice! Continue on to the next lab to explore how to make bug fixes and updates to our microservice.
 
