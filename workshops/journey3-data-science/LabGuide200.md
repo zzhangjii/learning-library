@@ -1,9 +1,11 @@
 ![](images/200/200.JPG)  
 Updated: August 13, 2017 for BDCSCE Version 17.3.1-20
 
+# Lab: Setup R and Big Data Cloud
+
 ## Introduction
 
-This lab will walk you through configuring the R environment for **Oracle Big Data Cloud Service - Compute Edition (BDCS-CE)**.  
+This lab will walk you through configuring the R environment for **Oracle Big Data Cloud (BDC)**.  
 
 In particular, this lab will focus on installing **R**, **SparkR**, **RStudio Server**, and a variety of R packages and dependencies.
 
@@ -12,18 +14,20 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 
 ## Objectives
 
-- Configure R, SparkR, and RStudio Server to run on BDCS-CE
+- Configure R, SparkR, and RStudio Server to run on BDC
 
 ## Required Artifacts
 
-- A running BDCS-CE instance and Storage Cloud Object Store instance, created as per the instructions in the New Data Lake Journey Lab 100.  These instructions included the use of a special "bootstrap.sh" script which setup the BDCS-CE environment for this workshop.
-- **You completed the tutorials in the New Data Lake Journey Lab 200 Getting to know BDCS-CE**
+- A running BDC instance and Storage Cloud Object Store instance, created as per the instructions in the New Data Lake Journey Lab 100.  These instructions included the use of a special "bootstrap.sh" script which setup the BDC environment for this workshop.
+- **You completed the tutorials in the New Data Lake Journey Lab 200 Getting to know BDC**
 
 
 
-## Connect to the BDCS-CE Console
+# Connect to the BDC Console
 
 **Make sure you completed the tutorials in the New Data Lake Journey Lab 200 Getting to know BDCS-CE before starting this lab.  They create certain objects (like hive tables and object store files) needed by this lab.**
+
+## Steps
 
 ### **STEP 1**: Navigate/login to the Oracle Cloud My Services Dashboard  
 
