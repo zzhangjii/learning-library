@@ -74,9 +74,9 @@ During this lab, you will take on the **Lead Developer Persona** and extend your
 
   ![](images/500/12.png)
 
-- Open both the **original and resized images** using one of the following commands to verify that the function did it's job -- which is to resize the image to 128px x 128px. _NOTE:_ You can also use your OS's file explorer to open the images if the command below does not work.
+- Open both the **original and resized images** using one of the following commands to verify that the function did it's job -- which is to resize the image to 128px x 128px. **NOTE**: You can also use your OS's file explorer to open the images if the commands below don't work.
 
-  `eog sample-image.jpg & eog thumbnail.jpg &`
+  `google-chrome sample-image.jpg & google-chrome thumbnail.jpg &`
 
   ![](images/500/13.png)
 
@@ -84,11 +84,35 @@ During this lab, you will take on the **Lead Developer Persona** and extend your
 
 ## Deploy Your Function to Fn on Kubernetes
 
-### **STEP 5**: Deploy Fn Server to Kubernetes Using Helm
+### **STEP 5**: Install Helm on Your Local Machine
 
-- Since you are using the Oracle-provided client image, the **fn-helm installer** has been downloaded for you. Change directories to the installer with the following command:
+- Helm is a package manager for Kubernetes that streamlines installing and managing applications on your Kubernetes cluster. We'll use Helm in this lab to install Fn on our cluster. **Download** the latest release for your operating system from the [Helm releases page](https://github.com/kubernetes/helm/releases/latest) in the **Installation and Upgrading** section.
 
-  `cd ~/fn-helm`
+  ![](images/500/1.linux.png)
+
+  **NOTE**: For additional background information, you can also visit the [Fn Helm GitHub page](https://github.com/fnproject/fn-helm#prerequisites) for more details.
+
+- Open a **terminal window** and run the following commands to extract and initialize **Helm**.
+
+  ```bash
+  cd ~/terraform-kubernetes-installer
+  export KUBECONFIG=`pwd`/generated/kubeconfig
+  cd ~/Downloads
+  mkdir helm
+  tar -xf helm-*tar.gz -C helm
+  cd helm/*
+  ./helm init --upgrade
+  ```
+
+  ![](images/500/2.linux.png)
+
+### **STEP 6**: Deploy Fn Server to Kubernetes Using Helm
+
+- Clone the **fn-helm git repository** using the following command.
+
+  `git clone https://github.com/fnproject/fn-helm.git && cd fn-helm`
+
+  ![](images/500/3.png)
 
 - Specify the version of Fn we want to install by modifying the `values.yaml` file using this command:
 
@@ -112,6 +136,7 @@ During this lab, you will take on the **Lead Developer Persona** and extend your
   kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'      
   helm init --service-account tiller --upgrade
   ```
+
 - Install the **Fn chart** by running the following command. **NOTE** _DO NOT_ change the name of the release, `my-release`. This name becomes part of the Kubernetes service name, which is used for DNS routing. If the name is changed, the product catalog application will not be able to communicate with the deployed function.
 
   `helm install --name my-release fn`
@@ -144,7 +169,7 @@ During this lab, you will take on the **Lead Developer Persona** and extend your
 
     ![](images/500/17.png)
 
-### **STEP 6**: Deploy Your Function to Fn Server on Kubernetes
+### **STEP 7**: Deploy Your Function to Fn Server on Kubernetes
 
 - In the same **terminal window** from the previous step, change directories to cloned function directory from **STEP 2**.
 
@@ -180,13 +205,13 @@ During this lab, you will take on the **Lead Developer Persona** and extend your
 
 - Open **thumbnail-remote.jpg** (using the same method you used in the local test) to verify the function was successful:
 
-    `eog thumbnail-remote.jpg`
+    `google-chrome thumbnail-remote.jpg`
 
   ![](images/500/21.png)
 
 - Our function is deployed and available on our remote Fn Server, which is running in our Kubernetes cluster. The last thing to verify is that the product catalog application is able to find and use our function. Let's test out the upload image feature.
 
-### **STEP 7**: Test Your Function in the Product Catalog
+### **STEP 8**: Test Your Function in the Product Catalog
 
 - Open the **product catalog** website in a browser. If you don't have the URL, you can look in the Kubernetes dashboard for the **external endpoint** of the product-catalog-service, or you can run the following command from your terminal window:
 
