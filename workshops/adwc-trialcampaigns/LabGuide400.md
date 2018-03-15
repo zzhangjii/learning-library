@@ -3,107 +3,118 @@ Update: March 31, 2017
 
 ## Introduction
 
-This is the fourth of several labs that are part of the **Oracle Cloud Native Microservices workshop**. This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
+This is the fourth of several labs that are part of the **Oracle Autonomous Data Warehouse Cloud Service Workshop**. This workshop will walk you through the connection of ADWCS to Data Visualization Desktop. This lab will elaborate on how you can connect your already created ADWCS instance (which has data already loaded into data warehouse) to DVD and perform beautiful visualizations in DVD.
 
-In this lab, Lisa Jones (The Project Manager) will complete the Sprint and view the Agile reports provided by the Oracle Developer Cloud Service
+At this point, you should have performed the following:
+
+1. Existing ADWCS instance: You should create and launch the ADWCS instance. Note down the details such as host, service name and port number of your instance. These details will be required when connecting to DVD, more on this later.
+
+2. You have desired data loaded into your data warehouse, which will be used as the data source for connecting to DVD
 
 
 ***To log issues***, click here to go to the [github oracle](https://github.com/oracle/cloud-native-devops-workshop/issues/new) repository issue submission form.
 
 ## Objectives
-- Access Developer Cloud Service
-- Complete Sprint
-- Run Backlog and Sprint Reports
-- Review Administrative Tasks
+- Creating ADWC Instance and Loading Data
+- Set Up Local Environment
+- Create New Data Visualization Desktop Connection
+- Prepare Data Set and Create Visualization
 
 
 ## Required Artifacts
 - The following lab requires an Oracle Public Cloud account that will be supplied by your instructor.
 
 
-# Close the Sprint
+# STEP 1: Do you have the instance and data? 
 
-## Connect to the Develop Cloud Service
-
-### **STEP 1**: Select the Agile Dashboard
-
-- This Lab assumes that you completed Lab 100, 200, and 300 and are still connected to the Oracle Cloud, that you're still in the Developer cloud Service Dashboard, and you're viewing the "Twitter Feed Marketing Project". If for some reason that is not the case, follow the first several Steps of Lab 100 to once again view the Developer Cloud Service Console.
-
-- Although you will remain connected to the Oracle Cloud using the user account you were provided, you are to take on the Persona of ***Lisa Jones*** as you perform the following steps.
-
-    ![](images/lisa.png)  
-
-- Click on **Agile** on the Microservice Board.
-
-    ![](images/400/image002.png)
-
-- Click on the **Reports** Button and explore the **Burndown Chart**.
-
-    ![](images/400/image003.png)
-
-- Click on the **Sprint Report**.
+## Creating ADWC Instance and Loading Data
 
 
-### **STEP 2**: Complete the Sprint
+At this stage you should have the ADWCS instance, up and running in the Oracle Pubic Cloud and data already loaded into your database in the data warehouse.
 
-- Click on to the **Active Sprints** button, then click **Complete Sprint**.
-
-![](images/400/image005.png)
-
-- **Confirm** and **Complete** the Sprint
-
-![](images/400/image006.png)
-
-##Run Sprint Reports
-
-### **STEP 3**: Run Sprint Reports
-
-- Return to the **Reports** Page
-
-    ![](images/400/image007.png)
+If you do not have the ADWCS instance and have not loaded the data yet, please refer and complete all the previous labs and then start here.
 
 
-- Review the Burndown Report by Story Points. Note: normally it would take several days to complete this project, and the report would provide information about the Burndown Rate per Day.
+# STEP 2: Set Up Local Environment
 
-    ![](images/400/image015.png)
+Once you have the ADWCS instance up and running, you will have access to cwallet.sso file into C:\<YourPCUser>\AppData\Local\Temp\DVDesktop\bitmp\DWCS 
+
+![](images/400/Picture400-00.PNG)
+
+## Create New Data Visualization Desktop Connection 
 
 
-- Click on the **Sprint Report** tab. In this lab, the results will be skewed because the Sprint was completed in a single day. However, the dotted line shows the starting point, and the red line shows the current remaining points. Normally this would step down towards the end of the sprint.
+### STEP 2.1
 
-    ![](images/400/image016.png)
 
-# Project Administrative Features
+Start DVD Version 4, Click on "Create" on top right of window.
 
-## Review Administrative Features
+![](images/400/Picture400-01.PNG)
 
-### **STEP 4**: Review Administrative Options
 
-- Click on **Administration** navigation to view the available administrative options. Click on the **Properties icon**.
+### STEP 2.2
 
-    ![](images/400/image008.png)
 
-- From this panel you are able to set the default properties for the Project. This is also the where the project can be deleted.
+Click on Connection Icon. In Create Connection window, search data warehouse and click on Oracle Data Warehouse.
 
-    ![](images/400/image009.png)
+![](images/400/Picture400-02.PNG)
 
-- Click on the Administration drop down to view the other Administration options. Select the **Usage Metrics**.
 
-    ![](images/400/image010.png)
+### STEP 2.3
 
-- The Usage Metrics will display the available storage allocation and usage for Git, Maven, Hudson, Tasks and the Wiki.
 
-    ![](images/400/image011.png)
+On this window, you will need information from the tnsnames.ora file in the ADWC wallet folder
 
-- From the Menu options list select **Issues Tracking** to view the options available for Issue configuration.
+![](images/400/Picture400-03.PNG)
 
-    ![](images/400/image012.png)
 
-- From the Menu options list, select **Repositories**.
+### STEP 2.4
 
-    ![](images/400/image013.png)
 
-- From the Menu options list, select **Branches** to view the repository branches by User or Branch.
+        New Connection Name: give name for instance
+        Host: host name from tnsnames.ora for your service
+        Post: port number from tnsnames.ora for your service
+        Username: database admin username while creating ADWC instance
+        Password: database admin password while creating ADWC instance
 
-    ![](images/400/image014.2.png)
 
-- You have now completed this lab
+Find the service for you and copy the host, port, and service name to DVD 
+
+![](images/400/Picture400-04.PNG)
+
+
+For username and password, it will be your database’s username and password. So, save the username and password while creating the ADWC instance.
+
+
+### STEP 2.5
+
+
+Click on OK to save connection. If it says “Invalid Wallet file”, please follow step 2 to make sure the cwallet file is in the right folder. 
+
+
+# STEP 3: Create Data Set and Create Visualization
+
+
+Once the connection is saved, create a data set using that connection. 
+
+
+![](images/400/Picture400-07.PNG)
+
+
+In this window, you can either select the columns you would like to visualize or just enter in a SQL statement.
+You can save the data set to create a new visualization project.
+
+
+![](images/400/Picture400-06.PNG)
+
+
+Now you have a visualization that is pulling data from ADWC! 
+
+Wohoo!!
+
+
+
+
+
+
+### You have now completed this lab

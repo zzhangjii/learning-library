@@ -58,7 +58,7 @@ The Lab guides are best viewed using the Workshop's [GitHub Pages Website URL](h
 - Learn how to create users in ADWC
 
 
-## Lab 200: 
+## Lab 200: Loading Data to ADWC
 
 **Documentation**: [LabGuide200.md](LabGuide200.md)
 
@@ -70,7 +70,7 @@ The Lab guides are best viewed using the Workshop's [GitHub Pages Website URL](h
     - Copy object storage file data to internal tables in Autonomous Data Warehouse Cloud using SQL Developer
     - Create external tables that reference files in object storage
 
-## Lab 300: 
+## Lab 300: Use Oracle Machine Learning and Monitor ADWC
 
 **Documentation**: [LabGuide300.md](LabGuide300.md)
 
@@ -83,9 +83,14 @@ The Lab guides are best viewed using the Workshop's [GitHub Pages Website URL](h
 - Monitor Oracle Autonomous Data Warehouse Cloud and SQL statements
 - Scaling ADWC Service
 
-## Lab 400:  
+## Lab 400: Creating Visulization using ADWC
 
-**Documentation**: 
+**Documentation**: [LabGuide400.md](LabGuide400.md)
 
 ### Objectives
+- Creating ADWC Instance and Loading Data
+- Set Up Local Environment
+- Create New Data Visualization Desktop Connection
+- Prepare Data Set and Create Visualization
+
 
