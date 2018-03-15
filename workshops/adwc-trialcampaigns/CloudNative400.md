@@ -39,7 +39,7 @@ If you do not have the ADWCS instance and have not loaded the data yet, please r
 
 Once you have the ADWCS instance up and running, you will have access to cwallet.sso file into C:\<YourPCUser>\AppData\Local\Temp\DVDesktop\bitmp\DWCS 
 
-![](images/400/Picture400-00.png)
+![](images/400/Picture400-00.PNG)
 
 ## Create New Data Visualization Desktop Connection 
 
