@@ -21,15 +21,13 @@
                 "filename": "LabGuide300.md",
                 "title": "Lab 300: Creating Visulization using ADWC (Optional)",
                 "description": "Use Data Visualization Desktop to connect to ADWC and create visualization"
-            }
+            },
             {
                 "number": "400",
                 "filename": "LabGuide400.md",
                 "title": "Lab 400:  Use Oracle Machine Learning and Monitor ADWC (Optional)",
                 "description": "Use Oracle Machine Learning SQL notebook to query data from ADWC and use ADWC console to monitor ADWC and SQL statements, and then scale ADWC service"
-            },
-
-
+            }
         ]
     }
 }
