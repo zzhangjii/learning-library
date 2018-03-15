@@ -3,9 +3,9 @@
 Updated: August 15, 2017 for BDCSCE Version 17.3.3-20
 
 
+# Lab: R and RStudio Server
 
-
-# Introduction
+## Introduction
 
 This lab provides the same examples from Data Science Acceleration Lab 300: R and Zeppelin but focusing on how to use R with RStudio.
 
@@ -31,7 +31,9 @@ If you completed Data Science Acceleration Lab 300: R and Zeppelin the following
 
 
 
-## Connect to the BDCS-CE Console and Open RStudio Port 8787
+# Connect to the BDCS-CE Console and Open RStudio Port 8787
+
+## Steps
 
 ### **STEP 1**: Navigate/login to the Oracle Cloud My Services Dashboard  
 
@@ -95,7 +97,8 @@ Click on the Open an Existing File icon ![](images/400/open.jpg) to open the Lab
 
 ![](images/400/open_lab400_script.gif)
 
-### **STEP 4**: Read and follow the instructions in the script by clicking on the run icon ![](images/400/run.JPG).
+### **STEP 4**: Read and follow the instructions in the script by clicking on the run icon 
+![](images/400/run.JPG)
 
 
 ![](images/400/lab400_Script.JPG)
