@@ -49,7 +49,7 @@ Once you have the ADWCS instance up and running, you will have access to cwallet
 
 Start DVD Version 4, Click on "Create" on top right of window.
 
-![](images/400/Picture400-01.png)
+![](images/400/Picture400-01.PNG)
 
 
 ### STEP 2.2
@@ -57,7 +57,7 @@ Start DVD Version 4, Click on "Create" on top right of window.
 
 Click on Connection Icon. In Create Connection window, search data warehouse and click on Oracle Data Warehouse.
 
-![](images/400/Picture400-02.png)
+![](images/400/Picture400-02.PNG)
 
 
 ### STEP 2.3
@@ -65,7 +65,7 @@ Click on Connection Icon. In Create Connection window, search data warehouse and
 
 On this window, you will need information from the tnsnames.ora file in the ADWC wallet folder
 
-![](images/400/Picture400-03.png)
+![](images/400/Picture400-03.PNG)
 
 
 ### STEP 2.4
@@ -80,7 +80,7 @@ On this window, you will need information from the tnsnames.ora file in the ADWC
 
 Find the service for you and copy the host, port, and service name to DVD 
 
-![](images/400/Picture400-04.png)
+![](images/400/Picture400-04.PNG)
 
 
 For username and password, it will be your database’s username and password. So, save the username and password while creating the ADWC instance.
@@ -98,14 +98,14 @@ Click on OK to save connection. If it says “Invalid Wallet file”, please fol
 Once the connection is saved, create a data set using that connection. 
 
 
-![](images/400/Picture400-07.png)
+![](images/400/Picture400-07.PNG)
 
 
 In this window, you can either select the columns you would like to visualize or just enter in a SQL statement.
 You can save the data set to create a new visualization project.
 
 
-![](images/400/Picture400-06.png)
+![](images/400/Picture400-06.PNG)
 
 
 Now you have a visualization that is pulling data from ADWC! 
