@@ -251,7 +251,13 @@ An API key is required for Terraform to authenticate to OCI in order to create c
 
   `terraform output kubeconfig | tr '\n' '\0' | xargs -0 -n1 sh -c`
 
-- Now that the proxy server is running, navigate to the **[Kubernetes dashboard](http://localhost:8001/api/v1/namespaces/kube-system/services/http:kubernetes-dashboard:/proxy/)** in a new browser tab.
+- Even though the Terraform provisioning has completed there is still configuration and set up being completed within the account. Make sure both Load Balancers are up and running before proceeding. In your account select **Networking-->Load Balancers** and wait for the green health checkmarks to show them up and running. 
+
+  ![](images/200/63.3.png)
+
+  ![](images/200/63.6.png)
+
+- With the proxy server running and the Load Balancers showing a running status, navigate to the **[Kubernetes dashboard](http://localhost:8001/api/v1/namespaces/kube-system/services/http:kubernetes-dashboard:/proxy/)** in a new browser tab.
 
   ![](images/200/64.png)
 
@@ -402,7 +408,7 @@ deploy-to-cluster:
 
 ### **STEP 9**: Set up environment variables in Wercker
 
-- Our first step is to set our cluster's authentication token as a Wercker environment variable. In your **terminal window**, change to the correct directory, and run the following command to copy the token to your clipboard:
+- Our first step is to set our cluster's authentication token as a Wercker environment variable. In your **terminal window**, change to the correct directory, and run the following command to copy the token to your clipboard. Note - If your kubernetes proxy server is still running, you can enter Control-C to close the proxy:
 
   ```bash
   cd ~/terraform-kubernetes-installer/
