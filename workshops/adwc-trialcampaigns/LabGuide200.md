@@ -1,7 +1,3 @@
-Update: March 12, 2018
-
-
-
 # Introduction
 
 This is the second of several labs that are part of the **Oracle Autonomous Data Warehouse Cloud Workshop**. This workshop will walk you through several use cases of using an autonomous data warehouse.

@@ -15,19 +15,20 @@
                 "filename": "LabGuide200.md",
                 "title": "Lab 200:  Loading Data to ADWC",
                 "description": "Use ADWC to create external table on files in Oracle Cloud Infrastructure (OCI) Object Storage, load data from OCI Object Storage and query"
-            },
+            },            
             {
                 "number": "300",
                 "filename": "LabGuide300.md",
-                "title": "Lab 300:  Use Oracle Machine Learning and Monitor ADWC",
-                "description": "Use Oracle Machine Learning SQL notebook to query data from ADWC and use ADWC console to monitor ADWC and SQL statements, and then scale ADWC service"
-            },
+                "title": "Lab 300: Creating Visulization using ADWC (Optional)",
+                "description": "Use Data Visualization Desktop to connect to ADWC and create visualization"
+            }
             {
                 "number": "400",
                 "filename": "LabGuide400.md",
-                "title": "Lab 400: Creating Visulization using ADWC",
-                "description": "Use Data Visualization Desktop to connect to ADWC and create visualization"
-            }
+                "title": "Lab 400:  Use Oracle Machine Learning and Monitor ADWC (Optional)",
+                "description": "Use Oracle Machine Learning SQL notebook to query data from ADWC and use ADWC console to monitor ADWC and SQL statements, and then scale ADWC service"
+            },
+
 
         ]
     }

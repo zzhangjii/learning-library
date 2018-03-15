@@ -8,8 +8,8 @@ The Lab guides are best viewed using the Workshop's [GitHub Pages Website URL](h
 
 - Learn how to provision an ADWC and connect to it
 - Learn how to load data into ADWC
-- Learn how to use Oracle Machine Learning SQL Notebook and ADWC console
-- Learn how to create business intelligence from ADWC using Data Visualization Desktop
+- Learn how to create business intelligence from ADWC using Data Visualization Desktop (Optional)
+- Learn how to use Oracle Machine Learning SQL Notebook and ADWC console (Optional)
 
 ## IMPORTANT: How to prepare for this Workshop
 
@@ -22,9 +22,14 @@ The Lab guides are best viewed using the Workshop's [GitHub Pages Website URL](h
 **Second**, ***Download SQL Developer***
 - Your client environment **must have SQL Developer** to attempting the Hands-on-Workshop labs. 
 - SQL Developer can be obtained at [SQL Developer](http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/) 
+
+**Third**, ***Download Data Visualization Desktop (Optional, only required for Lab 300)***
+- Your client environment **must have Data Visualization Desktop** to attempting the Hands-on-Workshop labs. 
+- Data Visualization Desktop can be obtained at [Data Visualization Desktop](http://www.oracle.com/technetwork/middleware/oracle-data-visualization/downloads/oracle-data-visualization-desktop-2938957.html) 
+- For more about Data Visualization Desktop, please click [here](https://docs.oracle.com/middleware/bidv1221/desktop/index.html)
  
 
-**Third**, ***How to View the Lab Guides***
+**Fourth**, ***How to View the Lab Guides***
 
 - The Lab guides are best viewed using the Workshop's [GitHub Pages Website URL](https://oracle.github.io/learning-library/workshops/adwc-trialcampaigns/) 
 
@@ -68,11 +73,22 @@ The Lab guides are best viewed using the Workshop's [GitHub Pages Website URL](h
     - Upload Files
 - Learn how to use SQL Developer with ADWC and Object Storage
     - Copy object storage file data to internal tables in Autonomous Data Warehouse Cloud using SQL Developer
-    - Create external tables that reference files in object storage
-
-## Lab 300: Use Oracle Machine Learning and Monitor ADWC
+    - Create external tables that reference files in object 
+    
+## Lab 300: Creating Visulization using ADWC (Optional)
 
 **Documentation**: [LabGuide300.md](LabGuide300.md)
+
+### Objectives
+- Creating ADWC Instance and Loading Data
+- Set Up Local Environment
+- Create New Data Visualization Desktop Connection
+- Prepare Data Set and Create Visualization
+
+
+## Lab 400: Use Oracle Machine Learning and Monitor ADWC (Optional)
+
+**Documentation**: [LabGuide400.md](LabGuide400.md)
 
 ### Objectives
 - Access Oracle Machine Learning Interface
@@ -82,15 +98,3 @@ The Lab guides are best viewed using the Workshop's [GitHub Pages Website URL](h
     - Create machine learning notebook using OML Gallery template
 - Monitor Oracle Autonomous Data Warehouse Cloud and SQL statements
 - Scaling ADWC Service
-
-## Lab 400: Creating Visulization using ADWC
-
-**Documentation**: [LabGuide400.md](LabGuide400.md)
-
-### Objectives
-- Creating ADWC Instance and Loading Data
-- Set Up Local Environment
-- Create New Data Visualization Desktop Connection
-- Prepare Data Set and Create Visualization
-
-
