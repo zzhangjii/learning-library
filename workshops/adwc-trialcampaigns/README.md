@@ -50,7 +50,7 @@ The Lab guides are best viewed using the Workshop's [GitHub Pages Website URL](h
 
 **Reference the following Lab Guides by opening their Documentation Files:**
 
-## Lab 100: Provision a new ADWC database, Connect to the database using Oracle SQL Developer, and create DW users
+## Lab 100: Provision and Connect to ADWC
 
 **Documenation**: [LabGuide100.md](LabGuide100.md)
 
@@ -60,7 +60,7 @@ The Lab guides are best viewed using the Workshop's [GitHub Pages Website URL](h
 
 - Learn how to connect Oracle SQL Developer to ADWC
 
-- Learn how to create users in ADWC
+- Learn how to create DW users in ADWC
 
 
 ## Lab 200: Loading Data to ADWC
@@ -75,7 +75,7 @@ The Lab guides are best viewed using the Workshop's [GitHub Pages Website URL](h
     - Copy object storage file data to internal tables in Autonomous Data Warehouse Cloud using SQL Developer
     - Create external tables that reference files in object 
     
-## Lab 300: Creating Visulization using ADWC (Optional)
+## Lab 300: Creating Visulization using ADWC
 
 **Documentation**: [LabGuide300.md](LabGuide300.md)
 

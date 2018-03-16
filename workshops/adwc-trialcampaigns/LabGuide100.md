@@ -1,15 +1,7 @@
 Introduction
 ------------
 
-This lab walks you through the steps to get started using the Oracle
-Autonomous Data Warehouse Cloud. You will provision a new ADWC database,
-connect to the database using Oracle SQL Developer, and create DW users.
-
-This lab shows you only the functional aspects of ADWC. It does not have
-exercises to test the performance of ADWC as the lab environment is not
-running on Exadata.
-
-To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issues/new) to go to the github oracle repository issue submission form.
+This lab walks you through the steps to get started using the Oracle Autonomous Data Warehouse Cloud. You will provision a new ADWC database, connect to the database using Oracle SQL Developer, and create DW users.
 
 Objectives
 ----------
@@ -130,7 +122,7 @@ Connecting to the database using SQL Developer
 
 Start SQL Developer and create a connection for your database using the default administrator account, ADMIN, by following these steps.
 
-### **STEP 5: Connect to the database using SQL Developer**
+### **STEP 5: Connect to the database using SQL Developer and create DW user**
 
 -   Click the **Create Connection** icon in the Connections toolbox on the top left of the SQL Developer homepage.
 
@@ -157,4 +149,11 @@ Start SQL Developer and create a connection for your database using the default 
 
 -   Test your connection by clicking the **Test** button, if it succeeds save your connection information by clicking **Save**, then connect to your database by clicking the **Connect** button. 
 
--   You are now ready to move to the next lab.
+-   Using your existing connection in SQL Developer, create a new user named SH using the following commands. For the next lab, you will use SH user to connect and work.
+```
+create user sh identified by "Welcome1!";
+grant dwrole to sh;
+```
+- Note that the database role DWROLE includes the privileges required by a typical DW developer. You can grant additional database privileges if needed.
+
+-   You are now ready to move to the next lab [LabGuide200.md](LabGuide200.md).

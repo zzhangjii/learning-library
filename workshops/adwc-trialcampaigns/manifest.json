@@ -7,7 +7,7 @@
             {
                 "number": "100",
                 "filename": "LabGuide100.md",
-                "title": "Lab 100:  Provision a new ADWC database, Connect to the database using Oracle SQL Developer, and create DW users",
+                "title": "Lab 100:  Provision and Connect to ADWC",
                 "description": "Use ADWC to provision a new instance, connect to the instance using Oracle SQL Developer, and create data warehouse user"
             },
             {
@@ -19,7 +19,7 @@
             {
                 "number": "300",
                 "filename": "LabGuide300.md",
-                "title": "Lab 300: Creating Visulization using ADWC (Optional)",
+                "title": "Lab 300: Creating Visulization using ADWC",
                 "description": "Use Data Visualization Desktop to connect to ADWC and create visualization"
             },
             {
