@@ -1,5 +1,3 @@
-Update: May 8, 2018
-
 # Introduction
 
 This is the fourth of several labs that are part of the **Oracle Autonomous Data Warehouse Cloud Workshop**. This workshop will walk you through several use cases of using an autonomous data warehouse's conle and Oracle Machine Learning Notebook.
