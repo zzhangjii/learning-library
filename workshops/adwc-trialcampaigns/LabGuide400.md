@@ -2,9 +2,6 @@
 
 This is the fourth of several labs that are part of the **Oracle Autonomous Data Warehouse Cloud Workshop**. This workshop will walk you through several use cases of using an autonomous data warehouse's conle and Oracle Machine Learning Notebook.
 
-
-**Please direct comments to: Tom Huang (tom.huang@oracle.com).**
-
 ## Objectives
 - Access Oracle Machine Learning Interface
     - Create OML user

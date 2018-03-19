@@ -1,16 +1,16 @@
-#Introduction
+# Introduction
 
 
 This lab walks you through the steps to get started using the Oracle Autonomous Data Warehouse Cloud. You will provision a new ADWC database, connect to the database using Oracle SQL Developer, and create DW users.
 
-##Objectives
+## Objectives
 
 
 -   Learn how to provision an ADWC service
 
 -   Learn how to connect to ADWC
 
-##Required Artifacts
+## Required Artifacts
 
 
 -   The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
@@ -21,7 +21,7 @@ This lab walks you through the steps to get started using the Oracle Autonomous 
     If you are a Windows user on 64-bit platform, download the 'Windows 64-bit with JDK 8 included' distribution as it includes both Java 8 and the Java Cryptography Extension (JCE) files necessary to run SQL Developer and connect to your Autonomous DW Cloud.
     If you are a non-Windows user, download and install the appropriate [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) for your Operating System. Download and extract the [Java Cryptography Encryption Archive](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) to the directory as indicated in the README.txt.
 
-##Provisioning an ADWC Service
+## Provisioning an ADWC Service
 =======================================
 
 In this section you will be provisioning an ADWC database using the cloud console.
@@ -85,7 +85,7 @@ In this section you will be provisioning an ADWC database using the cloud consol
 
 You now have created your first Autonomous Data Warehouse Cloud instance.
 
-##Connecting to ADWC
+## Connecting to ADWC
 
 - As ADWC only accepts secure connections to the database, you need to download a wallet file containing your credentials first. The wallet is downloaded from the ADWC service console.
 

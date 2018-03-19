@@ -27,7 +27,7 @@ Key features of OCI Object Storage:
 - Persistent IO-intensive block storage and high-throughput object storage options to handle multiple application types, and data at different lifecycle stages.
 - Each is manageable through the console and by CLI.
 
-### **Step 1**: Access Oracle Cloud Infrastructure
+### **STEP 1**: Access Oracle Cloud Infrastructure
 - Log into your Oracle cloud account
 
 - Click on the hamburger menu icon on the top left of the dashboard screen
@@ -37,7 +37,7 @@ Key features of OCI Object Storage:
 ![](./images/200/14.png)
 
 
-### **Step 2**: Access the Object Storage Console.
+### **STEP 2**: Access the Object Storage Console.
 - Select the **Storage** tab in the navigation bar
 
 ![](./images/200/2.png)
@@ -46,7 +46,7 @@ Key features of OCI Object Storage:
 
 ![](./images/200/3.png)
 
-### **Step 3**: Create Object Storage Bucket
+### **STEP 3**: Create Object Storage Bucket
 
 - Select **Create Bucket**
 
@@ -62,7 +62,7 @@ Select **Create Bucket**.
 
 ![](./images/200/5.png)
 
-### **Step 4**:  Upload files to your storage bucket.
+### **STEP 4**:  Upload files to your storage bucket.
 
 - Here we will download two files. One CSV and one JSON file. In later steps, we will use SQL Developer to query the data inside these files.
 
@@ -107,7 +107,7 @@ Select **Create Bucket**.
   - Select **Upload Object** and the popup will disappear.
 
 
-### **Step 5**: Retrieve swift password.
+### **STEP 5**: Retrieve swift password.
 
  - Click the drop down with username logged in, and select **User Settings**.
 
@@ -133,7 +133,7 @@ Next, we are going to use our Autonomous Data Warehouse Cloud instance connected
 
 # Querying Data Files in Object Storage
 
-### **Step 6**:  Connect Autonomous Data Warehouse Cloud instance to data in Object Storage
+### **STEP 6**:  Connect Autonomous Data Warehouse Cloud instance to data in Object Storage
 
 - Go to the SQL Developer console that you connected in a previous lab. Here's a reference to that lab section: https://github.com/unofficialoraclecloudhub/autonomous-campaign/blob/master/workshops/adwc-trialcampaigns/LabGuide100.md#connecting-to-the-database-using-sql-developer
 
@@ -159,7 +159,7 @@ end;
 This commands utilizes DBMS Cloud API to store your swift password as a credential when your Autonomous Data Warehouse Cloud / SQL Developer tries to connect to Object Storage.
 
 
-### **Step 7**:  Create an internal table for CSV file
+### **STEP 7**:  Create an internal table for CSV file
 
 Now that we have set up an Object Storage bucket and connected SQL Developer to our Autonomous Data Warehouse Cloud, we can start interacting with the data files that we uploaded. It is possible to copy file data to internal tables or connect to the file through an external table. In this lab we will do both.
 
@@ -198,7 +198,7 @@ end;
 Now you can query this table and retrieve data that previously only existed in Object Storage.
 
 
-### **Step 8**:  Create an external table for CSV file
+### **STEP 8**:  Create an external table for CSV file
 
 If for whatever reason you'd like to keep your data in Object Storage, you can create external tables. Instead of storing the data, it will store the connection to Object Storage so that it can quickly retrieve the data.
 
@@ -229,7 +229,7 @@ end;
 Now you can query this external table the same way you would query an internal table.
 
 
-### **Bonus Step**: Query JSON data
+### **BONUS STEP**: Query JSON data
 
 One of the benefits of the Oracle Database 18c that powers Autonomous Data Warehouse Cloud is the ability to natively query JSON data. With Object Storage and the DBMS_CLOUD API in SQL Developer, you can query external JSON files.
 
