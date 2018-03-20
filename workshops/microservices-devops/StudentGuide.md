@@ -1,27 +1,32 @@
-
 # Trial Account Student Guide
 
 ![](images/studentguide/Picture-Title.png)
 Update: December 7, 2017
 
-## Overview of Tasks
+## Workshop Introduction
 
-You will need to **complete the following 3 Tasks** prior to attempting the Labs contained in this workshop
+This Oracle Public Cloud DevOps and Cloud Native Microservices workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project, during which you will create and use several Microservices. During this workshop you will take on the role of 4 personae. As the first persona - the Project Manager - you will create the projects, add tasks and features to be worked on, and assign tasks to developers.  The Project Manager will then start the initial sprint. The Java Developer persona will develop a new twitter feed microservice that will allow for retrieval and filtering of twitter data. The Full Stack Developer persona will develop a new database microservice that allows access to the product catalog data. The JavaScript Developer persona will make enhancements to the Product Catalog UI that will display the twitter data related to a select catalog item.  During the workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service.
 
-- **Acquire an Oracle Cloud Trial Account**
-- **Configure Oracle Cloud Identity Information**
-- **Install the required open source tools locally on your computer (e.g. Eclipse, Maven, Git, and Brackets)**
+- You can see a list of Lab Guides by clicking on the **Menu Icon**
 
-# Acquire an Oracle Cloud Trial Account
+    ![](images/WorkshopMenu.png)
+
+- To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository.
+
+- Visit the [Workshop Interactive Labguide](https://launch.oracle.com/?microservices-devops) for a visual overview of the workshop content.
+
+- All setup steps and lab replays have been posted on [youtube](https://www.youtube.com/playlist?list=PLPIzp-E1msrZhDmRUnNBSYY6LJ2yWh3Ro). You can **watch the videos** to gain an overview of the workshop and what's required to successfully complete the labs.
+
+# Workshop Prerequisites
+
+## _Acquire an Oracle Cloud Trial Account_
 
 ### **Step 1**: Getting your Trial Account
 
 - Click on this URL [cloud.oracle.com/tryit](http://cloud.oracle.com/tryit&intcmp=DeveloperInnovation-HOL-11NOV17), and complete all the required steps to get your free Oracle Cloud Trial Account.
 - You must wait to receive our account before continuing to the "**Configure Oracle Cloud Identity Information**" Section.
 
-# Configure Oracle Cloud Identity Information
-
-## Login to your Oracle Cloud Account
+## _Configure Oracle Cloud Identity Information_
 
 ### **Step 2**: Record information from the welcome email and login
 
@@ -53,6 +58,9 @@ Data Center:
 - **Traditional Account Password**: You will login to your Traditional Cloud Account to set this password in an upcoming step.
 - **Identity Tenant ID**: We will locate this information later, but make a holding place in your notes for this field. This field will be used when creating a connection between the Developer Cloud Service (DevCS) and the Application Cloud Service (ACCS), allowing automatic deployment of Applications.
 - **Data Center**: We'll locate this information in an upcoming step, and this fields will also be used when creating the connection between DevCS and ACCS.
+
+### **Step 3**: Log into your Cloud Account
+
 - Click on the link ***(5)*** **Cloud Account My Services URL** provided in the email.
 - Follow the instructions to **set your password**, and then record in your notes the new password for this **Cloud Account Password** field.
 
@@ -90,7 +98,7 @@ Data Center:
 
     ![](images/studentguide/Picture200.11.png)
 
-### **Step 3**: Check/Set Storage Replication Policy
+### **Step 4**: Check/Set Storage Replication Policy
 
 Some services that we will use in this workshop require that your account's Replication Policy is set. The following steps will show you how to set your replication policy.
 
@@ -106,7 +114,7 @@ Some services that we will use in this workshop require that your account's Repl
 
     ![](images/studentguide/Picture204.png)
 
-### **Step 4**: Set the Traditional Account Password
+### **Step 5**: Log into the Traditional Account and set the Password
 
 We will now set the Password for the **Traditional Account** User. This Account will allow you to access the **Developer Cloud Service**.
 
@@ -116,7 +124,7 @@ We will now set the Password for the **Traditional Account** User. This Account 
 
 - Follow the instructions to **set your password**, and then record in your notes the new password for  **Traditional Account Password**.
 
-### **Step 5**: Test Logging into your Multiple Accounts
+### **Step 6**: Test Logging into your Multiple Accounts
 
 It is important to fully understand how to login to both the **Standard Identity Cloud Service** managed account, and then login to the **Traditional** account at the same time. After this step, we'll assume you know how to switch between accounts and services during the upcoming labs. ***Note: Oracle will soon have all services merged under the Standard Identity Cloud Service Account.*** However, until that time, you need to be aware of your dashboard Account settings, and at times you will need to switch between the Regular Cloud Account and Traditional Cloud Account to view the right services in the Dashboard and Dashboard Menus.
 
@@ -168,12 +176,11 @@ It is important to fully understand how to login to both the **Standard Identity
 
     ![](images/studentguide/Picture204.9.png)
 
+## _Install Open Source Tools_
 
-# Install the Open Source Tools
+## Java JDK
 
-## Verify your version of the Java JDK
-
-### **Step 6 (Windows Option)**: JDK Verification on Windows
+### **Step 7 (Windows Option)**: JDK Verification on Windows
 
 **Note**: Eclipse requires that you have the a Java JDK 8 installed. Even if you have a JRE version 8, you still need to verify that you have a JDK 8 installed.
 
@@ -188,11 +195,11 @@ Java HotSpot(TM) Client VM (build 25.121-b13, mixed mode, sharing)
 
 - If JDK/**Java version 1.8** is not installed,  you will need to download a [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) from the Oracle Technology Network website, and install.
 
-### **Step 6 (Mac Option)**: JDK Verification on a MAC
+### **Step 7 (Mac Option)**: JDK Verification on a MAC
 
 **Note**: Eclipse requires that you have the a Java **JDK** 8 installed. Even if you have a **JRE** version 8, you still need to verify that you have a JDK 8 installed.
 
-- Open Terminal window and execute the following command: 
+- Open Terminal window and execute the following command:
 
 ```
 ls /Library/java/JavaVirtualMachines/
@@ -200,9 +207,9 @@ ls /Library/java/JavaVirtualMachines/
 
 - If you do not have a JDK 1.8 folder, you will need to download the [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) from the Oracle Technology Network website, and install.
 
-## Download and Install Eclipse
+## Eclipse
 
-### **Step 7**: Download Eclipse
+### **Step 8**: Download Eclipse
 
 ***Note***: Even if you already have Eclipse installed, you need to install and use the version documented below. This version of Eclipse contains the ***Oracle Enterprise Pack for Eclipse***, which will be used during the workshop.
 
@@ -212,17 +219,17 @@ ls /Library/java/JavaVirtualMachines/
 
     ![](images/studentguide/Picture1.png)
 
-- Once you’ve downloaded eclipse, extract the zip file and install. ***Note:*** If you encounter an error when extracting Eclipse due to a "Path name too long" error on Windows, there are solutions that can be found by performing an internet search on the error to change the Windows allowed file length. Also, we have found that using the open source [7-zip](http://www.7-zip.org/download.html) tool can help overcome the file length errors encountered by the default windows zip file extraction tools.
+- Once you've downloaded eclipse, extract the zip file and install. ***Note:*** If you encounter an error when extracting Eclipse due to a "Path name too long" error on Windows, there are solutions that can be found by performing an internet search on the error to change the Windows allowed file length. Also, we have found that using the open source [7-zip](http://www.7-zip.org/download.html) tool can help overcome the file length errors encountered by the default windows zip file extraction tools.
 
-### **Step 8**: Optionally Configure Proxies (if behind a firewall)
+### **Step 9**: Optionally Configure Proxies (if behind a firewall)
 
-If you are running Eclipse behind a firewall, you need to configure the proxy setting. First, you need to ensure that Eclipse’s proxy is set. Next, you need to update the maven proxy setting, and then finally, you need to ensure that the Oracle Plugin will work with your proxy settings.
+If you are running Eclipse behind a firewall, you need to configure the proxy setting. First, you need to ensure that Eclipse's proxy is set. Next, you need to update the maven proxy setting, and then finally, you need to ensure that the Oracle Plugin will work with your proxy settings.
 
-- To set configure Eclipse’s proxy, open Eclipse and navigate to the Properties menu. Depending on the operating system, this drop down is found either from the **Eclipse > Preferences, or Window > Preferences**
+- To set configure Eclipse's proxy, open Eclipse and navigate to the Properties menu. Depending on the operating system, this drop down is found either from the **Eclipse > Preferences, or Window > Preferences**
 
     ![](images/studentguide/Picture2.png)
 
-- From the preferences panel, enter “**proxy**” into the search window, and click on **Network Connections**. Select **Native** for the Active Provider and click on **OK**. This setting works well, but it requires that you have the proxy setting configured correctly on the system running Eclipse – e.g. Windows, MAC OS or Linux. Selecting Manual should also work, but some of the plugins require the underlying operating system’s proxy to be configured.
+- From the preferences panel, enter "**proxy**" into the search window, and click on **Network Connections**. Select **Native** for the Active Provider and click on **OK**. This setting works well, but it requires that you have the proxy setting configured correctly on the system running Eclipse – e.g. Windows, MAC OS or Linux. Selecting Manual should also work, but some of the plugins require the underlying operating system's proxy to be configured.
 
     ![](images/studentguide/Picture3.png)
 
@@ -230,7 +237,7 @@ If you are running Eclipse behind a firewall, you need to configure the proxy se
 
     ![](images/studentguide/Picture4.png)
 
-- Type “**web**” in the search field, select **Internal Web Browser** and click on **OK**
+- Type _web_ in the search field, select **Internal Web Browser** and click on **OK**
 
     ![](images/studentguide/Picture5.png)
 
@@ -238,18 +245,18 @@ If you are running Eclipse behind a firewall, you need to configure the proxy se
 
 ![](images/studentguide/Picture6.png)
 
-### **Step 9**: Optionally Update the Eclipse / Maven proxy (if behind a firewall)
+### **Step 10**: Optionally Update the Eclipse / Maven proxy (if behind a firewall)
 
 ***Note:*** You will only do this optional Eclipse/Maven Proxy setup if you are behind a firewall. Otherwise, skip this step, and go to next step where you will download and install Brackets.
 
-- From the **Eclipse > Preference or Window > Preferences** panel, type **Maven** into the search box. 
+- From the **Eclipse > Preference or Window > Preferences** panel, type **Maven** into the search box.
 - Click on the Maven **User Settings**. Make note of the directory where the settings.xml file is to be located. In the example below, the Maven User Settings will be located in the **/home/oracle/.m2** directory
 
     ![](images/studentguide/Picture7.png)
 
 - **Cancel** out of the Maven dialog, and **Close** Eclipse
 
-- If the directory does not exist where the settings.xml file is to be located, **create the directory**. In this example, we will create the **.m2** directory. 
+- If the directory does not exist where the settings.xml file is to be located, **create the directory**. In this example, we will create the **.m2** directory.
 
 - Also, create the **settings.xml** file, if it does not exist. Add the following to the settings.xml file (NOTE: you will need to use your correct **Host, Port, nonProxyHosts, username and Password settings**):
 
@@ -282,9 +289,9 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 
 - Reload Eclipse to use the new maven settings
 
-## Download and Install Git and Brackets
+## Git and Brackets
 
-### **Step 10**: Download/Install Git
+### **Step 11**: Download/Install Git
 
 - Go to the following URL: https://git-scm.com/downloads
 
@@ -306,7 +313,7 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 
     ![](images/studentguide/Picture12.png)
 
-### **Step 11**: Download/Install the Brackets Text Editor
+### **Step 12**: Download/Install the Brackets Text Editor
 
 - Go to the following URL: http://brackets.io    
 
@@ -326,7 +333,7 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
 
 - Run through the installation process. In our tests, we used the default installation settings.
 
-### **Step 12**: Start Brackets and Configure Git
+### **Step 13**: Start Brackets and Configure Git
 
 - From a location of your choice, create a directory called **ProductCatalogUI**. From Windows Explorer navigate to the directory **ProductCatalogUI**, right click and select **Open as Brackets Project**
 
@@ -351,3 +358,62 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.o
     ![](images/studentguide/Picture21.png)
 
 - You can now ready to start on [Lab 100](CloudNative100.md) Lab
+
+# Workshop Objectives
+
+## Lab 100: Agile Project Management
+
+**Documentation**: [CloudNative100.md](CloudNative100.md)
+
+### Objectives
+
+- Create Initial Project
+- Create Product Issues
+- Create Issues for Twitter Feed Microservice
+- Create Issues for Database Microservice
+- Create Issues for Product Catalog UI enhancements
+- Create Agile Board and initial Sprint
+- Add Issues to Sprint
+
+## Lab 200: Continuous Delivery of Java Microservices
+
+**Documentation**: [CloudNative200.md](CloudNative200.md)
+
+### Objectives
+
+- Access Developer Cloud Service
+- Import Code from external Git Repository
+- Import Project into Eclipse
+- Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
+
+## Lab 300: Continuous Delivery of Database Microservices
+
+**Documentation**: [CloudNativeMy300.md](CloudNative300.md)
+
+### Objectives
+
+- Access Developer Cloud Service
+- Import Code from external Git Repository
+- Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
+
+## Lab 400: Cloud Native Rapid JavaScript Development with node.js
+
+**Documentation**: [CloudNative400.md](CloudNative400.md)
+
+### Objectives
+
+- Access Developer Cloud Service
+- Import Code from external Git Repository
+- Import Project into Brackets
+- Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
+
+## Lab 500:  Oracle Developer Cloud Service Administration
+
+**Documentation**: [CloudNative500.md](CloudNative500.md)
+
+### Objectives
+
+- Access Developer Cloud Service
+- Complete Sprint
+- Run Backlog and Sprint Reports
+- Review Administrative Tasks

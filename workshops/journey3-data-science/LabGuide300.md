@@ -1,9 +1,11 @@
 ![](images/300/300.JPG)  
 Updated: August 13, 2017 for BDCSCE Version 17.3.1-20
 
+# Lab: R and Zeppelin
+
 ## Introduction
 
-This lab will show you how to use **R** with the **Zeppelin notebook** of **Oracle Big Data Cloud Service - Compute Edition (BDCS-CE)**.  
+This lab will show you how to use **R** with the **Zeppelin notebook** of **Oracle Big Data Cloud (BDC)**.  
 
 In particular, this lab will show you how to use R/SparkR functionality within Zeppelin notebooks.  This functionality will allow you to use R to query hive tables and read data directly from the Object Store.  It will also allow you to query R data with Spark SQL and to leverage some of Spark's advanced machine learning algorithms.
 
@@ -22,7 +24,9 @@ Please direct comments to: David Bayard (david.bayard@oracle.com)
 
 
 
-## Connect to the BDCS-CE Console
+# Connect to the BDCS-CE Console
+
+## Steps
 
 ### **STEP 1**: Navigate/login to the Oracle Cloud My Services Dashboard  
 

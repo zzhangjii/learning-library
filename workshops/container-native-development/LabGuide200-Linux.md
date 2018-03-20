@@ -123,26 +123,28 @@ cat ~/.oci/oci_api_key_public.pem
 
 ### **STEP 4**: Download Terraform
 
-- If you are using the Oracle-provided client image, this step has been done for you. Skip to the next step. Otherwise, continue with this step to install Terraform.
-
 - Download the appropriate Terraform package for your operating system from the [terraform.io downloads page](https://www.terraform.io/downloads.html).
 
   ![](images/200/58.png)
 
 - **Unzip** the file you downloaded into the folder ~/terraform. You can use the command line or a graphical zip program for this operation. The example command below assumes you don't have other zip files in the current directory beginning with the string `terraform_`.
 
-```
+```bash
 cd ~/Downloads
-mkdir ~/terraform && cat terraform_*.zip | tar -xvf - -C ~/terraform && cd ~/terraform
+mkdir -p ~/terraform
+unzip terraform_*.zip
+mv terraform ~/terraform
+cd ~/terraform
 ```
 
-- Add Terraform to your PATH in the **terminal window** that you will use for the next two steps using the following command:
+- Add Terraform to your PATH in the **terminal window** that you will _use for the next two steps_ using the following command:
 
-  ``export PATH=$PATH:`pwd` ``
-
+```bash
+export PATH=$PATH:`pwd`
+```
 ### **STEP 5**: Download the OCI Terraform Provider
 
-- Download the **OCI Terraform Provider** from the [GitHub release page](https://github.com/oracle/terraform-provider-oci/releases/latest). Select the package for your operating system. **Note:** for **Mac** use **darwin.tar.gz**
+- Download the **OCI Terraform Provider** from the [GitHub release page](https://github.com/oracle/terraform-provider-oci/releases/latest). Select the package for your operating system. **Note:** for **Mac** use a **darwin** version of the tar file.
 
   ![](images/200/59.png)
 
@@ -150,20 +152,21 @@ mkdir ~/terraform && cat terraform_*.zip | tar -xvf - -C ~/terraform && cd ~/ter
 
   ![](images/200/59.1.png)
 
-- Run the following commands in a **terminal window** to extract the provider binary into the Terraform plugins folder (replace `linux.tar.gz` with the filename of the file you downloaded):
+- Run the following commands in a **terminal window** to extract the provider binary into the Terraform plugins folder. _Note:
+  replace_ the `linux_*.tar.gz` with the filename of the file you downloaded:
 
   ```bash
   cd ~/Downloads
-  mkdir -p ~/.terraform.d/plugins && cat linux.tar.gz | tar -zxvf - -C ~/.terraform.d/plugins/
+  mkdir -p ~/.terraform.d/plugins && cat linux_*.tar.gz | tar -zxvf - -C ~/.terraform.d/plugins/
   ```
 
 - Terraform will look in the `plugins` directory for the OCI provider when it is specified by an installer, as we will see in the next step.
 
 ### **STEP 6**: Download and Configure the OCI Terraform Kubernetes Installer
 
-- **Install kubectl**, if you don't already have it. Terraform requires `kubectl`, the Kubernetes command line interface, to interact with Kubernetes from your local machine. You can install it by following the instructions for your OS in the **[Kubernetes docs](https://kubernetes.io/docs/tasks/tools/install-kubectl/)**.
+- _Install kubectl_. Terraform requires `kubectl` - the Kubernetes command line interface, to interact with Kubernetes from your local machine. You can install it by following the instructions for **Installing kubcectl binary via curl** for either mac or linux **[Kubernetes docs](https://kubernetes.io/docs/tasks/tools/install-kubectl/)**.
 
-- From the same **terminal window** you used in the previous step, run the following commands to download the OCI Terraform Kubernetes Installer:
+- After you have installed kubectl, from the same **terminal window** you used in the previous step, run the following commands to download the OCI Terraform Kubernetes Installer:
 
   ```bash
   cd ~
@@ -251,7 +254,7 @@ mkdir ~/terraform && cat terraform_*.zip | tar -xvf - -C ~/terraform && cd ~/ter
 
   **NOTE**: The 0.0.0.0/0 value means that any IP address can access your cluster. A better security practice would be to determine your externally-facing IP address and restrict access to only that address. If you'd like, you can find out your IP address by running `curl ifconfig.co` in a terminal window, and place that address into the `master_https_ingress` parameter (e.g. `master_https_ingress = "11.12.13.14/32"`). Note that if you need remote assistance with the workshop, you may need to open this back up to 0.0.0.0/0 to allow access to your cluster.
 
-- **Double check** to ensure you removed the **#** character from in front of all the entries you modified 
+- **Double check** to ensure you removed the **#** character from in front of all the entries you modified
 
 ### **STEP 7**: Provision Kubernetes on OCI
 
@@ -275,9 +278,15 @@ mkdir ~/terraform && cat terraform_*.zip | tar -xvf - -C ~/terraform && cd ~/ter
 
   ![](images/200/62.png)
 
-- When provisioning is complete, Terraform will output the details of all created infrastructure to the terminal:
+- **When provisioning is complete**, Terraform will output the details of all created infrastructure to the terminal:
 
   ![](images/200/63.png)
+
+- Even though the Terraform provisioning has completed there is still configuration and setup being completed within the account. Make sure both Load Balancers are up and running before proceeding. In your account select **Networking-->Load Balancers**, and wait for the green health checkmarks to show that the Load Balances are up and running. 
+
+  ![](images/200/63.3.png)
+
+  ![](images/200/63.6.png)
 
 - During provisioning, Terraform generated a `kubeconfig` file that will authenticate you to the cluster. Let's configure and start the kubectl proxy server to make sure our cluster is accessible.
 
@@ -290,7 +299,7 @@ mkdir ~/terraform && cat terraform_*.zip | tar -xvf - -C ~/terraform && cd ~/ter
 
   **NOTE**: Should you need to change the IP address of your cluster in the future, you can configure `kubectl` with the updated connection information by running the following command, which will pass the current address and authentication details to **kubectl**: `terraform output kubeconfig | tr '\n' '\0' | xargs -0 -n1 sh -c`
 
-- Now that the proxy server is running, navigate to the **[Kubernetes dashboard](http://localhost:8001/api/v1/namespaces/kube-system/services/http:kubernetes-dashboard:/proxy/)** in a new browser tab.
+- With the proxy server running and the Load Balancers showing a running status, navigate to the **[Kubernetes dashboard](http://localhost:8001/api/v1/namespaces/kube-system/services/http:kubernetes-dashboard:/proxy/)** in a new browser tab.
 
   ![](images/200/64.png)
 
@@ -298,7 +307,7 @@ mkdir ~/terraform && cat terraform_*.zip | tar -xvf - -C ~/terraform && cd ~/ter
 
 ## Configure and Run Wercker Deployment Pipelines
 
-### **STEP 8**: Define Wercker Deployment Pipelines
+### **STEP 8**: Define Kubernetes Deployment Specification
 
 - From a browser, navigate to your forked twitter-feed repository on GitHub. If you've closed the tab, you can get back by going to [GitHub](https://github.com/), scrolling down until you see the **Your repositories** box on the right side of the page, and clicking the **twitter-feed** link.
 
@@ -312,9 +321,13 @@ mkdir ~/terraform && cat terraform_*.zip | tar -xvf - -C ~/terraform && cd ~/ter
 
   ![](images/200/28.png)
 
-- **Copy** the YAML below and **paste** it into the file editor. This configuration consists of two parts. The first section (up to line 28) defines a **Deployment**, which tells Kubernetes about the application we want to deploy. In this Deployment we instruct Kubernetes to create two Pods (`replicas: 2`) that will run our application. Within those pods, we specify that we want one Docker container to be run, and compose the link to the image for that container using environment variables specific to this workflow execution (`image: ${DOCKER_REPO}:${WERCKER_GIT_BRANCH}-${WERCKER_GIT_COMMIT}`).
+- **Copy** the YAML below and **paste** it into the file editor.
 
-- The second part of the file defines a **Service**. A Service defines how Kubernetes should expose our application to traffic from outside the cluster. In this case, we are asking for a cluster-internal IP address to be assigned (`type: ClusterIP`). This means that our twitter feed will only be accessible from inside the cluster. This is ok, because the twitter feed will be consumed by the product catalog application that we will deploy later. We can still verify that our twitter feed is deployed properly -- we'll see how in a later step.
+  >This configuration consists of two parts. The first section (up to line 28) defines a **Deployment**, which tells Kubernetes about the application we want to deploy. In this Deployment we instruct Kubernetes to create two Pods (`replicas: 2`) that will run our application. Within those pods, we specify that we want one Docker container to be run, and compose the link to the image for that container using environment variables specific to this workflow execution (`image: ${DOCKER_REPO}:${WERCKER_GIT_BRANCH}-${WERCKER_GIT_COMMIT}`).
+
+  >The second part of the file defines a **Service**. A Service defines how Kubernetes should expose our application to traffic from outside the cluster. In this case, we are asking for a cluster-internal IP address to be assigned (`type: ClusterIP`). This means that our twitter feed will only be accessible from inside the cluster. This is ok, because the twitter feed will be consumed by the product catalog application that we will deploy later. We can still verify that our twitter feed is deployed properly -- we'll see how in a later step.
+
+  >A `.yml` file is a common format for storing Kubernetes configuration data. The `.template` suffix in this file, however, is not a Kubernetes concept. We will use a Wercker step called **bash-template** to process any `.template` files in our project by substituting environment variables into the template wherever `${variables}` appear. You'll add that command to a new pipeline in the next step.
 
 ```yaml
 apiVersion: extensions/v1beta1
@@ -519,7 +532,7 @@ deploy-to-cluster:
 
   ![](images/200/47.png)
 
-- Right click on the **Raw** button and choose **Save Link As**. In the save file dialog box that appears, note the location of the file and click **Save**
+- Right click on the **Raw** button and choose **Save Link As** or **Save As**. In the save file dialog box that appears, note the location of the file and click **Save**
 
   ![](images/200/48.png)
 
@@ -552,6 +565,10 @@ deploy-to-cluster:
 - You should see the product catalog site load successfully, validating that our new Kubernetes deployment and service were created correctly. Let's test the twitter feed functionality of the catalog. Click the first product, **Crayola New Markers**. The product's twitter feed should be displayed.
 
   ![](images/200/54.png)
+
+  **NOTE**: You may have noticed that we did not need to alter the pre-built product catalog container with the URLs of the twitter feed pods or service. The product catalog app makes use of Kubernetes DNS to resolve the service name (twitter-feed) into its IP address. Kubernetes DNS assigns a DNS name to every service defined in your cluster, so any service can be looked up by doing a DNS query for the name of the service (prefixed by _`namespace.`_ if the service is in a different namespace from the requester). The product catalog server uses the following JavaScript code to make an HTTP request to the twitter feed microservice:
+
+  `request('http://twitter-feed:30000/statictweets/color', function (error, response, body) { ... });`
 
 - Some tweets are indeed displayed, but they aren't relevant to this product. It looks like there is a bug in our twitter feed microservice! Continue on to the next lab to explore how to make bug fixes and updates to our microservice.
 

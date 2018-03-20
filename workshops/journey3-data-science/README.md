@@ -40,13 +40,13 @@ In the new data driven world, math is becoming more and more integral to busines
 
 
 
-## Workshop Details
+# Workshop Details
 
-**Reference the following Lab Guides by opening their Documentation Files:**
+**Reference the following Lab Guides by opening their Documentation links**
 
 ## Lab 100: START HERE
 
-**Documenation**: [LabGuide100StartHere.md](LabGuide100StartHere.md)
+**Documentation**: [LabGuide100StartHere.md](LabGuide100StartHere.md)
 
 **Objectives**:
 
@@ -54,7 +54,7 @@ In the new data driven world, math is becoming more and more integral to busines
 
 ## Lab 200: Setup R and BDCS-CE
 
-**Documenation**: [LabGuide200.md](LabGuide200.md)
+**Documentation**: [LabGuide200.md](LabGuide200.md)
 
 **Objectives**:
 
@@ -64,7 +64,7 @@ In the new data driven world, math is becoming more and more integral to busines
 
 ## Lab 300: Analyzing Data with R and Zeppelin
 
-**Documenation**: [LabGuide300.md](LabGuide300.md)
+**Documentation**: [LabGuide300.md](LabGuide300.md)
 
 **Objectives**:
 
@@ -78,7 +78,7 @@ Use the Zeppelin notebook to
 
 ## Lab 400: Analyzing Data with R and RStudio Server
 
-**Documenation**: [LabGuide400.md](LabGuide400.md)
+**Documentation**: [LabGuide400.md](LabGuide400.md)
 
 **Objectives**:
 
@@ -92,7 +92,7 @@ Use the popular RStudio Server to
 
 ## Lab 500:  Tools to work with R and Object Store
 
-**Documenation**: [LabGuide500.md](LabGuide500.md)
+**Documentation**: [LabGuide500.md](LabGuide500.md)
 
 **Objectives**:
 

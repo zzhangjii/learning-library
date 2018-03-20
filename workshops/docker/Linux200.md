@@ -27,7 +27,7 @@ You will use various Docker commands to setup, run and connect into containers. 
 
 ## Required Artifacts
 
-- Docker Hub Account
+- Docker Hub Account: [Docker Hub](https://hub.docker.com/)
 - Docker and GIT installed in your own environment
     - OR, you can use an available Linux based VirtualBox image
 
@@ -99,7 +99,7 @@ docker login
 
 In this section your going to chose and setup a datasource for the application. You have a choice between an Oracle 12c database or a MYSQL database. As the steps and commands are slightly different pick one of the flows that follow below. You will start up a database container, connect into the container and run a script that loads the application's schema into the database.
 
-- **NOTE: You only have to set up ONE database (Oracle or MYSQL) to use with the AlphaOffice application but can go through the setup of both if you'd like.__**
+- **NOTE: You only have to set up ONE database (Oracle or MYSQL) to use with the AlphaOffice application but can go through the setup of both if you'd like.**
 
 ## Oracle Database Setup
 
@@ -125,7 +125,7 @@ docker run -d -it --name orcl -h='oracledb-ao' -p=1521:1521 -p=5600:5600 -v /<YO
 ```
 
 Example:
-docker run -d -it --name orcl -h='oracledb-ao' -p=1521:1521 -p=5500:5500 -p=5600:5600 -v /home/holuser/AlphaOfficeSetup:/dbfiles wvbirder/database-enterprise:12.2.0.1-slim
+docker `run -d -it --name orcl -h='oracledb-ao' -p=1521:1521 -p=5600:5600 -v /home/holuser/AlphaOfficeSetup:/dbfiles wvbirder/database-enterprise:12.2.0.1-slim`
 
 ***If you make a mistake with the volume path to where you downloaded the AlphaOfficeSetup files you can stop and remove the container once it's created and try again using the following commands***
 
@@ -198,11 +198,12 @@ sqlplus / as sysdba
 
 ![](images/200Linux/Picture200-11.png)
 
-- Type:
+- **Type** the following:
 ```
 exit
 ```
-to go back to the HOST
+
+- to go back to the HOST
 
 ### **STEP 5**: Verify container is running 
 
@@ -225,19 +226,13 @@ HTTP access as been defined on port 5600.
 
 - **If you are using the workshop VirtualBox VM Shockwave has already been installed and you will only have to enable it.**
 
-- From your terminal window **type** the following command:
+- In your browser **enter**:
 
 ```
-docker network inspect bridge
+http://localhost:5600/em
 ```
 
-- Locate the "orcl" container and note your network bridge IP. 
-
-![](images/200Linux/Picture200-12.7.png)
-
-- Insert your container IP address and navigate to the URL (In this example 172.17.0.3): `http:/172.17.0.3/:5600/em`
-
-![](images/200Linux/Picture200-12.8.png)
+![](images/200Linux/Picture200-12.6.png)
 
 - You may get prompted to enable Adobe Flash. Click the link to do so.
 
@@ -276,7 +271,7 @@ This docker command will create a container based on the latest MYSQL database i
 - **Type OR cut and paste** the following, but ***Substitute*** the **YOUR-HOME** place holder with the directory name where you loaded the AlphaofficeSetup GIT repository. For Example: `/YOUR-HOME/AlphaOfficeSetup` might change to this `~/AlphaOfficeSetup`, if you loaded the git repository in your home directory.
 
 ```
-docker run -d -it --name mysql -h='mysqldb-ao' -p=3306:3306 -v /\<YOUR-HOME>/AlphaOfficeSetup:/dbfiles --env="MYSQL_ROOT_PASSWORD=Alpha2017_" mysql
+docker run -d -it --name mysql -h='mysqldb-ao' -p=3306:3306 -v /<YOUR-HOME>/AlphaOfficeSetup:/dbfiles --env="MYSQL_ROOT_PASSWORD=Alpha2017_" mysql
 ```
 
 - Example: `docker run -d -it --name mysql -h='mysqldb-ao' -p=3306:3306 -v /home/holuser/AlphaOfficeSetup:/dbfiles --env="MYSQL_ROOT_PASSWORD=Alpha2017_" mysql`
@@ -324,7 +319,7 @@ Once into the container you will see a prompt which includes the hostname you se
 
 ```
 cd /dbfiles
-touch xxx
+touch yyy
 ls
 ```
 
@@ -371,9 +366,9 @@ docker ps
 
 In this section of the lab you will deploy the remaining containers to support the AlphaOffice application
 
-- **TwitterFeed**: This **java** application provides static Twitter posts (via a JSON file) via REST calls. The AlphaOffice UI mmakes calls to this container and associates the twitter posts to products displayed in the UI.
+- **TwitterFeed**: This **java** application provides static Twitter posts (via a JSON file) via REST calls. The AlphaOffice UI makes calls to this container and associates the twitter posts to products displayed in the UI.
 
-- **ClientREST**: This **Node.js** application makes REST calls to the selected datasource (Oracle or MYSQL) and returns details from the Product Catalog tables. Selection of the datasource is parameter driven.
+- **RESTClient**: This **Node.js** application makes REST calls to the selected datasource (Oracle or MYSQL) and returns details from the Product Catalog tables. Selection of the datasource is parameter driven.
 
 - **AlphaOfficeUI**: **Node.js** application container that displays data obtained via the TwitterFeed and ClientREST containers. 
 
@@ -381,7 +376,7 @@ In this section of the lab you will deploy the remaining containers to support t
 
 ### **STEP 1**: Run and test the TwitterFeed
 
-- **Type OR cut and paste**:
+- **Type OR cut and paste** the following:
 
 ```
 docker run -d --name=twitterfeed -p=9080:9080 wvbirder/twitterfeed
@@ -406,12 +401,6 @@ docker ps
 ![](images/200Linux/Picture200-22.png)
 
 ### **STEP 2**: Run and test the RESTClient
-
-- Stop the RESTClient container started in Lab 100 by **entering** the following commands.
-
-```
-docker stop restclient
-```
 
 - Let's take a look at what the docker **run** command options do:
     - "-d" flag runs the container in the background
@@ -466,10 +455,10 @@ http://localhost:8002/product/1025
 
 ![](images/200Linux/Picture200-25.png)
 
-**SIDEBAR:** If you don't want use a database as the datasource, you can always stop the current **restclient** and fall back to a version that uses a JSON file for the Products buy using: `docker run -d -it --rm --name restclient -p=8002:8002 -e DS='json' wvbirder/restclient`
+**SIDEBAR:** If you don't want use a database as the datasource, you can always stop the current `restclient` and fall back to a version that uses a JSON file for the Products buy using: `docker run -d -it --rm --name restclient -p=8002:8002 -e DS='json' wvbirder/restclient`
 
 **OPTONAL:**
-If you configured both ORACLE and MYSQL databases then you can stop the "restclient" container after testing with one of the datasources by typing: `docker stop restclient`. Then, start another "restclient" container stipulating the new datasource using the appropriate commands already shown at the beginning of this step.
+If you configured both ORACLE and MYSQL databases then you can stop the `restclient` container after testing with one of the datasources by typing: `docker stop restclient`. Then, start another `restclient` container stipulating the new datasource using the appropriate commands already shown at the beginning of this step.
 
 ### **STEP 3**: Run and Test the AlphaOfficeUI
 
@@ -523,7 +512,7 @@ docker cp /<YOUR_HOME>/AlphaOfficeSetup/dark_blue.jpg alphaofficeui:/pipeline/so
 
 Even though the orginal AlphaOfficeUI image could have been set up ahead of time with any needed client tools we're adding the the environment on-the-fly to give you some idea that it can be done
 
-- Connect into the "alphaofficeui" container:
+- Connect into the `alphaofficeui` container:
 
 ```
 docker exec -it alphaofficeui bash
@@ -601,7 +590,7 @@ In this step you will save a copy of your modifed docker container and give it a
 docker commit alphaofficeui (your-dockerhub-account)/(image-name)
 ```
   
-- For example: "docker commit alphaofficeui wvbirder/alphaoffice-new"
+- Example: `docker commit alphaofficeui wvbirder/alphaoffice-new`
 
 - **Type** the following:
 
@@ -615,17 +604,17 @@ docker images
 
 ### **STEP 2**: Start a container based on your new image
 
-Since there is already a running alphaofficeui container we'll name the new container alphaofficeui2 and use port 8086 on the HOST since 8085 is in use
+Since there is already a running `alphaofficeui` container we'll name the new container `alphaofficeui2` and use port 8086 on the HOST since 8085 is in use. We will also use the PORT enviroment variable.
 
 - **Type** the following:
 
 ```
-docker run -d --name=alphaofficeui2 -p=8086:8085 (your-dockerhub-account)/(image-name)
+docker run -d --name=alphaofficeui2 -p=8086:8086 -e PORT=8086 (your-dockerhub-account)/(image-name)
 ```
 
- - **NOTE:** You could have deleted the original container by typing `docker stop alphaofficeui` followed by `docker rm alphaofficeui` and you wouldn't have had to use a different container name or network port
+- Example: `docker run -d --name=alphaofficeui2 -p=8086:8086 -e PORT=8086 wvbirder/alphaoffice-new`
 
-- Verify the new container is running:
+- Verify the new container is running by **typing**:
 
 ```
 docker ps

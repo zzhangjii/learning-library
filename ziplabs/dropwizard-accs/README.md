@@ -39,19 +39,20 @@ In this tutorial, you create and deploy a web service for an employee directory 
 2. From the **Cloud Account** drop-down menu, select **Cloud Account with Identity Cloud Service**.
 3. Enter your Cloud Account Name and click **My Services**.
 4. Enter your cloud account credentials and click **Sign In**.
-7. In the **Application Container** tile, click **Action** and select **Open Service Console**.
-8. In the **Applications** list view, click **Create Application** and then select **Java SE**.
-9. On the **Create Application** page, enter `DropwizardSample` for the name. On **Application**, be sure **Upload Archive** is selected and click **Browse**.
-10. On the **File Upload** page, select your application archive `employee-service-dropwizard-1.0-SNAPSHOT.zip` in the `target` directory, and click **Open**.
-11. Click **Create**.
+5. In the **Application Container** tile, click **Action** and select **Open Service Console**.
+6. In the **Applications** list view, click **Create Application** and then select **Java SE**.
+7. On the **Create Application** page, enter `DropwizardSample` for the name. On **Application**, be sure **Upload Archive** is selected and click **Browse**.
+8. On the **File Upload** page, select your application archive `employee-service-dropwizard-1.0-SNAPSHOT.zip` in the `target` directory, and click **Open**.
+9. Click **Create**.
+10. When the application is created, make note of the URL.
 
 ## Test the Application ##
-1. Extract the `employee_client.zip` file in your local system.
+1. Extract the `employees-client.zip` file in your local system.
 2. Using a text editor, open `EmployeeController.js` file.
-3. Edit the `urlService` variable and put in the generated link of your application deployed in Oracle Application Container Cloud Service. 
+3. Edit `urlService` by inserting the generated URL link of your application and appending `/employees`. 
 
-    <pre><code>$scope.urlService = "http://<strong>your URL</strong>/employees";</code></pre>
-4. In a web browser open the `index.html` file and then click **Add New**.
+    <pre><code>$scope.urlService = "<var><strong>https://your URL</strong></var>/employees";</code></pre>
+4. In a web browser open `index.html` file and then click **Add New**.
 
     ![](img/testing-01.png)
 
