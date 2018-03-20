@@ -58,11 +58,6 @@ md-toolbar.md-hue-2:not(.md-menu-toolbar) {
     color: rgba(255, 255, 255, 0.87);
 }
 
-md-toolbar {
-  height: 50px;
-  min-height: 50px;
-}
-
 .menu-hamburger {
     padding: 4px 1px 1px 0px;
     height: 20px;
@@ -124,6 +119,16 @@ md-toolbar {
 
 .md-button.infra {
   flex-shrink: 0;
+}
+
+md-toolbar {
+  height: 50px;
+  min-height: 50px;
+}
+
+.md-toolbar-tools.infra {
+  height: 50px;
+  max-height: 50px;
 }
 
 md-toolbar.layout-padding.infra {
