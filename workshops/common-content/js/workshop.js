@@ -267,6 +267,7 @@ labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sa
                   $("#labguide h3").addClass('plus');
                   $("#labguide h3").unbind('click', stepClickHandler);
                   $("#labguide h3").click(stepClickHandler);
+                  window.scrollTo(0, 0);
               }, 0);
             }, function (msg) {
                 if(page === 'Home.md') {
