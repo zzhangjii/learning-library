@@ -145,7 +145,7 @@ Start SQL Developer and create a connection for your database using the default 
 
 -   Test your connection by clicking the **Test** button, if it succeeds save your connection information by clicking **Save**, then connect to your database by clicking the **Connect** button. 
 
--   Using your existing connection in SQL Developer, create a new user named SH using the following commands. For the next lab, you will use SH user to connect and work.
+-   Using your existing connection in SQL Developer, create a new user named **dwuser** using the following commands. For the next lab, you will use dwuser user to connect and work.
 ```
 create user dwuser identified by "Welcome_123!";
 grant dwrole to dwuser;
