@@ -119,11 +119,11 @@ Oracle Machine Learning uses Zeppelin Notebook, a collaborative interface where 
     ![](images/400/40.png)
 
 ### **STEP 6**: Edit your notebook
-- In the first paragraphe of the notebook, enter in the following SQL script: 
+- In the first paragraph of the notebook, enter in the following SQL script: 
     ```
     %sql
 
-    select prod_id, chanel_desc from sh.sales s join sh.channels c on s.channel_id = c.channel_id;
+    select prod_id, channel_desc from sh.sales s join sh.channels c on s.channel_id = c.channel_id;
     ```
 
     ![](images/400/41.png)
