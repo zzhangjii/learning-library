@@ -147,8 +147,8 @@ Start SQL Developer and create a connection for your database using the default 
 
 -   Using your existing connection in SQL Developer, create a new user named SH using the following commands. For the next lab, you will use SH user to connect and work.
 ```
-create user sh identified by "Welcome1!";
-grant dwrole to sh;
+create user dwuser identified by "Welcome_123!";
+grant dwrole to dwuser;
 ```
 - Note that the database role DWROLE includes the privileges required by a typical DW developer. You can grant additional database privileges if needed.
 

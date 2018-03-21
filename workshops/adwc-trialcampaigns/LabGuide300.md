@@ -62,11 +62,12 @@ At this point, you should have performed the following:
 - **Connection Name**: give name for instance
 - **Host**: host name from tnsnames.ora for your service
 - **Post**: port number from tnsnames.ora for your service
-- **Username**: sh
-- **Password**: ADWC user sh password you created in Lab 100. (It could be "Welcome1!" if you didn't change the user creation script.)
+- **Username**: admin
+- **Password**: The administrator password you specified during provisioning in Lab 100.
 
   ![](images/300/Picture300-03.PNG)
 
+  Note: you can also connect as a user that has dwrole, like **dwuser** you created in lab 100. 
 
 - Click on OK to save connection. If it says “Invalid Wallet file”, please follow step 2 to make sure the cwallet file is in the right folder. 
 

@@ -8,7 +8,7 @@ The Lab guides are best viewed using the Workshop's [GitHub Pages Website URL](h
 
 - Learn how to provision an ADWC and connect to it
 - Learn how to load data into ADWC
-- Learn how to create business intelligence from ADWC using Data Visualization Desktop (Optional)
+- Learn how to create business intelligence from ADWC using Data Visualization Desktop
 - Learn how to use Oracle Machine Learning SQL Notebook and ADWC console (Optional)
 
 ## IMPORTANT: How to prepare for this Workshop

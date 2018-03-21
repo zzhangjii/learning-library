@@ -110,15 +110,27 @@ Oracle Machine Learning uses Zeppelin Notebook, a collaborative interface where 
 
     ![](images/400/14.png)
 
+- Enter in information about this notebook
+
+    ![](images/400/39.PNG)
+
+- Click on the notebook you just created
+
+    ![](images/400/40.png)
+
 ### **STEP 6**: Edit your notebook
 - In the first paragraphe of the notebook, enter in the following SQL script: 
-```
-%sql
+    ```
+    %sql
 
-select prod_id, chanel_desc from sh.sales s join sh.channels c on s.channel_id = c.channel_id;
-```
+    select prod_id, chanel_desc from sh.sales s join sh.channels c on s.channel_id = c.channel_id;
+    ```
+
+    ![](images/400/41.PNG)
 
 - SH schema comes with a newly provisioned instance of ADWC for testing purpose. It is a simple database for small online shopping website. The script simply joins sales transactions table with sales channels table. To run the script, you can either press **SHIFT + ENTER** or click on the run icon ![](images/400/16.png). You should get the results in a table format.
+
+    ![](images/400/42.PNG)
 
     ![](images/400/15.png)
 
