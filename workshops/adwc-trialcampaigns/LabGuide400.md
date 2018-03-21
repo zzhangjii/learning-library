@@ -112,7 +112,7 @@ Oracle Machine Learning uses Zeppelin Notebook, a collaborative interface where 
 
 - Enter in information about this notebook
 
-    ![](images/400/39.png)
+    ![](images/400/39.PNG)
 
 - Click on the notebook you just created
 
