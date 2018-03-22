@@ -26,7 +26,7 @@ Key features of OCI Object Storage:
 - Persistent IO-intensive block storage and high-throughput object storage options to handle multiple application types, and data at different lifecycle stages.
 - Each is manageable through the console and by CLI.
 
-## Creation and Access
+## Creation and Upload
 
 ### **STEP 1**: Access Oracle Cloud Infrastructure
 - Log into your Oracle cloud account
@@ -132,7 +132,7 @@ Select **Create Bucket**.
 Next, we are going to use our Autonomous Data Warehouse Cloud instance connected with SQL Developer to interact with the data files residing in our recently create Object Storage bucket.
 
 
-# Querying Data Files in Object Storage
+## Querying Data Files in Object Storage
 
 ### **STEP 6**:  Connect Autonomous Data Warehouse Cloud instance to data in Object Storage
 
