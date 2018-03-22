@@ -23,9 +23,9 @@ This lab walks you through the steps to get started using the Oracle Autonomous 
 
 ## Provisioning an ADWC Service
 
-In this section you will be provisioning an ADWC database using the cloud console.
-
 ### **STEP 1**: Sign in to Oracle Cloud
+
+Note: In this section you will be provisioning an ADWC database using the cloud console.
 
 -   Go to [cloud.oracle.com](https://cloud.oracle.com), click **Sign In** to sign in with your Oracle Cloud account.
 
@@ -86,9 +86,9 @@ You now have created your first Autonomous Data Warehouse Cloud instance.
 
 ## Connecting to ADWC
 
-- As ADWC only accepts secure connections to the database, you need to download a wallet file containing your credentials first. The wallet is downloaded from the ADWC service console.
-
 ### **STEP 3: Sign in to the Service Console**
+
+Note: As ADWC only accepts secure connections to the database, you need to download a wallet file containing your credentials first. The wallet is downloaded from the ADWC service console.
 
 -   In the Instances page find your database and click **Service Console** in the actions menu.
 
