@@ -5,7 +5,6 @@ This is the second of several labs that are part of the **Oracle Autonomous Data
 This lab walks you through some examples using the Oracle
 Autonomous Data Warehouse Cloud with Object Storage. You will create and Object Storage bucket, upload data files, and use SQL developer to query those data files.
 
-**Please direct comments to: Tom Huang (tom.huang@oracle.com).**
 
 ## Objectives
 - Learn how to use OCI Object Storage
@@ -26,6 +25,8 @@ Oracle Object Storage is a web-based interface that provides the ability to acce
 Key features of OCI Object Storage:
 - Persistent IO-intensive block storage and high-throughput object storage options to handle multiple application types, and data at different lifecycle stages.
 - Each is manageable through the console and by CLI.
+
+## Creation and Access
 
 ### **STEP 1**: Access Oracle Cloud Infrastructure
 - Log into your Oracle cloud account
