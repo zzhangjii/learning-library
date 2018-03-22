@@ -32,7 +32,6 @@ The Lab guides are best viewed using the Workshop's [GitHub Pages Website URL](h
 
 - The Lab guides are best viewed using the Workshop's [GitHub Pages Website URL](https://oracle.github.io/learning-library/workshops/adwc-trialcampaigns/) 
 
-**Temporary GitHub Page link is here [GitHub Pages Website URL](https://unofficialoraclecloudhub.github.io/autonomous-campaign/workshops/adwc-trialcampaigns/)
 
 - Once you are viewing the Workshop's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
 
