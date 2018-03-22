@@ -22,7 +22,6 @@ This lab walks you through the steps to get started using the Oracle Autonomous 
     If you are a non-Windows user, download and install the appropriate [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) for your Operating System. Download and extract the [Java Cryptography Encryption Archive](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) to the directory as indicated in the README.txt.
 
 ## Provisioning an ADWC Service
-=======================================
 
 In this section you will be provisioning an ADWC database using the cloud console.
 
