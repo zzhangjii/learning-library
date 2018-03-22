@@ -1,5 +1,7 @@
 
 ![](images/ADWC.JPG)  
+
+March 19, 2018
     
 # ADWC Journey: Hands-On Test Drive Workshop
 This workshop walks you through all the steps to get started using the **Oracle Autonomous Data Warehouse Cloud (ADWC)**. You will provision a new ADWC database, load data from the object store and troubleshoot data loads, query external data residing on the object store, manage an ADWC instance, scale an ADWC instance, and use Oracle Machine Learning notebooks.
@@ -19,29 +21,30 @@ This workshop walks you through all the steps to get started using the **Oracle 
 
 
 
-## To learn more
- - [Autonomous Data Warehouse Cloud website](https://www.oracle.com/database/data-warehouse/index.html)
- - [Autonomous Data Warehouse Cloud ipaper](http://www.oracle.com/us/products/database/autonomous-dw-cloud-ipaper-3938921.pdf)
+## To Learn More
+ - [Oracle Autonomous Data Warehouse Cloud website](https://www.oracle.com/database/data-warehouse/index.html)
+ - [Oracle Autonomous Data Warehouse Cloud ipaper](http://www.oracle.com/us/products/database/autonomous-dw-cloud-ipaper-3938921.pdf)
+ - [Oracle Autonomous Data Warehouse Cloud Documentation](https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/index.html)
+ - [Additional Autonomous Data Warehouse Cloud Tutorials](https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/tutorials.html)
  
       
 ## How to View the Lab Guides
 
 - The Labguides are best viewed using the Workshop's [GitHub Pages Website URL](https://oracle.github.io/learning-library/workshops/journey4-adwc/) 
 
-** for now, use this temporary link: https://millerhoo.github.io/journey4-adwc/workshops/journey4-adwc/ **
+** for the very latest content (which may include pre-review and pre-release content), use this link: https://millerhoo.github.io/journey4-adwc/workshops/journey4-adwc/ **
 
 - Once you are viewing the Workshop's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
 
     ![](images/WorkshopMenu.png)  
 
-- To **log issues** and view the Lab Guide source, go to the [github oracle](https://github.com/oracle/learning-library/tree/master/workshops/journey4-adwc) repository.
+- To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issues/new) to go to the github oracle repository issue submission form.
 
 
 
 
 # Workshop Details
 
-** Reference the following Lab Guides by opening their Documentation links **
 
 ## Lab 100: Provisioning and Connecting
 
@@ -71,6 +74,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 
 **Objectives**:
 
+- Learn how to upload files to the Oracle Cloud Innfrastructure (OCI) Object Storage
 - Learn how to load data from an object store
 - Learn how to use the SQL Developer Data Import Wizard to load data
 - Learn how to troubleshoot data loads
@@ -113,6 +117,8 @@ This workshop walks you through all the steps to get started using the **Oracle 
 
 **Objectives**:
 
-- Learn how to create Oracle Machine Learning (OML) users
-- Learn how to run queries and scripts in the web-based OML worksheets
-- Learn how to create notebooks and share them across multiple users
+- Learn how to create OML Users
+- Learn how to run a SQL Statement
+- Learn how to share notebooks
+- Learn how to create and run SQL scripts
+
