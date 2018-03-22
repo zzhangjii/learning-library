@@ -5,6 +5,12 @@
         "theme": "default",
         "labs": [
             {
+                "number": "0",
+                "filename": "README.md",
+                "title": "Lab Overview",
+                "description": "Lab Overview and Prerequisites"
+            },
+            {
                 "number": "100",
                 "filename": "LabGuide100.md",
                 "title": "Lab 100:  Provision and Connect to ADWC",
