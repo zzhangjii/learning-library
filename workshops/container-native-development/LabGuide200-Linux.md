@@ -26,8 +26,7 @@ During this lab, you will take on the **DevOps Engineer Persona**. You will prov
 
 - The following lab requires:
   - an Oracle Public Cloud account that will be supplied by your instructor, or a Trial Account
-  - a [GitHub account](https://github.com/join)
-  - a [Docker Hub account](https://hub.docker.com)
+
 
 # Provision Kubernetes Using Terraform
 
@@ -35,7 +34,15 @@ During this lab, you will take on the **DevOps Engineer Persona**. You will prov
 
 ### **STEP 1**: Log in to your OCI dashboard
 
-- From any browser, go to:
+- If you are using a Trial Account, **you must wait until you receive this email** indicating that your Cloud Account has been provisioned. _Please note that this email may arrive in your spam or promotions folder pending your email settings._
+
+  ![](images/oraclecode/code_9.png)
+
+- Once you receive the **Get Started with Oracle Cloud** Email, make note of your **Username, Password and Cloud Account Name**.
+
+  ![](images/200/0.1.png)
+
+- From you you can also from any browser go to. :
 
     [https://cloud.oracle.com/en_US/sign-in](https://cloud.oracle.com/en_US/sign-in)
 
@@ -69,29 +76,29 @@ Compartments are used to isolate resources within your OCI tenant. User-based ac
 
   ![](images/200/6.png)
 
-- If your workshop instructor has directed you to use a pre-created compartment **_do not create a new one_**. Locate the compartment in the list and click **Copy** next to the displayed OCID. **Paste** this OCID into a text file or elsewhere for safe keeping. We will use it to tell Terraform where to set up our cluster in a later step. Proceed to **STEP 3**.
+- Look in the compartment list for a compartment called **Demo**. Next to the OCID of the Demo compartment, click **Copy**. **Paste** this OCID into a text file or elsewhere for safe keeping. We will use it to tell Terraform where to set up our cluster in a later step. Proceed to **STEP 3**.
 
-  Otherwise, if you are using a trial account or paid account, proceed to the next instruction to create a compartment.
+  ![](images/200/65.png)
 
-  ![](images/200/9.png)
+  **IMPORTANT**: _**Only if you do not have**_ a compartment called **Demo**, follow these steps to create a new compartment.
 
-- Click **Create Compartment**
+  - If you have a **Demo** compartment already, _**SKIP TO STEP 3**_. Otherwise, Click **Create Compartment**
 
-  ![](images/200/7.png)
+    ![](images/200/7.png)
 
-- In the **Name** field, enter `kubernetes`. Enter a description of your choice. Click **Create Compartment**.
+  - In the **Name** field, enter `kubernetes`. Enter a description of your choice. Click **Create Compartment**.
 
-  ![](images/200/8.png)
+    ![](images/200/8.png)
 
-- In a moment, your new Compartment will show up in the list. Locate it and click **Copy** in the OCID display. **Paste** this OCID into a text file or elsewhere for safe keeping. We will use it to tell Terraform where to set up our cluster in a later step.
+  - In a moment, your new Compartment will show up in the list. Locate it and click **Copy** in the OCID display. **Paste** this OCID into a text file or elsewhere for safe keeping. We will use it to tell Terraform where to set up our cluster in a later step.
 
-  ![](images/200/9.png)
+    ![](images/200/9.png)
 
 ### **STEP 3**: Create and upload a new API key
 
 An API key is required for Terraform to authenticate to OCI in order to create compute instances for your Kubernetes master and worker nodes.
 
-- Open a terminal window and run each of the following commands, one at a time, pressing **Enter** between each one. These commands will create a new directory called `.oci`, generate a new PEM private key, generate the corresponding public key, and copy the public key to the clipboard. For more information on this process, including the alternate commands to protect your key file with a passphrase, see the [official documentation](https://docs.us-phoenix-1.oraclecloud.com/Content/API/Concepts/apisigningkey.htm#two).
+- Open a terminal window and run each of the following commands, one at a time, pressing **Enter** between each one. These commands will create a new directory called `.oci`, generate a new PEM private key, generate the corresponding public key, and copy the public key to the clipboard.
 
 
 ```bash
@@ -108,6 +115,10 @@ cat ~/.oci/oci_api_key_public.pem
 - In your browser window showing the OCI Console, click the **Identity** menu item. You will be brought to the **Users** menu. Find your username in the list and hover over the **three dots** menu at the far right of the row, then click **View User Details**.
 
   ![](images/200/56.png)
+
+  **NOTE**: You may not see any users in the list, or there may be only administrator users that you cannot modify. In that case, you can access your current logged-in user settings by hovering over your username in the top right of the page and clicking **User Settings**.
+
+    ![](images/200/66.png)
 
 - Click **Add Public Key**
 
@@ -209,6 +220,8 @@ export PATH=$PATH:`pwd`
 
   ![](images/200/57.1.png)
 
+- Setting these variables can be a little tricky the first time you attempt it. [Checkout this video if you want to watch the steps performed. ](https://videohub.oracle.com/media/Lab+200A+Terraform+.tfvars+OCI+Configuration/0_vkxcw719)
+
 
 - You will replace lines **2, 4, 6, and 7** with the values from the OCI Console, referring to the following screenshot for where to find them.
 
@@ -232,14 +245,14 @@ export PATH=$PATH:`pwd`
 
 - The rest of the terraform.tfvars file controls the parameters used when creating your Kubernetes cluster. You can control how many OCPUs each node receives, whether nodes should be virtual machines or bare metal instances, how many availability domains to use, and more. We will modify three of the lines in the remainder of the file.
 
-- First, we will specify that we want only one OCPU in each of the worker and master nodes. This reduces the hourly cost of running our cluster. On **lines 15 and 16**, uncomment the **k8sMasterShape** and **k8sWorkerShape** parameters, and set both values to **VM.Standard1.1**:
+- First, we will specify shapes for our worker and master nodes base on our account limits/capacity. On **lines 15 and 16**, un-comment the **k8sMasterShape** and **k8sWorkerShape** parameters, and set the values to **VM.Standard2.1** and **VM.Standard1.2**:
 
   ```
-  k8sMasterShape = "VM.Standard1.1"
-  k8sWorkerShape = "VM.Standard1.1"
+  k8sMasterShape = "VM.Standard2.1"
+  k8sWorkerShape = "VM.Standard1.2"
   ```
 
-- Next, we will specify the type of load balancers we want for the master and etcd VMs -- 400Mbps in this case. Alter **lines 30 and 31** to read:
+- Next, we will specify the type of load balancers we want for the master and etcd VMs. We will also select the following settings based on our Account's capacity. Alter **lines 30 and 31** to read:
 
   ```
   etcdLBShape = "400Mbps"
@@ -282,7 +295,7 @@ export PATH=$PATH:`pwd`
 
   ![](images/200/63.png)
 
-- Even though the Terraform provisioning has completed there is still configuration and setup being completed within the account. Make sure both Load Balancers are up and running before proceeding. In your account select **Networking-->Load Balancers**, and wait for the green health checkmarks to show that the Load Balances are up and running. 
+- Even though the Terraform provisioning has completed there is still configuration and setup being completed within the account. Make sure both Load Balancers are up and running before proceeding. In your account select **Networking-->Load Balancers**, and wait for the green health checkmarks to show that the Load Balances are up and running.
 
   ![](images/200/63.3.png)
 
