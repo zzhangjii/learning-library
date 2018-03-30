@@ -123,4 +123,21 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/100/i30.png)
 
+### **STEP 4**: Review DBCS and Note Connection String	
+
+-	Select the menu in the top right to navigate to Database.
+
+	![](images/100/i31.png)
+
+-	Select Database
+
+	![](images/100/i32.png)
+
+-	Select DBCS12c-01
+
+	![](images/100/i33.png)
+
+-	Hover over the connection string.  Write down the number highlighted below (598320227 in this case).  We will need to update a database link (used to query DBCS from the on-premise instance), and we will also need to update the tnsnames.ora file in GGCS so it can connect to the database.  
+
+	![](images/100/i34.png)
 
