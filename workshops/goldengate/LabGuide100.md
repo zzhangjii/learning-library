@@ -141,3 +141,28 @@ To log issues and view the lab guide source, go to the [github oracle](https://g
 
 	![](images/100/i34.png)
 
+### **STEP 5**: Update the Database Link (used in Lab 200)
+
+-	Open the GGCS_Workshop_Material on the desktop and navigate to SQL SCripts.  Right click on the cr_dblink.sql script and open with gedit.
+
+	![](images/100/i35.png)
+
+-	Replace the existing identity domain with the connect string noted above.  Save your changes.
+
+	![](images/100/i36.png)
+
+-	Open SQL Developer, and then open the On Premise - EURO connection. 
+
+	![](images/100/i37.png)
+
+-	Open the cr_dblink.sql file to run the script.
+
+	![](images/100/i38.png)
+
+-	Run the script.
+
+	![](images/100/i39.png)
+
+-	Enter `select sysdate from dual@db12c;` to test.  Be sure to highlight this line.  It should return a date from the remote DBCS instance.  We will use this link to view data replication results later in lab 200.
+
+	![](images/100/i40.png)
