@@ -87,7 +87,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/200/i6.png)
 
-- Update the Service Name and enter your student identity domain with field ***CS1***, and then select `Test` to test the connection.
+- Update the Service Name and enter the connection string you wrote down at the end of lab 100, and then select `Test` to test the connection.
 
 	![](images/200/i6.1.png)
 
@@ -95,7 +95,7 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 
 	![](images/200/i6.2.png)
 
-- Do the same thing for the next `DBCS-DW` connection.  Right click on the `DBCS-DW` connection, select properties, and edit the Service Name, field ***CS1*** and then select `Test` to test the connection.
+- Do the same thing for the next `DBCS-DW` connection.  Right click on the `DBCS-DW` connection, select properties, and edit the Service Name, and then select `Test` to test the connection.
 
 	![](images/200/i7.png)
 
@@ -148,8 +148,19 @@ For the GoldenGate Cloud Service Workshop we will be using a compute Image that 
 	- **Confirm manager is started:** `info all`
 	- **Exit the command shell:** `exit`
 	- **Switch to the network admin directory where connectivity to dbcs12c is configured:** `cd /u02/data/oci/network/admin`
-	- **Display the tnsnames.ora file:** `cat tnsnames.ora` (***Note*** this is where you configure GGCS sources and targets.  This has been done for you)
-	- **Close the connection:** `exit` and then `exit` again
+	- **Review the tnsnames.ora file which has the connection to dbcs:** `cat tnsnames.ora`
+
+	![](images/200/i9.4.png)
+
+-	Update the tnsnames file.  Enter the following:
+	- `sed -i 's/<your assigned domain name>/<the database connection string>/g' tnsnames.ora`
+
+-	Display the tnsnames.ora file.  Enter the following:
+	- `cat tnsnames.ora` (***Note*** this is where you configure GGCS sources and targets.  This has been done for you)
+
+	![](images/200/i9.5.png)
+
+- Close the connection. Enter `exit` and then `exit` again
 
 ### **STEP 5**: Configure OGG (On-premise/Source)
 
