@@ -4,7 +4,7 @@ Oracle Identity Cloud Service(IDCS) provides integration with any service that c
 
 IDCS provides support for standard SAML 2.0 Browser POST Login & Logout Profiles.
 
-In this demo, we will setup integration with **Salesforce** using SAML.
+In this exercise, we will setup integration with **Salesforce** using SAML.
 
 ## Scenario
 
@@ -16,15 +16,12 @@ In SAML terminology, IDCS will act as **IdP** (Identity Provider) and Salesforce
 
 Administrators, End-Users
 
-## Demo Logistics
+## Logistics
 
 * A Salesforce developer account is needed. One can be obtained from [here](https://developer.salesforce.com/signup?d=70130000000td6N).
 
-For the demo, use the existing account [demoidcs@gmail.com]()
-
 * A custom domain needs to be setup in Salesforce for SP-initiated SSO to work i.e. SSO happens when user directly attempts to access Salesforce as opposed to accessing Salesforce App from IDCS MyApps portal (IDP-initiated SSO).
 
-[demoidcs@gmail.com]() has already been configured to leverage the custom domain [https://demoidaas-dev-ed.my.salesforce.com]()
 
 * Download IDCS Metadata to a local XML file. Metadata is available from the following location - [https://<<IDCSHOST>>/fed/v1/metadata](). Need to login using IDCS admin user credentials to access the URL;
 
@@ -56,11 +53,11 @@ Detailed instructions for setting up SAML SSO for Salesforce can be found from [
 ![](images/IA-SAML-6.png)
 ![](images/IA-SAML-7.png)
 
-* Note the **Organization ID** value. In the demo, the value is - *00D1N000002M18V*
+* Note the **Organization ID** value.
 
 ![](images/IA-SAML-8.png)
 
-* Note the Org **Domain Name** value. In the demo, the value is - *demoidaas-dev-ed*
+* Note the Org **Domain Name** value.
 
 ![](images/IA-SAML-9.png)
 	
@@ -80,12 +77,8 @@ Detailed instructions for setting up SAML SSO for Salesforce can be found from [
 ![](images/IA-SAML-12.png)
 
 
-* On the first page of Configuration screen provide the **Organization ID** and **Domain Name** values :
+* On the first page of Configuration screen provide the **Organization ID** and **Domain Name** values
 
-```	
-Domain Name : demoidaas-dev-ed
-Organization ID : 00D1N000002M18V
-```
 ![](images/IA-SAML-14.png)
 
 * Click on **Next** 
