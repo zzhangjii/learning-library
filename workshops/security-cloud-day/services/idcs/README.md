@@ -35,7 +35,5 @@ Here is the list of topics we will cover in the hands on lab -
 
 * [Multi-Factor Authentication](contents/MFA.md)
 
-* [Enterprise/Social Identity Provider Integration](contents/IDP.md)
-
 * **B2C:** [Self-Registration](contents/SelfRegister.md)
 	

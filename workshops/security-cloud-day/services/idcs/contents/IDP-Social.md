@@ -12,7 +12,7 @@ Following Social providers comes out-of-the-box with IDCS -
 
 IDCS also supports any generic social identity provider that is **OpenID Connect** compliant.
 
-## Demo Objective
+## Objective
 
 1. Configure IDCS to leverage **Google** as the social identity provider. 
 2. (Optional) Establish **Auth0** as the social provider leveraging **Generic OpenID Connect** provider support.
@@ -21,9 +21,9 @@ IDCS also supports any generic social identity provider that is **OpenID Connect
 
 Administrators, End-Users
 
-## Demo Logistics
+## Logistics
 
-G-suite account for **Google** authentication provider configuration. For this demonstration, we will be using necessary parameters from a pre-existing account.
+G-suite account for **Google** authentication provider configuration. For this exercise, we will be using necessary parameters from a pre-existing account.
 
 ## Configure IDCS to use Google Provider
 `(Persona: Administrators)`
@@ -77,7 +77,7 @@ Client Secret - URCTp86DdeQ8N2ojgl9Jpjnd
 
 * Click on **Google**
 
-* From the popup sign-in page for google, login with [demoidcs@gmail.com]()
+* From the popup sign-in page for google, login with your gmail account
 
 ![](images/IDP-Social-12.png)
 
@@ -103,13 +103,13 @@ Client Secret - URCTp86DdeQ8N2ojgl9Jpjnd
 
 * Logout of IDCS and Google
 
-* Login again in IDCS using **Google** provider as [demoidcs@gmail.com]()
+* Login again in IDCS using **Google** provider 
 
 * Verify that after successful google authentication, user is logged in to IDCS MyApps console without any additional prompt.
 
 ## End-to-end Configuration
 
-For configuring social authentication with Google, an OAuth client need to be setup in [Google Developer Console](https://console.developers.google.com). In the demo, existing OAuth client details (**Client ID** and **Client Secret**) have been used. 
+For configuring social authentication with Google, an OAuth client need to be setup in [Google Developer Console](https://console.developers.google.com). In the exercise, existing OAuth client details (**Client ID** and **Client Secret**) have been used. 
 
 The end-to-end integration starting from setup in [Google Developer Console](https://console.developers.google.com), has been captured in this *less than 7 minutes* video -
 
