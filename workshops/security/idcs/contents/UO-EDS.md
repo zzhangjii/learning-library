@@ -1,6 +1,6 @@
 # User On-boarding - Active Directory Synchronization
 
-![](images/1/header-eds.png)
+![](../images/1/header.png)
 
 ## Introduction
 

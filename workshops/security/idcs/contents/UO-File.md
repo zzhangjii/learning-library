@@ -1,6 +1,6 @@
 # User On-boarding - File Upload
 
-![](images/1/header-fo.png)
+![](../images/1/header.png)
 
 ## Introduction
 
