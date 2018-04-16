@@ -10,7 +10,7 @@ IDCS supports user on-boarding from on-premise Active Directory, using file uplo
 
 In this lab, you will walk-through the on-boarding process using either Active Directory or File upload. 
 
-_Note: use Active Directory, if you have admin access to an active Directory environment. Otherwise use File Upload_
+_Note: use Active Directory, if you have admin access to an Active Directory environment. Otherwise use File Upload_
 
 **_To log issues_**, click here to go to the [GitHub oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
