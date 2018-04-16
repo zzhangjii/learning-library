@@ -1,14 +1,29 @@
-# User On-boarding - Delimited File
+# User On-boarding - File Upload
 
+![](images/1/header-fo.png)
+
+## Introduction
+
+## Persona
+
+Administrators, End-Users
+
+## Objectives
+
+**Onboard users using file upload**
+
+- Import File in IDCS
+- End-user verfication
+
+## Import File in IDCS
 
 ### **STEP 1**: Obtain Upload CSV files
 
 - Download the CSV file for [Users](resources/Users.csv) and [Groups](resources/Groups.csv). Inspect the content of the files from your favorite editor.
 	
-	![](images/UO-File-1.png)
-	
+	![](images/UO-File-1.png)	
 
-### **STEP 2**: Import File in IDCS
+### **STEP 2**: Import File
 
 - Go to IDCS Admin console using your Administrator Account credentials as described [here](#adminconsole). Ensure that you are on the **Users** tab
 

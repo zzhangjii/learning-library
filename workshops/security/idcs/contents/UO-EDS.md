@@ -1,4 +1,4 @@
-# Active Directory Synchronization
+# User On-boarding - Active Directory Synchronization
 
 ![](images/1/header-eds.png)
 
@@ -247,7 +247,7 @@ How many groups failed to import.
 	
 ## End-user verfication
 
-### **STEP 1**: AActivate IDCS Account 
+### **STEP 1**: Activate IDCS Account 
 
 `(Persona: End-Users)`
 

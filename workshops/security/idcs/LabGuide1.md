@@ -21,18 +21,3 @@ Choose among the following -
 - <a href="contents/UO-EDS.md" target="_blank">Active Directory Synchronization</a>
 - <a href="contents/UO-File.md" target="_blank">File Upload</a>
 
-## Objectives
-
-**Onboard users from On-premise Active Directory or using file upload**
-
-- Active Directory
-	- AD Setup
-	- Configure Identity Bridge
-	- Initial Synchronization
-	- Verify Synchronization
-	- Synchronize Changes in Active Directory
-	- Activate IDCS Account
-- File Upload
-	- Import File in IDCS
-	- Verify User Creation
-
