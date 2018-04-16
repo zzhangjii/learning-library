@@ -1,38 +1,23 @@
-# User On-boarding
+# Single Sign-on
 
-![](images/1/header.png)
+![](images/2/header.png)
 
 ## Introduction
 
-This is the first of several labs that are part of the **Oracle Public Cloud Identity Cloud Service workshop.** This workshop will walk you through the process of onboarding user population in Identity Cloud Service (IDCS).
+This is the second of several labs that are part of the **Oracle Public Cloud Identity Cloud Service workshop.** This workshop will walk you through the Single Sign-on (SSO) capabilities available in Identity Cloud Service (IDCS).
 
-IDCS supports user on-boarding from on-premise Active Directory, using file upload, REST API, on-premise Oracle Identity Management, or manually from IDCS admin console.
+IDCS supports SSO integration using several methods - 
 
-In this lab, you will walk-through the on-boarding process using either Active Directory or File upload. 
+- Security Assertion Markup Language (SAML) protocol
+- Secure Form-Fill
+- Agent enforced cookie or header based SSO with on-premise/cloud applications
+- Oracle E-Business Suite asserter.
 
-_Note: use Active Directory, if you have admin access to an active Directory environment. Otherwise use File Upload_
+In this lab, you will integrate external application for SSO using SAML. 
 
 **_To log issues_**, click here to go to the [GitHub oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
 ## Contents
 
-Choose among the following - 
-
-- <a href="contents/UO-EDS.md" target="_blank">Active Directory Synchronization</a>
-- <a href="contents/UO-File.md" target="_blank">File Upload</a>
-
-## Objectives
-
-**Onboard users from On-premise Active Directory or using file upload**
-
-- Active Directory
-	- AD Setup
-	- Configure Identity Bridge
-	- Initial Synchronization
-	- Verify Synchronization
-	- Synchronize Changes in Active Directory
-	- Activate IDCS Account
-- File Upload
-	- Import File in IDCS
-	- Verify User Creation
+- [Salesforce SSO Integration - SAML](contents/LabGuide2-IA-SAML.md)
 
