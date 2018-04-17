@@ -22,7 +22,6 @@ Administrators, End-Users
 
 ## Objectives
 
-
 - Integrate Salesforce with IDCS for SSO
 	- Salesforce Setup
 	- IDCS Setup
