@@ -41,7 +41,7 @@ Administrators, External user
 	![](images/4/SelfRegister-2.png) 
 
 
-## Create registration profile  
+### **STEP 2**: Create registration profile  
 
 `(Persona: Administrators)`
 
@@ -90,7 +90,7 @@ Administrators, External user
 	
 	![](images/4/SelfRegister-12.png)
 
-## Verify self-registration
+### **STEP 3**: Verify self-registration
 
 `(Persona: External user)`
 
