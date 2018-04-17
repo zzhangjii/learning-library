@@ -1,7 +1,7 @@
 # Trial Account Student Guide
 
 ![](images/studentguide/Picture-Title.png)
-Update: December 7, 2017
+Updated: April 17, 2018
 
 ## Workshop Introduction
 
