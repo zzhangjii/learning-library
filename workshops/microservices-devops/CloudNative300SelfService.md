@@ -1,7 +1,7 @@
 # Continuous Delivery of Database Microservices
 
 ![](images/300/PictureLab.png)  
-Update: Dec 7, 2017
+Updated: April 17, 2018
 
 ## Introduction
 
@@ -13,7 +13,8 @@ In the first lab (100), the Project Manager created a new project in the Develop
 
 - Access Developer Cloud Service
 - Import Code from external Git Repository
-- Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
+- Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service (ACCS)
+- Show how to pass Environment Variables to ACCS Applications during the Deployment Process
 
 ## Required Artifacts
 
