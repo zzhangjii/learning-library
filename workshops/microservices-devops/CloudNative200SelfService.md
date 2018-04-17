@@ -2,7 +2,7 @@
 
 ![](images/200/Picture-lab.png)
 
-Updated: Dec 7, 2017
+Updated: April 17, 2018
 
 ## Introduction
 
@@ -15,7 +15,7 @@ In the first lab (100), the Project Manager created a new project in the Develop
 - Access Developer Cloud Service
 - Import Code from external Git Repository
 - Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
-- Clone the Git Repository Locally, and update the code to add a Filtered Search feature.
+- Clone the Git Repository Locally, and update the code to add a filtered search feature.
 - Commit to a new branch, and merge the new feature, build and deploy.
 
 ## Required Artifacts
@@ -321,7 +321,7 @@ Normally you would you an Integrated Development environment like Eclipse to upd
 - In the **Change Progress** popup click **OK**.
 
 
-- If you did not install Git as part of the **Trial Account** Student guide, there are many sites that you can visit to install GIT on your laptop. Visit [https://git-scm.com/downloads](https://git-scm.com/downloads) to download and install GIT for your operating system. In the examples to follow, we will use Windows cmd window to execute the git commands, but these examples will work equally as well on Windows or a Mac.
+- If you did not install Git as part of the **Trial Account** Student guide, you can visit [https://git-scm.com/downloads](https://git-scm.com/downloads) to download and install GIT for your operating system. In the examples to follow, we will use Windows cmd window to execute the git commands, but these examples will work equally as well on Windows or a Mac.
 
 - Open a **cmd** or **terminal** window and execute the command: 
 
@@ -342,12 +342,12 @@ Normally you would you an Integrated Development environment like Eclipse to upd
 - Enter the following into the **cmd/terminal** window, and **appending the URL** you just copied after the command 
 
     ```
-    git clone <the git repository URL you copied>
+    git clone https://THE_REPOSITORY_URL_YOU_COPIED
     ``` 
 
     ![](images/200/PictureSelfServe25.png)  
 
-- Now you will change to the **TwitterFeedMicroservice**, and you will create a new Branch titled **Feature2**. You will then **Checkout** that branch. Use the following commands:
+- Now you will change to the **TwitterFeedMicroservice**, and you will create a new Branch titled **Feature2**. You will then **Checkout** that branch so all subsequent updates you make are contained in the Feature2 Branch. Use the following commands:
 
     ```
     cd TwitterFeedMicroservice
@@ -357,14 +357,14 @@ Normally you would you an Integrated Development environment like Eclipse to upd
 
 ### **Step 10**: Update the StaticTweets.java and MyServiceTest.java
 
-- We need to modifiy the StaticTweets.java file so that it will perform filtering of Tweets. To do this, open the file **TwitterFeedMicroservices/src/main/java/com/example/StaticTweets.java**. Here is an example on Windows:
+- We need to modify the StaticTweets.java file so that it will perform filtering of Tweets. To do this, open the file **TwitterFeedMicroservices/src/main/java/com/example/StaticTweets.java**. Here is an example on Windows:
 
     ```
     notepad src/main/java/com/example/StaticTweets.java
     ```
     ![](images/200/PictureSelfServe26.png)  
 
-- In your editor of choice, located the lines that begin with **Remove this comment**. Removing these lines will cause the code surrounded by the comments to execute:
+- In your editor of your choice, locate the lines that begin with "**Remove this comment**". Removing these lines will cause the code previously surrounded by the comments to execute:
 
     ![](images/200/PictureSelfServe27.png)  
 
@@ -372,7 +372,7 @@ Normally you would you an Integrated Development environment like Eclipse to upd
 
      ![](images/200/PictureSelfServe28.png)  
 
-- Now we need to update the test code that will be run whenever a build occurs. Open the file  **TwitterFeedMicroservices/src/test/java/com/example/MyServiceTest.java**. Here is an example on Windows:
+- Now we need to update the test code that will be run whenever a build occurs. The Developer Cloud Service will provide graphs showing the results from the Tests run during the build. Open the file  **TwitterFeedMicroservices/src/test/java/com/example/MyServiceTest.java**. Here is an example on Windows:
 
     ```
     notepad src/test/java/com/example/MyServiceTest.java
