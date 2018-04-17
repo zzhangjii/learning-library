@@ -4,6 +4,8 @@
 
 ## Introduction
 
+In IDCS, you can batch import user accounts, groups and application roles using comma-separated values (CSV) files. In this exercise, you will import a set of users, groups and group memberships into IDCS using sample CSV files provided.
+
 ## Persona
 
 Administrators, End-Users

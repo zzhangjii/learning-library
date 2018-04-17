@@ -9,8 +9,8 @@ Active Directory's Users and Groups can be synchronized to IDCS using the **Micr
 You can select which AD containers of Users and Groups will be synchronized.
 A User's password is **NOT** synchronized. So users will need to either -
 
-* **Activate** (have email sent to them with link) which will let them set a password, or 
-* Federate into IDCS - using your companies' SAML Identity Provider (IDP) - for example - **Active Directory Federation Service (ADFS)**
+- **Activate** (have email sent to them with link) which will let them set a password, or 
+- **Federate into IDCS** - using your company's SAML Identity Provider (IDP) - for example - **Active Directory Federation Service (ADFS)**
 
 ## Persona
 

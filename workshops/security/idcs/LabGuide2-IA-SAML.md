@@ -20,107 +20,125 @@ In SAML terminology, IDCS will act as **IdP** (Identity Provider) and Salesforce
 
 Administrators, End-Users
 
+## Objectives
+
+
+- Integrate Salesforce with IDCS for SSO
+	- Salesforce Setup
+	- IDCS Setup
+	- Assign the App to an IDCS group
+	- Verify SSO
+
 ## Logistics
 
-* A Salesforce developer account is needed. One can be obtained from [here](https://developer.salesforce.com/signup?d=70130000000td6N).
+- A Salesforce developer account is needed. One can be obtained from [here](https://developer.salesforce.com/signup?d=70130000000td6N).
 
-* A custom domain needs to be setup in Salesforce for SP-initiated SSO to work i.e. SSO happens when user directly attempts to access Salesforce as opposed to accessing Salesforce App from IDCS MyApps portal (IDP-initiated SSO).
+- A custom domain needs to be setup in Salesforce for SP-initiated SSO to work i.e. SSO happens when user directly attempts to access Salesforce as opposed to accessing Salesforce App from IDCS MyApps portal (IDP-initiated SSO).
 
 
-* Download IDCS Metadata to a local XML file. Metadata is available from the following location - [https://<<IDCSHOST>>/fed/v1/metadata](). Need to login using IDCS admin user credentials to access the URL;
+- Download IDCS Metadata to a local XML file. Metadata is available from the following location - [https://<<IDCSHOST>>/fed/v1/metadata](). Need to login using IDCS admin user credentials to access the URL.
 
 	![](images/2/IA-SAML-1.png)
 	
-## Salesforce Setup
-`(Persona: Administrators)`
-
-Detailed instructions for setting up SAML SSO for Salesforce can be found from [Salesforce help article](https://help.salesforce.com/articleView?id=sso_saml.htm&type=5)
-
-
-* Login to the Salesforce developer account.
-
-* From side menu bar, go to **Settings** -> **Identity** -> **Single Sign-On Settings**
-
-![](images/2/IA-SAML-2.png)
-
-* Click on **Edit** and enable **Federated Single Sign-On Using SAML** option
-
-![](images/2/IA-SAML-3.png)
-
-* Click on **New from Metadata File** button to import IDCS metadata. Select the downloaded metadata file using **Choose File** button. Click on **Create**.
-
-![](images/2/IA-SAML-4.png)
-![](images/2/IA-SAML-5.png)
-
-* Keep all the default information and click on **Save**
-
-![](images/2/IA-SAML-6.png)
-![](images/2/IA-SAML-7.png)
-
-* Note the **Organization ID** value.
-
-![](images/2/IA-SAML-8.png)
-
-* Note the Org **Domain Name** value.
-
-![](images/2/IA-SAML-9.png)
 	
-## IDCS Setup
-`(Persona: Administrators)`
-
-* Go to IDCS Admin console -> **Applications** tab
-
-* Click on **Add button** and select **App Catalog**
-
-![](images/2/IA-SAML-10.png)
-
-* Search for **Salesforce** App and Add 
-
-![](images/2/IA-SAML-11.png)
+## Integrate Salesforce with IDCS for SSO
 	
-![](images/2/IA-SAML-12.png)
+### **STEP 1**: Salesforce Setup
 
-
-* On the first page of Configuration screen provide the **Organization ID** and **Domain Name** values
-
-![](images/2/IA-SAML-14.png)
-
-* Click on **Next** 
-
-![](images/2/IA-SAML-15.png)
-
-* Click on **Finish** button  
-
-* **Activate** the application 
-
-![](images/2/IA-SAML-16.png)
-
-## Assign Apps to Group
 `(Persona: Administrators)`
 
-* Go to IDCS Admin Console -> **Groups** tab 
+**_Note_**: Detailed instructions for setting up SAML SSO for Salesforce can be found from [Salesforce help article](https://help.salesforce.com/articleView?id=sso_saml.htm&type=5)
+
+
+- Login to the Salesforce developer account.
+
+- From side menu bar, go to **Settings** -> **Identity** -> **Single Sign-On Settings**
+
+	![](images/2/IA-SAML-2.png)
+
+- Click on **Edit** and enable **Federated Single Sign-On Using SAML** option
+
+	![](images/2/IA-SAML-3.png)
+
+- Click on **New from Metadata File** button to import IDCS metadata. Select the downloaded metadata file using **Choose File** button. Click on **Create**.
+
+	![](images/2/IA-SAML-4.png)
+	
+	![](images/2/IA-SAML-5.png)
+
+- Keep all the default information and click on **Save**
+
+	![](images/2/IA-SAML-6.png)
+	
+	![](images/2/IA-SAML-7.png)
+
+- Note the **Organization ID** value.
+
+	![](images/2/IA-SAML-8.png)
+
+- Note the Org **Domain Name** value.
+
+	![](images/2/IA-SAML-9.png)
+	
+### **STEP 2**: IDCS Setup
+
+`(Persona: Administrators)`
+
+- Go to IDCS Admin console -> **Applications** tab
+
+- Click on **Add button** and select **App Catalog**
+
+	![](images/2/IA-SAML-10.png)
+
+- Search for **Salesforce** App and Add 
+
+	![](images/2/IA-SAML-11.png)
+	
+	![](images/2/IA-SAML-12.png)
+
+
+- On the first page of Configuration screen provide the **Organization ID** and **Domain Name** values
+
+	![](images/2/IA-SAML-14.png)
+
+- Click on **Next** 
+
+	![](images/2/IA-SAML-15.png)
+
+- Click on **Finish** button  
+
+- **Activate** the application 
+
+	![](images/2/IA-SAML-16.png)
+
+### **STEP 3**: Assign App to Group
+
+`(Persona: Administrators)`
+
+- Go to IDCS Admin Console -> **Groups** tab 
 
 	![](images/2/IA-SAML-17.png)
 
-* Add group **Employees**, if not already there. Open the group details page.
+- Add group **Employees**, if not already there. Open the group details page.
 
 	![](images/2/IA-SAML-18.png)
 
-* Go to the `Access` tab. Click on `Assign`. 
+- Go to the `Access` tab. Click on `Assign`. 
 
-* Select `Salesforce` and confirm 
+- Select `Salesforce` and confirm 
 
 	![](images/2/IA-SAML-19.png)
 	
 	![](images/2/IA-SAML-20.png)
 	
 	
-## Verify Apps SSO
+### **STEP 4**: Verify SSO
+
 `(Persona: End-Users)`
 
-* Login in IDCS as employee **dcrane**
+- Login in IDCS as employee **dcrane**
 		
-* Verify that the following Salesforce applications are visible now on the landing page - **MyApps** portal
+- Verify that the following Salesforce applications are visible now on the landing page - **MyApps** portal
 
 ```
 Salesforce Application
@@ -132,10 +150,10 @@ Salesforce Work.com
 
 <blockquote>This is because <b>dcrane</b> is part of Employees group. <b>Salesforce</b> App has been assigned to the <b>Employees</b> group. So any user who is member of this group will automatically get access to all the Salesforce applications</blockquote>
 
-* Click on the **Salesforce Chatter** app. 
+- Click on the **Salesforce Chatter** app. 
 
-* Verify that **dcrane** is automatically logged-in to Salesforce Chatter (**SSO**)
+- Verify that **dcrane** is automatically logged-in to Salesforce Chatter (**SSO**)
 
-![](images/2/IA-SAML-22.png)
+	![](images/2/IA-SAML-22.png)
 	
 
