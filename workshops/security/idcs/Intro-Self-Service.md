@@ -2,7 +2,7 @@
 
 ## Oracle Identity Cloud Service Workshop
 
-Welcome to the Oracle Public Cloud Container Native Development workshop. This workshop focuses on the essential and useful features of IDCS for `End-Users` and `Administrator`communities to help you understand the benefits of using Oracle's next generation Identity and Access management solution.
+Welcome to the Oracle Identity Cloud Service workshop. This workshop focuses on the essential and useful features of IDCS for `End-Users` and `Administrator`communities to help you understand the benefits of using Oracle's next generation Identity and Access management solution.
 
 The **Key Performance Indicators** we will focus on are - **Deep Integration**, **facilitate Hybrid environment operation**, **Fast Integration**, and **next-gen Security services**
 
@@ -20,11 +20,13 @@ _Note: When clicking on links in this lab guide_, it is best to **Right Click** 
   ![](images/oraclecode/code_9.png)
 
 
-### **Step 2**: Navigate to Lab 1
+### **Step 2**: Navigate to Labs
 
 - _You can see a list of Lab Guides_ by clicking on the **Menu Icon** in the upper left corner of the browser window. You're now ready to continue with **Lab 1**.
 
-  ![](images/LabMenuIcon.png)
+  ![](images/LabMenuIcon1.png)
+  
+  ![](images/LabMenuIcon2.png)
   
   
 <blockquote>
