@@ -36,16 +36,15 @@ In this lab, Lisa Jones (The Project Manager) will complete the Sprint and view 
 
 - Click on **Agile** on the Microservice Board.
 
-    ![](images/400/image002.png)
+    ![](images/500/image002.png)
 
 - Click on the **Reports** Button and explore the **Burndown Chart**.
 
     ![](images/500/image003.png)
 
-- Click on the **Sprint Report**.
+- Click on the **Sprint Report** Tab.
 
     ![](images/500/image003.1.png)
-
 
 ### **STEP 2**: Complete the Sprint
 
@@ -55,7 +54,7 @@ In this lab, Lisa Jones (The Project Manager) will complete the Sprint and view 
 
 - **Confirm** and **Complete** the Sprint
 
-![](images/400/image006.png)
+![](images/500/image006.png)
 
 
 # Project Administrative Features
