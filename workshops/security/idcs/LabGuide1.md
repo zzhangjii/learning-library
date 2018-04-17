@@ -18,6 +18,6 @@ _Note: use Active Directory, if you have admin access to an Active Directory env
 
 Choose among the following - 
 
-- <a href="contents/UO-EDS.md" target="_blank">Active Directory Synchronization</a>
-- <a href="contents/UO-File.md" target="_blank">File Upload</a>
+- [Active Directory Synchronization](LabGuide1-UO-EDS.md)
+- [File Upload](LabGuide1-UO-File.md)
 

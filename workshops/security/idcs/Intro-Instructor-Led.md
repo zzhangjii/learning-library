@@ -20,13 +20,11 @@ _Note: When clicking on links in this lab guide_, it is best to **Right Click** 
   ![](images/oraclecode/code_9.png)
 
 
-### **Step 2**: Navigate to Labs
+### **Step 2**: Navigate to Lab 1
 
 - _You can see a list of Lab Guides_ by clicking on the **Menu Icon** in the upper left corner of the browser window. You're now ready to continue with **Lab 1**.
 
-  ![](images/LabMenuIcon1.png)
-  
-  ![](images/LabMenuIcon2.png)
+  ![](images/LabMenuIcon.png)
   
   
 <blockquote>
