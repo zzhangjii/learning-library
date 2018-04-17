@@ -2,7 +2,7 @@
 
 ![](images/100/Picture100-lab.png)
 
-Updated: Dec 7, 2017
+Updated: April 17, 2018
 
 ## Introduction
 
@@ -61,7 +61,7 @@ Although you will login as a single user, you will take on 4 Personae during the
 
 Oracle Developer Cloud Service provides a complete development platform that streamlines team development processes and automates software delivery. The integrated platform includes an issue tracking system, agile development dashboards, code versioning and review platform, continuous integration and delivery automation, as well as team collaboration features such as wikis and live activity stream. With a rich web based dashboard and integration with popular development tools, Oracle Developer Cloud Service helps deliver better applications faster.
 
-- From the Cloud UI dashboard, **Right Click** on the **Developer** service, then open the Service in a new tab. This will keep the Dashboard loaded on another tab.
+- From the Cloud UI dashboard, **Right Click** on the **Developer** service, then open the Service in a new tab. This will keep the Dashboard and the Developer consoles loaded at the same time.
 
     ![](images/100/SelfServ13.png)
 
@@ -74,9 +74,12 @@ Oracle Developer Cloud Service provides a complete development platform that str
     ![](images/100/SelfServ06.png)
 
 - Enter the following:
-    - **Instance Name**: `DevCS`
-    - **Description**: `DevCS Instance`
-    - **Notification Email**: Your account email should automatically show
+
+    **Instance Name**: `DevCS`
+
+    **Description**: `DevCS Instance`
+
+    **Notification Email**: Your account email should automatically show
 
     ![](images/100/SelfServ07.png)
 
@@ -106,7 +109,7 @@ Oracle Developer Cloud Service provides a complete development platform that str
 
     ![](images/100/SelfServ12.png)
 
-- On Details screen enter the following data and click on **Next**.
+- On the Details screen, enter the following data and click on **Next**.
 
     **Name:** `Alpha Office Product Catalog Project`
 
@@ -144,7 +147,7 @@ In this step you are still assuming the identity of the Project Manager, ***Lisa
 
 ![](images/lisa.png)
 
-- Click **Issues** on left hand navigation panel to display the Track Issues page. Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
+- Click **Issues** on left hand navigation panel to display the **Track Issues** page. Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
 
     ![](images/100/Picture100-16.png)
 
@@ -274,6 +277,8 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 
     ![](images/100/Picture100-26.png)
 
+- After dragging all the issues, your Sprint Issues should appear as shown below:
+
     ![](images/100/Picture100-27.png)
 
 ### **STEP 11**: Start Sprint
@@ -298,7 +303,7 @@ Each Sprint lists issues that are added to it. The Backlog section (the last sec
 
 ### **STEP 12**: Setup Storage Connection
 
-In this step we are going to configure a server that can be used to perform the Build functions performed in later labs, but we'll get those steps out of the way now.
+In this step we are going to configure an Image that can be used to perform the Build functions to be executed in later labs, but we'll get those steps out of the way now.
 
 - Click on your **User Name** in the top right corner of the window. Then click on **Organization**.
 
@@ -324,7 +329,7 @@ In this step we are going to configure a server that can be used to perform the 
 
     ![](images/100/SelfServ19.png)
 
-- Return to the tab/window with the **New Configuration** dialog.
+- Return to the tab/window with the **New Configuration** dialog:
     - In **Field 1. Service ID**, ***append*** the word "`Storage-`" to the front of the **Cloud Account Name** - e.g. `Storage-myaccountname`.
     - In **Field 2. User Name**, copy and paste the **Buyer** email address. e.g. `myaccountname@me.com`.
     - In **Field 3. Password**, enter your account Password.
@@ -347,10 +352,9 @@ In this step we are going to configure a server that can be used to perform the 
 
     ![](images/100/SelfServ23.png)
 
-- The following dialog will be displayed, and we will fill in fields **1, 2, 3 and 4** using data from the **Classic Compute** console.
+- The following dialog will be displayed, and we will fill in fields labeled **1, 2, 3 and 4** using data from the **Classic Compute** console.
 
     ![](images/100/SelfServ26.png)
-
 
 - We next need to go to the the **Classic Compute** Console. To get to that console, return to the tab/window with the **Storage Classic** dashboard. From that tab/window, click on the **Dashboard** icon on the top right corner of the screen.
 
