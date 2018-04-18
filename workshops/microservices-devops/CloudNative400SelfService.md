@@ -276,7 +276,7 @@ We have now verified that the Product Catalog UI has been deployed and functions
 
 ## Create a build Pipeline
 
-### **STEP 8**: Test Product Catalog UI
+### **STEP 8**: Create Build Pipeline
 
 Developer Cloud service provides the ability to create Build Pipelines. With a build pipeline you're able to determine which build runs when, and what other builds it will trigger.
 
@@ -303,6 +303,8 @@ Developer Cloud service provides the ability to create Build Pipelines. With a b
     ![](images/400/SelfServe24.png) 
 
 - Click on **Save**
+
+### **STEP 9**: Start the Build
 
 - Click on the **Build** icon to start the build pipeline.
 
