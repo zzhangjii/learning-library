@@ -17,6 +17,7 @@ In the first lab (100), the Project Manager created a new project in the Develop
 - Access Developer Cloud Service
 - Import code from an external Git repository
 - Build and deploy a project using Developer Cloud Service and Oracle Application Container Cloud Service
+- Create a Build Pipeline
 
 ## Required Artifacts
 
@@ -272,5 +273,51 @@ We have now verified that the Product Catalog UI has been deployed and functions
 - Your Sprint should now look like the following:
 
     ![](images/400/Picture58.2.png) 
+
+## Create a build Pipeline
+
+### **STEP 8**: Test Product Catalog UI
+
+Developer Cloud service provides the ability to create Build Pipelines. With a build pipeline you're able to determine which build runs when, and what other builds it will trigger.
+
+- Click on the **Build** left hand menu option. Then click on the **Pipelines** tab in the build window.
+
+    ![](images/400/SelfServe20.png) 
+
+- Click on the **New Pipeline** button
+
+    ![](images/400/SelfServe21.png) 
+
+- Enter the following in the dialog:
+    - **Name:** `AlphaOfficeBuildPipeline`
+    - **Auto Start...**: For the sake of this workshop, we are turning this option off. We don't want to trigger the pipeline, if you decide to build a job independently. 
+    - **Disallow pipeline**: Also for the sake of this demo, we don't want any manually started build jobs to cause the pipeline to start.
+    - Click on **Create** 
+
+    ![](images/400/SelfServe22.png) 
+
+- Drag and drop **AlphaRESTBuild, TwitterFeedBuild** and **ProductCatalogUIBuild** to the diagramming panel.
+
+- Connect **Start** to **AlphaRESTBuild** and **TwitterFeedBuild**. Then connect **AlphaRESTBuild** and **TwitterFeedBuild** to **ProductCatalogBuild**. This will allow the ProductCatalogBuild to be run only if TwitterFeedBuild and AlphaRESTBuild complete Successfully.
+
+    ![](images/400/SelfServe24.png) 
+
+- Click on **Save**
+
+- Click on the **Build** icon to start the build pipeline.
+
+    ![](images/400/SelfServe25.png) 
+
+- You can monitor the progress of the Pipeline job from the **Pipelines** tab.
+
+    ![](images/400/SelfServe26.png) 
+
+- Or, you can monitor progress from the **Jobs** tab.
+
+    ![](images/400/SelfServe27.png) 
+
+- You can also click on the **Deploy** tab and monitor the deployment process after the builds have completed.
+
+    ![](images/400/SelfServe28.png) 
 
 - **You are now done with this lab.**
