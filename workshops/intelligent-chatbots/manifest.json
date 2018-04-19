@@ -1,0 +1,32 @@
+{
+    "workshop": {
+        "title": "Intelligent Chatbot Training Workshop",
+        "description": "Description of this workshop.",
+        "theme": "default",
+        "interactive":"https://launch.oracle.com/?",
+        "labs": [
+            {
+                "number": "0",
+                "filename": "README.md",
+                "title": "README",
+                "description": "Step-by-step workshop instructions"
+
+            },
+            {
+                "number": "100",
+                "filename": "LabGuide100.md",
+                "title": "Lab 100: Create Intelligent ChatBot.",
+                "description": "Use Oracle Mobile Cloud Service to create cafeteria chatbot"
+
+            },
+            {
+                "number": "200",
+                "filename": "LabGuide200.md",
+                "title": "Lab 200: Integrating Instant App, QnA and web channel with Intelligent ChatBot.",
+                "description": "Integrating Instant App, QnA and web channel in the CafeteriaAssistance Bot which you have done in the Lab1"
+
+            }
+
+        ]
+    }
+}
