@@ -149,7 +149,7 @@ You will land onto the below screen:
 Now, provide any name and unzip the attached folder and upload the CSV file:
 
 ![D:\\Workshop\_Bot\\BotsLab2\\qna5.PNG](images/100/media/image17.png)
-[CSV_File.zip](https://github.com/AdityaVishwekar/workshops/blob/master/intelligent-chatbots/images/CSV_File.zip)
+[CSV_File.zip](https://github.com/AdityaVishwekar/IntelligentChatBots/blob/master/workshops/intelligent-chatbots/images/CSV_File.zip)
 
 Once you upload the CSV file, you see the below screen:
 
@@ -235,7 +235,7 @@ Now, you will get the below screen note down the App Id because you have to use 
 
 Now, unzip the below folder and then open index.html file which is inside the html folder in any editor.
 
-[CafeteriaAssistanceBotWebPage.zip](https://github.com/AdityaVishwekar/workshops/blob/master/intelligent-chatbots/images/CafeteriaAssistanceBotWebPage.zip)
+[CafeteriaAssistanceBotWebPage.zip](https://github.com/AdityaVishwekar/IntelligentChatBots/blob/master/workshops/intelligent-chatbots/images/CafeteriaAssistanceBotWebPage.zip)
 
 In the index.html file change the appId like below:
 
