@@ -337,6 +337,7 @@ In this step we are going to configure an Image that can be used to perform the 
     - Click on the **Create** Button.
 
     ![](images/100/SelfServ20.png)
+    
 
 - After your Configuration is accepted, click on **Test Connection**
 

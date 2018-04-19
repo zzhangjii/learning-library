@@ -393,7 +393,7 @@ Normally you would you an Integrated Development environment like Eclipse to upd
     ```
     git status
     git config --global user.email "youremail@me.com"
-    git config --glogal user.name "your name"
+    git config --global user.name "your name"
     git commit -am "Feature2: Added Support for Filtering"
     ```
 
