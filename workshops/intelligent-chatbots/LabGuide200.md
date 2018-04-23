@@ -251,4 +251,4 @@ Once you click on the right-bottom corner image - ChatBot icon (marked as red in
 
 Now your ChatBot is integrated with the web page. To do testing type “ShowMenu” in Type a message and then click on the “Send” button.
 
-**Note** You can download all the related files from [Github](https://github.com/AdityaVishwekar/IntelligentChatBots/blob/master/workshops/intelligent-chatbots/images/All_files.zip) 
+**Note:** You can download all the related files from [Github](https://github.com/AdityaVishwekar/IntelligentChatBots/blob/master/workshops/intelligent-chatbots/images/All_files.zip) 
