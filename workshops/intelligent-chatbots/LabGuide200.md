@@ -250,3 +250,5 @@ Once you click on the right-bottom corner image - ChatBot icon (marked as red in
 ![D:\\Workshop\_Bot\\BotsLab2\\webpage2.PNG](images/100/media/image32.png)
 
 Now your ChatBot is integrated with the web page. To do testing type “ShowMenu” in Type a message and then click on the “Send” button.
+
+**Note** You can download all the related files from [Github](https://github.com/AdityaVishwekar/IntelligentChatBots/blob/master/workshops/intelligent-chatbots/images/all_files.zip) 
