@@ -22,6 +22,8 @@ Log in to your ChatBot Tenant instance, then click the **Bots** button on left-n
 
 On the ChatBot Tenant instance dashboard, click the **New Bot** button.
 
+***DISCLAIMER*** “The MCSe trail environment GUI might be little different than our test environment”
+
 ![D:\\Workshop\_Bot\\image1.PNG](images/100/image3.png)
 
 In the **Create Bot** dialog, name the ChatBot CafeteriaAssistance\_Bot. Then, add a description and click **Create**.
