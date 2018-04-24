@@ -13,12 +13,12 @@
           {
             "name": "Lab 100",
             "description": "Create Intelligent ChatBots with Intents, Entities, Utterances and Flow.",
-            "imageUrl": "https://oracle.github.io/learning-library/workshops/common-content/images/common/laptop.jpg"
+            "imageUrl": "https://github.com/oracle/learning-library/tree/master/workshops/common-content/images/common/chatbotlogo.PNG"
           },
           {
             "name": "Lab 200",
             "description": "Integrating Instant App, QnA and Web Channel with Intelligent Bot.",
-            "imageUrl": "images/OracleCode.png"
+            "imageUrl": "https://github.com/oracle/learning-library/tree/master/workshops/common-content/images/common/Lab200.png"
           }
         ],
         "labs": [
