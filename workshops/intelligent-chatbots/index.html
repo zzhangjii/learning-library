@@ -38,9 +38,9 @@
     <!--    TOP TOOLBAR-->
     <md-toolbar class="md-hue-2 infra" flex="none" layout-padding>
         <div class="md-toolbar-tools infra">
-            <md-button class="md-icon-button md-raised md-accent infra" aria-label="menu-button" ng-disabled="hasMultipleVersions && !version.selected" ng-click="toggleLeft()">
+            <!-- <md-button class="md-icon-button md-raised md-accent infra" aria-label="menu-button" ng-disabled="hasMultipleVersions && !version.selected" ng-click="toggleLeft()">
                 <img src="https://oracle.github.io/learning-library/workshops/common-content/images/common/hamburger.png" class="menu-hamburger infra" />
-            </md-button>
+            </md-button> -->
             <h2 class="infra" flex="noshrink">
                 <span class="infra">{{manifest.workshop.title}}</span>
             </h2>
@@ -90,7 +90,7 @@
     </md-sidenav>
 
     <!--  LAB GUIDE VERSION SELECTION PAGE -->
-    <h4 class="infra version-heading" ng-show="hasMultipleVersions && selection == 'chooseVersion'">Please Select a Workshop Version:</h4>
+    <h4 class="infra version-heading" ng-show="hasMultipleVersions && selection == 'chooseVersion'">Use the following links to navigate the workshop:</h4>
     <div class="version-box" ng-show="hasMultipleVersions && selection == 'chooseVersion'">
       <div ng-repeat="thisVersion in versionsAvailable" class="version-content">
         <md-toolbar ng-class="{ infra: true }" md-theme="theme-{{$index}}" flex="none" layout-padding>
@@ -103,7 +103,7 @@
             <span class="infra">{{thisVersion.description}}</span>
             <img ng-src="{{thisVersion.imageUrl}}" class="infra" />
             <md-button class="infra md-raised md-primary high-contrast-hover" ng-click="version.selected = thisVersion.name">
-              Select {{thisVersion.name}} Version
+              Go To {{thisVersion.name}}
             </md-button>
           </div>
         </md-content>
