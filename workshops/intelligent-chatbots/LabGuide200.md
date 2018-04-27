@@ -1,9 +1,8 @@
-Integrating Instant App, QnA and web channel in the CafeteriaAssistance Bot
+Integrating Instant App and Web channel in the CafeteriaAssistance Bot
 ===========================================================================
 ### Objective
 
 - Adding Instant App feature to the Bot.
-- Adding QnA feature in the Bot
 - Integrate the Bot with Web Page
 
 ### Features Overview
