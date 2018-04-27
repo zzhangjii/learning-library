@@ -41,7 +41,7 @@
             {
                 "number": "200",
                 "filename": "LabGuide200.md",
-                "title": "Lab 200: Integrating Instant App, QnA and web channel with Intelligent ChatBot.",
+                "title": "Lab 200: Integrating Instant App and web channel with Intelligent ChatBot.",
                 "description": "Integrating Instant App and web channel in the CafeteriaAssistance Bot which you have done in the Lab1",
                 "labels": {"version": "Lab 200"}
 
