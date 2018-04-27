@@ -39,7 +39,7 @@ Once you click new Instant app, it will provide some pre-defined templates which
 
 #### ![D:\\Workshop\_Bot\\BotsLab2\\Capture4.PNG](images/100/media/image6.png)
 
-#### App Settings
+#### **App Settings**
 
 App Settings is where you manage general information about your Instant App.
 
@@ -130,81 +130,8 @@ Now, if you go back to the Bot you can see the response like below:
 
 ![](images/100/media/image13.png)
 
-### **Step 2**: Adding QnA feature in the Bot
 
-**Note:** "If you are unable to see Q&A option in your OMCe trial account, then, skip this section. It will be provided as a part of next release."
-
-To add Q&A feature in your Bot, click on the Q&A on left side list in your Bot Instance like below:
-
-![D:\\Workshop\_Bot\\image2.PNG](images/100/media/image14.png)
-
-Once you click on Q&A, you can see the below screen:
-
-![D:\\Workshop\_Bot\\BotsLab2\\qna2.PNG](images/100/media/image15.png)
-
-You will land onto the below screen:
-
-![D:\\Workshop\_Bot\\BotsLab2\\qna3.PNG](images/100/media/image16.png)
-
-Now, provide any name and unzip the attached folder and upload the CSV file:
-
-![D:\\Workshop\_Bot\\BotsLab2\\qna5.PNG](images/100/media/image17.png)
-[CSV_File.zip](https://github.com/AdityaVishwekar/IntelligentChatBots/blob/master/workshops/intelligent-chatbots/images/CSV_File.zip)
-
-Once you upload the CSV file, you see the below screen:
-
-![D:\\Workshop\_Bot\\BotsLab2\\qna6.PNG](images/100/media/image19.png)
-
-On the click of “View All Q&A”, you can edit the question and answer list below:
-
-![](images/100/media/image20.png)
-
-Once the csv file is uploaded. In your previous lab1 CafeteriaAssistanceBot flow (YAML) add “qnaEnable=true” and call the qna intent like below, you don’t have to define it in the intent as it’s a default intent. Write the YAML code marked as red box to your Bot flow in Intent:
-
-![D:\\Workshop\_Bot\\BotsLab2\\Capture8.PNG](images/100/media/image21.png)
-
-Then, add the below code in the flow after feedback. Also, same can be seen in the below screenshot:
-
-```
-
-qna:
-
-component: \"System.QnA\"
-
-transitions:
-
-actions:
-
-none: \"unresolved\"
-
-next: \"Intent\"
-
-unresolved:
-
-component: \"System.Output\"
-
-properties:
-
-text: \"Sorry I don\'t understand that question!\"
-
-transitions:
-
-return: \"unresolved\"
-```
-
-![D:\\Workshop\_Bot\\BotsLab2\\Capture28738721.PNG](images/100/media/image22.png)
-
-Validate and run to check the Q&A utterances.
-
-Type “Cancel my order” and click on send:
-
-![D:\\Workshop\_Bot\\BotsLab2\\qna10.PNG](images/100/media/image23.png)
-
-Now, run and check Q&A feature in your Bot like type “Cancel my order” and click send:
-
-![D:\\Workshop\_Bot\\BotsLab2\\bot12.PNG](images/100/media/image24.png)
-
-### **Step 3**: Integrating the Bot with website page as a channel
+### **Step 2**: Integrating the Bot with website page as a channel
 
 **Channels**
 
