@@ -17,7 +17,7 @@
           },
           {
             "name": "Lab 200",
-            "description": "Integrating Instant App, QnA and Web Channel with Intelligent Bot.",
+            "description": "Integrating Instant App and Web Channel with Intelligent Bot.",
             "imageUrl": "https://www.oracle.com/assets/c78-03-mobility-3886479.jpg"
           }
         ],
@@ -41,8 +41,8 @@
             {
                 "number": "200",
                 "filename": "LabGuide200.md",
-                "title": "Lab 200: Integrating Instant App, QnA and web channel with Intelligent ChatBot.",
-                "description": "Integrating Instant App, QnA and web channel in the CafeteriaAssistance Bot which you have done in the Lab1",
+                "title": "Lab 200: Integrating Instant App and web channel with Intelligent ChatBot.",
+                "description": "Integrating Instant App and web channel in the CafeteriaAssistance Bot which you have done in the Lab1",
                 "labels": {"version": "Lab 200"}
 
             }
