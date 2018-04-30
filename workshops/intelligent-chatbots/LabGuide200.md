@@ -7,7 +7,7 @@ Integrating Instant App and Web channel in the CafeteriaAssistance Bot
 
 ### Features Overview
 
-Intelligent Bots in Oracle Mobile Cloud Enterprise (or just Bots) provide lot of features which can be used based on the requirements like Instant App, Q&A, Translation Services, Bot-Agent handoff, Quality, and Channels support for the Bot like Web Channel, iOS App, Android App, Facebook Messenger, and some other channels supported using webhook.
+Intelligent Bots in Oracle Mobile Cloud Enterprise (or just Bots) provide lot of features which can be used based on the requirements like Instant App, Translation Services, Bot-Agent handoff, Quality, and Channels support for the Bot like Web Channel, iOS App, Android App, Facebook Messenger, and some other channels supported using webhook.
 
 ### **Step 1**: Adding Instant App feature to the Bot
 
