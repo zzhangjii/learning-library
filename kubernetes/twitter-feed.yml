@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: twitter-feed-v2
+  name: twitter-feed
   labels:
     commit: 321c9efce6a0fce712e80b6d999cc01c63781c20
 spec:
