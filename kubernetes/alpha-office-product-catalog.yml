@@ -23,8 +23,6 @@ spec:
         - name: pc-app-port
           containerPort: 80
           protocol: TCP
-      imagePullSecrets:
-        - name: wercker
 ---
 apiVersion: v1
 kind: Service
