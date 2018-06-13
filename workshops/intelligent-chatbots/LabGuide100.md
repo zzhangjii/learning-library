@@ -22,7 +22,7 @@ Log in to your OMCe and then, select Bots to create ChatBot.
 
 And, then click the **New Bot** button
 
-***DISCLAIMER*** “The MCSe trail environment GUI might be little different than our test environment”
+
 
 ![D:\\Workshop\_Bot\\image1.PNG](images/100/image3.png)
 
