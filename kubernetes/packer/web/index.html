@@ -171,7 +171,6 @@
         }
 
         httpRequest.onreadystatechange = function(){
-            console.log("state change: "+ this);
             if(this.readyState === XMLHttpRequest.DONE) {
               let k8sbutton = document.getElementById(elem + "-button");
               console.log("button: " + elem + "-button");
