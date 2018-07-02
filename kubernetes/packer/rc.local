@@ -1,6 +1,9 @@
 #!/bin/bash
 
 sudo iptables -D INPUT -j REJECT --reject-with icmp-host-prohibited
+sudo curl -Lo index.html https://raw.githubusercontent.com/derekoneil/demo-labs/master/kubernetes/packer/web/index.html && sudo mv index.html /home/ubuntu/web/index.html
+sudo echo "server { listen 80 default_server; listen [::]:80 default_server; root /home/ubuntu/web/; }" > /etc/nginx/sites-available/default
+sudo systemctl restart nginx
 sudo minikube start --vm-driver none
 #sudo mv /root/.kube /home/ubuntu/.kube
 sudo chown -R ubuntu /home/ubuntu/.kube && sudo chgrp -R ubuntu /home/ubuntu/.kube
@@ -8,8 +11,9 @@ sudo chown -R ubuntu /home/ubuntu/.kube && sudo chgrp -R ubuntu /home/ubuntu/.ku
 sudo chown -R ubuntu /home/ubuntu/.minikube && sudo chgrp -R ubuntu /home/ubuntu/.minikube
 sudo minikube update-context
 sudo chmod 666 /etc/nginx/sites-available/default
-sudo echo "server { listen 80 default_server; listen [::]:80 default_server; location /k8s/ { proxy_pass http://$(sudo minikube ip):30000/; } location /product-catalog/ { proxy_pass http://$(sudo minikube ip):30232/; } }" > /etc/nginx/sites-available/default
+sudo echo "server { listen 80 default_server; listen [::]:80 default_server; root /home/ubuntu/web/; location /k8s/ { proxy_pass http://$(sudo minikube ip):30000/; } location /product-catalog/ { proxy_pass http://$(sudo minikube ip):30232/; } }" > /etc/nginx/sites-available/default
 sudo systemctl restart nginx
 sudo curl -Lo alpha-office-product-catalog.yml https://raw.githubusercontent.com/derekoneil/demo-labs/master/kubernetes/alpha-office-product-catalog.yml && sudo mv alpha-office-product-catalog.yml /home/ubuntu/alpha-office-product-catalog.yml
-sudo su -c 'kubectl apply -f /home/ubuntu/alpha-office-product-catalog.yml' root
+sudo KUBECONFIG=/etc/kubernetes/admin.conf kubectl apply -f /home/ubuntu/alpha-office-product-catalog.yml
+#sudo su -c 'kubectl apply -f /home/ubuntu/alpha-office-product-catalog.yml' root
 exit 0

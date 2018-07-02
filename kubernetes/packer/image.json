@@ -13,7 +13,7 @@
       "shape": "VM.Standard1.1",
       "ssh_username": "ubuntu",
       "ssh_password": "welcome1",
-      "key_file":"oci_api_key.pem",
+      "key_file":"./keys/oci_api_key.pem",
       "type": "oracle-oci"
     }
   ],
@@ -27,6 +27,21 @@
       "type": "file",
       "source": "minikube-cache.tar.gz",
       "destination": "/home/ubuntu/minikube-cache.tar.gz"
+    },
+    {
+      "type": "file",
+      "source": "minikube-start.sh",
+      "destination": "/home/ubuntu/minikube-start.sh"
+    },
+    {
+      "type": "file",
+      "source": "minikube-stop.sh",
+      "destination": "/home/ubuntu/minikube-stop.sh"
+    },
+    {
+      "type": "file",
+      "source": "web",
+      "destination": "/home/ubuntu"
     },
     {
       "type": "shell",
@@ -43,7 +58,9 @@
         "sudo curl -LO https://storage.googleapis.com/minikube/releases/latest/docker-machine-driver-kvm2 && sudo chmod +x docker-machine-driver-kvm2 && sudo mv docker-machine-driver-kvm2 /usr/local/bin/",
         "tar -zxvf minikube-cache.tar.gz",
         "sudo mv /home/ubuntu/rc.local /etc/rc.local && sudo chmod 777 /etc/rc.local",
-        "sudo su -c 'mkdir /home/ubuntu/.minikube' ubuntu && sudo cp -r /home/ubuntu/cache /home/ubuntu/.minikube/cache"
+        "sudo su -c 'mkdir /home/ubuntu/.minikube' ubuntu && sudo cp -r /home/ubuntu/cache /home/ubuntu/.minikube/cache",
+        "sudo chmod +x /home/ubuntu/minikube-*.sh"
+
       ]
     }
   ]

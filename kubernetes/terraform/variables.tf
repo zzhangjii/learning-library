@@ -5,7 +5,7 @@ variable "user_ocid" {}
 variable "fingerprint" {}
 
 variable "private_key_path" {
-  default = "./oci_api_key.pem"
+  default = "./keys/oci_api_key.pem"
 }
 
 variable "region" {
@@ -15,11 +15,11 @@ variable "region" {
 variable "compartment_ocid" {}
 
 variable "ssh_public_key" {
-  default = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0nysWs1m+sdoaK15mMIvLEiN+ofDhi9qNEXbPby+a76cJl4zD26P3cErUjE2HVLizuLoec5XzrcKLOz53/0f9hulwZRzapsbIZlPDLBoL+HcuqRyD23YMf6ETg780E3cKZvDVtVCKZg0R2H8QGs9yrnKHt0zhXp6FwKuinfVvMhY3rOM23bYRoI3Y4WiREMSDWLkNTXxAJqUPtcxPVVU388OpWznAsEYiioiwt/KsNU1MECpcK93vihdUMJ15GamPptplS+0Bu1nmYHOvkp9UHEsq+SNKw57sO8S2dgJtpDmT3Hyth8ZvgW+pYOEGAD7PwxFfUm2km/XuRUDF7HfB computekey"
+  default = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpz2Wd1ktUUfhDUyK59ZWMhgZwg/vbCnwzScTLFJS5RlASj5itdnPsvePS6qtmCHIoLFW/Ouuw8A7aMNq3bntCIGiWBexYNvCChu4Y9/KuGmzpjL/NRyl/EHhSS4jVm4LRxn9FY8dxwEgAfRHOCW0PzTZjvLiNVAkb4QzwR/0K7wQVRt4D1vInIyyLXsCNWrG5Lt/6eVz8cv7lABsat1rOejPV54tUi7Ybl4S09gr/bWvoGu7rtCAVA4+PoiGbGJ4kedSfeZHc9r+oF3X7mZih9IFaypBBIghcaS400PCgCvBIU4VA6ihMqFN/vOsPvAGpvuGI3TqLVKT7dBqaZ1o7 derek@hathor.fios-router.home"
 }
 
 variable "ssh_private_key" {
-  default = "./ckey"
+  default = "./keys/ssh-key"
 }
 
 # Choose an Availability Domain
