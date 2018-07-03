@@ -1,64 +1,24 @@
-# Workshop Introduction
+# Database Cloud Services Workshop for Oracle Compute Infrastructure (OCI)
 
-## How to Prepare for This Workshop
+Welcome to the Oracle Database Cloud Service Workshop. This particular version is based on Oracle's 'OCI' services, versus Oracle 'Classic' services. These labs will give you a basic understanding of the Oracle Database Cloud Service and many of the capabilities around administration and database management. Lab 100 will introduce you to DBCS and show you how to create a Cloud Database. Lab 200 will cover various data migration use cases, including pluggable database migration, tablespace migration, schema migration, and ad-hoc table copying between databases. Lab 300 covers some common Database management activities. Lab 400 show you how to use the Oracle Command Line Interface (CLI) commands to perform various tasks.  This workshop was built on and for version 12.2 of the database, but will also work with 18c with minor changes.  See the 18c_updates document in the drop down menu.
 
-- To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository.
+This instructor led version will have set up the lab environment for you so you don't need to run the setup steps.
 
-- The Labguides are best viewed using the Workshop's [GitHub Pages Website URL](https://oracle.github.io/learning-library/workshops/dbcs-dba-oci/) 
+### **STEP 1**:  Acquire an Oracle Cloud Trial or Workshop Account
 
-- Once you are viewing the Workshop's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
+- Please click on the URL to create your Free Account cloud.oracle.com/tryit, and complete all the required steps to get your free Oracle Cloud Trial Account. When you complete the registration process you'll receive a $300 credit that will enable you to complete the lab for free. Additionally, you'll have 1000s of hours left over to continue to explore the Oracle Cloud.
+  - Soon after requesting your trial you will receive the following email. You will not be able to start Lab 100 until you have received it.
 
-![](images/WorkshopMenu.png)  
+    ![](images/trial.png) 
 
-## Database Cloud Services Workshop for Oracle Compute Infrastructure (OCI)
+### **STEP 2**:  Navigate to Lab 100
 
-Welcome to the Oracle Database Cloud Service Workshop. This particular version is based on Oracle's 'OCI' services, versus Oracle 'Classic' services. These labs will give you a basic understanding of the Oracle Database Cloud Service and many of the capabilities around administration and database management. Lab 100 will introduce you to DBCS and show you how to create a Cloud Database. Lab 200 will cover various data migration use cases, including pluggable database migration, tablespace migration, schema migration, and ad-hoc table copying between databases. Lab 300 covers some common Database management activities. Lab 400 show you how to use the Oracle Command Line Interface (CLI) commands to perform various tasks.
+- Once the setup is complete you can move on to lab 100 by clicking on the Menu Icon in the upper left corner of the browser window. You're now ready to continue with Lab 100.
 
-## Workshop Details
+![](images/WorkshopMenu.png)
 
-**Reference the following Lab Guides by opening their Documentation Files:**
-
-## Lab 100: Introduction and Database Creation
-
-**Documentation**: [IL-100.md](IL-100.md)
-
-### Objectives
-
--	Familiarize yourself with the Oracle Cloud Infrastructure.
--	Create a Virtual Cloud Network (VCN).
--	Create Database Cloud Service.
--   SSH configuration.
--   Explore VM and consoles.
-
-## Lab 200: Data Migration
-
-**Documentation**: [IL-200.md](IL-200.md)
-
-### Objectives
-
--   Hot clone a pluggable database from on-premise to the Cloud.
--   Migrate a schema using Oracle Data Pump.
--   Migrate data using a Transportable Tablespace.
--   Copy data using Database Links.
-
-## Lab 300: Common DBA Tasks
-
-**Documentation**: [IL-300.md](IL-300.md)
-
-### Objectives
-
--   Maintain security access.
--   Scale up an instance.
--   Add a SSH Key.
--   Recover a dropped table.
+![](images/lab100.png)  
 
 
-## Lab 400:  Oracle Command Line Interface (CLI)
 
-**Documentation**: [IL-400.md](IL-400.md)
 
-### Objectives
-
-- Install Oracle CLI
-- Use OCI commands to request information about DBCS related configuration and services.
-- Create services with oci commands.
