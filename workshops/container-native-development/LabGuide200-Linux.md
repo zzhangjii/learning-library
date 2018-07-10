@@ -64,7 +64,7 @@ During this lab, you will take on the **DevOps Engineer Persona**. You will prov
 
   ![](images/200/4.png)
 
-- On the OCI Console sign in page, enter the same **Username** as you did on the previous sign in page. If you are using a trial account and this is your first time logging into the OCI Console, enter the **temporary password** from your trial account welcome email. If you have already visited the OCI Console and changed your password, enter your **new password**. Otherwise, this password will be supplied by your workshop instructor.
+- If you are not prompted to sign in, skip to the next step. Otherwise, on the OCI Console sign in page, enter the same **Username** as you did on the previous sign in page. If you are using a trial account and this is your first time logging into the OCI Console, enter the **temporary password** from your trial account welcome email. If you have already visited the OCI Console and changed your password, enter your **new password**. Otherwise, this password will be supplied by your workshop instructor.
 
   ![](images/200/5.png)
 
@@ -74,9 +74,9 @@ Compartments are used to isolate resources within your OCI tenant. User-based ac
 
 - Click the **hamburger icon** in the upper left corner to open the navigation menu. Under the **Identity** section of the menu, click **Compartments**
 
-  ![](images/200/69.png)
+  ![](images/200/72.png)
 
-  ![](images/200/70.png)
+  ![](images/200/73.png)
 
 - Look in the compartment list for a compartment called **Demo**. Next to the OCID of the Demo compartment, click **Copy**. **Paste** this OCID into a text file or elsewhere for safe keeping. We will use it to tell Terraform where to set up our cluster in a later step. Proceed to **STEP 3**.
 
@@ -116,7 +116,7 @@ cat ~/.oci/oci_api_key_public.pem
 
 - In your browser window showing the OCI Console, click the **hamburger icon** to open the navigation menu. Under the **Identity** section, click **Users**. Find the user called **api.user**, or for a trial account, find **your username** in the list and hover over the **three dots** menu at the far right of the row, then click **View User Details**.
 
-  ![](images/200/71.png)
+  ![](images/200/74.png)
 
   ![](images/200/56.png)
 
