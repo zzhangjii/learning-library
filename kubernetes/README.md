@@ -21,9 +21,7 @@ _Time to Complete: 20 minutes_
 
 ### Start Your Demo Lab Instance
 
-- Qloudable site
-  - Launch Demo Lab
-  - View overview video while machine is starting up
+- You should have reached this page by launching the Microservices on Kubernetes Demo Lab for Oracle Cloud Infrastructure. If not, please visit [this link](#) to get access to your free instant sandbox environment where you can complete the rest of this lab.
 
 ### Investigate Product Catalog Microservice
 

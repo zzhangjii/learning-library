@@ -39,7 +39,7 @@ variable "InstanceImageOCID" {
     // See https://docs.us-phoenix-1.oraclecloud.com/Content/Resources/Assets/OracleProvidedImageOCIDs.pdf
     us-phoenix-1 = "ocid1.image.oc1.phx.aaaaaaaav4gjc4l232wx5g5drypbuiu375lemgdgnc7zg2wrdfmmtbtyrc5q"
 
-    us-ashburn-1   = "ocid1.image.oc1.iad.aaaaaaaa33siliry4le3hrl2oemn73bl2kbhw7iziv2d55xziwq3yn5yfepa"
+    us-ashburn-1   = "ocid1.image.oc1.iad.aaaaaaaas5dn4m2uad2fnzqk3b5ovtcixp5ov5pkwjlcybwekiaxecirfxra"
     eu-frankfurt-1 = "ocid1.image.oc1.eu-frankfurt1.aaaaaaaajdge4yzm5j7ci7ryzte7f3qgcekljjw7p6nexhnsvwt6hoybcu3q"
   }
 }
