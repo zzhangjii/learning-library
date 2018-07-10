@@ -35,7 +35,7 @@ Click the URL of your application. "Hello World!" is displayed in the browser.
 
    ![ruby-app-response.png](img/ruby-app-response.png)
 
-   [Description of the illustration ruby-app-response.png](files/ruby-app-response.png)
+   [Description of the illustration ruby-app-response.png](files/ruby-app-response.txt)
 
 ## Want to Learn More? ##
 * [About Your Application and Oracle Application Container Cloud Service](http://www.oracle.com/pls/topic/lookup?ctx=cloud&id=DVCJV-GUID-B477F7D6-C132-4CAF-97F4-75C13EFC538E) in the Oracle Help Center
