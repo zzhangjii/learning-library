@@ -11,13 +11,13 @@ Welcome to the Oracle Database Cloud Service Workshop.  This particular version 
 
 ### **STEP 2**:  Navigate to Setup
 
-### **STEP 3**:  Navigate to Lab 100
-
 - Before you proceed with the labs you must run setup steps.  These steps will take approximately one hour to complete.
 
 ![](images/WorkshopMenu.png)
 
 ![](images/setup.png)
+
+### **STEP 3**:  Navigate to Lab 100
 
 - Once the setup is complete you can move on to lab 100 by clicking on the Menu Icon in the upper left corner of the browser window. You're now ready to continue with Lab 100.
 
