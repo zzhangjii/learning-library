@@ -53,15 +53,15 @@
 
 - Visit the [Workshop Interactive Labguide](http://launch.oracle.com/?cloudnative) for a visual overview of the workshop content.
 
-## DevOps and Cloud Native Microservices Workshop
+## WLS On-Prem to ACCS Workshop
 
-This Oracle Public Cloud DevOps Cloud Native Microservices workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project, during which you will create and use several Microservices. During this workshop you will take on the role of 3 personae. As the first persona - the Project Manager - youwill create the projects, add tasks and features to be worked on, and assign tasks to developers.  The Project Manager will then start the initial sprint. The Java Developer persona will develop a new twitter feed service that will allow for retrieval and filtering of twitter data. The JavaScript Developer persona will develop a new Twitter Marketing UI that will display the twitter data to allow for analysis.  During the workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service.
+This Oracle Public Cloud DevOps WLS On-Prem to ACCS Workshop will walk you through o understand the movement on a Java EE application from their on-prem WLS deployment to Oracle's Cloud, during which you will create and deploy Jave EE war files. During this workshop you will take on the role of 2 personae. As the first persona - DevOps Manager - you will create the projects, add tasks and features to be worked on, and assign tasks to developers.  The Project Manager will then start the initial sprint. The Java Developer persona will develop a new twitter feed service that will allow for retrieval and filtering of twitter data. The Deployment Engineer persona will deploy a new Twitter Feed UI that will display the twitter data to allow for analysis.  During the workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service.
 
 ## Workshop Details
 
 **Reference the following Lab Guides by opening their Documentation Files:**
 
-## Lab 100: Agile Project Management
+## Lab 100: Overview of App in On-prem simulation
 
 **Documenation**: [LabGuide100.md](LabGuide100.md)
 
@@ -75,7 +75,7 @@ This Oracle Public Cloud DevOps Cloud Native Microservices workshop will walk yo
 - Create Agile Board and initial Sprint
 - Add Issues to Sprint
 
-## Lab 200: Continuous Delivery of Java Microservices
+## Lab 200: Redeploy both Components to ACCS
 
 **Documenation**: [LabGuide200.md](LabGuide200.md)
 
@@ -86,7 +86,7 @@ This Oracle Public Cloud DevOps Cloud Native Microservices workshop will walk yo
 - Import Project into Eclipse
 - Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
 
-## Lab 300: Cloud Native Rapid Javascript Devlopment with node.js
+## Lab 300: Deploy to JCS
 
 **Documenation**: [LabGuide300.md](LabGuide300.md)
 
@@ -97,13 +97,3 @@ This Oracle Public Cloud DevOps Cloud Native Microservices workshop will walk yo
 - Import Project into Brackets
 - Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
 
-## Lab 400:  Cloud Native Develper Cloud Service Administration
-
-**Documenation**: [LabGuide400.md](LabGuide400.md)
-
-### Objectives
-
-- Access Developer Cloud Service
-- Complete Sprint
-- Run Backlog and Sprint Reports
-- Review Administrative Tasks
