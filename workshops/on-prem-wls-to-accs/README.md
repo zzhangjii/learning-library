@@ -1,3 +1,3 @@
-# Container Native Application Development Workshop
+# WLS On-Prem to ACCS Workshop
 
 ## About this Workshop
