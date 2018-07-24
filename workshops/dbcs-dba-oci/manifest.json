@@ -71,7 +71,7 @@
                 "title": "Download Links",
                 "description": "You can download files for this workshop here",
                 "labels": {"version": "Self-Guided"}
-            }
+            },
             {
                 "number": "10",
                 "filename": "IL-intro.md",
