@@ -4,19 +4,19 @@ Update April 2, 2018
 
 This workshop requires several setups steps that are normally done in advance as part of an automated process prior to running the labs.  In cases where a customer wishes to run through the workshop themselves on their own without the support of Global Services Engineering (GSE) they must first walk through the following steps.  Note there are two setup options: The first is manual, and the second (this one) uses Terraform with the Oracle Terraform OCI Provider.  This is the recommended set as it has fewer steps and configures the cloud automatically.  We have left the manual one in place so you can see what the Terraform process will do for you.  This workshop was built on and for version 12.2 of the database, but will also work with 18c with minor changes.  The setup instructions and lab docs have notes at various places on what you need to do to run the workshop using 18c.
 
-### **STEP 1**: Install Git, Download the Terraform Configuration Files, and Install Terraform and the Oracle Terraform OCI-Provider
+### **STEP 1**: Download the Terraform Configuration Files, and Install Terraform and the Oracle Terraform OCI-Provider
 
--	Download and install git.
-```
-https://git-scm.com/download/win
-```
--	Clone the Terraform Repository.  We are cloning to d: (you can clone elsewhere).  Open a command window and enter the following.
-```
-git clone https://github.com/pcdavies/DatabaseCloudServiceForDBAsOCI.git
-```
-![](images/SG-setup-terraform/001.png)
+-	Download TF.zip
 
--	Extract the Terraform configuration files from the git above into your Terraform working directory.  In our case we are extracting from `d:\DatabaseCloudServiceForDBAsOCI\workshops\dbcs-dba\install\TF.zip` to `d:`.  De-select the Path.
+	![](images/SG-setup-terraform/001.png)
+
+	![](images/SG-setup-terraform/001.1.png)
+
+	![](images/SG-setup-terraform/001.2.png)
+
+	![](images/SG-setup-terraform/001.3.png)
+
+-	Extract the Terraform configuration files from the git above into your Terraform working directory.  In our case we are extracting from `TF.zip` to `d:`.  De-select the Path.
 
 	![](images/SG-setup-terraform/002.png)
 	

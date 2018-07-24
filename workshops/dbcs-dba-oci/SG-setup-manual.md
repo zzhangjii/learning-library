@@ -176,7 +176,7 @@ We will create a second DBCS instance to support lab200 activities that involve 
 
 	![](images/SG-setup-manual/029.2.png)
 
-### **STEP 6**: Copy files to the WorkshopImage.  See lower down if you are using a Linux OS.
+### **STEP 6**: Copy files to the WorkshopImage.
 
 -	Once the WorkshopImage is available log into the Cloud Console to obtain the Public IP address.
 
@@ -251,7 +251,7 @@ exit
 ```
 . oraenv (enter ORCL when prompted)
 sudo su - oracle
-svn export https://github.com/pcdavies/DatabaseCloudServiceForDBAsOCI/trunk/workshops/dbcs-dba/install/install_oci.zip
+svn export https://github.com/dgcameron/DatabaseCloudServiceForDBAsOCI/trunk/workshops/dbcs-dba/install/install_oci.zip
 unzip install_oci.zip
 exit
 ```
