@@ -1,29 +1,86 @@
 ![](images/200/Picture-lab.png)  
-Updated: Date
+Updated: 07/24/2018
 
 ## Introduction
 
-Introductory Text
+This is the first of several labs that are part of the WLS On-Prem to ACCS Workshop. This lab will walk you through the process of moving an existing Java On-Prem application into Oracle Application Container Cloud. It will create and deploy war file and deploy it to the Oracle Public Cloud.
+
 
 **_To log issues_**, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
 ## Objectives
 
-- Objective 1
-- Objective 2
+- Deploying the Application to the Oracle Application Cloud Service Instance
+- Verifying the Application Deployment
 
 ## Required Artifacts
 
-- List of Prerequisites
+For this lab you will need Github and Docker Hub Accounts. Use the following links to set up:
 
-# Main Heading 1
+- a [GitHub account - https://github.com/join](GitHub account - https://github.com/join)
+-  [Oracle JDeveloper - https://www.oracle.com/technetwork/developer-tools/jdev/overview/index.html](Oracle JDeveloper - https://www.oracle.com/technetwork/developer-tools/jdev/overview/index.html)
 
-## Sub Heading 1
+# Redeploy both Components to ACCS
 
-### **STEP 1**: Title of Step 1
+## Deploying the Application to the Oracle Application Cloud Service Instance
 
-- Instructions for Step 1
+### **STEP 1**: Preparing the WAR file to be Deployed
 
-### **STEP 2**: Title of Step 2
+- In the Projects pane in Oracle JDeveloper, right-click Project and select Deploy > New Deployment Profile.
+   
+![](images/200/war_1.png) 
 
-- Instructions for Step 2
+- The New Deployment Profile is displayed. Select WAR file and click Next.
+  
+![](images/200/war_2.png) 
+
+- The Create Deployment Profile is displayed. Select Profile Type to WAR file and click OK.
+
+![](images/200/war_3.png) 
+
+- In the Edit WAR Deployment Profile Properties, edit any changes and click OK.
+
+![](images/200/war_4.png) 
+
+- Deploy AlphaProductCatalog is displayed. Select Deploy to War and click Next.
+
+![](images/200/war_5.png) 
+
+- In the Summary page, verify the values and click Finish.
+   
+![](images/200/war_6.png)
+
+### **STEP 2**: Uploading the war file to the  Application Container Cloud Service
+
+
+- In the Oracle Application Container Cloud, click Create Application.
+
+![](images/200/1.png) 
+
+- The Create Application is displayed. Select you application platform as JAVA EE.
+  
+![](images/200/2.png) 
+
+- The Create Application is displayed. Enter a name.
+  
+![](images/200/3.png) 
+
+- Click Choose File button to upload generated war file and click Create.
+
+![](images/200/6.png) 
+
+## Verifying the Application Deployment
+
+### **STEP 1**: Verification
+
+- After Application Container Cloud Service Instance is created, you can click the link.
+
+![](images/200/9.png) 
+
+- Verify that you can see the Alpha Product Catalog Static Tweets Page.
+
+![](images/200/10.png) 
+
+You have successfully deployed the Java EE application using  Application Cloud Container Service.
+
+
