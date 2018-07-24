@@ -106,6 +106,12 @@
                 "title": "Lab 400: Using the Oracle Command Line Interface (CLI) to manage DBCS Instances",
                 "description": "Install and configure Oracle CLI, and perform various DBA tasks with CLI",
                 "labels": {"version": "Instructor Led"}
+            },
+            "number": "500",
+            "filename": "DownloadLinks.md",
+            "title": "Download Links",
+            "description": "You can download files for this workshop here",
+            "labels": {"version": "Instructor Led"}
             }
         ]
     }
