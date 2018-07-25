@@ -15,9 +15,7 @@ Introductory Text
 
 - List of Prerequisites
 
-# Main Heading 1
-
-## Sub Heading 1
+# On premise WLS to JCS
 
 ### **STEP 1**: Create Database Instance in Cloud
 
@@ -76,86 +74,86 @@ If you see the untrusted security certificate warning, add the certificate to yo
 - Enter your administrator credentials. 
 Note: These are the credentials that you had specified while creating the instance. In the case of a quickstart instance, you can find the credentials in the credentials zip bundle that you downloaded while creating the instance. 
 The WebLogic Server Administration Console is displayed.
-![](images/300/DB/Upload_to_JCS/1.png)
+
+    ![](images/300/DB/Upload_to_JCS/1.png)
 
 - Click Lock & Edit.
 
-  ![](images/300/DB/Upload_to_JCS/2.png)
+    ![](images/300/DB/Upload_to_JCS/2.png)
 
 - Under Domain Structure, click Deployments.
 
-  ![](images/300/DB/Upload_to_JCS/3.png)
+    ![](images/300/DB/Upload_to_JCS/3.png)
 
 - On the Deployments page, click Install.
 
-  ![](images/300/DB/Upload_to_JCS/5.png)
+    ![](images/300/DB/Upload_to_JCS/5.png)
 
 - On the Install page, click upload your file(s).
 
-  ![](images/300/DB/Upload_to_JCS/6.png)
+    ![](images/300/DB/Upload_to_JCS/6.png)
 
 - On the Install Application Assistant page, click Browse near the Deployment Archive field, and select the alphaOffice.war application that you downloaded earlier.
 
-  ![](images/300/DB/Upload_to_JCS/7.png)
+    ![](images/300/DB/Upload_to_JCS/7.png)
 
 - The name of the selected deployment archive file appears next to the Browse button. Click Next.
 
-
-  ![](images/300/DB/Upload_to_JCS/8.png)
+    ![](images/300/DB/Upload_to_JCS/8.png)
 
 - Make sure that the deployment archive file is selected, near the bottom of the page, and then click Next.
 
-  ![](images/300/DB/Upload_to_JCS/9.png)
+    ![](images/300/DB/Upload_to_JCS/9.png)
 
 - You can install the deployment as either an application or a library. For this tutorial, we'll install it as an application. Click Next
 
-  ![](images/300/DB/Upload_to_JCS/10.png)
+    ![](images/300/DB/Upload_to_JCS/10.png)
 
 - Select the servers or clusters to which you want to deploy the application. For this tutorial, we'll deploy the application to all the servers in the cluster. So click All servers in the cluster, and then click Next. 
 Note that the the cluster name (wls003jc_cluster in this example) would be the first eight characters of your service instance's name followed by _cluster.
 
-  ![](images/300/DB/Upload_to_JCS/11.png)
+    ![](images/300/DB/Upload_to_JCS/11.png)
 
 - On the Optional Settings page, click Next. The default settings are adequate for this tutoria
 
-  ![](images/300/DB/Upload_to_JCS/12.png)
+    ![](images/300/DB/Upload_to_JCS/12.png)
 
 - Review the configuration settings. You can choose to fine-tune your configuration; but for this tutorial, select No, I will review the configuration later, and then click Finish.
 
-  ![](images/300/DB/Upload_to_JCS/13.png)
+    ![](images/300/DB/Upload_to_JCS/13.png)
 
 - A message is displayed that the application was deployed successfully.
 
-  ![](images/300/DB/Upload_to_JCS/14.png)
+    ![](images/300/DB/Upload_to_JCS/14.png)
 
 - In the Change Center, click Activate Changes.
 
-  ![](images/300/DB/Upload_to_JCS/15.png)
+    ![](images/300/DB/Upload_to_JCS/15.png)
+
+
+
+    ## To start the application
 
 - The application is in the Prepared state and ready to be started.
 
-  ![](images/300/DB/Upload_to_JCS/16.png)
+    ![](images/300/DB/Upload_to_JCS/16.png)
 
 - In the WebLogic Server Administration Console, on the Summary of Deployments page, go to the Control tab.
 
-
-  ![](images/300/DB/Upload_to_JCS/17.png)
+    ![](images/300/DB/Upload_to_JCS/17.png)
 
 - In the Deployments table, select the check box near the application that you just deployed.
 
-
-
-  ![](images/300/DB/Upload_to_JCS/18.png)
+    ![](images/300/DB/Upload_to_JCS/18.png)
 
 - Click Start, and then select Servicing all requests.
 
-
-  ![](images/300/DB/Upload_to_JCS/19.png)
+    ![](images/300/DB/Upload_to_JCS/19.png)
 
 - Click Yes to confirm the deployment.
 
-  ![](images/300/DB/Upload_to_JCS/20.png)
+    ![](images/300/DB/Upload_to_JCS/20.png)
 
 - The application is now in the Active state and is ready to accept requests.
 
-  ![](images/300/DB/Upload_to_JCS/21.png)
+    ![](images/300/DB/Upload_to_JCS/21.png)

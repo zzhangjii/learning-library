@@ -28,46 +28,46 @@ For this lab you will need Github and Docker Hub Accounts. Use the following lin
 
 - In the Projects pane in Oracle JDeveloper, right-click Project and select Deploy > New Deployment Profile.
    
-![](images/200/war_1.png) 
+    ![](images/200/war_1.png) 
 
 - The New Deployment Profile is displayed. Select WAR file and click Next.
   
-![](images/200/war_2.png) 
+    ![](images/200/war_2.png) 
 
 - The Create Deployment Profile is displayed. Select Profile Type to WAR file and click OK.
 
-![](images/200/war_3.png) 
+    ![](images/200/war_3.png) 
 
 - In the Edit WAR Deployment Profile Properties, edit any changes and click OK.
 
-![](images/200/war_4.png) 
+    ![](images/200/war_4.png) 
 
 - Deploy AlphaProductCatalog is displayed. Select Deploy to War and click Next.
 
-![](images/200/war_5.png) 
+    ![](images/200/war_5.png) 
 
 - In the Summary page, verify the values and click Finish.
    
-![](images/200/war_6.png)
+    ![](images/200/war_6.png)
 
 ### **STEP 2**: Uploading the war file to the  Application Container Cloud Service
 
 
 - In the Oracle Application Container Cloud, click Create Application.
 
-![](images/200/1.png) 
+    ![](images/200/1.png) 
 
 - The Create Application is displayed. Select you application platform as JAVA EE.
   
-![](images/200/2.png) 
+    ![](images/200/2.png) 
 
 - The Create Application is displayed. Enter a name.
   
-![](images/200/3.png) 
+    ![](images/200/3.png) 
 
 - Click Choose File button to upload generated war file and click Create.
 
-![](images/200/6.png) 
+    ![](images/200/6.png) 
 
 ## Verifying the Application Deployment
 
@@ -75,12 +75,12 @@ For this lab you will need Github and Docker Hub Accounts. Use the following lin
 
 - After Application Container Cloud Service Instance is created, you can click the link.
 
-![](images/200/9.png) 
+    ![](images/200/9.png) 
 
 - Verify that you can see the Alpha Product Catalog Static Tweets Page.
 
-![](images/200/10.png) 
+    ![](images/200/10.png) 
 
-You have successfully deployed the Java EE application using  Application Cloud Container Service.
+- You have successfully deployed the Java EE application using  Application Cloud Container Service.
 
 
