@@ -30,7 +30,7 @@
                 "number": "300",
                 "filename": "LabGuide300.md",
                 "title": "Lab 300: Move on-premise WLS to JCS",
-                "description": "Short description of lab 300"
+                "description": "Deploy the web application(WAR files) to JCS."
 
             },
             {

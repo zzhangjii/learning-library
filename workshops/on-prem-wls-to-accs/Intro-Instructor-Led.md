@@ -81,10 +81,8 @@ This Oracle Public Cloud DevOps WLS On-Prem to ACCS Workshop will walk you throu
 
 ### Objectives
 
-- Access Developer Cloud Service
-- Import Code from external Git Repository
-- Import Project into Eclipse
-- Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
+- Deploying the Application to the Oracle Application Cloud Service Instance
+- Verifying the Application Deployment
 
 ## Lab 300: Deploy to JCS
 
@@ -92,8 +90,8 @@ This Oracle Public Cloud DevOps WLS On-Prem to ACCS Workshop will walk you throu
 
 ### Objectives
 
-- Access Developer Cloud Service
-- Import Code from external Git Repository
-- Import Project into Brackets
-- Build and Deploy project using Developer Cloud Service and Oracle Application Container Cloud Service
+- Move on premise WLS to Oracle JCS.
+  - Create database instance
+  - Create JCS instance
+  - Move application to JCS
 

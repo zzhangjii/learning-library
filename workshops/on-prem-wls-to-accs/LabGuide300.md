@@ -1,19 +1,21 @@
-![](images/300/Picture-lab.png)  
-Updated: Date
-
 ## Introduction
 
-Introductory Text
-
-**_To log issues_**, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
+This lab focus on moving the on-premise WLS app to JCS. Java Cloud Service provides features that are easy to use and deploy and give more option for the developer to customize. 
 
 ## Objectives
 
 - Move on premise WLS to Oracle JCS.
+  - Create database instance
+  - Create JCS instance
+  - Move application to JCS
 
 ## Required Artifacts
 
-- List of Prerequisites
+For this lab you will need Github and Oracle Cloud account Hub Accounts. Use the following links to set up:
+
+- [GitHub account](GitHub account - https://github.com/join)
+- [Oracle JDeveloper](Oracle JDeveloper - https://www.oracle.com/technetwork/developer-tools/jdev/overview/index.html)
+- [Oracle cloud account](https://myservices.us.oraclecloud.com/mycloud/signup?language=en&sourceType=:ow:lp:2t::RC_PDMK180124P00080:ContainerNativeHOLLP&intcmp=:ow:lp:2t::RC_PDMK180124P00080:ContainerNativeHOLLP)
 
 # On premise WLS to JCS
 
@@ -130,10 +132,6 @@ Note that the the cluster name (wls003jc_cluster in this example) would be the f
 
     ![](images/300/DB/Upload_to_JCS/15.png)
 
-
-
-    ## To start the application
-
 - The application is in the Prepared state and ready to be started.
 
     ![](images/300/DB/Upload_to_JCS/16.png)
@@ -157,3 +155,20 @@ Note that the the cluster name (wls003jc_cluster in this example) would be the f
 - The application is now in the Active state and is ready to accept requests.
 
     ![](images/300/DB/Upload_to_JCS/21.png)
+
+    ## Test access to the application
+
+- Sign in to the Oracle Java Cloud Service Console.
+
+- Click the name of the service instance to which you deployed the sample application.
+
+- On the details page of the service instance, do one of the following:
+  - If a Load Balancer section exists, then expand it, and note the public IP Address of the load balancer node. In this example, it is 129.213.145.149
+  - If you don't see a Load Balancer section, then expand the Resources section, and note the public IP Address of one of the nodes shown there.
+
+  ![](images/300/DB/Upload_to_JCS/22.png)
+
+- Enter the URL that you identified in the previous step in a browser. 
+If you see the untrusted security certificate warning, add the certificate to your browser, as an exception, and continue. The text of this warning and the steps to proceed depend on your browser. In Firefox, for example, you can proceed by clicking Advanced and then Add Exception. 
+  - The URL for the application would be in the format **https://managedServer_publicIP/contextRoot** 
+   Example: https://129.213.145.149/main.jsp
