@@ -1,4 +1,4 @@
-# Hackathon Objective 1: Deployment from a Feature Branch
+# Hackathon Objective 2: Deployment from a Feature Branch
 
 ![](images/400/header.png)
 
