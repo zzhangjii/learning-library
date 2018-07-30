@@ -116,7 +116,7 @@
                 "title": "Hackathon Objective 2: Deployment from a Feature Branch",
                 "description": "Create a new branch and set up deployment using Wercker",
                 "labels": {"version": "Hackathon"}
-            }
+            },
             {
                 "number": "1000",
                 "filename": "ManualCleanUp.md",
