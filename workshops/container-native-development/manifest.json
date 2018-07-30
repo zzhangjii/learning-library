@@ -6,6 +6,11 @@
         "interactive":"https://launch.oracle.com/?container-native-development",
         "versions": [
           {
+            "name": "Hackathon",
+            "description": "Explore Kubernetes microservice deployment techniques",
+            "imageUrl": "https://oracle.github.io/learning-library/workshops/common-content/images/common/Self-Service.png"
+          },
+          {
             "name": "Virtual Box",
             "description": "Use the Oracle-provided VirtualBox Image running on your laptop",
             "imageUrl": "https://oracle.github.io/learning-library/workshops/common-content/images/common/virtualbox.png"
@@ -75,6 +80,49 @@
                 "title": "Cloud Environment Post Workshop Cleanup",
                 "description": "Reset your cloud environment by removing the Cloud Instances, Networking, etc. created during the workshop",
                 "labels": {"version": "Virtual Box"}
+            },
+            {
+                "number": "0",
+                "filename": "Intro.md",
+                "title": "Read Me First",
+                "description": "Step-by-step workshop instructions",
+                "labels": {"version": "Hackathon"}
+            },
+            {
+                "number": "100",
+                "filename": "LabGuide100.md",
+                "title": "Lab 100: Containerize Your Java Microservice",
+                "description": "Use Wercker to automatically build your application and package it as a Docker image",
+                "labels": {"version": "Hackathon"}
+            },
+            {
+                "number": "200",
+                "filename": "LabGuide200-VBox.md",
+                "title": "Lab 200: Automate Deployment to Kubernetes",
+                "description": "Use Wercker to set up a managed Kubernetes cluster and deploy to it",
+                "labels": {"version": "Hackathon"}
+            }
+            ,
+            {
+                "number": "300",
+                "filename": "LabGuide300-Hackathon.md",
+                "title": "Hackathon Objective 1: Blue/Green Deployments",
+                "description": "Use Wercker configure deployment of multiple simultaneous versions",
+                "labels": {"version": "Hackathon"}
+            },
+            {
+                "number": "400",
+                "filename": "LabGuide400-Hackathon.md",
+                "title": "Hackathon Objective 2: Deployment from a Feature Branch",
+                "description": "Create a new branch and set up deployment using Wercker",
+                "labels": {"version": "Hackathon"}
+            }
+            {
+                "number": "1000",
+                "filename": "ManualCleanUp.md",
+                "title": "Cloud Environment Post Workshop Cleanup",
+                "description": "Reset your cloud environment by removing the Cloud Instances, Networking, etc. created during the workshop",
+                "labels": {"version": "Hackathon"}
             },
             {
                 "number": "0",
