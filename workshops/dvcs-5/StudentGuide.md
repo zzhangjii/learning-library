@@ -29,7 +29,7 @@ As an alternative to installing Eclipse, Brackets and Git on your laptop, you ca
 
 - You will need full Administrator privileges on your machines, and in some cases will need to set Hardware Virtualization in the BIOS.
 
-    - Hardware Virtualization needs to be enabled in the BIOS to properly run Virtual Box.  If you getting virtualization errors, reboot into the BIOS and make sure that the setting to enable Hardware Virtualization is enabled. 
+- Hardware Virtualization needs to be enabled in the BIOS to properly run Virtual Box.  If you getting virtualization errors, reboot into the BIOS and make sure that the setting to enable Hardware Virtualization is enabled. 
 
 - The latest version of Virtual Box should be installed and tested prior to the workhop.
 

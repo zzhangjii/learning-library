@@ -2,9 +2,130 @@
 ![](images/100/Picture100-lab.png)  
 Updated: February 10, 2017
 
-## Introduction
+# Lab 4 - Data Flows to Curate Data (General Ledger from Multiple Sources)
 
-This is the first of several labs that are part of the **Oracle Public Cloud DevOps Cloud Native Microservices workshop.** This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
+In this next lab, you will create a data source from multiple sources as a resuaable **Data Flow. Data Flows** can be used to merge multiple data sources; apply aggregations; filter results; and modify and create columns. These flows can also be refreshed and reused as needed. 
+
+![](images/info.png) 
+### This lab is optional but provides an important overview of managing data for those users who might need to prepare data for analysis.
+
+![](images/UserStory.png) 
+### As VP of Finance at a large organization you often face the challenge of being able adequately analyze financial data which is often derived from multiple sources. A Project Planning and Management tool is used for budgeting and forecasting purposes while actuals (e.g. spend) are captured in a Financials module of an ERP. You have asked for data from both but been given a delimited text file and an Excel file.Luckily, one of your staff recently learned about Oracle Data Visualization Desktop and is here to help you define a mechanism by which that data can be merged and utilized for your analytical purposes.
+
+## 4a – Import an Excel File and a Delimited Text File and Apply a Format Conversion
+
+- **1) Import actuals data from an Excel file for use in your data flow.**
+    - Open the **Data** menu.
+    ![](images/400/4a-1.png) 
+
+    - Select **Data Source** in the **Create** section.
+    ![](images/400/4a-2.png) 
+    
+    - Select **File.**
+    ![](images/400/4a-3.png)
+
+    - Select **General Ledger Data - Financial System Actuals.xlsx** from where you saved the data files for the workshop. Please make sure you do not load the combined data file (that is used if skipping this lab). 
+    ![](images/400/4a-4.png)
+
+    - You’ll notice this file contains **Actual** (spend amount) by **AccountLineId, Account, Account Group, Business Lines, Month.** Leave all fields as they are and select **Add.**
+    ![](images/400/4a-5.png)
+
+    ![](images/Yield.png) 
+    - You may have noticed that **Month** is appearing with the day of the month as well. Let’s clean that up.
+
+    - Select the the header for the **Month** column 
+    ![](images/400/4a-6.png)
+
+    - Navigate to the **Month** settings section, select the clock (Date/Time Format) icon, and chnage the Format to MMMMMM YYYY.
+    ![](images/400/4a-20.png)
+    
+    - After you've confirmed that the format is correct select **Add** to upload the dataset. 
+    ![](images/400/4a-10.png)
+
+    - Select the the header for the **Actual** column 
+    ![](images/400/4a-8.png)
+
+    - Navigate to the **Actual** settings in the bottom left corner, select #, and chnage the number format to Currency. 
+    ![](images/400/4a-9.png)
+
+    - Your data should now be ready to use. Select < icon to go back to the **Data Sources** menu.
+    ![](images/400/4a-11.png)
+
+
+- **2) Import budget data from a delimited text file for use in your data flow.**
+    - Open the **Data** menu.
+    ![](images/400/4a-12.png) 
+
+    - Return to the **Data Seource** in the **Create** section.
+    ![](images/400/4a-13.png)
+
+    - Select **File.**
+    ![](images/400/4a-14.png)
+
+    - Select **General Ledger Data - Project Planning System Budgets.txt** from where you saved the data files for the workshop. Please make sure you do not load the combined data file (that is used if skipping this lab).
+    ![](images/400/4a-15.png)
+
+    ![](images/info.png) 
+    - Delimited files (typically in a text format) are simply datasets where the columns are separated by a character (or set of characters) such as a comma, a pipe, a semicolon, or others. Most systems today have strong export capabilities and APIs for retrieving data but large datasets and those from legacy systems often rely upon these means for sharing data.
+
+    - You’ll notice that it looks like the system thinks all the data is part of a single column. This is because the system defaults to looking for comma delimited files so you will need to change this. Click on **Comma.** Select **Custom.**
+    ![](images/400/4a-16.png)
+
+    - Type in a vertical bar - | for the Separated By text box.
+    ![](images/400/4a-17.png)
+
+    -Click outside the menu to apply the changes and you’ll now notice this file contains **Budget** by **AccountLineId, Account, Account Group, Business Lines,** and **Month.**
+
+    Leave all fields as they are and select **Add**.
+    ![](images/400/4a-18.png)
+
+- **3) Convert Text to Dates.**
+
+    ![](images/Yield.png) 
+    - You may have noticed that **Month** is appearing with the day of the month as well and in text format. Let’s clean that up so we can analyze it as a date.
+
+    - Select the the header for the **Month** column
+    ![](images/400/4a-6.png)
+
+    - Navigate to the **Month** settings section and channge the Data Type to Date. 
+    ![](images/400/4a-19.png)
+
+    - Select the clock (Date/Time Format) icon and chnage the Format to MMMMMM YYYY. Click outside of the menu to apply the changes.
+    ![](images/400/4a-20.png)
+
+    The data is now ready to be used in our data flow.
+
+    ![](images/info.png) 
+    - You won’t always need to be modify data as we just did and you can also add data sources directly while creating data flows but these past two exercises have been structured to allow you to see that, regardless of the type and format of data you have been provided, you can easily structure it for analysis within DVD.
+
+## 4b – Create a Data Flow to Curate Budget and Actuals into a Single Dataset. 
+
+- **1) Create a new Data Flow.**
+
+    - Return to the **Data Sources** menu. 
+    ![](images/400/4a-21.png)
+
+    - Select **Data Flow** in the **Create** section
+    ![](images/400/4a-22.png)
+
+    ![](images/400/4a-23.png)
+
+    - Select the **General Ledger Data – Financial System Actuals dataset** and select **Add**.
+    ![](images/400/4a-24.png)
+
+    - This brings up the **Data Flow** editor. We will not be covering this in its entirety but the editor shows a visual representation of the operations at the top of the screen with the resulting data at the bottom. The available operations are presented as icons on the right.
+    ![](images/400/4a-25.png)
+
+- **2) Add another data source.**
+    - Select the Data flow icon. 
+    ![](images/400/4a-26.png)
+
+    - The first thing we should do here is add our other data source (the budgetary figures). Select **Add Data** from the **Operations Menu**. Drag it under **General** in the diagram.
+    ![](images/400/4a-27.png)
+
+    - Select the **General Ledger Data - Project Planning System Budgets** dataset and select **Add**.
+
+- **2) Join the data sources.**
 
 You will take on 3 Personas during the workshop. The **Project Manager Persona** will create the projects, add tasks and features to be worked on, and assign tasks to developers.  The Project Manager will then start the initial sprint. The Java Developer persona will develop a new twitter feed service that will allow for retrieval and filtering of twitter data. The **JavaScript Developer** persona will develop a new Twitter Marketing UI that will display the twitter data to allow for analysis.  During the workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service.
 

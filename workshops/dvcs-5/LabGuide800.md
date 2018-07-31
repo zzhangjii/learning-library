@@ -1,228 +1,209 @@
+#Lab 8 – Predicting Subscriptions - Machine Learning
 
-![](images/100/Picture100-lab.png)  
-Updated: February 10, 2017
+##What is Machine Learning?
+Machine learning at its most basic is the practice of using algorithms to parse data, learn from it, and then make a determination or prediction about something in the world. Data Visualization Desktop uses Machine Learning to make predictions using your existing data. Data Visualization also provides scripts to train data models that you then add to other sets of data to predict trends and patterns in data.
 
-## Introduction
+![](images/info.png) - Please refer to the excel files in the ML Folder to successfully complete Lab 8.
 
-This is the first of several labs that are part of the **Oracle Public Cloud DevOps Cloud Native Microservices workshop.** This workshop will walk you through the Software Development Lifecycle (SDLC) for a Cloud Native project that will create and use several Microservices.
+##8a Create new project and add the Koolkart Orders dataset
 
-You will take on 3 Personas during the workshop. The **Project Manager Persona** will create the projects, add tasks and features to be worked on, and assign tasks to developers.  The Project Manager will then start the initial sprint. The Java Developer persona will develop a new twitter feed service that will allow for retrieval and filtering of twitter data. The **JavaScript Developer** persona will develop a new Twitter Marketing UI that will display the twitter data to allow for analysis.  During the workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service.
+**1) Create a new project by dragging the Koolkart Orders Excel file onto the home page.**
 
-**_To log issues_**, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
+PIC
 
-## Objectives
-- Create Initial Project
-    - Add Users to Project
-- Create Product Issues
-    - Create Issues for Twitter Feed Microservice
-    - Create Issues for Twitter Feed Marketing UI
-- Create Agile Board and initial Sprint
-- Add Issues to Sprint
+PIC
 
-## Required Artifacts
-- The following lab requires an Oracle Public Cloud account that will be supplied by your instructor.
+**2) Formatting data types.**
 
+After uploading the dataset, change **Order ID** and **Customer ID** to attributes. 
+Change the **Order Amount** number format from Auto to Currency. Hit OK. 
+Once uploaded, click on the file on the home page to open the project.
 
-# Create Twitter Feed Marketing Project
+PIC
 
-## Create Developer Cloud Service Project
+##8b Create Visualizations for Sales Analysis
 
-### **STEP 1**: Login to your Oracle Cloud Account
-- From any browser, go to the URL:
-    `https://cloud.oracle.com`
+**1) Create Visualizations Order Amount by Date and Category.**
+Steps required:
+Go to the **Visualize** tab.
+Select **Order Amount** and **Order Date** and select **Create Best Visualization**.
+Double click the **Category** attribute to add it to your visualization.
+Switch the chart from a line chart to an area chart.
+Select Order Date dropdown in Data Elements section. Select Month and drag to Category (X-Axis) to replace Order Date.
 
-- click **Sign In** in the upper right hand corner of the browser
+PIC
 
-    ![](images/100/Picture100-1.png)
+**2) Create Visualization for Order Amount by Category and Sub Category.**
+Steps required:
+Select **Category**, **ub Category**, and **Order Amount**. Right click attributes while selected then select **Tree Map**.
 
-- **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. If you are unsure of the data center you should select, and this is an in-person training event, ***ask your instructor*** which **Region** to select from the drop down list. If you received your account through an Oracle Trial, your Trial confirmation email should provide a URL that will pre-select the region for you.
+PIC
 
-    ![](images/100/Picture100-2.png)
+Select **Order Amount** and **Order Date**. Right click attributes while selected then select **Create best visualization**.
+Right Click the visualization and select Add Trend Line. 
+Right Click the visualization and select Add Forecast.
 
-- Enter your identity domain and click **Go**.
+Refer to the visualization settings in Project Components Menu and select the () Analytics option. Select the Forecast dropdown and enter 6 in the Period textbox to change the Model to Arima ().
+ 
+##8c Create Visualization for Customer Analysis
 
-    **NOTE:** The **Identity Domain, User Name** and **Password** values will be given to you by the instructor or Trial confirmation email.
+**1) Add another dataset and format data.**
 
-    ![](images/100/Picture100-3.png)
+Select the (+) next to Data Elements and select Add Data Set...
+Select (Create Data Set) and add the KoolKart Customers Excel File. Another way to create the data set is to drag and drop the KoolKart Customers Excel file to the data flow.
 
-- Once your Identity Domain is set, enter your User Name and Password and click **Sign In**
+**Drag** the file onto the file icon.
+Change Customer ID data type from a measure to attribute.
 
-  **NOTE:** For this lab you will assume the role of Project Manager ***Lisa Jones***. Although you are assuming the identify of Lisa Jones, you will log into the account using the **username** provided to you by your instructor, given to you by your corporation, or supplied to you as part of an Oracle Trial. As you progress through the workshop, you will remain logged in as a single user, but you will make “logical” changes from Lisa Jones the Project Manager to other personas.
+PIC
 
-    ![](images/lisa.png)
+Select Data Diagram and select Add Another Match.
 
-    ![](images/100/Picture100-3.5.png)
+PIC
 
-- You will be presented with a Dashboard displaying the various cloud services available to this account.
+**2) Create a visualization of Order Amount by Customer Age Group.**
 
-    ![](images/100/Picture100-4.png)
+Steps required:
+Click on Visualize
+Create a new Canvas
+Expand the new Koolkart Customers dataset
+Select **Order Amount** from Koolkart Orders and **Customer Age Group** from Koolkart Customers. While having the attributes selected, right click and select **Create best visualization**.
+Change chart type to a Donut chart and move **Customer Age Group** to **Color**.
 
-- If all your services are not visible, **click** on the **Customize Dashboard**, you can add services to the dashboard by clicking **Show.** For this workshop, you will want to ensure that you are showing at least the **Application Container, Developer and Storage** cloud services. If you do not want to see a specific service, click **Hide**
+PIC
 
-    ![](images/100/Picture100-5.png)
+Select **Order Amount** and **Customer Country**. While having the attributes selected, right click and select **Pick Visualization**.
+Choose the **Map Chart**.
 
-### **STEP 2**: Check/Set Storage Replication Policy
+PIC
 
-Depending on the state of your Cloud Account, you may need to set the replication policy, if it has not been previously set. In this step you will got to the Storage Cloud Service to check on the status of the Replicaton Policy. 
+Select **Order Amount** and **Customer Gender**. While having the attributes selected, right click and select Pick Visualization.
+Choose the **Pie Chart**.
+Right-click the **Pie Chart** and select Color > Manage Assignments. Choose the color pink for F and the color royal blue for M.
+Move pie chart under the donut chart.
 
-- Click on the **Storage** Cloud Service
+PIC
 
-    ![](images/100/Picture-01.png)
+Name the canvas “Customers” and save the project.
 
-- If you see a message requesting that you **Set Replication Policy** as is shown below, click on the message. If the message is not displayed, your replicatin policy has already been set and you can continue to the next step by clicking on the **Dashboard** icon in the top right corner of the page.
+##8d Creating a Data Flow for Koolkart Orders and Customers
 
-    ![](images/100/Picture-02.png)
+**1) Create a Data Flow and add Dataset**
+Steps required:
 
-- Care must be taking when setting your replication policy, because it cannot be changed. With Trial accounts, the first option available will generatlly set the replication policy sufficient for this workshop, so we will take the Default, and click on the **Set** button. 
+Click on the Home button in the top right corner.
+Select Create > Data Flow and then add the Koolkart Orders Dataset.
 
-    ![](images/100/Picture-03.png)
 
-- Click on the **Dashboard** button
+**2) Add a Dataset to Data Flow**
 
-    ![](images/100/Picture-04.png)
+Steps required:
 
-### **STEP 3**: Login to Developer Cloud Service
+Double click on Add Data (+ Add Data) and add the KoolKart Customers dataset.
 
-Oracle Developer Cloud Service provides a complete development platform that streamlines team development processes and automates software delivery. The integrated platform includes an issue tracking system, agile development dashboards, code versioning and review platform, continuous integration and delivery automation, as well as team collaboration features such as wikis and live activity stream. With a rich web based dashboard and integration with popular development tools, Oracle Developer Cloud Service helps deliver better applications faster.
+PIC
 
-- From the Cloud UI dashboard click on the **Developer** service. In our example, the Developer Cloud Service is named **developer99019**.
+**3) Add Filter a to Data Flow**
+Steps required:
+Select Filter and drag between KoolKart Orders and Join.
 
-    ![](images/100/Picture100-6.png)
+PIC
 
-- The Service Details page gives you a quick glance of the service status overview.
+Select (+ Click here or drag data to add a filter) and select Category in the Available Data. 
+Double click on Movies & Music
+Refer to the Selections, click the hamburger option (Hamburger Menu), and select Exclude Selections.
 
-    ![](images/100/Picture100-7.png)
+PIC
+PIC
 
-- Click **Open Service Console** for the Oracle Developer Cloud Service. The Service Console will then list all projects for which you are currently a member.
+**4) Add Select Columns to the Data flow and exclude duplicated Customer ID**
 
-    ![](images/100/Picture100-7.5.png)
+Steps required:
+Select (Select Colums) and drag it to (+) on in front of Join.
+PIC
+Select Customer_ID1 and click Remove Selected.
 
-### **STEP 4**: Create Developer Cloud Service Project
 
-- Click **New Project** to start the project create wizard.
+**5) Group data into Sales Regions in data flow**
+Steps required:
+Select (+)) next to **Select Columns** and then select **Group**.
+Set the group name to **Sales Region**.
+Name the first group **NA** and add **Canada** and **USA** to the group.
+Select (+ Group) to add a second group and name it **EMEA**. Add the following countries to the group: **France**, **United Kingdom**, and **Germany**.
 
-    ![](images/100/Picture100-8.png)
+Select (+ Group) to add a third group and name it APAC. Add Japan to the group.
 
-- On Details screen enter the following data and click on **Next**.
+PIC
 
-    **Name:** `Twitter Feed Marketing Project`
+Your Data Flow should look this after you’ve successfully completed the steps.
 
-    **Description:** `Project to gather and analyze twitter data`
+PIC
 
-    **Note:** A Private project will only be seen by you. A Shared project will be seen by all Developer Cloud users. In either case, users need to be added to a project in order to interact with the project.
+Save the Data Flow and name it ML Dataflow.
 
-    ![](images/100/Picture100-9.png)
+##8f Creating a Dataflow and Predicting Subscriptions
 
-- Leave default template set to **Empty Project** and click **Next**
+![](images/UserStory.png - When customers purchase from Koolkart website they are offered the opportunity to subscribe to the KoolKart mailing list.
 
-    ![](images/100/Picture100-10.png)
+Some customers have purchased some products through a partner and in the shipping confirmation email KoolKart would like to include an incentive to subscribe to KoolKart mailing list, in the form of a discount coupon.
 
-- Select your **Wiki Markup** preference to **MARKDOWN** and click **Finish**.
+The marketing department just doesn’t know how big the incentive should be. They would like to predict the likeliness of new customers to subscribe and directly correlate the amount of the coupon to how much they are likely to subscribe anyway.
 
-    ![](images/100/Picture100-11.png)
+They want to take advantage of existing data gathered by looking at subscription patterns on Koolkart website and develop a model that looks at past subscription data to determine the influence of Customer Age Group, Customer Gender, Customer Country and purchased Product Category into the likeliness to subscribe.
 
-- The Project Creation will take about 1 minute.
+**1) Create a Data Flow and add Dataset**
+Steps required:
 
-    ![](images/100/Picture100-12.png)
+Click on Home.
+Select Create and Data Flow, add the KoolKart Subscription dataset. Select Train Binary Classifier and select Naïve Bayes for Classification.
 
-- You now have a new project, in which you can manage your software development.
 
-    ![](images/100/Picture100-13.png)
+**2) Add a Binary Classifier to the Data Flow**
+Steps required:
+Select (Train Multi Classifier) and drag it to the (+) in front of the KoolKart Subscription.
+When the “Select Train Two-Classification Model Script” window loads there will be multiple scripts that you can choose from.
+Select the Naïve Bayes for Classification script.
+Set a target by clicking (Select a column) and select Subscribed.
 
+PIC
 
+Save the Data Flow as Subscribed Predictions 
+Click Execute Data Flow
 
-# Create Product Issues
+**3) Create a Scenario that will predict subscription confidence.**
+Steps required below:
 
-## Create Issues for Twitter Feed Microservice
+Open the Machine Learning project and create a new canvas named “Subscription Prediction”. Click the (+) next to the Date Elements, select the Add Data Set option. Select the Create Data
+Set (Create Data Set) option and add the KoolKart Partner Sales Excel file by dragging and dropping the file onto the file icon
 
-### **STEP 5**: Create Issue for the initial GIT Repository Creation
+PIC
 
-In this step you are still assuming the identity of the Project Manager, ***Lisa Jones***.
+Turn OrderID into an attibute.
+Click the  (+) next to the Data Elements again and select the create scenario option.
+Once the Create Scenario – Select Model window loads, select the Subscribed Prediction Model.
 
-![](images/lisa.png)
+PIC
 
-- Click **Issues** on left hand navigation panel to display the Track Issues page.
+Once the Create Scenario – Map Your Data window loads, select the KoolKart Partner Sales for the Data Set. Click on the Select Data next to the Order ID and click Order ID. When you are done select OK.
 
-    ![](images/100/Picture100-16.png)
+PIC
 
-- Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
+Select **Customer Name** and **PredictionConfidence**. While having the attributes selected, right click, select **Pick Visualization**, and select **Pivot Table**.
 
-    **Note:** Throughout the lab you will assign your own account as the “physical” owner of the issue, but for the sake of this workshop, **Bala Gupta** will be the “logical” owner of the following issues.
+Drag the **Subscribed Prediction** to the Color. Right click the color and the select Manage Assignments. Choose the color Royal Blue for No and the color Green for Yes.
 
-    ![](images/bala.png)
 
-    **Summary:**
-    `Create Initial GIT Repository for Twitter Feed Service`
+If you have successfully completed the steps you will see the visualization below. From looking at the chart we can predict which customers are more likely to get a subscription.
 
-    **Description:**
-    `Create Initial GIT Repository for Twitter Feed Service`
+PIC
 
-    **Type:** `Task`
+Congratulations! You have completed the workshop.
 
-    **Owner:** `Select your account provided in the dropdown [Logical Owner: Bala Gupta]`
+In today’s workshop, we were able to quickly assess the effectiveness of your social media campaigns on sales and how sales trends correspond to social media tone/sentiment. We were also able to explore some ERP data to look at spend as well as HCM data to look at attrition, vacancies and reasons why people are leaving.
 
-    **Story Points:** `1`
+This concludes our Oracle Analytics Cloud Data Visualization workshop.
 
-    Note: Story point is an arbitrary measure used by Scrum teams. They are used to measure the effort required to implement a story. This [Site](https://agilefaq.wordpress.com/2007/11/13/what-is-a-story-point/) will provide more information. 
+For further information about Oracle Analytics Cloud Service or any of the Oracle BI products, contact your Oracle Business Intelligence Sales Rep.
 
-    ![](images/100/Picture100-17.png)
-
-### **STEP 6**: Create Issue for Update Twitter Credentials
-
-- Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
-
-    ![](images/bala.png)
-
-    **Summary:** `Create Filter on Twitter Feed`
-
-    **Description:** `Create Filter to allow user to supply text to reduce the amount of data returned by the Twitter feed`
-
-    **Type:** `Feature`
-
-    **Owner:** `Select your account provided in the dropdown [Logical Owner: Bala Gupta]`
-
-    **Story Points:** `2`
-
-    ![](images/100/Picture100-18.png)
-
-### **STEP 7**: Create Issue for initial GIT Repository creation
-
-- Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**. Note: The next two issues will logically be owned by John Dunbar.
-
-    ![](images/john.png)
-
-    **Summary:** `Create Initial GIT Repository for Twitter Feed Marketing UI`
-
-    **Description:** `Create Initial GIT Repository for Twitter Feed Marketing UI`
-
-    **Type:** `Task`
-
-    **Owner:** `Select your account provided in the dropdown [Logical Owner: John Dunbar]`
-
-    **Story Points:** `1`
-
-    ![](images/100/Picture100-19.png)
-
-### **STEP 8**: Create Issue for Displaying Twitter Feed
-
-- Click **New Issue**. Enter the following data in the New Issue page and click **Create Issue**.
-
-    ![](images/john.png)
-
-    **Summary:** `Display Twitter Feed in Table Format`
-
-    **Description:** `Display Twitter Feed in Table Format`
-
-    **Type:** `Feature`
-
-    **Owner:** `Select account provided in the dropdown [Logical Owner: John Dunbar]`
-
-    **Story Points:** `2`
-
-    ![](images/100/Picture100-20.png)
-
-- Click the back arrow ![](images/100/Picture100-21.png) on the **left side** of the window, or click on the **Issues** menu option to view all newly created issues.
-
-    ![](images/100/Picture100-22.png)
 
 
