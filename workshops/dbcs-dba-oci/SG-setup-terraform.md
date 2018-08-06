@@ -1,8 +1,6 @@
-Update April 2, 2018
-
 # Setup
 
-This workshop requires several setups steps that are normally done in advance as part of an automated process prior to running the labs.  In cases where a customer wishes to run through the workshop themselves on their own without the support of Global Services Engineering (GSE) they must first walk through the following steps.  Note there are two setup options: The first is manual, and the second (this one) uses Terraform with the Oracle Terraform OCI Provider.  This is the recommended set as it has fewer steps and configures the cloud automatically.  We have left the manual one in place so you can see what the Terraform process will do for you.  This workshop was built on and for version 12.2 of the database, but will also work with 18c with minor changes.  The setup instructions and lab docs have notes at various places on what you need to do to run the workshop using 18c.
+This workshop requires several setups steps that are normally done in advance as part of an automated process prior to running the labs.  In cases where a customer wishes to run through the workshop themselves on their own they must first walk through the following steps.  Note there are two setup options: The first is manual, and the second (this one) uses Terraform with the Oracle Terraform OCI Provider.  This is the recommended set as it has fewer steps and configures the cloud automatically.  We have left the manual one in place so you can see what the Terraform process will do for you.  This workshop was built on and for version 12.2 of the database, but will also work with 18c with minor changes.  The setup instructions and lab docs have notes at various places on what you need to do to run the workshop using 18c.
 
 ### **STEP 1**: Download the Terraform Configuration Files, and Install Terraform and the Oracle Terraform OCI-Provider
 
