@@ -19,11 +19,11 @@ Create a new **Canvas**.
 
 Clear any existing filters and add **Business Lines** to the filter area and then filter on **Capital Equipment**.
 
-Create a **Stacked Bar** chart of **Voluntary Turnover** and **Involuntary Turnover** by **Month Name**. Change the colors (hint: **right-click**, select **Color**, and select **Reset Visualization Colors**)
+Create a **Stacked Bar** chart of **Voluntary Turnover** and **Involuntary Turnover** by **Month Name** (Make sure that both the **Voluntary Turnover** and **Involuntary Turnover** measures are in the **Value - Y-Axis**). Change the colors (hint: **right-click**, select **Color**, and select **Reset Visualization Colors**)
 
 Create a **Donut** chart on the right side of **Voluntary Turnover** by **Job Description**.
 
-PIC
+![](images/700/img_7a-1.png)
 
 ###2) Create another data source, additional visualizations, and an Insight using recruitment data.
 
@@ -38,13 +38,9 @@ Move the **Donut** chart above the **Stacked Bar** chart.
 Select **Job Description**, **Open Positions**, **Avg Open Duration**, and **Position Fill Rate**. Select Create Best Visualization.
 Move **Position Fill Rate** to **Size** and **Job Description** to **Color**.
 
-Add an **Insight** with the following **Description**:
-
-**Struggling to fill key vacancies Save your project.**
-
 **Save** your project.
 
-PIC
+![](images/700/img_7a-2.png)
 
 **3) Add a third data source along with visualizations and Insights using attrition history data.**
 Steps required:
@@ -60,7 +56,7 @@ Move Quit Reason to the Color property.
 Change the visualization type to **Horizontal Bar**. 
 Sort **Quit Count High to Low**.
 
-PIC
+![](images/700/img_7a-3.png)
 
 Select **Employee Name**, **Salary**, and **Hours Worked**.
 Select **Create Best Visualization**
@@ -75,8 +71,10 @@ Add an **Insight** with following **Description**:
 
 **Save** your project.
 
-PIC
+![](images/700/img_7a-4.png)
 
-To share this with others, it is probably best to do so in **Story Navigator**.
+To share this with others, it is probably best to navigate to the **Narrate** tab. 
 
-Turn on the **Story Navigator** (in bottom right menu) and enter **Presentation Mode** (in top right menu). Click on the dots or arrows to navigate between **Insights**.
+After clicking the **Narrate** tab, drag the insight to the bottom screen, and click on present. Click on the dots or arrows to navigate between **Insights**.
+
+![](images/700/img_7a-5.png)
