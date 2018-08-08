@@ -15,7 +15,7 @@ This is the first of several labs that are part of the WLS On-Prem to ACCS Works
 
 ## Required Artifacts
 
-For this lab you will need Github and Docker Hub Accounts. Use the following links to set up:
+For this lab you will need Github and Oracle JDeveloper. Use the following links to set up:
 
 - a [GitHub account - https://github.com/join](GitHub account - https://github.com/join)
 -  [Oracle JDeveloper - https://www.oracle.com/technetwork/developer-tools/jdev/overview/index.html](Oracle JDeveloper - https://www.oracle.com/technetwork/developer-tools/jdev/overview/index.html)
