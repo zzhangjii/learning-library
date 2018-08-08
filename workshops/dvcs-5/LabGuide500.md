@@ -218,9 +218,9 @@ Navigate to the Narrate Section of the UI.
 
 ![](images/500/img_5d-29.png) ![](images/500/img_5d-30.png) 
 
-![](images/500/img_5d-31.png)  - **General**: This section allows you to adjust logistical parts of your storyboards/canvases. You are given the option to set the base canvas as well as hide/show the entire page, the page title, and the description.
+![](images/500/img_5d-31.png) - **General**: This section allows you to adjust logistical parts of your storyboards/canvases. You are given the option to set the base canvas as well as hide/show the entire page, the page title, and the description.
 
-![](images/500/img_5d-32.png)  - **Adjustments**: This section allows you to make extra adjustments to the UI. You are given the option to set the layout and size orientation of your storyboards/canvases.
+![](images/500/img_5d-32.png) - **Adjustments**: This section allows you to make extra adjustments to the UI. You are given the option to set the layout and size orientation of your storyboards/canvases.
 
 ![](images/500/img_5d-33.png) - **Filters**: This section helps you to manage any filters you’ve applied to your canvases in a more organized manner.
 
