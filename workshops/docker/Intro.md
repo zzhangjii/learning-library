@@ -4,7 +4,7 @@ Welcome to the **Oracle Public Cloud** Docker Development and Deployment worksho
 
 To learn more about this workshop please watch the video below.
 
-![](images/000jumpstart/JS5-2.PNG)
+![](images/000jumpstart/JS5-2.png)
 
 <a href="https://www.youtube.com/watch?v=ivNEREBsH9k&t=0s&index=3&list=PLPIzp-E1msrYGLKIgW3njO3uUkvXD0bAH" target="_video">Workshop Overview</a>
 
