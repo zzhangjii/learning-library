@@ -3,8 +3,6 @@
 
 ![](images/050Linux/Title050.png) 
 
-Updated: June 21, 2018
-
 ## Overview
 
 What is Docker? What is a container?
@@ -49,7 +47,7 @@ You will create all required infrastructure components within your Trail account
 
 ### **Step 1**: Your Oracle Cloud Trial Account
 
-- You have already applied for and received you're Oracle Cloud Trial Account and will change the efault password...
+- You have already applied for and received you're Oracle Cloud Trial Account and will change the default password...
 
 
 ### **STEP 2**: Log in to your OCI dashboard
@@ -80,9 +78,6 @@ You will create all required infrastructure components within your Trail account
 
   ![](images/050Linux/4.png)
 
-- On the OCI Console sign in page, enter the same **Username** as you did on the previous sign in page. If this is your first time logging into the OCI Console, enter the **temporary password** from your trial account welcome email. If you have already visited the OCI Console and changed your password, enter your **new password**.
-
-  ![](images/050Linux/5.png)
 
 ### **STEP 3**: Create a Compartment
 
@@ -117,6 +112,10 @@ All the availability domains in a region are connected to each other by a low la
 - Click the **hamburger icon** in the upper left corner to open the navigation menu. Under the **Network** section of the menu, click **Virtual Cloud Networks**
 
     ![](images/050Linux/10.PNG)
+    
+- Select your compartment from the LOV.
+    
+    ![](images/050Linux/10a.png)
 
 - Click **Create Virtual Cloud Network**
 
@@ -220,6 +219,10 @@ ssh-keygen -b 2048 -t rsa -f dockerkey
 - Your key pair is now in the current directory
 
     ![](images/050Linux/24.PNG)
+    
+- **NOTE for Linux and Mac Clients:** Just open up the pubic key file in an editor (vi) and select / copy the entire contents to be used in Step 8.   
+
+    ![](images/050Linux/25-4.PNG)
 
 ### **STEP 7**: Create SSH Key Pair (Windows client)
 
@@ -229,17 +232,17 @@ For Windows clients this example will show the use of PuttyGen to generate the k
 
     ![](images/050Linux/25.PNG)
 
-- **Save private key** to a directory of your choice.
+- Once the generation process completes click the **Save Private Key** button and save to a directory of your choice.
+
+- If prompted to save without a passphrase click yes. 
+
+    ![](images/050Linux/25a.png)
 
 **NOTE:** `Do not save the public key as the format is not compatable with Linux openSSH.
 
 - Instead, **Select the entire Public Key in the display and right-click copy**. `This content will be pasted into the Create Instance dialog in Step 8.`
 
     ![](images/050Linux/25-2.PNG)
-
-- **NOTE for Linux and Mac Clients:** Just open up the pubic key file in an editor (vi) and select / copy the entire contents to be used in Step 8.   
-
-    ![](images/050Linux/25-4.PNG)
 
 ### **STEP 8**: Create a Compute Instance
 
@@ -261,7 +264,7 @@ Availability Domain: xxx-AD-1
 Boot Volume: Oracle-Provided OS Image
 Image Operating System: Oracle Linux 7.5
 Shape Type: Virtual Machine
-Shape: VM.Standard1.1
+Shape: VM.Standard2.1
 SSH Keys: Choose SSH Key Files
 ```
 
@@ -344,6 +347,9 @@ usermod -aG docker opc
 systemctl enable docker
 systemctl start docker
 ```
+
+- **NOTE:** During the `yum install docker-engine` command press `Y` is asked if installation is ok.
+
 - Screenshot at the end of the Docker installation:
 
    ![](images/050Linux/38.PNG)
@@ -381,6 +387,8 @@ Set the server to Permissive mode and also ensure that permissive mode survives 
 sudo -s
 vi /etc/sysconfig/selinux
 ```
+
+- **NOTE:** If new to vi, press the letter `i` to edit text. To save press Escape, the type `:wq!`.
 
    ![](images/050Linux/42.png)
 

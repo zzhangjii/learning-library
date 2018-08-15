@@ -3,8 +3,6 @@
 
 ![](images/100Linux/Title100.png) 
 
-Updated: June 22, 2018
-
 ## Introduction
 In this lab we introduce some basic concepts of Docker, container architectures and functions.  We will do this using a single container which provides a REST service as part of a node.js application.  The application has two pieces, which provide a microservice.
 
@@ -30,7 +28,7 @@ You will use various Docker commands to setup, run and connect into containers. 
 
 # Start up and login into your Linux environment
 
-This Lab and Lab 200 assume you have went through the 050 Set Up Lab and have SSH'ed into that Compute Instance. verify that the Docker engine is up and running. 
+This Lab and Lab 200 assume you have went through the 050 Set Up Lab and have SSH'ed into that Compute Instance. Verify that the Docker engine is up and running. 
 
 **NOTE**: The screen shots in this lab guide are using the available Linux VirtualBox VM
 
