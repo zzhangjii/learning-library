@@ -2,7 +2,7 @@
 
 Welcome to the **Oracle Public Cloud** Docker Development and Deployment workshop. This workshop will walk you through the process of creating an infrastructure to support deployment of a multi-container Docker application (AlphaOffice).
 
-To learn more about this workshop please watch the video below.
+To learn more about this workshop please watch the video below. 
 
 ![](images/000jumpstart/JS5-2.png)
 
