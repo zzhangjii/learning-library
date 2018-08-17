@@ -17,7 +17,7 @@ Key Take Aways from this lab:
 
 1. Start by clicking on the hamburger menu in the top-left of the UI. This will open the drawer menu.
 
-    ![](images/200/img2a_1_1.png)
+   ![](images/200/img2a_1_1.png)
     
 2. You can use this menu to navigate through the application.
 
