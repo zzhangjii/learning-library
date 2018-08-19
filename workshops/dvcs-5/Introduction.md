@@ -1,4 +1,3 @@
-![](images/200/Picture-lab.png)  
 Updated: July 19, 2018
 
 ## Introduction

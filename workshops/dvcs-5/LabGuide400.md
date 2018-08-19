@@ -1,273 +1,308 @@
-Updated: July 21, 2018
+Updated: Aug 16, 2018
 
-## Lab 4: Data Flows to Curate Data (General Ledger from Multiple Sources)
-
-In this next lab, you will create a data source from multiple sources, as part of a reusable **Data Flow**. **Data Flows** can be used to merge multiple data sources; apply aggregations; filter results; and modify and create columns. These flows can also be refreshed and reused as needed.
+## Lab 4 – Analyzing Social Media with Sales – Visualize and Narrate
 
 Key Take Aways from this lab:
-- Getting used to the DV interface
-- 
+- Learning how to use Calculations
+- Using different visualizations to obtain insights from dataset
+- Narrating a meaningful story using Narrate
 
-        This lab is optional but provides an important overview of managing data for those users who might 
-        need to prepare data for analysis.
+### 4a) Analyzing Sales and Social Media Data
 
-### Scenario
+1. Create a calculated field to use in visualizations.
 
-As VP of Finance at a large organization, you often face the challenge of being able adequately analyze financial data, which is derived from multiple sources. A Project Planning and Management tool is used for budgeting and forecasting purposes, while actuals (e.g. spend) are captured in a Financials module of an ERP. You have asked for data from both, but been given a delimited text file and an Excel file.
-
-Luckily, one of your staff who knows how to use Data Visualization in Oracle Analytics Cloud, is here to help you define a mechanism by which that data can be merged and utilized for your analytical purposes.
-
-
-### 4a) Import an Excel File and a Delimited Text File and Apply a Format Conversion
-
-1. Import actuals data from an Excel file for use in your data flow.
-
-    Open the **Data** menu.
-
-    ![](images/400/img4a_1_1.png)
+        Now, we have data that spans both social media feeds and revenue figures. This will help us dig into
+        their relationship.
     
-    Select **Data Set** in the **Create** section.
+        Previously, we created some visualizations, but now, we have the ability to really dive into more 
+        advanced capabilities. For starters, activity on social media is subject to large spikes. To make
+        it easier to evaluate, we should evaluate it on a logarithmic scale (large and varied datasets like
+        those found in social media are often, best handled using a logarithmic scale, where values are 
+        evaluated based upon multiplicative factors as opposed to static values).
     
-    ![](images/400/img4a_1_2.png)
+    In the last exercise, we modified some of the data in the **KoolKart Sales Data** dataset to ensure that it is aligned with the **DaaS Social Feeds-K oolKart** dataset. Navigate to the **Visualize** tab.
     
-    Select **Data Set** and choose **Drag data file here or click to browse** or simply drag the **General Ledger Data - Financial System Actuals.xlsx** file to the space.
-    
-    ![](images/400/img4a_1_3.png)
-    
-    Select **General Ledger Data - Financial System Actuals.xlsx** from where you saved the data files for the workshop. Please make sure you do not load the combined data file (that is used if skipping this lab).
-    
-    You’ll notice this file contains **Actual** (spend amount) by **AccountLineId**, **Account**, **Account Group**, **Business Lines**, **Month**. Leave all fields as they are and select **Add**.
-    
-        You may have noticed that Month is appearing with the day of the month as well. Let’s clean that
-        up.
-    
-    ![](images/400/img4a_1_4.png)
-    
-    Select the column **Month**. Under **Properties** in the **Project Components Menu**, select the **Date** icon. Now type in **MMMMM YYYY** into the **Format** field.
-    
-    ![](images/400/img4a_1_5.png)
-    
-    ![](images/400/img4a_1_6.png)
-    
-     Go to **Preparation Script** and click **Apply Script**. 
+     ![](images/300/img_3c_1_1.png)
      
-     ![](images/400/img4a_1_7.png)
-    
-    Your data should now be ready to use. Go back to the **Data Sources** menu.
-    
-    ![](images/400/img4a_1_8.png)
-    
-2. Import budget data from a delimited text file for use in your data flow. 
-    
-    Select **Data Source** in the **Create** section.
-    
-    ![](images/400/img4a_1_2.png)
+     Click on the **+** icon on the top right of the **Project Components Menu**. Next, click on **Add Calculation** (make sure that the **Data Elements** icon is selected, else the **+** icon won't be visible).
      
-    Similar to step 1, select **Data Set** and choose **Drag data file here or click to browse** and select **General Ledger Data - Project Planning System Budgets.txt** or drag it to the space.
-    
-        Delimited files (typically in a text format) are simply datasets where the columns are separated 
-        by a character (or set of characters) such as a comma, a pipe, a semicolon, or others. Most 
-        systems today have strong export capabilities and APIs for retrieving data, but large datasets 
-        and those from legacy systems often rely upon these means for sharing data.
-    
-    You’ll notice that it looks like the system thinks all the data is part of a single column. This is because the system defaults to looking for comma delimited files so you will need to change this. Click on **Comma**. Select **Custom**.
-    
-    ![](images/400/img4a_2_2.png)
-    
-    Type in a pipe delimiter (usually **Shift** and the key between **Backspace** and **Enter**/**Return**): **|**
-    
-    ![](images/400/img4a_2_3.png)
-    
-    Click outside the field to apply the changes. You will now notice this file contains **Budget** by **AccountLineId**, **Account**, **Account Group**, **Business Lines**, and **Month**.
-    
-    Leave all fields as they are and select **Add**.
-    
-3.  Convert Text to Dates.
-
-        You may have noticed that Month is showing up with the day of the month as well and in text format. Let’s clean that up so we can analyze it as a date.
-    
-    Select the **Month** column.
-    
-    ![](images/400/img4a_3_1.png)
-    
-    Under **Properties** in the **Project Components Menu**, select the **Data Type** and set it as **Date**. You will now be able to see the **Date** icon. Now type in **MMMMM YYYY** into the **Format** field. Go to *Preparation Script** and click **Apply Script**. 
-    
-    ![](images/400/img4a_3_2.png)
-    
-    The data is now ready to be used in our data flow.
-    
-        You won’t always need to be modify data as we just did. You can add data sources directly while 
-        creating data flows. However, these past two exercises were structured to allow you to see that
-        regardless of the type and format of data you have been provided, you can easily structure it for
-        analysis within OAC.
-    
-## 4b) Create a Data Flow to Curate Budget and Actuals into a Single Dataset
-
-1. Create a new Data Flow.
-    
-    Return to the **Data Sources** menu.
-    
-    ![](images/400/img4b_1_1.png)
-    
-    Select **Data Flow** in the **Create** section.
-    
-    ![](images/400/img4b_1_2.png)
-    
-    Select the **General Ledger Data – Financial System Actuals** dataset and select **Add**.
-    
-    ![](images/400/img4b_1_3.png)
-   
-    This brings up the **Data Flow** editor. We will not be covering this in its entirety, but the editor shows a visual representation of the operations at the top of the screen with the resulting data at the bottom. The available operations are presented as icons on the right.
+     ![](images/300/img_3f_1_2.png)
      
-    ![](images/400/img4b_1_4.png)
+    In the **Expression Editor**, type in **Activity(log scale)** as the **Name**.
     
-2. Add another data source.
+    Then, type in the following expression into the **Expression Box** (you could also use the function list on the right and field search as demonstrated in previous exercises):
 
-    The first thing we should do here is add our other data source (the budgetary figures). Select **Add Data** from the **Data Flow Steps Menu**. Drag it under **General** in the diagram.
+    **log(Total**
     
-    ![](images/400/img4b_2_1.png)
+    ![](images/300/img_3f_1_3.png)
     
-    Select the **General Ledger Data - Project Planning System Budgets** dataset and select **Add**.
+    Select **Total Number of Snippets** from the pop up.
     
-3. Join the data sources.
+        You must type this in for the auto-complete suggestions to show up.
+        
+    Select **Validate**. Then select **Save**, assuming it was valid.
+    
+    ![](images/300/img_3f_1_4.png)
+    
+    ![](images/300/img_3f_1_5.png)
 
-    ![](images/400/img4b_3_1.png)
-    
-    In order for the system to understand how the two data sources can be combined, we need to provide athejoin logic.
+2. Use the calculation in a visualization to analyze social media volume on a logarithmic scale.
 
-    Select **Join** from the **Data Flow Steps** Menu and drag and drop it after the first General icon in the flow.
+    Clear the existing **Canvas**. Select the **Canvas Settings** option from the **Project Menu** and select **Clear Canvas**.
     
-    ![](images/400/img4b_3_2.png)
-    
-    You will be informed that you need to provide additional logic. Select the open circle to do so (it does not matter if the circle appears in the top or bottom line).
-    
-    ![](images/400/img4b_3_3.png)
-    
-    The system will suggest the first column (**AccountLineId**) as a possible join. In addition, we also want to use the **Month** column. To do so, select the plus icon and add another join.
-    
-    ![](images/400/img4b_3_4.png)
-    
-    Select **Month** for both, Input 1 and Input 2.
-    
-    ![](images/400/img4b_3_5.png)
-    
-    You should see the data below the join logic. If not, then there may be an issue with what you have applied, so try again.
-    
-4. Identify the columns we want to use for our analyses.
+    ![](images/300/img_3f_2_1.png)
 
-    Let’s remove any column copies as both data sets include the same information about the account. Click on **Select Columns** and drag and drop it after **Join**.
+    Select **Date** (under **DaaS Social Feeds-KoolKart** within **Data Elements** in the **Project Components Menu**).
+ 
+        You can adjust the display format of a date or a time column by specifying the format and/or level 
+        of granularity. For example, you might want to change the format of a transaction data column (which 
+        by default, is set to show the long date format such as November 1, 2017) to display the ISO
+        date format (such as 2017-11-01), instead.
     
-    ![](images/400/img4b_4_1.png)
+    Press the **Control(Windows)** or **Command(Mac)** key and also select **Activity(log scale)**. **Right click** and select **Create Best Visualization**.
     
-    Scroll down and click on **AccountLineId_1**. Then also select **Account Group_1**, **Account_1**, **Business Lines_1**, and **Month_1**. **Select Remove Selected**.
-    
-    ![](images/400/img4b_4_2.png)
-    
-    ![](images/400/img4b_4_3.png)
-    
-    Your flow and data should now look like the following:
-    
-    ![](images/400/img4b_4_4.png)
-    
-5. Add a new column to the result set.
+    ![](images/300/img_3f_2_2.png)
 
-    If you’ve noticed, we have both **Budget** and **Actual** values. Typically, it makes sense to evaluate any variance. Let’s add that information to our flow.
+    The system will have determined that a line chart is the best way to visualize this data. Let’s create a copy of the visualization, so that we can quickly analyze the date based information in our dataset.
     
-    Select **Add Columns** and drag it to the right of **Select Columns**.
+    ![](images/300/img_3f_2_3.png)
     
-    ![](images/400/img4b_5_1.png)
+    **Right click** in the white space of the visualization (or use the **Visualization Properties Menu** in the top right of the visualization). Select **Copy Visual**.
     
-    Type in **Variance** as the **Name**. Type in **Budget** in the **Expression Editor** and wait for the pop-up to appear and select **Budget**.
+    ![](images/300/img_3f_2_4.png)
     
-    ![](images/400/img4b_5_2.png)
-    
-    Type in the minus sign (**-**). Then drag and drop the **Actual** column into the equation after the minus (you will need to select the **Columns** icon in the menu on the left).
-    
-    ![](images/400/img4b_5_3.png)
-    
-    Select **Validate** and then Apply.
-    
-    ![](images/400/img4b_5_4.png)
-    
-    You should now see a **Variance** column in the data. Let’s go ahead and add a step to save the data in the flow.
-    
-6. Save the data in the flow (e.g. to have the system create a data source for use in visualizations).
-    
-    Select the **Actions** icon. Select **Save Data Set** and drag next to **Add Column**.
-    
-    ![](images/400/img4b_6_1.png)
-    
-    Type in **General Ledger Data Merged** in the **Name**.
-    
-    ![](images/400/img4b_6_2.png)
-    
-7. Save the data flow itself.
+    ![](images/300/img_3f_2_5.png)
 
-    Select **Save** in the top right and select **Save As**.
+    **Right click** in the white space of the visualization (or use the **Visualization Properties Menu** in the top right of the visualization). Select **Paste Visual**.
     
-    ![](images/400/img4b_7_1.png)
+    ![](images/300/img_3f_2_6.png)
     
-    Type in **General Ledger Merging Data Flow** and select **OK**.
-    
-    ![](images/400/img4b_7_2.png)
-    
-8. Run the Data Flow to create the data source for use in visualizations.
+    ![](images/300/img_3f_2_7.png)
 
-    ![](images/400/img4b_8_1.png)
+    You should now have two copies of the line chart on your canvas. 
+    
+    ![](images/300/img_3f_2_8.png)
+    
+    If needed, rearrange the images one above the other, as learnt in Lab2. 
+    
+    Now, go ahead and select the one at the top.
+    
+    ![](images/300/img_3f_2_9.png)
 
-9. Review the created Data Source to make sure it is formatted how you would like it.
-
-    Go to the **Data** menu.
-    
-    ![](images/400/img4b_9_1.png)
-    
-    Select the **Ellipses** icon next to the newly created and merged data source (**General Ledger Data Merged**) and select **Open**.
-    
-    ![](images/400/img4b_9_2.png)
-    
-    Now would be a good time to adjust formatting as needed (e.g. in the example below, we want to change the formatting for **Actual**, **Budget**, and **Variance**).
-    
-    ![](images/400/img4b_9_3.png)
-    
-    As before, to make any change select the column, go to **Project Components Menu** and make the change.
-    
-    ![](images/400/img4b_9_4.png)
-    
-    ![](images/400/img4b_9_5.png)
-    
-    ![](images/400/img4b_9_6.png)
-    
-    In this menu, you can also change the Aggregation (default for Measures) and Format as desired.
-    
-    Once you are done with your changes, click **Apply Script**.
-    
-    You are now ready to create visualizations from two different data sources that have been curated using a **Data Flow**!
-
-### 4c) Binning, Grouping, Running Aggregations in Data Flows
-
-Binning a measure creates a new column based on the value of the measure. You can assign a value to the bin, dynamically, by creating the number of equally sized bins (such as the same number of values in each bin), or by explicitly specifying the range of values for each bin.
-
-1. Navigate back to your newly created **Data Flow** section.
-
-    ![](images/400/img4c_1_1.png)
-    
-2. Drag **Bin** from the left pane to the **Add columns** option.
-
-    ![](images/400/img4c_2_1.png)
-    
-    ![](images/400/img4c_2_2.png)
-
-    ![](images/400/img4c_2_3.png)
-    
-3. Rename the element name to **Bin for Actuals** and set the **Number of bins** to 6.
-
-    ![](images/400/img4c_3_1.png)
-    
-4. Drag Group from the left pane to the Add Columns Section.
-
-    ![](images/400/img4c_4_1.png)
-    
-5. Now you are able to take certain columns and assign them to a group.
-
-    ![](images/400/img4c_5_1.png)
+    Select **Revenue** under **KoolKart Sales Data** in the **Project Components Menu** (make sure nothing else is selected) and drag it directly on top of **Activity(log scale)** in the properties box under **Values (Y-axis)**.
      
+    ![](images/300/img_3f_2_10.png)
+    
+    Doing so should have replaced **Activity(log scale)** with **Revenue**. If, instead, it added it as another Y-axis measure, just hover over the **Activity(log scale)** measure and click the **X** that appears in the right corner to remove it.
+ 
+    ![](images/300/img_3f_2_11.png)
+    
+        In our earlier analysis, we were able to establish that, although, certain product categories have 
+        negative revenue trends, the overall trends are positive and would appear to correlate positively 
+        with our social media campaigns.
+    
+        In this visualization, we can see the Revenue by Date and Activity(log scale) by Date visualizations
+        seem quite close in terms of trending thus helping validate the hypothesis that the social media 
+        campaigns were helpful overall.
+    
+        However, let’s drill into the categories that were not performing well to see if we can find out
+        what is going on. Specifically, let’s take a look at Clothing & Shoes and Electronics & Computers.
+        
+3. Include category in the visualization as a Trellis Column.
+    
+    Select **Category** and drag it into the **Trellis Columns** property.
+    
+    ![](images/300/img_3f_3_1.png)
+    
+    Your visualization should now look like the following:
+    
+    ![](images/300/img_3f_3_2.png)
+    
+4. Add category to the Activity(log scale) by Date visualization.
+
+    Select the **Activity(log scale) by Date** visualization. It will appear with a blue border, once you select it. Select **Category** (make sure nothing else is selected) and drag it to the **Trellis Columns** property.
+    
+    ![](images/300/img_3f_4_1.png)
+    
+    Let’s take a look at the visualizations.
+    
+    ![](images/300/img_3f_4_2.png)
+    
+        Well, what do we see here?
+        
+        In looking at the Activity(log scale) by Date, Category visualization, the overall trend is 
+        flat meaning there doesn’t seem to be much social media activity for the Clothing , Shoes category 
+        despite our social media campaigns. The revenues for the Clothing , Shoes category also seem to be 
+        rather flat.
+        
+        Surprisingly, there is quite a bit of social media activity for the Electronics , Computers 
+        category and it is growing. But, the revenues are trending down.
+        
+        This is confusing! Let’s check the tonality/sentiment of the social media activities because while
+        there is social media activity, it does not seem to be all positive.
+        
+5. Create a new visualization to evaluate the tone of social media posts.
+
+    Select the **Activity(log scale) by Date, Category** visualization. **Right click** in any blank area and select **Copy Visual**.
+    
+    ![](images/300/img_3f_5_1.png)
+    
+    **Right click** below the **Activity(log scale) by Date, Category** visualization and select **Paste Visual**.
+    
+    ![](images/300/img_3f_5_2.png)
+    
+    Select the visualization that you have just paster. Select **Percent Positive Tone** (make sure nothing else is selected). Press and hold **Control(Windows) or Command(Mac)** and select **Percent Neutral Tone** and **Percent Negative Tone**. Drag and drop them directly on top of **Activity(log scale)** in the under **Values (Y-axis)**.
+    
+    ![](images/300/img_3f_5_3.png)
+    
+    This should have replaced **Activity(log scale)** with the 3 new columns. Instead, if they were added as additional **Y-axis** measures, just hover over the **Activity(log scale)** measure and remove it.
+    
+    Change the visualization type. Select the dropdown menu next to the current visualization type (**Line**) and select **Area**.
+    
+    ![](images/300/img_3f_5_4.png)
+    
+    ![](images/300/img_3f_5_5.png)
+    
+    Let’s take a closer look at this visualization. Select **Maximize Visualization** in the top right of the visualization.
+    
+    ![](images/300/img_3f_5_6.png)
+    
+    ![](images/300/img_3f_5_7.png)
+    
+        Interesting... there seems to be a lot of negative sentiment towards Electronics , Computers, 
+        starting in the 2nd week of January. Let’s analyze the Indicators to try to further understand the 
+        problem.
+        
+6. Evaluate the tone of specific social media posts using a Tag Cloud visualization.
+
+    Minimize the last visualization.
+    
+    ![](images/300/img_3f_6_1.png)
+    
+    Select **Indicators**. Press and hold **Control(Windows) or Command(Mac)**. Select **Total Number of Snippets**. Right click and select **Pick Visualization**.
+    
+    ![](images/300/img_3f_6_2.png)
+    
+    Select **Tag Cloud**.
+    
+    ![](images/300/img_3f_6_3.png)
+    
+    You should now see a breakdown of the most common Indicators on social media.
+    
+    ![](images/300/img_3f_6_4.png)
+    
+    Let’s narrow this down to focus in on just **Electronics , Computers** and filter the dates to after mid-January. Select **Mention Category**, drop it under the **Filters** and select **Electronics , Computers**. 
+    
+    ![](images/300/img_3f_6_5.png)
+    
+    ![](images/300/img_3f_6_6.png)
+    
+    ![](images/300/img_3f_6_7.png)
+     
+     Click outside the filter to exit the menu. Select **Date** and drag it into the **Filter** area. Don't replace the **Mentions Category** filter.
+     
+     ![](images/300/img_3f_6_8.png)
+     
+     Set the **Start Date** (using the calendar or by typing) to **January 1, 2016**. Set the **End Date** to **April 29, 2016**. Click anywhere outside the filter to exit the menu.
+     
+     ![](images/300/img_3f_6_9.png)
+     
+     Next, let’s color the **Tag Cloud** by intensity of negative sentiments. Select **Percent Negative Tone** and drag it into the **Color** property.
+     
+     ![](images/300/img_3f_6_10.png)
+     
+     We now have a visualization of **Electronics , Computers** related social media posts between January and April 2016 focused on identifying issues from negative feedback.
+     
+     ![](images/300/img_3f_6_11.png)
+      
+        In looking at the size of the tag, we can see key indicators like Defective, Delivery, and Recall 
+        are frequently mentioned and by looking at the darker color, we can see Customer Service and MEDIA: 
+        Viewing seem to be contributing to the bulk of negative sentiment. This needs to be followed up on.
+        
+        Let’s note this as another insight to share with the team.
+        
+        Depending on the size of your monitor and your screen resolution, your Tag Cloud could be laid out 
+        slightly different, but relative size and color should be the same as above.
+        
+### 4b) Finalizing the Project and Insights on Sales and Social Media Data
+
+    Data Action links are responsible for passing context values from Data Visualization as parameters to 
+    external URLs or filters to other projects. When a link navigates to a project, the data context is 
+    displayed in the form of canvas scope filters in the filter bar. The links data context may include 
+    attributes associated with the selections or cell from which the link was initiated.
+
+1. Accessing the Data Actions Dialog Box
+
+    Click on **Narrate** in the **Project Tabs** in the top right of the screen.
+    
+    ![](images/300/img_3g_1_1.png)
+
+    Hover over the visualization, click on the **Hamburger Icon**, and select **Add To Story**.
+    
+    ![](images/300/img_3g_1_2.png)
+
+    Let’s also give the **Insight** a meaningful name. Double-click the **Title Box** and type **Social Media Sentiment**.
+ 
+    Navigate to the **Canvas Settings** and check the **Description Box**.
+    
+    ![](images/300/img_3g_1_3.png)
+ 
+    Double-click the **Description Text Box** and type in: **Seeing increased social media activity for Electronics & Computers starting mid-January. Negative sentiment seems to be around Customer Service and MEDIA: Viewing**. Click anywhere outside the box to save it.
+ 
+    ![](images/300/img_3g_1_4.png)
+ 
+2. Save the project.
+ 
+    Select the **Save Button** in the **Project Menu**. Select **Save**.
+    
+    ![](images/300/img_3g_2_1.png)
+    
+3. Present the findings using Presentation Mode.
+
+    **Presentation Mode** should be used when you are sharing your story and any insights that you have gained with others.
+    
+    Select the **Present** button to start **Presentation Mode** in the **Project Menu**. 
+    
+    ![](images/300/img_3g_3_1.png)
+
+    This will remove all the editing sections from the interface and convert your **Insights** into a dashboard style presentation mode that you can now, share with others.
+    
+    ![](images/300/img_3g_3_2.png)
+
+    Notice the 2 dots that appear at the bottom of your screen (one for each Insight you created). The **Insight** title and description appear above the dots. Click on the **2nd dot**. Notice that now, your **2nd Insight** is displayed. You can navigate back and forth between each **Insight** by clicking on the dots or the arrows.
+    
+    ![](images/300/img_3g_3_3.png)
+    
+    ![](images/300/img_3g_3_4.png)
+    
+    Exit **Presentation Mode** by selecting the **X** in the top right. 
+    
+    ![](images/300/img_3g_3_5.png)
+    
+    The buttons to the left of the **X** are used for hiding/showing annotations and for sharing. 
+    
+You are now ready to share your visualizations as a file or you can print a hard copy. You can do so, by clicking  on **Share** and choosing your desired option.
+
+![](images/300/img_3g_1.png)
+
+### 4c) Modifying Properties in the Data Panel.
+
+Before we conclude this lab, let's go over the **Data Panel** for **Narrate** tab.
+
+![](images/300/img_3h_1.png)
+
+This section will cover the functions of each of these options.
+
+![](images/300/img_3h_2.png)
+
+![](images/300/img_3h_3.png)
+
+- ![](images/300/img_3h_4.png) **General**: This section allows you to adjust logistical parts of your storyboards/canvases. You are given the option to set the base canvas as well as hide/show the entire page, the page title, and the description.
+
+- ![](images/300/img_3h_5.png) **Adjustments**: This section allows you to make extra adjustments to the UI. You are given the option to set the layout and size orientation of your storyboards/canvases.
+
+- ![](images/300/img_3h_6.png) **Filters**: This section helps you to manage any filters you’ve applied to your canvases in a more organized manner.
+
+- ![](images/300/img_3h_7.png) **Notes**:  This section helps you manage any notes you’ve appended to your canvases.
+
+- ![](images/300/img_3h_8.png) **Presentation**: This section helps you to manage the presentation of your storyboards/canvases. It includes the Story Navigator, which allows you to the style and auto hide properties of your presentation.
