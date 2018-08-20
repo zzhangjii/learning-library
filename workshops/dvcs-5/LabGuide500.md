@@ -216,6 +216,10 @@ Isla knows that she needs to use KoolKart Orders and KoolKart Customers datasets
 
     ![](images/800/img_8c_2_6.png)
 
+    Navagate to settings section and select the data layers section. We've recently added a new feature which enables you to create new data layers. Within this section you can also adjust the map layers, the layer type, and transparency of the map. 
+
+    ![](images/800/img_8c_2_6.1.png)
+
     You're canvas should reflect the picture below
 
    ![](images/800/img_8c_2_7.png)
