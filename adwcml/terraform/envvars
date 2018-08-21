@@ -1,0 +1,17 @@
+#!/bin/bash
+
+export TF_VAR_user_ocid=ocid1.user.oc1..aaaaaaaa6zfztv44vzkk6de2oyel2akugsuxfr2xqy7rxei4z2rnhomkujrq
+export TF_VAR_compartment_ocid=ocid1.compartment.oc1..aaaaaaaan2nd2p5b4u6rmjgsgkevfdi6q3djbhsrhg2tmaeqpgcceqtebt5a
+export TF_VAR_deployment_auuid=deploy1
+export TF_VAR_deployment_short_id=123
+export TF_VAR_fingerprint=fa:49:8b:7d:ed:d7:bb:db:58:31:e7:ad:9a:8e:d7:6e
+export TF_VAR_tenancy_ocid=ocid1.tenancy.oc1..aaaaaaaa3ff5n7tzn3bupbw7d5nhfcnuagnca5kn7kw4odbmzmp5fhh6fwla
+export TF_VAR_user_email=derrick.cameron@oracle.com
+export TF_VAR_user_name=dcameron
+export TF_VAR_region="us-ashburn-1"
+
+# Public/private keys used on the instance
+export TF_VAR_private_key_path="./keys/oci_api_key.pem"
+export TF_VAR_ssh_public_key=$(cat "./keys/publicKey.pub")
+export TF_VAR_ssh_private_key=$(cat "./keys/privateKey")
+

@@ -1,0 +1,33 @@
+{
+  "builders": [
+    {
+      "user_ocid":"ocid1.user.oc1..aaaaaaaa6zfztv44vzkk6de2oyel2akugsuxfr2xqy7rxei4z2rnhomkujrq",
+      "tenancy_ocid": "ocid1.tenancy.oc1..aaaaaaaa3ff5n7tzn3bupbw7d5nhfcnuagnca5kn7kw4odbmzmp5fhh6fwla",
+      "fingerprint":"fa:49:8b:7d:ed:d7:bb:db:58:31:e7:ad:9a:8e:d7:6e",
+      "availability_domain": "ORly:US-ASHBURN-AD-1",
+      "region": "us-ashburn-1",
+      "base_image_ocid": "ocid1.image.oc1.iad.aaaaaaaa6kbmads5tuf4ztjdrozwpknscrisu4uzcgu2fcq77armuhf4dfiq",
+      "compartment_ocid": "ocid1.compartment.oc1..aaaaaaaan2nd2p5b4u6rmjgsgkevfdi6q3djbhsrhg2tmaeqpgcceqtebt5a",
+      "image_name": "Oracle Autonomous Database Jumpstart",
+      "shape": "VM.Standard1.1",
+      "ssh_username": "opc",
+      "ssh_password": "welcome1",
+      "key_file":"oci_api_key.pem",
+      "subnet_ocid": "ocid1.subnet.oc1.iad.aaaaaaaa2c63h4kclkaxanlmmxsyct5cpygmnyiiprfr3aqzjoj2avre22ja",
+      "type": "oracle-oci"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "file",
+      "source": "instantclient_12_2.zip",
+      "destination": "/home/opc/instantclient_12_2.zip"
+    },
+    {
+      "type": "shell",
+      "inline": [
+        "unzip /home/opc/instantclient_12_2.zip"
+      ]
+    }
+  ]
+}
