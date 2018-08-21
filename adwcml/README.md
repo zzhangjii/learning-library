@@ -1,4 +1,4 @@
-# Microservices on Kubernetes Demo Lab
+# Oracle Autonomous Data Warehouse Machine Learning Demo Lab
 
 ## Introduction
 _Time to Complete: 20 minutes_
