@@ -1,2 +1,0 @@
-packer validate CreateFirstImg.json
-packer build CreateFirstImg.json
