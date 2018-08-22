@@ -52,11 +52,15 @@ Let’s look at the past 6 months of Oracle Data as a Service (DaaS) feeds on a 
     
     The system uploads the file. 
 
-        Notice that the system was intelligent enough to see that the Date column is common between the first data set (i.e. revenue spreadsheet) you uploaded into your current project and this one. Therefore, the system sets this column to Match. This, in turn, will enable you to create visualizations combining attributes and measures from both data sets at the same time.
+        Notice that the system was intelligent enough to see that the Date column is common between the 
+        first data set (i.e. revenue spreadsheet) you uploaded into your current project and this one. 
+        Therefore, the system sets this column to Match. This, in turn, will enable you to create 
+        visualizations combining attributes and measures from both data sets at the same time.
     
     ![](images/300/img_3a_1_4.png)
     
-        You do not need to change anything with this step. This is merely to allow you to recognize that the system will auto match data sets where possible. 
+        You do not need to change anything with this step. This is merely to allow you to recognize that the 
+        system will auto match data sets where possible. 
         
     ![](images/300/img_3a_1_5.png)
     
@@ -199,15 +203,15 @@ Let’s look at the past 6 months of Oracle Data as a Service (DaaS) feeds on a 
 
 1. Create an additional join (e.g. matching logic) between the sales and social feeds data sets.
 
-    In the last exercise, we modified some of the data in the **KoolKart Sales Data** dataset to ensure that it aligned with the **DaaS Social Feeds-KoolKart** dataset.
+    In the last exercise, we modified some of the data in the **KoolKart Sales Data** data set to ensure that it aligned with the **DaaS Social Feeds-KoolKart** data set.
 
-    Now that **Category** / **Mentions Category** appears in a similar way in both datasets, we can tell the system to join the two datasets.
+    Now that **Category** / **Mentions Category** appears in a similar way in both data sets, we can tell the system to join the two data sets.
 
     Select **Data Diagram** in the bottom left.
 
     ![](images/300/img_3e_1_1.png)
     
-   **Data Diagram** displays a visualization of the datasets being utilized within the project. In this workshop, we are using two Excel files, so you will see those represented. Furthermore, you will see any joins between the two datasets. If you recall, the system had automatically matched the files according to date. Now that we have made some changes to the data, we can also utilize **Category** / **Mentions Category**.
+   **Data Diagram** displays a visualization of the data sets being utilized within the project. In this workshop, we are using two Excel files, so you will see those represented. Furthermore, you will see any joins between the two data sets. If you recall, the system had automatically matched the files according to date. Now that we have made some changes to the data, we can also utilize **Category** / **Mentions Category**.
    
    ![](images/300/img_3e_1_2.png)
    
@@ -215,18 +219,18 @@ Let’s look at the past 6 months of Oracle Data as a Service (DaaS) feeds on a 
    
    ![](images/300/img_3e_1_3.png)
    
-   You can now identify the logic to join the datasets. In the first column of the new row, use the dropdown to select **Mentions Category**. In the second column select **Category**.
+   You can now identify the logic to join the data sets. In the first column of the new row, use the dropdown to select **Mentions Category**. In the second column select **Category**.
    
    ![](images/300/img_3e_1_4.png)
     
         You may have noticed that only Attributes are displayed. This is by design as Measures are for 
         aggregation, not dimensional analysis or joins. If need be, you can always modify a column or create 
-        a copy of it in another format (e.g. a dataset could have an Id column defined as an Attribute and a 
-        copy of that column, such as Id_Measure, defined as a Measure with count aggregation).
+        a copy of it in another format (e.g. a data set could have an Id column defined as an Attribute and 
+        a copy of that column, such as Id_Measure, defined as a Measure with count aggregation).
     
     Click **OK**.
     
-    The data source diagram will now show there are **2** joins between the datasets.
+    The data source diagram will now show there are **2** joins between the data sets.
     
     ![](images/300/img_3e_1_5.png)
     

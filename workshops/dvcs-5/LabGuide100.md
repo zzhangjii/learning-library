@@ -8,7 +8,7 @@ This section focuses on getting started with OAC5 DV and introducing users to th
 
 Key Take Aways from this lab:
 - Starting up an OAC5 instance 
-- Learning and getting acclimatised to the DV interface
+- Learning and getting acclimatized to the DV interface
 
 ### 1b) Reviewing the Home page and the primary menus
 

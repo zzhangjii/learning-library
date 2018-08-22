@@ -4,7 +4,7 @@ Updated: Aug 16, 2018
 
 Key Take Aways from this lab:
 - Learning how to use Calculations
-- Using different visualizations to obtain insights from dataset
+- Using different visualizations to obtain insights from data set
 - Narrating a meaningful story using Narrate
 
 ### 4a) Analyzing Sales and Social Media Data
@@ -16,11 +16,11 @@ Key Take Aways from this lab:
     
         Previously, we created some visualizations, but now, we have the ability to really dive into more 
         advanced capabilities. For starters, activity on social media is subject to large spikes. To make
-        it easier to evaluate, we should evaluate it on a logarithmic scale (large and varied datasets like
+        it easier to evaluate, we should evaluate it on a logarithmic scale (large and varied data sets like
         those found in social media are often, best handled using a logarithmic scale, where values are 
         evaluated based upon multiplicative factors as opposed to static values).
     
-    In the last exercise, we modified some of the data in the **KoolKart Sales Data** dataset to ensure that it is aligned with the **DaaS Social Feeds-K oolKart** dataset. Navigate to the **Visualize** tab.
+    In the last exercise, we modified some of the data in the **KoolKart Sales Data** data set to ensure that it is aligned with the **DaaS Social Feeds-KoolKart** data set. Navigate to the **Visualize** tab.
     
      ![](images/300/img_3c_1_1.png)
      
@@ -63,7 +63,7 @@ Key Take Aways from this lab:
     
     ![](images/300/img_3f_2_2.png)
 
-    The system will have determined that a line chart is the best way to visualize this data. Let’s create a copy of the visualization, so that we can quickly analyze the date based information in our dataset.
+    The system will have determined that a line chart is the best way to visualize this data. Let’s create a copy of the visualization, so that we can quickly analyze the date based information in our data set.
     
     ![](images/300/img_3f_2_3.png)
     

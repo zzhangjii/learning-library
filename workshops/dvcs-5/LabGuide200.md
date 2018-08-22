@@ -70,7 +70,19 @@ After reaching out to the sales team, you have been provided with a spreadsheet 
     
     ![](images/200/img_2c_4_1.png)
     
-5. Create an analysis of monthly revenues.
+5. Use Recommendations to enrich your data set for analysis.
+
+    On creating the data set, you will guided to the **Prepare** screen, where you can modify your data set. OAC uses its intelligence to recommend changes that can enrich the data set. 
+    
+    ![](images/200/img_2c_4_2.png)
+    
+    Selecting a column will filter the recommendations to show only those related to that column. Select **Customer Country** to see the recommendations for the column..
+    
+    ![](images/200/img_2c_4_3.png)
+    
+    Although, we won't be using the recommendations now, it is a very powerful feature and we will see that in the last lab.
+    
+6. Create an analysis of monthly revenues.
 
     Select the **Visualize** tab (top right of the screen).
     
@@ -105,7 +117,7 @@ After reaching out to the sales team, you have been provided with a spreadsheet 
 
     You can switch between the tabs as needed and each has a specific purpose:
 
-    - **Prepare** – As briefly covered in step 3 of Lab 1b, this is where you can validate and make changes to the data you wish to use in your visualizations.
+    - **Prepare** – As briefly covered above, this is where you can validate and make changes to the data you wish to use in your visualizations.
 
     - **Visualize** – This is where you will create your visualizations.
 
@@ -166,7 +178,8 @@ After reaching out to the sales team, you have been provided with a spreadsheet 
     
     ![](images/200/img_2e_1_2.png)
     
-        Built-in intelligence would also have allowed you to simply double click on Category and the system would attempt to determine how best to add it to your visualization.
+        Built-in intelligence would also have allowed you to simply double click on Category and the 
+        system would attempt to determine how best to add it to your visualization.
         
     You can also interact with the results further by hovering over various categories. For example, if you move your mouse over the yellow portion of **2015-11** (which represents **Electronics & Computers**), you will see all other categories dimmed for easier viewing. You will also be able to see more detailed information on the actual data (e.g. the actual number of orders).
     

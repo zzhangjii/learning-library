@@ -2,22 +2,22 @@
 
 Key Take Aways from this lab:
 - Learning how to create Dataflows
-- Using Machine Learning abilities of OAC
+- Using the **Machine Learning** abilities of OAC
 
-## What is Machine Learning?
-Machine learning at its most basic is the usage of algorithms to parse data, learn from it, and then make a determination or prediction about something. OAC5 uses Machine Learning to make predictions using your existing data. Data Visualization also provides scripts to train data models that you can add to other datasets to predict trends and patterns in data.
+### What is Machine Learning?
+Machine learning, at its most basic, is the usage of algorithms to parse data, learn from it, and then make a determination or prediction about something. The Machine Learning abilities of OAC5 allow you to make predictions based on your data set. Data Visualization also provides scripts to train data models that you can add to other data sets to predict trends and patterns in data.
 
 ### Scenario
 
 When customers purchase products through a partner, KoolKart would like to include a discount coupon in the shipping confirmation email as an incentive for users to subscribe to the KoolKart mailing list. Now, Isla Stuart, who works in the market research department has to understand the customer demographics and figure out how big the incentive should be. 
 
-To do this, Isla  has already obtained 4 different datasets: Orders, Customers, Subscriptions and Partner Sales. She wants to look at subscription patterns on the KoolKart website and develop a model that looks at past subscription data to determine how Customer Age Group, Customer Gender, Customer Country and  purchased Product Category influence the likeliness to subscribe. 
+To do this, Isla  has already obtained 4 different data sets: Orders, Customers, Subscriptions and Partner Sales. She wants to look at subscription patterns on the KoolKart website and develop a model that looks at past subscription data to determine how Customer Age Group, Customer Gender, Customer Country and  purchased Product Category influence the likeliness to subscribe. 
 
-Isla knows that she needs to use KoolKart Orders and KoolKart Customers datasets together. Most importantly, she decides to utilize the Data Flow functionality of OAC that allows her to create a dataset tailored to her needs. Let's start!
+Isla knows that she needs to use KoolKart Orders and KoolKart Customers data sets together. Most importantly, she decides to utilize the Data Flow functionality of OAC that allows her to create a data set tailored to her needs. Let's start!
 
-### 8a) Creating a Data Flow for Koolkart Orders and Customers
+### 5a) Creating a Data Flow for Koolkart Orders and Customers
 
-1. Create a Data Flow and add Dataset
+1. Create a Data Flow and add a data set
 
     Select the hamburger menu button and click on the Home button.
 
@@ -27,7 +27,7 @@ Isla knows that she needs to use KoolKart Orders and KoolKart Customers datasets
 
     ![](images/800/img_8e_1_2.png)
 
-    Add the **Koolkart Orders** Dataset.
+    Add the **Koolkart Orders** data set.
 
     ![](images/800/img_8e_1_3.png)
 
@@ -35,7 +35,7 @@ Isla knows that she needs to use KoolKart Orders and KoolKart Customers datasets
 
     ![](images/800/img_8e_2_1.png)
     
-    Add the **KoolKart Customers** dataset by selecting **KoolKart Customers** and selecting **Add**.
+    Add the **KoolKart Customers** data set by selecting **KoolKart Customers** and selecting **Add**.
 
     ![](images/800/img_8e_2_2.png)
 
@@ -92,7 +92,7 @@ Isla knows that she needs to use KoolKart Orders and KoolKart Customers datasets
 
     ![](images/800/img_8e_5_3.png)
 
-    Now, drag **Save Data Set** into the editor. Save the dataset as **KoolKarts Orders & Customers**. Set **Order ID** and **Customer ID** to attributes.
+    Now, drag **Save Data Set** into the editor. Save the data set as **KoolKarts Orders & Customers**. Set **Order ID** and **Customer ID** to attributes.
 
     ![](images/800/img_8e_5_3_2.png)
     
@@ -112,14 +112,28 @@ Isla knows that she needs to use KoolKart Orders and KoolKart Customers datasets
     
     ![](images/800/img_8e_5_7.png)
 
-### 8b) Using KoolKart Dataflow for Sales Analysis
+### 5b) Using KoolKart Dataflow for Sales Analysis
 
-1. Create a new project by double clicking on the the **Koolkart Orders & Customers** dataset on the home page or clicking on the ellipse menu and selecting **Create Project**.
+1. Create a new project by double clicking on the the **Koolkart Orders & Customers** data set on the home page or clicking on the ellipses menu and selecting **Create Project**.
 
     ![](images/800/img_8e_6_1.png)
     
     ![](images/800/img_8a_2_1.png)
+    
+2. Go to the **Prepare** tab and select the **Customer Country** column.  
 
+    ![](images/300/img_3d_1_1.png)
+
+    ![](images/800/img_5b_2_2.png)
+    
+    Select the recommendation **Enrich Customer Country with continent**.
+    
+    ![](images/800/img_5b_2_3.png)
+    
+    Notice, how the recommendation allows us to group the countries into sales regions with just 1 click and do so much more. Since, we have already grouped our data, let's return to visualizaing. Click on **Visualize**.
+    
+    ![](images/200/img_2c_5_1.png)
+    
 2. Create Visualizations Order Amount by Date and Category.
     
     Select **Order Amount** and **Order Date** and select **Pick Visualization**. 
@@ -188,7 +202,7 @@ Isla knows that she needs to use KoolKart Orders and KoolKart Customers datasets
 
     ![](images/800/img_8b_3_10.png)
  
-### 8c) Creating Visualization for Customer Analysis
+### 5c) Creating Visualization for Customer Analysis
 
 1. Create a visualization of Order Amount by Customer Age Group.
 
@@ -247,9 +261,9 @@ Isla knows that she needs to use KoolKart Orders and KoolKart Customers datasets
     Name the canvas “Customers” and save the project.
    ![](images/800/img_8c_2_14.png)
 
-### 8d) Using the Explain feature to create a visualization
+### 5d) Using the Explain feature to create a visualization
     
-Let's stop for a few moments to learn more about the **Explain** feature. The **Explain** feature allows you to uncover insights and patterns about a particular column within a data set. 
+Let's take a few moments to learn more about the **Explain** feature. The **Explain** feature allows you to uncover insights and patterns about a particular column within a data set. 
     
 1. Right-click the **Category** attribute and selcted **Explain Category**. 
    
@@ -259,7 +273,7 @@ Let's stop for a few moments to learn more about the **Explain** feature. The **
    
    ![](images/800/img_8d_2_1.png)
   
-  The **Explain** feature parses the dataset and presents different insights about the **Category** column. Listed below is a description of what **Basic Facts**, **Key Drivers**, **Segments** and **Anomalies entail**:
+  The **Explain** feature parses the data set and presents different insights about the **Category** column. Listed below is a description of what **Basic Facts**, **Key Drivers**, **Segments** and **Anomalies entail**:
 
 Basic Facts
 - Shows the basic distribution of the data element (attribute or measure) values across the data set and its breakdown against each one of the measures in the data set.
@@ -289,7 +303,7 @@ Anomalies
     ![](images/800/img_8d_3_3.png)
 
 
-### 8e) Creating a Dataflow and Predicting Subscriptions
+### 5e) Creating a Dataflow and Predicting Subscriptions
 
 Isla now wants to predict the likeliness of new customers to subscribe and to directly correlate the amount of the coupon to how much they are likely to subscribe anyway.
 
@@ -305,21 +319,21 @@ She wants to take advantage of existing data gathered by looking at subscription
     
     ![](images/800/img_8f_1_2.png)
     
-    Select **Create Data Set**
+    Select **Create Data Set**.
 
     ![](images/800/img_8f_1_3.png)
 
-    Select **Drop data file here or click to browse** and choose the **KoolKart Subsciption** dataset 
+    Select **Drop data file here or click to browse** and choose the **KoolKart Subsciption** data set. 
 
     ![](images/800/img_8f_1_4.png)
 
-    Select **Add** to add the **KoolKart Subscription** dataset. 
+    Select **Add** to add the **KoolKart Subscription** data set. 
 
     ![](images/800/img_8f_2_1.png)
 
 2. Add a Binary Classifier to the Data Flow
     
-    Select **Train Binary Classifier** and drag it to the **+** in front of the **KoolKart Subscription** dataset.
+    Select **Train Binary Classifier** and drag it to the **+** in front of the **KoolKart Subscription** data set.
 
     ![](images/800/img_8f_2_2.png)
 
@@ -416,4 +430,3 @@ In today’s workshop, we were able to quickly assess the effectiveness of your 
 This concludes our Oracle Analytics Cloud 5 Data Visualization workshop.
 
 For further information about Oracle Analytics Cloud Service or any of the Oracle BI products, contact your Oracle Business Intelligence Sales Rep.
-
