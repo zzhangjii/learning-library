@@ -1,6 +1,6 @@
 {
     "workshop": {
-        "title": "Workshop Title",
+        "title": "WLS On-Prem to ACCS",
         "description": "Description of this workshop.",
         "theme": "default",
         "interactive":"https://launch.oracle.com/?",
@@ -8,7 +8,7 @@
             {
                 "number": "0",
                 "filename": "Intro-Instructor-Led.md",
-                "title": "Intro - Instructor Led",
+                "title": "Read Me First",
                 "description": "Step-by-step workshop instructions"
 
             },

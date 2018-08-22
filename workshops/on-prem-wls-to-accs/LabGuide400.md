@@ -144,7 +144,7 @@ If the Java tile is not visible, click Customize Dashboard.
 
 - Click the folder icon for the Output Directory field.
 
-![](images/400/400_1_3_4.png)
+![](images/400/400_1_3_4_1.png)
 
 - Navigate to the output folder that you created earlier. For example, /home/oracle/app2cloud_output. Click Open.
 
@@ -161,7 +161,7 @@ If the Java tile is not visible, click Customize Dashboard.
 
 - If the Health Check fails, refer to the error messages in this tab as well as the Report and Log tabs.
 
-### **STEP 3**: Export the Domain
+### **STEP 4**: Export the Domain
 
 - Click the Go To Export button on the Health Check page.
 The Export page is displayed. The Oracle Home and Archive File input fields are set automatically based on the Health Check results
@@ -241,7 +241,7 @@ Tip: You can view the generated export and report files in your specified output
 
 - For this tutorial you do not need Database configurations. If your application needs to connect database, then you remotely connect to the Database Cloud Service instance and use SQL scripts to create the necessary schema, tables and data for the sample application. There are many other ways in which to migrate data to Database Cloud Service.
 
-### **STEP 3**: Create an Oracle Java Cloud Service Instance
+### **STEP 2**: Create an Oracle Java Cloud Service Instance
 
 - Return to the Dashboard in Oracle Cloud. Locate the Java tile. Click the Action Menu Action Menu Icon, and then select Open Service Console. If this is the first time you have accessed the service then you may be presented with a Welcome screen. If this happens then you can continue to the console by clicking Go to Console.
 
@@ -298,7 +298,7 @@ When you return to the Java Cloud Service console, you will see your new service
 
 - Periodically refresh this page until the service instance creation is completed.
 
-### **STEP 4**: Import Applications into the Service Instance
+### **STEP 3**: Import Applications into the Service Instance
 
 - Perform an import to update the new service instance with the Java EE applications and other resources collected from your on-premises environment.
 
@@ -309,7 +309,7 @@ You may need to scroll through the list of menu options.
 After a few moments, the service instance will have a status of "Service Maintenance". Periodically refresh this page until the service instance is no longer in a maintenance state.
 If the import fails, use the Activity tab to view the log for this operation.
 
-### **STEP 5**: Test the Imported Application
+### **STEP 4**: Test the Imported Application
 
 - Click the name of the service instance.
   

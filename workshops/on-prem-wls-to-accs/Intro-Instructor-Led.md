@@ -1,31 +1,5 @@
-# Tips for Workshop Developers -- Instructor Led
+# WLS On-Prem to ACCS Workshop
 
-## Steps for creating a new workshop
-
-- To start a new workshop, use git to create a branch from this (workshop-template) branch.
-- Rename the workshop-template folder in your new branch to the title of your new workshop, observing the naming convention of the rest of the folders in the repository
-- Rename the lab guide md files to be more specific to your workshop, if desired.
-- Update manifest.json with the titles and descriptions of your labs (and md filenames if you changed them).
-- Select theme choice for your manifest.json - current choices are: "default", "ttc"
-- Update the manifest.json with your interactive tour link (Note that by removing this in the JSON the tour launcher will be hidden)
-- Use LabGuide100.md as an example of how to format and structure your lab's markdown.
-- Preview your lab guides by loading index.html in your favorite editor's live view (Brackets - Live Preview, Atom - atom-live-server)
-
-## Supporting Files
-
-- README
-    - The README.md file (this file) should give a clear step-by-step overview of what the student should do to complete the workshop, beginning with any prerequisite checks or software installation (detailed in the Student Guide)
-    - **Do not include this 'Tips for Workshop Developers' section in the final workshop readme**
-    - An example readme follows these tips, it can be modified for your workshop
-- Student Guide
-    - An example student guide has been provided, but it should be modified for the requirements of this workshop.
-    - It should document where to get and how to install any required software
-    - Any networking settings likely to need attention should be discussed in the guide
-- Images
-    - Store lab images under the images/x00 folder corresponding to the lab number they belong to.
-    - Images that are used in multiple lab guides can be stored directly in the images/ folder.
-
-# Example Readme:
 ## IMPORTANT: How to prepare for this workshop
 
 **First**, ***Get an Oracle Cloud Account***
@@ -55,7 +29,7 @@
 
 ## WLS On-Prem to ACCS Workshop
 
-This Oracle Public Cloud DevOps WLS On-Prem to ACCS Workshop will walk you through o understand the movement on a Java EE application from their on-prem WLS deployment to Oracle's Cloud, during which you will create and deploy Jave EE war files. During this workshop you will take on the role of 2 personae. As the first persona - DevOps Manager - you will create the projects, add tasks and features to be worked on, and assign tasks to developers.  The Project Manager will then start the initial sprint. The Java Developer persona will develop a new twitter feed service that will allow for retrieval and filtering of twitter data. The Deployment Engineer persona will deploy a new Twitter Feed UI that will display the twitter data to allow for analysis.  During the workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service.
+This Oracle Public Cloud DevOps WLS On-Prem to ACCS Workshop will walk you through o understand the movement on a Java EE application from their on-prem WLS deployment to Oracle's Cloud, during which you will create and deploy Jave EE war files. You will take on 2 Personas during the workshop. The DevOps Manager Persona will add new features and keep the system stable, fast and available. The DevOps Manager will involve integrating development, testing, deployment and release cycle in twitter feed service and alpha product catalog. The Infrastructure person persona will extract Alpha Product Catalog war file and import into the WebLogic Server. During the workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service. Also, you will have option to familiar with Java Cloud Service and AppToCloud tool.
 
 ## Workshop Details
 
@@ -95,3 +69,11 @@ This Oracle Public Cloud DevOps WLS On-Prem to ACCS Workshop will walk you throu
   - Create JCS instance
   - Move application to JCS
 
+## Lab 400: JCS Instance with AppToCloud
+
+**Documenation**: [LabGuide400.md](LabGuide400.md)
+
+### Objectives
+
+- Exporting a WebLogic Server Domain to Oracle Cloud
+- Creating an Oracle Java Cloud Service Instance with AppToCloud
