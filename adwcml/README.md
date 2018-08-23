@@ -1,7 +1,9 @@
+  ![](images/001.png)
+
 # Oracle Autonomous Data Warehouse Machine Learning Demo Lab
 
 ## Introduction
-_Time to Complete: 20 minutes_
+_Time to Complete: 30 minutes_
 
   In this demo lab, you will begin your machine learning development journey by importing an Apache Zeppelin Notebook into Oracle Machine Learning and then use ADWC's Machine Learning to predict customer good credit given detailed demographic information.
 
@@ -15,17 +17,15 @@ _Time to Complete: 20 minutes_
 
 ## Instructions
 
-### Start Your Demo Lab Instance
+### Download your Apache Zeppelin Notebook.
 
-- You should have reached this page by launching the Autonomous Data Warehouse Machine Learning Demo Lab for Oracle Cloud Infrastructure. If not, please visit [this link](#) to get access to your free instant sandbox environment where you can complete the rest of this lab.
+**Right click to Download**
+
+[Credit_Score_Predictions.json](https://dgcameron.github.io/adwcjs/Credit_Score_Predictions.json)
 
 ### Log into Oracle Machine Learning.
 
-The application we'll be working with today is a product catalog website that consists of two separate services. One component, **product-catalog-app**, is a Node.js server that hosts the catalog data and serves the website to customers. The second component, **twitter-feed** is a Java SE service that searches Twitter for tweets about the items in the product catalog. The product catalog microservice requests the twitter data from the twitter-feed service and returns it to the browser.
+- Use the following URL to sign into Machine Learning.  Use your assigned userid, with password `Alpha2018___`:  `https://adwc.uscom-east-1.oraclecloud.com/omlusers/login.html?tenant=OCID1.TENANCY.OC1..AAAAAAAA3FF5N7TZN3BUPBW7D5NHFCNUAGNCA5KN7KW4ODBMZMP5FHH6FWLA&database=ORCL&redirect_uri=https://adwc.uscom-east-1.oraclecloud.com/omlusers/api/oauth2/v1/login`
 
-Let's explore the deployed application using the Kubernetes Dashboard.
-
-- Open your Kubernetes Dashboard by clicking the **Kubernetes Dashboard** button on your demo lab landing page.
-
-  ![](images/4-1.png)
+  ![](images/002.png)
 
