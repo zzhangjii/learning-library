@@ -173,7 +173,7 @@ The Export page is displayed. The Oracle Home and Archive File input fields are 
 
 ![](images/400/400_1_4_1.png)
 
- Navigate to the sample domain that you created earlier, MW_HOME/user_projects/domains/petstore_domain. For example, /u01/app/fmw/user_projects/domains/petstore_domain. Click Open.
+ Navigate to the sample domain that you created earlier, MW_HOME/user_projects/domains/default_domain. For example, /u01/app/fmw/user_projects/domains/default_domain. Click Open.
 
 - Verify that the Upload to Cloud Storage check box is selected.
 
@@ -252,7 +252,7 @@ Tip: You can view the generated export and report files in your specified output
 - Enter values for these input fields:
   
   ![](images/400/400_2_2_2.png)
-    - Exported json File - Enter the fully-qualified URL or the relative path to petstore_domain.json in the AppToCloud storage container.
+    - Exported json File - Enter the fully-qualified URL or the relative path to default_domain.json in the AppToCloud storage container.
 For example, SStorage-gse00014412/AppToCloud/base_domain.json
 If necessary, refer to the output from the AppToCloud Client tool.
     - Cloud Storage User Name - Enter the name of an Oracle Cloud user that has access to this storage container. This can be the same user that the AppToCloud Client used to upload the JSON file.
@@ -316,7 +316,7 @@ If the import fails, use the Activity tab to view the log for this operation.
 - Identity the Public IP address in this service instance.
 
 - Direct your browser to the URL http://LB_PUBLIC_IP/AlphaProductCatalog/products.jsp.
-Verify that the Petstore application was successfully deployed to Oracle Cloud.
+Verify that the AlphaProductCatalog application was successfully deployed to Oracle Cloud.
 
   ![](images/400/400_2_4_1.png)
 

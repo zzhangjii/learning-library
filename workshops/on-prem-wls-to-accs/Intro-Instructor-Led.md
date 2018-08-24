@@ -39,16 +39,6 @@ This Oracle Public Cloud DevOps WLS On-Prem to ACCS Workshop will walk you throu
 
 **Documenation**: [LabGuide100.md](LabGuide100.md)
 
-### Objectives
-
-- Create Initial Project
-    - Add Users to Project
-- Create Product Issues
-    - Create Issues for Twitter Feed Microservice
-    - Create Issues for Twitter Feed Marketing UI
-- Create Agile Board and initial Sprint
-- Add Issues to Sprint
-
 ## Lab 200: Redeploy both Components to ACCS
 
 **Documenation**: [LabGuide200.md](LabGuide200.md)
