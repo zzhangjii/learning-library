@@ -1,11 +1,43 @@
 Updated: April 11, 2017
 
-Intelligent Bots Training
+ChatBot Overview
 =========================
- 
 
-Create ChatBots with Intents, Entities, Utterances and Flow
------------------------------------------------------------
+### **What is a Chatbot?**
+
+Intelligent Bots in Oracle Mobile Cloud Enterprise (or just Bots) is a conversational computing platform for the enterprise. 
+
+You can think of your Bot as a virtual personal assistant, one that completes a task through a combination of text messages and simple UI elements like select lists. While a Bot can open your enterprise to messaging, it’s not a replacement for a mobile or web app. It instead provides a new channel.
+
+![](images/100/image1.png)
+
+Bots enables you to connect your users to the enterprise while engaging them in naturalistic conversations. The Bots you create can respond to free-form user input because the Bots’ language intelligence framework uses machine learning. While users are probably aware that they’re chatting with a Bot, they don’t need to limit or constrain their input.
+
+You can build the Bot, test it, and configure it to run on different messaging services using the Bot Builder, a simple user interface. Although, you can run this Bot through Facebook Messenger and other platforms or websites, you need only write the bot once. Bots optimizes the Bot for the target platform.
+
+### **How Do you create a Chatbot?**
+
+Here's a bird's-eye view of bot development.
+![Description of bots-overall-process.png follows](images/100/image2.png)
+**Description of the illustration bots-overall-process.png**
+
+**Create Intents**---You can start by creating Intents. Intents illustrate your use case by describing the various actions that your Bot helps its users complete. If your Bot enables users to perform various banking transactions, for example, then you could create intents like CheckBalance or TransferMoney. Intents not only describe what your Bot can do, but, they are also the key to your Bot’s intelligence. They enable it to recognize user input because each Intent has a set of typical user statements known as utterances associated with it. While these phrases share the same meaning, they make your Bot resilient because they’re also varied (for example, What’s my savings account balance? and How much is in my checking account?).
+
+**Train the Bot**---To enable your Bot to reference Intents when it parses the user input, you need to train it. Specifically, you need to train it with the Intents and their utterances (collectively, the training data), so that it can resolve the user input to one of the Intents. By training your Bot, you leverage the language intelligence which is at the core of the Bots platform. Its algorithms enable your Bot to not only recognize the sample phrases that belong to each intent, but similar phrases as well.
+
+**Create Entities**---In some cases, you may need to provide some context to enable your Bot to complete a user request. While some user requests might resolve to the same intent, they are nonetheless asking for different things (for example, What’s my savings account balance? and How much is in my checking account? would both resolve to the CheckBalance intent). To clarify the request, you would add an entity. Using the banking Bot example, an entity called AccountType, which defines values called checking and saving would enable the Bot to parse the user request and respond appropriately.
+
+**Integrate Custom Components**---At this point, your Bot can recognize input, but it can’t respond to it. To put your Bot’s intelligence to work, you need to add components and then later, create a dialog flow. Components enable your Bot to do its job. There are two types of components: the ones provided by Bots that perform functions ranging from holding the resolved Intent to outputting text, and the ones that you provide. The components belonging to this latter category are known as custom components. Unlike the built-in components that you can use in any Bot that you build with the Bots platform, the custom components perform tasks that are specific to a single bot, like checking a user’s age, or returning account information. Custom components don’t reside within the Bots platform, so for your Bot to use them, you need to access them through a REST service.
+
+**Create the Dialog Flow**---Next, you need to give the Bot the wherewithal to express its intelligence to its users by creating the dialog flow. The dialog flow describes how your Bot reacts as different Intents are resolved. It defines what your Bot says to its users, how it prompts them for input, and how it returns data. Think of the dialog flow as a flow chart that’s been transposed to a simple markdown language. In Bots, this markdown language is a version of YAML called OBotML.
+
+**Test the Bot**---Once you’ve started your dialog flow, you can chat with your Bot to test it out. You can see how the Tester works in [Building Your First Bot](https://docs.oracle.com/en/cloud/paas/mobile-suite/develop/bot-basics1.html#GUID-0C3BF9FB-563D-427C-8536-4E98C115CDB0).
+
+**Configure Channels**---Users subscribe to your bot through messaging platforms such as Facebook Messenger, iOS App, Android App, and Web Page. You don’t have to rewrite your Bot for each messaging platform, but you do need to configure a channel for each one. Bots enables you to integrate with Facebook Messenger quickly through its Facebook Channel. You don’t need to craft any REST calls to run your Bot on Facebook. Instead, you complete a UI using artifacts that are generated by both Facebook and Bots. See [Running Your Bot on Facebook Messenger](https://docs.oracle.com/en/cloud/paas/mobile-suite/develop/bot-channels.html#GUID-CCEE3FD5-21F2-4288-9450-0D24202F2615). To integrate your Bot with other services, Bots provides the Webhook channel. You build your own Webhooks for these non-Facebook integrations. 
+
+
+Start Lab 100 -- Create ChatBots with Intents, Entities, Utterances and Flow
+----------------------------------------------------------------------------
 
 ### Objective
 
@@ -26,7 +58,7 @@ And, then click the **New Bot** button
 
 ![D:\\Workshop\_Bot\\image1.PNG](images/100/image3.png)
 
-In the **Create Bot** dialog, name your bot (e.g. ChatBot CafeteriaAssistance_Bot). Then, add a description and click **“Create”** .
+In the **Create Bot** dialog, name your bot (e.g. ChatBot CafeteriaAssistance_Bot). Then, add a description and click **“Create�?** .
 
 ![](images/100/image4.png)
 
@@ -36,7 +68,7 @@ You are taken to the home page for your Bot. Here on the left, you can see a lis
 
 ### **Step 2**: Add an Intent, Entity for show menu
 
-From the homepage of your ChatBot, click the **“Intent”** icon present on left-side navigation bar and then click the green **“Intent”** button.
+From the homepage of your ChatBot, click the **“Intent�?** icon present on left-side navigation bar and then click the green **“Intent�?** button.
 
 ![](images/100/image6.png)
 
@@ -127,7 +159,7 @@ Click the green **Entity** button and then enter **ItemSize** as the entity 
 
 Now that you have an Entity, you need to provide some values that could be used. In our case of the **ItemSize**, you would want to use values that represent size you could query for the order.
 
-In the **Configuration** area, ensure the **Type** property is set to Value List (To create the list of values based on the requirement) and then click the green **“Value”** button.
+In the **Configuration** area, ensure the **Type** property is set to Value List (To create the list of values based on the requirement) and then click the green **“Value�?** button.
 
 
 ![D:\\Workshop\_Bot\\Capture10.PNG](images/100/image15.png)
@@ -152,7 +184,7 @@ When finished, your entity definition should look like the image shown below.
 
 Now you've got 4 intents (ShowMenu, OrderFood, OrderBeverages and ExitFlow) and an entity named as ItemSize. You need to associate the **OrderFood** and **OrderBeverages** intents with **ItemSize** entity, and it's easy to do it.
 
-On the left-navigation bar, click the **“Intent”** icon, and on the right, find the **Intent Entities** area.
+On the left-navigation bar, click the **“Intent�?** icon, and on the right, find the **Intent Entities** area.
 
 Click the green **Entity** button and select **ItemSize** from the list, after selection your screen will look like image shown below:
 
@@ -513,13 +545,13 @@ states:
 ```
 ### **Step 8**: Validate, Train and Test your ChatBot
 
-Finally, click the **“Validate”** button in the upper right corner and you should see a message that there were no problems found in your bot.
+Finally, click the **“Validate�?** button in the upper right corner and you should see a message that there were no problems found in your bot.
 
 In the next section, you train the Bot to recognize responses that might be entered and then test it.
 
 In this part of the tutorial, you run the training tool on the Bot. This will train the Bot allowing it to understand similar user inputs to the example utterances used when building the Bot.
 
-In the upper right, click the **“Train”** button. This will kick-off a process that will run an algorithm to take your example utterances and build the model that will be used to ascertain the intents and entities. Anytime the ChatBot platform recognizes your Bot needs to be trained, it will display an exclamation point in the train button. Once the training is complete the exclamation point is replaced by a check mark.
+In the upper right, click the **“Train�?** button. This will kick-off a process that will run an algorithm to take your example utterances and build the model that will be used to ascertain the intents and entities. Anytime the ChatBot platform recognizes your Bot needs to be trained, it will display an exclamation point in the train button. Once the training is complete the exclamation point is replaced by a check mark.
 
 ![D:\\Workshop\_Bot\\Capture13.PNG](images/100/image22.png)
 
