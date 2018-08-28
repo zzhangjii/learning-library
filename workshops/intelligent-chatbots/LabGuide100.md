@@ -153,7 +153,7 @@ On the left-navigation bar, click the second icon down named **"Entities"** and 
 
 ![](images/100/image13.png)
 
-Click the green  **Entity**  button and then enter  **ItemSize**  as the entity name and a brief description.
+Click the green **Entity** button and then enter **ItemSize** as the entity name and a brief description.
 
 ![D:\\Workshop\_Bot\\screen9.PNG](images/100/image14.png)
 
@@ -164,17 +164,17 @@ In the **Configuration** area, ensure the **Type** property is set to Value List
 
 ![D:\\Workshop\_Bot\\Capture10.PNG](images/100/image15.png)
 
-In the popup dialog, enter  **Small**  as the value and  **small**  as a synonym (followed by a return).
+In the popup dialog, enter **Small** as the value and **small** as a synonym (followed by a return).
 
-Then click  **Create**.
+Then click **Create**.
 
 ![](images/100/image16.png)
 
-Then, add a second value named  **Medium**  and this time add a synonym of  **normal**.
+Then, add a second value named **Medium** and this time add a synonym of **normal**.
 
 ![](images/100/image17.png)
 
-Finally, add a third value named  **Large**  and use  **big**  as the synonyms.
+Finally, add a third value named **Large** and use **big** as the synonyms.
 
 ![](images/100/image18.png)
 
@@ -186,11 +186,11 @@ Now you've got 4 intents (ShowMenu, OrderFood, OrderBeverages and ExitFlow) and 
 
 On the left-navigation bar, click the **Intent** icon, and on the right, find the **Intent Entities** area.
 
-Click the green  **Entity**  button and select  **ItemSize**  from the list, after selection your screen will look like image shown below:
+Click the green **Entity** button and select **ItemSize** from the list, after selection your screen will look like image shown below:
 
 ![D:\\Workshop\_Bot\\Capture12.PNG](images/100/image20.png)
 
-The entity is added and a required flag is set. If you want you can remove the entity by clicking the  **(x)**  to the right of the entity name. Do not remove the entity from your intent.
+The entity is added and a required flag is set. If you want you can remove the entity by clicking the **(x)** to the right of the entity name. Do not remove the entity from your intent.
 
 ### **Step 7**: Define the Conversation Flow
 
@@ -563,9 +563,9 @@ a.  Choose Trainer Ht from the options.
 
 b.  Refine your corpus, retrain with Trainer Ht. Repeat as necessary.
 
-The  Train  button (<img src="images/100/image24.png" title="This is an image of the "dirty" Train button" class="infra" />) activates whenever you add an intent or when you update an intent by adding, changing, or deleting its utterances. To bring the training up to date, choose a training model and then click  Train. The model displays an exclamation point whenever it needs training. When its training is current, it displays a check mark.
+The Train button (<img src="images/100/image24.png" title="This is an image of the "dirty" Train button" class="infra" />) activates whenever you add an intent or when you update an intent by adding, changing, or deleting its utterances. To bring the training up to date, choose a training model and then click **Train**. The model displays an exclamation point whenever it needs training. When its training is current, it displays a check mark.
 
-To test the ChatBot, click the  **play**  (Run) icon in the upper right of the page. This takes you into the tester
+To test the ChatBot, click the **play** (Run) icon in the upper right of the page. This takes you into the tester
 
 ![D:\\Workshop\_Bot\\image3.PNG](images/100/image25.png)
 
@@ -573,11 +573,11 @@ where you can see three tabs: Bot, Intent and QnA.
 
 ![](images/100/image26.png)
 
-Click the  **Bot**  tab to test the bot. What you type in at the bottom in the  **Message**  area, is what will be sent to the bot when you click the  **Send**  button.
+Click the **Bot** tab to test the bot. What you type in at the bottom in the **Message** area, is what will be sent to the bot when you click the **Send** button.
 
 Let's start out simple to test the bot.
 
-In the Message area, type  **Show menu**  and then click the  **Send**  button.
+In the Message area, type **Show menu** and then click the **Send** button.
 
 ![](images/100/image26.png)
 
@@ -592,11 +592,11 @@ Now, let's try a message that includes the **ItemSize**.
 
 ![](images/100/image28.png)
 
-Please finish each flow if you are testing the Bot, or hit  **Reset**  to create a new session and avoid confusion with an incomplete flow from a previous session.
+Please finish each flow if you are testing the Bot, or hit **Reset** to create a new session and avoid confusion with an incomplete flow from a previous session.
 
-Now click the  **Intent**  tab. We are going to now test only the intent and entity resolution rather than a whole conversation flow.
+Now click the **Intent** tab. We are going to now test only the intent and entity resolution rather than a whole conversation flow.
 
-In the message area type **Show menu** and press **Send**.
+In the message area type **Show menu** and press **Send**.
 
 ![](images/100/image29.png)
 
