@@ -21,11 +21,11 @@ _Time to Complete: 30 minutes_
 
 **Right click to Download**
 
-[Credit_Score_Predictions.json](https://oracle.github.io/learning-library/workshops/adwc4dev/install/Credit_Score_Predictions.json)
+[Credit_Score_Predictions.json](https://dgcameron.github.io/demo-labs/adwcjs/Credit_Score_Predictions.json)
 
 ### Log into Oracle Machine Learning.
 
-- Use the following URL to sign into Machine Learning.  Use your assigned userid, with password `Alpha2018___`:  `https://adwc.uscom-east-1.oraclecloud.com/omlusers/login.html?tenant=OCID1.TENANCY.OC1..AAAAAAAA3FF5N7TZN3BUPBW7D5NHFCNUAGNCA5KN7KW4ODBMZMP5FHH6FWLA&database=ORCL&redirect_uri=https://adwc.uscom-east-1.oraclecloud.com/omlusers/api/oauth2/v1/login`
+- Use the following URL to sign into Machine Learning.  Use your assigned userid, with password `Alpha2018___`:  `https://adwc.uscom-east-1.oraclecloud.com/oml/tenants/OCID1.TENANCY.OC1..AAAAAAAA3FF5N7TZN3BUPBW7D5NHFCNUAGNCA5KN7KW4ODBMZMP5FHH6FWLA/databases/ORCL/index.html`
 
   ![](images/002.png)
 
