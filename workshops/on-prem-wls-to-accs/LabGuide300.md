@@ -1,3 +1,6 @@
+![](images/300/Picture300-lab.png)  
+Updated: 07/24/2018
+
 ## Introduction
 
 This lab focus on moving the on-premise WLS app to JCS. Java Cloud Service provides features that are easy to use and deploy and give more option for the developer to customize. 
