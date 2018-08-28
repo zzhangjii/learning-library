@@ -21,7 +21,7 @@ _Time to Complete: 30 minutes_
 
 **Right click to Download**
 
-[Credit_Score_Predictions.json](https://dgcameron.github.io/demo-labs/adwcjs/Credit_Score_Predictions.json)
+[Credit_Score_Predictions.json](https://dgcameron.github.io/demo-labs/adwcml/Credit_Score_Predictions.json)
 
 ### Log into Oracle Machine Learning.
 
