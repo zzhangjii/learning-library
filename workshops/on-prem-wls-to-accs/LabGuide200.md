@@ -1,10 +1,9 @@
 ![](images/200/Picture200-lab.png)  
-Updated: 07/24/2018
+Updated: 08/28/2018
 
 ## Introduction
 
-This is the first of several labs that are part of the WLS On-Prem to ACCS Workshop. This lab will walk you through the process of moving an existing Java On-Prem application into Oracle Application Container Cloud. It will create and deploy war file and deploy it to the Oracle Public Cloud.
-
+This is the first of several labs that are part of the WLS On-Prem to Cloud Workshop. This lab will walk you through the process of moving an existing Java On-Prem application into Oracle Application Container Cloud. It will create and deploy war file and deploy it to the Oracle Public Cloud.
 
 **_To log issues_**, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
@@ -83,4 +82,4 @@ For this lab you will need Github and Oracle JDeveloper. Use the following links
 
 - You have successfully deployed the Java EE application using  Application Cloud Container Service.
 
-
+***SHOW RUNNING APP HERE
