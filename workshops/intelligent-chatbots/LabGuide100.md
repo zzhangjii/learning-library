@@ -58,7 +58,7 @@ And, then click the **New Bot** button
 
 ![D:\\Workshop\_Bot\\image1.PNG](images/100/image3.png)
 
-In the **Create Bot** dialog, name your bot (e.g. ChatBot CafeteriaAssistance_Bot). Then, add a description and click **â€œCreateâ€?** .
+In the **Create Bot** dialog, name your bot (e.g. ChatBot CafeteriaAssistance_Bot). Then, add a description and click ** Create ?** .
 
 ![](images/100/image4.png)
 
@@ -68,7 +68,7 @@ You are taken to the home page for your Bot. Here on the left, you can see a lis
 
 ### **Step 2**: Add an Intent, Entity for show menu
 
-From the homepage of your ChatBot, click the **â€œIntentâ€?** icon present on left-side navigation bar and then click the green **â€œIntentâ€?** button.
+From the homepage of your ChatBot, click the ** Intent ?** icon present on left-side navigation bar and then click the green ** Intent ?** button.
 
 ![](images/100/image6.png)
 
@@ -153,28 +153,28 @@ On the left-navigation bar, click the second icon down named **"Entities"** and 
 
 ![](images/100/image13.png)
 
-Click the greenÂ **Entity**Â button and then enterÂ **ItemSize**Â as the entity name and a brief description.
+Click the green  **Entity**  button and then enter  **ItemSize**  as the entity name and a brief description.
 
 ![D:\\Workshop\_Bot\\screen9.PNG](images/100/image14.png)
 
 Now that you have an Entity, you need to provide some values that could be used. In our case of the **ItemSize**, you would want to use values that represent size you could query for the order.
 
-In the **Configuration** area, ensure the **Type** property is set to Value List (To create the list of values based on the requirement) and then click the green **â€œValueâ€?** button.
+In the **Configuration** area, ensure the **Type** property is set to Value List (To create the list of values based on the requirement) and then click the green ** Value ?** button.
 
 
 ![D:\\Workshop\_Bot\\Capture10.PNG](images/100/image15.png)
 
-In the popup dialog, enterÂ **Small**Â as the value andÂ **small**Â as a synonym (followed by a return).
+In the popup dialog, enter  **Small**  as the value and  **small**  as a synonym (followed by a return).
 
-Then clickÂ **Create**.
+Then click  **Create**.
 
 ![](images/100/image16.png)
 
-Then, add a second value namedÂ **Medium**Â and this time add a synonym ofÂ **normal**.
+Then, add a second value named  **Medium**  and this time add a synonym of  **normal**.
 
 ![](images/100/image17.png)
 
-Finally, add a third value namedÂ **Large**Â and useÂ **big**Â as the synonyms.
+Finally, add a third value named  **Large**  and use  **big**  as the synonyms.
 
 ![](images/100/image18.png)
 
@@ -184,13 +184,13 @@ When finished, your entity definition should look like the image shown below.
 
 Now you've got 4 intents (ShowMenu, OrderFood, OrderBeverages and ExitFlow) and an entity named as ItemSize. You need to associate the **OrderFood** and **OrderBeverages** intents with **ItemSize** entity, and it's easy to do it.
 
-On the left-navigation bar, click the **â€œIntentâ€?** icon, and on the right, find the **Intent Entities** area.
+On the left-navigation bar, click the ** Intent ?** icon, and on the right, find the **Intent Entities** area.
 
-Click the greenÂ **Entity**Â button and selectÂ **ItemSize**Â from the list, after selection your screen will look like image shown below:
+Click the green  **Entity**  button and select  **ItemSize**  from the list, after selection your screen will look like image shown below:
 
 ![D:\\Workshop\_Bot\\Capture12.PNG](images/100/image20.png)
 
-The entity is added and a required flag is set. If you want you can remove the entity by clicking theÂ **(x)**Â to the right of the entity name. Do not remove the entity from your intent.
+The entity is added and a required flag is set. If you want you can remove the entity by clicking the  **(x)**  to the right of the entity name. Do not remove the entity from your intent.
 
 ### **Step 7**: Define the Conversation Flow
 
@@ -545,13 +545,13 @@ states:
 ```
 ### **Step 8**: Validate, Train and Test your ChatBot
 
-Finally, click the **â€œValidateâ€?** button in the upper right corner and you should see a message that there were no problems found in your bot.
+Finally, click the ** Validate ?** button in the upper right corner and you should see a message that there were no problems found in your bot.
 
 In the next section, you train the Bot to recognize responses that might be entered and then test it.
 
 In this part of the tutorial, you run the training tool on the Bot. This will train the Bot allowing it to understand similar user inputs to the example utterances used when building the Bot.
 
-In the upper right, click the **â€œTrainâ€?** button. This will kick-off a process that will run an algorithm to take your example utterances and build the model that will be used to ascertain the intents and entities. Anytime the ChatBot platform recognizes your Bot needs to be trained, it will display an exclamation point in the train button. Once the training is complete the exclamation point is replaced by a check mark.
+In the upper right, click the ** Train ?** button. This will kick-off a process that will run an algorithm to take your example utterances and build the model that will be used to ascertain the intents and entities. Anytime the ChatBot platform recognizes your Bot needs to be trained, it will display an exclamation point in the train button. Once the training is complete the exclamation point is replaced by a check mark.
 
 ![D:\\Workshop\_Bot\\Capture13.PNG](images/100/image22.png)
 
@@ -563,9 +563,9 @@ a.  Choose Trainer Ht from the options.
 
 b.  Refine your corpus, retrain with Trainer Ht. Repeat as necessary.
 
-TheÂ TrainÂ button (<img src="images/100/image24.png" title="This is an image of the "dirty" Train button" class="infra" />) activates whenever you add an intent or when you update an intent by adding, changing, or deleting its utterances. To bring the training up to date, choose a training model and then clickÂ Train. The model displays an exclamation point whenever it needs training. When its training is current, it displays a check mark.
+The  Train  button (<img src="images/100/image24.png" title="This is an image of the "dirty" Train button" class="infra" />) activates whenever you add an intent or when you update an intent by adding, changing, or deleting its utterances. To bring the training up to date, choose a training model and then click  Train. The model displays an exclamation point whenever it needs training. When its training is current, it displays a check mark.
 
-To test the ChatBot, click theÂ **play**Â (Run) icon in the upper right of the page. This takes you into the tester
+To test the ChatBot, click the  **play**  (Run) icon in the upper right of the page. This takes you into the tester
 
 ![D:\\Workshop\_Bot\\image3.PNG](images/100/image25.png)
 
@@ -573,11 +573,11 @@ where you can see three tabs: Bot, Intent and QnA.
 
 ![](images/100/image26.png)
 
-Click theÂ **Bot**Â tab to test the bot. What you type in at the bottom in theÂ **Message**Â area, is what will be sent to the bot when you click theÂ **Send**Â button.
+Click the  **Bot**  tab to test the bot. What you type in at the bottom in the  **Message**  area, is what will be sent to the bot when you click the  **Send**  button.
 
 Let's start out simple to test the bot.
 
-In the Message area, typeÂ **Show menu**Â and then click theÂ **Send**Â button.
+In the Message area, type  **Show menu**  and then click the  **Send**  button.
 
 ![](images/100/image26.png)
 
@@ -592,11 +592,11 @@ Now, let's try a message that includes the **ItemSize**.
 
 ![](images/100/image28.png)
 
-Please finish each flow if you are testing the Bot, or hitÂ **Reset**Â to create a new session and avoid confusion with an incomplete flow from a previous session.
+Please finish each flow if you are testing the Bot, or hit  **Reset**  to create a new session and avoid confusion with an incomplete flow from a previous session.
 
-Now click theÂ **Intent**Â tab. We are going to now test only the intent and entity resolution rather than a whole conversation flow.
+Now click the  **Intent**  tab. We are going to now test only the intent and entity resolution rather than a whole conversation flow.
 
-In the message area type **Show menu**Â and pressÂ **Send**.
+In the message area type **Show menu** and press **Send**.
 
 ![](images/100/image29.png)
 
