@@ -56,29 +56,29 @@ And, then click the **New Bot** button
 
 
 
-![D:\\Workshop\_Bot\\image1.PNG](images/100/image3.png)
+![D:\Workshop_Bot\image1.PNG](images/100/image3.png)
 
-In the **Create Bot** dialog, name your bot (e.g. ChatBot CafeteriaAssistance_Bot). Then, add a description and click ** Create ?** .
+In the **Create Bot** dialog, name your bot (e.g. ChatBot CafeteriaAssistance_Bot). Then, add a description and click **Ã¢â?¬Å?CreateÃ¢â?¬?** .
 
 ![](images/100/image4.png)
 
 You are taken to the home page for your Bot. Here on the left, you can see a list of icons you can use to navigate to your **Intents, Entities, Flow, Resource Bundles, Q&A, Components, Settings and Quality**.
 
-![D:\\Workshop\_Bot\\image2.PNG](images/100/image5.png)
+![D:\Workshop_Bot\image2.PNG](images/100/image5.png)
 
 ### **Step 2**: Add an Intent, Entity for show menu
 
-From the homepage of your ChatBot, click the ** Intent ?** icon present on left-side navigation bar and then click the green ** Intent ?** button.
+From the homepage of your ChatBot, click the **Ã¢â?¬Å?IntentÃ¢â?¬?** icon present on left-side navigation bar and then click the green **Ã¢â?¬Å?IntentÃ¢â?¬?** button.
 
 ![](images/100/image6.png)
 
 This Intent will be used to show the cafeteria menu. Enter **ShowMenu** as the Intent name, and then provide a description. These values are automatically saved, so you do not need to explicitly save them. As you create artifacts, you may notice a message in the lower right corner that your work has been saved.
 
-![D:\\Workshop\_Bot\\Image5.PNG](images/100/image7.png)
+![D:\Workshop_Bot\Image5.PNG](images/100/image7.png)
 
 Now that you have an intent, to express what a show menu is. In the Examples area add the following text: **show menu**, followed by a return.
 
-![D:\\Workshop\_Bot\\image6.PNG](images/100/image8.png)
+![D:\Workshop_Bot\image6.PNG](images/100/image8.png)
 
 Add another example utterance: **what do you have?** Followed by a return.
 
@@ -96,7 +96,7 @@ Include the list of example utterances below to your intent, each followed by a 
 
 -   **What food do you have**
 
-![D:\\Workshop\_Bot\\screen7.PNG](images/100/image9.png)
+![D:\Workshop_Bot\screen7.PNG](images/100/image9.png)
 
 ### **Step 3**: In the similar way add OrderFood intent:
 
@@ -120,14 +120,14 @@ Add the below utterances for the OrderFood intent:
 
 Add the below utterances for the OrderBeverages intent:
 
-1\. Beverages please
+1. Beverages please
 
-2\. Can I get Beverages?
+2. Can I get Beverages?
 
-3\. I want Beverages
+3. I want Beverages
 <!-- TODO: are utterances case sensitive? if not, remove #4 -->
 
-4\. What kind of Beverages do you have?
+4. What kind of Beverages do you have?
 <a name="step-5-add-an-intent-entity-for-exit-flow"></a>
 ### **Step 5**: In the similar way add ExitFlow intent:
 
@@ -135,13 +135,13 @@ Add the below utterances for the OrderBeverages intent:
 
 Add the below utterances for the ExitFlow intent:
 
-1\. Bye
+1. Bye
 
-2\. Great
+2. Great
 
-3\. Thank You
+3. Thank You
 
-4\. Thank
+4. Thank
 <!-- TODO: are utterances case sensitive? if not, remove #5 -->
 
 ### **Step 6**: Now that the intent is created, add an entity.
@@ -153,28 +153,28 @@ On the left-navigation bar, click the second icon down named **"Entities"** and 
 
 ![](images/100/image13.png)
 
-Click the green  **Entity**  button and then enter  **ItemSize**  as the entity name and a brief description.
+Click the greenÃ?Â **Entity**Ã?Â button and then enterÃ?Â **ItemSize**Ã?Â as the entity name and a brief description.
 
-![D:\\Workshop\_Bot\\screen9.PNG](images/100/image14.png)
+![D:\Workshop_Bot\screen9.PNG](images/100/image14.png)
 
 Now that you have an Entity, you need to provide some values that could be used. In our case of the **ItemSize**, you would want to use values that represent size you could query for the order.
 
-In the **Configuration** area, ensure the **Type** property is set to Value List (To create the list of values based on the requirement) and then click the green ** Value ?** button.
+In the **Configuration** area, ensure the **Type** property is set to Value List (To create the list of values based on the requirement) and then click the green **Ã¢â?¬Å?ValueÃ¢â?¬?** button.
 
 
-![D:\\Workshop\_Bot\\Capture10.PNG](images/100/image15.png)
+![D:\Workshop_Bot\Capture10.PNG](images/100/image15.png)
 
-In the popup dialog, enter  **Small**  as the value and  **small**  as a synonym (followed by a return).
+In the popup dialog, enterÃ?Â **Small**Ã?Â as the value andÃ?Â **small**Ã?Â as a synonym (followed by a return).
 
-Then click  **Create**.
+Then clickÃ?Â **Create**.
 
 ![](images/100/image16.png)
 
-Then, add a second value named  **Medium**  and this time add a synonym of  **normal**.
+Then, add a second value namedÃ?Â **Medium**Ã?Â and this time add a synonym ofÃ?Â **normal**.
 
 ![](images/100/image17.png)
 
-Finally, add a third value named  **Large**  and use  **big**  as the synonyms.
+Finally, add a third value namedÃ?Â **Large**Ã?Â and useÃ?Â **big**Ã?Â as the synonyms.
 
 ![](images/100/image18.png)
 
@@ -184,13 +184,13 @@ When finished, your entity definition should look like the image shown below.
 
 Now you've got 4 intents (ShowMenu, OrderFood, OrderBeverages and ExitFlow) and an entity named as ItemSize. You need to associate the **OrderFood** and **OrderBeverages** intents with **ItemSize** entity, and it's easy to do it.
 
-On the left-navigation bar, click the ** Intent ?** icon, and on the right, find the **Intent Entities** area.
+On the left-navigation bar, click the **Ã¢â?¬Å?IntentÃ¢â?¬?** icon, and on the right, find the **Intent Entities** area.
 
-Click the green  **Entity**  button and select  **ItemSize**  from the list, after selection your screen will look like image shown below:
+Click the greenÃ?Â **Entity**Ã?Â button and selectÃ?Â **ItemSize**Ã?Â from the list, after selection your screen will look like image shown below:
 
-![D:\\Workshop\_Bot\\Capture12.PNG](images/100/image20.png)
+![D:\Workshop_Bot\Capture12.PNG](images/100/image20.png)
 
-The entity is added and a required flag is set. If you want you can remove the entity by clicking the  **(x)**  to the right of the entity name. Do not remove the entity from your intent.
+The entity is added and a required flag is set. If you want you can remove the entity by clicking theÃ?Â **(x)**Ã?Â to the right of the entity name. Do not remove the entity from your intent.
 
 ### **Step 7**: Define the Conversation Flow
 
@@ -282,7 +282,7 @@ states:
       - name: "Cold Cocoa Latte"
         description: "Smooth, creamy ice cold chocolate milkshake. Who can say no to this classic beverage?"
         image: "http://res.cloudinary.com/psjsaravana/image/upload/v1522769201/CafeteriaAssistant/Cold_Cocoa_Latte.jpg"
-      - name: "CafÃ© Americano"
+      - name: "CafÃ?Â© Americano"
         description: "A double shot of espresso topped with hot water, served with a complimentary milk on the side."
         image: "http://res.cloudinary.com/psjsaravana/image/upload/v1522769202/CafeteriaAssistant/Caf%C3%A9_Americano.jpg"
     transitions: {}  
@@ -303,8 +303,8 @@ states:
       metadata:
         responseItems:
         - type: "text"
-          text: "Sorry, I don't understand you, I am not human. Please try another\
-            \ sentence."
+          text: "Sorry, I don't understand you, I am not human. Please try another
+             sentence."
           name: "Sorry"
           separateBubbles: true
       processUserMessage: false
@@ -456,8 +456,8 @@ states:
       metadata:
         responseItems:
         - type: "text"
-          text: "<#if user.botsUserError == 'true'>Invalid size, please try again.\
-            \ </#if>What size do you want?"
+          text: "<#if user.botsUserError == 'true'>Invalid size, please try again.
+             </#if>What size do you want?"
           name: "What size"
           separateBubbles: true
           actions:
@@ -498,8 +498,8 @@ states:
     properties:
       metadata:
         responseItems:
-        - text: "Thank you for your order, your ${itemSize} ${orderedFood} \
-            \ will be delivered in 10 minutes at GPS position ${location.value.latitude},${location.value.longitude}!"
+        - text: "Thank you for your order, your ${itemSize} ${orderedFood} 
+             will be delivered in 10 minutes at GPS position ${location.value.latitude},${location.value.longitude}!"
           type: "text"
           name: "conf"
           separateBubbles: true
@@ -545,15 +545,15 @@ states:
 ```
 ### **Step 8**: Validate, Train and Test your ChatBot
 
-Finally, click the ** Validate ?** button in the upper right corner and you should see a message that there were no problems found in your bot.
+Finally, click the **Ã¢â?¬Å?ValidateÃ¢â?¬?** button in the upper right corner and you should see a message that there were no problems found in your bot.
 
 In the next section, you train the Bot to recognize responses that might be entered and then test it.
 
 In this part of the tutorial, you run the training tool on the Bot. This will train the Bot allowing it to understand similar user inputs to the example utterances used when building the Bot.
 
-In the upper right, click the ** Train ?** button. This will kick-off a process that will run an algorithm to take your example utterances and build the model that will be used to ascertain the intents and entities. Anytime the ChatBot platform recognizes your Bot needs to be trained, it will display an exclamation point in the train button. Once the training is complete the exclamation point is replaced by a check mark.
+In the upper right, click the **Ã¢â?¬Å?TrainÃ¢â?¬?** button. This will kick-off a process that will run an algorithm to take your example utterances and build the model that will be used to ascertain the intents and entities. Anytime the ChatBot platform recognizes your Bot needs to be trained, it will display an exclamation point in the train button. Once the training is complete the exclamation point is replaced by a check mark.
 
-![D:\\Workshop\_Bot\\Capture13.PNG](images/100/image22.png)
+![D:\Workshop_Bot\Capture13.PNG](images/100/image22.png)
 
 ![](images/100/image23.png)
 
@@ -563,21 +563,21 @@ a.  Choose Trainer Ht from the options.
 
 b.  Refine your corpus, retrain with Trainer Ht. Repeat as necessary.
 
-The  Train  button (<img src="images/100/image24.png" title="This is an image of the "dirty" Train button" class="infra" />) activates whenever you add an intent or when you update an intent by adding, changing, or deleting its utterances. To bring the training up to date, choose a training model and then click  Train. The model displays an exclamation point whenever it needs training. When its training is current, it displays a check mark.
+TheÃ?Â TrainÃ?Â button (<img src="images/100/image24.png" title="This is an image of the "dirty" Train button" class="infra" />) activates whenever you add an intent or when you update an intent by adding, changing, or deleting its utterances. To bring the training up to date, choose a training model and then clickÃ?Â Train. The model displays an exclamation point whenever it needs training. When its training is current, it displays a check mark.
 
-To test the ChatBot, click the  **play**  (Run) icon in the upper right of the page. This takes you into the tester
+To test the ChatBot, click theÃ?Â **play**Ã?Â (Run) icon in the upper right of the page. This takes you into the tester
 
-![D:\\Workshop\_Bot\\image3.PNG](images/100/image25.png)
+![D:\Workshop_Bot\image3.PNG](images/100/image25.png)
 
 where you can see three tabs: Bot, Intent and QnA.
 
 ![](images/100/image26.png)
 
-Click the  **Bot**  tab to test the bot. What you type in at the bottom in the  **Message**  area, is what will be sent to the bot when you click the  **Send**  button.
+Click theÃ?Â **Bot**Ã?Â tab to test the bot. What you type in at the bottom in theÃ?Â **Message**Ã?Â area, is what will be sent to the bot when you click theÃ?Â **Send**Ã?Â button.
 
 Let's start out simple to test the bot.
 
-In the Message area, type  **Show menu**  and then click the  **Send**  button.
+In the Message area, typeÃ?Â **Show menu**Ã?Â and then click theÃ?Â **Send**Ã?Â button.
 
 ![](images/100/image26.png)
 
@@ -592,11 +592,11 @@ Now, let's try a message that includes the **ItemSize**.
 
 ![](images/100/image28.png)
 
-Please finish each flow if you are testing the Bot, or hit  **Reset**  to create a new session and avoid confusion with an incomplete flow from a previous session.
+Please finish each flow if you are testing the Bot, or hitÃ?Â **Reset**Ã?Â to create a new session and avoid confusion with an incomplete flow from a previous session.
 
-Now click the  **Intent**  tab. We are going to now test only the intent and entity resolution rather than a whole conversation flow.
+Now click theÃ?Â **Intent**Ã?Â tab. We are going to now test only the intent and entity resolution rather than a whole conversation flow.
 
-In the message area type **Show menu** and press **Send**.
+In the message area type **Show menu**Ã?Â and pressÃ?Â **Send**.
 
 ![](images/100/image29.png)
 
