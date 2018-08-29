@@ -3,7 +3,7 @@ Updated: 07/24/2018
 
 ## Introduction
 
-This lab focus on moving the on-premise WLS app to JCS. Java Cloud Service provides features that are easy to use and deploy and give more option for the developer to customize. 
+This lab focus on moving the on-premise WLS app to JCS. JCS is ideal for development, testing, user acceptance testing, staging and production. Also, it allows to instantly create dedicated and isolated WebLogic Server environments (11g or 12c version) to run your entire cluster at scale.
 
 ## Objectives
 
@@ -25,7 +25,7 @@ For this lab you will need Github and Oracle Cloud account Hub Accounts. Use the
 ### **STEP 1**: Create Database Instance in Cloud
 
 - Sign in to Oracle Cloud My Services.
-- Click  Dashboard menu near the upper left corner of the page, and select
+- Click  Dashboard menu near the upper left corner of the page, and select Database.
   
 - Click on create instance
 
@@ -84,11 +84,11 @@ The WebLogic Server Administration Console is displayed.
 
 - Click Lock & Edit.
 
-    ![](images/300/DB/Upload_to_JCS/2.png)
+    ![](images/300/DB/Upload_to_JCS/3.png)
 
 - Under Domain Structure, click Deployments.
 
-    ![](images/300/DB/Upload_to_JCS/3.png)
+    ![](images/300/DB/Upload_to_JCS/2.png)
 
 - On the Deployments page, click Install.
 
@@ -119,7 +119,7 @@ Note that the the cluster name (wls003jc_cluster in this example) would be the f
 
     ![](images/300/DB/Upload_to_JCS/11.png)
 
-- On the Optional Settings page, click Next. The default settings are adequate for this tutoria
+- On the Optional Settings page, click Next. The default settings are adequate for this tutorial.
 
     ![](images/300/DB/Upload_to_JCS/12.png)
 
