@@ -73,14 +73,18 @@ For this lab you will need Github and Oracle Cloud account Hub Accounts. Use the
 
 ### **STEP 3**: Upload project in JCS
 
-- From the menu that's displayed, select Open WebLogic Server Console. 
+- From the menu that's displayed, select Open WebLogic Server Console.
+
+![](images/300/DB/Upload_to_JCS/Open_Console.png)
+
 The sign-in page of the WebLogic Server Administration Console is displayed. 
 If you see the untrusted security certificate warning, add the certificate to your browser, as an exception, and continue. The text of this warning and the steps to proceed depend on your browser. In Firefox, for example, you can proceed by clicking Advanced and then Add Exception.
+
+ ![](images/300/DB/Upload_to_JCS/unsafe_connection.png)
+
 - Enter your administrator credentials. 
 Note: These are the credentials that you had specified while creating the instance. In the case of a quickstart instance, you can find the credentials in the credentials zip bundle that you downloaded while creating the instance. 
 The WebLogic Server Administration Console is displayed.
-
-    ![](images/300/DB/Upload_to_JCS/1.png)
 
 - Click Lock & Edit.
 
@@ -175,3 +179,7 @@ Note that the the cluster name (wls003jc_cluster in this example) would be the f
 If you see the untrusted security certificate warning, add the certificate to your browser, as an exception, and continue. The text of this warning and the steps to proceed depend on your browser. In Firefox, for example, you can proceed by clicking Advanced and then Add Exception. 
   - The URL for the application would be in the format **https://managedServer_publicIP/contextRoot** 
    Example: https://129.213.145.149/main.jsp
+
+- Once the app is running it will appear something like this
+
+ ![](images/300/DB/Upload_to_JCS/product.png)

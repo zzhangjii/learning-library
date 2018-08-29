@@ -82,4 +82,6 @@ For this lab you will need Github and Oracle JDeveloper. Use the following links
 
 - You have successfully deployed the Java EE application using  Application Cloud Container Service.
 
+    ![](images/300/DB/Upload_to_JCS/product.png)
+
 ***SHOW RUNNING APP HERE
