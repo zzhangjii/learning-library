@@ -29,7 +29,7 @@ You will begin your machine learning development journey by importing an Apache 
 
 ### Log into Oracle Machine Learning.
 
-- Use the following URL to sign into Machine Learning.  Use your assigned userid, with password `Alpha2018___` (three underscores):  `https://adwc.uscom-east-1.oraclecloud.com/oml/tenants/OCID1.TENANCY.OC1..AAAAAAAA3FF5N7TZN3BUPBW7D5NHFCNUAGNCA5KN7KW4ODBMZMP5FHH6FWLA/databases/ORCL/index.html`
+- Use the [Machine Learning Login](https://adwc.uscom-east-1.oraclecloud.com/oml/tenants/OCID1.TENANCY.OC1..AAAAAAAA3FF5N7TZN3BUPBW7D5NHFCNUAGNCA5KN7KW4ODBMZMP5FHH6FWLA/databases/ORCL/index.html) to sign into Machine Learning.  Use your assigned userid, with password `Alpha2018___` (three underscores):  
 
   ![](images/002.png)
 
