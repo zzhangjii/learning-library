@@ -3,7 +3,7 @@ Updated: 08/28/2018
 
 ## Introduction
 
-This is the first of several labs that are part of the WLS On-Prem to Cloud Workshop. This lab will walk you through the process of moving an existing Java On-Prem application into Oracle Application Container Cloud. It will create and deploy war file and deploy it to the Oracle Public Cloud.
+This is the first of several labs that are part of the WebLogic Server On-Prem to Cloud Workshop. This lab will walk you through the process of moving an existing Java On-Prem application into Oracle Application Container Cloud. It will create and deploy war file and deploy it to the Oracle Public Cloud.
 
 **_To log issues_**, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
@@ -19,7 +19,7 @@ For this lab you will need Github and Oracle JDeveloper. Use the following links
 - a [GitHub account - https://github.com/join](GitHub account - https://github.com/join)
 -  [Oracle JDeveloper - https://www.oracle.com/technetwork/developer-tools/jdev/overview/index.html](Oracle JDeveloper - https://www.oracle.com/technetwork/developer-tools/jdev/overview/index.html)
 
-# Redeploy both Components to ACCS
+# Redeploy both Components to Application Container Cloud Service
 
 ## Deploying the Application to the Oracle Application Cloud Service Instance
 
