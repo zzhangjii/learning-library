@@ -1,10 +1,11 @@
 # Method-mapping Policy
+
 Method mapping allows us to handle differences between the front-end API and back-end service.  If we were to design everything from scratch, we might not need method-mapping, but oftentimes, one or more back-end services may already exist.  Using the method-mapping policy, we can handle the differences of our back-end service to achieve the behavior desired in the design of our API.
 
 ## Before you begin
+
 1. You have an API Platform environment.  See [environments](../../../../environments/README.md) for details on procuring an API Platform environment.
 1. You have completed the tutorial [Creating an API](../../create_api)
-1. You have completed the tutorial [Creating a Service](../../../services/create_service)
   1. You will need to make sure you are either using the [hosted](../../../docker/compose/ticketService/README.md#hosted-version) instance of the microservice, or you have [set up your own instance](../../../docker/compose/ticketService)
 1. You have updated your API to use your service in the *Service Request* policy
 
