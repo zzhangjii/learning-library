@@ -179,3 +179,26 @@ If you see the untrusted security certificate warning, add the certificate to yo
 - Once the app is running it will appear something like this
 
  ![](images/300/DB/Upload_to_JCS/product.png)
+
+### **STEP 4**: Scale instance in Java Cloud Service
+
+- Click Hamburger menu icon and select Scale Up/Down option.
+
+ ![](images/300/DB/5.png)
+
+- Select Compute Shape from the dropdown list according to your requirement. Note that the instance will be unavailable during scale up/down operation.
+  
+ ![](images/300/DB/6.png)
+
+- Click Yes, Scale Up/Down VM to proceed.
+  
+ ![](images/300/DB/7.png)
+
+ - The scale request is successfully accepted and scheduled.
+  
+ ![](images/300/DB/8.png)
+
+- Refresh page again in few minutes to confirm the scale request is successfully completed.
+  
+ ![](images/300/DB/9.png)
+

@@ -1,3 +1,3 @@
-# WLS On-Prem to ACCS Workshop
+# On-prem Weblogic migration to Cloud Workshop
 
 ## About this Workshop
