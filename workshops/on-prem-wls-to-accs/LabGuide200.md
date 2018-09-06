@@ -84,4 +84,31 @@ For this lab you will need Github and Oracle JDeveloper. Use the following links
 
     ![](images/300/DB/Upload_to_JCS/product.png)
 
-### **STEP 2**: 
+### **STEP 2**: Scale instance in the Application Container Cloud Service
+
+- Click overview tab inside AlphaOfficeProductCatalog instance.
+
+    ![](images/200/11.png) 
+
+- Increase instances and memory according to your requirements.
+
+    ![](images/200/12.png) 
+
+- Click Apply to proceed.
+
+    ![](images/200/13.png) 
+
+- Proceed with either Rolling Restart with no downtime or Concurrent Restart brief downtime and click apply. 
+
+    ![](images/200/14.png) 
+
+- Wait few minutes to progress activity.
+
+    ![](images/200/15.png) 
+
+- You have successfully scaled up/down AlphaOfficeProductCatalog Application Container Cloud Service Instance.
+
+    ![](images/200/16.png) 
+
+
+
