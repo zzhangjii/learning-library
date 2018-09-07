@@ -1,0 +1,26 @@
+{
+    "workshop": {
+        "title": "Autonomous Transaction Processing: Self-Guided Hands-On Workshop",
+        "description": "This workshop will show you how to use Oracle Autonomous Transaction Processing in the Oracle Public Cloud.",
+        "labs": [
+            {
+                "number": "0",
+                "filename": "README.md",
+                "title": "Read Me First",
+                "description": "Autonomous Transaction Processing self-guided hands-on Workshop overview"
+            },
+            {
+                "number": "100",
+                "filename": "LabGuide100Setupnodejsapp.md",
+                "title": "Lab 100: Building nodejs App with ATP",
+                "description": "Instructions to build node.js app with ATP"
+            },
+            {
+                "number": "200",
+                "filename": "LabGuide200ContainerizedApps.md",
+                "title": "Lab 200: Containerized Apps",
+                "description": "WIP"
+            }
+        ]
+    }
+}
