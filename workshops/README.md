@@ -1,6 +1,9 @@
 # Autonomous Transaction Processing: Self-Guided Hands-On Workshop
 This workshop walks you through all the steps to get started using the **Oracle Autonomous Transaction Processing**. Install and configure node.js, install Oracle Client 12.2, download ATP secured connectivity file, run node.js app. 
 
+## Required Artifacts
+
+- Please complete Autonomous Database: Self Guided Hands on Workshop prior to starting this workshop. Please click [here](https://cloudsolutionhubs.github.io/autonomous-database/workshops/?page=README.md)
 
 ## Goals
 
