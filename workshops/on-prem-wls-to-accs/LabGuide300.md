@@ -22,6 +22,8 @@ For this lab you will need Github and Oracle Cloud account Hub Accounts. Use the
 
 # On premise WebLogic Server to Java Cloud Service
 
+## Deploying the Application to the Oracle Java Cloud Service
+
 ### **STEP 1**: Create Database Instance in Cloud
 
 - Sign in to Oracle Cloud My Services.
