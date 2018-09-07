@@ -7,7 +7,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 
 ## Goals
 
- - Install and configure node.js on your latptop
+ - Install and configure node.js on your laptop
  - Install Oracle 12.2 instant client
  - Create softlink (for Mac users only)
  - Download ATP secure connectity zipfile
