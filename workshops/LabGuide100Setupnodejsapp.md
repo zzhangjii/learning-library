@@ -22,7 +22,7 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 
 ## Steps
 
-### **STEP 1: Sign in to Oracle Cloud and Download credentials**
+### STEP 1: Sign in to Oracle Cloud and Download credentials**
 
 -   Go to [cloud.oracle.com](https://cloud.oracle.com), click **Sign In** to sign in with your Oracle Cloud account.
 
@@ -87,7 +87,7 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 
 - Download and Install appropriate node.js on you laptop from the following [link](https://nodejs.org/en/download/)
 
-### STEP 3: Download and Install node.js**
+### STEP 3: Download and Install node.js
 - From Node.js website download and install mac OS package. Once the installation is complete, verify node and npm version. 
 
 ![](./images/100/Picture100-nodejsdownload.jpeg)
@@ -102,7 +102,7 @@ npm —version
 
 ![](./images/100/Picture100-nodenpmversion.jpeg)
 
-### STEP 4: Download and install Oracle Instant Client**
+### STEP 4: Download and install Oracle Instant Client
 - Download and unzip Oracle Instant Client for Mac OS from the [link](https://www.oracle.com/technetwork/topics/intel-macsoft-096467.html)
 
 ![](./images/100/Picture100-Oracleinstallclient.jpeg)
@@ -122,7 +122,7 @@ ls -s ~/Downloads/instantclient_12_2/ libclntsh.dylib.12.1 /usr/local/lib
 
 - Now that the instant client is setup lets move on Download the credentials file from Admin console. We have pre-provisioned Oracle ATP that we are going to use for our node application.
 
-### STEP 5: Setup environment variables   for ATP connections**
+### STEP 5: Setup environment variables for ATP connections
 - Paste Downloaded Credentials zip file here
 
 - Once the file has been downloaded, go and unzip the file in node application folder.
@@ -149,7 +149,7 @@ export TNS_ADMIN=/<path_to_unzipped_wallet_folder>
     ```
 ![](./images/100/Picture100-updateojdbcprops.jpeg)
 
-### STEP 6: Configure and start your Node.js App**
+### STEP 6: Configure and start your Node.js App
 
 - You can download the files from /scripts/dbconfig.js and /scripts/server.js and copy it to your node project folder.
 
