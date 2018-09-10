@@ -22,7 +22,7 @@ This lab shows how to load data from Oracle Cloud Infrastructure Object Storage 
         
 For more information about loading data, see the documentation <a href="https://www.oracle.com/pls/topic/lookup?ctx=en/cloud/paas/autonomous-data-warehouse-cloud&id=CSWHU-GUID-07900054-CB65-490A-AF3C-39EF45505802">Loading Data from Files in the Cloud</a>.
 
-To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issues/new) to go to the github oracle repository issue submission form.
+To **log issues**, click [here](https://github.com/oracle/learning-library/issues/new) to go to the github oracle repository issue submission form.
 
 ## Objectives
 
@@ -57,7 +57,7 @@ To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issue
     -   Products data: **products.txt**
 
 # Create the tables
-## Steps
+
 ### STEP 2: Create Target Tables for Data Loading
 
 -   Connected as your user in SQL Developer, copy and paste <a href="./scripts/300/create_tables.txt" target="_blank">this code snippet</a> to SQL Developer worksheet. Take a moment to examine the script. Then click the **Run Script** button to run it.
@@ -69,7 +69,7 @@ To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issue
 Note that you do not need to specify anything other than the list of columns when creating tables in the SQL scripts. You can use primary keys and foreign keys if you want, but they are not required.
 
 # Load data from the local file system
-## Steps
+
 
 ### STEP 3: Loading Data Using the Data Import Wizard in SQL Developer
 
@@ -112,7 +112,7 @@ When you are satisfied with the file content view, click **NEXT**.
 
 
 # Setup the OCI Object Store
-## Steps    
+   
 ### STEP 4: Navigate to the OCI Compute Console 
 
 -   The easiest way to get to the **OCI Compute Console** is to first navigate to the My Services Dashboard page:
@@ -199,7 +199,7 @@ To load data from the Oracle Cloud Infrastructure(OCI) Object Storage you will n
 
     ![](./images/300/snap0015311.jpg)
 
-### STEP 10: Create a Database Credential for Your User
+### STEP 10: Create a Database Credential for User
 
 In order to access data in the Object Store you have to enable your database user to authenticate itself with the Object Store using your OCI object store account and Auth token. You do this by creating a private CREDENTIAL object for your user that stores this information encrypted in your Autonomous Data Warehouse. This information is only usable for your user schema.
 
@@ -222,7 +222,6 @@ In order to access data in the Object Store you have to enable your database use
 
 # Load data from the Object Store using the Data Import Wizard
 
-## Steps
 
 ### STEP 11: Loading Data Using the Data Import Wizard in SQL Developer
 
@@ -296,7 +295,7 @@ When you are satisfied with the data preview, click **NEXT**.
 
 # Load data from the Object Store using DBMS_CLOUD
 
-## Steps
+
 
 ### STEP 12: Loading Data Using the PL/SQL Package, DBMS_CLOUD
 

@@ -1,4 +1,4 @@
-# ADWC Journey: Hands-On Test Drive Workshop
+# ADWC Hands-On Workshop
 This workshop walks you through all the steps to get started using the **Oracle Autonomous Data Warehouse Cloud (ADWC)**. You will provision a new ADWC database, load data from the object store and troubleshoot data loads, scale an ADWC instance, use Oracle Machine Learning notebooks and connect database to Data Visualization.
 
 
@@ -14,7 +14,11 @@ This workshop walks you through all the steps to get started using the **Oracle 
  - Use Oracle Data Visualization (OAAC) with ADWC
  - Use Oracle Data Integration Platform Cloud (DIPC) with ADWC
  
+## Prepare for this workshop
 
+***Download SQL Developer***
+- You **must have SQL Developer** to complete the Hands-on-Workshop labs. 
+- SQL Developer can be obtained at [SQL Developer](http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/)
 
 
 ## To Learn More
@@ -33,7 +37,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 
     ![](images/WorkshopMenu.png)  
 
-- To **log issues**, click [here](https://github.com/oracle/learning-library/tree/master/workshops/journey3-data-science) to go to the github oracle repository issue submission form.
+- To **log issues**, click [here](https://github.com/oracle/learning-library/issues/new) to go to the github oracle repository issue submission form.
 
 
 
@@ -41,16 +45,17 @@ This workshop walks you through all the steps to get started using the **Oracle 
 # Workshop Details
 
 
-## Lab 100: Provisioning and Connecting
+## Lab 100: Provisioning and Connecting to SQL Developer
 
 **Documentation**: [LabGuide100ProvisioningGettingStarted.md](LabGuide100ProvisioningGettingStarted.md)
 
 **Objectives**:
 
 - Learn how to sign-in to the Oracle Public Cloud
-- Learn how to provision a new ADWC database
+- Learn hot to provision a new ADWC database
 - Learn how to download the client credentials wallet file
-- Learn how to connect from Oracle SQL Developer
+- Learn how to connect Oracle SQL Developer to ADW
+
 
 ## Lab 200: Working with Database Services and Sample Data Sets
 
@@ -60,7 +65,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 
 - Learn about the different levels of ADWC database service (HIGH, MEDIUM, LOW)
 - Learn about the Star Schema Benchmark (SSB) and Sales History (SH) sample data sets
-- See how the different levels of database service affect performance and concurrency
+- Learn how different levels of database service affect performance and concurrency
 
 
 ## Lab 300: Data Loading
@@ -74,19 +79,28 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - Learn how to use the SQL Developer Data Import Wizard to load data
 - Learn how to troubleshoot data loads
  
+ ## Lab 400: Query External Data
 
-## Lab 400: Scaling and Performance in ADWC
+**Documentation**:  [LabGuide400QueryExternalData.md](LabGuide400QueryExternalData.md)
 
-**Documentation**:  [LabGuide400ScalingPerformance.md](LabGuide400ScalingPerformance.md)
+**Objectives**:
+
+- Learn how to define external tables against Object Store data sets
+- Learn how to query external tables
+- Learn how to create data warehouse user
+
+## Lab 500: Scaling and Performance in ADWC
+
+**Documentation**:  [LabGuide500ScalingPerformance.md](LabGuide500ScalingPerformance.md)
 
 **Objectives**:
 
 - Learn how to scale up and down the ADWC instance
-- See how scaling affects ADWC concurrency and performance
+- Learn how scaling affects ADWC concurrency and performance
 
-## Lab 500: Oracle Machine Learning Notebooks
+## Lab 600: Oracle Machine Learning Notebooks
 
-**Documentation**: [LabGuide500OracleMachineLearning.md](LabGuide500OracleMachineLearning.md)
+**Documentation**: [LabGuide600OracleMachineLearning.md](LabGuide600OracleMachineLearning.md)
 
 **Objectives**:
 
@@ -95,9 +109,9 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - Learn how to share notebooks
 - Learn how to create and run SQL scripts
 
-## Lab 600: Basic Machine Learning (DBMS_PREDICTIVE_ANALYTICS)
+## Lab 700: Basic Machine Learning (DBMS_PREDICTIVE_ANALYTICS)
 
-**Documentation**: [LabGuide600OracleDatabaseML.md](LabGuide600OracleDatabaseML.md)
+**Documentation**: [LabGuide700OracleDatabaseML.md](LabGuide700OracleDatabaseML.md)
 
 **Objectives**:
 
@@ -105,9 +119,9 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - Learn how to use DBMS_PREDICTIVE_ANALYTICS routines
 - Learn how to use Oracle ML Gallery
 
-## Lab 700: Create Data Visualizations from ADWC
+## Lab 800-1: Create Data Visualizations from Data Visualization Desktop
 
-**Documentation**: [LabGuide700DataVisualization.md](LabGuide700DataVisualization.md)
+**Documentation**: [LabGuide800-1DataVisualization.md](LabGuide800-1DataVisualization.md)
 
 **Objectives**:
 
@@ -116,23 +130,23 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - Learn how to create a simple data visualization project with Oracle Data Visualization Desktop
 - Learn how to access and gain insights from data in the Autonomous Data Warehouse
 
-## Lab 700-2: Create Data Visualizations from Oracle Autonomous Analytics
+## Lab 800-2: Create Data Visualizations from Oracle Autonomous Analytics
 
-**Documentation**: [LabGuide700-2(OAAC).md](LabGuide700-2(OAAC).md)
+**Documentation**: [LabGuide800-2(OAAC).md](LabGuide800-2(OAAC).md)
 
 **Objectives**:
 
-- Learn how to connect a autonomous analytics tool to the powerful Autonomous Data Warehouse 
+- Learn how to connect an autonomous analytics tool to the powerful Autonomous Data Warehouse 
 - Learn how to create a simple data visualization project with Oracle Autonomous Analytics
 - Learn how to access and gain insights from data in the Autonomous Data Warehouse
 
 
-## Lab 800: Integrating with ADWC
+## Lab 900: Data Integration Platform Cloud with ADWC
 
-**Documentation**: [LabGuideDIPC.md](LabGuideDIPC.md)
+**Documentation**: [LabGuide900DIPCWithADW.md](LabGuide900DIPCWithADW.md)
 
 **Objectives**:
 
-- Learn how to load data to ADWCS with Oracle Data Integrator (ODI)
+- Learn how to load data to ADWC with Oracle Data Integrator (ODI)
 - Learn how to replicate data to ADWCS with Oracle GoldenGate (OGG)
 - Learn how to review data quality in ADWCS with Oracle Enterprise Data Quality (EDQ)
