@@ -35,38 +35,44 @@
             },
             {
                 "number": "500",
-                "filename": "LabGuide500ScalingPerformance.md",
-                "title": "Lab 500: Scaling and Performance in ADWC",
-                "description": "Understanding how to scale ADWC and its impact on performance and concurrency"
+                "filename": "LabGuide500ManagingandMonitoring.md",
+                "title": "Lab 500: Managing and Monitoring",
+                "description": "Managing and Monitoring"
             },
             {
                 "number": "600",
-                "filename": "LabGuide600OracleMachineLearning.md",
-                "title": "Lab 600: Oracle Machine Learning Notebooks",
-                "description": "Instructions to use Oracle Machine Learning Notebooks in ADWC"
+                "filename": "LabGuide600ScalingPerformance.md",
+                "title": "Lab 600: Scaling and Performance in ADWC",
+                "description": "Understanding how to scale ADWC and its impact on performance and concurrency"
             },
             {
                 "number": "700",
-                "filename": "LabGuide700OracleDatabaseML.md",
-                "title": "Lab 700: Basic Machine Learning (DBMS_PREDICTIVE_ANALYTICS)",
+                "filename": "LabGuide700OracleMachineLearning.md",
+                "title": "Lab 700: Oracle Machine Learning Notebooks",
+                "description": "Instructions to use Oracle Machine Learning Notebooks in ADWC"
+            },
+            {
+                "number": "800",
+                "filename": "LabGuide800OracleDatabaseML.md",
+                "title": "Lab 800: Basic Machine Learning (DBMS_PREDICTIVE_ANALYTICS)",
                 "description": "Learn to use DBMS_PREDICTIVE_ANALYTICS using a sample Oracle ML Notebook"
             },
             {
-                "number": "800-1",
-                "filename": "LabGuide800-1DataVisualization.md",
-                "title": "Lab 800-1: Create Data Visualizations from Data Visualization Desktop",
+                "number": "900-1",
+                "filename": "LabGuide900-1DataVisualization.md",
+                "title": "Lab 900-1: Create Data Visualizations from Data Visualization Desktop",
                 "description": "Learn to use Data Visualization Desktop with ADWC"
             },
             {
-                "number": "800-2",
-                "filename": "LabGuide800-2(OAAC).md",
-                "title": "Lab 800-2: Create Data Visualizations from Oracle Autonomous Analytics",
+                "number": "900-2",
+                "filename": "LabGuide900-2(OAAC).md",
+                "title": "Lab 900-2: Create Data Visualizations from Oracle Autonomous Analytics",
                 "description": "Learn to use OAAC with ADWC"
             },
             {
-                "number": "900",
-                "filename": "LabGuide900DIPCWithADW.md",
-                "title": "Lab 900: Data Integration Platform Cloud with ADWC",
+                "number": "1000",
+                "filename": "LabGuide1000DIPCWithADW.md",
+                "title": "Lab 1000: Data Integration Platform Cloud with ADWC",
                 "description": "Learn to use Oracle Data Integration Platform Cloud (DIPC) with ADWC"
             }
         ]
