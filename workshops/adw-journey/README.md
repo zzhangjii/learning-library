@@ -89,9 +89,19 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - Learn how to query external tables
 - Learn how to create data warehouse user
 
-## Lab 500: Scaling and Performance in ADWC
+## Lab 500: Managing and Monitoring
 
-**Documentation**:  [LabGuide500ScalingPerformance.md](LabGuide500ScalingPerformance.md)
+**Documentation**:  [LabGuide500ManagingandMonitoring.md](LabGuide500ManagingandMonitoring.md)
+
+**Objectives**:
+
+- Learn how to start/stop your ADWC instance
+- Learn how to recover your ADWC database if needed
+- Learn how to use the service console to monitor the performance of your ADWC instance
+
+## Lab 600: Scaling and Performance in ADWC
+
+**Documentation**:  [LabGuide600ScalingPerformance.md](LabGuide600ScalingPerformance.md)
 
 **Objectives**:
 
@@ -100,7 +110,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 
 ## Lab 600: Oracle Machine Learning Notebooks
 
-**Documentation**: [LabGuide600OracleMachineLearning.md](LabGuide600OracleMachineLearning.md)
+**Documentation**: [LabGuide700OracleMachineLearning.md](LabGuide700OracleMachineLearning.md)
 
 **Objectives**:
 
@@ -111,7 +121,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 
 ## Lab 700: Basic Machine Learning (DBMS_PREDICTIVE_ANALYTICS)
 
-**Documentation**: [LabGuide700OracleDatabaseML.md](LabGuide700OracleDatabaseML.md)
+**Documentation**: [LabGuide800OracleDatabaseML.md](LabGuide800OracleDatabaseML.md)
 
 **Objectives**:
 
@@ -121,7 +131,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 
 ## Lab 800-1: Create Data Visualizations from Data Visualization Desktop
 
-**Documentation**: [LabGuide800-1DataVisualization.md](LabGuide800-1DataVisualization.md)
+**Documentation**: [LabGuide900-1DataVisualization.md](LabGuide900-1DataVisualization.md)
 
 **Objectives**:
 
@@ -132,7 +142,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 
 ## Lab 800-2: Create Data Visualizations from Oracle Autonomous Analytics
 
-**Documentation**: [LabGuide800-2(OAAC).md](LabGuide800-2(OAAC).md)
+**Documentation**: [LabGuide900-2(OAAC).md](LabGuide900-2(OAAC).md)
 
 **Objectives**:
 
@@ -143,7 +153,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 
 ## Lab 900: Data Integration Platform Cloud with ADWC
 
-**Documentation**: [LabGuide900DIPCWithADW.md](LabGuide900DIPCWithADW.md)
+**Documentation**: [LabGuide1000DIPCWithADW.md](LabGuide1000DIPCWithADW.md)
 
 **Objectives**:
 
