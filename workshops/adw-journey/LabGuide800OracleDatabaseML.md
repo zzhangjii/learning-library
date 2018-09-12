@@ -1,4 +1,4 @@
-# Lab 700: Basic Oracle Database Machine Learning (DBMS_PREDICTIVE_ANALYTICS)
+# Lab 800: Basic Oracle Database Machine Learning (DBMS_PREDICTIVE_ANALYTICS)
 
 ## Introduction
 

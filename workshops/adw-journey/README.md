@@ -40,8 +40,6 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - To **log issues**, click [here](https://github.com/oracle/learning-library/issues/new) to go to the github oracle repository issue submission form.
 
 
-
-
 # Workshop Details
 
 

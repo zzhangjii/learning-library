@@ -1,4 +1,4 @@
-# Lab 800-1: Create Data Visualizations from ADWC with Data Visulization Desktop
+# Lab 900-1: Create Data Visualizations from ADWC with Data Visulization Desktop
 
 ## Introduction
 
