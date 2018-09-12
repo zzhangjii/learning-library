@@ -17,9 +17,9 @@
             },
             {
                 "number": "200",
-                "filename": "LabGuide200ContainerizedApps.md",
-                "title": "Lab 200: Containerized Apps",
-                "description": "WIP"
+                "filename": "LabGuide200BuildingmicroservicesonATP.md",
+                "title": "Lab 200: Building microservices on ATP",
+                "description": "Instructions to build and provision application stack consisting of microservices "
             }
         ]
     }

@@ -30,7 +30,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 
     ![](images/WorkshopMenu.png)  
 
-- To **log issues**, click [here](https://github.com/oracle/learning-library/issues/new) to go to the github oracle repository issue submission form.
+- To **log issues**, click [here](https://github.com/cloudsolutionhubs/autonomous-transaction-processing/issues/new) to go to the github oracle repository issue submission form.
 
 
 
@@ -48,11 +48,17 @@ This workshop walks you through all the steps to get started using the **Oracle 
 
 ## Lab 200: Containerized Apps 
 
-**Documentation**: [LabGuide200ContainerizedApps.md](LabGuide200ContainerizedApps.md)
+**Documentation**: [LabGuide200BuildingmicroservicesonATP.md](LabGuide200BuildingmicroservicesonATP.md)
 
 **Objectives**:
 
-- WIP
+- To build a docker container running node.js microservice
+- Deploy it on an ATP service
 
+## Appendix
 
+**Documentation**: [Appendix.md](Appendix.md)
 
+**Objectives**:
+
+- Handy docker commands you may need while doing Lab200: Building microservices on ATP
