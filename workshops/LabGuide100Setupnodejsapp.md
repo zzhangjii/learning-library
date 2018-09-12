@@ -4,7 +4,7 @@
 
 This lab walks you through the steps to get started using the Oracle Autonomous Transaction Processing on Oracle Infrastructure Cloud (OCI). You will build a node.js app with ATP.
 
-To **log issues**, click [here](https://github.com/oracle/learning-library/issues/new) to go to the github oracle repository issue submission form.
+To **log issues**, click [here](https://github.com/cloudsolutionhubs/autonomous-transaction-processing/issues/new) to go to the github oracle repository issue submission form.
 
 ## Objectives
 
@@ -14,7 +14,7 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 
 ## Required Artifacts
 
--   The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
+- The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
 - Install node.js on your laptop
 - Install Oracle instant client 12.2
 - Download and unzip ATP secure connectivity file
