@@ -1,4 +1,4 @@
-# Lab 900: Using Oracle Data Integration Platform Cloud (DIPC) with ADWC
+# Lab 1000: Using Oracle Data Integration Platform Cloud (DIPC) with ADWC
 
 ## Introduction
 

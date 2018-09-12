@@ -1,4 +1,4 @@
-# Lab 600: Using Oracle Machine Learning Notebooks
+# Lab 700: Using Oracle Machine Learning Notebooks
 
 ## Introduction
 

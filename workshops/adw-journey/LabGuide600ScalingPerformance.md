@@ -1,4 +1,4 @@
-# ADWC Lab 500: Scaling and Performance
+# ADWC Lab 600: Scaling and Performance
 
 ## Introduction
 
