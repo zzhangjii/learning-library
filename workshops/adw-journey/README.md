@@ -78,8 +78,8 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - Learn how to load data from an object store
 - Learn how to use the SQL Developer Data Import Wizard to load data
 - Learn how to troubleshoot data loads
- 
- ## Lab 400: Query External Data
+
+## Lab 400: Query External Data
 
 **Documentation**:  [LabGuide400QueryExternalData.md](LabGuide400QueryExternalData.md)
 
@@ -108,7 +108,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - Learn how to scale up and down the ADWC instance
 - Learn how scaling affects ADWC concurrency and performance
 
-## Lab 600: Oracle Machine Learning Notebooks
+## Lab 700: Oracle Machine Learning Notebooks
 
 **Documentation**: [LabGuide700OracleMachineLearning.md](LabGuide700OracleMachineLearning.md)
 
@@ -119,7 +119,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - Learn how to share notebooks
 - Learn how to create and run SQL scripts
 
-## Lab 700: Basic Machine Learning (DBMS_PREDICTIVE_ANALYTICS)
+## Lab 800: Basic Machine Learning (DBMS_PREDICTIVE_ANALYTICS)
 
 **Documentation**: [LabGuide800OracleDatabaseML.md](LabGuide800OracleDatabaseML.md)
 
@@ -129,7 +129,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - Learn how to use DBMS_PREDICTIVE_ANALYTICS routines
 - Learn how to use Oracle ML Gallery
 
-## Lab 800-1: Create Data Visualizations from Data Visualization Desktop
+## Lab 900-1: Create Data Visualizations from Data Visualization Desktop
 
 **Documentation**: [LabGuide900-1DataVisualization.md](LabGuide900-1DataVisualization.md)
 
@@ -140,7 +140,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - Learn how to create a simple data visualization project with Oracle Data Visualization Desktop
 - Learn how to access and gain insights from data in the Autonomous Data Warehouse
 
-## Lab 800-2: Create Data Visualizations from Oracle Autonomous Analytics
+## Lab 900-2: Create Data Visualizations from Oracle Autonomous Analytics
 
 **Documentation**: [LabGuide900-2(OAAC).md](LabGuide900-2(OAAC).md)
 
@@ -151,7 +151,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - Learn how to access and gain insights from data in the Autonomous Data Warehouse
 
 
-## Lab 900: Data Integration Platform Cloud with ADWC
+## Lab 1000: Data Integration Platform Cloud with ADWC
 
 **Documentation**: [LabGuide1000DIPCWithADW.md](LabGuide1000DIPCWithADW.md)
 
