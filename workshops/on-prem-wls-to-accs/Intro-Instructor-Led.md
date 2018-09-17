@@ -1,4 +1,4 @@
-# WLS On-Prem to ACCS Workshop
+# On-prem Weblogic migration to Cloud Workshop
 
 ## IMPORTANT: How to prepare for this workshop
 
@@ -27,9 +27,9 @@
 
 - Visit the [Workshop Interactive Labguide](http://launch.oracle.com/?cloudnative) for a visual overview of the workshop content.
 
-## WLS On-Prem to ACCS Workshop
+## On-prem Weblogic migration to Cloud Workshop
 
-This Oracle Public Cloud DevOps WLS On-Prem to ACCS Workshop will walk you through o understand the movement on a Java EE application from their on-prem WLS deployment to Oracle's Cloud, during which you will create and deploy Jave EE war files. You will take on 2 Personas during the workshop. The DevOps Manager Persona will add new features and keep the system stable, fast and available. The DevOps Manager will involve integrating development, testing, deployment and release cycle in twitter feed service and alpha product catalog. The Infrastructure person persona will extract Alpha Product Catalog war file and import into the WebLogic Server. During the workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service. Also, you will have option to familiar with Java Cloud Service and AppToCloud tool.
+This Oracle Public Cloud DevOps On-prem Weblogic migration to Cloud Workshop will walk you through o understand the movement on a Java EE application from their on-prem Weblogic deployment to Oracle's Cloud, during which you will create and deploy Jave EE war files. You will take on 2 Personas during the workshop. The DevOps Manager Persona will add new features and keep the system stable, fast and available. The DevOps Manager will involve integrating development, testing, deployment and release cycle in twitter feed service and alpha product catalog. The Infrastructure person persona will extract Alpha Product Catalog war file and import into the WebLogic Server. During the workshop, you will get exposure to Oracle Developer Cloud Service and Oracle Application Container Cloud Service. Also, you will have option to familiar with Java Cloud Service and AppToCloud tool.
 
 ## Workshop Details
 
@@ -39,7 +39,7 @@ This Oracle Public Cloud DevOps WLS On-Prem to ACCS Workshop will walk you throu
 
 **Documenation**: [LabGuide100.md](LabGuide100.md)
 
-## Lab 200: Redeploy both Components to ACCS
+## Lab 200: Redeploy both Components to Application Container Cloud Service
 
 **Documenation**: [LabGuide200.md](LabGuide200.md)
 
@@ -48,18 +48,18 @@ This Oracle Public Cloud DevOps WLS On-Prem to ACCS Workshop will walk you throu
 - Deploying the Application to the Oracle Application Cloud Service Instance
 - Verifying the Application Deployment
 
-## Lab 300: Deploy to JCS
+## Lab 300: Move on-premise Weblogic Server to Java Cloud Service
 
 **Documenation**: [LabGuide300.md](LabGuide300.md)
 
 ### Objectives
 
-- Move on premise WLS to Oracle JCS.
+- Move on premise Weblogic to Oracle Java Cloud Service.
   - Create database instance
-  - Create JCS instance
-  - Move application to JCS
+  - Create Java Cloud Service instance
+  - Move application to Java Cloud Service
 
-## Lab 400: JCS Instance with AppToCloud
+## Lab 400: Java Cloud Service Instance with AppToCloud
 
 **Documenation**: [LabGuide400.md](LabGuide400.md)
 

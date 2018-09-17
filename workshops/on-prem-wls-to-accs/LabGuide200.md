@@ -72,14 +72,42 @@ For this lab you will need Github and Oracle JDeveloper. Use the following links
 
 ### **STEP 1**: Verification
 
-- After Application Container Cloud Service Instance is created, you can click the link.
+- After Application Container Cloud Service Instance is created, click the link.
 
     ![](images/200/9.png) 
 
-- Verify that you can see the Alpha Product Catalog Static Tweets Page.
+- Add /alpha-office-product-catalog/products.jsp to view Alpha Office Product Catalog website.
 
     ![](images/200/10.png) 
 
-- You have successfully deployed the Java EE application using  Application Cloud Container Service.
+- You have successfully deployed the Java EE application using  Application Cloud Container Service. Click any product to view its static twitter popup.
 
-    ![](images/300/DB/Upload_to_JCS/product.png)
+    ![](images/200/10_1.png) 
+
+### **STEP 2**: Scale instance in the Application Container Cloud Service
+
+- Click overview tab inside AlphaOfficeProductCatalog instance.
+
+    ![](images/200/11.png) 
+
+- Increase instances and memory according to your requirements.
+
+    ![](images/200/12.png) 
+
+- Click Apply to proceed.
+
+    ![](images/200/13.png) 
+
+- Proceed with either Rolling Restart with no downtime or Concurrent Restart brief downtime and click apply. 
+
+    ![](images/200/14.png) 
+
+- Wait few minutes to progress activity.
+
+    ![](images/200/15.png) 
+
+- You have successfully scaled up/down AlphaOfficeProductCatalog Application Container Cloud Service Instance.
+
+    ![](images/200/16.png) 
+
+
