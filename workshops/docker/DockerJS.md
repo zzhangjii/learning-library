@@ -223,7 +223,7 @@ In this step, you make a couple of changes to the AlphaOfficeUI application. One
 - Save (docker commit) a copy of the changes to a NEW docker image
 - Start up and test the AlphaOfficeUI container using the NEW image
 
-### **STEP 1**: Copy a New Background Image
+#### **STEP 4a**: Copy a New Background Image
 
 Copy a background image file into the running AlphaOfficeUI container. This file is in the `/home/opc/AlphaOfficeSetup` directory.
 
@@ -237,7 +237,7 @@ docker cp /home/opc/AlphaOfficeSetup/dark_blue.jpg alphaofficeui:/pipeline/sourc
 
   Example: `docker cp /home/opc/AlphaOfficeSetup/dark_blue.jpg alphaofficeui:/pipeline/source/public/Images`
 
-### **STEP 2**: Install the VIM editor in the UI container
+#### **STEP 4b**: Install the VIM editor in the UI container
 
 Even though the original AlphaOfficeUI image could have been set up ahead of time with any needed client tools you will install it now.
 
