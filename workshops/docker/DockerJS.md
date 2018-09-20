@@ -1,17 +1,29 @@
 
-# Introduction to Docker on the Oracle Cloud
+# Docker on the Oracle Cloud Demo Lab
 
 ![](images/000JumpStart/TitleJS.png) 
 
 Updated: June 23, 2018
 
-## Oracle Cloud Infrastructure Overview
+## Introduction
+_Time to Complete: 20 minutes_
 
-With a comprehensive offering that includes compute, storage, network, bare metal, and container services, Oracle’s infrastructure services drive business value. Our enterprise-grade cloud enables organizations to run any workload at any time, while innovative migration tools pave the way by simplifying how organizations migrate on-premises workloads to the cloud.
+In this lab you will be looking at various application components deployed in three Docker containers. The AlphaOffice application offers a list of products from a catalog. Refering to the `Product Catalog Application` section of the diagram below we see four Docker containers. 
 
-This introduction provisions a Docker multi-container application running in the Compute Cloud Service on a VM Standard footprint. There are many options to choose from in Oracle's IaaS arena.
+**NOTE:** In this lab deployment the "database" product catalog is bundled with the REST service. The product listing is provided via JSON. In the full blown deployment available as a follow-up lab, you use an Oracle or MYSQL database as the datasource.
 
-![](images/000JumpStart/JS0-2.PNG)
+The AlphaOffice UI container retrieves catalog information from a REST service (written in Node.js) running in a separate container. It also takes in sample Twitter feed data from a REST service (written in Java), also running in its own container, and combines the data into a unified front end.
+
+![](images/000JumpStart/JS2.PNG)
+
+![](images/000JumpStart/JS0-4.PNG)
+
+## Objectives
+
+- Connect into your account using VNC Viewer
+- Do some docker commands to see various aspects of the set up
+- Use the AlphaOffice application
+- Go into the UI Docker container and make small changes in the application.
 
 ## Docker Overview
 
@@ -31,30 +43,11 @@ While containers may sound like a virtual machine (VM), the two are distinct tec
 
 Whereas, Containers include the application, all of its dependencies, but share the kernel with other containers and are not tied to any specific infrastructure, other than having the Docker engine installed on it’s host – allowing containers to run on almost any computer, infrastructure and cloud.
 
-## Lab Introduction
-
-In this lab you will be looking at various application components deployed in three Docker containers. The AlphaOffice application offers a list of products from a catalog. Refering to the `Product Catalog Application` section of the diagram below we see four Docker containers. 
-
-**NOTE:** In this lab deployment the "database" product catalog is bundled with the REST service. The product listing is provided via JSON. In the full blown deployment available as a follow-up lab, you use an Oracle or MYSQL database as the datasource.
-
-The AlphaOffice UI container retrieves catalog information from a REST service (written in Node.js) running in a separate container. It also takes in sample Twitter feed data from a REST service (written in Java), also running in its own container, and combines the data into a unified front end.
-
-![](images/000JumpStart/JS2.PNG)
-
-![](images/000JumpStart/JS0-4.PNG)
-
-## Objectives
-
-- Connect into your account using VNC Viewer
-- Do some docker commands to see various aspects of the set up
-- Use the AlphaOffice application
-- Go into the UI Docker container and make small changes in the application.
-
-## Required Artifacts
+## Required Prerequisites
 
 - Once the infrastructure is provisioned you can access your enironment using `VNC Viewer`. Please download and install from: [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/)
 
-# Start the Demo Lab
+## Instructions
 
 -  **Launch the Demo Lab**
 
