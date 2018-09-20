@@ -1,4 +1,4 @@
-# Lab 200: Building microservices on ATP
+# Lab 800: Building microservices on ATP
 
 ## Introduction
 
@@ -22,34 +22,39 @@ To **log issues**, click [here](https://github.com/cloudsolutionhubs/autonomous-
 ## Objectives
 
 - To build a docker container running node.js microservice
-- Deploy it on an ATP service
+- Deploy it on an ATP Database service running in the Oracle cloud
 
-Note: For simplicity, we will run docker locally on our laptop but it’s also pretty easy to deploy it to Oracle’s Kubernetes cluster service in their cloud, perhaps something you would certainly do for production applications.
+#### Note: For simplicity, we will run docker locally on our laptop but it’s also pretty easy to deploy it to Oracle’s Kubernetes cluster service in their cloud, perhaps something you would certainly do for production applications.
 
 ## Required Artifacts
 
 -   The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
 - Install node.js on your laptop
 - Docker installed on your local machine. If you do not have docker please follow this [link](https://docs.docker.com/docker-for-mac/install/) and install docker
-- Clone gig repo [here](https://github.com/cloudsolutionhubs/ATPDocker)
+- Create a folder and download git repository to your local machine [here](https://github.com/cloudsolutionhubs/ATPDocker)
 
-Note: Note there are two Docker files in the repository. That’sbecause we have two different applications–ATPnodeapp and aOne. Both of these are node.js applications which mimic as microservices in our case.
+Note: Note there are two Docker files in the repository. That’s because we have two different applications–ATPnodeapp and aOne. Both of these are node.js applications which mimic as microservices in our case.
 
 ATPnodeapp simply makes a connection to the ATP database and does not require any schema setup. aOne, on the other hand is a sample marketplace application and requires schema and seed data to be deployed in the backend. If you plan to use that app, you will need to first run the create_schema.sql scripts on the database.
 
 ## Steps
 
-### Step 1
+### **STEP 1: Provision an ATP instance and copy secure credential file to application folder**
 
-Provision ATP instance and download secure connectivity credentials file
+Provision ATP instance and download secure connectivity credentials file.
 
-Please click [here](https://cloudsolutionhubs.github.io/autonomous-database/workshops/?page=README.md) to find instructions to provision ATP instance and download secure credential file.
+Refer to labs LabGuide100ProvisionAnATPDatabase.md and LabGuide200SecureConnectivityAndDataAccess.md to provision and download the secure connectivity credentials file.
 
-- NOTE: If you wish to deploy aOne app, you would need to connect to your database using SQL client and run the create_schema script in the default admin schema or create a suitable user schema for the application. 
+- NOTE: If you wish to deploy aOne app, you would need to connect to your database using SQL client and run the [create_schema](https://github.com/kbhanush/ATPDocker-back/blob/master/aone/create_schema.sql) script in the default admin schema or create a suitable user schema for the application.
 
 Unzip and store the wallet folder in the same folder as your application under /wallet_NODEAPPDB2. This folder is copied into your container image when you run the docker file.
 
+```
+unzip wallet_RESTONHUBDB.zip -d /path_to_app_folder/wallet_NODEAPPDB2
+```
+
 - In you wallet folder, edit sqlnet.ora and replace the fcontents of the file with the following text: 
+
 ```
 WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA = 
 (DIRECTORY=$TNS_ADMIN)))
@@ -57,13 +62,14 @@ WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA =
 
 This tells the driver to look for the wallet in the path setup in variable TNS_ADMIN.
 
-### Step 2
+### **STEP 2: Build you docker image**
 
 Assuming you have downloaded the Dockerfile, database wallet and created the backend schema, you can now build your docker image.
 
 #### Ensure you are in a folder that contains the wallet folder /wallet_NODEAPPDB2 when you run this command
+
 ```
-$ docker build -t aone
+$ docker build -t aone .
 ```
 
 Note: -t options gives your image a tag ‘aone’. Don’t forget to include the period in the end. It means ‘use the Dockerfile in the current folder.
@@ -73,18 +79,19 @@ You can also specify your dockerfile as,
 ```
 $docker build –t atpnodeapp –f Dockerfile2
 ```
-Note: This will build another app called ATPnodeapp in the image.
+#### Note: This will build another app called ATPnodeapp in the image.
 
 Your image should be ready in less than a minute. The entire image is about 400 MB.
 
 The docker creates multiple image files as it builds each layer. Your final image would show at the top of the list and will have the tag you chose.
+
 ```
 $ docker images -a
 ```
 
 ![](./images/200/Picture400.png)
 
-### Step 3
+### **STEP 3: Change Database configuration**
 
 You need to launch your docker image and change the following
 - dbuser
@@ -92,24 +99,30 @@ You need to launch your docker image and change the following
 - connect string 
 
 ```
-$ docker run aone
-```
-Once inside the image, run the below commands 
+cd /path_to_app_folder/ATPDocker/aone/scripts
 
-```
-cd /opt/oracle/lib/ATPDocker/aone/scripts
 cat dbconfig.js
 ```
-![](./images/200/Picture500.png)
 
+![](./images/200/Picture500.png)
 
 This is the default username, password and connectString wirtten in the app and it will attempt to connect to the database with these credentials along with the secure keystore file. Either create a user with these credentials in your database or change this file to match what you create.
 
-### Step 4
+### **STEP 4: Run server.js app**
 
-Run node.js app
+Install oracledb add-on binary for Node.js
 
 ```
+cd /path_to_app_folder/ATPDocker/aone/
+
+npm install oracledb
+```
+
+Navigate to aone folder and run server.js script
+
+```
+cd /path_to_app_folder/ATPDocker/aone/
+
 $ node server.js
 ```
 
@@ -117,11 +130,12 @@ Your should get a response similar to this
 
 ![](./images/200/Picture600.png)
 
-To check the app on the browser, you will need to bridge port 3050 on the container to your local host. 
+To check the app on the browser, you will need to bridge port 3050 on the container to your local host.
 
 Exit node.js, make your you kill the process and shut down and exit container.
 
 Re-run the container with the following docker command
+
 ```
 $ docker run -i -p 3050:3050 -t <tagname>
 ```
