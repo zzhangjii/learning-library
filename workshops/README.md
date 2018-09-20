@@ -1,10 +1,6 @@
 # Autonomous Transaction Processing: Self-Guided Hands-On Workshop
 This workshop walks you through all the steps to get started using the **Oracle Autonomous Transaction Processing**. Provision a database, scale ATP, load data, configure node.js with ATP, configure Java with ATP, working with REST APIs, and building microservices on ATP. 
 
-## Required Artifacts
-
-- Please complete Autonomous Database: Self Guided Hands on Workshop prior to starting this workshop. Please click [here](https://cloudsolutionhubs.github.io/autonomous-database/workshops)
-
 ## Goals
 
 - Provision an ATP Database on Oracle Cloud Infrastructure
