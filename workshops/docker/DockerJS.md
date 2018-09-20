@@ -16,14 +16,16 @@ The AlphaOffice UI container retrieves catalog information from a REST service (
 
 ![](images/000JumpStart/JS2.PNG)
 
+The AlphaOffice UI is shown below.
+
 ![](images/000JumpStart/JS0-4.PNG)
 
 ## Objectives
 
 - Connect into your account using VNC Viewer
-- Do some docker commands to see various aspects of the set up
+- Perform some docker commands to see various aspects of the set up
 - Use the AlphaOffice application
-- Go into the UI Docker container and make small changes in the application.
+- Edit the UI Docker container and make small changes to the application.
 
 ## Docker Overview
 
@@ -33,7 +35,7 @@ What is Docker? What is a container?
 - [Docker Documentation](https://docs.docker.com)
 - A container is a runtime instance of a docker image: [Container Documentation](https://docs.docker.com/glossary/?term=container)
 
-Containers have been around for many years. Docker created a technology that was usable by mere humans, and was much easier to understand than before. Thus, has enjoyed a tremendous amount of support for creating a technology for packaging applications to be portable and lightweight.
+Containers have been around for many years. Docker created a technology that allows developers to create and package containers into applications that are portable and lightweight.
 
 ### VM vs Container
 
@@ -43,11 +45,12 @@ While containers may sound like a virtual machine (VM), the two are distinct tec
 
 Whereas, Containers include the application, all of its dependencies, but share the kernel with other containers and are not tied to any specific infrastructure, other than having the Docker engine installed on it’s host – allowing containers to run on almost any computer, infrastructure and cloud.
 
-## Required Prerequisites
-
-- Once the infrastructure is provisioned you can access your enironment using `VNC Viewer`. Please download and install from: [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/)
-
 ## Instructions
+
+### Access Your Environment
+
+Once the infrastructure is provisioned you can access your enironment using `VNC Viewer`. Please download and install from: [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/)
+
 
 -  **Launch the Demo Lab**
 
