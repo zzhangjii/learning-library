@@ -265,7 +265,7 @@ ls /pipeline/source/public/Images
 
 ![](images/000JumpStart/Picture200-28.1.png)
 
-### **STEP 3**: Edit the alpha.html file   
+#### **STEP 4c**: Edit the alpha.html file   
 
 - Edit the `alpha.html` file to fix a typo - Note, if you are unfamiliar with `vim`, you'll find information at this URL: [VIM](http://vimsheet.com). The commands are very similar to vi.
 
@@ -279,7 +279,7 @@ vim /pipeline/source/public/alpha.html
 
 - Save the file and exit by hitting the **ESC** key and then holding the **SHIFT** key down and typing "**Z**" TWICE
 
-### **STEP 4**: Edit the alpha.css file
+#### **STEP 4d**: Edit the alpha.css file
 
 - **Type** the following:
 
@@ -299,7 +299,7 @@ vim /pipeline/source/public/css/alpha.css
 exit
 ```
 
-### **STEP 5**: Commit a NEW Docker image
+#### **STEP 4e**: Commit a NEW Docker image
 
 - Save a copy of your modifed docker container and give it a new name. (**NOTE:** You're back out in the HOST now). You can assign whatever <`image-name`> you want.
 **NOTE:** \<image-name> must be in lower case.
@@ -322,7 +322,7 @@ docker images
 
 ![](images/000JumpStart/Picture200-31.png)
 
-### **STEP 6**: Start a container based on your new image
+#### **STEP 4f**: Start a container based on your new image
 
 **Stop** and **remove** the currently running AlphaOfficeUI container. Then, start a new container based on your changes.
 
