@@ -39,7 +39,7 @@ Containers have been around for many years. Docker created a technology that all
 
 ### VM vs Container
 
-![](images/000JumpStart/JS1.PNG)
+![](images/000JumpStart/JS1.png)
 
 While containers may sound like a virtual machine (VM), the two are distinct technologies. With VMs each virtual machine includes the application, the necessary binaries and libraries and the entire guest operating system.
 
