@@ -27,9 +27,9 @@ The AlphaOffice UI is shown below.
 - Use the AlphaOffice application
 - Edit the UI Docker container and make small changes to the application.
 
-## Docker Overview
+## Technology Overview
 
-What is Docker? What is a container?
+### What is Docker? What is a container?
 
 - Docker is the company and containerization technology.
 - [Docker Documentation](https://docs.docker.com)
