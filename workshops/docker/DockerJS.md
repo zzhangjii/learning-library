@@ -93,9 +93,7 @@ Using VNC Viewer to connect to your provisioned account.
 
   ![](images/000JumpStart/JS11.PNG)
 
- ### **STEP 2**: AlphaOffice Application
-
- Run the AlphaOffice Application.
+ ### **STEP 2**: Run the AlphaOffice Application
 
 - Click the **Applications** tab and select **Firefox Web Browser**.
 
@@ -115,9 +113,9 @@ Using VNC Viewer to connect to your provisioned account.
 
 - **Minimize the browser**. Later in this Lab, you make a change to the application and return to this page to see your change.
 
-### **STEP 3**: Run some Docker Commands
+### **STEP 3**: Run Docker Commands
 
-Run some Docker commands to explore details of the installation and the AlphaOffice containers.
+Run some Docker commands to explore details about the installation and the AlphaOffice containers.
 
 - Open a terminal session. On the desktop **right-click** and select **Open Terminal**
 
