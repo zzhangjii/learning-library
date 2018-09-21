@@ -34,7 +34,7 @@ To **log issues**, click [here](https://github.com/cloudsolutionhubs/autonomous-
 
 ### **STEP 1: Generate an ssh key pair in pem format**
 
-- Generate a primary key
+- Generate a private key
 
 ```
 openssl genrsa -aes128 -out ~/oci_api_key.pem 2048
@@ -58,11 +58,11 @@ openssl rsa -pubout -in ~/oci_api_key.pem -out ~/oci_api_key_public.pem
 
 ![](./images/700/Picture700-1.png)
 
-- Pick user from the list of users and one the User page click 'Add API Keys' button.
+- Pick user from the list of users and on the User page click 'Add API Keys' button.
 
 ![](./images/700/Picture700-2.png)
 
-- Paste your oci_api_key_public.pem key text. The service generates a key Fingerprint. Save the fingerprint some where safe since you will need it to sign your API requests.
+- Paste your oci_api_key_public.pem key text. The service generates a key Fingerprint. Save the fingerprint somewhere safe since you will need it to sign your API requests.
 
 ![](./images/700/Picture700-3.png)
 

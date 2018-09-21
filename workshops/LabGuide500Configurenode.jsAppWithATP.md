@@ -35,7 +35,7 @@ To **log issues**, click [here](https://github.com/cloudsolutionhubs/autonomous-
 
 ![](./images/500/Picture500-2.png)
 
-- Enter all the required fieklds and click on Crate Instance. 
+- Enter all the required fields and click on Create Instance.
 
 ![](./images/500/Picture500-3.png)
 
@@ -53,7 +53,7 @@ $ssh -i /Users/tejus/Desktop/sshkeys/id_rsa opc@ipaddress
 
 ![](./images/500/Picture500-4.png)
 
-- Download and install node.js, python and git. We will nee git to download isntant client and sample app.
+- Download and install node.js, python and git. We will need git to download instant client and sample app.
 
 ```
 $curl --silent --location https://rpm.nodesource.com/setup_10.x | sudo bash -
@@ -70,7 +70,7 @@ sudo yum install nodejs
 ![](./images/500/Picture500-6.png)
 
 
-- Install python 2.7 if it does not already exists on your machine. 
+- Install python 2.7 if it does not already exist on your machine.
 
 #### Note: OEL 7.5 comes pre-installed with python 2.7
 
@@ -128,7 +128,7 @@ sudo mkdir /opt/oracle
 sudo mv /home/opc/instantclient_12_2_linux/instantclient_12_2/ /opt/oracle/instantclient_12_2/
 ```
 
-- Set LD_LIBRARY_PATH in you bash_profile as
+- Set LD_LIBRARY_PATH in your bash_profile as
 
 ```
 export LD_LIBRARY_PATH=/opt/oracle/instantclient_12_2:$LD_LIBRARY_PATH
@@ -169,7 +169,8 @@ connectString: 'restonHubDB_high'
 
 - Upload the connection wallet and run sample app
 
-- From you local machine copy the secured wallet file to host machine
+- From your local machine copy the secured wallet file to host machine
+
 ```
 sudo scp -i ~/priv-ssh-keyfile wallet_RESTONHUBDB.zip opc@ipaddress:/home/opc/ATPnodeapp
 ```
@@ -180,7 +181,7 @@ sudo scp -i ~/priv-ssh-keyfile wallet_RESTONHUBDB.zip opc@ipaddress:/home/opc/AT
 unzip wallet_RESTONHUBDB.zip -d wallet_RESTONHUBDB/
 ```
 
-- Set env variables TNS_AMDIN to point to the wallet folder and edit sqlnet.ora file in wallet folder to point to the waller.
+- Set env variables TNS_AMDIN to point to the wallet folder and edit sqlnet.ora file in wallet folder to point to the wallet.
 
 ```
 export TNS_ADMIN=/home/opc/ATPnodeapp/wallet_RESTONHUBDB/

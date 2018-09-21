@@ -14,7 +14,7 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 
 ## Required Artifacts
 
-- Please ensure you are connected to your cloud account and have provisioned an ATP instance. Refer LabGuide100ProvisionAnATPDatabase.md
+- Please ensure you are connected to your cloud account and have provisioned an ATP instance. Refer <a href="./LabGuide100ProvisionAnATPDatabase.md" target="_blank">here</a> to connect to provision an ATP database.
 
 
 ## Steps
@@ -23,7 +23,7 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 
 - Log into your cloud account using your tenant name, username and password.
 
-- On the ATP console, select your ATP instance provisioned in LabGuide100ProvisionAnATPDatabase.md.
+- On the ATP console, select your ATP instance provisioned in <a href="./LabGuide100ProvisionAnATPDatabase.md" target="_blank">LabGuide100ProvisionAnATPDatabase.md</a>.
 
 ![](./images/200/Picture200-1.png)
 
@@ -56,7 +56,7 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 - Configuration file is the connection wallet downloaded from ATP console
 Enter keystore password provided at the time of wallet download
 
-- Finally, select service name from drop down. Service name is database name followed by suffixes low, medium or high. These suffixes determine degree of parallelism used and are relevant for a DSS workload. For OLTP workloads its safe to select any of them.
+- Finally, select service name from drop down. Service name is database name followed by suffixes low, medium or high. These suffixes determine degree of parallelism used and are relevant for a DSS workload. For OLTP workloads it's safe to select any of them.
 
 ![](./images/200/Picture200-8.png)
 

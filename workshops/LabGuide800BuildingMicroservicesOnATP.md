@@ -4,11 +4,11 @@
 
 Containers allow us to package apps along with all their dependencies and provide a light-weight run time environment that provides isolation similar to a virtual machine, but without the added overhead of a full-fledged operating system.
 
-The topic of containers and microservices is a subject on its own but suffice to say that breaking up large,complex software into more manageable pieces that run isolated from each other has many advantages. Its easier to deploy, diagnose and provides better availability since failure of any microservice limits downtime to a portion of the application.
+The topic of containers and microservices is a subject on its own but suffice to say that breaking up large,complex software into more manageable pieces that run isolated from each other has many advantages. It's easier to deploy, diagnose and provides better availability since failure of any microservice limits downtime to a portion of the application.
 
 ![](./images/200/Picture200.png)
 
-Its important to have a similar strategy in the backend for the database tier. But the issue is if you run multiple databases for each application then you end up having to maintain a large fleet of databases and the maintenance costs can go through the roof. Add to that having to manage security and availability for all of them.
+It's important to have a similar strategy in the backend for the database tier. But the issue is if you run multiple databases for each application then you end up having to maintain a large fleet of databases and the maintenance costs can go through the roof. Add to that having to manage security and availability for all of them.
 
 This is where the Oracle’s autonomous database cloud service comes in. It is based on a pluggable architecture similar to application containers where one container database holds multiple pluggable databases. Each of these pluggable databases or PDBs are completely isolated from each other, can be deployed quickly and can be managed as a whole so that you incur the cost of managing a single database while deploying multiple micro services onto these PDBs.
 
@@ -43,7 +43,7 @@ ATPnodeapp simply makes a connection to the ATP database and does not require an
 
 Provision ATP instance and download secure connectivity credentials file.
 
-Refer to labs LabGuide100ProvisionAnATPDatabase.md and LabGuide200SecureConnectivityAndDataAccess.md to provision and download the secure connectivity credentials file.
+Refer to labs <a href="./LabGuide100ProvisionAnATPDatabase.md" target="_blank">LabGuide100ProvisionAnATPDatabase.md</a> and <a href="./LabGuide200SecureConnectivityAndDataAccess.md" target="_blank">LabGuide200SecureConnectivityAndDataAccess.md</a> to provision and download the secure connectivity credentials file.
 
 - NOTE: If you wish to deploy aOne app, you would need to connect to your database using SQL client and run the [create_schema](https://github.com/kbhanush/ATPDocker-back/blob/master/aone/create_schema.sql) script in the default admin schema or create a suitable user schema for the application.
 
@@ -53,7 +53,7 @@ Unzip and store the wallet folder in the same folder as your application under /
 unzip wallet_RESTONHUBDB.zip -d /path_to_app_folder/wallet_NODEAPPDB2
 ```
 
-- In you wallet folder, edit sqlnet.ora and replace the fcontents of the file with the following text: 
+- In your wallet folder, edit sqlnet.ora and replace the fcontents of the file with the following text: 
 
 ```
 WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA = 
@@ -62,7 +62,7 @@ WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA =
 
 This tells the driver to look for the wallet in the path setup in variable TNS_ADMIN.
 
-### **STEP 2: Build you docker image**
+### **STEP 2: Build your docker image**
 
 Assuming you have downloaded the Dockerfile, database wallet and created the backend schema, you can now build your docker image.
 
@@ -72,7 +72,7 @@ Assuming you have downloaded the Dockerfile, database wallet and created the bac
 $ docker build -t aone .
 ```
 
-Note: -t options gives your image a tag ‘aone’. Don’t forget to include the period in the end. It means ‘use the Dockerfile in the current folder.
+Note: -t options gives your image a tag ‘aone’. Don’t forget to include the period in the end. It means use the Dockerfile in the current folder.
 
 You can also specify your dockerfile as,
 
@@ -130,9 +130,9 @@ Your should get a response similar to this
 
 ![](./images/200/Picture600.png)
 
-To check the app on the browser, you will need to bridge port 3050 on the container to your local host.
+To check the app on the browser, you will need to bridge port 3050 on the container to your localhost.
 
-Exit node.js, make your you kill the process and shut down and exit container.
+Exit node.js, make sure you kill the process and shut down and exit container.
 
 Re-run the container with the following docker command
 
@@ -140,10 +140,10 @@ Re-run the container with the following docker command
 $ docker run -i -p 3050:3050 -t <tagname>
 ```
 
-Open browser on your local host and go to http://localhost:3050
+Open browser on your localhost and go to http://localhost:3050
 
 This is what you see if your app ran successfully.
 
 ![](./images/200/Picture700.png)
 
-You just built and provisioned an entire application stack consisting of a microservice and a enterprise grade, self managing database. You can push your docker image to a public/private docker repository and it can be pushed to any container orchestration service either on-prem or with any cloud provider. Your database is autonomous –it provisions quickly, backs up, patches and tunes itself as needed.
+You just built and provisioned an entire application stack consisting of a microservice and an enterprise grade, self managing database. You can push your docker image to a public/private docker repository and it can be pushed to any container orchestration service either on-prem or with any cloud provider. Your database is autonomous –it provisions quickly, backs up, patches and tunes itself as needed.

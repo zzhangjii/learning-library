@@ -64,7 +64,6 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - Learn how to define object store credentials for ADWC
 - Learn how to create tables in your database
 - Learn how to load data from the Object Store
-- Learn how to troubleshoot data loads
 
 ## Lab 500: Configure node.js app with ATP
 
@@ -78,7 +77,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 
 **Documentation**: [LabGuide600ConfigureJavaWithATP.md](LabGuide600ConfigureJavaWithATP.md)
 
-**Objectives**:
+**Objectives**: **work in progress**
 
 - Learn how to configure Java with ATP
 

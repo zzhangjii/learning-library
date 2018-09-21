@@ -15,7 +15,7 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 
 - The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
 
-# Section 1. Provisioning an Autonomous Transaction Processing Database Instance
+# Provisioning an Autonomous Transaction Processing Database Instance
 
 In this section you will be provisioning an ATP database using the cloud console.
 
