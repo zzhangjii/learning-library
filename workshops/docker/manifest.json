@@ -19,6 +19,13 @@
                 "labels": {"version": "Linux Trial Account"}
             },
             {
+                "number": "1",
+                "filename": "Intro-virtual.md",
+                "title": "Introduction",
+                "description": "Obtain an Oracle Cloud Trial Account",
+                "labels": {"version": "Linux Trial Account"}
+            },
+            {
                 "number": "050",
                 "filename": "Linux050.md",
                 "title": "Lab 050: Cloud Infrastructure Configuration",
