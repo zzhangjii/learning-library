@@ -6,7 +6,7 @@
 Updated: June 23, 2018
 
 ## Introduction
-_Time to Complete: 20 minutes_
+_Time to Complete: 40 minutes_
 
 In this lab, you look at various application components deployed in three Docker containers. The AlphaOffice application offers a list of products from a catalog which includes four Docker containers. Refer to the `Product Catalog Application` section of the diagram below. 
 
