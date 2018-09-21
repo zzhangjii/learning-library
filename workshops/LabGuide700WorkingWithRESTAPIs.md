@@ -84,7 +84,7 @@ openssl rsa -pubout -in ~/oci_api_key.pem -out ~/oci_api_key_public.pem
 #### Note: It is extremely important that you do not share this with anyone or expose it over an unencrypted network.
 
 
-### **STEP 3: Run the scripts you cloned from git **
+### **STEP 3: Run the scripts you cloned from git**
 
 - In the REST API scripts folder, install node package dependencies
 

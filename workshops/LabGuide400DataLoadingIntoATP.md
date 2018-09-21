@@ -215,8 +215,7 @@ Specify the credentials for your Oracle Cloud Infrastructure Object Storage serv
 
 - Now you are ready to load data from the Object Store.
 
-
-### **STEP 5: Load data from the Object Storage using the Data Import Wizard **
+### **STEP 5: Load data from the Object Storage using the Data Import Wizard**
 
 - Expand ‘**Tables**’ in your user schema object tree. If you don't see any tables, click on the refresh icon (two curved arrows) to refresh the table list.  You will see all the tables you have created previously. Select table **CUSTOMERS**. Clicking the right mouse button opens the context-sensitive menu in SQL Developer; select ‘**Import Data**’:
 
