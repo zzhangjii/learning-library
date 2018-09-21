@@ -1,70 +1,66 @@
 
-# Introduction to Docker on the Oracle Cloud
+# Docker on the Oracle Cloud Demo Lab
 
 ![](images/000JumpStart/TitleJS.png) 
 
 Updated: June 23, 2018
 
-## Oracle Cloud Infrastructure Overview
+## Introduction
+_Time to Complete: 40 minutes_
 
-With a comprehensive offering that includes compute, storage, network, bare metal, and container services, Oracle’s infrastructure services drive business value. Our enterprise-grade cloud enables organizations to run any workload at any time, while innovative migration tools pave the way by simplifying how organizations migrate on-premises workloads to the cloud.
+In this lab, you look at various application components deployed in three Docker containers. The AlphaOffice application offers a list of products from a catalog which includes four Docker containers. Refer to the `Product Catalog Application` section of the diagram below. 
 
-This introduction provisions a Docker multi-container application running in the Compute Cloud Service on a VM Standard footprint. There are many options to choose from in Oracle's IaaS arena.
+**NOTE:** In this lab, the "database" product catalog is bundled with the REST service and the product listing is provided via JSON. In a follow-up lab, you use an Oracle or MYSQL database as the datasource.
 
-![](images/000JumpStart/JS0-2.PNG)
-
-## Docker Overview
-
-What is Docker? What is a container?
-
-- Docker is the company and containerization technology.
-- [Docker Documentation](https://docs.docker.com)
-- A container is a runtime instance of a docker image: [Container Documentation](https://docs.docker.com/glossary/?term=container)
-
-Containers have been around for many years. Docker created a technology that was usable by mere humans, and was much easier to understand than before. Thus, has enjoyed a tremendous amount of support for creating a technology for packaging applications to be portable and lightweight.
-
-### VM vs Container
-
-![](images/000JumpStart/JS1.PNG)
-
-While containers may sound like a virtual machine (VM), the two are distinct technologies. With VMs each virtual machine includes the application, the necessary binaries and libraries and the entire guest operating system.
-
-Whereas, Containers include the application, all of its dependencies, but share the kernel with other containers and are not tied to any specific infrastructure, other than having the Docker engine installed on it’s host – allowing containers to run on almost any computer, infrastructure and cloud.
-
-## Lab Introduction
-
-In this lab you will be looking at various application components deployed in three Docker containers. The AlphaOffice application offers a list of products from a catalog. Refering to the `Product Catalog Application` section of the diagram below we see four Docker containers. 
-
-**NOTE:** In this lab deployment the "database" product catalog is bundled with the REST service. The product listing is provided via JSON. In the full blown deployment available as a follow-up lab, you use an Oracle or MYSQL database as the datasource.
-
-The AlphaOffice UI container retrieves catalog information from a REST service (written in Node.js) running in a separate container. It also takes in sample Twitter feed data from a REST service (written in Java), also running in its own container, and combines the data into a unified front end.
+The AlphaOffice UI container retrieves catalog information from a REST service (written in Node.js) running in a separate container. It also uses sample Twitter feed data from a REST service (written in Java), also running in its own container, and combines the data into a unified front end.
 
 ![](images/000JumpStart/JS2.PNG)
+
+The AlphaOffice UI is shown below.
 
 ![](images/000JumpStart/JS0-4.PNG)
 
 ## Objectives
 
 - Connect into your account using VNC Viewer
-- Do some docker commands to see various aspects of the set up
+- Perform some docker commands to see various aspects of the set up
 - Use the AlphaOffice application
-- Go into the UI Docker container and make small changes in the application.
+- Edit the UI Docker container and make small changes to the application.
 
-## Required Artifacts
+## Technology Overview
 
-- Once the infrastructure is provisioned you can access your enironment using `VNC Viewer`. Please download and install from: [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/)
+### What is Docker? What is a container?
 
-# Start the Demo Lab
+- Docker is the company and containerization technology.
+- [Docker Documentation](https://docs.docker.com)
+- A container is a runtime instance of a docker image: [Container Documentation](https://docs.docker.com/glossary/?term=container)
 
--  **Launch the Demo Lab**
+Containers have been around for many years. Docker created a technology that allows developers to create and package containers into applications that are portable and lightweight.
 
+### VM vs Container
+
+![](images/000JumpStart/JS1.png)
+
+While containers may sound like a virtual machine (VM), the two are distinct technologies. With VMs each virtual machine includes the application, the necessary binaries and libraries and the entire guest operating system.
+
+Whereas, Containers include the application, all of its dependencies, but share the kernel with other containers and are not tied to any specific infrastructure, other than having the Docker engine installed on it’s host – allowing containers to run on almost any computer, infrastructure and cloud.
+
+### Prerequisite
+
+Once the infrastructure is provisioned you can access your enironment using `VNC Viewer`. Please download and install from: [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/)
+
+## Instructions
+
+### Access Your Environment
+
+- Click **Launch Demo Lab**.
    ![](images/000JumpStart/JS3.PNG)
 
-- **In 6 minutes the Oracle IaaS infrastructure including the Application already running and deployed will be available.**
+- In 6 minutes the Oracle IaaS infrastructure including the Application already running and deployed will be available.
 
   ![](images/000JumpStart/JS4.PNG)
 
-- While you're waiting, check out the short video that gives an overview of this session if you have not already done so:
+- While you're waiting, check out the short video that gives an overview of this session.
 
   ![](images/000JumpStart/JS5.PNG)
 
@@ -72,41 +68,38 @@ The AlphaOffice UI container retrieves catalog information from a REST service (
 
   ![](images/000JumpStart/JS6.PNG)
 
-- **You have 30 minutes** before the environment will go away.
+- **NOTE: You have 30 minutes** before the environment will go away.
 
   ![](images/000JumpStart/JS7.PNG)
 
-## Log into your Account
-
-Using VNC Viewer connect into the newly provisioned account.
 
 ### **STEP 1**: Start VNC Viewer
 
-- Enter the connect string you were given (Example Shown):
+Using VNC Viewer to connect to your provisioned account.
+
+- Enter the connect string you were given (Example Shown below).
 
   ![](images/000JumpStart/JS8.PNG)
 
-- If presented with this prompt, just click **Continue**
+- If presented with this prompt, click **Continue**.
 
   ![](images/000JumpStart/JS9.PNG)
 
-- Enter the VNC password  **Qloudable** 
+- Enter the VNC password  **Qloudable**. 
 
   ![](images/000JumpStart/JS10.PNG)
 
-- You should now see your Desktop:
+- Your Desktop is displayed.
 
   ![](images/000JumpStart/JS11.PNG)
 
- ### **STEP 2**: AlphaOffice Application
+ ### **STEP 2**: Run the AlphaOffice Application
 
- Run the AlphaOffice Application
-
-- Click on the **Applications** tab and select **Firefox Web Browser**
+- Click the **Applications** tab and select **Firefox Web Browser**.
 
   ![](images/000JumpStart/JS12.PNG)
 
-- **Type** in the URL: **localhost:8085**
+- **Type** the URL: **localhost:8085**
 
   ![](images/000JumpStart/JS13.PNG)
 
@@ -114,21 +107,17 @@ Using VNC Viewer connect into the newly provisioned account.
 
   ![](images/000JumpStart/JS14.PNG)
 
-- Click on the **Crayola Markers** product to see associated Twitter feeds.
+- Click the **Crayola Markers** product to see associated Twitter feeds.
 
   ![](images/000JumpStart/JS15.PNG)
 
-- **Minimize the browser**. We will come back to it later.
+- **Minimize the browser**. Later in this Lab, you make a change to the application and return to this page to see your change.
 
-## Explore the Docker environment
+### **STEP 3**: Run Docker Commands
 
-Run some Docker commands to explore details of the installation and the AlphaOffice containers
+Run some Docker commands to explore details about the installation and the AlphaOffice containers.
 
-### **STEP 1**: Run some Docker Commands
-
-Open a terminal session
-
-- On the desktop **right-click** and select **Open Terminal**
+- Open a terminal session. On the desktop **right-click** and select **Open Terminal**
 
     ![](images/000JumpStart/JS16.PNG)
 
@@ -139,11 +128,11 @@ su - opc
 docker version
 ```
 
-This takes us into the `opc` user and shows the current Docker version (`18.03`)
+This logs you into the `opc` user and shows the current Docker version (`18.03`)
 
 ![](images/000JumpStart/JS17.PNG)
 
-- **Type** the following to see what Docker containers are running:
+- **Type** the following to view the Docker containers that are running.
 
 ```
 docker ps
@@ -161,7 +150,7 @@ The unique container ID that docker assigns at runtime is shown along with the s
 
 Docker uses a default network called `bridge` and assigns virtual IP addresses to each container. Any containers on the same network subnet can implicity see each other.
 
-- **Type** the Following:
+- **Type** the following:
 
 ```
 docker network ls
@@ -169,17 +158,17 @@ docker network ls
 
   ![](images/000JumpStart/JS19.PNG)
 
-- `docker inspect` will show us all details of a particular container. Storage locations, storage volumes, storage types, networking subnet, IP address and much more. To get information on the `restclient` container, for example, **Type** the following:
+- `docker inspect` displays the details associated with a particular container. Storage locations, storage volumes, storage types, networking subnet, IP address and much more. To get information on the `restclient` container, for example, **Type** the following:
 
 ```
 docker inspect restclient
 ```
 
-Scroll back through the JSON output. We will touch on a couple of sections:
+- Scroll through the JSON output. 
 
   ![](images/000JumpStart/JS20.PNG)
 
-The output above shows the Creation Date, container status, The process ID (`2351`) on the HOST operating system, the path location on the HOST where container specific information is stored (`/var/lib/docker/...`), the type of storage overlay that Docker is using on the HOST opearating system (In this case, `overlay2`)
+The output above shows the Creation Date, container status, The process ID (`2351`) on the HOST operating system, the path location on the HOST where container specific information is stored (`/var/lib/docker/...`), the type of storage overlay that Docker is using on the HOST opearating system (In this case, `overlay2`).
 
 - Take the PID (Process ID) of the `restclient` container and see what is running on the HOST (In this example the process ID is 2390. Substitute your <PID> in its place).
 
@@ -189,30 +178,28 @@ The output above shows the Creation Date, container status, The process ID (`235
 ps -ef | grep <PID>
 ```
 
-You'll see a Node.js application `server.js` running:
+A Node.js application `server.js` is running.
 
 ![](images/000JumpStart/JS20-2.PNG)
 
-- Now, go into the `restclient` container and see what is running there. **Type** the following sequence; 1) `bash` into the container, 2) `ps -ef`, 3) `exit` out of the container
+- Let's look at the `restclient` container and see what is running. **Type** the following sequence:
 
 ```
-docker exec -it restcleint bash
+docker exec -it restclient bash
 ps -ef
 exit
 ```
-You'll notice the same application running...
+- Notice that the same application is running.
 
 ![](images/000JumpStart/JS20-4.PNG)
 
-Now, looking further at the `restclient` inspection output:
+- View the `restclient` inspection output. Notice the output shows the arbitrarily assigned hostname (You can give the container a hostname on startup if you want), and the HOST exposed network port (`8002`).
 
   ![](images/000JumpStart/JS21.PNG)
 
-The output above shows the arbitrarily assigned hostname (You can give the container a hostname on startup if you want), and the HOST exposed network port (`8002`)
+- In addition, notice the output shows networking specifics for the container: the Docker virtual network that it is on (`bridge`), the ports the container is using (`8002`) and the assigned IP address (`172.17.0.4`).
 
   ![](images/000JumpStart/JS22.PNG)  
-
-The output above shows networking specifics for the container. The Docker virtual network that it's on (`bridge`), the ports the container is using (`8002`) and the assigned IP address (`172.17.0.4`)
 
  - **Cut and Paste** the following to get a list of all IP addresses from the current running containers:
 
@@ -223,24 +210,22 @@ Example output (your IP assignments may vary):
 
   ![](images/000JumpStart/JS23.PNG)  
 
-# Make changes to the AlphaOffice application
+### **STEP 4**: Make changes to the AlphaOffice application
 
-In this section you will make a couple of changes to the AlphaOfficeUI application. One will correct a typo and another will change the background image. The flow for this will be as follows:
+In this step, you make a couple of changes to the AlphaOfficeUI application. One will correct a typo and another will change the background image. The tasks you follow in this step are as follows:
 
 - Copy the new background image into the container
-- Connect into the AlphaOfficeUI container
+- Connect to the AlphaOfficeUI container
 - Install the vim text editor
 - Fix a typo and specify the new background image
 - Save (docker commit) a copy of the changes to a NEW docker image
 - Start up and test the AlphaOfficeUI container using the NEW image
 
-## Container In-place Modifications
-
-### **STEP 1**: Copy a New Background Image
+#### **STEP 4a**: Copy a New Background Image
 
 Copy a background image file into the running AlphaOfficeUI container. This file is in the `/home/opc/AlphaOfficeSetup` directory.
 
-**NOTE:** Make sure you are still logged in as the `opc` user. You can check by typing `whoami`. If you are the root user for some reason then Type `su - opc` to login as the opc user.
+**NOTE:** Make sure you are still logged in as the `opc` user. You can check by typing `whoami`. If not, type `su - opc` to login as the opc user.
 
 - **Type or Cut and Paste** the following:
 
@@ -250,9 +235,9 @@ docker cp /home/opc/AlphaOfficeSetup/dark_blue.jpg alphaofficeui:/pipeline/sourc
 
   Example: `docker cp /home/opc/AlphaOfficeSetup/dark_blue.jpg alphaofficeui:/pipeline/source/public/Images`
 
-### **STEP 2**: Install the VIM editor in the UI container
+#### **STEP 4b**: Install the VIM editor in the UI container
 
-Even though the orginal AlphaOfficeUI image could have been set up ahead of time with any needed client tools we're adding the the environment on-the-fly to give you some idea that it can be done
+Even though the original AlphaOfficeUI image could have been set up ahead of time with any needed client tools you will install it now.
 
 - Connect into the `alphaofficeui` container:
 
@@ -270,7 +255,7 @@ apt-get update
 
 
 
-- Verify the "**dark_blue.jpg**" file is in the container by **typing**:
+- Verify the "**dark_blue.jpg**" file is in the container by **typing** the following:
 
 ```
 ls /pipeline/source/public/Images
@@ -278,9 +263,9 @@ ls /pipeline/source/public/Images
 
 ![](images/000JumpStart/Picture200-28.1.png)
 
-### **STEP 3**: Edit the alpha.html file   
+#### **STEP 4c**: Edit the alpha.html file   
 
-- Edit the `alpha.html` file to fix a typo - Note, if you are unfamiliar with `vim`, you'll find information at this URL: [VIM](http://vimsheet.com). The commands are very similar to vi:
+- Edit the `alpha.html` file to fix a typo - Note, if you are unfamiliar with `vim`, you'll find information at this URL: [VIM](http://vimsheet.com). The commands are very similar to vi.
 
 ```
 vim /pipeline/source/public/alpha.html
@@ -292,7 +277,7 @@ vim /pipeline/source/public/alpha.html
 
 - Save the file and exit by hitting the **ESC** key and then holding the **SHIFT** key down and typing "**Z**" TWICE
 
-### **STEP 4**: Edit the alpha.css file
+#### **STEP 4d**: Edit the alpha.css file
 
 - **Type** the following:
 
@@ -312,16 +297,12 @@ vim /pipeline/source/public/css/alpha.css
 exit
 ```
 
-## Commit and run the NEW version of AlphaOffice
+#### **STEP 4e**: Commit a NEW Docker image
 
-Commit and Test the changes
-
-### **STEP 1**: Commit a NEW Docker image
-
-In this step you will save a copy of your modifed docker container and give it a new name. (**NOTE:** You're back out in the HOST now). You can assign whatever <`image-name`> you want.
+- Save a copy of your modifed docker container and give it a new name. (**NOTE:** You're back out in the HOST now). You can assign whatever <`image-name`> you want.
 **NOTE:** \<image-name> must be in lower case.
 
-- **Type** in following:
+- **Type** the following:
 
 ```
 docker commit alphaofficeui jumpstart/<image-name>
@@ -339,7 +320,7 @@ docker images
 
 ![](images/000JumpStart/Picture200-31.png)
 
-### **STEP 2**: Start a container based on your new image
+#### **STEP 4f**: Start a container based on your new image
 
 **Stop** and **remove** the currently running AlphaOfficeUI container. Then, start a new container based on your changes.
 
@@ -366,7 +347,7 @@ docker run -d --restart unless-stopped --name=alphaofficeui -p=8085:8085 jumpsta
 
 - Example: `docker run -d --restart unless-stopped --name=alphaofficeui -p=8085:8085  jumpstart/alphaoffice-new`
 
-- Verify the new container is running by **typing**:
+- Verify the new container is running by **typing** the following:
 
 ```
 docker ps
