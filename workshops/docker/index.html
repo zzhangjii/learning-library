@@ -71,7 +71,7 @@
       </md-toolbar>
       <md-content style="height: 110%;">
         <md-list>
-            <md-list-item class="md-3-line toc-item infra" ng-repeat="lab in manifest.workshop.labs | versionFilter:version.selected" ng-click="getLabGuide(lab); close();">
+            <md-list-item class="md-3-line toc-item infra" ng-repeat="lab in manifest.workshop.labs | versionFilter:version.selected" ng-click="getLabGuide(lab); close();" ng-hide="lab.filename == 'Intro-virtual.md'">
                 <div class="md-list-item-text infra">
                     <h3 class="infra" style="overflow: visible; white-space: normal;">{{lab.title}}</h3>
                     <p class="infra">{{lab.description}}</p>
