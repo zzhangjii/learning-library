@@ -104,4 +104,4 @@ This workshop walks you through all the steps to get started using the **Oracle 
 
 **Objectives**:
 
-- Handy docker commands you may need while doing Lab200: Building microservices on ATP
+- Handy docker commands you may need while doing <a href="./LabGuide800BuildingMicroservicesOnATP.md" target="_blank">LabGuide800BuildingMicroservicesOnATP.md</a>
