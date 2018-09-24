@@ -8,9 +8,13 @@ Updated: June 23, 2018
 ## Introduction
 _Time to Complete: 40 minutes_
 
-In this lab, you look at various application components deployed in three Docker containers. The AlphaOffice application offers a list of products from a catalog which includes four Docker containers. Refer to the `Product Catalog Application` section of the diagram below. 
+In this lab, you look at various application components deployed in three Docker containers. You will connect into your account using VNC Viewer, perform some docker commands to see various aspects of the setup, access the AlphaOffice application and edit the UI Docker container and make small changes to the application.
 
-**NOTE:** In this lab, the "database" product catalog is bundled with the REST service and the product listing is provided via JSON. In a follow-up lab, you use an Oracle or MYSQL database as the datasource.
+In this lab, the "database" product catalog is bundled with the REST service and the product listing is provided via JSON. In a follow-up lab, you use an Oracle or MYSQL database as the datasource.
+
+##Exploring the AlphaOffice Application
+
+The AlphaOffice application offers a list of products from a catalog which includes four Docker containers. Refer to the `Product Catalog Application` section of the diagram below. 
 
 The AlphaOffice UI container retrieves catalog information from a REST service (written in Node.js) running in a separate container. It also uses sample Twitter feed data from a REST service (written in Java), also running in its own container, and combines the data into a unified front end.
 
@@ -19,13 +23,6 @@ The AlphaOffice UI container retrieves catalog information from a REST service (
 The AlphaOffice UI is shown below.
 
 ![](images/000JumpStart/JS0-4.PNG)
-
-## Objectives
-
-- Connect into your account using VNC Viewer
-- Perform some docker commands to see various aspects of the set up
-- Use the AlphaOffice application
-- Edit the UI Docker container and make small changes to the application.
 
 ## Technology Overview
 
