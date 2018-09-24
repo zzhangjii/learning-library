@@ -8,7 +8,7 @@ Updated: June 23, 2018
 ## Introduction
 _Time to Complete: 40 minutes_
 
-In this lab, you look at various application components deployed in three Docker containers. You will connect into your account using VNC Viewer, perform some docker commands to see various aspects of the setup, access the AlphaOffice application and edit the UI Docker container and make small changes to the application.
+In this lab, you get an introduction to Docker, Container Architectures and Container Functions. In an Oracle Cloud environment, you’ll provision a Docker multi-container application running in the Compute Cloud Service on a VM Standard footprint. You'll look at various application components deployed in three Docker containers. You'll connect into your account using VNC Viewer, perform some docker commands to see various aspects of the setup, access the AlphaOffice application and edit the UI Docker container and make small changes to the application.
 
 In this lab, the "database" product catalog is bundled with the REST service and the product listing is provided via JSON. In a follow-up lab, you use an Oracle or MYSQL database as the datasource.
 
