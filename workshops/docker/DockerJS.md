@@ -12,7 +12,7 @@ In this lab, you look at various application components deployed in three Docker
 
 In this lab, the "database" product catalog is bundled with the REST service and the product listing is provided via JSON. In a follow-up lab, you use an Oracle or MYSQL database as the datasource.
 
-##Exploring the AlphaOffice Application
+### Exploring the AlphaOffice Application
 
 The AlphaOffice application offers a list of products from a catalog which includes four Docker containers. Refer to the `Product Catalog Application` section of the diagram below. 
 
