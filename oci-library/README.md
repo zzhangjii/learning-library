@@ -19,5 +19,5 @@
 |----------------------------------------|:------------:|:-------:|:-------------:|
 |[NAT Gateway](./IAM-Practice/IAM-Practice.md) | Advanced |   2.1   |   September 2018   |
 |[Local Peering ](./Compute-Practice/Compute-Practice.md)                        | Advanced |   2.1   |   September 2018   |
-|[Console Connection](./Console Connections/Console-Connection.md)                  | Advanced |   2.1   |   September 2018   |
-| Volume Groups and disk performance                  | August |   2.1   |   September 2018   |
+|[Console Connection]                  | Advanced |   2.1   |   September 2018   |
+| Volume Groups and disk performance                  | Advanced |   2.1   |   September 2018   |
