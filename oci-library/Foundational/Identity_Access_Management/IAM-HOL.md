@@ -44,7 +44,7 @@ To sign in to the Console, you need the following:
 
 **Note:**
 
-- **For this lab we use _cloud.admin_ and <your-name> as the user name to demonstrate the scenarios. You must use your cloud.admin when you perform these tasks.**
+- **For this lab we use _cloud.admin_ and <your-name@domain.com> as the user name to demonstrate the scenarios. You must use your cloud.admin when you perform these tasks.**
 
 - Oracle Cloud Infrastructure supports the latest versions of Google Chrome, Firefox and Internet Explorer 11.
 
@@ -100,7 +100,7 @@ You should have completed IAM-Practice-1
 
 **2** - Create a Group in Your Tenancy
 
-   a) Sign in to the console, on the **Home** page click **Identity**, then select **Groups**.
+   a) Sign in to the console, on the **Menu** click **Identity**, then select **Groups**.
 
    b) Click **Create Group**.
 
@@ -116,7 +116,7 @@ You should have completed IAM-Practice-1
 
 **3** - Create a **Compartment** in Your Tenancy
 
-   a) On the **Home** page click **Identity**, then select **Compartments**.
+   a) On the **Menu** click **Identity**, then select **Compartments**.
 
    b) Click **Create Compartment.**
 
@@ -130,7 +130,7 @@ You should have completed IAM-Practice-1
 
 **4** - Now, let’s **create a policy** that gives your group permissions in your assigned compartment. For example, creates a policy that gives permission to compartment OCI-Demo to members or group oci-group:
 
-   a) In the Console, click **Identity**, and then click **Policies**.
+   a) On the **Menu** click **Identity**, and then click **Policies**.
 
    b) On the left side, select your **OCI-Demo** compartment.
 
@@ -150,7 +150,7 @@ You should have completed IAM-Practice-1
 
 **5** - Create a New User
 
-   a) In the Console, click **Identity**, and then click **Users**.
+   a) On the **Menu** click **Identity**, and then click **Users**.
 
    b) Click **Create User**.
 
@@ -210,7 +210,7 @@ You should have completed IAM-Practice-1
 
 **9** -  Verify user permissions
 
-   a) Go to the **Compute** tab and click on **Instances**.
+   a) Go to the **Menu** click **Compute** and **Instances**.
 
    b) Select compartment OCI-Demo from the left menu, if it's not already selected.
 
@@ -240,7 +240,7 @@ You should have completed IAM-Practice-1
 
 a) Sign in as yourname@oracle.com
 
-b) Go to the **Compute** tab and click **Instances.**
+b) Go to the **Menu** click **Compute** and **Instances**.
 
 c) Select compartment **OCI-Demo** from the list of compartments on the left.
 
@@ -248,7 +248,7 @@ c) Select compartment **OCI-Demo** from the list of compartments on the left.
 
 d) There is no message related to permissions.
 
-e) Go to the **Identity** tab and select **Groups.**
+e) Go to the **Menu** click **Identity** and select **Groups.**
 
 f) The message “You don’t have access to these resources” appears. This is expected, since your user has no permission to any groups.
 
