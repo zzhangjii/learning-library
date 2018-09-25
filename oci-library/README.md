@@ -3,8 +3,8 @@
 
 |                  **Name**              |    **Type**  | **Version** | **Last Modified** |
 |----------------------------------------|:------------:|:-------:|:-------------:|
-|[Identity and Access Management Service](./Foundational/Identiy_Access_Management/IAM-HOL.md) | Foundational |   2.1   |   September 2018   |
-|[Network, Compute and Block Service ](./Foundational/Network_Compute_and_Block_Service/Compute-HOL.md)                        | Foundational |   2.1   |   September 2018   |
+|[Identity and Access Management Service](./oci-library/Foundational/Identity_Access_Management/IAM_HOL.md) | Foundational |   2.1   |   September 2018   |
+|[Network, Compute and Block Service ](./oci-library/Foundational/Network_Compute_and_Block_Service/Compute_HOL.md)                        | Foundational |   2.1   |   September 2018   |
 | File Storage Service                  | Foundational |   2.1   |   September 2018   |
 | Load Balancer Service                  | Foundational |   2.1   |   September 2018   |
 | Database Service                       | Foundational |   2.1   |   September 2018   |
