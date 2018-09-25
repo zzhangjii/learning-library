@@ -36,7 +36,7 @@ This Lab and Lab 200 assume you have went through the 050 Set Up Lab and have SS
 
 ### **STEP 1**: Open up a Terminal Window
 
-- Make sure you are in a SSH terminal session (`Assumes login via Lab 050`). **You can follow Step 8 in Lab 050 to re-login if you need to...**
+- Make sure you are in a SSH terminal session (`Assumes login via Lab 050`). **You can follow Step 9 in Lab 050 to re-login if you need to...**
 
 ### **STEP 2**: Verify that Docker is running
 
