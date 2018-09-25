@@ -364,7 +364,7 @@ http://localhost:8085
 
 If you would like to experience a more in-depth look at how this Docker infrastructure was created in the Oracle Cloud and how the AlphaOffice application can be deployed using an Oracle OR MYSQL database as the RESTclient datasource please go to: **\<link-goes-here>**
 
-- **NOTE:** When the Lab's allotted time has expired (30 minutes) you will see the following:
+- **NOTE:** When the Lab's allotted time has expired (40 minutes) you will see the following:
 
   ![](images/000JumpStart/JS99.PNG)
 
