@@ -115,11 +115,11 @@ You should have completed IAM-Practice-1
 ![]( img/image006.png)
 
 
-**3** - Now, let’s **create a policy** that gives your group permissions in your assigned compartment. For example, creates a policy that gives permission to compartment OCI-Demo to members or group oci-group:
+**3** - Now, let’s **create a policy** that gives your group permissions in your assigned compartment. For example, creates a policy that gives permission to compartment Demo to members or group oci-group:
 
    a) On the **Menu** click **Identity**, and then click **Policies**.
 
-   b) On the left side, select your **OCI-Demo** compartment.
+   b) On the left side, select **Demo** compartment.
 
    c) Click **Create Policy**.
 
