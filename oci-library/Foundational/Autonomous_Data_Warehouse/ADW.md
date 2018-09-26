@@ -69,7 +69,7 @@ The home page gives you quick links to the documentation and to Oracle Support.
 ## Practice-3
 ### __Create an Autonomous Data Warehouse__
 
-1) Click on **Menu** /> **Autonomous Data Warehouse** 
+1) Click on **Menu** > **Autonomous Data Warehouse** 
 
 2) Select **Demo** Comparment and click **Create Autonomous Data Warehouse** 
 
@@ -77,19 +77,20 @@ The home page gives you quick links to the documentation and to Oracle Support.
 
 3) Enter the following information:
 
-	a) Display Name: ADW Finance
-	b) Database Name: ADWFINANCE
-	c) CPU Core Count: 1
-	d) Storage: 1
-	e) Password: Demo_2018DB##
-	f) Confirm Password: Demo_2018DB##
-	g) Click **Create Autonomous Data Warehouse** 
+ - **Display Name**: ADW Finance
+ - **Database Name**: ADWFINANCE
+ - **CPU Core Count**: 1
+ - **Storage**: 1
+ - **Password**: Demo_2018DB##
+ - **Confirm Password**: Demo_2018DB##
+ - Click **Create Autonomous Data Warehouse** 
 
 ![]( img/image006.png)
 
 ![]( img/image007.png)
 
-4)  
+4)
+
 
 
 
