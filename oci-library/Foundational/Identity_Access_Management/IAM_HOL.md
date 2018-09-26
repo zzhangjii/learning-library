@@ -44,7 +44,7 @@ To sign in to the Console, you need the following:
 
 **Note:**
 
-- **For this lab we use _cloud.admin_ and <your-name@domain.com> as the user name to demonstrate the scenarios. You must use your cloud.admin when you perform these tasks.**
+- **For this lab we use _cloud.admin_ and <yourname@domain.com> as the user name to demonstrate the scenarios. You must use your cloud.admin when you perform these tasks.**
 
 - Oracle Cloud Infrastructure supports the latest versions of Google Chrome, Firefox and Internet Explorer 11.
 
@@ -62,11 +62,11 @@ To sign in to the Console, you need the following:
 
  b) Enter your tenant name: <Tenant> and click **Continue**
 
- ![]( img/image001.png)
+![]( img/image001.png)
 
  c) Oracle Cloud Infrastructure is integrated with Identity Cloud Services, you will see a screen validating your Identity Provider. You can just click **Continue**.
 
- ![]( img/image002.png)
+![]( img/image002.png)
 
  d) Enter your user name and password
 
@@ -77,7 +77,7 @@ To sign in to the Console, you need the following:
 
 When you sign in to the Console, the home page is displayed.
 
- ![]( img/image004.png)
+![]( img/image004.png)
 
 The home page gives you quick links to the documentation and to Oracle Support.
 
@@ -114,21 +114,8 @@ You should have completed IAM-Practice-1
 
 ![]( img/image006.png)
 
-**3** - Create a **Compartment** in Your Tenancy
 
-   a) On the **Menu** click **Identity**, then select **Compartments**.
-
-   b) Click **Create Compartment.**
-
-   c) In the **Create Compartment** dialog box, enter the following:
-
- - **Name:** Enter a unique name for your compartment such as "OCI-Demo” Note that the compartment name cannot contain spaces.
- - **Description:** Enter a description (for example, “New compartment for oci demo”).
- - Click **Create Compartment**.
-
-![]( img/image007.png)
-
-**4** - Now, let’s **create a policy** that gives your group permissions in your assigned compartment. For example, creates a policy that gives permission to compartment OCI-Demo to members or group oci-group:
+**3** - Now, let’s **create a policy** that gives your group permissions in your assigned compartment. For example, creates a policy that gives permission to compartment OCI-Demo to members or group oci-group:
 
    a) On the **Menu** click **Identity**, and then click **Policies**.
 
@@ -146,7 +133,7 @@ You should have completed IAM-Practice-1
 
    g) Click **Create**.
 
-![]( img/image008.png)
+![]( img/image007.png)
 
 **5** - Create a New User
 
@@ -156,21 +143,21 @@ You should have completed IAM-Practice-1
 
    c) In the **New User** dialog box, enter the following:
 
-- **Name:** Enter a unique name or email address for the new user. For Example: yourname@oracle.com
+- **Name:** Enter a unique name or email address for the new user. For Example: yourname@domain.com
     _This value is the user's login name for the Console and it must be unique across all other users in your tenancy._
 - **Description:** Enter a description. For example, New oci user.
 
-![]( img/image009.png)
+![]( img/image008.png)
     
    d) Click **Create**.
 
-**6** - Set a Temporary Password for the Newly Created User
+**6** - Set a Temporary Password for the newly created User
 
    a) From the list of users, click on **the user that you created** to display its details.
 
    b) Click **Create/Reset Password**.  
    
-![]( img/image010.png)
+![]( img/image009.png)
 
    c) In the dialog, click **Create/Reset Password**.
 
@@ -194,7 +181,7 @@ You should have completed IAM-Practice-1
 
    b) Enter the Tenant name, if prompted.
 
-   c) Sign in as yourname@oracle.com.
+   c) Sign in as user01.
 
    d) Enter the password that you copied in [Task 4](#passwrdlabuser01).
 
@@ -206,13 +193,12 @@ You should have completed IAM-Practice-1
 
 ![]( img/image015.png)
 
-   f) yourname@oracle.com lands on the home page.
 
 **9** -  Verify user permissions
 
    a) Go to the **Menu** click **Compute** and **Instances**.
 
-   b) Select compartment OCI-Demo from the left menu, if it's not already selected.
+   b) Try to select any compartment from the left menu.
 
    c) The message “**You don’t have access to this compartment**” appears.
 
@@ -222,9 +208,9 @@ You should have completed IAM-Practice-1
 
 **10** - Add User to a Group
 
-   a) Sign in back as the cloud.admin using the Single Sign-on (SSO) option. Click **Identity** \> **Users**.
+   a) Sign in back as the cloud.admin using the Single Sign-on (SSO) option. Click on **Menu** \> **Identity** \> **Users**.
 
-   b) From the **Users** list, click your user (for example, yourname@oracle.com)  to go to the user details page.
+   b) From the **Users** list, click your user (for example, user01)  to go to the user details page.
 
    c) Under the **Resources** menu on the left, click **Groups.**
 
@@ -234,17 +220,19 @@ You should have completed IAM-Practice-1
 
    f) Click **Add**.
 
+![]( img/image017.png)
+
    g) Sign out.
 
 **11** - Verify user permissions when a user belongs to a specific group
 
-a) Sign in as yourname@oracle.com
+a) Sign in as user01
 
 b) Go to the **Menu** click **Compute** and **Instances**.
 
-c) Select compartment **OCI-Demo** from the list of compartments on the left.
+c) Select compartment **Demo** from the list of compartments on the left.
 
-![]( img/image017.png)
+![]( img/image018.png)
 
 d) There is no message related to permissions.
 
