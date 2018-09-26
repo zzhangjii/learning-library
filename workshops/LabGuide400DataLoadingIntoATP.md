@@ -215,68 +215,24 @@ Specify the credentials for your Oracle Cloud Infrastructure Object Storage serv
 
 - Now you are ready to load data from the Object Store.
 
-### **STEP 5: Load data from the Object Storage using the Data Import Wizard**
+### **STEP 5: Load data from the Object Storage using DBMS_CLOUD**
 
-- Expand ‘**Tables**’ in your user schema object tree. If you don't see any tables, click on the refresh icon (two curved arrows) to refresh the table list.  You will see all the tables you have created previously. Select table **CUSTOMERS**. Clicking the right mouse button opens the context-sensitive menu in SQL Developer; select ‘**Import Data**’:
+ You can use the PL/SQL package DBMS_CLOUD direclty to load the data from object store. This is the preferred choice for any load automation.
 
-![](./images/400/snap0014659.jpg)
+ - Connect as your user in SQL Developer, copy and paste <a href="./scripts/300/load_data.txt" target="_blank">this code snippet</a> to SQL Developer worksheet. We use the **copy\_data** procedure of the **DBMS\_CLOUD** package to copy the data (customers.csv) staged in your object store.
 
-![](./images/400/snap0014660.jpg)
+ - At the top of the script, specify the Object Store base URL in the definition of the **base\_URL** variable. You have constructed and saved the URL in the step "Construct the URLs of the Files on Your OCI Object Storage".
 
-- The Data Import Wizard is started. Enter the following information:
+![](./images/400/snap0014550.jpg)
 
-    -   Select **Oracle Cloud Storage** as source for the data load
+- For the **credential_name** parameter in the **copy\_data** procedure, it is the name of the credential you defined in the step "Create a Database Credential for Your User".  You probably don't need to change this.
 
-    -   Enter the URL of **customers.csv** as the file to load. You constructed the URL in STEP 8 Construct the URLs of the Files on Your OCI Object Storage. For example, the URL might look something like:
+-  For the **format** parameter, it is a list of DBMS_CLOUD options (which are documented <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/dbmscloud-reference.html">here</a>).
 
-        https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/dbayard00/ATPLab/customers.csv
+- Run the script.
 
-    -   Select the Credential you previously created for authentication with the Object Store, **OBJ\_STORE\_CRED**
+![](./images/400/snapScriptResult.jpg)
 
-    -   Click the **Preview** button
+![](./images/400/snapCustomerData.jpg)
 
-After clicking preview, you will likely get a warning about the format which we will fix next.
-
-![](./images/400/snap0014661.jpg)
-
-- Now we will fix the file format settings.
-
-     - Click OK to close the Invalid format window if you have not already.
-
-     - Deselect the Header checkbox as this file does not have a header.  When you deselect the checkbox, you will get another Field Format message.  Click OK to acknowledge the message window.
-
-     - Change the delimiter to the vertical bar |
-
-The data should now look much better.
-
-![](./images/400/snap0014662.jpg)
-
-When you are satisfied with the data preview, click **NEXT**.
-
-  - On the Import Method page, you can click on Load Options to see some of the available options.  For this exercise, leave the options at their defaults.  Click **NEXT** to advance to the next page of the wizard.
-
-![](./images/400/snap0014663.jpg)
-
-  -   On the Column Definition page, you can control how the fields of the file map to columns in the table.  You can also adjust certain properties.
-
-![](./images/400/snap0014664.jpg)
-
-  - Click on the **COLUMN21** with the warning icon beside it.  This is informing us of a data problem.
-
-  - In this case, the date format does not match our data.  Change the format to be YYYY-MM-DD-HH24-MI-SS  (you can type this in the Format field)
-
-  - You also need to change the date format for **COLUMN22** to the same YYYY-MM-DD-HH24-MI-SS format.
-
-  - Click **NEXT**.
-
-![](./images/400/snap0014665.jpg)
-
-- The last screen before the final data load enables you to test a larger row count than the sample data of the beginning of the wizard to see whether the previously made decisions are satisfying for your data load. Note that we are not loading any data when iterating back and forth between this screen and previous ones. Select **TEST RESULTS** and look at the log, the data you would load, any mistakes and how the external table definition looks like based on your inputs.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When done with your investigation, click **NEXT**.
-
-![](./images/400/snap0014666.jpg)
-
-![](./images/400/snap0014667.jpg)
-
-- The final screen reflects all your choices made in the Wizard. Click **FINISH** to load the data into table CUSTOMERS.
+#### You have successfully loaded the sample data to customers table using DBMS_CLOUD.
