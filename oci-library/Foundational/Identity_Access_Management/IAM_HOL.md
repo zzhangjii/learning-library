@@ -129,7 +129,7 @@ You should have completed IAM-Practice-1
 
    f) Enter the following **Statement**:
 
- `Allow group oci-group to manage all-resources in compartment OCI-Demo`
+ `Allow group oci-group to manage all-resources in compartment Demo`
 
    g) Click **Create**.
 
