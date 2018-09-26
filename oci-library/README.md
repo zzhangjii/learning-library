@@ -26,7 +26,7 @@
 # Oracle Open World 2018 Hands On Labs 
 
 
-|                  **HOL**              |    **Name**  |  | **Date** |
+|                  **HOL**              |    **Name**  |   **Date** |
 |----------------------------------------|:------------:|:-------------:|
 |HOL6377| Autonomous Data Warehouse on Oracle Cloud Infrastructure |  September 2018   |
 |HOL6685| Machine Learning on Oracle Cloud Infrastructure  |   September 2018   |
