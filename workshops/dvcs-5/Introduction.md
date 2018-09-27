@@ -1,20 +1,18 @@
-Updated: July 19, 2018
+## Oracle Analytics Cloud v5 Workshop
 
-## Introduction
+Welcome to the Oracle Analytics Cloud v5 workshop. This workshop will introduce you to the data visualization capabilities included in OAC. Data Visualization allows you to analyze data based on a pre-built OAC subject area or based on data coming directly from a wide variety of sources. These can include Oracle SaaS applications (e.g. ERP Cloud), databases, and 3rd party applications (e.g. Salesforce), amongst others.For the purpose of this workshop, we will be using Excel files.
 
-Welcome!
+## Workshop Format
+
+The workshop is broken out in to sections (i.e. labs) which focus on various facets of the tool. Certain labs are optional and are identified as such. In terms of timing, this workshop can typically be completed within 4 hours, though individual experiences may vary.
+
+## Oracle Analytics Cloud
 
 Oracle Analytics Cloud (OAC) is a cloud-first analytics platform, providing fast and flexible analysis of any data from any source. It is built on the industry-leading Oracle Business Intelligence platform and Oracle’s top tier cloud infrastructure.
 
 Oracle Analytics Cloud delivers scalability, high availability, state-of-the-art security, and operational simplicity. This combination of proven technologies, world-class infrastructure, broad data access, and deep analytic capabilities makes Oracle Analytics Cloud the best solution for every user.
 
 The goal of today’s workshop is to introduce you to the data visualization capabilities included in OAC. We will be analyzing data using local Excel files. Data Visualization also allows you to analyze data based on a pre-built OAC subject area or based on data coming directly from a wide variety of sources. These can include Oracle SaaS applications (e.g. ERP Cloud), databases, and 3rd party applications (e.g. Salesforce), amongst others.
-
-## Prerequisites
-
-## Workshop Format
-
-The workshop is broken out in to sections (i.e. labs) which focus on various facets of the tool. Certain labs are optional and are identified as such. In terms of timing, this workshop can typically be completed within 2 hours, though individual experiences may vary.
 
 ## What are Data Visualizations?
 
@@ -41,3 +39,18 @@ Data Visualization makes it easy to visualize your data, so you can focus on exp
 - **Data Blending**: Combining two or more data sources for analysis
 
 Now let’s get started!
+
+## Acquire an Oracle Cloud Trial or Workshop Account
+
+If you already have an account or active trial you may skip this section.
+
+- Bookmark this page for future reference.
+
+- Please click on the following link to create your [Free Account](https://myservices.us.oraclecloud.com/mycloud/signup?language=en&sourceType=:ex:tb:::RC_NAMK180919P00028:OAC_HOL&SC=:ex:tb:::RC_NAMK180919P00028:OAC_HOL&pcode=NAMK180919P00028), and complete all the required steps to get your free Oracle Cloud Trial Account. When you complete the registration process you'll receive a $300 credit that will enable you to complete the lab for free. Additionally, you'll have 1000s of hours left over to continue to explore the Oracle Cloud.
+    - Soon after requesting your trial you will receive the following email. You will not be able to start Lab 100 until you have received it.
+
+    ![](images/introduction/img_intro_1_1.png)
+
+## Navigate to Lab 100
+
+- You can see a list of Lab Guides by clicking on the Menu Icon in the upper left corner of the browser window. You're now ready to continue with Lab 100.

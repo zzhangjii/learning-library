@@ -1,5 +1,3 @@
-Updated: Aug 16, 2018
-
 ## Lab 3 – Analyzing Social Media with Sales – Data Blending and Wrangling
  
 Key Take Aways from this lab:
@@ -24,11 +22,11 @@ Let’s look at the past 6 months of Oracle Data as a Service (DaaS) feeds on a 
 
     There are two ways to add another data source. You can click on the **+** icon to open up the options and select **Add Data Set...** or you can right click in any blank area in the **Project Components Menu** and select **Add Data Set**.
 
-    ![](images/200/img_2i_2_1.png)
+    ![](images/300/img_2i_2_1.png)
 
     ![](images/300/img_3a_1_1.png)
     
-    Select **Create Data Souret**.
+    Select **Create Data Source**.
     
     ![](images/300/img_3a_1_2.png)
     
@@ -42,7 +40,7 @@ Let’s look at the past 6 months of Oracle Data as a Service (DaaS) feeds on a 
     
     ![](images/300/img_3a_1_3.png)
     
-    In the file browser that pops up, find and select the **DaaS Social Feeds-KoolKart.xslx** file.
+    In the file browser that pops up, find and select the **DaaS Social Feeds-KoolKart.xlsx** file.
     
         This file contains Indicator words from posts to your social media pages or posts mentioning your 
         business. It includes the total number of times the Indicator word was mentioned and whether it was
@@ -87,7 +85,7 @@ Let’s look at the past 6 months of Oracle Data as a Service (DaaS) feeds on a 
     
     ![](images/300/img_3b_1_4.png)
 
-2. Update an Attribute to a Measure.
+2. Update an **Attribute** to a **Measure**.
 
         Upon importing data, DV will automatically identify numeric columns as measures. Please continue
         with the step below, if the **Total Number of Snippets** column is not a measure.
