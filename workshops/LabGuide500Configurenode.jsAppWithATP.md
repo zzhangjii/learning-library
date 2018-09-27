@@ -197,13 +197,21 @@ WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA = (DIRECTORY=$TNS_ADMIN
 SSL_SERVER_DN_MATCH=yes
 ```
 
-- Get into your node app folder and run app in background and test with curl
-
 ```
 node server.js
+```
+
+![](./images/500/Picture500-11.png)
+
+
+- Once the server.js is running open up another terminal and ssh into the linux machine and get into your node app folder and run app in background and test with curl.
+
+```
+cd home/opc/ATPnodeapp/
 
 curl http://localhost:3050
 ```
+
 - The application confirms connectivity to your ATP instance.
 
 ![](./images/500/Picture500-10.png)
