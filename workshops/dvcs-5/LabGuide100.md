@@ -4,8 +4,8 @@
 
 This section focuses on getting started with OAC5 DV and introducing users to the DV interface.
 
-Key Take Aways from this lab:
-- Starting up an Autonomous OAC instance 
+Key takeaways from this lab:
+- Starting an Autonomous OAC instance 
 - Learning and getting acclimatized to the DV interface
 
 ### 1a) Provisioning an Oracle Autonomous Analytics Cloud Instance
@@ -50,7 +50,7 @@ Key Take Aways from this lab:
     
     ![](images/100/img_1a_7_2.png)
     
-    Now, give your instance a **Name** and choose the correct **License Type**. If you already own a license then choose the first option else go with the second.
+    Now, give your instance a **Name** and choose the correct **License Type**. If you already own a license, then choose the first option else go with the second.
     
     ![](images/100/img_1a_7_3.png)
     
@@ -111,7 +111,7 @@ On logging into OAC5, you will see the home page.
     
     - **Machine Learning**: This page shows all the available machine learning models ready for use in projects.
     
-    - **Console**: Administrative menu for managing **Custom Plugins** (e.g. new types of analyses obtained from the Oracle Analytics Store or custom built), **Maps** layers (e.g. new backgrounds for map based analyses) and other administrative tasks.
+    - **Console**: Administrative menu for managing **Custom Plugins** (e.g. new types of analyses obtained from the Oracle Analytics Store or custom built), **Maps** layers (e.g. new backgrounds for map-based analyses) and other administrative tasks.
     
     - **Academy**: Home to important links to the OAC documentation and videos that help you accomplish common tasks in the OAC. 
    

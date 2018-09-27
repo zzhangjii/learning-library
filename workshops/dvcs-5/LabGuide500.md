@@ -1,7 +1,7 @@
 ## Lab 5 – Predicting Subscriptions - Machine Learning
 
-Key Take Aways from this lab:
-- Learning how to create Dataflows
+Key takeaways from this lab:
+- Learning how to create data flows
 - Using the **Machine Learning** abilities of OAC
 
 ### What is Machine Learning?
@@ -15,7 +15,7 @@ To do this, Isla  has already obtained 4 different data sets: Orders, Customers,
 
 Isla knows that she needs to use KoolKart Orders and KoolKart Customers data sets together. Most importantly, she decides to utilize the Data Flow functionality of OAC that allows her to create a data set tailored to her needs. Let's start!
 
-### 5a) Creating a Data Flow for Koolkart Orders and Customers
+### 5a) Creating a Data Flow for KoolKart Orders and Customers
 
 1. Create a Data Flow and add a data set
 
@@ -27,7 +27,7 @@ Isla knows that she needs to use KoolKart Orders and KoolKart Customers data set
 
     ![](images/500/img_5a_1_2.png)
 
-    Add the **Koolkart Orders** data set.
+    Add the **KoolKart Orders** data set.
 
     ![](images/500/img_5a_1_3.png)
 
@@ -47,7 +47,7 @@ Isla knows that she needs to use KoolKart Orders and KoolKart Customers data set
 
     ![](images/500/img_5a_2_4.png)
 
-    If you've succesfully made the join, the dataflow will reflect the image below. 
+    If you've successfully made the join, the dataflow will reflect the image below. 
 
     ![](images/500/img_5a_2_5.png)
 
@@ -114,7 +114,7 @@ Isla knows that she needs to use KoolKart Orders and KoolKart Customers data set
 
 ### 5b) Using KoolKart Dataflow for Sales Analysis
 
-1. Create a new project by double clicking on the the **Koolkart Orders & Customers** data set on the home page or clicking on the ellipses menu and selecting **Create Project**.
+1. Create a new project by double clicking on the the **KoolKart Orders & Customers** data set on the home page or clicking on the ellipses menu and selecting **Create Project**.
 
      ![](images/500/img_8a_2_1.png)
      
@@ -130,7 +130,7 @@ Isla knows that she needs to use KoolKart Orders and KoolKart Customers data set
     
     ![](images/500/img_5b_2_3.png)
     
-    Notice, how the recommendation allows us to group the countries into sales regions with just 1 click and do so much more. Since, we have already grouped our data, let's return to visualizaing. Click on **Visualize**.
+    Notice, how the recommendation allows us to group the countries into sales regions with just 1 click and do so much more. Since, we have already grouped our data, let's return to visualizing. Click on **Visualize**.
     
      ![](images/300/img_3c_1_1.png)
     
@@ -140,7 +140,7 @@ Isla knows that she needs to use KoolKart Orders and KoolKart Customers data set
     
     ![](images/500/img_5a_6_2.png)
     
-    After you selecting **Pick Visuliation**, select the **Line** chart. 
+    After you selecting **Pick Visualization**, select the **Line** chart. 
 
     ![](images/500/img_5a_6_3.png)
     
@@ -210,7 +210,7 @@ Isla knows that she needs to use KoolKart Orders and KoolKart Customers data set
     
     ![](images/500/img_5c_2_1.png)
 
-    Select **Order Amount** from Koolkart Orders and **Customer Age Group** from Koolkart Customers. While having the attributes selected, right click and select **Create best visualization**.
+    Select **Order Amount** from KoolKart Orders and **Customer Age Group** from KoolKart Customers. While having the attributes selected, right click and select **Create best visualization**.
     
     ![](images/500/img_5c_2_2.png)
 
@@ -265,7 +265,7 @@ Isla knows that she needs to use KoolKart Orders and KoolKart Customers data set
     
 Let's take a few moments to learn more about the **Explain** feature. The **Explain** feature allows you to uncover insights and patterns about a particular column within a data set. 
     
-1. Right-click the **Category** attribute and selcted **Explain Category**. 
+1. Right-click the **Category** attribute and selected **Explain Category**. 
    
    ![](images/500/img_5d_1_1.png)
 
@@ -302,7 +302,7 @@ Let's take a few moments to learn more about the **Explain** feature. The **Expl
 
 Isla now wants to predict the likeliness of new customers to subscribe and to directly correlate the amount of the coupon to how much they are likely to subscribe anyway.
 
-She wants to take advantage of existing data gathered by looking at subscription patterns on Koolkart website and to develop a model that looks at past subscription data to determine the influence of Customer Age Group, Customer Gender, Customer Country and purchased Product Category into the likeliness to subscribe.
+She wants to take advantage of existing data gathered by looking at subscription patterns on KoolKart website and to develop a model that looks at past subscription data to determine the influence of Customer Age Group, Customer Gender, Customer Country and purchased Product Category into the likeliness to subscribe.
 
 1. Use Data Flow Editor to Create Model
 
@@ -318,7 +318,7 @@ She wants to take advantage of existing data gathered by looking at subscription
 
     ![](images/500/img_5e_1_3.png)
 
-    Select **Drop data file here or click to browse** and choose the **KoolKart Subsciption** data set. 
+    Select **Drop data file here or click to browse** and choose the **KoolKart Subscription** data set. 
 
     ![](images/500/img_5e_1_4.png)
 
@@ -352,7 +352,7 @@ She wants to take advantage of existing data gathered by looking at subscription
     
     ![](images/500/img_5e_2_7.png)
 
-    Click **Run Data Flow** to excute the data flow. 
+    Click **Run Data Flow** to execute the data flow. 
 
     ![](images/500/img_5e_2_8.png)
 
@@ -378,7 +378,7 @@ She wants to take advantage of existing data gathered by looking at subscription
 
     ![](images/500/img_5e_3_5.png)
 
-    Turn **OrderID** into an attibute.
+    Turn **OrderID** into an attribute.
 
     ![](images/500/img_5e_3_6.png)
 

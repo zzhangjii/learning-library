@@ -1,6 +1,6 @@
 ## Lab 3 – Analyzing Social Media with Sales – Data Blending and Wrangling
  
-Key Take Aways from this lab:
+Key takeaways from this lab:
 - Learning to Wrangle Data Sets
 - Joining Multiple Data Sets for analysis.
  

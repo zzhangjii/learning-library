@@ -2,7 +2,7 @@
 
 This section walks the you through the analysis of a single data set.
 
-Key Take Aways from this lab:
+Key takeaways from this lab:
 - Creating projects with data sets and visualizations
 - Understanding the visualization capabilities of DV
 - Telling a story with annotated visualizations
@@ -431,4 +431,4 @@ This section will cover the functions of each of these options.
 
 - ![](images/200/img_2g_8.png) **Date/Time Format**: Here you are given the capability to adjust how date/time column data is shown in your visualizations.
 
-- ![](images/200/img_2g_9.png) **Analytics**: In this section, you are given the ability to add different analytics options to your visualization. This can inlcude: Clusters, Outliers, Reference Lines, and Forecasts.
+- ![](images/200/img_2g_9.png) **Analytics**: In this section, you are given the ability to add different analytics options to your visualization. This can include: Clusters, Outliers, Reference Lines, and Forecasts.

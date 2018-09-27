@@ -1,7 +1,7 @@
 
 ## Lab 4 – Analyzing Social Media with Sales – Visualize and Narrate
 
-Key Take Aways from this lab:
+Key takeaways from this lab:
 - Learning how to use Calculations
 - Using different visualizations to obtain insights from data set
 - Narrating a meaningful story using Narrate

@@ -1,6 +1,6 @@
 ## Oracle Analytics Cloud v5 Workshop
 
-Welcome to the Oracle Analytics Cloud v5 workshop. This workshop will introduce you to the data visualization capabilities included in OAC. Data Visualization allows you to analyze data based on a pre-built OAC subject area or based on data coming directly from a wide variety of sources. These can include Oracle SaaS applications (e.g. ERP Cloud), databases, and 3rd party applications (e.g. Salesforce), amongst others.For the purpose of this workshop, we will be using Excel files.
+Welcome to the Oracle Analytics Cloud v5 workshop. This workshop will introduce you to the data visualization capabilities included in OAC. Data Visualization allows you to analyze data based on a pre-built OAC subject area or based on data coming directly from a wide variety of sources. These can include Oracle SaaS applications (e.g. ERP Cloud), databases, and 3rd party applications (e.g. Salesforce), amongst others. For the purpose of this workshop, we will be using Excel files.
 
 ## Workshop Format
 
@@ -42,7 +42,7 @@ Now let’s get started!
 
 ## Acquire an Oracle Cloud Trial or Workshop Account
 
-If you already have an account or active trial you may skip this section.
+If you already have an account or an active trial, you may skip this section.
 
 - Bookmark this page for future reference.
 
