@@ -226,8 +226,15 @@ export PATH=$PATH:`pwd`
 
 - Setting these variables can be a little tricky the first time you attempt it. [Checkout this video if you want to watch the steps performed. ](https://videohub.oracle.com/media/Lab+200A+Terraform+.tfvars+OCI+Configuration/0_vkxcw719)
 
+- You will replace line **2** from the "Tenacy Details" page, which you can find under the administration menu:
 
-- You will replace lines **2, 4, 6, and 7** with the values from the OCI Console, referring to the following screenshot for where to find them.
+  ![](images/200/17.1.png)
+
+- The Tenancy OCID can be found, and copied, in the center of the page, shown below:
+
+  ![](images/200/17.2.png)
+
+- You will replace lines **4, 6, and 7** with the values from the OCI Console, referring to the following screenshot for where to find them.
 
   ![](images/200/17.png)
 
