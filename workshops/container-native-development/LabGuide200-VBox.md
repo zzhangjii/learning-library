@@ -441,9 +441,9 @@ deploy-to-cluster:
         command: apply -f kubernetes.yml
 ```
 
-- At the bottom of the page, click **Commit new file**
+- At the bottom of the page, click **Commit changes**.
 
-  ![](images/200/29.png)
+  ![](images/100/29.png)
 
 - Since you've committed to the repository again, Wercker will once again trigger an execution of your workflow. We still haven't configured the deployment pipelines in Wercker yet, so we'll still end up with a new Run and a new image, but not a deployment to Kubernetes.
 
