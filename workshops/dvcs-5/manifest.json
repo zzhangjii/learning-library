@@ -1,46 +1,46 @@
 {
     "workshop": {
-        "title": "Workshop Title",
-        "description": "Description of this workshop.",
+        "title": "Oracle Analytics Cloud v5",
+        "description": "This workshop provides you with an introduction to the data visualization capabilities included in OAC. Data Visualization (DV) enables you to quickly synthesize a variety of data sources to gain meaningful insights. In this workshop you will learn how to massage and analyze data with the help of custom calculations, advanced filtering, and machine learning.", 
+        
         "theme": "default",
-        "interactive":"https://launch.oracle.com/?",
+        "interactive":"https://launch.oracle.com/?oacv5",
         "labs": [
-            {
-                "number": "0",
-                "filename": "Intro-Instructor-Led.md",
-                "title": "Intro - Instructor Led",
-                "description": "Step-by-step workshop instructions"
-
-            },
             {
                 "number": "100",
                 "filename": "LabGuide100.md",
-                "title": "Lab 100: Agile Project Management, plus an even longer section of text that will almost assuredly wrap unto the proximate lineage.",
-                "description": "Use Developer Cloud Service to create issues, tasks, and sprints, plus an even longer section of text that will almost assuredly wrap unto the proximate lineage, plus an even longer section of text that will almost assuredly wrap unto the proximate lineage."
+                "title": "Lab 100: Getting Started with OACv5 DV",
+                "description": "Learning how to provision an Autonomous OAC instance. Getting acclimatized to the DV interface."
 
             },
             {
                 "number": "200",
                 "filename": "LabGuide200.md",
-                "title": "Lab 200:  Title of Lab 200",
-                "description": "Short description of lab 200"
+                "title": "Lab 200:  Analyzing Sales - Basic Introduction to Core Features",
+                "description": "Creating projects with data sets and visualizations. Understanding the visualization capabilities of DV. Telling a story with annotated visualizations."
 
             },
             {
                 "number": "300",
                 "filename": "LabGuide300.md",
-                "title": "Lab 300:  Title of Lab 300",
-                "description": "Short description of lab 300"
+                "title": "Lab 300:  Analyzing Social Media with Sales – Data Blending and Wrangling",
+                "description": "Learning to Wrangle Data Sets. Joining Multiple Data Sets for analysis."
 
             },
             {
                 "number": "400",
                 "filename": "LabGuide400.md",
-                "title": "Lab 400: Title of Lab 400",
-                "description": "Short description of lab 400"
+                "title": "Lab 400: Analyzing Social Media with Sales – Visualize and Narrate",
+                "description": "Learning how to use Calculations. Using different visualizations to obtain insights from data set. Narrating a meaningful story using Narrate"
+
+            },
+            {
+                "number": "500",
+                "filename": "LabGuide500.md",
+                "title": "Lab 500: Predicting Subscriptions - Machine Learning",
+                "description": "Learning how to create data flows. Using the Machine Learning abilities of OAC."
 
             }
-
 
         ]
     }

@@ -1,8 +1,8 @@
-## Lab 1 - Getting Started with OAC DV5
+## Lab 1 - Getting Started with OACv5 DV
 
 ## Objectives
 
-This section focuses on getting started with OAC5 DV and introducing users to the DV interface.
+This section focuses on getting started with OACv5 DV and introducing users to the DV interface.
 
 Key takeaways from this lab:
 - Starting an Autonomous OAC instance 
@@ -87,7 +87,7 @@ Key takeaways from this lab:
 
 ### 1b) Reviewing the Home page and the primary menus
 
-On logging into OAC5, you will see the home page.
+On logging into OACv5, you will see the home page.
 
 ![](images/100/img_1b_1.png)  
 
