@@ -113,7 +113,7 @@ In OCI Object Storage, a bucket is the terminology for a container of multiple f
 
 ![](images/400/snap0014299.jpg)
 
- - **Name your bucket** and click **Create Bucket** button.
+ - **Name your bucket**
 
 ![](images/400/snap0014300.jpg)
 
@@ -123,6 +123,7 @@ Use **Object Storage** for data to which you need fast, immediate, and frequent 
 
 Use **Archive Storage** for data to which you seldom or rarely access, but that must be retained and preserved for long periods of time. The cost efficiency of the Archive Storage tier offsets the long lead time required to access the data. For more information, see Overview of [Archive Storage](https://docs.cloud.oracle.com/iaas/Content/Archive/Concepts/archivestorageoverview.htm).
 
+- Click **Create Bucket** button to create the bucket in Demo Compartment
 
 To learn more about the OCI Object Storage, check out this <a href="https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Tasks/addingbuckets.htm" target="_blank">documentation</a> .
 
