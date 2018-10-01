@@ -20,7 +20,7 @@
 
 [Practice 7: Login to the ADW database and store the object store credentials](#practice-7-login-to-the-adw-database-and-store-the-object-store-credentials)
 
-[Practice 8: Load data into ADW using channels.txt file](#practice-8-load-data-into-adw-using-channels.txt-file)
+[Practice 8: Load data into ADW using channels text file](#practice-8-load-data-into-adw-using-channels-text-file)
 
 ## Overview
 
