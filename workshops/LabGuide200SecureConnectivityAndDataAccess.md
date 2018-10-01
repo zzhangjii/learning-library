@@ -14,7 +14,7 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 
 ## Required Artifacts
 
-- Please ensure you are connected to your cloud account and have provisioned an ATP instance. Refer <a href="./LabGuide100ProvisionAnATPDatabase.md" target="_blank">here</a> to connect to provision an ATP database.
+- Please ensure you are connected to your cloud account and have provisioned an ATP instance. Refer <a href="./LabGuide100ProvisionAnATPDatabase.md" target="_blank">here</a> on how provision an ATP database.
 
 
 ## Steps
@@ -27,7 +27,7 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 
 ![](./images/200/Picture200-1.png)
 
-- Click Service Console button and provide username (admin) and password and click on Sign in.
+- Click Service Console button and provide username (admin) and password (WElcome_123#) and click on Sign in.
 
 ![](./images/200/Picture200-2.png)
 
@@ -41,6 +41,11 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 
 ![](./images/200/Picture200-6.png)
 
+#### Please use below Keystore password to download the client credentials
+```
+WElcome_123#
+```
+
 ![](./images/200/Picture200-5.png)
 
 - The credentials zip file contains the encryption wallet, Java keystore and other relevant files to make a secure TLS 1.2 connection to your database from client applications. Store this file in a secure location.
@@ -51,13 +56,30 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 
 ![](./images/200/Picture200-7.png)
 
-- Enter a connection name, username (admin) and password provided at the time of provisioning. Select connection type as ‘Cloud PDB’
+Enter the following in New database connection
 
-- Configuration file is the connection wallet downloaded from ATP console
-Enter keystore password provided at the time of wallet download
+**Connection Name**: Name for your connection
 
-- Finally, select service name from drop down. Service name is database name followed by suffixes low, medium or high. These suffixes determine degree of parallelism used and are relevant for a DSS workload. For OLTP workloads it's safe to select any of them.
+**Username**: admin
+
+**Password**: WElcome_123#
+
+**Connection Type**: Cloud PDB
+
+**Role**: Default
+
+**Configuration File**: Click on Browse and select the wallet file you downloaded
+
+**Service**: 'databasename_high' Database name followed by suffix low, medium or high. These suffixes determine degree of parallelism used and are relevant for a DSS workload. For OLTP workloads it's safe to select any of them.
 
 ![](./images/200/Picture200-8.png)
 
-- Test your connection and save. You now have a secure connection to your cloud database.
+- Test your connection and save. The **Status** bar will show **Success** if it is a successful connection.
+
+![](./images/200/Picture200-9.png)
+
+Click on **Connect**. You now have a secure connection to your cloud database.
+
+![](./images/200/Picture200-10.png)
+
+You now have connected your Autonomous Transaction Processing Cloud instance to Oracle SQL Developer.
