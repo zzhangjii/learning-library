@@ -21,7 +21,7 @@ In this section you will be provisioning an ATP database using the cloud console
 
 ## Steps
 
-### **STEP 1: Sign in to Oracle Cloud**
+### **STEP 1: Sign in to Oracle Cloud Infrastructure console**
 
 -   Go to [cloud.oracle.com](https://cloud.oracle.com), click **Sign In** to sign in with your Oracle Cloud account.
 
@@ -37,21 +37,7 @@ In this section you will be provisioning an ATP database using the cloud console
 
 ### **STEP 2: Create an ATP Instance**
 
--   Once you are logged in, you are taken to the cloud dashboard where you can see all the services available to you. To access Oracle Cloud Infrastructure (OCI) dashboard, click on **Customize Dashboard**.
-
-![](./images/100/Picture100-36.JPG)
-
--  Find **Compute** under Infrastructure and click on **Show**
-
-![](./images/100/Picture100-37.JPG)
-
--  Now you should see Compute service under your dashboard. Go ahead and click on **Compute**
-
-![](./images/100/Picture100-38.JPG)
-
--  This will bring you to the service details page. Click on **Open Service Console** on top right of your screen to bring you to OCI dashboard.
-
-![](./images/100/Picture100-39.JPG)
+-   Once you are logged in, you are taken to the cloud dashboard where you can see all the services available to you.
 
 ![](./images/100/Picture100-19.jpeg)
 
@@ -76,7 +62,13 @@ In this section you will be provisioning an ATP database using the cloud console
 
 ![](./images/100/Picture100-25.jpeg)
 
--  Select a compartment of your choice
+#### Note: Oracle Cloud Infrastructure allows logical isolation of users within a tenant through Compartments. This allows multiple users and business units to share a tenant account while being isolated from each other.
+
+If you have chosen the compartment you do not have privilegeson, you will not be able to see or provision instance in it.
+
+More information about Compartments and Policies is provided in the OCI Identity and Access Management documentation [here](https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm?tocpath=Services%7CIAM%7C_____13).
+
+-  Select any compartment other than root compartment for this lab
 
 ![](./images/100/Picture100-26.jpeg)
 
@@ -84,15 +76,34 @@ In this section you will be provisioning an ATP database using the cloud console
 
 ![](./images/100/Picture100-27.jpeg)
 
--  You can update the storage size if needed
+-  You can choose an instance shape, specified by the CPU count and storage size. Default CPU count is 1 and storage is 1 TB.
 
 ![](./images/100/Picture100-28.jpeg)
 
--  Then specify the password for the instance
+-  Specify the password for the instance
 
 ![](./images/100/Picture100-29.jpeg)
 
--  Make sure you have everything filled out
+- License Type: You will see 2 options under licensing options. 
+
+#### My organization already owns Oracle database software licenses: Oracle allows you to bring your unused on-prem licenses to the cloud and your instances are billed at a discounted rate. This is the default option so ensure you have the right license type for this subscription.
+
+![](./images/100/Picture100-34.jpeg)
+
+#### Subscribe to new database software licenses and the database cloud service: Your cloud service instance should inslude databsae license. This is an all-inclusive cost and you do not need to bring any additional licenses to cloud.
+
+![](./images/100/Picture100-35.jpeg)
+
+- Tagging is a metadata system that allows you to organize and track resources within your tenancy. Tags are composed of keys and values that can be attached to resources. 
+
+More information about Tags and Tag Namespaces is provided in the OCI Identity and Access Management documentation [here](https://docs.cloud.oracle.com/iaas/Content/Identity/Concepts/taggingoverview.htm).
+
+
+![](./images/100/Picture100-36.jpeg)
+
+For this workshop we will not be creating any TAG NAMESPACE. 
+
+- Make sure you have everything filled all required details
 
 ![](./images/100/Picture100-30.jpeg)
 
