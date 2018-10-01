@@ -43,8 +43,6 @@ Generate SSH keys to be used later while launching an instance.
  a. Generate ssh-keys for your machine if you don’t have one. As long as an id\_rsa and id\_rsa.pub key pair is present they can be reused. By default these are stored in \~/.ssh/
     
   >  $ ssh-keygen
-  
-![](media/img.png)
 
 
 b. Make sure permissions are restricted, sometimes ssh will fail if
@@ -62,7 +60,7 @@ a.  Install git for windows. Download
 
 b.  Open Git-bash:
     
-    ![](media/image4.png)
+    ![](media/image1.png)
 
 c.  Generate ssh-keys by running this command in Git Bash
 
@@ -189,7 +187,7 @@ b. Open the Console, click **Networking**.
 
 c. Select a compartment on the left that you have permission to work in.
 
-![](media/image9.png)
+![](media/image2.png)
 
 d. Click **Create Virtual Cloud Network**.
 
@@ -203,7 +201,7 @@ Enter the following details:
 > to be unique, and it cannot be changed later in the Console (but you
 > can change it with the API).
 
-![](media/image10.png)
+![](media/image3.png)
 
 Select **Create Virtual Cloud Network plus related resources**. The
 dialog box expands to list the items that will be created with your
@@ -211,19 +209,19 @@ cloud network.
 
 >**Note:** This option is the quickest way to get a working cloud network in the fewest steps.
 
-![](media/image11.png)
+![](media/image4.png)
 
 Scroll to the bottom of the dialog box and click **Create Virtual Cloud
 Network**.
 
-![](media/image12.png)
+![](media/image5.png)
 
 A confirmation page displays the details of the cloud network that you
 just created.
 
-![](media/image13.png)
+![](media/image6.png)
 
-![](media/image14.png)
+![](media/image7.png)
 
 For example, the cloud network above has the following resources and
 characteristics:
@@ -265,9 +263,6 @@ a.  Navigate to the **Compute** tab and click **Create Instance**. We will launc
 
 The launch browser will automatically fill in the details for launching a single Oracle Linux. Please check each field for better understanding. 
 
-![](media/image15.png)
-
- 
  - Name of the instance
  - Shape of Instance (VM.Standard 1.1 or VM.Standard1.2) or the shape available for your tenancy
  - Availability Domain to launch the instance (AD1, AD2 or AD3)
@@ -281,9 +276,9 @@ The launch browser will automatically fill in the details for launching a single
 	 - VCN Name: VCN you created in Practice 3
 	 - Subnet: Any subnet among the three ADs
 
-![](media/image16.png)
+![](media/image8.png)
 
-![](media/image17.png)
+![](media/image9.png)
 
 Launching an instance is simple and intuitive with few options to
 select. Provisioning of the compute instance will complete in less than
@@ -292,7 +287,7 @@ running.
 
 b.  Once the instance state changes to Running, you can SSH to the Public IP address of the instance.
     
-![](media/image18.png)
+![](media/image10.png)
 
 c.  To connect to the instance, you can use ‘Terminal’ if you are using
     MAC or Gitbash if you are using Windows.
@@ -304,8 +299,6 @@ You can use the following command to SSH into the OCI VM on UNIX-style system (i
 > $ ssh –i \</path/privateKey\> opc@\<PublicIP\_Address\>
 
 For windows, use a tool like GitBash to login into the Linux instance.
-
-> ![](media/image4.png)
 
 > $ ssh -i \</path/privateKey\> opc@\<PublicIP\_Address\>
 
@@ -343,7 +336,7 @@ SSH into the Linux instance and run following commands.
 
 e.  Click on Virtual Cloud Network and then the VCN you created above (Training VCN). Click on **Security Lists** on the left navigation bar for the VCN. Then click on the **Default Security List**. Here you need to open port 80. Click on **Edit all rules**.
 
-![](media/image19.png)
+![](media/image11.png)
 
 - Click on +Add Rule and add the following values as shown below under the Allow Rules for Ingress.
 
@@ -354,11 +347,11 @@ e.  Click on Virtual Cloud Network and then the VCN you created above (Training 
 
 - Click on **Save Security List Rules** at the bottom.
 
-![](media/image20.png)
+![](media/image12.png)
 
 f. Navigate to \<http://\<publicIPAddress:80\> (the IP address of the Linux VM) in your browser. Now you should see the index page of the webserver we created above.
 
-![](media/image21.png)
+![](media/image13.png)
 
 **Troubleshooting: **
 
@@ -393,7 +386,7 @@ A common usage of Block Volume is adding storage capacity to an Oracle Cloud Inf
 
 a. Navigate to the Block Volume and click on Block Volume.
 
-![](media/image22.png)
+![](media/image14.png)
 
 b.  In Bock Volume service, Click on Create Block Volume and provide the following details.
 
