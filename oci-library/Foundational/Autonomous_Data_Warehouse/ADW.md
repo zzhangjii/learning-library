@@ -20,7 +20,7 @@
 
 [Practice 7: Login to the ADW database and store the object store credentials](#practice-7-login-to-the-adw-database-and-store-the-object-store-credentials)
 
-[Practice 8: Load data into ADW using channels.txt file](#practice-8-load-data-into-using-channels.txt-file)
+[Practice 8: Load data into ADW using channels.txt file](#practice-8-load-data-into-adw-using-channels.txt-file)
 
 ## Overview
 
@@ -231,8 +231,9 @@ You should see an output of **Table CHANNELS created** if there are no execution
 
 3. Now lets load data into the CHANNELS table using the channels.txt file by executing a modified version of the script bellow:
 
-> **Note:**  For `file_uri_list`, specify the URL that points to the location of the file staged in your object store. The URL is structured as follows. The values you specify are in bold:  
-https://swiftobjectstorage.**region-name**.oraclecloud.com/v1/**tenant-name**/**bucket-name**/**file-name**
+> **Note:**  For **file_uri_list**, specify the URL that points to the location of the file staged in your object store. The URL is structured as follows. The values you specify are in bold:
+
+https:\//swiftobjectstorage.**region-name**.oraclecloud.com/v1/**tenant-name**/**bucket-name**/**file-name**
 
 ``` 
 begin
