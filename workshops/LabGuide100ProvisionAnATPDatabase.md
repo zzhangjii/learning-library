@@ -23,17 +23,17 @@ In this section you will be provisioning an ATP database using the cloud console
 
 ### **STEP 1: Sign in to Oracle Cloud Infrastructure console**
 
--   Go to [cloud.oracle.com](https://cloud.oracle.com), click **Sign In** to sign in with your Oracle Cloud account.
+- Login to your Oracle Cloud Infrastructure console using the URL provided.
+
+- Choose oracleidentitycloudservice as your Identity Provider and click on **Continue**.
 
 ![](./images/100/Picture100-2.png)
 
--   Enter your **Cloud Account Name** and click **My Services**.
-
-![](./images/100/Picture100-3.png)
-
--   Enter your Cloud **username** and **password**, and click **Sign In**.
+-   On the following screen, provide tenant name, username and password. 
 
 ![](./images/100/Picture100-4.png)
+
+- You will then be securely logged into your Oracle Cloud Infrastructure Console.
 
 ### **STEP 2: Create an ATP Instance**
 
