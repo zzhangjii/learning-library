@@ -209,7 +209,7 @@ end;
 
 You should see an output of “PL/SQL Procedure successfully completed.” if there are no execution errors or typos in the script.
 
-## Practice 8: Load data into ADW using channels.txt file
+## Practice 8: Load data into ADW using channels text file
 
 In this portion of the lab you will use SQL Developer to create the CHANNELS table in the ocitest schema. Once the table is created, you will load it with data from the channels.txt file stored in the object storage.
 
