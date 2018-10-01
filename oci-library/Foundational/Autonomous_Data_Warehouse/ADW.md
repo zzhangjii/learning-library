@@ -20,7 +20,7 @@
 
 [Practice 7: Login to the ADW database and store the object store credentials](#practice-7-login-to-the-adw-database-and-store-the-object-store-credentials)
 
-[Practice 8: Load data into CHANNELS table using channels.txt file](#practice-8-load-data-into-channels-table-using-channels.txt-file)
+[Practice 8: Load data into ADW using channels.txt file](#practice-8-load-data-into-using-channels.txt-file)
 
 ## Overview
 
@@ -209,7 +209,7 @@ end;
 
 You should see an output of “PL/SQL Procedure successfully completed.” if there are no execution errors or typos in the script.
 
-## Practice 8: Load data into CHANNELS table using channels.txt file
+## Practice 8: Load data into ADW using channels.txt file
 
 In this portion of the lab you will use SQL Developer to create the CHANNELS table in the ocitest schema. Once the table is created, you will load it with data from the channels.txt file stored in the object storage.
 
@@ -232,7 +232,7 @@ You should see an output of **Table CHANNELS created** if there are no execution
 3. Now lets load data into the CHANNELS table using the channels.txt file by executing a modified version of the script bellow:
 
 > **Note:**  For `file_uri_list`, specify the URL that points to the location of the file staged in your object store. The URL is structured as follows. The values you specify are in bold:  
-"https://swiftobjectstorage.**region-name**.oraclecloud.com/v1/**tenant-name**/**bucket-name**/**file-name**
+https://swiftobjectstorage.**region-name**.oraclecloud.com/v1/**tenant-name**/**bucket-name**/**file-name**
 
 ``` 
 begin
