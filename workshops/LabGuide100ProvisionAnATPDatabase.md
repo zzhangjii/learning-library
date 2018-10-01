@@ -82,6 +82,11 @@ More information about Compartments and Policies is provided in the OCI Identity
 
 -  Specify the password for the instance
 
+#### For this lab, we will be using the following as password
+```
+WElcome_123#
+```
+
 ![](./images/100/Picture100-29.jpeg)
 
 - License Type: You will see 2 options under licensing options. 
