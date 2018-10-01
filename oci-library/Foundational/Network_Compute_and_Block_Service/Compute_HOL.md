@@ -5,27 +5,24 @@ is intended for information purposes only, and may not be incorporated into any 
 
 Table of Contents
 
-[Disclaimer 1](#disclaimer)
-
 [Overview 2](#overview)
 
 [Pre-Requisites 2](#pre-requisites)
 
-[Practice 1: Generate SSH Keys 3](#practice-4-1-generate-ssh-keys)
+[Practice 1: Generate SSH Keys 3](#practice-1-generate-ssh-keys)
 
-[Practice 2: Signing in OCI Console and Setting up the Network
-5](#practice-4-2-signing-in-oci-console-and-setting-up-the-network)
+[Practice 2: Signing in OCI Console](#practice-2-signing-in-oci-console)
 
 [Practice 3: Create a Virtual Cloud Network
 7](#practice-3-create-a-virtual-cloud-network)
 
-[Practice 4: Creating a Webserver on a Compute Instance
-11](#practice-4-creating-a-webserver-on-a-compute-instance)
+[Practice 4: Creating a Web Server on a Compute Instance
+11](#practice-4-creating-a-web-server-on-a-compute-instance)
 
 [Practice 5: Expand the Compute Instance Storage using Block Volume
 18](#practice-5-expand-the-compute-instance-storage-using-block-volume)
 
-[Summary 22](#summary)
+[Summary](#summary)
 
 # Overview
 
@@ -46,26 +43,9 @@ Generate SSH keys to be used later while launching an instance.
  a. Generate ssh-keys for your machine if you don’t have one. As long as an id\_rsa and id\_rsa.pub key pair is present they can be reused. By default these are stored in \~/.ssh/
     
   >  $ ssh-keygen
-   > Generating public/private rsa key pair. 
-    Enter file in which to save the key (/Users/username/.ssh/id\_rsa): 
-    Enter passphrase (empty for no passphrase):
-    Enter same passphrase again:
-    Your identification has been saved in /Users/username/.ssh/id\_rsa.
-    Your public key has been saved in /Users/username/.ssh/id\_rsa.pub.  
-    The key fingerprint is:
-    SHA256:tAn6nKkcZDTXl/vXRAD/pfLzdmF5rQ2948MQgz5CWe8
-    The key's randomart image is:
-    \+---\[RSA 2048\]----+   
-    | ... |  
-    | . o . . | 
-    | o o o = o . o|  
-    | . + o \* o + +.| 
-    | + S o o +.=|
-    | o o o . + E.\*+|
-    | . = . o B+=|
-    | . o ..B+|
-    | o .o=|
-    \+----\[SHA256\]-----+
+  
+![](media/img.png)
+
 
 b. Make sure permissions are restricted, sometimes ssh will fail if
     private keys have permissive permissions.
