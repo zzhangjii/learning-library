@@ -20,7 +20,7 @@
 
 [Practice 7: Login to the ADW database and store the object store credentials](#practice-7-login-to-the-adw-database-and-store-the-object-store-credentials)
 
-[Practice 8: Load data into CHANNELS table using channels.txt file](#practice-8)
+[Practice 8: Load data into CHANNELS table using channels.txt file](#practice-8-load-data-into-channels-table-using-channels.txt-file)
 
 ## Overview
 
@@ -35,7 +35,7 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 
 ## Practice-1: Download the text file
 
-Download the channel text file from this link:   and save it to your desktop.
+Download the channel.txt file from this link: https://bit.ly/2NSNd4l and save it to your desktop.
 
 This file will be loaded into Object Storage and later used to load data into the CHANNELS table.
 
@@ -129,6 +129,7 @@ To load data from files in the cloud into your Autonomous DW Cloud database, use
 4. Click **Create Bucket** 
 ![]( img/image014.png)
 
+
 5.  Upload the channels.txt file to the ADW_Bucket
 ![]( img/image015.png)
 
@@ -167,10 +168,12 @@ The ocitest user will be the owner of the CHANNELS table that will be used for l
 
 4. You are now connected to ADW.
 5. Now that you have logged into SQL Developer, execute the following statements to create the **ocitest** user and to grant **DWROLE** to this user:
+
  ```
-create user ocitest identified by Demo_2018DB##;
+create user ocitest identified by "Demo_2018DB##";
 grant dwrole to ocitest;
 ```
+
 
 ![]( img/image022.png)
 
@@ -189,18 +192,66 @@ grant dwrole to ocitest;
 
 9. Once connected, you will store your object credentials using the procedure **DBMS_CLOUD.CREATE_CREDENTIAL** running the following SQL Statement:
  
-> **Note:**  Replace "random_string_of_generated_token" with the generated token you copied from Practice-6.
+> **Note:**  Replace "password" with the generated token you copied from Practice-6.
+
 ```
-SET DEFINE OFF
-BEGIN
- DBMS_CLOUD.CREATE_CREDENTIAL(
-  credential_name => 'OCI_CRED_NAME',
-  username => 'api.user',
-  password => 'random_string_of_generated_token'
- );
-END;
+begin
+ DBMS_CLOUD.create_credential (
+     credential_name => 'OBJ_STORE_CRED',
+     username => 'api.user',
+     password => '<your Auth Token>'  
+  ) ;
+end;
 /
 ```
+
 ![]( img/image025.png)
 
 You should see an output of “PL/SQL Procedure successfully completed.” if there are no execution errors or typos in the script.
+
+## Practice 8: Load data into CHANNELS table using channels.txt file
+
+In this portion of the lab you will use SQL Developer to create the CHANNELS table in the ocitest schema. Once the table is created, you will load it with data from the channels.txt file stored in the object storage.
+
+1. Launch SQL Developer on your laptop and connect to the ocitest user.
+2. Execute the following SQL script:
+
+```
+CREATE TABLE ocitest.channels (
+    channel_id                  NUMBER          NOT NULL,
+    channel_desc                VARCHAR2(20)    NOT NULL,
+    channel_class               VARCHAR2(20)    NOT NULL,
+    channel_class_id            NUMBER          NOT NULL,
+    channel_total               VARCHAR2(13)    NOT NULL,
+    channel_total_id            NUMBER          NOT NULL);
+```
+![]( img/image026.png)
+
+You should see an output of **Table CHANNELS created** if there are no execution errors or typos in the script.
+
+3. Now lets load data into the CHANNELS table using the channels.txt file by executing a modified version of the script bellow:
+
+> **Note:**  For `file_uri_list`, specify the URL that points to the location of the file staged in your object store. The URL is structured as follows. The values you specify are in bold:  
+"https://swiftobjectstorage.**region-name**.oraclecloud.com/v1/**tenant-name**/**bucket-name**/**file-name**
+
+``` 
+begin
+ dbms_cloud.copy_data(
+    table_name =>'CHANNELS',
+    credential_name =>'OBJ_STORE_CRED',
+    file_uri_list =>'https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/gse0001234/ADW_Bucket/channels.txt',
+    format => json_object('ignoremissingcolumns' value 'true', 'removequotes' value 'true')
+ );
+end;
+/
+```
+![]( img/image027.png)
+
+4. Still using the SQL Developer tool, perform the following SQL query:
+
+```
+select * from channels;
+```
+
+![]( img/image028.png)
+
