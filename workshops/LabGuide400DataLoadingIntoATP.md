@@ -99,6 +99,8 @@ When you are satisfied with the file content view, click **NEXT**.
 
 ![](images/400/snap0014297.jpg)
 
+#### In order to create a New Bucket in Object Storage we need to select a Compartment from List Scope.
+
 - Choose the Demo compartment in the **COMPARTMENT** drop-down if it is not already choosen.
 
 ![](images/400/snap0014298.jpg)
