@@ -45,18 +45,18 @@ This file will be loaded into Object Storage and later used to load data into th
 
 2) Enter your tenant name: <Tenant> and click **Continue**
 
- ![]( img/image001.png)
+ ![](img/image001.png)
 
 3) Oracle Cloud Infrastructure is integrated with Identity Cloud Services, you will see a screen validating your Identity Provider. You can just click **Continue**.
 
- ![]( img/image002.png)
+ ![](img/image002.png)
 
 4) Enter your user name and password
 
  - **Username:** api.user
  - **Password:** _instructor will provide password_
 
- ![](img/image003.png {width=50%})
+ ![very good|512x397](img/image003.png)
 
 When you sign in to the Console, the home page is displayed.
 
