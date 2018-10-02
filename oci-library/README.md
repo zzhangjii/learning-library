@@ -8,7 +8,7 @@
 | File Storage Service                  | Foundational |   2.1   |   September 2018   |
 | Load Balancer Service                  | Foundational |   2.1   |   September 2018   |
 | Database Service                       | Foundational |   2.1   |   September 2018   |
-| Autonomous Data Warehouse              | Foundational |   2.1   |   September 2018   |
+|[Autonomous Data Warehouse](./Foundational/Autonomous_Data_Warehouse/ADW_HOL.md)             | Foundational |   2.1   |   September 2018   |
 
 
 
@@ -28,7 +28,7 @@
 
 |                  **HOL**              |    **Name**  |   **Date** |
 |----------------------------------------|:------------:|:-------------:|
-|HOL6377| Autonomous Data Warehouse on Oracle Cloud Infrastructure |  September 2018   |
+|HOL6377|[Autonomous Data Warehouse on Oracle Cloud Infrastructure](./Foundational/Autonomous_Data_Warehouse/ADW_HOL.md) |  September 2018   |
 |HOL6685| Machine Learning on Oracle Cloud Infrastructure  |   September 2018   |
 |HOL6376| Using Terraform with Oracle Cloud Infrastructure |   September 2018   |
 |HOL6375| Using Oracle Containers Engine for Kubernetes    |   September 2018   |
