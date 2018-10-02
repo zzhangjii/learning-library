@@ -28,7 +28,11 @@ To **log issues**, click [here](https://github.com/cloudsolutionhubs/autonomous-
 
 - The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
 - node.js is installed in you local machine. If not you can follow download and installation instructions for your OS [here](https://nodejs.org/en/download/)
-- Download [this](https://github.com/kbhanush/ATP-REST-nodejs.git) git repository to a local folder.
+- Clone [this](https://github.com/cloudsolutionhubs/ATP-REST-nodejs.git) git repository to a local folder.
+
+```
+git clone https://github.com/cloudsolutionhubs/ATP-REST-nodejs.git
+```
 
 ## Steps
 
@@ -51,18 +55,22 @@ chmod go-rwx ~/oci_api_key.pem
 openssl rsa -pubout -in ~/oci_api_key.pem -out ~/oci_api_key_public.pem
 ```
 
-### **STEP 2: Upload the public key to your OCI account from the console**
+### **STEP 2: Upload the public key to your OCI account from the console and note down OCID's**
 
 - Login to Oracle Cloud Infrastructure
 - From top left Hamburger menu, select Identity -> Users
 
 ![](./images/700/Picture700-1.png)
 
-- Pick user from the list of users and on the User page click 'Add API Keys' button.
+- Pick api.user from the list of users and on the User page click 'Add API Keys' button.
 
 ![](./images/700/Picture700-2.png)
 
-- Paste your oci_api_key_public.pem key text. The service generates a key Fingerprint. Save the fingerprint somewhere safe since you will need it to sign your API requests.
+- Paste your oci_api_key_public.pem key text and click on Add. 
+
+![](./images/700/AddPEMKey.png)
+
+- The service generates a key Fingerprint. Save the fingerprint somewhere safe since you will need it to sign your API requests.
 
 ![](./images/700/Picture700-3.png)
 
@@ -84,11 +92,13 @@ openssl rsa -pubout -in ~/oci_api_key.pem -out ~/oci_api_key_public.pem
 #### Note: It is extremely important that you do not share this with anyone or expose it over an unencrypted network.
 
 
-### **STEP 3: Run the scripts you cloned from git**
+### **STEP 3: Run the following scripts you cloned from git**
 
 - In the REST API scripts folder, install node package dependencies
 
 ```
+cd ATP-REST-nodejs
+
 npm install
 ```
 
@@ -98,9 +108,43 @@ npm install
 
 This module has all the user auth information used to generate the signature and other header information including compartments.
 
-You will need to edit this file and change the tenancyID, authUserId, keyFingerprint, privateKeyPath and compartments.
+You will need to edit the following
+- tenancyID 
+- authUserId 
+- keyFingerprint 
+- privateKeyPath 
+- compartments.
 
-![](./images/700/Picture700-7.png)
+```
+var fs = require('fs');
+var os = require('os');
+
+
+/* Begin ---- Tenant auth info */
+
+var tenancyId=  "ocid1.tenancy.oc1..aaaaaaaawrgt5au6hbledhhyas2secm3q2atqiuvihck45rbi3jyc5tfyfga";
+var authUserId= "ocid1.user.oc1..aaaaaaaavscszlxxcf2wnq73nxpguxtubvpxaklqbspmuuml7xxp26mbxmgq";
+var keyFingerprint = "0d:33:d8:eb:9a:48:2a:15:cd:36:2e:f5:20:fe:b3:d3";
+var Compartment = "ocid1.compartment.oc1..aaaaaaaai75jrzzbfe6t43fd6yivpqngk2tufisqnohacf3s26p6uhcgz7bq";
+var privateKeyPath = "/Users/tejus/Desktop/sshkeys/oci_api_key.pem";
+
+if(privateKeyPath.indexOf("~/") === 0) {
+    privateKeyPath = privateKeyPath.replace("~", os.homedir())
+}
+var privateKey = fs.readFileSync(privateKeyPath, 'ascii');
+
+/* End ---- Tenant auth info */
+
+module.exports = {
+tenancyId: tenancyId,
+authUserId: authUserId,
+keyFingerprint: keyFingerprint,
+privateKey: privateKey,
+Compartment: Compartment
+
+};
+```
+
 
 #### Note: Make sure the privateKeyPath variable accurately points to the location of your private key file.
 
@@ -113,7 +157,7 @@ Refer to Oracle's [IAM documentation](https://docs.oracle.com/en/cloud/paas/iden
 
 #### 2. region.js
 
-This module lists all the API endpoints for OCI. You do not need to change anything here unless a new service is added or Oracle makes a change to the	URLs (which is less likely).
+This module lists all the API endpoints for OCI. You do not need to change anything here unless a new service is added or Oracle makes a change to the URLs (which is less likely).
 
 #### 3. headers.js
 
@@ -127,9 +171,65 @@ It also has an option getUser method used in every REST call to get user informa
 
 These are the scripts you would need to run. Make sure the variable in each of these scripts are set right before you run them. 
 
-For example, in the createAutonomousDatabase.js script, replace compartmentID, displayName, dbName, adminPassword, cpuCoreCount and dataStorageInTbs to match your requirements.
+For example, in the createAutonomousDatabase.js script, be sure to replace the following to match your requirements
+- displayName
+- dbName
+- adminPassword
+- cpuCoreCount
+- dataStorageInTbs
+- host region
 
-![](./images/700/Picture700-8.png)
+```
+var auth = require('./auth.js');
+var regions = require('./regions.js');
+var headers = require('./headers.js');
+var https = require('https');
+//Create autonomous database ATP 
+
+function createATP(callback) {
+
+var body = JSON.stringify({
+  "compartmentId" : auth.Compartment,
+  "displayName" : "example_autonomous_database6",
+  "dbName" : "adatabasedb6",
+  "adminPassword" : "AVeryLongPassword321!",
+  "cpuCoreCount" : 1,
+  "dataStorageSizeInTBs" : 1
+});
+var options = {
+        host: regions.dbPhoenixRegion,
+        path: '/20160918/autonomousDatabases',
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json"
+        }
+    };
+var request = https.request(options, headers.handleRequest(callback));
+
+    headers.sign(request, {
+        body: body,
+        privateKey: auth.privateKey,
+        keyFingerprint: auth.keyFingerprint,
+        tenancyId: auth.tenancyId,
+        userId: auth.authUserId
+    });
+
+    request.end(body);
+};
+
+headers.getUser(auth.authUserId, function(data) {
+    console.log(data);
+
+
+    console.log("\nCREATING ATP Service:");
+
+    
+    createATP(function(data) {
+        console.log(data);
+    });
+
+});
+```
 
 - Run these scripts as,
 
@@ -147,5 +247,8 @@ node createAutonomousDatabase.js
 
 - You have successfully created ATP database.
 
-Explore the various scripts provided and build your own instance. You may build similar scripts using Python, Java, golang, Perl, C#, bash and Curl.
+Explore the various scripts provided and build your own instance.
 
+#### Note: Please do not forget to change region and other variables in each of the other scripts before you run them.
+
+You may build similar scripts using Python, Java, golang, Perl, C#, bash and Curl.
