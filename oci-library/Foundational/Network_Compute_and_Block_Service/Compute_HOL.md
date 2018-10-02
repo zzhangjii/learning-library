@@ -314,6 +314,7 @@ SSH into the Linux instance and run following commands.
 - Start the apache server and configure it to start after system reboots
 
 > $ sudo apachectl start
+
 > $ sudo systemctl enable httpd
 
 - Run a quick check on apache configurations
