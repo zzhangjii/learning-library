@@ -136,7 +136,7 @@ Where
 In order to install the required package on linux environment we need to ssh into our linux host machine. 
 
 
-- Open Terminal and ssh ssh as user opc to your host machine.
+- Open Terminal and ssh as user opc to your host machine.
 
 ```
 $ssh -i /Users/tejus/Desktop/sshkeys/id_rsa opc@ipaddress
