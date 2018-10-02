@@ -16,14 +16,50 @@ To **log issues**, click [here](https://github.com/cloudsolutionhubs/autonomous-
 ## Required Artifacts
 
 - The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
-- Install node.js on your laptop
-- Install Oracle instant client 12.2
-- Download and unzip ATP secure connectivity file
-- Install oracledb node driver 
 
 ## Steps
 
-### **STEP 1: Provision a linux compute VM to serve as the app server**
+### **STEP 2: Create a Virtual Cloud Network**
+
+Virutal Cloud Network (VCN) is a private network that you set up in the Oracle data centers, with firewall rules and specific types of communication gateways that you can choose to use. A VCN covers a single, contiguous IPv4 CIDR block of your choice. See [Default Components that Come With Your VCN](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/overview.htm#Default). The terms virtual cloud network, VCN, and cloud network are used interchangeably in this documentation. For more information, see [VCNs and Subnets](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/managingVCNs.htm).
+
+- Login to your Oracle Cloud Infrastructure and Click n **Menu** and select **Network** and **Virtual Cloud Networks**.
+
+![](./images/500/Picture500-12.png)
+
+In order to create a VCN we need to select a Compartment from the List Scope. For this lab we will be selecting **Demo** compartment.
+
+![](./images/500/Picture500-13.png)
+
+- After selecting **Demo** compartment click on Create Virtual Cloud Network to create VCN
+
+![](./images/500/Picture500-14.png)
+
+- THis will bring Create Virtual CLoud Netowrk screen where you will specify the configurations.
+
+![](./images/500/Picture500-15.png)
+
+- Enter the following the the screen
+
+**Create In Compartment**: Select the sandbox compartment, Demo. By default, this field displays your current compartment.
+**Name**: Enter a name for your cloud network.
+Check on **Create Virtual Cloud Network Plus Related Resources** option. By selecting this option, you will be creating a VCN with only public subnets. The dialog expands to list the items that will be created with your cloud network.
+
+![](./images/500/Picture500-16.png)
+
+- Click on Create Virtual Cloud Network.
+
+A confirmation page displays the details of the cloud network that you just created. The cloud network has the following resources and characteristics (some of which are not listed in the confirmation dialog):
+- CIDR block range of 10.0.0.0/16
+- An internet gateway
+- A route table with a default route rule to enable traffic to and from the internet gateway
+- A [default security](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/securitylists.htm#Default) list
+- A public subnet in each availability domain
+
+![](./images/500/Picture500-17.png)
+
+
+### **STEP 2: Provision a linux compute VM to serve as the app server**
 
 - Provision a linux compute VM to serve as the app server. 
 
@@ -35,11 +71,16 @@ To **log issues**, click [here](https://github.com/cloudsolutionhubs/autonomous-
 
 ![](./images/500/Picture500-2.png)
 
-- Enter all the required fields and click on Create Instance.
+- In order to create Compute Instance we need to select a Compartment.
+
+Enter the following to Create Linux Instance
+
+- 
+
 
 ![](./images/500/Picture500-3.png)
 
-#### Note: You would need to provision virtual cloud network (VCN) in your compartment to create Compute Instance.
+- You would need to provision virtual cloud network (VCN) in your compartment to create Compute Instance.
 
 - Note the public IP of the machine provisioned and ssh into this host and configure it to run node.js on ATP.
 

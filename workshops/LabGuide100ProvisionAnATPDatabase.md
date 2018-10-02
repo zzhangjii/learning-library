@@ -35,13 +35,39 @@ In this section you will be provisioning an ATP database using the cloud console
 
 - You will then be securely logged into your Oracle Cloud Infrastructure Console.
 
-### **STEP 2: Create an ATP Instance**
+### **STEP 2: Create a Compartment**
 
 -   Once you are logged in, you are taken to the cloud dashboard where you can see all the services available to you.
 
 ![](./images/100/Picture100-19.jpeg)
 
--  Once you are on OCI dashboard page, click on the hamburger menu icon on the top left of the screen
+- -  Once you are on OCI dashboard page, click on the hamburger menu icon on the top left of the screen
+
+![](./images/100/Picture100-20.jpeg)
+
+-  Click on **Identity** and then **Compartments** from the menu
+
+![](./images/100/Compartments.jpeg)
+
+-  Click on **Create Compartment** button to start the compartment creation process 
+
+![](./images/100/CreateCompartment.jpeg)
+
+Enter the following in create Compartment window
+
+- **Name**: Enter a friendly name to idenitfy your compartment (Demo)
+- **Description**: Enter a description for the compartment
+- Click on Create Compartment link 
+
+![](./images/100/CreateCompartment1.jpeg)
+
+- You can verify the compartment created on Compartments page
+
+![](./images/100/CreateCompartment2.jpeg)
+
+### **STEP 3: Create an ATP Instance**
+
+-  Click on the hamburger menu icon on the top left of the screen
 
 ![](./images/100/Picture100-20.jpeg)
 
@@ -68,7 +94,7 @@ If you have chosen the compartment you do not have privilegeson, you will not be
 
 More information about Compartments and Policies is provided in the OCI Identity and Access Management documentation [here](https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm?tocpath=Services%7CIAM%7C_____13).
 
--  Select any compartment other than root compartment for this lab
+-  Select Demo compartment which you created earlier in this lab
 
 ![](./images/100/Picture100-26.jpeg)
 
