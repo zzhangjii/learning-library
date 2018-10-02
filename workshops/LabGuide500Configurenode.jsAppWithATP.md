@@ -19,7 +19,7 @@ To **log issues**, click [here](https://github.com/cloudsolutionhubs/autonomous-
 
 ## Steps
 
-### **STEP 2: Create a Virtual Cloud Network**
+### **STEP 1: Create a Virtual Cloud Network**
 
 Virutal Cloud Network (VCN) is a private network that you set up in the Oracle data centers, with firewall rules and specific types of communication gateways that you can choose to use. A VCN covers a single, contiguous IPv4 CIDR block of your choice. See [Default Components that Come With Your VCN](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/overview.htm#Default). The terms virtual cloud network, VCN, and cloud network are used interchangeably in this documentation. For more information, see [VCNs and Subnets](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/managingVCNs.htm).
 
