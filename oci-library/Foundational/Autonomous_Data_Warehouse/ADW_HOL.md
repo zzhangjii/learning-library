@@ -72,14 +72,17 @@ The home page gives you quick links to the documentation and to Oracle Support.
 
 ![]( img/image005.png)
 
-3) Enter the following information:
+3) In the Create Autonomous Data Warehouse dialog, enter the following information:
 
-  - **Display Name**: ADW Finance
+ - **Display Name**: ADW Finance
  - **Database Name**: ADWFINANCE
  - **CPU Core Count**: 1
  - **Storage**: 1
- - **Password**: Demo_2018DB##
- - **Confirm Password**: Demo_2018DB##
+ - **Password**: Password for ADMIN user of the service instance. The password must meet the following requirements:
+	 - -  The password must be between 12 and 60 characters long and must include at least one uppercase letter, one lowercase letter, and one numeric character.
+	 - -   The password cannot contain the double quote (") character.
+	 - -   The password must be different from the last 4 passwords used.
+ 
  - Click **Create Autonomous Data Warehouse** 
 
 ![]( img/image006.png)
@@ -101,7 +104,7 @@ Oracle client credentials (wallet files) are downloaded from the Autonomous Data
  
 2. Enter with the following credentials:
 	- **Username**: admin
-	- **Password**: *same as database password* 
+	- **Password**: *same password you used on Practice-3* 
 	
 ![]( img/image011.png)
 
@@ -110,7 +113,7 @@ Oracle client credentials (wallet files) are downloaded from the Autonomous Data
 
 ![]( img/image012.png)
 
-5. You must protect this file to prevent unauthorized database access. Therefore, you need to create a password to protect this file. For this exercise enter *Demo_2018DB##* and click **Download** and save it to your desktop
+5. You must protect this file to prevent unauthorized database access. Therefore, you need to create a password to protect this file. For this exercise enter the same password you used on Practice-3 and click **Download** and save it to your desktop
 
 ![]( img/image013.png)
 
@@ -128,7 +131,6 @@ To load data from files in the cloud into your Autonomous DW Cloud database, use
 	
 4. Click **Create Bucket** 
 ![]( img/image014.png)
-
 
 5.  Upload the channels.txt file to the ADW_Bucket
 ![]( img/image015.png)
@@ -170,7 +172,7 @@ The ocitest user will be the owner of the CHANNELS table that will be used for l
 5. Now that you have logged into SQL Developer, execute the following statements to create the **ocitest** user and to grant **DWROLE** to this user:
 
  ```
-create user ocitest identified by "Demo_2018DB##";
+create user ocitest identified by "<password>";
 grant dwrole to ocitest;
 ```
 
@@ -182,7 +184,7 @@ grant dwrole to ocitest;
 7.  Now lets create a new connection using the following values:
 	- **Connection Name**: ADW-Finance-OCITEST
 	- **Username**: ocitest
-	- **Password**: *Demo_2018DB##*
+	- **Password**: *Enter the password you used from step 5*
 	- **Connection Type**: Cloud PDB
 	- **Configuration File**: *Browse to the credentials file collected from Practice-4* 
 	- **Service**: adwfinance_medium
@@ -232,8 +234,8 @@ You should see an output of **Table CHANNELS created** if there are no execution
 3. Now lets load data into the CHANNELS table using the channels.txt file by executing a modified version of the script bellow:
 
 > **Note:**  For **file_uri_list**, specify the URL that points to the location of the file staged in your object store. The URL is structured as follows. The values you specify are in bold:
-
-https:\//swiftobjectstorage.**region-name**.oraclecloud.com/v1/**tenant-name**/**bucket-name**/**file-name**
+>
+>*https:\//<span></span>swiftobjectstorage.**region-name**.oraclecloud.com/v1/**tenant-name**/**bucket-name**/**file-name***
 
 ``` 
 begin
@@ -255,4 +257,3 @@ select * from channels;
 ```
 
 ![]( img/image028.png)
-
