@@ -71,28 +71,80 @@ A confirmation page displays the details of the cloud network that you just crea
 
 ![](./images/500/Picture500-2.png)
 
-- In order to create Compute Instance we need to select a Compartment.
+- In order to create Compute Instance we need to select a Compartment. Select Demo Compartment which we created in Lab100
 
 Enter the following to Create Linux Instance
 
-- 
+- **Name**: Enter a frinedly name to identify your linux instance
+- **Availability Domain**: Oracle Cloud Infrastructure is hosted in Regions, which are localized geographic areas. Each Region contains three Availability Domains which are isolated and fault-tolerant data centers that can be used to ensure high availability. In the Availability Domain field, select the Availability Domain in which you want to run the instance. For example, scul:PHX-AD-1.
+- **Image Compartment**: Select Demo compartment
+- **Boot Volume**: Oracle-Provided OS Image
+- **Image Operating System**: Oracle Linux 7.5
+- **Shape Type**: Virtual Machine
+- **Shape**: The shape of an instance determines the number of CPUs, the amount of memory, and how much local storage an instance will have. Shape types with names that start with VM are Virtual Machines, while shape types with names that start with BM are Bare Metal instances. Choose the appropriate shape for your Virtual Machine instance in the Shape field. For example, VM.Standard1.4.
+- **Image Version**: Please select the latest version, 2018.09.25-0(latest)
+- **SSH Keys**: If the operating system image for your instance uses SSH keys for authentication (for example, Linux instances), then you must provide an SSH public key. To choose a public key file, ensure that Choose SSH Key Files is selected, then click Browse. 
+
+![](./images/500/BrowseSSH.png)
+
+- Choose the public key to upload (for example, id_rsa.pub), then click Open. Note: some operating systems may use a different interface for file selection.
+
+![](./images/500/UploadSSH.png)
+
+If you do not have ssh key pair you can create using command line.
+
+- Open terminal for entering the commands
+- At the prompt, enter the following:
+```
+ssh-keygen -t rsa -N "" -b "2048" -C "key comment" -f path/root_name
+```
+Where
+- **-t rsa**: Use the RSA algorithm
+- **-N "passphrase"**: Passphrase to protect the use of the key (like a password). If you don't want to set a passphrase, don't enter anything between the quotes.
+- **-b "2048"**: Generate a 2048 bit key.
+- **-C "key comment": A name to identify the key.
+- **-f path/root_name**: The location where the key pair will be saved and the root name for the files. For example, if you give the root name as id_rsa, the name of the private key will be id_rsa and the public key will be id_rsa.pub.
+
+![](./images/500/GenerateSSH.png)
+
+- **Virtual Cloud Network Compartment**: Select Demo Compartment
+- **Virtual Cloud Network**: In the Virtual Cloud Network field, select the Virtual Cloud Network for the instance which we created earlier in this lab.
+- **Subnet Compartment**: Select Demo Compartment
+- **Subnet**: In the Subnet field, select the subnet to which to add the instance. For example, the public subnet scul:PHX-AD-1.
+
+- Click on **Create Instance** at the bottom 
 
 
-![](./images/500/Picture500-3.png)
 
-- You would need to provision virtual cloud network (VCN) in your compartment to create Compute Instance.
+
+![](./images/500/CreateLinux1.png)
+![](./images/500/CreateLinux2.png)
+![](./images/500/CreateLinux3.png)
+
+- While the instance is being created, its state is displayed as "PROVISIONING".
+
+![](./images/500/ProvisioningLinux.png)
+
+- The status changes to "RUNNING" when the instance is fully operational.
+
+![](./images/500/RunningLinux.png)
 
 - Note the public IP of the machine provisioned and ssh into this host and configure it to run node.js on ATP.
 
-### **STEP 2: Install node.js, python 2.7 and required libaio libraries**
+### **STEP 3: Install node.js, python 2.7 and required libaio libraries**
 
-- ssh as user opc to your host machine.
+In order to install the required package on linux environment we need to ssh into our linux host machine. 
+
+
+- Open Terminal and ssh ssh as user opc to your host machine.
 
 ```
 $ssh -i /Users/tejus/Desktop/sshkeys/id_rsa opc@ipaddress
 ```
 
 ![](./images/500/Picture500-4.png)
+
+Once you have succesfully ssh into the host machine install the packages.
 
 - Download and install node.js, python and git. We will need git to download instant client and sample app.
 
@@ -134,8 +186,15 @@ sudo yum install libaio
 - You can check your node, npm installs using
 ```
 node --version
+```
+![](./images/500/Node_Version.png)
+
+```
 npm --version
 ```
+
+![](./images/500/npm_version.png)
+
 
 - Install git to your host machine.
 
@@ -144,7 +203,7 @@ sudo yum install git
 ```
 
 
-### **STEP 3: Install and configure Oracle Instant Client**
+### **STEP 4: Install and configure Oracle Instant Client**
 
 - Download and install Oracle Instant Client software
 
@@ -152,7 +211,7 @@ sudo yum install git
 
 For simplicity and to facilitate a direct download to your linux host, clone below git repository to your host machine.
 ```
-git clone https://github.com/kbhanush/instantclient_12_2_linux
+git clone https://github.com/cloudsolutionhubs/instantclient_12_2_linux
 ```
 
 - Unzip the file and move the files to /opt/oracle/instantclient_12_2
@@ -169,21 +228,14 @@ sudo mkdir /opt/oracle
 sudo mv /home/opc/instantclient_12_2_linux/instantclient_12_2/ /opt/oracle/instantclient_12_2/
 ```
 
-- Set LD_LIBRARY_PATH in your bash_profile as
-
-```
-export LD_LIBRARY_PATH=/opt/oracle/instantclient_12_2:$LD_LIBRARY_PATH
-```
-
-
-### **STEP 4: Install node oracle drivers through npm**
+### **STEP 5: Install node oracle drivers through npm**
 
 - Download sample node.js app from git
 
 ```
 cd /home/opc/
 
-git clone https://github.com/kbhanush/ATPnodeapp
+git clone https://github.com/cloudsolutionhubs/ATPnodeapp
 ```
 
 - In the node.js app folder install node oracle drivers from npm
@@ -196,6 +248,10 @@ npm install oracledb
 
 - Your sample application consists of 2 files, dbconfig.js and server.js. Set dbuser, dbpassword and connectString in dbconfig.js to point to your ATP database.
 
+- **dbuser**: admin
+- **dbpassword**: Admin passwrod, in our case it is 'WElcome_123#'
+- **connectString**: 'yourdbname_high'
+
 ```
 nano dbconfig.js
 
@@ -206,29 +262,29 @@ connectString: 'restonHubDB_high'
 }
 ```
 
-### **STEP 5: Upload connection wallet and run sample app**
+### **STEP 6: Upload connection wallet and run sample app**
 
 - Upload the connection wallet and run sample app
 
-- From your local machine copy the secured wallet file to host machine
+- From your local machine copy the secured wallet file to host machine. 
+The format of the below command is 
+
+scp -i **"/path_to_private_key "** **"/path_to_wallet_dbname.zip"** opc@ipaddress:/home/opc/ATPnodeapp
 
 ```
-sudo scp -i ~/priv-ssh-keyfile wallet_RESTONHUBDB.zip opc@ipaddress:/home/opc/ATPnodeapp
+scp -i ~/priv-ssh-keyfile wallet_RESTONHUBDB.zip opc@ipaddress:/home/opc/ATPnodeapp
 ```
 
 - ssh back to your host machine and unzip the wallet file
 
 ```
+cd /home/opc/ATPnodeapp
+
 unzip wallet_RESTONHUBDB.zip -d wallet_RESTONHUBDB/
 ```
 
-- Set env variables TNS_AMDIN to point to the wallet folder and edit sqlnet.ora file in wallet folder to point to the wallet.
-
-```
-export TNS_ADMIN=/home/opc/ATPnodeapp/wallet_RESTONHUBDB/
-```
-
 - Edit sqlnet.ora as follows
+
 ```
 cd /home/opc/ATPnodeapp/wallet_RESTONHUBDB/
 
@@ -238,7 +294,25 @@ WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA = (DIRECTORY=$TNS_ADMIN
 SSL_SERVER_DN_MATCH=yes
 ```
 
+- Set LD_LIBRARY_PATH in your bash_profile as
+
 ```
+export LD_LIBRARY_PATH=/opt/oracle/instantclient_12_2:$LD_LIBRARY_PATH
+```
+
+- Set env variables TNS_AMDIN to point to the wallet folder and edit sqlnet.ora file in wallet folder to point to the wallet.
+
+```
+export TNS_ADMIN=/home/opc/ATPnodeapp/wallet_RESTONHUBDB/
+```
+
+- We have now set up all the required packages and settings to run our server.js.
+
+- Run server.js
+
+```
+cd /home/opc/ATPnodeapp
+
 node server.js
 ```
 
@@ -248,7 +322,9 @@ node server.js
 - Once the server.js is running open up another terminal and ssh into the linux machine and get into your node app folder and run app in background and test with curl.
 
 ```
-cd home/opc/ATPnodeapp/
+$ssh -i /path_to_private_key/sshkeys/id_rsa opc@ipaddress
+
+cd /home/opc/ATPnodeapp/
 
 curl http://localhost:3050
 ```
@@ -256,3 +332,5 @@ curl http://localhost:3050
 - The application confirms connectivity to your ATP instance.
 
 ![](./images/500/Picture500-10.png)
+
+You have now successfully connected your node app to Autonomous Transaction Processing database.

@@ -38,4 +38,4 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 
 - The service details page would indicate that the scaling operation is in progress. Once it completes, the status changes to ‘Available’.
 
-#### NOTE:  Regardless to the change in CPU or strorage, your database is always available to your application and your workload can run uninterrupted during the scaling process.
+#### NOTE:  Regardless to the change in CPU or storage, your database is always available to your application and your workload can run uninterrupted during the scaling process.
