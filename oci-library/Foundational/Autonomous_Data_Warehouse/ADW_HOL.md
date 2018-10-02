@@ -56,7 +56,7 @@ This file will be loaded into Object Storage and later used to load data into th
  - **Username:** api.user
  - **Password:** _instructor will provide password_
 
- ![very good|512x397](img/image003.png)
+ ![](img/image003.png)
 
 When you sign in to the Console, the home page is displayed.
 
