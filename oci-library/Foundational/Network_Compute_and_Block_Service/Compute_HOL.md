@@ -60,7 +60,7 @@ a.  Install git for windows. Download
 
 b.  Open Git-bash:
     
-    ![](media/image1.png)
+![](media/image1.png)
 
 c.  Generate ssh-keys by running this command in Git Bash
 
@@ -384,11 +384,9 @@ A common usage of Block Volume is adding storage capacity to an Oracle Cloud Inf
 
 **Tasks**
 
-a. Navigate to the Block Volume and click on Block Volume.
+a. Navigate to the Block Volume Service and click on Block Volume.
 
-![](media/image14.png)
-
-b.  In Bock Volume service, Click on Create Block Volume and provide the following details.
+b. In Bock Volume service, Click on Create Block Volume and provide the following details.
 
 **Compartment** : \<Your Compartment Name\>
 
@@ -425,7 +423,7 @@ it is to be attached
 > run yearly on January 1st. Full backups are retained for five
 > years.
 
-![](media/image23.png)
+![](media/image14.png)
 
 Leave the tags options as it is and **CLICK** on **Create Block
 Volume**.
@@ -433,16 +431,15 @@ Volume**.
 The volume will be ready to attach once its icon no longer lists it as
 PROVISIONING in the volume list.
 
-c.  Once the Block Volume is created, you can attach it to the VM
-    instance you just launched. When you attach a block volume to a VM instance, you have two options for attachment type, iSCSI or paravirtualized.
+c.  Once the Block Volume is created, you can attach it to the VM instance you just launched. When you attach a block volume to a VM instance, you have two options for attachment type, iSCSI or paravirtualized.
 
 > Paravirtualized attachments simplify the process of configuring your block storage by removing the extra commands required before connecting to an iSCSI-attached volume. The trade-off is that IOPS performance for iSCSI attachments is greater than that for paravirtualized attachments, so you need to consider your requirements when selecting a volume's attachment type.
 
 d.  Go to the Compute instance tab, and navigate to the VM instance and click on the Attach Block Volume button.
 
-![](media/image24.png)
+![](media/image15.png)
 
-![](media/image25.png)
+![](media/image16.png)
 
 e.  Select the volume created from the drop down menu and choose
  **iSCSI.** Once it gets attached after provisioning, the console
@@ -450,9 +447,9 @@ e.  Select the volume created from the drop down menu and choose
  
 f. Click on the ellipsis and then click **iSCSI Command and Information link.** Connect to the instance through SSH and **run the iSCSI ATTACH COMMANDS** as provided (shown below).
 
-![](media/image26.png)
+![](media/image17.png)
     
-![](media/image27.png)
+![](media/image18.png)
 
 g. Click on **COPY** to copy all commands and ssh into the compute instance and run all these commands by pasting it in the terminal.
 
@@ -462,7 +459,7 @@ h. Once the disk is attached, you can run the following commands to
 > $ ssh –i \</path/privateKey\> opc@\<PublicIP\_Address\>
 > $ lsblk
 
-![](media/image28.png)
+![](media/image19.png)
 
 >When mounting a storage volume for the first time, you can format the storage volume and create a single, primary partition that occupies the entire volume by using fdisk command (Caution: Using fdisk to format the disk deletes any data on the disk).
 
@@ -474,7 +471,7 @@ $ sudo mkdir /mnt/disk1
 $ sudo mount /dev/sdb /mnt/disk1
 $ lsblk
 
-![](media/image29.png)
+![](media/image20.png)
 
 ## Summary
 
