@@ -324,11 +324,14 @@ SSH into the Linux instance and run following commands.
 - Create firewall rules to allow access to the ports on which the HTTP server listens.
 
 > $ sudo firewall-cmd --permanent --zone=public --add-service=http 
+
 > $ sudo firewall-cmd --reload
 
 - Create an index file for your webserver
 > $ sudo su
+
 > $ echo ‘This is my webserver running on Oracle Cloud Infrastructure’ \>\> /var/www/html/index.html
+
 > $ exit
 
 - Navigate to http://\<PublicIPAddress\>:80 (the IP address of the Linux VM) in your browser.
@@ -458,6 +461,7 @@ h. Once the disk is attached, you can run the following commands to
     format the disk and mount it.
 
 > $ ssh –i \</path/privateKey\> opc@\<PublicIP\_Address\>
+
 > $ lsblk
 
 ![](media/image19.png)
@@ -467,10 +471,14 @@ h. Once the disk is attached, you can run the following commands to
 - Use mkfs to create a file system on the storage volume. Once filesystem is created, create a new mount point and mount the new disk.
 
 > $ sudo mkfs -t ext4 /dev/sdb
- Press y when prompted
-$ sudo mkdir /mnt/disk1
-$ sudo mount /dev/sdb /mnt/disk1
-$ lsblk
+
+> Press y when prompted
+
+> $ sudo mkdir /mnt/disk1
+
+> $ sudo mount /dev/sdb /mnt/disk1
+
+> $ lsblk
 
 ![](media/image20.png)
 
