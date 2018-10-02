@@ -31,7 +31,10 @@ To **log issues**, click [here](https://github.com/cloudsolutionhubs/autonomous-
 -   The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
 - Install node.js on your laptop
 - Docker installed on your local machine. If you do not have docker please follow this [link](https://docs.docker.com/docker-for-mac/install/) and install docker
-- Create a folder and download git repository to your local machine [here](https://github.com/cloudsolutionhubs/ATPDocker)
+- Create a folder and clone git repository to your local machine 
+```
+git clone https://github.com/cloudsolutionhubs/ATPDocker.git
+```
 
 Note: Note there are two Docker files in the repository. That’s because we have two different applications–ATPnodeapp and aOne. Both of these are node.js applications which mimic as microservices in our case.
 
@@ -45,17 +48,21 @@ Provision ATP instance and download secure connectivity credentials file.
 
 Refer to labs <a href="./LabGuide100ProvisionAnATPDatabase.md" target="_blank">LabGuide100ProvisionAnATPDatabase.md</a> and <a href="./LabGuide200SecureConnectivityAndDataAccess.md" target="_blank">LabGuide200SecureConnectivityAndDataAccess.md</a> to provision and download the secure connectivity credentials file.
 
-- NOTE: If you wish to deploy aOne app, you would need to connect to your database using SQL client and run the [create_schema](https://github.com/kbhanush/ATPDocker-back/blob/master/aone/create_schema.sql) script in the default admin schema or create a suitable user schema for the application.
+- NOTE: If you wish to deploy aOne app, you would need to connect to your database using SQL Developer and run the [create_schema](https://github.com/cloudsolutionhubs/ATPDocker/blob/master/aone/create_schema.sql) script in the default admin schema or create a suitable user schema for the application.
 
-Unzip and store the wallet folder in the same folder as your application under /wallet_NODEAPPDB2. This folder is copied into your container image when you run the docker file.
+Unzip and store the wallet in same folder as your application under /wallet_NODEAPPDB2. This folder is copied into your container image when you run the docker file.
 
 ```
-unzip wallet_RESTONHUBDB.zip -d /path_to_app_folder/wallet_NODEAPPDB2
+unzip /path_to_wallet_RESTONHUBDB.zip -d /path_to_app_folder/ATPDocker/wallet_NODEAPPDB2/
 ```
 
 - In your wallet folder, edit sqlnet.ora and replace the fcontents of the file with the following text: 
 
 ```
+cd wallet_NODEAPPDB2
+
+nano sqlnet.ora
+
 WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA = 
 (DIRECTORY=$TNS_ADMIN)))
 ```
@@ -69,6 +76,9 @@ Assuming you have downloaded the Dockerfile, database wallet and created the bac
 #### Ensure you are in a folder that contains the wallet folder /wallet_NODEAPPDB2 when you run this command
 
 ```
+
+cd /path_to_app_folder/ATPDocker/
+
 $ docker build -t aone .
 ```
 
@@ -94,14 +104,14 @@ $ docker images -a
 ### **STEP 3: Change Database configuration**
 
 You need to launch your docker image and change the following
-- dbuser
-- password
-- connect string 
+- dbuser: admin
+- password: WElcome_123#
+- connect string: yourdbname_high 
 
 ```
 cd /path_to_app_folder/ATPDocker/aone/scripts
 
-cat dbconfig.js
+nano dbconfig.js
 ```
 
 ![](./images/200/Picture500.png)

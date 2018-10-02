@@ -41,18 +41,20 @@ git clone https://github.com/cloudsolutionhubs/ATP-REST-nodejs.git
 - Generate a private key
 
 ```
-openssl genrsa -aes128 -out ~/oci_api_key.pem 2048
+mkdir ~/.oci
+
+openssl genrsa -out ~/.oci/oci_api_key.pem 2048
 ```
 - Change permission of the key generated
 
 ```
-chmod go-rwx ~/oci_api_key.pem
+chmod go-rwx ~/.oci/oci_api_key.pem
 ```
 
 - Generate a public key using the private key you just created
 
 ```
-openssl rsa -pubout -in ~/oci_api_key.pem -out ~/oci_api_key_public.pem
+openssl rsa -pubout -in ~/.oci/oci_api_key.pem -out ~/.oci/oci_api_key_public.pem
 ```
 
 ### **STEP 2: Upload the public key to your OCI account from the console and note down OCID's**
