@@ -79,9 +79,9 @@ The home page gives you quick links to the documentation and to Oracle Support.
  - **CPU Core Count**: 1
  - **Storage**: 1
  - **Password**: Password for ADMIN user of the service instance. The password must meet the following requirements:
-	 - -  The password must be between 12 and 60 characters long and must include at least one uppercase letter, one lowercase letter, and one numeric character.
-	 - -   The password cannot contain the double quote (") character.
-	 - -   The password must be different from the last 4 passwords used.
+	 -  The password must be between 12 and 60 characters long and must include at least one uppercase letter, one lowercase letter, and one numeric character.
+	 -    The password cannot contain the double quote (") character.
+	 -    The password must be different from the last 4 passwords used.
  
  - Click **Create Autonomous Data Warehouse** 
 
