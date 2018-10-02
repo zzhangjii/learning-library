@@ -56,7 +56,7 @@ This file will be loaded into Object Storage and later used to load data into th
  - **Username:** api.user
  - **Password:** _instructor will provide password_
 
- ![]( img/image003.png)
+ ![](img/image003.png){:height="700px" width="400px"}
 
 When you sign in to the Console, the home page is displayed.
 
@@ -108,7 +108,7 @@ Oracle client credentials (wallet files) are downloaded from the Autonomous Data
 	
 ![]( img/image011.png)
 
-3. On the left side of the page click on ** Administration**
+3. On the left side of the page click on **Administration**
 4. Click on **Download Client Credentials** 
 
 ![]( img/image012.png)
