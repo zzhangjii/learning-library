@@ -87,7 +87,7 @@ Note: -t options gives your image a tag ‘aone’. Don’t forget to include th
 You can also specify your dockerfile as,
 
 ```
-$docker build –t atpnodeapp –f Dockerfile2
+docker build -t atpnodeapp -f Dockerfile2 .
 ```
 #### Note: This will build another app called ATPnodeapp in the image.
 

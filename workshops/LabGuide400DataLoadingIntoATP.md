@@ -215,7 +215,7 @@ Specify the credentials for your Oracle Cloud Infrastructure Object Storage serv
 
 ### **STEP 5: Load data from the Object Storage using DBMS_CLOUD**
 
- You can use the PL/SQL package DBMS_CLOUD direclty to load the data from object store. This is the preferred choice for any load automation.
+ You can use the PL/SQL package DBMS_CLOUD directly to load the data from object store. This is the preferred choice for any load automation.
 
  - Connect as your user in SQL Developer, copy and paste <a href="./scripts/300/load_data.txt" target="_blank">this code snippet</a> to SQL Developer worksheet. We use the **copy\_data** procedure of the **DBMS\_CLOUD** package to copy the data (customers.csv) staged in your object store.
 
@@ -235,4 +235,4 @@ Specify the credentials for your Oracle Cloud Infrastructure Object Storage serv
 
 ![](./images/400/snapCustomerData.jpg)
 
-You have successfully loaded the sample data to customers table using DBMS_CLOUD.
+You have successfully loaded the sample data from Object storage to customers table using DBMS_CLOUD.
