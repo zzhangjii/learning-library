@@ -14,7 +14,7 @@ This is where the Oracle’s autonomous database cloud service comes in. It is b
 
 The Autonomous cloud service takes it a step further. It is self managing, self securing and highly available. There is no customer involvement in backing it up, patching it or even tuning it for most part. You simply provision, connect and run your apps. Oracle even provides a 99.995 SLA. That is a maximum of 2minutes, 11.5 seconds of downtime per month.
 
-![](./images/200/Picture300.png)
+![](./images/800/Picture300.png)
 
 
 To **log issues**, click [here](https://github.com/cloudsolutionhubs/autonomous-transaction-processing/issues/new) to go to the github oracle repository issue submission form.
@@ -99,7 +99,7 @@ The docker creates multiple image files as it builds each layer. Your final imag
 $ docker images -a
 ```
 
-![](./images/200/Picture400.png)
+![](./images/800/Picture400.png)
 
 ### **STEP 3: Change Database configuration**
 
@@ -109,51 +109,38 @@ You need to launch your docker image and change the following
 - connect string: yourdbname_high 
 
 ```
-cd /path_to_app_folder/ATPDocker/aone/scripts
 
-nano dbconfig.js
+docker run -i -p 3050:3050 -t aone sh
+
+cd /opt/oracle/lib/ATPDocker/aone/scripts
+
+vi dbconfig.js
 ```
 
-![](./images/200/Picture500.png)
+![](./images/800/Picture500.png)
 
-This is the default username, password and connectString wirtten in the app and it will attempt to connect to the database with these credentials along with the secure keystore file. Either create a user with these credentials in your database or change this file to match what you create.
+This is the default username, password and connectString wirtten in the app and it will attempt to connect to the database with these credentials along with the secure keystore file. Either create a user with these credentials in your database or change this file to match what you create and save the file.
 
 ### **STEP 4: Run server.js app**
 
-Install oracledb add-on binary for Node.js
+Within the docker container navigate to aone folder and run server.js script
 
 ```
-cd /path_to_app_folder/ATPDocker/aone/
+cd /opt/oracle/lib/ATPDocker/aone/
 
-npm install oracledb
-```
-
-Navigate to aone folder and run server.js script
-
-```
-cd /path_to_app_folder/ATPDocker/aone/
-
-$ node server.js
+$ node server.js &
 ```
 
 Your should get a response similar to this
 
-![](./images/200/Picture600.png)
+![](./images/800/Picture600.png)
 
-To check the app on the browser, you will need to bridge port 3050 on the container to your localhost.
-
-Exit node.js, make sure you kill the process and shut down and exit container.
-
-Re-run the container with the following docker command
-
-```
-$ docker run -i -p 3050:3050 -t <tagname>
-```
+To check the app on the browser, you have bridged port 3050 on the container to your localhost.
 
 Open browser on your localhost and go to http://localhost:3050
 
 This is what you see if your app ran successfully.
 
-![](./images/200/Picture700.png)
+![](./images/800/Picture700.png)
 
 You just built and provisioned an entire application stack consisting of a microservice and an enterprise grade, self managing database. You can push your docker image to a public/private docker repository and it can be pushed to any container orchestration service either on-prem or with any cloud provider. Your database is autonomous –it provisions quickly, backs up, patches and tunes itself as needed.
