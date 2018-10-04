@@ -170,7 +170,7 @@ To load data from the Oracle Cloud Infrastructure(OCI) Object Storage you will n
 
 -   Click the **user's name** to view the details.  Also, remember the username as you will need that in the next step.
 
-For this lab we will be using **api.user**.
+For this lab we will be using admin user.
 
 ![](./images/400/Create_Swift_Password_02.png)
 
@@ -196,7 +196,7 @@ In order to access data in the Object Store you have to enable your database use
 
 -   Connected as your user in SQL Developer, copy and paste <a href="./scripts/300/create_credential.txt" target="_blank">this code snippet</a> to SQL Developer worksheet.
 
-Specify the credentials for your Oracle Cloud Infrastructure Object Storage service: The username will be the **OCI username** (in our case it is **api.user**) and the OCI object store **Auth Token** you generated in the previous step.  In this example, the crediential object named **OBJ\_STORE\_CRED** is created. You reference this credential name in the following steps.
+Specify the credentials for your Oracle Cloud Infrastructure Object Storage service: The username will be the **OCI username** (in our case it is **your email address**) and the OCI object store **Auth Token** you generated in the previous step.  In this example, the crediential object named **OBJ\_STORE\_CRED** is created. You reference this credential name in the following steps.
 
  ![](./images/400/snap0015312.jpg)
 
