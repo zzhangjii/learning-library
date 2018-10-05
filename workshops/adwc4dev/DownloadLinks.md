@@ -4,5 +4,4 @@
 
 **Click to Download**
 
-[install.zip](https://dgcameron.github.io/adwc4dev/workshops/adwc4dev/install/install.zip)
-
+[install.zip](https://oracle.github.io/learning-library/workshops/adwc4dev/install/install.zip)
