@@ -34,12 +34,20 @@ In this section, you'll fill out the form located at [oracle.com/oow18trial](ora
 
 ## Sign in to Your Account ##
 1. Go to [cloud.oracle.com](cloud.oracle.com) and click **Sign In**.
+
     ![](img/signin.png)
+
     [Description of the illustration signin.png](files/signin.txt)
+
 2. From the **Cloud Account** drop-down menu, select **Cloud Account with Identity Cloud Service**.
 3. Enter your Cloud Account Name and click **My Services**. This is the name you chose when you created your account in the previous section. If you forgot the name, see the confirmation email.
+
     ![](img/accountname.png)
+
     [Description of the illustration accountname.png](files/accountname.txt)
+
 4. Enter your Cloud Account credentials and click **Sign In**. Your username is the email address you used to sign up. Your password is auto-generated and is found in the confirmation email. You're asked to change this password when you sign in for the first time.
+
     ![](img/username.png)
+    
     [Description of the illustration username.png](files/username.txt)

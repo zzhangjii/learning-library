@@ -21,12 +21,13 @@ Before you can launch an instance, you need to have a VCN to launch it into. In 
 
 
 ## Create a Virtual Cloud Network ##
-1. Log in to the Oracle Cloud Platform.
+1. Sign in to the Oracle Cloud Platform.
 2. Click the menu icon to expand the menu on the left edge of the screen.
 3. Click **Services**.
 4. Click **Compute**.
 
     ![](img/MyServicesMenu.png)
+    
     [Description of the illustration MyServicesMenu.png](files/MyServicesMenu.txt)
 
 5. Click the OIC menu icon to expand the menu on the left edge of the screen.
@@ -34,11 +35,13 @@ Before you can launch an instance, you need to have a VCN to launch it into. In 
 7. Click **Virtual Cloud Networks**.
     
     ![](img/OCIMenu1.png)
+
     [Description of the illustration OCIMenu1.png](files/OCIMenu1.txt)
 
 8. Select the root compartment from the Compartment dropdown menu.
 
     ![](img/Compartment.png)
+
     [Description of the illustration Compartment.png](files/Compartment.txt)
 
 9. Click the button **Create Virtual Cloud Network**.
@@ -64,11 +67,13 @@ Before you can launch an instance, you need to have a VCN to launch it into. In 
 3. Click **Instances**.
     
     ![](img/OCIMenu2.png)
+
     [Description of the illustration OCIMenu2.png](files/OCIMenu2.txt)
 
 4. Ensure the root compartment is still selected in the Compartment dropdown menu.
 
     ![](img/Compartment.png)
+
     [Description of the illustration Compartment.png](files/Compartment.txt)
 
 5. Click the button **Create Virtual Cloud Network**.
@@ -85,6 +90,7 @@ Before you can launch an instance, you need to have a VCN to launch it into. In 
      <pre><code>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDVNPh09u35ejTZun3FNEGhrjL/CovPsHAh79pN0QVprxEJaW2zjmaBZF1Q6lkuyTRvraomIlduCYxrlnwCe8oyER5dY1zuJATWm7ZiqgsvIkhj8L+ea9dBZRvFvcnFsNFnt4ALZYkW2nB2EeTdvqVMHERjFKfbRMCcO0dusmBUEsvaaqLtrvVuHBjwoXIDKkT/PFkix4DWRZRkZIjmZ/y9kwrHO4W1FYsFi4LP1xIB1c9y2H4w0SBXAMv4NCSFEIgWPQly2NywMsgEbddjW+zPz+7YjYqjWfz5Fgchu7+N1gejsIdzg1/aLvDpze6TN9xLcZx5gt04jA3TR+xfs2Ab Tim@Corsair</code></pre>
          
     ![](img/pastesshkey.png)
+
     [Description of the illustration pastesshkey.png](files/pastesshkey.txt)
 
      * Keep the remaining default values
