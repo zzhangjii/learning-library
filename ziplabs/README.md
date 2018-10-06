@@ -7,8 +7,10 @@ permalink: /ziplabs/index.html
 # Zip Labs Index #
 
 ## Oracle Open World 2018 ##
+* [Access an Oracle Cloud Platform Trial Account](2018-account)
 * [Create a Virtual Machine Instance Using Oracle Cloud Infrastructure Compute](oci-vm)
 * [Provisioning Autonomous Data Warehouse Cloud and Getting Started](adw-provisioning)
+* [Working with Database Services and Sample Data Sets](adw-services)
 
 ## Oracle Open World 2017 ##
 * [Creating a Node.js RESTful API in Oracle Application Container Cloud Service](node-rest/)
