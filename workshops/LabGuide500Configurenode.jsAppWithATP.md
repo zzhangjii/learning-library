@@ -23,7 +23,7 @@ To **log issues**, click [here](https://github.com/cloudsolutionhubs/autonomous-
 
 Virutal Cloud Network (VCN) is a private network that you set up in the Oracle data centers, with firewall rules and specific types of communication gateways that you can choose to use. A VCN covers a single, contiguous IPv4 CIDR block of your choice. See [Default Components that Come With Your VCN](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/overview.htm#Default). The terms virtual cloud network, VCN, and cloud network are used interchangeably in this documentation. For more information, see [VCNs and Subnets](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/managingVCNs.htm).
 
-- Login to your Oracle Cloud Infrastructure and Click n **Menu** and select **Network** and **Virtual Cloud Networks**.
+- Login to your Oracle Cloud Infrastructure and Click on **Menu** and select **Network** and **Virtual Cloud Networks**.
 
 ![](./images/500/Picture500-12.png)
 
@@ -114,9 +114,6 @@ Where
 
 - Click on **Create Instance** at the bottom 
 
-
-
-
 ![](./images/500/CreateLinux1.png)
 ![](./images/500/CreateLinux2.png)
 ![](./images/500/CreateLinux3.png)
@@ -133,8 +130,7 @@ Where
 
 ### **STEP 3: Install node.js, python 2.7 and required libaio libraries**
 
-In order to install the required package on linux environment we need to ssh into our linux host machine. 
-
+In order to install the required package on linux environment we need to ssh into our linux host machine.
 
 - Open Terminal and ssh as user opc to your host machine.
 

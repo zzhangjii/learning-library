@@ -12,7 +12,7 @@ It's important to have a similar strategy in the backend for the database tier. 
 
 This is where the Oracle’s autonomous database cloud service comes in. It is based on a pluggable architecture similar to application containers where one container database holds multiple pluggable databases. Each of these pluggable databases or PDBs are completely isolated from each other, can be deployed quickly and can be managed as a whole so that you incur the cost of managing a single database while deploying multiple micro services onto these PDBs.
 
-The Autonomous cloud service takes it a step further. It is self managing, self securing and highly available. There is no customer involvement in backing it up, patching it or even tuning it for most part. You simply provision, connect and run your apps. Oracle even provides a 99.995 SLA. That is a maximum of 2minutes, 11.5 seconds of downtime per month.
+The Autonomous cloud service takes it a step further. It is self managing, self securing and highly available. There is no customer involvement in backing it up, patching it or even tuning it for most part. You simply provision, connect and run your apps. Oracle even provides a 99.995 SLA. That is a maximum of 2 minutes, 11.5 seconds of downtime per month.
 
 ![](./images/800/Picture300.png)
 
@@ -30,7 +30,7 @@ To **log issues**, click [here](https://github.com/cloudsolutionhubs/autonomous-
 
 -   The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
 - Install node.js on your laptop
-- Docker installed on your local machine. If you do not have docker please follow this [link](https://docs.docker.com/docker-for-mac/install/) and install docker
+- Docker installed on your local machine. If you do not have docker please follow this [Mac User link](https://docs.docker.com/docker-for-mac/install/), [Windows User link](https://docs.docker.com/docker-for-windows/install/) and install docker
 - Create a folder and clone git repository to your local machine 
 ```
 git clone https://github.com/cloudsolutionhubs/ATPDocker.git

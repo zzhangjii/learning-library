@@ -75,6 +75,9 @@ Enter the following in create Compartment window
 
 ![](./images/100/Picture100-21.jpeg)
 
+- Select **Demo Compartment** 
+
+![](./images/100/DemoComp.png)
 
 -  Click on **Create Autonomous Transaction Processing Database** button to start the instance creation process
 
@@ -121,7 +124,7 @@ WElcome_123#
 
 ![](./images/100/Picture100-34.jpeg)
 
-#### Subscribe to new database software licenses and the database cloud service: Your cloud service instance should inslude databsae license. This is an all-inclusive cost and you do not need to bring any additional licenses to cloud.
+#### Subscribe to new database software licenses and the database cloud service: Your cloud service instance should inslude database license. This is an all-inclusive cost and you do not need to bring any additional licenses to cloud.
 
 ![](./images/100/Picture100-35.jpeg)
 
