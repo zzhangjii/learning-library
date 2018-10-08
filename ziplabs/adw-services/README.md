@@ -7,7 +7,7 @@ permalink: /ziplabs/adw-services/index.html
 # Working with Database Services and Sample Data Sets #
 
 ## Before You Begin ##
-In this 15-minute lab, you will explore the provided sample data sets and experiment with the choices of database services that come with your ADWC instance.
+In this 10-minute lab, you will explore the provided sample data sets and experiment with the choices of database services that come with your ADWC instance.
 
 ### Background ###
 Autonomous Data Warehouse Cloud provides three database services that you can choose when connecting to your database. These are named as HIGH, MEDIUM, and LOW services and provide different levels of performance and concurrency. 
@@ -20,13 +20,12 @@ As a user you need to pick the database service based on your performance and co
 
 This lab uses the LOW and HIGH database services to understand the performance differences between them. The lab will run queries on sample data set provided out of the box with ADWC. ADWC provides the Oracle Sales History sample schema and the Star Schema Benchmark (SSB) data set, these data sets are in the SH and SSB schemas respectively. 
 
-You will run queries on the SH Schema.
-
 
 ### What Do You Need? ###
 * Access to an instance of Oracle Autonomous Data Warehouse Cloud
 * [Oracle SQL Developer 18.2](http://www.oracle.com/technetwork/developer-tools/sql-developer/overview/index.html)  (already installed)
 * [Oracle's Java Development Kit 8 (JDK 8)](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (already installed)
+* [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) (already installed)
 * You must have completed the previous lab **Provisioning Autonomous Data Warehouse Cloud and Getting Started**.
 
 
@@ -40,12 +39,12 @@ You will run queries on the SH Schema.
 
 3. Copy and paste this code into the SQL Developer worksheet:
 
-    ````SQL
-    select /* low */ c_city,c_region,count(*)
-    from ssb.customer c_low
-    group by c_region, c_city
-    order by count(*);
-    ````
+   ````SQL
+   select /* low */ c_city,c_region,count(*)
+   from ssb.customer c_low
+   group by c_region, c_city
+   order by count(*);
+   ````
 
 4. Click **Run Script** in SQL Developer so that all the rows are displayed on the screen.
 5. Note the response time.
@@ -59,12 +58,12 @@ You will run queries on the SH Schema.
 1. Double click the **admin_high** connection to connect to the database.
 2. Copy and paste this code into the SQL Developer worksheet:
 
-    ````SQL
-    select /* high */ c_city,c_region,count(*) 
-    from ssb.customer c_high
-    group by c_region, c_city
-    order by count(*);
-    ````
+   ````SQL
+   select /* high */ c_city,c_region,count(*) 
+   from ssb.customer c_high
+   group by c_region, c_city
+   order by count(*);
+   ````
 
 3. Click **Run Script** in SQL Developer so that all the rows are displayed on the screen.
 4. Note the response time.
@@ -76,7 +75,7 @@ A query running in the HIGH database service can use more resources and run fast
 ADWC will caches the results of a query. If you run the same queries again, you'll see they run much faster.
 
 1. Click **Run Script** again for `admin_high` so that all the rows are displayed on the screen.
-2. Note the improved response time.
+2. Note the improved response time!
 
 
 ## Want to Learn More? ##

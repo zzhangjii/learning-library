@@ -18,6 +18,7 @@ Oracle’s Autonomous Data Warehouse Cloud is the perfect quick-start service fo
 * Access to an instance of Oracle Autonomous Data Warehouse Cloud
 * [Oracle SQL Developer 18.2](http://www.oracle.com/technetwork/developer-tools/sql-developer/overview/index.html)  (already installed)
 * [Oracle's Java Development Kit 8 (JDK 8)](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (already installed)
+* [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) (already installed)
 
 
 ## Create an ADWC Instance ##
@@ -88,13 +89,18 @@ Note: Version 18.2.0 of SQL Developer drops the requirement to enter the Autonom
      * **Keystore Password**:
         * **For SQL Developer 18.2.0 or newer**: Starting with version 18.2.0, SQL Developer does not require that you enter a Keystore Password and does not provide the Keystore Password field.
         * **For SQL Developer older version**: Enter the password that was generated when you downloaded the Client Credentials zip file from the Autonomous Data Warehouse Cloud console.
-     * **Service**: There are 3 pre-configured database services for each database. Pick `<databasename>_low`. These service levels map to the LOW, MEDIUM, and HIGH consumer groups, which provide different levels of performance and concurrency.
+     * **Service**: There are 3 pre-configured database services for each database. Pick `adwfinace_low`. These service levels map to the LOW, MEDIUM, and HIGH consumer groups, which provide different levels of performance and concurrency.
+
+    ![](img/NewConnection.png)
+
+    [Description of the illustration NewConnection.png](files/NewConnection.txt)
+
 4. Click **Test**. "Status: Success" should display at the left-most bottom of the New/Select Database Connection dialog.
 5. Click **Save** to save the connecton information.
-6. Click **Connect** to connect the database. An entry for the new connection appears under Connections.
+6. Click **Connect** to connect the database. An entry for the new connection appears under Connections. A new worksheet also appears.
 7. Repeat the previous steps to create another connection. Use the same information as before with, with the following exceptions:
     * **Connection Name**: `admin_high`
-    * **Service**: `<databasename>_high`
+    * **Service**: `adwfinace_high`
 
 Keep SQL Developer open. You'll need it in the next lab when you examine the differences between low and high database service levels.
 
