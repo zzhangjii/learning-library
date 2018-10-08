@@ -33,5 +33,5 @@
 |HOL6376| Using Terraform with Oracle Cloud Infrastructure |   September 2018   |
 |HOL6375| Using Oracle Containers Engine for Kubernetes    |   September 2018   |
 |HOL6379| Getting Started with Edge Services on Oracle Cloud Infrastructure    |   September 2018 |
-|HOL6684| Computational Fluid Dynamics Simulation on Oracle Cloud Infrastructure | September 2018 |
+|HOL6684| [Computational Fluid Dynamics Simulation on Oracle Cloud Infrastructure](./OOW-2018/HPC/HPC_HOL.md)| September 2018 |
 |HOL6686| Big Data on Oracle Cloud Infrastructure | September 2018 |
