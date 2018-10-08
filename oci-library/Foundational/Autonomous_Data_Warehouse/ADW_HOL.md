@@ -30,16 +30,16 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 
 - Oracle Cloud Infrastructure account credentials (User, Password, and Tenant) with available service limit for Autonomous Data Warehouse
 - SQL Developer installation on the laptop and basic knowledge of executing SQL scripts in the SQL Worksheet of SQL Developer
-- SQL Developer can be downloaded from [http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html] (http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html)
+- SQL Developer can be downloaded from [http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html](http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html)
 - A simple text editor like Notepad, vi or Sublime.
 
 ## Practice-1: Download channel text file and install SQL Developer Tool
 
-1) Download the channel.txt file from this link: [https://bit.ly/2NSNd4l] (https://bit.ly/2NSNd4l) and save it to your desktop.
+1) Download the channel.txt file from this link: [https://bit.ly/2NSNd4l](https://bit.ly/2NSNd4l) and save it to your desktop.
 
 > **Note:**  This file will be loaded into Object Storage and later used to load data into the CHANNELS table.
 
-2) Download SQL Developer Tool from this link: [https://bit.ly/2OHcBcZ] (https://bit.ly/2OHcBcZ) and install in your desktop.
+2) Download SQL Developer Tool from this link: [https://bit.ly/2OHcBcZ](https://bit.ly/2OHcBcZ) and install in your desktop.
 
 ## Practice-2: Sign in to OCI Console
 
