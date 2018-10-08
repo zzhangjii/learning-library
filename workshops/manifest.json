@@ -1,0 +1,74 @@
+{
+    "workshop": {
+        "title": "ADWC Journey: Hands-on Workshop",
+        "description": "This workshop will show you how to use Oracle Autonomous Data Warehouse Cloud in the Oracle Public Cloud.",
+        "labs": [
+            {
+                "number": "0",
+                "filename": "README.md",
+                "title": "Read Me First",
+                "description": "ADWC Test Drive Workshop Overview"
+            },
+            {
+                "number": "100",
+                "filename": "LabGuide1.md",
+                "title": "Lab 1: Provisioning and Connecting",
+                "description": "Instructions to provision an ADWC service and connect to ADWC"
+            },
+            {
+                "number": "200",
+                "filename": "LabGuide2.md",
+                "title": "Lab 2: Working with Database Services and Sample Data Sets",
+                "description": "Understanding the different levels of database services and the sample Star Schema Benchmark (SSB) and Sales History (SH) datasets provided with ADWC"
+            },
+            {
+                "number": "300",
+                "filename": "LabGuide3.md",
+                "title": "Lab 3: Data Loading",
+                "description": "Instructions to load data from Object Stores using SQL Developer and/or PL/SQL"
+            },
+            {
+                "number": "400",
+                "filename": "LabGuide4.md",
+                "title": "Lab 4: Querying External Data",
+                "description": "Instructions to define and query external tables based on Object Store datasets"
+            },
+            {
+                "number": "500",
+                "filename": "LabGuide5.md",
+                "title": "Lab 5: Managing and Monitoring ADWC using the Cloud Console",
+                "description": "Understanding how to use the ADWC Console to monitor, start/stop, and recover your ADWC instance"
+            },
+            {
+                "number": "600",
+                "filename": "LabGuide6.md",
+                "title": "Lab 6: Scaling and Performance in ADWC",
+                "description": "Understanding how to scale ADWC and its impact on performance and concurrency"
+            },
+            {
+                "number": "700",
+                "filename": "LabGuide7.md",
+                "title": "Lab 7: Oracle Machine Learning Notebooks",
+                "description": "Instructions to use Oracle Machine Learning Notebooks in ADWC"
+            },
+            {
+                "number": "800",
+                "filename": "LabGuide8.md",
+                "title": "Lab 8: Basic Machine Learning (DBMS_PREDICTIVE_ANALYTICS)",
+                "description": "Learn to use DBMS_PREDICTIVE_ANALYTICS using a sample Oracle ML Notebook"
+            },
+            {
+                "number": "900",
+                "filename": "LabGuide9.md",
+                "title": "Lab 9: Create Data Visualizations from ADWC",
+                "description": "Learn to use Data Visualization Desktop with ADWC"
+            },
+            {
+                "number": "1000",
+                "filename": "LabGuide10.md",
+                "title": "Lab 10: Data Integration Platform Cloud with ADWC",
+                "description": "Learn to use Oracle Data Integration Platform Cloud (DIPC) with ADWC"
+            }
+        ]
+    }
+}
