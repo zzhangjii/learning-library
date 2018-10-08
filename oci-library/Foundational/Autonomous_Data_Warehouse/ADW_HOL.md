@@ -6,7 +6,7 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Practice 1: Download the text file ](#practice-1-download-channel-text-file-and-install-sql-developer-tool)
+[Practice 1: Download channel text file and install SQL Developer Tool ](#practice-1-download-channel-text-file-and-install-sql-developer-tool)
 
 [Practice 2: Sign in to OCI Console](#practice-2-sign-in-to-oci-console)
 
