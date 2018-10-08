@@ -6,7 +6,7 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Practice 1: Download the text file ](#practice-1-download-the-text-file)
+[Practice 1: Download the text file ](#practice-1-download-channel-text-file-and-install-sql-developer-tool)
 
 [Practice 2: Sign in to OCI Console](#practice-2-sign-in-to-oci-console)
 
@@ -33,7 +33,7 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 - SQL Developer can be downloaded from http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html
 - A simple text editor like Notepad, vi or Sublime.
 
-## Practice-1: Download the text file
+## Practice-1: Download channel text file and install SQL Developer Tool
 
 1) Download the channel.txt file from this link: https://bit.ly/2NSNd4l and save it to your desktop.
 
