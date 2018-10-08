@@ -2,7 +2,7 @@
 
 Updated: June 15, 2018
 
-# ADWC Lab 100: Provisioning and Getting Started
+# ADWC Lab 1: Provisioning and Getting Started
 
 ## Introduction
 
@@ -24,7 +24,7 @@ To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issue
 -   The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
 
 -   Oracle SQL Developer 18.1 (see [Oracle Technology Network download site](http://www.oracle.com/technetwork/developer-tools/sql-developer/overview/index.html)).
-    Please be sure to use SQL Developer version 18.1 or later because this version contains enhancements for key Autonomous DW Cloud features. 
+    Please be sure to use SQL Developer version 18.1 or later because this version contains enhancements for key Autonomous DW Cloud features.
 
     * Note *: If you are a Windows user on 64-bit platform, download the 'Windows 64-bit with JDK 8 included' distribution as it includes both Java 8 and the Java Cryptography Extension (JCE) files necessary to run SQL Developer and connect to your Autonomous DW Cloud.
     If you are a non-Windows user, download and install the appropriate [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) for your Operating System. Download and extract the [Java Cryptography Encryption Archive](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) to the directory as indicated in the README.txt.
@@ -133,7 +133,7 @@ As ADWC only accepts secure connections to the database, you need to download a 
 
 ### **STEP 3: Sign in to the Service Console**
 
--   In the instance details page find your database and click **Service Console** 
+-   In the instance details page find your database and click **Service Console**
 
 ![](./images/100/Picture100-34.jpeg)
 

@@ -2,13 +2,13 @@
 
 Draft Version. Updated: March 13, 2018
 
-# ADWC Lab 500: Managing and Monitoring ADWC using the Cloud Console
+# ADWC Lab 5: Managing and Monitoring ADWC using the Cloud Console
 
 ## Introduction
 
 For this lab you will **watch** a couple of demos to show the capabilities available via the Cloud Console and ADWC Service Console.
 
-First you will see the Cloud Console and how you can stop, start, delete your instance, and how you can recover your database when needed. 
+First you will see the Cloud Console and how you can stop, start, delete your instance, and how you can recover your database when needed.
 
 <a href="https://raw.githubusercontent.com/millerhoo/journey4-adwc/master/workshops/journey4-adwc/images/ADWC%20HOL%20Start%20Stop%20Recover.mp4" target="_blank">ADWC Start, Stop, and Backup/Recover video</a>
 
@@ -20,4 +20,3 @@ The following demo will walk you through the service console and show you a runn
 
 
 To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issues/new) to go to the github oracle repository issue submission form.
-

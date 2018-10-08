@@ -2,7 +2,7 @@
 
 Updated: May 10, 2018
 
-# ADWC Lab 300: Data Loading
+# ADWC Lab 3: Data Loading
 
 ## Introduction
 
@@ -23,7 +23,7 @@ This lab shows how to load data from Oracle Cloud Infrastructure Object Storage 
     + You will use this procedure to create object store credentials in your Autonomous DW Cloud admin schema.
 + copy_data: Loads the specified source file to a table. The table must already exist in Autonomous DW Cloud.
     + You will use this procedure to load tables in your admin schema with data from data files staged in the Oracle Cloud Infrastructure Object Storage cloud service.
-        
+
 For more information about loading data, see the documentation <a href="https://www.oracle.com/pls/topic/lookup?ctx=en/cloud/paas/autonomous-data-warehouse-cloud&id=CSWHU-GUID-07900054-CB65-490A-AF3C-39EF45505802">Loading Data from Files in the Cloud</a>.
 
 To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issues/new) to go to the github oracle repository issue submission form.
@@ -46,7 +46,7 @@ To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issue
 
 -   The following lab requires an Oracle Public Cloud account. You may your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
 
--   Oracle SQL Developer (see Lab100 for more specifics on the version of SQL Developer and how to install and configure it). 
+-   Oracle SQL Developer (see Lab100 for more specifics on the version of SQL Developer and how to install and configure it).
 
 # Download Sample Data
 ## Steps
@@ -68,7 +68,7 @@ To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issue
 
     ![](./images/300/Picture300-2.png)
 
--   If you want, you can compare your output to <a href="./scripts/300/create_tables_output.txt" target="_blank">this expected output.</a>  It is expected that you may get ORA-00942 errors during the DROP TABLE commands, but you should not see any other errors. 
+-   If you want, you can compare your output to <a href="./scripts/300/create_tables_output.txt" target="_blank">this expected output.</a>  It is expected that you may get ORA-00942 errors during the DROP TABLE commands, but you should not see any other errors.
 
 Note that you do not need to specify anything other than the list of columns when creating tables in the SQL scripts. You can use primary keys and foreign keys if you want, but they are not required.
 
@@ -88,8 +88,8 @@ Note that you do not need to specify anything other than the list of columns whe
     -   Select **Local File** as source for the data load
 
     -   Click the browse button and navigate to the channels.csv file (you extracted this file from the zip file you downloaded at the start of this lab).
-    
-   
+
+
 
 After entering this information, you can preview the data and select the appropriate file formats. You will see that the data preview is
 interactive and changes according to your selection.
@@ -117,7 +117,7 @@ When you are satisfied with the file content view, click **NEXT**.
 
 # Setup the OCI Object Store
 ## Steps    
-### STEP 4: Navigate to the OCI Compute Console 
+### STEP 4: Navigate to the OCI Compute Console
 
 -   The easiest way to get to the **OCI Compute Console** is to first navigate to the My Services Dashboard page:
     ![](images/300/snap0014294.jpg)
@@ -129,7 +129,7 @@ When you are satisfied with the file content view, click **NEXT**.
     ![](images/300/snap0014296.jpg)
 
 
-### STEP 5: Navigate to the Storage Tab, then Object Storage 
+### STEP 5: Navigate to the Storage Tab, then Object Storage
 To learn more about the OCI Object Storage, check out this <a href="https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Tasks/addingbuckets.htm" target="_blank">documentation</a> .
 
 -   In the OCI Compute Console, click on the **Storage** tab, then click on **Object Storage** on the left-hand menu:
@@ -139,12 +139,12 @@ To learn more about the OCI Object Storage, check out this <a href="https://docs
     ![](images/300/snap0014298.jpg)
 
 ### STEP 6: Create a Bucket for the Object Storage
-In OCI Object Storage, a bucket is the terminology for a container of multiple files. 
+In OCI Object Storage, a bucket is the terminology for a container of multiple files.
 
 -   Click the **Create Bucket** button:
     ![](images/300/snap0014299.jpg)
 
--   **Name your bucket** and click **Create Bucket** button. 
+-   **Name your bucket** and click **Create Bucket** button.
     ![](images/300/snap0014300.jpg)
 
 ### STEP 7: Upload Files to Your OCI Object Store Bucket
@@ -172,7 +172,7 @@ In this example, the region name is us-ashburn-1, the tenant name is dbayard00, 
 
 ![](images/300/ConstructURLs.png)
 
--   **Repeat** this for the **sales.csv.gz**, **products.txt**, and **channels\_error.csv** files. 
+-   **Repeat** this for the **sales.csv.gz**, **products.txt**, and **channels\_error.csv** files.
 
 -   **Save** the URLs you constructed to a note. We will use the URLs in the following steps.
 
@@ -180,7 +180,7 @@ In this example, the region name is us-ashburn-1, the tenant name is dbayard00, 
 
 To load data from the Oracle Cloud Infrastructure(OCI) Object Storage you will need an OCI user with the appropriate privileges to read data (or upload) data to the Object Store. The communication between the database and the object store relies on the Swift protocol and the OCI user Auth Token.
 
--   Go back to the **OCI Compute Console** in your browser. In the top menu, click the **Identity**, and then click **Users**. 
+-   Go back to the **OCI Compute Console** in your browser. In the top menu, click the **Identity**, and then click **Users**.
     ![](./images/300/Create_Swift_Password_01.png)
 
 -   Click the **user's name** to view the details.  Also, remember the username as you will need that in the next step.
@@ -215,7 +215,7 @@ In order to access data in the Object Store you have to enable your database use
 
 <!-- -->
 
--   Run the script. 
+-   Run the script.
 
     ![](./images/300/Picture300-12.png)
 
@@ -308,7 +308,7 @@ As an alternative to the wizard-guided data load, you can use the PL/SQL package
 
 -   Connected as your user in SQL Developer, copy and paste <a href="./scripts/300/load_data.txt" target="_blank">this code snippet</a> to SQL Developer worksheet. We use the **copy\_data** procedure of the **DBMS\_CLOUD** package to copy the data (**sales.csv.gz**) staged in your object store.
 
-    -   At the top of the script, specify the Object Store base URL in the definition of the **base\_URL** variable. You have constructed and saved the URL in the step "Construct the URLs of the Files on Your OCI Object Storage". 
+    -   At the top of the script, specify the Object Store base URL in the definition of the **base\_URL** variable. You have constructed and saved the URL in the step "Construct the URLs of the Files on Your OCI Object Storage".
     ![](./images/300/snap0014550.jpg)
 
     -   For the **credential_name** parameter in the **copy\_data** procedure, it is the name of the credential you defined in the step "Create a Database Credential for Your User".  You probably don't need to change this.

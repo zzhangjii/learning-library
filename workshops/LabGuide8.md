@@ -2,7 +2,7 @@
 
 Updated: March 27, 2018
 
-# Lab 800: Basic Oracle Database Machine Learning (DBMS_PREDICTIVE_ANALYTICS)
+# Lab 8: Basic Oracle Database Machine Learning (DBMS_PREDICTIVE_ANALYTICS)
 
 ## Introduction
 
@@ -63,11 +63,11 @@ The notebook will provide some live examples of DBMS_PREDICTIVE_ANALYTICS in act
 
 ### Step 8: Create a machine learning notebook
 
-- Go back to OML dashboard and click on **Go to Gallery**. The Gallery page lists pre-populated Oracle Machine Learning notebook templates which you can view, like, and use it to create new templates. 
+- Go back to OML dashboard and click on **Go to Gallery**. The Gallery page lists pre-populated Oracle Machine Learning notebook templates which you can view, like, and use it to create new templates.
 
     ![](./images/800/25.png)
 
-- In the Gallery page, select the template based on which you want to create a notebook. 
+- In the Gallery page, select the template based on which you want to create a notebook.
 
     ![](./images/800/26.png)
 

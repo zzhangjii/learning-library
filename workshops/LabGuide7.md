@@ -2,7 +2,7 @@
 
 Updated: March 21, 2018
 
-# Lab 700: Using Oracle Machine Learning Notebooks
+# Lab 7: Using Oracle Machine Learning Notebooks
 
 ## Introduction
 
@@ -332,7 +332,7 @@ The “Run SQL Statement” link on the home page allows you to run a single que
 
 Notice that the script paragraph does not have any menus to control the display and formatting of the output. You can, however, use SQL SET commands to control how data is formatted for display.
 
-### Step 14: Creating and running a SQL script 
+### Step 14: Creating and running a SQL script
 
 In this section we are going to use a script from a SQL pattern matching tutorial, <a href="https://livesql.oracle.com/apex/livesql/file/tutorial_EWB8G5JBSHAGM9FB2GL4V5CAQ.html" target="_blank">Sessionization with MATCH\_RECOGNIZE and JSON</a>, on the free Oracle <a href="http://livesql.oracle.com/" target="_blank">livesql.oracle.com</a> site. This script shows how to use the SQL pattern matching **MATCH\_RECOGNIZE** feature for sessionization analysis based on **JSON** web log files.
 
@@ -349,5 +349,3 @@ In this section we are going to use a script from a SQL pattern matching tutoria
 ![](./images/700/Picture700-48.png)
 
 -   You have completed all of the steps in this lab.
-
-

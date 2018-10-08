@@ -2,7 +2,7 @@
 
 Draft Version. Updated: March 13, 2018
 
-# ADWC Lab 600: Scaling and Performance
+# ADWC Lab 6: Scaling and Performance
 
 ## Introduction
 
@@ -69,5 +69,3 @@ Click **Scale Service** after filling in the form, this will take you the Instan
 ![](./images/600/Picture300-8.png)
 
 -   ADWC allows you to dynamically scale your service online when you require more concurrency and performance.
-
-

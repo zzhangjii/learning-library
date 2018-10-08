@@ -2,7 +2,7 @@
 
 Updated: May 17, 2018
 
-# ADWC Lab DIPC: Using Oracle Data Integration Platform Cloud (DIPC) with ADWC
+# ADWC Lab 10: Using Oracle Data Integration Platform Cloud (DIPC) with ADWC
 
 ## Introduction
 
@@ -27,7 +27,7 @@ In addition to Oracle Database (including ADWCS), MySQL, and Exadata are among t
 * Cloud to Cloud
 * Cloud to On-premises
 * On-premises to On-premises
-      
+
 For more information about DIPC, see the documentation <a href="https://docs.oracle.com/en/cloud/paas/data-integration-platform-cloud/using/getting-started-data-integration-platform-cloud.html#GUID-72E6BAA9-260B-4098-90A8-D42B95FC9010" target="_blank">Getting Started with Oracle Data Integration Platform Cloud</a>.
 
 To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issues/new) to go to the github oracle repository issue submission form.
@@ -218,7 +218,7 @@ dipc_low = (description= (address=(protocol=tcps)(port=1522)(host=adwc.uscom-eas
 
 dipc_medium = (description= (address=(protocol=tcps)(port=1522)(host=adwc.uscom-east-1.oraclecloud.com))(connect_data=(service_name=xxxxxxx_dipc_medium.adwc.oraclecloud.com))(security=(ssl_server_cert_dn=
         "CN=adwc.uscom-east-1.oraclecloud.com,OU=Oracle BMCS US,O=Oracle Corporation,L=Redwood City,ST=California,C=US"))   )
-        
+
 ```
 
 - Create a sqlnet.ora file in /u01/app/oracle/suite/oci/network/admin/ and add these lines.  Save the file.
@@ -304,7 +304,7 @@ Oracle GoldenGate enables the exchange and manipulation of data at the transacti
 
 ## Steps
 
-### STEP 1:  Configure OGG 
+### STEP 1:  Configure OGG
 
 - Connect as opc to your DIPC server via ssh and run the following commands to start ggsci.
 ```
@@ -344,7 +344,7 @@ edit param ./GLOBALS
 ALLOWOUTPUTDIR /u01/app/oracle/suite/gghome/dirdat/
 ```
 - restart mgr
-``` 
+```
 stop mgr
 start mgr
 info all
@@ -438,7 +438,7 @@ CHANNEL_ID CHANNEL_DESC         CHANNEL_CLASS        CHANNEL_CLASS_ID CHANNEL_TO
          2 Partners             Others                             14 Channel total                1
         11 test                 Others                             11 Channel total                1
 
-6 rows selected. 
+6 rows selected.
 ```
 - You are now replicating the channels table to ADWC and can modify the extract and replicat parameters to include other schemas and tables.
 
@@ -606,9 +606,3 @@ Schema: admin or SSB or any schema
 ![](./images/DIPC/dipcedq11.gif)
 
 - You can now use profiling and other EDQ features with ADWCS.  Try using tables in the SSB schema on ADWCS.
-
-
-
-
-
-

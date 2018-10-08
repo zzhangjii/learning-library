@@ -2,7 +2,7 @@
 
 Updated: April 6, 2018
 
-# ADWC Lab 400: Query External Data 
+# ADWC Lab 4: Query External Data
 
 ## Introduction
 
@@ -18,7 +18,7 @@ To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issue
 
 -   Learn how to query external data by the external tables
 
--   Learn how to create data warehouse user 
+-   Learn how to create data warehouse user
 
 ## Required Artifacts
 
@@ -110,7 +110,7 @@ When you are satisfied with the data preview, click **NEXT**.
 
 ![](./images/400/snap0014676.jpg)
 
- 
+
 
 
 -   The last screen before the final data load enables you to test a larger row count than the sample data of the beginning of the wizard to see whether the previously made decisions are satisfying for your data load. Note that we are not loading any data when iterating back and forth between this screen and previous ones. Select **TEST RESULTS** and look at the log, the data you would load, any mistakes and how the external table definition looks like based on your inputs.
@@ -158,8 +158,7 @@ CREATE TRIGGER
 CREATE TYPE
 CREATE VIEW
 READ,WRITE ON directory DATA_PUMP_DIR
-EXECUTE privilege on the PL/SQL package DBMS_CLOUD 
+EXECUTE privilege on the PL/SQL package DBMS_CLOUD
 ```
 
 -   You are now ready to move to the next lab.
-
