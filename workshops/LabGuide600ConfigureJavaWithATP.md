@@ -16,6 +16,8 @@ To **log issues**, click [here](https://github.com/cloudsolutionhubs/autonomous-
 
 - The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
 
+#### Note: If you have created Virtual Cloud Network, Linux Environemnt in the previous lab, you can use the same instance to complete this lab.
+
 ## Steps
 
 ### **STEP 1: Create a Virtual Cloud Network**
@@ -34,11 +36,11 @@ In order to create a VCN we need to select a Compartment from the List Scope. Fo
 
 ![](./images/500/Picture500-14.png)
 
-- THis will bring Create Virtual CLoud Netowrk screen where you will specify the configurations.
+- This will bring Create Virtual Cloud Netowrk screen where you will specify the configurations.
 
 ![](./images/500/Picture500-15.png)
 
-- Enter the following the the screen
+- Enter the following the screen
 
 **Create In Compartment**: Select the sandbox compartment, Demo. By default, this field displays your current compartment.
 **Name**: Enter a name for your cloud network.
@@ -58,9 +60,9 @@ A confirmation page displays the details of the cloud network that you just crea
 ![](./images/500/Picture500-17.png)
 
 
-### **STEP 2: Provision a linux compute VM to serve as the app server**
+### **STEP 2: Provision a Linux compute VM to serve as the app server**
 
-- Provision a linux compute VM to serve as the app server. 
+- Provision a Linux compute VM to serve as the app server. 
 
 - Log into your Oracle Cloud Infrastructure and click on Menu and select Compute and Instances.
 
@@ -74,7 +76,7 @@ A confirmation page displays the details of the cloud network that you just crea
 
 Enter the following to Create Linux Instance
 
-- **Name**: Enter a frinedly name to identify your linux instance
+- **Name**: Enter a friendly name to identify your Linux instance
 - **Availability Domain**: Oracle Cloud Infrastructure is hosted in Regions, which are localized geographic areas. Each Region contains three Availability Domains which are isolated and fault-tolerant data centers that can be used to ensure high availability. In the Availability Domain field, select the Availability Domain in which you want to run the instance. For example, scul:PHX-AD-1.
 - **Image Compartment**: Select Demo compartment
 - **Boot Volume**: Oracle-Provided OS Image
@@ -127,5 +129,150 @@ Where
 
 - Note the public IP of the machine provisioned and ssh into this host and configure it to run node.js on ATP.
 
-### **STEP 3: Install JDK and JDBC drivers **
+### **STEP 3: Install JDK and JDBC drivers**
+
+- ssh into Linux host machine
+
+```
+sudo ssh -i /path_to/sshkeys/id_rsa opc@publicIP
+```
+
+![](./images/600/sshIntohost.png)
+
+
+- Install open JDK in Linux environment
+
+#### Note: It will take around 3 minutes to install
+
+```
+sudo yum install -y java-1.8.0-openjdk-devel
+```
+
+![](./images/600/openjdk1.png)
+
+![](./images/600/openjdk2.png)
+
+
+- Create a folder named ATPJava and clone the java app from git
+
+```
+cd ~
+
+mkdir ATPJava
+
+cd ATPJava
+
+sudo yum install git
+
+git clone https://github.com/cloudsolutionhubs/ATPJava.git
+```
+
+- Install JDBC drivers on Linux environment
+
+```
+cd /home/opc/ATPJava/
+
+mkdir lib
+
+cd lib 
+
+wget https://github.com/sblack4/ojdbc8-full/raw/master/ojdbc8-full.tar.gz 
+
+tar xzfv ojdbc8-full.tar.gz
+```
+
+![](./images/600/jdbc.png)
+
+![](./images/600/jdbc2.png)
+
+- Copy secured connection wallet to Linux instance
+
+    - Open terminal in your laptop and run the following command
+
+```
+scp sudo scp -i /path_to_ssh_key/id_rsa /path_to/wallet_DB.zip opc@publicIP:/home/opc/ATPJava/
+```
+
+- Unzip secured wallet in your linux instance
+    - ssh into linux host machine
+
+```
+cd /home/opc/ATPJava/
+
+mkdir wallet_DB
+
+unzip /home/opc/ATPJava/wallet_TEJUS.zip -d /home/opc/ATPJava/wallet_DB/
+```
+
+![](./images/600/unzipwallet.png)
+
+
+- Change database credentials configuration from dbconfig.properties
+
+Enter the following:
+
+#### Note: Please change your dbinstance, dbuser, dbpassword accordingly.
+
+**dbinstance=tejus_low**
+
+**dbcredpath=/home/opc/ATPJava/wallet_DB**
+
+**dbuser=ADMIN**
+
+**dbpassword=WElcome_123#**
+
+```
+cd /home/opc/ATPJava/ATPJava/src
+
+nano dbconfig.properties
+```
+
+![](./images/600/dbconfig.png)
+
+
+- Edit sqlnet.ora in wallet_DB folder
+
+```
+cd /home/opc/ATPJava/wallet_DB/
+
+nano sqlnet.ora
+```
+
+- Enter the following in sqlnet.ora
+
+```
+WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA = (DIRECTORY=$TNS_ADMIN)))
+SSL_SERVER_DN_MATCH=yes
+```
+
+![](./images/600/TNS_ADMIN.png)
+
+
+- Expoert TNS_ADMIN to location where secured wallet is present
+
+```
+export TNS_ADMIN=/home/opc/ATPJava/wallet_DB/
+```
+
+- Compile your Java application
+
+```
+cd /home/opc/ATPJava/ATPJava/src
+
+javac -cp .:/home/opc/ATPJava/lib/ojdbc8-full/ojdbc8.jar TestATP.java
+```
+
+![](./images/600/javac.png)
+
+
+- Run your Java application 
+
+```
+java -cp .:/home/opc/ATPJava/lib/ojdbc8-full/ojdbc8.jar TestATP
+```
+
+![](./images/600/java.png)
+
+
+You have now successfully connected your Java app to Autonomous Transaction Processing database.
 
