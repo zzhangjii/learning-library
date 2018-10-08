@@ -79,9 +79,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 
 **Objectives**: 
 
-- - Learn how to build a linux Java application server and connect it to an Oracle ATP database service
-
-- Learn how to configure Java with ATP
+- Learn how to build a linux Java application server and connect it to an Oracle ATP database service
 
 ## Lab 700: Working with REST APIs
 
