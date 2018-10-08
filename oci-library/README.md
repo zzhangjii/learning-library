@@ -17,7 +17,7 @@
 
 |                  **Name**              |    **Type**  | **Version** | 
 |----------------------------------------|:------------:|:-------:|
-|NAT Gateway| Advanced |   2.1   |   September 2018   |
+|NAT Gateway| Advanced |   2.1   | 
 |Local Peering                        | Advanced |   2.1   |   
 |Console Connection                  | Advanced |   2.1   |   
 | Volume Groups and disk performance                  | Advanced |   2.1   |   
