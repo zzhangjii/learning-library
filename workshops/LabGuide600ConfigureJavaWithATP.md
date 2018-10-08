@@ -209,17 +209,17 @@ unzip /home/opc/ATPJava/wallet_TEJUS.zip -d /home/opc/ATPJava/wallet_DB/
 
 - Change database credentials configuration from dbconfig.properties
 
-Enter the following:
+    Enter the following:
 
-#### Note: Please change your dbinstance, dbuser, dbpassword accordingly.
+    #### Note: Please change your dbinstance, dbuser, dbpassword accordingly.
 
-**dbinstance=tejus_low**
+    **dbinstance=tejus_low**
 
-**dbcredpath=/home/opc/ATPJava/wallet_DB**
+    **dbcredpath=/home/opc/ATPJava/wallet_DB**
 
-**dbuser=ADMIN**
+    **dbuser=ADMIN**
 
-**dbpassword=WElcome_123#**
+    **dbpassword=WElcome_123#**
 
 ```
 cd /home/opc/ATPJava/ATPJava/src
