@@ -197,6 +197,8 @@ scp sudo scp -i /path_to_ssh_key/id_rsa /path_to/wallet_DB.zip opc@publicIP:/hom
     - ssh into linux host machine
 
 ```
+sudo ssh -i /path_to/sshkeys/id_rsa opc@publicIP
+
 cd /home/opc/ATPJava/
 
 mkdir wallet_DB
@@ -211,15 +213,15 @@ unzip /home/opc/ATPJava/wallet_TEJUS.zip -d /home/opc/ATPJava/wallet_DB/
 
     Enter the following:
 
-    #### Note: Please change your dbinstance, dbuser, dbpassword accordingly.
+    #### Note: Please change your dbinstance, dbcredpath, dbuser, dbpassword accordingly.
 
-    **dbinstance=tejus_low**
+    **dbinstance= This is your ATP instancee name. E.g tejus_low**
 
-    **dbcredpath=/home/opc/ATPJava/wallet_DB**
+    **dbcredpath= /home/opc/ATPJava/wallet_DB**
 
-    **dbuser=ADMIN**
+    **dbuser= ADMIN**
 
-    **dbpassword=WElcome_123#**
+    **dbpassword= WElcome_123#**
 
 ```
 cd /home/opc/ATPJava/ATPJava/src
@@ -248,11 +250,13 @@ SSL_SERVER_DN_MATCH=yes
 ![](./images/600/TNS_ADMIN.png)
 
 
-- Expoert TNS_ADMIN to location where secured wallet is present
+- Export TNS_ADMIN to location where secured wallet is present
 
 ```
 export TNS_ADMIN=/home/opc/ATPJava/wallet_DB/
 ```
+
+### **STEP 4: Compile and run Java application**
 
 - Compile your Java application
 
