@@ -1,7 +1,7 @@
 
 # Docker Workshop - Trial Account Set Up
 
-![](images/050Linux/Title050.png) 
+![](images/050Linux/Title050.png)
 
 ## Overview
 
@@ -112,9 +112,9 @@ All the availability domains in a region are connected to each other by a low la
 - Click the **hamburger icon** in the upper left corner to open the navigation menu. Under the **Networking** section of the menu, click **Virtual Cloud Networks**
 
     ![](images/050Linux/10.PNG)
-    
+
 - Select your compartment from the LOV.
-    
+
     ![](images/050Linux/10a.png)
 
 - Click **Create Virtual Cloud Network**
@@ -155,11 +155,11 @@ A security list provides a virtual firewall for an instance, with ingress and eg
 
 For the purposes of the upcoming Docker deployments we need to add five Ingress Rules that allow access from the Internet to ports 9080, 8002, 18002, 5600, and 8085. In a production environment only the UI port (8085) would typically be opened for access but the labs will have us test various other Application and Oracle centric functionality as we go, thus the need to open other ports.
 
-- Click **Edit All Rules** and then select **+Add Rule**
+- Click **Edit All Rules** and then select **+ Another Ingress Rule**
 
     ![](images/050Linux/19.PNG)
 
-    ![](images/050Linux/20.PNG)
+    ![](images/050Linux/Linux050-c8ef545e.png)
 
 - **Enter the following**
 
@@ -167,34 +167,30 @@ For the purposes of the upcoming Docker deployments we need to add five Ingress 
 
 ```
 Source CIDR: 0.0.0.0/0
-Destination Port Range: 8085 
+Destination Port Range: 8085
 ```
 
 - **Add four more Ingress Rules**
 
 ```
 Source CIDR: 0.0.0.0/0
-Destination Port Range: 9080 
+Destination Port Range: 9080
 ```
 
 ```
 Source CIDR: 0.0.0.0/0
-Destination Port Range: 8002 
+Destination Port Range: 8002
 ```
 
 ```
 Source CIDR: 0.0.0.0/0
-Destination Port Range: 18002 
+Destination Port Range: 18002
 ```
 
 ```
 Source CIDR: 0.0.0.0/0
-Destination Port Range: 5600 
+Destination Port Range: 5600
 ```
-
-- When completed your rules should look like:
-
-    ![](images/050Linux/21.PNG)
 
 - Click the **Save Security List Rules** button
 
@@ -202,11 +198,11 @@ Destination Port Range: 5600
 
 - Your Ingress Rules should look like:
 
-    ![](images/050Linux/23.PNG)
+    ![](images/050Linux/Linux050-a84ef9f4.png)
 
 ### **STEP 6**: Create SSH Key Pair (Linux or Mac client)
 
-Before we create the Compute instance that will contian Docker and application depoyments we need to create an ssh key pair so we'll be able to securly connect to the instance and do the Docker installation, etc.
+Before we create the Compute instance that will contain Docker and application deployments we need to create an ssh key pair so we'll be able to securely connect to the instance and do the Docker installation, etc.
 
 **NOTE:** `This step focuses on key pair generation for Linux or Mac based terminal sessions. If your going to run your terminal sessions from a Windows client then skip to STEP 7`
 
@@ -219,7 +215,7 @@ ssh-keygen -b 2048 -t rsa -f dockerkey
 - Your key pair is now in the current directory
 
     ![](images/050Linux/24.PNG)
-    
+
 - **NOTE for Linux and Mac Clients:** Just open up the pubic key file in an editor (vi) and select / copy the entire contents to be used in Step 8.   
 
     ![](images/050Linux/25-4.PNG)
@@ -234,7 +230,7 @@ For Windows clients this example will show the use of PuttyGen to generate the k
 
 - Once the generation process completes click the **Save Private Key** button and save to a directory of your choice.
 
-- If prompted to save without a passphrase click yes. 
+- If prompted to save without a passphrase click yes.
 
     ![](images/050Linux/25a.png)
 
@@ -269,7 +265,7 @@ SSH Keys: Choose SSH Key Files
 ```
 
 - You will Browse and select your PUBLIC SSH Key
-**NOTE:** You will paste the public key you copied in Step 7 into the SSH KEY field by selecting the "Paste SSH Keys" radio button. `The public key should all be on ONE LINE` 
+**NOTE:** You will paste the public key you copied in Step 7 into the SSH KEY field by selecting the "Paste SSH Keys" radio button. `The public key should all be on ONE LINE`
 
    ![](images/050Linux/28.PNG)
 
@@ -310,7 +306,7 @@ opc
 
 - Select **SSH-->Auth** and browse to the Private Key you created back in Step 7:
 
-   ![](images/050Linux/33.PNG) 
+   ![](images/050Linux/33.PNG)
 
 - Click the **Open** button. You will presented the first time with am alert message. Click **Yes**
 
@@ -390,7 +386,7 @@ vi /etc/sysconfig/selinux
 
 - **NOTE:** If new to vi, press the letter `i` to edit text. To save press Escape, the type `:wq!`.
 
-   ![](images/050Linux/42.png)
+   ![](images/050Linux/42.PNG)
 
 - Save the file and exit out of vi
 
