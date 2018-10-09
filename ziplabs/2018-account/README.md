@@ -40,7 +40,7 @@ In this section, you'll fill out the form located at [oracle.com/oow18trial](ora
     [Description of the illustration signin.png](files/signin.txt)
 
 2. From the **Cloud Account** drop-down menu, select **Cloud Account with Identity Cloud Service**.
-3. Enter your Cloud Account Name and click **My Services**. This is the name you chose when you created your account in the previous section. If you forgot the name, see the confirmation email.
+3. Enter your Cloud Account Name and click **Next**. This is the name you chose when you created your account in the previous section. If you forgot the name, see the confirmation email.
 
     ![](img/accountname.png)
 

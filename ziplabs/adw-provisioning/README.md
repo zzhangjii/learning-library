@@ -65,7 +65,7 @@ Once you have created the data warehouse, download the credentials zip file for 
      * **Username**: `admin`
      * **Password**: Enter the administrator password you specified when you created your service instance.
 3. The service console opens in the **Overview** mode. Click **Administration** in the left navigation pane.
-4. Click **Download Client Credentials**.
+4. Click **Download a Connection Wallet**.
 5. You are prompted to create a password for the credentials zip file. Enter a password and click **Download**.
 6. Store the zip file. You will use the zip file in the next step to define a SQL Developer connection to your Autonomous Data Warehouse Cloud database.
 
