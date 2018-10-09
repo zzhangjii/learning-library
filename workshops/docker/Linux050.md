@@ -198,7 +198,7 @@ Destination Port Range: 5600
 
 - Your Ingress Rules should look like:
 
-    ![](images/Linux050-a84ef9f4.png)
+    ![](images/050Linux/Linux050-a84ef9f4.png)
 
 ### **STEP 6**: Create SSH Key Pair (Linux or Mac client)
 
