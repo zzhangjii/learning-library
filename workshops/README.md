@@ -61,7 +61,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 
 - Learn how to use the SQL Developer Data Import Wizard
 - Learn how to upload files to the OCI Object Storage
-- Learn how to define object store credentials for ADWC
+- Learn how to define object store credentials for ATP
 - Learn how to create tables in your database
 - Learn how to load data from the Object Store
 
