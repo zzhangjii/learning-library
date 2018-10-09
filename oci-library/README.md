@@ -5,9 +5,8 @@
 |----------------------------------------|:------------:|:-------:|
 |[Identity and Access Management Service](./Foundational/Identity_Access_Management/IAM_HOL.md) | Foundational |   2.1   |   
 |[Compute Service](./Foundational/Network_Compute_and_Block_Service/Compute_HOL.md)                        | Foundational |   2.1   |
-| File Storage Service                  | Foundational |   2.1   |   
-| Load Balancer Service                  | Foundational |   2.1   |   
-| Database Service                       | Foundational |   2.1   |   
+| [File Storage Service](./Foundational/File_Storage_Service/FSS_HOL.md)                   | Foundational |   2.1   |   
+| Load Balancer Service                  | Foundational |   2.1   |      
 |[Autonomous Data Warehouse](./Foundational/Autonomous_Data_Warehouse/ADW_HOL.md)             | Foundational |   2.1   |   
 
 
@@ -20,7 +19,7 @@
 |NAT Gateway| Advanced |   2.1   | 
 |Local Peering                        | Advanced |   2.1   |   
 |Console Connection                  | Advanced |   2.1   |   
-| Volume Groups and disk performance                  | Advanced |   2.1   |   
+|Volume Groups and disk performance                  | Advanced |   2.1   |   
 
 
 # Oracle Open World 2018 Hands On Labs 
