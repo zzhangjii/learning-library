@@ -367,7 +367,7 @@ labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sa
           var intcmp = searchParams.get("intcmp");
           var sc = searchParams.get("SC");
           var pcode = searchParams.get("pcode");
-          console.log("source type: " + sourceType)
+
           if(sourceType || intcmp || sc || pcode) {
             let trialLink = "https://myservices.us.oraclecloud.com/mycloud/signup?language=en";
             if(sourceType) {
@@ -405,7 +405,6 @@ labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sa
             $scope.loadContent(lab.filename);
 
             setTimeout(function () {
-              $scope.updateTrialUrl();
               $("#labguide a").each(function () {
                     if (this.href.endsWith('.md')) {
                         $(this).on("click", function (event) {
@@ -418,6 +417,10 @@ labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sa
                     }
                 })
             }, 500);
+
+            setTimeout(function () {
+              $scope.updateTrialUrl();
+            }, 2000);
         }
         stepClickHandler = function (e) {
             var fadeOutStep = function (step) {
