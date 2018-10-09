@@ -62,10 +62,8 @@ Enter file in which to save the key
 Created directory '/c/Users/username/.ssh'.  
 Enter passphrase (empty for no passphrase):  
 Enter same passphrase again:  
-Your identification has been saved in
-/c/Users/username/.ssh/id\_rsa.  
-Your public key has been saved in
-/c/Users/username/.ssh/id\_rsa.pub.  
+Your identification has been saved in /c/Users/username/.ssh/id\_rsa.  
+Your public key has been saved in /c/Users/username/.ssh/id\_rsa.pub.  
 ```
 > **Note**: In Git-Bash, C:\\Users\\username\\ is shown as /c/Users/username/
 
@@ -95,7 +93,7 @@ When you sign in to the Console, the home page is displayed.
 The home page gives you quick links to the documentation and to Oracle Support.
 
 ## Practice 3: Create a Virtual Cloud Network
-A Virtual Cloud Network (VCN) is a virtual version of a traditional network—including subnets, route tables, and gateways—on which your compute instances run. Customers can bring their network topology to the cloud with VCN. Creating a VCN involves a few key aspects such as:
+A Virtual Cloud Network (VCN) is a virtual version of a traditional network including subnets, route tables, and gateways on which your compute instances run. Customers can bring their network topology to the cloud with VCN. Creating a VCN involves a few key aspects such as:
 
  - Allocate a private IP block for the cloud (CIDR range for the VCN).
  - Customers can bring their own RFC1918 IP addresses.
@@ -353,8 +351,6 @@ A common usage of Block Volume is adding storage capacity to an Oracle Cloud Inf
 
 ## Summary
 
-In this lab, you were able to quickly create a Virtual Cloud Network in the cloud, launch a linux instance, install an apache webserver and successfully access the server by allowing TCP traffic on port 80 in the Security Lists of the Virtual Cloud Network. 
-
-You were also able to create a block disk and attach it your linux instance. 
+In this lab, you were able to quickly create a Virtual Cloud Network in the cloud, launch a linux instance, install an apache webserver and successfully access the server by allowing TCP traffic on port 80 in the Security Lists of the Virtual Cloud Network. You were also able to create a block disk and attach it your linux instance. 
 
 
