@@ -6,7 +6,7 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Practice 1: Generate SSH Keys 3](#practice-1-generate-ssh-keys)
+[Practice 1: Generate SSH Keys](#practice-1-generate-ssh-keys)
 
 [Practice 2: Signing in OCI Console](#practice-2-signing-in-oci-console)
 
