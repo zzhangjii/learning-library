@@ -63,7 +63,7 @@ In this step we will create a new business object to host data for our applicati
 
 ![](images/100/importBusObj.png)
 
-- Download this spreadsheet <a href="/avbcsMisc/inventory.xlsx" target="new">inventory.xlsx</a> to your local machine. When prompted upload this file to create a new business object.
+- Download this spreadsheet <a href="https://oracle.github.io/learning-library/workshops/vbcs/avbcsMisc/inventory.xlsx" target="new">inventory.xlsx</a> to your local machine. When prompted upload this file to create a new business object.
 
 ![](images/100/LabGuide100-97eff54f.png)
 
