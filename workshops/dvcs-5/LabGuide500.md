@@ -5,7 +5,7 @@ Key takeaways from this lab:
 - Using the **Machine Learning** abilities of OAC
 
 ### What is Machine Learning?
-Machine learning, at its most basic, is the usage of algorithms to parse data, learn from it, and then make a determination or prediction about something. The Machine Learning abilities of OAC5 allow you to make predictions based on your data set. Data Visualization also provides scripts to train data models that you can add to other data sets to predict trends and patterns in data.
+Machine learning, at its most basic, is the usage of algorithms to parse data, learn from it, and then make a determination or prediction about something. The Machine Learning abilities of OAC allow you to make predictions based on your data set. Data Visualization also provides scripts to train data models that you can add to other data sets to predict trends and patterns in data.
 
 ### Scenario
 
@@ -420,6 +420,6 @@ She wants to take advantage of existing data gathered by looking at subscription
 
 Congratulations! You have completed the workshop.
 
-In this workshop, we were able to quickly assess the effectiveness of your social media campaigns on sales and how sales trends correspond to social media tone/sentiment. We also used OAC5's machine learning abilities to predict the likelihood of customer's subscribing to KoolKart's mailing list.
+In this workshop, we were able to quickly assess the effectiveness of your social media campaigns on sales and how sales trends correspond to social media tone/sentiment. We also used OAC's machine learning abilities to predict the likelihood of customer's subscribing to KoolKart's mailing list.
 
-This concludes our Oracle Analytics Cloud 5 Data Visualization workshop.
+This concludes our Oracle Analytics Cloud Data Visualization workshop.
