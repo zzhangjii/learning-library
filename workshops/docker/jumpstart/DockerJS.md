@@ -74,7 +74,9 @@ Once the infrastructure is provisioned you can access your enironment using `VNC
 
 Using VNC Viewer to connect to your provisioned account.
 
-- Enter the connect string you were given (Example Shown below).
+- Enter the connect string you were given and hit **Return**. (Example Shown below).
+
+**NOTE: Do NOT click the Sign In button**
 
   ![](images/000JumpStart/JS8.PNG)
 
@@ -82,7 +84,7 @@ Using VNC Viewer to connect to your provisioned account.
 
   ![](images/000JumpStart/JS9.PNG)
 
-- Enter the VNC password  **Qloudable**. 
+- Enter the VNC password  **Qloudable** and click OK.
 
   ![](images/000JumpStart/JS10.PNG)
 
@@ -165,9 +167,9 @@ docker inspect restclient
 
   ![](images/000JumpStart/JS20.PNG)
 
-The output above shows the Creation Date, container status, The process ID (`2351`) on the HOST operating system, the path location on the HOST where container specific information is stored (`/var/lib/docker/...`), the type of storage overlay that Docker is using on the HOST opearating system (In this case, `overlay2`).
+The output above shows the Creation Date, container status, The process ID (`2390`) on the HOST operating system, the path location on the HOST where container specific information is stored (`/var/lib/docker/...`), the type of storage overlay that Docker is using on the HOST opearating system (In this case, `overlay2`).
 
-- Take the PID (Process ID) of the `restclient` container and see what is running on the HOST (In this example the process ID is 2390. Substitute your <PID> in its place).
+- Take the PID (Process ID) of the `restclient` container and see what is running on the HOST (**In this example the process ID is 2390. Substitute your process ID <PID> in its place**).
 
 - **Type** the following:
 
