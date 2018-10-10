@@ -14,7 +14,7 @@ This Oracle Public Cloud Low Code Application Development workshop will walk you
 
 ### **Step 2**: Proceed to the Lab Guides
 
-- The Lab Guides are best viewed using the Workshop's [GitHub Pages Website URL](https://ranched.github.io/WorkshopTemplate/)
+- The Lab Guides are best viewed using the Workshop's [GitHub Pages Website URL](https://oracle.github.io/learning-library/workshops/vbcs/)
 
 - Once you are viewing the Workshop's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
 
