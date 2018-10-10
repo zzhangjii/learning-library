@@ -1,8 +1,8 @@
-## Lab 1 - Getting Started with OACv5 DV
+## Lab 1 - Getting Started with OAC DV
 
 ## Objectives
 
-This section focuses on getting started with OACv5 DV and introducing users to the DV interface.
+This section focuses on getting started with OAC DV and introducing users to the DV interface.
 
 Key takeaways from this lab:
 - Starting an Autonomous OAC instance
@@ -26,7 +26,7 @@ Data Visualization makes it easy to visualize your data, so you can focus on exp
 
 - Data Visualization provides you with tools for faster and simpler assembly of detailed reports arranged together in an appealing and meaningful display. Data Visualization goes even further, to give you dynamic views for focused, exploratory interaction with your data.
 
-### Data Visualization provides the following:
+## Data Visualization provides the following:
 
 - **Guidance**: Grammar-centric approach to visualizations combined with powerful keyword search and pattern detection to aid all users making new discoveries.
 
@@ -121,7 +121,7 @@ Now let’s get started!
 
 ### 1b) Reviewing the Home page and the primary menus
 
-On logging into OACv5, you will see the home page.
+On logging into OAC, you will see the home page.
 
 ![](images/100/img_1b_1.png)  
 
