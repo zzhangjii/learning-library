@@ -51,25 +51,9 @@ In this section you will be provisioning an ADWC database using the cloud consol
 
 ### **STEP 2: Create an ADWC Instance**
 
--   Once you are logged in, you are taken to the cloud dashboard where you can see all the services available to you. To access Oracle Cloud Infrastructure (OCI) dashboard, click on **Customize Dashboard**.
+-   Once you are logged in, you are taken to the cloud services dashboard where you can see all the services available to you. Click **Create Instance**.
 
 ![](./images/100/Picture100-36.JPG)
-
--  Find **Compute** under Infrastructure and click on **Show**
-
-![](./images/100/Picture100-37.JPG)
-
--  Now you should see Compute service under your dashboard. Go ahead and click on **Compute**
-
-![](./images/100/Picture100-38.JPG)
-
--  This will bring you to the service details page. Click on **Open Service Console** on top right of your screen to bring you to OCI dashboard.
-
-![](./images/100/Picture100-39.JPG)
-
-![](./images/100/Picture100-19.jpeg)
-
--  Once you are on OCI dashboard page, click on the hamburger menu icon on the top left of the screen
 
 ![](./images/100/Picture100-20.jpeg)
 

@@ -46,7 +46,7 @@ To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issue
 
 -   The following lab requires an Oracle Public Cloud account. You may your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
 
--   Oracle SQL Developer (see Lab100 for more specifics on the version of SQL Developer and how to install and configure it).
+-   Oracle SQL Developer (see Lab Guide 1 for more specifics on the version of SQL Developer and how to install and configure it).
 
 # Download Sample Data
 ## Steps
