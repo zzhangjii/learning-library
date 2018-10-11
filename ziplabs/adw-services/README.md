@@ -79,7 +79,7 @@ ADWC will caches the results of a query. If you run the same queries again, you'
 
 
 ## Explore the Sample Data ##
-ADWC provides sets of sample data you can leverage for testing purposes. In this part of the lab, you'll see the sample data categories and ways to breakdown that data. You'll explore the SH schema which is accessible through LOW database services.
+The ADWC sample data is robust and is helpful to leveraged for testing purposes. In this part of the lab, you'll examine the sample data categories and ways to breakdown that data. You'll explore the SH schema which is accessible through LOW database services.
 
 1. Navigate to the `admin_low` worksheet.
 2. Enter the following queries:
