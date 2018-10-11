@@ -1,12 +1,15 @@
-![](./images/DIPC/Titledipc.jpg)
+<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
 
-Updated: May 17, 2018
-
-# ADWC Lab 10: Using Oracle Data Integration Platform Cloud (DIPC) with ADWC
+September 21, 2018
+</td>
+<td class="td-banner">
+# Bonus Lab 3: Using Oracle Data Integration Platform Cloud with your Autonomous Data Warehouse
+</td></tr><table>
+    
 
 ## Introduction
 
-In this lab, you will configure and use Oracle Data Integration Platform Cloud (DIPC) with ADWCS.  The labs follow a typical enterprise data warehouse reference implementation with ETL/ELT batch processing, real time data replication, and data quality review.  You will load data from a flat file and a database table using Oracle Data Integrator (ODI) to your ADWC database.  You will replicate data from a database table to ADWCS using Oracle Golden Gate (OGG).  You will review data quality in ADWCS using Oracle Enterprise Data Quality (EDQ).  There are several configuration steps in this lab that will be removed in a soon to be released DIPC version.
+In this lab, you will configure and use Oracle Data Integration Platform Cloud (DIPC) with your Autonomous Data Warehouse.  The labs follow a typical enterprise data warehouse reference implementation with ETL/ELT batch processing, real time data replication, and data quality review.  You will load data from a flat file and a database table using Oracle Data Integrator (ODI) to your ADW.  You will replicate data from a database table to ADW using Oracle Golden Gate (OGG).  You will review data quality in ADWC using Oracle Enterprise Data Quality (EDQ).  There are several configuration steps in this lab that will be removed in a soon to be released DIPC version.
 
 ![](./images/DIPC/dipcarch.gif)
 
@@ -21,24 +24,24 @@ Data Integration Platform Cloud provides seamless batch and real-time data movem
 
 Data Integration Platform Cloud provides a comprehensive cloud-based solution for all of your data integration and governance needs. With Data Integration Platform Cloud, you can synchronize an entire data source or copy high volumes of data in batches to a new Oracle Database Cloud deployment, and then easily access, transform, and cleanse your data from the platform. You can also stream data in real time to new data sources, perform data analysis on streaming data, and keep any number of data sources synchronized.
 
-In addition to Oracle Database (including ADWCS), MySQL, and Exadata are among the databases that you can use with Oracle Data Integration Platform Cloud. You can perform homogenous or heterogeneous replication between the following:
+In addition to Oracle Database (including ADW), MySQL, and Exadata are among the databases that you can use with Oracle Data Integration Platform Cloud. You can perform homogenous or heterogeneous replication between the following:
 
 * On-premises to Cloud
 * Cloud to Cloud
 * Cloud to On-premises
 * On-premises to On-premises
-
+      
 For more information about DIPC, see the documentation <a href="https://docs.oracle.com/en/cloud/paas/data-integration-platform-cloud/using/getting-started-data-integration-platform-cloud.html#GUID-72E6BAA9-260B-4098-90A8-D42B95FC9010" target="_blank">Getting Started with Oracle Data Integration Platform Cloud</a>.
 
 To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issues/new) to go to the github oracle repository issue submission form.
 
 ## Objectives
 
--   Learn how to load data to ADWCS with ODI.
+-   Learn how to load data to ADW with ODI.
 
--   Learn how to replicate data to ADWCS with OGG.
+-   Learn how to replicate data to ADW with OGG.
 
--   Learn how to review data quality in ADWCS with EDQ.
+-   Learn how to review data quality in ADW with EDQ.
 
 ## Required Artifacts
 
@@ -52,9 +55,9 @@ To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issue
 
 # Provision services and copy wallet and sample files
 
-## Steps
+ 
 
-### STEP 1: Provision DBCS and DIPC services.  (Requires ~1 Hour)
+#### STEP 1: Provision DBCS and DIPC services.  (Requires ~1 Hour)
 - Follow these [instructions](https://docs.oracle.com/en/cloud/paas/data-integration-platform-cloud/using/oci-classic.html) to provision the DIPC and DBCS services used in this lab.  You must use DIPC Governance Edition to include ODI, OGG, and EDQ in the deployment.  You must use version 12.1.0.2 and EE, HP, or EP edition in OCI-Classic DBCS for the DIPC database.  Be sure to select 'Configure Golden Gate' when provisioning the database as this database will also serve as the source database for OGG in the lab. The lab uses the default CDB name of ORCL and the default PDB name of PDB1.  All network access from your PC will be over ssh and we recommend using a SQL Developer ssh connection type to the database over the internet. You will first build a database service as a prerequisite for DIPC and then you will build a DIPC service as below.  If there are multiple users following the lab you will need to create unique names for your services.
 
 ![](./images/DIPC/dbconsole.gif)
@@ -62,10 +65,10 @@ To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issue
 ![](./images/DIPC/dipcservice.gif)
 
 
-### STEP 2: Connect to your DIPC service via ssh.
+#### STEP 2: Connect to your DIPC service via ssh.
 - Follow these [instructions](https://docs.oracle.com/en/cloud/paas/data-integration-platform-cloud/using/accessing-virtual-machine-secure-shell.html) to connect to your DIPC service using your SSH key.  Connect using the opc user.
 
-### STEP 3: Copy the ADWCS wallet and sample files to your DIPC server.
+#### STEP 3: Copy the ADW wallet and sample files to your DIPC server.
 - Create the directory /tmp/dipcadw on your DIPC server
 ```
 $ sudo -s
@@ -84,9 +87,9 @@ $ gunzip -- keep /tmp/dipcadw/datafiles/sales.csv.gz
 
 # Configure the ADWC target for ODI, OGG, and EDQ
 
-## Steps
+ 
 
-### STEP 1: Configure your ADWC database instance
+#### STEP 1: Configure your ADWC database instance
 - Run these commands to configure ODI, OGG, and EDQ in the ADWC target using your SQL Developer Connection for the ADWC admin user from lab 200 to connect to your ADWC instance.
 ```
 CREATE USER ODI_USER IDENTIFIED BY WelcomeDIPCADWC1;
@@ -115,9 +118,9 @@ ALTER TABLE admin.channelsodi
 
 # Configure DIPC and DBCS
 
-## Steps
+ 
 
-### STEP 1: Configure the DBCS source DIPC DB
+#### STEP 1: Configure the DBCS source DIPC DB
 - Follow these [instructions](https://docs.oracle.com/en/cloud/paas/database-dbaas-cloud/csdbi/connect-db-using-sql-developer.html) to create a new SQL Developer connection using sys as sysdba to the DIPC PDB provisioned at the beginning of this lab.  
 
 - If you did not select 'Enable Golden Gate' when provisioning the DBCS service you can manually enable it using dbaascli by following these [instructions](https://docs.oracle.com/en/cloud/paas/database-dbaas-cloud/csdbi/use-goldengate-service-this-service.html#GUID-3DF283C1-366D-40B0-8550-1E6003CBC751).
@@ -167,7 +170,7 @@ Insert into adwc_repl.CHANNELS (CHANNEL_ID,CHANNEL_DESC,CHANNEL_CLASS,CHANNEL_CL
 
 ```
 
-### STEP 2: Configure DIPC TNSNAMES.ORA and SQLNET.ORA
+#### STEP 2: Configure DIPC TNSNAMES.ORA and SQLNET.ORA
 -  To create the TNSNAMES.ora entries and SQLNET.ora files, connect to your DIPC server via ssh as user opc and run these commands.
 ```
 $ sudo -s
@@ -218,7 +221,7 @@ dipc_low = (description= (address=(protocol=tcps)(port=1522)(host=adwc.uscom-eas
 
 dipc_medium = (description= (address=(protocol=tcps)(port=1522)(host=adwc.uscom-east-1.oraclecloud.com))(connect_data=(service_name=xxxxxxx_dipc_medium.adwc.oraclecloud.com))(security=(ssl_server_cert_dn=
         "CN=adwc.uscom-east-1.oraclecloud.com,OU=Oracle BMCS US,O=Oracle Corporation,L=Redwood City,ST=California,C=US"))   )
-
+        
 ```
 
 - Create a sqlnet.ora file in /u01/app/oracle/suite/oci/network/admin/ and add these lines.  Save the file.
@@ -239,7 +242,7 @@ $ ./sqlplus sys@CDB as sysdba
 $ ./sqlplus admin@dipc_low
 ```
 
-### STEP 3: Configure ODI and EDQ JAVA parameters for ADWCS
+#### STEP 3: Configure ODI and EDQ JAVA parameters for ADW
 -  To create the required JAVA paramters for ODI you need to add parameters as below.
 
 ```
@@ -278,7 +281,7 @@ oracle.net.ssl_version=1.2
 oracle.net.wallet_location=(SOURCE=(METHOD=file)(METHOD_DATA=(DIRECTORY=/tmp/dipcadw)))
 ```
 
-### STEP 4:  Restart the DIPC Service
+#### STEP 4:  Restart the DIPC Service
 
 -  Use the cloud console to stop and start the DIPC service for the JAVA settings to take effect.
 
@@ -298,13 +301,13 @@ $ cd /u01/data/domains/jlsData/dipcagent001/bin
 $ ./startAgentInstance.sh &
 ```
 
-# Use OGG with ADWCS
+# Use OGG with ADW
 
 Oracle GoldenGate enables the exchange and manipulation of data at the transaction level among multiple, heterogeneous platforms across the enterprise. It moves committed transactions with transaction integrity and minimal overhead on your existing infrastructure. Its modular architecture gives you the flexibility to extract and replicate selected data records, transactional changes, and changes to DDL (data definition language) across a variety of topologies.
 
-## Steps
+ 
 
-### STEP 1:  Configure OGG
+#### STEP 1:  Configure OGG 
 
 - Connect as opc to your DIPC server via ssh and run the following commands to start ggsci.
 ```
@@ -344,7 +347,7 @@ edit param ./GLOBALS
 ALLOWOUTPUTDIR /u01/app/oracle/suite/gghome/dirdat/
 ```
 - restart mgr
-```
+``` 
 stop mgr
 start mgr
 info all
@@ -438,17 +441,17 @@ CHANNEL_ID CHANNEL_DESC         CHANNEL_CLASS        CHANNEL_CLASS_ID CHANNEL_TO
          2 Partners             Others                             14 Channel total                1
         11 test                 Others                             11 Channel total                1
 
-6 rows selected.
+6 rows selected. 
 ```
 - You are now replicating the channels table to ADWC and can modify the extract and replicat parameters to include other schemas and tables.
 
-# Use ODI with ADWCS
+# Use ODI with Your ADW
 
 Oracle Data Integrator provides a fully unified solution for building, deploying, and managing complex data warehouses or as part of data-centric architectures in a SOA or business intelligence environment. In addition, it combines all the elements of data integration—data movement, data synchronization, data quality, data management, and data services—to ensure that information is timely, accurate, and consistent across complex systems.
 
-## Steps
+ 
 
-### STEP 1: Configure and connect the VNC service on your DIPC server.  
+#### STEP 1: Configure and connect the VNC service on your DIPC server.  
 - You will use ODI Studio through a VNC connection and ssh tunnel with putty.  Follow these [instructions](https://docs.oracle.com/en/cloud/paas/data-integration-platform-cloud/using/connecting-odi-studio-vnc-server.html#GUID-7210212B-C58C-48AC-B581-DBFD7F58B552) to create a ssh tunnel and connect to your DIPC server using VNC.  VNCServer is installed on the DIPC server and must be started first.  Be sure to use the oracle user when starting the VNCServer service and disable screen lock and screen saver after connecting the first time or you will be locked out and need to restart VNC on the server.  Be sure that you made the changes to /u01/jdk/jre/lib/security/java.security earlier in this lab to allow ODI to work with ADWC.
 
 - To start ODI run this command in a terminal window.  Click 'No' for importing preferences.
@@ -464,7 +467,7 @@ Connect to the repository.
 ```
 ![](./images/DIPC/dipcodi1.gif)
 
-### STEP 2: Create a New Data Server for ADWC
+#### STEP 2: Create a New Data Server for ADWC
 - Navigate to the Topology tab in ODI, find the Oracle technology, right click, create a 'New Data Server'
 ```
 Name: ADWC_DIPC_MED
@@ -481,7 +484,7 @@ oracle.net.wallet_location = (SOURCE = (METHOD = file) (METHOD_DATA = (DIRECTORY
 ![](./images/DIPC/dipcodi2.gif)
 - Click 'Test Connection' and test both the local and OracleDIAgent agents for success and Ok.
 
-### STEP 3: Create a New Physical Schema for ADWC
+#### STEP 3: Create a New Physical Schema for ADWC
 - Right click on the ADWC_DIPC_MED data server and add a new physical schema
 ```
 Schema: ADMIN
@@ -492,7 +495,7 @@ Work Schema: ODI_USER
 Logical Schema: ADWC_ODI
 ```
 - Click the save icon to save the physical schema
-### STEP 4: Add a new model for ADWC
+#### STEP 4: Add a new model for ADWC
 - Click on the 'Designer' tab and expand the 'Models' ribbon then click on the folder to select 'New Model'
 - Enter the following details
 ```
@@ -500,19 +503,19 @@ Name: ADWC_ODI
 Technology: Oracle
 Logical Schema: ADWC_ODI
 ```
-- Click Reverse Engineer to import the tables in the schema and you will now see the ADWC tables in the Models ribbon.
+- Click Reverse Engineer to import the tables in the schema and you will now see the ADW tables in the Models ribbon.
 
 ![](./images/DIPC/dipcodi3.gif)
 
 
-### STEP 5: Import the sample project and run mappings
+#### STEP 5: Import the sample project and run mappings
 - A sample project has been provided with file and table mappings to ADWC or you can build your own.  Open the Designer tab and import the sample project from /tmp/dipcadw/SmartExport.xml
 
 ![](./images/DIPC/dipcodi4.gif)
 
 - You will need to update the password and connection information for both databases after importing the project in the Topology tab.  Edit the connections similar to step 2 of this section and test the connections.
 
-- Review the mappings and you run the mapping individually or the load plan RunMappings. The table mapping uses the SQL to SQL Loading Knowledge Model, you can also create a db link to ADWC and use a DB Link (Push) KDM.
+- Review the mappings and you run the mapping individually or the load plan RunMappings. The table mapping uses the SQL to SQL Loading Knowledge Model, you can also create a db link to ADW and use a DB Link (Push) KDM.
 
 ![](./images/DIPC/dipcodi11.gif)
 
@@ -541,13 +544,13 @@ Logical Schema: ADWC_ODI
 ![](./images/DIPC/dipcodi12.gif)
 
 
-# Use EDQ with ADWCS
+# Use EDQ with Your ADW
 
 Oracle EDQ provides a comprehensive data quality management environment that is used to understand, improve, protect and govern data quality. EDQ facilitates best practice master data management, data integration, business intelligence, and data migration initiatives. EDQ provides integrated data quality in customer relationship management and other applications.
 
-## Steps
+ 
 
-### STEP 1: Connect to EDQ
+#### STEP 1: Connect to EDQ
 - Open the DIPC Console by clicking on the user image
 
 ![](./images/DIPC/dipcedq1.gif)
@@ -562,7 +565,7 @@ Oracle EDQ provides a comprehensive data quality management environment that is 
 
 ![](./images/DIPC/dipcedq4.gif)
 
-### STEP 2: Create a data store for ADWC
+#### STEP 2: Create a data store for ADWC
 - Create a Data Store for ADWC by right clicking on Data Store
 
 ![](./images/DIPC/dipcedq5.gif)
@@ -577,7 +580,7 @@ Password: WelcomeDIPCADWC1
 Schema: admin or SSB or any schema
 ```
 
-### STEP 3:  Create a snapshot of data
+#### STEP 3:  Create a snapshot of data
 
 - Right Click Staged Data and select your datastore and tables.  You may want to limit the rows.
 
@@ -587,7 +590,7 @@ Schema: admin or SSB or any schema
 
 - A task will run to load the snapshot of data.
 
-### STEP 4:  Create a Profile Process
+#### STEP 4:  Create a Profile Process
 
 - Right Click on Processes and select New Process.  Select the data source from the previous step.
 
@@ -605,4 +608,16 @@ Schema: admin or SSB or any schema
 
 ![](./images/DIPC/dipcedq11.gif)
 
-- You can now use profiling and other EDQ features with ADWCS.  Try using tables in the SSB schema on ADWCS.
+- You can now use profiling and other EDQ features with your Autonomous Data Warehouse.  Try using tables in the SSB schema on ADW.
+
+
+
+## Great Work - All Done
+
+<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
+</td>
+<td class="td-banner">
+Please click here to return to the [Getting Started Home page](README.md)
+</td></tr><table>
+
+

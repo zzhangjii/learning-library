@@ -1,21 +1,24 @@
-![](./images/300/TITLE300.png)
+<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
 
-Updated: May 10, 2018
+September 21, 2018
+</td>
+<td class="td-banner">
+# Lab 3: Loading Data into Your New Autonomous Data Warehouse
+</td></tr><table>
 
-# ADWC Lab 3: Data Loading
 
 ## Introduction
 
 In this lab, you will be uploading files to the Oracle Cloud Infrastructure (OCI) Object Storage, creating sample tables, loading data into them from files on the OCI Object Storage, and troubleshooting data loads with errors.
 
-You can load data into Autonomous DW Cloud using Oracle Database tools, and Oracle and 3rd party data integration tools. You can load data:
+You can load data into your new Autonomous Data Warehouse using Oracle Database tools, and Oracle and 3rd party data integration tools. You can load data:
 
 + from files local to your client computer, or
 + from files stored in a cloud-based object store
 
 For the fastest data loading experience Oracle recommends uploading the source files to a cloud-based object store, such as Oracle Cloud Infrastructure Object Storage, before loading the data into your Autonomous DW Cloud.
 
-To load data from files in the cloud into your Autonomous DW Cloud database, use the new PL/SQL DBMS_CLOUD package. The DBMS_CLOUD package supports loading data files from the following Cloud sources: Oracle Cloud Infrastructure Object Storage, Oracle Cloud Infrastructure Object Storage Classic, and Amazon AWS S3.
+To load data from files in the cloud into your Autonomous Data Warehouse database, use the new PL/SQL DBMS_CLOUD package. The DBMS_CLOUD package supports loading data files from the following Cloud sources: Oracle Cloud Infrastructure Object Storage, Oracle Cloud Infrastructure Object Storage Classic, Amazon AWS S3 and Microsoft Azure Object Store.
 
 This lab shows how to load data from Oracle Cloud Infrastructure Object Storage using two of the procedures in the DBMS_CLOUD package:
 
@@ -34,7 +37,7 @@ To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issue
 
 -   Learn how to upload files to the OCI Object Storage
 
--   Learn how to define object store credentials for ADWC
+-   Learn how to define object store credentials for your ADW
 
 -   Learn how to create tables in your database
 
@@ -49,8 +52,9 @@ To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issue
 -   Oracle SQL Developer (see Lab Guide 1 for more specifics on the version of SQL Developer and how to install and configure it).
 
 # Download Sample Data
-## Steps
-### STEP 1: Download the Sample Data Files to Your Local Computer
+
+
+#### STEP 1: Download the Sample Data Files to Your Local Computer
 
 -   For this lab, you will need a handful of data files.  Click <a href="./files/datafiles.zip" target="_blank">here</a> to download a zipfile of the 5 sample data files for you to upload to the object store. Unzip it to a directory on your local computer. You will see:-
 
@@ -61,8 +65,8 @@ To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issue
     -   Products data: **products.txt**
 
 # Create the tables
-## Steps
-### STEP 2: Create Target Tables for Data Loading
+
+#### STEP 2: Create Target Tables for Data Loading
 
 -   Connected as your user in SQL Developer, copy and paste <a href="./scripts/300/create_tables.txt" target="_blank">this code snippet</a> to SQL Developer worksheet. Take a moment to examine the script. Then click the **Run Script** button to run it.
 
@@ -73,9 +77,9 @@ To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issue
 Note that you do not need to specify anything other than the list of columns when creating tables in the SQL scripts. You can use primary keys and foreign keys if you want, but they are not required.
 
 # Load data from the local file system
-## Steps
 
-### STEP 3: Loading Data Using the Data Import Wizard in SQL Developer
+
+#### STEP 3: Loading Data Using the Data Import Wizard in SQL Developer
 
 -   Expand ‘**Tables**’ in your user schema object tree. If you don't see any tables, click on the refresh icon (two curved arrows) to refresh the table list.  You will see all the tables you have created previously. Select table **CHANNELS**. Clicking the right mouse button opens the context-sensitive menu in SQL Developer; select ‘**Import Data**’:
 
@@ -116,8 +120,8 @@ When you are satisfied with the file content view, click **NEXT**.
 
 
 # Setup the OCI Object Store
-## Steps    
-### STEP 4: Navigate to the OCI Compute Console
+
+#### STEP 4: Navigate to the OCI Compute Console
 
 -   The easiest way to get to the **OCI Compute Console** is to first navigate to the My Services Dashboard page:
     ![](images/300/snap0014294.jpg)
@@ -129,7 +133,7 @@ When you are satisfied with the file content view, click **NEXT**.
     ![](images/300/snap0014296.jpg)
 
 
-### STEP 5: Navigate to the Storage Tab, then Object Storage
+#### STEP 5: Navigate to the Storage Tab, then Object Storage
 To learn more about the OCI Object Storage, check out this <a href="https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Tasks/addingbuckets.htm" target="_blank">documentation</a> .
 
 -   In the OCI Compute Console, click on the **Storage** tab, then click on **Object Storage** on the left-hand menu:
@@ -138,7 +142,7 @@ To learn more about the OCI Object Storage, check out this <a href="https://docs
 -   Choose the root compartment in the **COMPARTMENT** drop-down if it is not already choosen. The name of your root compartment might be different.
     ![](images/300/snap0014298.jpg)
 
-### STEP 6: Create a Bucket for the Object Storage
+#### STEP 6: Create a Bucket for the Object Storage
 In OCI Object Storage, a bucket is the terminology for a container of multiple files.
 
 -   Click the **Create Bucket** button:
@@ -147,7 +151,7 @@ In OCI Object Storage, a bucket is the terminology for a container of multiple f
 -   **Name your bucket** and click **Create Bucket** button.
     ![](images/300/snap0014300.jpg)
 
-### STEP 7: Upload Files to Your OCI Object Store Bucket
+#### STEP 7: Upload Files to Your OCI Object Store Bucket
 
 -   Click on your **bucket name** to open it:
     ![](images/300/snap0014301.jpg)
@@ -163,7 +167,7 @@ In OCI Object Storage, a bucket is the terminology for a container of multiple f
 -   The end result should look like this with all 4 files listed under Objects:
     ![](images/300/snap0014304.jpg)
 
-### STEP 8: Construct the URLs of the Files on Your OCI Object Storage
+#### STEP 8: Construct the URLs of the Files on Your OCI Object Storage
 -   Construct the URL that points to the location of the customers.csv file staged in the OCI Object Storage. The URL is structured as follows. The values for you to specify are in bold:
 
     https://swiftobjectstorage.<**region_name**>.oraclecloud.com/v1/<**tenant_name**>/<**bucket_name**>/<**file_name**>
@@ -176,7 +180,7 @@ In this example, the region name is us-ashburn-1, the tenant name is dbayard00, 
 
 -   **Save** the URLs you constructed to a note. We will use the URLs in the following steps.
 
-### STEP 9: Creating an Object Store Auth Token
+#### STEP 9: Creating an Object Store Auth Token
 
 To load data from the Oracle Cloud Infrastructure(OCI) Object Storage you will need an OCI user with the appropriate privileges to read data (or upload) data to the Object Store. The communication between the database and the object store relies on the Swift protocol and the OCI user Auth Token.
 
@@ -203,7 +207,7 @@ To load data from the Oracle Cloud Infrastructure(OCI) Object Storage you will n
 
     ![](./images/300/snap0015311.jpg)
 
-### STEP 10: Create a Database Credential for Your User
+#### STEP 10: Create a Database Credential for Your User
 
 In order to access data in the Object Store you have to enable your database user to authenticate itself with the Object Store using your OCI object store account and Auth token. You do this by creating a private CREDENTIAL object for your user that stores this information encrypted in your Autonomous Data Warehouse. This information is only usable for your user schema.
 
@@ -226,9 +230,8 @@ In order to access data in the Object Store you have to enable your database use
 
 # Load data from the Object Store using the Data Import Wizard
 
-## Steps
 
-### STEP 11: Loading Data Using the Data Import Wizard in SQL Developer
+#### STEP 11: Loading Data Using the Data Import Wizard in SQL Developer
 
 
 -   Expand ‘**Tables**’ in your user schema object tree. If you don't see any tables, click on the refresh icon (two curved arrows) to refresh the table list.  You will see all the tables you have created previously. Select table **CUSTOMERS**. Clicking the right mouse button opens the context-sensitive menu in SQL Developer; select ‘**Import Data**’:
@@ -300,9 +303,9 @@ When you are satisfied with the data preview, click **NEXT**.
 
 # Load data from the Object Store using DBMS_CLOUD
 
-## Steps
 
-### STEP 12: Loading Data Using the PL/SQL Package, DBMS_CLOUD
+
+#### STEP 12: Loading Data Using the PL/SQL Package, DBMS_CLOUD
 
 As an alternative to the wizard-guided data load, you can use the PL/SQL package **DBMS_CLOUD** directly. This is the preferred choice for any load automation.
 
@@ -323,7 +326,7 @@ As an alternative to the wizard-guided data load, you can use the PL/SQL package
 
     ![](./images/300/Picture300-20.png)
 
-### STEP 13: Troubleshooting DBMS_CLOUD data loads
+#### STEP 13: Troubleshooting DBMS_CLOUD data loads
 
 -   Connected as your user in SQL Developer, run the following query to look at past and current data loads.
 ```
@@ -353,3 +356,13 @@ A load or external table validation that errors out is indicated by status=FAILE
 -   To learn more about how to specify file formats, delimiters, and more, you can review DBMS_CLOUD Package Format Options: https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/dbmscloud-reference.html
 
 -   Keep your SQL Deveoper open and move to the next lab - Querying External Data.
+
+
+
+## Great Work - All Done
+
+<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
+</td>
+<td class="td-banner">
+Please click here to return to the [Getting Started Home page](README.md)
+</td></tr><table>

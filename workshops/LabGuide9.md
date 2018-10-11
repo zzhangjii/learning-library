@@ -1,29 +1,36 @@
-![](./images/900/title900-2.jpg)
+<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
 
-# Lab 9: Create Data Visualizations from ADWC
+September 21, 2018
+</td>
+<td class="td-banner">
+# Bonus Lab 2: Exploring Your Data Using Data Visualization Desktop
+</td></tr><table>
+
 
 ## Introduction
 
-This lab will walk you through the steps to connect Oracle Data Visualization Desktop to an instance of ADWC and create data visualizations.  Unlimited Data Visualization Desktop licenses are included when connecting to an ADWC data source.  Instructions will be provided to connect your previously created ADWC instance (using sample data loaded into data warehouse) to Oracle Data Visualization Desktop.  We will demonstrate how you can immediately gain insights and create beautiful data visualizations.
+This lab will walk you through the steps to connect Oracle Data Visualization Desktop to an instance of ADW and create data visualizations.  Unlimited Data Visualization Desktop licenses are included when connecting to an ADW data source.  Instructions will be provided to connect your previously created ADW instance (using sample data loaded into data warehouse) to Oracle Data Visualization Desktop.  We will demonstrate how you can immediately gain insights and create beautiful data visualizations.
 
 At this point, you should have performed the following:
 
-1. Created an ADWC instance and downloaded the credentials wallet.  
+1. Obtained an Oracle cloud account
+2. Created your new Autonomous Data Warehouse 
+3. Downloaded the credentials wallet for your Autonomous Data Warehouse. 
 
 ## Objectives
-- Learn how to connect a desktop analytics tool to the powerful Autonomous Data Warehouse
+- Learn how to connect a desktop analytics tool to the powerful Autonomous Data Warehouse 
 - Learn how to secure a desktop client connection to Autonomous Data Warehouse
 - Learn how to create a simple data visualization project with Oracle Data Visualization Desktop
 - Learn how to access and gain insights from data in the Autonomous Data Warehouse
 
 
 ## Required Artifacts
-- Installation of Oracle Data Visualization Desktop
-- Access to an ADWC instance
+- Installation of Oracle Data Visualization Desktop (free with Autonomous Data Warehouse)
+- Access to an existing Autonomous Data Warehouse instance 
 
 ## Set Up Local Windows Desktop Environment
 
-### Installing Oracle Data Visualization Desktop on a Windows Desktop
+#### STEP 1: Installing Oracle Data Visualization Desktop on a Windows Desktop
 
 - Downloaded the latest version of Oracle Data Visualization Desktop (DVD) from [here](http://www.oracle.com/technetwork/middleware/oracle-data-visualization/downloads/oracle-data-visualization-desktop-2938957.html).
 - After saving the installer .ZIP to your desktop, open the compressed file and click on the .exe installer and follow the guided steps.
@@ -36,7 +43,7 @@ At this point, you should have performed the following:
 
    ![](./images/900/image006.png)
 
-### Securing Your Client Connection to Autonomous Data Warehouse
+#### STEP 2: Securing Your Client Connection to Autonomous Data Warehouse
 
 You want to secure your data from the desktop all the way from the client application to the server where your data is stored.  Password credentials for connecting to databases can now be stored in a client-side Oracle wallet, a secure software container used to store authentication and signing credentials.  This wallet usage can simplify large-scale deployments that rely on password credentials for connecting to databases. When this feature is configured, application code, batch jobs, and scripts no longer need embedded user names and passwords. Risk is reduced because such passwords are no longer exposed in the clear, and password management policies are more easily enforced without changing application code whenever user names or passwords change.
 
@@ -65,7 +72,7 @@ You want to secure your data from the desktop all the way from the client applic
    COPY cwallet.sso C:\%HOMEPATH%\AppData\Local\DVDesktop\components\OBIS\DWCS\
    ```
 
-- Go to the directory and ensure that the file was copied over.  At the command prompt, type
+- Go to the directory and ensure that the file was copied over.  At the command prompt, type 
 
    ```
    CD C:\%HOMEPATH%\AppData\Local\DVDesktop\components\OBIS\DWCS
@@ -81,7 +88,7 @@ You want to secure your data from the desktop all the way from the client applic
 
 ## Create a View using Tables in the SH Schema
 
-### Execute the Provided Script in SQL Developer
+#### STEP 3: Execute the Provided Script in SQL Developer
 
 For the sake of this test drive exercises, we are helping make it as simple as possible for you.  We don’t want the required steps of creating a data model required in any reporting, analytics or data visualization tool to overshadow the fact that Autonomous Data Warehouse is simple.  In this exercise, we are using the SH schema provided and will be creating a simple view.
 
@@ -90,7 +97,7 @@ For the sake of this test drive exercises, we are helping make it as simple as p
    ```
    drop view DV_SH_VIEW;
 
-   create or replace view DV_SH_VIEW as select
+   create or replace view DV_SH_VIEW as select 
    P.PROD_NAME,
    P.PROD_DESC,
    P.PROD_CATEGORY,
@@ -123,14 +130,14 @@ For the sake of this test drive exercises, we are helping make it as simple as p
    ![](./images/900/image012.png)
 
 
-## Create a Connection to ADWC from Data Visualization Desktop
+## Create a Connection to Your Autonomous Data Warehouse from Data Visualization Desktop
 
-### Create Connection
+#### STEP 4: Create Connection
 
 - Start Oracle Data Visualization Desktop from the Start Windows Menu
 
    ![](./images/900/image015.png)
-
+   
    ![](./images/900/image016.png)
 
 - When Oracle Data Visualization Desktop opens, click on the __‘Create’__ button and __‘Connection’__ selection highlighted.
@@ -149,16 +156,16 @@ For the sake of this test drive exercises, we are helping make it as simple as p
    (security=(ssl_server_cert_dn="CN=adwc.us-e1.oraclecloud.com,OU=Oracle BMCS US,O=Oracle Corporation,
    L=Redwood City,ST=California,C=US"))   )
    ```
-
-
-
+ 
+ 
+ 
      | Connection Info       | Entry                                             |  
      | --------------------- | :--------------------------------------------- |
      | New Connection Name:  | Type in 'SALES_HISTORY'                             |
      | Host:                 | e.g. adwc.us-e1-1.oraclecloud.com (from above) |
      | Port:                 | 1522                                              |
      | Username:             | <your username> Insert username created in previous labs.  Same as SQL Developer credentials. |                                            
-     | Password              | <your password> Insert username created in previous labs.  Same as SQL Developer credentials. |
+     | Password              | <your password> Insert username created in previous labs.  Same as SQL Developer credentials. | 
      | Service Name:         | e.g. tuak89quycc88vqkzengdw1high.adwc.oraclecloud.com (This information is also found in the ‘tnsnames.ora’ file. Example highlighted above.) |
 
 - After completing the fields, click on __‘Save’__ button.
@@ -168,11 +175,11 @@ For the sake of this test drive exercises, we are helping make it as simple as p
 - Upon success of creating a new connection to the Autonomous Data Warehouse, select the __Create__ button and select __Data Set__.  
 
    ![](./images/900/image025.png)
-
+   
 - We will now choose to select the sales data we want to analyze and visualize in our first project.  Select the connection we just created named __SALES_HISTORY__.
 
    ![](./images/900/image027.png)
-
+   
 - Click on the __ADMIN__ schema in the data warehouse.
 
    ![](./images/900/image029.png)
@@ -180,74 +187,74 @@ For the sake of this test drive exercises, we are helping make it as simple as p
 - Select (Click) on __DB_SH_VIEW__.
 
    ![](./images/900/image031.png)
-
+   
 - First click on the __Add All__ Label in the left column, type a new Name for the Data Set called, __‘SALES_HISTORY’__ and then Click on the __Add__ button.  __NOTE:__  It is important to use the new name of __‘SALES_HISTORY’__ as the rest of the lab exercises will reference that name.  Optionally, you can click on the __'Get Preview'__ to see some example records.
 
    ![](./images/900/image033.png)
-
+   
 - Once the __SALES_HISTORY__ Data Set has successfully been created, click on the main menu item.
 
    ![](./images/900/image035.png)
-
+   
 - Select the __Data__ menu option on the left.  This should reveal your new __SALES_HISTORY__ Data Set you created.  Right click on __SALES_HISTORY__ label and choose the __'Inspect__ sub-menu item.
 
    ![](./images/900/image037.png)
-
+   
  - We are going to override the data types for two columns recognized as numeric and correctly set them as attributes-- __CALENDAR_YEAR__ and __CUST_YEAR_OF_BIRTH__.  Hover the mouse over the names column looking for the fields, __CALENDAR_YEAR__.  Change the __‘Treat As’__ field as an __‘Attribute’__.  Repeat for the field, __CUST_YEAR_OF_BIRTH__.  When both field have been set to Attribute, click __OK__ when done.  You will be promoted to confirm that you want to change the Data Set.  Confirm, __‘Yes’__.
 
    ![](./images/900/image039.png)
-
+   
    ![](./images/900/image041.png)  
-
+   
 - Once the Data Set has been updated successfully, we are ready to create our first project.  Click on the __Create Project__ button.
 
    ![](./images/900/image043.png)
-
+   
 - Click on the __SALES_HISTORY__ Data (highlight) and click on the __‘Add to Project’__ button.
 
    ![](./images/900/image045.png)
 
 ## Create a New Project in Oracle Data Visualization Desktop
 
-### Project Introduction
+#### STEP 5: Project Introduction
 
 No matter what your role is in the organization, access to timely data can provide greater insights to improve the performance of your business.  Whether you’re creating a data warehouse or data mart for yourself or others, Autonomous Data Warehouse Cloud is making it far simpler than ever before.  Easy, fast and elastic.   This small project demonstrates this.  This is how business users would interact with the Autonomous Data Warehouse.
 
 SCENARIO:  For a moment, rewind yourself back a couple of decades.  You work at an electronics reseller company.  The founder started his business by selling camera and photography equipment.  He’s already diversified his business portfolio as he already owns many 1-hour photo processing and video rental stores.  Over the last few years, his computer reselling business has grown, but he’s not convinced that the PC/server business will last.  His instincts tell him to continue to focus on growing his photography equipment and supplies business rather than PCs.  If you had access to this technology and solution, what would this data tell him?  What insights could you share?  How could this data help him focus on the right investments, grow his business and better target his existing and potential customers?
 
-### Browse and Explore the Data With Data Tiles
+#### STEP Browse and Explore the Data With Data Tiles
 
 - We will first start by browsing the data that’s available in our Data Set. Click on the highlighted __Prepare__ button and then click to select the menu option __Data Tiles__.  
 
    ![](./images/900/image047.png)
-
+   
    Notice how easy it is to browse the data elements to see what is available for you to further explore.  After scrolling through the data, click back on the highlighted __Visualize__ option to bring up the blank canvas.  
 
    ![](./images/900/image049.png)
-
-### Create Your First Data Visualization
+   
+#### STEP 6: Create Your First Data Visualization
 
 - We will now create a very simple visualization project to finish this lab.  Multi-select (ctrl+click) the 5 Data Elements within __SALES_HISTORY__ including __PROD_NAME__, __AMOUNT_SOLD__, __CALENDAR_YEAR__, __PROD_CATEGORY__, and __QUANTITY_SOLD__.  
 
 - Drag the five selected columns to the middle of the screen.
    ![](./images/900/image051.png)
-
+   
 - Based upon this data, Oracle Data Visualization Desktop will choose a default visualization.  If not, choose the __Scatter__ chart so it matches the view below.   
 
    ![](./images/900/image053.png)
-
+   
  At this point with a very few steps, you now have something that can further bring your data to life and begin to make some data-driven decisions.  And of course, as you share this with others, more and more people will want to gain access to the data.  But, don’t forget how easy, fast and elastic the Autonomous Data Warehouse is and will be able to quickly scale to meet your growing data and end users.
-
+ 
 ## Create a Another Project with Multiple Canvases in Oracle Data Visualization Desktop
 
-### Create a New Data Visualization project
+#### STEP 7: Create a New Data Visualization project
 
 In this part of the lab, we will create 3 basic interactive canvases within a single project.  You will see how easy and powerful you can gain insights and visualize your data in just a few clicks.  This lab is not intended to be an exhaustive view of all Oracle Data Visualization capabilities.  Much in fact has not been included to keep the lab short.
 
 While this will provide specific instructions to replicate the intended visualizations, don’t feel that you must be constrained.  Try other visualization types and layouts.  Modify filters and colors as you like.  If you run into trouble you can always undo the previous step with Ctrl-Z or the back arrow at the top right of the screen.
 
    ![](./images/900/imageE002.png)
-
+   
 - Create a new Data Visualization project
 
    You will create a basic interactive dashboard with 3 canvases that summarizes:
@@ -255,21 +262,21 @@ While this will provide specific instructions to replicate the intended visualiz
     - __Product Summary__
     - __Customer Demographics Summary__
 
-- Select the __“Data”__ menu option on the right to reveal the available Data Sets.  Your newly created __SALES_HISTORY__ should be visible with a red icon indicating a live ADWC connection.
+- Select the __“Data”__ menu option on the right to reveal the available Data Sets.  Your newly created __SALES_HISTORY__ should be visible with a red icon indicating a live ADW connection.
 
 - Right click on the __SALES_HISTORY__ data set and choose __“Create Project”__.
-
+   
    ![](./images/900/imageE005.png)
 
 - Click on the Hamburger to hide the navigator and increase your working screen view.
 
    ![](./images/900/imageE008.png)
-
-- This is your new Data Visualization project (blank canvas).
+   
+- This is your new Data Visualization project (blank canvas). 
 
    ![](./images/900/imageE010.png)
 
-### Canvas 1 - Sales Summary
+#### STEP 8: Canvas 1 - Sales Summary
 
 Questions Answered with Data in this section:
 
@@ -278,7 +285,7 @@ Questions Answered with Data in this section:
 ‘What are my sales in each country region? And what products sell best in each country?’
 ```
 
-#### Create Sales Summary using a Combo Chart and Trend Line
+##### STEP Create Sales Summary using a Combo Chart and Trend Line
 
 We will create Sales Summary using a Combo Chart to show the Amount Sold, Quantity Sold by Month.  This will help answer the question, *‘What are my monthly sales by dollar and quantity sold?’*
 
@@ -289,46 +296,46 @@ We will create Sales Summary using a Combo Chart to show the Amount Sold, Quanti
 - Right click on the metric __QUANTITY_SOLD__ and choose __Y2 Axis__.  Right click the metric __QUANTITY_SOLD__ again and this time choose __Bar__ type display.
 
    ![](./images/900/imageE019.png)
-
+   
    ![](./images/900/imageE021.png)
 
 - Select the __Advanced Analytics__ option from the left icon.  Then double click on __Trend Line__.
 
    ![](./images/900/imageE025.png)
-
-#### Create Sales Summary using an Area Chart
+   
+##### STEP 9: Create Sales Summary using an Area Chart
 
 We will create a Sales Summary using a Trend Line to show the Amount Sold by Product Category and Country Region.  This will help answer the questions such as, *‘What are my sales in each country region? And what products sell best in each country?’*
 
-- Return to the __Data Elements__ view in the Menu Navigator.
+- Return to the __Data Elements__ view in the Menu Navigator. 
 
    ![](./images/900/imageE028.png)
-
+   
 - Drag __AMOUNT_SOLD__, __COUNTRY_REGION__ and __PROD_CATEGORY__ from the navigator (using __CTRL__ for multi-select) onto the canvas at the bottom of the existing visual.  When the blue bar appears, drop the elements to create the next visualization.
 
    ![](./images/900/imageE031.png)
 
    ![](./images/900/imageE033.png)
-
-- Change the chart type to an __Area__ chart.
+   
+- Change the chart type to an __Area__ chart. 
 
    ![](./images/900/imageE036.png)
-
+   
 - Switch the two attributes locations.  Drag __COUNTRY_REGION__ over __PRODUCT_CATEGORY__ until the green (switch) icons appear over the top right corner of the 2 elements.  Then drop the element to swap their locations.
 
    ![](./images/900/imageE039.png)
-
+   
 - Rename the current canvas by click on the down triangle on the canvas name and choosing __rename__.  Change the name to __Sales Summary__.  
 
-- Save your project as __SALES_HISTORY__
+- Save your project as __SALES_HISTORY__ 
 
    ![](./images/900/imageE042.png)
-
+   
 Great job!!  You have created the first of the 3 views for this project.  This is the __Sales Summary__ view.  Next you will create the Product Summary view.
 
-### Canvas 2 - Product Summary
+#### STEP Canvas 2 - Product Summary 
 
-We will create the __Product Summary__ using a Scatter Chart to show the Quantity Sold, Product List Price by Month, Product Category, Amount Sold and Country Region.
+We will create the __Product Summary__ using a Scatter Chart to show the Quantity Sold, Product List Price by Month, Product Category, Amount Sold and Country Region. 
 
 Questions Answered with Data:
 
@@ -337,7 +344,7 @@ Questions Answered with Data:
 ‘What products categories are trending?  Are there trends based upon price?  Or by regions?’
 ```
 
-#### Create Product Summary using a Sunburst Chart
+##### STEP 10: Create Product Summary using a Sunburst Chart
 
 We will create the Product Summary using a Sunburst Chart to show the Quantity Sold by Product Category and Product Sub-Category.  This will help answer the question, *‘What products are selling the best?’*
 
@@ -358,12 +365,12 @@ We will create the Product Summary using a Sunburst Chart to show the Quantity S
 - Add the following attributes and metrics:
     - __QUANTITY_SOLD__ to the __Values (Slice size)__.  
     - __PROD_CATEOGORY__ to the __Category (slices)__.
-    - __PROD_SUBCATEGORY__ to the __Color__.
+    - __PROD_SUBCATEGORY__ to the __Color__. 
 
    ![](./images/900/imageE053.png)
+   
 
-
-#### Create Product Summary using a Scatter Chart
+##### STEP 11: Create Product Summary using a Scatter Chart
 
 - Follow the same steps from above to a 2nd visualization on this canvas.  This will help answer, *‘What products categories are trending?  Are there trends based upon price?  Or by regions?’*
 
@@ -380,12 +387,12 @@ We will create the Product Summary using a Sunburst Chart to show the Quantity S
     - __COUNTRY_REGION__ to __Shape__
 
    ![](./images/900/imageE057.png)
-
+   
 - Rename this canvas to __Product Summary__.
 
 You have created 2 of the 3 views for this project.  We will finish this exercise by adding a Demographics Summary view.
-
-### Canvas 3 - Demographics Summary
+   
+#### STEP 12: Canvas 3 - Demographics Summary 
 
 Questions Answered with Data:
 
@@ -395,7 +402,7 @@ Questions Answered with Data:
 ‘What products and product subcategories sell the best to our male or female customers?’
 ```
 
-#### Create Demographics Summary using a Tree Map
+##### STEP 13: Create Demographics Summary using a Tree Map
 
 We will create the __Demographics Summary__ using 3 different charts.  We will start by creating a Tree Map to show the Amount Sold segmented by Customer Income Level.  This will help answer the question such as, *‘Of all my customers, which customer income level segment drives my sales?’*
 
@@ -404,26 +411,26 @@ We will create the __Demographics Summary__ using 3 different charts.  We will s
 - Hit the __CTRL__ key and multi-select __AMOUNT_SOLD__ and __CUST_INCOME_LEVEL__ in the Data Elements section and drag them onto the canvas.
 
    ![](./images/900/imageE059.png)
-
+   
 - Change the chart type to a __Tree Map__.  Then drag __CUST_INCOME_LEVEL__ to the Color
 
    ![](./images/900/imageE063.png)
-
-#### Create Demographics Summary using a Horizontal Stacked Bar Chart
+   
+##### STEP 14: Create Demographics Summary using a Horizontal Stacked Bar Chart
 
 We will create another chart on our Demographics Summary.  We will create a chart to show the Amount Sold based upon our Customers Year of Birth and their Gender.  This will help answer the question such as, *‘Do Male or Females buy more from us? And what are the ages of our customers who purchase the most?’*
 
-- Multi-select __AMOUNT_SOLD__ and __CUST_YEAR_OF_BIRTH__ and drag them onto the canvas below the tree map to create a new visual.
+- Multi-select __AMOUNT_SOLD__ and __CUST_YEAR_OF_BIRTH__ and drag them onto the canvas below the tree map to create a new visual. 
 
-- Change the chart type to __Horizontal Stacked__.
+- Change the chart type to __Horizontal Stacked__. 
 
 - Add __CUST_GENDER__ to the __Trellis Rows__
 
    ![](./images/900/imageE066.png)
-
+   
 - Resize the chart to make the horizontal bar take up more room.  Hover your mouse between the 2 charts until it turns into a double headed arrow.  Then drag the chart up to resize it.
 
-#### Create Demographics Summary using a Scatter Chart
+##### STEP 15: Create Demographics Summary using a Scatter Chart
 
 We will create our last chart on our Demographics Summary.  We will create a chart to show the Amount Sold and Amount Sold for Product Category and Product Sub Category based upon our Customers Gender.  This will help answer the question such as, *‘What products and product subcategories sell the best to our male or female customers?’*
 
@@ -439,21 +446,21 @@ We will create our last chart on our Demographics Summary.  We will create a cha
     - __CUST_GENDER__ to __Trellis Rows__
 
    ![](./images/900/imageE069.png)
-
+   
  - Resize the scatter chart to be larger.  Hover the mouse between the scatter chart and the horizontal bar until the double headed mouse appears.  Drag the mouse left to increase the scatter plots size.
 
-### Switching to presentation mode - Narrate Your Data, Insights and Analytics
+#### STEP 16: Switching to presentation mode - Narrate Your Data, Insights and Analytics
 
 The narrate capability is intended to provide a live presentation mode that an analyst can use to explain their findings during meetings.  Instead of screen grabbing or exporting charts and pasting them statically into a DOC or PPT, this presentation mode provides a versatile graphical mode for stepping through your storyline.  Your storyline, or narrative, is the thinking that led to your finding – your workings that justify your conclusion.  During a meeting, in presentation mode, all navigation and build interfaces are hidden to maximize the view of the visualizations.  All visualizations remain active and are drillable or you can still apply filters, just in case anyone asks questions during the meeting.  You’re not trapped in static PPT.
 
 - Click on the __Narrate__ button at the top right.  This switches the modes from creating visualizations to presenting them.
 
    ![](./images/900/imageE072.png)
-
+   
 - Drag your 3 new canvases into the storyboard (at the bottom).
 
    ![](./images/900/imageE076.png)
-
+   
 - Switch the order of your story so that you present Sales Summary, then Demographics and finally Product Summary.
 
 - Click on the __Present__ button.
@@ -466,7 +473,7 @@ The narrate capability is intended to provide a live presentation mode that an a
    ![](./images/900/imageE081.png)
    ![](./images/900/imageE083.png)   
 
-### Exporting your DVA (project) file - Optional Step
+#### STEP 17: Exporting your DVA (project) file - Optional Step
 
 This step enables you to share your project file with colleges.
 
@@ -477,11 +484,19 @@ This step enables you to share your project file with colleges.
 - Your most recent project (DVA) will appear at the top left of your home page tiles, under __What’s New__.  Once you mouse over your project the properties icon will appear at the top right of the project tile. Click the properties and then choose __Share__.
 
    ![](./images/900/imageE086.png)  
-
+   
 - Choose to export as a __File__.  Email may work if DV Desktop is able to interact with your local email client.  Cloud provides the mechanism to upload and share your project to Oracle Autonomous Analytics Cloud.
 
-- Choose the export options as shown below and save the DVA file to your desktop.
-
+- Choose the export options as shown below and save the DVA file to your desktop. 
+ 
    ![](./images/900/imageE088.png)  
 
-__Great job!!  You have completed the Lab.  Now that you have connected the Oracle Data Visualization Desktop to your Autonomous Data Warehouse, you can find more insights to unleash the power of your data. __
+
+
+## Great Work - All Done
+
+<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
+</td>
+<td class="td-banner">
+Please click here to return to the [Getting Started Home page](README.md)
+</td></tr><table>
