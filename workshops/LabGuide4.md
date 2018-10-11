@@ -1,8 +1,11 @@
-![](images/400/TITLE400.png)
+<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
 
-Updated: April 6, 2018
+September 21, 2018
+</td>
+<td class="td-banner">
+# Lab 4: Querying Data in External Files
+</td></tr><table>
 
-# ADWC Lab 4: Query External Data
 
 ## Introduction
 
@@ -18,7 +21,7 @@ To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issue
 
 -   Learn how to query external data by the external tables
 
--   Learn how to create data warehouse user
+-   Learn how to create data warehouse user 
 
 ## Required Artifacts
 
@@ -28,9 +31,9 @@ To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issue
 
 # Querying External Data
 
-## Steps
+ 
 
-### STEP 1: Create External Tables with DBMS_CLOUD
+#### STEP 1: Create External Tables with DBMS_CLOUD
 
 -   Connected as your user in SQL Developer, copy and paste <a href="./scripts/400/create_external_tables.txt" target="_blank">this code snippet</a> to SQL Developer worksheet.  
 
@@ -45,7 +48,7 @@ To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issue
 
     Now you have external tables for the sample data pointing to files in the object store. Any query against the external tables will return the same result as against the original tables.
 
-### STEP 2: Querying External Data
+#### STEP 2: Querying External Data
 
 -   Copy and paste <a href="./scripts/400/query_external_data.txt" target="_blank">this code snippet</a> to SQL Developer worksheet. We only replaced the original table names <TABLE_NAME> with <TABLE_NAME_EXT> in the sample query.  
     ![](images/400/Picture400-4.png)
@@ -53,14 +56,14 @@ To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issue
 -   **Run the script**. It will return the same result as against the original tables.
 
 
-### STEP 3: Exploring Oracle Database JSON features
+#### STEP 3: Exploring Oracle Database JSON features
 
 -   Copy and paste <a href="./scripts/400/query_json_data.txt" target="_blank">this code snippet</a> to SQL Developer worksheet.
     ![](images/400/snap0014671.jpg)
 
 -   **Run the script**. It shows an example of querying json data stored on the Object Store using the Oracle Database's JSON features,  Learn more about JSON in the database <a href="https://docs.oracle.com/en/database/oracle/oracle-database/18/adjsn/json-in-oracle-database.html">here</a>.
 
-### STEP 4: Creating an external table using the SQL Developer Import Wizard
+#### STEP 4: Creating an external table using the SQL Developer Import Wizard
 
 -   Click on ‘**Tables**’ in your user schema object tree. Clicking the right mouse button opens the context-sensitive menu in SQL Developer; select ‘**Import Data**’:
 
@@ -110,7 +113,7 @@ When you are satisfied with the data preview, click **NEXT**.
 
 ![](./images/400/snap0014676.jpg)
 
-
+ 
 
 
 -   The last screen before the final data load enables you to test a larger row count than the sample data of the beginning of the wizard to see whether the previously made decisions are satisfying for your data load. Note that we are not loading any data when iterating back and forth between this screen and previous ones. Select **TEST RESULTS** and look at the log, the data you would load, any mistakes and how the external table definition looks like based on your inputs.
@@ -158,7 +161,17 @@ CREATE TRIGGER
 CREATE TYPE
 CREATE VIEW
 READ,WRITE ON directory DATA_PUMP_DIR
-EXECUTE privilege on the PL/SQL package DBMS_CLOUD
+EXECUTE privilege on the PL/SQL package DBMS_CLOUD 
 ```
 
 -   You are now ready to move to the next lab.
+
+
+
+## Great Work - All Done
+
+<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
+</td>
+<td class="td-banner">
+Please click here to return to the [Getting Started Home page](README.md)
+</td></tr><table>

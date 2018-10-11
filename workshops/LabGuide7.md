@@ -1,12 +1,15 @@
-![](images/700/TITLE700.png)
+<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
 
-Updated: March 21, 2018
+September 21, 2018
+</td>
+<td class="td-banner">
+# Lab 7:  Using Oracle Machine Learning SQL Notebooks
+</td></tr><table>
 
-# Lab 7: Using Oracle Machine Learning Notebooks
 
 ## Introduction
 
-During this lab you will be using the new Oracle Machine Learning (OML) notebook application provided with ADWC. This browser-based application provides a web interface to run SQL queries and scripts, which can be grouped together within a notebook. Notebooks can be used to build single reports, collections of reports, and dashboards. OML provides a simple way to share workbooks with other OML users.
+During this lab you will be using the new Oracle Machine Learning (OML) SQL notebook application provided with your Autonomous Data Warehouse. This browser-based application provides a web interface to run SQL queries and scripts, which can be grouped together within a notebook. Notebooks can be used to build single reports, collections of reports, and even dashboards. OML provides a simple way to share workbooks, and collections of workbooks, with other OML users.
 
 ## Objectives
 
@@ -23,9 +26,8 @@ During this lab you will be using the new Oracle Machine Learning (OML) notebook
 
 The first step is to create two new users.
 
-## Steps
 
-### Step 1: Creating OML Users
+#### STEP 1: Creating OML Users
 
 -   Go back to the Cloud Console and open the Instances screen. Find your database, click the action menu and select **Service Console**.
 
@@ -73,9 +75,9 @@ You will use these two users later in this workshop.
 
 # Exploring the OML Home Page
 
-## Steps
+ 
 
-### Step 2: Signing into OML
+#### STEP 2: Signing into OML
 
 -   Using the link from your welcome email, from Oracle Global Accounts, you can now sign-in to OML. Copy and paste the **application link** from the email into your browser and sign-in to OML.
 
@@ -89,7 +91,7 @@ You will use these two users later in this workshop.
 
 Once you have successfully signed in to OML the application home page will be displayed.
 
-### Step 3: Overview of OML Home Page
+#### STEP 3: Overview of OML Home Page
 
 -   The grey menu bar at the top of the screen provides links to the main OML menus for the application (left corner) and the
     workspace/project and user maintenance on the right-hand side.
@@ -102,7 +104,7 @@ Once you have successfully signed in to OML the application home page will be di
 
 -   All your work is automatically saved – i.e. there is no “Save” button when you are writing scripts and/or queries.
 
-### Step 4: Understanding the Key concepts
+#### STEP 4: Understanding the Key concepts
 
 -   What is a Workspace?
 
@@ -118,9 +120,9 @@ Once you have successfully signed in to OML the application home page will be di
 
 # Running a SQL Statement
 
-## Steps
+ 
 
-### Step 5: Opening a new SQL query scratchpad
+#### STEP 5: Opening a new SQL query scratchpad
 
 -   From the home page click on the “**Run SQL Statement**” link in the Quick Actions panel to open a new SQL query scratchpad.
 
@@ -144,7 +146,7 @@ Once you have successfully signed in to OML the application home page will be di
 
 ![](./images/700/Picture700-20.png)
 
-### Step 6: Changing the report type
+#### STEP 6: Changing the report type
 
 -   Using the report menu bar you can change the table to a graph and/or export the result set to a CSV or TSV file.
 
@@ -166,7 +168,7 @@ Once you have successfully signed in to OML the application home page will be di
 -   To remove a column from the Keys, Groups of Values panel just click on the **x** next to the column name displayed in the relevant
     panel.
 
-### Step 7: Changing the layout of the graph
+#### STEP 7: Changing the layout of the graph
 
 -   With the graph settings panel visible:
 
@@ -182,7 +184,7 @@ The report should now look like the one shown below.
 
 ![](./images/700/Picture700-24.png)
 
-### Step 8: Tidying up the report
+#### STEP 8: Tidying up the report
 
 -   Click on the **Settings** link to hide the layout controls.
 
@@ -197,10 +199,10 @@ The report should now look like the one shown below.
 # Saving the Scratchpad as a New Notebook
 
 
-## Steps
+ 
 
 
-### Step 9: Saving the Scratchpad as a New Notebook
+#### STEP 9: Saving the Scratchpad as a New Notebook
 
 The SQL Scratchpad in the previous section is simply a default type notebook with a system generated name. But we can change the name of the scratchpad we have just created **SQL Query Scratchpad**.
 
@@ -239,9 +241,9 @@ The SQL Scratchpad in the previous section is simply a default type notebook wit
 
 # Sharing notebooks
 
-## Steps
+ 
 
-### Step 10: Logging in to OML as the second OML (OMLUSER2) user
+#### STEP 10: Logging in to OML as the second OML (OMLUSER2) user
 
 By default, when you create a notebook it’s only visible to you.
 
@@ -268,7 +270,7 @@ Notice that you have no activity listed in the **Recent Activities** panel on yo
 
 -   Repeat the previous steps to logout of OML and sign into OML as **OMLUSER1**.
 
-### Step 11: Changing Workspace Permissions
+#### STEP 11: Changing Workspace Permissions
 
 -   From the OML home page, click on link **OML Project (OML Workspace)** link in the top right corner on the OML home page to
     display the workspace-project menu. Then select **Workspace Permissions**.
@@ -295,7 +297,7 @@ Notice that you have no activity listed in the **Recent Activities** panel on yo
 
 -   Finally, click the **OK** button.
 
-### Step 12: Accessing shared notebooks
+#### STEP 12: Accessing shared notebooks
 
 -   Now repeat the process you followed at the start of this section and sign-out of OML and sign-in to OML again as user **OMLUSER2**.
 
@@ -314,9 +316,9 @@ Notice that you have no activity listed in the **Recent Activities** panel on yo
 
 # Creating and running SQL scripts
 
-## Steps
+ 
 
-### Step 13: Getting Started with Scripts
+#### STEP 13: Getting Started with Scripts
 
 -   Log out from user OMLUSER2 and log in as OMLUSER1.
 The “Run SQL Statement” link on the home page allows you to run a single query in a paragraph. To be able to run scripts you can use the “Create a SQL Script” link on the home page.
@@ -332,7 +334,7 @@ The “Run SQL Statement” link on the home page allows you to run a single que
 
 Notice that the script paragraph does not have any menus to control the display and formatting of the output. You can, however, use SQL SET commands to control how data is formatted for display.
 
-### Step 14: Creating and running a SQL script
+#### STEP 14: Creating and running a SQL script 
 
 In this section we are going to use a script from a SQL pattern matching tutorial, <a href="https://livesql.oracle.com/apex/livesql/file/tutorial_EWB8G5JBSHAGM9FB2GL4V5CAQ.html" target="_blank">Sessionization with MATCH\_RECOGNIZE and JSON</a>, on the free Oracle <a href="http://livesql.oracle.com/" target="_blank">livesql.oracle.com</a> site. This script shows how to use the SQL pattern matching **MATCH\_RECOGNIZE** feature for sessionization analysis based on **JSON** web log files.
 
@@ -349,3 +351,14 @@ In this section we are going to use a script from a SQL pattern matching tutoria
 ![](./images/700/Picture700-48.png)
 
 -   You have completed all of the steps in this lab.
+
+
+
+## Great Work - All Done
+
+<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
+</td>
+<td class="td-banner">
+Please click here to return to the [Getting Started Home page](README.md)
+</td></tr><table>
+

@@ -1,8 +1,11 @@
-![](images/600/TITLE600.JPG)
+<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
 
-Draft Version. Updated: March 13, 2018
-
-# ADWC Lab 6: Scaling and Performance
+September 21, 2018
+</td>
+<td class="td-banner">
+# Lab 6: Scaling and Performance in Your Autonomous Data Warehouse
+</td></tr><table>
+    
 
 ## Introduction
 
@@ -14,17 +17,17 @@ To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issue
 
 -   Learn how to scale up an ADWC service
 
--   Understand the performance and concurrency impacts of scaling the ADWC service online
+-   Understand the performance and concurrency impacts of scaling your Autonomous Data Warehouse service online
 
 ## Required Artifacts
 
--   The following lab requires an Oracle Public Cloud account. You may your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
+-   The following lab requires an Oracle Public Cloud account. If you don't already have your own cloud account then you can obtaina new cloud account through the free Oracle trial program.
 
 # Scaling and Performance Hands-on Lab
 
-## Steps
+ 
 
-### STEP 1: Scaling your ADWC instance
+#### STEP 1: Scaling your ADWC instance
 
 -   Go back to the Cloud Console you used during the provisioning exercise and open the Instances screen. Click the **action menu** and select **Scale Service**.
 
@@ -56,7 +59,7 @@ Click **Scale Service** after filling in the form, this will take you the Instan
 
 ![](./images/600/Picture300-6.png)
 
-### STEP 2: Performance and concurrency benefits of dynamic scaling
+#### STEP 2: Performance and concurrency benefits of dynamic scaling
 
 -   <a href="https://raw.githubusercontent.com/millerhoo/journey4-adwc/master/workshops/journey4-adwc/images/ADWC%20HOL%20-%20Scaling.mp4" target="_blank">Click here</a> to watch a demo of the performance impact of scaling up your instance. In the demo you will see that scaling up provides more concurrency for your users.
 
@@ -69,3 +72,14 @@ Click **Scale Service** after filling in the form, this will take you the Instan
 ![](./images/600/Picture300-8.png)
 
 -   ADWC allows you to dynamically scale your service online when you require more concurrency and performance.
+
+
+
+## Great Work - All Done
+
+<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
+</td>
+<td class="td-banner">
+Please click here to return to the [Getting Started Home page](README.md)
+</td></tr><table>
+
