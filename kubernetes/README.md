@@ -5,7 +5,7 @@ _Time to Complete: 20 minutes_
 
   In this demo lab, you begin your container-native development journey by diving in to a Kubernetes sandbox environment with a microservice application partially running in it. You will learn about the components that make up an application in Kubernetes, such as Deployments, Services, Replica Sets, and Pods.
 
-  Next, you omplete the deployment of this application yourself using a pre-written deployment descriptor and learn about how the two microservices discover and interact with each other. Finally, you scale out one of the services to learn about handling peak traffic.
+  Next, you complete the deployment of this application yourself using a pre-written deployment descriptor and learn about how the two microservices discover and interact with each other. Finally, you scale out one of the services to learn about handling peak traffic.
 
   If you would like to learn how to build a highly available Kubernetes cluster on your own hardware or in the cloud, as well as set up a CI/CD pipeline from scratch, check out the last section of this guide for information about our container native workshop.
 
