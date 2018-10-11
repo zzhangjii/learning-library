@@ -49,15 +49,9 @@ Before you can launch an instance, you need to have a VCN to launch it into. In 
      * **Create in Compartment**: Select the root compartment.
      * **Name**: `user01_Network`
      * Select **Create Virtual Vloud Network Plus Related Resources**.
-     * Check the box to **Use DNS Host Names in this VCN**.
-     * Scroll down and check the box to **View detail page after this resource is created**.
-11. Click the button **Create Virtual Cloud Network** to close the dialog box. A confirmation page with the details of the cloud network is diplayed. The cloud network has the following resources and characteristics:
-     * CIDR block range of 10.0.0.0/16
-     * An Internet Gateway
-     * A route table with a default route rule to enable traffic to and from the Internet Gateway
-     * A default security list
-     * A public subnet in each Availability Domain
-     * The VCN will automatically use the Internet and VCN Resolver for DNS
+     * The box to **Use DNS Host Names in this VCN** should be checked.
+     * Scroll down. The box to **View detail page after this resource is created** should be checked.
+11. Click the button **Create Virtual Cloud Network** to close the dialog box. A confirmation page with the details of the cloud network is diplayed.
 12. Click **Close**.
 
 
@@ -76,27 +70,29 @@ Before you can launch an instance, you need to have a VCN to launch it into. In 
 
     [Description of the illustration Compartment.png](files/Compartment.txt)
 
-5. Click the button **Create Virtual Cloud Network**.
+5. Click the button **Create Instance**.
 6. In the Create Instance dialog box, enter the following information:
      * **Name**: Keep the default value.
      * **Availability Domain**: Keep the default value.
      * **Boot Volume**: `Oracle-Provided OS Image`
-     * **Image Operating System**: Choose the most recent version of `Oracle-Linux`.
+     * **Image Operating System**: `Oracle Linux 7.5`.
      * **Shape Type**: `Virtual Machine`
-     * **Shape**: `VM.Standard1.4`
-     * **Image Version**: Choose the most recent version of `Oracle-Linux`.
-     * **Boot Volume Configuration**: Keep the default values.
-     * **SSH Key**: Select `Paste SSH Keys`. An example SSH key is: 
+     * **Shape**: `VM.Standard2.1 (1 OCPU, 15GB RAM)`
+     * **Image Version**: Choose the latest version.
+     * **Boot Volume Configuration**: Keep the default values. The boxes should remain unchecked.
+     * **SSH Key**: Select `Paste SSH Keys`. An example SSH key to paste is: 
      <pre><code>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDVNPh09u35ejTZun3FNEGhrjL/CovPsHAh79pN0QVprxEJaW2zjmaBZF1Q6lkuyTRvraomIlduCYxrlnwCe8oyER5dY1zuJATWm7ZiqgsvIkhj8L+ea9dBZRvFvcnFsNFnt4ALZYkW2nB2EeTdvqVMHERjFKfbRMCcO0dusmBUEsvaaqLtrvVuHBjwoXIDKkT/PFkix4DWRZRkZIjmZ/y9kwrHO4W1FYsFi4LP1xIB1c9y2H4w0SBXAMv4NCSFEIgWPQly2NywMsgEbddjW+zPz+7YjYqjWfz5Fgchu7+N1gejsIdzg1/aLvDpze6TN9xLcZx5gt04jA3TR+xfs2Ab Tim@Corsair</code></pre>
          
     ![](img/pastesshkey.png)
 
     [Description of the illustration pastesshkey.png](files/pastesshkey.txt)
 
-     * Keep the remaining default values
-7. Scroll down and click the button **Create Instance** to close the dialog box.
-     * While the instance is being created, its state is displayed as "PROVISIONING".
-     * The status changes to "RUNNING" when the instance is fully operational.
+7. In the Networking section:
+     * Choose the Virtual Cloud Network you created earlier, `user01_Networking`
+     * Keep the default values for the remaining fields.
+8. Scroll down and click the button **Create Instance** to close the dialog box.
+     * While the instance is being created, its state is displayed as `PROVISIONING`.
+     * The status changes to `RUNNING` when the instance is fully operational.
 
 
 ## Want to Learn More? ##
