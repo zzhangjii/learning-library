@@ -19,7 +19,7 @@ With access to the Oracle Cloud Platform, you can build production-ready workloa
 
 
 ## Create Your Account ##
-In this section, you'll fill out the form located at [oracle.com/oow18trial](oracle.com/oow18trial)
+In this section, you'll fill out the form located at [oracle.com/oow18trial](https://oracle.com/oow18trial)
 
 1. Enter the appropriate information for Account Details. 
      * Remember the Cloud Account Name you select. You'll need it to sign into your account.
@@ -33,7 +33,7 @@ In this section, you'll fill out the form located at [oracle.com/oow18trial](ora
 
 
 ## Sign in to Your Account ##
-1. Go to [cloud.oracle.com](cloud.oracle.com) and click **Sign In**.
+1. Go to [cloud.oracle.com](https://cloud.oracle.com) and click **Sign In**.
 
     ![](img/signin.png)
 
