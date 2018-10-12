@@ -18,9 +18,9 @@
 
 [Practice 6: Generate an API Signing Key](#practice-6-generate-an-api-signing-key)
 
-[Practice 7: install and configure Terraform](#practice-7-install-and-configure-terraform)
+[Practice 7: Upload the Public Key to api user](#practice-7-upload-the-public-key-to-api-user)
 
-
+[Practice 8:  Install and configure Terraform](#practice-8-install-and-configure-terraform)
 
 ## Overview
 
@@ -213,7 +213,9 @@ Launching an instance is simple and intuitive with few options to select. Provis
 ```
 # ssh -i /path/privateKey opc@PublicIP_Address
 ```
+
 ## Practice 6: Generate an API Signing Key
+
 You can use the following [OpenSSL](http://www.openssl.org/) commands to generate the key pair in the required PEM format:
 
 1) Create a `.oci` directory to store the credentials:
@@ -244,7 +246,8 @@ You can use the following [OpenSSL](http://www.openssl.org/) commands to generat
 
 **Note: Copy the output of the step 5 and 6 and save to your notepad**
 
-## Practice 7:  Upload the Public Key to api.user
+
+## Practice 7:  Upload the Public Key to api user
 
 You can upload the PEM public key in the Console, located at [https://console.us-ashburn-1.oraclecloud.com](https://console.us-phoenix-1.oraclecloud.com/). 
 
