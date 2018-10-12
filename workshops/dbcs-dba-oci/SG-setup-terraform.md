@@ -6,7 +6,7 @@ This workshop requires several setups steps that are normally done in advance as
 
 **Click to Download**
 
-[TF.zip](https://dgcameron.github.io/dbcs-dba-oci/workshops/TF.zip)
+[TF.zip](https://dgcameron.github.io/DatabaseCloudServiceForDBAsOCI/workshops/dbcs-dba-oci/TF.zip)
 
 - Extract the Terraform configuration files from the git above into your Terraform working directory.  In our case we are extracting from `TF.zip` to `d:`.  De-select the Path.
 
