@@ -1,6 +1,6 @@
 ![](images/Picture-Title.png)
 
-# Lab 50 - Provisioning a New Autonomous Visual Builder Cloud Service
+# Lab 50 - Provisioning a New Visual Builder Cloud Service
 
 ## Introduction
 
