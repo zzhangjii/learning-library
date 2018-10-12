@@ -4,7 +4,7 @@ description: Learn how to provision and get started with Oracle Autonomous Data 
 tags: Oracle Cloud, Autonomous Data Warehouse, ADW, Oracle Cloud Infrastructure, OCI
 permalink: /ziplabs/adw-provisioning/index.html
 ---
-# Provisioning Autonomous Data Warehouse Cloud #
+# Provisioning Autonomous Data Warehouse Cloud and Connecting with SQL Developer #
 
 ## Before You Begin ##
 This 15-minute lab walks you through the steps to get started using the Oracle Autonomous Data Warehouse Cloud (ADWC) on Oracle Infrastructure Cloud (OCI). You will provision a new ADWC database and connect to the database using Oracle SQL Developer.
@@ -33,19 +33,16 @@ Oracle’s Autonomous Data Warehouse Cloud is the perfect quick-start service fo
 
 5. Click the **Create Autonomous Date Warehouse** button to start the instance creation process.
 6. In the Create Autonomous Data Warehouse dialog, enter the following information:
-     * **Compartment**: For this lab, we'll use the root compartment.
+     * **Compartment**: For this lab, we'll use the `root` compartment.
      * **Display Name**: `ADW Finance Mart`
      * **Database Name**: `ADWFINANCE`
      * **CPU Core Count**: `1`
      * **Storage (TB)**:  `1`
-     * **Administrator Credentials**: Create a password for the ADMIN user of the service instance. The password must meet the following requirements:
-        * The password must be between 12 and 60 characters long and must include at least one uppercase letter, one lowercase letter, and one numeric character.
-        * The password cannot contain the double quote (") character.
-        * The password must be different from the last 4 passwords used.
+     * **Administrator Credentials**: Create a password for the ADMIN user of the service instance. You'll need this password in the upcoming steps to sign into the service console, download the credential wallet, and connect to the database from Oracle SQL Developer.
      * **License Type**: `My organization already owns Oracle database software licenses`
      * **Tags**: (Optional) You don't need to enter anything here.
 7. Click the **Create Autonomous Data Warehouse** button to start provisioning the instance. 
-8. The Create Autonomous Data Warehouse dialog closes. On the console, the State field indicates that the data warehouse is **Provisioning**. When creation is completed, the State field changes from **Provisioning** to **Available**. 
+8. The Create Autonomous Data Warehouse dialog closes. On the console, the State field indicates that the data warehouse is **Provisioning**. When creation is completed, the State field changes from **Provisioning** to **Available**.  If the status doesn't change to available after few minutes, try refreshing the page.
 
     ![](img/adw_provisioning_state.png)
 
@@ -53,7 +50,7 @@ Oracle’s Autonomous Data Warehouse Cloud is the perfect quick-start service fo
 
 
 ## Download the Credentials Zip File ##
-Once you have created the data warehouse, download the credentials zip file for client access to that data warehouse. As ADWC only accepts secure connections to the database, you need to download a wallet file containing your credentials first. You will use this file in the next tutorial to connect SQL Developer to your Autonomous Data Warehouse database.
+Once you have created the data warehouse, download the credentials zip file for client access to that data warehouse. As ADWC only accepts secure connections to the database, you need to download a wallet file containing your credentials first. You will use this file to connect SQL Developer to your Autonomous Data Warehouse database.
 
 1. In the console, in the menu across from the name of your new data warehouse, select **Service Console**.
 
@@ -64,12 +61,12 @@ Once you have created the data warehouse, download the credentials zip file for 
 2. A dialog opens to sign in to the service console. Enter the following information:
      * **Username**: `admin`
      * **Password**: Enter the administrator password you specified when you created your service instance.
-3. The service console opens in the **Overview** mode. Click **Administration** in the left navigation pane.
+3. The service console opens to the **Overview** page. Click **Administration** in the left navigation pane.
 4. Click **Download a Connection Wallet**.
-5. You are prompted to create a password for the credentials zip file. Enter a password and click **Download**.
-6. Store the zip file. You will use the zip file in the next step to define a SQL Developer connection to your Autonomous Data Warehouse Cloud database.
-
-Note: Version 18.2.0 of SQL Developer drops the requirement to enter the Autonomous Data Warehouse keystore password and does not provide the keystore password field in the dialog for creating a connection. If using SQL Developer version 18.2.0 or newer, you do not use this password.
+5. You are prompted to create a password for the credentials zip file. Enter a password This password is separate from the Admin user password created earlier.  
+     * Note: Version 18.2.0 of SQL Developer drops the requirement to enter the ATP keystore password and does not provide the keystore password field in the dialog for creating a connection. If using SQL Developer version 18.2.0 or newer, you do not use the password you just created.
+7. Click **Download**.
+6. Make note of where the zip file is stored. This will most likely be the downloads directory (Oracle's Home/Downloads). You'll use the zip file in the next step to define a SQL Developer connection to your Autonomous Data Warehouse Cloud database.
 
 
 ## Connect to the Database using SQL Developer ##
@@ -83,12 +80,12 @@ Note: Version 18.2.0 of SQL Developer drops the requirement to enter the Autonom
 3. Fill in the connection details:
      * **Connection Name**: `admin_low`
      * **Username**: `admin`
-     * **Password**: Enter the admin user's password that you or your Autonomous Data Warehouse Cloud administrator specified when creating the service instance.
+     * **Password**: Enter the admin user's password that you specified when provisioning the service instance.
      * **Connection Type**: `Cloud PDB`
-     * **Configuration File**: Click **Browse**, and select the **Client Credentials** zip file, downloaded from the Autonomous Data Warehouse Cloud service console by you.
+     * **Configuration File**: Click **Browse**, and select the **Client Credentials** zip file you downloaded from the ADWC service console.
      * **Keystore Password**:
         * **For SQL Developer 18.2.0 or newer**: Starting with version 18.2.0, SQL Developer does not require that you enter a Keystore Password and does not provide the Keystore Password field.
-        * **For SQL Developer older version**: Enter the password that was generated when you downloaded the Client Credentials zip file from the Autonomous Data Warehouse Cloud console.
+        * **For SQL Developer older version**: Enter the password that was generated when you downloaded the Client Credentials zip file from the Autonomous Data Warehouse Cloud service console.
      * **Service**: There are 3 pre-configured database services for each database. Pick `adwfinace_low`. These service levels map to the LOW, MEDIUM, and HIGH consumer groups, which provide different levels of performance and concurrency.
 
     ![](img/NewConnection.png)

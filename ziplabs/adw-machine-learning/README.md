@@ -17,7 +17,7 @@ Oracle Machine Learning SQL notebooks provide easy access to Oracle's paralleliz
 
 ### What Do You Need? ###
 * Access to an instance of Oracle Autonomous Data Warehouse Cloud
-* You must have completed the previous lab **Provisioning Autonomous Data Warehouse Cloud and Getting Started**.
+* You must have completed the previous lab **Provisioning Autonomous Data Warehouse Cloud and Connecting with SQL Developer**.
 
 
 ## Create an OML User ##
