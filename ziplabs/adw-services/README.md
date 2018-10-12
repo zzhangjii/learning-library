@@ -26,7 +26,7 @@ This lab uses the LOW and HIGH database services to understand the performance d
 * [Oracle SQL Developer 18.2](http://www.oracle.com/technetwork/developer-tools/sql-developer/overview/index.html)  (already installed)
 * [Oracle's Java Development Kit 8 (JDK 8)](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (already installed)
 * [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) (already installed)
-* You must have completed the previous lab **Provisioning Autonomous Data Warehouse Cloud and Getting Started**.
+* You must have completed the previous lab **Provisioning Autonomous Data Warehouse Cloud and Connecting with SQL Developer**.
 
 
 ## Connect and Query with the LOW Database Service ##
