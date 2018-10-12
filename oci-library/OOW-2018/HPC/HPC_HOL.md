@@ -34,8 +34,9 @@ High Performance Computing and storage in the cloud can be very confusing and it
 
 1) On Gitbash terminal use SSH command to connect to the control node with this information:
 
-- **username**: *xxxx*
-- **IP address**: *X.X.X.X*
+- **username**: *Instructor will provide username for each participant*
+- **password**: *Instructor will provide password for each participant*
+- **IP address**: *129.146.103.162 *
 
 ```
 # ssh username@IPAddress
