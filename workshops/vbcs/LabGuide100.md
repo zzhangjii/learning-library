@@ -1,10 +1,10 @@
 ![](images/Picture-Title.png)
 
-# Lab 100 - Creating an Autonomous Visual Builder Application
+# Lab 100 - Creating an   Visual Builder Application
 
 ## Introduction
 
-This is the first of several labs that are part of the **Oracle Autonomous Visual Builder Cloud Service Workshop.** During this workshop you will explore Oracle's Autonomous Visual Builder Cloud Service and its features from the persona of **Javascript Developer**, <add name>. You will follow <add name> as he creates a new web application, mobile application and links the mobile and web applications to the same business data in the Cloud. In our first lab you will create a Visual Builder application and add business data to display.
+This is the first of several labs that are part of the **Oracle Visual Builder Cloud Service Workshop.** During this workshop you will explore Oracle's  Visual Builder Cloud Service and its features from the persona of **Javascript Developer**, <add name>. You will follow <add name> as he creates a new web application, mobile application and links the mobile and web applications to the same business data in the Cloud. In our first lab you will create a Visual Builder application and add business data to display.
 
 ## Objectives
 
@@ -17,7 +17,7 @@ This is the first of several labs that are part of the **Oracle Autonomous Visua
 
 # Create an Application
 
-### **STEP 1**: Access, Create Autonomous Visual Builder Cloud Service
+### **STEP 1**: Access, Create  Visual Builder Cloud Service
 
 - Click on the **Hamburger** icon at the top of the page and select the **Open Visual Builder Homepage** dropdown choice.
 
@@ -63,7 +63,7 @@ In this step we will create a new business object to host data for our applicati
 
 ![](images/100/importBusObj.png)
 
-- Download this spreadsheet <a href="/avbcsMisc/inventory.xlsx" target="new">inventory.xlsx</a> to your local machine. When prompted upload this file to create a new business object.
+- Download this spreadsheet <a href="https://oracle.github.io/learning-library/workshops/vbcs/avbcsMisc/inventory.xlsx" target="new">inventory.xlsx</a> to your local machine. When prompted upload this file to create a new business object.
 
 ![](images/100/LabGuide100-97eff54f.png)
 
@@ -182,6 +182,6 @@ Copy the syntax below into the **Value1** field
 
 # Summary
 
-We have now created an application in Autonomous Visual Builder Cloud Service, added our business data. The next lab in the series will guide us through adding update and edit features to allow the app's users to update inventory counts from the app.
+We have now created an application in  Visual Builder Cloud Service, added our business data. The next lab in the series will guide us through adding update and edit features to allow the app's users to update inventory counts from the app.
 
 - You may proceed to [Lab 200](LabGuide200.md)

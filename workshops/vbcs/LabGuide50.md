@@ -1,10 +1,10 @@
 ![](images/Picture-Title.png)
 
-# Lab 50 - Provisioning a New Autonomous Visual Builder Cloud Service
+# Lab 50 - Provisioning a New Visual Builder Cloud Service
 
 ## Introduction
 
-During this lab we will take your new trial account and show you how to provision all the required components for a new Autonomous Visual Builder Cloud Service.
+During this lab we will take your new trial account and show you how to provision all the required components for a new   Visual Builder Cloud Service.
 
 ## Objectives
 
@@ -55,7 +55,7 @@ During this lab we will take your new trial account and show you how to provisio
 
 ![](images/100/LabGuide100-cb88530c.png)
 
-- Fill out the form below selecting **Javascript** and **Web App**. Then press the **Create Autonomous Visual Builder Instance** button.
+- Fill out the form below selecting **Javascript** and **Web App**. Then press the **Create Visual Builder Instance** button.
 
 ![](images/100/LabGuide100-6fa626cd.png)
 

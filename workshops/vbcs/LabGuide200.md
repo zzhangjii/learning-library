@@ -149,6 +149,6 @@ _Note: If the value does not immediate update press the reload button at the top
 
 # Summary
 
-We have now created an application in Autonomous Visual Builder Cloud Service, added our business data, and added pages to display, add to, and edit our data all with very little need for code.
+We have now created an application in Visual Builder Cloud Service, added our business data, and added pages to display, add to, and edit our data all with very little need for code.
 
 You may proceed to [Lab 300](LabGuide300.md)

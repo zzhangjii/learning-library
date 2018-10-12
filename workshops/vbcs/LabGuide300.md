@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This is the third of several labs that are part of the **Oracle Autonomous Visual Builder Cloud Service workshop.** This lab will walk you through creating a mobile application and displaying inventory data.
+This is the third of several labs that are part of the **Oracle Visual Builder Cloud Service workshop.** This lab will walk you through creating a mobile application and displaying inventory data.
 
 ## Objectives
 
@@ -112,6 +112,6 @@ Our app is displaying our data but our inventory/reserved counts aren't labeled.
 
   # Summary
 
-  We have now created a mobile application in Autonomous Visual Builder Cloud Service, added our business data. The next lab in the series will guide us through adding update and edit features to allow the app's users to update inventory counts from the app.
+  We have now created a mobile application in Visual Builder Cloud Service, added our business data. The next lab in the series will guide us through adding update and edit features to allow the app's users to update inventory counts from the app.
 
 - You may proceed to [Lab 400](LabGuide400.md)
