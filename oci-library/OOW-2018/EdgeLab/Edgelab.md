@@ -24,9 +24,10 @@ In this lab, we will learn how to use OCI DNS Traffic Management service to ensu
 ## Pre-Requisites 
 
 Each attendee would be provided with a set of credentials for Oracle Cloud Infrastructure. The credentials will include 
-	- Tenancy Information
-	- Username
-	- Password
+
+- Tenancy Information
+- Username
+- Password
 
 ## Practice 1: Setup Windows 10 VM 
 
@@ -37,20 +38,25 @@ Each attendee would be provided with a set of credentials for Oracle Cloud Infra
 2) Open Chrome Browser and Log into Oracle Cloud Infrastructure (OCI) Console. 
 https://console.us-phoenix-1.oraclecloud.com/
 Add the Cloud Tenant name provided to you. 
+
 ![](media/image2.png)
 
 3) Sign in by providing your username and temporary password. 
+
 ![](media/image3.png)
 
 4) Change the temporary password provided to you. 
 ** Following password will suffice password requirements
 ** Oracleoow2018!
+
 ![](media/image4.png)
 
 After log in, you are the home page of OCI web console. 
+
 ![](media/image5.png)
 
 5) Navigate to the different regions from the top right corner. For this lab, lets navigate to OCI Frankfurt Region. 
 eu-frankfurt-1 
+
 ![](media/image6.png)
 
