@@ -46,8 +46,11 @@ Add the Cloud Tenant name provided to you.
 ![](media/image3.png)
 
 4) Change the temporary password provided to you. 
-** Following password will suffice password requirements
-** Oracleoow2018!
+
+```
+Following password will suffice password requirements 
+Oracleoow2018! 
+```
 
 ![](media/image4.png)
 
