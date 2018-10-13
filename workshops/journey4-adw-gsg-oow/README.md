@@ -5,7 +5,7 @@ Last Updated:<br>October 12, 2018
 <td class="td-banner">
 # Getting Started with Autonomous Data Warehouse                                    
 </td></tr><table>
-    
+
 
 This workshop walks you through all the steps to get started using the **Oracle Autonomous Data Warehouse  (ADW)**. You will provision a new ADW database, load data from the object store and troubleshoot data loads, query external data residing on the object store, manage an ADW instance, scale an ADW instance, and use Oracle Machine Learning notebooks.
 
@@ -22,8 +22,8 @@ This workshop walks you through all the steps to get started using the **Oracle 
  - Use Oracle Machine Learning SQL notebooks
  - Use Oracle Data Visualization Desktop (DVD) with ADW
  - Use Oracle Data Integration Platform Cloud (DIPC) with ADW
- 
-     
+
+
 
 # Workshop Overview
 
@@ -44,33 +44,26 @@ Read on to begin your Getting Started journey with Oracle Autonomous Data Wareho
 **Lab Pre-requisites – Required Software**
 This workshop needs two desktop tools to be installed on your computer to do the exercises in this lab.
 
-1. SQL Developer 
-To download and install SQL Developer please follow [this link], (http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html) and select the operating system for your computer. This page also has instructions on how to install SQL Developer on Windows, Mac OSX and Linux.
+*1. SQL Developer*
+  To download and install SQL Developer please follow [this link](http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html), and select the operating system for your computer. This page also has instructions on how to install SQL Developer on Windows, Mac OSX and Linux.
 
-If you already have SQL Developer installed on your computer then please check the version. The minimum version that is required to connect to an Oracle Autonomous Data Warehouse Cloud is SQL Developer 17.4.
+  If you already have SQL Developer installed on your computer then please check the version. The minimum version that is required to connect to an Oracle Autonomous Data Warehouse Cloud is SQL Developer 17.4.
 
-2. Data Visualization Desktop 
-To download and install Data Visualization Desktop please follow [this link], (https://www.oracle.com/technetwork/middleware/oracle-data-visualization/downloads/oracle-data-visualization-desktop-2938957.html) and select the operating system for your computer. This page also has instructions on how to install DVD on Windows and Mac OSX.
+*2. Data Visualization Desktop*
+  To download and install Data Visualization Desktop please follow [this link](https://www.oracle.com/technetwork/middleware/oracle-data-visualization/downloads/oracle-data-visualization-desktop-2938957.html), and select the operating system for your computer. This page also has instructions on how to install DVD on Windows and Mac OSX.
 
-If you already have Data Visualization Desktop installed on your computer then please check the version. The minimum version that is required to connect to an Oracle Autonomous Data Warehouse Cloud is 12c 12.2.5.0.0.
+  If you already have Data Visualization Desktop installed on your computer then please check the version. The minimum version that is required to connect to an Oracle Autonomous Data Warehouse Cloud is 12c 12.2.5.0.0.
 
 
 **Getting Help During This Workshop**
-<table border="0">
-<tr>
-<td class="td-logo"><img src="https://ora-fusion-apps.custhelp.com/euf/assets/images/ocom/occc-logo.png" height="75px">
-</td>
-<td class="td-logo"><img src="https://ora-fusion-apps.custhelp.com/euf/assets/images/ocom/oacc-page-banner.png" height="75px">
-</td>
-</tr>
-</table>
+  ![](images/README-9a67ec93.png)
 
 [**CloudCustomerConnect**](https://cloudcustomerconnect.oracle.com/resources/32a53f8587/summary) Forum for Autonomous Data Warehouse
 If you have a question during this workshop then use the Autonomous Data Warehouse Forum to post questions, connect with experts, and share your thoughts and ideas about Oracle Autonomous Data Warehouse.
 
 Are you are completely new to the [CloudCustomerConnect](https://cloudcustomerconnect.oracle.com/resources/32a53f8587/summary) forums? Visit our forum  [Getting Started page](https://cloudcustomerconnect.oracle.com/pages/1f00b02b84) to learn how to best leverage community resources.
 
-**You are all set, let's begin**
+**You are all set, let's begin!**
 
 
 
@@ -121,7 +114,7 @@ In this lab, you will be querying files directly on Oracle Object Storage withou
 
 - Learn how to define external tables against Oracle Object Store data sets
 - Learn how to query external tables
-- Learn how to create data warehouse user 
+- Learn how to create data warehouse user
 
 **Click here to run [Lab 4](LabGuide4.md)**
 
@@ -227,5 +220,3 @@ Use these links to get more information about Oracle Autonomous Data Warehouse
  - [Oracle Autonomous Data Warehouse ipaper](http://www.oracle.com/us/products/database/autonomous-dw-cloud-ipaper-3938921.pdf)
  - [Oracle Autonomous Data Warehouse Documentation](https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/index.html)
  - [Additional Autonomous Data Warehouse Cloud Tutorials](https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/tutorials.html)
- 
- 

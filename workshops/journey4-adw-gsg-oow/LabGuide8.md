@@ -1,4 +1,4 @@
-<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
+<table class="tbl-heading"><tr><td class="td-logo">![](images/obe_tag.png)
 
 September 21, 2018
 </td>
@@ -25,7 +25,7 @@ During this lab you will be using the Oracle Machine Learning (OML) notebook app
 
 The first step is to download the sample notebook and then import it into the Oracle ML notebook application.
 
- 
+
 
 #### STEP 1: Download the sample notebook for this lab
 
@@ -66,11 +66,11 @@ The notebook will provide some live examples of DBMS_PREDICTIVE_ANALYTICS in act
 
 #### STEP 8: Create a machine learning notebook
 
-- Go back to OML dashboard and click on **Go to Gallery**. The Gallery page lists pre-populated Oracle Machine Learning notebook templates which you can view, like, and use it to create new templates. 
+- Go back to OML dashboard and click on **Go to Gallery**. The Gallery page lists pre-populated Oracle Machine Learning notebook templates which you can view, like, and use it to create new templates.
 
     ![](./images/800/25.png)
 
-- In the Gallery page, select the template based on which you want to create a notebook. 
+- In the Gallery page, select the template based on which you want to create a notebook.
 
     ![](./images/800/26.png)
 

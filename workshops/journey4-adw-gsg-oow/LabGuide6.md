@@ -1,11 +1,11 @@
-<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
+<table class="tbl-heading"><tr><td class="td-logo">![](images/obe_tag.png)
 
 September 21, 2018
 </td>
 <td class="td-banner">
 # Lab 6: Scaling and Performance in Your Autonomous Data Warehouse
 </td></tr><table>
-    
+
 
 ## Introduction
 
@@ -25,7 +25,7 @@ To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issue
 
 # Scaling and Performance Hands-on Lab
 
- 
+
 
 #### STEP 1: Scaling your ADWC instance
 
@@ -82,4 +82,3 @@ Click **Scale Service** after filling in the form, this will take you the Instan
 <td class="td-banner">
 Please click here to return to the [Getting Started Home page](README.md)
 </td></tr><table>
-

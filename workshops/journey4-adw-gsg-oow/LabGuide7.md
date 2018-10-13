@@ -1,4 +1,4 @@
-<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
+<table class="tbl-heading"><tr><td class="td-logo">![](images/obe_tag.png)
 
 September 21, 2018
 </td>
@@ -75,7 +75,7 @@ You will use these two users later in this workshop.
 
 # Exploring the OML Home Page
 
- 
+
 
 #### STEP 2: Signing into OML
 
@@ -120,7 +120,7 @@ Once you have successfully signed in to OML the application home page will be di
 
 # Running a SQL Statement
 
- 
+
 
 #### STEP 5: Opening a new SQL query scratchpad
 
@@ -199,7 +199,7 @@ The report should now look like the one shown below.
 # Saving the Scratchpad as a New Notebook
 
 
- 
+
 
 
 #### STEP 9: Saving the Scratchpad as a New Notebook
@@ -241,7 +241,7 @@ The SQL Scratchpad in the previous section is simply a default type notebook wit
 
 # Sharing notebooks
 
- 
+
 
 #### STEP 10: Logging in to OML as the second OML (OMLUSER2) user
 
@@ -316,7 +316,7 @@ Notice that you have no activity listed in the **Recent Activities** panel on yo
 
 # Creating and running SQL scripts
 
- 
+
 
 #### STEP 13: Getting Started with Scripts
 
@@ -334,7 +334,7 @@ The “Run SQL Statement” link on the home page allows you to run a single que
 
 Notice that the script paragraph does not have any menus to control the display and formatting of the output. You can, however, use SQL SET commands to control how data is formatted for display.
 
-#### STEP 14: Creating and running a SQL script 
+#### STEP 14: Creating and running a SQL script
 
 In this section we are going to use a script from a SQL pattern matching tutorial, <a href="https://livesql.oracle.com/apex/livesql/file/tutorial_EWB8G5JBSHAGM9FB2GL4V5CAQ.html" target="_blank">Sessionization with MATCH\_RECOGNIZE and JSON</a>, on the free Oracle <a href="http://livesql.oracle.com/" target="_blank">livesql.oracle.com</a> site. This script shows how to use the SQL pattern matching **MATCH\_RECOGNIZE** feature for sessionization analysis based on **JSON** web log files.
 
@@ -361,4 +361,3 @@ In this section we are going to use a script from a SQL pattern matching tutoria
 <td class="td-banner">
 Please click here to return to the [Getting Started Home page](README.md)
 </td></tr><table>
-
