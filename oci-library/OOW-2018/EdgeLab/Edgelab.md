@@ -7,21 +7,21 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Practice 1: Setup Windows 10 VM](#Practice 1: Setup Windows 10 VM)
+[Practice 1: Setup Windows 10 VM](#practice-1-setup-windows-10-vm)
 
-[Practice 2: Log in OCI Web Console](#Practice 2: Log in OCI Web Console)
+[Practice 2: Log in OCI Web Console](#practice-2-log-in-oci-web-console)
 
-[Practice 3: Create a Traffic Management Policy ](#Practice 3: Create a Traffic Management Policy)
+[Practice 3: Create a Traffic Management Policy](#practice-3-create-a-traffic-management-policy)
 
-[Practice 4: Failover Test for Traffic Management Policy ](#Practice 3: Failover Test for Traffic Management Policy)
+[Practice 4: Failover Test for Traffic Management Policy](#practice-4-failover-test-for-traffic-management-policy)
 
-[Practice 5: Health Check Policy ](#Practice 3: Health Check Policy)
+[Practice 5: Health Check Policy](#practice-5-health-check-policy)
 
-[Practice 6: Internet Intelligence Tool   ](#Practice 3: Internet Intelligence Tool )
+[Practice 6: Internet Intelligence Tool](#practice-6-internet-intelligence-tool)
 
-[Practice 7: Cleanup  ](#Practice 3: Cleanup )
+[Practice 7: Cleanup](#practice-7-cleanup)
 
-[Try Oracle Cloud Infrastructure for FREE!!] (#Try Oracle Cloud Infrastructure for FREE!!)
+[Try Oracle Cloud Infrastructure for FREE!!](try-oracle-cloud-infrastructure-for-free!!)
 
 
 ## Overview
@@ -66,12 +66,16 @@ Oracleoow2018!
 
 ![](media/image4.png)
 
-After log in, you are the home page of OCI web console. 
+After log in, you are at the home page of OCI web console. 
 
 ![](media/image5.png)
 
-4) Navigate to the different regions from the top right corner. For this lab, lets navigate to OCI Frankfurt Region. 
+4) Navigate to the different regions from the top right corner. 
+
+```
+For this lab, lets navigate to OCI Frankfurt Region. 
 eu-frankfurt-1 
+```
 
 ![](media/image6.png)
 
@@ -110,6 +114,7 @@ The compartments are named similar to your username. For instance, if your usern
 - Policy TTL: 30 seconds
 - Create two Answer Pools and add each webserver in its own 
 ```
+
 ![](media/image11.png)
 
 Create answer pools that will contain the records and will be provided as answers for DNS queries. They are an effective way to group similar or related answers together to make managing them easier.
@@ -265,7 +270,7 @@ Navigate to the summarized *traceroute* path to see the summary view of *tracero
 ![](media/image33.png) 
 
 
-## Try Oracle Cloud Infrastructure for FREE!! 
+## :Try Oracle Cloud Infrastructure for FREE!! 
 
 Sign up for the free Oracle Cloud Infrastructure trial account. 
 https://cloud.oracle.com/tryit
