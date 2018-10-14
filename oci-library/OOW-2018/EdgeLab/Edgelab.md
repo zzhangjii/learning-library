@@ -21,7 +21,7 @@
 
 [Practice 7: Cleanup](#practice-7-cleanup)
 
-[Try Oracle Cloud Infrastructure for FREE!!](try-oracle-cloud-infrastructure-for-free!!)
+[Practice: Try Oracle Cloud Infrastructure for FREE](#practice-try-oracle-cloud-infrastructure-for-free)
 
 
 ## Overview
@@ -270,7 +270,7 @@ Navigate to the summarized *traceroute* path to see the summary view of *tracero
 ![](media/image33.png) 
 
 
-## :Try Oracle Cloud Infrastructure for FREE!! 
+## Practice: Try Oracle Cloud Infrastructure for FREE 
 
 Sign up for the free Oracle Cloud Infrastructure trial account. 
 https://cloud.oracle.com/tryit
