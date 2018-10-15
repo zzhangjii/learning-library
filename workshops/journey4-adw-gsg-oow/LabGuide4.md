@@ -164,12 +164,12 @@ READ,WRITE ON directory DATA_PUMP_DIR
 EXECUTE privilege on the PL/SQL package DBMS_CLOUD
 ```
 
--   You are now ready to move to the next lab.
 
 <table>
 <tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
 <td class="td-banner">
 ## Great Work - All Done!
+-   You are now ready to move to the next lab.
 </td>
 </tr>
 <table>

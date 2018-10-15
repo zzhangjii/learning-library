@@ -3,7 +3,7 @@
 September 21, 2018
 </td>
 <td class="td-banner">
-# Bonus Lab 4: Simple Introduction to Machine Learning Algorithms (DBMS_PREDICTIVE_ANALYTICS)
+# Bonus Lab 9: Simple Introduction to Machine Learning Algorithms (DBMS_PREDICTIVE_ANALYTICS)
 </td></tr><table>
 
 
@@ -90,6 +90,8 @@ The notebook will provide some live examples of DBMS_PREDICTIVE_ANALYTICS in act
 <tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
 <td class="td-banner">
 ## Great Work - All Done!
+ - You are now ready to move to the next lab.
+
 </td>
 </tr>
 <table>
