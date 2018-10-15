@@ -22,6 +22,7 @@ The following demo will walk you through the service console and show you a runn
 <tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
 <td class="td-banner">
 ## Great Work - All Done!
+ - You are now ready to move to the next lab.
 </td>
 </tr>
 <table>
