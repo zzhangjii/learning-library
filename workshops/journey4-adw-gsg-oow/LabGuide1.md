@@ -3,7 +3,7 @@
 September 21, 2018
 </td>
 <td class="td-banner">
-# Lab 1: Getting Started with Autonomous Data Warehouse
+# Lab 1: Getting Started with Autonomous Data Warehouse (ADW)
 </td></tr><table>
 
 
@@ -26,10 +26,10 @@ To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issue
 
 -   The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
 
--   Oracle SQL Developer 18.1 (see [Oracle Technology Network download site](http://www.oracle.com/technetwork/developer-tools/sql-developer/overview/index.html)).
-    Please be sure to use SQL Developer version 18.1 or later because this version contains enhancements for key Autonomous DW Cloud features.
+-   Oracle SQL Developer 18.3 (see [Oracle Technology Network download site](http://www.oracle.com/technetwork/developer-tools/sql-developer/overview/index.html)).
+    Please be sure to use SQL Developer version 18.3 or later because this version contains enhancements for key Autonomous Data Warehouse features, including using ADW behind a VPN or Firewall.
 
-    * Note *: If you are a Windows user on 64-bit platform, download the 'Windows 64-bit with JDK 8 included' distribution as it includes both Java 8 and the Java Cryptography Extension (JCE) files necessary to run SQL Developer and connect to your Autonomous DW Cloud.
+    *Note:* If you are a Windows user on 64-bit platform, download the 'Windows 64-bit with JDK 8 included' distribution as it includes both Java 8 and the Java Cryptography Extension (JCE) files necessary to run SQL Developer and connect to your Autonomous Data Warehouse.
     If you are a non-Windows user, download and install the appropriate [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) for your Operating System. Download and extract the [Java Cryptography Encryption Archive](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) to the directory as indicated in the README.txt.
 
 # Part 1. Provisioning an ADW Instance
@@ -91,7 +91,7 @@ In this section you will be provisioning an ADW database using the cloud console
 
 ![](./images/100/Picture100-31.jpeg)
 
--  Your instance will begin provisioning. Once the state goes from Provisioning to Available, click on your instance name to see it's details.
+-  Your instance will begin provisioning. Once the state goes from Provisioning to Available, click on your instance name to see its details.
 
 ![](./images/100/Picture100-32.jpeg)
 
@@ -154,29 +154,28 @@ Start SQL Developer and create a connection for your database using the default 
 
     -   **Password:** The password you specified during provisioning
 
-    -   **Connection Type:** Cloud PDB
+    -   **Connection Type:** Cloud Wallet
 
     -   **Configuration File:** Enter the full path for the wallet file you downloaded before, or click the **Browse button** to point to the location of the file.
 
     -   **Keystore Password:** The password you specified when downloading the wallet from the ADW service console
 
     -   **Service:** There are 3 pre-configured database services for each database. Pick **&lt;databasename&gt;_low** for this lab. For
-        example, if you created a database named testdw select testdw_low as the service.
+        example, if you the database you created was named adwfinance, select adwfinance_low as the service.
 
-![](./images/100/Picture100-18.png)
+![](./images/100/Picture100-18.jpg)
 
 -   Test your connection by clicking the **Test** button, if it succeeds save your connection information by clicking **Save**, then connect to your database by clicking the **Connect** button. An entry for the new connection appears under Connections.
+-   If you are behind a VPN or Firewall and this Test fails, please download [SQL Developer 18.3](https://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html) or higher. This version and above will allow you to select the "Use HTTP Proxy Host" option for a Cloud Wallet type connection. While creating your new ADW connection here, provide your proxy's Host and Port. If you are unsure where to find this, you may look at your computer's connection settings or contact your Network Administrator.
 
 -   Create another connection named as **admin_high** using the same information as above, this time pick **&lt;databasename&gt;_high** as the service name, for example, testdw_high.
 
 -   You are now ready to move to the next lab.
 
-
-
-## Great Work - All Done!
-
-<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
-</td>
+<table>
+<tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
 <td class="td-banner">
-Please click here to return to the [Getting Started Home page](README.md)
-</td></tr><table>
+## Great Work - All Done!
+</td>
+</tr>
+<table>

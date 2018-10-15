@@ -107,13 +107,10 @@ ADW also caches the results of a query for you. If you run the same queries agai
 
 -   You can find more sample queries to run in the ADW documentation.  Try some of the queries from <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/sample-queries.html">here</a>.
 
-
-
-
-## Great Work - All Done
-
-<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
-</td>
+<table>
+<tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
 <td class="td-banner">
-Please click here to return to the [Getting Started Home page](README.md)
-</td></tr><table>
+## Great Work - All Done!
+</td>
+</tr>
+<table>

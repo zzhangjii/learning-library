@@ -611,11 +611,10 @@ Schema: admin or SSB or any schema
 - You can now use profiling and other EDQ features with your Autonomous Data Warehouse.  Try using tables in the SSB schema on ADW.
 
 
-
-## Great Work - All Done
-
-<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
-</td>
+<table>
+<tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
 <td class="td-banner">
-Please click here to return to the [Getting Started Home page](README.md)
-</td></tr><table>
+## Great Work - All Done!
+</td>
+</tr>
+<table>

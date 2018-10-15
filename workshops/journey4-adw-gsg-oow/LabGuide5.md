@@ -24,12 +24,10 @@ The following demo will walk you through the service console and show you a runn
 
 To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issues/new) to go to the github oracle repository issue submission form.
 
-
-
-## Great Work - All Done
-
-<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
-</td>
+<table>
+<tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
 <td class="td-banner">
-Please click here to return to the [Getting Started Home page](README.md)
-</td></tr><table>
+## Great Work - All Done!
+</td>
+</tr>
+<table>

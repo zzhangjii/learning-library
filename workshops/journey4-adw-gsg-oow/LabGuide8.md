@@ -84,15 +84,12 @@ The notebook will provide some live examples of DBMS_PREDICTIVE_ANALYTICS in act
 
 - Experiment with DBMS_PREDICTIVE_ANALYTICS with your data
 - Review the Oracle Database Data Mining documentation: https://docs.oracle.com/en/database/oracle/oracle-database/18/dmapi/introduction-to-oracle-data-mining.html
-- Look at the DBMS_DATA_MINING sample notebooes in the Oracle ML Notebook Gallery
+- Look at the DBMS_DATA_MINING sample notebooks in the Oracle ML Notebook Gallery
 
-
-
-
-## Great Work - All Done
-
-<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
-</td>
+<table>
+<tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
 <td class="td-banner">
-Please click here to return to the [Getting Started Home page](README.md)
-</td></tr><table>
+## Great Work - All Done!
+</td>
+</tr>
+<table>
