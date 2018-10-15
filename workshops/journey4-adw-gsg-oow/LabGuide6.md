@@ -3,7 +3,7 @@
 September 21, 2018
 </td>
 <td class="td-banner">
-# Bonus Lab 1: Managing and Monitoring Your Data Warehouse Instance using the Cloud Console
+# Bonus Lab 6: Managing and Monitoring Your Data Warehouse Instance using the Cloud Console
 </td></tr><table>
 
 
