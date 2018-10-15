@@ -41,7 +41,7 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 
 1) Each attendee is provided with a laptop with a Virtual Box. In the Virtual Box, Please start the Windows 10 VM (name of the VM is same as the ID of this Hands on Lab - HOL6379)
 
-<img width="200" alt="image001" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/OOW-2018/EdgeLab/media/image1.png">
+<img width="800" alt="image001" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/OOW-2018/EdgeLab/media/image1.png">
 
 ## Practice-2: Download channel text file and install SQL Developer Tool
 
@@ -275,4 +275,4 @@ select * from channels;
 Sign up for the free Oracle Cloud Infrastructure trial account. 
 https://cloud.oracle.com/tryit
 
-<img width="200" alt="image001" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/OOW-2018/EdgeLab/media/image34.png">
+<img width="800" alt="image001" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/OOW-2018/EdgeLab/media/image34.png">
