@@ -615,6 +615,8 @@ Schema: admin or SSB or any schema
 <tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
 <td class="td-banner">
 ## Great Work - All Done!
+ - You are now ready to move to the next lab.
+
 </td>
 </tr>
 <table>
