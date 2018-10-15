@@ -15,8 +15,8 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 
 ## Objectives
 
-- Learn how to instal OCI CLI
-- Run examples on how to Create, Get, List Autonomous Transaction Processing Database using OCI CLI
+- Configure Oracle Cloud Infrastructure Command Line Interface
+- Run examples using OCI-CLI for Autonomous Transaction Processing database
 
 ## Required Artifacts
 

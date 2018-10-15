@@ -37,11 +37,11 @@ In this section you will be provisioning an ATP database using the cloud console
 
 ### **STEP 2: Create a Compartment**
 
--   Once you are logged in, you are taken to the cloud dashboard where you can see all the services available to you.
+- Once you are logged in, you are taken to the cloud dashboard where you can see all the services available to you.
 
 ![](./images/100/Picture100-19.jpeg)
 
-- -  Once you are on OCI dashboard page, click on the hamburger menu icon on the top left of the screen
+- Once you are on OCI dashboard page, click on the hamburger menu icon on the top left of the screen
 
 ![](./images/100/Picture100-20.jpeg)
 
@@ -59,11 +59,16 @@ Enter the following in create Compartment window
 - **Description**: Enter a description for the compartment
 - Click on Create Compartment link 
 
+Managing Tags and Tag Namespaces: When you have many resources (for example, instances, VCNs, load balancers, and block volumes) across multiple compartments in your tenancy, it can become difficult to track resources used for specific purposes, or to aggregate them, report on them, or take bulk actions on them. Tagging allows you to define keys and values and associate them with resources. You can then use the tags to help you organize and list resources based on your business needs. For more information please click [here](https://docs.cloud.oracle.com/iaas/Content/Identity/Concepts/taggingoverview.htm).
+
 ![](./images/100/CreateCompartment1.jpeg)
+
+![](./images/100/CreateCompartment3.jpeg)
 
 - You can verify the compartment created on Compartments page
 
 ![](./images/100/CreateCompartment2.jpeg)
+
 
 ### **STEP 3: Create an ATP Instance**
 
@@ -112,6 +117,7 @@ More information about Compartments and Policies is provided in the OCI Identity
 -  Specify the password for the instance
 
 #### For this lab, we will be using the following as password
+
 ```
 WElcome_123#
 ```
@@ -124,7 +130,7 @@ WElcome_123#
 
 ![](./images/100/Picture100-34.jpeg)
 
-#### Subscribe to new database software licenses and the database cloud service: Your cloud service instance should inslude database license. This is an all-inclusive cost and you do not need to bring any additional licenses to cloud.
+#### Subscribe to new database software licenses and the database cloud service: Your cloud service instance should include database license. This is an all-inclusive cost and you do not need to bring any additional licenses to cloud.
 
 ![](./images/100/Picture100-35.jpeg)
 
