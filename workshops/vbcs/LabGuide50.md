@@ -63,6 +63,10 @@ During this lab we will take your new trial account and show you how to provisio
 
 ![](images/100/LabGuide100-a793d2af.png)
 
+- Download the SSH key and credentials to access your instance. Then, click Create to submit your request.
+
+![](images/100/LabGuide100-f7898cb7.png)
+
 - You will see the following screen once your request is submitted. Press the refresh button every few minutes to see if your instance is provisioned.
 
 ![](images/100/LabGuide100-fcc49616.png)
