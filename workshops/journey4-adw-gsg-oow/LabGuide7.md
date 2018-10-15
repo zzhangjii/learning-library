@@ -27,39 +27,29 @@ To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/iss
 
 
 
-#### STEP 1: Scaling your ADWC instance
+#### **STEP 1: Scaling your ADWC instance**
 
 -   Go back to the Cloud Console you used during the provisioning exercise and open the Instances screen. Click the **action menu** and select **Scale Service**.
 
-![](./images/600/Picture300-2.png)
+![](./images/600/Picture300-2.jpg)
 
 -   Fill in the form with the following information.
 
-    -   **Type of change:** Scale Up
+    -   **CPU core count :** 8
 
-    -   **CPU core count change:** 2
+    -   **Storage capacity:** 2 TB
 
-    -   **Storage capacity change:** 0
+Click **Update** after filling in the form, this will take you the Instances screen.
 
-> **Note** that these values are additional increments over existing CPU and storage capacity. By specifying 2 as CPU core count change, we will be adding 2 CPUs to the service.
+![](./images/600/Picture300-3.jpg)
 
-Click **Scale Service** after filling in the form, this will take you the Instances screen.
+>  **Note** The applications can continue running during the scale operation without downtime.
 
-![](./images/600/Picture300-3.png)
+-   **Refresh** the page to see the result of the scaled operation.
 
-> **Note** The applications can continue running during the scale operation without downtime.
+![](./images/600/Picture300-6.jpg)
 
--   **Refresh** the page to see the result of the scale operation.
-
-![](./images/600/Picture300-4.png)
-
--   **Click** on your database name and look at the Service Overview screen to see the new number of CPUs in your database.
-
-![](./images/600/Picture300-5.png)
-
-![](./images/600/Picture300-6.png)
-
-#### STEP 2: Performance and concurrency benefits of dynamic scaling
+#### **STEP 2: Performance and concurrency benefits of dynamic scaling**
 
 -   <a href="https://raw.githubusercontent.com/millerhoo/journey4-adwc/master/workshops/journey4-adwc/images/ADWC%20HOL%20-%20Scaling.mp4" target="_blank">Click here</a> to watch a demo of the performance impact of scaling up your instance. In the demo you will see that scaling up provides more concurrency for your users.
 
@@ -71,7 +61,7 @@ Click **Scale Service** after filling in the form, this will take you the Instan
 
 ![](./images/600/Picture300-8.png)
 
--   ADWC allows you to dynamically scale your service online when you require more concurrency and performance.
+-   ADW allows you to dynamically scale your service online when you require more concurrency and performance.
 
 <table>
 <tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>

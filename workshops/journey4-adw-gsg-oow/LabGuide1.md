@@ -25,8 +25,8 @@ To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/iss
 
 -   The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
 
--   Oracle SQL Developer 18.3 (see [Oracle Technology Network download site](http://www.oracle.com/technetwork/developer-tools/sql-developer/overview/index.html)).
-    Please be sure to use SQL Developer version 18.3 or later because this version contains enhancements for key Autonomous Data Warehouse features, including using ADW behind a VPN or Firewall.
+-   Oracle SQL Developer 18.3 or later (see [Oracle Technology Network download site](http://www.oracle.com/technetwork/developer-tools/sql-developer/overview/index.html)).
+    Please use SQL Developer version 18.3 or later because this version contains enhancements for key Autonomous Data Warehouse features, including using ADW behind a VPN or Firewall.
 
     *Note:* If you are a Windows user on 64-bit platform, download the 'Windows 64-bit with JDK 8 included' distribution as it includes both Java 8 and the Java Cryptography Extension (JCE) files necessary to run SQL Developer and connect to your Autonomous Data Warehouse.
     If you are a non-Windows user, download and install the appropriate [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) for your Operating System. Download and extract the [Java Cryptography Encryption Archive](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) to the directory as indicated in the README.txt.

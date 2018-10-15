@@ -38,8 +38,7 @@ To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/iss
 
 -   The following lab requires an Oracle Public Cloud account. You may your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
 
--   Oracle SQL Developer (see Lab100 for more specifics on the version of SQL Developer and how to install and configure it).
-
+-   Oracle SQL Developer (see Lab 1 for more specifics on the version of SQL Developer and how to install and configure it).
 
 
 # Connect and Query with the LOW database service
@@ -47,7 +46,7 @@ To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/iss
  Note: For this demonstration to work, your ADW instance should be configured with at least 2 OCPUs.  With 1 OCPU, you will not see much difference in performance.
 
 
-#### STEP 1: Open up SQL Developer and connect to the admin_low database connection you previously created
+#### **STEP 1: Open up SQL Developer and connect to the admin_low database connection you previously created**
 
 -   You can do this via expanding the list of connections and double-clicking on the admin_low connection.
 
@@ -65,7 +64,7 @@ To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/iss
 # Connect and Query with the HIGH database service
 
 
-#### STEP 2: Open up SQL Developer and connect to the admin_high database connection you previously created
+#### **STEP 2: Open up SQL Developer and connect to the admin_high database connection you previously created**
 
 -   You can do this via expanding the list of connections and double-clicking on the admin_high connection.
 
@@ -87,7 +86,7 @@ To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/iss
 ADW also caches the results of a query for you. If you run the same queries again you will see that they will run much faster.
 
 
-#### STEP 3: Run the previous query you just ran
+#### **STEP 3: Run the previous query you just ran**
 
 -   Click the **Run Script** button to run it. Make sure you click the Run Script button in SQL Developer so that all the rows are displayed on the screen.
 
@@ -103,9 +102,9 @@ ADW also caches the results of a query for you. If you run the same queries agai
 # Explore additional queries with the Sample Schemas
 
 
-#### STEP 4: Experiment with running other sample queries
+#### **STEP 4: Experiment with running other sample queries**
 
--   You can find more sample queries to run in the ADW documentation.  Try some of the queries from <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/sample-queries.html">here</a>.
+-   You can find more sample queries to run in the ADW documentation.  Try some of the queries from <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/sample-queries.html" target="_blank">here</a>.
 
 <table>
 <tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>

@@ -155,7 +155,7 @@ For this lab you will watch a couple of demos to show the capabilities available
 - Learn how to recover your data warehouse - if needed
 - Learn how to use the service console to monitor the performance of your Autonomous Data Warehouse
 
-**Click here to run [Bonus Lab 1](LabGuide6.md)**
+**Click here to run [Bonus Lab 6](LabGuide6.md)**
 
 
 
@@ -168,7 +168,7 @@ In this lab you will scale up your Oracle Autonomous Data Warehouse instance by 
 - Learn how to scale up and down the CPUs and storage used by your Autonomous Data Warehouse
 - See how scaling affects your concurrency and performance
 
-**Click here to run [Bonus Lab 2](LabGuide7.md)**
+**Click here to run [Bonus Lab 7](LabGuide7.md)**
 
 
 
@@ -182,7 +182,7 @@ During this lab you will be using the new Oracle Machine Learning SQL notebook a
 - Learn how to share notebooks
 - Learn how to create and run SQL scripts
 
-**Click here to run [Bonus Lab 3](LabGuide8.md)**
+**Click here to run [Bonus Lab 8](LabGuide8.md)**
 
 
 
@@ -195,7 +195,7 @@ During this lab you will be using the Oracle Machine Learning SQL notebook appli
 - Learn how to use Oracle ML Gallery
 - Learn how to import notebooks into Oracle ML
 
-**Click here to run [Bonus Lab 4](LabGuide9.md)**
+**Click here to run [Bonus Lab 9](LabGuide9.md)**
 
 
 
@@ -208,7 +208,7 @@ In this lab, you will configure and use Oracle Data Integration Platform Cloud (
 - Learn how to replicate data into your Autonomous Data Warehouse with Oracle GoldenGate (OGG)
 - Learn how to review data quality your Autonomous Data Warehouse with Oracle Enterprise Data Quality (EDQ)
 
-**Click here to run [Bonus Lab 5](LabGuide10.md)**
+**Click here to run [Bonus Lab 10](LabGuide10.md)**
 
 
 

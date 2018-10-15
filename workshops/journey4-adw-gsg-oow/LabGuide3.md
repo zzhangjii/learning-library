@@ -54,9 +54,9 @@ To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/iss
 # Download Sample Data
 
 
-#### STEP 1: Download the Sample Data Files to Your Local Computer
+#### **STEP 1: Download the Sample Data Files to Your Local Computer**
 
--   For this lab, you will need a handful of data files.  Click <a href="./files/datafiles.zip" target="_blank">here</a> to download a zipfile of the 5 sample data files for you to upload to the object store. Unzip it to a directory on your local computer. You will see:-
+-   For this lab, you will need a handful of data files.  Click <a href="./files/datafiles.zip" target="_blank">here</a> to download a zipfile of the 5** sample data files for you to upload to the object store. Unzip it to a directory on your local computer. You** will see:-
 
     -   Sales data: **sales.csv.gz**
     -   Customer data: **customers.csv**
@@ -66,7 +66,7 @@ To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/iss
 
 # Create the tables
 
-#### STEP 2: Create Target Tables for Data Loading
+#### **STEP 2: Create Target Tables for Data Loading**
 
 -   Connected as your user in SQL Developer, copy and paste <a href="./scripts/300/create_tables.txt" target="_blank">this code snippet</a> to SQL Developer worksheet. Take a moment to examine the script. Then click the **Run Script** button to run it.
 
@@ -79,7 +79,7 @@ Note that you do not need to specify anything other than the list of columns whe
 # Load data from the local file system
 
 
-#### STEP 3: Loading Data Using the Data Import Wizard in SQL Developer
+#### **STEP 3: Loading Data Using the Data Import Wizard in SQL Developer**
 
 -   Expand ‘**Tables**’ in your user schema object tree. If you don't see any tables, click on the refresh icon (two curved arrows) to refresh the table list.  You will see all the tables you have created previously. Select table **CHANNELS**. Clicking the right mouse button opens the context-sensitive menu in SQL Developer; select ‘**Import Data**’:
 
@@ -95,8 +95,7 @@ Note that you do not need to specify anything other than the list of columns whe
 
 
 
-After entering this information, you can preview the data and select the appropriate file formats. You will see that the data preview is
-interactive and changes according to your selection.
+After entering this information, you can preview the data and select the appropriate file formats. You will see that the data preview is interactive and changes according to your selection.
 
 When you are satisfied with the file content view, click **NEXT**.
 
@@ -121,37 +120,26 @@ When you are satisfied with the file content view, click **NEXT**.
 
 # Setup the OCI Object Store
 
-#### STEP 4: Navigate to the OCI Compute Console
+#### **STEP 4: Navigate to Object Storage**
 
--   The easiest way to get to the **OCI Compute Console** is to first navigate to the My Services Dashboard page:
+-  From the Autonomous Data Warehouse console, pull out the left side menu from the top-left corner and select **Object Storage**. To revisit signing-in and navigating to ADW, please see Lab 1.
     ![](images/300/snap0014294.jpg)
 
--   From the My Services Dashboard page, open the **upper left menu** and expand **Services**.  Under Services, click on the entry titled **Compute**.  *Hint: you might want to right-click on Compute and choose "open in new tab" so that you can keep the My Services Dashboard open*:
-    ![](images/300/snap0014295.jpg)
+To learn more about the OCI Object Storage, refer to its <a href="https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Tasks/addingbuckets.htm" target="_blank">documentation</a> .
 
--   This should take you to the OCI Compute Console:
-    ![](images/300/snap0014296.jpg)
-
-
-#### STEP 5: Navigate to the Storage Tab, then Object Storage
-To learn more about the OCI Object Storage, check out this <a href="https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Tasks/addingbuckets.htm" target="_blank">documentation</a> .
-
--   In the OCI Compute Console, click on the **Storage** tab, then click on **Object Storage** on the left-hand menu:
-    ![](images/300/snap0014297.jpg)
-
--   Choose the root compartment in the **COMPARTMENT** drop-down if it is not already choosen. The name of your root compartment might be different.
+-   You should now be on the **Object Storage** page. Choose the **root** compartment in the **Compartment** drop-down if it is not already chosen.
     ![](images/300/snap0014298.jpg)
 
-#### STEP 6: Create a Bucket for the Object Storage
+#### **STEP 6: Create a Bucket for the Object Storage**
 In OCI Object Storage, a bucket is the terminology for a container of multiple files.
 
 -   Click the **Create Bucket** button:
     ![](images/300/snap0014299.jpg)
 
--   **Name your bucket** and click **Create Bucket** button.
+-   Name your bucket **ADWCLab** and click the **Create Bucket** button.
     ![](images/300/snap0014300.jpg)
 
-#### STEP 7: Upload Files to Your OCI Object Store Bucket
+#### **STEP 7: Upload Files to Your OCI Object Store Bucket**
 
 -   Click on your **bucket name** to open it:
     ![](images/300/snap0014301.jpg)
@@ -167,20 +155,25 @@ In OCI Object Storage, a bucket is the terminology for a container of multiple f
 -   The end result should look like this with all 4 files listed under Objects:
     ![](images/300/snap0014304.jpg)
 
-#### STEP 8: Construct the URLs of the Files on Your OCI Object Storage
+#### **STEP 8: Construct the URLs of the Files on Your OCI Object Storage**
 -   Construct the URL that points to the location of the customers.csv file staged in the OCI Object Storage. The URL is structured as follows. The values for you to specify are in bold:
 
     https://swiftobjectstorage.<**region_name**>.oraclecloud.com/v1/<**tenant_name**>/<**bucket_name**>/<**file_name**>
 
-In this example, the region name is us-ashburn-1, the tenant name is dbayard00, and the bucket name is ADWCLab. So the URL of the customers.csv file is:  https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/dbayard00/ADWCLab/customers.csv . Yours would be different.
+-   The simplest way for you to find this information would be to be simply look at the details of your recently uploaded files.  
 
-![](images/300/ConstructURLs.png)
+![](images/300/ConstructURLs.jpg)
+
+-   In this example below, the region name is us-phoenix-1, the tenant name is labs, and the bucket name is ADWCLab. This is all of the information you need to construct the swift storage URL above.
+*For more information on the Swift OpenStack API, <a href="https://wiki.openstack.org/wiki/Swift" target="_blank">click here</a>.*
+
+![](images/300/ConstructUrls-2.jpg)
 
 -   **Repeat** this for the **sales.csv.gz**, **products.txt**, and **channels\_error.csv** files.
 
 -   **Save** the URLs you constructed to a note. We will use the URLs in the following steps.
 
-#### STEP 9: Creating an Object Store Auth Token
+#### **STEP 9: Creating an Object Store Auth Token**
 
 To load data from the Oracle Cloud Infrastructure(OCI) Object Storage you will need an OCI user with the appropriate privileges to read data (or upload) data to the Object Store. The communication between the database and the object store relies on the Swift protocol and the OCI user Auth Token.
 
@@ -207,7 +200,7 @@ To load data from the Oracle Cloud Infrastructure(OCI) Object Storage you will n
 
     ![](./images/300/snap0015311.jpg)
 
-#### STEP 10: Create a Database Credential for Your User
+#### **STEP 10: Create a Database Credential for Your User**
 
 In order to access data in the Object Store you have to enable your database user to authenticate itself with the Object Store using your OCI object store account and Auth token. You do this by creating a private CREDENTIAL object for your user that stores this information encrypted in your Autonomous Data Warehouse. This information is only usable for your user schema.
 
@@ -231,7 +224,7 @@ In order to access data in the Object Store you have to enable your database use
 # Load data from the Object Store using the Data Import Wizard
 
 
-#### STEP 11: Loading Data Using the Data Import Wizard in SQL Developer
+#### **STEP 11: Loading Data Using the Data Import Wizard in SQL Developer**
 
 
 -   Expand ‘**Tables**’ in your user schema object tree. If you don't see any tables, click on the refresh icon (two curved arrows) to refresh the table list.  You will see all the tables you have created previously. Select table **CUSTOMERS**. Clicking the right mouse button opens the context-sensitive menu in SQL Developer; select ‘**Import Data**’:
@@ -305,7 +298,7 @@ When you are satisfied with the data preview, click **NEXT**.
 
 
 
-#### STEP 12: Loading Data Using the PL/SQL Package, DBMS_CLOUD
+#### **STEP 12: Loading Data Using the PL/SQL Package, DBMS_CLOUD**
 
 As an alternative to the wizard-guided data load, you can use the PL/SQL package **DBMS_CLOUD** directly. This is the preferred choice for any load automation.
 
@@ -326,7 +319,7 @@ As an alternative to the wizard-guided data load, you can use the PL/SQL package
 
     ![](./images/300/Picture300-20.png)
 
-#### STEP 13: Troubleshooting DBMS_CLOUD data loads
+#### **STEP 13: Troubleshooting DBMS_CLOUD data loads**
 
 -   Connected as your user in SQL Developer, run the following query to look at past and current data loads.
 ```
