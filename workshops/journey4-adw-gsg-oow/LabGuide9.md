@@ -3,7 +3,7 @@
 September 21, 2018
 </td>
 <td class="td-banner">
-# Bonus Lab 4: Simple Introduction to Machine Learning Algorithms (DBMS_PREDICTIVE_ANALYTICS)
+# Bonus Lab 9: Simple Introduction to Machine Learning Algorithms (DBMS_PREDICTIVE_ANALYTICS)
 </td></tr><table>
 
 
