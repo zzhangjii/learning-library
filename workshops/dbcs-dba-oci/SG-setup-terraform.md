@@ -184,4 +184,6 @@ openssl rsa -pubout -in d:/tf/keys/oci_api_key.pem -out d:/tf/keys/oci_api_key_p
 
 	![](images/SG-setup-terraform/049.png)
 
+**Important:**  If you manually change services in the console and you wish to re-run this script you need to either first run `terraform destroy` or manually delete all the services in the console and delete the terraform state and .terraform directory and files (any terraform files created from the first run).
+
 You should now be able to VNC into your WorkshopInstance.
