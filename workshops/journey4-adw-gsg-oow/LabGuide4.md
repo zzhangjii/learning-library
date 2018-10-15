@@ -11,7 +11,7 @@ September 21, 2018
 
 In this lab, you will be querying files on the Oracle Cloud Infrastructure Object Storage (OCI) directly without loading them to your database.
 
-**Note:** Make sure you have completed <a href="https://millerhoo.github.io/journey4-adwc/workshops/journey4-adwc/LabGuide300.md" target="_blank">Lab 300: Loading Data</a> before you take this lab. Because you will use the data files on the OCI Object Storage and the credential object from Lab 300 in this lab.
+**Note:** Make sure you have completed Lab 3: Loading Data into Your New Autonomous Data Warehouse before you proceed with this lab. You will use the data files on the OCI Object Storage and the credential object from Lab 300 in this lab.
 
 To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/issues/new" target="_blank"> here </a> to go to the github oracle repository issue submission form.
 

@@ -62,6 +62,11 @@ In this section you will be provisioning an ADW database using the cloud console
 
 ![](./images/100/Picture100-6.png)
 
+- Select the root compartment, or another compartment of your choice where you will create your new ADW instance. You can learn more about Compartments <a href="https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm" target="_blank"> here. </a>
+*Note* - Avoid the use of the ManagedCompartmentforPaaS compartment as this is an Oracle default used for Oracle Platform Services.
+
+![](./images/100/Compartment.jpg)
+
 -  Click on **Create Autonomous Data Warehouse** button to start the instance creation process.
 
 ![](./images/100/Picture100-23.jpeg)
@@ -70,7 +75,7 @@ In this section you will be provisioning an ADW database using the cloud console
 
 ![](./images/100/Picture100-26.jpg)
 
--  Specify a memorable name for the instance. Also specify your database's name, for this lab use ADWFINANCE.
+-  Specify a memorable display name for the instance. Also specify your database's name, for this lab use ADWFINANCE.
 
 ![](./images/100/Picture100-27.jpeg)
 
@@ -90,7 +95,7 @@ In this section you will be provisioning an ADW database using the cloud console
 
 ![](./images/100/Picture100-31.jpeg)
 
--  Your instance will begin provisioning. Once the state goes from Provisioning to Available, click on your instance name to see its details.
+-  Your instance will begin provisioning. Once the state goes from Provisioning to Available, click on your display name to see its details.
 
 ![](./images/100/Picture100-32.jpeg)
 
@@ -100,7 +105,7 @@ In this section you will be provisioning an ADW database using the cloud console
 
 # Part 2. Connecting to ADW
 
-## Downloading the credentials wallet
+## Downloading the Connection Wallet
 
 
 As ADW only accepts secure connections to the database, you need to download a wallet file containing your credentials first. The wallet is downloaded from the ADW service console.

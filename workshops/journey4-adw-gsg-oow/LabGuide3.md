@@ -160,11 +160,11 @@ In OCI Object Storage, a bucket is the terminology for a container of multiple f
 
     https://swiftobjectstorage.<**region_name**>.oraclecloud.com/v1/<**tenant_name**>/<**bucket_name**>/<**file_name**>
 
--   The simplest way for you to find this information would be to be simply look at the details of your recently uploaded files.  
+-   The simplest way for you to find this information would be to be look at the details of your recently uploaded files.  
 
 ![](images/300/ConstructURLs.jpg)
 
--   In this example below, the region name is us-phoenix-1, the tenant name is labs, and the bucket name is ADWCLab. This is all of the information you need to construct the swift storage URL above.
+-   In this example below, the **region name** is us-phoenix-1, the **tenant name** is labs, and the **bucket name** is ADWCLab. This is all of the information you need to construct the swift storage URL above.
 *For more information on the Swift OpenStack API, <a href="https://wiki.openstack.org/wiki/Swift" target="_blank">click here</a>.*
 
 ![](images/300/ConstructUrls-2.jpg)
