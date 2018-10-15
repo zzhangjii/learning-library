@@ -3,7 +3,7 @@
 September 21, 2018
 </td>
 <td class="td-banner">
-# Bonus Lab 3: Using Oracle Data Integration Platform Cloud with your Autonomous Data Warehouse
+# Bonus Lab 5: Using Oracle Data Integration Platform Cloud with your Autonomous Data Warehouse
 </td></tr><table>
 
 
@@ -33,7 +33,7 @@ In addition to Oracle Database (including ADW), MySQL, and Exadata are among the
 
 For more information about DIPC, see the documentation <a href="https://docs.oracle.com/en/cloud/paas/data-integration-platform-cloud/using/getting-started-data-integration-platform-cloud.html#GUID-72E6BAA9-260B-4098-90A8-D42B95FC9010" target="_blank">Getting Started with Oracle Data Integration Platform Cloud</a>.
 
-To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issues/new) to go to the github oracle repository issue submission form.
+To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/issues/new" target="_blank"> here </a> to go to the github oracle repository issue submission form.
 
 ## Objectives
 

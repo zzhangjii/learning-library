@@ -3,75 +3,26 @@
 September 21, 2018
 </td>
 <td class="td-banner">
-# Lab 6: Scaling and Performance in Your Autonomous Data Warehouse
+# Bonus Lab 1: Managing and Monitoring Your Data Warehouse Instance using the Cloud Console
 </td></tr><table>
 
 
 ## Introduction
 
-In this lab you will scale up your Oracle Autonomous Data Warehouse Cloud (ADWC) service to have more CPUs. And you will watch a demo that shows the performance and concurrency impacts of scaling your service online.
+For this lab you will **watch** a couple of demos to show the capabilities available via the Cloud Console and Autonomous Data Warehouse Service Console.
 
-To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issues/new) to go to the github oracle repository issue submission form.
+First you will see the Cloud Console and how you can stop, start, delete your instance, and how you can recover your database when needed.
 
-## Objectives
+<a href="https://raw.githubusercontent.com/millerhoo/journey4-adwc/master/workshops/journey4-adwc/images/ADWC%20HOL%20Start%20Stop%20Recover.mp4" target="_blank">ADWC Start, Stop, and Backup/Recover video</a>
 
--   Learn how to scale up an ADWC service
+You can use the ADWC service console to monitor the performance of your ADWC instance. Service console provides dashboards to monitor the real-time and historical CPU and storage utilization, and database activity like the number of running or queued statements. It also provides Real-Time SQL Monitoring to  look at current and past long running SQL statements in your instance and allows you to cancel long running queries or set thresholds for ADWC to automatically cancel them for you.
 
--   Understand the performance and concurrency impacts of scaling your Autonomous Data Warehouse service online
+The following demo will walk you through the service console and show you a running workload.
 
-## Required Artifacts
-
--   The following lab requires an Oracle Public Cloud account. If you don't already have your own cloud account then you can obtaina new cloud account through the free Oracle trial program.
-
-# Scaling and Performance Hands-on Lab
+<a href="https://raw.githubusercontent.com/millerhoo/journey4-adwc/master/workshops/journey4-adwc/images/ADWC%20HOL%20Service%20Console.mp4" target="_blank">ADW Service Console and Monitoring video</a>
 
 
-
-#### STEP 1: Scaling your ADWC instance
-
--   Go back to the Cloud Console you used during the provisioning exercise and open the Instances screen. Click the **action menu** and select **Scale Service**.
-
-![](./images/600/Picture300-2.png)
-
--   Fill in the form with the following information.
-
-    -   **Type of change:** Scale Up
-
-    -   **CPU core count change:** 2
-
-    -   **Storage capacity change:** 0
-
-> **Note** that these values are additional increments over existing CPU and storage capacity. By specifying 2 as CPU core count change, we will be adding 2 CPUs to the service.
-
-Click **Scale Service** after filling in the form, this will take you the Instances screen.
-
-![](./images/600/Picture300-3.png)
-
-> **Note** The applications can continue running during the scale operation without downtime.
-
--   **Refresh** the page to see the result of the scale operation.
-
-![](./images/600/Picture300-4.png)
-
--   **Click** on your database name and look at the Service Overview screen to see the new number of CPUs in your database.
-
-![](./images/600/Picture300-5.png)
-
-![](./images/600/Picture300-6.png)
-
-#### STEP 2: Performance and concurrency benefits of dynamic scaling
-
--   <a href="https://raw.githubusercontent.com/millerhoo/journey4-adwc/master/workshops/journey4-adwc/images/ADWC%20HOL%20-%20Scaling.mp4" target="_blank">Click here</a> to watch a demo of the performance impact of scaling up your instance. In the demo you will see that scaling up provides more concurrency for your users.
-
--   The demo will show a workload that has 10 concurrent users running with the MEDIUM database service. You will see that on a 2 CPU ADWC instance 5 queries are running whereas 5 queries are waiting in the queue for resources.
-
-![](./images/600/Picture300-7.png)
-
--   While the workload is running the database will be scaled up from 2 CPUs to 4 CPUs. You will see that the queries waiting in the queue are now able to start and there are no sessions waiting in the queue anymore.
-
-![](./images/600/Picture300-8.png)
-
--   ADWC allows you to dynamically scale your service online when you require more concurrency and performance.
+To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/issues/new" target="_blank"> here </a> to go to the github oracle repository issue submission form.
 
 <table>
 <tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>

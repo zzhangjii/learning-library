@@ -25,7 +25,7 @@ The lab will use the LOW and HIGH database services to understand the performanc
 
 You will run queries on the SSB data set which is a 1TB data set with one fact table with around 6 billion rows, and several dimension tables.
 
-To **log issues**, click [here](https://github.com/millerhoo/journey4-adwc/issues/new) to go to the github oracle repository issue submission form.
+To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/issues/new" target="_blank"> here </a> to go to the github oracle repository issue submission form.
 
 ## Objectives
 

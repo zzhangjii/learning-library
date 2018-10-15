@@ -130,7 +130,7 @@ This lab will walk you through the process of connecting your Autonomous Data Wa
 - Learn how to create a simple data visualization project with Oracle Data Visualization Desktop
 - Learn how to access and gain insights from data in the Autonomous Data Warehouse
 
-**Click here to run [Lab 5](LabGuide9.md)**
+**Click here to run [Lab 5](LabGuide5.md)**
 
 
 
@@ -146,7 +146,7 @@ The following labs will let you explore some of the more advanced features of yo
 
 
 
-## Bonus Lab 1:  Managing and Monitoring Autonomous Data Warehouse using the Cloud Service Console
+## Bonus Lab - Lab 6:  Managing and Monitoring Autonomous Data Warehouse using the Cloud Service Console
 For this lab you will watch a couple of demos to show the capabilities available via the Cloud Console and Autonomous Data Warehouse Service Console.
 
 **Key Objectives**:
@@ -155,12 +155,12 @@ For this lab you will watch a couple of demos to show the capabilities available
 - Learn how to recover your data warehouse - if needed
 - Learn how to use the service console to monitor the performance of your Autonomous Data Warehouse
 
-**Click here to run [Bonu Lab 1](LabGuide5.md)**
+**Click here to run [Bonus Lab 1](LabGuide6.md)**
 
 
 
 
-## Bonus Lab 2: Scaling and Performance in Autonomous Data Warehouse
+## Bonus Lab - Lab 7: Scaling and Performance in Autonomous Data Warehouse
 In this lab you will scale up your Oracle Autonomous Data Warehouse instance by adding more CPUs with on interruption to your service. You will watch a recorded demo that shows the performance and concurrency impacts of scaling your service online.
 
 **Key Objectives**:
@@ -168,11 +168,11 @@ In this lab you will scale up your Oracle Autonomous Data Warehouse instance by 
 - Learn how to scale up and down the CPUs and storage used by your Autonomous Data Warehouse
 - See how scaling affects your concurrency and performance
 
-**Click here to run [Bonus Lab 2](LabGuide6.md)**
+**Click here to run [Bonus Lab 2](LabGuide7.md)**
 
 
 
-## Bonus Lab 3:  Using Oracle Machine Learning SQL Notebooks
+## Bonus Lab - Lab 8:  Using Oracle Machine Learning SQL Notebooks
 During this lab you will be using the new Oracle Machine Learning SQL notebook application that is part of your Autonomous Data Warehouse. This browser-based application provides a web interface to run SQL queries and scripts, which can be grouped together within a notebook. Notebooks can be used to build single reports, collections of reports, and dashboards. Oracle Machine Learning provides a simple way to share workbooks with other OML users.
 
 **Key Objectives**:
@@ -182,11 +182,11 @@ During this lab you will be using the new Oracle Machine Learning SQL notebook a
 - Learn how to share notebooks
 - Learn how to create and run SQL scripts
 
-**Click here to run [Bonus Lab 3](LabGuide7.md)**
+**Click here to run [Bonus Lab 3](LabGuide8.md)**
 
 
 
-## Bonus Lab 3: Simple Introduction to Machine Learning Algorithms
+## Bonus Lab - Lab 9: Simple Introduction to Machine Learning Algorithms
 During this lab you will be using the Oracle Machine Learning SQL notebook application to explore how you can use the in-database DBMS_PREDICTIVE_ANALYTICS functionality. DBMS_PREDICTIVE_ANALYTICS provides a set of easy-to-use procedures that simplify the machine learning process.
 
 **Key Objectives**:
@@ -195,11 +195,11 @@ During this lab you will be using the Oracle Machine Learning SQL notebook appli
 - Learn how to use Oracle ML Gallery
 - Learn how to import notebooks into Oracle ML
 
-**Click here to run [Bonus Lab 4](LabGuide8.md)**
+**Click here to run [Bonus Lab 4](LabGuide9.md)**
 
 
 
-## Bonus Lab 5: Using Data Integration Tools with Autonomous Data Warehouse
+## Bonus Lab - Lab 10: Using Data Integration Tools with Autonomous Data Warehouse
 In this lab, you will configure and use Oracle Data Integration Platform Cloud (DIPC) with Autonomous Data Warehouse. This lab follow a typical enterprise data warehouse reference implementation with ETL/ELT batch processing, real time data replication, and data quality review. You will load data from a flat file and a database table using Oracle Data Integrator (ODI) to your Autonomous Data Warehouse. You will replicate data from a database table to Autonomous Data Warehouse using Oracle Golden Gate (OGG). You will review data quality in your Autonomous Data Warehouse using Oracle Enterprise Data Quality (EDQ).
 
 **Key Objectives**:
