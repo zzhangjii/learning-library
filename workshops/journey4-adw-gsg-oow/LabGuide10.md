@@ -9,7 +9,7 @@ September 21, 2018
 
 ## Introduction
 
-In this lab, you will configure and use Oracle Data Integration Platform Cloud (DIPC) with your Autonomous Data Warehouse.  The labs follow a typical enterprise data warehouse reference implementation with ETL/ELT batch processing, real time data replication, and data quality review.  You will load data from a flat file and a database table using Oracle Data Integrator (ODI) to your ADW.  You will replicate data from a database table to ADW using Oracle Golden Gate (OGG).  You will review data quality in ADWC using Oracle Enterprise Data Quality (EDQ).  There are several configuration steps in this lab that will be removed in a soon to be released DIPC version.
+In this lab, you will configure and use Oracle Data Integration Platform Cloud (DIPC) with your Autonomous Data Warehouse.  The labs follow a typical enterprise data warehouse reference implementation with ETL/ELT batch processing, real time data replication, and data quality review.  You will load data from a flat file and a database table using Oracle Data Integrator (ODI) to your ADW.  You will replicate data from a database table to ADW using Oracle Golden Gate (OGG).  You will review data quality in ADW using Oracle Enterprise Data Quality (EDQ).  There are several configuration steps in this lab that will be removed in a soon to be released DIPC version.
 
 ![](./images/DIPC/dipcarch.gif)
 
@@ -47,11 +47,11 @@ To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/iss
 
 -   The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
 
--   Completed Journey4-ADWC Labs 100, 200, and 300.
+-   Completed ADW Labs 1, 2, and 3.
 
 -   VNC Client
 
--   SQL Developer v18.1+
+-   SQL Developer v18.3
 
 # Provision services and copy wallet and sample files
 
@@ -75,7 +75,7 @@ $ sudo -s
 $ su - oracle
 $ mkdir /tmp/dipcadw
 ```
-- Copy the ADWC wallet zip file to /tmp/dipcadw/ using WinSCP or Filezilla.
+- Copy the ADW wallet zip file to /tmp/dipcadw/ using WinSCP or Filezilla.
 - Run these commands to download the sample files and unzip the files.
 ```
 $ wget https://oracle.github.io/learning-library/workshops/journey4-adwc/files/datafiles.zip -O /tmp/dipcadw/datafiles.zip
@@ -85,12 +85,12 @@ $ unzip /tmp/dipcadw/datafiles.zip -d /tmp/dipcadw/
 $ gunzip -- keep /tmp/dipcadw/datafiles/sales.csv.gz
 ```
 
-# Configure the ADWC target for ODI, OGG, and EDQ
+# Configure the ADW target for ODI, OGG, and EDQ
 
 
 
-#### STEP 1: Configure your ADWC database instance
-- Run these commands to configure ODI, OGG, and EDQ in the ADWC target using your SQL Developer Connection for the ADWC admin user from lab 200 to connect to your ADWC instance.
+#### STEP 1: Configure your ADW database instance
+- Run these commands to configure ODI, OGG, and EDQ in the ADW target using your SQL Developer Connection for the ADW admin user from lab 200 to connect to your ADW instance.
 ```
 CREATE USER ODI_USER IDENTIFIED BY WelcomeDIPCADWC1;
 GRANT CREATE SESSION TO ODI_USER;
@@ -140,7 +140,7 @@ EXEC dbms_goldengate_auth.grant_admin_privilege('C##GGADMIN',container=>'all');
 grant dba to c##ggadmin container=all;    
 ```
 
-- Run these commands from the SQL Developer DIPC PDB connection to configure the OGG source database user and table that matches the channels table in ADWC you loaded in lab 300.
+- Run these commands from the SQL Developer DIPC PDB connection to configure the OGG source database user and table that matches the channels table in ADW you loaded in lab 300.
 
 ```
 ALTER SESSION SET CONTAINER="PDB1";

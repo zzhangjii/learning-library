@@ -9,7 +9,7 @@ September 21, 2018
 
 ## Introduction
 
-This lab walks you through the steps to get started using the Oracle Autonomous Data Warehouse Cloud (ADW) on Oracle Infrastructure Cloud (OCI). You will provision a new ADW database and connect to the database using Oracle SQL Developer.
+This lab walks you through the steps to get started using the Oracle Autonomous Data Warehouse (ADW) on Oracle Infrastructure Cloud (OCI). You will provision a new ADW database and connect to the database using Oracle SQL Developer.
 
   <a href="https://raw.githubusercontent.com/millerhoo/journey4-adwc/master/workshops/journey4-adwc/images/ADWC%20HOL%20-%20Provision%20and%20Connect.mp4" target="_blank">**Click here**</a> to watch a video demonstration of provisioning and connecting to a new ADW database.
 
@@ -58,11 +58,11 @@ In this section you will be provisioning an ADW database using the cloud console
 
 ![](./images/100/Picture100-36.JPG)
 
-- Click **Create** on the Autonomous Data Warehouse tile. If it does not appear in your Featured Services, click on All Services and you will find it there.
+- Click **Create** on the Autonomous Data Warehouse tile. If it does not appear in your Featured Services, click on All Services and find it there.
 
 ![](./images/100/Picture100-6.png)
 
-- Select the root compartment, or another compartment of your choice where you will create your new ADW instance. You can learn more about Compartments <a href="https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm" target="_blank"> here. </a>
+- Select the root compartment, or another compartment of your choice where you will create your new ADW instance. You can learn more about Compartments <a href="https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm" target="_blank"> here</a>.
 *Note* - Avoid the use of the ManagedCompartmentforPaaS compartment as this is an Oracle default used for Oracle Platform Services.
 
 ![](./images/100/Compartment.jpg)
@@ -99,7 +99,7 @@ In this section you will be provisioning an ADW database using the cloud console
 
 ![](./images/100/Picture100-32.jpeg)
 
--  You now have created your first Autonomous Data Warehouse Cloud instance. Have a look at your instance's details here including its name, database version, CPU count and storage size.
+-  You now have created your first Autonomous Data Warehouse instance. Have a look at your instance's details here including its name, database version, CPU count and storage size.
 
 ![](./images/100/Picture100-38.jpg)
 
@@ -108,35 +108,22 @@ In this section you will be provisioning an ADW database using the cloud console
 ## Downloading the Connection Wallet
 
 
-As ADW only accepts secure connections to the database, you need to download a wallet file containing your credentials first. The wallet is downloaded from the ADW service console.
+As ADW only accepts secure connections to the database, you need to download a wallet file containing your credentials first. The wallet can be downloaded either from the instance's details page, or from the ADW service console.
 
-
-#### **STEP 3: Sign in to the Service Console**
-
--   In your database's instance details page, click **Service Console**.
-
-![](./images/100/Picture100-34.jpeg)
-
--   This will open a new browser tab for the service console. Sign in to the service console with the following information.
-
-    -   **Username:** admin
-
-    -   **Password:** The administrator password you specified during provisioning
-
-![](./images/100/Picture100-35.jpeg)
 
 #### **STEP 4: Download the Connection Wallet**
 
--   Click the “**Administration**” tab and click “**Download a Connection Wallet**” to download the wallet.
+-   In your database's instance details page, click **DB Connection**.
+
+![](./images/100/Picture100-34.jpeg)
+
+-   Under Download a Connection Wallet, click **Download**.
 
 ![](./images/100/Picture100-15.jpg)
 
--   Specify a password of your choice for the wallet, you will need this password when connecting to the database later. Click **Download** to download the wallet file to your client machine.
+-   Specify a password of your choice for the wallet. You will need this password when connecting to the database via SQL Developer later, and is also used as the JKS keystore password for JDBC applications that use JKS for security. Click **Download** to download the wallet file to your client machine. This password .
 
 ![](./images/100/Picture100-16.jpg)
-
-
-
 
 
 ## Connecting to the database using SQL Developer
@@ -152,27 +139,26 @@ Start SQL Developer and create a connection for your database using the default 
 
 -   Fill in the connection details as below:
 
-    -   **Connection Name:** admin_low
+    -   **Connection Name:** admin_high
 
     -   **Username:** admin
 
-    -   **Password:** The password you specified during provisioning
+    -   **Password:** The password you specified during provisioning your instance
 
     -   **Connection Type:** Cloud Wallet
 
     -   **Configuration File:** Enter the full path for the wallet file you downloaded before, or click the **Browse button** to point to the location of the file.
 
-    -   **Keystore Password:** The password you specified when downloading the wallet from the ADW service console
-
-    -   **Service:** There are 3 pre-configured database services for each database. Pick **&lt;databasename&gt;_low** for this lab. For
+    -   **Service:** There are 3 pre-configured database services for each database. Pick **&lt;databasename&gt;_high** for this lab. For
         example, if you the database you created was named adwfinance, select adwfinance_low as the service.
+
+*Note* : SQL Developer versions prior to 18.3 ask for a **Keystore Password.** Here, you would enter the password you specified when downloading the wallet from ADW.
 
 ![](./images/100/Picture100-18.jpg)
 
 -   Test your connection by clicking the **Test** button, if it succeeds save your connection information by clicking **Save**, then connect to your database by clicking the **Connect** button. An entry for the new connection appears under Connections.
--   If you are behind a VPN or Firewall and this Test fails, please download <a href="https://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html" target="_blank">SQL Developer 18.3</a> or higher. This version and above will allow you to select the "Use HTTP Proxy Host" option for a Cloud Wallet type connection. While creating your new ADW connection here, provide your proxy's Host and Port. If you are unsure where to find this, you may look at your computer's connection settings or contact your Network Administrator.
 
--   Create another connection named as **admin_high** using the same information as above, this time pick **&lt;databasename&gt;_high** as the service name, for example, testdw_high.
+-   If you are behind a VPN or Firewall and this Test fails, please download <a href="https://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html" target="_blank">SQL Developer 18.3</a> or higher. This version and above will allow you to select the "Use HTTP Proxy Host" option for a Cloud Wallet type connection. While creating your new ADW connection here, provide your proxy's Host and Port. If you are unsure where to find this, you may look at your computer's connection settings or contact your Network Administrator.
 
 -   You are now ready to move to the next lab.
 

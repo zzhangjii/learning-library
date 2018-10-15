@@ -231,7 +231,7 @@ The SQL Scratchpad in the previous section is simply a default type notebook wit
 ![](./images/700/Picture700-32.png)
 
 -   Click on the **Edit** button to pop-up the settings dialog for this notebook and enter the information as shown in the image below
-    (*note that the connection information is read-only because this is managed by Autonomous Data Warehouse Cloud*):
+    (*note that the connection information is read-only because this is managed by Autonomous Data Warehouse*):
 
 ![](./images/700/Picture700-33.png)
 

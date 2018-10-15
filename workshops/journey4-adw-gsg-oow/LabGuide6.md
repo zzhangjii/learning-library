@@ -15,7 +15,7 @@ First you will see the Cloud Console and how you can stop, start, delete your in
 
 <a href="https://raw.githubusercontent.com/millerhoo/journey4-adwc/master/workshops/journey4-adwc/images/ADWC%20HOL%20Start%20Stop%20Recover.mp4" target="_blank">ADWC Start, Stop, and Backup/Recover video</a>
 
-You can use the ADWC service console to monitor the performance of your ADWC instance. Service console provides dashboards to monitor the real-time and historical CPU and storage utilization, and database activity like the number of running or queued statements. It also provides Real-Time SQL Monitoring to  look at current and past long running SQL statements in your instance and allows you to cancel long running queries or set thresholds for ADWC to automatically cancel them for you.
+You can use the ADW service console to monitor the performance of your ADW instance. Service console provides dashboards to monitor the real-time and historical CPU and storage utilization, and database activity like the number of running or queued statements. It also provides Real-Time SQL Monitoring to  look at current and past long running SQL statements in your instance and allows you to cancel long running queries or set thresholds for ADW to automatically cancel them for you.
 
 The following demo will walk you through the service console and show you a running workload.
 

@@ -3,25 +3,25 @@
 September 21, 2018
 </td>
 <td class="td-banner">
-# Lab 2: Working with Database Services and Sample Data Sets
+# Lab 2: Working with Data Warehouse Services and the free Sample Data Sets
 </td></tr><table>
 
 
 ## Introduction
 
-In this lab you will explore the provided sample data sets and experiment with the choices of database services that come with your ADW instance.
+In this lab you will explore the provided sample data sets and learn more about the choices of database services that come with your ADW instance.
 
 Autonomous Data Warehouse  provides three database services that you can choose when connecting to your database. These are named as HIGH, MEDIUM, and LOW services and provide different levels of performance and concurrency.
 <blockquote>
-The <strong>HIGH</strong> database service provides the maximum amount of resources for a query, this also means the number of concurrent queries you can run in this service will not be as much as the other services.<br><br>
-
-The <strong>MEDIUM</strong>  database service provides multiple compute and IO resources for a query. This service also provides more concurrency compared to the HIGH database service. <br><br>
-
-The <strong>LOW</strong>  database service provides the least amount of resources for a query, this also means the number of concurrent queries you can run in this service will  be higher than the other services. <br>
+The <strong>HIGH</strong> database service provides the maximum amount of CPU resources for a query, however this also means the number of concurrent queries you can run in this service will not be as much as the other services. The number of concurrent SQL statements that can be run in this service is 3, this number is independent of the number of CPUs in your database.
+<br><br>
+The <strong>MEDIUM</strong> database service provides multiple compute and IO resources for a query. This service provides more concurrency compared to the HIGH database service. The number of concurrent SQL statements that can be run in this service depends on the number of CPUs in your database and scales linearly with the number of CPUs.
+<br><br>
+The <strong>LOW</strong> database service provides the least amount of resources for a query, this also means the number of concurrent queries you can run in this service will  be higher than the other services. <br> The number of concurrent SQL statements that can be run in this service is twice the number of CPUs in your database.
 </blockquote>
 As a user you need to pick the database service based on your performance and concurrency requirements.
 
-The lab will use the LOW and HIGH database services to understand the performance differences between them. The demo will run queries on sample data sets provided out of the box with ADW. ADW provides the Oracle Sales History sample schema and the Star Schema Benchmark (SSB) data set, these data sets are in the SH and SSB schemas respectively.
+The lab will use a HIGH database service to understand the performance and will demo queries on sample data sets provided out of the box with ADW. ADW provides the Oracle Sales History sample schema and the Star Schema Benchmark (SSB) data set, these data sets are in the SH and SSB schemas respectively.
 
 You will run queries on the SSB data set which is a 1TB data set with one fact table with around 6 billion rows, and several dimension tables.
 
@@ -31,78 +31,33 @@ To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/iss
 
 - Learn about the different levels of ADW database service (HIGH, MEDIUM, LOW)
 - Learn about the Star Schema Benchmark (SSB) and Sales History (SH) sample data sets
-- See how the different levels of database service affect performance and concurrency
-
+- Run a query on an ADW sample dataset
 
 ## Required Artifacts
 
--   The following lab requires an Oracle Public Cloud account. You may your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
+-   The following lab requires an Oracle Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
 
 -   Oracle SQL Developer (see Lab 1 for more specifics on the version of SQL Developer and how to install and configure it).
 
 
-# Connect and Query with the LOW database service
-
- Note: For this demonstration to work, your ADW instance should be configured with at least 2 OCPUs.  With 1 OCPU, you will not see much difference in performance.
-
-
-#### **STEP 1: Open up SQL Developer and connect to the admin_low database connection you previously created**
-
--   You can do this via expanding the list of connections and double-clicking on the admin_low connection.
-
-    ![](images/200/snap0014314.jpg)
-
--   Copy and paste <a href="./scripts/200/low_ssb_query.txt" target="_blank">this code snippet</a> to SQL Developer worksheet. Take a moment to examine the script. Then click the **Run Script** button to run it. Make sure you click the Run Script button in SQL Developer so that all the rows are displayed on the screen.
-
-    ![](./images/200/snap0014315.jpg)
-
--   Make a note of the response time.
-
-    ![](./images/200/snap0014316.jpg)
-
-
-# Connect and Query with the HIGH database service
-
-
-#### **STEP 2: Open up SQL Developer and connect to the admin_high database connection you previously created**
+#### **STEP 1: Open up SQL Developer and connect to the admin_high database connection you previously created**
 
 -   You can do this via expanding the list of connections and double-clicking on the admin_high connection.
 
-    ![](images/200/snap0014317.jpg)
+    ![](images/200/snap0014314.jpg)
 
--   Copy and paste <a href="./scripts/200/high_ssb_query.txt" target="_blank">this code snippet</a> to SQL Developer worksheet. This query is basically the same as the previous one except the comment after the select keyword and the table alias.
+-   Copy and paste <a href="./scripts/200/low_ssb_query.txt" target="_blank">this code snippet</a> to your SQL Developer worksheet. This query will run on the Star Schema Benchmark, one of the two ADW sample data sets that may be accessed from any ADW instance. Take a moment to examine the script. Then click the **Run Script** button to run it. Make sure you click the Run Script button in SQL Developer so that all the rows are displayed on the screen.
 
--   Then click the **Run Script** button to run it. Make sure you click the Run Script button in SQL Developer so that all the rows are displayed on the screen.
+![](./images/200/snap0014315.jpg)
 
-    ![](./images/200/snap0014323.jpg)
+-   Take a look at the output response from your Autonomous Data Warehouse as well as the response time.
 
--   Make a note of the response time.  In this example, the query with the LOW database service finished in 5.5 seconds compared to 3.4 seconds for the HIGH database service.
-
-    ![](images/200/snap0014320.jpg)
-
--   A query running in the HIGH database service can use more resources and run faster compared to a query running in the LOW database service. As you scale up the compute capacity of your ADW service you will realize that the queries will get faster in the HIGH database service.
-
-# Explore the query results caching
-ADW also caches the results of a query for you. If you run the same queries again you will see that they will run much faster.
-
-
-#### **STEP 3: Run the previous query you just ran**
-
--   Click the **Run Script** button to run it. Make sure you click the Run Script button in SQL Developer so that all the rows are displayed on the screen.
-
-    ![](./images/200/snap0014323.jpg)
-
--   Make a note of the response time.  
-
-    ![](images/200/snap0014324.jpg)
-
--   This time you will see that the query finishes in less than a second.
-
+-   When possible, ADW also **caches** the results of a query for you. If you run identical queries more than once, you will notice a much lower response time when your results have been cached.
 
 # Explore additional queries with the Sample Schemas
 
 
-#### **STEP 4: Experiment with running other sample queries**
+#### **STEP 2: Experiment with running other sample queries**
 
 -   You can find more sample queries to run in the ADW documentation.  Try some of the queries from <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/sample-queries.html" target="_blank">here</a>.
 
