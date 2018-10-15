@@ -56,6 +56,30 @@
                 "filename": "LabGuide800BuildingMicroservicesOnATP.md",
                 "title": "Lab 800: Building microservices on ATP",
                 "description": "Instructions to build and provision application stack consisting of microservices"
+            },
+            {
+                "number": "900",
+                "filename": "LabGuide900ConfigureOCI-CLI.md",
+                "title": "Lab 800: Configure Oracle Cloud Infrastructure Command Line Interface",
+                "description": "Instructions to to configure Oracle Cloud Infrastructure Command Line Interface"
+            },
+            {
+                "number": "1000",
+                "filename": "LabGuide1000ConfigureOCI-CLI.md",
+                "title": "Lab 1000: Work in Progress",
+                "description": "Work in Progress"
+            },
+            {
+                "number": "Appendix",
+                "filename": "Appendix.md",
+                "title": "Handy docker commands you may need",
+                "description": "Handy docker commands you may need to complete LabGuide800BuildingMicroservicesOnATP"
+            },
+            {
+                "number": "DockerImage",
+                "filename": "DockerImage.md",
+                "title": "Read me for Docker Images",
+                "description": "Read me for Docker Images"
             }
         ]
     }

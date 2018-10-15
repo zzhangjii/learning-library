@@ -98,6 +98,23 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - To build a docker container running node.js microservice
 - Deploy it on an ATP service
 
+## Lab 900: Configure Oracle Cloud Infrastructure Command Line Interface
+
+**Documentation**: [LabGuide900ConfigureOCI-CLI.md](LabGuide900ConfigureOCI-CLI.md)
+
+**Objectives**:
+
+- Configure Oracle Cloud Infrastructure Command Line Interface
+- Run examples using OCI-CLI for Autonomous Transaction Processing database
+
+## Lab 1000: Work in Progress!
+
+**Documentation**: [LabGuide1000.md](LabGuide1000.md)
+
+**Objectives**:
+
+- Work in Progress! 
+
 ## Appendix
 
 **Documentation**: [Appendix.md](Appendix.md)
@@ -105,3 +122,9 @@ This workshop walks you through all the steps to get started using the **Oracle 
 **Objectives**:
 
 - Handy docker commands you may need while doing <a href="./LabGuide800BuildingMicroservicesOnATP.md" target="_blank">LabGuide800BuildingMicroservicesOnATP.md</a>
+
+**Documentation**: [DockerImage.md](DockerImage.md)
+
+**Objectives**:
+
+- Work in Progess!
