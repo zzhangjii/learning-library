@@ -3,7 +3,7 @@
 September 21, 2018
 </td>
 <td class="td-banner">
-# Bonus Lab 5: Using Oracle Data Integration Platform Cloud with your Autonomous Data Warehouse
+# Bonus Lab 10: Using Oracle Data Integration Platform Cloud with your Autonomous Data Warehouse
 </td></tr><table>
 
 
