@@ -6,11 +6,15 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Practice-1: Open Gitbash on your Desktop](#practice-1-open-gitbash-on-your-desktop)
+[Practice 1: Setup Windows 10 VM](#practice-1-setup-windows-10-vm)
 
-[Practice 2: Access the GPU instance](#practice-2-access-the-gpu-instance)
+[Practice 2: Open Gitbash on your Desktop](#practice-1-open-gitbash-on-your-desktop)
 
-[Practice 3: Use TensorFlow to recognize the visual contents of images](#practice-3-use-tensorflow-to-recognize-the-visual-contents-of-images)
+[Practice 3: Access the GPU instance](#practice-2-access-the-gpu-instance)
+
+[Practice 4: Use TensorFlow to recognize the visual contents of images](#practice-3-use-tensorflow-to-recognize-the-visual-contents-of-images)
+
+[Practice 5: Try Oracle Cloud Infrastructure for FREE](#practice-5-try-oracle-cloud-infrastructure-for-free)
 
 ## Overview
 This is a demo for showcasing how TensorFlow Machining Learning (ML) workload running inside Nvidia-Docker can leverage OCI GPU instances.
@@ -28,7 +32,14 @@ The topics touched upon by this demo are:
 - SSH Client
 - Download the SSH key into your desktop from this link: https://bit.ly/2Ef9GE4
 
-## Practice-1: Open Gitbash on your Desktop
+
+## Practice 1: Setup Windows 10 VM 
+
+1) Each attendee is provided with a laptop with a Virtual Box. In the Virtual Box, Please start the Windows 10 VM (name of the VM is same as the ID of this Hands on Lab - HOL6379)
+
+<img width="800" alt="image001" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/OOW-2018/EdgeLab/media/image1.png">
+
+## Practice 1: Open Gitbash on your Desktop
 
 1) Open Gitbash on your desktop. It is already installed for you. 
 
@@ -80,3 +91,10 @@ This will show that the GPU is actually getting used by the process.  Keep that 
 2) Upload the jpeg image download from the **Pre-requisites** step. Once you click upload, the app will run the TensorFlow inference program in the GPU and display the inferences and the time taken to process in the GPU(s).
 
 ![](img/image005.png)
+
+## Practice 5: Try Oracle Cloud Infrastructure for FREE 
+
+Sign up for the free Oracle Cloud Infrastructure trial account. 
+https://cloud.oracle.com/tryit
+
+<img width="800" alt="image001" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/OOW-2018/EdgeLab/media/image34.png">
