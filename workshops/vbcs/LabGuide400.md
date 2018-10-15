@@ -41,7 +41,7 @@ Next we'll add a page to display inventory item details and once that is complet
 
 - Select the GET endpoint of the Inventory Business Object and click **Next**.
 
-![](images/200/LabGuide200-d85827f1.png)
+![](images/400/LabGuide400-d85827f2.png)
 
 - This will bring us to the **Page Detail** step where we can select the fields we would like to make available for creating new records. We'll select the following:
 
@@ -124,7 +124,7 @@ We will now add the Service Connection through which data will be retrieved from
 
 ![](images/400/LabGuide400-dc4ef0ff.png)
 
-- You'll see on the next screen that AVBCS populates some fields with information from the address we have provided. The **Service Name** and **Service ID** are filled in for us. Click on the **Test** tab to try our connection and make sure it works.
+- You'll see on the next screen that VBCS populates some fields with information from the address we have provided. The **Service Name** and **Service ID** are filled in for us. Click on the **Test** tab to try our connection and make sure it works.
 
   ![](images/400/serviceName.png)
 
