@@ -23,6 +23,17 @@ This workshop walks you through all the steps to get started using the **Oracle 
  - Use Oracle Data Visualization Desktop (DVD) with ADW
  - Use Oracle Data Integration Platform Cloud (DIPC) with ADW
 
+# How to Get Your Free Cloud Trial Account
+If you already have an Oracle Cloud account then you can skip this section. If you don't have an Oracle Cloud account then you can quickly and easily sign up for a free trial account that provides:
+
+$300 of free credits good for up to 3500 hours of Oracle Cloud usage
+Credits can be used on all eligible Cloud Platform and Infrastructure services for the next 30 days
+Your credit card will only be used for verification purposes and will not be charged unless you 'Upgrade to Paid' in My Services
+Click on the image below to go to the trial sign-up page which will allow you to request your free cloud account:
+
+[![](http://www.oracle.com/webfolder/technetwork/tutorials/learning_path/images/700705-auto-dw-social-bn728_-152.png)](https://myservices.us.oraclecloud.com/mycloud/signup?language=en&sourceType=APMK180704P0003:APACVT082918:ie:mt)
+
+Once your trial account is created, you will receive a Welcome to Oracle Cloud email that contains your cloud account password along with links to useful collateral. To sign into the Oracle Cloud, copy and paste this URL into a browser window: [https://cloud.oracle.com](https://cloud.oracle.com)
 
 
 # Workshop Overview
