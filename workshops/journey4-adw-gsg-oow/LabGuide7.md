@@ -3,7 +3,7 @@
 September 21, 2018
 </td>
 <td class="td-banner">
-# Bonus Lab 2: Scaling and Performance in Your Autonomous Data Warehouse
+# Bonus Lab 7: Scaling and Performance in Your Autonomous Data Warehouse
 </td></tr><table>
 
 
