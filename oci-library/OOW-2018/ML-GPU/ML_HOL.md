@@ -8,11 +8,11 @@
 
 [Practice 1: Setup Windows 10 VM](#practice-1-setup-windows-10-vm)
 
-[Practice 2: Open Gitbash on your Desktop](#practice-1-open-gitbash-on-your-desktop)
+[Practice 2: Open Gitbash on your Desktop](#practice-2-open-gitbash-on-your-desktop)
 
-[Practice 3: Access the GPU instance](#practice-2-access-the-gpu-instance)
+[Practice 3: Access the GPU instance](#practice-3-access-the-gpu-instance)
 
-[Practice 4: Use TensorFlow to recognize the visual contents of images](#practice-3-use-tensorflow-to-recognize-the-visual-contents-of-images)
+[Practice 4: Use TensorFlow to recognize the visual contents of images](#practice-4-use-tensorflow-to-recognize-the-visual-contents-of-images)
 
 [Practice 5: Try Oracle Cloud Infrastructure for FREE](#practice-5-try-oracle-cloud-infrastructure-for-free)
 
@@ -39,13 +39,13 @@ The topics touched upon by this demo are:
 
 <img width="800" alt="image001" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/OOW-2018/EdgeLab/media/image1.png">
 
-## Practice 1: Open Gitbash on your Desktop
+## Practice 2: Open Gitbash on your Desktop
 
 1) Open Gitbash on your desktop. It is already installed for you. 
 
 ![](img/gitbash001.png)
 
-## Practice 2: Access the GPU instance
+## Practice 3: Access the GPU instance
 
 1) On Gitbash terminal use SSH command to connect to the GPU instance:
 
@@ -82,7 +82,7 @@ _`<<Hit enter to skip>>`_
 ```
 This will show that the GPU is actually getting used by the process.  Keep that screen open. 
 
-## Practice 3: Use TensorFlow to recognize the visual contents of images
+## Practice 4: Use TensorFlow to recognize the visual contents of images
 
 1) Go back to your broswer where you opened the application by typing: `http://129.213.32.143` and click on **Browser** at the uper left corner of your screen:
 
