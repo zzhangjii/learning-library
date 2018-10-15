@@ -9,7 +9,7 @@ September 21, 2018
 
 ## Introduction
 
-In this lab, you will configure and use Oracle Data Integration Platform Cloud (DIPC) with your Autonomous Data Warehouse.  The labs follow a typical enterprise data warehouse reference implementation with ETL/ELT batch processing, real time data replication, and data quality review.  You will load data from a flat file and a database table using Oracle Data Integrator (ODI) to your ADW.  You will replicate data from a database table to ADW using Oracle Golden Gate (OGG).  You will review data quality in ADWC using Oracle Enterprise Data Quality (EDQ).  There are several configuration steps in this lab that will be removed in a soon to be released DIPC version.
+In this lab, you will configure and use Oracle Data Integration Platform Cloud (DIPC) with your Autonomous Data Warehouse.  The labs follow a typical enterprise data warehouse reference implementation with ETL/ELT batch processing, real time data replication, and data quality review.  You will load data from a flat file and a database table using Oracle Data Integrator (ODI) to your ADW.  You will replicate data from a database table to ADW using Oracle Golden Gate (OGG).  You will review data quality in ADW using Oracle Enterprise Data Quality (EDQ).  There are several configuration steps in this lab that will be removed in a soon to be released DIPC version.
 
 ![](./images/DIPC/dipcarch.gif)
 
@@ -75,7 +75,7 @@ $ sudo -s
 $ su - oracle
 $ mkdir /tmp/dipcadw
 ```
-- Copy the ADWC wallet zip file to /tmp/dipcadw/ using WinSCP or Filezilla.
+- Copy the ADW wallet zip file to /tmp/dipcadw/ using WinSCP or Filezilla.
 - Run these commands to download the sample files and unzip the files.
 ```
 $ wget https://oracle.github.io/learning-library/workshops/journey4-adwc/files/datafiles.zip -O /tmp/dipcadw/datafiles.zip
@@ -85,12 +85,12 @@ $ unzip /tmp/dipcadw/datafiles.zip -d /tmp/dipcadw/
 $ gunzip -- keep /tmp/dipcadw/datafiles/sales.csv.gz
 ```
 
-# Configure the ADWC target for ODI, OGG, and EDQ
+# Configure the ADW target for ODI, OGG, and EDQ
 
 
 
-#### STEP 1: Configure your ADWC database instance
-- Run these commands to configure ODI, OGG, and EDQ in the ADWC target using your SQL Developer Connection for the ADWC admin user from lab 200 to connect to your ADWC instance.
+#### STEP 1: Configure your ADW database instance
+- Run these commands to configure ODI, OGG, and EDQ in the ADW target using your SQL Developer Connection for the ADW admin user from lab 200 to connect to your ADW instance.
 ```
 CREATE USER ODI_USER IDENTIFIED BY WelcomeDIPCADWC1;
 GRANT CREATE SESSION TO ODI_USER;
@@ -177,7 +177,7 @@ $ sudo -s
 $ su - oracle
 $ cd /u01/app/oracle/suite/oci/network/admin
 ```
-- Edit the tnsnames.ora file and add entries for your CDB, PDB, and ADWC.  Copy the value for low, medium, and high services from /tmp/dipcadw/tnsnames.ora into /u01/app/oracle/suite/oci/network/admin/tnsnames.ora.  
+- Edit the tnsnames.ora file and add entries for your CDB, PDB, and ADW.  Copy the value for low, medium, and high services from /tmp/dipcadw/tnsnames.ora into /u01/app/oracle/suite/oci/network/admin/tnsnames.ora.  
 
 - Create an entry for your CDB by copying the existing DIPC entry 'target' and modify the name and service_name to the CDB.  It should look similar to this but have your specific information.
 
@@ -231,7 +231,7 @@ WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA = (DIRECTORY="/tmp/dipc
 SSL_SERVER_DN_MATCH=yes
 ```
 
-- Test your sqlnet connections to the CDB and ADWC.
+- Test your sqlnet connections to the CDB and ADW.
 
 ```
 $ export TNS_ADMIN=/u01/app/oracle/suite/oci/network/admin/
@@ -401,7 +401,7 @@ info all
 ```
 edit param adwcrep
 ```
-- add the following lines that replicate to the ADWC table admin.channels and save the file
+- add the following lines that replicate to the ADW table admin.channels and save the file
 ```
 replicat adwcrep
 useridalias ggadmin_tgt
@@ -429,7 +429,7 @@ REPLICAT    RUNNING     ADWCREP     00:00:00      00:00:06
 INSERT INTO "ADWC_REPL"."CHANNELS" (CHANNEL_ID, CHANNEL_DESC, CHANNEL_CLASS, CHANNEL_CLASS_ID, CHANNEL_TOTAL, CHANNEL_TOTAL_ID) VALUES ('11', 'test', 'Others', '11', 'Channel total', '1');
 commit;
 ```
-- Check the target ADWC table for the new data
+- Check the target ADW table for the new data
 ```
 select * from admin.channels;
 CHANNEL_ID CHANNEL_DESC         CHANNEL_CLASS        CHANNEL_CLASS_ID CHANNEL_TOTAL CHANNEL_TOTAL_ID
@@ -443,7 +443,7 @@ CHANNEL_ID CHANNEL_DESC         CHANNEL_CLASS        CHANNEL_CLASS_ID CHANNEL_TO
 
 6 rows selected.
 ```
-- You are now replicating the channels table to ADWC and can modify the extract and replicat parameters to include other schemas and tables.
+- You are now replicating the channels table to ADW and can modify the extract and replicat parameters to include other schemas and tables.
 
 # Use ODI with Your ADW
 
@@ -452,7 +452,7 @@ Oracle Data Integrator provides a fully unified solution for building, deploying
 
 
 #### STEP 1: Configure and connect the VNC service on your DIPC server.  
-- You will use ODI Studio through a VNC connection and ssh tunnel with putty.  Follow these [instructions](https://docs.oracle.com/en/cloud/paas/data-integration-platform-cloud/using/connecting-odi-studio-vnc-server.html#GUID-7210212B-C58C-48AC-B581-DBFD7F58B552) to create a ssh tunnel and connect to your DIPC server using VNC.  VNCServer is installed on the DIPC server and must be started first.  Be sure to use the oracle user when starting the VNCServer service and disable screen lock and screen saver after connecting the first time or you will be locked out and need to restart VNC on the server.  Be sure that you made the changes to /u01/jdk/jre/lib/security/java.security earlier in this lab to allow ODI to work with ADWC.
+- You will use ODI Studio through a VNC connection and ssh tunnel with putty.  Follow these [instructions](https://docs.oracle.com/en/cloud/paas/data-integration-platform-cloud/using/connecting-odi-studio-vnc-server.html#GUID-7210212B-C58C-48AC-B581-DBFD7F58B552) to create a ssh tunnel and connect to your DIPC server using VNC.  VNCServer is installed on the DIPC server and must be started first.  Be sure to use the oracle user when starting the VNCServer service and disable screen lock and screen saver after connecting the first time or you will be locked out and need to restart VNC on the server.  Be sure that you made the changes to /u01/jdk/jre/lib/security/java.security earlier in this lab to allow ODI to work with ADW.
 
 - To start ODI run this command in a terminal window.  Click 'No' for importing preferences.
 ```
@@ -467,7 +467,7 @@ Connect to the repository.
 ```
 ![](./images/DIPC/dipcodi1.gif)
 
-#### STEP 2: Create a New Data Server for ADWC
+#### STEP 2: Create a New Data Server for ADW
 - Navigate to the Topology tab in ODI, find the Oracle technology, right click, create a 'New Data Server'
 ```
 Name: ADWC_DIPC_MED
@@ -484,7 +484,7 @@ oracle.net.wallet_location = (SOURCE = (METHOD = file) (METHOD_DATA = (DIRECTORY
 ![](./images/DIPC/dipcodi2.gif)
 - Click 'Test Connection' and test both the local and OracleDIAgent agents for success and Ok.
 
-#### STEP 3: Create a New Physical Schema for ADWC
+#### STEP 3: Create a New Physical Schema for ADW
 - Right click on the ADWC_DIPC_MED data server and add a new physical schema
 ```
 Schema: ADMIN
@@ -495,7 +495,7 @@ Work Schema: ODI_USER
 Logical Schema: ADWC_ODI
 ```
 - Click the save icon to save the physical schema
-#### STEP 4: Add a new model for ADWC
+#### STEP 4: Add a new model for ADW
 - Click on the 'Designer' tab and expand the 'Models' ribbon then click on the folder to select 'New Model'
 - Enter the following details
 ```
@@ -509,7 +509,7 @@ Logical Schema: ADWC_ODI
 
 
 #### STEP 5: Import the sample project and run mappings
-- A sample project has been provided with file and table mappings to ADWC or you can build your own.  Open the Designer tab and import the sample project from /tmp/dipcadw/SmartExport.xml
+- A sample project has been provided with file and table mappings to ADW or you can build your own.  Open the Designer tab and import the sample project from /tmp/dipcadw/SmartExport.xml
 
 ![](./images/DIPC/dipcodi4.gif)
 
@@ -565,7 +565,7 @@ Oracle EDQ provides a comprehensive data quality management environment that is 
 
 ![](./images/DIPC/dipcedq4.gif)
 
-#### STEP 2: Create a data store for ADWC
+#### STEP 2: Create a data store for ADW
 - Create a Data Store for ADWC by right clicking on Data Store
 
 ![](./images/DIPC/dipcedq5.gif)
