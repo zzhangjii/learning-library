@@ -423,3 +423,45 @@ The following commands create a config file at expected default name and locatio
 
 > ![](media/image22.png)
 
+
+## Practice 6: Kubernetes Dashboard
+
+### Overview
+
+Kubernetes Dashboard is a web-based user interface that you can use as an alternative to the Kubernetes kubectl command line tool to:
+
+-   deploy containerized applications to a Kubernetes cluster
+-   troubleshoot your containerized applications
+
+You use the Kubernetes Dashboard to get an overview of applications running on a cluster, as well as to create or modify individual Kubernetes resources. The Kubernetes Dashboard also reports the status of Kubernetes resources in the cluster, and any errors that have occurred. Note that to use the Kubernetes Dashboard, it must have been enabled when the cluster was initially created.
+
+In contrast to the Kubernetes Dashboard, Container Engine for Kubernetes enables you to create and delete Kubernetes clusters and node pools, and to manage the associated compute, network, and storage resources.
+
+1) If you haven't done so already, download the cluster's `kubeconfig` configuration file and set the KUBECONFIG environment variable (see Practice 5) 
+
+2) On **Clusters** detail page of OCI Console, navigate to **Getting Started** where the steps are provided to connect to the Kubernetes Dashboard. 
+
+![](media/image24.png)
+
+	In a bash terminal (Terminal in MacOS or GitBash for Windows) 
+	`kubectl proxy` 
+
+![](media/image23.png)
+
+	Open the browser and go to `http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/`
+	Provide the kubeconfig file for authentication. 
+
+![](media/image25.png)
+
+![](media/image26.png)
+
+Navigate to Overview to take a look at the current deployments in the cluster. You can work around to take a look at current cluster worker nodes and its details. 
+
+
+
+
+
+
+
+
+
