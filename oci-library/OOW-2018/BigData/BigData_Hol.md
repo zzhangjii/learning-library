@@ -72,9 +72,15 @@ For instance: For **Username** *OOW10*  use **Compartment** *OOW-HOL10*
 
 ![](media/image6.png)
 
+5) Open Gitbash in your windows 10 VM. Its already installed. You will use Gitbash for *ssh*. 
+
+![](media/gitbash1.png)
+
 ## Practice 3: Cloudera Enterprise Data Hub on OCI 
 
 Each attendee group is provided with a pre-installed Cloudera EDH on OCI. The setup architecture is provided below. 
+
+![](media/arch1.png)
 
 The setup consists of three worker nodes, one utility node and a bastion host. The utility node also hosts the Cloudera Manager, which we will use to manage the cluster. 
 
@@ -147,9 +153,18 @@ Cluster startup takes ~3m.  Proceed to SSH login while this runs.
 ![](media/image14.png)
 
 4) Open GitBash in your Windows and SSH to the utility Node. 
+Download an ssh private key from [here](https://bit.ly/2NDfXc4) and use this id_rsa key to log in to the Utility node. Make sure to provide the complete path for the key below.  
+
 ```
 $ ssh -i id-rsa opc@<Utility_Node_PublicIP> 
 ```
+**NOTE**
+```
+Any persmission issues, 
+$chmod 0600 id_rsa 
+Try log in again. 
+```
+
 5) Confirm is the cluster is started in the Cloud Manager Console. 
 
 ![](media/image15.png)
