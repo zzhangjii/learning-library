@@ -90,6 +90,10 @@ oci setup config
 
 ![](./images/1000/lab1000-4.png)
 
+This process can take upwards of 10 minutes while everything is configured
+
+
+
 
 
 
