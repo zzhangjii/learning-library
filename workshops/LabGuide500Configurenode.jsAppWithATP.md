@@ -35,13 +35,13 @@ In order to create a VCN we need to select a Compartment from the List Scope. Fo
 
 ![](./images/500/Picture500-14.png)
 
-- THis will bring Create Virtual CLoud Netowrk screen where you will specify the configurations.
+- This will bring Create Virtual CLoud Netowrk screen where you will specify the configurations.
 
 ![](./images/500/Picture500-15.png)
 
-- Enter the following the the screen
+- Enter the following in Create Virtual Cloud Network window
 
-**Create In Compartment**: Select the sandbox compartment, Demo. By default, this field displays your current compartment.
+**Create In Compartment**: Select the compartment, **Demo**. By default, this field displays your current compartment.
 **Name**: Enter a name for your cloud network.
 Check on **Create Virtual Cloud Network Plus Related Resources** option. By selecting this option, you will be creating a VCN with only public subnets. The dialog expands to list the items that will be created with your cloud network.
 
@@ -67,11 +67,12 @@ A confirmation page displays the details of the cloud network that you just crea
 
 ![](./images/500/Picture500-1.png)
 
+- In order to create Compute Instance we need to select a Compartment. Select Demo Compartment which we created in Lab100
+
 - Click on Create Instance
 
 ![](./images/500/Picture500-2.png)
 
-- In order to create Compute Instance we need to select a Compartment. Select Demo Compartment which we created in Lab100
 
 Enter the following to Create Linux Instance
 
