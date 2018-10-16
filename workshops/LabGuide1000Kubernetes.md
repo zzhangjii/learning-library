@@ -38,7 +38,7 @@ To **log issues**, click [here](https://github.com/cloudsolutionhubs/autonomous-
 
 ## Steps
 
-### **STEP 1: Pull the image and Setup OCI**
+### **STEP 1: Pull the Docker image**
 
 - First we will pull down the docker image using:
 
@@ -63,22 +63,48 @@ docker run -it -v ~/tmp/wallet:/opt/oracle/database/wallet -p 3050:3050 NAMEOFIM
 
 ![](./images/1000/lab1000-1.png)
 
+### **STEP 2: Setup OCI config**
+
 - Once in the image we will setup OCI-CLI like we did in Lab900:
 
 ```
 oci setup config
 ```
 
-- Follow the prompts supplying the proper information:
-
-![](./images/1000/lab1000-2.png)
-
-- Add the public key generated in the container to the public keys in your User's list:
-
-![](./images/1000/lab1000-3.png)
+- The command prompts you for the information required for the config file and the API public/private keys. The setup dialog generates an API key pair and creates the config file.
 
 
-### **STEP 2: Deploy the Infratstructure**
+![](./images/900/OCI-Setup-Config.png)
+
+- Once you run the above command, you will need to enter the following:
+
+    - **Enter a location for your config [/Users/tejus/.oci/config]**: Press Return key
+    - **Enter a user OCID**: This is located on your user information page in OCI console
+
+    Login to OCI console and click on Menu, Identity and Users. Click on the User and navigate to User Details page. Copy the User OCID.
+
+    ![](./images/900/UserOCID1.png)
+
+    ![](./images/900/UserOCID2.png)
+
+
+    - **Enter a tenancy OCID**: This is located in the bottom left of your OCI console
+    
+    Login to OCI console click on User icon on top right corner on the page and click on Tenancy and copy Tenancy OCID
+
+    ![](./images/900/TenancyOCID1.png)
+
+    ![](./images/900/TenancyOCID2.png)
+
+    - **Enter a region (e.g. eu-frankfurt-1, uk-london-1, us-ashburn-1, us-phoenix-1)**: Select a region
+
+    - **Do you want to generate a new RSA key pair? (If you decline you will be asked to supply the path to an existing key.) [Y/n]**: Y
+    - **Enter a directory for your keys to be created [/Users/tejus/.oci]**: Press Return key
+    - **Enter a name for your key [oci_api_key]**: Press Return key
+    - **Enter a passphrase for your private key (empty for no passphrase)**: Press Return key
+    
+
+### **STEP 3: Deploy the Infratstructure**
 
 - This step is entirely automated and only requires the user to add the compartment ID to deploy the infrastructure
 
@@ -91,6 +117,25 @@ oci setup config
 ![](./images/1000/lab1000-4.png)
 
 This process can take upwards of 10 minutes while everything is configured
+
+- When it is over you will see a message like below:
+
+![](./images/1000/nodeUpdate.png)
+
+
+### **STEP 4: Deploy the Node Application**
+
+- First we will git clone the Node application named aOne to our container:
+
+```
+git clone https://github.com/cloudsolutionhubs/aOne-oow.git
+```
+
+![](./images/1000/gitCloneaOne.png)
+
+- Second we .....
+
+
 
 
 
