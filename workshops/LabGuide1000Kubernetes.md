@@ -58,7 +58,7 @@ mkdir -p ~/tmp/wallet
 Note: With this run command we are mapping the local directory ~/tmp/wallet/ to the directory in the image /opt/oracle/database/wallet
 
 ```
-docker run -it -v ~/tmp/wallet:/opt/oracle/database/wallet NAMEOFIMAGE sh
+docker run -it -v ~/tmp/wallet:/opt/oracle/database/wallet -p 3050:3050 NAMEOFIMAGE sh
 ```
 
 ![](./images/1000/lab1000-1.png)

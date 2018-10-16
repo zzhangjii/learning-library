@@ -123,7 +123,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 
 #### Lab 1000: Work in Progress!
 
-**Documentation**: [LabGuide1000.md](LabGuide1000.md)
+**Documentation**: [LabGuide1000Kubernetes.md](LabGuide1000Kubernetes.md)
 
 **Objectives**:
 

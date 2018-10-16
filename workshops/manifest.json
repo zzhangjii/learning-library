@@ -65,9 +65,9 @@
             },
             {
                 "number": "1000",
-                "filename": "LabGuide1000ConfigureOCI-CLI.md",
-                "title": "Lab 1000: Work in Progress",
-                "description": "Work in Progress"
+                "filename": "LabGuide1000Kubernetes.md",
+                "title": "Lab 1000: Kubernetes",
+                "description": "Deploy a Node.js application on a Kubernetes cluster"
             },
             {
                 "number": "Appendix",
