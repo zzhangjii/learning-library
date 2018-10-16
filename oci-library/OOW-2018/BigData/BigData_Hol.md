@@ -14,7 +14,9 @@
 
 [Practice 4: Log in to Cloudera Manager](#practice-4-log-in-to-cloudera-manager)
 
-[Practice 5: Benchmarking with Teragen/Terasort)(#practice-5-benchmarking-with-teragen/terasort)
+[Practice 5: Benchmarking with Teragen/Terasort](#practice-5-benchmarking-with-teragen/terasort)
+
+[Try Oracle Cloud Infrastructure for FREE](#try-oracle-cloud-infrastructure-for-free)
 
 ## Overview
 
@@ -315,3 +317,16 @@ Confirm that we want to re-deploy client configuration and click the blue button
 ```
 $ hadoop jar hadoop-mapreduce-examples.jar teragen -Ddfs.replication=1 -Dmapreduce.job.maps=120 10000000000 /user/opc/<UNIQUE_ID>/1T_terasort_in/
 ```
+![](media/image49.png)
+
+![](media/image50.png)
+
+![](media/image51.png)
+
+## Try Oracle Cloud Infrastructure for FREE 
+
+Sign up for the free Oracle Cloud Infrastructure trial account. 
+https://cloud.oracle.com/tryit
+
+![](media/image52.png) 
+
