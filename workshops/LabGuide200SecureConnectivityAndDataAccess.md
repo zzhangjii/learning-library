@@ -15,6 +15,7 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 ## Required Artifacts
 
 - Please ensure you are connected to your cloud account and have provisioned an ATP instance. Refer <a href="./LabGuide100ProvisionAnATPDatabase.md" target="_blank">here</a> on how provision an ATP database.
+- You have installed Oracle SQL Developer 18.3.
 
 
 ## Steps
@@ -23,30 +24,28 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 
 - Log into your cloud account using your tenant name, username and password.
 
+- Click on Menu and select Autonomous Transaction Processing
+
 - On the ATP console, select your ATP instance provisioned in <a href="./LabGuide100ProvisionAnATPDatabase.md" target="_blank">LabGuide100ProvisionAnATPDatabase.md</a>.
 
 ![](./images/200/Picture200-1.png)
 
-- Click Service Console button and provide username (admin) and password (WElcome_123#) and click on Sign in.
+- Click on  **DB Connection** to open up Database Connection pop-up window
 
 ![](./images/200/Picture200-2.png)
 
-![](./images/200/Picture200-3.png)
-
-- Once you sign in you will be navigated to ATP overview page
-
-![](./images/200/Picture200-4.png)
-
-- From the Admin panel, select ‘Download Client Credentials’. Provide a keystore password and download the file to your local machine. You will need this file and keystore password to connect to the database later.
-
-![](./images/200/Picture200-6.png)
-
+- Click on **Download** to supply a password for the wallet and download your client credentials.
 #### Please use below Keystore password to download the client credentials
+
 ```
 WElcome_123#
 ```
 
-![](./images/200/Picture200-5.png)
+![](./images/200/Picture200-3.png)
+
+- Once you have downloaded your wallet, you will be navigated to ATP overview page
+
+![](./images/200/Picture200-4.png)
 
 - The credentials zip file contains the encryption wallet, Java keystore and other relevant files to make a secure TLS 1.2 connection to your database from client applications. Store this file in a secure location.
 
@@ -64,13 +63,13 @@ Enter the following in New database connection
 
 **Password**: WElcome_123#
 
-**Connection Type**: Cloud PDB
+**Connection Type**: Cloud Wallet
 
 **Role**: Default
 
 **Configuration File**: Click on Browse and select the wallet file you downloaded
 
-**Service**: 'databasename_high' Database name followed by suffix low, medium or high. These suffixes determine degree of parallelism used and are relevant for a DSS workload. For OLTP workloads it's safe to select any of them.
+**Service**: 'databasename_high' Database name followed by suffix low, medium or high. These suffixes determine degree of parallelism used and are relevant for a DSS workload. For OLTP workloads it's safe to select any of them. Example: **atpdatabase_high**
 
 ![](./images/200/Picture200-8.png)
 

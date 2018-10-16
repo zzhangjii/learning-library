@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Oracle's Autonomous Transaction Processing cloud service provides all of the performance of the market-leading Oracle Database in an environment that is tuned and optimized for transaction processing workloads. Oracle Autonomous Transaction Processing ( or ATP ) service provisions in a few minutes and requires very little manual ongoing administration and is therefore ideal for developers to build and test their applications. 
+Oracle's Autonomous Transaction Processing cloud service provides all of the performance of the market-leading Oracle Database in an environment that is tuned and optimized for transaction processing workloads. Oracle Autonomous Transaction Processing ( or ATP ) service provisions in a few minutes and requires very little manual ongoing administration and is therefore ideal for developers to build and test their applications.
 
 Often times, you would prefer to interact with your cloud services programmatically over REST rather than log into the cloud console and click through screens. Besides, by creating your own deployment and management scripts you can save and reuse your deployments, set gold standards and in fact store entire application infrastructure stacks as version controlled code.
 
@@ -186,7 +186,7 @@ var auth = require('./auth.js');
 var regions = require('./regions.js');
 var headers = require('./headers.js');
 var https = require('https');
-//Create autonomous database ATP 
+//Create autonomous database ATP
 
 function createATP(callback) {
 
