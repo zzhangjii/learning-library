@@ -56,7 +56,7 @@ This workshop needs two desktop tools to be installed on your computer to do the
 *1. SQL Developer*
   To download and install SQL Developer please follow <a href="http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html" target="_blank"> this link</a>, and select the operating system for your computer. This page also has instructions on how to install SQL Developer on Windows, Mac OSX and Linux.
 
-  If you already have SQL Developer installed on your computer then please check the version - The recommended version is 18.3 or higher. The minimum version that is required to connect to an Oracle Autonomous Data Warehouse is SQL Developer 17.4.
+  If you already have SQL Developer installed on your computer then please check the version - The recommended version is 18.3 or higher as this version contains enhancements for key Autonomous Data Warehouse features, including using ADW behind a VPN or Firewall. The minimum version that is required to connect to an Oracle Autonomous Data Warehouse is SQL Developer 17.4.
 
 *2. Data Visualization Desktop*
   To download and install Data Visualization Desktop please follow <a href="https://www.oracle.com/technetwork/middleware/oracle-data-visualization/downloads/oracle-data-visualization-desktop-2938957.html" target="_blank"> this link </a>, and select the operating system for your computer. This page also has instructions on how to install DVD on Windows and Mac OSX.
