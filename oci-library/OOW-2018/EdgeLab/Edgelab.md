@@ -142,7 +142,7 @@ Next we will set priority of a pool in the policy failover chain, listed from hi
 Next we will create a Health Check for our application. (More on it in next exercise)
 ```
 - Attach Health Check: 
-	- Health Check Name: HealthCheck-user0
+	- Health Check Name: HealthCheck-userX (replace x with your userID) 
 	- Interval: 30 seconds
 	- Protocol: HTTP
 ```
@@ -169,7 +169,9 @@ Once the health check runs after the interval specified in health check (30 seco
 
 6) In your browser, open up the domain specified in your traffic policy and you will be directed to a webserver in Ashburn region
 
-	http://edgelabuser-0.oowedgeserviceslab.com
+	http://edgelabuser-X.oowedgeserviceslab.com
+	
+	(replace X with your userID)
 
 ![](media/image17.png)
 
@@ -188,7 +190,9 @@ In this exercise, we will do a failover test of the policy just created. We will
 
 3) In your browser, open up the domain specified in your traffic policy and you will be directed to a webserver in Ashburn region
 
-	http://edgelabuser-0.oowedgeserviceslab.com
+	http://edgelabuser-X.oowedgeserviceslab.com
+	
+	(replace X with your userID)
 
 ![](media/image19.png)
 
@@ -200,7 +204,7 @@ In this exercise we will take a look at different options on the health check po
 
 ![](media/image20.png)
 
-2) Click on the health check you created **HealthCheck-User0**
+2) Click on the health check you created **HealthCheck-UserX** (replace X with your userID)
 
 ![](media/image21.png)
 
