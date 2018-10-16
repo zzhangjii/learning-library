@@ -49,26 +49,23 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 
 > **Note:**  This file will be loaded into Object Storage and later used to load data into the CHANNELS table.
 
-2) Download SQL Developer Tool from this link: [https://bit.ly/2OHcBcZ](https://bit.ly/2OHcBcZ) and install in your desktop.
+2) Download SQL Developer Tool from this link: [https://bit.ly/2OHcBcZ](https://bit.ly/2OHcBcZ) and install on your Windows 10 VM.
 
 ## Practice 3: Sign in to OCI Console
 
 1) Open a supported browser and go to the Console URL. For example, [https://console.us-ashburn-1.oraclecloud.com](https://console.us-ashburn-1.oraclecloud.com).
 
-2) Enter your tenant name: <Tenant> and click **Continue**
+2) Enter your tenant name: *Instructor will provide you the tenant name* and click **Continue**
 
  ![](img/image001.png)
 
-3) Oracle Cloud Infrastructure is integrated with Identity Cloud Services, you will see a screen validating your Identity Provider. You can just click **Continue**.
+3) Enter your user name and password and click on **Sign In**
+
+ - **Username:** *instructor will provide you username*
+ - **Password:** *instructor will provide password*
 
  ![](img/image002.png)
 
-4) Enter your user name and password
-
- - **Username:** api.user
- - **Password:** _instructor will provide password_
-
- ![](img/image003.png)
 
 When you sign in to the Console, the home page is displayed.
 
@@ -80,7 +77,7 @@ The home page gives you quick links to the documentation and to Oracle Support.
 
 1) Click on **Menu** > **Autonomous Data Warehouse** 
 
-2) Select **Demo** Comparment and click **Create Autonomous Data Warehouse** 
+2) Select your **Test-XX** Comparment and click **Create Autonomous Data Warehouse** 
 
 ![]( img/image005.png)
 
