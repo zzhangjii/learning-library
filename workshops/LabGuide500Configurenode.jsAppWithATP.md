@@ -78,12 +78,12 @@ Enter the following to Create Linux Instance
 
 - **Name**: Enter a frinedly name to identify your linux instance
 - **Availability Domain**: Oracle Cloud Infrastructure is hosted in Regions, which are localized geographic areas. Each Region contains three Availability Domains which are isolated and fault-tolerant data centers that can be used to ensure high availability. In the Availability Domain field, select the Availability Domain in which you want to run the instance. For example, scul:PHX-AD-1.
-- **Image Compartment**: Select Demo compartment
 - **Boot Volume**: Oracle-Provided OS Image
 - **Image Operating System**: Oracle Linux 7.5
 - **Shape Type**: Virtual Machine
-- **Shape**: The shape of an instance determines the number of CPUs, the amount of memory, and how much local storage an instance will have. Shape types with names that start with VM are Virtual Machines, while shape types with names that start with BM are Bare Metal instances. Choose the appropriate shape for your Virtual Machine instance in the Shape field. For example, VM.Standard1.4.
+- **Shape**: The shape of an instance determines the number of CPUs, the amount of memory, and how much local storage an instance will have. Shape types with names that start with VM are Virtual Machines, while shape types with names that start with BM are Bare Metal instances. Choose the appropriate shape for your Virtual Machine instance in the Shape field. For this lab we will be using, **VM.Standard2.1 (1 OCPU, 15GB RAM)**.
 - **Image Version**: Please select the latest version, 2018.09.25-0(latest)
+- **Boot Volume Configuration**: When you launch a virtual machine (VM) or bare metal instance based on an Oracle-provided image or custom image, a new boot volume for the instance is created in the same compartment. That boot volume is associated with that instance until you terminate the instance. When you terminate the instance, you can preserve the boot volume and its data, see Terminating an Instance. For this lab we will be using Selected image's default boot volume size: 46.6 GB only.
 - **SSH Keys**: If the operating system image for your instance uses SSH keys for authentication (for example, Linux instances), then you must provide an SSH public key. To choose a public key file, ensure that Choose SSH Key Files is selected, then click Browse. 
 
 ![](./images/500/BrowseSSH.png)
@@ -96,9 +96,11 @@ If you do not have ssh key pair you can create using command line.
 
 - Open terminal for entering the commands
 - At the prompt, enter the following:
+
 ```
 ssh-keygen -t rsa -N "" -b "2048" -C "key comment" -f path/root_name
 ```
+
 Where
 - **-t rsa**: Use the RSA algorithm
 - **-N "passphrase"**: Passphrase to protect the use of the key (like a password). If you don't want to set a passphrase, don't enter anything between the quotes.
@@ -108,10 +110,19 @@ Where
 
 ![](./images/500/GenerateSSH.png)
 
-- **Virtual Cloud Network Compartment**: Select Demo Compartment
+#### For windows users:
+
+- Download and run the PuTTY installer [here](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
+
+- Generate a private and public key pair:
+    - Go to the Windows Start menu -> All Programs -> PuTTY and open PuTTYgen
+    - Click the 'Generate' button and PuTTYgen will ask you to make some random movement with your mouse until it has enough random data to generate a secure key for you
+    - Click the 'Save private key' button and save the resulting file somewhere safe and only accessible by you!
+
 - **Virtual Cloud Network**: In the Virtual Cloud Network field, select the Virtual Cloud Network for the instance which we created earlier in this lab.
-- **Subnet Compartment**: Select Demo Compartment
 - **Subnet**: In the Subnet field, select the subnet to which to add the instance. For example, the public subnet scul:PHX-AD-1.
+
+That is all you need to enter to create Linux instance on OCI. 
 
 - Click on **Create Instance** at the bottom 
 
@@ -254,7 +265,7 @@ nano dbconfig.js
 
 module.exports= {
 dbuser: 'admin', 
-dbpassword: 'xxxxxxxxxx', 
+dbpassword: 'WElcome_123#', 
 connectString: 'restonHubDB_high' 
 }
 ```
