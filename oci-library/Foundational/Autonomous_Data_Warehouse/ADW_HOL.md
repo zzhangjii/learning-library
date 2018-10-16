@@ -49,26 +49,23 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 
 > **Note:**  This file will be loaded into Object Storage and later used to load data into the CHANNELS table.
 
-2) Download SQL Developer Tool from this link: [https://bit.ly/2OHcBcZ](https://bit.ly/2OHcBcZ) and install in your desktop.
+2) Download SQL Developer Tool from this link: [https://bit.ly/2OHcBcZ](https://bit.ly/2OHcBcZ) and install on your Windows 10 VM.
 
 ## Practice 3: Sign in to OCI Console
 
-1) Open a supported browser and go to the Console URL. For example, [https://console.us-ashburn-1.oraclecloud.com](https://console.us-ashburn-1.oraclecloud.com).
+1) Open a supported browser and go to the Console URL. For example, [https://console.us-phoenix-1.oraclecloud.com](https://console.us-phoenix-1.oraclecloud.com).
 
-2) Enter your tenant name: <Tenant> and click **Continue**
+2) Enter your tenant name: *Instructor will provide you the tenant name* and click **Continue**
 
  ![](img/image001.png)
 
-3) Oracle Cloud Infrastructure is integrated with Identity Cloud Services, you will see a screen validating your Identity Provider. You can just click **Continue**.
+3) Enter your user name and password and click on **Sign In**
+
+ - **Username:** *instructor will provide username*
+ - **Password:** *instructor will provide password*
 
  ![](img/image002.png)
 
-4) Enter your user name and password
-
- - **Username:** api.user
- - **Password:** _instructor will provide password_
-
- ![](img/image003.png)
 
 When you sign in to the Console, the home page is displayed.
 
@@ -78,9 +75,11 @@ The home page gives you quick links to the documentation and to Oracle Support.
 
 ## Practice 4: Create an Autonomous Data Warehouse
 
+> **Note**: Make sure you are on us-phoenix region. You can see your region a
+
 1) Click on **Menu** > **Autonomous Data Warehouse** 
 
-2) Select **Demo** Comparment and click **Create Autonomous Data Warehouse** 
+2) Select your **Test-XX** Comparment and click **Create Autonomous Data Warehouse** 
 
 ![]( img/image005.png)
 
@@ -114,18 +113,18 @@ Oracle client credentials (wallet files) are downloaded from the Autonomous Data
  
  ![]( img/image010.png)
  
-2. Enter with the following credentials:
+2. If you are asked for authentication, enter with the following credentials:
 	- **Username**: admin
 	- **Password**: *same password you used on Practice-3* 
 	
 ![]( img/image011.png)
 
 3. On the left side of the page click on **Administration**
-4. Click on **Download Client Credentials** 
+4. Click on **Download a Connection Wallet** 
 
 ![]( img/image012.png)
 
-5. You must protect this file to prevent unauthorized database access. Therefore, you need to create a password to protect this file. For this exercise enter the same password you used on Practice-3 and click **Download** and save it to your desktop
+5. You must protect this file to prevent unauthorized database access. Therefore, you need to create a password to protect this file. For this exercise enter the same password you used on Practice-3 and click **Download** and save it to your Windows 10 VM desktop folder
 
 ![]( img/image013.png)
 
@@ -136,7 +135,7 @@ For the fastest data loading experience Oracle recommends uploading the source f
 To load data from files in the cloud into your Autonomous DW Cloud database, use the new PL/SQL DBMS_CLOUD package. The DBMS_CLOUD package supports loading data files from the following Cloud sources: Oracle Cloud Infrastructure Object Storage, Oracle Cloud Infrastructure Object Storage Classic, and Amazon AWS S3. Lets create an Object Storage Bucket inside the Demo Compartment.
 
 1. On OCI Dashboard **Menu** click on **Object Storage** > **Object Storage**
-2. Make sure to select **Demo** Compartment
+2. Make sure to select **Test-XX** Compartment
 3. Click on **Create Bucket** and enter the following information:
 	- Bucket Name: ADW_Bucket
 	- Storage Tier: Standard
@@ -152,14 +151,15 @@ To load data from files in the cloud into your Autonomous DW Cloud database, use
 ## Practice 7: Creating an Auth token for OCI user
 An Auth token is an Oracle-generated token that you can use to authenticate with third-party APIs. For example, use an auth token to authenticate with a Swift client when using Recovery Manager (RMAN) to back up an Oracle Database System (DB System) database to Object Storage. Lets start the process of creating an Auth token:
 
-1. On **Menu** click on **Identity** > **Users** 
-2. Find **api.user** and click on **View User Details** 
-![]( img/image017.png)
+1. On the top right corner click on the **User Settings** 
+
+![]( img/usericon.png)
+
 3. On the left side of page under **Resources**,  click on **Auth Tokens** and then click **Generate Token**
 4. Enter the following Description: *Auth Token for ADW Database*
 5. Click **Generate Token**
 ![]( img/image018.png)
-6. Copy the generated token and save it in a notepad/text file. You will use it to create the database credential for api.user. *A portion of the generated token has been hidden for security reasons.*
+6. Copy the generated token and save it in a notepad/text file. You will use it to create the database credential. *A portion of the generated token has been hidden for security reasons.*
 ![]( img/image019.png)
 
 ## Practice 8: Login to the ADW database and store the object store credentials
@@ -172,7 +172,7 @@ The ocitest user will be the owner of the CHANNELS table that will be used for l
 2. Create a new connection using the following values:
 	- **Connection Name**: ADW Finance
 	- **Username**: admin
-	- **Password**: *Enter admin password*
+	- **Password**: *Enter the database admin password*
 	- **Connection Type**: Cloud PDB
 	- **Configuration File**: *Browse to the credentials file collected from Practice-4* 
 	- **Service**: adwfinance_medium
@@ -206,13 +206,15 @@ grant dwrole to ocitest;
 
 9. Once connected, you will store your object credentials using the procedure **DBMS_CLOUD.CREATE_CREDENTIAL** running the following SQL Statement:
  
-> **Note:**  Replace "password" with the generated token you copied from Practice-6.
+> **Note:**  
+> Replace username with your oci "username" which is userXX - For example user00
+> Replace "password" with the generated token you copied from Practice-6.
 
 ```
 begin
  DBMS_CLOUD.create_credential (
      credential_name => 'OBJ_STORE_CRED',
-     username => 'api.user',
+     username => '<userXX>',
      password => '<your Auth Token>'  
   ) ;
 end;
@@ -254,7 +256,7 @@ begin
  dbms_cloud.copy_data(
     table_name =>'CHANNELS',
     credential_name =>'OBJ_STORE_CRED',
-    file_uri_list =>'https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/gse0001234/ADW_Bucket/channels.txt',
+    file_uri_list =>'https://swiftobjectstorage.us-phoenix-1.oraclecloud.com/v1/<tenancy-name>/ADW_Bucket/channels.txt',
     format => json_object('ignoremissingcolumns' value 'true', 'removequotes' value 'true')
  );
 end;
@@ -267,6 +269,8 @@ end;
 ```
 select * from channels;
 ```
+
+You have successfully imported the channels.txt file from your on-premises to ADW!
 
 ![]( img/image028.png)
 
