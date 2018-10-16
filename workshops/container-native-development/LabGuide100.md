@@ -144,7 +144,7 @@ For this lab you will need Github and Docker Hub Accounts. Use the following lin
 ```yaml
 #Use OpenJDK base docker image from dockerhub and open the application port on the docker container
 box:
-  id: openjdk
+  id: openjdk:8
   ports:
     - $PORT
 
