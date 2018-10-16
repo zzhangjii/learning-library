@@ -1,6 +1,6 @@
 # Autonomous Transaction Processing: Self-Guided Hands-On Workshop
 
-This workshop walks you through all the steps to get started using the **Oracle Autonomous Transaction Processing**. Provision a database, scale ATP, load data, configure node.js with ATP, configure Java with ATP, working with REST APIs, and building microservices on ATP.
+This workshop walks you through all the steps to get started using the **Oracle Autonomous Transaction Processing**. Provision a database, scale ATP, load data, configure node.js with ATP, configure Java with ATP, working with REST APIs, building microservices on ATP, Configuring OCI CLI, and working with Kubernetes.
 
 ### **Step 1**: Acquire an Oracle Cloud Trial or Workshop Account
 
@@ -8,28 +8,18 @@ This workshop walks you through all the steps to get started using the **Oracle 
 
 - Please click on the following link to create your <a class=“trial-link” href="https://myservices.us.oraclecloud.com/mycloud/signup?language=en&sourceType=:ex:tb:::RC_NAMK181011P00041:ATPHOL&SC=:ex:tb:::RC_NAMK181011P00041:ATPHOL&pcode=NAMK181011P00041" target="_trial">Free Account</a>, and complete all the required steps to get your free Oracle Cloud Trial Account. When you complete the registration process you'll receive a $300 credit that will enable you to complete the lab for free.  Additionally, you'll have 1000s of hours left over to continue to explore the Oracle Cloud.
 
-  - Soon after requesting your trial you will receive the following email. _You may begin working on Lab 100 before you receive this email_, but you will not be able to start Lab 200 until you have received it.
+  - Soon after requesting your trial you will receive the following email. You may begin working on Lab 100.
 
-  ![](images/code_9.png)
-
-
-### **Step 2**: Navigate to Lab 100
-
-- _You can see a list of Lab Guides_ by clicking on the **Menu Icon** in the upper left corner of the browser window. You're now ready to continue with **Lab 100**.
-
-  ![](images/LabMenuIcon.png)
+  ![](images/readme/code_9.png)
 
 
+### **Step 2**: Workshop Details
 
+- _You can see a list of Lab Guides_ by clicking on the **Menu Icon** in the upper left corner of the browser window. You're now ready to continue with the workshop.
 
+  ![](images/readme/Menu.png)
 
-
------------------------------------------------------------------------
-# Autonomous Transaction Processing: Self-Guided Hands-On Workshop
-This workshop walks you through all the steps to get started using the **Oracle Autonomous Transaction Processing**. Provision a database, scale ATP, load data, configure node.js with ATP, configure Java with ATP, working with REST APIs, and building microservices on ATP. 
-
-## Goals
-
+#### Goals
 - Provision an ATP Database on Oracle Cloud Infrastructure
 - Configure a secure connection using Oracle SQL Developer
 - Scaling an ATP Database
@@ -38,6 +28,8 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - Configure Java with ATP
 - Working with REST APIs
 - Building Microservices on ATP
+- Configure OCI CLI
+- Working with Kubernetes
 
 ## To Learn More
  - [Oracle Autonomous Transaction Processing Cloud Website](https://www.oracle.com/database/autonomous-transaction-processing.html)
@@ -46,10 +38,6 @@ This workshop walks you through all the steps to get started using the **Oracle 
 ## How to View the Lab Guides
 
 - The Lab guides are best viewed using the Workshop's [GitHub Pages Website URL](https://oracle.github.io/learning-library/workshops/autonomous-transaction-processing/) 
-
-- Once you are viewing the Workshop's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
-
-    ![](images/WorkshopMenu.png)  
 
 - To **log issues**, click [here](https://github.com/cloudsolutionhubs/autonomous-transaction-processing/issues/new) to go to the github oracle repository issue submission form.
 
