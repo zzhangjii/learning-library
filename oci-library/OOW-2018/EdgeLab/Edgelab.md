@@ -68,7 +68,7 @@ Oracleoow2018!
 
 After log in, you are at the home page of OCI web console. 
 
-![](media/image5.png)
+<img width="1240" alt="ocihomepage" src="https://user-images.githubusercontent.com/32341971/47040466-2c38dd80-d13b-11e8-8ae1-79f8d48a3214.png">
 
 4) Navigate to the different regions from the top right corner. 
 
@@ -77,7 +77,7 @@ For this lab, lets navigate to OCI Frankfurt Region.
 eu-frankfurt-1 
 ```
 
-![](media/image6.png)
+<img width="1234" alt="ociregions" src="https://user-images.githubusercontent.com/32341971/47040902-50e18500-d13c-11e8-8771-e516efd2121c.png">
 
 ## Practice 3: Create a Traffic Management Policy
 
@@ -90,12 +90,12 @@ The webservers are already built in OCI Ashburn and Frankfurt regions, and are h
 
 1) Open the Menu and navigate to the Edge Services --> DNS Traffic Management. 
 
-![](media/image7.png)
+<img width="1249" alt="ocitrafficmanagement" src="https://user-images.githubusercontent.com/32341971/47041239-1e845780-d13d-11e8-9602-372e30beb014.png">
 
-2) Make sure to select the correct compartment for your user. 
+2) Make sure to select the Edgelab-O compartment. 
 
 ```
-The compartments are named similar to your username. For instance, if your username is edgelabuser-0, please navigate to EdgeLab-0 compartment. 
+Attendees will share the compartment and the domain name resources. 
 ```
 
 ![](media/image8.png)
@@ -142,7 +142,7 @@ Next we will set priority of a pool in the policy failover chain, listed from hi
 Next we will create a Health Check for our application. (More on it in next exercise)
 ```
 - Attach Health Check: 
-	- Health Check Name: HealthCheck-user0
+	- Health Check Name: HealthCheck-userX (replace x with your userID) 
 	- Interval: 30 seconds
 	- Protocol: HTTP
 ```
@@ -169,7 +169,9 @@ Once the health check runs after the interval specified in health check (30 seco
 
 6) In your browser, open up the domain specified in your traffic policy and you will be directed to a webserver in Ashburn region
 
-	http://edgelabuser-0.oowedgeserviceslab.com
+	http://edgelabuser-X.oowedgeserviceslab.com
+	
+	(replace X with your userID)
 
 ![](media/image17.png)
 
@@ -188,7 +190,9 @@ In this exercise, we will do a failover test of the policy just created. We will
 
 3) In your browser, open up the domain specified in your traffic policy and you will be directed to a webserver in Ashburn region
 
-	http://edgelabuser-0.oowedgeserviceslab.com
+	http://edgelabuser-X.oowedgeserviceslab.com
+	
+	(replace X with your userID)
 
 ![](media/image19.png)
 
@@ -200,7 +204,7 @@ In this exercise we will take a look at different options on the health check po
 
 ![](media/image20.png)
 
-2) Click on the health check you created **HealthCheck-User0**
+2) Click on the health check you created **HealthCheck-UserX** (replace X with your userID)
 
 ![](media/image21.png)
 
