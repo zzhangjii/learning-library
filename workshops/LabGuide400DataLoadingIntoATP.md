@@ -123,6 +123,12 @@ Use **Object Storage** for data to which you need fast, immediate, and frequent 
 
 Use **Archive Storage** for data to which you seldom or rarely access, but that must be retained and preserved for long periods of time. The cost efficiency of the Archive Storage tier offsets the long lead time required to access the data. For more information, see Overview of [Archive Storage](https://docs.cloud.oracle.com/iaas/Content/Archive/Concepts/archivestorageoverview.htm).
 
+You have an option to **Encrypt using Key Management**. Oracle Cloud Infrastructure Key Management provides you with centralized management of the encryption of your data. You can use Key Management to create master encryption keys and data encryption keys, rotate keys to generate new cryptographic material, enable or disable keys for use in cryptographic operations, assign keys to resources, and use keys for encryption and decryption.
+
+ You can find more details on Key Management [here](https://docs.cloud.oracle.com/iaas/Content/KeyManagement/Concepts/keyoverview.htm).
+
+ For this workshop please do not checking **Encrypt using Key Management**.
+
 - Click **Create Bucket** button to create the bucket in Demo Compartment
 
 To learn more about the OCI Object Storage, check out this <a href="https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Tasks/addingbuckets.htm" target="_blank">documentation</a> .
@@ -150,6 +156,11 @@ Upload File to your OCI Object Store Bucket
 Construct the URL that points to the location of the customers.csv file staged in the OCI Object Storage. The URL is structured as follows. The values for you to specify are in bold:
 
  https://swiftobjectstorage.<**region_name**>.oraclecloud.com/v1/<**tenant_name**>/<**bucket_name**>/<**file_name**>
+
+ #### region_name: Type in the region you have created your Object storage in.
+ #### tenant_name: Type in your tenancy name.
+ #### bucket_name: Type in your bucket name which you created in Object Storage.
+ #### file_name: customers.csv
 
  In this example, the region name is us-ashburn-1, the tenant name is gse00014623, and the bucket name is ATPLab. So the URL of the customers.csv file is: 
  
