@@ -17,19 +17,20 @@ The <strong>HIGH</strong> database service provides the maximum amount of CPU re
 <br><br>
 The <strong>MEDIUM</strong> database service provides multiple compute and IO resources for a query. This service provides more concurrency compared to the HIGH database service. The number of concurrent SQL statements that can be run in this service depends on the number of CPUs in your database and scales linearly with the number of CPUs.
 <br><br>
-The <strong>LOW</strong> database service provides the least amount of resources for a query, this also means the number of concurrent queries you can run in this service will  be higher than the other services. <br> The number of concurrent SQL statements that can be run in this service is twice the number of CPUs in your database.
+The <strong>LOW</strong> database service provides the least amount of resources for a query, and any number of concurrent queries you can run in this service.
+<br>
 </blockquote>
 As a user you need to pick the database service based on your performance and concurrency requirements.
 
 The lab will use a HIGH database service to understand the performance and will demo queries on sample data sets provided out of the box with ADW. ADW provides the Oracle Sales History sample schema and the Star Schema Benchmark (SSB) data set, these data sets are in the SH and SSB schemas respectively.
 
-You will run queries on the SSB data set which is a 1TB data set with one fact table with around 6 billion rows, and several dimension tables.
+You will run a basic query on the SSB data set which is a 1TB data set with one fact table with around 6 billion rows, and several dimension tables.
 
 To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/issues/new" target="_blank"> here </a> to go to the github oracle repository issue submission form.
 
 ## Objectives
 
-- Learn about the different levels of ADW database service (HIGH, MEDIUM, LOW)
+- Learn about the different levels of ADE instance service (HIGH, MEDIUM, LOW)
 - Learn about the Star Schema Benchmark (SSB) and Sales History (SH) sample data sets
 - Run a query on an ADW sample dataset
 
@@ -46,7 +47,7 @@ To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/iss
 
     ![](images/200/snap0014314.jpg)
 
--   Copy and paste <a href="./scripts/200/low_ssb_query.txt" target="_blank">this code snippet</a> to your SQL Developer worksheet. This query will run on the Star Schema Benchmark, one of the two ADW sample data sets that may be accessed from any ADW instance. Take a moment to examine the script. Then click the **Run Script** button to run it. Make sure you click the Run Script button in SQL Developer so that all the rows are displayed on the screen.
+-   Copy and paste <a href="./scripts/200/high_ssb_query.txt" target="_blank">this code snippet</a> to your SQL Developer worksheet. This query will run on the Star Schema Benchmark, one of the two ADW sample data sets that may be accessed from any ADW instance. Take a moment to examine the script. Then click the **Run Script** button to run it. Make sure you click the Run Script button in SQL Developer so that all the rows are displayed on the screen.
 
 ![](./images/200/snap0014315.jpg)
 

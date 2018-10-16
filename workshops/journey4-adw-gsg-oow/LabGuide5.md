@@ -25,7 +25,7 @@ At this point, you should have performed the following:
 
 
 ## Required Artifacts
-- Installation of Oracle Data Visualization Desktop (free with Autonomous Data Warehouse)
+- Installation of Oracle Data Visualization Desktop (free with Autonomous Data Warehouse). If you already have Data Visualization Desktop installed, please check the version. You will need a minimum DVD version 12.2.5.0.0 to connect to you Oracle Autonomous Data Warehouse.
 - Access to an existing Autonomous Data Warehouse instance
 
 ## Set Up Local Windows Desktop Environment

@@ -7,13 +7,13 @@ Last Updated:<br>October 12, 2018
 </td></tr><table>
 
 
-This workshop walks you through all the steps to get started using the **Oracle Autonomous Data Warehouse  (ADW)**. You will provision a new ADW database, load data from the object store and troubleshoot data loads, query external data residing on the object store, manage an ADW instance, scale an ADW instance, and use Oracle Machine Learning notebooks.
+This workshop walks you through all the steps to get started using the **Oracle Autonomous Data Warehouse  (ADW)**. You will provision a new ADW instance, load data from the object store and troubleshoot data loads, query external data residing on the object store, manage an ADW instance, scale an ADW instance, and use Oracle Machine Learning notebooks.
 
 
 ## Goals for this workshop
 
  - Get comfortable with Oracle's public cloud services
- - Provision a new ADW database
+ - Provision a new ADW instance
  - Run sample queries against the sample data sets
  - Load data from the object store
  - Query external data from the object store
@@ -23,17 +23,6 @@ This workshop walks you through all the steps to get started using the **Oracle 
  - Use Oracle Data Visualization Desktop (DVD) with ADW
  - Use Oracle Data Integration Platform Cloud (DIPC) with ADW
 
-# How to Get Your Free Cloud Trial Account
-If you already have an Oracle Cloud account then you can skip this section. If you don't have an Oracle Cloud account then you can quickly and easily sign up for a free trial account that provides:
-
-$300 of free credits good for up to 3500 hours of Oracle Cloud usage
-Credits can be used on all eligible Cloud Platform and Infrastructure services for the next 30 days
-Your credit card will only be used for verification purposes and will not be charged unless you 'Upgrade to Paid' in My Services
-Click on the image below to go to the trial sign-up page which will allow you to request your free cloud account:
-
-[![](http://www.oracle.com/webfolder/technetwork/tutorials/learning_path/images/700705-auto-dw-social-bn728_-152.png)](https://myservices.us.oraclecloud.com/mycloud/signup?language=en&sourceType=APMK180704P0003:APACVT082918:ie:mt)
-
-Once your trial account is created, you will receive a Welcome to Oracle Cloud email that contains your cloud account password along with links to useful collateral. To sign into the Oracle Cloud, copy and paste this URL into a browser window: [https://cloud.oracle.com](https://cloud.oracle.com)
 
 
 # Workshop Overview
@@ -45,7 +34,7 @@ Oracle Autonomous Data Warehouse is built around the market leading Oracle datab
 
 We take care of everything for you.
 
-Click here to [watch our short video](https://www.youtube.com/watch?v=tZMZODoi2xw) that explains the key features in Oracle's Autonomous Data Warehouse.
+Click here to <a href="https://www.youtube.com/watch?v=tZMZODoi2xw" target="_blank">watch our short video</a> that explains the key features in Oracle's Autonomous Data Warehouse.
 
 Oracle’s Autonomous Data Warehouse is the perfect quick-start service for fast data loading and sophisticated data reporting and analysis.  Oracle manages everything for you so you can focus on your data.
 
@@ -56,29 +45,29 @@ Read on to begin your Getting Started journey with Oracle Autonomous Data Wareho
 This workshop needs two desktop tools to be installed on your computer to do the exercises in this lab.
 
 *1. SQL Developer*
-  To download and install SQL Developer please follow [this link](http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html), and select the operating system for your computer. This page also has instructions on how to install SQL Developer on Windows, Mac OSX and Linux.
+  To download and install SQL Developer please follow <a href="http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html" target="_blank"> this link</a>, and select the operating system for your computer. This page also has instructions on how to install SQL Developer on Windows, Mac OSX and Linux.
 
-  If you already have SQL Developer installed on your computer then please check the version. The minimum version that is required to connect to an Oracle Autonomous Data Warehouse Cloud is SQL Developer 17.4.
+  If you already have SQL Developer installed on your computer then please check the version - The recommended version is 18.3 or higher. The minimum version that is required to connect to an Oracle Autonomous Data Warehouse is SQL Developer 17.4.
 
 *2. Data Visualization Desktop*
-  To download and install Data Visualization Desktop please follow [this link](https://www.oracle.com/technetwork/middleware/oracle-data-visualization/downloads/oracle-data-visualization-desktop-2938957.html), and select the operating system for your computer. This page also has instructions on how to install DVD on Windows and Mac OSX.
+  To download and install Data Visualization Desktop please follow <a href="https://www.oracle.com/technetwork/middleware/oracle-data-visualization/downloads/oracle-data-visualization-desktop-2938957.html" target="_blank"> this link </a>, and select the operating system for your computer. This page also has instructions on how to install DVD on Windows and Mac OSX.
 
-  If you already have Data Visualization Desktop installed on your computer then please check the version. The minimum version that is required to connect to an Oracle Autonomous Data Warehouse Cloud is 12c 12.2.5.0.0.
+  If you already have Data Visualization Desktop installed on your computer then please check the version. The minimum version that is required to connect to an Oracle Autonomous Data Warehouse is 12c 12.2.5.0.0.
 
 
 **Getting Help During This Workshop**
-  ![](images/README-9a67ec93.png)
+![](images/README-9a67ec93.png)
 
-[**CloudCustomerConnect**](https://cloudcustomerconnect.oracle.com/resources/32a53f8587/summary) Forum for Autonomous Data Warehouse
+[**Cloud Customer Connect**](https://cloudcustomerconnect.oracle.com/resources/32a53f8587/summary) Forum for Autonomous Data Warehouse
 If you have a question during this workshop then use the Autonomous Data Warehouse Forum to post questions, connect with experts, and share your thoughts and ideas about Oracle Autonomous Data Warehouse.
 
-Are you are completely new to the [CloudCustomerConnect](https://cloudcustomerconnect.oracle.com/resources/32a53f8587/summary) forums? Visit our forum  [Getting Started page](https://cloudcustomerconnect.oracle.com/pages/1f00b02b84) to learn how to best leverage community resources.
+Are you are completely new to the [Cloud Customer Connect](https://cloudcustomerconnect.oracle.com/resources/32a53f8587/summary) forums? Visit our forum  [Getting Started page](https://cloudcustomerconnect.oracle.com/pages/1f00b02b84) to learn how to best leverage community resources.
 
 **You are all set, let's begin!**
 
 
 
-## Step 1: Getting Started and Provisioning a New Autonomous Data Warehouse
+## Lab 1: Getting Started and Provisioning a New Autonomous Data Warehouse
 This lab walks you through the steps of logging into Oracle Cloud, accessing the Oracle Autonomous Data Warehouse console and provisioning your first Autonomous Data Warehouse. The last part of this lab will explore how to connect to your new data warehouse using Oracle SQL Developer.
 
 **Key Objectives**:
@@ -88,10 +77,10 @@ This lab walks you through the steps of logging into Oracle Cloud, accessing the
 - Learn how to download the client credentials wallet file
 - Learn how to connect from Oracle SQL Developer
 
-**Click here to run [Lab 1](LabGuide1.md)**
+**[Click here to run Lab 1](LabGuide1.md)**
 
 
-## Step 2: Working with Data Warehouse Services and the Free Sample Data Sets
+## Lab 2: Working with Data Warehouse Services and the Free Sample Data Sets
 In this lab you will explore the free sample data sets that are included witin your new autonomous data warehouse. As part of this lab you will experiment with the selecting different levels of database services that come with your Autonomous Data Warehouse.
 
 **Key Objectives**:
@@ -100,11 +89,11 @@ In this lab you will explore the free sample data sets that are included witin y
 - Learn about the Star Schema Benchmark (SSB) and Sales History (SH) sample data sets
 - See how the different levels of database service affect performance and concurrency
 
-**Click here to run [Lab 2](LabGuide2.md)**
+**[Click here to run Lab 2](LabGuide2.md)**
 
 
 
-## Step 3: Loading Data into Your New Autonomous Data Warehouse
+## Lab 3: Loading Data into Your New Autonomous Data Warehouse
 In this lab, you will be uploading files to Oracle Object Storage, creating new sample tables, loading data into those sample tables from files on the OCI Object Storage, and troubleshooting errors relating to your data load jobs.
 
 **Key Objectives**:
@@ -114,11 +103,11 @@ In this lab, you will be uploading files to Oracle Object Storage, creating new 
 - Learn how to use the SQL Developer Data Import Wizard to load data
 - Learn how to troubleshoot data loads
 
-**Click here to run [Lab 3](LabGuide3.md)**
+**[Click here to run Lab 3](LabGuide3.md)**
 
 
 
-## Step 4: Querying External Data
+## Lab 4: Querying External Data
 In this lab, you will be querying files directly on Oracle Object Storage without loading them to your autonomous data warehouse.
 
 **Key Objectives**:
@@ -127,11 +116,11 @@ In this lab, you will be querying files directly on Oracle Object Storage withou
 - Learn how to query external tables
 - Learn how to create data warehouse user
 
-**Click here to run [Lab 4](LabGuide4.md)**
+**[Click here to run Lab 4](LabGuide4.md)**
 
 
 
-## Step 5: Creating Rich Data Visualizations
+## Lab 5: Creating Rich Data Visualizations
 This lab will walk you through the process of connecting your Autonomous Data Warehouse to Data Visualization Desktop and then use DVD and build sophisticated data visualizations to help your business teams get deeper insights about their data
 
 **Key Objectives**:
@@ -141,7 +130,7 @@ This lab will walk you through the process of connecting your Autonomous Data Wa
 - Learn how to create a simple data visualization project with Oracle Data Visualization Desktop
 - Learn how to access and gain insights from data in the Autonomous Data Warehouse
 
-**Click here to run [Lab 5](LabGuide5.md)**
+**[Click here to run Lab 5](LabGuide5.md)**
 
 
 
@@ -166,7 +155,7 @@ For this lab you will watch a couple of demos to show the capabilities available
 - Learn how to recover your data warehouse - if needed
 - Learn how to use the service console to monitor the performance of your Autonomous Data Warehouse
 
-**Click here to run [Bonus Lab 6](LabGuide6.md)**
+**[Click here to run Bonus Lab 6](LabGuide6.md)**
 
 
 
@@ -179,7 +168,7 @@ In this lab you will scale up your Oracle Autonomous Data Warehouse instance by 
 - Learn how to scale up and down the CPUs and storage used by your Autonomous Data Warehouse
 - See how scaling affects your concurrency and performance
 
-**Click here to run [Bonus Lab 7](LabGuide7.md)**
+**[Click here to run Bonus Lab 7](LabGuide7.md)**
 
 
 
@@ -193,7 +182,7 @@ During this lab you will be using the new Oracle Machine Learning SQL notebook a
 - Learn how to share notebooks
 - Learn how to create and run SQL scripts
 
-**Click here to run [Bonus Lab 8](LabGuide8.md)**
+**[Click here to run Bonus Lab 8](LabGuide8.md)**
 
 
 
@@ -206,7 +195,7 @@ During this lab you will be using the Oracle Machine Learning SQL notebook appli
 - Learn how to use Oracle ML Gallery
 - Learn how to import notebooks into Oracle ML
 
-**Click here to run [Bonus Lab 9](LabGuide9.md)**
+**[Click here to run Bonus Lab 9](LabGuide9.md)**
 
 
 
@@ -219,7 +208,7 @@ In this lab, you will configure and use Oracle Data Integration Platform Cloud (
 - Learn how to replicate data into your Autonomous Data Warehouse with Oracle GoldenGate (OGG)
 - Learn how to review data quality your Autonomous Data Warehouse with Oracle Enterprise Data Quality (EDQ)
 
-**Click here to run [Bonus Lab 10](LabGuide10.md)**
+**[Click here to run Bonus Lab 10](LabGuide10.md)**
 
 
 
@@ -227,7 +216,7 @@ In this lab, you will configure and use Oracle Data Integration Platform Cloud (
 
 Use these links to get more information about Oracle Autonomous Data Warehouse
 
- - [Oracle Autonomous Data Warehouse website](https://www.oracle.com/database/data-warehouse/index.html)
- - [Oracle Autonomous Data Warehouse ipaper](http://www.oracle.com/us/products/database/autonomous-dw-cloud-ipaper-3938921.pdf)
- - [Oracle Autonomous Data Warehouse Documentation](https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/index.html)
- - [Additional Autonomous Data Warehouse Cloud Tutorials](https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/tutorials.html)
+ - <a href="https://www.oracle.com/database/data-warehouse/index.html" target="_blank">Oracle Autonomous Data Warehouse website</a>
+ - <a href="http://www.oracle.com/us/products/database/autonomous-dw-cloud-ipaper-3938921.pdf" target="_blank">Oracle Autonomous Data Warehouse ipaper</a>
+ - <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/index.html" target="_blank">Oracle Autonomous Data Warehouse Documentation</a>
+ - <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/tutorials.html" target="_blank">Additional Autonomous Data Warehouse Tutorials</a>

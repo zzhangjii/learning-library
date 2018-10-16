@@ -9,15 +9,15 @@ September 21, 2018
 
 ## Introduction
 
-This lab walks you through the steps to get started using the Oracle Autonomous Data Warehouse (ADW) on Oracle Infrastructure Cloud (OCI). You will provision a new ADW database and connect to the database using Oracle SQL Developer.
+This lab walks you through the steps to get started using the Oracle Autonomous Data Warehouse (ADW) on Oracle Infrastructure Cloud (OCI). You will provision a new ADE instance and connect to the database using Oracle SQL Developer.
 
-  <a href="https://raw.githubusercontent.com/millerhoo/journey4-adwc/master/workshops/journey4-adwc/images/ADWC%20HOL%20-%20Provision%20and%20Connect.mp4" target="_blank">**Click here**</a> to watch a video demonstration of provisioning and connecting to a new ADW database.
+  <a href="https://raw.githubusercontent.com/millerhoo/journey4-adwc/master/workshops/journey4-adwc/images/ADWC%20HOL%20-%20Provision%20and%20Connect.mp4" target="_blank">**Click here**</a> to watch a video demonstration of provisioning and connecting to a new ADE instance.
 
 To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/issues/new" target="_blank"> here </a> to go to the github oracle repository issue submission form.
 
 ## Objectives
 
--   Learn how to provision an new Autonomous Data Warehouse
+-   Learn how to provision a new Autonomous Data Warehouse
 
 -   Learn how to connect to your new Autonomous Data Warehouse
 
@@ -26,14 +26,14 @@ To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/iss
 -   The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
 
 -   Oracle SQL Developer 18.3 or later (see [Oracle Technology Network download site](http://www.oracle.com/technetwork/developer-tools/sql-developer/overview/index.html)).
-    Please use SQL Developer version 18.3 or later because this version contains enhancements for key Autonomous Data Warehouse features, including using ADW behind a VPN or Firewall.
+    Please use SQL Developer version 18.3 or later as this version contains enhancements for key Autonomous Data Warehouse features, including using ADW behind a VPN or Firewall.
 
     *Note:* If you are a Windows user on 64-bit platform, download the 'Windows 64-bit with JDK 8 included' distribution as it includes both Java 8 and the Java Cryptography Extension (JCE) files necessary to run SQL Developer and connect to your Autonomous Data Warehouse.
     If you are a non-Windows user, download and install the appropriate [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) for your Operating System. Download and extract the [Java Cryptography Encryption Archive](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) to the directory as indicated in the README.txt.
 
 # Part 1. Provisioning an ADW Instance
 
-In this section you will be provisioning an ADW database using the cloud console.
+In this section you will be provisioning an ADE instance using the cloud console.
 
 
 #### **STEP 1: Sign in to Oracle Cloud**
@@ -44,7 +44,7 @@ In this section you will be provisioning an ADW database using the cloud console
 
 -   Enter your **Cloud Account Name** and click **My Services**.
 
-![](./images/100/Picture100-3.png)
+![](./images/100/Picture100-3.jpg)
 
 -   Enter your Oracle Cloud **username** and **password**, and click **Sign In**.
 
@@ -60,7 +60,7 @@ In this section you will be provisioning an ADW database using the cloud console
 
 - Click **Create** on the Autonomous Data Warehouse tile. If it does not appear in your Featured Services, click on All Services and find it there.
 
-![](./images/100/Picture100-6.png)
+![](images/100/LabGuide1-39fb4a5b.png)
 
 - Select the root compartment, or another compartment of your choice where you will create your new ADW instance. You can learn more about Compartments <a href="https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm" target="_blank"> here</a>.
 *Note* - Avoid the use of the ManagedCompartmentforPaaS compartment as this is an Oracle default used for Oracle Platform Services.
@@ -71,7 +71,7 @@ In this section you will be provisioning an ADW database using the cloud console
 
 ![](./images/100/Picture100-23.jpeg)
 
--  This will bring up the Create Autonomous Data Warehouse screen where you will specify the configurations of the instance. Select a compartment of your choice.
+-  This will bring up the Create Autonomous Data Warehouse screen where you will specify the configurations of the instance. Select the compartment of your choice.
 
 ![](./images/100/Picture100-26.jpg)
 
