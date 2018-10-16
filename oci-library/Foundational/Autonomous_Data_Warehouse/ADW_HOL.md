@@ -6,21 +6,25 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Practice 1: Download channel text file and install SQL Developer Tool ](#practice-1-download-channel-text-file-and-install-sql-developer-tool)
+[Practice 1: Setup Windows 10 VM](#practice-1-setup-windows-10-vm) 
 
-[Practice 2: Sign in to OCI Console](#practice-2-sign-in-to-oci-console)
+[Practice 2: Download channel text file and install SQL Developer Tool ](#practice-2-download-channel-text-file-and-install-sql-developer-tool)
 
-[Practice 3: Create an Autonomous Data Warehouse Database](#practice-3-create-an-autonomous-data-warehouse)
+[Practice 3: Sign in to OCI Console](#practice-3-sign-in-to-oci-console)
 
-[Practice 4: Download the client credentials for ADW Database](#practice-4-download-the-client-credentials-for-adw-database)
+[Practice 4: Create an Autonomous Data Warehouse Database](#practice-4-create-an-autonomous-data-warehouse)
 
-[Practice 5: Create a bucket in Object Storage and upload the channels.txt file](#practice-5-create-a-bucket-in-object-storage-and-upload-the-text-file)
+[Practice 5: Download the client credentials for ADW Database](#practice-5-download-the-client-credentials-for-adw-database)
 
-[Practice 6: Creating an Auth token for OCI user](#practice-6-creating-an-auth-token-for-oci-user)
+[Practice 6: Create a bucket in Object Storage and upload the channels.txt file](#practice-6-create-a-bucket-in-object-storage-and-upload-the-text-file)
 
-[Practice 7: Login to the ADW database and store the object store credentials](#practice-7-login-to-the-adw-database-and-store-the-object-store-credentials)
+[Practice 7: Creating an Auth token for OCI user](#practice-7-creating-an-auth-token-for-oci-user)
 
-[Practice 8: Load data into ADW using channels text file](#practice-8-load-data-into-adw-using-channels-text-file)
+[Practice 8: Login to the ADW database and store the object store credentials](#practice-8-login-to-the-adw-database-and-store-the-object-store-credentials)
+
+[Practice 9: Load data into ADW using channels text file](#practice-9-load-data-into-adw-using-channels-text-file)
+
+[Practice 10: Try Oracle Cloud Infrastructure for FREE](#practice-10-try-oracle-cloud-infrastructure-for-free)
 
 ## Overview
 
@@ -33,7 +37,13 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 - SQL Developer can be downloaded from [http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html](http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html)
 - A simple text editor like Notepad, vi or Sublime.
 
-## Practice-1: Download channel text file and install SQL Developer Tool
+## Practice 1: Setup Windows 10 VM 
+
+1) Each attendee is provided with a laptop with a Virtual Box. In the Virtual Box, Please start the Windows 10 VM (name of the VM is same as the ID of this Hands on Lab - HOL6379)
+
+<img width="800" alt="image001" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/OOW-2018/EdgeLab/media/image1.png">
+
+## Practice-2: Download channel text file and install SQL Developer Tool
 
 1) Download the channel.txt file from this link: [https://bit.ly/2NSNd4l](https://bit.ly/2NSNd4l) and save it to your desktop.
 
@@ -41,7 +51,7 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 
 2) Download SQL Developer Tool from this link: [https://bit.ly/2OHcBcZ](https://bit.ly/2OHcBcZ) and install in your desktop.
 
-## Practice-2: Sign in to OCI Console
+## Practice 3: Sign in to OCI Console
 
 1) Open a supported browser and go to the Console URL. For example, [https://console.us-ashburn-1.oraclecloud.com](https://console.us-ashburn-1.oraclecloud.com).
 
@@ -66,7 +76,7 @@ When you sign in to the Console, the home page is displayed.
 
 The home page gives you quick links to the documentation and to Oracle Support.
 
-## Practice-3: Create an Autonomous Data Warehouse
+## Practice 4: Create an Autonomous Data Warehouse
 
 1) Click on **Menu** > **Autonomous Data Warehouse** 
 
@@ -96,7 +106,7 @@ The home page gives you quick links to the documentation and to Oracle Support.
 ![]( img/image008.png)
 ![]( img/image009.png)
 
-## Practice 4: Download the client credentials for ADW Database
+## Practice 5: Download the client credentials for ADW Database
 
 Oracle client credentials (wallet files) are downloaded from the Autonomous Data Warehouse Cloud administrative service console by a service administrator. If you are not an Autonomous Data Warehouse Cloud administrator, your administrator should provide you with the client credentials. Wallet files, along with the Database user ID and password provide access to data in your Autonomous Data Warehouse Cloud.
 
@@ -120,7 +130,7 @@ Oracle client credentials (wallet files) are downloaded from the Autonomous Data
 ![]( img/image013.png)
 
 
-## Practice 5: Create a bucket in Object Storage and upload the text file
+## Practice 6: Create a bucket in Object Storage and upload the text file
 
 For the fastest data loading experience Oracle recommends uploading the source files to a cloud-based object store, such as Oracle Cloud Infrastructure Object Storage, before loading the data into your Autonomous DW Cloud. 
 To load data from files in the cloud into your Autonomous DW Cloud database, use the new PL/SQL DBMS_CLOUD package. The DBMS_CLOUD package supports loading data files from the following Cloud sources: Oracle Cloud Infrastructure Object Storage, Oracle Cloud Infrastructure Object Storage Classic, and Amazon AWS S3. Lets create an Object Storage Bucket inside the Demo Compartment.
@@ -139,7 +149,7 @@ To load data from files in the cloud into your Autonomous DW Cloud database, use
 
 ![]( img/image016.png)
 
-## Practice 6: Creating an Auth token for OCI user
+## Practice 7: Creating an Auth token for OCI user
 An Auth token is an Oracle-generated token that you can use to authenticate with third-party APIs. For example, use an auth token to authenticate with a Swift client when using Recovery Manager (RMAN) to back up an Oracle Database System (DB System) database to Object Storage. Lets start the process of creating an Auth token:
 
 1. On **Menu** click on **Identity** > **Users** 
@@ -152,7 +162,7 @@ An Auth token is an Oracle-generated token that you can use to authenticate with
 6. Copy the generated token and save it in a notepad/text file. You will use it to create the database credential for api.user. *A portion of the generated token has been hidden for security reasons.*
 ![]( img/image019.png)
 
-## Practice 7: Login to the ADW database and store the object store credentials
+## Practice 8: Login to the ADW database and store the object store credentials
 In this portion of the lab you will use SQL Developer to create a connection to the Autonomous Data Warehouse database you created earlier. You will use the admin user credentials for this part.
 Once you connect to the admin user, you will create a ocitest user (a demo user), grant it the DWROLE role and then create a SQL Developer connection using the ocitest user credentials.
 The ocitest user will be the owner of the CHANNELS table that will be used for loading data.
@@ -213,7 +223,7 @@ end;
 
 You should see an output of “PL/SQL Procedure successfully completed.” if there are no execution errors or typos in the script.
 
-## Practice 8: Load data into ADW using channels text file
+## Practice 9: Load data into ADW using channels text file
 
 In this portion of the lab you will use SQL Developer to create the CHANNELS table in the ocitest schema. Once the table is created, you will load it with data from the channels.txt file stored in the object storage.
 
@@ -259,3 +269,10 @@ select * from channels;
 ```
 
 ![]( img/image028.png)
+
+## Practice 10: Try Oracle Cloud Infrastructure for FREE 
+
+Sign up for the free Oracle Cloud Infrastructure trial account. 
+https://cloud.oracle.com/tryit
+
+<img width="800" alt="image001" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/OOW-2018/EdgeLab/media/image34.png">

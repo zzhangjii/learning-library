@@ -6,15 +6,19 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Practice 1: Open Gitbash on your Desktop ](#practice-1-open-gitbash-on-your-desktop)
+[Practice 1: Setup Windows 10 VM](#practice-1-setup-windows-10-vm)
 
-[Practice 2: Access the control node](#practice-2-access-the-control-node)
+[Practice 2: Open Gitbash on your Desktop ](#practice-2-open-gitbash-on-your-desktop)
 
-[Practice 3: Deploy your HPC Cluster](#practice-3-deploy-your-hpc-cluster)
+[Practice 3: Access the control node](#practice-3-access-the-control-node)
 
-[Practice 4: Run OpenFOAM to generate your simulation](#practice-4-run-openfoam-to-generate-your-simulation)
+[Practice 4: Deploy your HPC Cluster](#practice-4-deploy-your-hpc-cluster)
 
-[Practice 5: Sign in to OCI Console](#practice-2-sign-in-to-oci-console)
+[Practice 5: Run OpenFOAM to generate your simulation](#practice-5-run-openfoam-to-generate-your-simulation)
+
+[Practice 6: Sign in to OCI Console](#practice-6-sign-in-to-oci-console)
+
+[Practice 7: Try Oracle Cloud Infrastructure for FREE](#practice-7-try-oracle-cloud-infrastructure-for-free)
 
 ## Overview
 
@@ -24,24 +28,31 @@ High Performance Computing and storage in the cloud can be very confusing and it
 
 - Oracle Cloud Infrastructure account credentials (User, Password, and Tenant) with available service limit for Bare Metal Shapes.
 
-## Practice-1: Open Gitbash on your Desktop
+## Practice 1: Setup Windows 10 VM 
+
+1) Each attendee is provided with a laptop with a Virtual Box. In the Virtual Box, Please start the Windows 10 VM (name of the VM is same as the ID of this Hands on Lab - HOL6379)
+
+<img width="800" alt="image001" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/OOW-2018/EdgeLab/media/image1.png">
+
+## Practice 2: Open Gitbash on your Desktop
 
 1) Open Gitbash on your desktop. It is already installed for you. 
 
 ![](img/gitbash001.png)
 
-## Practice 2: Access the control node
+## Practice 3: Access the control node
 
 1) On Gitbash terminal use SSH command to connect to the control node with this information:
 
-- **username**: *xxxx*
-- **IP address**: *X.X.X.X*
+- **username**: *Instructor will provide username for each participant*
+- **password**: *Instructor will provide password for each participant*
+- **IP address**: *129.146.103.162 *
 
 ```
 # ssh username@IPAddress
 ```
 
-## Practice 3: Deploy your HPC Cluster
+## Practice 4: Deploy your HPC Cluster
 
 1) After login, change into home directory by typing:
 
@@ -69,7 +80,7 @@ High Performance Computing and storage in the cloud can be very confusing and it
 ![](img/c_deploy002.png)
 
 
-## Practice 4: Run OpenFOAM to generate your simulation
+## Practice 5: Run OpenFOAM to generate your simulation
 
 1) After login into the GOTTY, execute the following command:
 
@@ -82,7 +93,7 @@ High Performance Computing and storage in the cloud can be very confusing and it
 - Ganglia: http://IPaddress/gangllia
 - Grafana: http://IPaadress:3000
 
-## Practice 5: Sign in to OCI Console
+## Practice 6: Sign in to OCI Console
 
 1) Open a supported browser and go to the Console URL. For example, [https://console.us-ashburn-1.oraclecloud.com](https://console.us-ashburn-1.oraclecloud.com).
 
@@ -106,3 +117,10 @@ When you sign in to the Console, the home page is displayed.
  ![]( img/image004.png)
 
 The home page gives you quick links to the documentation and to Oracle Support.
+
+## Practice 7: Try Oracle Cloud Infrastructure for FREE 
+
+Sign up for the free Oracle Cloud Infrastructure trial account. 
+https://cloud.oracle.com/tryit
+
+<img width="800" alt="image001" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/OOW-2018/EdgeLab/media/image34.png">
