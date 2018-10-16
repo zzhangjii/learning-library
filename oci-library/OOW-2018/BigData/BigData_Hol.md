@@ -1,4 +1,4 @@
-# Edge Services on Oracle Cloud Infrastructure
+# Big Data on Oracle Cloud Infrastructure
 
 ## Table of Contents
 
@@ -19,6 +19,13 @@
 [Try Oracle Cloud Infrastructure for FREE](#try-oracle-cloud-infrastructure-for-free)
 
 ## Overview
+
+Cloudera Enterprise Data Hub brings together the best big data technologies from the Apache Hadoop ecosystem, including HDFS, HBase, Hive, Spark, Impala, Solr, and Kudu, and adds consistent security, granular governance, and full support. It is the fastest, most secure, and easiest to use big data software available.
+
+Cloudera on Oracle Cloud Infrastructure is a joint solution that combines the flexibility and performance of Oracle Cloud Infrastructure with the scalable data management of Cloudera Enterprise Data Hub. Our solution enables customers to realize their data strategies, from operational to analytics, with amazing performance, an unmatched data ecosystem, and the inherent benefits of moving from on-premises fixed infrastructure to elastic cloud infrastructure.
+
+In this lab, attendees will manage a Cloudera Enterpise Data Hub on OCI and use TeraSort, a popular benchmark used to measure MapReduce performance of an Apache™ Hadoop® cluster.  The data contained in this presentation details performance of YARN scheduled TeraSort jobs on Cloudera Enterprise Data Hub running on OCI.
+
 
 ## Pre-Requisites 
 
