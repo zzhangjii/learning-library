@@ -22,7 +22,7 @@
 |Volume Groups and disk performance                  | Advanced |   2.1   |   
 
 
-# Oracle Open World 2018 Hands On Labs 
+# OOW 2018 Hands On Labs 
 
 
 |                  **HOL**              |    **Name**  |   
