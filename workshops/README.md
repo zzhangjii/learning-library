@@ -31,19 +31,18 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - Configure OCI CLI
 - Working with Kubernetes
 
-## To Learn More
+#### To Learn More
  - [Oracle Autonomous Transaction Processing Cloud Website](https://www.oracle.com/database/autonomous-transaction-processing.html)
  - [Oracle Autonomous Transaction Processing Cloud docs](https://docs.oracle.com/en/cloud/paas/atp-cloud/index.html)
  
-## How to View the Lab Guides
+#### How to View the Lab Guides
 
 - The Lab guides are best viewed using the Workshop's [GitHub Pages Website URL](https://oracle.github.io/learning-library/workshops/autonomous-transaction-processing/) 
 
 - To **log issues**, click [here](https://github.com/cloudsolutionhubs/autonomous-transaction-processing/issues/new) to go to the github oracle repository issue submission form.
 
-# Workshop Details
 
-## Lab 100: Provisioning an Autonomous Transaction Processing Database
+#### Lab 100: Provisioning an Autonomous Transaction Processing Database
 
 **Documentation**: [LabGuide100ProvisionAnATPDatabase.md](LabGuide100ProvisionAnATPDatabase.md)
 
@@ -52,7 +51,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - Learn how to sign-in to the Oracle Public Cloud
 - Learn how to provision a new ATP database
 
-## Lab 200: Secure Connectivity and Data Access
+#### Lab 200: Secure Connectivity and Data Access
 
 **Documentation**: [LabGuide200SecureConnectivityAndDataAccess.md](LabGuide200SecureConnectivityAndDataAccess.md)
 
@@ -60,7 +59,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 
 - Learn how to configure a secure connection using Oracle SQL Developer
 
-## Lab 300: Scaling an ATP instance
+#### Lab 300: Scaling an ATP instance
 
 **Documentation**: [LabGuide300ScaleAnATP.md](LabGuide300ScaleAnATP.md)
 
@@ -68,7 +67,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 
 - Learn how to scale an ATP instance
 
-## Lab 400: Data Loading into ATP
+#### Lab 400: Data Loading into ATP
 
 **Documentation**: [LabGuide400DataLoadingIntoATP.md](LabGuide400DataLoadingIntoATP.md)
 
@@ -80,7 +79,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - Learn how to create tables in your database
 - Learn how to load data from the Object Store
 
-## Lab 500: Configure node.js app with ATP
+#### Lab 500: Configure node.js app with ATP
 
 **Documentation**: [LabGuide500Configurenode.jsAppWithATP.md](LabGuide500Configurenode.jsAppWithATP.md)
 
@@ -88,7 +87,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 
 - Learn how to build a linux node.js application server and connect it to an Oracle ATP database service
 
-## Lab 600: Configure Java with ATP
+#### Lab 600: Configure Java with ATP
 
 **Documentation**: [LabGuide600ConfigureJavaWithATP.md](LabGuide600ConfigureJavaWithATP.md)
 
@@ -96,7 +95,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 
 - Learn how to build a linux Java application server and connect it to an Oracle ATP database service
 
-## Lab 700: Working with REST APIs
+#### Lab 700: Working with REST APIs
 
 **Documentation**: [LabGuide700WorkingWithRESTAPIs.md](LabGuide700WorkingWithRESTAPIs.md)
 
@@ -104,7 +103,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 
 - Learn how to generate REST calls to the Oracle Cloud Infrastructure using node.js
 
-## Lab 800: Building microservices on ATP
+#### Lab 800: Building microservices on ATP
 
 **Documentation**: [LabGuide800BuildingMicroservicesOnATP.md](LabGuide800BuildingMicroservicesOnATP.md)
 
@@ -113,7 +112,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - To build a docker container running node.js microservice
 - Deploy it on an ATP service
 
-## Lab 900: Configure Oracle Cloud Infrastructure Command Line Interface
+#### Lab 900: Configure Oracle Cloud Infrastructure Command Line Interface
 
 **Documentation**: [LabGuide900ConfigureOCI-CLI.md](LabGuide900ConfigureOCI-CLI.md)
 
@@ -122,7 +121,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - Configure Oracle Cloud Infrastructure Command Line Interface
 - Run examples using OCI-CLI for Autonomous Transaction Processing database
 
-## Lab 1000: Work in Progress!
+#### Lab 1000: Work in Progress!
 
 **Documentation**: [LabGuide1000.md](LabGuide1000.md)
 
@@ -130,7 +129,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 
 - Work in Progress! 
 
-## Appendix
+#### Appendix
 
 **Documentation**: [Appendix.md](Appendix.md)
 
