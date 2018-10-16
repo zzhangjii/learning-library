@@ -1,4 +1,4 @@
-# Edge Services on Oracle Cloud Infrastructure
+# Big Data on Oracle Cloud Infrastructure
 
 ## Table of Contents
 
@@ -14,9 +14,18 @@
 
 [Practice 4: Log in to Cloudera Manager](#practice-4-log-in-to-cloudera-manager)
 
-[Practice 5: Benchmarking with Teragen/Terasort)(#practice-5-benchmarking-with-teragen/terasort)
+[Practice 5: Benchmarking with Teragen/Terasort](#practice-5-benchmarking-with-teragen/terasort)
+
+[Try Oracle Cloud Infrastructure for FREE](#try-oracle-cloud-infrastructure-for-free)
 
 ## Overview
+
+Cloudera Enterprise Data Hub brings together the best big data technologies from the Apache Hadoop ecosystem, including HDFS, HBase, Hive, Spark, Impala, Solr, and Kudu, and adds consistent security, granular governance, and full support. It is the fastest, most secure, and easiest to use big data software available.
+
+Cloudera on Oracle Cloud Infrastructure is a joint solution that combines the flexibility and performance of Oracle Cloud Infrastructure with the scalable data management of Cloudera Enterprise Data Hub. Our solution enables customers to realize their data strategies, from operational to analytics, with amazing performance, an unmatched data ecosystem, and the inherent benefits of moving from on-premises fixed infrastructure to elastic cloud infrastructure.
+
+In this lab, attendees will manage a Cloudera Enterpise Data Hub on OCI and use TeraSort, a popular benchmark used to measure MapReduce performance of an Apache™ Hadoop® cluster.  The data contained in this presentation details performance of YARN scheduled TeraSort jobs on Cloudera Enterprise Data Hub running on OCI.
+
 
 ## Pre-Requisites 
 
@@ -63,9 +72,15 @@ For instance: For **Username** *OOW10*  use **Compartment** *OOW-HOL10*
 
 ![](media/image6.png)
 
+5) Open Gitbash in your windows 10 VM. Its already installed. You will use Gitbash for *ssh*. 
+
+![](media/gitbash1.png)
+
 ## Practice 3: Cloudera Enterprise Data Hub on OCI 
 
 Each attendee group is provided with a pre-installed Cloudera EDH on OCI. The setup architecture is provided below. 
+
+![](media/arch1.png)
 
 The setup consists of three worker nodes, one utility node and a bastion host. The utility node also hosts the Cloudera Manager, which we will use to manage the cluster. 
 
@@ -138,9 +153,18 @@ Cluster startup takes ~3m.  Proceed to SSH login while this runs.
 ![](media/image14.png)
 
 4) Open GitBash in your Windows and SSH to the utility Node. 
+Download an ssh private key from [here](https://bit.ly/2NDfXc4) and use this id_rsa key to log in to the Utility node. Make sure to provide the complete path for the key below.  
+
 ```
 $ ssh -i id-rsa opc@<Utility_Node_PublicIP> 
 ```
+**NOTE**
+```
+Any persmission issues, 
+$chmod 0600 id_rsa 
+Try log in again. 
+```
+
 5) Confirm is the cluster is started in the Cloud Manager Console. 
 
 ![](media/image15.png)
@@ -315,3 +339,16 @@ Confirm that we want to re-deploy client configuration and click the blue button
 ```
 $ hadoop jar hadoop-mapreduce-examples.jar teragen -Ddfs.replication=1 -Dmapreduce.job.maps=120 10000000000 /user/opc/<UNIQUE_ID>/1T_terasort_in/
 ```
+![](media/image49.png)
+
+![](media/image50.png)
+
+![](media/image51.png)
+
+## Try Oracle Cloud Infrastructure for FREE 
+
+Sign up for the free Oracle Cloud Infrastructure trial account. 
+https://cloud.oracle.com/tryit
+
+![](media/image52.png) 
+
