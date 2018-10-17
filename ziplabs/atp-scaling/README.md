@@ -84,35 +84,35 @@ The timing for the LOW service remains unchanged, despite increasing the CPUs fr
     ![](img/ServiceConsoleButton.png)
 
     [Description of the ServiceConsoleButton.png](files/ServiceConsoleButton.txt)
-
-3. Once on the console select **Activity** from the left margin. A dashboard of activity on your instance is displayed in four tiles, Database Activity, CPU Utilization, Running Statements, Queued Statements. This information is displayed by defined service. The default is to report Real Time activity, but specific time period activity can be examined by selecting the **Time Period** button.
-4. Run your cursor over any of the graphs to see more detailed information.
+3. Depending on your browser settings, you may need to give permission for the Service Console to open in a new tab.
+4. Once on the console select **Activity** from the left margin. A dashboard of activity on your instance is displayed in four tiles, Database Activity, CPU Utilization, Running Statements, Queued Statements. This information is displayed by defined service. The default is to report Real Time activity, but specific time period activity can be examined by selecting the **Time Period** button.
+5. Run your cursor over any of the graphs to see more detailed information.
     
     ![](img/activity-monitor.png)
 
     [Description of the illustration activity-monitor.png](files/activity-monitor.txt)
 
 
-5. To see specific SQL statement, click the **Monitored SQL** tab. This displays SQL that has run or is running in chronological order.
-6. Judging from the **Duration** property, select a SQL statement associated with the LOW service. The row will turn blue when it's selected.
-7. Click the **Show details** button.
+6. To see specific SQL statement, click the **Monitored SQL** tab. This displays SQL that has run or is running in chronological order.
+7. Judging from the **Duration** property, select a SQL statement associated with the LOW service. The row will turn blue when it's selected.
+8. Click the **Show details** button.
     
     ![](img/activity-monitored-sql.png)
 
     [Description of the illustration activity-monitored-sql.png](files/activity-monitored-sql.txt)
 
-8. The Details window pops up. The Overview tab on this page provides information about the SQL that was executed such as the sql text, user, times, and service used.
-9. Click the **Parallel** tab. Because this is a LOW service, we wouldn't expect to find anything. In fact, you're taken to an empty page indicationg there was no parallelization for this query.
+9. The Details window pops up. The Overview tab on this page provides information about the SQL that was executed such as the sql text, user, times, and service used.
+10. Click the **Parallel** tab. Because this is a LOW service, we wouldn't expect to find anything. In fact, you're taken to an empty page indicationg there was no parallelization for this query.
     
     ![](img/details-overview.png)
 
     [Description of the illustration details-overview.png](files/details-overview.txt)
 
-10. Click the **x** in the top right corner to close the details window. This will return you to Monitored SQL page.
-11. Judging from the **Duration** property, select the most recent SQL statement associated with a PARALLEL service.
-12. Click the **Show details** button.
-13. Click the **Parallel** tab.
-14. Expand the **Parallel Set** and notice how the query was executed in parallel, with 4 parallel threads. In the image below, each thread took about 1.5 seconds for the total of about 6 seconds. This is because the PARALLEL service automatically parallelizes transactions depending on the number of CPU’s available.
+11. Click the **x** in the top right corner to close the details window. This will return you to Monitored SQL page.
+12. Judging from the **Duration** property, select the most recent SQL statement associated with a PARALLEL service.
+13. Click the **Show details** button.
+14. Click the **Parallel** tab.
+15. Expand the **Parallel Set** and notice how the query was executed in parallel, with 4 parallel threads. In the image below, each thread took about 1.5 seconds for the total of about 6 seconds. This is because the PARALLEL service automatically parallelizes transactions depending on the number of CPU’s available.
 
     ![](img/details-parallel.png)
 

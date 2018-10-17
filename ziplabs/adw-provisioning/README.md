@@ -38,7 +38,7 @@ Oracle’s Autonomous Data Warehouse Cloud is the perfect quick-start service fo
      * **Database Name**: `ADWFINANCE`
      * **CPU Core Count**: `1`
      * **Storage (TB)**:  `1`
-     * **Administrator Credentials**: Create a password for the ADMIN user of the service instance. You'll need this password in the upcoming steps to sign into the service console, download the credential wallet, and connect to the database from Oracle SQL Developer.
+     * **Administrator Credentials**: Create a password for the ADMIN user of the service instance. You'll need this password in the upcoming steps to download the credential wallet and connect to the database from Oracle SQL Developer.
      * **License Type**: `My organization already owns Oracle database software licenses`
      * **Tags**: (Optional) You don't need to enter anything here.
 7. Click the **Create Autonomous Data Warehouse** button to start provisioning the instance. 
@@ -58,9 +58,14 @@ Once you have created the data warehouse, download the credentials zip file for 
 
     [Description of the illustration open_service_console.png](files/open_service_console.txt)
 
-2. A dialog opens to sign in to the service console. Enter the following information:
-     * **Username**: `admin`
-     * **Password**: Enter the administrator password you specified when you created your service instance.
+2. Depending on your browser settings, you may need to give permission for the Service Console to open in a new tab. In Firefox:
+     * Click **Preferences**
+     * Click the final option to **Show** the content.
+
+    ![](img/ShowNewTab.png)
+
+    [Description of the illustration ShowNewTab.png](files/ShowNewTab.txt)
+    
 3. The service console opens to the **Overview** page. Click **Administration** in the left navigation pane.
 4. Click **Download a Connection Wallet**.
 5. You are prompted to create a password for the credentials zip file. Enter a password This password is separate from the Admin user password created earlier.  
@@ -81,7 +86,7 @@ Once you have created the data warehouse, download the credentials zip file for 
      * **Connection Name**: `admin_low`
      * **Username**: `admin`
      * **Password**: Enter the admin user's password that you specified when provisioning the service instance.
-     * **Connection Type**: `Cloud PDB`
+     * **Connection Type**: `Cloud PDB` (Note: This may also be called `Cloud Wallet`)
      * **Configuration File**: Click **Browse**, and select the **Client Credentials** zip file you downloaded from the ADWC service console.
      * **Keystore Password**:
         * **For SQL Developer 18.2.0 or newer**: Starting with version 18.2.0, SQL Developer does not require that you enter a Keystore Password and does not provide the Keystore Password field.

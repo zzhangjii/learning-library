@@ -38,7 +38,7 @@ Autonomous Transaction Processing is built upon the Oracle Database, so that all
      * **Database Name**: `atpxweek`
      * **CPU Core Count**: `2`
      * **Storage (TB)**:  `1`
-     * **Administrator Credentials**: Create a password for the ADMIN user of the service instance. You'll need this password in the upcoming steps to sign into the service console, download the credential wallet, and connect to the database from Oracle SQL Developer.
+     * **Administrator Credentials**: Create a password for the ADMIN user of the service instance. You'll need this password in the upcoming steps to download the credential wallet and connect to the database from Oracle SQL Developer.
      * **License Type**: `My organization already owns Oracle database software licenses`
      * **Tags**: (Optional) You don't need to enter anything here. Tags can be used for additional security and segmentation.
 7. Click the **Create Autonomous Transaction Processing Database** button to start provisioning the instance. 
@@ -65,9 +65,14 @@ Now that you've created an ATP database, download the credentials zip file. This
 
     [Description of the illustration atp_open_service_console.png](files/atp_open_service_console.txt)
 
-2. The database is initially created with one user, `admin`. To sign in to the service console, enter the following information in the dialog that appears:
-     * **Username**: `admin`
-     * **Password**: Enter the administrator password you specified when you created your service instance.
+2. Depending on your browser settings, you may need to give permission for the Service Console to open in a new tab. In Firefox:
+     * Click **Preferences**
+     * Click the final option to **Show** the content.
+
+    ![](img/ShowNewTab.png)
+
+    [Description of the illustration ShowNewTab.png](files/ShowNewTab.txt)
+
 3. The service console opens to the **Overview** page. There is no activity displayed yet because this is a new instance. Click **Administration** in the left navigation pane.
 
     ![](img/atp-administration.png)
@@ -79,8 +84,6 @@ Now that you've created an ATP database, download the credentials zip file. This
      * Note: Version 18.2.0 of SQL Developer drops the requirement to enter the ATP keystore password and does not provide the keystore password field in the dialog for creating a connection. If using SQL Developer version 18.2.0 or newer, you do not use the password you just created.
 7. Click **Download**.
 6. Make note of where the zip file is stored. This will most likely be the downloads directory (Oracle's Home/Downloads). You'll use this file in the next step to define a SQL Developer connection to your ATP database.
-
-
 
 
 ## Connect to the Database using SQL Developer ##
