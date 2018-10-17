@@ -64,7 +64,7 @@ Oracleoow2018!
 
 After log in, you are at the home page of OCI web console. 
 
-![](media/image5.png)
+<img width="1240" alt="ocihomepage" src="https://user-images.githubusercontent.com/32341971/47040466-2c38dd80-d13b-11e8-8ae1-79f8d48a3214.png">
 
 4) Navigate to the **MENU** on the top left, and Click on **Networking** --> **Virtual Cloud Networks** and select the compartment associated with your userID. 
 
