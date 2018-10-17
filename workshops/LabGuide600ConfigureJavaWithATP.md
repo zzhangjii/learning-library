@@ -16,7 +16,7 @@ To **log issues**, click [here](https://github.com/cloudsolutionhubs/autonomous-
 
 - The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
 
-#### Note: If you have created Virtual Cloud Network, Linux Environemnt in the previous lab, you can use the same instance to complete this lab.
+#### Note: If you have created Virtual Cloud Network, Linux Environemnt in the previous lab, you can jump to Step 3 in the same lab to configure Java with ATP.
 
 ## Steps
 
@@ -108,6 +108,15 @@ Where
 
 ![](./images/500/GenerateSSH.png)
 
+#### For windows users:
+
+- Download and run the [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) installer.
+
+- Generate a private and public key pair:
+    - Go to the Windows Start menu -> All Programs -> PuTTY and open PuTTYgen
+    - Click the 'Generate' button and PuTTYgen will ask you to make some random movement with your mouse until it has enough random data to generate a secure key for you
+    - Click the 'Save private key' button and save the resulting file somewhere safe and only accessible by you!
+
 - **Virtual Cloud Network Compartment**: Select Demo Compartment
 - **Virtual Cloud Network**: In the Virtual Cloud Network field, select the Virtual Cloud Network for the instance which we created earlier in this lab.
 - **Subnet Compartment**: Select Demo Compartment
@@ -176,7 +185,7 @@ mkdir lib
 
 cd lib 
 
-wget https://github.com/sblack4/ojdbc8-full/raw/master/ojdbc8-full.tar.gz 
+wget https://github.com/cloudsolutionhubs/ojdbc8-full/raw/master/ojdbc8-full.tar.gz
 
 tar xzfv ojdbc8-full.tar.gz
 ```
