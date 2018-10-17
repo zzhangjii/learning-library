@@ -1,25 +1,16 @@
-# Autonomous Transaction Processing: Self-Guided Hands-On Workshop
+<table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
+
+Last Updated:<br>October 17, 2018
+</td>
+<td class="td-banner">
+# Getting Started with Autonomous Transaction Processing                                    
+</td></tr><table>
+
 
 This workshop walks you through all the steps to get started using the **Oracle Autonomous Transaction Processing**. Provision a database, scale ATP, load data, configure node.js with ATP, configure Java with ATP, working with REST APIs, building microservices on ATP, Configuring OCI CLI, and working with Kubernetes.
 
-### **Step 1**: Acquire an Oracle Cloud Trial or Workshop Account
+## Goals for this workshop
 
-- Bookmark this page for future reference.
-
-- Please click on the following link to create your <a class=“trial-link” href="https://myservices.us.oraclecloud.com/mycloud/signup?language=en&sourceType=:ex:tb:::RC_NAMK181011P00041:ATPHOL&SC=:ex:tb:::RC_NAMK181011P00041:ATPHOL&pcode=NAMK181011P00041" target="_trial">Free Account</a>, and complete all the required steps to get your free Oracle Cloud Trial Account. When you complete the registration process you'll receive a $300 credit that will enable you to complete the lab for free.  Additionally, you'll have 1000s of hours left over to continue to explore the Oracle Cloud.
-
-  - Soon after requesting your trial you will receive the following email. You may begin working on Lab 100.
-
-  ![](images/readme/code_9.png)
-
-
-### **Step 2**: Workshop Details
-
-- _You can see a list of Lab Guides_ by clicking on the **Menu Icon** in the upper left corner of the browser window. You're now ready to continue with the workshop.
-
-  ![](images/readme/Menu.png)
-
-#### Goals
 - Provision an ATP Database on Oracle Cloud Infrastructure
 - Configure a secure connection using Oracle SQL Developer
 - Scaling an ATP Database
@@ -28,49 +19,57 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - Configure Java with ATP
 - Working with REST APIs
 - Building Microservices on ATP
-- Configure OCI CLI
 
-#### To Learn More
- - [Oracle Autonomous Transaction Processing Cloud Website](https://www.oracle.com/database/autonomous-transaction-processing.html)
- - [Oracle Autonomous Transaction Processing Cloud docs](https://docs.oracle.com/en/cloud/paas/atp-cloud/index.html)
- 
-#### How to View the Lab Guides
+ # How to Get Your Free Cloud Trial Account
+ Please click on the following link to create your <a class=“trial-link” href="https://myservices.us.oraclecloud.com/mycloud/signup?language=en&sourceType=:ex:tb:::RC_NAMK181011P00041:ATPHOL&SC=:ex:tb:::RC_NAMK181011P00041:ATPHOL&pcode=NAMK181011P00041" target="_trial">Free Account</a>, and complete all the required steps to get your free Oracle Cloud Trial Account. When you complete the registration process you'll receive a $300 credit that will enable you to complete the lab for free.  Additionally, you'll have 1000s of hours left over to continue to explore the Oracle Cloud.
 
-- The Lab guides are best viewed using the Workshop's [GitHub Pages Website URL](https://oracle.github.io/learning-library/workshops/autonomous-transaction-processing/) 
+  - Soon after requesting your trial you will receive the following email. You may begin working on Lab 100.
 
-- To **log issues**, click [here](https://github.com/cloudsolutionhubs/autonomous-transaction-processing/issues/new) to go to the github oracle repository issue submission form.
+  ![](images/readme/code_9.png)
+
+# Workshop Overview
+
+## Before Your Begin
+**What is an Autonomous Transaction Processing?**
+
+Oracle Autonomous Transaction Processing delivers a self-driving, self-securing, self-repairing database service that can instantly scale to meet demands of mission critical transaction processing and mixed workload applications.  
+
+Read on to begin your Getting Started journey with Oracle Autonomous Transaction Processing.
+
+**You are all set, let's begin!**
 
 
-#### Lab 100: Provisioning an Autonomous Transaction Processing Database
+## Lab 100: Provisioning an Autonomous Transaction Processing Database
 
-**Documentation**: [LabGuide100ProvisionAnATPDatabase.md](LabGuide100ProvisionAnATPDatabase.md)
-
-**Objectives**:
+**Key Objectives**:
 
 - Learn how to sign-in to the Oracle Public Cloud
 - Learn how to provision a new ATP database
 
-#### Lab 200: Secure Connectivity and Data Access
+**[Click here to run Lab 100](LabGuide100ProvisionAnATPDatabase.md)**
 
-**Documentation**: [LabGuide200SecureConnectivityAndDataAccess.md](LabGuide200SecureConnectivityAndDataAccess.md)
 
-**Objectives**:
+## Lab 200: Secure Connectivity and Data Access
+
+**Key Objectives**:
 
 - Learn how to configure a secure connection using Oracle SQL Developer
 
-#### Lab 300: Scaling an ATP instance
+**[Click here to run Lab 200](LabGuide200SecureConnectivityAndDataAccess.md)**
 
-**Documentation**: [LabGuide300ScaleAnATP.md](LabGuide300ScaleAnATP.md)
 
-**Objectives**:
+## Lab 300: Scaling an ATP instance
+
+**Key Objectives**:
 
 - Learn how to scale an ATP instance
 
-#### Lab 400: Data Loading into ATP
+**[Click here to run Lab 300](LabGuide300ScaleAnATP.md)**
 
-**Documentation**: [LabGuide400DataLoadingIntoATP.md](LabGuide400DataLoadingIntoATP.md)
 
-**Objectives**:
+## Lab 400: Data Loading into ATP
+
+**Key Objectives**:
 
 - Learn how to use the SQL Developer Data Import Wizard
 - Learn how to upload files to the OCI Object Storage
@@ -78,43 +77,55 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - Learn how to create tables in your database
 - Learn how to load data from the Object Store
 
-#### Lab 500: Configure node.js app with ATP
+**[Click here to run Lab 400](LabGuide400DataLoadingIntoATP.md)**
 
-**Documentation**: [LabGuide500Configurenode.jsAppWithATP.md](LabGuide500Configurenode.jsAppWithATP.md)
 
-**Objectives**:
+
+## Lab 500: Configure node.js app with ATP
+
+**Key Objectives**:
 
 - Learn how to build a linux node.js application server and connect it to an Oracle ATP database service
 
-#### Lab 600: Configure Java with ATP
+**[Click here to run Lab 500](LabGuide500Configurenode.jsAppWithATP.md)**
 
-**Documentation**: [LabGuide600ConfigureJavaWithATP.md](LabGuide600ConfigureJavaWithATP.md)
+## Lab 600: Configure Java with ATP
 
-**Objectives**: 
+**Key Objectives**:
 
 - Learn how to build a linux Java application server and connect it to an Oracle ATP database service
 
-#### Lab 700: Working with REST APIs
+**[Click here to run Lab 600](LabGuide600ConfigureJavaWithATP.md)**
 
-**Documentation**: [LabGuide700WorkingWithRESTAPIs.md](LabGuide700WorkingWithRESTAPIs.md)
+## Lab 700: Working with REST APIs
 
-**Objectives**:
+**Key Objectives**:
 
 - Learn how to generate REST calls to the Oracle Cloud Infrastructure using node.js
 
-#### Lab 800: Building microservices on ATP
+**[Click here to run Lab 700](LabGuide700WorkingWithRESTAPIs.md)**
 
-**Documentation**: [LabGuide800BuildingMicroservicesOnATP.md](LabGuide800BuildingMicroservicesOnATP.md)
+## Lab 800: Building microservices on ATP
 
-**Objectives**:
+**Key Objectives**:
 
 - To build a docker container running node.js microservice
 - Deploy it on an ATP service
 
-#### Appendix
+**[Click here to run Lab 700](LabGuide800BuildingMicroservicesOnATP.md)**
 
-**Documentation**: [Appendix.md](Appendix.md)
 
-**Objectives**:
+## Appendix
+
+**Key Objectives**:
 
 - Handy docker commands you may need while doing <a href="./LabGuide800BuildingMicroservicesOnATP.md" target="_blank">LabGuide800BuildingMicroservicesOnATP.md</a>
+
+**[Click here to go through Appendix](Appendix.md)**
+
+## Learn More About Autonomous Transaction Processing...
+
+Use these links to get more information about Oracle Autonomous Transaction Processing
+
+- [Oracle Autonomous Transaction Processing Cloud Website](https://www.oracle.com/database/autonomous-transaction-processing.html)
+- [Oracle Autonomous Transaction Processing Cloud docs](https://docs.oracle.com/en/cloud/paas/atp-cloud/index.html)
