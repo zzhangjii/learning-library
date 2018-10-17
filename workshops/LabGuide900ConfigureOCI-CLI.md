@@ -91,7 +91,7 @@ oci setup config
 - Once you run the above command, you will need to enter the following:
 
     - **Enter a location for your config [/Users/tejus/.oci/config]**: Press Return key
-    - **Enter a user OCID**: This is located on your user information page in OCI console
+    - **Enter user OCID**: This is located on your user information page in OCI console
 
     Login to OCI console and click on Menu, Identity and Users. Click on the User and navigate to User Details page. Copy the User OCID.
 
@@ -124,7 +124,7 @@ Add public key to OCI User setting
 - Open Terminal and navigate to folder containing **oci_api_key_public.pem**. Copy the public key.
 
 ```
-cat oci_api_key_public.pem
+cat /path_to/oci_api_key_public.pem
 ```
 
 ![](./images/900/OCIPublicKeycleare.png)
