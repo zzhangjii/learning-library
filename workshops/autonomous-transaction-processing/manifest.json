@@ -58,12 +58,6 @@
                 "description": "Instructions to build and provision application stack consisting of microservices"
             },
             {
-                "number": "900",
-                "filename": "LabGuide900ConfigureOCI-CLI.md",
-                "title": "Lab 900: Configure Oracle Cloud Infrastructure Command Line Interface",
-                "description": "Instructions to to configure Oracle Cloud Infrastructure Command Line Interface"
-            },
-            {
                 "number": "Appendix",
                 "filename": "Appendix.md",
                 "title": "Handy docker commands you may need",
