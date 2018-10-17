@@ -81,12 +81,16 @@ eu-frankfurt-1
 
 ## Practice 3: Create a Traffic Management Policy
 
-In this exercise we will assume that you have a web application servers running in OCI in two different regions - Ashburn, US and in Frankfurt, EU. We are going to create a global **Failover** traffic management policy for your web application. 
+In this exercise we have a web application that has web servers running in OCI in two different regions - Ashburn, US and in Frankfurt, EU. We are going to create a global **Failover** traffic management policy for this web application, where we will use Frankfurt web server as primary and Ashburn web server as secondary. 
 
 The webservers are already built in OCI Ashburn and Frankfurt regions, and are hosting a basic apache webserver. The public IPs associated with these webservers are provided below. 
 
 - Webserver Frankfurt: X.X.X.X
 - Webserver Ashburn: X.X.X.X
+
+Following is a high level architecture diagram. 
+
+![arch1](https://user-images.githubusercontent.com/32341971/47058024-13025200-d178-11e8-85f1-fa2a26e086f3.png)
 
 1) Open the Menu and navigate to the Edge Services --> DNS Traffic Management. 
 
