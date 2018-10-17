@@ -102,7 +102,8 @@ In this lab you will explore the free sample data sets that are included witin y
 - See how the different levels of database service affect performance and concurrency
 
 **[Click here to run Lab 2](LabGuide2.md)**
-<a href="https://apexapps.oracle.com/pls/apex/f?p=44785:112:0::::P112_CONTENT_ID:22791" target="_blank">**Click here to watch a video demonstration** of running queries against the sample data sets that are part of your Autonomous Data Warehouse.
+
+<a href="https://apexapps.oracle.com/pls/apex/f?p=44785:112:0::::P112_CONTENT_ID:22791" target="_blank">**Click here to watch a video demonstration**</a> of running queries against the sample data sets that are part of your Autonomous Data Warehouse.
 
 
 ## Lab 3: Loading Data into Your New Autonomous Data Warehouse
