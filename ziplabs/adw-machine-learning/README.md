@@ -50,8 +50,8 @@ Oracle Machine Learning SQL notebooks provide easy access to Oracle's paralleliz
 
 11. You're taken to the Create Users page. Enter the following information:
      * **Username**: `omluser1`
-     * **First Name**: OML
-     * **Last Name**: User1
+     * **First Name**: `OML`
+     * **Last Name**: `User1`
      * **Email Address**: For easy access, enter the same email address you used to login to your cloud account.
      * **Password:** Uncheck the box to auto generate a password. Instead create a new password yourself.
 12. You're taken back to the Users page where the new user is now listed.
