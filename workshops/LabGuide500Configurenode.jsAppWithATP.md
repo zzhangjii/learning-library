@@ -42,7 +42,9 @@ In order to create a VCN we need to select a Compartment from the List Scope. Fo
 - Enter the following in Create Virtual Cloud Network window
 
 **Create In Compartment**: Select the compartment, **Demo**. By default, this field displays your current compartment.
+
 **Name**: Enter a name for your cloud network.
+
 Check on **Create Virtual Cloud Network Plus Related Resources** option. By selecting this option, you will be creating a VCN with only public subnets. The dialog expands to list the items that will be created with your cloud network.
 
 ![](./images/500/Picture500-16.png)
@@ -67,7 +69,7 @@ A confirmation page displays the details of the cloud network that you just crea
 
 ![](./images/500/Picture500-1.png)
 
-- In order to create Compute Instance we need to select a Compartment. Select Demo Compartment which we created in Lab100
+- In order to create Compute Instance we need to select a Compartment. Select **Demo** Compartment which we created in Lab100
 
 - Click on Create Instance
 
@@ -112,7 +114,7 @@ Where
 
 #### For windows users:
 
-- Download and run the PuTTY installer [here](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
+- Download and run the [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) installer.
 
 - Generate a private and public key pair:
     - Go to the Windows Start menu -> All Programs -> PuTTY and open PuTTYgen
@@ -144,7 +146,9 @@ That is all you need to enter to create Linux instance on OCI.
 
 In order to install the required package on linux environment we need to ssh into our linux host machine.
 
-- Open Terminal and ssh as user opc to your host machine.
+- Open Terminal and ssh as user opc to your host machine. 
+
+Change the below command to your ssh key path.
 
 ```
 $ssh -i /Users/tejus/Desktop/sshkeys/id_rsa opc@ipaddress
@@ -266,7 +270,7 @@ nano dbconfig.js
 module.exports= {
 dbuser: 'admin', 
 dbpassword: 'WElcome_123#', 
-connectString: 'restonHubDB_high' 
+connectString: 'atplab_high' 
 }
 ```
 
