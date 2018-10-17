@@ -35,7 +35,7 @@ To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/iss
 
 -   Connected as your user in SQL Developer, copy and paste <a href="./scripts/400/create_external_tables.txt" target="_blank">this code snippet</a> to SQL Developer worksheet.  
 
-    Use the **create\_external\_table** procedure of the **DBMS\_CLOUD** package to create external tables on the files (**sale1v3.dat**, **cust1v3.dat**, and **prod1v3.dat**) staged in your object store. Note that you are still using the same credential and the URLs of files on OCI Object Storage you used when loading data in the previous lab.
+    Use the **create\_external\_table** procedure of the **DBMS\_CLOUD** package to create external tables on the files (**sale1v3.dat**, **cust1v3.dat**, and **products.txt**) staged in your object store. Note that you are still using the same credential and the URLs of files on OCI Object Storage you used when loading data in the previous lab.
 
     -   At the top of the script, specify the Object Store base URL in the definition of the **base\_URL** variable.
 
@@ -121,11 +121,7 @@ When you are satisfied with the data preview, click **NEXT**.
 
 ![](./images/400/snap0014677.jpg)
 
-
-
-
-
--   The final screen reflects all your choices made in the Wizard. Click **FINISH** to create the external table CHANNELS_EXT.
+-   The final screen reflects all your choices made in the Wizard. Click **FINISH** to create the external table CHANNELS_EXT and wait for the import to complete.
 
 -   Finally, test your new external table by running a simple query like this:
 
