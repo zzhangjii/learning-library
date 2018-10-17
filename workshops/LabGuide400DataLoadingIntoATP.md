@@ -162,11 +162,11 @@ Construct the URL that points to the location of the customers.csv file staged i
  #### bucket_name: Type in your bucket name which you created in Object Storage.
  #### file_name: customers.csv
 
- In this example, the region name is us-ashburn-1, the tenant name is gse00014623, and the bucket name is ATPLab. So the URL of the customers.csv file is: 
+ In the belwo example of constructed URL, the region name is us-seattle-1, the tenant name is r1atpdemo6, and the bucket name is ATPLab. So the URL of the customers.csv file is:
  
- https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/gse00014623/ATPLab/customers.csv
+ https://swiftobjectstorage.us-seattle-1.oraclecloud.com/v1/r1atpdemo6/ATPLab/customers.csv
  
- Yours would be different.
+ Yours would be different, please change the above mentioned details and save your URL.
 
 ![](images/400/ConstructURLs.png) 
 
