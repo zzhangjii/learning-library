@@ -231,7 +231,7 @@ Login to OCI console and naviagte to Autonomous Transaction Processing Database 
 
 #### Bonus Step: In similar way you can try the follwing examples
 
-#### Restore Databse 
+#### Restore Database
 
 Open your command line interface and run the following command to Restore Autonomous Transaction Processing Database
 
