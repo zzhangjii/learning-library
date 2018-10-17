@@ -55,7 +55,7 @@ In this section you will be provisioning an ATP database using the cloud console
 
 Enter the following in create Compartment window
 
-- **Name**: Enter a friendly name to idenitfy your compartment (Demo)
+- **Name**: Enter a friendly name to idenitfy your compartment (To complete this workshop let us name compartment as **Demo**)
 - **Description**: Enter a description for the compartment
 - Click on Create Compartment link 
 
@@ -92,9 +92,6 @@ Managing Tags and Tag Namespaces: When you have many resources (for example, ins
 
 ![](./images/100/Picture100-24.jpeg)
 
--  Click on **Click here** to enable compartment selection so that the ATP instance is in a specific compartment
-
-![](./images/100/Picture100-25.jpeg)
 
 #### Note: Oracle Cloud Infrastructure allows logical isolation of users within a tenant through Compartments. This allows multiple users and business units to share a tenant account while being isolated from each other.
 
@@ -102,13 +99,15 @@ If you have chosen the compartment you do not have privilegeson, you will not be
 
 More information about Compartments and Policies is provided in the OCI Identity and Access Management documentation [here](https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm?tocpath=Services%7CIAM%7C_____13).
 
--  Select Demo compartment which you created earlier in this lab
+-  Verify Demo compartment is selected
 
 ![](./images/100/Picture100-26.jpeg)
 
 -  Specify a name for the instance
 
 ![](./images/100/Picture100-27.jpeg)
+
+- For this lab we are not checking Dedicate Infrastructure
 
 -  You can choose an instance shape, specified by the CPU count and storage size. Default CPU count is 1 and storage is 1 TB.
 
@@ -145,11 +144,11 @@ For this workshop we will not be creating any TAG NAMESPACE.
 
 - Make sure you have everything filled all required details
 
-![](./images/100/Picture100-30.jpeg)
-
 -  Click on **Create Autonomous Transaction Processing Database** to start provisioning the instance
 
 ![](./images/100/Picture100-31.jpeg)
+
+- Once you create ATP Database it would take 2-3 minutes for the instance to be provisioned.
 
 ![](./images/100/Picture100-32.jpeg)
 
