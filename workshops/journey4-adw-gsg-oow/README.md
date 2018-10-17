@@ -87,8 +87,8 @@ This lab walks you through the steps of logging into Oracle Cloud, accessing the
 - Learn how to connect from Oracle SQL Developer
 
 **[Click here to run Lab 1](LabGuide1.md)**
-<a href="https://apexapps.oracle.com/pls/apex/f?p=44785:112:0::::P112_CONTENT_ID:24294" target="_blank">**Click here to watch a video demonstration** of provisioning a new autonomous data warehouse.
-<a href="https://apexapps.oracle.com/pls/apex/f?p=44785:112:0::::P112_CONTENT_ID:22790 " target="_blank">**Click here to watch a video demonstration** of connecting to your new Autonomous Data Warehouse using SQL Developer.
+<a href="https://apexapps.oracle.com/pls/apex/f?p=44785:112:0::::P112_CONTENT_ID:24294" target="_blank">**Click here to watch a video demonstration**</a> of provisioning a new autonomous data warehouse.
+<a href="https://apexapps.oracle.com/pls/apex/f?p=44785:112:0::::P112_CONTENT_ID:22790 " target="_blank">**Click here to watch a video demonstration**</a> of connecting to your new Autonomous Data Warehouse using SQL Developer.
 
 ## Lab 2: Working with Data Warehouse Services and the Free Sample Data Sets
 In this lab you will explore the free sample data sets that are included witin your new autonomous data warehouse. As part of this lab you will experiment with the selecting different levels of database services that come with your Autonomous Data Warehouse.
@@ -114,7 +114,7 @@ In this lab, you will be uploading files to Oracle Object Storage, creating new 
 - Learn how to troubleshoot data loads
 
 **[Click here to run Lab 3](LabGuide3.md)**
-<a href="https://apexapps.oracle.com/pls/apex/f?p=44785:112:0::::P112_CONTENT_ID:22792" target="_blank">**Click here to watch a video demonstration** of loading data into your Autonomous Data Warehouse
+<a href="https://apexapps.oracle.com/pls/apex/f?p=44785:112:0::::P112_CONTENT_ID:22792" target="_blank">**Click here to watch a video demonstration**</a> of loading data into your Autonomous Data Warehouse
 
 
 ## Lab 4: Querying External Data
@@ -141,7 +141,7 @@ This lab will walk you through the process of connecting your Autonomous Data Wa
 - Learn how to access and gain insights from data in the Autonomous Data Warehouse
 
 **[Click here to run Lab 5](LabGuide5.md)**
-<a href="https://youtu.be/n5Q_5abgXcI" target="_blank">**Click here to watch a video demonstration** that walks you through the process of connecting Data Visualization Desktop to your new Autonomous Data Warehouse and building sophisticated data visualizations.
+<a href="https://youtu.be/n5Q_5abgXcI" target="_blank">**Click here to watch a video demonstration**</a> that walks you through the process of connecting Data Visualization Desktop to your new Autonomous Data Warehouse and building sophisticated data visualizations.
 
 
 
@@ -166,7 +166,7 @@ For this lab you will watch a couple of demos to show the capabilities available
 - Learn how to use the service console to monitor the performance of your Autonomous Data Warehouse
 
 **[Click here to run Bonus Lab 6](LabGuide6.md)**
-<a href="https://apexapps.oracle.com/pls/apex/f?p=44785:112:0::::P112_CONTENT_ID:24194" target="_blank">**Click here to watch a video demonstration** that shows you how to monitor performance of your Autonomous Data Warehouse and perform basic administrative tasks.
+<a href="https://apexapps.oracle.com/pls/apex/f?p=44785:112:0::::P112_CONTENT_ID:24194" target="_blank">**Click here to watch a video demonstration**</a> that shows you how to monitor performance of your Autonomous Data Warehouse and perform basic administrative tasks.
 
 
 
