@@ -64,22 +64,10 @@
                 "description": "Instructions to to configure Oracle Cloud Infrastructure Command Line Interface"
             },
             {
-                "number": "1000",
-                "filename": "LabGuide1000Kubernetes.md",
-                "title": "Lab 1000: Using Kubernetes",
-                "description": "Deploy a Node.js application on a Kubernetes cluster"
-            },
-            {
                 "number": "Appendix",
                 "filename": "Appendix.md",
                 "title": "Handy docker commands you may need",
                 "description": "Handy docker commands"
-            },
-            {
-                "number": "DockerImage",
-                "filename": "DockerImage.md",
-                "title": "Read me for Docker Images",
-                "description": "Read me for Docker Images"
             }
         ]
     }
