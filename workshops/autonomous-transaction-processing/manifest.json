@@ -73,7 +73,7 @@
                 "number": "Appendix",
                 "filename": "Appendix.md",
                 "title": "Handy docker commands you may need",
-                "description": "Handy docker commands you may need to complete LabGuide800BuildingMicroservicesOnATP"
+                "description": "Handy docker commands"
             },
             {
                 "number": "DockerImage",
