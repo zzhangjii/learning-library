@@ -14,6 +14,8 @@ permalink: /ziplabs/index.html
 * [Getting Started With Oracle Machine Learning Notebooks](adw-machine-learning)
 * [Provisioning Autonomous Transaction Processing and Connecting with SQL Developer](atp-provisioning)
 
+Art: https://oracle.github.io/learning-library/ziplabs/2018-art/
+
 ## Oracle Open World 2017 ##
 * [Creating a Node.js RESTful API in Oracle Application Container Cloud Service](node-rest/)
 * [Deploy a Spring Application to Oracle Cloud](java-spring-accs/)
