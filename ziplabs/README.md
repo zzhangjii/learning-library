@@ -13,6 +13,8 @@ permalink: /ziplabs/index.html
 * [Working with Database Services and Sample Data Sets](adw-services)
 * [Getting Started With Oracle Machine Learning Notebooks](adw-machine-learning)
 * [Provisioning Autonomous Transaction Processing and Connecting with SQL Developer](atp-provisioning)
+* [Working with Database Services and ATP Consumer Groups](atp-services)
+* [Scaling, Performance, and Monitoring in ATP](atp-scaling)
 
 Art: https://oracle.github.io/learning-library/ziplabs/2018-art/
 
