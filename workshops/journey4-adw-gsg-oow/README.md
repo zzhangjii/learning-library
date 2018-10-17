@@ -7,7 +7,7 @@ Last Updated:<br>October 12, 2018
 </td></tr><table>
 
 
-This workshop walks you through all the steps to get started using the **Oracle Autonomous Data Warehouse (ADW)**. You will provision a new ADW instance, load data from the object store and troubleshoot data loads, query external data residing on the object store, manage an ADW instance, scale an ADW instance, and use Oracle Machine Learning notebooks.
+This workshop walks you through all the steps to get started using the **Oracle Autonomous Data Warehouse  (ADW)**. You will provision a new ADW instance, load data from the object store and troubleshoot data loads, query external data residing on the object store, manage an ADW instance, scale an ADW instance, and use Oracle Machine Learning notebooks.
 
 
 ## Goals for this workshop
@@ -30,13 +30,13 @@ This workshop walks you through all the steps to get started using the **Oracle 
  Your credit card will only be used for verification purposes and will not be charged unless you 'Upgrade to Paid' in My Services
  Click on the image below to go to the trial sign-up page which will allow you to request your free cloud account:
 
-  <a href="https://myservices.us.oraclecloud.com/mycloud/signup?language=en&sourceType=:ex:tb:::RC_NAMK181017P00031:ADW_IMHOL&SC=:ex:tb:::RC_NAMK181017P00031:ADW_IMHOL&pcode=NAMK181017P00031" target="_blank"><img src="http://www.oracle.com/webfolder/technetwork/tutorials/learning_path/images/700705-auto-dw-social-bn728_-152.png"/></a>
+  <a href="https://cloud.oracle.com/tryit" target="_blank"><img src="http://www.oracle.com/webfolder/technetwork/tutorials/learning_path/images/700705-auto-dw-social-bn728_-152.png"/></a>
 
-  Once your trial account is created, you will receive a Welcome to Oracle Cloud email that contains your cloud account password along with links to useful collateral. Click here to sign into the Oracle Cloud, go to: <a href="https://myservices.us.oraclecloud.com/mycloud/signup?language=en&sourceType=:ex:tb:::RC_NAMK181017P00031:ADW_IMHOL&SC=:ex:tb:::RC_NAMK181017P00031:ADW_IMHOL&pcode=NAMK181017P00031" target="_blank">https://cloud.oracle.com</a>
+  Once your trial account is created, you will receive a Welcome to Oracle Cloud email that contains your cloud account password along with links to useful collateral. Click here to sign into the Oracle Cloud, go to: <a href="https://cloud.oracle.com" target="_blank">https://cloud.oracle.com</a>
 
 # Workshop Overview
 
-## Before Your Begin
+## Before You Begin
 **What is an Autonomous Data Warehouse?**
 
 Oracle Autonomous Data Warehouse is built around the market leading Oracle database and comes with fully automated data warehouse specific features that deliver outstanding query performance.  This environment is delivered as a fully managed cloud service running on optimized high-end Oracle hardware systems.  You don’t need to spend time thinking about how you should store your data, when or how to back it up or how to tune your queries.  
@@ -50,7 +50,7 @@ Oracle’s Autonomous Data Warehouse is the perfect quick-start service for fast
 Read on to begin your Getting Started journey with Oracle Autonomous Data Warehouse.
 
 
-**Lab Pre-requisites – Required Software**
+**Lab Prerequisites – Required Software**
 This workshop needs two desktop tools to be installed on your computer to do the exercises in this lab.
 
 *1. SQL Developer*
@@ -67,10 +67,10 @@ This workshop needs two desktop tools to be installed on your computer to do the
 **Getting Help During This Workshop**
 ![](images/README-9a67ec93.png)
 
-[**Cloud Customer Connect**](https://cloudcustomerconnect.oracle.com/resources/32a53f8587/summary target="_blank") Forum for Autonomous Data Warehouse
+[**Cloud Customer Connect**](https://cloudcustomerconnect.oracle.com/resources/32a53f8587/summary) Forum for Autonomous Data Warehouse
 If you have a question during this workshop then use the Autonomous Data Warehouse Forum to post questions, connect with experts, and share your thoughts and ideas about Oracle Autonomous Data Warehouse.
 
-Are you are completely new to the [Cloud Customer Connect](https://cloudcustomerconnect.oracle.com/resources/32a53f8587/summary target="_blank") forums? Visit our forum  [Getting Started page](https://cloudcustomerconnect.oracle.com/pages/1f00b02b84 target="_blank") to learn how to best leverage community resources.
+Are you are completely new to the [Cloud Customer Connect](https://cloudcustomerconnect.oracle.com/resources/32a53f8587/summary) forums? Visit our forum  [Getting Started page](https://cloudcustomerconnect.oracle.com/pages/1f00b02b84) to learn how to best leverage community resources.
 
 **You are all set, let's begin!**
 
@@ -88,9 +88,6 @@ This lab walks you through the steps of logging into Oracle Cloud, accessing the
 
 **[Click here to run Lab 1](LabGuide1.md)**
 
-<a href="https://apexapps.oracle.com/pls/apex/f?p=44785:112:0::::P112_CONTENT_ID:24294" target="_blank">**Click here to watch a video demonstration**</a> of provisioning a new autonomous data warehouse.
-
-<a href="https://apexapps.oracle.com/pls/apex/f?p=44785:112:0::::P112_CONTENT_ID:22790 " target="_blank">**Click here to watch a video demonstration**</a> of connecting to your new Autonomous Data Warehouse using SQL Developer.
 
 ## Lab 2: Working with Data Warehouse Services and the Free Sample Data Sets
 In this lab you will explore the free sample data sets that are included witin your new autonomous data warehouse. As part of this lab you will experiment with the selecting different levels of database services that come with your Autonomous Data Warehouse.
@@ -103,7 +100,6 @@ In this lab you will explore the free sample data sets that are included witin y
 
 **[Click here to run Lab 2](LabGuide2.md)**
 
-<a href="https://apexapps.oracle.com/pls/apex/f?p=44785:112:0::::P112_CONTENT_ID:22791" target="_blank">**Click here to watch a video demonstration**</a> of running queries against the sample data sets that are part of your Autonomous Data Warehouse.
 
 
 ## Lab 3: Loading Data into Your New Autonomous Data Warehouse
@@ -118,7 +114,6 @@ In this lab, you will be uploading files to Oracle Object Storage, creating new 
 
 **[Click here to run Lab 3](LabGuide3.md)**
 
-<a href="https://apexapps.oracle.com/pls/apex/f?p=44785:112:0::::P112_CONTENT_ID:22792" target="_blank">**Click here to watch a video demonstration**</a> of loading data into your Autonomous Data Warehouse
 
 
 ## Lab 4: Querying External Data
@@ -146,7 +141,6 @@ This lab will walk you through the process of connecting your Autonomous Data Wa
 
 **[Click here to run Lab 5](LabGuide5.md)**
 
-<a href="https://youtu.be/n5Q_5abgXcI" target="_blank">**Click here to watch a video demonstration**</a> that walks you through the process of connecting Data Visualization Desktop to your new Autonomous Data Warehouse and building sophisticated data visualizations.
 
 
 
@@ -172,7 +166,6 @@ For this lab you will watch a couple of demos to show the capabilities available
 
 **[Click here to run Bonus Lab 6](LabGuide6.md)**
 
-<a href="https://apexapps.oracle.com/pls/apex/f?p=44785:112:0::::P112_CONTENT_ID:24194" target="_blank">**Click here to watch a video demonstration**</a> that shows you how to monitor performance of your Autonomous Data Warehouse and perform basic administrative tasks.
 
 
 
