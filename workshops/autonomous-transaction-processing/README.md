@@ -112,7 +112,7 @@ Read on to begin your Getting Started journey with Oracle Autonomous Transaction
 - To build a docker container running node.js microservice
 - Deploy it on an ATP service
 
-**[Click here to run Lab 700](LabGuide800BuildingMicroservicesOnATP.md)**
+**[Click here to run Lab 800](LabGuide800BuildingMicroservicesOnATP.md)**
 
 
 ## Appendix
