@@ -11,7 +11,7 @@ September 21, 2018
 
 In this lab, you will be querying files on the Oracle Cloud Infrastructure Object Storage (OCI) directly without loading them to your database.
 
-**Note:** Make sure you have completed Lab 3: Loading Data into Your New Autonomous Data Warehouse before you proceed with this lab. You will use the data files on the OCI Object Storage and the credential object from Lab 300 in this lab.
+**Note:** Make sure you have completed Lab 3: Loading Data into Your New Autonomous Data Warehouse before you proceed with this lab. You will use the data files on the OCI Object Storage and the credential object from Lab 3 in this lab.
 
 To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/issues/new" target="_blank"> here </a> to go to the github oracle repository issue submission form.
 
@@ -25,47 +25,45 @@ To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/iss
 
 ## Required Artifacts
 
--   The following lab requires an Oracle Public Cloud account. You may your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
+-   The following lab requires an Oracle Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
 
--   Oracle SQL Developer (see Lab100 for more specifics on the version of SQL Developer and how to install and configure it).
+-   Oracle SQL Developer (see Lab 1 for more specifics on the version of SQL Developer and how to install and configure it).
 
 # Querying External Data
 
-
-
-#### STEP 1: Create External Tables with DBMS_CLOUD
+#### **STEP 1: Create External Tables with DBMS_CLOUD**
 
 -   Connected as your user in SQL Developer, copy and paste <a href="./scripts/400/create_external_tables.txt" target="_blank">this code snippet</a> to SQL Developer worksheet.  
 
-    Use the **create\_external\_table** procedure of the **DBMS\_CLOUD** package to create external tables on the files (**sales.csv.gz**, **customers.csv**, and **products.txt**) staged in your object store. Note that you are still using the same credential and the URLs of flies on OCI Object Storage you used when loading data in the previous lab.
+    Use the **create\_external\_table** procedure of the **DBMS\_CLOUD** package to create external tables on the files (**sale1v3.dat**, **cust1v3.dat**, and **prod1v3.dat**) staged in your object store. Note that you are still using the same credential and the URLs of files on OCI Object Storage you used when loading data in the previous lab.
 
     -   At the top of the script, specify the Object Store base URL in the definition of the **base\_URL** variable.
+
     ![](./images/400/snap0014527.jpg)
 
+    - **Run the script**.
 
+    Now you have **external tables** for the sample data pointing to files in the object store. Any query against the external tables will return the same result as against the original tables.
 
--   **Run the script**.
+#### **STEP 2: Querying External Data**
 
-    Now you have external tables for the sample data pointing to files in the object store. Any query against the external tables will return the same result as against the original tables.
-
-#### STEP 2: Querying External Data
-
--   Copy and paste <a href="./scripts/400/query_external_data.txt" target="_blank">this code snippet</a> to SQL Developer worksheet. We only replaced the original table names <TABLE_NAME> with <TABLE_NAME_EXT> in the sample query.  
+-   Copy and paste <a href="./scripts/400/query_external_data.txt" target="_blank">this code snippet</a> to SQL Developer worksheet. We only replaced the original table names &lt;TABLE_NAME&gt; with &lt;TABLE_NAME_EXT&gt; in the sample query.  
     ![](images/400/Picture400-4.png)
 
--   **Run the script**. It will return the same result as against the original tables.
+-   **Run the script**. You will now see the result from data pulled directly from the Object Store.
 
 
-#### STEP 3: Exploring Oracle Database JSON features
+#### **STEP 3: Exploring Oracle Database JSON features**
 
 -   Copy and paste <a href="./scripts/400/query_json_data.txt" target="_blank">this code snippet</a> to SQL Developer worksheet.
+
     ![](images/400/snap0014671.jpg)
 
--   **Run the script**. It shows an example of querying json data stored on the Object Store using the Oracle Database's JSON features,  Learn more about JSON in the database <a href="https://docs.oracle.com/en/database/oracle/oracle-database/18/adjsn/json-in-oracle-database.html">here</a>.
+-   **Run the script**. It shows an example of querying json data stored on the Object Store using the Oracle Database's JSON features,  Learn more about JSON in the database <a href="https://docs.oracle.com/en/database/oracle/oracle-database/18/adjsn/json-in-oracle-database.html" target="_blank">here</a>.
 
-#### STEP 4: Creating an external table using the SQL Developer Import Wizard
+#### **STEP 4: Creating an external table using the SQL Developer Import Wizard**
 
--   Click on ‘**Tables**’ in your user schema object tree. Clicking the right mouse button opens the context-sensitive menu in SQL Developer; select ‘**Import Data**’:
+-   Right-Click on ‘**Tables**’ in your user schema object tree and select ‘**Import Data**’:
 
     ![](./images/400/snap0014672.jpg)
 
@@ -74,9 +72,9 @@ To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/iss
 
     -   Select **Oracle Cloud Storage** as source for the data load
 
-    -   Enter the URL of **channels_error.csv** as the file to load. You constructed the URL in data loading lab. For example, the URL might look something like:
+    -   Enter the URL of **chan_v3_error.dat** as the file to load. You constructed the URL in data loading lab. For example, the URL might look something like:
 
-        https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/dbayard00/ADWCLab/channels_error.csv
+        https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/tenant/ADWCLab/chan_v3_error.csv
 
     -   Select the Credential you previously created for authentication with the Object Store, **OBJ\_STORE\_CRED**
 
@@ -86,20 +84,21 @@ After clicking preview, you will likely get a warning about the format which we 
 
 ![](./images/400/snap0014673.jpg)
 
-  - Now we will fix the file format settings.
+  - Let us now fix the file format settings:
 
-     - Click OK to close the Invalid format window if you have not already.
+     - Click OK to close the Invalid format window.
 
-     - Change the delimiter to the semicolon ;
-
-The data should now look much better.
+     - Change the delimiter to a semicolon ;
 
 ![](./images/400/snap0014674.jpg)
 
+  - The data will now look properly formatted into columns.
+
+  ![](images/400/LabGuide4-8f28a302.png)
 
 When you are satisfied with the data preview, click **NEXT**.
 
-  - On the Import Method page, change the Import Method to External Table.
+  - On the Import Method page, change the Import Method to **External Table**.
 
   - Define the table name as CHANNELS_EXT
 
@@ -128,24 +127,25 @@ When you are satisfied with the data preview, click **NEXT**.
 
 -   The final screen reflects all your choices made in the Wizard. Click **FINISH** to create the external table CHANNELS_EXT.
 
--   Finally, test your new external table by running a query like this:
+-   Finally, test your new external table by running a simple query like this:
 
-```
+    ```
     select * from channels_ext;
-```
+    ```
 
 ![](./images/400/snap0014678.jpg)
 
 
-### BONUS STEP: Create Data Warehouse User
+## BONUS STEP: Create Data Warehouse User
 
 -   Using your existing connection in SQL Developer, create a new user named **dwuser** using the following commands.
-```
-CREATE USER dwuser IDENTIFIED BY "Welcome_123!";
-GRANT DWROLE to dwuser;
-```
-- Note that the database role DWROLE includes the privileges required by a typical DW developer. The privileges in DWROLE are the following. You can grant additional database privileges if needed.
-```
+
+    ```
+    CREATE USER dwuser IDENTIFIED BY "Welcome_123!";
+    GRANT DWROLE to dwuser;
+    ```
+-   Note that the database role DWROLE includes the privileges required by a typical DW developer. The privileges in DWROLE are the following. You can grant additional database privileges if needed.
+    ```
 CREATE ANALYTIC VIEW
 CREATE ATTRIBUTE DIMENSION
 ALTER SESSION
