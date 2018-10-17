@@ -30,13 +30,13 @@ Autonomous Transaction Processing allows you to scale the CPU core count and sto
 
     [Description of the illustration MyServicesMenu.png](files/MyServicesMenu.txt)
 
-5. You're taken to the ATP Cloud Console you used during the provisioning exercise. Click the name of the ATP instance you created earlier.
+5. You're taken to the ATP Cloud Console you used during the provisioning lab. Click the name of the ATP instance you created earlier. 
 
     ![](img/ATPMenu.png)
 
     [Description of the ATPMenu.png](files/ATPMenu.txt)
 
-6. You're taken to the instance page. Notice that among the details displayed about your ATP instance, there are currently has 2 CPU’s allocated.
+6. You're taken to the instance page. You may also have this page already available if you've kept your browser tabs open from the previous labs. Notice that among the details displayed about your ATP instance, there are currently has 2 CPU’s allocated.
 7. Click the **Scale Up/Down** button.
 8. This opens a Scale Up/Down menu. Within this menu:
      * Increase the **CPU Core Count** to 4
