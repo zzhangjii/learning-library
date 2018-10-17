@@ -31,7 +31,7 @@ This lab uses the LOW and HIGH database services to understand the performance d
 
 ## Connect and Query with the LOW Database Service ##
 1. Open SQL Developer. 
-2. Expand the list of connections and double click the **admin_low** connection to connect to the database.
+2. If you're not already connected, expand the list of connections and double click the **admin_low** connection to connect to the database. After you enter the admin signin credentials, a SQL worksheet will open.
 
     ![](img/connections.jpg)
 
@@ -46,7 +46,7 @@ This lab uses the LOW and HIGH database services to understand the performance d
    order by count(*);
    ````
 
-4. Click **Run Script** in SQL Developer so that all the rows are displayed on the screen.
+4. Click **Run Script (or F5)** in SQL Developer so that all the rows are displayed on the screen.
 5. Note the response time.
     
     ![](img/responseTime.jpg)
@@ -55,7 +55,7 @@ This lab uses the LOW and HIGH database services to understand the performance d
 
 
 ## Connect and Query with the HIGH Database Service ##
-1. Double click the **admin_high** connection to connect to the database.
+1. If you're not already connected, double click the **admin_high** connection to connect to the database. After you enter the admin signin credentials, a SQL worksheet will open.
 2. Copy and paste this code into the SQL Developer worksheet:
 
    ````SQL
@@ -65,7 +65,7 @@ This lab uses the LOW and HIGH database services to understand the performance d
    order by count(*);
    ````
 
-3. Click **Run Script** in SQL Developer so that all the rows are displayed on the screen.
+3. Click **Run Script** in SQL Developer.
 4. Note the response time.
 
 A query running in the HIGH database service can use more resources and run faster compared to a query running in the LOW database service. As you scale up the compute capacity of your ADWC service, you'll realize the queries get faster in the HIGH database service.

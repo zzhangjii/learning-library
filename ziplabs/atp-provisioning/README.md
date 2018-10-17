@@ -49,7 +49,7 @@ Autonomous Transaction Processing is built upon the Oracle Database, so that all
 
     [Description of the illustration atp_provisioning_state.png](files/atp_provisioning_state.txt)
 
-10. You're taken to a page which displays more information about your instance. Notice the ATP icon on the right. It's green to indicate the service is available. There are also various menu buttons that help you manage your new instance including buttons to start, stop, terminate, and scale the service.
+10. You're taken to the instance page which displays more information about your instance. Notice the ATP icon on the left. It's green to indicate the service is available. There are also various menu buttons that help you manage your new instance including buttons to start, stop, terminate, and scale the service.
 
     ![](img/atp_instance.png)
 
