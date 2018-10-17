@@ -45,8 +45,6 @@ WElcome_123#
 
 - Once you have downloaded your wallet, you will be navigated to ATP overview page
 
-![](./images/200/Picture200-4.png)
-
 - The credentials zip file contains the encryption wallet, Java keystore and other relevant files to make a secure TLS 1.2 connection to your database from client applications. Store this file in a secure location.
 
 ### **STEP 2: Connect to ATP instance using Oracle SQL Developer**
@@ -69,7 +67,7 @@ Enter the following in New database connection
 
 **Configuration File**: Click on Browse and select the wallet file you downloaded
 
-**Service**: 'databasename_high' Database name followed by suffix low, medium or high. These suffixes determine degree of parallelism used and are relevant for a DSS workload. For OLTP workloads it's safe to select any of them. Example: **atpdatabase_high**
+**Service**: 'databasename_high' Database name followed by suffix low, medium or high. These suffixes determine degree of parallelism used and are relevant for a DSS workload. For OLTP workloads it's safe to select any of them. Example: **atplab_high**
 
 ![](./images/200/Picture200-8.png)
 

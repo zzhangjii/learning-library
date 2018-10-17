@@ -60,13 +60,13 @@
             {
                 "number": "900",
                 "filename": "LabGuide900ConfigureOCI-CLI.md",
-                "title": "Lab 800: Configure Oracle Cloud Infrastructure Command Line Interface",
+                "title": "Lab 900: Configure Oracle Cloud Infrastructure Command Line Interface",
                 "description": "Instructions to to configure Oracle Cloud Infrastructure Command Line Interface"
             },
             {
                 "number": "1000",
                 "filename": "LabGuide1000Kubernetes.md",
-                "title": "Lab 1000: Kubernetes",
+                "title": "Lab 1000: Using Kubernetes",
                 "description": "Deploy a Node.js application on a Kubernetes cluster"
             },
             {

@@ -121,13 +121,14 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - Configure Oracle Cloud Infrastructure Command Line Interface
 - Run examples using OCI-CLI for Autonomous Transaction Processing database
 
-#### Lab 1000: Work in Progress!
+#### Lab 1000: Using Kubernetes!
 
 **Documentation**: [LabGuide1000Kubernetes.md](LabGuide1000Kubernetes.md)
 
 **Objectives**:
 
-- Work in Progress! 
+- Build a Kubernetes cluster in the Oracle Cloud running a node.js application
+- Connect Node.js application to an ATP Database service running in the Oracle cloud
 
 #### Appendix
 
