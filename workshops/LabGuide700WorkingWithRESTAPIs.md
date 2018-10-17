@@ -64,7 +64,7 @@ openssl rsa -pubout -in ~/.oci/oci_api_key.pem -out ~/.oci/oci_api_key_public.pe
 
 ![](./images/700/Picture700-1.png)
 
-- Pick api.user from the list of users and on the User page click 'Add API Keys' button.
+- Pick respective user from the list of users and on the User page click 'Add API Keys' button.
 
 ![](./images/700/Picture700-2.png)
 
@@ -80,7 +80,7 @@ openssl rsa -pubout -in ~/.oci/oci_api_key.pem -out ~/.oci/oci_api_key_public.pe
 
 ![](./images/700/Picture700-4.png)
 
-- CLick on account information on top right corner and click on Tenancy.
+- Click on account information on top right corner and click on Tenancy.
 
 ![](./images/700/Picture700-5.png)
 
