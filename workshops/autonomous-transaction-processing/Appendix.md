@@ -1,6 +1,6 @@
 # Appendix 
 
-Here are some handy docker commands you may need while doing <a href="./LabGuide800BuildingMicroservicesOnATP.md" target="_blank">LabGuide800BuildingMicroservicesOnATP.md</a>
+Here are some handy docker commands you may need.
 
 ### List all images in your local docker repository
 

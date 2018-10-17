@@ -32,7 +32,7 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 ## Required Artifacts
 
 - Please ensure you are connected to your cloud account and have provisioned an ATP instance. Refer <a href="./LabGuide100ProvisionAnATPDatabase.md" target="_blank">LabGuide100ProvisionAnATPDatabase.md</a>
-- You have installed Oracle SQL Developer
+- You have installed Oracle SQL Developer. You can download SQL Developer 18.3 [here](https://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html) and follow the instructions to complete the installation.
 
 ## Steps
 
@@ -127,7 +127,7 @@ You have an option to **Encrypt using Key Management**. Oracle Cloud Infrastruct
 
  You can find more details on Key Management [here](https://docs.cloud.oracle.com/iaas/Content/KeyManagement/Concepts/keyoverview.htm).
 
- For this workshop please do not checking **Encrypt using Key Management**.
+ For this workshop please do not check **Encrypt using Key Management**.
 
 - Click **Create Bucket** button to create the bucket in Demo Compartment
 
@@ -157,10 +157,13 @@ Construct the URL that points to the location of the customers.csv file staged i
 
  https://swiftobjectstorage.<**region_name**>.oraclecloud.com/v1/<**tenant_name**>/<**bucket_name**>/<**file_name**>
 
- #### region_name: Type in the region you have created your Object storage in.
- #### tenant_name: Type in your tenancy name.
- #### bucket_name: Type in your bucket name which you created in Object Storage.
- #### file_name: customers.csv
+ region_name: Type in the region you have created your Object storage in.
+ 
+ tenant_name: Type in your tenancy name.
+ 
+ bucket_name: Type in your bucket name which you created in Object Storage.
+ 
+ file_name: customers.csv
 
  In the belwo example of constructed URL, the region name is us-seattle-1, the tenant name is r1atpdemo6, and the bucket name is ATPLab. So the URL of the customers.csv file is:
  

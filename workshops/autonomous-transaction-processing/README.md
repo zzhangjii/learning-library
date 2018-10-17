@@ -29,7 +29,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - Working with REST APIs
 - Building Microservices on ATP
 - Configure OCI CLI
-- Working with Kubernetes
+- Using Kubernetes
 
 #### To Learn More
  - [Oracle Autonomous Transaction Processing Cloud Website](https://www.oracle.com/database/autonomous-transaction-processing.html)
