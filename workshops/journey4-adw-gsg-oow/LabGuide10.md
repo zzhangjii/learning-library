@@ -89,7 +89,7 @@ $ gunzip -- keep /tmp/dipcadw/datafiles/sales.csv.gz
 
 
 
-#### STEP 1: Configure your ADE instance instance
+#### STEP 1: Configure your ADW instance instance
 - Run these commands to configure ODI, OGG, and EDQ in the ADW target using your SQL Developer Connection for the ADW admin user from lab 200 to connect to your ADW instance.
 ```
 CREATE USER ODI_USER IDENTIFIED BY WelcomeDIPCADWC1;

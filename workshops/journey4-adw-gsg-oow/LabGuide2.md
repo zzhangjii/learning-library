@@ -30,7 +30,7 @@ To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/iss
 
 ## Objectives
 
-- Learn about the different levels of ADE instance service (HIGH, MEDIUM, LOW)
+- Learn about the different levels of ADW instance service (HIGH, MEDIUM, LOW)
 - Learn about the Star Schema Benchmark (SSB) and Sales History (SH) sample data sets
 - Run a query on an ADW sample dataset
 

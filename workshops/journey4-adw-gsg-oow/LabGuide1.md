@@ -9,9 +9,9 @@ September 21, 2018
 
 ## Introduction
 
-This lab walks you through the steps to get started using the Oracle Autonomous Data Warehouse (ADW) on Oracle Infrastructure Cloud (OCI). You will provision a new ADE instance and connect to the database using Oracle SQL Developer.
+This lab walks you through the steps to get started using the Oracle Autonomous Data Warehouse (ADW) on Oracle Infrastructure Cloud (OCI). You will provision a new ADW instance and connect to the database using Oracle SQL Developer.
 
-  <a href="https://raw.githubusercontent.com/millerhoo/journey4-adwc/master/workshops/journey4-adwc/images/ADWC%20HOL%20-%20Provision%20and%20Connect.mp4" target="_blank">**Click here**</a> to watch a video demonstration of provisioning and connecting to a new ADE instance.
+  <a href="https://raw.githubusercontent.com/millerhoo/journey4-adwc/master/workshops/journey4-adwc/images/ADWC%20HOL%20-%20Provision%20and%20Connect.mp4" target="_blank">**Click here**</a> to watch a video demonstration of provisioning and connecting to a new ADW instance.
 
 To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/issues/new" target="_blank"> here </a> to go to the github oracle repository issue submission form.
 
@@ -33,7 +33,7 @@ To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/iss
 
 # Part 1. Provisioning an ADW Instance
 
-In this section you will be provisioning an ADE instance using the cloud console.
+In this section you will be provisioning an ADW instance using the cloud console.
 
 
 #### **STEP 1: Sign in to Oracle Cloud**
@@ -71,7 +71,7 @@ In this section you will be provisioning an ADE instance using the cloud console
 
 ![](./images/100/Picture100-23.jpeg)
 
--  This will bring up the Create Autonomous Data Warehouse screen where you will specify the configurations of the instance. Select the compartment of your choice.
+-  This will bring up the Create Autonomous Data Warehouse screen where you will specify the configurations of the instance. Select the root compartment, or another compartment of your choice.
 
 ![](./images/100/Picture100-26.jpg)
 
