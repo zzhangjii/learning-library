@@ -10,7 +10,7 @@ This Oracle Public Cloud Low Code Application Development workshop will walk you
 
   - Soon after requesting your trial you will receive the following email.
 
-  ![](images/100/code_9.png)
+  ![](images/100/cloud_ready.jpg)
 
 ### **Step 2**: Proceed to the Lab Guides
 
