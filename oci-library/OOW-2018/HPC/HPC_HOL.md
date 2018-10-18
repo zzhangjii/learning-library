@@ -84,13 +84,6 @@ High Performance Computing and storage in the cloud can be very confusing and it
 
 ![](img/c_deploy001.png)
 
-4. Open a web browser and type in the **GOTTY** IP address that was shown at the bottom of the deployment terminal window like this http://IPaddress:8080 and use the following information to authenticate:
-
-- **user**: opc
-- **password**: *xxxxxxx*
-
-![](img/c_deploy002.png)
-
 
 ## Practice 5: OpenFOAM to generate your simulation
 
