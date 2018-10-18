@@ -1,4 +1,11 @@
-# Lab 100: Provisioning an Autonomous Transaction Processing Database
+<table class="tbl-heading"><tr><td class="td-logo">![](images/obe_tag.png)
+
+September 21, 2018
+</td>
+<td class="td-banner">
+# Lab 1: Provisioning an Autonomous Transaction Processing Database
+</td></tr><table>
+
 
 ## Introduction
 
@@ -37,15 +44,7 @@ In this section you will be provisioning an ATP database using the cloud console
 
 ### **STEP 2: Create a Compartment**
 
-- Once you are logged in, you are taken to the cloud dashboard where you can see all the services available to you.
-
-![](./images/100/Picture100-19.jpeg)
-
-- Once you are on OCI dashboard page, click on the hamburger menu icon on the top left of the screen
-
-![](./images/100/Picture100-20.jpeg)
-
--  Click on **Identity** and then **Compartments** from the menu
+- In the Cloud Infrastructure Console, click on the hamburger menu on the top left of the screen. From the pull-out menu, under Identity, click Compartments.
 
 ![](./images/100/Compartments.jpeg)
 
@@ -157,3 +156,13 @@ For this workshop we will not be creating any TAG NAMESPACE.
 ![](./images/100/Picture100-33.jpeg)
 
 You now have created your first Autonomous Transaction Processing Cloud instance.
+
+-   You are now ready to move to the next lab.
+
+<table>
+<tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
+<td class="td-banner">
+## Great Work - All Done!
+</td>
+</tr>
+<table>

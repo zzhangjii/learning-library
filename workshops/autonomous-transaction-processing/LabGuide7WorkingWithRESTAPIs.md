@@ -1,4 +1,10 @@
-# Lab 700: Working with REST APIs
+<table class="tbl-heading"><tr><td class="td-logo">![](images/obe_tag.png)
+
+September 21, 2018
+</td>
+<td class="td-banner">
+# Lab 7: Working with REST APIs
+</td></tr><table>
 
 ## Introduction
 
@@ -254,3 +260,13 @@ Explore the various scripts provided and build your own instance.
 #### Note: Please do not forget to change region and other variables in each of the other scripts before you run them.
 
 You may build similar scripts using Python, Java, golang, Perl, C#, bash and Curl.
+
+-   You are now ready to move to the next lab.
+
+<table>
+<tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
+<td class="td-banner">
+## Great Work - All Done!
+</td>
+</tr>
+<table>

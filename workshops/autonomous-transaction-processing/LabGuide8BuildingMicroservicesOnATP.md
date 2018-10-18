@@ -1,4 +1,10 @@
-# Lab 800: Building microservices on ATP
+<table class="tbl-heading"><tr><td class="td-logo">![](images/obe_tag.png)
+
+September 21, 2018
+</td>
+<td class="td-banner">
+# Lab 8: Building microservices on ATP
+</td></tr><table>
 
 ## Introduction
 
@@ -46,7 +52,7 @@ ATPnodeapp simply makes a connection to the ATP database and does not require an
 
 Provision ATP instance and download secure connectivity credentials file.
 
-Refer to labs <a href="./LabGuide100ProvisionAnATPDatabase.md" target="_blank">LabGuide100ProvisionAnATPDatabase.md</a> and <a href="./LabGuide200SecureConnectivityAndDataAccess.md" target="_blank">LabGuide200SecureConnectivityAndDataAccess.md</a> to provision and download the secure connectivity credentials file.
+Refer to labs <a href="./LabGuide1ProvisionAnATPDatabase.md" target="_blank">LabGuide1ProvisionAnATPDatabase.md</a> and <a href="./LabGuide2SecureConnectivityAndDataAccess.md" target="_blank">LabGuide2SecureConnectivityAndDataAccess.md</a> to provision and download the secure connectivity credentials file.
 
 - NOTE: If you wish to deploy aOne app, you would need to connect to your database using SQL Developer and run the [create_schema](https://github.com/cloudsolutionhubs/ATPDocker/blob/master/aone/create_schema.sql) script in the default admin schema or create a suitable user schema for the application.
 
@@ -144,3 +150,14 @@ This is what you see if your app ran successfully.
 ![](./images/800/Picture700.png)
 
 You just built and provisioned an entire application stack consisting of a microservice and an enterprise grade, self managing database. You can push your docker image to a public/private docker repository and it can be pushed to any container orchestration service either on-prem or with any cloud provider. Your database is autonomous –it provisions quickly, backs up, patches and tunes itself as needed.
+
+
+-   You are now ready to move to the next lab.
+
+<table>
+<tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
+<td class="td-banner">
+## Great Work - All Done!
+</td>
+</tr>
+<table>

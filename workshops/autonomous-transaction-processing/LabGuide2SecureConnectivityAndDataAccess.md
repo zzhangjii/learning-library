@@ -1,4 +1,10 @@
-# Lab 200: Secure Connectivity and Data Access
+<table class="tbl-heading"><tr><td class="td-logo">![](images/obe_tag.png)
+
+September 21, 2018
+</td>
+<td class="td-banner">
+# Lab 2: Secure Connectivity and Data Access
+</td></tr><table>
 
 ## Introduction
 
@@ -14,7 +20,7 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 
 ## Required Artifacts
 
-- Please ensure you are connected to your cloud account and have provisioned an ATP instance. Refer <a href="./LabGuide100ProvisionAnATPDatabase.md" target="_blank">here</a> on how provision an ATP database.
+- Please ensure you are connected to your cloud account and have provisioned an ATP instance. Refer <a href="./LabGuide1ProvisionAnATPDatabase.md" target="_blank">here</a> on how provision an ATP database.
 - You have installed Oracle SQL Developer 18.3.
 
 
@@ -26,7 +32,7 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 
 - Click on Menu and select Autonomous Transaction Processing
 
-- On the ATP console, select your ATP instance provisioned in <a href="./LabGuide100ProvisionAnATPDatabase.md" target="_blank">LabGuide100ProvisionAnATPDatabase.md</a>.
+- On the ATP console, select your ATP instance provisioned in <a href="./LabGuide1ProvisionAnATPDatabase.md" target="_blank">LabGuide1ProvisionAnATPDatabase.md</a>.
 
 ![](./images/200/Picture200-1.png)
 
@@ -80,3 +86,13 @@ Click on **Connect**. You now have a secure connection to your cloud database.
 ![](./images/200/Picture200-10.png)
 
 You now have connected your Autonomous Transaction Processing Cloud instance to Oracle SQL Developer.
+
+-   You are now ready to move to the next lab.
+
+<table>
+<tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
+<td class="td-banner">
+## Great Work - All Done!
+</td>
+</tr>
+<table>

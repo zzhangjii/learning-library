@@ -1,4 +1,11 @@
-# Lab 600: Configure Java with ATP
+<table class="tbl-heading"><tr><td class="td-logo">![](images/obe_tag.png)
+
+September 21, 2018
+</td>
+<td class="td-banner">
+# Lab 5: Configure node.js app with ATP
+</td></tr><table>
+
 ## Introduction
 
 Autonomous Transaction Processing provides all of the performance of the market-leading Oracle Database in an environment that is tuned and optimized for transaction processing workloads. Oracle Autonomous Transaction Processing (or ATP) service provisions in a few minutes and requires very little manual ongoing administration.
@@ -10,13 +17,11 @@ To **log issues**, click [here](https://github.com/cloudsolutionhubs/autonomous-
 
 ## Objectives
 
-- Learn how to build a linux Java application server and connect it to an Oracle ATP database service
+- Learn how to build a linux node.js application server and connect it to an Oracle ATP database service
 
 ## Required Artifacts
 
 - The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
-
-#### Note: If you have created Virtual Cloud Network, Linux Environemnt in the previous lab, you can jump to Step 3 in the same lab to configure Java with ATP.
 
 ## Steps
 
@@ -24,7 +29,7 @@ To **log issues**, click [here](https://github.com/cloudsolutionhubs/autonomous-
 
 Virutal Cloud Network (VCN) is a private network that you set up in the Oracle data centers, with firewall rules and specific types of communication gateways that you can choose to use. A VCN covers a single, contiguous IPv4 CIDR block of your choice. See [Default Components that Come With Your VCN](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/overview.htm#Default). The terms virtual cloud network, VCN, and cloud network are used interchangeably in this documentation. For more information, see [VCNs and Subnets](https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/managingVCNs.htm).
 
-- Login to your Oracle Cloud Infrastructure and Click n **Menu** and select **Network** and **Virtual Cloud Networks**.
+- Login to your Oracle Cloud Infrastructure and Click on **Menu** and select **Network** and **Virtual Cloud Networks**.
 
 ![](./images/500/Picture500-12.png)
 
@@ -36,14 +41,16 @@ In order to create a VCN we need to select a Compartment from the List Scope. Fo
 
 ![](./images/500/Picture500-14.png)
 
-- This will bring Create Virtual Cloud Netowrk screen where you will specify the configurations.
+- This will bring Create Virtual CLoud Netowrk screen where you will specify the configurations.
 
 ![](./images/500/Picture500-15.png)
 
-- Enter the following the screen
+- Enter the following in Create Virtual Cloud Network window
 
-**Create In Compartment**: Select the sandbox compartment, Demo. By default, this field displays your current compartment.
+**Create In Compartment**: Select the compartment, **Demo**. By default, this field displays your current compartment.
+
 **Name**: Enter a name for your cloud network.
+
 Check on **Create Virtual Cloud Network Plus Related Resources** option. By selecting this option, you will be creating a VCN with only public subnets. The dialog expands to list the items that will be created with your cloud network.
 
 ![](./images/500/Picture500-16.png)
@@ -60,30 +67,31 @@ A confirmation page displays the details of the cloud network that you just crea
 ![](./images/500/Picture500-17.png)
 
 
-### **STEP 2: Provision a Linux compute VM to serve as the app server**
+### **STEP 2: Provision a linux compute VM to serve as the app server**
 
-- Provision a Linux compute VM to serve as the app server. 
+- Provision a linux compute VM to serve as the app server. 
 
 - Log into your Oracle Cloud Infrastructure and click on Menu and select Compute and Instances.
 
 ![](./images/500/Picture500-1.png)
 
+- In order to create Compute Instance we need to select a Compartment. Select **Demo** Compartment which we created in Lab100
+
 - Click on Create Instance
 
 ![](./images/500/Picture500-2.png)
 
-- In order to create Compute Instance we need to select a Compartment. Select Demo Compartment which we created in Lab100
 
 Enter the following to Create Linux Instance
 
-- **Name**: Enter a friendly name to identify your Linux instance
+- **Name**: Enter a friendly name to identify your linux instance
 - **Availability Domain**: Oracle Cloud Infrastructure is hosted in Regions, which are localized geographic areas. Each Region contains three Availability Domains which are isolated and fault-tolerant data centers that can be used to ensure high availability. In the Availability Domain field, select the Availability Domain in which you want to run the instance. For example, scul:PHX-AD-1.
-- **Image Compartment**: Select Demo compartment
 - **Boot Volume**: Oracle-Provided OS Image
 - **Image Operating System**: Oracle Linux 7.5
 - **Shape Type**: Virtual Machine
-- **Shape**: The shape of an instance determines the number of CPUs, the amount of memory, and how much local storage an instance will have. Shape types with names that start with VM are Virtual Machines, while shape types with names that start with BM are Bare Metal instances. Choose the appropriate shape for your Virtual Machine instance in the Shape field. For example, VM.Standard1.4.
+- **Shape**: The shape of an instance determines the number of CPUs, the amount of memory, and how much local storage an instance will have. Shape types with names that start with VM are Virtual Machines, while shape types with names that start with BM are Bare Metal instances. Choose the appropriate shape for your Virtual Machine instance in the Shape field. For this lab we will be using, **VM.Standard2.1 (1 OCPU, 15GB RAM)**.
 - **Image Version**: Please select the latest version, 2018.09.25-0(latest)
+- **Boot Volume Configuration**: When you launch a virtual machine (VM) or bare metal instance based on an Oracle-provided image or custom image, a new boot volume for the instance is created in the same compartment. That boot volume is associated with that instance until you terminate the instance. When you terminate the instance, you can preserve the boot volume and its data, see Terminating an Instance. For this lab we will be using Selected image's default boot volume size: 46.6 GB only.
 - **SSH Keys**: If the operating system image for your instance uses SSH keys for authentication (for example, Linux instances), then you must provide an SSH public key. To choose a public key file, ensure that Choose SSH Key Files is selected, then click Browse. 
 
 ![](./images/500/BrowseSSH.png)
@@ -96,9 +104,11 @@ If you do not have ssh key pair you can create using command line.
 
 - Open terminal for entering the commands
 - At the prompt, enter the following:
+
 ```
 ssh-keygen -t rsa -N "" -b "2048" -C "key comment" -f path/root_name
 ```
+
 Where
 - **-t rsa**: Use the RSA algorithm
 - **-N "passphrase"**: Passphrase to protect the use of the key (like a password). If you don't want to set a passphrase, don't enter anything between the quotes.
@@ -117,10 +127,10 @@ Where
     - Click the 'Generate' button and PuTTYgen will ask you to make some random movement with your mouse until it has enough random data to generate a secure key for you
     - Click the 'Save private key' button and save the resulting file somewhere safe and only accessible by you!
 
-- **Virtual Cloud Network Compartment**: Select Demo Compartment
 - **Virtual Cloud Network**: In the Virtual Cloud Network field, select the Virtual Cloud Network for the instance which we created earlier in this lab.
-- **Subnet Compartment**: Select Demo Compartment
 - **Subnet**: In the Subnet field, select the subnet to which to add the instance. For example, the public subnet scul:PHX-AD-1.
+
+That is all you need to enter to create Linux instance on OCI. 
 
 - Click on **Create Instance** at the bottom 
 
@@ -138,154 +148,217 @@ Where
 
 - Note the public IP of the machine provisioned and ssh into this host and configure it to run node.js on ATP.
 
-### **STEP 3: Install JDK and JDBC drivers**
+### **STEP 3: Install node.js, python 2.7 and required libaio libraries**
 
-- ssh into Linux host machine
+In order to install the required package on linux environment we need to ssh into our linux host machine.
 
-```
-sudo ssh -i /path_to/sshkeys/id_rsa opc@publicIP
-```
+- Open Terminal and ssh as user opc to your host machine. 
 
-![](./images/600/sshIntohost.png)
-
-
-- Install open JDK in Linux environment
-
-#### Note: It will take around 3 minutes to install
+Change the below command to your ssh key path.
 
 ```
-sudo yum install -y java-1.8.0-openjdk-devel
+$ssh -i /Users/tejus/Desktop/sshkeys/id_rsa opc@ipaddress
 ```
 
-![](./images/600/openjdk1.png)
+![](./images/500/Picture500-4.png)
 
-![](./images/600/openjdk2.png)
+Once you have succesfully ssh into the host machine install the packages.
 
-
-- Create a folder named ATPJava and clone the java app from git
+- Download and install node.js, python and git. We will need git to download instant client and sample app.
 
 ```
-cd ~
+$curl --silent --location https://rpm.nodesource.com/setup_10.x | sudo bash -
+```
 
-mkdir ATPJava
+![](./images/500/Picture500-5.png)
 
-cd ATPJava
+- Install nodejs
 
+```
+sudo yum install nodejs
+```
+
+![](./images/500/Picture500-6.png)
+
+
+- Install python 2.7 if it does not already exist on your machine.
+
+#### Note: OEL 7.5 comes pre-installed with python 2.7
+
+- You can check python version
+
+```
+python --version
+```
+
+![](./images/500/Picture500-7.png)
+
+- Ensure libaio is installed and up to date
+
+```
+sudo yum install libaio
+```
+
+![](./images/500/Picture500-8.png)
+
+- You can check your node, npm installs using
+```
+node --version
+```
+![](./images/500/Node_Version.png)
+
+```
+npm --version
+```
+
+![](./images/500/npm_version.png)
+
+
+- Install git to your host machine.
+
+```
 sudo yum install git
-
-git clone https://github.com/cloudsolutionhubs/ATPJava.git
 ```
 
-- Install JDBC drivers on Linux environment
 
+### **STEP 4: Install and configure Oracle Instant Client**
+
+- Download and install Oracle Instant Client software
+
+#### Note: You can download it from OTN [here](http://www.oracle.com/technetwork/database/database-technologies/instant-client/downloads/index.html)
+
+For simplicity and to facilitate a direct download to your linux host, clone below git repository to your host machine.
 ```
-cd /home/opc/ATPJava/
-
-mkdir lib
-
-cd lib 
-
-wget https://github.com/cloudsolutionhubs/ojdbc8-full/raw/master/ojdbc8-full.tar.gz
-
-tar xzfv ojdbc8-full.tar.gz
+git clone https://github.com/cloudsolutionhubs/instantclient_12_2_linux
 ```
 
-![](./images/600/jdbc.png)
-
-![](./images/600/jdbc2.png)
-
-- Copy secured connection wallet to Linux instance
-
-    - Open terminal in your laptop and run the following command
+- Unzip the file and move the files to /opt/oracle/instantclient_12_2
 
 ```
-scp sudo scp -i /path_to_ssh_key/id_rsa /path_to/wallet_DB.zip opc@publicIP:/home/opc/ATPJava/
+cd instantclient_12_2_linux/
+
+unzip instantclient-basiclite-linux.x64-12.2.0.1.0.zip
+
+cd instantclient_12_2/
+
+sudo mkdir /opt/oracle
+
+sudo mv /home/opc/instantclient_12_2_linux/instantclient_12_2/ /opt/oracle/instantclient_12_2/
 ```
 
-- Unzip secured wallet in your linux instance
-    - ssh into linux host machine
+### **STEP 5: Install node oracle drivers through npm**
+
+- Download sample node.js app from git
 
 ```
-sudo ssh -i /path_to/sshkeys/id_rsa opc@publicIP
+cd /home/opc/
 
-cd /home/opc/ATPJava/
-
-mkdir wallet_DB
-
-unzip /home/opc/ATPJava/wallet_TEJUS.zip -d /home/opc/ATPJava/wallet_DB/
+git clone https://github.com/cloudsolutionhubs/ATPnodeapp
 ```
 
-![](./images/600/unzipwallet.png)
-
-
-- Change database credentials configuration from dbconfig.properties
-
-    Enter the following:
-
-    #### Note: Please change your dbinstance, dbcredpath, dbuser, dbpassword accordingly.
-
-    **dbinstance= This is your ATP instancee name. E.g tejus_low**
-
-    **dbcredpath= /home/opc/ATPJava/wallet_DB**
-
-    **dbuser= ADMIN**
-
-    **dbpassword= WElcome_123#**
+- In the node.js app folder install node oracle drivers from npm
 
 ```
-cd /home/opc/ATPJava/ATPJava/src
+cd ATPnodeapp/
 
-nano dbconfig.properties
+npm install oracledb
 ```
 
-![](./images/600/dbconfig.png)
+- Your sample application consists of 2 files, dbconfig.js and server.js. Set dbuser, dbpassword and connectString in dbconfig.js to point to your ATP database.
 
-
-- Edit sqlnet.ora in wallet_DB folder
+- **dbuser**: admin
+- **dbpassword**: Admin passwrod, in our case it is 'WElcome_123#'
+- **connectString**: 'yourdbname_high'
 
 ```
-cd /home/opc/ATPJava/wallet_DB/
+nano dbconfig.js
+
+module.exports= {
+dbuser: 'admin', 
+dbpassword: 'WElcome_123#', 
+connectString: 'atplab_high' 
+}
+```
+
+### **STEP 6: Upload connection wallet and run sample app**
+
+- Upload the connection wallet and run sample app
+
+- From your local machine copy the secured wallet file to host machine. 
+The format of the below command is 
+
+scp -i **"/path_to_private_key "** **"/path_to_wallet_dbname.zip"** opc@ipaddress:/home/opc/ATPnodeapp
+
+```
+scp -i ~/priv-ssh-keyfile wallet_RESTONHUBDB.zip opc@ipaddress:/home/opc/ATPnodeapp
+```
+
+- ssh back to your host machine and unzip the wallet file
+
+```
+cd /home/opc/ATPnodeapp
+
+unzip wallet_RESTONHUBDB.zip -d wallet_RESTONHUBDB/
+```
+
+- Edit sqlnet.ora as follows
+
+```
+cd /home/opc/ATPnodeapp/wallet_RESTONHUBDB/
 
 nano sqlnet.ora
-```
 
-- Enter the following in sqlnet.ora
-
-```
 WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA = (DIRECTORY=$TNS_ADMIN)))
 SSL_SERVER_DN_MATCH=yes
 ```
 
-![](./images/600/TNS_ADMIN.png)
-
-
-- Export TNS_ADMIN to location where secured wallet is present
+- Set LD_LIBRARY_PATH in your bash_profile as
 
 ```
-export TNS_ADMIN=/home/opc/ATPJava/wallet_DB/
+export LD_LIBRARY_PATH=/opt/oracle/instantclient_12_2:$LD_LIBRARY_PATH
 ```
 
-### **STEP 4: Compile and run Java application**
-
-- Compile your Java application
+- Set env variables TNS_AMDIN to point to the wallet folder and edit sqlnet.ora file in wallet folder to point to the wallet.
 
 ```
-cd /home/opc/ATPJava/ATPJava/src
-
-javac -cp .:/home/opc/ATPJava/lib/ojdbc8-full/ojdbc8.jar TestATP.java
+export TNS_ADMIN=/home/opc/ATPnodeapp/wallet_RESTONHUBDB/
 ```
 
-![](./images/600/javac.png)
+- We have now set up all the required packages and settings to run our server.js.
 
-
-- Run your Java application 
+- Run server.js
 
 ```
-java -cp .:/home/opc/ATPJava/lib/ojdbc8-full/ojdbc8.jar TestATP
+cd /home/opc/ATPnodeapp
+
+node server.js
 ```
 
-![](./images/600/java.png)
+![](./images/500/Picture500-11.png)
 
 
-You have now successfully connected your Java app to Autonomous Transaction Processing database.
+- Once the server.js is running open up another terminal and ssh into the linux machine and get into your node app folder and run app in background and test with curl.
 
+```
+$ssh -i /path_to_private_key/sshkeys/id_rsa opc@ipaddress
+
+cd /home/opc/ATPnodeapp/
+
+curl http://localhost:3050
+```
+
+- The application confirms connectivity to your ATP instance.
+
+![](./images/500/Picture500-10.png)
+
+You have now successfully connected your node app to Autonomous Transaction Processing database.
+
+-   You are now ready to move to the next lab.
+
+<table>
+<tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
+<td class="td-banner">
+## Great Work - All Done!
+</td>
+</tr>
+<table>
