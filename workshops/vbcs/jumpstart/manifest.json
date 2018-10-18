@@ -1,7 +1,7 @@
 {
     "workshop": {
-        "title": "Docker Demo Lab",
-        "description": "Get hands-on with Docker on the Oracle Cloud",
+        "title": "Visual Builder Demo Lab",
+        "description": "Get hands-on with Visual builder in the Oracle Cloud",
         "theme": "default",
         "labs": [
             {

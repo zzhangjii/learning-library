@@ -3,50 +3,16 @@
 
 ![](images/000JumpStart/TitleJS.png) 
 
-Updated: June 23, 2018
+Updated: October 18, 2018
 
 ## Introduction
-_Time to Complete: 40 minutes_
+_Time to Complete: 30 minutes_
 
-In this lab, you get an introduction to Docker, Container Architectures and Container Functions. In an Oracle Cloud environment, you’ll provision a Docker multi-container application running in the Compute Cloud Service on a VM Standard footprint. You'll look at various application components deployed in three Docker containers. You'll connect into your account using VNC Viewer, perform some docker commands to see various aspects of the setup, access the AlphaOffice application and edit the UI Docker container and make small changes to the application.
+Visual Builder (VB) is a cloud service that enables you to rapidly create and host web and mobile applications with minimal coding required. Users can visually create an application using a collection of built-in user-interface controls, and bind the UI to existing REST services or custom business objects they create from within the tool. Users publish their application with a click of a button to provide access to end-users. In addition role based security can be defined for the application to control access to pages and data.
 
-In this lab, the "database" product catalog is bundled with the REST service and the product listing is provided via JSON. In a follow-up lab, you use an Oracle or MYSQL database as the datasource.
+## Lab Overview
 
-### Exploring the AlphaOffice Application
-
-The AlphaOffice application offers a list of products from a catalog which includes four Docker containers. Refer to the `Product Catalog Application` section of the diagram below. 
-
-The AlphaOffice UI container retrieves catalog information from a REST service (written in Node.js) running in a separate container. It also uses sample Twitter feed data from a REST service (written in Java), also running in its own container, and combines the data into a unified front end.
-
-![](images/000JumpStart/JS2.PNG)
-
-The AlphaOffice UI is shown below.
-
-![](images/000JumpStart/JS0-4.PNG)
-
-## Technology Overview
-
-### What is Docker? What is a container?
-
-- Docker is the company and containerization technology.
-- [Docker Documentation](https://docs.docker.com)
-- A container is a runtime instance of a docker image: [Container Documentation](https://docs.docker.com/glossary/?term=container)
-
-Containers have been around for many years. Docker created a technology that allows developers to create and package containers into applications that are portable and lightweight.
-
-### VM vs Container
-
-![](images/000JumpStart/JS1.png)
-
-While containers may sound like a virtual machine (VM), the two are distinct technologies. With VMs each virtual machine includes the application, the necessary binaries and libraries and the entire guest operating system.
-
-Whereas, Containers include the application, all of its dependencies, but share the kernel with other containers and are not tied to any specific infrastructure, other than having the Docker engine installed on it’s host – allowing containers to run on almost any computer, infrastructure and cloud.
-
-### Prerequisite
-
-Once the infrastructure is provisioned you can access your enironment using `VNC Viewer`. Please download and install from: [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/)
-
-## Instructions
+This Lab will have you log into and Oracle Virtual Builder Cloud service and build a simple web application that uses Business Objects and Charts. A business object is a resource, such as an invoice or purchase order, similar to a database table; it has fields that hold the data for your application. Like a database table, a business object provides the structure for data used with business processes. Business objects are stored in a database.  
 
 ### Access Your Environment
 
