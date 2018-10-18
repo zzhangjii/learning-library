@@ -28,7 +28,7 @@ At this point, you should have performed the following:
 - Installation of Oracle Data Visualization Desktop (free with Autonomous Data Warehouse). If you already have Data Visualization Desktop installed, please check the version. The recommended version is 12.2.5.0.0 to connect to your Oracle Autonomous Data Warehouse.
 - Access to an existing Autonomous Data Warehouse instance
 
-## Set Up Local Windows Desktop Environment
+# Set Up Local Data Visualization Desktop Environment in Windows
 
 #### **STEP 1: Installing Oracle Data Visualization Desktop on a Windows Desktop**
 
@@ -53,7 +53,7 @@ You want to secure your data from the desktop all the way from the client applic
    - cwallet.sso
    - tnsnames.ora
 
-## Create a View using Tables in the SH Schema
+# Create a View using Tables in the SH Schema
 
 #### **STEP 3: Execute the Provided Script in SQL Developer**
 
@@ -97,7 +97,7 @@ For simplicity's sake, in this exercise we will use the SH schema provided and w
    ![](./images/900/image012.jpg)
 
 
-## Create a Connection to Your Autonomous Data Warehouse from Data Visualization Desktop
+# Create a Connection to Your Autonomous Data Warehouse from Data Visualization Desktop
 
 #### **STEP 4: Create Connection**
 
@@ -162,7 +162,7 @@ For simplicity's sake, in this exercise we will use the SH schema provided and w
 
 
 
-## Working with your New Project in Oracle Data Visualization Desktop
+# Working with your New Project in Oracle Data Visualization Desktop
 
 #### **Project Introduction**
 
@@ -191,7 +191,7 @@ SCENARIO: You work at an electronics reseller company. The founder started his b
 
  You may **Save** this project if you need.   At this point with very few steps, you now have something that can further bring your data to life and you can begin to make some data-driven decisions.  As you share this with others, more people will want to gain access to and benefit from the data. To enable this, the Autonomous Data Warehouse is easy to use, fast, elastic, and will be able to quickly scale to meet your growing data and user base.
 
-## Create a Another Project with Multiple Canvases in Oracle Data Visualization Desktop
+# Create a Another Project with Multiple Canvases in Oracle Data Visualization Desktop
 
 #### **STEP 7: Create a New Data Visualization project**
 
@@ -425,7 +425,7 @@ This step enables you to share your project file with colleges.
 
    ![](./images/900/imageE086.png)  
 
-- Choose to export as a __File__.  Email may work if DV Desktop is able to interact with your local email client.  Cloud provides the mechanism to upload and share your project to <a href="https://cloud.oracle.com/en_US/oac" target="_blank">Oracle Analytics Cloud</a>.
+  - Choose to export as a __File__.  Email may work if DV Desktop is able to interact with your local email client.  Cloud provides the mechanism to upload and share your project to <a href="https://cloud.oracle.com/en_US/oac" target="_blank">Oracle Analytics Cloud</a>.
 
 - Choose the export options as shown below and save the DVA file to your desktop.
 
