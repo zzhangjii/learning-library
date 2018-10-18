@@ -153,6 +153,10 @@ It will prompt to change the password, enter this new password: *Oracleoow2018!*
 
  ![](img/c_deploy010.png)
 
+Here is a few hours later:
+
+![](img/c_deploy011.png)
+
 
 ## Practice 8: Sign in to OCI Console
 
