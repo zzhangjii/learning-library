@@ -121,7 +121,7 @@ Note that you do not need to specify anything other than the list of columns whe
 -   You should now be on the **Object Storage** page. Choose the **root** compartment in the **Compartment** drop-down if it is not already chosen.
     ![](images/300/snap0014298.jpg)
 
-#### **STEP 6: Create a Bucket for the Object Storage**
+#### **STEP 5: Create a Bucket for the Object Storage**
 In OCI Object Storage, a bucket is the terminology for a container of multiple files.
 
 -   Click the **Create Bucket** button:
@@ -132,7 +132,7 @@ In OCI Object Storage, a bucket is the terminology for a container of multiple f
 
     ![](images/300/snap0014300.jpg)
 
-#### **STEP 7: Upload Files to Your OCI Object Store Bucket**
+#### **STEP 6: Upload Files to Your OCI Object Store Bucket**
 
 -   Click on your **bucket name** to open it:
 
@@ -152,7 +152,7 @@ In OCI Object Storage, a bucket is the terminology for a container of multiple f
 
     ![](images/300/snap0014304.jpg)
 
-#### **STEP 8: Construct the URLs of the Files on Your OCI Object Storage**
+#### **STEP 7: Construct the URLs of the Files on Your OCI Object Storage**
 -   Construct the base URL that points to the location of your files staged in the OCI Object Storage. The URL is structured as follows. The values for you to specify are in bold:
 
     https://swiftobjectstorage.<**region_name**>.oraclecloud.com/v1/<**tenant_name**>/<**bucket_name**>/
@@ -167,7 +167,7 @@ In OCI Object Storage, a bucket is the terminology for a container of multiple f
 
 -   **Save** the base URL you constructed to a note. We will use the base URL in the following steps.
 
-#### **STEP 9: Creating an Object Store Auth Token**
+#### **STEP 8: Creating an Object Store Auth Token**
 
 To load data from the Oracle Cloud Infrastructure(OCI) Object Storage you will need an OCI user with the appropriate privileges to read data (or upload) data to the Object Store. The communication between the database and the object store relies on the Swift protocol and the OCI user Auth Token.
 
@@ -196,7 +196,7 @@ To load data from the Oracle Cloud Infrastructure(OCI) Object Storage you will n
 
     ![](./images/300/snap0015311.jpg)
 
-#### **STEP 10: Create a Database Credential for Your User**
+#### **STEP 9: Create a Database Credential for Your User**
 
 In order to access data in the Object Store you have to enable your database user to authenticate itself with the Object Store using your OCI object store account and Auth token. You do this by creating a private CREDENTIAL object for your user that stores this information encrypted in your Autonomous Data Warehouse. This information is only usable for your user schema.
 
@@ -220,7 +220,7 @@ In order to access data in the Object Store you have to enable your database use
 # Load data from the Object Store using the Data Import Wizard
 
 
-#### **STEP 11: Loading Data Using the Data Import Wizard in SQL Developer**
+#### **STEP 10: Loading Data Using the Data Import Wizard in SQL Developer**
 
 
 -   Click ‘**Tables**’ in your user schema object tree. Clicking the right mouse button opens the context-sensitive menu in SQL Developer; select ‘**Import Data**’:
@@ -266,7 +266,7 @@ When done with your investigation, click **NEXT**.
 
 
 
-#### **STEP 12: Loading Data Using the PL/SQL Package, DBMS_CLOUD**
+#### **STEP 11: Loading Data Using the PL/SQL Package, DBMS_CLOUD**
 
 As an alternative to the wizard-guided data load, you can use the PL/SQL package **DBMS_CLOUD** directly. This is the preferred choice for any load automation.
 
@@ -283,11 +283,11 @@ As an alternative to the wizard-guided data load, you can use the PL/SQL package
 
     ![](./images/300/snap0014550.jpg)
 
-    - You have successfully loaded the sample tables. You can now run any sample query in the <a href="https://docs.oracle.com/database/122/DWHSG/part-relational-analytics.htm#DWHSG8493" target="_blank">relational analytics</a> section of the Oracle documentation. For example, to analyze the cumulative amount sold for specific customer IDs in quarter 2000, you could run the query in <a href="./scripts/300/query_tables.txt" target="_blank">this code snippet</a>. ( <a href="https://docs.oracle.com/database/122/DWHSG/sql-analysis-reporting-data-warehouses.htm#GUID-33B4DE75-D7F8-4AE1-9F2E-C2846F72CC1E__GUID-4CB0EE02-AA9F-42D9-8F1B-2CD477496CD9" target="_blank">link</a> to documentation).
+    - You have successfully loaded the sample tables. You can now run any sample query in the <a href="https://docs.oracle.com/database/122/DWHSG/part-relational-analytics.htm#DWHSG8493" target="_blank">relational analytics</a> section of the Oracle documentation. For example, to analyze the cumulative amount sold for specific customer IDs in quarter 2000, you could run the query in <a href="./scripts/300/query_tables.txt" target="_blank">this code snippet</a>. (<a href="https://docs.oracle.com/en/database/oracle/oracle-database/12.2/dwhsg/introduction-data-warehouse-concepts.html#GUID-452FBA23-6976-4590-AA41-1369647AD14D" target="_blank">Click Here</a> to read the Data Warehousing documentation.
 
     ![](./images/300/Picture300-20.png)
 
-#### **STEP 13: Troubleshooting DBMS_CLOUD data loads**
+#### **STEP 12: Troubleshooting DBMS_CLOUD data loads**
 
 -   Connected as your user in SQL Developer, run the following query to look at past and current data loads.
     ```

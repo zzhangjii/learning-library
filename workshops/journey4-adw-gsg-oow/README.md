@@ -116,7 +116,7 @@ In this lab, you will be uploading files to Oracle Object Storage, creating new 
 - Learn how to use the SQL Developer Data Import Wizard to load data
 - Learn how to troubleshoot data loads
 
-**[Click here to run Lab 3](LabGuide3.md)**
+**[Click here to run Lab 3](LabGuide3OOW.md)**
 
 <a href="https://apexapps.oracle.com/pls/apex/f?p=44785:112:0::::P112_CONTENT_ID:22792" target="_blank">**Click here to watch a video demonstration**</a> of loading data into your Autonomous Data Warehouse
 

@@ -342,7 +342,7 @@ labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sa
         var updateFilenameInHeader = function(filename) {
           var headerElement = document.getElementsByTagName('h2')[0];
           var labElement = document.createElement('span');
-          labElement.textContent = '- ' + filename.replace("Guide"," ").replace(".md","");
+          labElement.textContent = '- ' + filename.replace("Guide"," ").replace(".md","").replace("OOW","");
 
           if(headerElement.children[1])
             headerElement.removeChild(headerElement.children[1]);
