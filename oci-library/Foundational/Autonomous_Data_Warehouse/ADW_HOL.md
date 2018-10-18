@@ -96,7 +96,7 @@ The home page gives you quick links to the documentation and to Oracle Support.
  - **Database Name**: ADWTEST*XX*
  - **CPU Core Count**: 1
  - **Storage**: 1
- - **Password**: Oracleoow2018!
+ - **Password**: *Oracleoow2018!*
  - Click **Create Autonomous Data Warehouse** 
 
 ![]( img/image006.png)
@@ -134,11 +134,10 @@ To load data from files in the cloud into your Autonomous DW Cloud database, use
 1. On OCI Dashboard **Menu** click on **Object Storage** > **Object Storage**
 2. Make sure to select **Test-XX** Compartment
 3. Click on **Create Bucket** and enter the following information:
-
 **NOTE: Make sure to add your username number as part of the bucket name**
 
-	- Bucket Name: ADW_Bucket-*XX*
-	- Storage Tier: Standard
+	- **Bucket Name**: ADW_Bucket-*XX*
+	- **Storage Tier**: Standard
 	
 4. Click **Create Bucket** 
 ![]( img/image014.png)
