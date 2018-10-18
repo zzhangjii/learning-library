@@ -14,7 +14,7 @@
 
 [Practice 4: Create an Autonomous Data Warehouse Database](#practice-4-create-an-autonomous-data-warehouse)
 
-[Practice 5: Download the client credentials for ADW Database](#practice-5-download-the-client-credentials-for-adw-database)
+[Practice 5: Download a Connection Wallet for ADW Database](#practice-5-download-a-connection-wallet-for-adw-database)
 
 [Practice 6: Create a bucket in Object Storage and upload the channels.txt file](#practice-6-create-a-bucket-in-object-storage-and-upload-the-text-file)
 
@@ -33,8 +33,7 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 ## Pre-Requisites
 
 - Oracle Cloud Infrastructure account credentials (User, Password, and Tenant) with available service limit for Autonomous Data Warehouse
-- SQL Developer installation on the laptop and basic knowledge of executing SQL scripts in the SQL Worksheet of SQL Developer
-- SQL Developer can be downloaded from [http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html](http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html)
+- SQL Developer tool
 - A simple text editor like Notepad, vi or Sublime.
 
 ## Practice 1: Setup Windows 10 VM 
@@ -45,11 +44,17 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 
 ## Practice-2: Download channel text file and install SQL Developer Tool
 
-1) Download the channel.txt file from this link: [https://bit.ly/2NSNd4l](https://bit.ly/2NSNd4l) and save it to your desktop.
+1) Download a zip file from this link: [http://bit.ly/2yOzzVE](http://bit.ly/2yOzzVE) and save it to your desktop.
+
+2) Unzip the file and you will see a channel.txt file
 
 > **Note:**  This file will be loaded into Object Storage and later used to load data into the CHANNELS table.
 
-2) Download SQL Developer Tool from this link: [https://bit.ly/2OHcBcZ](https://bit.ly/2OHcBcZ) and install on your Windows 10 VM.
+2) Download SQL Developer Tool from this link: [https://bit.ly/2OHcBcZ](https://bit.ly/2OHcBcZ) unzip and install on your Windows 10 VM.
+
+ ![](img/sqldev01.png)
+
+ ![](img/sqldev02.png)
 
 ## Practice 3: Sign in to OCI Console
 
@@ -75,7 +80,7 @@ The home page gives you quick links to the documentation and to Oracle Support.
 
 ## Practice 4: Create an Autonomous Data Warehouse
 
-> **Note**: Make sure you are on us-phoenix region. You can see your region a
+> **Note**: Make sure you are on us-phoenix-1 region. You can see your region at the right up corner of the page.
 
 1) Click on **Menu** > **Autonomous Data Warehouse** 
 
@@ -85,46 +90,38 @@ The home page gives you quick links to the documentation and to Oracle Support.
 
 3) In the Create Autonomous Data Warehouse dialog, enter the following information:
 
- - **Display Name**: ADW Finance
- - **Database Name**: ADWFINANCE
+**_NOTE: Replace XX with your user number. Example: user01 is ADWTEST01_**
+
+ - **Display Name**: ADWTEST*XX*
+ - **Database Name**: ADWTEST*XX*
  - **CPU Core Count**: 1
  - **Storage**: 1
- - **Password**: Password for ADMIN user of the service instance. The password must meet the following requirements:
-	 -  The password must be between 12 and 60 characters long and must include at least one uppercase letter, one lowercase letter, and one numeric character.
-	 -    The password cannot contain the double quote (") character.
-	 -    The password must be different from the last 4 passwords used.
- 
+ - **Password**: Oracleoow2018!
  - Click **Create Autonomous Data Warehouse** 
 
 ![]( img/image006.png)
 
 ![]( img/image007.png)
 
-4) Once the ADW Finance database is provisioned, click on the database name to get on details page:
+4) Once the ADW database is provisioned, click on the database name to get on details page:
 
 ![]( img/image008.png)
 ![]( img/image009.png)
 
-## Practice 5: Download the client credentials for ADW Database
+## Practice 5: Download a Connection Wallet for ADW Database
 
-Oracle client credentials (wallet files) are downloaded from the Autonomous Data Warehouse Cloud administrative service console by a service administrator. If you are not an Autonomous Data Warehouse Cloud administrator, your administrator should provide you with the client credentials. Wallet files, along with the Database user ID and password provide access to data in your Autonomous Data Warehouse Cloud.
+Oracle connection wallet are downloaded from the Autonomous Data Warehouse Cloud administrative service console by a service administrator. If you are not an Autonomous Data Warehouse Cloud administrator, your administrator should provide you with the client credentials. Wallet files, along with the Database user ID and password provide access to data in your Autonomous Data Warehouse Cloud.
 
 1. On the details page of your ADW, click on **Service Console**
  
  ![]( img/image010.png)
- 
-2. If you are asked for authentication, enter with the following credentials:
-	- **Username**: admin
-	- **Password**: *same password you used on Practice-3* 
-	
-![]( img/image011.png)
 
-3. On the left side of the page click on **Administration**
-4. Click on **Download a Connection Wallet** 
+2. On the left side of the page click on **Administration**
+3. Click on **Download a Connection Wallet** 
 
 ![]( img/image012.png)
 
-5. You must protect this file to prevent unauthorized database access. Therefore, you need to create a password to protect this file. For this exercise enter the same password you used on Practice-3 and click **Download** and save it to your Windows 10 VM desktop folder
+4. You must protect this file to prevent unauthorized database access. Therefore, you need to create a password to protect this file. For this exercise enter the same password you used on Practice-3 *Oracleoow2018!* and click **Download** and save it to your Windows 10 VM desktop folder
 
 ![]( img/image013.png)
 
@@ -159,7 +156,7 @@ An Auth token is an Oracle-generated token that you can use to authenticate with
 4. Enter the following Description: *Auth Token for ADW Database*
 5. Click **Generate Token**
 ![]( img/image018.png)
-6. Copy the generated token and save it in a notepad/text file. You will use it to create the database credential. *A portion of the generated token has been hidden for security reasons.*
+6. Copy the generated token and **save** it in a notepad/text file. You will use it to create the database credential. *A portion of the generated token has been hidden for security reasons.*
 ![]( img/image019.png)
 
 ## Practice 8: Login to the ADW database and store the object store credentials
@@ -170,12 +167,12 @@ The ocitest user will be the owner of the CHANNELS table that will be used for l
 1. Launch SQL Developer on your laptop and click on **+** to create a new connection
 ![]( img/image020.png)
 2. Create a new connection using the following values:
-	- **Connection Name**: ADW Finance
+	- **Connection Name**: ADWTEST*XX*
 	- **Username**: admin
-	- **Password**: *Enter the database admin password*
+	- **Password**: *Oracleoow2018!*
 	- **Connection Type**: Cloud PDB
-	- **Configuration File**: *Browse to the credentials file collected from Practice-4* 
-	- **Service**: adwfinance_medium
+	- **Configuration File**: *Browse to the wallet zip file collected from Practice-4* 
+	- **Service**: adwtest*xx*_medium
 3. Click on **Save** then click **Connect**
 
 ![]( img/image021.png)
@@ -184,7 +181,7 @@ The ocitest user will be the owner of the CHANNELS table that will be used for l
 5. Now that you have logged into SQL Developer, execute the following statements to create the **ocitest** user and to grant **DWROLE** to this user:
 
  ```
-create user ocitest identified by "<password>";
+create user ocitest identified by "Oracleoow2018!";
 grant dwrole to ocitest;
 ```
 
@@ -193,13 +190,13 @@ grant dwrole to ocitest;
 
 6. Execute the statement by pressing **Run Statement** button ![]( img/image023.png)
 
-7.  Now lets create a new connection using the following values:
-	- **Connection Name**: ADW-Finance-OCITEST
+7.  Now lets create a new SQL connection using the following values:
+	- **Connection Name**: ADWTEST*XX*-OCITEST
 	- **Username**: ocitest
-	- **Password**: *Enter the password you used from step 5*
+	- **Password**: *Oracleoow2018!*
 	- **Connection Type**: Cloud PDB
-	- **Configuration File**: *Browse to the credentials file collected from Practice-4* 
-	- **Service**: adwfinance_medium
+	- **Configuration File**: *Browse to the wallet zip file collected from Practice-4* 
+	- **Service**: adwtest*xx*_medium
 8. Click on **Save** then click **Connect**
 
 ![]( img/image024.png)
@@ -277,6 +274,6 @@ You have successfully imported the channels.txt file from your on-premises to AD
 ## Practice 10: Try Oracle Cloud Infrastructure for FREE 
 
 Sign up for the free Oracle Cloud Infrastructure trial account. 
-https://cloud.oracle.com/tryit
+[https://cloud.oracle.com/tryit](https://cloud.oracle.com/tryit)
 
 <img width="800" alt="image001" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/OOW-2018/EdgeLab/media/image34.png">
