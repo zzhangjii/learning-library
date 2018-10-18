@@ -129,18 +129,21 @@ Oracle connection wallet are downloaded from the Autonomous Data Warehouse Cloud
 ## Practice 6: Create a bucket in Object Storage and upload the text file
 
 For the fastest data loading experience Oracle recommends uploading the source files to a cloud-based object store, such as Oracle Cloud Infrastructure Object Storage, before loading the data into your Autonomous DW Cloud. 
-To load data from files in the cloud into your Autonomous DW Cloud database, use the new PL/SQL DBMS_CLOUD package. The DBMS_CLOUD package supports loading data files from the following Cloud sources: Oracle Cloud Infrastructure Object Storage, Oracle Cloud Infrastructure Object Storage Classic, and Amazon AWS S3. Lets create an Object Storage Bucket inside the Demo Compartment.
+To load data from files in the cloud into your Autonomous DW Cloud database, use the new PL/SQL DBMS_CLOUD package. The DBMS_CLOUD package supports loading data files from the following Cloud sources: Oracle Cloud Infrastructure Object Storage, Oracle Cloud Infrastructure Object Storage Classic, and Amazon AWS S3. Lets create an Object Storage Bucket inside the **Test-XX** Compartment.
 
 1. On OCI Dashboard **Menu** click on **Object Storage** > **Object Storage**
 2. Make sure to select **Test-XX** Compartment
 3. Click on **Create Bucket** and enter the following information:
-	- Bucket Name: ADW_Bucket
+
+**NOTE: Make sure to add your username number as part of the bucket name**
+
+	- Bucket Name: ADW_Bucket-*XX*
 	- Storage Tier: Standard
 	
 4. Click **Create Bucket** 
 ![]( img/image014.png)
 
-5.  Upload the channels.txt file to the ADW_Bucket
+5.  Upload the channels.txt file to the ADW_Bucket-*XX*
 ![]( img/image015.png)
 
 ![]( img/image016.png)
@@ -253,7 +256,7 @@ begin
  dbms_cloud.copy_data(
     table_name =>'CHANNELS',
     credential_name =>'OBJ_STORE_CRED',
-    file_uri_list =>'https://swiftobjectstorage.us-phoenix-1.oraclecloud.com/v1/<tenancy-name>/ADW_Bucket/channels.txt',
+    file_uri_list =>'https://swiftobjectstorage.us-phoenix-1.oraclecloud.com/v1/<tenancy-name>/ADW_Bucket_XX/channels.txt',
     format => json_object('ignoremissingcolumns' value 'true', 'removequotes' value 'true')
  );
 end;
