@@ -1,6 +1,6 @@
 <table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
 
-Last Updated:<br>October 17, 2018
+Last Updated:<br>October 18, 2018
 </td>
 <td class="td-banner">
 # Getting Started with Autonomous Transaction Processing                                    
@@ -128,7 +128,7 @@ Read on to begin your Getting Started journey with Oracle Autonomous Transaction
 
 **Key Objectives**:
 
-- Handy docker commands you may need while doing <a href="./LabGuide800BuildingMicroservicesOnATP.md" target="_blank">LabGuide800BuildingMicroservicesOnATP.md</a>
+- Handy docker commands you may need
 
 **[Click here to go through Appendix](Appendix.md)**
 

@@ -1,6 +1,6 @@
 <table class="tbl-heading"><tr><td class="td-logo">![](images/obe_tag.png)
 
-September 21, 2018
+October 18, 2018
 </td>
 <td class="td-banner">
 # Lab 6: Configure Java with ATP
