@@ -22,9 +22,7 @@
 
 [Practice 7: Grafana Monitoring](#practice-7-grafana-monitoring)
 
-[Practice 8: Sign in to OCI Console](#practice-6-sign-in-to-oci-console)
-
-[Practice 9: Try Oracle Cloud Infrastructure for FREE](#practice-7-try-oracle-cloud-infrastructure-for-free)
+[Practice 8: Try Oracle Cloud Infrastructure for FREE](#practice-7-try-oracle-cloud-infrastructure-for-free)
 
 ## Overview
 
@@ -56,9 +54,9 @@ High Performance Computing and storage in the cloud can be very confusing and it
 
 1. On Gitbash terminal use SSH command to connect to the control node with this information:
 
-- **username**: *Instructor will provide username for each participant*
-- **password**: *Instructor will provide password for each participant*
-- **IP address**: *129.146.103.162 *
+- **IPaddress**: *129.146.103.162 *
+- **username**: *hol_userX*
+- **password**: *+ocihpc123456*
 
 ```
 # ssh username@129.146.103.162
@@ -74,9 +72,8 @@ High Performance Computing and storage in the cloud can be very confusing and it
 2. Deploy your Cluster by typing:
 
 ```
-# ./cli_deploy.sh $C
+# ./cli_deploy.sh
 ```
-> **Note:**  $C is a variable with your designated compartment. It will be automatically loaded for you after login. 
 
 ![](img/c_deploy.png)
 
@@ -84,6 +81,7 @@ High Performance Computing and storage in the cloud can be very confusing and it
 
 ![](img/c_deploy001.png)
 
+**Note**: Take a note of the Public IP from the ouptut above
 
 ## Practice 5: OpenFOAM to generate your simulation
 
@@ -93,7 +91,7 @@ Lets run OpenFOAM in our HPC Cluster:
 
 1. Open a web browser and type in the **GOTTY** IP address that was shown at the bottom of the deployment terminal window and use the following information to authenticate:
 
-[http://129.146.103.162 :8080](http://129.146.103.162 :8080)
+[http://<Public-IP>:8080](http://<Public-IP> :8080)
 
 ![](img/c_deploy002.png)
 
@@ -107,6 +105,9 @@ Lets run OpenFOAM in our HPC Cluster:
 ```
 # cd /mnt/blk/share/data/OpenFOAM/oci-hpc-foam-motorbike; source Allrun 2 52
 ```
+
+Keep this browser open and let it run.
+
 ![](img/c_deploy004.png)
 
 ## Practice 6: Ganglia Monitoring System
@@ -115,11 +116,12 @@ Ganglia is a scalable distributed monitoring system for high-performance computi
 
 1. While OpenFOAM is running, open another tab in your web browser and navigate to the Ganglia Dashboard:
 
-[http://129.146.103.162 /ganglia](http://129.146.103.162 /ganglia)
+[http://<Public-IP>/ganglia](http://<Public-IP>/ganglia)
 
 
 ![](img/c_deploy005.png)
 
+Here you can see an OCI Grid Report showing the CPU, Memory, Network and Cluster metrics.
 
 ## Practice 7: Grafana Monitoring
 
@@ -128,7 +130,7 @@ We can use Grafana to monitor our HPC Cluster and shows live updates of resource
 
 1. Open Grafana dashboard using the following URL:
 
-[http://129.146.103.162 :3000](http://129.146.103.162 :3000)
+[http://<Public-IP>:3000/d/P6dYXV1iz/cluster-status](http://<Public-IP>:3000/d/P6dYXV1iz/cluster-status)
 
 Enter the following credentials:
 
@@ -141,15 +143,8 @@ It will prompt to change the password, enter this new password: *Oracleoow2018!*
 
 ![](img/c_deploy007.png)
 
-2. After login, click on Home:
 
- ![](img/c_deploy008.png)
-
-3. Click on Cluster Status
-
- ![](img/c_deploy009.png)
-
-4. While OpenFOAM is running you can see your HPC Cluster utilization during this process. Here you can see cpu, network, disk and overall load of the system:
+2. While OpenFOAM is running you can see your HPC Cluster utilization during this process. Here you can see cpu, network, disk and overall load of the system:
 
  ![](img/c_deploy010.png)
 
@@ -158,32 +153,11 @@ Here is a few hours later:
 ![](img/c_deploy011.png)
 
 
-## Practice 8: Sign in to OCI Console
+As you can see the simulation is consuming our HPC resources. It will take some time to finish OpenFOAM but to give you an idea, here is what is actually processing:
 
-1) Open a supported browser and go to the Console URL. For example, [https://console.us-ashburn-1.oraclecloud.com](https://console.us-ashburn-1.oraclecloud.com).
+![](img/c_deploy012.png)
 
-2) Enter your tenant name: <Tenant> and click **Continue**
-
- ![](img/image001.png)
-
-3) Oracle Cloud Infrastructure is integrated with Identity Cloud Services, you will see a screen validating your Identity Provider. You can just click **Continue**.
-
- ![](img/image002.png)
-
-4) Enter your user name and password
-
- - **Username:** _instructor will provide username_
- - **Password:** _instructor will provide password_
-
- ![](img/image003.png)
-
-When you sign in to the Console, the home page is displayed.
-
- ![]( img/image004.png)
-
-The home page gives you quick links to the documentation and to Oracle Support.
-
-## Practice 9: Try Oracle Cloud Infrastructure for FREE 
+## Practice 8: Try Oracle Cloud Infrastructure for FREE 
 
 Sign up for the free Oracle Cloud Infrastructure trial account. 
 https://cloud.oracle.com/tryit
