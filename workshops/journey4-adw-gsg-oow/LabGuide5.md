@@ -161,6 +161,7 @@ For simplicity's sake, in this exercise we will use the SH schema provided and w
    ![](./images/900/image039.jpg)
 
 
+
 ## Working with your New Project in Oracle Data Visualization Desktop
 
 #### **Project Introduction**
@@ -182,19 +183,19 @@ SCENARIO: You work at an electronics reseller company. The founder started his b
   - We will now create a very simple visualization project to finish this lab.  Multi-select (ctrl+click) the 5 Data Elements within __SALES_HISTORY__ including __PROD_NAME__, __AMOUNT_SOLD__, __CALENDAR_YEAR__, __PROD_CATEGORY__, and __QUANTITY_SOLD__.  
 
 - Drag the five selected columns to the middle of the screen.
-   ![](./images/900/image051.png)
+   ![](./images/900/image050.png)
 
 - Based upon this data, Oracle Data Visualization Desktop will choose a default visualization.  If not, choose the __Scatter__ chart so it matches the view below.   
 
-   ![](./images/900/image053.png)
+   ![](./images/900/image052.png)
 
- At this point with a very few steps, you now have something that can further bring your data to life and begin to make some data-driven decisions.  And of course, as you share this with others, more and more people will want to gain access to the data.  But, don’t forget how easy, fast and elastic the Autonomous Data Warehouse is and will be able to quickly scale to meet your growing data and end users.
+ You may **Save** this project if you need.   At this point with very few steps, you now have something that can further bring your data to life and you can begin to make some data-driven decisions.  As you share this with others, more people will want to gain access to and benefit from the data. To enable this, the Autonomous Data Warehouse is easy to use, fast, elastic, and will be able to quickly scale to meet your growing data and user base.
 
 ## Create a Another Project with Multiple Canvases in Oracle Data Visualization Desktop
 
 #### **STEP 7: Create a New Data Visualization project**
 
-In this part of the lab, we will create 3 basic interactive canvases within a single project.  You will see how easy and powerful you can gain insights and visualize your data in just a few clicks.  This lab is not intended to be an exhaustive view of all Oracle Data Visualization capabilities.  Much in fact has not been included to keep the lab short.
+In this part of the lab, we will create 3 basic interactive canvases within a single project.  You will see how easy and powerful you can gain insights and visualize your data in just a few clicks.  This lab is not intended to be an exhaustive view of all Oracle Data Visualization capabilities.
 
 While this will provide specific instructions to replicate the intended visualizations, don’t feel that you must be constrained.  Try other visualization types and layouts.  Modify filters and colors as you like.  If you run into trouble you can always undo the previous step with Ctrl-Z or the back arrow at the top right of the screen.
 
@@ -209,13 +210,9 @@ While this will provide specific instructions to replicate the intended visualiz
 
 - Select the __“Data”__ menu option on the right to reveal the available Data Sets.  Your newly created __SALES_HISTORY__ should be visible with a red icon indicating a live ADW connection.
 
-- Right click on the __SALES_HISTORY__ data set and choose __“Create Project”__.
+- Click on the __SALES_HISTORY__ data set, or open up the options menu and choose __“Create Project”__.
 
-   ![](./images/900/imageE005.png)
-
-- Click on the Hamburger to hide the navigator and increase your working screen view.
-
-   ![](./images/900/imageE008.png)
+   ![](./images/900/imageE005.jpg)
 
 - This is your new Data Visualization project (blank canvas).
 
@@ -234,7 +231,7 @@ Questions Answered with Data in this section:
 
 We will create Sales Summary using a Combo Chart to show the Amount Sold, Quantity Sold by Month.  This will help answer the question, *‘What are my monthly sales by dollar and quantity sold?’*
 
-- Expand the __TIME_ID__ attribute to expose the component time dimension elements.  Create the first visualization by holding down __CTRL__ and multi-selecting __AMOUNT_SOLD__, __QUANTITY_SOLD__ and __MONTH__.  Drag those 3 fields from the left navigation pane to the blank canvas.  A scatterplot is created automatically as you added 2 numeric fields and 1 dimension.  From the __chart__ icon at the top right change the chart type to a __Combo__ chart.
+- Expand the __TIME_ID__ attribute to expose the component time dimension elements.  Create the first visualization by holding down __CTRL__ and multi-selecting __AMOUNT_SOLD__, __QUANTITY_SOLD__ and __MONTH__.  Drag those 3 fields from the left navigation pane to the center blank canvas (where it says "Drop Visualizations Here").  A scatterplot is created automatically as you added 2 numeric fields and 1 dimension.  From the __chart__ icon at the top right change the chart type to a __Combo__ chart.
 
    ![](./images/900/imageE014.png)
 
@@ -244,7 +241,7 @@ We will create Sales Summary using a Combo Chart to show the Amount Sold, Quanti
 
    ![](./images/900/imageE021.png)
 
-- Select the __Advanced Analytics__ option from the left icon.  Then double click on __Trend Line__.
+- Select the __Analytics__ icon option from the left Menu Navigator.  Then double click on __Trend Line__. This chart serves as valueable insight on month-over-month sales.
 
    ![](./images/900/imageE025.png)
 
@@ -252,7 +249,7 @@ We will create Sales Summary using a Combo Chart to show the Amount Sold, Quanti
 
 We will create a Sales Summary using a Trend Line to show the Amount Sold by Product Category and Country Region.  This will help answer the questions such as, *‘What are my sales in each country region? And what products sell best in each country?’*
 
-- Return to the __Data Elements__ view in the Menu Navigator.
+- Return to the __Data Elements__ view in the left Menu Navigator.
 
    ![](./images/900/imageE028.png)
 
@@ -264,19 +261,19 @@ We will create a Sales Summary using a Trend Line to show the Amount Sold by Pro
 
 - Change the chart type to an __Area__ chart.
 
-   ![](./images/900/imageE036.png)
+   ![](./images/900/LabGuide5-313acb9b.png)
+
+   ![](./images/900/imageE036.jpg)
 
 - Switch the two attributes locations.  Drag __COUNTRY_REGION__ over __PRODUCT_CATEGORY__ until the green (switch) icons appear over the top right corner of the 2 elements.  Then drop the element to swap their locations.
 
    ![](./images/900/imageE039.png)
 
-- Rename the current canvas by click on the down triangle on the canvas name and choosing __rename__.  Change the name to __Sales Summary__.  
-
-- Save your project as __SALES_HISTORY__
+- We now have a useful chart below that tells us which products sell best in each country, and by how much. Rename the current canvas by click on the down triangle on the canvas name and choosing __rename__.  Change the name to __Sales Summary__. Save your project as __SALES_HISTORY__.
 
    ![](./images/900/imageE042.png)
 
-Great job!!  You have created the first of the 3 views for this project.  This is the __Sales Summary__ view.  Next you will create the Product Summary view.
+Great job!  You have created the first of the 3 views for this project.  This is the __Sales Summary__ view.  Next you will create the Product Summary view.
 
 #### **STEP 10: Canvas 2 - Product Summary**
 
@@ -293,13 +290,11 @@ Questions Answered with Data:
 
 We will create the Product Summary using a Sunburst Chart to show the Quantity Sold by Product Category and Product Sub-Category.  This will help answer the question, *‘What products are selling the best?’*
 
-- Rename the current canvas by click on the down triangle on the canvas name and choosing __‘Rename’__.  Change the canvas name to __‘Sales Summary’__.  
+- Add a new blank canvas using the __+__ icon at the bottom of the screen beside the current __'Sales Summary'__ canvas name.
 
-- Save your project as __'SALES_HISTORY'__.
+  ![](images/900/LabGuide5-344a30f6.png)  
 
-- Add a new blank canvas using the __+__ icon at the bottom of the screen beside the current __'Sales Summary'__ canvas name.  
-
-- On the new blank canvas, choose the __Visualizations__ menu option from the left-hand navigator pane.  Then drag the __Sunburst__ chart onto the canvas.
+- On the new blank canvas, choose the __Visualizations__ menu option from the left-hand menu navigator.  Then drag the __Sunburst__ chart onto the canvas.
 
    ![](./images/900/imageE046.png)
 
@@ -307,7 +302,7 @@ We will create the Product Summary using a Sunburst Chart to show the Quantity S
 
    ![](./images/900/imageE049.png)
 
-- Add the following attributes and metrics:
+- From the Data Elements pane on the left, drag the following attributes and measures to the appropriate visualization category:
     - __QUANTITY_SOLD__ to the __Values (Slice size)__.  
     - __PROD_CATEOGORY__ to the __Category (slices)__.
     - __PROD_SUBCATEGORY__ to the __Color__.
@@ -317,13 +312,13 @@ We will create the Product Summary using a Sunburst Chart to show the Quantity S
 
 ##### **Create Product Summary using a Scatter Chart**
 
-- Follow the same steps from above to a 2nd visualization on this canvas.  This will help answer, *‘What products categories are trending?  Are there trends based upon price?  Or by regions?’*
+- We will now create a visualization to answer, *‘What products categories are trending?  Are there trends based upon price?  Or by regions?’*
 
-- Use the navigator to switch to the chart types view.  Drag the __Scatter__ chart option onto the canvas to the right of the sunburst chart you created earlier.  
+- Use the left navigator menu to switch to the chart types view.  Drag the __Scatter__ chart option onto the canvas to the right of the sunburst chart you created earlier.  
 
-- Switch back to the __data elements__ view and drag the following items into the new scatter chart.
+- Switch back to the __data elements__ view from the left navigator menu and drag the following items into the new scatter chart.
 
-   Add the following attributes and metrics:  
+   From the Data Elements pane on the left, drag the following attributes and measures to the appropriate visualization category:
     - __PROD_LIST_PRICE__ to __Values (Y-Axis)__
     - __QUANTITY_SOLD__ to __Values (X-Axis)__
     - __TIME_ID (Month of Year)__ to __Category (Points)__
@@ -333,7 +328,7 @@ We will create the Product Summary using a Sunburst Chart to show the Quantity S
 
    ![](./images/900/imageE057.png)
 
-- Rename this canvas to __Product Summary__.
+- Rename this canvas, from the bottom bar, to __Product Summary__.
 
 You have created 2 of the 3 views for this project.  We will finish this exercise by adding a Demographics Summary view.
 
@@ -351,7 +346,7 @@ Questions Answered with Data:
 
 We will create the __Demographics Summary__ using 3 different charts.  We will start by creating a Tree Map to show the Amount Sold segmented by Customer Income Level.  This will help answer the question such as, *‘Of all my customers, which customer income level segment drives my sales?’*
 
-- Create a new blank canvas.  This is the 3rd canvas.  Rename the canvas to __'Demographics'__.
+- Create a new blank canvas from the bottom bar.  This is the 3rd canvas.  Rename the canvas to __'Demographics'__.
 
 - Hit the __CTRL__ key and multi-select __AMOUNT_SOLD__ and __CUST_INCOME_LEVEL__ in the Data Elements section and drag them onto the canvas.
 
@@ -373,7 +368,7 @@ We will create another chart on our Demographics Summary.  We will create a char
 
    ![](./images/900/imageE066.png)
 
-- Resize the chart to make the horizontal bar take up more room.  Hover your mouse between the 2 charts until it turns into a double headed arrow.  Then drag the chart up to resize it.
+- Notice, you can resize the chart to make the top horizontal color chart take up more room.  Hover your mouse between the 2 charts until it turns into a double headed arrow.  Then drag the chart up to resize it.
 
 ##### **Create Demographics Summary using a Scatter Chart**
 
@@ -396,7 +391,7 @@ We will create our last chart on our Demographics Summary.  We will create a cha
 
 #### **STEP 12: Switching to presentation mode - Narrate Your Data, Insights and Analytics**
 
-The narrate capability is intended to provide a live presentation mode that an analyst can use to explain their findings during meetings.  Instead of screen grabbing or exporting charts and pasting them statically into a DOC or PPT, this presentation mode provides a versatile graphical mode for stepping through your storyline.  Your storyline, or narrative, is the thinking that led to your finding – your workings that justify your conclusion.  During a meeting, in presentation mode, all navigation and build interfaces are hidden to maximize the view of the visualizations.  All visualizations remain active and are drillable or you can still apply filters, just in case anyone asks questions during the meeting.  You’re not trapped in static PPT.
+The narrate capability is intended to provide a live presentation mode that an analyst can use to explain their findings during meetings.  Instead of screen grabbing or exporting charts and pasting them statically into a DOC or PPT, this presentation mode provides a versatile graphical mode for stepping through your storyline.  Your storyline, or narrative, is the thinking that led to your finding – your workings that justify your conclusion.  During a meeting, in presentation mode, all navigation and build interfaces are hidden to maximize the view of the visualizations.  All visualizations remain dynamic and are drillable and you can even apply filters. If there are questions during your presentation, you are not trapped in a static PPT.
 
 - Click on the __Narrate__ button at the top right.  This switches the modes from creating visualizations to presenting them.
 
@@ -430,7 +425,7 @@ This step enables you to share your project file with colleges.
 
    ![](./images/900/imageE086.png)  
 
-- Choose to export as a __File__.  Email may work if DV Desktop is able to interact with your local email client.  Cloud provides the mechanism to upload and share your project to Oracle Autonomous Analytics Cloud.
+- Choose to export as a __File__.  Email may work if DV Desktop is able to interact with your local email client.  Cloud provides the mechanism to upload and share your project to <a href="https://cloud.oracle.com/en_US/oac" target="_blank">Oracle Analytics Cloud</a>.
 
 - Choose the export options as shown below and save the DVA file to your desktop.
 

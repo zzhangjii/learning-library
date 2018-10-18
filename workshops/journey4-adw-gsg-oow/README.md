@@ -150,7 +150,7 @@ This lab will walk you through the process of connecting your Autonomous Data Wa
 
 
 
-# Bonus Labs - Slightly More Advanced Labs for Data Warehouse Developers, Cloud DBAs and Data Scientists
+# Bonus Labs - Slightly More Advanced Features for Data Warehouse Developers, Cloud DBAs and Data Scientists
 
 The following labs will let you explore some of the more advanced features of your Autonomous Data Warehouse. They cover the following topics that will help you expand your knowledge by introducing some more advanced topics for Autonomous Data Warehouse"
 
