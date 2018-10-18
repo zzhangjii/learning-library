@@ -91,7 +91,7 @@ Lets run OpenFOAM in our HPC Cluster:
 
 1. Open a web browser and type in the **GOTTY** IP address that was shown at the bottom of the deployment terminal window and use the following information to authenticate:
 
-[http://<Public-IP>:8080](http://<Public-IP> :8080)
+[http://Public-IP:8080](http://Public-IP:8080)
 
 ![](img/c_deploy002.png)
 
@@ -116,7 +116,7 @@ Ganglia is a scalable distributed monitoring system for high-performance computi
 
 1. While OpenFOAM is running, open another tab in your web browser and navigate to the Ganglia Dashboard:
 
-[http://<Public-IP>/ganglia](http://<Public-IP>/ganglia)
+[http://Public-IP/ganglia](http://Public-IP/ganglia)
 
 
 ![](img/c_deploy005.png)
@@ -130,7 +130,7 @@ We can use Grafana to monitor our HPC Cluster and shows live updates of resource
 
 1. Open Grafana dashboard using the following URL:
 
-[http://<Public-IP>:3000/d/P6dYXV1iz/cluster-status](http://<Public-IP>:3000/d/P6dYXV1iz/cluster-status)
+[http://Public-IP:3000/d/P6dYXV1iz/cluster-status](http://Public-IP:3000/d/P6dYXV1iz/cluster-status)
 
 Enter the following credentials:
 
