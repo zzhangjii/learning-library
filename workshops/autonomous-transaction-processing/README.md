@@ -1,6 +1,6 @@
 <table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
 
-Last Updated:<br>October 17, 2018
+Last Updated:<br>October 18, 2018
 </td>
 <td class="td-banner">
 # Getting Started with Autonomous Transaction Processing                                    
@@ -19,6 +19,7 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - Configure Java with ATP
 - Working with REST APIs
 - Building Microservices on ATP
+- Configure OCI-CLI
 
 # How to Get Your Free Cloud Trial Account
 Please click on the following link to create your <a class=“trial-link” href="https://myservices.us.oraclecloud.com/mycloud/signup?language=en&sourceType=:ex:tb:::RC_NAMK181011P00041:ATPHOL&SC=:ex:tb:::RC_NAMK181011P00041:ATPHOL&pcode=NAMK181011P00041" target="_trial">Free Account</a>, and complete all the required steps to get your free Oracle Cloud Trial Account. When you complete the registration process you'll receive a $300 credit that will enable you to complete the lab for free.  Additionally, you'll have 1000s of hours left over to continue to explore the Oracle Cloud.
@@ -39,35 +40,35 @@ Read on to begin your Getting Started journey with Oracle Autonomous Transaction
 **You are all set, let's begin!**
 
 
-## Lab 100: Provisioning an Autonomous Transaction Processing Database
+## Lab 1: Provisioning an Autonomous Transaction Processing Database
 
 **Key Objectives**:
 
 - Learn how to sign-in to the Oracle Public Cloud
 - Learn how to provision a new ATP database
 
-**[Click here to run Lab 100](LabGuide100ProvisionAnATPDatabase.md)**
+**[Click here to run Lab 1](LabGuide1ProvisionAnATPDatabase.md)**
 
 
-## Lab 200: Secure Connectivity and Data Access
+## Lab 2: Secure Connectivity and Data Access
 
 **Key Objectives**:
 
 - Learn how to configure a secure connection using Oracle SQL Developer
 
-**[Click here to run Lab 200](LabGuide200SecureConnectivityAndDataAccess.md)**
+**[Click here to run Lab 2](LabGuide2SecureConnectivityAndDataAccess.md)**
 
 
-## Lab 300: Scaling an ATP instance
+## Lab 3: Scaling an ATP instance
 
 **Key Objectives**:
 
 - Learn how to scale an ATP instance
 
-**[Click here to run Lab 300](LabGuide300ScaleAnATP.md)**
+**[Click here to run Lab 3](LabGuide3ScaleAnATP.md)**
 
 
-## Lab 400: Data Loading into ATP
+## Lab 4: Data Loading into ATP
 
 **Key Objectives**:
 
@@ -77,49 +78,58 @@ Read on to begin your Getting Started journey with Oracle Autonomous Transaction
 - Learn how to create tables in your database
 - Learn how to load data from the Object Store
 
-**[Click here to run Lab 400](LabGuide400DataLoadingIntoATP.md)**
+**[Click here to run Lab 4](LabGuide4DataLoadingIntoATP.md)**
 
 
 
-## Lab 500: Configure node.js app with ATP
+## Lab 5: Configure node.js app with ATP
 
 **Key Objectives**:
 
 - Learn how to build a linux node.js application server and connect it to an Oracle ATP database service
 
-**[Click here to run Lab 500](LabGuide500Configurenode.jsAppWithATP.md)**
+**[Click here to run Lab 5](LabGuide5Configurenode.jsAppWithATP.md)**
 
-## Lab 600: Configure Java with ATP
+## Lab 6: Configure Java with ATP
 
 **Key Objectives**:
 
 - Learn how to build a linux Java application server and connect it to an Oracle ATP database service
 
-**[Click here to run Lab 600](LabGuide600ConfigureJavaWithATP.md)**
+**[Click here to run Lab 6](LabGuide6ConfigureJavaWithATP.md)**
 
-## Lab 700: Working with REST APIs
+## Lab 7: Working with REST APIs
 
 **Key Objectives**:
 
 - Learn how to generate REST calls to the Oracle Cloud Infrastructure using node.js
 
-**[Click here to run Lab 700](LabGuide700WorkingWithRESTAPIs.md)**
+**[Click here to run Lab 7](LabGuide7WorkingWithRESTAPIs.md)**
 
-## Lab 800: Building microservices on ATP
+## Lab 8: Building microservices on ATP
 
 **Key Objectives**:
 
 - To build a docker container running node.js microservice
 - Deploy it on an ATP service
 
-**[Click here to run Lab 800](LabGuide800BuildingMicroservicesOnATP.md)**
+**[Click here to run Lab 8](LabGuide8BuildingMicroservicesOnATP.md)**
+
+## Lab 9: Configure OCI-CLI
+
+**Key Objectives**:
+
+- Configure Oracle Cloud Infrastructure Command Line Interface
+- Run examples using OCI-CLI for Autonomous Transaction Processing database
+
+**[Click here to run Lab 9](LabGuide9ConfigureOCI-CLI.md)**
 
 
 ## Appendix
 
 **Key Objectives**:
 
-- Handy docker commands you may need while doing <a href="./LabGuide800BuildingMicroservicesOnATP.md" target="_blank">LabGuide800BuildingMicroservicesOnATP.md</a>
+- Handy docker commands you may need
 
 **[Click here to go through Appendix](Appendix.md)**
 

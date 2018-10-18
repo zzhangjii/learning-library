@@ -1,4 +1,10 @@
-# Lab 300: Scaling an ATP instance
+<table class="tbl-heading"><tr><td class="td-logo">![](images/obe_tag.png)
+
+October 18, 2018
+</td>
+<td class="td-banner">
+# Lab 3: Scaling an ATP instance
+</td></tr><table>
 
 ## Introduction
 
@@ -15,7 +21,7 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 
 ## Required Artifacts
 
-- Please ensure you are connected to your cloud account and have provisioned an ATP instance. Refer<a href="./LabGuide100ProvisionAnATPDatabase.md" target="_blank">LabGuide100ProvisionAnATPDatabase.md</a>
+- Please ensure you are connected to your cloud account and have provisioned an ATP instance. Refer<a href="./LabGuide1ProvisionAnATPDatabase.md" target="_blank">LabGuide1ProvisionAnATPDatabase.md</a>
 
 
 ## Steps
@@ -39,3 +45,14 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 - The service details page would indicate that the scaling operation is in progress. Once it completes, the status changes to ‘Available’.
 
 #### NOTE:  Regardless to the change in CPU or storage, your database is always available to your application and your workload can run uninterrupted during the scaling process.
+
+
+-   You are now ready to move to the next lab.
+
+<table>
+<tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
+<td class="td-banner">
+## Great Work - All Done!
+</td>
+</tr>
+<table>

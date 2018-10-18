@@ -1,4 +1,11 @@
-# Lab 400: Data Loading into ATP
+<table class="tbl-heading"><tr><td class="td-logo">![](images/obe_tag.png)
+
+October 18, 2018
+</td>
+<td class="td-banner">
+# Lab 4: Data Loading into ATP
+</td></tr><table>
+
 ## Introduction
 
 In this lab, you will be uploading files to the Oracle Cloud Infrastructure (OCI) Object Storage, creating sample tables, loading data into them from files on the OCI Object Storage.
@@ -31,7 +38,7 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 
 ## Required Artifacts
 
-- Please ensure you are connected to your cloud account and have provisioned an ATP instance. Refer <a href="./LabGuide100ProvisionAnATPDatabase.md" target="_blank">LabGuide100ProvisionAnATPDatabase.md</a>
+- Please ensure you are connected to your cloud account and have provisioned an ATP instance. Refer <a href="./LabGuide1ProvisionAnATPDatabase.md" target="_blank">LabGuide1ProvisionAnATPDatabase.md</a>
 - You have installed Oracle SQL Developer. You can download SQL Developer 18.3 [here](https://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html) and follow the instructions to complete the installation.
 
 ## Steps
@@ -165,7 +172,7 @@ Construct the URL that points to the location of the customers.csv file staged i
  
  file_name: customers.csv
 
- In the belwo example of constructed URL, the region name is us-seattle-1, the tenant name is r1atpdemo6, and the bucket name is ATPLab. So the URL of the customers.csv file is:
+ In the below example of constructed URL, the region name is us-seattle-1, the tenant name is r1atpdemo6, and the bucket name is ATPLab. So the URL of the customers.csv file is:
  
  https://swiftobjectstorage.us-seattle-1.oraclecloud.com/v1/r1atpdemo6/ATPLab/customers.csv
  
@@ -250,3 +257,13 @@ Specify the credentials for your Oracle Cloud Infrastructure Object Storage serv
 ![](./images/400/snapCustomerData.jpg)
 
 You have successfully loaded the sample data from Object storage to customers table using DBMS_CLOUD.
+
+-   You are now ready to move to the next lab.
+
+<table>
+<tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
+<td class="td-banner">
+## Great Work - All Done!
+</td>
+</tr>
+<table>
