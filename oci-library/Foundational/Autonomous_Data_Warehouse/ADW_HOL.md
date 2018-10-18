@@ -50,7 +50,7 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 
 > **Note:**  This file will be loaded into Object Storage and later used to load data into the CHANNELS table.
 
-2) Download SQL Developer Tool from this link: [https://bit.ly/2OHcBcZ](https://bit.ly/2OHcBcZ) extract and install on your Windows 10 VM.
+2) Download SQL Developer Tool from this link: [https://bit.ly/2OHcBcZ](https://bit.ly/2OHcBcZ) unzip and install on your Windows 10 VM.
 
  ![](img/sqldev01.png)
 
@@ -274,6 +274,6 @@ You have successfully imported the channels.txt file from your on-premises to AD
 ## Practice 10: Try Oracle Cloud Infrastructure for FREE 
 
 Sign up for the free Oracle Cloud Infrastructure trial account. 
-https://cloud.oracle.com/tryit
+[https://cloud.oracle.com/tryit](https://cloud.oracle.com/tryit)
 
 <img width="800" alt="image001" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/OOW-2018/EdgeLab/media/image34.png">
