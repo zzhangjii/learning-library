@@ -36,9 +36,7 @@ Oracle Machine Learning SQL notebooks provide easy access to Oracle's paralleliz
 
     [Description of the illustration open_service_console.png](files/open_service_console.txt)
 
-6. A dialog opens to sign in to the service console. Enter the following information:
-     * **Username**: `admin`
-     * **Password**: Enter the administrator password you specified when you created your service instance.
+6. Depending on your browser settings, you may need to give permission for the Service Console to open in a new tab.
 7. The service console opens in the **Overview** mode. Click **Administration** in the left navigation pane.
 8. Click **Manage Oracle ML Users**.
 9. Sign in using the same information as before:
@@ -52,8 +50,8 @@ Oracle Machine Learning SQL notebooks provide easy access to Oracle's paralleliz
 
 11. You're taken to the Create Users page. Enter the following information:
      * **Username**: `omluser1`
-     * **First Name**: OML
-     * **Last Name**: User1
+     * **First Name**: `OML`
+     * **Last Name**: `User1`
      * **Email Address**: For easy access, enter the same email address you used to login to your cloud account.
      * **Password:** Uncheck the box to auto generate a password. Instead create a new password yourself.
 12. You're taken back to the Users page where the new user is now listed.
