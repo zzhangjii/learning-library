@@ -55,7 +55,7 @@ High Performance Computing and storage in the cloud can be very confusing and it
 1. On Gitbash terminal use SSH command to connect to the control node with this information:
 
 - **IPaddress**: *129.146.103.162 *
-- **username**: *hol_userX*
+- **username**: *hol_userX - Instructor will provide you a password*
 - **password**: *+ocihpc123456*
 
 ```
@@ -155,7 +155,7 @@ Here is a few hours later:
 
 As you can see the simulation is consuming our HPC resources. It will take some time to finish OpenFOAM but to give you an idea, here is what is actually processing:
 
-![](img/c_deploy012.png)
+![](img/c_deploy12.png)
 
 ## Practice 8: Try Oracle Cloud Infrastructure for FREE 
 
