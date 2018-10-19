@@ -55,7 +55,7 @@ WElcome_123#
 
 ### **STEP 2: Connect to ATP instance using Oracle SQL Developer**
 
-- Launch SQL Developer from tbe desktop and click Add Connection on top left.
+- Launch SQL Developer from the desktop and click Add Connection on top left.
 
 ![](./images/200/Picture200-7.png)
 

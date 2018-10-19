@@ -9,13 +9,13 @@ October 18, 2018
 
 ## Introduction
 
-This lab walks you through the steps to get started using the Oracle Autonomous Transaction Processing Database on Oracle Infrastructure Cloud (OCI). You will provision a new database.
+This lab walks you through the steps to get started using the Oracle Autonomous Transaction Processing Database on Oracle Cloud Infrastructure (OCI). You will provision a new database.
 
-To **log issues**, click [here](https://github.com/oracle/learning-library/issues/new) to go to the github oracle repository issue submission form.
+To **log issues**, click [here](https://github.com/oracle/learning-library/issues/new) to go to the github Oracle repository issue submission form.
 
 ## Objectives
 
-- Learn how to sign-in to the Oracle Public Cloud
+- Learn how to sign-in to the Oracle Cloud
 - Learn how to provision a new ATP database
 
 ## Required Artifacts
@@ -30,15 +30,17 @@ In this section you will be provisioning an ATP database using the cloud console
 
 ### **STEP 1: Sign in to Oracle Cloud Infrastructure console**
 
-- Login to your Oracle Cloud Infrastructure console using the URL provided.
+- Go to cloud.oracle.com, click Sign In to sign in with your Oracle Cloud account.
 
-- Choose oracleidentitycloudservice as your Identity Provider and click on **Continue**.
+![](./images/100/signin.png)
 
-![](./images/100/Picture100-2.png)
+- Enter your Cloud Account Name and click My Services.
 
--   On the following screen, provide tenant name, username and password. 
+![](./images/100/cloudaccname.png)
 
-![](./images/100/Picture100-4.png)
+- Enter your Oracle Cloud username and password, and click Sign In.
+
+![](./images/100/unpw.png)
 
 - You will then be securely logged into your Oracle Cloud Infrastructure Console.
 
@@ -94,7 +96,7 @@ Managing Tags and Tag Namespaces: When you have many resources (for example, ins
 
 #### Note: Oracle Cloud Infrastructure allows logical isolation of users within a tenant through Compartments. This allows multiple users and business units to share a tenant account while being isolated from each other.
 
-If you have chosen the compartment you do not have privilegeson, you will not be able to see or provision instance in it.
+If you have chosen the compartment you do not have privileges on, you will not be able to see or provision instance in it.
 
 More information about Compartments and Policies is provided in the OCI Identity and Access Management documentation [here](https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm?tocpath=Services%7CIAM%7C_____13).
 
