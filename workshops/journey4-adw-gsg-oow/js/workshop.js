@@ -377,13 +377,15 @@ labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sa
 
             setTimeout(function () {
                 $("#labguide a").each(function () {
-                    if (this.href.endsWith('.md')) {
+                    if (this.href.endsWith('.md') && !this.href.includes('?')) {
+                        var filename = this.getAttribute('href');
+                        this.href = window.location.href.split('?')[0] + '?page='+filename;
+
                         $(this).on("click", function (event) {
                             event.preventDefault();
-                            console.log('clicked on: ' + this.getAttribute('href'));
-                            $scope.getLabGuide({
-                                filename: this.getAttribute('href')
-                            });
+                            console.log('clicked on: ' + filename);
+                            var win = window.open(this.href, '_blank');
+                            win.focus();
                         });
                     }
                 })
