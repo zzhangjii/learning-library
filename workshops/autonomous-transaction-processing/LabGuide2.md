@@ -20,7 +20,7 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 
 ## Required Artifacts
 
-- Please ensure you are connected to your cloud account and have provisioned an ATP instance. Refer <a href="./LabGuide1ProvisionAnATPDatabase.md" target="_blank">here</a> on how provision an ATP database.
+- Please ensure you are connected to your cloud account and have provisioned an ATP instance. Refer <a href="./LabGuide1.md" target="_blank">here</a> on how provision an ATP database.
 - You have installed Oracle SQL Developer 18.3.
 
 
@@ -32,7 +32,7 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 
 - Click on Menu and select Autonomous Transaction Processing
 
-- On the ATP console, select your ATP instance provisioned in <a href="./LabGuide1ProvisionAnATPDatabase.md" target="_blank">LabGuide1ProvisionAnATPDatabase.md</a>.
+- On the ATP console, select your ATP instance provisioned in <a href="./LabGuide1.md" target="_blank">LabGuide1.md</a>.
 
 ![](./images/200/Picture200-1.png)
 

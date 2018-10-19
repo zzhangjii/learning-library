@@ -52,7 +52,7 @@ ATPnodeapp simply makes a connection to the ATP database and does not require an
 
 Provision ATP instance and download secure connectivity credentials file.
 
-Refer to labs <a href="./LabGuide1ProvisionAnATPDatabase.md" target="_blank">LabGuide1ProvisionAnATPDatabase.md</a> and <a href="./LabGuide2SecureConnectivityAndDataAccess.md" target="_blank">LabGuide2SecureConnectivityAndDataAccess.md</a> to provision and download the secure connectivity credentials file.
+Refer to labs <a href="./LabGuide1.md" target="_blank">LabGuide1.md</a> and <a href="./LabGuide2.md" target="_blank">LabGuide2.md</a> to provision and download the secure connectivity credentials file.
 
 - NOTE: If you wish to deploy aOne app, you would need to connect to your database using SQL Developer and run the [create_schema](https://github.com/cloudsolutionhubs/ATPDocker/blob/master/aone/create_schema.sql) script in the default admin schema or create a suitable user schema for the application.
 
