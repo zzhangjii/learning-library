@@ -7,7 +7,7 @@ permalink: /ziplabs/adw-provisioning/index.html
 # Provisioning Autonomous Data Warehouse Cloud and Connecting with SQL Developer #
 
 ## Before You Begin ##
-This 15-minute lab walks you through the steps to get started using the Oracle Autonomous Data Warehouse Cloud (ADWC) on Oracle Infrastructure Cloud (OCI). You will provision a new ADWC database and connect to the database using Oracle SQL Developer.
+This 15-minute lab walks you through the steps to get started using the Oracle Autonomous Data Warehouse Cloud (ADWC) on Oracle Cloud Infrastructure (OCI). You will provision a new ADWC database and connect to the database using Oracle SQL Developer.
 
 ### Background ###
 Autonomous Data Warehouse Cloud is built around the market leading Oracle database and comes with fully automated data warehouse specific features that deliver outstanding query performance.  This environment is delivered as a fully managed cloud service running on optimized high-end Oracle hardware systems.  You don’t need to spend time thinking about how you should store your data, when or how to back it up or how to tune your queries.  We take care of everything for you.  You can select the exact combination of storage and CPUs to fit your project and your budget. We keep all of your data safe and secure.  It’s always backed up and always encrypted in Oracle’s cloud.  Using our client tools you load all kinds of different types of data from worksheets on your computer, webstore log files to data files stored in Oracle’s cloud-based object store and load that data into your Autonomous Data Warehouse cloud.
