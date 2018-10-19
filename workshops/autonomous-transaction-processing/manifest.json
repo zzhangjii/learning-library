@@ -1,6 +1,6 @@
 {
     "workshop": {
-        "title": "Autonomous Transaction Processing: Self-Guided Hands-On Workshop Tejus",
+        "title": "Autonomous Transaction Processing: Self-Guided Hands-On Workshop",
         "description": "This workshop will show you how to use Oracle Autonomous Transaction Processing in the Oracle Public Cloud.",
         "labs": [
             {

@@ -260,7 +260,7 @@ labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sa
                 $scope.previousSelection = $scope.selection;
                 $scope.selection = "lab";
                 $scope.currentFilename = filename;
-                $scope.getLabGuide({ filename: filename});
+                $scope.getLabGuide({ filename: ""});
               }
             }
             else { //Version in query string not found
