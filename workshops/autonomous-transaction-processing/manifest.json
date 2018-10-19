@@ -11,14 +11,14 @@
             },
             {
                 "number": "1",
-                "filename": "LabGuide1",
-                "title": "Lab 1: Provisioning an Autonomous Transaction Processing Database",
+                "filename": "LabGuide100ProvisionAnATPDatabase.md",
+                "title": "Lab Tejus",
                 "description": "Instructions to provision ATP Database"
             },
             {
                 "number": "2",
                 "filename": "LabGuide200SecureConnectivityAndDataAccess.md",
-                "title": "Lab 2: Secure Connectivity and Data Access",
+                "title": "Lab Jennie",
                 "description": "Instructions to configure a secure connection using Oracle SQL Developer"
             },
             {
