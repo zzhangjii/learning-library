@@ -47,17 +47,13 @@ During this lab we will take your new trial account and show you how to provisio
 
 ### **STEP 2**: Create a New Instance
 
-- At the top of the page select the **Guided Journey** link.
+- In the Autonomous Visual Builder panel open the Service Console.
 
-![](images/100/LabGuide100-f0dbfc52.png)
+![](images/100/LabGuide50-6196f9d1.png)
 
-- Next Select the **Develop and Deploy** option.
+- Next Select the **Quickstarts** option from the top of the page.
 
-![](images/100/LabGuide100-cb88530c.png)
-
-- Fill out the form below selecting **Javascript** and **Web App**. Then press the **Create Visual Builder Instance** button.
-
-![](images/100/LabGuide100-6fa626cd.png)
+![](images/100/LabGuide50-11580389.png)
 
 - Name your instance and press create.
 
