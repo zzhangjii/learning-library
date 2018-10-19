@@ -229,7 +229,7 @@ sudo yum install git
 
 Copy instant client from you local machine to linux host machine
 ```
-scp -i ~/priv-ssh-keyfile /path_to/nstantclient-basic-linux.x64-12.2.0.1.0.zip opc@ipaddress:/opt/oracle/instantclient_12_2
+scp -i ~/priv-ssh-keyfile /path_to/instantclient-basic-linux.x64-12.2.0.1.0.zip opc@ipaddress:/opt/oracle/instantclient_12_2
 ```
 
 - Unzip the file and move the files to /opt/oracle/instantclient_12_2
