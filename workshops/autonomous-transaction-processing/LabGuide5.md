@@ -225,11 +225,11 @@ sudo yum install git
 
 - Download and install Oracle Instant Client software
 
-#### Note: You can download it from OTN [here](http://www.oracle.com/technetwork/database/database-technologies/instant-client/downloads/index.html)
+#### Note: You can download it from OTN [here](https://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html)
 
-For simplicity and to facilitate a direct download to your linux host, clone below git repository to your host machine.
+Copy instant client from you local machine to linux host machine
 ```
-git clone https://github.com/cloudsolutionhubs/instantclient_12_2_linux
+scp -i ~/priv-ssh-keyfile /path_to/nstantclient-basic-linux.x64-12.2.0.1.0.zip opc@ipaddress:/opt/oracle/instantclient_12_2
 ```
 
 - Unzip the file and move the files to /opt/oracle/instantclient_12_2
