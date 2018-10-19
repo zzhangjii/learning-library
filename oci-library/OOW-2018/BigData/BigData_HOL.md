@@ -258,6 +258,8 @@ How did we get 80Vcores when we only have 24 OCPU (48 cores) available per worke
 
 While memory in the cluster is static, YARN can be customized with a vcores value which doesn’t map exactly to the physical core ratio.  This tuning directly affects performance.
 
+More on YARN tunning : https://www.cloudera.com/documentation/enterprise/5-15-x/topics/cdh_ig_yarn_tuning.html
+
 Let’s try adjusting this from 1.6x to 2.5x. In the search box type **“cpu-vcores”** and adjust the Container Virtual CPU Cores from 80 to 120.
 
 ![](media/image31.png)
