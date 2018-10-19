@@ -90,8 +90,7 @@ The notebook will provide some live examples of DBMS_PREDICTIVE_ANALYTICS in act
 <tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
 <td class="td-banner">
 ## Great Work - All Done!
- - You are now ready to move to the next lab.
-
+ You are now ready to move on to the next lab.
 </td>
 </tr>
 <table>

@@ -1,6 +1,6 @@
 <table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
 
-Last Updated:<br>October 12, 2018
+Last Updated:<br>October 19, 2018
 </td>
 <td class="td-banner">
 # Getting Started with Autonomous Data Warehouse                                    
@@ -8,6 +8,8 @@ Last Updated:<br>October 12, 2018
 
 
 This workshop walks you through all the steps to get started using the **Oracle Autonomous Data Warehouse (ADW)**. You will provision a new ADW instance, load data from the object store and troubleshoot data loads, query external data residing on the object store, manage an ADW instance, scale an ADW instance, and use Oracle Machine Learning notebooks.
+
+If you came here directly via GitHub consider using Oracle's official <a href="https://www.oracle.com/goto/adw/tutorial">Learning Library link</a> for this tutorial, where you may login and also get access to many other Oracle Cloud tutorials.
 
 
 ## Goals for this workshop

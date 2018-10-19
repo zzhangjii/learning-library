@@ -163,12 +163,11 @@ Start SQL Developer and create a connection for your database using the default 
 
 -   If you are behind a VPN or Firewall and this Test fails, please download <a href="https://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html" target="_blank">SQL Developer 18.3</a> or higher. This version and above will allow you to select the "Use HTTP Proxy Host" option for a Cloud Wallet type connection. While creating your new ADW connection here, provide your proxy's Host and Port. If you are unsure where to find this, you may look at your computer's connection settings or contact your Network Administrator.
 
--   You are now ready to move to the next lab.
-
 <table>
 <tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
 <td class="td-banner">
 ## Great Work - All Done!
+You are now ready to move on to the next lab.
 </td>
 </tr>
 <table>

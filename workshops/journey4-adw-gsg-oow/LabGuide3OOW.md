@@ -222,6 +222,7 @@ A load or external table validation that errors out is indicated by status=FAILE
 <tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
 <td class="td-banner">
 ## Great Work - All Done!
+You are now ready to move on to the next lab.
 </td>
 </tr>
 <table>
