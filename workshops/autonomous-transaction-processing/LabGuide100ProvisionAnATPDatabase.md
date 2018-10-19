@@ -42,7 +42,11 @@ In this section you will be provisioning an ATP database using the cloud console
 
 ![](./images/100/unpw.png)
 
-- You will then be securely logged into your Oracle Cloud Infrastructure Console.
+- Once you are logged in, you are taken to the cloud services dashboard where you can see all the services available to you.
+
+- Click Autonomous Transaction Processing in the left side menu under services
+
+![](./images/100/myservices.png)
 
 ### **STEP 2: Create a Compartment**
 
@@ -50,7 +54,7 @@ In this section you will be provisioning an ATP database using the cloud console
 
 ![](./images/100/Compartments.jpeg)
 
--  Click on **Create Compartment** button to start the compartment creation process 
+-  Click on **Create Compartment** button to start the compartment creation process
 
 ![](./images/100/CreateCompartment.jpeg)
 
