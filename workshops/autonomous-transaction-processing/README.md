@@ -47,7 +47,7 @@ Read on to begin your Getting Started journey with Oracle Autonomous Transaction
 - Learn how to sign-in to the Oracle Public Cloud
 - Learn how to provision a new ATP database
 
-**[Click here to run Lab 1](LabGuide100ProvisionAnATPDatabase.md)**
+**[Click here to run Lab 1](LabGuide1.md)**
 
 
 ## Lab 2: Secure Connectivity and Data Access
