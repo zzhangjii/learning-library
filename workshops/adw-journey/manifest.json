@@ -1,79 +1,73 @@
 {
     "workshop": {
-        "title": "ADWC: Self guided hands-on workshop",
-        "description": "This workshop will show you how to use Oracle Autonomous Data Warehouse Cloud in the Oracle Public Cloud.",
+        "title": "Oracle Autonomous Data Warehouse: Getting Started Workshop",
+        "description": "This workshop will show you how to get started with Oracle Autonomous Data Warehouse  in the Oracle Public Cloud.",
         "labs": [
             {
                 "number": "0",
                 "filename": "README.md",
                 "title": "Read Me First",
-                "description": "ADWC: Self guided hands-on workshop overview"
+                "description": "ADW Getting Started Workshop Overview"
             },
             {
-                "number": "100",
-                "filename": "LabGuide100ProvisioningGettingStarted.md",
-                "title": "Lab 100: Provisioning and Connecting to SQL Developer",
-                "description": "Instructions to provision an ADWC service and connect to ADWC"
+                "number": "1",
+                "filename": "LabGuide1.md",
+                "title": "Lab 1: Provisioning and Connecting",
+                "description": "Building your first Autonomous Data Warehouse instance and connecting with SQL Developer"
             },
             {
-                "number": "200",
-                "filename": "LabGuide200DatabaseServiceSampleDatasets.md",
-                "title": "Lab 200: Working with Database Services and Sample Data Sets",
+                "number": "2",
+                "filename": "LabGuide2.md",
+                "title": "Lab 2: Working with Database Services and Sample Data Sets",
                 "description": "Understanding the different levels of database services and the sample Star Schema Benchmark (SSB) and Sales History (SH) datasets provided with ADWC"
             },
             {
-                "number": "300",
-                "filename": "LabGuide300DataLoading.md",
-                "title": "Lab 300: Data Loading",
+                "number": "3",
+                "filename": "LabGuide3.md",
+                "title": "Lab 3: Loading Data",
                 "description": "Instructions to load data from Object Stores using SQL Developer and/or PL/SQL"
             },
             {
-                "number": "400",
-                "filename": "LabGuide400QueryExternalData.md",
-                "title": "Lab 400: Query External Data",
-                "description": "Understanding how to Query External Data"
+                "number": "4",
+                "filename": "LabGuide4.md",
+                "title": "Lab 4: Querying An External Data File",
+                "description": "Instructions to define and query external tables based on Object Store datasets"
             },
             {
-                "number": "500",
-                "filename": "LabGuide500ManagingandMonitoring.md",
-                "title": "Lab 500: Managing and Monitoring",
-                "description": "Managing and Monitoring"
+                "number": "5",
+                "filename": "LabGuide5.md",
+                "title": "Lab 5: Managing and Monitoring Your Data Warehouse Instance using the Cloud Console",
+                "description": "Understanding how to use the ADWC Console to monitor, start/stop, and recover your ADWC instance"
             },
             {
-                "number": "600",
-                "filename": "LabGuide600ScalingPerformance.md",
-                "title": "Lab 600: Scaling and Performance in ADWC",
-                "description": "Understanding how to scale ADWC and its impact on performance and concurrency"
+                "number": "6",
+                "filename": "LabGuide6.md",
+                "title": "Lab 6: Scaling and Performance in Your Autonomous Data Warehouse",
+                "description": "Understanding how to scale your data warehouse instance and its effect on performance and concurrency"
             },
             {
-                "number": "700",
-                "filename": "LabGuide700OracleMachineLearning.md",
-                "title": "Lab 700: Oracle Machine Learning Notebooks",
-                "description": "Instructions to use Oracle Machine Learning Notebooks in ADWC"
+                "number": "7",
+                "filename": "LabGuide7.md",
+                "title": "Lab 7: Using Oracle Machine Learning SQL Notebooks",
+                "description": "Building SQL reports and dashboards using Oracle Machine Learning SQL notebooks"
             },
             {
-                "number": "800",
-                "filename": "LabGuide800OracleDatabaseML.md",
-                "title": "Lab 800: Basic Machine Learning (DBMS_PREDICTIVE_ANALYTICS)",
-                "description": "Learn to use DBMS_PREDICTIVE_ANALYTICS using a sample Oracle ML Notebook"
+                "number": "8",
+                "filename": "LabGuide8.md",
+                "title": "Lab 8: Simple Introduction to Machine Learning Algorithms (DBMS_PREDICTIVE_ANALYTICS)Using Oracle Data Integration Platform Cloud with your Autonomous Data Warehouse",
+                "description": "Learn to use the machine learning DBMS_PREDICTIVE_ANALYTICS package to build a more sophisticated notebook"
             },
             {
-                "number": "900-1",
-                "filename": "LabGuide900-1DataVisualization.md",
-                "title": "Lab 900-1: Create Data Visualizations from Data Visualization Desktop",
-                "description": "Learn to use Data Visualization Desktop with ADWC"
+                "number": "9",
+                "filename": "LabGuide9.md",
+                "title": "Lab 9: Exploring Your Data Using Data Visualization Desktop",
+                "description": "Learn to how to connect Data Visualization Desktop to your Autonomous Data Warehouse and build interactive reports"
             },
             {
-                "number": "900-2",
-                "filename": "LabGuide900-2(OAAC).md",
-                "title": "Lab 900-2: Create Data Visualizations from Oracle Autonomous Analytics",
-                "description": "Learn to use OAAC with ADWC"
-            },
-            {
-                "number": "1000",
-                "filename": "LabGuide1000DIPCWithADW.md",
-                "title": "Lab 1000: Data Integration Platform Cloud with ADWC",
-                "description": "Learn to use Oracle Data Integration Platform Cloud (DIPC) with ADWC"
+                "number": "10",
+                "filename": "LabGuideETL.md",
+                "title": "Lab 10: Using Oracle Data Integration Platform Cloud with your Autonomous Data Warehouse",
+                "description": "Learn to use Oracle Data Integration Platform Cloud (DIPC) to extract, transform and load data into your Autonomous Data Warehouse"
             }
         ]
     }

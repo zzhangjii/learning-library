@@ -2,7 +2,7 @@
 /*
 First step is to create the JSON table that will hold our data from our session log file. The log will provide the details of the time and account/user id.
 
-Oracle Autonomous Data Warehouse Cloud supports storing JSON documents inside the database. Use following code to create a table to store the transaction log which is in JSON format
+Oracle Autonomous Data Warehouse supports storing JSON documents inside the database. Use following code to create a table to store the transaction log which is in JSON format
 */
 BEGIN
       EXECUTE IMMEDIATE 'drop table json_sessionization';
@@ -44,8 +44,8 @@ END;
 Using the new JSON SQL notation we can query our data using a simple SELECT statement
 */
 
-SELECT 
-  TO_NUMBER(j.session_doc.time_id) as time_id, 
+SELECT
+  TO_NUMBER(j.session_doc.time_id) as time_id,
   j.session_doc.user_id as user_id
 FROM json_sessionization j;
 
@@ -70,19 +70,19 @@ SELECT
  start_time,
  end_time,
  session_duration
-FROM (SELECT 
-       TO_NUMBER(j.session_doc.time_id) as time_id, 
+FROM (SELECT
+       TO_NUMBER(j.session_doc.time_id) as time_id,
        j.session_doc.user_id as userid
-     FROM json_sessionization j) 
+     FROM json_sessionization j)
 MATCH_RECOGNIZE(
    PARTITION BY userid ORDER BY time_id
    MEASURES match_number() as session_id,
             COUNT(*) as no_of_events,
             FIRST(b.time_id) start_time,
             LAST(s.time_id) end_time,
-            LAST(s.time_id) - FIRST(b.time_id) session_duration    
+            LAST(s.time_id) - FIRST(b.time_id) session_duration
    ONE ROW PER MATCH
-   PATTERN (b s+)    
+   PATTERN (b s+)
    DEFINE
        s as (time_id - PREV(time_id) <= 10)
  );
