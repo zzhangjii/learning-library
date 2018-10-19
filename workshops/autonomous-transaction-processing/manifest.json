@@ -1,6 +1,6 @@
 {
     "workshop": {
-        "title": "Autonomous Transaction Processing: Self-Guided Hands-On Workshop",
+        "title": "Autonomous Transaction Processing: Self-Guided Hands-On Workshop Tejus",
         "description": "This workshop will show you how to use Oracle Autonomous Transaction Processing in the Oracle Public Cloud.",
         "labs": [
             {
@@ -11,7 +11,7 @@
             },
             {
                 "number": "1",
-                "filename": "LabGuide1.md",
+                "filename": "LabGuide100ProvisionAnATPDatabase.md",
                 "title": "Lab 1: Provision an ATP Database",
                 "description": "Instructions to provision ATP Database"
             },
