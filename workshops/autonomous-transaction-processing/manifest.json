@@ -11,14 +11,14 @@
             },
             {
                 "number": "1",
-                "filename": "LabGuide100ProvisionAnATPDatabase.md",
-                "title": "Lab Tejus",
+                "filename": "LabGuide1.md",
+                "title": "Lab 1: Provision an ATP Database",
                 "description": "Instructions to provision ATP Database"
             },
             {
                 "number": "2",
                 "filename": "LabGuide200SecureConnectivityAndDataAccess.md",
-                "title": "Lab Jennie",
+                "title": "Lab 2: Scaling an ATP instance",
                 "description": "Instructions to configure a secure connection using Oracle SQL Developer"
             },
             {
