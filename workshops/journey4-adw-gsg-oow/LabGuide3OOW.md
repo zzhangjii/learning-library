@@ -110,11 +110,13 @@ Note that you do not need to specify anything other than the list of columns whe
 
 #### **STEP 4: Create a Database Credential for Your User**
 
-For best performance and easy access, we recommend storing your data in the **OCI Object Store**. For the purpose and brevity of this lab, we have created a **bucket** (which contain the data files you downloaded in the zip file above) and a **user** (which will give you credentials to securely access that data) for you. In order to use this data lying in the Object Store you must give your database user access to the Object Store using credentials (a Username and Password). You will do this by creating a private CREDENTIAL object for your user that stores this information encrypted in your Autonomous Data Warehouse. This information is only usable for your user schema.
+For best performance and easy access, we recommend storing your data in the **OCI Object Store**. In order to use data in the Object Store you must give your database user access to the Object Store using credentials (a Cloud username and Authorization Token). You will do this by creating a private CREDENTIAL object for your user that stores this information encrypted in your Autonomous Data Warehouse. This information is only usable for your user schema.
 If you would like to learn more about the OCI Object Storage, refer to its <a href="https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Tasks/addingbuckets.htm" target="_blank">documentation</a>.
 
- Username : adwc_oss_access
- Auth Token (Serves as Credentials Password) : 6:rg1JlPUKge&&)jO$_v
+For the purpose and brevity of this lab, we have created a bucket for (which contain the data files you downloaded in the zip file above) and provide the necessary credential information you will need below:
+
+ Username : **adwc_oss_access**
+ Auth Token (Serves as Credentials Password) : **6:rg1JlPUKge&&)jO$_v**
 
 -   Connected as your user in SQL Developer, copy and paste <a href="./scripts/300/create_credential.txt" target="_blank">this code snippet</a> to SQL Developer worksheet. Note the above credentials are specified in this creation script. **Run this script**.
 
@@ -134,7 +136,7 @@ If you would like to learn more about the OCI Object Storage, refer to its <a hr
 
     -   Select **Oracle Cloud Storage** as source for the data load
 
-    -   Enter the URL of **channels.csv** as the file to load. You constructed the URL in STEP 8 Construct the URLs of the Files on Your OCI Object Storage. For example, the URL might look something like:
+    -   Enter the URL of **channels.csv** as the file to load. Use the following URL to access this file in our pre-created bucket:
         https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/dwcsdemo/DEMO_DATA/channels.csv
 
     -   Select the Credential you previously created for authentication with the Object Store, **OBJ\_STORE\_CRED**
@@ -183,7 +185,7 @@ As an alternative to the wizard-guided data load, you can use the PL/SQL package
 
     ![](./images/300/snap0014550.jpg)
 
-    - You have successfully loaded the sample tables. You can now run any sample query in the <a href="https://docs.oracle.com/database/122/DWHSG/part-relational-analytics.htm#DWHSG8493" target="_blank">relational analytics</a> section of the Oracle documentation. For example, to analyze the cumulative amount sold for specific customer IDs in quarter 2000, you could run the query in <a href="./scripts/300/query_tables.txt" target="_blank">this code snippet</a>. (<a href="https://docs.oracle.com/en/database/oracle/oracle-database/12.2/dwhsg/introduction-data-warehouse-concepts.html#GUID-452FBA23-6976-4590-AA41-1369647AD14D" target="_blank">Click Here</a> to read the Data Warehousing documentation).
+    - You have successfully loaded the sample tables. You can now run any sample query in the <a href="https://docs.oracle.com/database/122/DWHSG/part-relational-analytics.htm#DWHSG8493" target="_blank">relational analytics</a> section of the Oracle documentation. For example, to analyze the cumulative amount sold for specific customer IDs in quarter 2000, you could run the query in <a href="./scripts/300/query_tables.txt" target="_blank">this code snippet</a>. (<a href="https://docs.oracle.com/database/122/DWHSG/sql-analysis-reporting-data-warehouses.htm#GUID-33B4DE75-D7F8-4AE1-9F2E-C2846F72CC1E__GUID-4CB0EE02-AA9F-42D9-8F1B-2CD477496CD9" target="_blank">Click Here</a> to read the Data Warehousing documentation).
 
     ![](./images/300/Picture300-20.png)
 
