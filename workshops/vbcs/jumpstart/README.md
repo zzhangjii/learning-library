@@ -14,7 +14,9 @@ Visual Builder (VB) is a cloud service that enables you to rapidly create and ho
 
 This Lab will have you log into and Oracle Virtual Builder Cloud service and build a simple web application that uses Business Objects and Charts. A business object is a resource, such as an invoice or purchase order, similar to a database table; it has fields that hold the data for your application. Like a database table, a business object provides the structure for data used with business processes. Business objects are stored in a database.  
 
-### Access Your Environment
+## Access Your Environment
+
+**After selecting the Demo Lab and Signing UP or Signin In you'll recieve and email with the URL and credentials to log into your Virtual Builder environment.**
 
 - Click **Launch Demo Lab**.
    ![](images/000JumpStart/JS3.PNG)
