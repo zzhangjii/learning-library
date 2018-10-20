@@ -12,7 +12,7 @@ Oracle Visual Builder is a cloud service that enables you to rapidly create and 
 
 ## Lab Overview
 
-This Lab will have you log into and Oracle Virtual Builder and build a simple web application that uses Business Objects and Charts. A business object is a resource, such as an invoice or purchase order, similar to a database table; it has fields that hold the data for your application. Like a database table, a business object provides the structure for data used with business processes. Business objects are stored in a database.  
+This Lab will have you log into and Oracle Virtual Builder and build a simple web application that uses Business Objects and Charts.
 
 ## Access Your Environment
 
@@ -36,13 +36,13 @@ This Lab will have you log into and Oracle Virtual Builder and build a simple we
 
   ![](images/000JumpStart/JS8.PNG)
 
-- You should see the introduction Visual Builder page. Click the New button to create an application
+- You should see the introduction Visual Builder page. Click the **New** button to create an application
 
   ![](images/000JumpStart/JS9.PNG)
 
   ![](images/000JumpStart/JS10.PNG)
 
-- Enter the Application Name using a prefix of `charts-` followed by your initials123
+- Enter the Application Name using a prefix of `charts-` followed by your `initials` and a suffix of `123`.
 
   **Application Name**
 
@@ -58,6 +58,37 @@ This Lab will have you log into and Oracle Virtual Builder and build a simple we
 
   ![](images/000JumpStart/JS11.PNG)
 
+ ### **STEP 2**: Create Web Application
+
+- On the left hand side of the page click the **Application Icon** to toggle to a Web Application.
+
+  ![](images/000JumpStart/JS12.PNG)
+
+- Click the **+ Web Application** button.
+
+  ![](images/000JumpStart/JS13.PNG)
+
+-  Name the application `chartwebapp` and click **Create**. The application opens on the main-start page with a Component Palette on the left, a Canvas in the middle and the Property Palette on the right.
+
+  ```
+  chartwebapp
+  ```
+
+  ![](images/000JumpStart/JS14.PNG)
+
+ ### **STEP 3**: Import Data for the Business Objects 
+
+A business object is a resource, such as an invoice or purchase order, similar to a database table; it has fields that hold the data for your application. Like a database table, a business object provides the structure for data used with business processes. Business objects are stored in a database.
+
+- Download the chart_application .zip file by clicking here: <link-to-be-provided>. The .zip contains CSV for the business objects.
+
+- Click the **Business Objects Icon**
+
+  ![](images/000JumpStart/JS15.PNG)
+
+- Then, click the Business Objects **hamburger menu** and select **Data Manager**.
+
+  ![](images/000JumpStart/JS16.PNG)
 
 
 
@@ -90,13 +121,6 @@ This Lab will have you log into and Oracle Virtual Builder and build a simple we
 
 
 
-
-
-
-
-
-
-  
 
  ### **STEP 2**: Run the AlphaOffice Application
 
