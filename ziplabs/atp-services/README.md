@@ -61,9 +61,9 @@ The expectation for this lab is that you will see parallelization and therefore 
 4. Click **Run Script (or F5)** in SQL Developer so that all the rows are displayed on the screen.
 5. Note the response time.
     
-    ![](img/responseTimeLow.png)
+    ![](img/ResponseTimeLow.png)
 
-    [Description of the illustration responseTimeLow.png](files/responseTimeLow.txt)
+    [Description of the illustration ResponseTimeLow.png](files/ResponseTimeLow.txt)
 
 
 ## Connect and Query with the PARALLEL Database Service ##
@@ -80,9 +80,9 @@ The expectation for this lab is that you will see parallelization and therefore 
 3. Click **Run Script** in SQL Developer.
 4. Note the response time.
     
-    ![](img/responseTimeParallel.png)
+    ![](img/ResponseTimeParallel.png)
 
-    [Description of the illustration responseTimeParallel.png](files/responseTimeParallel.txt)
+    [Description of the illustration ResponseTimeParallel.png](files/ResponseTimeParallel.txt)
 
 The query using the PARALLEL service ran in about half the time as before! This is because we have 2 CPU’s allocated in this environment, and the PARALLEL service parallelized the query to take advantage of both CPU’s. The LOW service has only 1 CPU and cannot utilized parallelization. Therefore, the query using the LOW service takes twice as long to run.
 

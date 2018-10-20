@@ -30,7 +30,7 @@ Before you can launch an instance, you need to have a VCN to launch it into. In 
     
     [Description of the illustration MyServicesMenu.png](files/MyServicesMenu.txt)
 
-5. Click the OIC menu icon to expand the menu on the left edge of the screen.
+5. Click the OCI menu icon to expand the menu on the left edge of the screen.
 6. Select **Networking**.
 7. Click **Virtual Cloud Networks**.
     
@@ -48,7 +48,7 @@ Before you can launch an instance, you need to have a VCN to launch it into. In 
 10. In the Create Virtual Cloud Network dialog box, enter the following information:
      * **Create in Compartment**: Select the root compartment.
      * **Name**: `user01_Network`
-     * Select **Create Virtual Vloud Network Plus Related Resources**.
+     * Select **Create Virtual Cloud Network Plus Related Resources**.
      * The box to **Use DNS Host Names in this VCN** should be checked.
      * Scroll down. The box to **View detail page after this resource is created** should be checked.
 11. Click the button **Create Virtual Cloud Network** to close the dialog box. A confirmation page with the details of the cloud network is diplayed.
@@ -88,7 +88,7 @@ Before you can launch an instance, you need to have a VCN to launch it into. In 
     [Description of the illustration pastesshkey.png](files/pastesshkey.txt)
 
 7. In the Networking section:
-     * Choose the Virtual Cloud Network you created earlier, `user01_Networking`
+     * Choose the Virtual Cloud Network you created earlier, `user01_Network`
      * Keep the default values for the remaining fields.
 8. Scroll down and click the button **Create Instance** to close the dialog box.
      * While the instance is being created, its state is displayed as `PROVISIONING`.

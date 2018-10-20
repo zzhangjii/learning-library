@@ -64,15 +64,15 @@ The page will automatically refresh once the scale operation has completed and t
 
 4. Click **Run Script** for the `xweek_admin_low` database service. Note the execution time.
 
-    ![](img/responseTimeLow.png)
+    ![](img/ResponseTimeLow.png)
 
-    [Description of the illustration responseTimeLow.png](files/responseTimeLow.txt)
+    [Description of the illustration ResponseTimeLow.png](files/ResponseTimeLow.txt)
 
 5. Click **Run Script** for  the `xweek_admin_parallel` database service. Note the execution time.
 
-    ![](img/responseTimeParallel.png)
+    ![](img/ResponseTimeParallel.png)
 
-    [Description of the illustration responseTimeParallel.png](files/responseTimeParallel.txt)
+    [Description of the illustration ResponseTimeParallel.png](files/ResponseTimeParallel.txt)
 
 The timing for the LOW service remains unchanged, despite increasing the CPUs from 2 to 4. The LOW service does not parallelize transactions to take advantage of increased CPUs. The PARALLEL service previously executed in half the time as the LOW service. Now the the CPUs have been doubled, the execution time is halved again. It's now approximately one fourth that of the LOW service, reflecting the use of the additional CPU’s.
 
