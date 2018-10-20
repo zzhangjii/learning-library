@@ -288,7 +288,7 @@ Now you will test the completed application
 
 If you would like to experience a more in-depth look at how Oracle Visual Builder can be used please go to the following: 
 
-[Complete Visual Builder Workshop](https://oracle.github.io/learning-library/workshops/docker/?version=Linux+Trial+Account&page=Intro.md&sourceType=:ex:tb:::RC_NAMK180927P00040:DockerDemoLab&SC=:ex:tb:::RC_NAMK180927P00040:DockerDemoLab&pcode=NAMK180927P00040)
+[Complete Visual Builder Workshop](https://linkgoeshere.com)
 
 - **NOTE:** When the Lab's allotted time has expired (30 minutes) you will see the following:
 
