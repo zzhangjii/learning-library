@@ -36,6 +36,7 @@ To **log issues**, click [here](https://github.com/cloudsolutionhubs/autonomous-
 
 -   The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
 - Install node.js on your laptop
+- Download the **instantclient-basic-linux.x64-12.1.0.2.0.zip** from Oracle OTN [here](https://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html)
 - Docker installed on your local machine. If you do not have docker please follow this [Mac User link](https://docs.docker.com/docker-for-mac/install/), [Windows User link](https://docs.docker.com/docker-for-windows/install/) and install docker
 - Create a folder and clone git repository to your local machine 
 ```
@@ -52,7 +53,7 @@ ATPnodeapp simply makes a connection to the ATP database and does not require an
 
 Provision ATP instance and download secure connectivity credentials file.
 
-Refer to labs <a href="./LabGuide1ProvisionAnATPDatabase.md" target="_blank">LabGuide1ProvisionAnATPDatabase.md</a> and <a href="./LabGuide2SecureConnectivityAndDataAccess.md" target="_blank">LabGuide2SecureConnectivityAndDataAccess.md</a> to provision and download the secure connectivity credentials file.
+Refer to labs <a href="./LabGuide100ProvisionAnATPDatabase.md" target="_blank">LabGuide1.md</a> and <a href="./LabGuide200SecureConnectivityAndDataAccess.md" target="_blank">LabGuide2.md</a> to provision and download the secure connectivity credentials file.
 
 - NOTE: If you wish to deploy aOne app, you would need to connect to your database using SQL Developer and run the [create_schema](https://github.com/cloudsolutionhubs/ATPDocker/blob/master/aone/create_schema.sql) script in the default admin schema or create a suitable user schema for the application.
 
@@ -65,7 +66,7 @@ unzip /path_to_wallet_RESTONHUBDB.zip -d /path_to_app_folder/ATPDocker/wallet_NO
 - In your wallet folder, edit sqlnet.ora and replace the fcontents of the file with the following text: 
 
 ```
-cd wallet_NODEAPPDB2
+cd /path_to/ATPDocker/wallet_NODEAPPDB2
 
 nano sqlnet.ora
 
@@ -79,10 +80,15 @@ This tells the driver to look for the wallet in the path setup in variable TNS_A
 
 Assuming you have downloaded the Dockerfile, database wallet and created the backend schema, you can now build your docker image.
 
-#### Ensure you are in a folder that contains the wallet folder /wallet_NODEAPPDB2 when you run this command
+Move instantclient-basic-linux.x64-12.1.0.2.0.zip to ATPDocker folder.
 
 ```
+mv /path_to/instantclient-basic-linux.x64-12.1.0.2.0.zip /path_to/ATPDocker/
+```
 
+#### Ensure you are in a folder that contains the wallet folder /wallet_NODEAPPDB2 and instantclient-basic-linux.x64-12.1.0.2.0.zip when you run this command
+
+```
 cd /path_to_app_folder/ATPDocker/
 
 $ docker build -t aone .

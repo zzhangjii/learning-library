@@ -79,8 +79,8 @@ labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sa
 
           // Then bind the event to the callback function.
           // There are several events for cross browser compatibility.
-          script.onreadystatechange = callback;
-          script.onload = callback;
+             script.onreadystatechange = callback;
+             script.onload = callback;
 
           // Fire the loading
           head.appendChild(script);
@@ -342,7 +342,7 @@ labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sa
         var updateFilenameInHeader = function(filename) {
           var headerElement = document.getElementsByTagName('h2')[0];
           var labElement = document.createElement('span');
-          labElement.textContent = '- ' + filename.replace("Guide"," ").replace(".md","");
+          // labElement.textContent = '- ' + filename.replace("Guide"," ").replace(".md","");
 
           if(headerElement.children[1])
             headerElement.removeChild(headerElement.children[1]);

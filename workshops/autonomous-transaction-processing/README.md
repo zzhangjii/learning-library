@@ -30,7 +30,7 @@ Please click on the following link to create your <a class=“trial-link” href
 
 # Workshop Overview
 
-## Before Your Begin
+## Before You Begin
 **What is an Autonomous Transaction Processing?**
 
 Oracle Autonomous Transaction Processing delivers a self-driving, self-securing, self-repairing database service that can instantly scale to meet demands of mission critical transaction processing and mixed workload applications.  
@@ -47,7 +47,7 @@ Read on to begin your Getting Started journey with Oracle Autonomous Transaction
 - Learn how to sign-in to the Oracle Public Cloud
 - Learn how to provision a new ATP database
 
-**[Click here to run Lab 1](LabGuide1ProvisionAnATPDatabase.md)**
+**[Click here to run Lab 1](LabGuide100ProvisionAnATPDatabase.md)**
 
 
 ## Lab 2: Secure Connectivity and Data Access
@@ -56,7 +56,7 @@ Read on to begin your Getting Started journey with Oracle Autonomous Transaction
 
 - Learn how to configure a secure connection using Oracle SQL Developer
 
-**[Click here to run Lab 2](LabGuide2SecureConnectivityAndDataAccess.md)**
+**[Click here to run Lab 2](LabGuide200SecureConnectivityAndDataAccess.md)**
 
 
 ## Lab 3: Scaling an ATP instance
@@ -65,7 +65,7 @@ Read on to begin your Getting Started journey with Oracle Autonomous Transaction
 
 - Learn how to scale an ATP instance
 
-**[Click here to run Lab 3](LabGuide3ScaleAnATP.md)**
+**[Click here to run Lab 3](LabGuide300ScaleAnATP.md)**
 
 
 ## Lab 4: Data Loading into ATP
@@ -78,9 +78,7 @@ Read on to begin your Getting Started journey with Oracle Autonomous Transaction
 - Learn how to create tables in your database
 - Learn how to load data from the Object Store
 
-**[Click here to run Lab 4](LabGuide4DataLoadingIntoATP.md)**
-
-
+**[Click here to run Lab 4](LabGuide400DataLoadingIntoATP.md)**
 
 ## Lab 5: Configure node.js app with ATP
 
@@ -88,7 +86,7 @@ Read on to begin your Getting Started journey with Oracle Autonomous Transaction
 
 - Learn how to build a linux node.js application server and connect it to an Oracle ATP database service
 
-**[Click here to run Lab 5](LabGuide5Configurenode.jsAppWithATP.md)**
+**[Click here to run Lab 5](LabGuide500Configurenode.jsAppWithATP.md)**
 
 ## Lab 6: Configure Java with ATP
 
@@ -96,7 +94,7 @@ Read on to begin your Getting Started journey with Oracle Autonomous Transaction
 
 - Learn how to build a linux Java application server and connect it to an Oracle ATP database service
 
-**[Click here to run Lab 6](LabGuide6ConfigureJavaWithATP.md)**
+**[Click here to run Lab 6](LabGuide600ConfigureJavaAppWithATP.md)**
 
 ## Lab 7: Working with REST APIs
 
@@ -104,7 +102,7 @@ Read on to begin your Getting Started journey with Oracle Autonomous Transaction
 
 - Learn how to generate REST calls to the Oracle Cloud Infrastructure using node.js
 
-**[Click here to run Lab 7](LabGuide7WorkingWithRESTAPIs.md)**
+**[Click here to run Lab 7](LabGuide700WorkingWithRESTAPIs.md)**
 
 ## Lab 8: Building microservices on ATP
 
@@ -113,7 +111,7 @@ Read on to begin your Getting Started journey with Oracle Autonomous Transaction
 - To build a docker container running node.js microservice
 - Deploy it on an ATP service
 
-**[Click here to run Lab 8](LabGuide8BuildingMicroservicesOnATP.md)**
+**[Click here to run Lab 8](LabGuide800BuildingMicroservicesOnATP.md)**
 
 ## Lab 9: Configure OCI-CLI
 
@@ -122,7 +120,7 @@ Read on to begin your Getting Started journey with Oracle Autonomous Transaction
 - Configure Oracle Cloud Infrastructure Command Line Interface
 - Run examples using OCI-CLI for Autonomous Transaction Processing database
 
-**[Click here to run Lab 9](LabGuide9ConfigureOCI-CLI.md)**
+**[Click here to run Lab 9](LabGuide900ConfigureOCI-CLI.md)**
 
 
 ## Appendix
