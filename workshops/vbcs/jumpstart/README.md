@@ -138,11 +138,105 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
   ![](images/000JumpStart/JS24.PNG)
 
-## Add a Bar Chart
+## Add a Bar Chart to the Application
 
 In this section you will configure a Bar Chart using the defined Business Objects.
 
- ### **STEP 1**: Run the AlphaOffice Application
+ ### **STEP 1**: Add a Heading
+
+- Click the **Web Applications Icon**.
+
+  ![](images/000JumpStart/JS12.PNG)
+
+- Expand down the **chartwebapp-->flows-->main** and click **main-start**
+
+  ![](images/000JumpStart/JS25.PNG)
+
+- In the Component Palette locate the **Heading** component under `Common` and drag it onto the Canvas.
+
+  ![](images/000JumpStart/JS26.PNG)
+
+- The the `Heading` label properties change the text to:
+
+```
+Summary
+```
+
+**NOTE**: You'll have to tab out of the text field to see the change take place.
+
+  ![](images/000JumpStart/JS27.PNG)
+
+ ### **STEP 2**: Add a Bar Chart
+
+- In the Component Palette scroll down chart section and drag a **Bar Chart** into the Canvas below the Heading. A default Bar Chart appears. Click **Add Data** to map a Business Oject to the chart.
+
+  ![](images/000JumpStart/JS28.PNG)
+
+- On the `Select Endpoint` page expand **Business Objects-->Summary** and click **GET /Summary**.
+
+  ![](images/000JumpStart/JS29.PNG)
+
+- Click **Next**.
+
+- On the `Map Fields` page drag and drop the following:
+
+  - sales-->Values (Y Axis)
+  - year-->Categories (X Axis)
+
+  ![](images/000JumpStart/JS30.PNG)
+
+  - Expand the `ref2RegionObject` to **items-->item[i]. Drag name to Colors (Series)
+
+  ![](images/000JumpStart/JS31.PNG)
+
+  - Click **Next**.
+
+  - On the `Define Query` page click **Finish**. The Summary Business Object's values are applied to the chart.
+
+    ![](images/000JumpStart/JS32.PNG)
+
+- With the Chart selected click the **General** tab. Select or enter the following:
+
+  - Legend, Title: **Regions**
+  - Legend, Position (drop down): **End**
+  - X Axis, Title: **Year**
+  - Y Axis, Title: **Sales**
+
+    ![](images/000JumpStart/JS33.PNG)
+
+- The Bar Chart will now look like:
+
+  ![](images/000JumpStart/JS34.PNG)
+
+- From the `Component Palette` drag a **Label** between the Summary Header and the Bar Chart. You'll know it's between when you see a broken blue bar across the Canvas.
+
+  ![](images/000JumpStart/JS35.PNG) 
+
+- In the Label properties change the text field to:
+
+```
+Sales by Region
+```
+  ![](images/000JumpStart/JS36.PNG)
+
+- The completed chart will look like:
+
+  ![](images/000JumpStart/JS37.PNG)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
