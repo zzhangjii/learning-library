@@ -16,12 +16,13 @@ This Lab will have you log into and Oracle Virtual Builder Cloud service and bui
 
 ## Access Your Environment
 
-**After selecting the Demo Lab and Signing UP or Signin In you'll recieve and email with the URL and credentials to log into your Virtual Builder environment.**
+`After selecting the Demo Lab and Signing UP or Signing In you'll recieve an email with the URL and credentials to log into your Virtual Builder environment.`
 
-- Click **Launch Demo Lab**.
+- Click **Demo Lab**.
+
    ![](images/000JumpStart/JS3.PNG)
 
-- In 6 minutes the Oracle IaaS infrastructure including the Application already running and deployed will be available.
+- After Signing In, if you don't see the status bar then refresh your browser. In 4 minutes the Virtual Builder instance will be available.
 
   ![](images/000JumpStart/JS4.PNG)
 
@@ -32,11 +33,6 @@ This Lab will have you log into and Oracle Virtual Builder Cloud service and bui
 - When the environment is ready you will see the following along with the connect string to put into VNC Viewer. (In this example 129.213.56.126:1. Your IP address will be different)
 
   ![](images/000JumpStart/JS6.PNG)
-
-- **NOTE: You have 30 minutes** before the environment will go away.
-
-  ![](images/000JumpStart/JS7.PNG)
-
 
 ### **STEP 1**: Start VNC Viewer
 
