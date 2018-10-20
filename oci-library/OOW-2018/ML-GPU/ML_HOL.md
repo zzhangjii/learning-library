@@ -263,11 +263,11 @@ For that we will use two images. Please download those images and save to your D
 
 ![](img/image004.png)
 
-2. Upload the cat image jpeg image first. Once you click upload, the app will run the TensorFlow inference classification process and display score the image. As you can see it was classified as cat. 
+2. Upload the cat image image first. Once you click upload, the app will run the TensorFlow inference classification process and display score the image. As you can see it was classified as cat. 
 
 ![](img/image005.png)
 
-3. Now, lets upload our second image (navy.png). This image has more elements to show. You can notice that now, it recognize the military uniform, the suits and even the type of the tie!!
+3. Now, lets upload our second image (navy.jpg). This image has more elements to show. You can notice that now, it recognize the military uniform, the suits and even the type of the tie!!
 
 ![](img/image006.png)
 
