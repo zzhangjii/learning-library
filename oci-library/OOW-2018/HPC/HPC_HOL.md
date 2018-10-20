@@ -103,7 +103,7 @@ Lets run OpenFOAM in our HPC Cluster:
 2. After login into the GOTTY, execute the following command:
 
 ```
-# cd /mnt/blk/share/data/OpenFOAM/oci-hpc-foam-motorbike; source Allrun 2 52
+# cd /mnt/blk/share/data/OpenFOAM/oci-hpc-foam-motorbike; source Allrun 36
 ```
 
 Keep this browser open and let it run.
