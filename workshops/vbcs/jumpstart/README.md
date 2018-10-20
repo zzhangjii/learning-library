@@ -14,7 +14,7 @@ Oracle Visual Builder is a cloud service that enables you to rapidly create and 
 
 This Lab will have you log into and Oracle Virtual Builder and build a simple web application that uses Business Objects and Charts.
 
-## Access Your Environment
+## Access Your Environment and Create a Web Application
 
 `After clicking on the the Demo Lab button and Signing UP or Signing In you'll recieve an email with the URL and credentials to log into your Virtual Builder environment.`
 
@@ -80,7 +80,7 @@ This Lab will have you log into and Oracle Virtual Builder and build a simple we
 
 A business object is a resource, such as an invoice or purchase order, similar to a database table; it has fields that hold the data for your application. Like a database table, a business object provides the structure for data used with business processes. Business objects are stored in a database.
 
-- Download the chart_application .zip file by clicking here: <link-to-be-provided>. The .zip contains CSV for the business objects.
+- Download the `chart_application .zip` file by clicking here: <link-to-be-provided>. The .zip contains CSV for the business objects.
 
 - Click the **Business Objects Icon**
 
@@ -90,14 +90,59 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
   ![](images/000JumpStart/JS16.PNG)
 
+- Click the **Import Business Objects** tile.
 
+  ![](images/000JumpStart/JS17.PNG)
 
+- Click on the **Upload a file or drag it here icon**, browse to the location you saved the `chart_application.zip` file and select it.
 
+  ![](images/000JumpStart/JS18.PNG)
 
+- Three Business Objects are imported and created, Region, Sales and Summary. Click **Next**.
 
+  ![](images/000JumpStart/JS19.PNG)
 
+- On the Business Object page you'll see the three created data sources. Click **Next**.
 
+- On the Fields page we are going to make some changes. Click the Sales button to bring up the default paramters.
 
+  ![](images/000JumpStart/JS20.PNG)
+
+- Make the following changes:
+  - On the Display Label column **rename** `ref2Region` to `Region`.
+  - Click the **#** sign in the type field. Select the **Reference icon**
+
+      ![](images/000JumpStart/JS21-2.PNG)
+
+   - Take the `Reference Buiness Object` and `Default Display Field` defualts and click and **check icon** (OK).
+
+      ![](images/000JumpStart/JS21.PNG)
+
+- Select the Summary button and make the following changes:
+  - On the Display Label column **rename** `ref2Region` to `Region`.
+  - Click the **#** sign in the type field. Select the **Reference icon**
+
+      ![](images/000JumpStart/JS21-2.PNG)
+
+   - Take the `Reference Buiness Object` and `Default Display Field` defualts and click and **check icon** (OK).
+
+      ![](images/000JumpStart/JS22.PNG)
+
+- Click **Finish**. The import will occur.
+
+- In the Applying changes dialog click the **Close** button to complete the process.
+
+  ![](images/000JumpStart/JS23.PNG)
+
+- Click the business Objects hamburger menu and select **Diagram**. It will show the relationships you just defined.
+
+  ![](images/000JumpStart/JS24.PNG)
+
+## Add a Bar Chart
+
+In this section you will configure a Bar Chart using the defined Business Objects.
+
+ ### **STEP 1**: Run the AlphaOffice Application
 
 
 
