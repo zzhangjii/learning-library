@@ -8,15 +8,15 @@ Updated: October 18, 2018
 ## Introduction
 _Time to Complete: 30 minutes_
 
-Visual Builder (VB) is a cloud service that enables you to rapidly create and host web and mobile applications with minimal coding required. Users can visually create an application using a collection of built-in user-interface controls, and bind the UI to existing REST services or custom business objects they create from within the tool. Users publish their application with a click of a button to provide access to end-users. In addition role based security can be defined for the application to control access to pages and data.
+Oracle Visual Builder is a cloud service that enables you to rapidly create and host web and mobile applications with minimal coding required. Users can visually create an application using a collection of built-in user-interface controls, and bind the UI to existing REST services or custom business objects they create from within the tool. Users publish their application with a click of a button to provide access to end-users. In addition role based security can be defined for the application to control access to pages and data.
 
 ## Lab Overview
 
-This Lab will have you log into and Oracle Virtual Builder Cloud service and build a simple web application that uses Business Objects and Charts. A business object is a resource, such as an invoice or purchase order, similar to a database table; it has fields that hold the data for your application. Like a database table, a business object provides the structure for data used with business processes. Business objects are stored in a database.  
+This Lab will have you log into and Oracle Virtual Builder and build a simple web application that uses Business Objects and Charts. A business object is a resource, such as an invoice or purchase order, similar to a database table; it has fields that hold the data for your application. Like a database table, a business object provides the structure for data used with business processes. Business objects are stored in a database.  
 
 ## Access Your Environment
 
-`After selecting the Demo Lab and Signing UP or Signing In you'll recieve an email with the URL and credentials to log into your Virtual Builder environment.`
+`After clicking on the the Demo Lab button and Signing UP or Signing In you'll recieve an email with the URL and credentials to log into your Virtual Builder environment.`
 
 - Click **Demo Lab**.
 
@@ -30,31 +30,73 @@ This Lab will have you log into and Oracle Virtual Builder Cloud service and bui
 
   ![](images/000JumpStart/JS5.PNG)
 
-- When the environment is ready you will see the following along with the connect string to put into VNC Viewer. (In this example 129.213.56.126:1. Your IP address will be different)
+### **STEP 1**: Log into Visual Builder
 
-  ![](images/000JumpStart/JS6.PNG)
-
-### **STEP 1**: Start VNC Viewer
-
-Using VNC Viewer to connect to your provisioned account.
-
-- Enter the connect string you were given and hit **Return**. (Example Shown below).
-
-**NOTE: Do NOT click the Sign In button**
+- Go to the URL you recieved in the email and login with the credentials provided:
 
   ![](images/000JumpStart/JS8.PNG)
 
-- If presented with this prompt, click **Continue**.
+- You should see the introduction Visual Builder page. Click the New button to create an application
 
   ![](images/000JumpStart/JS9.PNG)
 
-- Enter the VNC password  **Qloudable** and click OK.
-
   ![](images/000JumpStart/JS10.PNG)
 
-- Your Desktop is displayed.
+- Enter the Application Name using a prefix of `charts-` followed by your initials123
+
+  **Application Name**
+
+  ```
+  charts-<your intials>123
+  ```
+
+  **Description**
+
+  ```
+  Charts based Web Application
+  ```
 
   ![](images/000JumpStart/JS11.PNG)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
  ### **STEP 2**: Run the AlphaOffice Application
 
