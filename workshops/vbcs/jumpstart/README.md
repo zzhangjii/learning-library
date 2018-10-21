@@ -80,7 +80,7 @@ This Lab will have you log into and Oracle Virtual Builder and build a simple we
 
 A business object is a resource, such as an invoice or purchase order, similar to a database table; it has fields that hold the data for your application. Like a database table, a business object provides the structure for data used with business processes. Business objects are stored in a database.
 
-- Download the `chart_application.zip` file by **right-clicking** on this link: [Chart Application](https://github.com/chipbaber/vbcs/tree/master/workshops/vbcs/jumpstart/chart_application.zip) and saving locally. The .zip contains CSV for the business objects.
+- Download the `chart_application.zip` file by **right-clicking** on this link: [Chart Application](https://github.com/chipbaber/vbcs/tree/master/workshops/vbcs/jumpstart/chart_application.zip) and saving locally. The .zip contains CSVs for the business objects.
 
 - Click the **Business Objects Icon**
 
@@ -104,27 +104,27 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
 - On the Business Object page you'll see the three created data sources. Click **Next**.
 
-- On the Fields page we are going to make some changes. Click the Sales button to bring up the default paramters.
+- On the Fields page we are going to make some changes. Click the **Sales** tab to bring up the default paramters.
 
   ![](images/000JumpStart/JS20.PNG)
 
 - Make the following changes:
   - On the Display Label column **rename** `ref2Region` to `Region`.
-  - Click the **#** sign in the type field. Select the **Reference icon**
+  - Click the **#** sign in the type field. Select the **Reference icon**.
 
       ![](images/000JumpStart/JS21-2.PNG)
 
-   - Take the `Reference Buiness Object` and `Default Display Field` defualts and click and **check icon** (OK).
+   - Take the `Reference Buiness Object` and `Default Display Field` defaults and click the **check icon**.
 
       ![](images/000JumpStart/JS21.PNG)
 
-- Select the Summary button and make the following changes:
+- Now, select the **Summary** tab and make the following changes:
   - On the Display Label column **rename** `ref2Region` to `Region`.
-  - Click the **#** sign in the type field. Select the **Reference icon**
+  - Click the **#** sign in the type field. Select the **Reference icon**.
 
       ![](images/000JumpStart/JS21-2.PNG)
 
-   - Take the `Reference Buiness Object` and `Default Display Field` defualts and click and **check icon** (OK).
+   - Take the `Reference Buiness Object` and `Default Display Field` defaults and click the **check icon**.
 
       ![](images/000JumpStart/JS22.PNG)
 
@@ -134,7 +134,9 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
   ![](images/000JumpStart/JS23.PNG)
 
-- Click the business Objects hamburger menu and select **Diagram**. It will show the relationships you just defined.
+- Click the business Objects **hamburger menu** and select **Diagram**. It will show the relationships you just defined.
+
+  ![](images/000JumpStart/JS23-2.PNG)
 
   ![](images/000JumpStart/JS24.PNG)
 
