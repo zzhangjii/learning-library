@@ -134,7 +134,7 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
   ![](images/000JumpStart/JS23.PNG)
 
-- Click the business Objects **hamburger menu** and select **Diagram**. It will show the relationships you just defined.
+- Click the Business Objects **hamburger menu** and select **Diagram**. It will show the relationships you just defined.
 
   ![](images/000JumpStart/JS23-2.PNG)
 
@@ -150,7 +150,7 @@ In this section you will configure a Bar Chart using the defined Business Object
 
   ![](images/000JumpStart/JS12.PNG)
 
-- Expand down the **chartwebapp-->flows-->main** and click **main-start**
+- Expand **chartwebapp-->flows-->main** and click **main-start**.
 
   ![](images/000JumpStart/JS25.PNG)
 
@@ -231,7 +231,7 @@ In this section you will configure an Area Chart using the defined Business Obje
 
 ### **STEP 1**: Add the Area Chart
 
-- In the Component Palette scroll down to the chart section and drag an **Area Chart** into the Canvas below the Bar Chart. A default Area Chart appears. Click **Add Data** to map a Business Oject to the chart.
+- In the Component Palette scroll down to the chart section and drag an **Area Chart** into the Canvas below the Bar Chart. A default Area Chart appears. Click **Add Data** to map a Business Object to the chart.
 
   ![](images/000JumpStart/JS38.PNG)
 
