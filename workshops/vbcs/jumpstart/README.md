@@ -288,10 +288,6 @@ Now you will test the completed application
 
 If you would like to experience a more in-depth look at how Oracle Visual Builder can be used please go to the following: 
 
-[Complete Visual Builder Workshop](https://linkgoeshere.com)
-
-- **NOTE:** When the Lab's allotted time has expired (30 minutes) you will see the following:
-
-  ![](images/000JumpStart/JS99.PNG)
+[Complete Visual Builder Workshop](https://go.oracle.com/LP=76343?src1=:ow:lp:cpo::RC_NAMK180712P00041:LPD100729372&intcmp=NAMK180921P00073:ow:lp:cpo::RC_NAMK180712P00041:LPD100729372)
 
 **This completes the Jump Start**
