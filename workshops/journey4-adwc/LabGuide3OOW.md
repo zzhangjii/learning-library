@@ -88,7 +88,9 @@ When you are satisfied with the file content view, click **NEXT**.
 
 ![](./images/300/snap0014656.jpg)
 
--   The final screen reflects all your choices made in the Wizard. Click **FINISH** to load the data into table *CHANNELS_LOCAL*.
+-   The final screen reflects all your choices made in the Wizard. Click **FINISH** to load the data into your newly created table *CHANNELS_LOCAL*. If you don't see it in your object tree under Tables, right click on Tables and hit refresh.
+
+*Note:* If you don't see newly created objects in the object tree on the left under Tables, right click on Tables and hit **refresh**.
 
  ![](./images/300/snap0014657.jpg)
 
@@ -103,7 +105,7 @@ When you are satisfied with the file content view, click **NEXT**.
 
     ![](./images/300/Picture300-2.png)
 
-Note that you do not need to specify anything other than the list of columns when creating tables in the SQL scripts. You can use primary keys and foreign keys if you want, but they are not required.
+You do not need to specify anything other than the list of columns when creating tables in the SQL scripts. You can use primary keys and foreign keys if you want, but they are not required.
 
 
 # Load data from the Object Store
@@ -113,7 +115,7 @@ Note that you do not need to specify anything other than the list of columns whe
 For best performance and easy access, we recommend storing your data in the **OCI Object Store**. In order to use data in the Object Store you must give your database user access to the Object Store using credentials (a Cloud username and Authorization Token). You will do this by creating a private CREDENTIAL object for your user that stores this information encrypted in your Autonomous Data Warehouse. This information is only usable for your user schema.
 If you would like to learn more about the OCI Object Storage, refer to its <a href="https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Tasks/addingbuckets.htm" target="_blank">documentation</a>.
 
-For the purpose and brevity of this lab, we have created a bucket for (which contain the data files you downloaded in the zip file above) and provide the necessary credential information you will need below:
+For the purpose and brevity of this lab, we have created a bucket named **DEMO_DATA** (residing in a tenancy named **dwcsdemo**) for you, which contain the data files you downloaded in the zip file above. The necessary credential information you will need to connect to this bucket is below:
 
  Username : **adwc_oss_access**
  Auth Token (Serves as Credentials Password) : **6:rg1JlPUKge&&)jO$_v**
@@ -177,7 +179,7 @@ As an alternative to the wizard-guided data load, you can use the PL/SQL package
 
     -   At the top of the script, the Object Store URL has been specified.
 
-    -   For the **credential_name** parameter in the **copy\_data** procedure, it is the name of the credential you defined in the step "Create a Database Credential for Your User" above.  You can use that credential.
+    -   For the **credential_name** parameter in the **copy\_data** procedure, use the name of the credential you defined in the step "Create a Database Credential for Your User" above. (eg. OBJ_STORE_CRED)
 
     -  For the **format** parameter, it is a list of DBMS_CLOUD options (you can read more about these options <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/dbmscloud-reference.html">here</a>).
 
@@ -197,9 +199,9 @@ As an alternative to the wizard-guided data load, you can use the PL/SQL package
     ```
     Notice how this table lists the past and current load operations in your schema.  Any data copy and data validation operation will have backed up records in your Cloud.
 
--   For an example of how to troubleshoot a data load, we will attempt to load a data file with the wrong format (chan_v3_error.dat).  Specifically, the default separator is the | character, but the channels_error.csv file uses a semicolon instead.  To attempt to load bad data, copy and paste <a href="./scripts/300/load_data_with_errors.txt" target="_blank">this code snippet</a> to a SQL Developer worksheet and run the script as your user in SQL Developer. Specify the URL that points to the **chan\_v3\_error.dat** file. You have constructed and saved the URL in the step "Construct the URLs of the Files on Your OCI Object Storage". Note that you are going to load the data with errors this time.
+-   For an example of how to troubleshoot a data load, we will attempt to load a data file with the wrong format (chan_v3_error.dat).  Specifically, the default separator is the | character, but the channels_error.csv file uses a semicolon instead.  To attempt to load bad data, copy and paste <a href="./scripts/300/load_data_with_errors.txt" target="_blank">this code snippet</a> to a SQL Developer worksheet and run the script as your user in SQL Developer. The URL for the **chan\_v3\_error.dat** file provided in the script points to the data in the pre-created bucket. Note that you are going to load the data with reject errors this time.
 
-    ![](images/300/LabGuide3-3f756664.jpg)
+    ![](images/LabGuide3OOW-f0ef4ac6.png)
 
 -   Run the following query to see the load that errored out.
     ```
@@ -214,7 +216,7 @@ A load or external table validation that errors out is indicated by status=FAILE
 
     ![](./images/300/Picture300-23.JPG)    
 
--   To learn more about how to specify file formats, delimiters, and more, review the <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/dbmscloud-reference.html" target="_blank"> DBMS_CLOUD Package Format Options </a>
+-   To learn more about how to specify file formats, delimiters, reject limits, and more, review the <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/dbmscloud-reference.html" target="_blank"> DBMS_CLOUD Package Format Options </a>
 
 -   Keep your SQL Deveoper open and move to the next lab - Querying External Data.
 
@@ -222,7 +224,7 @@ A load or external table validation that errors out is indicated by status=FAILE
 <tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
 <td class="td-banner">
 ## Great Work - All Done!
-You are ready to move on to the next lab. You may now close this tab.
+**You are ready to move on to the next lab. You may now close this tab.**
 </td>
 </tr>
 <table>
