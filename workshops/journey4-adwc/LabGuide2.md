@@ -60,14 +60,14 @@ To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/iss
 
 #### **STEP 2: Experiment with running other sample queries**
 
--   You can find more sample queries to run in the ADW documentation.  Try some of the queries from <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/sample-queries.html" target="_blank">here</a>.
+-   You can find more sample queries to run in the ADW documentation.  Try some of the queries from the ADW Documentation <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/sample-queries.html" target="_blank">here</a>.
 
 
 <table>
 <tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
 <td class="td-banner">
 ## Great Work - All Done!
-You are ready to move on to the next lab. You may now close this tab.
+**You are ready to move on to the next lab. You may now close this tab.**
 </td>
 </tr>
 <table>

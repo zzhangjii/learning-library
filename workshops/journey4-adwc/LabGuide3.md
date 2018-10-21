@@ -90,7 +90,7 @@ When you are satisfied with the file content view, click **NEXT**.
 
 ![](./images/300/snap0014656.jpg)
 
--   The final screen reflects all your choices made in the Wizard. Click **FINISH** to load the data into table *CHANNELS_LOCAL*.
+-   The final screen reflects all your choices made in the Wizard. Click **FINISH** to load the data into your newly created table *CHANNELS_LOCAL*. If you don't see it in your object tree under Tables, right click on Tables and hit refresh.
 
  ![](./images/300/snap0014657.jpg)
 
@@ -295,7 +295,7 @@ As an alternative to the wizard-guided data load, you can use the PL/SQL package
     ```
     Notice how this table lists the past and current load operations in your schema.  Any data copy and data validation operation will have backed up records in your Cloud.
 
--   For an example of how to troubleshoot a data load, we will attempt to load a data file with the wrong format (chan_v3_error.dat).  Specifically, the default separator is the | character, but the channels_error.csv file uses a semicolon instead.  To attempt to load bad data, copy and paste <a href="./scripts/300/load_data_with_errors.txt" target="_blank">this code snippet</a> to a SQL Developer worksheet and run the script as your user in SQL Developer. Specify the URL that points to the **chan\_v3\_error.dat** file. You have constructed and saved the URL in the step "Construct the URLs of the Files on Your OCI Object Storage". Note that you are going to load the data with errors this time.
+-   For an example of how to troubleshoot a data load, we will attempt to load a data file with the wrong format (chan_v3_error.dat).  Specifically, the default separator is the | character, but the channels_error.csv file uses a semicolon instead.  To attempt to load bad data, copy and paste <a href="./scripts/300/load_data_with_errors.txt" target="_blank">this code snippet</a> to a SQL Developer worksheet and run the script as your user in SQL Developer. Specify the URL that points to the **chan\_v3\_error.dat** file. You have constructed and saved the URL in the step "Construct the URLs of the Files on Your OCI Object Storage". Expect to see see "reject limit" errors when loading your data this time.
 
     ![](images/300/LabGuide3-3f756664.jpg)
 
@@ -312,7 +312,7 @@ A load or external table validation that errors out is indicated by status=FAILE
 
     ![](./images/300/Picture300-23.JPG)    
 
--   To learn more about how to specify file formats, delimiters, and more, review the <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/dbmscloud-reference.html" target="_blank"> DBMS_CLOUD Package Format Options </a>
+-   To learn more about how to specify file formats, delimiters, reject limits, and more, review the <a href="https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/dbmscloud-reference.html" target="_blank"> DBMS_CLOUD Package Format Options </a>
 
 -   Keep your SQL Deveoper open and move to the next lab - Querying External Data.
 
@@ -320,7 +320,7 @@ A load or external table validation that errors out is indicated by status=FAILE
 <tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
 <td class="td-banner">
 ## Great Work - All Done!
-You are ready to move on to the next lab. You may now close this tab.
+**You are ready to move on to the next lab. You may now close this tab.**
 </td>
 </tr>
 <table>
