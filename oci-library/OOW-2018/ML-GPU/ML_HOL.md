@@ -1,6 +1,6 @@
 ## Machine Learning on Oracle Cloud Infrastructure
 
-## Table of Contents
+## Table of Contents 
 
 [Overview](#overview)
 
