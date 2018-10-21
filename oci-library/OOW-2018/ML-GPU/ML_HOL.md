@@ -22,8 +22,6 @@
 
 [Practice 2: Pull the TensorFlow docker image](#practice-2-pull-the-tensorflow-docker-image)
 
-[Practice 4: Use TensorFlow to recognize the visual contents of images](#practice-4-use-tensorflow-to-recognize-the-visual-contents-of-images)
-
 [Practice 3: Use TensorFlow to recognize the visual contents of images](#practice-3-use-tensorflow-to-recognize-the-visual-contents-of-images)
 
 [Practice 4: Try Oracle Cloud Infrastructure for FREE](#practice-4-try-oracle-cloud-infrastructure-for-free)
