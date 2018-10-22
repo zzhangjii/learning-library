@@ -10,17 +10,20 @@
 
 [Practice 2: Signing in OCI Console](#practice-2-signing-in-oci-console)
 
-[Practice 3: Collect the Required OCIDs for Terraform ](#practice-3-collect-the-required-ocids-for-terraform)
+[Practice 3: Create a Bastion Server](#practice-3-create-a-bastion-server)
 
-[Practice 4: Create a Virtual Cloud Network](#practice-4-create-a-virtual-cloud-network)
+[Practice 4: Collect the Required OCIDs for Terraform](#practice-4-collect-the-required-ocids-for-terraform)
 
-[Practice 5: Creating a Terraform Instance](#practice-5-creating-a-terraform-instance)
+[Practice 5: Install and Configure Terraform in Bastion Server](#practice-5-install-and-configure-terraform-in-bastion-server)
 
-[Practice 6: Generate an API Signing Key](#practice-6-generate-an-api-signing-key)
+[Practice 6: Creating a web server with Terraform](#practice-6-creating-a-web-server-with-terraform)
 
-[Practice 7: Upload the Public Key to api user](#practice-7-upload-the-public-key-to-api-user)
+[Practice 7: Setup Container Engine for Kubernetes OKE using Terraform](#practice-7-setup-container-engine-for-kubernetes-oke-using-terraform)
 
-[Practice 8:  Install and configure Terraform](#practice-8-install-and-configure-terraform)
+[Practice 9: Creating an Application on Kubernetes Cluster](#practice-9-creating-an-application-on-kubernetes-cluster)
+
+
+
 
 ## Overview
 
@@ -307,11 +310,9 @@ You can also navigate to the OCI web console and see what instances are created 
 # terraform destroy
 ```
 
-## Practice 7: Setup Container Engine for Kubernetes (OKE) using Terraform
+## Practice 7: Setup Container Engine for Kubernetes OKE using Terraform
 
-Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, scalable, and highly available service that you can use to deploy your containerized applications to the cloud. Use Container Engine for Kubernetes (sometimes abbreviated to just OKE) when your development team wants to reliably build, deploy, and manage cloud-native applications.
-
-Container Engine for Kubernetes uses Kubernetes - the open-source system for automating deployment, scaling, and management of containerized applications across clusters of hosts. Kubernetes groups the containers that make up an application into logical units (called pods) for easy management and discovery. Container Engine for Kubernetes uses versions of Kubernetes certified as conformant by the  [Cloud Native Computing Foundation (CNCF)](https://github.com/cncf/k8s-conformance)
+In this exercise we will create a OKE cluster. 
 
 Please make sure to delete the webservers created in the last exercise. 
 
@@ -406,7 +407,7 @@ The following commands create a config file at expected default name and locatio
 
 ![](media/image36.png)
 
-## Practice 9: Creating a Application on Kubernetes Cluster
+## Practice 9: Creating an Application on Kubernetes Cluster
 
 Lets run a basic nginx webserver on this kubernetes cluster. 
 
@@ -459,7 +460,6 @@ Once the lab is complete, please delete the kubernetes cluster by running terraf
    $ cd oraclecodelab18/oke-cluster-exercise/
    $ terraform destroy
 ```
-
 
 
 
