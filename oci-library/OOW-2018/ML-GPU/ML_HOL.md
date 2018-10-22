@@ -1,11 +1,13 @@
 ## Machine Learning on Oracle Cloud Infrastructure
 
-## Table of Contents
+## Table of Contents 
 
 [Overview](#overview)
 
 [Pre-Requisites](#pre-requisites)
+
 ### H20ai Lab 
+
 [Practice 1: Setup Windows 10 VM](#practice-1-setup-windows-10-vm)
 
 [Practice 2: Open Gitbash on your Desktop](#practice-2-open-gitbash-on-your-desktop)
@@ -17,7 +19,9 @@
 [Practice 5: Access H2Oai application](#practice-5-access-h2oai-application)
 
 [Practice 6: Loading an adult census dataset](#practice-6-loading-an-adult-census-dataset)
+
 ### TensorFlow Lab
+
 [Practice 1: Open a second Gitbash window](#practice-1-open-a-second-gitbash-window)
 
 [Practice 2: Pull the TensorFlow docker image](#practice-2-pull-the-tensorflow-docker-image)
