@@ -104,7 +104,7 @@ Oracle Cloud Infrastructure Compute lets you provision and manage compute hosts,
 
 1) At your home page, Click on **Create a Compute Instance** 
 
-<img width="600" alt="image008" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/OOW-2018/OracleCode/media/image6.png">
+![](media/image6.png)
 
 2) The launch browser will automatically fill in the details for launching a single Oracle Linux. Please check each field for better understanding. 
 
