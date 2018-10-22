@@ -268,7 +268,6 @@ In this exercise, we will create a basic webserver with terraform.
 - Webserver Exercise
 - OKE cluster Exercise (we will use it in next exercise)
 
-https://github.com/jamalarif/oraclecodelab18.git
 
 ```
 # git clone https://github.com/jamalarif/oraclecodelab18.git
