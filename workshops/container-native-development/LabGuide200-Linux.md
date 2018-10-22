@@ -68,7 +68,7 @@ During this lab, you will take on the **DevOps Engineer Persona**. You will prov
 
   ![](images/200/5.png)
 
-### **STEP 2**: Locate or Create a Compartment for your Kubernetes nodes
+### **STEP 2**: Create a Compartment for your Kubernetes nodes
 
 Compartments are used to isolate resources within your OCI tenant. User-based access policies can be applied to manage access to compute instances and other resources within a Compartment.
 
@@ -78,23 +78,17 @@ Compartments are used to isolate resources within your OCI tenant. User-based ac
 
   ![](images/200/73.png)
 
-- Look in the compartment list for a compartment called **Demo**. Next to the OCID of the Demo compartment, click **Copy**. **Paste** this OCID into a text file or elsewhere for safe keeping. We will use it to tell Terraform where to set up our cluster in a later step. Proceed to **STEP 3**.
+- Click **Create Compartment**
 
-  ![](images/200/65.png)
+  ![](images/200/7.png)
 
-  **IMPORTANT**: _**Only if you do not have**_ a compartment called **Demo**, follow these steps to create a new compartment.
+- In the **Name** field, enter `Demo`. Enter a description of your choice. Click **Create Compartment**.
 
-  - If you have a **Demo** compartment already, _**SKIP TO STEP 3**_. Otherwise, Click **Create Compartment**
+  ![](images/200/8.png)
 
-    ![](images/200/7.png)
+- In a moment, your new Compartment will show up in the list. Locate it and click **Copy** in the OCID display. **Paste** this OCID into a text file or elsewhere for safe keeping. We will use it to tell Terraform where to set up our cluster in a later step.
 
-  - In the **Name** field, enter `Demo`. Enter a description of your choice. Click **Create Compartment**.
-
-    ![](images/200/8.png)
-
-  - In a moment, your new Compartment will show up in the list. Locate it and click **Copy** in the OCID display. **Paste** this OCID into a text file or elsewhere for safe keeping. We will use it to tell Terraform where to set up our cluster in a later step.
-
-    ![](images/200/9.png)
+  ![](images/200/9.png)
 
 ### **STEP 3**: Create and upload a new API key
 
@@ -114,7 +108,7 @@ cat ~/.oci/oci_api_key_public.pem
 
   ![](images/200/11.png)
 
-- In your browser window showing the OCI Console, click the **hamburger icon** to open the navigation menu. Under the **Identity** section, click **Users**. Find the user called **api.user**, or for a trial account, find **your username** in the list and hover over the **three dots** menu at the far right of the row, then click **View User Details**.
+- In your browser window showing the OCI Console, click the **hamburger icon** to open the navigation menu. Under the **Identity** section, click **Users**. Find **your username** in the list and hover over the **three dots** menu at the far right of the row, then click **View User Details**.
 
   ![](images/200/74.png)
 
@@ -187,6 +181,7 @@ export PATH=$PATH:`pwd`
   cd ~
   git clone https://github.com/oracle/terraform-kubernetes-installer.git
   cd terraform-kubernetes-installer
+  git checkout b6671
   ```
 
 - Initialize this Terraform installer by running the following command:
@@ -218,15 +213,13 @@ export PATH=$PATH:`pwd`
   gedit terraform.tfvars
   ```
 
-- You should still have a browser tab open to your **User Details** page in the OCI Console. If not, you can get to the User Details by selecting **Identity** then **Users** from the top menu of the Console. Then click on your **User's Name**.
-
-- While editing the file, you will first remove the **#** comment character and replace in the values in the terraform.tfvars file on lines **2, 4, 6, and 7** using the examples in the next two images below. **NOTE**: The **region** parameter may not already be present in your tfvars file. If it is not there, add it on a new line after the user_ocid parameter on line 6.
+- You should still have a browser tab open to your **User Details** page in the OCI Console. You will first remove the **#** comment character and replace in the values  in the terraform.tfvars file on lines **2, 4, 6, and 7**. **NOTE**: The **region** parameter may not already be present in your tfvars file. If it is not there, add it on a new line after the user_ocid parameter on line 6.
 
   ![](images/200/57.1.png)
 
 - Setting these variables can be a little tricky the first time you attempt it. [Checkout this video if you want to watch the steps performed. ](https://videohub.oracle.com/media/Lab+200A+Terraform+.tfvars+OCI+Configuration/0_vkxcw719)
 
-- You will replace line **2** with the Tenancy OCID from the "Tenacy Details" page, which you can find under the administration menu:
+- You will replace line **3** with the Tenancy OCID from the "Tenacy Details" page, which you can find under the administration menu:
 
   ![](images/200/17.1.png)
 
@@ -234,43 +227,60 @@ export PATH=$PATH:`pwd`
 
   ![](images/200/17.2.png)
 
-- You will replace lines **4, 6, and 7** with the values from the OCI Console, referring to the following screenshot for where to find them.
+- You will replace lines **5, 7, and 8** with the values from the OCI Console, referring to the following screenshot for where to find them.
 
   ![](images/200/17.png)
 
-- As an exmaple, Your terraform.tfvars file should now appear similar to the image shown below:
+- As an example, Your terraform.tfvars file should now appear similar to the image shown below:
 
   ![](images/200/57.2.png)
 
-- Now follow the same process of removing the comment character **#**, and fill in the OCI Compartment ID on **line 3**. Paste the value that you saved to a text file after locating or creating the Demo **compartment** in the OCI Console. If you have lost it, you can retrieve it from the OCI Console compartment list (refer to **STEP 2**).
+- Now follow the same process of removing the comment character **#**, and fill in the OCI Compartment ID on **line 4**. Paste the value that you saved to a text file after locating or creating the Demo **compartment** in the OCI Console. If you have lost it, you can retrieve it from the OCI Console compartment list (refer to **STEP 2**).
 
   ```
   compartment_ocid = "Compartment OCID"
   ```
 
-- The last piece of information we need to provide about your OCI tenant is the private key corresponding to the public API key you uploaded to the OCI console previously. Provide the path the the private key file on **line 5**. Note that _your path may differ_ from the example given below. Your public key was created as a first task in Step 3, and the location of your oci_api_key.pem file can be determined from how you completed those instructions.
+- The last piece of information we need to provide about your OCI tenant is the private key corresponding to the public API key you uploaded to the OCI console previously. Provide the path and the private key file on **line 6** using the path below:
 
   ```
-  private_key_path = "/Users/your-local-username/.oci/oci_api_key.pem"
+  private_key_path = "/home/oracle/.oci/oci_api_key.pem"
   ```
 
-- The rest of the terraform.tfvars file controls the parameters used when creating your Kubernetes cluster. You can control how many OCPUs each node receives, whether nodes should be virtual machines or bare metal instances, how many availability domains to use, and more. We will modify three of the lines in the remainder of the file.
+- The rest of the terraform.tfvars file controls the parameters used when creating your Kubernetes cluster. You can control how many OCPUs each node receives, whether nodes should be virtual machines or bare metal instances, how many availability domains to use, and more. We will modify five of the lines in the remainder of the file.
 
-- First, we will specify shapes for our worker and master nodes base on our account limits/capacity. On **lines 15 and 16**, un-comment the **k8sMasterShape** and **k8sWorkerShape** parameters, and set the values to **VM.Standard2.1** and **VM.Standard1.2**:
+- First, we will specify shapes for our worker and master nodes base on our account limits/capacity. On **lines 16, 17 and 18**, un-comment the **etcdShape**, **k8sMasterShape** and **k8sWorkerShape** parameters, and set the values to **VM.Standard2.1**:
 
   ```
+  etcdShape = "VM.Standard2.1"
   k8sMasterShape = "VM.Standard2.1"
-  k8sWorkerShape = "VM.Standard1.2"
+  k8sWorkerShape = "VM.Standard2.1"
   ```
 
-- Next, we will specify the type of load balancers we want for the master and etcd VMs. We will also select the following settings based on our Account's capacity. Alter **lines 30 and 31** to read:
+- Now we can specify which Availability Domains we want each of the components to be provisioned in. We will place the Kubernetes Master in AD1, the etcd node in AD2, and the Kubernetes Worker in AD3. To accomplish this, uncomment the three lines from **line 20 through 22** and adjust the quantities to the following:
+
+  ```
+  etcdAd1Count = "0"
+  etcdAd2Count = "1"
+  etcdAd3Count = "0"
+  ```
+
+- We will follow a similar pattern for the worker nodes. Uncomment **line 28 through 30** and adjust the values to the following:
+
+  ```
+  k8sWorkerAd1Count = "0"
+  k8sWorkerAd2Count = "0"
+  k8sWorkerAd3Count = "1"
+  ```
+
+- Next, we will specify the type of load balancers we want for the master and etcd VMs. We will also select the following settings based on our Account's capacity. Alter **lines 32 and 33** to read:
 
   ```
   etcdLBShape = "400Mbps"
   k8sMasterLBShape = "400Mbps"
   ```
 
-- The last change we will make is to open up the allowed Kubernetes master inbound IP address range, so that we can access our cluster from the internet. On **line 38**, remove the pound sign at the beginning of the line to uncomment it.
+- The last change we will make is to open up the allowed Kubernetes master inbound IP address range, so that we can access our cluster from the internet. On **line 40**, remove the pound sign at the beginning of the line to uncomment it.
 
   ```
   master_https_ingress = "0.0.0.0/0"
@@ -282,11 +292,18 @@ export PATH=$PATH:`pwd`
 
 ### **STEP 7**: Provision Kubernetes on OCI
 
-- Now we are ready to have Terraform provision our Kubernetes cluster. **Save and close** your terraform.tfvars file. In your open **terminal window**, run the following command to have Terraform evaluate the various network and compute infrastructure that we are asking to be provisioned.
+- Now we are ready to have Terraform provision our Kubernetes cluster. **Save and close** your terraform.tfvars file. In your open **terminal window**, run the following commands to have Terraform evaluate the various network and compute infrastructure that we are asking to be provisioned.
+
+- Specify the correct OS base image for your Kubernetes virtual machines by running:
+
+  ```bash
+  sed -i.bak 's/Oracle-Linux-7.5-2018.07.20-0/Oracle-Linux-7.5-2018.08.14-0/' variables.tf
+  ```
+
+- Preview the changes that Terraform is going to make to your infrastructure by running:
 
   ```bash
   terraform plan
-  ```
 
   ![](images/200/60.png)
 
