@@ -147,8 +147,6 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
 ## Add a Bar Chart to the Application
 
-In this section you will configure a Bar Chart using the defined Business Objects.
-
 ### **STEP 1**: Add a Heading
 
 - Click the **Web Applications Icon**.
@@ -165,11 +163,11 @@ In this section you will configure a Bar Chart using the defined Business Object
 
 - The the `Heading` label properties change the text to:
 
-```
-Summary
-```
+  ```
+  Summary
+  ```
 
-**NOTE**: You'll have to tab out of the text field to see the change take place.
+  **NOTE**: You'll have to tab out of the text field to see the change take place.
 
   ![](images/000JumpStart/JS27.PNG)
 
@@ -196,9 +194,9 @@ Summary
 
   ![](images/000JumpStart/JS31.PNG)
 
-  - Click **Next**.
+- Click **Next**.
 
-  - On the `Define Query` page click **Finish**. The Summary Business Object's values are applied to the chart.
+- On the `Define Query` page click **Finish**. The Summary Business Object's values are applied to the chart.
 
     ![](images/000JumpStart/JS32.PNG)
 
@@ -221,9 +219,9 @@ Summary
 
 - In the Label properties change the text field to:
 
-```
-Sales by Region
-```
+  ```
+  Sales by Region
+  ```
   ![](images/000JumpStart/JS36.PNG)
 
 - The completed chart will look like:
@@ -231,8 +229,6 @@ Sales by Region
   ![](images/000JumpStart/JS37.PNG)
 
 ## Add an Area Chart to the Application
-
-In this section you will configure an Area Chart using the defined Business Objects.
 
 ### **STEP 1**: Add the Area Chart
 
@@ -257,11 +253,11 @@ In this section you will configure an Area Chart using the defined Business Obje
 
   ![](images/000JumpStart/JS41.PNG)
 
-  - Click **Next**.
+- Click **Next**.
 
-  - On the `Define Query` page click **Finish**. The Sales Business Object's values are applied to the chart.
+- On the `Define Query` page click **Finish**. The Sales Business Object's values are applied to the chart.
 
-    ![](images/000JumpStart/JS42.PNG)
+  ![](images/000JumpStart/JS42.PNG)
 
 - With the Area Chart selected click the **General** tab. Select or enter the following:
 
@@ -278,8 +274,6 @@ In this section you will configure an Area Chart using the defined Business Obje
   ![](images/000JumpStart/JS44.PNG)
 
 ## Testing
-
-Now you will test the completed application
 
 ### **STEP 1**: Run the Application
 
