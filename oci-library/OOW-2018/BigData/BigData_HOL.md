@@ -153,7 +153,9 @@ Cluster startup takes ~3m.  Proceed to SSH login while this runs.
 ![](media/image14.png)
 
 4) Open GitBash in your Windows and SSH to the utility Node. 
-Download an ssh private key from [here](https://bit.ly/2NDfXc4) and use this id_rsa key to log in to the Utility node. Make sure to provide the complete path for the key below.  
+Download an ssh private key from [here](https://bit.ly/2NDfXc4) and use this id_rsa key to log in to the Utility node. Make sure to provide the complete path for the key below. 
+
+For SSH Keys [CLICK here](https://bit.ly/2NDfXc4)
 
 ```
 $ ssh -i id-rsa opc@<Utility_Node_PublicIP> 
