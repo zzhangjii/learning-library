@@ -108,6 +108,7 @@ Oracle connection wallet are downloaded from the Autonomous Data Warehouse Cloud
  ![]( img/image010.png)
 
 **2.** On the left side of the page click on **Administration**
+
 **3.** Click on **Download a Connection Wallet** 
 
 ![]( img/image012.png)
@@ -123,12 +124,15 @@ For the fastest data loading experience Oracle recommends uploading the source f
 To load data from files in the cloud into your Autonomous DW Cloud database, use the new PL/SQL DBMS_CLOUD package. The DBMS_CLOUD package supports loading data files from the following Cloud sources: Oracle Cloud Infrastructure Object Storage, Oracle Cloud Infrastructure Object Storage Classic, and Amazon AWS S3. Lets create an Object Storage Bucket inside the **Test-XX** Compartment.
 
 **1.** On OCI Dashboard **Menu** click on **Object Storage** > **Object Storage**
+
 **2.** Make sure to select **Test-XX** Compartment
+
 **3.** Click on **Create Bucket** and enter the following information:
+
 **NOTE: Make sure to add your username number as part of the bucket name**
 
-	- **Bucket Name**: ADW_Bucket-*XX*
-	- **Storage Tier**: Standard
+- **Bucket Name**: ADW_Bucket-*XX*
+- **Storage Tier**: Standard
 	
 **4.** Click **Create Bucket** 
 ![]( img/image014.png)
@@ -165,12 +169,12 @@ The ocitest user will be the owner of the CHANNELS table that will be used for l
 
 **2.** Create a new connection using the following values:
 
-	- **Connection Name**: ADWTEST*XX*
-	- **Username**: admin
-	- **Password**: *Oracleoow2018!*
-	- **Connection Type**: Cloud PDB
-	- **Configuration File**: *Browse to the wallet zip file collected from Practice-4* 
-	- **Service**: adwtest*xx*_medium
+- **Connection Name**: ADWTEST*XX*
+- **Username**: admin
+- **Password**: *Oracleoow2018!*
+- **Connection Type**: Cloud PDB
+- **Configuration File**: *Browse to the wallet zip file collected from Practice-4* 
+- **Service**: adwtest*xx*_medium
 
 **3.** Click on **Save** then click **Connect**
 
@@ -228,6 +232,7 @@ You should see an output of “PL/SQL Procedure successfully completed.” if th
 In this portion of the lab you will use SQL Developer to create the CHANNELS table in the ocitest schema. Once the table is created, you will load it with data from the channels.txt file stored in the object storage.
 
 **1.** Launch SQL Developer on your laptop and connect to the ocitest user.
+
 **2.** Execute the following SQL script:
 
 ```
