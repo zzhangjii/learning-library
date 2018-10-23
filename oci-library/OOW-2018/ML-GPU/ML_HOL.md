@@ -8,17 +8,13 @@
 
 ### H20ai Lab 
 
-[Practice 1: Setup Windows 10 VM](#practice-1-setup-windows-10-vm)
+[Practice 1: Access the GPU instance](#practice-1-access-the-gpu-instance)
 
-[Practice 2: Open Gitbash on your Desktop](#practice-2-open-gitbash-on-your-desktop)
+[Practice 2: Install H2Oai in the GPU Instance](#practice-2-install-h2oai-in-the-gpu-instance)
 
-[Practice 3: Access the GPU instance](#practice-3-access-the-gpu-instance)
+[Practice 3: Access H2Oai application](#practice-3-access-h2oai-application)
 
-[Practice 4: Install H2Oai in the GPU Instance](#practice-4-install-h2oai-in-the-gpu-instance)
-
-[Practice 5: Access H2Oai application](#practice-5-access-h2oai-application)
-
-[Practice 6: Loading an adult census dataset](#practice-6-loading-an-adult-census-dataset)
+[Practice 4: Loading an adult census dataset](#practice-4-loading-an-adult-census-dataset)
 
 ### TensorFlow Lab
 
@@ -51,23 +47,17 @@ The key topics touched upon by both labs are:
 
 ## H20.ai Lab
 
-## Practice 1: Setup Windows 10 VM 
+## Practice 1: Open Gitbash on your Desktop
 
-1) Each attendee is provided with a laptop with a Virtual Box. In the Virtual Box, Please start the Windows 10 VM (name of the VM is same as the ID of this Hands on Lab)
-
-<img width="800" alt="image001" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/OOW-2018/EdgeLab/media/image1.png">
-
-## Practice 2: Open Gitbash on your Desktop
-
-1. Open Gitbash program on your desktop. It is already installed on your Windows 10 VM. 
+**1.** Open Gitbash program on your desktop. It is already installed on your Windows 10 VM. 
 
 ![](img/gitbash001.png)
  
-2. Download the SSH Key from this link [https://bit.ly/2Ef9GE4](https://bit.ly/2Ef9GE4) and save it your Downloads folder
+**2.** Download the SSH Key from this link [https://bit.ly/2Ef9GE4](https://bit.ly/2Ef9GE4) and save it your Downloads folder
 
-## Practice 3: Access the GPU instance
+## Practice 2: Access the GPU instance
 
-1. On Gitbash terminal use SSH command to connect to the GPU instance:
+3) On Gitbash terminal use SSH command to connect to the GPU instance:
 
 - **username**: *ubuntu*
 - **IP address**: *Use the IP address provided by your instructor*
@@ -87,7 +77,7 @@ _`<<Hit enter to skip>>`_
 
 ![](img/image001.png)
 
-## Practice 4: Install H2Oai in the GPU Instance
+## Practice 3: Install H2Oai in the GPU Instance
 
 1. Execute the following commands to pull H2O docker image:
 
@@ -115,7 +105,7 @@ This will take a few minutes to complete
 
 This will keep H20.ai application running. Leave this gitbash open. 
 
-## Practice 5: Access H2Oai application
+## Practice 4: Access H2Oai application
 
 1. Open a browser and access:
 
@@ -146,7 +136,7 @@ JmJF70WfrncHJI7vOK7Fdd3MfaoSu9KqxDT5SAqutbio68C1iev6uaECe_YSf-StuCs2JLD5QzahsZ-I
 
 ![](img/h2oimage006.png)
 
-## Practice 6: Loading an adult census dataset
+## Practice 5: Loading an adult census dataset
 
 1. Click on Add Dataset and select Amazon S3
 
