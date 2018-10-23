@@ -244,17 +244,17 @@ This will show that the GPU is actually getting used by the image recognision pr
 
 We will try to solve a problem which is as simple and small as possible while still being difficult enough to teach us valuable lessons. All we want the GPU instance to do is the following: when presented with an image, our system should analyze it and score the images. Our goal is for our model to pick the correct category as often as possible. This task is called image classification. 
 
-For that we will use two images. Please download those images and save to your Desktop:
+For that we will use two images. Please download those images and save to your Desktop and unzip it:
 
-- [cat image](https://raw.githubusercontent.com/flavio-santino/learning-library/master/oci-library/OOW-2018/ML-GPU/img/cat.jpg)
+- [cat image](https://raw.githubusercontent.com/flavio-santino/learning-library/master/oci-library/OOW-2018/ML-GPU/img/cat.jpg.zip)
 
-- [navy image](https://raw.githubusercontent.com/flavio-santino/learning-library/master/oci-library/OOW-2018/ML-GPU/img/navy.jpg)
+- [navy image](https://raw.githubusercontent.com/flavio-santino/learning-library/master/oci-library/OOW-2018/ML-GPU/img/navy.jpg.zip)
 
 **1.** Go back to your broswer where TensorFlow is running and click on **Choose File** at  uper-left corner of your screen:
 
 ![](img/image004.png)
 
-**2.** Upload the cat image image first. Once you click upload, the app will run the TensorFlow inference classification process and display score the image. As you can see it was classified as cat. 
+**2.** Upload the cat image image first. Once you click upload, the app will run the TensorFlow inference classification process and display the image score. As you can see it was classified as cat. 
 
 ![](img/image005.png)
 
