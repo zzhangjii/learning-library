@@ -325,7 +325,6 @@ An API key is required for Terraform to authenticate to OCI in order to create c
   cd ~/terraform-kubernetes-installer/
   echo "export KUBECONFIG=`pwd`/generated/kubeconfig" >> ~/.bashrc
   source ~/.bash_profile
-  cd ~/terraform-kubernetes-installer/
   while true; do kubectl get nodes; sleep 10; done
   ```
 
