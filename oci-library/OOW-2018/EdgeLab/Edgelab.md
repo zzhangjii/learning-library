@@ -289,7 +289,6 @@ Navigate to the summarized *traceroute* path to see the summary view of *tracero
 
 ## Practice: Try Oracle Cloud Infrastructure for FREE 
 
-Sign up for the free Oracle Cloud Infrastructure trial account. 
-https://cloud.oracle.com/tryit
+Sign up for the [free](#https://cloud.oracle.com/tryit) Oracle Cloud Infrastructure trial account. 
 
 ![](media/image34.png) 
