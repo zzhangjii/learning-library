@@ -191,12 +191,12 @@ grant dwrole to ocitest;
 
 **7.**  Now lets create a new SQL connection using the following values:
 
-	- **Connection Name**: ADWTEST*XX*-OCITEST
-	- **Username**: ocitest
-	- **Password**: *Oracleoow2018!*
-	- **Connection Type**: Cloud PDB
-	- **Configuration File**: *Browse to the wallet zip file collected from Practice-4* 
-	- **Service**: adwtest*xx*_medium
+- **Connection Name**: ADWTEST*XX*-OCITEST
+- **Username**: ocitest
+- **Password**: *Oracleoow2018!*
+- **Connection Type**: Cloud PDB
+- **Configuration File**: *Browse to the wallet zip file collected from Practice-4* 
+- **Service**: adwtest*xx*_medium
 
 **8.** Click on **Save** then click **Connect**
 
