@@ -153,10 +153,12 @@ Cluster startup takes ~3m.  Proceed to SSH login while this runs.
 ![](media/image14.png)
 
 4) Open GitBash in your Windows and SSH to the utility Node. 
-Download an ssh private key from [here](https://bit.ly/2NDfXc4) and use this id_rsa key to log in to the Utility node. Make sure to provide the complete path for the key below.  
+Download an ssh private key from here [https://bit.ly/2NDfXc4](https://bit.ly/2NDfXc4) and use this id_rsa key to log in to the Utility node. Make sure to provide the complete path for the key below. 
+
+For SSH Keys [CLICK here](https://bit.ly/2NDfXc4)
 
 ```
-$ ssh -i id-rsa opc@<Utility_Node_PublicIP> 
+$ ssh -i ~/Downloads/id_rsa opc@<Utility_Node_PublicIP> 
 ```
 **NOTE**
 ```
@@ -179,7 +181,8 @@ $ ssh -i id-rsa opc@<Utility_Node_PublicIP>
 2) Submit a 100GB Teragen. 
 **NOTE**: **<UNIQUE_ID>** is above should be a unique identifier for each participant sharing the cluster.  This will be used in next steps, so ensure this is captured.  A single digit number will suffice
 
-	The count above is 1,000,000,000 for 100GB.  We are running a small scale test due to time constraints.
+The count above is 1,000,000,000 for 100GB.  We are running a small scale test due to time constraints.
+
 ```
 $ hadoop jar hadoop-mapreduce-examples.jar teragen -Ddfs.replication=1 1000000000 /user/opc/<UNIQUE_ID>/terasort_in/
 ```
@@ -200,10 +203,12 @@ $ mapred job -list
 ```
 Copy the jobID and kill this job 
 ![](media/image19.png)
+
 ```
 $ mapred job -kill <jobID>
 $ hdfs dfs -rm -r -skipTrash /user/opc/<UNIQUE_ID>/
 ```
+
 ![](media/image20.png)
 
 
@@ -221,6 +226,7 @@ $ hadoop jar hadoop-mapreduce-examples.jar teragen -Ddfs.replication=1 -Dmapredu
 ```
 $ time hadoop jar hadoop-mapreduce-examples.jar terasort -Ddfs.replication=1 -Dmapreduce.job.maps=120 -Dmapreduce.job.reduces=120 /user/opc/<UNIQUE_ID>/terasort_in/ /user/opc/<UNIQUE_ID>/terasort_out/
 ```
+
 ![](media/image23.png)
 
 ![](media/image26.png)
@@ -338,14 +344,18 @@ Confirm that we want to re-deploy client configuration and click the blue button
 ![](media/image48.png)
 
 8) If time permits, scale the teragen to 1TB and we can watch Cloudera Manager during execution. *Note that a new path is used, we want to put the 1TB Teragen in a separate location.*
+
 ```
 $ hadoop jar hadoop-mapreduce-examples.jar teragen -Ddfs.replication=1 -Dmapreduce.job.maps=120 10000000000 /user/opc/<UNIQUE_ID>/1T_terasort_in/
 ```
+
 ![](media/image49.png)
 
 ![](media/image50.png)
 
 ![](media/image51.png)
+
+**Please help us to improve this LAB by providing your feedback here:** [https://www.surveymonkey.com/r/BD-LAB](https://www.surveymonkey.com/r/BD-LAB)
 
 ## Try Oracle Cloud Infrastructure for FREE 
 
