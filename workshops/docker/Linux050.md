@@ -410,6 +410,7 @@ whoami
 
    ![](images/050Linux/44.PNG)
 
-- You are ready to proceed to [Lab 100](https://wvbirder.github.io/DockerBasics/workshops/docker/?version=Linux+Trial+Account&page=Linux100.md)
 
 **This completes the Set Up!**
+
+**You are ready to proceed to [Lab 100](Linux100.md)**
