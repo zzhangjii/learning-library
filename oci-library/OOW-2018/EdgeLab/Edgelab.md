@@ -112,7 +112,10 @@ Attendees will share the compartment and the domain name resources.
 
 ![](media/image11.png)
 
-Create answer pools that will contain the records and will be provided as answers for DNS queries. They are an effective way to group similar or related answers together to make managing them easier.
+Create answer pools that will contain the records and will be provided as answers for DNS queries. They are an effective way to group similar or related answers together to make managing them easier. 
+
+**NOTE** Use the IP addresses for Web Servers provided to you here, don't use the ones in the snapshot below. 
+
 ```
 Answer pool
 	- Answer Pool Name: Frankfurt-Pool
