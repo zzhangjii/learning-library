@@ -32,7 +32,7 @@ You will use various Docker commands to setup, run and connect into containers. 
 
 # Start up and login into your Linux environment
 
-If you chose to use your own Linux setup then login and verify that the Docker engine is up and running. 
+If you chose to use your own Linux setup then login and verify that the Docker engine is up and running.
 
 **NOTE:** The screen shots shown in this lab are using the available VirtualBox image that has been imported per the SetUp documentation included with these lab guides. Using the VirtualBox VM you are automatically logged in as the "holuser".
 
@@ -73,7 +73,7 @@ git clone https://github.com/wvbirder/AlphaOfficeSetup.git
 - **Type** the following:
 
 ```
-chmod -R 777 Alpha* 
+chmod -R 777 Alpha*
 ```
 
 ![](images/200Linux/Picture200-4.png)
@@ -104,7 +104,7 @@ In this section your going to chose and setup a datasource for the application. 
 
 ### **STEP 1**: Create the database container
 
-This docker command will create a container based on the database image file located in the wvbirder/database-enterprise repository having the tag: 12.2.0.1-slim. 
+This docker command will create a container based on the database image file located in the wvbirder/database-enterprise repository having the tag: 12.2.0.1-slim.
 
 - Let's take a look at what the docker **run** command options do:
     - "-d" flag runs the container in the background
@@ -202,7 +202,7 @@ sqlplus / as sysdba
 exit
 ```
 
-### **STEP 5**: Verify container is still running 
+### **STEP 5**: Verify container is still running
 
 - **Type** the following:
 
@@ -217,7 +217,7 @@ docker ps
 Enterprise Manager Express comes bundled with the Oracle database you just created which is running in a container.
 HTTP access as been defined on port 5600.
 
-- Open a browser (in this example we are using Firefox). 
+- Open a browser (in this example we are using Firefox).
 
 - **NOTE:** If you want to login to Enterprise Manager Express the browser needs the Shockwave add-on installed. Install this into your browser environment by going to the adobe webite and downloading the player from: [Shockwave](https://get.adobe.com/shockwave/)
 
@@ -276,8 +276,8 @@ This docker command will create a container based on the latest MYSQL database i
     outside of the container's private subnet (typically 172.17.0.0/16). This allows the container to be accessed from the HOST, for example. The default port for MYSQL is on port 3306
     - "--name" The name of the container will be "mysql"
     - "-v" This maps the directory where you downloaded the AlphaOfficeSetup GIT
-    repository to the /dbfiles directory within the container 
-    
+    repository to the /dbfiles directory within the container
+
 - **Type OR cut and paste** the following.  If you downloaded the AlphaOfficeSetup GIT files to a directory other than /home/opc/ then ***Substitute*** your directory name. For Example: `/home/opc/AlphaOfficeSetup` might change to this `~/AlphaOfficeSetup`, if you loaded the GIT repository in your home directory.
 
 ```
@@ -387,7 +387,7 @@ In this section of the lab you will deploy the remaining containers to support t
 
 - **RESTClient**: This **Node.js** application makes REST calls to the selected datasource (Oracle or MYSQL) and returns details from the Product Catalog tables. Selection of the datasource is parameter driven.
 
-- **AlphaOfficeUI**: **Node.js** application container that displays data obtained via the TwitterFeed and ClientREST containers. 
+- **AlphaOfficeUI**: **Node.js** application container that displays data obtained via the TwitterFeed and ClientREST containers.
 
 ## Application Deployment
 
@@ -427,7 +427,7 @@ docker ps
     - "--name" The name of the container will be "restclient"
     - "-p" Port 8002 is mapped from the container to the same port on the HOST
     - "--link" A intra-container link to the "mysql" database is created using the
-    - "mysqldb" hostname. This hostname is added to the restclient container's /etc/host file. Hostname is used because it is more flexible than using the private IP address of the container that can change upon subsquent invocations. The hostname is used for making a connection to the database 
+    - "mysqldb" hostname. This hostname is added to the restclient container's /etc/host file. Hostname is used because it is more flexible than using the private IP address of the container that can change upon subsquent invocations. The hostname is used for making a connection to the database
     - "-e" Environment variables used by the application. "MYSQL_HOST" and "DS" settings designate the MYSQL datasource. The Oracle datsource uses the "ORACLE_CONNECT" variable (an example of that is shown below)
 
 - ***NOTE: This example assumes we are using the MYSQL database as the datasource***. If you choose to use the Oracle database, then that command is in the **ALERT** shown below.
@@ -449,10 +449,10 @@ docker run -d -it --rm --name restclient -p=8002:8002 --link orcl:oracledb-ao -e
 ```
  docker ps
 ```
- 
+
 ![](images/200Linux/Picture200-23.png)
 
-Go to the browser, open up a new tab and **enter**: 
+Go to the browser, open up a new tab and **enter**:
 
 ```
 http://<Public-IP>:8002/products
@@ -610,7 +610,7 @@ In this step you will save a copy of your modifed docker container and give it a
 ```
 docker commit alphaofficeui (your-dockerhub-account)/(image-name)
 ```
-  
+
 - Example: `docker commit alphaofficeui wvbirder/alphaoffice-new`
 
 - **Type** the following:
@@ -676,4 +676,4 @@ docker push (your-dockerhub-account)/(image-name)
 
 ![](images/200Linux/Picture200-35.png)
 
-**This completes the Lab!**
+**This completes the Docker Workshop!**

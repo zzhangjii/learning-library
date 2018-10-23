@@ -1,7 +1,7 @@
 
 # Docker Workshop
 
-![](images/100Linux/Title100.png) 
+![](images/100Linux/Title100.png)
 
 ## Introduction
 In this lab we introduce some basic concepts of Docker, container architectures and functions.  We will do this using a single container which provides a REST service as part of a node.js application.  The application has two pieces, which provide a microservice.
@@ -28,7 +28,7 @@ You will use various Docker commands to setup, run and connect into containers. 
 
 # Start up and login into your Linux environment
 
-This Lab and Lab 200 assume you have went through the 050 Set Up Lab and have SSH'ed into that Compute Instance. Verify that the Docker engine is up and running. 
+This Lab and Lab 200 assume you have went through the 050 Set Up Lab and have SSH'ed into that Compute Instance. Verify that the Docker engine is up and running.
 
 **NOTE**: The screen shots in this lab guide are using the available Linux VirtualBox VM
 
@@ -80,7 +80,7 @@ We will now download and create a container based on an existing docker image st
 
 - **Type OR cut and paste** the following (all on one line):
 
-``` 
+```
 docker run -d -it --rm --name restclient -p=8002:8002 -e DS='json' wvbirder/restclient
 ```
 
@@ -166,7 +166,7 @@ docker run -d -it --rm --name restclient -p=18002:8002 -e DS='json' wvbirder/res
 
 ### **STEP 9**: Inspect the Container's Network and IP Address
 
-- You can get various bits of information from the subnet that docker container is running on by inspecting the default network bridge docker creates out-of-the-box. You can create your own networks and assign containers to them but that is out of the scope of this lab. 
+- You can get various bits of information from the subnet that docker container is running on by inspecting the default network bridge docker creates out-of-the-box. You can create your own networks and assign containers to them but that is out of the scope of this lab.
 
  - **Type** the following:
 
@@ -194,4 +194,5 @@ ping 172.17.0.2 -c3
 docker stop restclient
 ```
 
-**This completes the Lab, you can continue to Lab 200**
+
+**You are ready to proceed to [Lab 200](Linux200.md)**
