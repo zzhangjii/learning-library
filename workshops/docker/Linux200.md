@@ -151,7 +151,7 @@ docker logs --follow orcl
 
 ![](images/200Linux/Picture200-7.png)
 
-- When the database is created you will see "**The database is ready for use**" in the log output:
+- When the database is created you will see "**The database is ready for use**" in the log output. Once you see it, press **Control-C** to stop watching the log and continue to the next step.
 
 ![](images/200Linux/Picture200-8.png)
 
