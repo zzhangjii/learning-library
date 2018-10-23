@@ -15,7 +15,7 @@ Oracle Visual Builder is a cloud service that enables you to rapidly create and 
 
 This Lab will have you log into Oracle Visual Builder and build a web application that uses Business Objects and Charts.
 
-# Access Your Environment and Create a Web Application
+# Launch Demo Lab and Create a Web Application
 
 `After clicking on the the Demo Lab button and Signing UP or Signing In you'll recieve an email with the URL and credentials to log into your Virtual Builder environment.`
 
@@ -145,7 +145,7 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
   ![](images/000JumpStart/JS24.PNG)
 
-## Add a Bar Chart to the Application
+### Add a Bar Chart to the Application
 
 ### **STEP 1**: Add a Heading
 
@@ -228,7 +228,7 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
   ![](images/000JumpStart/JS37.PNG)
 
-## Add an Area Chart to the Application
+### Add an Area Chart to the Application
 
 ### **STEP 1**: Add the Area Chart
 
