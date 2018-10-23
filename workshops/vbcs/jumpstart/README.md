@@ -85,7 +85,7 @@ This Lab will have you log into Oracle Visual Builder and build a web applicatio
 
 A business object is a resource, such as an invoice or purchase order, similar to a database table; it has fields that hold the data for your application. Like a database table, a business object provides the structure for data used with business processes. Business objects are stored in a database.
 
-- Download the `chart_application.zip` file by **right-clicking** on this link: [Chart Application](https://github.com/chipbaber/vbcs/tree/master/workshops/vbcs/jumpstart/chart_application.zip) and saving locally. The .zip contains CSVs for the business objects.
+- Download the `chart_application.zip` file by **right-clicking** on this link: [Chart Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/8wRNgZaZRb4P7cxsKvmPWaceaMSRdJ2O3dQwLGZFp9E/n/natdcshjumpstartprod/b/VBCS/o/chart_application.zip) and saving locally. The .zip contains CSVs for the business objects.
 
 - Click the **Business Objects Icon**
 
@@ -185,12 +185,12 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
 - On the `Map Fields` page drag and drop the following:
 
-  - sales-->Values (Y Axis)
-  - year-->Categories (X Axis)
+  - **sales**-->Values (Y Axis)
+  - **year**-->Categories (X Axis)
 
   ![](images/000JumpStart/JS30.PNG)
 
-  - Expand the `ref2RegionObject` to **items-->item[i]**. Drag name to Colors (Series)
+  - Expand the `ref2RegionObject` to **items-->item[i]**. Drag **name** to Colors (Series)
 
   ![](images/000JumpStart/JS31.PNG)
 
@@ -244,12 +244,12 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
 - On the `Map Fields` page drag and drop the following:
 
-  - sales-->Values (Y Axis)
-  - year-->Categories (X Axis)
+  - **sales**-->Values (Y Axis)
+  - **year**-->Categories (X Axis)
 
   ![](images/000JumpStart/JS40.PNG)
 
-  - Expand the `ref2RegionObject` to **items-->item[i]**. Drag name to Colors (Series)
+  - Expand the `ref2RegionObject` to **items-->item[i]**. Drag **name** to Colors (Series)
 
   ![](images/000JumpStart/JS41.PNG)
 
