@@ -15,13 +15,13 @@ Oracle Visual Builder is a cloud service that enables you to rapidly create and 
 
 This Lab will have you log into Oracle Visual Builder and build a web application that uses Business Objects and Charts.
 
-# Launch Demo Lab and Create a Web Application
+# Application Development with Visual Builder
 
 `After clicking on the the Demo Lab button and Signing UP or Signing In you'll recieve an email with the URL and credentials to log into your Virtual Builder environment.`
 
-## 
+## Login and Launch the Demo Lab
 
-### **STEP 1**: Launch the Demo Lab
+### **STEP 1**: Demo Lab
 
 - Click **Demo Lab**.
 
@@ -63,7 +63,9 @@ This Lab will have you log into Oracle Visual Builder and build a web applicatio
 
   ![](images/000JumpStart/JS11.PNG)
 
-### **STEP 3**: Create Web Application
+## Web Application
+
+### **STEP 1**: Create a Web Application
 
 - On the left hand side of the page click the **Application Icon** to toggle to a Web Application.
 
@@ -81,7 +83,7 @@ This Lab will have you log into Oracle Visual Builder and build a web applicatio
 
   ![](images/000JumpStart/JS14.PNG)
 
-### **STEP 4**: Import Data for the Business Objects 
+### **STEP 2**: Import Data for the Business Objects 
 
 A business object is a resource, such as an invoice or purchase order, similar to a database table; it has fields that hold the data for your application. Like a database table, a business object provides the structure for data used with business processes. Business objects are stored in a database.
 
