@@ -277,6 +277,8 @@ You have successfully imported the channels.txt file from your on-premises to AD
 
 ![]( img/image028.png)
 
+**Please help us to improve this LAB by providing a feedback here: [https://www.surveymonkey.com/r/ADW-LAB](https://www.surveymonkey.com/r/ADW-LAB)
+
 ## Practice 10: Try Oracle Cloud Infrastructure for FREE 
 
 Sign up for the free Oracle Cloud Infrastructure trial account. 
