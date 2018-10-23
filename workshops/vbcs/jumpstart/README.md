@@ -12,7 +12,7 @@ Oracle Visual Builder is a cloud service that enables you to rapidly create and 
 
 ## Lab Overview
 
-This Lab will have you log into and Oracle Virtual Builder and build a simple web application that uses Business Objects and Charts.
+This Lab will have you log into Oracle Visual Builder and build a web application that uses Business Objects and Charts.
 
 ## Access Your Environment and Create a Web Application
 
