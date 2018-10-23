@@ -6,6 +6,7 @@
 Updated: October 18, 2018
 
 ## Introduction
+
 _Time to Complete: 30 minutes_
 
 Oracle Visual Builder is a cloud service that enables you to rapidly create and host web and mobile applications with minimal coding required. Users can visually create an application using a collection of built-in user-interface controls, and bind the UI to existing REST services or custom business objects they create from within the tool. Users publish their application with a click of a button to provide access to end-users. In addition role based security can be defined for the application to control access to pages and data.
@@ -14,9 +15,13 @@ Oracle Visual Builder is a cloud service that enables you to rapidly create and 
 
 This Lab will have you log into Oracle Visual Builder and build a web application that uses Business Objects and Charts.
 
-## Access Your Environment and Create a Web Application
+# Access Your Environment and Create a Web Application
 
 `After clicking on the the Demo Lab button and Signing UP or Signing In you'll recieve an email with the URL and credentials to log into your Virtual Builder environment.`
+
+## Demo Lab
+
+### **STEP 1**: Launch the Demo Lab
 
 - Click **Demo Lab**.
 
@@ -30,7 +35,7 @@ This Lab will have you log into Oracle Visual Builder and build a web applicatio
 
   ![](images/000JumpStart/JS5.PNG)
 
-### **STEP 1**: Log into Visual Builder
+### **STEP 2**: Log into Visual Builder
 
 - Go to the URL you recieved in the email and login with the credentials provided:
 
@@ -58,7 +63,7 @@ This Lab will have you log into Oracle Visual Builder and build a web applicatio
 
   ![](images/000JumpStart/JS11.PNG)
 
- ### **STEP 2**: Create Web Application
+ ### **STEP 3**: Create Web Application
 
 - On the left hand side of the page click the **Application Icon** to toggle to a Web Application.
 
@@ -76,7 +81,7 @@ This Lab will have you log into Oracle Visual Builder and build a web applicatio
 
   ![](images/000JumpStart/JS14.PNG)
 
- ### **STEP 3**: Import Data for the Business Objects 
+ ### **STEP 4**: Import Data for the Business Objects 
 
 A business object is a resource, such as an invoice or purchase order, similar to a database table; it has fields that hold the data for your application. Like a database table, a business object provides the structure for data used with business processes. Business objects are stored in a database.
 
