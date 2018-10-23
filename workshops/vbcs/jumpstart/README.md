@@ -149,7 +149,7 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
 In this section you will configure a Bar Chart using the defined Business Objects.
 
- ### **STEP 1**: Add a Heading
+### **STEP 1**: Add a Heading
 
 - Click the **Web Applications Icon**.
 
@@ -173,7 +173,7 @@ Summary
 
   ![](images/000JumpStart/JS27.PNG)
 
- ### **STEP 2**: Add a Bar Chart
+### **STEP 2**: Add a Bar Chart
 
 - In the Component Palette scroll down to the chart section and drag a **Bar Chart** into the Canvas below the Heading. A default Bar Chart appears. Click **Add Data** to map a Business Oject to the chart.
 
@@ -281,7 +281,7 @@ In this section you will configure an Area Chart using the defined Business Obje
 
 Now you will test the completed application
 
- ### **STEP 1**: Run the Application
+### **STEP 1**: Run the Application
 
 - Click the **Run Application Arrow** on the main Visual Builder menu bar.
 
