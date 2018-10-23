@@ -244,7 +244,7 @@ This will show that the GPU is actually getting used by the image recognision pr
 
 We will try to solve a problem which is as simple and small as possible while still being difficult enough to teach us valuable lessons. All we want the GPU instance to do is the following: when presented with an image, our system should analyze it and score the images. Our goal is for our model to pick the correct category as often as possible. This task is called image classification. 
 
-For that we will use two images. Please download those images and save to your Desktop:
+For that we will use two images. Please download those images and save to your Desktop and unzip it:
 
 - [cat image](https://raw.githubusercontent.com/flavio-santino/learning-library/master/oci-library/OOW-2018/ML-GPU/img/cat.jpg.zip)
 
