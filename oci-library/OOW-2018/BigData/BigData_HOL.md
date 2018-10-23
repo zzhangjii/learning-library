@@ -181,7 +181,8 @@ $ ssh -i id-rsa opc@<Utility_Node_PublicIP>
 2) Submit a 100GB Teragen. 
 **NOTE**: **<UNIQUE_ID>** is above should be a unique identifier for each participant sharing the cluster.  This will be used in next steps, so ensure this is captured.  A single digit number will suffice
 
-	The count above is 1,000,000,000 for 100GB.  We are running a small scale test due to time constraints.
+The count above is 1,000,000,000 for 100GB.  We are running a small scale test due to time constraints.
+
 ```
 $ hadoop jar hadoop-mapreduce-examples.jar teragen -Ddfs.replication=1 1000000000 /user/opc/<UNIQUE_ID>/terasort_in/
 ```
@@ -202,10 +203,12 @@ $ mapred job -list
 ```
 Copy the jobID and kill this job 
 ![](media/image19.png)
+
 ```
 $ mapred job -kill <jobID>
 $ hdfs dfs -rm -r -skipTrash /user/opc/<UNIQUE_ID>/
 ```
+
 ![](media/image20.png)
 
 
@@ -223,6 +226,7 @@ $ hadoop jar hadoop-mapreduce-examples.jar teragen -Ddfs.replication=1 -Dmapredu
 ```
 $ time hadoop jar hadoop-mapreduce-examples.jar terasort -Ddfs.replication=1 -Dmapreduce.job.maps=120 -Dmapreduce.job.reduces=120 /user/opc/<UNIQUE_ID>/terasort_in/ /user/opc/<UNIQUE_ID>/terasort_out/
 ```
+
 ![](media/image23.png)
 
 ![](media/image26.png)
@@ -340,9 +344,11 @@ Confirm that we want to re-deploy client configuration and click the blue button
 ![](media/image48.png)
 
 8) If time permits, scale the teragen to 1TB and we can watch Cloudera Manager during execution. *Note that a new path is used, we want to put the 1TB Teragen in a separate location.*
+
 ```
 $ hadoop jar hadoop-mapreduce-examples.jar teragen -Ddfs.replication=1 -Dmapreduce.job.maps=120 10000000000 /user/opc/<UNIQUE_ID>/1T_terasort_in/
 ```
+
 ![](media/image49.png)
 
 ![](media/image50.png)
