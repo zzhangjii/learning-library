@@ -347,6 +347,8 @@ $ hadoop jar hadoop-mapreduce-examples.jar teragen -Ddfs.replication=1 -Dmapredu
 
 ![](media/image51.png)
 
+**Please help us to improve this LAB by providing your feedback here: [https://www.surveymonkey.com/r/BD-LAB](https://www.surveymonkey.com/r/BD-LAB)
+
 ## Try Oracle Cloud Infrastructure for FREE 
 
 Sign up for the free Oracle Cloud Infrastructure trial account. 
