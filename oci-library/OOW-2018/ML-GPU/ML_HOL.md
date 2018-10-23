@@ -254,7 +254,7 @@ For that we will use two images. Please download those images and save to your D
 
 ![](img/image004.png)
 
-**2.** Upload the cat image image first. Once you click upload, the app will run the TensorFlow inference classification process and display score the image. As you can see it was classified as cat. 
+**2.** Upload the cat image image first. Once you click upload, the app will run the TensorFlow inference classification process and display the image score. As you can see it was classified as cat. 
 
 ![](img/image005.png)
 
