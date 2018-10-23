@@ -85,8 +85,8 @@ In this exercise we have a web application that has web servers running in OCI i
 
 The webservers are already built in OCI Ashburn and Frankfurt regions, and are hosting a basic apache webserver. The public IPs associated with these webservers are provided below. 
 
-- Webserver Frankfurt: X.X.X.X
-- Webserver Ashburn: X.X.X.X
+- Webserver Frankfurt: 130.61.107.80
+- Webserver Ashburn: 129.213.80.47
 
 Following is a high level architecture diagram. 
 
@@ -127,11 +127,11 @@ Answer pool
 	- Answer Pool Name: Frankfurt-Pool
 		- Answer Name: Webserver-Frankfurt
 		- Type: A 
-		- RData: X.X.X.X (Public IP of Webserver in Frankfurt) 
+		- RData: 130.61.107.80 (Public IP of Webserver in Frankfurt) 
 	- Answer Pool Name: Ashburn-Pool
 		- Answer Name: Webserver-Ashburn
 		- Type: A 
-		- RData: X.X.X.X (Public IP of Webserver in Ashburn) 
+		- RData: 129.213.80.47 (Public IP of Webserver in Ashburn) 
 ```
 
 ![](media/image12.png)
@@ -152,9 +152,16 @@ Next we will create a Health Check for our application. (More on it in next exer
 ```
 For the domains, we already have created a zone for you **oowedgeserviceslab.com**. Each user will add its own domain for this zone. 
 ```
+If your user is in tenancy 'jamalarif' use the below available domain,
 - Attached Domains 
 	- Domain: edgelabuser-X (replace X with your userID)
 	- Zone: oowedgeserviceslab.com 
+	
+OR if you are in Tenancy : bmc-flaviop
+- Attached Domains 
+	- Domain: edgelabuser-X (replace X with your userID)
+	- Zone: flaviosantino.com 
+	
 ```
 
 Click on **Create Policy**.
@@ -174,6 +181,12 @@ Once the health check runs after the interval specified in health check (30 seco
 6) In your browser, open up the domain specified in your traffic policy and you will be directed to a webserver in Ashburn region
 
 	http://edgelabuser-X.oowedgeserviceslab.com
+	
+	(replace X with your userID)
+	
+	OR 
+	
+	http://edgelabuser-X.flaviosantino.com
 	
 	(replace X with your userID)
 
