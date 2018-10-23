@@ -53,18 +53,9 @@ Add the Cloud Tenant name provided to you.
 
 ![](media/image2.png)
 
-2) Sign in by providing your username and temporary password. 
+2) Sign in by providing your username and password. 
 
 ![](media/image3.png)
-
-3) Change the temporary password provided to you. 
-
-```
-Following password will suffice password requirements 
-Oracleoow2018! 
-```
-
-![](media/image4.png)
 
 After log in, you are at the home page of OCI web console. 
 
