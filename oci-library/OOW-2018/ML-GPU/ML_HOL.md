@@ -263,6 +263,9 @@ For that we will use two images. Please download those images and save to your D
 ![](img/image006.png)
 
 
+**Please help us to improve this LAB and provide your feedback by clicking here:** [https://www.surveymonkey.com/r/ML-LAB](https://www.surveymonkey.com/r/ML-LAB)
+
+
 ## Practice 4: Try Oracle Cloud Infrastructure for FREE 
 
 Sign up for the free Oracle Cloud Infrastructure trial account. 
