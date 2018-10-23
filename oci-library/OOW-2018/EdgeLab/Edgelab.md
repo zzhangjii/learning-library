@@ -284,6 +284,8 @@ Navigate to the summarized *traceroute* path to see the summary view of *tracero
 
 ![](media/image33.png) 
 
+**Please help us to improve this LAB by clicking here:** [https://www.surveymonkey.com/r/EDGE-LAB](https://www.surveymonkey.com/r/EDGE-LAB)
+
 
 ## Practice: Try Oracle Cloud Infrastructure for FREE 
 
