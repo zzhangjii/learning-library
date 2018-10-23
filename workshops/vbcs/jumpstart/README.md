@@ -19,7 +19,7 @@ This Lab will have you log into Oracle Visual Builder and build a web applicatio
 
 `After clicking on the the Demo Lab button and Signing UP or Signing In you'll recieve an email with the URL and credentials to log into your Virtual Builder environment.`
 
-## Demo Lab
+## 
 
 ### **STEP 1**: Launch the Demo Lab
 
@@ -145,7 +145,7 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
   ![](images/000JumpStart/JS24.PNG)
 
-### Add a Bar Chart to the Application
+## Add a Bar Chart to the Application
 
 ### **STEP 1**: Add a Heading
 
@@ -228,7 +228,7 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
   ![](images/000JumpStart/JS37.PNG)
 
-### Add an Area Chart to the Application
+## Add an Area Chart to the Application
 
 ### **STEP 1**: Add the Area Chart
 
@@ -273,9 +273,7 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
   ![](images/000JumpStart/JS44.PNG)
 
-## Testing
-
-### **STEP 1**: Run the Application
+### **STEP 2**: Run the Application
 
 - Click the **Run Application Arrow** on the main Visual Builder menu bar.
 
