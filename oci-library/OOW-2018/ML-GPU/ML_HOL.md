@@ -246,9 +246,9 @@ We will try to solve a problem which is as simple and small as possible while st
 
 For that we will use two images. Please download those images and save to your Desktop:
 
-- [cat image](https://raw.githubusercontent.com/flavio-santino/learning-library/master/oci-library/OOW-2018/ML-GPU/img/cat.jpg)
+- [cat image](https://raw.githubusercontent.com/flavio-santino/learning-library/master/oci-library/OOW-2018/ML-GPU/img/cat.jpg.zip)
 
-- [navy image](https://raw.githubusercontent.com/flavio-santino/learning-library/master/oci-library/OOW-2018/ML-GPU/img/navy.jpg)
+- [navy image](https://raw.githubusercontent.com/flavio-santino/learning-library/master/oci-library/OOW-2018/ML-GPU/img/navy.jpg.zip)
 
 **1.** Go back to your broswer where TensorFlow is running and click on **Choose File** at  uper-left corner of your screen:
 
