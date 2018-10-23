@@ -63,7 +63,7 @@ This Lab will have you log into Oracle Visual Builder and build a web applicatio
 
   ![](images/000JumpStart/JS11.PNG)
 
- ### **STEP 3**: Create Web Application
+### **STEP 3**: Create Web Application
 
 - On the left hand side of the page click the **Application Icon** to toggle to a Web Application.
 
@@ -81,7 +81,7 @@ This Lab will have you log into Oracle Visual Builder and build a web applicatio
 
   ![](images/000JumpStart/JS14.PNG)
 
- ### **STEP 4**: Import Data for the Business Objects 
+### **STEP 4**: Import Data for the Business Objects 
 
 A business object is a resource, such as an invoice or purchase order, similar to a database table; it has fields that hold the data for your application. Like a database table, a business object provides the structure for data used with business processes. Business objects are stored in a database.
 
