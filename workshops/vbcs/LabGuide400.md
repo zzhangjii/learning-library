@@ -16,11 +16,11 @@ This lab will walk you through creating a mobile application page for viewing an
 
 - This lab assumes that you have completed [Lab 100](LabGuide100.md), [Lab 200](LabGuide200.md), [Lab 300](LabGuide300.md).
 
-# Create Mobile Pages for Inventory Details
+## Create Mobile Pages for Inventory Details
 
-Next we'll add a page to display inventory item details and once that is complete we'll incorporate data retrieved from a third party REST endpoint.
+### **STEP 1**: Add a Inventory Details Mobile Page
 
-### Add a Inventory Details Mobile Page
+Now we'll add a page to display inventory item details and once that is complete we'll incorporate data retrieved from a third party REST endpoint.
 
 - Open the item1-start page by expanding the **inventorymobileapp --> flows --> item1** menu and click the **item1-start**.
 
@@ -98,7 +98,7 @@ Next we'll add a page to display inventory item details and once that is complet
 
   ![](images/400/wineImageSource.png)
 
-### Add REST Service Connection
+### **STEP 2**: Add REST Service Connection
 
 We will now add the Service Connection through which data will be retrieved from an external REST endpoint.
 
@@ -155,7 +155,9 @@ There are a few steps to integrating REST data into our app. First we'll need to
 - Create an **Action Chain** that retrieves our data and assigns it to the variable
 - Configure an event that will trigger our action chain and make the data available via the variable
 
-### Define Custom Variable Type
+## Variable Definitions
+
+### **STEP 1**: Define Custom Variable Type
 
 - In the left panel of our developer console, select the mobile menu icon, then expand the **flows --> item1** page.
 
@@ -177,7 +179,7 @@ There are a few steps to integrating REST data into our app. First we'll need to
 
 ![](images/400/endpointStructure.png)
 
-#### Create Variable
+#### **STEP 2**: Create Variable
 
  We now have our type that will be used in our variable definition, let's set up our variable.
 
@@ -193,7 +195,7 @@ There are a few steps to integrating REST data into our app. First we'll need to
 
 ![](images/400/LabGuide400-a15181c1.png)
 
-### Define Action Chain
+### **STEP 3**: Define Action Chain
 
 Now that the variable which will hold our response is created we can define the Action Chain that will retrieve the data from our Service Connection and store it in the variable.
 
@@ -241,7 +243,7 @@ Clicking this will open the Map Variables To Parameters window.
 
 ![](images/400/LabGuide400-20d1aa5a.png)
 
-### Bind Action Chain to App Event
+### **STEP 4**: Bind Action Chain to App Event
 
 The action chain is now ready to do it's work. All we need to do is tell our app what event should be used to trigger this action chain.
 
@@ -280,7 +282,7 @@ The action chain is now ready to do it's work. All we need to do is tell our app
 
 - Our pieces are all tied together, when the button is clicked on the inventory detail page it will trigger our action chain that in turn calls our service connection and stores the response of that call in our variable. All that's left to do now is display the data stored in the variable in our app.
 
-### Display REST Response Variable Data
+### **STEP 5**: Display REST Response Variable Data
 
 - Navigate back to the **item1-Inventory-detail** tab.
 
@@ -305,3 +307,5 @@ The action chain is now ready to do it's work. All we need to do is tell our app
 - Once in **Live** mode, click an item in the list, then when the **itemDetail** page loads test our button to verify it displays our new information.
 
 ![](images/400/buttonPopulatedText.png)
+
+- **This completes Lab 400 and the Workshop**
