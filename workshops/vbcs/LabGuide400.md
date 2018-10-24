@@ -16,7 +16,9 @@ This lab will walk you through creating a mobile application page for viewing an
 
 - This lab assumes that you have completed [Lab 100](LabGuide100.md), [Lab 200](LabGuide200.md), [Lab 300](LabGuide300.md).
 
-## Create Mobile Pages for Inventory Details
+# Create Mobile Pages for Inventory Details
+
+## Making Mobile Application Modifications
 
 ### **STEP 1**: Add a Inventory Details Mobile Page
 
