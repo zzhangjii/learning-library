@@ -198,7 +198,7 @@ During this lab, you will take on the **Lead Developer Persona** and extend your
 
 ### **STEP 7**: Test Your Function in the Product Catalog
 
-- **Close all Firefox windows** that you may have open inside the Virtual Machine. Update Firefox by running the following command in a terminal window:
+- **Close all Firefox windows** that you may have open inside the Virtual Machine. **Update Firefox** by running the following command in a terminal window:
 
   ```bash
   sudo yum -y update firefox
