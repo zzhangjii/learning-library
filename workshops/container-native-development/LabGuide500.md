@@ -126,7 +126,7 @@ During this lab, you will take on the **Lead Developer Persona** and extend your
 - Update the readiness probe URL for v2 of the fn API by running:
 
   ```bash
-  sed -i.bak 's/\/v1\/apps/\/v2\/apps/' fn/templates/fn-daemonset.yaml
+  sed 's/\/v1\/apps/\/v2\/apps/' fn/templates/fn-daemonset.yaml
   ```
 
 - Install the **Fn chart** by running the following command. **NOTE** _DO NOT_ change the name of the release, `my-release`. This name becomes part of the Kubernetes service name, which is used for DNS routing. If the name is changed, the product catalog application will not be able to communicate with the deployed function.
