@@ -206,10 +206,10 @@ Let’s look at the past 6 months of Oracle Data as a Service (DaaS) feeds on a 
    ![](images/300/img_3e_1_4.png)
     
    >You may have noticed that only Attributes are displayed. This is by design as Measures are for aggregation- not dimensional analysis or joins. If need be, you can always modify a column or create a copy of it in another format (e.g. a data set could have a column defined as an Attribute and a copy of that column defined as a Measure with count aggregation).
-    
-    Click **OK**.
-    
-    The data source diagram will now show there are **2** joins between the data sets.
-    
-    ![](images/300/img_3e_1_5.png)
+   
+   Click **OK**.
+   
+   The data source diagram will now show there are **2** joins between the data sets.
+   
+   ![](images/300/img_3e_1_5.png)
     
