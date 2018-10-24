@@ -54,7 +54,7 @@ Let’s look at the past 6 months of Oracle Data as a Service (DaaS) feeds on a 
         
     ![](images/300/img_3a_1_5.png)
     
-## b) Updating Aggregation Logic within a Data Source
+### b) Updating Aggregation Logic within a Data Source
 
 1. Modify how DV will aggregate some of the fields by default.
 
@@ -126,8 +126,8 @@ Let’s look at the past 6 months of Oracle Data as a Service (DaaS) feeds on a 
 
 1. Modify the data in the social media data source to allow it to be merged with the sales data.
 
-   >Data wrangling enables you to manipulate the data in an existing “raw” data set for easier consumption by tools like analytics and reporting platforms. This eliminates having to go back and make changes to your source tables/files (in our case, the Excel file) and then re-uploading again.
-        
+    >Data wrangling enables you to manipulate the data in an existing “raw” data set for easier consumption by tools like analytics and reporting platforms. This eliminates having to go back and make changes to your source tables/files (in our case, the Excel file) and then re-uploading again.
+    
     Select the **Prepare** tab.
     
     ![](images/300/img_3d_1_1.png)
@@ -166,16 +166,16 @@ Let’s look at the past 6 months of Oracle Data as a Service (DaaS) feeds on a 
     
     You can also search **Replace** in the search bar.
     
-     The system will show you the required format of the function. Click on the first occurrence of **expression** and type in "Categ". You will see the system provides suggestions. Click on **Category**.
+    The system will show you the required format of the function. Click on the first occurrence of **expression** and type in "Categ". You will see the system provides suggestions. Click on **Category**.
      
-     ![](images/300/img_3d_1_11.png)
+    ![](images/300/img_3d_1_11.png)
      
-     Click the next occurrence of **expression** and type in ‘&’ (include the single quotes). 
-     Click the next occurrence of **expression** and type in ‘,’ (include the single quotes).
+    Click the next occurrence of **expression** and type in ‘&’ (include the single quotes). 
+    Click the next occurrence of **expression** and type in ‘,’ (include the single quotes).
      
-     The expression should now appear as: **REPLACE(Category, '&', ',')**. The function should be validated, automatically. If not, click the **Validate** button.  
+    The expression should now appear as: **REPLACE(Category, '&', ',')**. The function should be validated, automatically. If not, click the **Validate** button.  
      
-     ![](images/300/img_3d_1_12.png)
+    ![](images/300/img_3d_1_12.png)
 
     Click **Add Step** to apply your changes, once validated. If you face any issues then please try again.
 
