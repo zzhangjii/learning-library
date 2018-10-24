@@ -11,7 +11,9 @@ During this lab we will take your new trial account and show you how to provisio
 - Login to Your Cloud Account
   - Provision a New Instance
 
-# Create an Application
+# Starting with Visual Builder 
+
+## Create an Application
 
 ### **STEP 1**: Login to your Oracle Cloud Account
 
@@ -20,56 +22,56 @@ During this lab we will take your new trial account and show you how to provisio
 
 - Click **Sign In** in the upper right hand corner of the browser and on the next screen enter you Cloud Account Name.
 
-![](images/100/signIn.png)
+  ![](images/100/signIn.png)
 
-![](images/100/signIn2.png)
+  ![](images/100/signIn2.png)
 
 - Enter your User Name and Password provided for your trial account and click **Sign In**
 
-![](images/100/idcs_login.png)
+  ![](images/100/idcs_login.png)
 
 
 - You will be presented with a Dashboard displaying the various cloud services available to this account.
 
-![](images/100/cloud_dash.png)
+  ![](images/100/cloud_dash.png)
 
 - If the Visual Builder Cloud Service does not appear in your list click the customize dashboard button.
 
-![](images/100/custom_dash.png)
+  ![](images/100/custom_dash.png)
 
 - Then select Visual Builder and click the show button.
 
-![](images/100/show_dash_vb.png)
+  ![](images/100/show_dash_vb.png)
 
 - You should see the following before proceeding to the next step.
 
-![](images/100/LabGuide100-80c36c4c.png)
+  ![](images/100/LabGuide100-80c36c4c.png)
 
 ### **STEP 2**: Create a New Instance
 
 - In the Autonomous Visual Builder panel open the Service Console.
 
-![](images/100/LabGuide50-6196f9d1.png)
+  ![](images/100/LabGuide50-6196f9d1.png)
 
 - Next Select the **Quickstarts** option from the top of the page.
 
-![](images/100/LabGuide50-11580389.png)
+  ![](images/100/LabGuide50-11580389.png)
 
 - Name your instance and press create.
 
-![](images/100/LabGuide100-a793d2af.png)
+  ![](images/100/LabGuide100-a793d2af.png)
 
 
 - You will see the following screen once your request is submitted. Press the refresh button every few minutes to see if your instance is provisioned.
 
-![](images/100/LabGuide100-fcc49616.png)
+  ![](images/100/LabGuide100-fcc49616.png)
 
 - You should see your instance being created.
 
-![](images/100/LabGuide100-8ef678e1.png)
+  ![](images/100/LabGuide100-8ef678e1.png)
 
 - When you see the following screen you can proceed to the next step.
 
-![](images/100/LabGuide100-9f6f488d.png)
+  ![](images/100/LabGuide100-9f6f488d.png)
 
 - You may proceed to [Lab 100](LabGuide100.md)
