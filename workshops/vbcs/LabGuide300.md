@@ -15,7 +15,7 @@ This is the third of several labs that are part of the **Oracle Visual Builder C
 
 - This lab assumes that you have completed [Lab 100](LabGuide100.md) and [Lab 200](LabGuide200.md).
 
-# Create a Mobile Application
+## Create the Application
 
 ### **STEP 1**: Add a Mobile App to Our Application
 
