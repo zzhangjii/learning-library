@@ -179,7 +179,7 @@ There are a few steps to integrating REST data into our app. First we'll need to
 
 ![](images/400/endpointStructure.png)
 
-#### **STEP 2**: Create Variable
+### **STEP 2**: Create Variable
 
  We now have our type that will be used in our variable definition, let's set up our variable.
 
