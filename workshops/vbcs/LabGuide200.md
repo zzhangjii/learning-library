@@ -1,6 +1,6 @@
 ![](images/Picture-Title.png)
 
-# Lab 200 - Adding Update and Edit Pages to the Web Application
+# Lab 200 - Adding Update and Edit Pages
 
 ## Introduction
 
@@ -17,8 +17,6 @@
 - This lab assumes that you have completed the [Lab 100](/LabGuide100.md).
 
 ## Creating and Editing Pages
-
-Now that we have a display of our data, the next step is to allow additions and edits to that data. This will allow users to add new wines as they become available and edit the inventory/reserved counts.
 
 ### **STEP 1** Create a New Page
 
