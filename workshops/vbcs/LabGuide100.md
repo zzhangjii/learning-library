@@ -1,6 +1,6 @@
 ![](images/Picture-Title.png)
 
-# Lab 100 - Creating an   Visual Builder Application
+# Lab 100 - Creating a Visual Builder Application
 
 ## Introduction
 
