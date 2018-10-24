@@ -151,4 +151,4 @@ Now that we have a display of our data, the next steps are to allow additions an
 
 We have now created an application in Visual Builder Cloud Service, added our business data, and added pages to display, add to, and edit our data all with very little need for code.
 
-You may proceed to [Lab 300](LabGuide300.md)
+- You may proceed to [Lab 300](LabGuide300.md)
