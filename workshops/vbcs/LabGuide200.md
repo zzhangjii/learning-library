@@ -20,7 +20,7 @@
 
 Now that we have a display of our data, the next step is to allow additions and edits to that data. This will allow users to add new wines as they become available and edit the inventory/reserved counts.
 
-### Create a New Page
+### **STEP 1** Create a New Page
 
 - In the **Designer View** of our app, click inside the list component but outside an individual item so that the List is selected and the **List View** tag is displayed in blue.
 

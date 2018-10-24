@@ -15,7 +15,7 @@ This is the first of several labs that are part of the **Oracle Visual Builder C
   - Create pages for displaying business data
   - Create pages for creating and editing business data
 
-# Create an Application and Import Business Objects
+# Create an Application and Import Business Data
 
 ##  Create the Application
 
