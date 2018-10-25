@@ -180,12 +180,12 @@ $ ssh -i id-rsa opc@<Utility_Node_PublicIP>
 
 2) Submit a 100GB Teragen.
 
-**NOTE**: *UNIQUE_ID* above should be a unique identifier for each participant sharing the cluster. This will be used in next steps, so ensure this is captured.  A single digit number will suffice. The count above is 1,000,000,000 for 100GB. We are running a small scale test due to time constraints.
-
-
 ```
 $ hadoop jar hadoop-mapreduce-examples.jar teragen -Ddfs.replication=1 1000000000 /user/opc/<UNIQUE_ID>/terasort_in/
 ```
+
+**NOTE**: *UNIQUE_ID* above should be a unique identifier for each participant sharing the cluster. This will be used in next steps, so ensure this is captured.  A single digit number will suffice. The count above is 1,000,000,000 for 100GB. We are running a small scale test due to time constraints.
+
 
 ![](media/image16.png)
 
