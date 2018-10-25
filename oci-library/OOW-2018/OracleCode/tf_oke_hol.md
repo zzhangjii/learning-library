@@ -98,6 +98,29 @@ The home page gives you quick links to the documentation and to Oracle Support.
 
 4. The compartment for this hands on lab is 'Demo'
 
+5. Click on **MENU** on top left, **Identity** then to **Policies**. 
+
+Select the tenancy’s root compartment from the list on the left: Tenancy name (root). (gse00014448 in the screenshot)
+- Click Create policy and enter the following:
+- Name: Enter a unique name for your policy such as "oke-service”
+- Description: Enter a description (for example, “oke-service-policy”) o Policy Versioning: Select Keep Policy Current
+- Policy Statements: enter the following policy statement:
+```
+allow service OKE to manage all-resources in tenancy
+
+```
+Click **Create**
+
+
+<img width="851" alt="screen shot 2018-10-25 at 12 23 36 pm" src="https://user-images.githubusercontent.com/32341971/47524975-fbe6f280-d850-11e8-9894-d43ecee1daad.png">
+
+<img width="578" alt="screen shot 2018-10-25 at 12 23 46 pm" src="https://user-images.githubusercontent.com/32341971/47525015-0d2fff00-d851-11e8-9f0b-89e0af9e13ea.png">
+
+
+<img width="797" alt="screen shot 2018-10-25 at 12 23 54 pm" src="https://user-images.githubusercontent.com/32341971/47525028-1620d080-d851-11e8-94ec-f0612e774716.png">
+
+
+
 ## Practice 3: Create a Bastion Server
 
 Oracle Cloud Infrastructure Compute lets you provision and manage compute hosts, known as  instances. In this exercise we will create a bastion server (Oracle Linux). Once the bastion server is created, we will connect with the server and install terraform in it.
