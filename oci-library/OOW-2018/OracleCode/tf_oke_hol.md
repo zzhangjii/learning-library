@@ -105,10 +105,12 @@ Select the tenancy’s root compartment from the list on the left: Tenancy name 
 - Name: Enter a unique name for your policy such as "oke-service”
 - Description: Enter a description (for example, “oke-service-policy”) o Policy Versioning: Select Keep Policy Current
 - Policy Statements: enter the following policy statement:
-```
-allow service OKE to manage all-resources in tenancy
 
 ```
+   allow service OKE to manage all-resources in tenancy
+
+```
+
 Click **Create**
 
 
