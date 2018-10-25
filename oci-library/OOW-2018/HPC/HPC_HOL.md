@@ -56,7 +56,7 @@ High Performance Computing and storage in the cloud can be very confusing and it
 
 - **IPaddress**: *129.146.103.162 *
 - **username**: *Instructor will provide you a username*
-- **password**: *Instructor will provide you a password*
+- **password**: *+ocihpc123456*
 
 ```
 # ssh username@129.146.103.162
