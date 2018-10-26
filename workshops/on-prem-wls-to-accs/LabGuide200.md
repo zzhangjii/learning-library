@@ -62,9 +62,9 @@ For this lab you will need Github and Oracle JDeveloper. Use the following links
 
 - The Create Application is displayed. Enter a name.
   
-    ![](images/200/3.png) 
+    ![](images/200/4.png) 
 
-- Click Choose File button to upload generated war file and click Create.
+- Click Upload Archive button to upload generated war file and click Create.
 
     ![](images/200/6.png) 
 
