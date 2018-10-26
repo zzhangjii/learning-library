@@ -291,4 +291,4 @@ If you would like to experience a more in-depth look at how Oracle Visual Builde
 
 [Complete Visual Builder Workshop](https://go.oracle.com/LP=76343?src1=:ow:lp:cpo::RC_NAMK180712P00041:LPD100729372&intcmp=NAMK180921P00073:ow:lp:cpo::RC_NAMK180712P00041:LPD100729372)
 
-**This completes the Jump Start**
+**This completes the Demo Lab**
