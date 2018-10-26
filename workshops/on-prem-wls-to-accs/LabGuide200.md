@@ -56,11 +56,11 @@ For this lab you will need Github and Oracle JDeveloper. Use the following links
 
     ![](images/200/1.png) 
 
-- The Create Application is displayed. Select you application platform as JAVA EE.
+- The Create Application is displayed. Select your application platform as JAVA EE.
   
     ![](images/200/2.png) 
 
-- The Create Application is displayed. Enter a name.
+- The Create Application is displayed. Enter a name for the application.
   
     ![](images/200/4.png) 
 
@@ -109,6 +109,5 @@ For this lab you will need Github and Oracle JDeveloper. Use the following links
 - You have successfully scaled up/down AlphaOfficeProductCatalog Application Container Cloud Service Instance.
 
     ![](images/200/16.png) 
-
 
 

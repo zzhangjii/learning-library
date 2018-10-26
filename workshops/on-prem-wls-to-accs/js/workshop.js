@@ -317,7 +317,7 @@ labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sa
               $scope.selection = 'lab';
               page.htmlContent = html;
               setTimeout(function () {
-                  $("#labguide h2").next("h3").addClass("first-in-section");
+                  $("#labguide h1, #labguide h2").next("h3").addClass("first-in-section");
                   $("#labguide h3").nextUntil("#labguide h1, #labguide h2, #labguide h3").hide();
                   $("#labguide h3").addClass('plus');
                   $("#labguide h3").unbind('click', stepClickHandler);
