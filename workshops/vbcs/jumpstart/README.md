@@ -1,27 +1,33 @@
 
-# Docker on the Oracle Cloud Demo Lab
+# Oracle Visual Builder Demo Lab
 
 ![](images/000JumpStart/TitleJS.png) 
 
 Updated: October 18, 2018
 
 ## Introduction
+
 _Time to Complete: 30 minutes_
 
-Visual Builder (VB) is a cloud service that enables you to rapidly create and host web and mobile applications with minimal coding required. Users can visually create an application using a collection of built-in user-interface controls, and bind the UI to existing REST services or custom business objects they create from within the tool. Users publish their application with a click of a button to provide access to end-users. In addition role based security can be defined for the application to control access to pages and data.
+Oracle Visual Builder is a cloud service that enables you to rapidly create and host web and mobile applications with minimal coding required. Users can visually create an application using a collection of built-in user-interface controls, and bind the UI to existing REST services or custom business objects they create from within the tool. Users publish their application with a click of a button to provide access to end-users. In addition role based security can be defined for the application to control access to pages and data.
 
 ## Lab Overview
 
-This Lab will have you log into and Oracle Virtual Builder Cloud service and build a simple web application that uses Business Objects and Charts. A business object is a resource, such as an invoice or purchase order, similar to a database table; it has fields that hold the data for your application. Like a database table, a business object provides the structure for data used with business processes. Business objects are stored in a database.  
+This Lab will have you log into Oracle Visual Builder and build a web application that uses Business Objects and Charts.
 
-## Access Your Environment
+# Application Development with Visual Builder
 
-**After selecting the Demo Lab and Signing UP or Signin In you'll recieve and email with the URL and credentials to log into your Virtual Builder environment.**
+**`After clicking on the the Demo Lab button and Signing UP or Signing In you'll recieve an email with the URL and credentials to log into your Virtual Builder environment.`**
 
-- Click **Launch Demo Lab**.
+## Login and Launch the Demo Lab
+
+### **STEP 1**: Demo Lab
+
+- Click **Demo Lab**.
+
    ![](images/000JumpStart/JS3.PNG)
 
-- In 6 minutes the Oracle IaaS infrastructure including the Application already running and deployed will be available.
+- After Signing In, if you don't see the status bar then refresh your browser. In 4 minutes the Virtual Builder instance will be available.
 
   ![](images/000JumpStart/JS4.PNG)
 
@@ -29,315 +35,260 @@ This Lab will have you log into and Oracle Virtual Builder Cloud service and bui
 
   ![](images/000JumpStart/JS5.PNG)
 
-- When the environment is ready you will see the following along with the connect string to put into VNC Viewer. (In this example 129.213.56.126:1. Your IP address will be different)
+### **STEP 2**: Log into Visual Builder
 
-  ![](images/000JumpStart/JS6.PNG)
-
-- **NOTE: You have 30 minutes** before the environment will go away.
-
-  ![](images/000JumpStart/JS7.PNG)
-
-
-### **STEP 1**: Start VNC Viewer
-
-Using VNC Viewer to connect to your provisioned account.
-
-- Enter the connect string you were given and hit **Return**. (Example Shown below).
-
-**NOTE: Do NOT click the Sign In button**
+- Go to the URL you recieved in the email and login with the credentials provided:
 
   ![](images/000JumpStart/JS8.PNG)
 
-- If presented with this prompt, click **Continue**.
+- You should see the introduction Visual Builder page. Click the **New** button to create an application
 
   ![](images/000JumpStart/JS9.PNG)
 
-- Enter the VNC password  **Qloudable** and click OK.
-
   ![](images/000JumpStart/JS10.PNG)
 
-- Your Desktop is displayed.
+- Enter the Application Name using a prefix of `charts-` followed by your `initials` and a suffix of `123`.
+
+  **Application Name**
+
+  ```
+  charts-<your intials>123
+  ```
+
+  **Description**
+
+  ```
+  Charts based Web Application
+  ```
 
   ![](images/000JumpStart/JS11.PNG)
 
- ### **STEP 2**: Run the AlphaOffice Application
+## Web Application
 
-- Click the **Applications** tab and select **Firefox Web Browser**.
+### **STEP 1**: Create a Web Application
+
+- On the left hand side of the page click the **Application Icon** to toggle to a Web Application.
 
   ![](images/000JumpStart/JS12.PNG)
 
-- **Type** the URL: **localhost:8085**
+- Click the **+ Web Application** button.
 
   ![](images/000JumpStart/JS13.PNG)
 
-- The Application is displayed. **NOTE:** There is a typo in the tab (Aplha). You will fix this in a few minutes...
+-  Name the application `chartwebapp` and click **Create**. The application opens on the main-start page with a Component Palette on the left, a Canvas in the middle and the Property Palette on the right.
+
+  ```
+  chartwebapp
+  ```
 
   ![](images/000JumpStart/JS14.PNG)
 
-- Click the **Crayola Markers** product to see associated Twitter feeds.
+### **STEP 2**: Import Data for the Business Objects 
+
+A business object is a resource, such as an invoice or purchase order, similar to a database table; it has fields that hold the data for your application. Like a database table, a business object provides the structure for data used with business processes. Business objects are stored in a database.
+
+- Download the `chart_application.zip` file by **right-clicking** on this link: [Chart Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/8wRNgZaZRb4P7cxsKvmPWaceaMSRdJ2O3dQwLGZFp9E/n/natdcshjumpstartprod/b/VBCS/o/chart_application.zip) and saving locally. The .zip contains CSVs for the business objects.
+
+- Click the **Business Objects Icon**
 
   ![](images/000JumpStart/JS15.PNG)
 
-- **Minimize the browser**. Later in this Lab, you make a change to the application and return to this page to see your change.
+- Then, click the Business Objects **hamburger menu** and select **Data Manager**.
 
-### **STEP 3**: Run Docker Commands
+  ![](images/000JumpStart/JS16.PNG)
 
-Run some Docker commands to explore details about the installation and the AlphaOffice containers.
+- Click the **Import Business Objects** tile.
 
-- Open a terminal session. On the desktop **right-click** and select **Open Terminal**
+  ![](images/000JumpStart/JS17.PNG)
 
-    ![](images/000JumpStart/JS16.PNG)
-
-- **Type** the following:
-
-```
-su - opc
-docker version
-```
-
-This logs you into the `opc` user and shows the current Docker version (`18.03`)
-
-![](images/000JumpStart/JS17.PNG)
-
-- **Type** the following to view the Docker containers that are running.
-
-```
-docker ps
-```
+- Click on the **Upload a file or drag it here icon**, browse to the location you saved the `chart_application.zip` file and select it.
 
   ![](images/000JumpStart/JS18.PNG)
 
-The output shows three containers running named:
-```
-alphaofficeui
-restclient
-twitterfeed
-``` 
-The unique container ID that docker assigns at runtime is shown along with the startup command and the networking ports that the containers have exposed. These are mapped to the HOST operating sytem's server ports for external consumption. The TwitterFeed Java application is running on port 9080, the RESTClient is on port 8002 and the AlphaOffice UI is on port 8085.
-
-Docker uses a default network called `bridge` and assigns virtual IP addresses to each container. Any containers on the same network subnet can implicity see each other.
-
-- **Type** the following:
-
-```
-docker network ls
-```
+- Three Business Objects are imported and created, Region, Sales and Summary. Click **Next**.
 
   ![](images/000JumpStart/JS19.PNG)
 
-- `docker inspect` displays the details associated with a particular container. Storage locations, storage volumes, storage types, networking subnet, IP address and much more. To get information on the `restclient` container, for example, **Type** the following:
+- On the Business Object page you'll see the three created data sources. Click **Next**.
 
-```
-docker inspect restclient
-```
-
-- Scroll through the JSON output. 
+- On the Fields page we are going to make some changes. Click the **Sales** tab to bring up the default paramters.
 
   ![](images/000JumpStart/JS20.PNG)
 
-The output above shows the Creation Date, container status, The process ID (`2390`) on the HOST operating system, the path location on the HOST where container specific information is stored (`/var/lib/docker/...`), the type of storage overlay that Docker is using on the HOST opearating system (In this case, `overlay2`).
+- Make the following changes:
+  - On the Display Label column **rename** `ref2Region` to `Region`.
+  - Click the **#** sign in the type field. Select the **Reference icon**.
 
-- Take the PID (Process ID) of the `restclient` container and see what is running on the HOST (**In this example the process ID is 2390. Substitute your process ID <PID> in its place**).
+      ![](images/000JumpStart/JS21-2.PNG)
 
-- **Type** the following:
+   - Take the `Reference Buiness Object` and `Default Display Field` defaults and click the **check icon**.
 
-```
-ps -ef | grep <PID>
-```
+      ![](images/000JumpStart/JS21.PNG)
 
-A Node.js application `server.js` is running.
+- Now, select the **Summary** tab and make the following changes:
+  - On the Display Label column **rename** `ref2Region` to `Region`.
+  - Click the **#** sign in the type field. Select the **Reference icon**.
 
-![](images/000JumpStart/JS20-2.PNG)
+      ![](images/000JumpStart/JS21-2.PNG)
 
-- Let's look at the `restclient` container and see what is running. **Type** the following sequence:
+   - Take the `Reference Buiness Object` and `Default Display Field` defaults and click the **check icon**.
 
-```
-docker exec -it restclient bash
-ps -ef
-exit
-```
-- Notice that the same application is running.
+      ![](images/000JumpStart/JS22.PNG)
 
-![](images/000JumpStart/JS20-4.PNG)
+- Click **Finish**. The import will occur.
 
-- View the `restclient` inspection output. Notice the output shows the arbitrarily assigned hostname (You can give the container a hostname on startup if you want), and the HOST exposed network port (`8002`).
+- In the Applying changes dialog click the **Close** button to complete the process.
 
-  ![](images/000JumpStart/JS21.PNG)
+  ![](images/000JumpStart/JS23.PNG)
 
-- In addition, notice the output shows networking specifics for the container: the Docker virtual network that it is on (`bridge`), the ports the container is using (`8002`) and the assigned IP address (`172.17.0.4`).
+- Click the Business Objects **hamburger menu** and select **Diagram**. It will show the relationships you just defined.
 
-  ![](images/000JumpStart/JS22.PNG)  
+  ![](images/000JumpStart/JS23-2.PNG)
 
- - **Cut and Paste** the following to get a list of all IP addresses from the current running containers:
+  ![](images/000JumpStart/JS24.PNG)
 
- ```
- docker ps -q | xargs -n 1 docker inspect --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}} {{ .Name }}' | sed 's/ \// /'
- ```
-Example output (your IP assignments may vary):
+## Add a Bar Chart to the Application
 
-  ![](images/000JumpStart/JS23.PNG)  
+### **STEP 1**: Add a Heading
 
-### **STEP 4**: Make changes to the AlphaOffice application
+- Click the **Web Applications Icon**.
 
-In this step, you make a couple of changes to the AlphaOfficeUI application. One will correct a typo and another will change the background image. The tasks you follow in this step are as follows:
+  ![](images/000JumpStart/JS12.PNG)
 
-- Copy the new background image into the container
-- Connect to the AlphaOfficeUI container
-- Install the vim text editor
-- Fix a typo and specify the new background image
-- Save (docker commit) a copy of the changes to a NEW docker image
-- Start up and test the AlphaOfficeUI container using the NEW image
+- Expand **chartwebapp-->flows-->main** and click **main-start**.
 
-#### **STEP 4a**: Copy a New Background Image
+  ![](images/000JumpStart/JS25.PNG)
 
-Copy a background image file into the running AlphaOfficeUI container. This file is in the `/home/opc/AlphaOfficeSetup` directory.
+- In the Component Palette locate the **Heading** component under `Common` and drag it onto the Canvas.
 
-**NOTE:** Make sure you are still logged in as the `opc` user. You can check by typing `whoami`. If not, type `su - opc` to login as the opc user.
+  ![](images/000JumpStart/JS26.PNG)
 
-- **Type or Cut and Paste** the following:
+- The the `Heading` label properties change the text to:
 
-```
-docker cp /home/opc/AlphaOfficeSetup/dark_blue.jpg alphaofficeui:/pipeline/source/public/Images
-```
+  ```
+  Summary
+  ```
 
-  Example: `docker cp /home/opc/AlphaOfficeSetup/dark_blue.jpg alphaofficeui:/pipeline/source/public/Images`
+  **NOTE**: You'll have to tab out of the text field to see the change take place.
 
-#### **STEP 4b**: Install the VIM editor in the UI container
+  ![](images/000JumpStart/JS27.PNG)
 
-Even though the original AlphaOfficeUI image could have been set up ahead of time with any needed client tools you will install it now.
+### **STEP 2**: Add a Bar Chart
 
-- Connect into the `alphaofficeui` container:
+- In the Component Palette scroll down to the chart section and drag a **Bar Chart** into the Canvas below the Heading. A default Bar Chart appears. Click **Add Data** to map a Business Oject to the chart.
 
-```
-docker exec -it alphaofficeui bash
-```
+  ![](images/000JumpStart/JS28.PNG)
 
-- **Type** the following:
+- On the `Select Endpoint` page expand **Business Objects-->Summary** and click **GET /Summary**.
 
-```
-apt-get update
-```
+  ![](images/000JumpStart/JS29.PNG)
 
-![](images/000JumpStart/Picture200-28.png)
+- Click **Next**.
 
+- On the `Map Fields` page drag and drop the following:
 
+  - **sales**-->Values (Y Axis)
+  - **year**-->Categories (X Axis)
 
-- Verify the "**dark_blue.jpg**" file is in the container by **typing** the following:
+  ![](images/000JumpStart/JS30.PNG)
 
-```
-ls /pipeline/source/public/Images
-```
+  - Expand the `ref2RegionObject` to **items-->item[i]**. Drag **name** to Colors (Series)
 
-![](images/000JumpStart/Picture200-28.1.png)
+  ![](images/000JumpStart/JS31.PNG)
 
-#### **STEP 4c**: Edit the alpha.html file   
+- Click **Next**.
 
-- Edit the `alpha.html` file to fix a typo - Note, if you are unfamiliar with `vim`, you'll find information at this URL: [VIM](http://vimsheet.com). The commands are very similar to vi.
+- On the `Define Query` page click **Finish**. The Summary Business Object's values are applied to the chart.
 
-```
-vim /pipeline/source/public/alpha.html
-```
+    ![](images/000JumpStart/JS32.PNG)
 
-- Fix the header title to read "**Alpha Office Product Catalog**". You can also change the body title to whatever you want:
+- With the Bar Chart selected click the **General** tab. Select or enter the following:
 
-![](images/000JumpStart/Picture200-29.png)
+  - Legend, Title: **Regions**
+  - Legend, Position (drop down): **End**
+  - X Axis, Title: **Year**
+  - Y Axis, Title: **Sales**
 
-- Save the file and exit by hitting the **ESC** key and then holding the **SHIFT** key down and typing "**Z**" TWICE
+    ![](images/000JumpStart/JS33.PNG)
 
-#### **STEP 4d**: Edit the alpha.css file
+- The Bar Chart will now look like:
 
-- **Type** the following:
+  ![](images/000JumpStart/JS34.PNG)
 
-```
-vim /pipeline/source/public/css/alpha.css
-```
+- From the `Component Palette` drag a **Label** between the Summary Header and the Bar Chart. You'll know it's between when you see a broken blue bar across the Canvas.
 
-- Change the background image reference to **dark_blue.jpg**
+  ![](images/000JumpStart/JS35.PNG) 
 
-![](images/000JumpStart/Picture200-30.png)
+- In the Label properties change the text field to:
 
-- Save the file and exit by hitting the **ESC** key and then holding the **SHIFT** key down and typing "**Z**" TWICE
+  ```
+  Sales by Region
+  ```
+  ![](images/000JumpStart/JS36.PNG)
 
-- **Exit** out of the container:
+- The completed chart will look like:
 
-```
-exit
-```
+  ![](images/000JumpStart/JS37.PNG)
 
-#### **STEP 4e**: Commit a NEW Docker image
+## Add an Area Chart to the Application
 
-- Save a copy of your modifed docker container and give it a new name. (**NOTE:** You're back out in the HOST now). You can assign whatever <`image-name`> you want.
-**NOTE:** \<image-name> must be in lower case.
+### **STEP 1**: Add the Area Chart
 
-- **Type** the following:
+- In the Component Palette scroll down to the chart section and drag an **Area Chart** into the Canvas below the Bar Chart. A default Area Chart appears. Click **Add Data** to map a Business Object to the chart.
 
-```
-docker commit alphaofficeui jumpstart/<image-name>
-```
-  
-- Example: `docker commit alphaofficeui jumpstart/alphaoffice-new`
+  ![](images/000JumpStart/JS38.PNG)
 
-- **Type** the following:
+- On the `Select Endpoint` page expand **Business Objects-->Sales** and click **GET /Sales**.
 
-```
-docker images
-```
+  ![](images/000JumpStart/JS39.PNG)
 
- - The new image is available:
+- Click **Next**.
 
-![](images/000JumpStart/Picture200-31.png)
+- On the `Map Fields` page drag and drop the following:
 
-#### **STEP 4f**: Start a container based on your new image
+  - **sales**-->Values (Y Axis)
+  - **year**-->Categories (X Axis)
 
-**Stop** and **remove** the currently running AlphaOfficeUI container. Then, start a new container based on your changes.
+  ![](images/000JumpStart/JS40.PNG)
 
-- **Type** the following:
+  - Expand the `ref2RegionObject` to **items-->item[i]**. Drag **name** to Colors (Series)
 
-```
-docker stop alphaofficeui
-docker rm alphaofficeui
-```
+  ![](images/000JumpStart/JS41.PNG)
 
-Start a container using your new Docker image.
+- Click **Next**.
 
-- Let's take a look at what the docker **run** command options do:
-    - "-d" flag runs the container in the background
-    - "--restart unless-stopped" Restarts the container if it goes down unexpectedly... UNLESS it is stopped manually
-    - "--name" The name of the container will be "alphaofficeui"
-    - "-p" Port 8085 is mapped from the container to the same port on the HOST
+- On the `Define Query` page click **Finish**. The Sales Business Object's values are applied to the chart.
 
-- **Cut and Paste OR Type** the following:
+  ![](images/000JumpStart/JS42.PNG)
 
-```
-docker run -d --restart unless-stopped --name=alphaofficeui -p=8085:8085 jumpstart/<image-name>
-```
+- With the Area Chart selected click the **General** tab. Select or enter the following:
 
-- Example: `docker run -d --restart unless-stopped --name=alphaofficeui -p=8085:8085  jumpstart/alphaoffice-new`
+  - Legend, Title: **Regions**
+  - Style Defaults, Line Type (drop down): **Curved**
+  - Stack Values: **On**
+  - X Axis, Title: **Year**
+  - Y Axis, Title: **Sales**
 
-- Verify the new container is running by **typing** the following:
+    ![](images/000JumpStart/JS43.PNG)
 
-```
-docker ps
-```
+- The completed Area Chart will now look like:
 
-![](images/000JumpStart/Picture200-32.png)
+  ![](images/000JumpStart/JS44.PNG)
 
-- If your browser is still minimized then maximize it and refresh the AlphaOffice tab. If it's closed, then restart Firefox from the Desktop `Applications` tab and go to:
+### **STEP 2**: Run the Application
 
-```
-http://localhost:8085
-```
+- Click the **Run Application Arrow** on the main Visual Builder menu bar.
 
-![](images/000JumpStart/Picture200-33.png)
+  ![](images/000JumpStart/JS45.PNG)
+
+- The application will appear in a new browser tab:
+
+  ![](images/000JumpStart/JS46.PNG) 
 
 # Where do I go from here?
 
-If you would like to experience a more in-depth look at how this Docker infrastructure was created in the Oracle Cloud and how the AlphaOffice application can be deployed using an Oracle OR MYSQL database as the RESTclient datasource please go to: 
+If you would like to experience a more in-depth look at how Oracle Visual Builder can be used please go to the following: 
 
-[Complete Docker Workshop](https://oracle.github.io/learning-library/workshops/docker/?version=Linux+Trial+Account&page=Intro.md&sourceType=:ex:tb:::RC_NAMK180927P00040:DockerDemoLab&SC=:ex:tb:::RC_NAMK180927P00040:DockerDemoLab&pcode=NAMK180927P00040)
+[Complete Visual Builder Workshop](https://go.oracle.com/LP=76343?src1=:ow:lp:cpo::RC_NAMK180712P00041:LPD100729372&intcmp=NAMK180921P00073:ow:lp:cpo::RC_NAMK180712P00041:LPD100729372)
 
-- **NOTE:** When the Lab's allotted time has expired (40 minutes) you will see the following:
-
-  ![](images/000JumpStart/JS99.PNG)
-
-**This completes the Jump Start**
+**This completes the Demo Lab**
