@@ -107,14 +107,14 @@ The steps to add pages will be familiar if you have completed the web applicatio
   ```
   [["Reserved: " + $current.data.reserved]]
   ```
-  
+
   ![](images/100/LabGuide100-6a2979a3.png)
 
 - Now our app displays a list of the available wines with their labeled inventory count and reserved count.
 
   ![](images/300/countsLabeled.png)
 
-  # Summary
+# Summary
 
   We have now created a mobile application in Visual Builder Cloud Service, added our business data. The next lab in the series will guide us through adding update and edit features to allow the app's users to update inventory counts from the app.
 
