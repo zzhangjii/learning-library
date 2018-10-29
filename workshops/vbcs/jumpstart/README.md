@@ -17,7 +17,7 @@ This Lab will have you log into Oracle Visual Builder and build a web applicatio
 
 # Application Development with Visual Builder
 
-`After clicking on the the Demo Lab button and Signing UP or Signing In you'll recieve an email with the URL and credentials to log into your Virtual Builder environment.`
+**`After clicking on the the Demo Lab button and Signing UP or Signing In you'll recieve an email with the URL and credentials to log into your Virtual Builder environment.`**
 
 ## Login and Launch the Demo Lab
 
