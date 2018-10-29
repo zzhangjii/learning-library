@@ -137,7 +137,7 @@ Users of Ubuntu and Linux operating systems can use the command line to connect 
 ```
 3) Create a mount point by typing the following:
 ```
-    # sudo mkdir -p /mnt/nfs/data
+    # sudo mkdir -p /mnt/nfs-data
 ```
 4) Mount the file system by typing the following. Replace 10.x.x.x: with the local subnet IP address assigned to your mount target. The export path is the path to the file system (relative to the mount target’s IP address or hostname). If you did not specify a path when you created the mount target, then 10.x.x.x:/ represents the full extent of the mount target.
  ``` 
