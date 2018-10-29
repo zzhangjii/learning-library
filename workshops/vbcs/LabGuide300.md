@@ -107,6 +107,7 @@ The steps to add pages will be familiar if you have completed the web applicatio
   ```
   [["Reserved: " + $current.data.reserved]]
   ```
+  
   ![](images/100/LabGuide100-6a2979a3.png)
 
 - Now our app displays a list of the available wines with their labeled inventory count and reserved count.
