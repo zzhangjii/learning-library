@@ -22,6 +22,4 @@ This Oracle Public Cloud Low Code Application Development workshop will walk you
 
   ![](images/WorkshopMenu.png)
 
-- To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/oracle) repository.
-
-- Visit the [Workshop Interactive Lab Guide](http://launch.oracle.com/) for a visual overview of the workshop content.
+- Visit the [Workshop Interactive Lab Guide](http://launch.oracle.com/?vbcs) for a visual overview of the workshop content.
