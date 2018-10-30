@@ -20,9 +20,20 @@
 |                  **Name**              |    **Type**  | **Version** | 
 |----------------------------------------|:------------:|:-------:|
 |NAT Gateway| Advanced |   2.1   | 
-|Local Peering                        | Advanced |   2.1   |   
-|Console Connection                  | Advanced |   2.1   |   
-|Volume Groups and disk performance                  | Advanced |   2.1   |   
+|VCN Local Peering Connection                        | Advanced |   2.1   |   
+|Compute Console Connection                  | Advanced |   2.1   |   
+|Block Storage Volume Groups                  | Advanced |   2.1   |   
+
+
+## OCI DevOps Hands-On Labs *(Coming soon)*
+
+
+|                  **Name**              |    **Type**  | **Version** | 
+|----------------------------------------|:------------:|:-------:|
+|Container Engine for Kubernetes (OKE)| DevOps |   2.1   | 
+|Oracle Cloud Infrastructure Registry | DevOps |   2.1   |   
+|Resource Manager                     | DevOps |   2.1   |   
+|Terraform                            | DevOps |   2.1   |   
 
 
 ## OOW 2018 Hands-On Labs 
