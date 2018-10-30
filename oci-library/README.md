@@ -1,4 +1,7 @@
-# OCI Foundational Hands On Labs 
+
+
+
+## OCI Foundational Hands-On Labs 
 
 
 |                  **Name**              |    **Type**  | **Version** |
@@ -11,7 +14,7 @@
 
 
 
-# OCI Advanced Hands On Labs 
+## OCI Advanced Hands-On Labs 
 
 
 |                  **Name**              |    **Type**  | **Version** | 
@@ -22,7 +25,7 @@
 |Volume Groups and disk performance                  | Advanced |   2.1   |   
 
 
-# OOW 2018 Hands On Labs 
+## OOW 2018 Hands-On Labs 
 
 
 |                  **HOL**              |    **Name**  |   
