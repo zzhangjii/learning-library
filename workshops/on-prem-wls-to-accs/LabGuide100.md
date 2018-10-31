@@ -61,31 +61,70 @@ In order to complete the remaining migration labs, we will first create our on-p
 
 
 ### **STEP 3**: Create Network and Compartment on OCI
-
+- Click Computer from the Customize Dashboard, and Click Identy and Compartments. 
+  
   ![](images/100/LabGuide100-CreateCompartment.png)
 
-  ![](images/100/LabGuide100-CopyCompartmentOCID.png)
-
+- Click Create Compartments button to create a Compartment called WebLogicLab.
+  
   ![](images/100/LabGuide100-CreateCompartment2.png)
 
+- You can see the recently created WebLogicLab Compartment in  Compartments.
+  
   ![](images/100/LabGuide100-CreateCompartment3.png)
 
-  ![](images/100/LabGuide100-CreateVCN.png)
-
+- Click Compute and Custom Images
+  
   ![](images/100/LabGuide100-CustomImages.png)
-
-  ![](images/100/LabGuide100-IdentityCompartments.png)
-
 
 ### **STEP 4**: Import Custom Image
 
+- Click Import Image button and fill name and copy object storage URL.  (https://objectstorage.us-ashburn-1.oraclecloud.com/p/nMMC1055MyjdIJd-AuNXBMRpr5MMnBbX8UY5RWjAB6s/n/oraclestartupecosystem/b/DownloadableContentWLS-Workshop/o/Nov1-18-JDevClient) After that, click Import Image.
+  
 ![](images/100/LabGuide100-ImageImport.png)
 
+- You can see your WeblogicOnPrem Image is importing.
+  
 ![](images/100/LabGuide100-ImageImport2.png)
 
-
+- Later you can is your WeblogicOnPrem Image is up and available to use.
+  
 ![](images/100/LabGuide100-ImageImport3.png)
 
 ### **STEP 5**: Create Instance
 
-![](images/100/LabGuide100-ProvisionInstance.png)
+- Click Custom Images in Compute and select WeblogicOnPrem image and click Create Instance
+  
+  ![](images/100/CreateInstanceOnImage.png)
+
+- Click Create Instance after completing required name for the instance.
+
+  ![](images/100/CreateInstanceBegin.png)
+  ![](images/100/LabGuide100-CreateVCN.png)
+
+- You can see your WebLogicLabInstance is provisioning.
+  
+  ![](images/100/ProvisioningInstance.png)
+
+- Then you can see your instance is up and running.
+  
+  ![](images/100/RunningInstance.png)
+
+- You can connect to the image instance using the public ip Address.
+  
+  Example: vnc://132.145.175.73:5910
+
+
+### **STEP 6**: Open JDeveloper Environment
+
+- Click JDeveloper icon to open JDeveloper Environment
+
+ ![](images/100/ImageWelcome.png)
+
+- Click Java EE Developer option
+  
+ ![](images/100/j2eesettings.png)
+  
+- You have JDeveloper Environment is ready to use
+  
+  ![](images/100/JDeveloper.png)
