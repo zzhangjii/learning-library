@@ -15,6 +15,12 @@ Oracle Visual Builder is a cloud service that enables you to rapidly create and 
 
 This Lab will have you log into Oracle Visual Builder and build a web application that uses Business Objects and Charts.
 
+## Requirements
+
+**Chrome is the recommended browser. Others do not support all of the drag and drop functionality. If not using Chrome you will see a Warning:**
+
+  ![](images/000JumpStart/JS1.PNG)
+
 # Application Development with Visual Builder
 
 **`After clicking on the the Demo Lab button and Signing UP or Signing In you'll recieve an email with the URL and credentials to log into your Virtual Builder environment.`**
@@ -25,7 +31,7 @@ This Lab will have you log into Oracle Visual Builder and build a web applicatio
 
 - Click **Demo Lab**.
 
-   ![](images/000JumpStart/JS3.PNG)
+  ![](images/000JumpStart/JS3.PNG)
 
 - After Signing In, if you don't see the status bar then refresh your browser. In 4 minutes the Virtual Builder instance will be available.
 
@@ -87,7 +93,7 @@ This Lab will have you log into Oracle Visual Builder and build a web applicatio
 
 A business object is a resource, such as an invoice or purchase order, similar to a database table; it has fields that hold the data for your application. Like a database table, a business object provides the structure for data used with business processes. Business objects are stored in a database.
 
-- Download the `chart_application.zip` file by **right-clicking** on this link: [Chart Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/8wRNgZaZRb4P7cxsKvmPWaceaMSRdJ2O3dQwLGZFp9E/n/natdcshjumpstartprod/b/VBCS/o/chart_application.zip) and saving locally. The .zip contains CSVs for the business objects.
+- Download the `chart_application.zip` file by **right-clicking** on this link: [Chart Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/8lPXm6vGlPEsZX1ymQL-GUduhby-u3y_8Q9hpV1s4EQ/n/natdcshjumpstartprod/b/VBCS/o/chart_application.zip) and saving locally. The .zip contains CSVs for the business objects.
 
 - Click the **Business Objects Icon**
 
