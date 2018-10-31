@@ -93,7 +93,7 @@ This Lab will have you log into Oracle Visual Builder and build a web applicatio
 
 A business object is a resource, such as an invoice or purchase order, similar to a database table; it has fields that hold the data for your application. Like a database table, a business object provides the structure for data used with business processes. Business objects are stored in a database.
 
-- Download the `chart_application.zip` file by **right-clicking** on this link: [Chart Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/8wRNgZaZRb4P7cxsKvmPWaceaMSRdJ2O3dQwLGZFp9E/n/natdcshjumpstartprod/b/VBCS/o/chart_application.zip) and saving locally. The .zip contains CSVs for the business objects.
+- Download the `chart_application.zip` file by **right-clicking** on this link: [Chart Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/8lPXm6vGlPEsZX1ymQL-GUduhby-u3y_8Q9hpV1s4EQ/n/natdcshjumpstartprod/b/VBCS/o/chart_application.zip) and saving locally. The .zip contains CSVs for the business objects.
 
 - Click the **Business Objects Icon**
 
