@@ -15,6 +15,12 @@ Oracle Visual Builder is a cloud service that enables you to rapidly create and 
 
 This Lab will have you log into Oracle Visual Builder and build a web application that uses Business Objects and Charts.
 
+## Requirements
+
+**Chrome is the recommended browser. Others do not support all of the drag and drop functionality. If not using Chrome you will see a Warning:**
+
+  ![](images/000JumpStart/JS1.PNG)
+
 # Application Development with Visual Builder
 
 **`After clicking on the the Demo Lab button and Signing UP or Signing In you'll recieve an email with the URL and credentials to log into your Virtual Builder environment.`**
@@ -25,7 +31,7 @@ This Lab will have you log into Oracle Visual Builder and build a web applicatio
 
 - Click **Demo Lab**.
 
-   ![](images/000JumpStart/JS3.PNG)
+  ![](images/000JumpStart/JS3.PNG)
 
 - After Signing In, if you don't see the status bar then refresh your browser. In 4 minutes the Virtual Builder instance will be available.
 
