@@ -27,7 +27,7 @@ For this lab you will need Github and Oracle Cloud account Hub Accounts. Use the
 ### **STEP 1**: Create Database Instance in Cloud
 
 - Sign in to Oracle Cloud My Services.
-- Click  Dashboard menu near the upper left corner of the page, and select Database.
+- Click  Dashboard menu near the upper left corner of the page, and select Database Classic.
   
 - Click on create instance
 
