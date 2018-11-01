@@ -12,7 +12,6 @@ Key takeaways from this lab:
 **Scenario**
 
 You are the Chief Marketing Officer (CMO) of KoolKart.
-You are the Chief Marketing Officer (CMO) of KoolKart.
 
 KoolKart is an e-Commerce company that sells 4 categories of products and is looking for innovative ways to increase revenues. As part of that initiative, you and your team have launched several social media campaigns within the past 6 months.
 
@@ -58,13 +57,13 @@ After reaching out to the sales team, you have been provided with a spreadsheet 
     
     The system will determine, if the columns are **Attributes** or **Measures**.
     
-    >**Attributes**: Indicated by **A** (![](images/200/img_2a_3_3.png)). Attributes are generally non-numeric fields.
+    >![](images/200/img_2a_3_3.png) **Attributes**: Indicated by **A**, attributes are generally non-numeric fields.
     
-    >**Measures**: Indicated by **#** (![](images/200/img_2a_3_4.png)). Measures are generally numeric fields.
+    >![](images/200/img_2a_3_4.png) **Measures**: Indicated by **#**, measures are generally numeric fields.
     
     >If a field is determined to be a **Measure**, the system will also determine the default aggregation method for when it is used in an analysis (e.g. average, sum, count). If desired, you can change an **Attribute** to a **Measure** and vice-versa. For **Measures**, you can also change the default aggregation rule.
 
-    >Fields may also be indicated by a **Clock** icon (![](images/200/img_2a_3_5.png)). These will be your date and time based fields, which can be handled differently in certain visualizations. However, they still need to be defined as **Attributes** or **Measures**. If the **Clock** icon appears, the date is being treated as an **Attribute** otherwise it will have a **#** icon.
+    >![](images/200/img_2a_3_5.png) **Clock**: Fields may also be indicated by a **Clock** icon. These will be your date and time based fields, which can be handled differently in certain visualizations. However, they still need to be defined as **Attributes** or **Measures**. If the **Clock** icon appears, the date is being treated as an **Attribute** otherwise it will have a **#** icon.
     
     No changes are needed for this data.
     
@@ -162,7 +161,7 @@ After reaching out to the sales team, you have been provided with a spreadsheet 
 
     ![](images/200/img_2b_1_6.png)
     
-    Click the **X** (![](images/200/img_2b_1_7.png)) to remove any filters (please do so, now).
+    ![](images/200/img_2b_1_7.png) Click the **X** to remove any filters (please do so, now).
 
     Now that you have been exposed to the core features of the interface, let’s dive into some further analyses.
 

@@ -406,7 +406,7 @@ The **Explain** feature allows you to uncover insights and patterns about a part
 
     ![](images/500/img_5e_3_2.png)
     
-    Download the <a href="https://github.com/oracle/learning-library/raw/master/workshops/dvcs-5/Exercise%20Files/KoolKart%20Partner%20Sales%20.xlsx">*KoolKart Partner Sales.xlsx**</a> file.
+    Download the <a href="https://github.com/oracle/learning-library/raw/master/workshops/dvcs-5/Exercise%20Files/KoolKart%20Partner%20Sales%20.xlsx">**KoolKart Partner Sales.xlsx**</a> file.
     
     Click the **+** next to the **Data Elements**, select the **Add Data Set** option.
     
