@@ -63,7 +63,7 @@ For this lab you will need Github and Oracle Cloud account Hub Accounts. Use the
 
    ![](images/300/DB/JCS_instance/4.png)
 
-- If everything goes right, confirmation page will load up. Download the payload.
+- If everything goes right, confirmation page will load up.
 
    ![](images/300/DB/JCS_instance/5.png)
 
