@@ -23,7 +23,7 @@ You will begin your machine learning development journey by importing an Apache 
 
 ### Download your Apache Zeppelin Notebook.
 
-**Click to Download**
+**Click to download, then unzip**
 
 [Credit_Score_Predictions.zip](https://dgcameron.github.io/demo-labs/adwcml/Credit_Score_Predictions.zip)
 
