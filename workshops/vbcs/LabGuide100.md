@@ -27,7 +27,7 @@ This is the first of several labs that are part of the **Oracle Visual Builder C
 
 - Click **New Application** button to start the application create wizard.
 
-  ![](images/LabGuide100-f9530cdb.png)
+  ![](images/100/LabGuide100-f9530cdb.png)
 
 - On Details screen enter the following data and click on **Next**.
 
@@ -87,7 +87,7 @@ In this step we will create a new business object to host data for our applicati
 
 - Once the import is finished, you will receive a message showing the business objects that have been imported. Click the **Close** button.
 
-  ![](images/100/LabGuide100-b4cecb9c.png)
+  ![](images/100/LabGuide100-203c3cc2.png)
 
 - You should now see the **inventory** and **variant** business objects in the panel on the left. Click on the **inventory** Business Object. If the objects do not immediately appear refresh your browser.
 
@@ -115,37 +115,37 @@ Now that we have data for our app to display we can build our web app to display
 
 - The main-start page development panel will open in the right hand side of the page. To begin, we'll add a list to our page to display our added inventory data. Scroll down in the components list panel and drag a **List View** onto our page.
 
-  ![](images/100/addList.png)
+  ![](images/100/LabGuide100-e93995f0.png)
 
 - To associate our inventory data with the list, in the right panel select **Add Data**.
 
   ![](images/100/LabGuide100-6c8df0e9.png)
 
-- There are several steps for selecting data for our list. To select the endpoint expand Business Objects > Inventory and select the GET /Inventory entry, then click Next.
+- In the popup dialog window select the **inventory** data source and click **Next**.
 
-  ![](images/100/LabGuide100-95393e95.png)
+  ![](images/100/LabGuide100-066672e2.png)
 
-  - For **Choose Template** we will use the default template which is at the top of the list and then click **Next**.
+- Select the top template and click next **Next**.
 
-    ![](images/100/LabGuide100-faabe0ef.png)
+  ![](images/100/LabGuide100-b43e81b3.png)
 
-  - For our **Fields** we will select data from the **Endpoint Structure** and drag them into the **Fields** boxes.
+- For our **Fields** drag and drop the following fields to the respective numeric position.
 
-    - **title1**: name
-    - **title2**: variant
-    - **value1**: quantity
-    - **value2**: reserved
+    - **Position 2**: name     
+    - **Position 4**: variant
+    - **Position 3**: quantity
+    - **Position 5**: reserved
 
-
-    ![](images/100/drag_drop_fields.png)
+  ![](images/100/LabGuide100-87f367eb.png)
 
   Your screen should look like the following before you click **NEXT**:
 
-  ![](images/100/final_fields.png)
+  ![](images/100/LabGuide100-6d1d401f.png)
 
 - We don't need to define a query for our data, so we can click **Finish**.
 
   ![](images/100/finish.png)
+
 
 - At this point we have an application that will display our data and we can look at the live app by clicking on the **Play** button in the top right corner.
 
@@ -157,29 +157,31 @@ Now that we have data for our app to display we can build our web app to display
 
 Our app is displaying our data but our inventory/reserved counts aren't labeled. Let's add labels so users will know what these numbers mean. To do that we can customize the data displayed in our list view.
 
-- Close the browser tab that opened Live View and return to the design view of your app. Select an item in the list so that it is highlighted with a blue border and a **List Item** tag.
+- Close the browser tab that opened Live View and return to the design view of your app.
 
-  ![](images/100/listItem.png)
+- In the **Page Structure** panel select **Value 1 --> Paragraph**
 
-- In the detail panel on the right side, select the **General** tab.
+  ![](images/100/LabGuide100-0b773ad8.png)
 
-  ![](images/100/LabGuide100-b930c1a3.png)
+- In the right hand panel paste the following into the general tab. We will add a custom label to the list view so the data in the fields will accurately describe the inventory levels numeric values.
 
-- We add a custom label to the list view so the data in the fields will accurately describe the inventory and reserve levels numeric values.
+```
+[["Inventory: " + $current.data.quantity]]
+```
 
-  - Copy the syntax below into the **Value1** field
+  ![](images/100/LabGuide100-b7d1df3d.png)
 
-    ```
-    [["Inventory: " + $current.data.quantity]]
-    ```
+- In the **Page Structure** panel select **Value 2 --> Paragraph**
 
-  - and the syntax below into the **Value2** field:
+  ![](images/100/LabGuide100-2e2519f2.png)
+
+- In the right hand panel paste the following into the general tab.
 
     ```
     [["Reserved: " + $current.data.reserved]]
     ```
 
-    ![](images/100/LabGuide100-6a2979a3.png)
+    ![](images/100/LabGuide100-b5eed900.png)
 
 - Now our app displays a list of the available wines with their inventory count and reserved count.
 
