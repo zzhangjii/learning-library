@@ -185,7 +185,7 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
   ![](images/000JumpStart/JS28.PNG)
   
-- On the `Locate Data` page click **Summary**.
+- On the `Locate Data` page click the **Summary** Business Object.
 
   ![](images/000JumpStart/JS29.PNG)
 
@@ -230,6 +230,9 @@ A business object is a resource, such as an invoice or purchase order, similar t
   ```
   Sales by Region
   ```
+
+- ... and hit **enter/return**.
+
   ![](images/000JumpStart/JS36.PNG)
 
 - The completed chart will look like:
@@ -244,7 +247,7 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
   ![](images/000JumpStart/JS38.PNG)
 
-- On the `Locate Data` page click **Sales**.
+- On the `Locate Data` page click the **Sales** Business Object.
 
   ![](images/000JumpStart/JS39.PNG)
 
@@ -261,11 +264,9 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
   ![](images/000JumpStart/JS41.PNG)
 
-- Click **Next**. Then, on the Define Query page click **Finish**. The Summary Business Object's values are applied to the chart.
+- Click **Next**. Then, on the `Define Query` page click **Finish**. The Sales Business Object's values are applied to the chart.
 
   ![](images/000JumpStart/JS31-2.PNG)
-
-- On the `Define Query` page click **Finish**. The Sales Business Object's values are applied to the chart.
 
   ![](images/000JumpStart/JS42.PNG)
 
