@@ -25,9 +25,9 @@ This is the first of several labs that are part of the **Oracle Visual Builder C
 
   ![](images/100/nav_to_vbcs.jpg)
 
-- Click **New** to start the application create wizard.
+- Click **New Application** button to start the application create wizard.
 
-  ![](images/100/vbcsca_cra_s2.png)
+  ![](images/LabGuide100-f9530cdb.png)
 
 - On Details screen enter the following data and click on **Next**.
 
