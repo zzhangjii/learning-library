@@ -3,7 +3,7 @@
 
 ![](images/000JumpStart/TitleJS.png) 
 
-Updated: October 18, 2018
+Updated: November 02, 2018
 
 ## Introduction
 
@@ -47,11 +47,9 @@ This Lab will have you log into Oracle Visual Builder and build a web applicatio
 
   ![](images/000JumpStart/JS8.PNG)
 
-- You should see the introduction Visual Builder page. Click the **New** button to create an application
+- You should see the introduction Visual Builder page. Click the **+ New Application** button.
 
-  ![](images/000JumpStart/JS9.PNG)
-
-  ![](images/000JumpStart/JS10.PNG)
+  ![](images/000JumpStart/JS9-2.PNG)
 
 - Enter the Application Name using a prefix of `charts-` followed by your `initials` and a suffix of `123`.
 
@@ -117,6 +115,8 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
 - On the Business Object page you'll see the three created data sources. Click **Next**.
 
+  ![](images/000JumpStart/JS19-2.PNG)
+  
 - On the Fields page we are going to make some changes. Click the **Sales** tab to bring up the default paramters.
 
   ![](images/000JumpStart/JS20.PNG)
@@ -169,23 +169,23 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
   ![](images/000JumpStart/JS26.PNG)
 
-- The the `Heading` label properties change the text to:
+- In the `Heading` label properties change the text to:
 
   ```
   Summary
   ```
 
-  **NOTE**: You'll have to tab out of the text field to see the change take place.
+- ...and hit **enter/return** to see the changes take effect.
 
   ![](images/000JumpStart/JS27.PNG)
 
 ### **STEP 2**: Add a Bar Chart
 
-- In the Component Palette scroll down to the chart section and drag a **Bar Chart** into the Canvas below the Heading. A default Bar Chart appears. Click **Add Data** to map a Business Oject to the chart.
+- In the Component Palette scroll down to the chart section and drag a **Bar Chart** into the Canvas below the Heading. A default Bar Chart appears. Click **Add Data** to map a Business Object to the chart.
 
   ![](images/000JumpStart/JS28.PNG)
-
-- On the `Select Endpoint` page expand **Business Objects-->Summary** and click **GET /Summary**.
+  
+- On the `Locate Data` page click **Summary**.
 
   ![](images/000JumpStart/JS29.PNG)
 
@@ -202,11 +202,11 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
   ![](images/000JumpStart/JS31.PNG)
 
-- Click **Next**.
+- Click **Next**. Then, on the `Define Query` page click **Finish**. The Summary Business Object's values are applied to the chart.
 
-- On the `Define Query` page click **Finish**. The Summary Business Object's values are applied to the chart.
+  ![](images/000JumpStart/JS31-2.PNG)
 
-    ![](images/000JumpStart/JS32.PNG)
+  ![](images/000JumpStart/JS32.PNG)
 
 - With the Bar Chart selected click the **General** tab. Select or enter the following:
 
@@ -215,7 +215,7 @@ A business object is a resource, such as an invoice or purchase order, similar t
   - X Axis, Title: **Year**
   - Y Axis, Title: **Sales**
 
-    ![](images/000JumpStart/JS33.PNG)
+  ![](images/000JumpStart/JS33.PNG)
 
 - The Bar Chart will now look like:
 
@@ -244,7 +244,7 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
   ![](images/000JumpStart/JS38.PNG)
 
-- On the `Select Endpoint` page expand **Business Objects-->Sales** and click **GET /Sales**.
+- On the `Locate Data` page click **Sales**.
 
   ![](images/000JumpStart/JS39.PNG)
 
@@ -261,7 +261,9 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
   ![](images/000JumpStart/JS41.PNG)
 
-- Click **Next**.
+- Click **Next**. Then, on the Define Query page click **Finish**. The Summary Business Object's values are applied to the chart.
+
+  ![](images/000JumpStart/JS31-2.PNG)
 
 - On the `Define Query` page click **Finish**. The Sales Business Object's values are applied to the chart.
 
