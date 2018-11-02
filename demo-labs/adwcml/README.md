@@ -23,9 +23,9 @@ You will begin your machine learning development journey by importing an Apache 
 
 ### Download your Apache Zeppelin Notebook.
 
-**Right click to Download**
+**Click to Download**
 
-[Credit_Score_Predictions.json](https://dgcameron.github.io/demo-labs/adwcml/Credit_Score_Predictions.json)
+[Credit_Score_Predictions.json](https://dgcameron.github.io/demo-labs/adwcml/Credit_Score_Predictions.zip)
 
 ### Log into Oracle Machine Learning.
 
