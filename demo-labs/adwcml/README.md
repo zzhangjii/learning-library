@@ -25,7 +25,7 @@ You will begin your machine learning development journey by importing an Apache 
 
 **Click to download, then unzip**
 
-[Credit_Score_Predictions.zip](https://dgcameron.github.io/demo-labs/adwcml/Credit_Score_Predictions.zip)
+[Credit_Score_Predictions.zip](https://dgcameron.github.io/adwcjs/demo-labs/adwcml/Credit_Score_Predictions.zip)
 
 ### Log into Oracle Machine Learning.
 
