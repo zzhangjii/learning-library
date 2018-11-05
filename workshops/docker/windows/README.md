@@ -36,7 +36,7 @@ This document is not a step by step flow to the entire end game. Rather, it assu
   docker  exec –it aspdotnet  bash
   ```
 
-- Type **exit** to leaver the container.
+- Type **exit** to leave the container.
 
 - You’ll see the application contents, etc.
 
@@ -83,11 +83,11 @@ This document is not a step by step flow to the entire end game. Rather, it assu
    dotnet run
    ```
   
-- In a browser go to: http://localhost:5001
+- In a browser go to: https://localhost:5001
 
   ![](images/000Windows/win3.png)
 
-- Now that is tested and running, add a `Dockerfile` (case sensitive) into the directory with the follow contents:
+- Now, add a `Dockerfile` (case sensitive) into the directory with the follow contents:
 
   ```
   FROM microsoft\/dotnet:sdk AS build-env
@@ -109,7 +109,7 @@ This document is not a step by step flow to the entire end game. Rather, it assu
   ENTRYPOINT ["dotnet", "aspnetcoreapp.dll"]
   ```
 
-- Create a `.dockerignore` file in the same directory to exclude unwanted binary andbuild files. This reduces the Docker image size. Put the following in the file:
+- Create a `.dockerignore` file in the same directory to exclude unwanted binary / build files. This reduces the Docker image size. Put the following in the file:
 
   ```
   bin\
@@ -192,17 +192,17 @@ This document is not a step by step flow to the entire end game. Rather, it assu
 
     ![](images/000Windows/win5.png)
 
-- Verify the application is running by going to a browser. (Go to the IP address (Or, if the browser is on the local machine use http://localhost))
+- Verify the application is running: (Go to the public IP address or, if the browser is on the local machine, use http://localhost)
 
 ## Running in OCI on a Windows 2016 Standard VM 
 
 This option uses `Docker Toolbox for Windows` (Which includes VirtualBox and a bash shell)
 
-- Create a Compute instance using a VCN you already have in place. **Note the Public IP address and the Initial Password for the opc user**
+- Create a `Windows 2016 Standard` Compute instance using a VCN you already have in place. **Note the Public IP address and the Initial Password for the opc user**
 
   ![](images/000Windows/win6.png)
 
-- Go to your VCN and **open port 3389** in the Ingress Rules (RDP uses port 3389)
+- Go to your VCN default Security List and **open port 3389** in the Ingress Rules (RDP uses port 3389)
 
   ![](images/000Windows/win7.png)
 
@@ -214,7 +214,7 @@ This option uses `Docker Toolbox for Windows` (Which includes VirtualBox and a b
 
   ![](images/000Windows/win9.png)
 
-- In this exmaple we downloaded and installed `Chrome` and then `Docker Toolbox for Windows`. Decided to use Chrome instead of IE.
+- In this example we downloaded and installed `Chrome` and then `Docker Toolbox for Windows`. Decided to use Chrome instead of IE.
 
 - Once Docker Toolbox is installed double click the **Docker Quickstart** desktop icon. 
 
@@ -240,11 +240,11 @@ This option uses `Docker Toolbox for Windows` (Which includes VirtualBox and a b
 
 This option uses `Docker for Windows`  running on top of Hyper-V
 
-- Create the compute instance using a VCN you already have in place. **Note the Public IP address and the Initial Password for the opc user**
+- Create a `Windows 2016 Datacenter` Compute instance on Bare Metal using a VCN you already have in place. **Note the Public IP address and the Initial Password for the opc user**
 
   ![](images/000Windows/win14.png)
 
-- Go to your VCN and **open port 3389** in the Ingress Rules (RDP uses port 3389)
+- Go to your VCN default Security List and **open port 3389** in the Ingress Rules (RDP uses port 3389)
 
   ![](images/000Windows/win7.png)
 
@@ -256,11 +256,11 @@ This option uses `Docker for Windows`  running on top of Hyper-V
 
   ![](images/000Windows/win9.png)    
 
-- **Enable Hyper-V** by going into `Server Manager` and enabling that Role: (Make sure you select the virtual VNIC (checkbox) during this multi-step enablement. After Configuration and reboot Hyper-V will show up in the `Roles and Server Groups` section)
+- **Enable Hyper-V** by going into `Server Manager` and enabling that Role: (Make sure you select the virtual VNIC (checkbox) during this multi-step enablement. After configuration and reboots Hyper-V will show up in the `Roles and Server Groups` section)
 
   ![](images/000Windows/win15.png)
 
-- The system will require reboots to install and enable the Hyper-V service.
+- The system requires reboots to install and enable the Hyper-V service.
 
 - After the reboot, login and you can verify seeing Hyper-V **Running** as a System Service:
 
@@ -274,7 +274,7 @@ This option uses `Docker for Windows`  running on top of Hyper-V
 
   ![](images/000Windows/win18.png)
 
-- **Open up a Powershell** and run the `aspdotnet` application.
+- **Open up a Powershell** and verify the Docker installation by checking the version. Then, run the `aspdotnet` application.
 
   ```
   docker version
