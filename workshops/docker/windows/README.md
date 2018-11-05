@@ -5,10 +5,10 @@ Updated: November 5, 2018
 
 ## Introduction
 
-This document is a broad brush flow for assistance regarding the hands-on Docker experience if Ledcor decides they’d like to look at a .NET Core application (in this example an ASP app) running in the Oracle Cloud. This will cover options for Linux and Windows instances running in a Compute Cloud Service.
-NOTE: Oracle trial accounts will only be able to run the Linux and Windows 2016 (VM) versions as they no longer include Bare Metal shapes. As such the preferred Windows Docker usage (IMO) of running Linux Docker containers on top of Hyper-V cannot be done in the trial accounts (last option documented below). However, the “Docker Toolbox for Windows” option can be shown on a Windows 2016 Standard VM shape. All variations are noted here for completeness.
+This document is a broad brush flow regarding hands-on Docker experience if customers decide they’d like to look at a .NET Core application (in this example an ASP app) running in the Oracle Cloud. This will cover options for Linux and Windows instances running in a Compute Cloud Service.
+**NOTE: Oracle trial accounts will only be able to run Linux and Windows 2016 (VM) versions as they no longer include Bare Metal shapes**. As such the preferred Windows Docker usage of running Linux Docker containers on top of `Hyper-V` cannot be done in the trial accounts (This option is still documented here). However, the `Docker Toolbox for Windows` option can be shown from a Windows 2016 Standard VM shape. Both Docker for Windows variations are shown here for completeness.
 
-This document is not a step by step flow to the entire end game. Rather, tt assumes familiarity with OCI, Docker and Windows.
+This document is not a step by step flow to the entire end game. Rather, it assumes familiarity with OCI, Docker and Windows.
 
 ### Exploring some Options
 
