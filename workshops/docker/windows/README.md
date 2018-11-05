@@ -1,5 +1,5 @@
 
-# Docker on Windows the Oracle Cloud
+# Docker on Windows in the Oracle Cloud
 
 Updated: November 5, 2018
 

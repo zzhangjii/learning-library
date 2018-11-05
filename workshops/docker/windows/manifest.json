@@ -1,7 +1,7 @@
 {
     "workshop": {
-        "title": "Docker Demo Lab",
-        "description": "Get hands-on with Docker on the Oracle Cloud",
+        "title": "Docker on Windows in the Oracle Cloud",
+        "description": "Hands-on notes for .NET support",
         "theme": "default",
         "labs": [
             {
