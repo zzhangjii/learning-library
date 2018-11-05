@@ -83,14 +83,14 @@ This document is not a step by step flow to the entire end game. Rather, it assu
    dotnet run
    ```
   
-- In a browser go to: https://localhost:5001
+- In a browser go to: **https://localhost:5001**
 
   ![](images/000Windows/win3.png)
 
-- Now, add a `Dockerfile` (case sensitive) into the directory with the follow contents:
+- Now, add a **Dockerfile** (File name is case sensitive) into the directory with the follow contents. You can **Copy and Paste**:
 
   ```
-  FROM microsoft\/dotnet:sdk AS build-env
+  FROM microsoft/dotnet:sdk AS build-env
   WORKDIR /app
   
   # Copy csproj and restore as distinct layers
@@ -109,7 +109,7 @@ This document is not a step by step flow to the entire end game. Rather, it assu
   ENTRYPOINT ["dotnet", "aspnetcoreapp.dll"]
   ```
 
-- Create a `.dockerignore` file in the same directory to exclude unwanted binary / build files. This reduces the Docker image size. Put the following in the file:
+- Create a **.dockerignore** (There is a period at the front of the filename) file in the same directory to exclude unwanted binary / build files. This reduces the Docker image size. Put the following in the file:
 
   ```
   bin\
@@ -120,7 +120,7 @@ This document is not a step by step flow to the entire end game. Rather, it assu
 
     ![](images/000Windows/win4.png)
 
-- Build the Docker image: **Don’t forget the period .**
+- Build the Docker image: **( Don’t forget the period . )**
 
   ```
   docker build -t aspnetcoreapp .
@@ -202,21 +202,21 @@ This option uses `Docker Toolbox for Windows` (Which includes VirtualBox and a b
 
   ![](images/000Windows/win6.png)
 
-- Go to your VCN default Security List and **open port 3389** in the Ingress Rules (RDP uses port 3389)
+- Go to your VCN default **Security List** and **open port 3389** in the Ingress Rules (RDP uses port 3389)
 
   ![](images/000Windows/win7.png)
 
-- Using RDP, Login into your instance. You’ll be prompted for the Initial password and to change the password for the opc user. Change it and log in.
+- Using RDP login into your new instance. You’ll be prompted for the Initial password and to change the password for the opc user. Change it and log in.
 
   ![](images/000Windows/win8.png)
 
-- Using Internet Explorer add `https://*.google.com` and `https://*.docker.com` as Trusted Sites in the browser Internet Security options:
+- Using Internet Explorer add **https://*.google.com** and **https://*.docker.com** as `Trusted Sites` in the browser Internet Security options:
 
   ![](images/000Windows/win9.png)
 
 - In this example we downloaded and installed `Chrome` and then `Docker Toolbox for Windows`. Decided to use Chrome instead of IE.
 
-- Once Docker Toolbox is installed double click the **Docker Quickstart** desktop icon. 
+- Once `Docker Toolbox for Windows` is installed double click the **Docker Quickstart** desktop icon. 
 
   ![](images/000Windows/win10.png)
 
@@ -244,7 +244,7 @@ This option uses `Docker for Windows`  running on top of Hyper-V
 
   ![](images/000Windows/win14.png)
 
-- Go to your VCN default Security List and **open port 3389** in the Ingress Rules (RDP uses port 3389)
+- Go to your VCN default **Security List** and **open port 3389** in the Ingress Rules (RDP uses port 3389)
 
   ![](images/000Windows/win7.png)
 
@@ -252,15 +252,15 @@ This option uses `Docker for Windows`  running on top of Hyper-V
 
   ![](images/000Windows/win8.png)
 
-- Using Internet Explorer add `https://*.google.com` and `https://*.docker.com` as Trusted Sites in the browser Internet Security options:
+- Using Internet Explorer add **https://*.google.com** and **https://*.docker.com** as Trusted Sites in the browser Internet Security options:
 
   ![](images/000Windows/win9.png)    
 
-- **Enable Hyper-V** by going into `Server Manager` and enabling that Role: (Make sure you select the virtual VNIC (checkbox) during this multi-step enablement. After configuration and reboots Hyper-V will show up in the `Roles and Server Groups` section)
+- **Enable Hyper-V** by going into **Server Manager** and enabling that Role: (Make sure you select the virtual VNIC (checkbox) during this multi-step enablement. After configuration and reboots Hyper-V will show up in the **Roles and Server Groups** section)
 
   ![](images/000Windows/win15.png)
 
-- The system requires reboots to install and enable the Hyper-V service.
+- At this point the system requires reboots to install and enable the Hyper-V service.
 
 - After the reboot, login and you can verify seeing Hyper-V **Running** as a System Service:
 
@@ -270,11 +270,11 @@ This option uses `Docker for Windows`  running on top of Hyper-V
 
   ![](images/000Windows/win17.png)
 
-- If the installation and setup went OK the System Tray will show Docker as running:
+- If the installation and setup go OK the **System Tray** will show Docker as running:
 
   ![](images/000Windows/win18.png)
 
-- **Open up a Powershell** and verify the Docker installation by checking the version. Then, run the `aspdotnet` application.
+- **Open up a Powershell** and verify the Docker installation by checking the version. Then, run the **aspdotnet** application.
 
   ```
   docker version
@@ -283,7 +283,7 @@ This option uses `Docker for Windows`  running on top of Hyper-V
 
   ![](images/000Windows/win19.png)
 
-- Going to `localhost` in the local browser confirms:
+- Going to **localhost** in the local browser confirms:
 
   ![](images/000Windows/win20.png)
 
