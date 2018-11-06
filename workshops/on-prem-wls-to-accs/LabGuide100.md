@@ -32,7 +32,7 @@ You will take on 2 Personas during the workshop. The **Lead DevOps Engineer Per
     ![](images/100/Picture100-1.png)
 
 
-- Enter your identity domain and click **My Serices**
+- Enter your identity domain and click **My Services**
 
     **NOTE:** The **Identity Domain** should come from your Trial confirmation email.
 
@@ -61,7 +61,7 @@ In order to complete the remaining migration labs, we will first create our on-p
 
 
 ### **STEP 3**: Create Network and Compartment on OCI
-- Click Computer from the Customize Dashboard, and Click Identy and Compartments. 
+- Click Computer from the Customize Dashboard, and Click Identity and Compartments. 
   
   ![](images/100/LabGuide100-CreateCompartment.png)
 
