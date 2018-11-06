@@ -171,11 +171,11 @@ There are a few steps to integrating REST data into our app. First we'll need to
 
 - Click the **+ Type** button on the center of the page.
 
-  ![](images/LabGuide400-83b97b48.png)
+  ![](images/400/LabGuide400-83b97b48.png)
 
 - Choose the **From Endpoint** selection choice.
 
-  ![](images/LabGuide400-4f5fc5f9.png)
+  ![](images/400/LabGuide400-4f5fc5f9.png)
 
 - For the type's endpoint expand **Service Connections > Posts** and choose **GET /1** and click **Next**.
 
@@ -191,7 +191,7 @@ We now have our type that will be used in our variable definition, let's set up 
 
 - Go back to the **Variables** tab and click on the **+ Variable** button to begin creating a variable.
 
-  ![](images/LabGuide400-1c79a5d3.png)
+  ![](images/400/LabGuide400-1c79a5d3.png)
 
 - In the new variable window that opens, enter:
 
@@ -212,7 +212,7 @@ Now that the variable which will hold our response is created we can define the 
 
 - Open **Actions** and click the **+ Actions Chain** button.
 
-  ![](images/LabGuide400-b8559071.png)
+  ![](images/400/LabGuide400-b8559071.png)
 
 - Set the Id of the action chain as:
 
@@ -250,7 +250,7 @@ Now that the variable which will hold our response is created we can define the 
 
 - Clicking this will open the Map Variables To Parameters window.
 
-  ![](images/400/LabGuide400-55736c2d.png)
+  ![](images/400/LabGuide400-950cf2a2.png)
 
 - Under the **Sources** column on the left, expand "callRestEndpoint1" and drag "body" over and drop it onto the "itemDescription" under **Flow** in the **Target** column on the right . When you drop it on the "itemDescription" you should get a line drawn between the items. Once the line appears click **Save**.
 
@@ -282,11 +282,11 @@ The action chain is now ready to do it's work. All we need to do is tell our app
 
 - VBCS allows us to quickly add events to our buttons. Choose **Quick Start: 'ojAction'** to click event to the button.
 
-  ![](images/LabGuide400-b0c638af.png)
+  ![](images/400/LabGuide400-b0c638af.png)
 
 - Drag the **Call Action Chain** from the action collection panel on the left to the bottom of the chain.
 
-  ![](images/LabGuide400-397df46e.png)
+  ![](images/400/LabGuide400-397df46e.png)
 
 - Then click the **Select Action Chain** button in the right panel.
 
@@ -308,13 +308,14 @@ The action chain is now ready to do it's work. All we need to do is tell our app
 
   ![](images/400/LabGuide400-7a0067c2.png)
 
-- Now we'll set the text to be the data retrieved from the REST call. With the text box selected, hover over the "Value" field in the right panel and a small **(x)** will appear. Click that **(x)** to assign a variable to the text field.
+- Now we'll set the text to be the data retrieved from the REST call. In the right hand navigation panel paste the following into the value field.
 
-  ![](images/LabGuide400-c82e6dbb.png)
+```
+{{ $flow.variables.itemDescription.body }}
+```
 
-- In the dropdown, expand **Flow > itemDescription** and select **body**. This will display the value in that variable on our Inventory detail page when our button is clicked.
+![](images/400/LabGuide400-93a7bea4.png)
 
-  ![](images/400/textValue.png)
 
 - Let's test our button. Go back to the **item1-start** page which lists our inventory items, enable **Live** mode by clicking on the "Live" button in the top right corner.
 
