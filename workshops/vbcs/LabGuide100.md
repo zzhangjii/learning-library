@@ -132,8 +132,8 @@ Now that we have data for our app to display we can build our web app to display
 - For our **Fields** drag and drop the following fields to the respective numeric position.
 
     - **Position 2**: name     
-    - **Position 4**: variant
     - **Position 3**: quantity
+    - **Position 4**: variant
     - **Position 5**: reserved
 
   ![](images/100/LabGuide100-87f367eb.png)
