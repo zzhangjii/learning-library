@@ -54,12 +54,12 @@ High Performance Computing and storage in the cloud can be very confusing and it
 
 1. On Gitbash terminal use SSH command to connect to the control node with this information:
 
-- **IPaddress**: *129.146.103.162 *
-- **username**: *hol_userX* - *Instructor will provide an individual number for X*
-- **password**: *+ocihpc123456*
+- **IPaddress**: *Instructor will provide*
+- **username**:  *Instructor will provide*
+- **password**: *Instructor will provide*
 
 ```
-# ssh username@129.146.103.162
+# ssh username@IPAddress
 ```
 
 ## Practice 4: Deploy your HPC Cluster
