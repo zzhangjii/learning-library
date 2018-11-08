@@ -30,9 +30,9 @@ Now that we have a display of our data, the next steps are to allow additions an
 
   ![](images/200/LabGuide200-252f126c.png)
 
-- This will bring up a two step wizard. For the first step, we will click on the **Inventory** business object and click **Next**.
+- This will bring up a two step wizard. For the first step, we will click on the **POST /Inventory** and click **Next**.
 
-  ![](images/200/LabGuide200-15284f3c.png)
+  ![](images/200/LabGuide200-d85827f1.png)
 
 - This will bring us to the **Page Detail** step where we can select the fields we would like to make available for creating new records. We'll select the following:
 
@@ -45,7 +45,7 @@ Now that we have a display of our data, the next steps are to allow additions an
 
 - Also adjust the **Button Label** to simply "Create" and click **Finish**.
 
-  ![](images/200/LabGuide200-e1569d1d.png)
+  ![](images/200/LabGuide200-1be1d6be.png)
 
 - You will be presented with the main page of the app again. In order to view the new page  select the monitor icon, and expand **InventoryWebApp --> flows --> main** dropdown then select **CreateInventory**.
 
@@ -88,7 +88,7 @@ Now that we have a display of our data, the next steps are to allow additions an
 
   ![](images/200/LabGuide200-b7a2d3dc.png)
 
-- Close your new tab. Then exit Live mode by selecting the **Design** button.
+- Close your new tab to and exit Live mode by selecting the **Design** button.
 
   ![](images/200/LabGuide200-42ac6cc4.png)
 
@@ -102,13 +102,13 @@ Now that we have a display of our data, the next steps are to allow additions an
 
   ![](images/200/addEditPage.png)
 
-- Select the inventory business object as the read endpoint. Then click **Next**.
+- On the **Select Read Endpoint** page we'll leave the default endpoint selected (GET /Inventory/{Inventory_Id}), and click **Next**.
 
-  ![](images/200/LabGuide200-995325c2.png)
+  ![](images/200/LabGuide200-7465d138.png)
 
-- Select the Inventory business object as the update endpoint and click **Next**.
+- On the next step we'll leave the **Select Update Endpoint** set as the default (PATCH /Inventory/{Inventory_Id}) and click **Next**.
 
-  ![](images/200/LabGuide200-a60ec865.png)
+  ![](images/200/LabGuide200-2649ed80.png)
 
 - In the **Page Details** step we'll select the fields we want displayed on our edit page, and then click **Finish**. Here we'll select:
 
@@ -117,7 +117,7 @@ Now that we have a display of our data, the next steps are to allow additions an
   - Quantity
   - Reserved
 
-  ![](images/200/LabGuide200-1b4c63cf.png)
+  ![](images/200/LabGuide200-d0d96085.png)
 
 - Once the creation process completes click on the **main-start** page tab.
 
@@ -145,7 +145,7 @@ Now that we have a display of our data, the next steps are to allow additions an
 
 - If we go back to our **main** tab we can now see our apps structure:
 
-  ![](images/200/LabGuide200-572185e2.png)
+  ![](images/200/structure.png)
 
 # Summary
 
