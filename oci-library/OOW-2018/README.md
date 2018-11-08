@@ -10,5 +10,3 @@
 |HOL6379|[Getting Started with Edge Services on Oracle Cloud Infrastructure](./EdgeLab/Edgelab.md)|   
 |HOL6684|[Computational Fluid Dynamics Simulation on Oracle Cloud Infrastructure](./HPC/HPC_HOL.md)| 
 |HOL6686|[Big Data on Oracle Cloud Infrastructure](./BigData/BigData_HOL.md)|
-
-Test
