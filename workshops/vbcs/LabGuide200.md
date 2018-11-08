@@ -16,7 +16,7 @@ Now that we have a display of our data, the next steps are to allow additions an
 
 ## Required Artifacts
 
-- This lab assumes that you have completed the [Lab 100](/LabGuide100.md).
+- This lab assumes that you have completed the [Lab 100](LabGuide100.md).
 
 ## Creating and Editing Pages
 
