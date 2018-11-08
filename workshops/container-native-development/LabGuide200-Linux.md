@@ -82,7 +82,7 @@ Compartments are used to isolate resources within your OCI tenant. User-based ac
 
   ![](images/200/7.png)
 
-- In the **Name** field, enter `Demo`. Enter a description of your choice. Click **Create Compartment**.
+- In the **Name** field, enter `Demo`. Enter a description of your choice. Leave the 'Compartment' field at the default value (root compartment). Click **Create Compartment**.
 
   ![](images/200/8.png)
 
