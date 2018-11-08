@@ -55,26 +55,25 @@ The steps to add pages will be familiar if you have completed the web applicatio
 
   ![](images/100/LabGuide100-6c8df0e9.png)
 
-- Expand **Business Objects --> Inventory** menu and select the **GET /Inventory** entry, once it is highlighted blue click **Next**.
+- Select the Inventory business object and click **Next**.
 
-  ![](images/100/LabGuide100-95393e95.png)
+  ![](images/300/LabGuide300-09dc3b0e.png)
 
-- Choose the **title1** template at the top of the list and then click **Next**.
+- Choose the top template at the top of the list and then click **Next**.
 
-  ![](images/100/LabGuide100-faabe0ef.png)
+  ![](images/300/LabGuide300-9ef98630.png)
 
 - For our **Fields** we will select data from the **Endpoint Structure** and drag them into the **Fields** boxes.
+- **Position 2**: name
+- **Position 3**: quantity
+- **Position 4**: variant
+- **Position 5**: reserved
 
-  - **title1**: name
-  - **title2**: variant
-  - **value1**: quantity
-  - **value2**: reserved
-
-  ![](images/100/drag_drop_fields.png)
+  ![](images/100/LabGuide100-87f367eb.png)
 
 - Your screen should look like the following before you click **NEXT**:
 
-  ![](images/100/final_fields.png)
+  ![](images/100/LabGuide100-6d1d401f.png)
 
 - We don't need to define a query for our data, so we can click **Finish**.
 
@@ -90,25 +89,32 @@ The steps to add pages will be familiar if you have completed the web applicatio
 
   Our app is displaying our data but our inventory/reserved counts aren't labeled. Let's add labels so users will know what these numbers mean. To do that we can customize the data displayed in our list view.
 
-- Exit **Live** mode by closing your new tab. Select the row with the wine called Fresh of type Riesling. You should see the a blue border behind the **List Item** tag noting the row is selected.
+- Close the new tab you just opened.
 
-  ![](images/100/listItem.png)
+- In the **Page Structure** panel select **Value 1 --> Paragraph**
 
-- We add a custom label to the list view so the data in the fields will accurately describe the inventory and reserve levels numeric values.
+  ![](images/300/LabGuide300-affb1449.png)
 
-  - Copy the syntax below into the **Value1** field
+- In the right hand panel paste the following into the general tab. We will add a custom label to the list view so the data in the fields will accurately describe the inventory levels numeric values.
 
   ```
   [["Inventory: " + $current.data.quantity]]
   ```
 
-  - and the syntax below into the **Value2** field:
+  ![](images/100/LabGuide100-b7d1df3d.png)
+
+- In the **Page Structure** panel select **Value 2 --> Paragraph**
+
+  ![](images/300/LabGuide300-09af6987.png)
+
+- In the right hand panel paste the following into the general tab.
 
   ```
   [["Reserved: " + $current.data.reserved]]
   ```
 
-  ![](images/100/LabGuide100-6a2979a3.png)
+  ![](images/100/LabGuide100-b5eed900.png)
+
 
 - Now our app displays a list of the available wines with their labeled inventory count and reserved count.
 
