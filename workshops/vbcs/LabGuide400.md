@@ -42,7 +42,7 @@ Now we'll add a page to display inventory item details and once that is complete
 
 - Select the Inventory Business Object and click **Next**.
 
-  ![](images/LabGuide400-751d1385.png)
+  ![](images/400/LabGuide400-751d1385.png)
 
 - This will bring us to the **Page Detail** step where we can select the fields we would like to make available for creating new records. We'll select the following:
 
@@ -55,7 +55,7 @@ Now we'll add a page to display inventory item details and once that is complete
 
 - Then press finish.
 
-  ![](images/LabGuide400-5c9bbc66.png)
+  ![](images/400/LabGuide400-5c9bbc66.png)
 
 - We can now test the inventory item details page to see our newly created page. Click on the **Live** button to enable live mode and scroll down on the phone simulator to see your custom data entered in the prior lab.
 
@@ -91,12 +91,12 @@ Now we'll add a page to display inventory item details and once that is complete
 
 - Drag and drop the wineGlass.png image into the box below the source url field.  
 
-  ![](images/LabGuide400-137a7ed7.png)
+  ![](images/400/LabGuide400-137a7ed7.png)
 
 
 -  You should now see an image on our page.
 
-  ![](images/LabGuide400-b2701b78.png)
+  ![](images/400/LabGuide400-b2701b78.png)
 
 ### **STEP 2**: Add REST Service Connection
 
@@ -124,7 +124,7 @@ We will now add the Service Connection through which data will be retrieved from
 
 - In the right hand dropdown select **Get One** in the Action Hint dropdown menu, then click **Next**.
 
-  ![](images/LabGuide400-5deeaecf.png)
+  ![](images/400/LabGuide400-5deeaecf.png)
 
 - You'll see on the next screen that VBCS populates some fields with information from the address we have provided. The **Service Name** and **Service ID** are filled in for us. Click on the **Test** tab to try our connection and make sure it works.
 
@@ -140,7 +140,7 @@ We will now add the Service Connection through which data will be retrieved from
 
 - Check the **Response** tab to see the response is now in the "Example" text area, then click **Create**.
 
-  ![](images/LabGuide400-9e8447aa.png)
+  ![](images/400/LabGuide400-9e8447aa.png)
 
 - Once created, the development console will display the tab of the new service connection.
 
@@ -183,7 +183,7 @@ There are a few steps to integrating REST data into our app. First we'll need to
 
 - In the **Endpoint Structure** step, check the box next to **{}Response** to select all the items in the response structure. Click **Finish**.
 
-  ![](images/LabGuide400-e6276190.png)
+  ![](images/400/LabGuide400-e6276190.png)
 
 ### **STEP 2**: Create Variable
 
