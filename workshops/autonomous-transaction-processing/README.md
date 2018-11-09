@@ -133,7 +133,7 @@ Read on to begin your Getting Started journey with Oracle Autonomous Transaction
 
 **[Click here to run Lab 10](LabGuide1000Kubernetes.md)**
 
-## Lab 11: Kubernetes
+## Lab 11: Rapid application development with ATP
 
 **Key Objectives**:
 
