@@ -30,6 +30,33 @@ Please click on the following link to create your <a class=“trial-link” href
 
   ![](images/readme/code_9.png)
 
+# Docker images for instant application connectivity to ATP
+
+Two docker images are provided here to give you a jumpstart on developing applications on Oracle Autonomous Transaction Processing Service.
+
+#### atpclient:slim 
+
+Contains SqlCL, SQL*Plus and OCI command line interface to instantly provision and connect to ATP instances in your cloud account
+
+To download image, run- 
+
+```
+docker pull phx.ocir.io/oradbclouducm/openworld/atpclient:slim
+```
+
+#### atpclient:full
+
+Contains SqlCL, SQL*Plus and OCI command line interface, SDK scripts and sample applications for Python, Java, Node.js and Terraform
+
+To download image, run- 
+
+```
+docker pull phx.ocir.io/oradbclouducm/openworld/atpclient:full
+```
+
+Detailed instruction on using the image are provided in <a href="./LabGuide1100AppDev.md" target="_blank">LabGuide11.md</a>
+
+
 # Workshop Overview
 
 ## Before You Begin
