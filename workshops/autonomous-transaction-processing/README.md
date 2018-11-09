@@ -3,7 +3,7 @@
 Last Updated:<br>October 18, 2018
 </td>
 <td class="td-banner">
-# Getting Started with Autonomous Transaction Processing                                    
+# Getting Started with Autonomous Transaction Processing
 </td></tr><table>
 
 
@@ -20,6 +20,8 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - Working with REST APIs
 - Building Microservices on ATP
 - Configure OCI-CLI
+- Using Kubernetes
+- Rapid Application Development with Oracle ATP
 
 # How to Get Your Free Cloud Trial Account
 Please click on the following link to create your <a class=“trial-link” href="https://myservices.us.oraclecloud.com/mycloud/signup?language=en&sourceType=:ex:tb:::RC_NAMK181011P00041:ATPHOL&SC=:ex:tb:::RC_NAMK181011P00041:ATPHOL&pcode=NAMK181011P00041" target="_trial">Free Account</a>, and complete all the required steps to get your free Oracle Cloud Trial Account. When you complete the registration process you'll receive a $300 credit that will enable you to complete the lab for free.  Additionally, you'll have 1000s of hours left over to continue to explore the Oracle Cloud.
@@ -122,6 +124,26 @@ Read on to begin your Getting Started journey with Oracle Autonomous Transaction
 
 **[Click here to run Lab 9](LabGuide900ConfigureOCI-CLI.md)**
 
+## Lab 10: Kubernetes
+
+**Key Objectives**:
+
+- To build a Kubernetes cluster in the Oracle Cloud running a node.js application
+- Connect Node.js application to an ATP Database service running in the Oracle cloud
+
+**[Click here to run Lab 10](LabGuide1000Kubernetes.md)**
+
+## Lab 11: Kubernetes
+
+**Key Objectives**:
+
+- Connect Oracle ATP to Python
+- Connect Oracle ATP to Java
+- Connect Oracle ATP to Node
+- Utilize Terraform to control ATP
+- Utilize OCI-CLI to control ATP
+
+**[Click here to run Lab 11](LabGuide1100AppDev.md)**
 
 ## Appendix
 
