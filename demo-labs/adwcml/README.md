@@ -33,6 +33,14 @@ You will begin your machine learning development journey by importing an Apache 
 
   ![](images/002.png)
 
+- You must change your password before executing any of the notebook paragraphs that follow later on.  Select your useid in the upper right (each username will be different for each section):
+
+  ![](images/002.1.png)
+
+- The original password is `Alpha2018___` (three underscores).  Enter a new password of your choice.
+
+  ![](images/002.2.png)
+
 - Select `Examples` to review sample content.
 
   ![](images/003.png)
