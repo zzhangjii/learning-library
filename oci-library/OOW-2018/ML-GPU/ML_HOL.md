@@ -8,13 +8,15 @@
 
 ### H20ai Lab 
 
-[Practice 1: Access the GPU instance](#practice-1-access-the-gpu-instance)
+[Practice 1: Open Gitbash on your Desktop](#practice-1-open-gitbash-on-your-desktop)
 
-[Practice 2: Install H2Oai in the GPU Instance](#practice-2-install-h2oai-in-the-gpu-instance)
+[Practice 2: Access the GPU instance](#practice-2-access-the-gpu-instance)
 
-[Practice 3: Access H2Oai application](#practice-3-access-h2oai-application)
+[Practice 3: Install H2Oai in the GPU Instance](#practice-3-install-h2oai-in-the-gpu-instance)
 
-[Practice 4: Loading an adult census dataset](#practice-4-loading-an-adult-census-dataset)
+[Practice 4: Access H2Oai application](#practice-4-access-h2oai-application)
+
+[Practice 5: Loading an adult census dataset](#practice-5-loading-an-adult-census-dataset)
 
 ### TensorFlow Lab
 
