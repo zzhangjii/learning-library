@@ -1,37 +1,53 @@
 <table class="tbl-heading"><tr><td class="td-logo">![](images/obe_tag.png)
 
-November 08, 2018
+October 18, 2018
 </td>
 <td class="td-banner">
 # Lab 11: Docker Images for instant connectivity to Oracle Autonomous Database
 </td></tr><table>
 
-# Rapid Application Development with Oracle Autonomous Database
+# Rapid Application Devlopment with Oracle Autonomous Database
 
-Introduction about the image
+Two docker images are provided here to give you a jumpstart on developing applications on Oracle Autonomous Transaction Processing Service. These images are pre-configured with tools and language drivers so that you can,
+
+1. Instantly connect to your ATP instance using SQLCL or SQL*Plus
+2. Use OCI CLI commands to provision and manage ATP instances from a command line interface. Sample scripts are included.
+3. Orchestrate ATP instances using your favourite programming language. SDK sample scripts are included for Python, Java and Node.js
+4. Use sample applications written in Python, Java and Node.js to understand how apps connect to ATP using the secure encryption wallet
+5. Use terraform scripts to work with Oracle cloud. Sample scripts for managing ATP instances are provided
+
+atpclient:slim 
+
+Contains SqlCL, SQL*Plus and OCI command line interface to instantly provision and connect to ATP instances in your cloud account
+
+atpclient:full
+
+Contains SqlCL, SQL*Plus and OCI command line interface, SDK scripts and sample applications for Python, Java, Node.js and Terraform
+
+
+**README files with usage directions and example scripts have been added to each language folder in the image and are also listed below**
+
 
 To **log issues**, click [here](https://github.com/oracle/learning-library/issues/new) to go to the github Oracle repository issue submission form.
 
-## Objectives
 
-- Connect Oracle ATP to Python
-- Connect Oracle ATP to Java
-- Connect Oracle ATP to Node
-- Utilize Terraform to control ATP
-- Utilize OCI-CLI to control ATP
 
-README files with usage directions and example scripts have been added to each language folder in the image and are also listed below.
+## **Download Docker image**
 
-## **Pull the Docker image**
+- Start by pulling the image from Docker. Choose 'slim' if you simply want to connect to an ATP instant or issue OCI CLI commands. Choose 'full' if you wish to build and connect applications on ATP.
 
-- First we will pull down the docker image using:
+```
+docker pull phx.ocir.io/oradbclouducm/openworld/atpclient:full
+```
+OR
 
 ```
 docker pull phx.ocir.io/oradbclouducm/openworld/atpclient:full
 ```
 
-- Second, we will create a directory which we will use later to place our wallet in. When running our docker image we will use the -v option to map the directory to the image and the image will be able to pick up the wallet information
+- Next, create a directory on your local machine to download the ATP connection wallet from the Oracle Cloud Console. We will map this local directory to the docker container folder /opt/oracle/database/wallet so that client tools in the container have access to wallet files
 
+On your local machine - 
 ```
 mkdir -p ~/tmp/wallet
 ```
@@ -39,7 +55,7 @@ mkdir -p ~/tmp/wallet
 - Now we will launch the container using the image we just pulled.
 
 Note: With this run command we are mapping the local directory ~/tmp/wallet/ to the directory in the image /opt/oracle/database/wallet.
-This command also maps the port 3050 to your local machine port 3050 which will be used for the node application.
+This command also maps the port 3050 to your local machine port 3050 which will be used for testing node.js application.
 
 ```
 docker run -it -p 3050:3050 -v ~/tmp/wallet:/opt/oracle/database/wallet phx.ocir.io/oradbclouducm/openworld/atpclient:full /bin/bash
@@ -75,7 +91,7 @@ SQL> connect admin@testing_high
 
 SQL PLUS
 
-- Edit the sqlnet.ora file in /opt/oracle/database/wallet and change the line ?/network/admin:
+- Edit the sqlnet.ora using nano file in /opt/oracle/database/wallet and change the line ?/network/admin:
 
 Before:
 ```
@@ -204,19 +220,19 @@ oci db autonomous-database update --autonomous-database-id [OCID] --cpu-core-cou
 
 ## Python
 
-These scripts are intended to help any python developer get started connecting to Oracle Autonomous Database, as well as easily creating, updating, restoring, starting, stopping, etc. Follow the instructions to use the scripts already created here. Feel free to go into the code and learn for yourself as you get started.
+These scripts are intended to help any python developer get started connecting to Oracle Autonomous Database, as well as easily create, update, restore, start, stop ATP instances. These scripts serve as a starting point to using language SDK to create cloud orchestrations. Users are encouraged to read Oracle Cloud documentation and modify / enhance these scripts as per their requirements
 
 ### Getting Started
 
 Assuming you have setup oci using ```oci setup config``` change directories to /opt/oracle/tools/python/ and you will see two directories **sdk** and **apps**
 
-- **Edit your /root/.oci/config file and add the compartmentid line at the bottom like so**:
+- **Edit your /root/.oci/config file using nano and add the compartmentid line at the bottom like so**:
 
 ![](./images/1100/compartmentid.png)
 
 ### **APPLICATION EXAMPLE**:
 
-- /opt/oracle/tools/python/apps
+- Please change directories to: **/opt/oracle/tools/python/apps**
 
 In this simple python application, we are connecting to an existing ATP database, creating a table, and loading in the data from sales.csv into the table. We then do a simple query of that data and output that we are connected to the database
 
@@ -224,9 +240,9 @@ In this simple python application, we are connecting to an existing ATP database
 
 - **You have downloaded your wallet of the database you created and placed the files in the local directory mapped to /opt/oracle/database/wallet in your container**
 
-- **You have edited /root/.oci/config to point to the correct compartmentid where the database is located**
+- **You have edited /root/.oci/config using nano to point to the correct compartmentid where the database is located**
 
-- Edit the sqlnet.ora file in /opt/oracle/database/wallet and change the line ?/network/admin: 
+- Using nano, Edit the sqlnet.ora file in /opt/oracle/database/wallet and change the line ?/network/admin: 
 
 Before:
 ```
@@ -240,7 +256,7 @@ WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA = (DIRECTORY="/opt/orac
 SSL_SERVER_DN_MATCH=yes
 ```
 
-- Now you can run all applications
+- You may now run the sample python app
 
 ```
 python exampleConnection.py ADMIN OraclePassword123! salesdb_low
@@ -251,9 +267,9 @@ python exampleConnection.py ADMIN OraclePassword123! salesdb_low
 
 ### **SDK EXAMPLES**:
 
-- /opt/oracle/tools/python/sdk
+- Please change directories to: **/opt/oracle/tools/python/sdk**
 
-In the scripts below we are utilizing python's sdk Signer function and the REST APIs available to create, update, access, etc. in regards to Autonomous Transaction Processing.
+Here's some more scripts provided to manage lifecycle operations of Autonomous Database instances. Note that while the scripts are specific to Autonomous Transaction Processing, they can be used equally effectively for Autonomous Datawarehouse instances with a slight modification of keyword. Please refer to Oracle Autonomous Database documentation [here](https://docs.oracle.com/en/cloud/paas/atp-cloud/rest-apis.html)
 
 **Create Database**
 
@@ -326,13 +342,11 @@ python restoreAutonomousDatabase.py ocid1.autonomousdatabase.oc1.iad.abuwcljss3j
 
 ## **Java**
 
-These scripts are intended to help any java developer get started connecting to Oracle Autonomous Database, as well as easily creating, updating, restoring, starting, stopping, etc. 
+Similarly, scripts and sample app are  provided here to help Java developers get started connecting to Oracle Autonomous Database, as well as  create, update, restore, start, stop ATP instances
 
 ### Script Examples
 
-The scripts have been added to the classpath to make demoing the functionality easier. For these scripts you can be anywhere within the image
-
-listed as `COMMAND [-h for help] [arg_1 arg_2 ...]` 
+CLASSPATH env variable has been set so you can run this scripts from any folder. For syntax help on any command, you can type `COMMAND [-h for help] [arg_1 arg_2 ...]` 
 
 ```
 
@@ -354,7 +368,7 @@ getAutonomousDatabase DBOCID
 
 ```
 
-listAutonomousDatabases
+listAutonomousDatabases -cid compartment-id
 
 ```
 
@@ -376,7 +390,7 @@ updateAutonomousDatabase CPUCount StorageInTBs DBOCID
 
 ```
 
-### Application
+### Running the Sample Java Application
 
 **Please make sure:**
 
@@ -384,7 +398,7 @@ updateAutonomousDatabase CPUCount StorageInTBs DBOCID
 
 - **You have edited /root/.oci/config to point to the correct compartmentid where the database is located**
 
-- Edit the sqlnet.ora file in /opt/oracle/database/wallet and change the line ?/network/admin:
+- Using nano, Edit the sqlnet.ora file in /opt/oracle/database/wallet and change the line ?/network/admin:
 
 Before:
 ```
@@ -398,9 +412,8 @@ WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA = (DIRECTORY="/opt/orac
 SSL_SERVER_DN_MATCH=yes
 ```
 
-- Now you can connect with applications
 
-To connect to your ATP database for building an application you can test with:
+Run the sample Java app to test connectivity to your ATP instance as,
 
 ```
 
@@ -449,19 +462,19 @@ mvn package
 
 ## NODE.JS
 
-These scripts are intended to help any nodejs developer get started connecting to Oracle Autonomous Database, as well as easily creating, updating, restoring, starting, stopping, etc. Follow the instructions to use the scripts already created here. Feel free to go into the code and learn for yourself as you get started.
+These scripts are intended to help any nodejs developer get started connecting to Oracle Autonomous Database, as well as easily create, update, restore, start and stop ATP instances
 
 ### Getting Started
 
 Assuming you have setup oci using ```oci setup config``` change directories to /opt/oracle/tools/python/ and you will see two directories **sdk** and **apps**
 
-- Edit your /root/.oci/config file and add the compartmentid line at the bottom like so:
+- Using nano, Edit your /root/.oci/config file and add the compartmentid line at the bottom like so:
 
 ![](./images/1100/compartmentid.png)
 
 ### **APPLICATION EXAMPLE**:
 
-- /opt/oracle/tools/nodejs/apps
+- Please change directories to: **/opt/oracle/tools/nodejs/apps**
 
 In this simple node application we are connecting to the database 
 
@@ -471,7 +484,7 @@ In this simple node application we are connecting to the database
 
 - **You have edited /root/.oci/config to point to the correct compartmentid where the database is located**
 
-- Edit the sqlnet.ora file in /opt/oracle/database/wallet and change the line ?/network/admin:
+- Using nano, Edit the sqlnet.ora file in /opt/oracle/database/wallet and change the line ?/network/admin:
 
 Before:
 ```
@@ -485,21 +498,24 @@ WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA = (DIRECTORY="/opt/orac
 SSL_SERVER_DN_MATCH=yes
 ```
 
-- Now you can run all applications
+- The sample node.js app used a dbconfig.js configuration file for database credentials
 
--   Edit the dbconfig.js file to properly have the correct user, password, and connection string
+-   Using nano, Edit the dbconfig.js file and update the user, password and connectString variables to point to your ATP instances
 
--   Run:
+-   To run the app as a background process -
 ```
-node server.js
+node server.js &
 ```
+You can now test the status of your app by opening a browser window on your local machine and pointing it to http://localhost:3050
+Please recall that you need to launch the container mapping port 3050 on your local machine to the container.
+
 
 ![](./images/1100/nodeConnection.png)
 
 
 ### **SDK EXAMPLES**:
 
-- /opt/oracle/tools/nodejs/sdk
+Lets take a look at some more node.js SDK examples located in /opt/oracle/tools/nodejs/sdk
 
 **Create Database**
 
@@ -571,6 +587,9 @@ node restoreAutonomousDatabase.js ocid1.autonomousdatabase.oc1.iad.abuwcljss3jw6
 ```
 
 ## Terraform
+
+Terraform is a popular cloud orchestration tool. Sample terraform scripts are provided here to get your started with using it to manage ATP instances. However, users are encouraged to check out Oracle Cloud documentation to further build on these and learn to provision complete application stacks using terraform 
+
 
 ### About / Setup
 Utilize Terraform to create and destroy your ATP instances
@@ -675,7 +694,7 @@ terraform apply
 And now several details of that database will be displayed
 
 
-## **More Information**:
+## **Useful Links**:
 
 - [Autonomous Database REST API Information](https://docs.cloud.oracle.com/iaas/api/#/en/database/20160918/AutonomousDatabase/)
 
