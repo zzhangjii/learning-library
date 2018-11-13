@@ -22,7 +22,7 @@ Contains SqlCL, SQL*Plus and OCI command line interface to instantly provision a
 
 atpclient:full
 
-Contains SqlCL, SQL*Plus and OCI command line interface, SDK scripts and sample applications for Python, Java, Node.js and Terraform
+Contains SqlCL, SQL*Plus, OCI command line interface, SDK scripts and sample applications for Python, Java, Node.js and Terraform
 
 
 **README files with usage directions and example scripts have been added to each language folder in the image and are also listed below**
@@ -37,7 +37,7 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 - Start by pulling the image from Docker. Choose 'slim' if you simply want to connect to an ATP instant or issue OCI CLI commands. Choose 'full' if you wish to build and connect applications on ATP.
 
 ```
-docker pull phx.ocir.io/oradbclouducm/openworld/atpclient:full
+docker pull phx.ocir.io/oradbclouducm/openworld/atpclient:slim
 ```
 OR
 
@@ -52,9 +52,9 @@ On your local machine -
 mkdir -p ~/tmp/wallet
 ```
 
-- Now we will launch the container using the image we just pulled.
+- Now you can launch a container using the image you just pulled.
 
-Note: With this run command we are mapping the local directory ~/tmp/wallet/ to the directory in the image /opt/oracle/database/wallet.
+Note: With this run command you are mapping the local directory ~/tmp/wallet/ to the directory in the image /opt/oracle/database/wallet.
 This command also maps the port 3050 to your local machine port 3050 which will be used for testing node.js application.
 
 ```
@@ -63,7 +63,7 @@ docker run -it -p 3050:3050 -v ~/tmp/wallet:/opt/oracle/database/wallet phx.ocir
 
 ![](./images/1000/lab1000-1.png)
 
-## **Get Started Connecting to ATP**
+## **Connect to your ATP instance using SQLCL or SQL*Plus**
 
 - Get started connecting to a database using SQL and SQLPLUS *if you have already created an ATP instance*. 
 
@@ -84,14 +84,18 @@ SQL> set cloudconfig /opt/oracle/database/wallet/Wallet_testing.zip
 ```
 
 ```
-SQL> connect admin@testing_high
+SQL> connect admin@testing_high  (replace 'testing_high' with an appropriate service for your instance)
 ```
+Provide your admin password and you are in!
+
 
 ![](./images/1100/sqlcl.png)
 
 SQL PLUS
 
-- Edit the sqlnet.ora using nano file in /opt/oracle/database/wallet and change the line ?/network/admin:
+For SQL*Plus, you will need to unzip the wallet in your local folder and edit sqlnet.ora as follows-
+
+- Edit the sqlnet.ora file in /opt/oracle/database/wallet and change the line ?/network/admin:
 
 Before:
 ```
@@ -114,12 +118,15 @@ sqlplus admin@testing_high
 ![](./images/1100/sqlplus.png)
 
 
-## **Setup OCI config**
 
-- Once in the image we will setup OCI-CLI like we did in [Lab900](https://cloudsolutionhubs.github.io/autonomous-transaction-processing/workshops/autonomous-transaction-processing/?page=LabGuide900ConfigureOCI-CLI.md):
 
+## **Configuring and using Oracle Cloud Infrastructure CLI**
+
+- Next, we'll take a look at configuring and using Oracle Cloud Infrastructure CLI commands. Once in the image we will setup OCI-CLI like we did in [Lab900](https://cloudsolutionhubs.github.io/autonomous-transaction-processing/workshops/autonomous-transaction-processing/?page=LabGuide900ConfigureOCI-CLI.md):
+
+In your container, run -
 ```
-oci setup config
+$ oci setup config
 ```
 
 - The command prompts you for the information required for the config file and the API public/private keys. The setup dialog generates an API key pair and creates the config file.
@@ -156,7 +163,7 @@ oci setup config
   
 ## OCI CLI
 
-These commands can be used anywhere as long as you have run `oci setup config` 
+These commands can be run from any folder as long as you have run `oci setup config` 
 
 -   Example scripts can be found in **/opt/oracle/tools/oci**
 
@@ -226,23 +233,23 @@ These scripts are intended to help any python developer get started connecting t
 
 Assuming you have setup oci using ```oci setup config``` change directories to /opt/oracle/tools/python/ and you will see two directories **sdk** and **apps**
 
-- **Edit your /root/.oci/config file using nano and add the compartmentid line at the bottom like so**:
+- **Edit your /root/.oci/config file and add the compartmentid line at the bottom as shown below**:
 
 ![](./images/1100/compartmentid.png)
 
 ### **APPLICATION EXAMPLE**:
 
-- Please change directories to: **/opt/oracle/tools/python/apps**
+- /opt/oracle/tools/python/apps
 
-In this simple python application, we are connecting to an existing ATP database, creating a table, and loading in the data from sales.csv into the table. We then do a simple query of that data and output that we are connected to the database
+In this simple python application, we are connecting to an existing ATP database, creating a table, and loading data from sales.csv into the table. We then do a simple query of that data and output that we are connected to the database
 
 **Please make sure:**
 
 - **You have downloaded your wallet of the database you created and placed the files in the local directory mapped to /opt/oracle/database/wallet in your container**
 
-- **You have edited /root/.oci/config using nano to point to the correct compartmentid where the database is located**
+- **You have edited /root/.oci/config to point to the correct compartmentid where the database is located**
 
-- Using nano, Edit the sqlnet.ora file in /opt/oracle/database/wallet and change the line ?/network/admin: 
+- Edit the sqlnet.ora file in /opt/oracle/database/wallet and change the line ?/network/admin: 
 
 Before:
 ```
@@ -256,7 +263,7 @@ WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA = (DIRECTORY="/opt/orac
 SSL_SERVER_DN_MATCH=yes
 ```
 
-- You may now run the sample python app
+- You may now run the sample python app as - 
 
 ```
 python exampleConnection.py ADMIN OraclePassword123! salesdb_low
@@ -267,9 +274,9 @@ python exampleConnection.py ADMIN OraclePassword123! salesdb_low
 
 ### **SDK EXAMPLES**:
 
-- Please change directories to: **/opt/oracle/tools/python/sdk**
+- /opt/oracle/tools/python/sdk
 
-Here's some more scripts provided to manage lifecycle operations of Autonomous Database instances. Note that while the scripts are specific to Autonomous Transaction Processing, they can be used equally effectively for Autonomous Datawarehouse instances with a slight modification of keyword. Please refer to Oracle Autonomous Database documentation [here](https://docs.oracle.com/en/cloud/paas/atp-cloud/rest-apis.html)
+Here's some more scripts provided to manage lifecycle operations of Autonomous Database instances. Note that while the scripts are specific to Autonomous Transaction Processing, they can be used equally effectively for Autonomous Datawarehouse instances with a slight modification of keyword. Please refer to Oracle Autonomous Database documentation **here**
 
 **Create Database**
 
@@ -368,7 +375,7 @@ getAutonomousDatabase DBOCID
 
 ```
 
-listAutonomousDatabases -cid compartment-id
+listAutonomousDatabases
 
 ```
 
@@ -398,7 +405,7 @@ updateAutonomousDatabase CPUCount StorageInTBs DBOCID
 
 - **You have edited /root/.oci/config to point to the correct compartmentid where the database is located**
 
-- Using nano, Edit the sqlnet.ora file in /opt/oracle/database/wallet and change the line ?/network/admin:
+- Edit the sqlnet.ora file in /opt/oracle/database/wallet and change the line ?/network/admin:
 
 Before:
 ```
@@ -468,13 +475,13 @@ These scripts are intended to help any nodejs developer get started connecting t
 
 Assuming you have setup oci using ```oci setup config``` change directories to /opt/oracle/tools/python/ and you will see two directories **sdk** and **apps**
 
-- Using nano, Edit your /root/.oci/config file and add the compartmentid line at the bottom like so:
+- Edit your /root/.oci/config file and add the compartmentid line at the bottom like so:
 
 ![](./images/1100/compartmentid.png)
 
 ### **APPLICATION EXAMPLE**:
 
-- Please change directories to: **/opt/oracle/tools/nodejs/apps**
+- /opt/oracle/tools/nodejs/apps
 
 In this simple node application we are connecting to the database 
 
@@ -484,7 +491,7 @@ In this simple node application we are connecting to the database
 
 - **You have edited /root/.oci/config to point to the correct compartmentid where the database is located**
 
-- Using nano, Edit the sqlnet.ora file in /opt/oracle/database/wallet and change the line ?/network/admin:
+- Edit the sqlnet.ora file in /opt/oracle/database/wallet and change the line ?/network/admin:
 
 Before:
 ```
@@ -500,7 +507,7 @@ SSL_SERVER_DN_MATCH=yes
 
 - The sample node.js app used a dbconfig.js configuration file for database credentials
 
--   Using nano, Edit the dbconfig.js file and update the user, password and connectString variables to point to your ATP instances
+-   Edit the dbconfig.js file and update the user, password and connectString variables to point to your ATP instances
 
 -   To run the app as a background process -
 ```
@@ -696,5 +703,8 @@ And now several details of that database will be displayed
 
 ## **Useful Links**:
 
-- [Autonomous Database REST API Information](https://docs.cloud.oracle.com/iaas/api/#/en/database/20160918/AutonomousDatabase/)
-
+- [Autonomous Transaction Processing REST API Information](https://docs.cloud.oracle.com/iaas/api/#/en/database/20160918/AutonomousDatabase/)
+- [Autonomous DataWarehouse REST API Information](https://docs.cloud.oracle.com/iaas/api/#/en/database/20160918/AutonomousDataWarehouse/)
+- [Oracle Cloud Infrastructure Language SDK Documentation](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/sdks.htm)
+- [Oracle Cloud Infrastructure Command Line Interface Documentation](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/cliconcepts.htm)
+- [Oracle Cloud Infrastructure DevOps Tools](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/devopstools.htm)
