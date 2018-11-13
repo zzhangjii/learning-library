@@ -122,9 +122,10 @@ sqlplus admin@testing_high
 
 ## **Configuring and using Oracle Cloud Infrastructure CLI**
 
-- Next, we'll take a look at configuring and using Oracle Cloud Infrastructure CLI commands. Once in the image we will setup OCI-CLI like we did in [Lab900](https://cloudsolutionhubs.github.io/autonomous-transaction-processing/workshops/autonomous-transaction-processing/?page=LabGuide900ConfigureOCI-CLI.md):
+- Next, we'll take a look at configuring and using Oracle Cloud Infrastructure CLI commands. Once in the image we will setup OCI-CLI like we did in <a href="./LabGuide900ConfigureOCI-CLI.md" target="_blank">LabGuide9.md</a>:
 
-In your container, run -
+In your container, run
+
 ```
 $ oci setup config
 ```
