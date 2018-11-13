@@ -11,7 +11,7 @@ During this lab we will take your new trial account and show you how to provisio
 - Login to Your Cloud Account
   - Provision a New Instance
 
-# Starting with Visual Builder 
+# Starting with Visual Builder
 
 ## Create an Application
 
@@ -53,14 +53,17 @@ During this lab we will take your new trial account and show you how to provisio
 
   ![](images/100/LabGuide50-6196f9d1.png)
 
-- Next Select the **Quickstarts** option from the top of the page.
+- Next Select the **Create Instance** button on the page.
 
   ![](images/100/LabGuide50-11580389.png)
 
-- Name your instance and press create.
+- On the next screen set your instance name, enter a description and select the **us-phoenix-1** data center.
 
-  ![](images/100/LabGuide100-a793d2af.png)
+  ![](images/100/LabGuide50-e55cd2f8.png)
 
+- Review your information and press **Create**.
+
+  ![](images/100/LabGuide50-3e32574c.png)
 
 - You will see the following screen once your request is submitted. Press the refresh button every few minutes to see if your instance is provisioned.
 
