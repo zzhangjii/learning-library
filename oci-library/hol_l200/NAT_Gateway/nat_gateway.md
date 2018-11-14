@@ -1,7 +1,6 @@
 
 # NAT Gateway
 
-## Table of Contents
 
 ## Table of Contents
 
@@ -9,15 +8,11 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Practice 1: Generate SSH Keys](#practice-1-generate-ssh-keys)
+[Practice 1: Creating Virtual Cloud Network with Public and Private Subnets](#practice-1-creating-virtual-cloud-networks-with-public-and-private-subnets)
 
-[Practice 2: Signing in OCI Console](#practice-2-signing-in-oci-console)
+[Practice 2: Create Instances](#practice-2-create-instances)
 
-[Practice 3: Create a Virtual Cloud Network](#practice-3-create-a-virtual-cloud-network)
-
-[Practice 4: Creating a Web Server on a Compute Instance](#practice-4-creating-a-web-server-on-a-compute-instance)
-
-[Practice 5: Expand the Compute Instance Storage using Block Volume](#practice-5-expand-the-compute-instance-storage-using-block-volume)
+[Practice 3: Configuring NAT Gateway](#practice-3-configuring-nat-gateway)
 
 [Summary](#summary)
 
@@ -30,8 +25,12 @@ accessible only from the on-premises network or bastion hosts in public subnets.
 
 With the recent enhancements on our virtual networking platform, you can now enable outbound Internet access from your private instances using a new feature ‘NAT Gateway’. A NAT  gateway gives cloud resources without public IP addresses access to the internet without exposing those resources to incoming internet connections.
 
+[Pre-Requisites](#pre-requisites)
 
-# Practice-1: Creating Virtual Cloud Network (VCN) with Public and Private Subnets
+- Oracle Cloud Infrastructure account credentials (User, Password, and Tenant)
+- Access to Oracle Cloud Infrastructure account
+
+# Practice-1: Creating Virtual Cloud Network with Public and Private Subnets
 
 In this exercise, we are going to create a VCN and its required resources.
 
@@ -254,3 +253,7 @@ This route rule now sends all the traffic of the private subnet to nat gateway.A
 While still logged in the Private instance, test internet connectivity. As you can see below, it works now via the NAT Gateway device. 
 
 ![](media/image29.png)
+
+## Summary
+
+In this lab, you were able to create a private instance and provide internet access to that instance without providing any public IP to the instance. 
