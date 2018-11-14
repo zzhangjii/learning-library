@@ -106,15 +106,15 @@ In order to automate with terraform we need to collect a few OCIDs in advance. O
 
 2) The correct compartment for this exercise is **Demo**. If you don't select the correct compartment, none of the steps below will work.  On **Menu** select **Identity** > **Compartments**. Take a note of the Compartment OCID information. Save on your notepad. 
 
-<img width="800" alt="image002" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/OOW-2018/Terraform/img/image002.png">
+<img width="800" alt="image002" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/DevOps/Terraform/img/image002.png">
 
 3) For this exercise, we will use **api.user**. Navigate to **Identity**> **Users** and take a note of OCID for the api.user.  Save on your notepad.
 
-<img width="800" alt="image003" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/OOW-2018/Terraform/img/image003.png">
+<img width="800" alt="image003" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/DevOps/Terraform/img/image003.png">
 
 **Summary:** This exercise consisted of logging into the OCI Console and collecting the tenancy, compartment and user OCIDs. Save these for use later with terraform. You will have something similar to that:
 
-<img width="800" alt="image004" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/OOW-2018/Terraform/img/image004.png">
+<img width="800" alt="image004" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/DevOps/Terraform/img/image004.png">
 
 ## Practice 4: Create a Virtual Cloud Network
 A Virtual Cloud Network (VCN) is a virtual version of a traditional network including subnets, route tables, and gateways on which your compute instances run. Customers can bring their network topology to the cloud with VCN. Creating a VCN involves a few key aspects such as:
