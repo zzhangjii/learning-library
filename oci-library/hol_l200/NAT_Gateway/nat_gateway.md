@@ -247,10 +247,10 @@ In this exercise, we are going to configure a NAT Gateway in our VCN. After conf
 		Compartment: <Your Compartment>
 		Target Type Name: Nat Gateway	
 
-![](media/image27.png)
+![](media/image28.png)
 
 This route rule now sends all the traffic of the private subnet to nat gateway.A NAT gateway gives your private instance access to the internet without exposing it to incoming internet connections.
 
 While still logged in the Private instance, test internet connectivity. As you can see below, it works now via the NAT Gateway device. 
 
-
+![](media/image29.png)
