@@ -1,11 +1,7 @@
 
-<table class="tbl-heading"><tr><td class="td-logo">![](images/ICON.png)
+![](images/ICON.png)
 
-Last Updated:<br>October 19, 2018
-</td>
-<td class="td-banner">
 # From files to Object Storage, then to ADWC and OAC                                    
-</td></tr><table>
 
 When you need a visualization and want to keep up with the data source updates, Oracle provides the perfect tools, all you need to do is to link them together. This workshop walks you through all the steps to set up the pipeline. In order to get started, you will need to provision a **Virtual Machine (VM)**, **Oracle Object Storage**, **Oracle Autonomous Data Warehouse (ADW)**, **Oracle Autonomous Analytic Cloud Service (OAC)** (or using local **Oracle Data Visualization Desktop (DVD)** free with the purchase of ADW service). 
 
