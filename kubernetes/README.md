@@ -269,4 +269,4 @@ Let's explore the deployed application using the Kubernetes Dashboard.
 
 ### Next Steps
 
-- You worked with pre-built docker containers and a pre-installed Kubernetes cluster today. To learn how to start from bare VMs and source code, join us for a virtual, in-person, or self-service workshop where you explore container native development in depth. Visit [https://go.oracle.com/container-native-development](https://go.oracle.com/LP=65991?elqCampaignId=139312&src1=:ex:tb:::RC_NAMK180927P00041:KubernetesDemoLab&SC=:ex:tb:::RC_NAMK180927P00041:KubernetesDemoLab&pcode=NAMK180927P00041) to learn more.
+- You worked with pre-built docker containers and a pre-installed Kubernetes cluster today. To learn how to start from bare VMs and source code, join us for a virtual, in-person, or self-service workshop where you explore container native development in depth. Check out the [Container Native Development Workshop](https://go.oracle.com/LP=65991?elqCampaignId=139312&src1=:ex:tb:::RC_NAMK180927P00041:KubernetesDemoLab&SC=:ex:tb:::RC_NAMK180927P00041:KubernetesDemoLab&pcode=NAMK180927P00041) to learn more.
