@@ -1,5 +1,5 @@
 
-<table class="tbl-heading"><tr><td class="td-logo">[![](images/ICON)](README.md)
+<table class="tbl-heading"><tr><td class="td-logo">[![](images/ICON.png)](README.md)
 
 Last Updated:<br>October 19, 2018
 </td>
