@@ -30,15 +30,13 @@ A typical workflow contains 3 steps:
 
   If you already have Data Visualization Desktop installed on your computer then please check the version. The minimum version that is required to connect to an Oracle Autonomous Data Warehouse is 12c 12.2.5.0.0.
 
-## Step 1: Remotely Upload data into Oracle Object Storage 
-This lab walks you through the steps of logging into Oracle Cloud, accessing the Oracle Autonomous Data Warehouse console and provisioning your first Autonomous Data Warehouse. The last part of this lab will explore how to connect to your new data warehouse using Oracle SQL Developer.
+## Step 1: Remotely upload data into Oracle Object Storage 
+This step walks you through the details of loading data into Oracle Object Storage, and how to set up a scheduler in VM to automate this job.
 
 **Key Objectives**:
 
-- Learn how to sign-in to the Oracle Public Cloud
-- Learn how to provision a new Autonomous Data Warehouse instance
-- Learn how to download the client credentials wallet file
-- Learn how to connect from Oracle SQL Developer
+- Learn how to connect to the Oracle Object Storage
+- Learn how to upload data into Oracle Object Storage remotely
 
 **[Click here to run Lab 1](LabGuide1.md)**
 
