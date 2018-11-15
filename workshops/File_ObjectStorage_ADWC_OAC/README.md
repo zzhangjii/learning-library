@@ -55,10 +55,16 @@ In the new page, on the left side, select "Customer Secret Keys" under Resources
 ![](images/1-3.png)
 
 3. Install rclone tool
+
 Rclone ("rsync for cloud storage") is a command line program to sync files and directories to and from different cloud storage providers.
 Detail instructions can be found here: <a href="https://rclone.org" target="_blank">Rclone homepage</a>
 
-Use 'curl https://rclone.org/install.sh | sudo bash' command to install rclone tool;
+Here we use a Virtual Machine on Oracle Cloud as an example to show how to use rclone to make the connection happen:
+Inside VM, open a terminal, run the following command to install rclone:
+
+'''curl https://rclone.org/install.sh | sudo bash'''
+
+If you encounter any installation problems, you can find help here: <a href="https://rclone.org/downloads/" target="_blank">Rclone download</a>
 
 
 4. Set up OCI Object Storage bucket as rclone remote
