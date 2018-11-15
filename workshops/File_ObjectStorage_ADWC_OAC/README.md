@@ -35,16 +35,36 @@ This step walks you through the details of loading data into Oracle Object Stora
 
 **Key Objectives**:
 
-- Learn how to create a bucket in Oracle Object Storage
 - Learn how to connect to the Oracle Object Storage
 - Learn how to upload data into Oracle Object Storage remotely
 
 **Guide**
 
 1. Create a bucket in Object Storage
-Inside Oracle Cloud Infrastructure (OCI), click MENU on top-left => select Object Storage => select Object Storage
-![](images/1-1.png)
-Click "Create Bucket" => put in bucket name, choose "Standard" for storage tier => Create Bucket
+Instructions can be found here:
+Remember to choose "Standard" for storage tier, "Archieve" type won't work for step 2.
+
+2. Obtain "Secret Key" and "Access Key"
+To access the Oracle Object Storage from outside, we need to use "Secret Access Key" and "Access Key ID".
+Inside OCI, click through top_left MENU => Find "Identity" under Govonance and Administration => Select "Users" => Click on the user acount to open
+
+In the new page, on the left side, select "Customer Secret Keys" under Resources => Click "Generate Secret Key" => Put in Name => Copy the generated Secret Key and write it down (IMPORTANT! This key will not show again!) => Now, in the main page "Customer Secret Keys" section, click "show" to see the Access Key value.
+
+3. Install rclone tool
+Rclone is a tool to
+Detail instructions can be found here:
+
+Use 'curl https://rclone.org/install.sh | sudo bash' command to install rclone tool;
+
+
+4. Set up OCI Object Storage bucket as rclone remote
+use rclone config command to set up a remote link
+
+
+
+5. Load data into Object Storage
+
+
 
 ## Step 2: Automatically load data from Object Storage into ADWC
 In this lab you will explore the free sample data sets that are included witin your new autonomous data warehouse. As part of this lab you will experiment with the selecting different levels of database services that come with your Autonomous Data Warehouse.
