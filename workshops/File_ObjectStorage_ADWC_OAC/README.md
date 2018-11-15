@@ -62,13 +62,17 @@ Detail instructions can be found here: <a href="https://rclone.org" target="_bla
 Here we use a Virtual Machine on Oracle Cloud as an example to show how to use rclone to make the connection happen:
 Inside VM, open a terminal, run the following command to install rclone:
 
-'''curl https://rclone.org/install.sh | sudo bash'''
+```curl https://rclone.org/install.sh | sudo bash```
 
 If you encounter any installation problems, you can find help here: <a href="https://rclone.org/downloads/" target="_blank">Rclone download</a>
 
 
 4. Set up OCI Object Storage bucket as rclone remote
-use rclone config command to set up a remote link
+Inside VM terminal, run rclone config command to set up a remote link:
+
+```rclone config```
+
+then enter ```n``` to select "New remote" option:
 
 
 
