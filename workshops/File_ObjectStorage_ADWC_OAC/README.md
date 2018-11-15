@@ -72,8 +72,27 @@ Inside VM terminal, run rclone config command to set up a remote link:
 
 ```rclone config```
 
-then enter ```n``` to select "New remote" option:
+then enter ```n``` to select "New remote" option.
 
+Following promte, entering the following information:
+
+name: XXX
+
+type = s3  (Oracle Object Storage is categoried as s3 here)
+
+provider = Other 
+
+env_auth = false
+
+access_key_id = c6b898a9db2717c23e0e3dc0b3573b04b72c71ea
+
+secret_access_key = doO1BORL6gL1KrW10XYsdWB2XtrS6hwrv8yQgSquQGo=
+
+region = us-ashburn-1
+
+endpoint = https://zzhangjii.compat.objectstorage.us-ashburn-1.oraclecloud.com
+
+acl = bucket-owner-full-control
 
 
 5. Load data into Object Storage
