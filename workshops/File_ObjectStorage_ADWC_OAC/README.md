@@ -74,30 +74,36 @@ Inside VM terminal, run rclone config command to set up a remote link:
 
 then enter ```n``` to select "New remote" option.
 
-Following promte, entering the following information:
+Following prompt, entering/selecting the following information:
 
 name: XXX
 
 type = s3  (Oracle Object Storage is categoried as s3 here)
 
-provider = Other 
+provider = Other (Oracle is categoried as other)
 
 env_auth = false
 
-access_key_id = c6b898a9db2717c23e0e3dc0b3573b04b72c71ea
+access_key_id = enter the access key value in step 2
 
-secret_access_key = doO1BORL6gL1KrW10XYsdWB2XtrS6hwrv8yQgSquQGo=
+secret_access_key = enter the secret key value in step 2
 
-region = us-ashburn-1
+region = us-ashburn-1 (select the region in which you created your service, this your_region_identifier can be found in top right region of OCI interface )
 
-endpoint = https://zzhangjii.compat.objectstorage.us-ashburn-1.oraclecloud.com
+endpoint = https://<your_namespace>.compat.objectstorage.<your_region_identifier>.oraclecloud.com (namespace can be found in your object storage bucket information page)
 
 acl = bucket-owner-full-control
 
 
 5. Load data into Object Storage
 
+Once your have set up your rclone remote, you can confirm it with command:
 
+```rclone listremotes```
+
+```rclone --verbose --cache-workers 64 --transfers 64 --retries 32 copy /home/ubuntu/temp_unzip/ oci:Test```
+
+More instructions can be found here https://cloud.oracle.com/iaas/whitepapers/transfer-data-to-object-storage.pdf
 
 ## Step 2: Automatically load data from Object Storage into ADWC
 In this lab you will explore the free sample data sets that are included witin your new autonomous data warehouse. As part of this lab you will experiment with the selecting different levels of database services that come with your Autonomous Data Warehouse.
