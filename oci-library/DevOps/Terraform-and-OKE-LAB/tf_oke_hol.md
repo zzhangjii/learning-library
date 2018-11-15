@@ -186,19 +186,19 @@ In order to automate with terraform we need to collect a few OCIDs in advance. O
 
 1) In OCI webconsole, navigate to **Menu** > **Administration** > **Tenancy Details**. Take a note of the Tenancy OCID information. Save on your notepad. 
 
-<img width="800" alt="image001" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/OOW-2018/Terraform/img/image001.png">
+<img width="800" alt="image001" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/DevOps/Terraform/img/image001.png">
 
 2) The correct compartment for this exercise is **Demo**. On **Menu** select **Identity** > **Compartments**. Take a note of the Compartment OCID information. Save on your notepad. 
 
-<img width="800" alt="image002" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/OOW-2018/Terraform/img/image002.png">
+<img width="800" alt="image002" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/DevOps/Terraform/img/image002.png">
 
 3) For this exercise, we will use **api.user**. Navigate to **Identity**> **Users** and take a note of OCID for the api.user.  Save on your notepad.
 
-<img width="800" alt="image003" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/OOW-2018/Terraform/img/image003.png">
+<img width="800" alt="image003" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/DevOps/Terraform/img/image003.png">
 
 **Summary:** This exercise consisted of logging into the OCI Console and collecting the tenancy, compartment and user OCIDs. Save these for use later with terraform. You will have something similar to that:
 
-<img width="800" alt="image004" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/OOW-2018/Terraform/img/image004.png">
+<img width="800" alt="image004" src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/DevOps/Terraform/img/image004.png">
 
 ## Practice 5: Install and Configure Terraform in Bastion Server
 
