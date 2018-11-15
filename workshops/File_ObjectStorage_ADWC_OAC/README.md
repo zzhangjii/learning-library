@@ -42,11 +42,14 @@ This step walks you through the details of loading data into Oracle Object Stora
 
 1. Create a bucket in Object Storage
 Instructions can be found here:  - <a href="https://cloudsolutionhubs.github.io/autonomous-database/workshops/?page=LabGuide400LoadingDataToOracleAutonomousDatabase.md" target="_blank">Setup the OCI Object Store</a>
+
 Remember to choose "Standard" for storage tier, "Archieve" type won't work for step 2.
 
 2. Obtain "Secret Key" and "Access Key"
-To access the Oracle Object Storage from outside, we need to use "Secret Access Key" and "Access Key ID".
-Inside OCI, click through top_left MENU => Find "Identity" under Govonance and Administration => Select "Users" => Click on the user acount to open
+
+To access the Oracle Object Storage from outside, we need to obtain Object Storage's "Secret Access Key" and "Access Key ID" first.
+Inside OCI, click through top_left MENU => Find "Identity" under Govonance and Administration => Select "Users" => Click on the user acount to open;
+
 
 In the new page, on the left side, select "Customer Secret Keys" under Resources => Click "Generate Secret Key" => Put in Name => Copy the generated Secret Key and write it down (IMPORTANT! This key will not show again!) => Now, in the main page "Customer Secret Keys" section, click "show" to see the Access Key value.
 
