@@ -12,13 +12,6 @@ This is the first of several labs that are part of the WebLogic Server On-Prem t
 - Deploying the Application to the Oracle Application Cloud Service Instance
 - Verifying the Application Deployment
 
-## Required Artifacts
-
-For this lab you will need Github and Oracle JDeveloper. Use the following links to set up:
-
-- a [GitHub account - https://github.com/join](GitHub account - https://github.com/join)
--  [Oracle JDeveloper - https://www.oracle.com/technetwork/developer-tools/jdev/overview/index.html](Oracle JDeveloper - https://www.oracle.com/technetwork/developer-tools/jdev/overview/index.html)
-
 # Redeploy both Components to Application Container Cloud Service
 
 ## Deploying the Application to the Oracle Application Cloud Service Instance
