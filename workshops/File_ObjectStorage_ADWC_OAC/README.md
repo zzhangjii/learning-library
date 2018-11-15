@@ -31,17 +31,17 @@ Now we run the below script in Oracle ML notebook as OMLUSER1 to load the data a
 
 ![](images/sqlquery.png)
 
-The datya is now loaded in ADWC. We will create a job in our ML notebook to automate this loading process. 
+The data is now loaded in ADWC. We will create a job in our ML notebook to automate this loading process. 
 The steps for scheduling a data load to ADWC are shown below.
 - Click on Jobs under Quick Actions
    ![](images/mlnotebookhome.png)
    
    
-- The job creation window opens and now click on create
+- The job window opens and now click on create
    ![](images/jobshomepage.png)
    
- The job ctreation wizard will pop up. Here you can select the notebook which you can to schedule for an automatic run and also select the frequency of the run. For example here we want our data load job to run every 15 minutes.
-    ![](images/jobsdetails.png)
+- The job ctreation wizard will pop up. Here you can select the notebook which you can to schedule for an automatic run and also select the frequency of the run. For example here we want our data load job to run every 15 minutes.
+    ![](images/jobdetails.png)
       
  Below is our scheduled job
    ![](images/jobdetails2.png)
