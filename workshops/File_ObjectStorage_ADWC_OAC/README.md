@@ -37,17 +37,15 @@ The steps for scheduling a data load to ADWC are shown below.
    ![](images/jobshomepage.png)
 - The job creation window opens and now click on create
    ![](images/jobsdetails.png)
-   Here you can select the frequency as per requirement. For example here we want our data load job to rum every minute.
+   Here you can select the frequency as per requirement. For example here we want our data load job to run every 15 minutes.
 -Finally click on "OK" and a new scheduled job is created.
-   ![](images/postjobcreation.png)
+   ![](images/jobdetails.png)
+ Below is our scheduled job
+   ![](images/jobdetails2.png)
    
-  
-
-
-
-
-
-
+ We can see that out automatic load has ran successfuly every 15 minutes.
+   ![](images/jobrundetails.png)
+   
 
 ## Goals for this workshop
 
