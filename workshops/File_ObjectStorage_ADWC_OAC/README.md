@@ -71,11 +71,11 @@ If you encounter any installation problems, you can find help here: <a href="htt
 Inside VM terminal, run rclone config command to set up a remote link:
 
 ```rclone config```
-
+![](images/1-4.png)
 then enter ```n``` to select "New remote" option.
 
 Following prompt, entering/selecting the following information:
-
+```
 name: XXX
 
 type = s3  (Oracle Object Storage is categoried as s3 here)
@@ -93,15 +93,22 @@ region = us-ashburn-1 (select the region in which you created your service, this
 endpoint = https://<your_namespace>.compat.objectstorage.<your_region_identifier>.oraclecloud.com (namespace can be found in your object storage bucket information page)
 
 acl = bucket-owner-full-control
-
+```
 
 5. Load data into Object Storage
 
 Once your have set up your rclone remote, you can confirm it with command:
 
 ```rclone listremotes```
+![](images/1-5.png)
+In this example, rclone has a remote name 'oci' linking with our Object Storage. We can use the following command to upload local data into the "Test" bucket inside our Object Storage:
 
-```rclone --verbose --cache-workers 64 --transfers 64 --retries 32 copy /home/ubuntu/temp_unzip/ oci:Test```
+```rclone --verbose --cache-workers 64 --transfers 64 --retries 32    copy   /home/ubuntu/temp_unzip/    oci:Test```
+
+After "copy", the "/home/ubuntu/temp_unzip/" is the path of the source file, "oci:Test" is the target Object Storage bucket, note that if there's no bucket name "Test" in your Object Storage, it will create one with this name to store the files.
+
+![](images/1-6.png)
+If files are already in Object Storage bucket, then this copy command will only transfer files that need to be updated.
 
 More instructions can be found here https://cloud.oracle.com/iaas/whitepapers/transfer-data-to-object-storage.pdf
 
