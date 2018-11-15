@@ -23,7 +23,13 @@ We have already seen how to set up an object storage and load data into it in th
 
 Now we go to our ADWC instance service console and go to our ML notebook. If you need help creating an Oracle ML note book please refer to (https://oracle.github.io/learning-library/workshops/journey4-adwc/?page=LabGuide8.md).
 
-We have 2 users "ADMIN" and "OMLUSER1". We use the "OMLUSER1" for the further steps. We cannot use "ADMIN" for any of the below steps. Now we run the below script in Oracle ML notebook to load the data automatically from Object Storage to ADWC.
+We have 2 users "ADMIN" and "OMLUSER1". We use the "OMLUSER1" for the further steps. We cannot use "ADMIN" for any of the below steps. 
+
+![](images/OMLusers.png)
+
+Now we run the below script in Oracle ML notebook as OMLUSER1 to load the data automatically from Object Storage to ADWC.
+
+
 
 -insert the notepad snapshot here
 
