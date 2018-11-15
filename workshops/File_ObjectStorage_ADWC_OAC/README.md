@@ -50,7 +50,8 @@ The steps for scheduling a data load to ADWC are shown below.
  We can see that out job for automatic data load has ran successfuly every 15 minutes.
    ![](images/jobrundetails.png)
    
-
+## Using the data in Data Visualization desktop
+The data we have in ADWC can we used for drawing important business insights and in the below steps we will see how we can use Data Vizualization desktop for the name. You get a free licence for Data Visualization Desktop with Autonomous Data warehouse. 
 ## Goals for this workshop
 
  - Get comfortable with Oracle's public cloud services
