@@ -41,23 +41,22 @@ This step walks you through the details of loading data into Oracle Object Stora
 **Guide**
 
 1. Create a bucket in Object Storage
-Instructions can be found here:  - <a href="https://cloudsolutionhubs.github.io/autonomous-database/workshops/?page=LabGuide400LoadingDataToOracleAutonomousDatabase.md" target="_blank">Setup the OCI Object Store</a>
-
+Instructions can be found here:   <a href="https://cloudsolutionhubs.github.io/autonomous-database/workshops/?page=LabGuide400LoadingDataToOracleAutonomousDatabase.md" target="_blank">Setup the OCI Object Store</a>
+![](images/1-1.png)
 Remember to choose "Standard" for storage tier, "Archieve" type won't work for step 2.
 
 2. Obtain "Secret Key" and "Access Key"
 
 To access the Oracle Object Storage from outside, we need to obtain Object Storage's "Secret Access Key" and "Access Key ID" first.
 Inside OCI, click through top_left MENU => Find "Identity" under Govonance and Administration => Select "Users" => Click on the user acount to open;
-![](images/1-1.png)
-
 ![](images/1-2.png)
 
 In the new page, on the left side, select "Customer Secret Keys" under Resources => Click "Generate Secret Key" => Put in Name => Copy the generated Secret Key and write it down (IMPORTANT! This key will not show again!) => Now, in the main page "Customer Secret Keys" section, click "show" to see the Access Key value.
+![](images/1-3.png)
 
 3. Install rclone tool
-Rclone is a tool to
-Detail instructions can be found here:
+Rclone ("rsync for cloud storage") is a command line program to sync files and directories to and from different cloud storage providers.
+Detail instructions can be found here: <a href="https://rclone.org" target="_blank">Rclone homepage</a>
 
 Use 'curl https://rclone.org/install.sh | sudo bash' command to install rclone tool;
 
