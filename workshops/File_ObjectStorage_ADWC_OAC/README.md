@@ -29,11 +29,10 @@ We have 2 users "ADMIN" and "OMLUSER1". We use the "OMLUSER1" for the further st
 
 Now we run the below script in Oracle ML notebook as OMLUSER1 to load the data automatically from Object Storage to ADWC.
 
+![](images/sqlquery.png)
 
-
--insert the notepad snapshot here
-
-Now we need to schedule a job with ADWC to run the above script. For this we follow the below steps.
+The datya is now loaded in ADWC. We will create a job in our ML notebook to automate this loading process. 
+The steps for scheduling a data load to ADWC are shown below.
 - Click on Jobs under Quick Actions
 - The job creation window opens and now click on create
 -Finally click on "OK" and a new scheduled job is created.
