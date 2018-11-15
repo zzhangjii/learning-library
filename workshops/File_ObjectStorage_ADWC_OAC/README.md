@@ -35,13 +35,13 @@ This step walks you through the details of loading data into Oracle Object Stora
 
 **Key Objectives**:
 
-- Learn how to connect to the Oracle Object Storage
+- Learn how to connect to the Oracle Object Storage using rclone
 - Learn how to upload data into Oracle Object Storage remotely
 
 **Guide**
 
 1. Create a bucket in Object Storage
-Instructions can be found here:
+Instructions can be found here:  - <a href="https://cloudsolutionhubs.github.io/autonomous-database/workshops/?page=LabGuide400LoadingDataToOracleAutonomousDatabase.md" target="_blank">Setup the OCI Object Store</a>
 Remember to choose "Standard" for storage tier, "Archieve" type won't work for step 2.
 
 2. Obtain "Secret Key" and "Access Key"
