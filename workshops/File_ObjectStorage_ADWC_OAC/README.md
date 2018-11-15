@@ -8,7 +8,34 @@ When you need a visualization and want to keep up with the data source updates, 
 A typical workflow contains 3 steps:
 1. Obtain the data from various resources and upload it into object storage, this step can be automated through scheduling a script job in VM;  
 2. Load the data from object storage into ADWC, this step can be automated through scheduling a notebook job in ADWC; 
-3. Refresh the visualization in OAC or DVD to reflect the data updates in ADWC.  
+3. Refresh the visualization in OAC or DVD to reflect the data updates in ADWC. 
+
+##Move data from various sources to ADWC
+
+##Loading data to ADWC from object storage
+We have already seen in ?? how to provision Autonomous Data Warehouse (ADWC). In this section we will focus on how to get data to ADWC from object storage without any human intervention.
+
+We have already seen how to set up an object storage and load data into it in the previous section. Once the data files are updated in object storage we need to construct the URLs of the files and an object store auth token. Refer Steps 7-9 Under Setup the OCI Object Store (https://oracle.github.io/learning-library/workshops/journey4-adwc/?page=LabGuide3.md)
+
+_object store bucket image
+-object store auth token image
+
+Now we go to our ADWC instance service console and go to our ML notebook. If you need help creating an Oracle ML note book please refer to (https://oracle.github.io/learning-library/workshops/journey4-adwc/?page=LabGuide8.md).
+
+We have 2 users "ADMIN" and "OMLUSER1". We use the "OMLUSER1" for the further steps. Now we run the below script in Oracle ML notebook to load the data automatically from Object Storage to ADWC.
+
+-insert the notepad snapshot here
+
+Now we need to schedule a job with ADWC to run the above script. For this we follow the below steps.
+- Click on Jobs under Quick Actions
+- The job creation window opens and now click on create
+-Finally click on "OK" and a new scheduled job is created.
+
+
+
+
+
+
 
 ## Goals for this workshop
 
