@@ -3,7 +3,7 @@
 
 # From files to Object Storage, then to ADWC and OAC                                    
 
-When you need a visualization and want to keep up with the data source updates, Oracle provides the perfect tools, all you need to do is to link them together. This workshop walks you through all the steps to set up the pipeline. In order to get started, you will need to provision a **Virtual Machine (VM)**, **Oracle Object Storage**, **Oracle Autonomous Data Warehouse (ADW)**, **Oracle Autonomous Analytic Cloud Service (OAC)** (or using local **Oracle Data Visualization Desktop (DVD)** free with the purchase of ADW service). Information about how to provision those instances can be found inside upper level workshop folders.
+When you need a visualization and want to keep it up with the data source updates, Oracle provides the perfect tools, all you have to do is to link them together. This workshop walks you through all the steps to set up the pipeline. In order to get started, you will need to provision a **Virtual Machine (VM)**, **Oracle Object Storage**, **Oracle Autonomous Data Warehouse (ADW)**, **Oracle Autonomous Analytic Cloud Service (OAC)** (or using local **Oracle Data Visualization Desktop (DVD)** free with the purchase of ADW service). Information about how to provision those instances can be found inside upper level workshop folders.
 
 A typical workflow contains 3 steps:
 1. Obtain the data from various resources and upload it into object storage, this step can be automated through scheduling a script job in VM;  
@@ -35,14 +35,16 @@ This step walks you through the details of loading data into Oracle Object Stora
 
 **Key Objectives**:
 
+- Learn how to create a bucket in Oracle Object Storage
 - Learn how to connect to the Oracle Object Storage
 - Learn how to upload data into Oracle Object Storage remotely
 
-**[Click here to run Lab 1](LabGuide1.md)**
+**Guide**
 
-<a href="https://apexapps.oracle.com/pls/apex/f?p=44785:112:0::::P112_CONTENT_ID:24294" target="_blank">**Click here to watch a video demonstration**</a> of provisioning a new autonomous data warehouse.
-
-<a href="https://apexapps.oracle.com/pls/apex/f?p=44785:112:0::::P112_CONTENT_ID:22790 " target="_blank">**Click here to watch a video demonstration**</a> of connecting to your new Autonomous Data Warehouse using SQL Developer.
+1. Create a bucket in Object Storage
+Inside Oracle Cloud Infrastructure (OCI), click MENU on top-left => select Object Storage => select Object Storage
+![](images/1-1.png)
+Click "Create Bucket" => put in bucket name, choose "Standard" for storage tier => Create Bucket
 
 ## Step 2: Automatically load data from Object Storage into ADWC
 In this lab you will explore the free sample data sets that are included witin your new autonomous data warehouse. As part of this lab you will experiment with the selecting different levels of database services that come with your Autonomous Data Warehouse.
