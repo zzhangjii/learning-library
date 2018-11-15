@@ -42,11 +42,7 @@ The steps for scheduling a data load to ADWC are shown below.
    
  The job ctreation wizard will pop up. Here you can select the notebook which you can to schedule for an automatic run and also select the frequency of the run. For example here we want our data load job to run every 15 minutes.
     ![](images/jobsdetails.png)
-    
-    
--Finally click on "OK" and a new scheduled job is created.
-   ![](images/jobdetails.png)
-   
+      
  Below is our scheduled job
    ![](images/jobdetails2.png)
    
