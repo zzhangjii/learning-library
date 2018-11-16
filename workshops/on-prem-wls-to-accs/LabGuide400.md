@@ -104,7 +104,7 @@ Note that the the cluster name (alphaOff_cluster in this example) would be the f
 
 - Test access to the application
   
-   ![](images/400/400_1_1_2.png)
+   ![](images/400/localhost_alpha_product.png)
 
 ### **STEP 2**: Install the AppToCloud Tools
 - Sign in to the Oracle Cloud My Services dashboard. Follow the instructions in your Welcome email, or go to http://cloud.oracle.com and click Sign In.
