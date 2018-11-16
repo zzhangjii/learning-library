@@ -102,7 +102,7 @@ More instructions can be found here https://cloud.oracle.com/iaas/whitepapers/tr
 
 ## Step 2: Automatically load data from Object Storage into ADWC
 
-We have already seen in <a href="https://cloudsolutionhubs.github.io/autonomous-database/workshops/LabGuide100ProvisioningOracleAutonomousDatabase" target="_blank">ADWC Lab Guide</a> how to provision Autonomous Data Warehouse (ADWC). In this section we will focus on how to get data to ADWC from object storage without any human intervention.
+We have already seen in <a href="https://cloudsolutionhubs.github.io/autonomous-database/workshops/LabGuide100ProvisioningOracleAutonomousDatabase" target="_blank">ADWC Lab Guide</a> how to provision Autonomous Data Warehouse (ADWC). In this section we will focus on how to get data to ADWC from object storage without any human intervention. 
 
 
 We have already seen how to set up an object storage and load data into it in the previous section. Once the data files are updated in object storage we need to construct the URLs of the files and an object store auth token. Refer Steps 7-9 Under Setup the OCI Object Store (https://oracle.github.io/learning-library/workshops/journey4-adwc/?page=LabGuide3.md)
@@ -120,12 +120,26 @@ Now we go to our ADWC instance service console and go to our ML notebook. If you
 
 
 
-We have 2 users "ADMIN" and "OMLUSER1". We use the "OMLUSER1" for the further steps. We cannot use "ADMIN" for any of the below steps. 
+In ML notebook, System Administrator "ADMIN" cannot create a notebook or schedule a job. So, we have to create a normal user "OMLUSER1" and use it for the further steps. We cannot use "ADMIN" for any of the below steps. 
 
 
 ![](images/OMLusers.png)
 
-Now we run the below script in Oracle ML notebook as OMLUSER1 to load the data automatically from Object Storage to ADWC.
+Credential is required here to transfer data. To create a Credential, inside OCI, click through top_left MENU => Find "Identity" under Govonance and Administration => Select "Users" => Click on the user acount to open;
+![](images/1-2.png)
+
+In the new page, on the left side, select "Auth Token" under Resources => Click "Generate Secret Key" => Put in Name => Copy the generated token and write it down (IMPORTANT! This token will not show again!). Note that for each account, you can create 2 auth tokens at most.
+
+Now we run the below script in Oracle ML notebook as OMLUSER1 to create a Credential:
+
+```
+dbms_cloud.create_credential (
+    credential_name => 'OBJ_STORE_CRED10',
+    username => 'your_login_email_account',
+    password => 'Auth_token_just generated'
+  ) ;
+  ```
+Then we can load the data automatically from Object Storage to ADWC.
 
 ![](images/sqlquery.png)
 
