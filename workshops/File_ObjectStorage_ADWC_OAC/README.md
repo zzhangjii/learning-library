@@ -102,7 +102,7 @@ More instructions can be found here https://cloud.oracle.com/iaas/whitepapers/tr
 
 ## Step 2: Automatically load data from Object Storage into ADWC
 
-We have already seen in (https://cloudsolutionhubs.github.io/autonomous-database/workshops/LabGuide100ProvisioningOracleAutonomousDatabase) how to provision Autonomous Data Warehouse (ADWC). In this section we will focus on how to get data to ADWC from object storage without any human intervention.
+We have already seen in <a href="https://cloudsolutionhubs.github.io/autonomous-database/workshops/LabGuide100ProvisioningOracleAutonomousDatabase" target="_blank">ADWC Lab Guide</a> how to provision Autonomous Data Warehouse (ADWC). In this section we will focus on how to get data to ADWC from object storage without any human intervention.
 
 
 We have already seen how to set up an object storage and load data into it in the previous section. Once the data files are updated in object storage we need to construct the URLs of the files and an object store auth token. Refer Steps 7-9 Under Setup the OCI Object Store (https://oracle.github.io/learning-library/workshops/journey4-adwc/?page=LabGuide3.md)
