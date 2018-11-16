@@ -317,8 +317,8 @@ If the import fails, use the Activity tab to view the log for this operation.
   
 - Identity the Public IP address in this service instance.
 
-- Direct your browser to the URL http://LB_PUBLIC_IP/AlphaProductCatalog/products.jsp.
+- Direct your browser to the URL http://LB_PUBLIC_IP/alpha-office-product-catalog/products.jsp.
 Verify that the AlphaProductCatalog application was successfully deployed to Oracle Cloud.
 
-   ![](images/400/400_2_4_1.png)
+   ![](images/300/DB/Upload_to_JCS/product.png)
 

@@ -174,7 +174,7 @@ Note that the the cluster name (WebLogic alphaOff_cluster in this example) would
 - Enter the URL that you identified in the previous step in a browser. 
 If you see the untrusted security certificate warning, add the certificate to your browser, as an exception, and continue. The text of this warning and the steps to proceed depend on your browser. In Firefox, for example, you can proceed by clicking Advanced and then Add Exception. 
   - The URL for the application would be in the format **https://managedServer_publicIP/contextRoot** 
-   Example: https://129.213.145.149/products.jsp
+   Example: https://129.213.145.149/alpha-office-product-catalog/products.jsp
 
 - Once the app is running it will appear something like this
 
