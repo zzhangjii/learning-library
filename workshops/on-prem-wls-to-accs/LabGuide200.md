@@ -31,19 +31,25 @@ This is the first of several labs that are part of the WebLogic Server On-Prem t
     ![](images/200/war_3.png) 
 
 - In the Edit WAR Deployment Profile Properties, edit any changes and click OK.
-
+    
     ![](images/200/war_4.png) 
 
-- Deploy AlphaProductCatalog is displayed. Select Deploy to War and click Next.
+- Right Click project and Click Deploy. Select recently created AlphaProductCatalog. 
+  
+    ![](images/200/SelectWarFile.png)
 
+- Deploy AlphaProductCatalog is displayed. Select Deploy to War and click Next.    
     ![](images/200/war_5.png) 
 
 - In the Summary page, verify the values and click Finish.
    
-    ![](images/200/war_6.png)
+    ![](images/200/Summary.png)
 
 ### **STEP 2**: Uploading the war file to the  Application Container Cloud Service
 
+- Log into Oracle Cloud (https://cloud.oracle.com/en_US/sign-in). From Action Menu in the Application Container, select Open Service Control.
+  
+    ![](images/200/OpenACCS.png)
 
 - In the Oracle Application Container Cloud, click Create Application.
 

@@ -115,7 +115,7 @@ Note that the the cluster name (alphaOff_cluster in this example) would be the f
 
 Note: If the Java tile is not visible, click Customize Dashboard.
 
-- Click your user name at the top of the page. Select Help and then Download Center.
+- Click your username at the top of the page. Select Help and then Download Center.
 
 - Click the download icon for AppToCloud. Save the file a2c-zip-installer.zip to the machine running the sample domain.
   
