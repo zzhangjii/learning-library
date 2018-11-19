@@ -12,13 +12,6 @@ This is the first of several labs that are part of the WebLogic Server On-Prem t
 - Deploying the Application to the Oracle Application Cloud Service Instance
 - Verifying the Application Deployment
 
-## Required Artifacts
-
-For this lab you will need Github and Oracle JDeveloper. Use the following links to set up:
-
-- a [GitHub account - https://github.com/join](GitHub account - https://github.com/join)
--  [Oracle JDeveloper - https://www.oracle.com/technetwork/developer-tools/jdev/overview/index.html](Oracle JDeveloper - https://www.oracle.com/technetwork/developer-tools/jdev/overview/index.html)
-
 # Redeploy both Components to Application Container Cloud Service
 
 ## Deploying the Application to the Oracle Application Cloud Service Instance
@@ -38,19 +31,25 @@ For this lab you will need Github and Oracle JDeveloper. Use the following links
     ![](images/200/war_3.png) 
 
 - In the Edit WAR Deployment Profile Properties, edit any changes and click OK.
-
+    
     ![](images/200/war_4.png) 
 
-- Deploy AlphaProductCatalog is displayed. Select Deploy to War and click Next.
+- Right Click project and Click Deploy. Select recently created AlphaProductCatalog. 
+  
+    ![](images/200/SelectWarFile.png)
 
+- Deploy AlphaProductCatalog is displayed. Select Deploy to War and click Next.    
     ![](images/200/war_5.png) 
 
 - In the Summary page, verify the values and click Finish.
    
-    ![](images/200/war_6.png)
+    ![](images/200/Summary.png)
 
 ### **STEP 2**: Uploading the war file to the  Application Container Cloud Service
 
+- Log into Oracle Cloud (https://cloud.oracle.com/en_US/sign-in). From Action Menu in the Application Container, select Open Service Control.
+  
+    ![](images/200/OpenACCS.png)
 
 - In the Oracle Application Container Cloud, click Create Application.
 

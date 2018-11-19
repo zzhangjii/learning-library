@@ -32,7 +32,7 @@ You will take on 2 Personas during the workshop. The **Lead DevOps Engineer Per
     ![](images/100/Picture100-1.png)
 
 
-- Enter your identity domain and click **My Serices**
+- Enter your identity domain and click **My Services**
 
     **NOTE:** The **Identity Domain** should come from your Trial confirmation email.
 
@@ -61,7 +61,7 @@ In order to complete the remaining migration labs, we will first create our on-p
 
 
 ### **STEP 3**: Create Network and Compartment on OCI
-- Click Computer from the Customize Dashboard, and Click Identy and Compartments. 
+- Click Compute from the Customize Dashboard or from Services. After that from the Menu Click Identity and Compartments. 
   
   ![](images/100/LabGuide100-CreateCompartment.png)
 
@@ -73,13 +73,16 @@ In order to complete the remaining migration labs, we will first create our on-p
   
   ![](images/100/LabGuide100-CreateCompartment3.png)
 
-- Click Compute and Custom Images
+- Click Compute from the menu and click Custom Images.
   
   ![](images/100/LabGuide100-CustomImages.png)
 
 ### **STEP 4**: Import Custom Image
 
-- Click Import Image button and fill name and copy object storage URL.  (https://objectstorage.us-ashburn-1.oraclecloud.com/p/nMMC1055MyjdIJd-AuNXBMRpr5MMnBbX8UY5RWjAB6s/n/oraclestartupecosystem/b/DownloadableContentWLS-Workshop/o/Nov1-18-JDevClient) After that, click Import Image.
+- Click Import Image button and fill name and copy object storage URL.
+  https://objectstorage.us-ashburn-1.oraclecloud.com/p/SYLtttdNPcIjxVbKbzsNDuzl7ZZaFCPGLodzGz8nP-Q/n/gse00015058/b/PlaceForImages/o/Nov7JDevImage
+
+   After that, click Import Image.
   
 ![](images/100/LabGuide100-ImageImport.png)
 
@@ -93,14 +96,15 @@ In order to complete the remaining migration labs, we will first create our on-p
 
 ### **STEP 5**: Create Instance
 
-- Click Custom Images in Compute and select WeblogicOnPrem image and click Create Instance
+- From the Custom Images page, select WeblogicOnPrem image and click Create Instance
   
   ![](images/100/CreateInstanceOnImage.png)
 
-- Click Create Instance after completing required name for the instance.
+- Click Create Instance button after completing required name for the instance.
 
-  ![](images/100/CreateInstanceBegin.png)
-  ![](images/100/LabGuide100-CreateVCN.png)
+  ![](images/100/CreateInstance1.png)
+  ![](images/100/CreateInstance2.png)
+  ![](images/100/CreateInstance3.png)
 
 - You can see your WebLogicLabInstance is provisioning.
   
@@ -113,7 +117,7 @@ In order to complete the remaining migration labs, we will first create our on-p
 - You can connect to the image instance using the public ip Address.
   
   Example: vnc://132.145.175.73:5910
-
+  Password: Oracle123
 
 ### **STEP 6**: Open JDeveloper Environment
 
@@ -121,7 +125,7 @@ In order to complete the remaining migration labs, we will first create our on-p
 
  ![](images/100/ImageWelcome.png)
 
-- Click Java EE Developer option
+- Select Java EE Developer option
   
  ![](images/100/j2eesettings.png)
   

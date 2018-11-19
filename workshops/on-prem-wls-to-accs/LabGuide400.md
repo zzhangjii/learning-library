@@ -104,7 +104,7 @@ Note that the the cluster name (alphaOff_cluster in this example) would be the f
 
 - Test access to the application
   
-   ![](images/400/400_1_1_2.png)
+   ![](images/400/localhost_alpha_product.png)
 
 ### **STEP 2**: Install the AppToCloud Tools
 - Sign in to the Oracle Cloud My Services dashboard. Follow the instructions in your Welcome email, or go to http://cloud.oracle.com and click Sign In.
@@ -115,7 +115,7 @@ Note that the the cluster name (alphaOff_cluster in this example) would be the f
 
 Note: If the Java tile is not visible, click Customize Dashboard.
 
-- Click your user name at the top of the page. Select Help and then Download Center.
+- Click your username at the top of the page. Select Help and then Download Center.
 
 - Click the download icon for AppToCloud. Save the file a2c-zip-installer.zip to the machine running the sample domain.
   
@@ -317,8 +317,8 @@ If the import fails, use the Activity tab to view the log for this operation.
   
 - Identity the Public IP address in this service instance.
 
-- Direct your browser to the URL http://LB_PUBLIC_IP/AlphaProductCatalog/products.jsp.
+- Direct your browser to the URL http://LB_PUBLIC_IP/alpha-office-product-catalog/products.jsp.
 Verify that the AlphaProductCatalog application was successfully deployed to Oracle Cloud.
 
-   ![](images/400/400_2_4_1.png)
+   ![](images/300/DB/Upload_to_JCS/product.png)
 
