@@ -1,41 +1,33 @@
 <table class="tbl-heading"><tr><td class="td-logo">![](images/obe_tag.png)
 
-November 08, 2018
+November 19, 2018
 </td>
 <td class="td-banner">
-# Lab 1000: Using Kubernetes
+# Lab 10: Kubernetes and ATP
 </td></tr><table>
 
 ## Introduction
 
-A Kubernetes cluster is a group of nodes. The nodes are the machines running applications. Each node can be a physical machine or a virtual machine. The node's capacity (its number of CPUs and amount of memory) is defined when the node is created. A cluster can be organized into namespaces, to divide the cluster's resources between multiple uses.
+Containers allow us to package apps along with all their dependencies and provide a light-weight run time environment that provides isolation similar to a virtual machine, but without the added overhead of a full-fledged operating system
 
-- a master node (for high availability, typically there will actually be a number of master nodes)
-- one or more worker nodes (sometimes known as minions)
+The topic of containers and microservices is a subject on its own but suffice to say that breaking up large, complex software into more manageable pieces that run isolated from each other has many advantages. Its easier to deploy, diagnose and provides better availability since failure of any microservice limits downtime to a portion of the application.
 
-The master node in a cluster runs a number of processes:
+![](./images/1000/Picture300.png)
 
-- kube-apiserver to support API operations via the Kubernetes command line tool (kubectl) and the REST API, and includes admissions controllers required for advanced Kubernetes operations
-- kube-controller-manager to manage different Kubernetes components (for example, replication controller, endpoints controller, namespace controller, and serviceaccounts controller)
-- kube-scheduler to control where in the cluster to run jobs
-- etcd to store the cluster's configuration data
+Its important to have a similar strategy in the backend for the database tier. But the issue is if you run multiple databases for each application then you end up having to maintain a large fleet of databases and the maintenance costs can go through the roof. Add to that having to manage security and availability for all of them.
 
-Each worker node runs two Kubernetes processes:
+This is where the Oracle’s autonomous database cloud service comes in. It is based on a pluggable architecture similar to application containers where one container database holds multiple pluggable databases. Each of these pluggable databases or PDBs are completely isolated from each other, can be deployed quickly and can be managed as a whole so that you incur the cost of managing a single database while deploying multiple micro services onto these PDBs.
 
-- kubelet to communicate with the master node
-- kube-proxy to handle networking
-
-Each worker node also runs the Docker runtime.
-
-![](./images/800/Picture300.png)
-
+The Autonomous cloud service takes it a step further. It is self managing, self securing and highly available. There is no customer involvement in backing it up, patching it or even tuning it for most part. You simply provision, connect and run your apps. Lets take a look at how we can use cloud automation to deploy a full application stack in the Oracle Cloud Infrastructure and deploy a micro-service application.
 
 To **log issues**, click [here](https://github.com/cloudsolutionhubs/autonomous-transaction-processing/issues/new) to go to the github oracle repository issue submission form.
 
 ## Objectives
 
-- To build a Kubernetes cluster in the Oracle Cloud running a node.js application
-- Connect Node.js application to an ATP Database service running in the Oracle cloud
+- Use OCI automation to deploy a full infrastructure stack including load balancers, network, compute and a Kubernetes cluster
+- Automate deployment of ATP database
+- Deploy a microservice on the kubernetes cluster connected to the ATP database
+
 
 ## Required Artifacts
 

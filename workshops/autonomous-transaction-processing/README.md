@@ -151,7 +151,7 @@ Read on to begin your Getting Started journey with Oracle Autonomous Transaction
 
 **[Click here to run Lab 9](LabGuide900ConfigureOCI-CLI.md)**
 
-## Lab 10: Kubernetes
+## Lab 10: Kubernetes and ATP
 
 **Key Objectives**:
 
