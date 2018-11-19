@@ -155,8 +155,9 @@ Read on to begin your Getting Started journey with Oracle Autonomous Transaction
 
 **Key Objectives**:
 
-- To build a Kubernetes cluster in the Oracle Cloud running a node.js application
-- Connect Node.js application to an ATP Database service running in the Oracle cloud
+- Use OCI automation to deploy a full infrastructure stack including load balancers, network, compute and a Kubernetes cluster
+- Automate deployment of ATP database
+- Deploy a microservice on the kubernetes cluster connected to the ATP database
 
 **[Click here to run Lab 10](LabGuide1000Kubernetes.md)**
 
