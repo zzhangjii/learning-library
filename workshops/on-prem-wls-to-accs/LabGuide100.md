@@ -79,8 +79,8 @@ In order to complete the remaining migration labs, we will first create our on-p
 
 ### **STEP 4**: Import Custom Image
 
-- Click Import Image button and fill name and copy object storage URL.
-  https://objectstorage.us-ashburn-1.oraclecloud.com/p/SYLtttdNPcIjxVbKbzsNDuzl7ZZaFCPGLodzGz8nP-Q/n/gse00015058/b/PlaceForImages/o/Nov7JDevImage
+- Click Import Image button and fill name of import image and  **copy** object storage URL.
+  https://objectstorage.us-ashburn-1.oraclecloud.com/p/0wZwJGDzVjygLdY2mMWO6L32dzCO0CxQ2k-c1T3liMI/n/gse00015058/b/PlaceForImages/o/Nov7JDevImage
 
    After that, click Import Image.
   
@@ -103,6 +103,16 @@ In order to complete the remaining migration labs, we will first create our on-p
 - Click Create Instance button after completing required name for the instance.
 
   ![](images/100/CreateInstance1.png)
+
+- If you do not have SSH key file, open a terminal window (by right clicking on the desktop and and selecting Open Terminal) and run each of the following commands, one at a time, pressing Enter between each one. These commands will create a new directory called .oci, generate a new PEM private key, generate the corresponding public key, and copy the public key to the clipboard.
+  
+  ```bash
+mkdir ~/.oci
+openssl genrsa -out ~/.oci/oci_api_key.pem 2048
+openssl rsa -pubout -in ~/.oci/oci_api_key.pem -out ~/.oci/oci_api_key_public.pem
+cat ~/.oci/oci_api_key_public.pem
+```
+
   ![](images/100/CreateInstance2.png)
   ![](images/100/CreateInstance3.png)
 
