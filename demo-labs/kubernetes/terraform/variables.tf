@@ -28,7 +28,7 @@ variable "AD" {
 }
 
 variable "InstanceShape" {
-  default = "VM.Standard1.1"
+  default = "VM.Standard2.1"
 }
 
 variable "InstanceImageOCID" {
@@ -39,7 +39,7 @@ variable "InstanceImageOCID" {
     // See https://docs.us-phoenix-1.oraclecloud.com/Content/Resources/Assets/OracleProvidedImageOCIDs.pdf
     //us-phoenix-1 = "ocid1.image.oc1.phx.aaaaaaaav4gjc4l232wx5g5drypbuiu375lemgdgnc7zg2wrdfmmtbtyrc5q"
 
-    us-ashburn-1   = "ocid1.image.oc1.iad.aaaaaaaaeg644ql7ij6lalu7wuaukopewd5dueokvsxzz2czbmrmwqusr4lq"
+    us-ashburn-1   = "ocid1.image.oc1.iad.aaaaaaaaqsvykqhjjayjm6ffoy2tcc7t3bklnoqytg5sll2qthfrbinu5vpa"
     //eu-frankfurt-1 = "ocid1.image.oc1.eu-frankfurt1.aaaaaaaajdge4yzm5j7ci7ryzte7f3qgcekljjw7p6nexhnsvwt6hoybcu3q"
   }
 }
