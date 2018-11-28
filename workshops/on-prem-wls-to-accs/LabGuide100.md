@@ -124,11 +124,24 @@ cat ~/.oci/oci_api_key_public.pem
   
   ![](images/100/RunningInstance.png)
 
-- You can connect to the image instance using the public ip Address.
+- You can connect to the image instance using the public ip Address (Mac Clients).
   
   Example: vnc://132.145.175.73:5910
   Password: Oracle123
 
+- You can connect to the image instance using the public ip Address (Windows Clients).
+  
+  If you do not have VNC Viewer, you can download it from here. <a href="https://www.realvnc.com/en/connect/download/viewer/windows/" target="_trial">Download VNC Viewer</a>.
+  
+  Enter public ip address and port 5910 as follows.
+  ![](images/100/vnc1.png)
+
+  Click continue to connect.
+  ![](images/100/vnc2.png)
+
+  You can view your up and running instance as follows.
+  ![](images/100/vnc3.png)
+  
 ### **STEP 6**: Open JDeveloper Environment
 
 - Click JDeveloper icon to open JDeveloper Environment

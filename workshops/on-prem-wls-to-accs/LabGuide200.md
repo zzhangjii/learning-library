@@ -17,6 +17,13 @@ This is the first of several labs that are part of the WebLogic Server On-Prem t
 ## Deploying the Application to the Oracle Application Cloud Service Instance
 
 ### **STEP 1**: Preparing the WAR file to be Deployed
+- Click Application tab and open Terminal. 
+  
+    ![](images/200/Terminal.png)
+
+- You need to pull latest code as follows.
+  
+    ![](images/200/pull_request.png)
 
 - In the Projects pane in Oracle JDeveloper, right-click Project and select Deploy > New Deployment Profile.
    
@@ -42,7 +49,7 @@ This is the first of several labs that are part of the WebLogic Server On-Prem t
     ![](images/200/war_5.png) 
 
 - In the Summary page, verify the values and click Finish.
-   
+  Note: You can find generated war file as follows. 
     ![](images/200/Summary.png)
 
 ### **STEP 2**: Uploading the war file to the  Application Container Cloud Service
