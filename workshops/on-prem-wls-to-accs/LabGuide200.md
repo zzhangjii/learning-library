@@ -17,7 +17,11 @@ This is the first of several labs that are part of the WebLogic Server On-Prem t
 ## Deploying the Application to the Oracle Application Cloud Service Instance
 
 ### **STEP 1**: Preparing the WAR file to be Deployed
-- Click Application tab and open Terminal. You need to pull latest code as follows.
+- Click Application tab and open Terminal. 
+  
+    ![](images/200/Terminal.png)
+
+- You need to pull latest code as follows.
   
     ![](images/200/pull_request.png)
 
