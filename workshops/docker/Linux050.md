@@ -157,6 +157,8 @@ For the purposes of the upcoming Docker deployments we need to add five Ingress 
 
 - Click **Edit All Rules** and then select **+ Another Ingress Rule**
 
+  **NOTE: DO NOT EDIT AN ALREADY EXISTING RULE, ADD NEW ONES...**
+
     ![](images/050Linux/19.PNG)
 
     ![](images/050Linux/Linux050-c8ef545e.png)
@@ -252,32 +254,40 @@ You will now create a Linux based Compute instance using the public key you just
 
    ![](images/050Linux/27.PNG)
 
-- **Select or Type** the following in the `Instance` section of the dialog:
+- **Select / Leave Default or Type** the following in the `Create Compute Instance` section of the dialog:
 
 ```
 Name: Docker
-Availability Domain: xxx-AD-1
+Availability Domain: AD 1 (Use default AD 1)
 Boot Volume: Oracle-Provided OS Image
-Image Operating System: Oracle Linux 7.5
-Shape Type: Virtual Machine
-Shape: VM.Standard2.1
+Image Operating System: Oracle Linux 7.5 (Select Oracle Linux 7.5)
+Shape Type: Virtual Machine (Default)
+Shape: VM.Standard2.1 (Default)
 SSH Keys: Choose SSH Key Files
 ```
 
-- You will Browse and select your PUBLIC SSH Key
+- After entering the _Docker_ instance name click the **Change Image Source**.
+
+   ![](images/050Linux/27-2.PNG)
+
+- Select **Oracle Linux 7.5** and click **Select**.
+
+   ![](images/050Linux/27-4.PNG)
+
+- This selection will now be shown on the page:
+
+   ![](images/050Linux/27-6.PNG)
+
+- Scroll down furthur on the page and select your PUBLIC SSH Key
 **NOTE:** You will paste the public key you copied in Step 7 into the SSH KEY field by selecting the "Paste SSH Keys" radio button. `The public key should all be on ONE LINE`
 
    ![](images/050Linux/28.PNG)
 
-- In the Network Section **Select** the following:
-
-```
-Virtual Cloud Network: DockerVCN
-```
+- In the Configure networking Section you will take ALL of the defaults as shown:
 
    ![](images/050Linux/29.PNG)
 
-- Click **Create Instance**
+- Click **Create**
 
 After a few minutes you should see a running instance with a Public IP Address.
 
