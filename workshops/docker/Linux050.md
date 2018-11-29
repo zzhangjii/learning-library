@@ -97,9 +97,7 @@ Compartments are used to isolate resources within your OCI tenant. User-based ac
 
     ![](images/050Linux/8.png)
 
-    ![](images/050Linux/8-2.PNG)
-
-  - In a moment, your new Compartment will show up in the list. We will use it next to create components in.
+  - In a moment, your new Compartment will show up in the list.
 
     ![](images/050Linux/9.PNG)
 
@@ -157,7 +155,7 @@ For the purposes of the upcoming Docker deployments we need to add five Ingress 
 
 - Click **Edit All Rules** and then select **+ Another Ingress Rule**
 
-  **NOTE: DO NOT EDIT AN ALREADY EXISTING RULE, ADD NEW ONES...**
+  **`NOTE: DO NOT EDIT AN ALREADY EXISTING RULE, ADD NEW ONES...`**
 
     ![](images/050Linux/19.PNG)
 
@@ -250,11 +248,11 @@ You will now create a Linux based Compute instance using the public key you just
 
     ![](images/050Linux/26.PNG)
 
--Click **Create Instance**
+- Click **Create Instance**
 
    ![](images/050Linux/27.PNG)
 
-- **Select / Leave Default or Type** the following in the `Create Compute Instance` section of the dialog:
+- **You will (Select / Leave Default) or Type** the following in the `Create Compute Instance` section of the dialog:
 
 ```
 Name: Docker
@@ -270,7 +268,7 @@ SSH Keys: Choose SSH Key Files
 
    ![](images/050Linux/27-2.PNG)
 
-- Select **Oracle Linux 7.5** and click **Select**.
+- Select **Oracle Linux 7.5** and click **Select Image**.
 
    ![](images/050Linux/27-4.PNG)
 
