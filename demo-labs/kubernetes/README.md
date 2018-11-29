@@ -25,7 +25,7 @@ The application you will be working with is a product catalog website that consi
 
 Let's explore the deployed application using the Kubernetes Dashboard.
 
-- Once your lab is ready, you will see an IP address link on the lower right of your page. Click the link. 
+- Once your lab is ready, you will see an IP address link on the lower right of your page. Click the link.
 
 - Open your Kubernetes Dashboard by clicking the **Kubernetes Dashboard** button on your demo lab landing page.
 
@@ -59,7 +59,7 @@ Let's explore the deployed application using the Kubernetes Dashboard.
 
   ![](images/5.png)
 
-- The create feature allows you to specify the details of a deployment (or other resources) by pasting some text, uploading a file, or filling out a form. Today you will paste in some text that defines our twitter feed microservice. Click the **[https://raw.githubusercontent.com/derekoneil/demo-labs/master/kubernetes/twitter-feed.yml](https://raw.githubusercontent.com/derekoneil/demo-labs/master/kubernetes/twitter-feed.yml)** file to open it. **Select all of the text, copy it, and paste it into the text box** on the Kubernetes dashboard create dialog. Then click **Upload**.
+- The create feature allows you to specify the details of a deployment (or other resources) by pasting some text, uploading a file, or filling out a form. Today you will paste in some text that defines our twitter feed microservice. Click the **[https://raw.githubusercontent.com/oracle/learning-library/master/demo-labs/kubernetes/twitter-feed.yml](https://raw.githubusercontent.com/oracle/learning-library/master/demo-labs/kubernetes/twitter-feed.yml)** file to open it. **Select all of the text, copy it, and paste it into the text box** on the Kubernetes dashboard create dialog. Then click **Upload**.
 
   ![](images/7.png)
 
