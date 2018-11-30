@@ -8,8 +8,8 @@
 |----------------------------------------|:------------:|:-------:|
 |[Identity and Access Management Service](./Foundational/Identity_Access_Management/IAM_HOL.md) | Foundational |   2.1   |   
 |[Compute Service](./Foundational/Network_Compute_and_Block_Service/Compute_HOL.md)                        | Foundational |   2.1   |
-| [File Storage Service](./Foundational/File_Storage_Service/FSS_HOL.md)                   | Foundational |   2.1   |   
-| Load Balancer Service                  | Foundational |   2.1   |      
+|[File Storage Service](./Foundational/File_Storage_Service/FSS_HOL.md)                   | Foundational |   2.1   |   
+|[Load Balancer Service](./Foundational/Load_Balancer/load_balancer.md)                 | Foundational |   2.1   |      
 |[Autonomous Data Warehouse](./Foundational/Autonomous_Data_Warehouse/ADW_HOL.md)             | Foundational |   2.1   |   
 
 
