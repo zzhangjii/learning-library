@@ -24,7 +24,7 @@ A load balancer improves resource utilization, facilitates scaling, and helps en
 
 The Load Balancing service enables you to create a public or private load balancer within your VCN. A public load balancer has a public IP address that is accessible from the internet. A private load balancer has an IP address from the hosting subnet, which is visible only within your VCN. You can configure multiple listeners for an IP address to load balance transport Layer 4 and Layer 7 (TCP and HTTP) traffic. Both public and private load balancers can route data traffic to any backend server that is reachable from the VCN.
 
-The follwing provide an overview of a simple Public Load Balancer:
+The following provide an overview of a simple Public Load Balancer:
 
 ![](media/Public-Load-Balancer.png)
 
@@ -98,7 +98,7 @@ You will create two web servers that will work as backend servers for your Publi
 1. Launch two Instances with the following configuration:
 
 - Name: *Web-Server-1*
-- Avaiability Domain: *AD 3*
+- Availability Domain: *AD 3*
 - Shape: *VM.Standard2.1*
 - Enter your public SSH-Key
 - Click Create
@@ -113,9 +113,9 @@ Repeat the previous steps, but this time enter the name *Web-Server-2*
 **Note**: For Oracle Linux VMs, the default username is **opc**.
 
 - Install HTTP Server:
-	
-`# sudo yum install httpd -y`
-
+	```
+	# sudo yum install httpd -y
+	```
 - Start the apache server and configure it to start after system reboots:
 
   ```
