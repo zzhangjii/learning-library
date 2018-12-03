@@ -151,27 +151,8 @@ cd ~/terraform
 ```bash
 export PATH=$PATH:`pwd`
 ```
-### **STEP 5**: Download the OCI Terraform Provider
 
-- Download the **OCI Terraform Provider** from the [GitHub release page](https://github.com/oracle/terraform-provider-oci/releases/latest). Select the package for your operating system. **Note:** for **Mac** use a **darwin** version of the tar file.
-
-  ![](images/200/59.png)
-
-- Click on the **Save File** option if you are prompted and then click on **OK** to download the file.
-
-  ![](images/200/59.1.png)
-
-- Run the following commands in a **terminal window** to extract the provider binary into the Terraform plugins folder. _Note:
-  replace_ the `linux_*.tar.gz` with the filename of the file you downloaded:
-
-  ```bash
-  cd ~/Downloads
-  mkdir -p ~/.terraform.d/plugins && cat linux_*.tar.gz | tar -zxvf - -C ~/.terraform.d/plugins/
-  ```
-
-- Terraform will look in the `plugins` directory for the OCI provider when it is specified by an installer, as we will see in the next step.
-
-### **STEP 6**: Download and Configure the OCI Terraform Kubernetes Installer
+### **STEP 5**: Download and Configure the OCI Terraform Kubernetes Installer
 
 - _Install kubectl_. Terraform requires `kubectl` - the Kubernetes command line interface, to interact with Kubernetes from your local machine. You can install it by following the instructions for **Installing kubcectl binary via curl** for either mac or linux **[Kubernetes docs](https://kubernetes.io/docs/tasks/tools/install-kubectl/)**.
 
@@ -181,7 +162,6 @@ export PATH=$PATH:`pwd`
   cd ~
   git clone https://github.com/oracle/terraform-kubernetes-installer.git
   cd terraform-kubernetes-installer
-  git checkout b6671
   ```
 
 - Initialize this Terraform installer by running the following command:
@@ -280,7 +260,7 @@ export PATH=$PATH:`pwd`
   k8sMasterLBShape = "400Mbps"
   ```
 
-- The last change we will make is to open up the allowed Kubernetes master inbound IP address range, so that we can access our cluster from the internet. On **line 40**, remove the pound sign at the beginning of the line to uncomment it.
+- The next change we will make is to open up the allowed Kubernetes master inbound IP address range, so that we can access our cluster from the internet. On **line 40**, remove the pound sign at the beginning of the line to uncomment it.
 
   ```
   master_https_ingress = "0.0.0.0/0"
@@ -288,22 +268,30 @@ export PATH=$PATH:`pwd`
 
   **NOTE**: The 0.0.0.0/0 value means that any IP address can access your cluster. A better security practice would be to determine your externally-facing IP address and restrict access to only that address. If you'd like, you can find out your IP address by running `curl ifconfig.co` in a terminal window, and place that address into the `master_https_ingress` parameter (e.g. `master_https_ingress = "11.12.13.14/32"`). Note that if you need remote assistance with the workshop, you may need to open this back up to 0.0.0.0/0 to allow access to your cluster.
 
+
+- The last change we will make is to open up the NodePort port range on the master node. **Add a new line** to the file that reads:
+
+  ```
+  master_nodeport_ingress = "0.0.0.0/0"
+  ```
+
 - **Double check** to ensure you removed the **#** character from in front of all the entries you modified
 
-### **STEP 7**: Provision Kubernetes on OCI
+### **STEP 6**: Provision Kubernetes on OCI
 
 - Now we are ready to have Terraform provision our Kubernetes cluster. **Save and close** your terraform.tfvars file. In your open **terminal window**, run the following commands to have Terraform evaluate the various network and compute infrastructure that we are asking to be provisioned.
 
 - Specify the correct OS base image for your Kubernetes virtual machines by running:
 
   ```bash
-  sed -i.bak 's/Oracle-Linux-7.5-2018.07.20-0/Oracle-Linux-7.5-2018.08.14-0/' variables.tf
+  sed -i.bak 's/Oracle-Linux-7.5-2018.08.14-0/Oracle-Linux-7.6-2018.11.19-0/' variables.tf
   ```
 
 - Preview the changes that Terraform is going to make to your infrastructure by running:
 
   ```bash
   terraform plan
+  ```
 
   ![](images/200/60.png)
 
@@ -332,19 +320,25 @@ export PATH=$PATH:`pwd`
   while true; do kubectl get nodes; sleep 10; done
   ```
 
-- For the first few minutes, it is normal to see connection errors and server errors returned while your infrastructure is starting up. When you see that both the master and worker nodes have a 'STATUS' of **Ready**, press **Control-C** to stop the monitoring loop.
+- For the first few minutes, it is normal to see connection errors and server errors returned while your infrastructure is starting up. When you see that the node has a 'STATUS' of **Ready**, press **Control-C** to stop the monitoring loop.
 
   ![](images/200/68.png)
 
   **TROUBLESHOOTING**:
 
-  >If more than 15 minutes have passed and you do not have both nodes 'Ready', there may be a problem with your infrastructure. Navigate to the OCI console in your browser to check.
+  >If more than 15 minutes have passed and you do not have a node 'Ready', there may be a problem with your infrastructure. Navigate to the OCI console in your browser to check.
 
   >First, click the hamburger icon to open the navigation menu. Then, under the Networking section, click **Load Balancers** to view the status of your load balancers. Look at the colored hexagons on the left side of the table. Both load balancers should have green hexagons and have a status of 'ACTIVE'. If either one has a red hexagon and a status of 'FAILED', you will need to reprovision your infrastructure. Note that this is NOT the 'Health' indicator on the right side of the table, which will fluctuate between states for the first 20-30 minutes after provisioning.
 
   >Second, click on **Compute** from the navigation menu. You should see three compute instances with green 'RUNNING' status indicators. If any are in the red **FAILED** state or the yellow **PROVISIONING** state after 15 minutes, you will need to reprovision your infrastructure.
 
   >**To reprovision your infrastructure**, first run `terraform destroy` from your terminal window, then run `terraform apply` again. You will need to type `yes` when prompted to confirm each command. After the provisioning, re-run the monitoring loop to see the status of your installation: `while true; do kubectl get nodes; sleep 10; done`
+
+- Run the following command to allow pods to run on the master node:
+
+  ```bash
+  kubectl taint nodes 0 node-role.kubernetes.io/master:NoSchedule-
+  ```
 
 - Now that the nodes are ready, you can start the Kubernetes proxy server, which will let you view the cluster dashboard at a localhost URL.
 
@@ -362,7 +356,7 @@ export PATH=$PATH:`pwd`
 
 ## Configure and Run Wercker Deployment Pipelines
 
-### **STEP 8**: Define Kubernetes Deployment Specification
+### **STEP 7**: Define Kubernetes Deployment Specification
 
 - From a browser, navigate to your forked twitter-feed repository on GitHub. If you've closed the tab, you can get back by going to [GitHub](https://github.com/), scrolling down until you see the **Your repositories** box on the right side of the page, and clicking the **twitter-feed** link.
 
@@ -436,7 +430,7 @@ spec:
 
 - Since you've committed to the repository, Wercker will trigger another execution of your workflow. We haven't defined the deployment pipelines yet, so this will just result in a new entry in Wercker's Runs tab and a new image pushed to the container registry. You don't need to do anything with those; you can move on to the next step.
 
-### **STEP 9**: Define Wercker Deployment Pipelines
+### **STEP 8**: Define Wercker Deployment Pipelines
 
 - Click the file **wercker.yml** and then click the **pencil** button to begin editing the file.
 
@@ -477,7 +471,7 @@ deploy-to-cluster:
 
 - Since you've committed to the repository again, Wercker will once again trigger an execution of your workflow. We still haven't configured the deployment pipelines in Wercker yet, so we'll still end up with a new Run and a new image, but not a deployment to Kubernetes.
 
-### **STEP 10**: Set up deployment pipelines in Wercker
+### **STEP 9**: Set up deployment pipelines in Wercker
 
 - Open **[Wercker](https://app.wercker.com)** in a new tab or browser window, or switch to it if you already have it open. In the top navigation bar, click **Pipelines**, then click on your **twitter-feed** application.
 
@@ -503,7 +497,7 @@ deploy-to-cluster:
 
 - Now we've got our workflow updated with our deployment pipelines, but there's one more thing we need to do before we can actually deploy. We need to set two environment variables that tell Wercker the address of our Kubernetes master and provide an authentication token for Wercker to issue commands to Kubernetes.
 
-### **STEP 11**: Set up environment variables in Wercker
+### **STEP 10**: Set up environment variables in Wercker
 
 - Our first step is to set our cluster's authentication token as a Wercker environment variable. In your **terminal window**, run the following command to output the token, then **select it and copy it** to your clipboard:
 
@@ -527,7 +521,7 @@ deploy-to-cluster:
 
 - Now we're ready to try out our workflow from start to finish. We could do that by making another commit on GitHub, since Wercker is monitoring our source code. We can also trigger a workflow execution right from Wercker. We'll see how in the next step.
 
-### **STEP 12**: Trigger a retry of the pipeline
+### **STEP 11**: Trigger a retry of the pipeline
 
 - On your Wercker application page in your browser, click the **Runs** tab. Your most recent run should have successful build and push-release pipelines. Click the **push-release** pipeline.
 
@@ -545,7 +539,7 @@ deploy-to-cluster:
 
   ![](images/200/42.png)
 
-### **STEP 13**: Validate deployment
+### **STEP 12**: Validate deployment
 
 - In a terminal window, start the **kubectl proxy** using the following command. Your `KUBECONFIG` environment variable should still be set from a previous step. If not, reset it.
 
@@ -577,7 +571,7 @@ deploy-to-cluster:
 
 ## Deploy and Test the Product Catalog Application
 
-### **STEP 14**: Download the Product Catalog Kubernetes YAML file
+### **STEP 13**: Download the Product Catalog Kubernetes YAML file
 
 - From a browser, navigate to your forked twitter-feed repository on GitHub. If you've closed the tab, you can get back by going to [GitHub](https://github.com/), scrolling down until you see the **Your repositories** box on the right side of the page, and clicking the **twitter-feed** link.
 
@@ -593,7 +587,7 @@ deploy-to-cluster:
 
 **NOTE**: This YAML file contains the configuration for a Kubernetes deployment and service, much like the configuration for our twitter feed microservice. In a normal development environment, the product catalog application would be managed by Wercker as well, so that builds and deploys would be automated. In this workshop, however, you will perform a one-off deployment of a pre-built Docker image containing the product catalog application from within the Kubernetes dashboard.
 
-### **STEP 15**: Deploy and test the Product Catalog using the Kubernetes dashboard
+### **STEP 14**: Deploy and test the Product Catalog using the Kubernetes dashboard
 
 - Switch back to your **Kubernetes dashboard** browser tab. If you have closed it, navigate to the Kubernetes dashboard at [**Kubernetes dashboard**](http://localhost:8001/api/v1/namespaces/kube-system/services/http:kubernetes-dashboard:/proxy/)
 
@@ -604,18 +598,20 @@ deploy-to-cluster:
 - Click the **Upload a YAML or JSON file** radio button, then click the **three dots** button to browse for your file. In the dialog, select the YAML file you just downloaded from GitHub and click **Open**, then click **UPLOAD**.
 
   ![](images/200/50.png)
+  
+  **NOTE:** You could alternatively deploy this application using the command line interface, with `kubectl apply -f ~/Downloads/alpha-office-product-catalog.kubernetes.yml`
 
 - In the left side navigation menu, click **Overview**. You should see two new product-catalog-app pods being created and soon change state to Running.
 
   ![](images/200/51.png)
 
-- Instead of a cluster-internal IP address, the product-catalog-service will be exposed to the internet via a load balancer. The load balancer will take a few minutes to be instantiated and configured. Let's check on its status--click **Services** from the left side menu, then click on the **product-catalog-service**.
+- Instead of a cluster-internal IP address, the product-catalog-service will be exposed to the internet via a **Node Port**. The node where our pod is running will expose a port for this service on its public IP address. We can craft a link to the product catalog application by running the following in a terminal window (it's OK if you stop `kubectl proxy` to run this command, just start it back up again when you need it).
 
-  ![](images/200/52.png)
+  ```bash
+  echo http://$(kubectl get nodes -o jsonpath='{ $.items[*].status.addresses[?(@.type=="ExternalIP")].address }'):30000
+  ```
 
-- On the service detail page, you will see a field called **External endpoints**. Once the load balancer has finished provisioning, the External endpoints field will be populated with a link to the product catalog application. If the link is not shown yet, wait a few minutes, refresh your browser, and check again. Once the link is displayed, **click it** to launch the site in a new tab.
-
-  ![](images/200/53.png)
+- **Copy** the URL generated by the previous command and **paste** it into the location bar of a new browser tab.
 
 - You should see the product catalog site load successfully, validating that our new Kubernetes deployment and service were created correctly. Let's test the twitter feed functionality of the catalog. Click the first product, **Crayola New Markers**. The product's twitter feed should be displayed.
 
