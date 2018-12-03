@@ -177,13 +177,13 @@ An API key is required for Terraform to authenticate to OCI in order to create c
 - Download the latest updates by running the following command:
 
   ```bash
-  git fetch
-  git checkout b6671
+  git pull origin master
   ```
 
-- Initialize this Terraform installer by running the following command:
+- Remove the old OCI provider (a new one will be downloaded automatically) and initialize this Terraform installer by running the following command:
 
   ```bash
+  rm ~/.terraform.d/plugins/*oci*
   terraform init
   ```
 
@@ -275,13 +275,21 @@ An API key is required for Terraform to authenticate to OCI in order to create c
   k8sMasterLBShape = "400Mbps"
   ```
 
-- The last change we will make is to open up the allowed Kubernetes master inbound IP address range, so that we can access our cluster from the internet. On **line 40**, remove the pound sign at the beginning of the line to uncomment it.
+- The next change we will make is to open up the allowed Kubernetes master inbound IP address range, so that we can access our cluster from the internet. On **line 40**, remove the pound sign at the beginning of the line to uncomment it.
 
   ```
   master_https_ingress = "0.0.0.0/0"
   ```
 
   **NOTE**: The 0.0.0.0/0 value means that any IP address can access your cluster. A better security practice would be to determine your externally-facing IP address and restrict access to only that address. If you'd like, you can find out your IP address by running `curl ifconfig.co` in a terminal window, and place that address into the `master_https_ingress` parameter (e.g. `master_https_ingress = "11.12.13.14/32"`). Note that if you need remote assistance with the workshop, you may need to open this back up to 0.0.0.0/0 to allow access to your cluster.
+
+- The last change we will make is to open up the NodePort port range on the master node. **Add a new line** to the file that reads:
+
+  ```
+  master_nodeport_ingress = "0.0.0.0/0"
+  ```
+
+- **Double check** to ensure you removed the **#** character from in front of all the entries you modified
 
 ### **STEP 5**: Provision Kubernetes on OCI
 
@@ -290,7 +298,7 @@ An API key is required for Terraform to authenticate to OCI in order to create c
 - Specify the correct OS base image for your Kubernetes virtual machines by running:
 
   ```bash
-  sed -i.bak 's/Oracle-Linux-7.5-2018.07.20-0/Oracle-Linux-7.5-2018.08.14-0/' variables.tf
+  sed -i.bak 's/Oracle-Linux-7.5-2018.08.14-0/Oracle-Linux-7.6-2018.11.19-0/' variables.tf
   ```
 
 - Preview the changes that Terraform is going to make to your infrastructure by running:
@@ -328,19 +336,25 @@ An API key is required for Terraform to authenticate to OCI in order to create c
   while true; do kubectl get nodes; sleep 10; done
   ```
 
-- For the first few minutes, it is normal to see connection errors and server errors returned while your infrastructure is starting up. When you see that both the master and worker nodes have a 'STATUS' of **Ready**, press **Control-C** to stop the monitoring loop.
+- For the first few minutes, it is normal to see connection errors and server errors returned while your infrastructure is starting up. When you see that the node has a 'STATUS' of **Ready**, press **Control-C** to stop the monitoring loop.
 
   ![](images/200/68.png)
 
   **TROUBLESHOOTING**:
 
-  >If more than 15 minutes have passed and you do not have both nodes 'Ready', there may be a problem with your infrastructure. Navigate to the OCI console in your browser to check.
+  >If more than 15 minutes have passed and you do not have a node 'Ready', there may be a problem with your infrastructure. Navigate to the OCI console in your browser to check.
 
   >First, click the hamburger icon to open the navigation menu. Then, under the Networking section, click **Load Balancers** to view the status of your load balancers. Look at the colored hexagons on the left side of the table. Both load balancers should have green hexagons and have a status of 'ACTIVE'. If either one has a red hexagon and a status of 'FAILED', you will need to reprovision your infrastructure. Note that this is NOT the 'Health' indicator on the right side of the table, which will fluctuate between states for the first 20-30 minutes after provisioning.
 
   >Second, click on **Compute** from the navigation menu. You should see three compute instances with green 'RUNNING' status indicators. If any are in the red **FAILED** state or the yellow **PROVISIONING** state after 15 minutes, you will need to reprovision your infrastructure.
 
   >**To reprovision your infrastructure**, first run `terraform destroy` from your terminal window, then run `terraform apply` again. You will need to type `yes` when prompted to confirm each command. After the provisioning, re-run the monitoring loop to see the status of your installation: `while true; do kubectl get nodes; sleep 10; done`
+
+- Run the following command to allow pods to run on the master node:
+
+  ```bash
+  kubectl taint nodes 0 node-role.kubernetes.io/master:NoSchedule-
+  ```
 
 - Now that the nodes are ready, you can start the Kubernetes proxy server, which will let you view the cluster dashboard at a localhost URL.
 
@@ -602,17 +616,19 @@ deploy-to-cluster:
 
   ![](images/200/50.png)
 
+  **NOTE:** You could alternatively deploy this application using the command line interface, with `kubectl apply -f ~/Downloads/alpha-office-product-catalog.kubernetes.yml`
+
 - In the left side navigation menu, click **Overview**. You should see two new product-catalog-app pods being created and soon change state to Running.
 
   ![](images/200/51.png)
 
-- Instead of a cluster-internal IP address, the product-catalog-service will be exposed to the internet via a load balancer. The load balancer will take a few minutes to be instantiated and configured. Let's check on its status--click **Services** from the left side menu, then click on the **product-catalog-service**.
+- Instead of a cluster-internal IP address, the product-catalog-service will be exposed to the internet via a **Node Port**. The node where our pod is running will expose a port for this service on its public IP address. We can craft a link to the product catalog application by running the following in a terminal window (it's OK if you stop `kubectl proxy` to run this command, just start it back up again when you need it).
 
-  ![](images/200/52.png)
+  ```bash
+  echo http://$(kubectl get nodes -o jsonpath='{ $.items[*].status.addresses[?(@.type=="ExternalIP")].address }'):30000
+  ```
 
-- On the service detail page, you will see a field called **External endpoints**. Once the load balancer has finished provisioning, the External endpoints field will be populated with a link to the product catalog application. If the link is not shown yet, wait a few minutes, refresh your browser, and check again. Once the link is displayed, **click it** to launch the site in a new tab.
-
-  ![](images/200/53.png)
+- **Copy** the URL generated by the previous command and **paste** it into the location bar of a new browser tab.
 
 - You should see the product catalog site load successfully, validating that our new Kubernetes deployment and service were created correctly. Let's test the twitter feed functionality of the catalog. Click the first product, **Crayola New Markers**. The product's twitter feed should be displayed.
 
