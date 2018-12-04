@@ -1,5 +1,5 @@
 
-# Monolithic to Microservices Workshop - OCI Instance Set Up
+# Monolithic to Microservices Workshop - Container Microservice Deployment
 
 ![](images/200/Title.png)
 
