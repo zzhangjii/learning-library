@@ -255,7 +255,7 @@ After a few minutes you should see a running instance with a Public IP Address.
 
 ### **STEP 9**: SSH into the Instance and install Docker
 
-The last set up piece will be to SSH into the Compute image and install Docker and GIT.
+Continue the setup: SSH into the Compute image and install Docker and GIT.
 
 - For a Windows client session bring up Putty, select the **Session** section and type in the IP address:
 
