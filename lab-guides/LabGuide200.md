@@ -378,6 +378,15 @@ whoami
    ![](images/200/44.PNG)
 
 
+# Deploy the AlphaOffice Application using Docker
+
+In this section you will grab a Java Application and modify the configuration so it will query your ATP database. After successfull testing you will create a new Docker image and push this up to your Docker Hub account or Oracle Container Registry.
+
+## Your Trial Account
+
+### **Step 1**: Your Oracle Cloud Trial Account
+
+
 **This completes the Set Up!**
 
 **You are ready to proceed to [Lab 100](Linux100.md)**
