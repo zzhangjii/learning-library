@@ -27,7 +27,7 @@ You will create all required infrastructure components within your Trail account
 
 ### **Step 1**: Your Oracle Cloud Trial Account
 
-- You have already applied for and received you're Oracle Cloud Trial Account and will change the default password...
+- You have already applied for and received you're Oracle Cloud Trial Account.
 
 
 ### **STEP 2**: Log in to your OCI dashboard
@@ -47,8 +47,6 @@ You will create all required infrastructure components within your Trail account
 - Enter your **Username** and **Password** in the input fields and click **Sign In**.
 
   ![](images/200/2.png)
-
-**NOTE**: You may (probably) will be prompted to change the temporary password listed in the welcome email. In that case, enter the new password in the password field.
 
 - In the top left corner of the dashboard, click the **hamburger menu**
 
