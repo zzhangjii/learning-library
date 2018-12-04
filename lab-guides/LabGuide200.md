@@ -387,6 +387,6 @@ In this section you will grab a Java Application and modify the configuration so
 ### **Step 1**: Your Oracle Cloud Trial Account
 
 
-**This completes the Set Up!**
+**This completes the Lab!**
 
-**You are ready to proceed to [Lab 100](Linux100.md)**
+**You are ready to proceed to [Lab 300](LabGuide300.md)**
