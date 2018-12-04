@@ -380,11 +380,11 @@ whoami
 
 # Deploy the AlphaOffice Application using Docker
 
-In this section you will grab a Java Application and modify the configuration so it will query your ATP database. After successfull testing you will create a new Docker image and push this up to your Docker Hub account or Oracle Container Registry.
+In this section you will clone a github repository containing a Java Application and modify the configuration so it will query your ATP database. After successfull testing you will create a new Docker image and push this up to your Docker Hub account or Oracle Container Registry.
 
-## Your Trial Account
+## Deploy AlphaOffice Product Catalog Application
 
-### **Step 1**: Your Oracle Cloud Trial Account
+### **Step 1**: Clone the git repository
 
 
 **This completes the Lab!**
