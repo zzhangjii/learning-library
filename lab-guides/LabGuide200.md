@@ -1,7 +1,7 @@
 
 # Monolithic to Microservices Workshop - Container Microservice Deployment
 
-![](images/200/Title.png)
+  ![](images/200/Title.png)
 
 ## Introduction
 In this lab you will use your Oracle Cloud Trial Account, create ssh key pairs, login into your Trial, create a VCN (Virtual Compute Network) and Compartment, create a new compute instance and finally install docker into the instance.
