@@ -4,7 +4,7 @@
   ![](images/200/Title.png)
 
 ## Introduction
-In this lab you will use your Oracle Cloud Trial Account, create ssh key pairs, login into your Trial, create a VCN (Virtual Compute Network) and Compartment, create a new compute instance and finally install docker into the instance.
+In this lab you will use your Oracle Cloud Trial Account, create ssh key pairs, login into your Trial, create a VCN (Virtual Compute Network) and Compartment, create a new compute instance and install docker / git into the instance.
 
 ***To log issues***, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
@@ -13,7 +13,10 @@ In this lab you will use your Oracle Cloud Trial Account, create ssh key pairs, 
 - Create the baseline infrastructure to support a Compute instance
 - Create a SSH key pair
 - SSH into the instance: Install Docker and GIT
-- Create a Docker image and deploy the AlphaOffice application
+- Create a baseline Docker image and then dDeploy the AlphaOffice application
+- Customize the container to connect to your ATP DB and save a new image
+- Run a Docker container based off of your new image
+
 
 ## Required Artifacts
 
@@ -99,8 +102,6 @@ All the availability domains in a region are connected to each other by a low la
 
 - Fill in the follow values as highlighted below:
 
-    **NOTE:** Make sure to de-select the "USE DNS HOSTNAMES IN THIS VCN" checkbox)
-
     ![](images/200/12.PNG)
 
     ![](images/200/13.PNG)
@@ -137,23 +138,26 @@ For the purposes of the upcoming Docker deployments we need to add five Ingress 
 
     ![](images/200/19.PNG)
 
-    ![](images/200/Linux050-c8ef545e.png)
+    ![](images/200/19-2.png)
 
 - **Enter the following**
 
-**NOTE:** Leave all other values at default
+  **NOTE:** Leave all other values at default
 
-```
-Source CIDR: 0.0.0.0/0
-Destination Port Range: 8080
-```
+  ```
+  Source CIDR: 0.0.0.0/0
+  Destination Port Range: 8080
+  ```
+
+  ![](images/200/19-4.png)
+
 - Click the **Save Security List Rules** button
 
     ![](images/200/22.PNG)
 
 - Your Ingress Rules should look like:
 
-    ![](images/200/Linux050-a84ef9f4.png)
+    ![](images/200/20.png)
 
 ### **STEP 6**: Create SSH Key Pair (Linux or Mac client)
 
