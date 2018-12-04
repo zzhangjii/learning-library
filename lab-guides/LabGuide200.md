@@ -133,7 +133,7 @@ For the purposes of the upcoming Docker deployments we need to add five Ingress 
 
 - Click **Edit All Rules** and then select **+ Another Ingress Rule**
 
-  **`NOTE: DO NOT EDIT AN ALREADY EXISTING RULE, ADD NEW ONES...`**
+  **`NOTE: DO NOT EDIT AN ALREADY EXISTING RULE, ADD A NEW ONE`**
 
     ![](images/200/19.PNG)
 
@@ -145,31 +145,8 @@ For the purposes of the upcoming Docker deployments we need to add five Ingress 
 
 ```
 Source CIDR: 0.0.0.0/0
-Destination Port Range: 8085
+Destination Port Range: 8080
 ```
-
-- **Add four more Ingress Rules**
-
-```
-Source CIDR: 0.0.0.0/0
-Destination Port Range: 9080
-```
-
-```
-Source CIDR: 0.0.0.0/0
-Destination Port Range: 8002
-```
-
-```
-Source CIDR: 0.0.0.0/0
-Destination Port Range: 18002
-```
-
-```
-Source CIDR: 0.0.0.0/0
-Destination Port Range: 5600
-```
-
 - Click the **Save Security List Rules** button
 
     ![](images/200/22.PNG)
