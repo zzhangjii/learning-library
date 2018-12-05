@@ -370,12 +370,12 @@ sestatus
 
 - **Type** the following to exit out of `root` and go back and verify that you're now the `opc` user:
 
-```
-exit
-whoami
-```
+  ```
+  exit
+  whoami
+  ```
 
-   ![](images/200/44.PNG)
+  ![](images/200/44.PNG)
 
 
 # Deploy the AlphaOffice Application using Docker
@@ -385,6 +385,25 @@ In this section you will clone a github repository containing a Java Application
 ## Deploy AlphaOffice Product Catalog Application
 
 ### **Step 1**: Clone the git repository
+
+- Clone the git repository that contains the AlphaOffice application. **Type or Copy and Paste**:
+
+  ```
+  got clone https://github.com/derekoneil/monolithic-to-microservice.git
+  ```
+
+  ![](images/200/45.PNG)
+
+- From the directory you cloned the repository into:: **Type**:
+
+  ```
+  cd monolithic-to-microservice/lab-resources/docker
+  ```
+
+- You will see the baseline `alpha-office-product-catalog.war` file and a `Dockerfile`:
+
+  ![](images/200/46.PNG)
+
 
 
 **This completes the Lab!**
