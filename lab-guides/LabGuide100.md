@@ -26,13 +26,13 @@
 
 ### **STEP 2**: Create Object Storage Bucket
 
-  - Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Core Infrastructure** section, select **Object Storage** and select **Compartments**.
+  - Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Core Infrastructure** section, select **Object Storage**.
 
 	![](images/100/image5.png)
 
   - Select the **Compartment** `monoTOmicro` and click **Create Bucket**
 
-	![](images/100/media/image6.png)
+	![](images/100/image6.png)
 
   - In the **Bucket Name** field, enter `atpData` and click **Create Bucket**
 
