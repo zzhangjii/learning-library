@@ -400,9 +400,15 @@ In this section you will clone a github repository containing a Java Application
   cd monolithic-to-microservice/lab-resources/docker
   ```
 
-- In this step you are going to build a Docker image based on command the the provided Dockerfile. It will take a baseline docker image from Docker Hub and add the Glassfish 4.1.1 application server and then deploy the `alpha-office-product-catalog.war` into the application server running on port 8080. If you recall you opened port 8080 in the Networking Security List earlier in this lab so access from the outside can occur.
+- You will see the baseline `alpha-office-product-catalog.war` file and a `Dockerfile`:
 
-  The Dockerfile defines what happens in the image build. The contents look like:
+  ![](images/200/46.PNG)
+
+### **Step 2**: Build a Docker image
+
+In this step you are going to build a Docker image based on commands the the provided Dockerfile. It will take a baseline java docker image from Docker Hub, add the Glassfish 4.1.1 application server and then deploy the `alpha-office-product-catalog.war` into the Glassfish server running on port 8080. If you recall you opened port 8080 in the Networking Security List earlier in this lab so access from the outside can occur.
+
+- The Dockerfile defines what happens in the image build. The contents look like:
 
   ```
   FROM        java:8-jdk
@@ -431,14 +437,47 @@ In this section you will clone a github repository containing a Java Application
   CMD         asadmin start-domain --verbose
   ```
 
-- You will see the baseline `alpha-office-product-catalog.war` file and a `Dockerfile`:
+- Type:
 
-  ![](images/200/46.PNG)
+  ```
+  docker build -t alphaoffice .
+  ```
 
+  The build will take place and should be successfull:
 
+  ![](images/200/47.PNG)
 
+    ...
 
+  ![](images/200/48.PNG)
 
+- Typing **docker images** reveals the new image:
+
+  ![](images/200/49.PNG)
+
+- Create a container based on the new alphaoffice image mapping port 8080 to the same port on the HOST and naming the container alphaoffice:
+
+  ```
+  docker run -d --name alphaoffice -p=8080:8080 alphaoffice
+  ```
+
+- Type **docker ps** to show the running container. You'll note the asadmin command we stipulated in the Dockerfile build is executed:
+
+  ![](images/200/50.PNG)
+  
+- In a browser, test the application by using the Public IP Address of the VM instance.
+
+  ```
+  <YOUR-PUBLIC-IP>:8080/alpha-office-product-catalog/products.jsp
+  ```
+
+- You show see the Alpha Office Product Catalog displayed using data from your ATP database:
+
+  ![](images/200/51.PNG)
+
+- Clicking on one of the products shows related tweets:
+
+  ![](images/200/52.PNG)
 
 
 
