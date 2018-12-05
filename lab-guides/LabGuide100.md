@@ -102,7 +102,7 @@
 
 ### **STEP 7**: Create SQL Developer Connection to ATP Database
 
-### **STEP 8**: Create `alpha` Database User in ATP Database
+### **STEP 8**: Create Database User in ATP Database
 
 ### **STEP 9**: Create DBMS_CLOUD Credential 
 
