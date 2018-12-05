@@ -394,7 +394,7 @@ In this section you will clone a github repository containing a Java Application
 
   ![](images/200/45.PNG)
 
-- From the directory you cloned the repository into:: **Type**:
+- From the directory you cloned the repository into **Type**:
 
   ```
   cd monolithic-to-microservice/lab-resources/docker
@@ -403,6 +403,25 @@ In this section you will clone a github repository containing a Java Application
 - You will see the baseline `alpha-office-product-catalog.war` file and a `Dockerfile`:
 
   ![](images/200/46.PNG)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
