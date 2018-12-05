@@ -15,11 +15,11 @@ You will create all required infrastructure components within your Trial account
 
   - Once you receive the **Get Started Now with Oracle Cloud** Email, make note of your **Username, Password and Cloud Account Name**.
 
-  ![](images/050/image1.png)
+    ![](images/050/image1.png)
 
   - From any browser go to
 
-  [https://cloud.oracle.com/en_US/sign-in](https://cloud.oracle.com/en_US/sign-in)
+    [https://cloud.oracle.com/en_US/sign-in](https://cloud.oracle.com/en_US/sign-in)
 
   - Enter your **Cloud Account Name** in the input field and click the **Next** button.
 
