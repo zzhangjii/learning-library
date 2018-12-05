@@ -421,14 +421,13 @@ In this section you will clone a github repository containing a Java Application
               rm -f /tmp/glassfish-4.1.zip
 
   #clone and deploy the project on the glassfish server
-  #RUN     git clone http://myrepository.git /usr/local/mypath
   COPY     alpha-office-product-catalog.war /usr/local/glassfish4/glassfish/domains/domain1/autodeploy/alpha-office-product-catalog.war
 
   EXPOSE      8080
 
   WORKDIR     /usr/local/glassfish4
 
-  # verbose causes the process to remain in the foreground so that docker can track it
+  # verbose causes the process to remain in the foreground
   CMD         asadmin start-domain --verbose
   ```
 
