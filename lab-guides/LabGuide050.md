@@ -7,7 +7,7 @@ You will create all required infrastructure components within your Trial account
 
 ## Your Trial Account
 
-### **Step 1**: Your Oracle Cloud Trial Account
+### **STEP 1**: Your Oracle Cloud Trial Account
 
   - You have already applied for and received your Oracle Cloud Trial Account.
 
