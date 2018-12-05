@@ -400,6 +400,38 @@ In this section you will clone a github repository containing a Java Application
   cd monolithic-to-microservice/lab-resources/docker
   ```
 
+- In this step you are going to build a Docker image based on command the the provided Dockerfile. It will take a baseline docker image from Docker Hub and add the Glassfish 4.1.1 application server and then deploy the `alpha-office-product-catalog.war` into the application server running on port 8080. If you recall you opened port 8080 in the Networking Security List earlier in this lab so access from the outside can occur.
+
+  The Dockerfile defines what happens in the image build. The contents look like:
+
+  ```
+  FROM        java:8-jdk
+
+  ENV         JAVA_HOME         /usr/lib/jvm/java-8-openjdk-amd64
+  ENV         GLASSFISH_HOME    /usr/local/glassfish4
+  ENV         PATH              $PATH:$JAVA_HOME/bin:$GLASSFISH_HOME/bin
+
+  RUN         apt-get update && \
+              apt-get install -y curl unzip zip inotify-tools && \
+              rm -rf /var/lib/apt/lists/*
+
+  #download and install the glassfish server
+  RUN         curl -L -o /tmp/glassfish-4.1.zip https://download.oracle.com/glassfish/4.1.1/release/glassfish-4.1.1.zip && \
+              unzip /tmp/glassfish-4.1.zip -d /usr/local && \
+              rm -f /tmp/glassfish-4.1.zip
+
+  #clone and deploy the project on the glassfish server
+  #RUN     git clone http://myrepository.git /usr/local/mypath
+  COPY     alpha-office-product-catalog.war /usr/local/glassfish4/glassfish/domains/domain1/autodeploy/alpha-office-product-catalog.war
+
+  EXPOSE      8080
+
+  WORKDIR     /usr/local/glassfish4
+
+  # verbose causes the process to remain in the foreground so that docker can track it
+  CMD         asadmin start-domain --verbose
+  ```
+
 - You will see the baseline `alpha-office-product-catalog.war` file and a `Dockerfile`:
 
   ![](images/200/46.PNG)
