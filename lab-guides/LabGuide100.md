@@ -84,7 +84,7 @@
 
 **STEP 5**: Generate Auth Token for OCI User
 
-  - For the new user `impdp-ATP` is , select the **Resource** `Auth Tokens` and click **Generate Token**
+  - For the new user `impdp-ATP`, select the **Resource** `Auth Tokens` and click **Generate Token**
 
 	![](images/100/image18.png)
 
@@ -102,9 +102,9 @@
 
 ### **STEP 7**: Create SQL Developer Connection to ATP Database
 
-### **STEP 8**: Create \`alpha' Database User in ATP Database
+### **STEP 8**: Create `alpha` Database User in ATP Database
 
-### **STEP 9**: Create DBMS\_CLOUD Credential 
+### **STEP 9**: Create DBMS_CLOUD Credential 
 
 # Import Data Pump Export file into ATP Instance and Download and Inspect Data Pump Log File 
 
