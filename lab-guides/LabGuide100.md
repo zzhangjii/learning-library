@@ -2,16 +2,15 @@
 
 # Object Storage Setup, OCI User Creation and Auth Token Generation
 
-
 ### **STEP 1**: Log in to your OCI dashboard
 
-	- From any browser go to
+  - From any browser go to
 
-	[https://cloud.oracle.com/en_US/sign-in](https://cloud.oracle.com/en_US/sign-in)
+    [https://cloud.oracle.com/en_US/sign-in](https://cloud.oracle.com/en_US/sign-in)
 
-	- Enter your **Cloud Account Name** in the input field and click the **Next** button.
+  - Enter your **Cloud Account Name** in the input field and click the **Next** button.
 
-		![](images/100/image1.png)
+	![](images/100/image1.png)
 
 	- Enter your **Username** and **Password** in the input fields and click **Sign In**.
 
