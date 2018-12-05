@@ -12,28 +12,28 @@
 
 	![](images/100/image1.png)
 
-	- Enter your **Username** and **Password** in the input fields and click **Sign In**.
+  - Enter your **Username** and **Password** in the input fields and click **Sign In**.
 
-		![](images/100/image2.png)
+	![](images/100/image2.png)
 
-	- In the top left corner of the dashboard, click the **Guided Navigation Drawer**
+  - In the top left corner of the dashboard, click the **Guided Navigation Drawer**
 
-		![](images/100/image3.png)
+	![](images/100/image3.png)
 
-	- Click to expand the **Services** submenu, then click **Compute**
+  - Click to expand the **Services** submenu, then click **Compute**
 
-		![](images/100/image4.png)
+	![](images/100/image4.png)
 
 ### **STEP 2**: Create Object Storage Bucket
 
-	- Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Core Infrastructure** section, select **Object Storage** and select **Compartments**.
+  - Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Core Infrastructure** section, select **Object Storage** and select **Compartments**.
 
-		![](images/100/image5.png)
+	![](images/100/image5.png)
 
-	- Select the **Compartment** `monoTOmicro` and click **Create Bucket**
+  - Select the **Compartment** `monoTOmicro` and click **Create Bucket**
 
-		![](images/100/media/image6.png)
+	![](images/100/media/image6.png)
 
-	- In the **Bucket Name** field, enter `atpData` and click **Create Bucket**
+  - In the **Bucket Name** field, enter `atpData` and click **Create Bucket**
 
-		![](images/100/image7.png)
+	![](images/100/image7.png)
