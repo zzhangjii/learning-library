@@ -1,5 +1,5 @@
 # Monolithic to Microservice Experience -- Setup
-	![](images/050/Title.png)
+  ![](images/050/Title.png)
 	
 # Log into your Trial Account and Create Infrastructure
 
@@ -9,13 +9,13 @@ You will create all required infrastructure components within your Trial account
 
 ### **Step 1**: Your Oracle Cloud Trial Account
 
-	- You have already applied for and received your Oracle Cloud Trial Account.
+  - You have already applied for and received your Oracle Cloud Trial Account.
 
 ### **STEP 2**: Log in to your OCI dashboard
 
-	- Once you receive the **Get Started Now with Oracle Cloud** Email, make note of your **Username, Password and Cloud Account Name**.
+  - Once you receive the **Get Started Now with Oracle Cloud** Email, make note of your **Username, Password and Cloud Account Name**.
 
-	![](images/050/image1.png)
+  ![](images/050/image1.png)
 
 	- From any browser go to
 
