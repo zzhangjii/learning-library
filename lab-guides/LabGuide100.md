@@ -136,9 +136,9 @@
 
 	```
 	Connection Name:	atp-AlphaOffice-Admin
-	Username: 			admin
-	Password: 			a1phaOffice1_
-	Select 				Save Password
+	Username:	admin
+	Password: 	a1phaOffice1_
+	Select 		Save Password
 	Connection Type:	Cloud Wallet
 	Configuration File:	The Wallet_orcl.zip you downloaded in the previous step
 	```
