@@ -134,23 +134,25 @@
 
   - Enter/Select the following values, click **Test**. After a `Successful` **Status**, click **Save**, then **Connect**
 
+	```
 	**Connection Name:** `atp-AlphaOffice-Admin`
 	**Username:** `admin`
 	**Password:** `a1phaOffice1_`
 	Select `Save Password`
 	**Connection Type:** `Cloud Wallet`
 	**Configuration File:** The `Wallet_orcl.zip` you downloaded in the previous step
-
+	```
+	
 	![](images/100/image29.png)
 
 ### **STEP 8**: Create Database User in ATP Database
 
   - In the **SQL Developer Worksheet**, execute the following SQL Statements to create the `alpha` database user.
 	
-	'''
+	```
 	create user alpha identified by "a1phaOffice1_";
 	grant dwrole to alpha;
-	'''
+	```
 
 	![](images/100/image30.png)
 
@@ -158,7 +160,7 @@
 
   - In the same **SQL Developer Worksheet**, execute the following SQL Statements to create the **DBMS_CLOUD Credentials** `impdp_OBJ_STORE`.
 
-	'''
+	```
 	begin
 	  DBMS_CLOUD.create_credential(
 		credential_name => 'impdp_OBJ_STORE',
@@ -167,7 +169,7 @@
 	  );
 	end;
 	/
-	'''
+	```
 	
 	![](images/100/image31.png)
 
