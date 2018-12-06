@@ -96,7 +96,7 @@
 
 	![](images/100/image20.png)
 
-# Setup SQL Developer Connection to ATP Database , Create Database User DBMS\_CLOUD Credential in ATP Database
+# Setup SQL Developer Connection to ATP, Create Database User and DBMS_CLOUD Credential in ATP
 
 ### **STEP 6**: Download ATP Wallet Zip File
 
@@ -106,7 +106,7 @@
 
 ### **STEP 9**: Create DBMS_CLOUD Credential 
 
-# Import Data Pump Export file into ATP Instance and Download and Inspect Data Pump Log File 
+# Import Data Pump Export file into ATP Databse and Download/Inspect Data Pump Log File 
 
 ### **STEP 10**: Add DBA View and ATP SQL Developer Connection 
 

@@ -71,7 +71,7 @@ ATP Verbage.......
 
     ![](images/050/image12.png)
 
-  - Select the **Compartment** `monoTOmicro` if it is not already selected. Enter the **Display Name** `AlphaOffice`, **Database Name** `orcl`, enter the **Administrator Password** of `alphaOffice1_` and Click **Create Autonomous Transaction Processing Database**
+  - Select the **Compartment** `monoTOmicro` if it is not already selected. Enter the **Display Name** `AlphaOffice`, **Database Name** `orcl`, enter the **Administrator Password** of `a1phaOffice1_` and Click **Create Autonomous Transaction Processing Database**
 
     ![](images/050/image13.png)
 
