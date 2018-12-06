@@ -208,7 +208,7 @@
 	```
 	Type of Import: Full
 	Credentials or Directories: IMPDP_OBJ_STORE (Created in STEP 9)
-	File Names or URI: https://swiftobjectstorage.{REGION}.oraclecloud.com/v1/{OBJECT_STORAGE_NAMESPACE}/{BUCKET}/{FILE_NAME}
+	File Names or URI: https://swiftobjectstorage.{REGION}.oraclecloud.com/v1/{OBJECT_STORAGE_NAMESPACE}/{BUCKET}/{FILENAME}
 	```
 	
 	![](images/100/image38.png)
@@ -216,7 +216,7 @@
 	**Note:** For example, the **Swift URI** for the Data Pump DMP file uploaded to Object Storage in STEP 3 would be
 
 	```
-	https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/{OBJECT_STORAGE_NAMESPACE} /atpData/expdp\_alpha121.dmp
+	https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/{OBJECT_STORAGE_NAMESPACE}/atpData/expdp_alpha121.dmp
 	```
 	
 	**Note:** To determine the values for **REGION, BUCKET, OBJECT_STORAGE_NAMESPACE, FILENAME** to complete the **Swift URI**, navigate to **Object Storage** and click on the `atpData` **Bucket**
