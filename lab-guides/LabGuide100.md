@@ -135,12 +135,12 @@
   - Enter/Select the following values, click **Test**. After a `Successful` **Status**, click **Save**, then **Connect**
 
 	```
-	**Connection Name:** `atp-AlphaOffice-Admin`
-	**Username:** `admin`
-	**Password:** `a1phaOffice1_`
-	Select `Save Password`
-	**Connection Type:** `Cloud Wallet`
-	**Configuration File:** The `Wallet_orcl.zip` you downloaded in the previous step
+	Connection Name:	atp-AlphaOffice-Admin
+	Username: 			admin
+	Password: 			a1phaOffice1_
+	Select 				Save Password
+	Connection Type:	Cloud Wallet
+	Configuration File:	The Wallet_orcl.zip you downloaded in the previous step
 	```
 	
 	![](images/100/image29.png)
@@ -158,7 +158,7 @@
 
 ### **STEP 9**: Create DBMS_CLOUD Credential 
 
-  - In the same **SQL Developer Worksheet**, execute the following SQL Statements to create the **DBMS_CLOUD Credentials** `impdp_OBJ_STORE`.
+  - In the same **SQL Developer Worksheet**, execute the following SQL Statements to create the **DBMS_CLOUD Credential** `impdp_OBJ_STORE`.
 
 	```
 	begin
