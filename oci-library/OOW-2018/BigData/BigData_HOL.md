@@ -27,7 +27,7 @@ In this lab, attendees will manage a Cloudera Enterpise Data Hub on OCI and use 
 
 ## Pre-Requisites 
 
-* OCI account: If you don't have an OCI account, you can sign up for a free trial [here](https://cloud.oracle.com/trial
+* OCI account: If you don't have an OCI account, you can sign up for a free trial [here](https://cloud.oracle.com/trial)
 
 * Terraform configuration: That's all detailed [here](https://github.com/cloud-partners/oci-prerequisites)
 
