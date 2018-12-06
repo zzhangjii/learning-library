@@ -121,7 +121,7 @@ In the details section, copy the Public IP of the Utility Instance
 
 ![](media/image13.png)
 
-3. Start the cluster (if it is not already started).Proceed to SSH login while this runs.
+3. Start the cluster (if it is not already started).
 
 ![](media/image14.png)
 
