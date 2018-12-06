@@ -20,6 +20,7 @@
 
 ## Overview
 
+
 The Oracle Cloud Infrastructure Compute service provides console connections that enable you to remotely troubleshoot malfunctioning instances, such as:
 
 - An imported or customized image that does not complete a successful boot.
