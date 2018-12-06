@@ -100,11 +100,76 @@
 
 ### **STEP 6**: Download ATP Wallet Zip File
 
+  - Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Database** section, select **Autonomous Transaction Processing**.
+
+	![](images/100/image21.png)
+
+  - Select the **AlphaOffice** ATP Database
+
+	![](images/100/image22.png)
+
+  - Click **DB Connection**
+
+	![](images/100/image23.png)
+
+  - Click **Download**
+
+	![](images/100/image24.png)
+
+  - Enter the **Password** `a1phaOffice1_` and click **Download**
+
+	![](images/100/image25.png)
+
+  - The ATP Wallet file **Wallet_orcl.zip** contains the following files
+
+	![](images/100/image26.png)
+
 ### **STEP 7**: Create SQL Developer Connection to ATP Database
+
+  - Open **SQL Developer** available on the client image
+
+  - In the **Connections** Pane, Click ![](images/100/image27.png)
+
+	![](images/100/image28.png)
+
+  - Enter/Select the following values, click **Test**. After a `Successful` **Status**, click **Save**, then **Connect**
+
+	**Connection Name:** `atp-AlphaOffice-Admin`
+	**Username:** `admin`
+	**Password:** `a1phaOffice1_`
+	Select `Save Password`
+	**Connection Type:** `Cloud Wallet`
+	**Configuration File:** The `Wallet_orcl.zip` you downloaded in the previous step
+
+	![](images/100/image29.png)
 
 ### **STEP 8**: Create Database User in ATP Database
 
+  - In the **SQL Developer Worksheet**, execute the following SQL Statements to create the `alpha` database user.
+	
+	'''
+	create user alpha identified by "a1phaOffice1_";
+	grant dwrole to alpha;
+	'''
+
+	![](images/100/image30.png)
+
 ### **STEP 9**: Create DBMS_CLOUD Credential 
+
+  - In the same **SQL Developer Worksheet**, execute the following SQL Statements to create the **DBMS_CLOUD Credentials** `impdp_OBJ_STORE`.
+
+	'''
+	begin
+	  DBMS_CLOUD.create_credential(
+		credential_name => 'impdp_OBJ_STORE',
+		username => 'impdp-ATP',
+		password => 'Auth Token Generated in STEP 5'
+	  );
+	end;
+	/
+	'''
+	
+	![](images/100/image31.png)
 
 # Import Data Pump Export file into ATP Databse and Download/Inspect Data Pump Log File 
 
