@@ -23,11 +23,7 @@ In this lab, you log into Oracle Visual Builder and build a web application that
 
 # Application Development with Visual Builder
 
-<<<<<<< HEAD
-**`AAfter clicking on the Demo Lab button and Signing Up or Signing In you'll receive an email with the URL and credentials to log into your Visual Builder environment.`**
-=======
 **`After clicking on the the Demo Lab button and Signing Up or Signing In you'll recieve an email with the URL and credentials to log into your Virtual Builder environment.`**
->>>>>>> c0bdb3f1bb3d26de065eb08cd5d7983710232c2c
 
 ## Login and Launch the Demo Lab
 
@@ -121,11 +117,7 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
   ![](images/000JumpStart/JS19-2.PNG)
   
-<<<<<<< HEAD
 - On the Fields page we are going to make some changes. Click the **Sales** tab to bring up the default parameters.
-=======
-- On the Fields page, you will make some changes. Click the **Sales** tab to bring up the default parameters.
->>>>>>> c0bdb3f1bb3d26de065eb08cd5d7983710232c2c
 
   ![](images/000JumpStart/JS20.PNG)
 
