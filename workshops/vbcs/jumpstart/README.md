@@ -13,7 +13,7 @@ Oracle Visual Builder is a cloud service that enables you to rapidly create and 
 
 ## Lab Overview
 
-This Lab will have you log into Oracle Visual Builder and build a web application that uses Business Objects and Charts.
+In this lab, you log into Oracle Visual Builder and build a web application that uses Business Objects and Charts.
 
 ## Requirements
 
@@ -23,7 +23,7 @@ This Lab will have you log into Oracle Visual Builder and build a web applicatio
 
 # Application Development with Visual Builder
 
-**`After clicking on the the Demo Lab button and Signing UP or Signing In you'll recieve an email with the URL and credentials to log into your Virtual Builder environment.`**
+**`After clicking on the the Demo Lab button and Signing Up or Signing In you'll recieve an email with the URL and credentials to log into your Virtual Builder environment.`**
 
 ## Login and Launch the Demo Lab
 
@@ -37,13 +37,13 @@ This Lab will have you log into Oracle Visual Builder and build a web applicatio
 
   ![](images/000JumpStart/JS4.PNG)
 
-- While you're waiting, check out the short video that gives an overview of this session.
+- While you wait, check out the short video that gives an overview of this lab.
 
   ![](images/000JumpStart/JS5.PNG)
 
 ### **STEP 2**: Log into Visual Builder
 
-- Go to the URL you recieved in the email and login with the credentials provided:
+- Go to the URL you recieve in the email and login with the credentials provided:
 
   ![](images/000JumpStart/JS8.PNG)
 
@@ -71,7 +71,7 @@ This Lab will have you log into Oracle Visual Builder and build a web applicatio
 
 ### **STEP 1**: Create a Web Application
 
-- On the left hand side of the page click the **Application Icon** to toggle to a Web Application.
+- On the left hand side of the page, click the **Application Icon** to toggle to a Web Application.
 
   ![](images/000JumpStart/JS12.PNG)
 
@@ -97,7 +97,7 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
   ![](images/000JumpStart/JS15.PNG)
 
-- Then, click the Business Objects **hamburger menu** and select **Data Manager**.
+- Click the Business Objects **hamburger menu** and select **Data Manager**.
 
   ![](images/000JumpStart/JS16.PNG)
 
@@ -113,11 +113,11 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
   ![](images/000JumpStart/JS19.PNG)
 
-- On the Business Object page you'll see the three created data sources. Click **Next**.
+- On the Business Object page, the three created data sources are displayed. Click **Next**.
 
   ![](images/000JumpStart/JS19-2.PNG)
   
-- On the Fields page we are going to make some changes. Click the **Sales** tab to bring up the default paramters.
+- On the Fields page we are going to make some changes. Click the **Sales** tab to bring up the default parameters.
 
   ![](images/000JumpStart/JS20.PNG)
 
@@ -127,27 +127,27 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
       ![](images/000JumpStart/JS21-2.PNG)
 
-   - Take the `Reference Buiness Object` and `Default Display Field` defaults and click the **check icon**.
+  - Accept the defaults and click the **check icon**.
 
       ![](images/000JumpStart/JS21.PNG)
 
-- Now, select the **Summary** tab and make the following changes:
+- Select the **Summary** tab and make the following changes:
   - On the Display Label column **rename** `ref2Region` to `Region`.
   - Click the **#** sign in the type field. Select the **Reference icon**.
 
       ![](images/000JumpStart/JS21-2.PNG)
 
-   - Take the `Reference Buiness Object` and `Default Display Field` defaults and click the **check icon**.
+  - Accept the defaults and click the **check icon**.
 
       ![](images/000JumpStart/JS22.PNG)
 
-- Click **Finish**. The import will occur.
+- Click **Finish**. The import starts.
 
 - In the Applying changes dialog click the **Close** button to complete the process.
 
   ![](images/000JumpStart/JS23.PNG)
 
-- Click the Business Objects **hamburger menu** and select **Diagram**. It will show the relationships you just defined.
+- Click the Business Objects **hamburger menu** and select **Diagram**. It shows the relationships you just defined.
 
   ![](images/000JumpStart/JS23-2.PNG)
 
@@ -157,7 +157,7 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
 ### **STEP 1**: Add a Heading
 
-- Click the **Web Applications Icon**.
+- Click the **Web Applications** Icon.
 
   ![](images/000JumpStart/JS12.PNG)
 
@@ -165,7 +165,7 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
   ![](images/000JumpStart/JS25.PNG)
 
-- In the Component Palette locate the **Heading** component under `Common` and drag it onto the Canvas.
+- In the Component Palette, locate the **Heading** component under `Common` and drag it onto the Canvas.
 
   ![](images/000JumpStart/JS26.PNG)
 
@@ -185,13 +185,13 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
   ![](images/000JumpStart/JS28.PNG)
   
-- On the `Locate Data` page click the **Summary** Business Object.
+- On the `Locate Data` page, click the **Summary** Business Object.
 
   ![](images/000JumpStart/JS29.PNG)
 
 - Click **Next**.
 
-- On the `Map Fields` page drag and drop the following:
+- On the `Map Fields` page, drag and drop the following:
 
   - **sales**-->Values (Y Axis)
   - **year**-->Categories (X Axis)
@@ -235,7 +235,7 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
   ![](images/000JumpStart/JS36.PNG)
 
-- The completed chart will look like:
+- The completed chart shows the following:
 
   ![](images/000JumpStart/JS37.PNG)
 
@@ -280,7 +280,7 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
     ![](images/000JumpStart/JS43.PNG)
 
-- The completed Area Chart will now look like:
+- The completed Area Chart shows the following:
 
   ![](images/000JumpStart/JS44.PNG)
 
