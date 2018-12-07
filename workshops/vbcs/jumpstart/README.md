@@ -23,7 +23,7 @@ This Lab will have you log into Oracle Visual Builder and build a web applicatio
 
 # Application Development with Visual Builder
 
-**`After clicking on the the Demo Lab button and Signing UP or Signing In you'll recieve an email with the URL and credentials to log into your Virtual Builder environment.`**
+**`AAfter clicking on the Demo Lab button and Signing Up or Signing In you'll receive an email with the URL and credentials to log into your Visual Builder environment.`**
 
 ## Login and Launch the Demo Lab
 
@@ -117,7 +117,7 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
   ![](images/000JumpStart/JS19-2.PNG)
   
-- On the Fields page we are going to make some changes. Click the **Sales** tab to bring up the default paramters.
+- On the Fields page we are going to make some changes. Click the **Sales** tab to bring up the default parameters.
 
   ![](images/000JumpStart/JS20.PNG)
 
@@ -127,17 +127,17 @@ A business object is a resource, such as an invoice or purchase order, similar t
 
       ![](images/000JumpStart/JS21-2.PNG)
 
-   - Take the `Reference Buiness Object` and `Default Display Field` defaults and click the **check icon**.
+  - Accept the defaults and click the **check icon**.
 
       ![](images/000JumpStart/JS21.PNG)
 
-- Now, select the **Summary** tab and make the following changes:
+- Select the **Summary** tab and make the following changes:
   - On the Display Label column **rename** `ref2Region` to `Region`.
   - Click the **#** sign in the type field. Select the **Reference icon**.
 
       ![](images/000JumpStart/JS21-2.PNG)
 
-   - Take the `Reference Buiness Object` and `Default Display Field` defaults and click the **check icon**.
+  - Accept the defaults and click the **check icon**.
 
       ![](images/000JumpStart/JS22.PNG)
 
