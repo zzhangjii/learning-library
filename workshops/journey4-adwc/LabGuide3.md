@@ -73,11 +73,14 @@ To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/iss
 
     -   Click the browse button and navigate to the channels.csv file (you extracted this file from the zip file you downloaded at the start of this lab).
 
+    - You might see a read error since channels.csv has lines terminated by ";", as is sometimes the case with certain data. Manually enter a semi-colon in the **line terminator** box to properly parse the data.
+
 After selecting the file, you can preview the data and select the appropriate file formats. You will see that the data preview is interactive and changes according to your selection.
 
 When you are satisfied with the file content view, click **NEXT**.
 
-![](./images/300/snap0014654.jpg)
+![](assets/LabGuide3-becd791d.png)
+<!--When newline is fixed ![](./images/300/snap0014654.jpg)-->
 
 -   On Step 2 of the Import Wizard, you control the import method and parameters. Leave the Import Method as Insert. Enter *CHANNELS_LOCAL* as your target table name, this table will be created by the import wizard. Click **NEXT**.
 
@@ -236,10 +239,12 @@ In order to access data in the Object Store you have to enable your database use
 
     -   Select the Credential you previously created for authentication with the Object Store, **OBJ\_STORE\_CRED**
 
+    -   You might see a read error since channels.csv has lines terminated by ";", as is sometimes the case with certain data. Manually enter a semi-colon in the **line terminator** box to properly parse the data.
+
     -   Click the **Preview** button
 
-![](./images/300/snap0014662.jpg)
-
+<!--![](./images/300/snap0014662.jpg)-->
+![](assets/LabGuide3-51e53dd3.png)
 
 When you are satisfied with the data preview, click **NEXT**.
 
