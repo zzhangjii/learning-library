@@ -59,30 +59,7 @@ You will create all required infrastructure components within your Trail account
 
   ![](images/200/4.png)
 
-
-### **STEP 3**: Create a Compartment
-
-Compartments are used to isolate resources within your OCI tenant. User-based access policies can be applied to manage access to compute instances and other resources within a Compartment.
-
-- Click the **hamburger icon** in the upper left corner to open the navigation menu. Under the **Identity** section of the menu, click **Compartments**
-
-  ![](images/200/69.png)
-
-  ![](images/200/70.png)
-
-  - Click **Create Compartment**
-
-    ![](images/200/7.png)
-
-  - In the **Name** field, enter any name you want. For this example we will be using the name `monoTOmicro` going forward. Enter a **Description** of your choice. Click **Create Compartment**.
-
-    ![](images/200/8.png)
-
-  - In a moment, your new Compartment will show up in the list.
-
-    ![](images/200/9.PNG)
-
-### **STEP 4**: Create a Virtual Compute Network
+### **STEP 3**: Create a Virtual Compute Network
 
 We need a default VCN to define our networking within the `monoTOmicro` compartment (_Or the name you used for your compartment_). This is where Subnets and Security Lists, to name a couple get defined for each Availablity Domains in your Tenancy. Oracle Cloud Infrastructure is hosted in regions and availability domains. A region is a localized geographic area, and an availability domain is one or more data centers located within a region. A region is composed of several availability domains. Availability domains are isolated from each other, fault tolerant, and very unlikely to fail simultaneously. Because availability domains do not share infrastructure such as power or cooling, or the internal availability domain network, a failure at one availability domain is unlikely to impact the availability of the others.
 
@@ -116,7 +93,7 @@ All the availability domains in a region are connected to each other by a low la
 
     ![](images/200/15.PNG)
 
-### **STEP 5**: Add a Security List entry
+### **STEP 4**: Add a Security List entry
 
 A security list provides a virtual firewall for an instance, with ingress and egress rules that specify the types of traffic allowed in and out. Each security list is enforced at the instance level. However, you configure your security lists at the subnet level, which means that all instances in a given subnet are subject to the same set of rules. The security lists apply to a given instance whether it's talking with another instance in the VCN or a host outside the VCN.
 
@@ -159,7 +136,7 @@ For the purposes of the upcoming Docker deployments we need to add five Ingress 
 
     ![](images/200/20.png)
 
-### **STEP 6**: Create SSH Key Pair (Linux or Mac client)
+### **STEP 5**: Create SSH Key Pair (Linux or Mac client)
 
 Before we create the Compute instance that will contain Docker and application deployments we need to create an ssh key pair so we'll be able to securely connect to the instance and do the Docker installation, etc.
 
@@ -179,7 +156,7 @@ ssh-keygen -b 2048 -t rsa -f dockerkey
 
     ![](images/200/25-4.PNG)
 
-### **STEP 7**: Create SSH Key Pair (Windows client)
+### **STEP 6**: Create SSH Key Pair (Windows client)
 
 For Windows clients this example will show the use of PuttyGen to generate the keypair. [Putty and PuttyGen](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) are available for download.
 
@@ -199,7 +176,7 @@ For Windows clients this example will show the use of PuttyGen to generate the k
 
     ![](images/200/25-2.PNG)
 
-### **STEP 8**: Create a Compute Instance
+### **STEP 7**: Create a Compute Instance
 
 You will now create a Linux based Compute instance using the public key you just generated.
 
@@ -253,7 +230,7 @@ After a few minutes you should see a running instance with a Public IP Address.
    ![](images/200/30.PNG)
 
 
-### **STEP 9**: SSH into the Instance and install Docker
+### **STEP 8**: SSH into the Instance and install Docker
 
 Continue the setup: SSH into the Compute image and install Docker and GIT.
 
@@ -297,7 +274,7 @@ ssh -i ./dockerkey opc@129.213.119.105
 
   ![](images/200/37.PNG)
 
-### **STEP 10**: Install and configure Docker and GIT
+### **STEP 9**: Install and configure Docker and GIT
 
 Docker and GIT are required for the subsuquent labs. You will install the Docker engine, enable it to start on re-boot, grant docker privledges to the `opc` user and finally install GIT.
 
@@ -340,7 +317,7 @@ git --version
 
    ![](images/200/41.PNG)
 
-### **STEP 11**: Edit /etc/sysconfig/selinux
+### **STEP 10**: Edit /etc/sysconfig/selinux
 
 Set the server to Permissive mode and also ensure that permissive mode survives re-boots by editing `/etc/sysconfig/selinux`
 
