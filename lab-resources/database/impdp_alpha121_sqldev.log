@@ -1,5 +1,5 @@
-Master table "ADMIN"."IMP_SD_202-16_00_32" successfully loaded/unloaded
-Starting "ADMIN"."IMP_SD_202-16_00_32":  
+Master table "ADMIN"."IMP_SD_820-14_02_56" successfully loaded/unloaded
+Starting "ADMIN"."IMP_SD_820-14_02_56":  
 Processing object type SCHEMA_EXPORT/USER
 ORA-31684: Object type USER:"ALPHA" already exists
 Processing object type SCHEMA_EXPORT/SYSTEM_GRANT
@@ -26,7 +26,7 @@ Processing object type SCHEMA_EXPORT/TABLE/TABLE_DATA
 . . imported "ALPHA"."ORDERS"                            13.84 KB       3 rows
 . . imported "ALPHA"."ORDER_ITEMS"                       9.390 KB       4 rows
 . . imported "ALPHA"."PAYMENT_OPTIONS"                   12.79 KB       7 rows
-. . imported "ALPHA"."PRODUCTS"                          24.58 KB      57 rows
+. . imported "ALPHA"."PRODUCTS"                          25.64 KB      57 rows
 . . imported "ALPHA"."PRODUCT_CATEGORIES"                10.58 KB      20 rows
 . . imported "ALPHA"."PRODUCT_STOCK_LEVELS"              8.648 KB      26 rows
 . . imported "ALPHA"."PRODUCT_IMAGES"                        0 KB       0 rows
@@ -43,4 +43,4 @@ Processing object type SCHEMA_EXPORT/TABLE/TRIGGER
 Processing object type SCHEMA_EXPORT/TABLE/STATISTICS/TABLE_STATISTICS
 Processing object type SCHEMA_EXPORT/STATISTICS/MARKER
 ORA-39082: Object type FUNCTION:"ALPHA"."CALCTPS" created with compilation warnings
-Job "ADMIN"."IMP_SD_202-16_00_32" completed with 3 error(s) at Mon Dec 3 16:04:44 2018 elapsed 0 00:04:11
+Job "ADMIN"."IMP_SD_820-14_02_56" completed with 3 error(s) at Mon Dec 17 14:04:50 2018 elapsed 0 00:01:52
