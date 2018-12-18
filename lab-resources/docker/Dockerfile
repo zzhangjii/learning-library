@@ -3,6 +3,7 @@ FROM        java:8-jdk
 ENV         JAVA_HOME         /usr/lib/jvm/java-8-openjdk-amd64
 ENV         GLASSFISH_HOME    /usr/local/glassfish4
 ENV         PATH              $PATH:$JAVA_HOME/bin:$GLASSFISH_HOME/bin
+ENV         TNS_ADMIN         /usr/local/wallet_DB/
 
 RUN         apt-get update && \
             apt-get install -y curl unzip zip inotify-tools && \
@@ -11,10 +12,19 @@ RUN         apt-get update && \
 #download and install the glassfish server
 RUN         curl -L -o /tmp/glassfish-4.1.zip https://download.oracle.com/glassfish/4.1.1/release/glassfish-4.1.1.zip && \
             unzip /tmp/glassfish-4.1.zip -d /usr/local && \
-            rm -f /tmp/glassfish-4.1.zip
+            rm -f /tmp/glassfish-4.1.zip && \
+            mkdir /usr/local/wallet_DB && \
+            mkdir /usr/local/alpha
 
 #clone and deploy the project on the glassfish server
-COPY     alpha-office-product-catalog.war /usr/local/glassfish4/glassfish/domains/domain1/autodeploy/alpha-office-product-catalog.war
+#COPY     AlphaProductCatalog.war /usr/local/glassfish4/glassfish/domains/domain1/autodeploy/AlphaProductCatalog.war
+COPY AlphaProductCatalog.war /usr/local/alpha
+COPY Wallet_mattoATP.zip /usr/local/wallet_DB
+
+RUN         unzip /usr/local/wallet_DB/Wallet_mattoATP.zip -d /usr/local/wallet_DB/ && \
+            cd /usr/local/alpha && \
+            jar xvf /usr/local/alpha/AlphaProductCatalog.war && \
+            rm /usr/local/alpha/AlphaProductCatalog.war
 
 EXPOSE      8080
 
