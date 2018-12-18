@@ -1,5 +1,22 @@
 # Monolithic to Microservice Experience -- Autonomous Microservice Data Structure Configuration
 
+  ![](images/100/Title.png)
+
+## Introduction
+
+In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump export file to Object Storage and leverage SQL Developer to import the Data Pump export file into an Autonomous Transaction Processing (ATP) Database.
+
+***To log issues***, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
+
+## Objectives
+
+- Create Object Storage Bucket and Upload Data Pump Exprt File to the Bucket
+- Create an Oracle Cloud Infrastructure (OCI) User and Gernerate Auth Token
+- Setup SQL Developer Connection to Autonomous Transaction Processing (ATP) Database
+- Create ATP Database user and DBMS_CLOUD Credential
+- Import Data into ATP Database using SQL Developer Data Pump Import Wizard
+- Download and Review Data Pump Import Log
+  
 # Object Storage Setup, OCI User Creation and Auth Token Generation
 
 ### **STEP 1**: Log in to your OCI dashboard
@@ -82,7 +99,7 @@
 
 	![](images/100/image17.png)
 
-**STEP 5**: Generate Auth Token for OCI User
+### **STEP 5**: Generate Auth Token for OCI User
 
   - For the new user `impdp-ATP`, select the **Resource** `Auth Tokens` and click **Generate Token**
 
@@ -132,16 +149,14 @@
 
 	![](images/100/image28.png)
 
-  - Enter/Select the following values, click **Test**. After a `Successful` **Status**, click **Save**, then **Connect**
+  - Enter/Select the following values, click **Test**. After a `Success` **Status**, click **Save**, then **Connect**
 
-	```
-	Connection Name:  atp-AlphaOffice-Admin
-	Username:  admin
-	Password:  a1phaOffice1_
-	Select Save Password
-	Connection Type:  Cloud Wallet
-	Configuration File:  The Wallet_orcl.zip you downloaded in the previous step
-	```
+	- **Connection Name:**  ```atp-AlphaOffice-Admin```
+	- **Username:**  ```admin```
+	- **Password:**  ```a1phaOffice1_```
+	- Select ```Save Password```
+	- **Connection Type:**  ```Cloud Wallet```
+	- **Configuration File:**  The ```Wallet_orcl.zip``` you downloaded in the previous step
 	
 	![](images/100/image29.png)
 
@@ -205,11 +220,9 @@
 
   - On **Step 1** of the **Import Wizard**, select and/or enter the following and click **Next**
 
-	```
-	Type of Import: Full
-	Credentials or Directories: IMPDP_OBJ_STORE (Created in STEP 9)
-	File Names or URI: https://swiftobjectstorage.{REGION}.oraclecloud.com/v1/{OBJECT_STORAGE_NAMESPACE}/{BUCKET}/{FILENAME}
-	```
+	- **Type of Import:** ```Full```
+	- **Credentials or Directories:** ```IMPDP_OBJ_STORE``` (Created in STEP 9)
+	- **File Names or URI:** ```https://swiftobjectstorage.{REGION}.oraclecloud.com/v1/{OBJECT_STORAGE_NAMESPACE}/{BUCKET}/{FILENAME}```
 	
 	![](images/100/image38.png)
 
@@ -291,3 +304,7 @@ The **DBMS_CLOUD** package provides the **LIST_FILES** and **PUT_OBJECTS** subpr
   - Once downloaded, open it using a text editor to review the import messages. You will notice the **Import Job Name** `IMP_SD_84-18_49_56` in **SQL Developer** is also referenced in the log file.
 
 	![](images/100/image53.png)
+
+**This completes the Lab!**
+
+**You are ready to proceed to [Lab 200](LabGuide200.md)**
