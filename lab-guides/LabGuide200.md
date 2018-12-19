@@ -387,32 +387,7 @@ In this step you are going to build a Docker image based on commands the the pro
 
 - The Dockerfile defines what happens in the image build. The contents look like:
 
-  ```
-  FROM        java:8-jdk
-
-  ENV         JAVA_HOME         /usr/lib/jvm/java-8-openjdk-amd64
-  ENV         GLASSFISH_HOME    /usr/local/glassfish4
-  ENV         PATH              $PATH:$JAVA_HOME/bin:$GLASSFISH_HOME/bin
-
-  RUN         apt-get update && \
-              apt-get install -y curl unzip zip inotify-tools && \
-              rm -rf /var/lib/apt/lists/*
-
-  #download and install the glassfish server
-  RUN         curl -L -o /tmp/glassfish-4.1.zip https://download.oracle.com/glassfish/4.1.1/release/glassfish-4.1.1.zip && \
-              unzip /tmp/glassfish-4.1.zip -d /usr/local && \
-              rm -f /tmp/glassfish-4.1.zip
-
-  #clone and deploy the project on the glassfish server
-  COPY     alpha-office-product-catalog.war /usr/local/glassfish4/glassfish/domains/domain1/autodeploy/alpha-office-product-catalog.war
-
-  EXPOSE      8080
-
-  WORKDIR     /usr/local/glassfish4
-
-  # verbose causes the process to remain in the foreground
-  CMD         asadmin start-domain --verbose
-  ```
+  ![](images/200/46-2.PNG)
 
 - Type:
 
