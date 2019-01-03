@@ -41,10 +41,6 @@ The purpose of this lab is to give you an overview of the Reserved Public IP Ser
 
 - We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
 
-Ensure you have below information available:
-
-- Tenant, User name, Password, and compartment name
-
 1. Sign in using your tenant name, user name and password.
 
 2. Once signed in select the compartment assigned to you from drop down menu on left part of the screen
