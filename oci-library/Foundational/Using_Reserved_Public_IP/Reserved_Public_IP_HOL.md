@@ -1,4 +1,3 @@
-
 # ReservedIP Practice - Using Reserved Public IP 
   
 ## Table of Contents
@@ -7,17 +6,18 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[ReservedIP-Practice 1: Sign in to OCI Console and Create Reserved Public IP](#ReservedIP-practice-1)
+[Practice 1: Sign in to OCI Console and create reserved publci IP](#practice-1-sign-in-to-oci-console-and-create-reserved-public-ip)
 
-[ReservedIP-Practice 2: Assign reserved public IP to first compute instance](#ReservedIP-practice-2)
+[Practice 2: Assign reserved public IP to first compute instance](#practice-2-assign-reserved-public-ip-to-first-compute-instance)
 
-[ReservedIP-Practice 3: ssh to compute instance using Reserved Public IP](#ReservedIP-practice-3)
+[Practice 3: ssh to compute instance using Reserved Public IP](#practice-3-ssh-to-compute-instance-using-reserved-public-ip)
 
-[ReservedIP-Practice 4: Un-assign Reserved Public IP](#ReservedIP-practice-4)
+[Practice 4: Un assign Reserved Public IP](#practice-4-un-assign-reserved-public-ip)
 
-[ReservedIP-Practice 5: Create a second compute instance and assign the same Reserved Public IP](#ReservedIP-practice-5)
+[Practice 5: Create a second compute instance and assign the same Reserved Public IP](#practice-5-create-a-second-compute-instance-and-assign-the-same-reserved-public-ip)
 
-[ReservedIP-Practice 6: Delete the resources](#ReservedIP-practice-6)
+[Practice 6: Delete the resources](#practice-6-delete-the-resources)
+
 ## Overview
 
 Oracle Cloud Infrastructure Reserved Public IP service is an internet-scale, high-performance storage platform that offers reliable and cost-efficient data durability. The Reserved Public IP service can store an unlimited amount of unstructured data of any content type, including analytic data and rich content, like images and videos.
@@ -32,8 +32,7 @@ The purpose of this lab is to give you an overview of the Reserved Public IP Ser
 
 - Oracle Cloud Infrastructure account credentials (User, Password, Tenant, and Compartment)  
 
-## Reserved IP-Practice-1 
-### __Sign in to OCI console and create Reserved Public IP__
+## Practice-1: Sign in to OCI console and create reserved Public IP
 
 **Overview**
 
@@ -93,8 +92,7 @@ Click **Create Reserved Public IP**
 
 ![]( img/RESERVEDIP_HOL005.PNG)
 
-## Reserved IP-Practice 2: 
-### __Assign reserved public IP to first compute instance__
+## Practice 2: Assign reserved public IP to first compute instance
 
 #### Overview
 
@@ -183,8 +181,7 @@ k) Note down the Public IP address.
 
 ***We have successfully assigned a Reserved Public IP address to the compute instance***
 
-## Reserved IP-Practice 3: 
-### __ssh to compute instance using Reserved Public IP__
+## Practice 3: ssh to compute instance using Reserved Public IP
 
 #### Overview
 
@@ -218,8 +215,7 @@ e) Verify opc@<COMPUTE_INSTANCE_NAME(reserved-ip-instance1 in this case) appears
 
 ***We successfully ssh into the compute instance using the reserved public IP. Next we will use the same Public IP and assign it to a different Compute instance***
 
-## Reserved IP-Practice 4: 
-### __Un-assign Reserved Public IP__
+## Practice 4: Un assign Reserved Public IP
 
 #### Overview
 
@@ -249,8 +245,7 @@ Reserved Public IP will be unassigned) . Click **Update**
 
 ***Reserved Public IP has now been un-assigned from this compute instance. Next we will create a new compute instance and assign this same Public IP to it.***
 
-## Reserved IP-Practice 5: 
-### __Create a second compute instance and assign the same Reserved Public IP. Verify the operation by ssh into second compute instance__
+## Practice 5: Create a second compute instance and assign the same Reserved Public IP
 
 #### Overview
 
@@ -296,8 +291,7 @@ e) Verify opc@<COMPUTE_INSTANCE_NAME>
 (reserved-ip-instance2 in this case) appears at the 
 prompt
 
-## Reserved IP-Practice 6: 
-### __Delete the resources__
+## Practice 6: Delete the resources
 
 #### Overview
 
