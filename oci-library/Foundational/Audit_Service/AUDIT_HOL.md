@@ -54,10 +54,13 @@ Ensure you have below information available:
 ## Practice-2: Upload Object and Check Audit logs
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
+
 ![]( img/AUDIT004.PNG)
+
 2. Change directory to the Downloads folder Enter command: 
 
 **cd /c/Users/PhotonUser/Downloads/**
+
 ![]( img/AUDIT005.PNG)
 
 3. Create a sample file, Enter command:
@@ -66,9 +69,11 @@ Ensure you have below information available:
 4. Switch to OCI window and click the Bucket Name.
 
 **HINT:** You can swap between OCI window and any other application(git-bash etc) by clicking switch window
+
 ![]( img/AUDIT006.PNG)
 
 5. Bucket detail window should be visible. Click **Upload Object**
+
 ![]( img/AUDIT007.PNG)
 
 6. Click on Upload Object > Browse > This PC > Downloads. You should see the sample file created earlier
@@ -79,9 +84,9 @@ Ensure you have below information available:
 Keyword section. You can choose other options
 such as dates and Request Action Type. For this 
 lab we will leave them as default. Audit logs for the Storage bucket should be visible
+
 ![]( img/AUDIT008.PNG)
 ![]( img/AUDIT009.PNG)
-
 
 ***You have utilized OCI’s Audit service to extract events specific to Storage bucket created. Audit service can be used to monitor operations performed on OCI resources and can assist in trouble 
 shooting your OCI environment***
