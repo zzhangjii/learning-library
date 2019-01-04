@@ -54,9 +54,7 @@ Ensure you have below information available:
 ## Practice-2: Upload Object and Check Audit logs
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
-
 ![]( img/AUDIT004.PNG)
-
 2. Change directory to the Downloads folder Enter command: 
 
 **cd /c/Users/PhotonUser/Downloads/**
