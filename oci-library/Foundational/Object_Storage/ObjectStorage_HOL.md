@@ -6,9 +6,9 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Object-Practice 1: Sign in to OCI Console and Create Object Storage Bucket ](#Object-practice-1)
+[Practice 1: Sign in to OCI Console and Create Object Storage Bucket ](#practice-1-sign-in-to-oci-console-and-create-object-storage-bucket)
 
-[Object-Practice 2: Upload Object and create pre-authenticated link](#Object-practice-2)
+[Practice 2: Upload Object and create pre authenticated link](#practice-2-upload-object-and-create-pre-authenticated-link)
 
 
 ## Overview
@@ -31,127 +31,90 @@ The purpose of this lab is to give you an overview of the Object Service and an 
 
 - Oracle Cloud Infrastructure account credentials (User, Password, Tenant, and Compartment)  
 
-## Object-Practice-1 
-### __Sign in to OCI console and create Object Storage__
-
-**Overview**
-
-In this practice, you sign in to the Oracle Cloud Infrastructure console using your credentials and create Object Storage Bucket.
-
-Assumptions
-
-Oracle Cloud Infrastructure account credentials (User, Password, Tenant, and Compartment) are available
-
 **Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
 
 **Before You Begin**
 
 - We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
 
-Ensure you have below information available:
+## Practice-1: Sign in to OCI Console and Create Object Storage Bucket
 
-- Tenant, User name, Password, and compartment name
+1. Sign in using your tenant name, user name and password.
 
-**Duration: 5 minutes**
+2. Once signed in select the compartment assigned to you from drop down menu on left part of the screen
 
-**Tasks**
-
-**1** -  Sign in to OCI Console and Create Object Storage Bucket
-
-a) Sign in using your tenant name, user name and password.
-
-b) Once signed in select the compartment assigned to you from drop down menu on left part of the screen
-
-c) From the OCI Services menu,click **Object Storage** then **Create Bucket**
+3. From the OCI Services menu,click **Object Storage** then **Create Bucket**
 
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 ![]( img/OBJECT-STORAGE001.PNG)
+
+4. Fill out the dialog box:
+
+- Bucket Name: Provide a name (Test-Bucket in this lab)
+- Storage Tier: STANDARD 
+
+5.  Click **Create Bucket**
 ![]( img/OBJECT-STORAGE002.PNG)
 
-Fill out the dialog box:
+## Practice-2: Upload Object and create pre authenticated link
 
-**Bucket Name:** Provide a name (Test-Bucket in this lab)
-**Storage Tier:**  STANDARD 
-
-d) Click **Create Bucket**
-![]( img/OBJECT-STORAGE003.PNG)
-
-## Object-Practice-2 
-### __Upload Object and create pre-authenticated link__
-
-#### Overview
-
-In this section we will go over the steps needed to upload an object 
-(text file, media file, image etc) and how to create a pre-authenticated 
-request so the object is accessible from the internet.
-
-**Before You Begin**
-
-You should have completed Object-Practice-1
-
-**Duration: 10 minutes**
-
-**Tasks**
-
-**1** - Open built in Git bash application and create a sample file
-
-a) Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
+1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
 ![]( img/OBJECT-STORAGE004.PNG)
 
-b) Change directory to the Downloads folder Enter command:
+2. Change directory to the Downloads folder Enter command:
+
 **$ cd /c/Users/PhotonUser/Downloads/**
 ![]( img/OBJECT-STORAGE005.PNG)
-c) Create a sample file, Enter command:
+
+3. Create a sample file, Enter command:
 **touch samplefile**  This should create a file by the name"samplefile" in the Downloads folder
 
-**2** - Now, let’s upload this file to Object Stoage Bucket
-
-a) Switch to OCI window and click the Bucket Name.
+4. Switch to OCI window and click the Bucket Name.
 
 **HINT:** You can swap between OCI window and any other application(git-bash etc) by clicking switch window
 ![]( img/OBJECT-STORAGE006.PNG)
 
-b) Bucket detail window should be visible. Click **Upload Object**
+5. Bucket detail window should be visible. Click **Upload Object**
 ![]( img/OBJECT-STORAGE007.PNG)
 
-c) Click on Upload Object > Browse > This PC > Downloads. You should see the sample file created earlier
+6. Click on Upload Object > Browse > This PC > Downloads. You should see the sample file created earlier
 
-d) Select the file, then click **Upload Object** in the Dialog box.
+7. Select the file, then click **Upload Object** in the Dialog box.
 
-**3** - Create pre-authenticated link
-
-a) The file should be visible under Objects. Click 
-Action icon and click Create Pre-
-Authenticated Request. This will create a web
+8. File should be visible under Objects. Click 
+Action icon and click **Create Pre-
+Authenticated Request**. This will create a web
 link that can be used to access the object 
 Without requiring any additional authentication.
 
 ![]( img/OBJECT-STORAGE008.PNG)
 
-b) Fill out the dialog box:
+9. Fill out the dialog box:
 
-**NAME:** Use an easy to remember name.
+- NAME: Use an easy to remember name.
 
-**PRE AUTHENTICATION REQUEST TARGET:** OBJECT
+- PRE AUTHENTICATION REQUEST TARGET: OBJECT
 
-**ACCESS TYPE:** PERMIT READS ON THE OBJECT
+- ACCESS TYPE: PERMIT READS ON THE OBJECT
 
-**EXPIRATION DATE/TIME:** Specify link expiration date
+- EXPIRATION DATE/TIME: Specify link expiration date
 
-c) Click Create Pre-Authenticated Request
+10. Click **Create Pre-Authenticated Request**
 
 ![]( img/OBJECT-STORAGE009.PNG)
-d) Click Copy to copy the link
+
+11. Click **Copy** to copy the link
+
 **NOTE:** The link must be copied and saved once the window is closed the link can not be retrieved again. 
 
-e) Click Close
+12. Click **Close**
 ![]( img/OBJECT-STORAGE010.PNG)
 
-f) Open a new browser window and paste Pre-Authenticated link. 
+13. Open a new browser window and paste Pre-Authenticated link. 
 ![]( img/OBJECT-STORAGE011.PNG)
 
-g)  An option to download the file will appear.
+14.  An option to download the file will appear.
 
 **NOTE:** Do NOT download the file as due to space restrictions it is not allowed for the purpose of this lab.
 
