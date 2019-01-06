@@ -366,7 +366,7 @@ In this section you will clone a github repository containing a Java Application
 - Clone the git repository that contains the AlphaOffice application. **Type or Copy and Paste**:
 
   ```
-  got clone https://github.com/derekoneil/monolithic-to-microservice.git
+  git clone https://github.com/derekoneil/monolithic-to-microservice.git
   ```
 
   ![](images/200/45.PNG)
