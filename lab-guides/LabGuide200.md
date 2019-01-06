@@ -115,7 +115,7 @@ For the purposes of the upcoming Docker deployments we need to add five Ingress 
 
     ![](images/200/19.PNG)
 
-    ![](images/200/19-2.png)
+    ![](images/200/19-2.PNG)
 
 - **Enter the following**
 
@@ -126,7 +126,7 @@ For the purposes of the upcoming Docker deployments we need to add five Ingress 
   Destination Port Range: 8080
   ```
 
-  ![](images/200/19-4.png)
+  ![](images/200/19-4.PNG)
 
 - Click the **Save Security List Rules** button
 
@@ -134,7 +134,7 @@ For the purposes of the upcoming Docker deployments we need to add five Ingress 
 
 - Your Ingress Rules should look like:
 
-    ![](images/200/20.png)
+    ![](images/200/20.PNG)
 
 ### **STEP 5**: Create SSH Key Pair (Linux or Mac client)
 
