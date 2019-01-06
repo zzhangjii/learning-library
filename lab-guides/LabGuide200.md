@@ -107,7 +107,7 @@ A security list provides a virtual firewall for an instance, with ingress and eg
 
     ![](images/200/18.PNG)
 
-For the purposes of the upcoming Docker deployments we need to add five Ingress Rules that allow access from the Internet to ports 9080, 8002, 18002, 5600, and 8085. In a production environment only the UI port (8085) would typically be opened for access but the labs will have us test various other Application and Oracle centric functionality as we go, thus the need to open other ports.
+  For the purposes of the upcoming Docker application deployment we need to add an Ingress Rule that allows access from the Internet to port 8080.
 
 - Click **Edit All Rules** and then select **+ Another Ingress Rule**
 
@@ -117,7 +117,7 @@ For the purposes of the upcoming Docker deployments we need to add five Ingress 
 
     ![](images/200/19-2.PNG)
 
-- **Enter the following**
+- **Enter the following:**
 
   **NOTE:** Leave all other values at default
 
