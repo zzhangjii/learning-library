@@ -20,7 +20,7 @@
 |                  **Name**              |    **Type**  | **Version** | 
 |----------------------------------------|:------------:|:-------:|
 |[NAT Gateway](./L200-LAB/NAT_Gateway/nat_gateway.md)| Advanced |   2.1   | 
-|VCN Local Peering Connection                        | Advanced |   2.1   |   
+|[VCN Local Peering Connection](./L200-LAB/VCN_Local_Peering/vcn_local_peering.md)                       | Advanced |   2.1   |   
 |[Compute Console Connection](./L200-LAB/Compute-Console-Connection/HOL-Console-Connection.md)| Advanced |   2.1   |   
 |Block Storage Volume Groups                  | Advanced |   2.1   |   
 
