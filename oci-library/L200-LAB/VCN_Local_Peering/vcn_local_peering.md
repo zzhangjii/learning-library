@@ -40,7 +40,7 @@ In this exercise, we are going to create three separate VCNs and resources in ea
 
 1. Open the navigation menu. Under **Core Infrastructure**, go to **Networking** and click **Virtual Cloud Networks**.
    
-**Note:**Ensure that your compartment is the selected compartment on the left side of the Console.
+    **Note:** Ensure that your compartment is the selected compartment on the left side of the Console.
 
 2. Click **Create Virtual Cloud Network**. 
    
