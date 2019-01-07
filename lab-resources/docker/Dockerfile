@@ -26,6 +26,8 @@ RUN         unzip /usr/local/wallet_DB/Wallet_orcl.zip -d /usr/local/wallet_DB/ 
             jar xvf /usr/local/alpha/AlphaProductsRestService.war && \
             rm /usr/local/alpha/AlphaProductsRestService.war
 
+COPY sqlnet.ora /usr/local/wallet_DB
+
 EXPOSE      8080
 
 WORKDIR     /usr/local/glassfish4
