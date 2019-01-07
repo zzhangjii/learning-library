@@ -369,7 +369,8 @@ In this section you will clone a github repository containing a Java Application
 
 ### **Step 1**: Clone the git repository
 
-- Clone the git repository that contains the AlphaOffice application. **Type or Copy and Paste**:
+- Clone the git repository to your newly created OCI VM. This repo contains support files and the AlphaOffice application.
+ **Type or Copy and Paste**:
 
   ```
   git clone https://github.com/derekoneil/monolithic-to-microservice.git
@@ -377,16 +378,39 @@ In this section you will clone a github repository containing a Java Application
 
   ![](images/200/45.PNG)
 
-- From the directory you cloned the repository into **Type**:
+- From the directory you just cloned the repository into **Type**: (Command assumes your in the $HOME directory /home/opc)
 
   ```
   cd monolithic-to-microservice/lab-resources/docker
   ```
 
-- Here you will find the baseline `AlphaProductsRestService.war` file and a `Dockerfile`:
+- Here you will find the baseline `AlphaProductsRestService.war` file, `dbconfig.properties`, `sqlnet.ora` and a `Dockerfile`:
 
   ![](images/200/46.PNG)
 
+- From your local machine copy the database wallet file you downloaded in Lab 100 into the `/home/opc/monolithic-to-microservice/lab-resources/docker` directory in your OCI VM. The examples below assume your running the (p)scp command from the directory where the wallet file is located. The private key you generated is also in this directory:
+  **NOTE:** If your wallet file is a different name than **Wallet_orcl.zip** then substitute your name as shown in these examples below:
+
+  **Linux / MAC**
+
+  ```
+  scp -i ./dockerkey ./Wallet-mattoATP.zip opc@<YOUR-PUBLIC-IP>:/home/opc/monolithic-to-microservice/lab-resources/docker
+  ```
+
+  ![](images/200/46-1.1.PNG)
+  
+  **Windows** (Using the pscp utility bundled with Putty)
+
+  ```
+  scp -i .\dockerkey.ppk .\Wallet-mattoATP.zip opc@<YOUR-PUBLIC-IP>:/home/opc/monolithic-to-microservice/lab-resources/docker
+  ```
+
+   ![](images/200/46-1.2.PNG)
+
+- The wallet file should now be in the /home/opc/monolithic-to-microservice/lab-resources/docker directory on the OCI VM:
+
+  ![](images/200/46-1.3.PNG)
+ 
 ### **Step 2**: Build a Docker image
 
 In this step you are going to edit the provided Dockerfile and dbconfig.properties file, then build a Docker image based on commands provided in that file. You're going to add your ATP DB instance specific Wallet file. It will take a baseline java docker image from Docker Hub, add a Glassfish 4.1.1 application server and then deploy the `AlphaProductsRestService.war` into the Glassfish server running on port 8080. If you recall you opened port 8080 in the Networking Security List earlier in this lab so access from the internet can occur.
