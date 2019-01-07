@@ -20,7 +20,11 @@ In this lab you will use your Oracle Cloud Trial Account, create ssh key pairs, 
 
 ## Required Artifacts
 
-- If running from Windows: [Putty and PuttyGen](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+- If running from Windows and you don't have Bash Shell enabled (later Windows 10 releases) you can donload the Putty Packages. Select the proper .msi file for your operating system. We will be using Putty, PuttyGen and pscp from this installation: [Putty Packages](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+
+  ![](images/200/putty.PNG)
+
+  ![](images/200/putty2.PNG)
 
 # Log into  your Trial Account and Create Infrastructure
 
@@ -158,23 +162,25 @@ ssh-keygen -b 2048 -t rsa -f dockerkey
 
 ### **STEP 6**: Create SSH Key Pair (Windows client)
 
-For Windows clients this example will show the use of PuttyGen to generate the keypair. [Putty and PuttyGen](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) are available for download.
+For Windows clients this example will show the use of PuttyGen to generate the keypair. [Putty Packages](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) are available for download.
 
-- Run **PuttyGen** and click **Generate**
+- From a Command Prompt or PowerShell type **puttygen** and click **Generate**
 
-    ![](images/200/25.PNG)
+  ![](images/200/putty3.PNG)
+
+  ![](images/200/25.PNG)
 
 - Once the generation process completes click the **Save Private Key** button and save to a directory of your choice.
 
 - If prompted to save without a passphrase click yes.
 
-    ![](images/200/25a.png)
+  ![](images/200/25a.png)
 
 **NOTE:** `Do not save the public key as the format is not compatable with Linux openSSH.
 
-- Instead, **Select the entire Public Key in the display and right-click copy**. `This content will be pasted into the Create Instance dialog in Step 8.`
+- Instead, **Select the entire Public Key in the display and right-click copy**. `This content will be pasted into the Create Instance dialog in Step 7.`
 
-    ![](images/200/25-2.PNG)
+  ![](images/200/25-2.PNG)
 
 ### **STEP 7**: Create a Compute Instance
 
@@ -182,11 +188,11 @@ You will now create a Linux based Compute instance using the public key you just
 
 - Go back to your OCI console and from the hamburger menu in the upper left hand corner select **Compute-->Instances**
 
-    ![](images/200/26.PNG)
+  ![](images/200/26.PNG)
 
 - Click **Create Instance**
 
-   ![](images/200/27.PNG)
+ ![](images/200/27.PNG)
 
 - **You will (Select / Leave Default) or Type** the following in the `Create Compute Instance` section of the dialog:
 
@@ -213,7 +219,7 @@ SSH Keys: Choose SSH Key Files
    ![](images/200/27-6.PNG)
 
 - Scroll down furthur on the page and select your PUBLIC SSH Key
-**NOTE:** You will paste the public key you copied in Step 7 into the SSH KEY field by selecting the "Paste SSH Keys" radio button. `The public key should all be on ONE LINE`
+**NOTE:** You will paste the public key you copied in Step 6 into the SSH KEY field by selecting the "Paste SSH Keys" radio button. `The public key should all be on ONE LINE`
 
    ![](images/200/28.PNG)
 
@@ -234,7 +240,7 @@ After a few minutes you should see a running instance with a Public IP Address.
 
 Continue the setup: SSH into the Compute image and install Docker and GIT.
 
-- For a Windows client session bring up Putty, select the **Session** section and type in the IP address:
+- From a Command Prompt or PowerShell type **putty** and select the **Session** section and type in the Public IP address:
 
    ![](images/200/31.PNG)
 
@@ -385,7 +391,7 @@ In this section you will clone a github repository containing a Java Application
 
 In this step you are going to edit the provided Dockerfile and dbconfig.properties file, then build a Docker image based on commands provided in that file. You're going to add your ATP DB instance specific Wallet file. It will take a baseline java docker image from Docker Hub, add a Glassfish 4.1.1 application server and then deploy the `AlphaProductsRestService.war` into the Glassfish server running on port 8080. If you recall you opened port 8080 in the Networking Security List earlier in this lab so access from the internet can occur.
 
-- The Dockerfile defines what happens in the image build. The defualt contents look like:
+- The Dockerfile defines what happens in the image build. The default contents look like:
 
   ![](images/200/46-2.PNG)
 
