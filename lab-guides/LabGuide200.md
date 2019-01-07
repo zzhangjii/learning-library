@@ -377,15 +377,15 @@ In this section you will clone a github repository containing a Java Application
   cd monolithic-to-microservice/lab-resources/docker
   ```
 
-- You will see the baseline `alpha-office-product-catalog.war` file and a `Dockerfile`:
+- Here you will find the baseline `AlphaProductsRestService.war` file and a `Dockerfile`:
 
   ![](images/200/46.PNG)
 
 ### **Step 2**: Build a Docker image
 
-In this step you are going to build a Docker image based on commands the the provided Dockerfile. It will take a baseline java docker image from Docker Hub, add the Glassfish 4.1.1 application server and then deploy the `alpha-office-product-catalog.war` into the Glassfish server running on port 8080. If you recall you opened port 8080 in the Networking Security List earlier in this lab so access from the outside can occur.
+In this step you are going to edit the provided Dockerfile and dbconfig.properties file, then build a Docker image based on commands provided in that file. You're going to add your ATP DB instance specific Wallet file. It will take a baseline java docker image from Docker Hub, add a Glassfish 4.1.1 application server and then deploy the `AlphaProductsRestService.war` into the Glassfish server running on port 8080. If you recall you opened port 8080 in the Networking Security List earlier in this lab so access from the internet can occur.
 
-- The Dockerfile defines what happens in the image build. The contents look like:
+- The Dockerfile defines what happens in the image build. The defualt contents look like:
 
   ![](images/200/46-2.PNG)
 
