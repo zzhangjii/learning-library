@@ -367,7 +367,7 @@ In this section you will clone a github repository containing a Java Application
 
 ## Deploy AlphaOffice Product Catalog Application
 
-### **Step 1**: Clone the git repository
+### **Step 1**: Clone the git repository and copy the wallet file
 
 - Clone the git repository to your newly created OCI VM. This repo contains support files and the AlphaOffice application.
  **Type or Copy and Paste**:
@@ -411,9 +411,37 @@ In this section you will clone a github repository containing a Java Application
 
   ![](images/200/46-1.3.PNG)
  
-### **Step 2**: Build a Docker image
+### **Step 2**: Include/Edit your ATP instance specific information
 
-In this step you are going to edit the provided Dockerfile and dbconfig.properties file, then build a Docker image based on commands provided in that file. You're going to add your ATP DB instance specific Wallet file. It will take a baseline java docker image from Docker Hub, add a Glassfish 4.1.1 application server and then deploy the `AlphaProductsRestService.war` into the Glassfish server running on port 8080. If you recall you opened port 8080 in the Networking Security List earlier in this lab so access from the internet can occur.
+In this step you are going to edit the `dbconfig.properties` file to add your DB instance specific connection name.
+
+- Using **vi** edit the **dbconfig.properties** file and add your connection property. We will be using the ATP DB instance called `mattoATP` in the following examples:
+
+- The DB Connection information can be found in the OCI Console under your ATP database instance link:
+
+  ![](images/200/46-1.4.PNG) 
+
+  ![](images/200/46-1.5.PNG)
+
+
+  We will be using the MEDIUM connection name in the application.
+
+- For this example the modifed `dbconfig.properties` looks like:
+
+  ![](images/200/46-1.6.PNG)
+
+- **If your NOT using the default wallet name of `Wallet_orcl.zip` then you will also need to edit the `Dockerfile`** to point to your ATP DB instance wallet, otherwise, you can skip to Step 3.
+
+- For this example edit the following two location within the `Dockerfile`:
+
+  ![](images/200/46-1.7.PNG)
+
+
+### **Step 3**: Bundle your modifed files into a new .war
+
+### **Step 4**: Build a Docker image
+
+The docker build will take a baseline java docker image from Docker Hub, add a Glassfish 4.1.1 application server and then deploy the `AlphaProductsRestService.war` into the Glassfish server running on port 8080. If you recall you opened port 8080 in the Networking Security List earlier in this lab so access from the internet can occur.
 
 - The Dockerfile defines what happens in the image build. The default contents look like:
 
@@ -460,23 +488,6 @@ In this step you are going to edit the provided Dockerfile and dbconfig.properti
 - Clicking on one of the products shows related tweets:
 
   ![](images/200/52.PNG)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 **This completes the Lab!**
 
