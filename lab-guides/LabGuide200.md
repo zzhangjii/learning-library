@@ -436,24 +436,19 @@ In this step you are going to edit the `dbconfig.properties` file to add your DB
 
   ![](images/200/46-1.7.PNG)
 
+### **Step 3**: Build the Docker image
 
-### **Step 3**: Bundle your modifed files into a new .war
+The docker build will take a baseline java docker image from Docker Hub, add the Glassfish 4.1.1 application server, ATP DB instance wallet file and then extract the `AlphaProductsRestService.war` inside the container. The application server is running on port 8080. If you recall you opened port 8080 in the Networking Security List earlier in this lab so access from the internet can occur.
 
-### **Step 4**: Build a Docker image
+- The Dockerfile defines what happens in the image build. The contents for this example now look like:
 
-The docker build will take a baseline java docker image from Docker Hub, add a Glassfish 4.1.1 application server and then deploy the `AlphaProductsRestService.war` into the Glassfish server running on port 8080. If you recall you opened port 8080 in the Networking Security List earlier in this lab so access from the internet can occur.
-
-- The Dockerfile defines what happens in the image build. The default contents look like:
-
-  ![](images/200/46-2.PNG)
-
-- Type:
+- **Type:**
 
   ```
   docker build -t alphaoffice .
   ```
 
-  The build will take place and should be successfull:
+  The build will take a few minutes and should be successfull:
 
   ![](images/200/47.PNG)
 
@@ -465,7 +460,7 @@ The docker build will take a baseline java docker image from Docker Hub, add a G
 
   ![](images/200/49.PNG)
 
-- Create a container based on the new alphaoffice image mapping port 8080 to the same port on the HOST and naming the container alphaoffice:
+- Create a container based on the alphaoffice image mapping port 8080 to the same port on the HOST and naming the container alphaoffice:
 
   ```
   docker run -d --name alphaoffice -p=8080:8080 alphaoffice
@@ -474,20 +469,131 @@ The docker build will take a baseline java docker image from Docker Hub, add a G
 - Type **docker ps** to show the running container. You'll note the asadmin command we stipulated in the Dockerfile build is executed:
 
   ![](images/200/50.PNG)
-  
+
+### **Step 4**: Copy DB properties file into the container
+
+In this you will copy the `dbconfig.properties` file you modifed in a previous step into the running container. Then you will goto into the container and verify all the files look good and are in the proper locations. **NOTE:** All of this could be executed automatically at build time but we want you to get a feel for docker commands and what's going on inside the newly executed container.
+
+- **Type** the following:
+
+  ```
+  docker cp dbconfig.properties alphaoffice:/usr/local/alpha/WEB-INF/classes/com/oracle/db/
+  ```  
+
+  ![](images/200/53.PNG)
+
+### **Step 5**: Go into the container, verify the files and create a new AlphaProductsRestService.war
+
+- **Type:**
+
+  ```
+  docker exec --env COLUMNS=`tput cols` -it alphaoffice bash
+  ```
+
+   You'll notice you're now inside the docker container:
+
+    ![](images/200/54.PNG)
+
+- We need to verify our `dbconfig.properties` file and `sqlnet.ora` files made it into the environment. **Type OR Copy and Paste** the following commands:
+
+  ```
+  cat /usr/local/wallet_DB/sqlnet.ora
+  cat /usr/local/alpha/WEB-INF/classes/com/oracle/db/dbconfig.properties
+  ```
+
+- You should see your specific changes reflected in the output:
+
+  ![](images/200/55.PNG)
+
+- Bundle up a new .war file by running the following commands:
+
+  ```
+  cd /usr/local/alpha
+  jar -cvf AlphaProductsRestService.war *
+  ```  
+
+- Copy the .war to the Glassfish application server directory for auto deployment. **Type OR Copy and Paste:**
+
+  ```
+  cp AlphaProductsRestService.war /usr/local/glassfish4/glassfish/domains/domain1/autodeploy/AlphaProductsRestService.war
+  ```
+
+- Confirm the application was deployed by typing the following:
+
+  ```
+  cd /usr/local/glassfish4/bin
+  ./asadmin
+
+  (Once in the Glassfish admin tool type:)
+    list-applications
+  ```
+
+  - The application should show as deployed:
+
+    ![](images/200/57.PNG)
+
+- **Type: `exit` twice** to get out of the admin tool and the container.
+
 - In a browser, test the application by using the Public IP Address of the VM instance.
 
+  **NOTE:** If you have a JSON format add-on in your browser the data will be easier to read... however, if you don't it will still show up as a text stream. (**Include the trialing slash!**)
+
   ```
-  <YOUR-PUBLIC-IP>:8080/alpha-office-product-catalog/products.jsp
+  http://<YOUR-PUBLIC-IP>:8080/AlphaProductsRestService/webresources/restCall/
+  ```
+  Example:
+  `http://129.213.109.189:8080/AlphaProductsRestService/webresources/restCall/`
+
+  **Another NOTE:** Be patient the first time you test. It may take several seconds before you see data returned...
+
+  ![](images/200/58.PNG)
+
+- You can test querying one product by adding the Product ID to the REST call:
+
+  ```
+   http://<YOUR-PUBLIC-IP>:8080/AlphaProductsRestService/webresources/restCall/1050
   ```
 
-- You show see the Alpha Office Product Catalog displayed using data from your ATP database:
+  Example:
+  `http://129.213.109.189:8080/AlphaProductsRestService/webresources/restCall/1050`
 
-  ![](images/200/51.PNG)
+  ![](images/200/59.PNG)
 
-- Clicking on one of the products shows related tweets:
+- If you get a timeout or receive an error you can check the container logs by typing:
 
-  ![](images/200/52.PNG)
+  ```
+  docker logs alphaoffice
+  ```
+
+- If everything looks OK then you can commit a new docker image of the completed application deployment. **Type:**
+
+  ```
+  docker commit alphaoffice alphaoffice-rest
+  ```
+- Typing **docker images** will show the new image is created:
+
+  ![](images/200/60.PNG)
+
+ - Stop and remove the original container by executing the following:
+
+   ```
+   docker stop alphaoffice
+   docker rm alphaoffice
+   ```
+
+- Fire up a new container using the new `alphaoffice-rest` image:
+
+  ```
+  docker run -d --name alphaoffice -p=8080:8080 alphaoffice-rest
+  ```
+
+- You should now be able to go directly the the REST URL and see data returned from your ATP database.
+
+  ```
+  http://<YOUR-PUBLIC-IP>:8080/AlphaProductsRestService/webresources/restCall/
+  ```
+
+- This new docker image will be used in Lab 300...
 
 **This completes the Lab!**
 
