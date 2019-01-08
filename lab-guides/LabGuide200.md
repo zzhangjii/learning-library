@@ -363,14 +363,15 @@ sestatus
 
 # Deploy the AlphaOffice Application using Docker
 
-In this section you will clone a github repository containing a Java Application and modify the configuration so it will query your ATP database. After successfull testing you will create a new Docker image and push this up to your Docker Hub account or Oracle Container Registry.
+In this section you will clone a github repository containing a Java Application and modify the configuration so it will query your ATP database. After successfull testing you will create a new Docker image.
 
 ## Deploy AlphaOffice Product Catalog Application
 
 ### **Step 1**: Clone the git repository and copy the wallet file
 
-- Clone the git repository to your newly created OCI VM. This repo contains support files and the AlphaOffice application.
- **Type or Copy and Paste**:
+- Clone the git repository to your newly created OCI VM. This repo contains support files and the baseline AlphaOffice application that you will modify to connect to your ATP database.
+
+- **Type OR Copy and Paste**:
 
   ```
   git clone https://github.com/derekoneil/monolithic-to-microservice.git
@@ -388,7 +389,7 @@ In this section you will clone a github repository containing a Java Application
 
   ![](images/200/46.PNG)
 
-- From your local machine copy the database wallet file you downloaded in Lab 100 into the `/home/opc/monolithic-to-microservice/lab-resources/docker` directory in your OCI VM. The examples below assume your running the (p)scp command from the directory where the wallet file is located. The private key you generated is also in this directory:
+- From your local machine copy the database wallet file you downloaded in Lab 100 into the `/home/opc/monolithic-to-microservice/lab-resources/docker` directory within your OCI VM. The examples below assume your running the (p)scp command from the directory where the wallet file is located. The private key you generated is also in this directory:
   **NOTE:** If your wallet file is a different name than **Wallet_orcl.zip** then substitute your name as shown in these examples below:
 
   **Linux / MAC**
@@ -411,11 +412,11 @@ In this section you will clone a github repository containing a Java Application
 
   ![](images/200/46-1.3.PNG)
  
-### **Step 2**: Include/Edit your ATP instance specific information
+### **Step 2**: Edit your ATP instance specific information
 
-In this step you are going to edit the `dbconfig.properties` file to add your DB instance specific connection name.
+In this step you are going to edit the `dbconfig.properties` file to add a DB instance connection name.
 
-- Using **vi** edit the **dbconfig.properties** file and add your connection property. We will be using the ATP DB instance called `mattoATP` in the following examples:
+- Using **vi** edit the **dbconfig.properties** file and add your connection property. We will be using an ATP DB instance called `mattoATP` for the following examples:
 
 - The DB Connection information can be found in the OCI Console under your ATP database instance link:
 
@@ -430,17 +431,15 @@ In this step you are going to edit the `dbconfig.properties` file to add your DB
 
   ![](images/200/46-1.6.PNG)
 
-- **If your NOT using the default wallet name of `Wallet_orcl.zip` then you will also need to edit the `Dockerfile`** to point to your ATP DB instance wallet, otherwise, you can skip to Step 3.
+- **If your NOT using the default wallet name of `Wallet_orcl.zip` then you will also need to edit the `Dockerfile`** to point to your instance specific wallet, otherwise, you can skip ahead to Step 3.
 
-- For this example edit the following two location within the `Dockerfile`:
+- If applicable, **edit** the following two locations within the `Dockerfile`:
 
   ![](images/200/46-1.7.PNG)
 
 ### **Step 3**: Build the Docker image
 
-The docker build will take a baseline java docker image from Docker Hub, add the Glassfish 4.1.1 application server, ATP DB instance wallet file and then extract the `AlphaProductsRestService.war` inside the container. The application server is running on port 8080. If you recall you opened port 8080 in the Networking Security List earlier in this lab so access from the internet can occur.
-
-- The Dockerfile defines what happens in the image build. The contents for this example now look like:
+The docker build will take a baseline java ready docker image from Docker Hub, add the Glassfish 4.1.1 application server along with your ATP DB instance wallet file and then extract the `AlphaProductsRestService.war` inside the container. The application server will be running on port 8080. If you recall you opened port 8080 in the Networking Security List earlier in this lab so access from the internet can occur.
 
 - **Type:**
 
@@ -460,21 +459,23 @@ The docker build will take a baseline java docker image from Docker Hub, add the
 
   ![](images/200/49.PNG)
 
-- Create a container based on the alphaoffice image mapping port 8080 to the same port on the HOST and naming the container alphaoffice:
+- Start a container based on the alphaoffice image mapping port 8080 to the same port on the HOST naming the container alphaoffice:
 
   ```
   docker run -d --name alphaoffice -p=8080:8080 alphaoffice
   ```
 
-- Type **docker ps** to show the running container. You'll note the asadmin command we stipulated in the Dockerfile build is executed:
+- **docker ps** shows the running container. You'll note the asadmin command we stipulated in the CMD of the Dockerfile build is executed and running (This starts up the Glassfish app server):
 
   ![](images/200/50.PNG)
 
-### **Step 4**: Copy DB properties file into the container
+### **Step 4**: Copy the the database properties file into the container
 
-In this you will copy the `dbconfig.properties` file you modifed in a previous step into the running container. Then you will goto into the container and verify all the files look good and are in the proper locations. **NOTE:** All of this could be executed automatically at build time but we want you to get a feel for docker commands and what's going on inside the newly executed container.
+In this step you will copy the `dbconfig.properties` file modifed in a previous step into the running container. Then you will go into the container and verify all the copied and modied files look good and are in their proper locations. 
 
-- **Type** the following:
+**NOTE:** All of this could be executed automatically at build time but we want you to get a feel for docker commands and what's going on inside the newly executed container.
+
+- **Type OR Copy and Paste** the following:
 
   ```
   docker cp dbconfig.properties alphaoffice:/usr/local/alpha/WEB-INF/classes/com/oracle/db/
@@ -482,9 +483,9 @@ In this you will copy the `dbconfig.properties` file you modifed in a previous s
 
   ![](images/200/53.PNG)
 
-### **Step 5**: Go into the container, verify the files and create a new AlphaProductsRestService.war
+### **Step 5**: Verify files inside the container and deploy the AlphaProductsRestService application
 
-- **Type:**
+- **Type OR Copy and Paste:**
 
   ```
   docker exec --env COLUMNS=`tput cols` -it alphaoffice bash
@@ -494,7 +495,7 @@ In this you will copy the `dbconfig.properties` file you modifed in a previous s
 
     ![](images/200/54.PNG)
 
-- We need to verify our `dbconfig.properties` file and `sqlnet.ora` files made it into the environment. **Type OR Copy and Paste** the following commands:
+- We need to verify our `dbconfig.properties` and `sqlnet.ora` files made it into the environment. **Type OR Copy and Paste** the following commands:
 
   ```
   cat /usr/local/wallet_DB/sqlnet.ora
@@ -502,6 +503,12 @@ In this you will copy the `dbconfig.properties` file you modifed in a previous s
   ```
 
 - You should see your specific changes reflected in the output:
+
+  The $TNS_ADMIN environment variable was set on the image during the docker build:
+
+  ...
+  ENV         TNS_ADMIN         /usr/local/wallet_DB/
+  ...  
 
   ![](images/200/55.PNG)
 
@@ -512,7 +519,7 @@ In this you will copy the `dbconfig.properties` file you modifed in a previous s
   jar -cvf AlphaProductsRestService.war *
   ```  
 
-- Copy the .war to the Glassfish application server directory for auto deployment. **Type OR Copy and Paste:**
+- Copy the .war file to the Glassfish application server directory for auto deployment. **Type OR Copy and Paste:**
 
   ```
   cp AlphaProductsRestService.war /usr/local/glassfish4/glassfish/domains/domain1/autodeploy/AlphaProductsRestService.war
@@ -524,7 +531,7 @@ In this you will copy the `dbconfig.properties` file you modifed in a previous s
   cd /usr/local/glassfish4/bin
   ./asadmin
 
-  (Once in the Glassfish admin tool type:)
+  (Once inside the Glassfish admin tool type:)
     list-applications
   ```
 
@@ -536,7 +543,7 @@ In this you will copy the `dbconfig.properties` file you modifed in a previous s
 
 - In a browser, test the application by using the Public IP Address of the VM instance.
 
-  **NOTE:** If you have a JSON format add-on in your browser the data will be easier to read... however, if you don't it will still show up as a text stream. (**Include the trialing slash!**)
+  **NOTE:** If you have a JSON format add-on in your browser the data will be easier to read... however, if you don't it will still show up as a text stream. (**Include the trailing slash!**)
 
   ```
   http://<YOUR-PUBLIC-IP>:8080/AlphaProductsRestService/webresources/restCall/
@@ -565,7 +572,7 @@ In this you will copy the `dbconfig.properties` file you modifed in a previous s
   docker logs alphaoffice
   ```
 
-- If everything looks OK then you can commit a new docker image of the completed application deployment. **Type:**
+- If everything looks OK then commit a new docker image with the completed application deployment. **Type:**
 
   ```
   docker commit alphaoffice alphaoffice-rest
@@ -581,13 +588,13 @@ In this you will copy the `dbconfig.properties` file you modifed in a previous s
    docker rm alphaoffice
    ```
 
-- Fire up a new container using the new `alphaoffice-rest` image:
+- Fire up a container using the new `alphaoffice-rest` image:
 
   ```
   docker run -d --name alphaoffice -p=8080:8080 alphaoffice-rest
   ```
 
-- You should now be able to go directly the the REST URL and see data returned from your ATP database.
+- You should now be able to go directly to the REST URL and see data returned from your ATP database.
 
   ```
   http://<YOUR-PUBLIC-IP>:8080/AlphaProductsRestService/webresources/restCall/
