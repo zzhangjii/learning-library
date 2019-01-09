@@ -49,18 +49,17 @@ Start Lab 100 -- Create ChatBots with Intents, Entities, Utterances and Flow
 
 ### **STEP 1**: Create a simple Cafeteria Assistance ChatBot
 
-Log in to your AMCe and then, select Bots to create ChatBot.
-![](images/100/Picture100-23.png)
+When chatbotLab is finished provisioning select the menu icon and select **Digital Assistant UI**.
+![](images/100/5b.png)
 
-And, then click the **New Bot** button
+Click the hamburger in the top left to open the side menu. Expand **Development** and select **Skills**.
+Click **New Skill**.
 
+![D:\\Workshop\_Bot\\image1.PNG](images/100/5c.png)
 
+Give the skill a name such as **CafeteriaAssistance_Bot**, version it and add a brief description. Click create and your bot is live.
 
-![D:\\Workshop\_Bot\\image1.PNG](images/100/image3.png)
-
-In the **Create Bot** dialog, name your bot (e.g. ChatBot CafeteriaAssistance_Bot). Then, add a description and click **Create?** .
-
-![](images/100/image4.png)
+![](images/100/6.png)
 
 You are taken to the home page for your Bot. Here on the left, you can see a list of icons you can use to navigate to your **Intents, Entities, Flow, Resource Bundles, Q&A, Components, Settings and Quality**.
 
@@ -74,74 +73,61 @@ From the homepage of your ChatBot, click the **Intent** icon present on left-sid
 
 This Intent will be used to show the cafeteria menu. Enter **ShowMenu** as the Intent name, and then provide a description. These values are automatically saved, so you do not need to explicitly save them. As you create artifacts, you may notice a message in the lower right corner that your work has been saved.
 
-![D:\\Workshop\_Bot\\Image5.PNG](images/100/image7.png)
+![D:\\Workshop\_Bot\\Image5.PNG](images/100/7.png)
 
 Now that you have an intent, to express what a show menu is. In the Examples area add the following text: **show menu**, followed by a return.
 
-![D:\\Workshop\_Bot\\image6.PNG](images/100/image8.png)
+![D:\\Workshop\_Bot\\image6.PNG](images/100/7b.png)
 
 Add another example utterance: **what do you have?** Followed by a return.
 
 Include the list of example utterances below to your intent, each followed by a return. Notice that the examples do not need to be in the form of a question, they can be a statement as well.
 
 -   **hi**
-
 -   **Hi There**
-
 -   **menu please**
-
 -   **show menu**
-
 -   **What do you have?**
-
 -   **What food do you have**
 
-![D:\\Workshop\_Bot\\screen7.PNG](images/100/image9.png)
 
-### **Step 3**: In the similar way add OrderFood intent:
+### **Step 3**: Add OrderFood intent:
 
-![](images/100/image10.png)
+![](images/100/8.png)
 
-Add the below utterances for the OrderFood intent:
+Create another intent by clicking **+Intent** near the top left. Call this one "OrderFood" and use the below utterances.  
 
-1.Can I get a food
-
-2.Food please
-
-3.I want food
-
-4.Order Food
+*   **May I have some food**
+*   **Food please**
+*   **I want food**
+*   **order food**
 <!-- TODO: are utterances case sensitive? if not, remove #5 -->
 
 <a name="step-4-add-an-intent-entity-for-order-beverage"></a>
-### **Step 4**: In the similar way add OrderBeverages intent:
+### **Step 4**: Add OrderBeverages intent:
 
-![](images/100/image11.png)
+![](images/100/9.png)
 
-Add the below utterances for the OrderBeverages intent:
+Create another intent named “OrderBeverages” with the following utterances.
 
-1\. Beverages please
-
-2\. Can I get Beverages?
-
-3\. I want Beverages
+*   **Beverages please**
+*   **Can I get beverages.**
+*   **I want beverages**
+*   **What kind of Beverages do you have?**
 <!-- TODO: are utterances case sensitive? if not, remove #4 -->
 
-4\. What kind of Beverages do you have?
+
 <a name="step-5-add-an-intent-entity-for-exit-flow"></a>
-### **Step 5**: In the similar way add ExitFlow intent:
+### **Step 5**: Add ExitFlow intent:
 
-![](images/100/image12.png)
+![](images/100/10.png)
 
-Add the below utterances for the ExitFlow intent:
+The final intent will be called **ExitFlow** using these utterances.
 
-1\. Bye
-
-2\. Great
-
-3\. Thank You
-
-4\. Thank
+*   **Bye**
+*   **Great**
+*   **Thank You**
+*   **Thanks**
 <!-- TODO: are utterances case sensitive? if not, remove #5 -->
 
 ### **Step 6**: Now that the intent is created, add an entity.
@@ -593,11 +579,11 @@ Now, let's try a message that includes the **ItemSize**.
 
 Please finish each flow if you are testing the Bot, or hit **Reset** to create a new session and avoid confusion with an incomplete flow from a previous session.
 
-Now click the **Intent** tab. We are going to now test only the intent and entity resolution rather than a whole conversation flow.
+Now click the **Intent/Q&A** tab. We are going to now test only the intent and entity resolution rather than a whole conversation flow.
 
 In the message area type **Show menu** and press **Send**.
 
-![](images/100/image29.png)
+![](images/100/confidence.png)
 
 Here you can see a confidence percentage that the message is an Intent. You also see that the Show menu is recognized.
 
