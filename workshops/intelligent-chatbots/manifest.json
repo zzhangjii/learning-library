@@ -11,6 +11,11 @@
             "imageUrl": "https://oracle.github.io/learning-library/workshops/common-content/images/common/Self-Service.png"
           },
           {
+            "name": "Lab 050",
+            "description": "Provisioning Oracle Autonomous Digital Assistant in your cloud trial account",
+            "imageUrl": "https://oracle.github.io/learning-library/workshops/common-content/images/common/Self-Service.png"
+          },
+          {
             "name": "Lab 100",
             "description": "Create ChatBots with Intents, Entities, Utterances and Flow.",
             "imageUrl": "images/manifest/c78-oracle-intelligent-bots-3894709.jpg"
@@ -28,6 +33,14 @@
                 "title": "README",
                 "description": "Step-by-step workshop instructions",
                 "labels": {"version": "Requesting a Trial"}
+
+            },
+            {
+                "number": "50",
+                "filename": "LabGuide050.md",
+                "title": "Lab 050: Provisioning Oracle Autonomous Digital Assistant",
+                "description": "Provision the required service to set up a chatbot in your cloud account.",
+                "labels": {"version": "Lab 050"}
 
             },
             {
