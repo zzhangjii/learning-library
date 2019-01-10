@@ -1,6 +1,6 @@
-# Name Of The Workshop
+# On-premises WLS to OKE 
 
-Welcome to the ...workshop. This workshop will walk you through the process of... 
+Welcome to the on-premises WLS to OKE workshop. This workshop will walk you through the process of... 
 To learn more about this workshop please watch the video below.
 
 ![](images/oraclecode/youtube.png)

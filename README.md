@@ -1,3 +1,3 @@
-# Container Native Application Development Workshop
+# On-premises WLS to OKE Workshop
 
 ## About this Workshop
