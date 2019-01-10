@@ -1,4 +1,4 @@
-# Container Registry Practice - Create Container Registry
+# Container Registry Practice - Creating Container Registry
   
 ## Table of Contents
 
