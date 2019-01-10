@@ -50,6 +50,7 @@ Start Lab 100 -- Create ChatBots with Intents, Entities, Utterances and Flow
 ### **STEP 1**: Create a simple Cafeteria Assistance ChatBot
 
 When chatbotLab is finished provisioning select the menu icon and select **Digital Assistant UI**.
+
 ![](images/100/5b.png)
 
 Click the hamburger in the top left to open the side menu. Expand **Development** and select **Skills**.
@@ -552,34 +553,38 @@ The Train button (<img src="images/100/image24.png" title="This is an image of t
 
 To test the ChatBot, click the **play** (Run) icon in the upper right of the page. This takes you into the tester
 
-![D:\\Workshop\_Bot\\image3.PNG](images/100/image25.png)
+![D:\\Workshop\_Bot\\image3.PNG](images/100/playButton.png)
 
-where you can see three tabs: Bot, Intent and QnA.
+Where you can see three tabs: Conversation, Intent/QnA and View JSON.
 
-![](images/100/image26.png)
+![](images/100/26.png)
 
-Click the **Bot** tab to test the bot. What you type in at the bottom in the **Message** area, is what will be sent to the bot when you click the **Send** button.
+What you type in at the bottom in the **Message** area, is what will be sent to the bot when you click the **Send** button.
 
 Let's start out simple to test the bot.
 
 In the Message area, type **Show menu** and then click the **Send** button.
 
-![](images/100/image26.png)
+![](images/100/26.png)
 
 The bot will show cafeteria menu for you with two options.
 
 Click one of the option i.e Food and the details for that item is displayed.
 
-![](images/100/image27.png)
+![](images/100/27.png)
 
 Now, let's try a message that includes the **ItemSize**.
 <!-- TODO: need to include the instructions for testing ItemSize -->
 
-![](images/100/image28.png)
+![](images/100/28.png)
 
 Please finish each flow if you are testing the Bot, or hit **Reset** to create a new session and avoid confusion with an incomplete flow from a previous session.
 
-Now click the **Intent/Q&A** tab. We are going to now test only the intent and entity resolution rather than a whole conversation flow.
+Under the conversation tab you can see the flow of intents the bot recognizes throughout the conversation.
+
+![](images/100/29.png)
+
+Now click the **Intent/Q&A** tab. We are going to now test only the intent for a single message.
 
 In the message area type **Show menu** and press **Send**.
 
