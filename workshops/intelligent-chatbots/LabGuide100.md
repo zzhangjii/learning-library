@@ -49,40 +49,40 @@ Start Lab 100 -- Create ChatBots with Intents, Entities, Utterances and Flow
 
 ### **STEP 1**: Create a simple Cafeteria Assistance ChatBot
 
-When chatbotLab is finished provisioning select the menu icon and select **Digital Assistant UI**.
+- When chatbotLab is finished provisioning select the menu icon and select **Digital Assistant UI**.
 
 ![](images/100/5b.png)
 
-Click the hamburger in the top left to open the side menu. Expand **Development** and select **Skills**.
+- Click the hamburger in the top left to open the side menu. Expand **Development** and select **Skills**.
 Click **New Skill**.
 
 ![D:\\Workshop\_Bot\\image1.PNG](images/100/5c.png)
 
-Give the skill a name such as **CafeteriaAssistance_Bot**, version it and add a brief description. Click create and your bot is live.
+- Give the skill a name such as **CafeteriaAssistance_Bot**, version it and add a brief description. Click create and your bot is live.
 
 ![](images/100/6.png)
 
-You are taken to the home page for your Bot. Here on the left, you can see a list of icons you can use to navigate to your **Intents, Entities, Flow, Resource Bundles, Q&A, Components, Settings and Quality**.
+- You are taken to the home page for your Bot. Here on the left, you can see a list of icons you can use to navigate to your **Intents, Entities, Flow, Resource Bundles, Q&A, Components, Settings and Quality**.
 
 ![D:\\Workshop\_Bot\\image2.PNG](images/100/image5.png)
 
 ### **Step 2**: Add an Intent, Entity for show menu
 
-From the homepage of your ChatBot, click the **Intent** icon present on left-side navigation bar and then click the green **Intent** button.
+- From the homepage of your ChatBot, click the **Intent** icon present on left-side navigation bar and then click the green **Intent** button.
 
 ![](images/100/image6.png)
 
-This Intent will be used to show the cafeteria menu. Enter **ShowMenu** as the Intent name, and then provide a description. These values are automatically saved, so you do not need to explicitly save them. As you create artifacts, you may notice a message in the lower right corner that your work has been saved.
+- This Intent will be used to show the cafeteria menu. Enter **ShowMenu** as the Intent name, and then provide a description. These values are automatically saved, so you do not need to explicitly save them. As you create artifacts, you may notice a message in the lower right corner that your work has been saved.
 
 ![D:\\Workshop\_Bot\\Image5.PNG](images/100/7.png)
 
-Now that you have an intent, to express what a show menu is. In the Examples area add the following text: **show menu**, followed by a return.
+- Now that you have an intent, to express what a show menu is. In the Examples area add the following text: **show menu**, followed by a return.
 
 ![D:\\Workshop\_Bot\\image6.PNG](images/100/7b.png)
 
-Add another example utterance: **what do you have?** Followed by a return.
+- Add another example utterance: **what do you have?** Followed by a return.
 
-Include the list of example utterances below to your intent, each followed by a return. Notice that the examples do not need to be in the form of a question, they can be a statement as well.
+- Include the list of example utterances below to your intent, each followed by a return. Notice that the examples do not need to be in the form of a question, they can be a statement as well.
 
 -   **hi**
 -   **Hi There**
@@ -94,9 +94,9 @@ Include the list of example utterances below to your intent, each followed by a 
 
 ### **Step 3**: Add OrderFood intent:
 
-![](images/100/8.png)
+![](images/100/image10.png)
 
-Create another intent by clicking **+Intent** near the top left. Call this one "OrderFood" and use the below utterances.  
+- Create another intent by clicking **+Intent** near the top left. Call this one "OrderFood" and use the below utterances.  
 
 *   **May I have some food**
 *   **Food please**
@@ -109,7 +109,7 @@ Create another intent by clicking **+Intent** near the top left. Call this one "
 
 ![](images/100/9.png)
 
-Create another intent named “OrderBeverages” with the following utterances.
+- Create another intent named “OrderBeverages” with the following utterances.
 
 *   **Beverages please**
 *   **Can I get beverages.**
@@ -123,7 +123,7 @@ Create another intent named “OrderBeverages” with the following utterances.
 
 ![](images/100/10.png)
 
-The final intent will be called **ExitFlow** using these utterances.
+- The final intent will be called **ExitFlow** using these utterances.
 
 *   **Bye**
 *   **Great**
@@ -133,55 +133,55 @@ The final intent will be called **ExitFlow** using these utterances.
 
 ### **Step 6**: Now that the intent is created, add an entity.
 
-If you want the list of options i.e. sizes (based on the quantity) in this Bot for the item which user can choose to order, you would probably need to show the list of different available sizes of the item.
+- If you want the list of options i.e. sizes (based on the quantity) in this Bot for the item which user can choose to order, you would probably need to show the list of different available sizes of the item.
 
-On the left-navigation bar, click the second icon down named **"Entities"** and you'll be able to view pre-populated system entities. These are standard entities that can be used in your ChatBot without having to explicitly define them.
+- On the left-navigation bar, click the second icon down named **"Entities"** and you'll be able to view pre-populated system entities. These are standard entities that can be used in your ChatBot without having to explicitly define them.
 
 
 ![](images/100/image13.png)
 
-Click the green **Entity** button and then enter **ItemSize** as the entity name and a brief description.
+- Click the green **Entity** button and then enter **ItemSize** as the entity name and a brief description.
 
 ![D:\\Workshop\_Bot\\screen9.PNG](images/100/image14.png)
 
-Now that you have an Entity, you need to provide some values that could be used. In our case of the **ItemSize**, you would want to use values that represent size you could query for the order.
+- Now that you have an Entity, you need to provide some values that could be used. In our case of the **ItemSize**, you would want to use values that represent size you could query for the order.
 
-In the **Configuration** area, ensure the **Type** property is set to Value List (To create the list of values based on the requirement) and then click the green **Value** button.
+- In the **Configuration** area, ensure the **Type** property is set to Value List (To create the list of values based on the requirement) and then click the green **Value** button.
 
 
 ![D:\\Workshop\_Bot\\Capture10.PNG](images/100/image15.png)
 
-In the popup dialog, enter **Small** as the value and **small** as a synonym (followed by a return).
+- In the popup dialog, enter **Small** as the value and **small** as a synonym (followed by a return).
 
-Then click **Create**.
+- Then click **Create**.
 
 ![](images/100/image16.png)
 
-Then, add a second value named **Medium** and this time add a synonym of **normal**.
+- Then, add a second value named **Medium** and this time add a synonym of **normal**.
 
 ![](images/100/image17.png)
 
-Finally, add a third value named **Large** and use **big** as the synonyms.
+- Finally, add a third value named **Large** and use **big** as the synonyms.
 
 ![](images/100/image18.png)
 
-When finished, your entity definition should look like the image shown below.
+- When finished, your entity definition should look like the image shown below.
 
 ![](images/100/image19.png)
 
-Now you've got 4 intents (ShowMenu, OrderFood, OrderBeverages and ExitFlow) and an entity named as ItemSize. You need to associate the **OrderFood** and **OrderBeverages** intents with **ItemSize** entity, and it's easy to do it.
+- Now you've got 4 intents (ShowMenu, OrderFood, OrderBeverages and ExitFlow) and an entity named as ItemSize. You need to associate the **OrderFood** and **OrderBeverages** intents with **ItemSize** entity, and it's easy to do it.
 
-On the left-navigation bar, click the **Intent** icon, and on the right, find the **Intent Entities** area.
+- On the left-navigation bar, click the **Intent** icon, and on the right, find the **Intent Entities** area.
 
-Click the green **Entity** button and select **ItemSize** from the list, after selection your screen will look like image shown below:
+- Click the green **Entity** button and select **ItemSize** from the list, after selection your screen will look like image shown below:
 
 ![D:\\Workshop\_Bot\\Capture12.PNG](images/100/image20.png)
 
-The entity is added and a required flag is set. If you want you can remove the entity by clicking the **(x)** to the right of the entity name. Do not remove the entity from your intent.
+- The entity is added and a required flag is set. If you want you can remove the entity by clicking the **(x)** to the right of the entity name. Do not remove the entity from your intent.
 
 ### **Step 7**: Define the Conversation Flow
 
-With the intent and entity created, the next thing we need is a Dialog flow. Click the Flow icon on the left bar; some code has been added to display hello when activated.  For the sake of brevity, you can simply replace all the code with the below file content (Please click the below file to copy the content):
+- With the intent and entity created, the next thing we need is a Dialog flow. Click the Flow icon on the left bar; some code has been added to display hello when activated.  For the sake of brevity, you can simply replace all the code with the below file content (Please click the below file to copy the content):
 
 ```
 metadata:
@@ -531,66 +531,66 @@ states:
 ```
 ### **Step 8**: Validate, Train and Test your ChatBot
 
-Finally, click the **Validate** button in the upper right corner and you should see a message that there were no problems found in your bot.
+- Finally, click the **Validate** button in the upper right corner and you should see a message that there were no problems found in your bot.
 
-In the next section, you train the Bot to recognize responses that might be entered and then test it.
+- In the next section, you train the Bot to recognize responses that might be entered and then test it.
 
-In this part of the tutorial, you run the training tool on the Bot. This will train the Bot allowing it to understand similar user inputs to the example utterances used when building the Bot.
+- In this part of the tutorial, you run the training tool on the Bot. This will train the Bot allowing it to understand similar user inputs to the example utterances used when building the Bot.
 
-In the upper right, click the **Train** button. This will kick-off a process that will run an algorithm to take your example utterances and build the model that will be used to ascertain the intents and entities. Anytime the ChatBot platform recognizes your Bot needs to be trained, it will display an exclamation point in the train button. Once the training is complete the exclamation point is replaced by a check mark.
+- In the upper right, click the **Train** button. This will kick-off a process that will run an algorithm to take your example utterances and build the model that will be used to ascertain the intents and entities. Anytime the ChatBot platform recognizes your Bot needs to be trained, it will display an exclamation point in the train button. Once the training is complete the exclamation point is replaced by a check mark.
 
 ![D:\\Workshop\_Bot\\Capture13.PNG](images/100/image22.png)
 
 ![](images/100/image23.png)
 
-Oracle provides three models that learn from your corpus: Trainer Ht ,Trainer Tm and Q&A Training. Each uses a different algorithm to reconcile the user input against your intents. Trainer Ht uses pattern matching while Trainer Tm detects variations in user input and Q&A training is used to train for the pre-defined question and answers. You'd typically follow training process when you're creating intents:
+- Oracle provides three models that learn from your corpus: Trainer Ht ,Trainer Tm and Q&A Training. Each uses a different algorithm to reconcile the user input against your intents. Trainer Ht uses pattern matching while Trainer Tm detects variations in user input and Q&A training is used to train for the pre-defined question and answers. You'd typically follow training process when you're creating intents:
 
 a.  Choose Trainer Ht from the options.
 
 b.  Refine your corpus, retrain with Trainer Ht. Repeat as necessary.
 
-The Train button (<img src="images/100/image24.png" title="This is an image of the "dirty" Train button" class="infra" />) activates whenever you add an intent or when you update an intent by adding, changing, or deleting its utterances. To bring the training up to date, choose a training model and then click **Train**. The model displays an exclamation point whenever it needs training. When its training is current, it displays a check mark.
+- The Train button (<img src="images/100/image24.png" title="This is an image of the "dirty" Train button" class="infra" />) activates whenever you add an intent or when you update an intent by adding, changing, or deleting its utterances. To bring the training up to date, choose a training model and then click **Train**. The model displays an exclamation point whenever it needs training. When its training is current, it displays a check mark.
 
-To test the ChatBot, click the **play** (Run) icon in the upper right of the page. This takes you into the tester
+- To test the ChatBot, click the **play** (Run) icon in the upper right of the page. This takes you into the tester
 
 ![D:\\Workshop\_Bot\\image3.PNG](images/100/playButton.png)
 
-Where you can see three tabs: Conversation, Intent/QnA and View JSON.
+- Where you can see three tabs: Conversation, Intent/QnA and View JSON.
 
 ![](images/100/26.png)
 
-What you type in at the bottom in the **Message** area, is what will be sent to the bot when you click the **Send** button.
+- What you type in at the bottom in the **Message** area, is what will be sent to the bot when you click the **Send** button.
 
-Let's start out simple to test the bot.
+- Let's start out simple to test the bot:
 
-In the Message area, type **Show menu** and then click the **Send** button.
+  In the Message area, type **Show menu** and then click the **Send** button.
 
-![](images/100/26.png)
+![](images/100/26b.png)
 
-The bot will show cafeteria menu for you with two options.
+- The bot will show cafeteria menu for you with two options.
 
-Click one of the option i.e Food and the details for that item is displayed.
+- Click one of the option i.e Food and the details for that item is displayed.
 
 ![](images/100/27.png)
 
-Now, let's try a message that includes the **ItemSize**.
+- Now, let's try a message that includes the **ItemSize**.
 <!-- TODO: need to include the instructions for testing ItemSize -->
 
 ![](images/100/28.png)
 
-Please finish each flow if you are testing the Bot, or hit **Reset** to create a new session and avoid confusion with an incomplete flow from a previous session.
+- Please finish each flow if you are testing the Bot, or hit **Reset** to create a new session and avoid confusion with an incomplete flow from a previous session.
 
-Under the conversation tab you can see the flow of intents the bot recognizes throughout the conversation.
+- Under the conversation tab you can see the flow of intents the bot recognizes throughout the conversation.
 
 ![](images/100/29.png)
 
-Now click the **Intent/Q&A** tab. We are going to now test only the intent for a single message.
+- Now reset your bot by clicking the reset button above the chat window. Then click the **Intent/Q&A** tab. We are going to now test only the intent for a single message.
 
-In the message area type **Show menu** and press **Send**.
+- In the message area type **Show menu** and press **Send**.
 
 ![](images/100/confidence.png)
 
-Here you can see a confidence percentage that the message is an Intent. You also see that the Show menu is recognized.
+- Here you can see a confidence percentage that the message is an Intent. You also see that the Show menu is recognized.
 
 **Note:** You can see the JSON as click option here, as the user interface component, which is provided for debugging purpose while the Bot is in testing, so that you can see the JSON response to check if it's not responding properly. Once you integrate the bot with some channel i.e. Facebook messenger, Web Page this JSON option will not appear.
 
