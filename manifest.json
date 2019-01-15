@@ -16,21 +16,21 @@
                 "number": "100",
                 "filename": "LabGuide100.md",
                 "title": "Lab 100: Build the Docker image for the operator and push to Oracle Cloud Infrastructure Registry (OCIR)",
-                "description": "Use OKE to build, deploy, and manage cloud-native applications."
+                "description": "The Oracle Cloud Infrastructure Registry to push the WebLogic Server, Operator, and Load Balancer images."
 
             },
             {
                 "number": "200",
                 "filename": "LabGuide200.md",
                 "title": "Lab 200:  Create Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI)",
-                "description": "Short description of lab 200"
+                "description": "Use OKE to build, deploy, and manage cloud-native applications."
 
             },
             {
                 "number": "300",
                 "filename": "LabGuide300.md",
-                "title": "Lab 300:  Title of Lab 300",
-                "description": "Short description of lab 300"
+                "title": "Lab 300:  Prepare the WebLogic Kubernetes Operator environment",
+                "description": "How to run WebLogic clusters on the Oracle Cloud Infrastructure Container Engine for Kubernetes"
 
             },
             {
