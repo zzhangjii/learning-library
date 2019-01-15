@@ -15,14 +15,14 @@
             {
                 "number": "100",
                 "filename": "LabGuide100.md",
-                "title": "Lab 100: Create Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI).",
+                "title": "Lab 100: Build the Docker image for the operator and push to Oracle Cloud Infrastructure Registry (OCIR)",
                 "description": "Use OKE to build, deploy, and manage cloud-native applications."
 
             },
             {
                 "number": "200",
                 "filename": "LabGuide200.md",
-                "title": "Lab 200:  Title of Lab 200",
+                "title": "Lab 200:  Create Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI)",
                 "description": "Short description of lab 200"
 
             },
