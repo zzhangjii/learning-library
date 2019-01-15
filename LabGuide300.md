@@ -53,30 +53,29 @@ In this lab, we describe the steps to run a WebLogic cluster using the Oracle Cl
 ~/.ssh/id_rsa is the path to the private ssh RSA key.
 - Type **yes** and **press enter** when asked if you want to continue connecting
 
-    ![](images/200/LabGuide200-edc8f079.png)
+    ![](images/300/node1_login.png)
 
 - Retrieve private IP address executing this command:
      ```
 	$ ip addr | grep ens3
-	2: ens3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9000 qdisc mq state UP qlen 1000
-    	inet 10.0.12.4/24 brd 10.0.12.255 scope global dynamic ens3
      ```
-    Find the inet value. For example the private address in the example above: 10.0.12.4
+    ![](images/300/node1_ip.png)
+    Find the inet value. For example the private address in the example above: 10.0.96.2
 
     Repeat the query for each node. Note the IP addresses for easier usage:
 
 | Nodes:             | Public IP       | Private IP |
 |--------------------|-----------------|------------|
-| Node1 - NFS Server | 129.213.103.156 | 10.0.12.4  |
-| Node2              | 129.146.133.192 | 10.0.11.3  |
-| Node3              | 129.146.166.187 | 10.0.10.3  |
+| Node1 - NFS Server | 129.213.34.235  | 10.0.96.2  |
+| Node2              | 129.213.60.103  | 10.0.32.2  |
+| Node3              | 132.145.138.193 | 10.0.64.2  |
 
 
 - Log in using `ssh` to **Node1**, and set up NFS Server:
-
-	$ ssh -i ~/.ssh/id_rsa opc@129.146.103.156
-	Oracle Linux Server 7.4
-	Last login: Sat Jun 16 10:51:32 2018 from 86.59.134.172
+    ```
+	$ ssh -i ~/.ssh/id_rsa opc@129.213.34.235
+    ```
+    ![](images/300/node1_login.png)
 
 - Change to *root* user.
      ```
@@ -114,12 +113,17 @@ In this lab, we describe the steps to run a WebLogic cluster using the Oracle Cl
      ```
 	[root]$ exit
      ```
+- Node1 preparation is done type **exit** again to end the *ssh* session.
+    ```
+	[opc]$ exit
+    ```
+### **STEP 3**: Configure NFS clients
+
 - Log in using `ssh` to **Node2** and configure NFS client:
      ```
-	$ ssh -i ~/.ssh/id_rsa opc@129.146.133.192
-	Oracle Linux Server 7.4
-	Last login: Sat Jun 16 10:51:32 2018 from 86.59.134.172
+	$ ssh -i ~/.ssh/id_rsa opc@129.213.60.103  
      ```
+
 - Change to *root* user.
     ```
 	[opc]$ sudo su -
@@ -156,7 +160,7 @@ In this lab, we describe the steps to run a WebLogic cluster using the Oracle Cl
 	## More information:
 	## https://docs.us-phoenix-1.oraclecloud.com/Content/Block/Tasks/connectingtoavolume.htm
 	##
-	10.0.12.4:/scratch /scratch  nfs nfsvers=3 0 0
+	10.0.96.2:/scratch /scratch  nfs nfsvers=3 0 0
 	~                                                                                                                                                                               
 	~                                                                                                                                                                               
 	~                                                                                                                                                                               
@@ -167,13 +171,14 @@ In this lab, we describe the steps to run a WebLogic cluster using the Oracle Cl
 	~                                                                                                                                                                               
 	"/etc/fstab" 24L, 957C
     ```
+    ![](images/300/node2_fstab.png)
 - Save changes. Mount the shared `/scratch` directory.
     ```
 	[root]$ mount /scratch
     ```
 - Restart the NFS service.
     ```
-	[root]$ service nfs-server restart
+	[root]$ systemctl restart nfs
     ```
 - Type **exit** to end *root* session.
     ```
@@ -185,9 +190,7 @@ In this lab, we describe the steps to run a WebLogic cluster using the Oracle Cl
     ```
 - Log in using `ssh` to **Node3** and configure NFS client:
     ```
-	$ ssh -i ~/.ssh/id_rsa opc@129.146.166.187
-	Oracle Linux Server 7.4
-	Last login: Sat Jun 16 10:51:32 2018 from 86.59.134.172
+	$ ssh -i ~/.ssh/id_rsa opc@132.145.138.193
     ```
 - Change to *root* user.
     ```
@@ -225,7 +228,7 @@ In this lab, we describe the steps to run a WebLogic cluster using the Oracle Cl
 	## More information:
 	## https://docs.us-phoenix-1.oraclecloud.com/Content/Block/Tasks/connectingtoavolume.htm
 	##
-	10.0.12.4:/scratch /scratch  nfs nfsvers=3 0 0
+	10.0.96.2:/scratch /scratch nfs nfsvers=3 0 0
 	~                                                                                                                                                                               
 	~                                                                                                                                                                               
 	~                                                                                                                                                                               
@@ -236,13 +239,14 @@ In this lab, we describe the steps to run a WebLogic cluster using the Oracle Cl
 	~                                                                                                                                                                               
 	"/etc/fstab" 24L, 957C
     ```
+    ![](images/300/node2_fstab.png)
 - Save changes. Mount the shared `/scratch` directory.
     ```
 	[root]$ mount /scratch
     ```
 - Restart the NFS service.
     ```
-	[root]$ service nfs-server restart
+	[root]$ systemctl restart nfs
     ```
 - Type **exit** to end *root* session.
     ```
@@ -252,3 +256,17 @@ In this lab, we describe the steps to run a WebLogic cluster using the Oracle Cl
     ```
 	[opc]$ exit
     ```
+### **STEP 4**: Modify the configuration YAML files to reflect the Docker image names in the OCIR
+
+- Use Git to download the WebLogic Kubernetes Operator project:
+    ```
+	[git clone -b "v1.1" https://github.com/oracle/weblogic-kubernetes-operator.git
+    ```
+    ![](images/300/git_clone_1_1.png)
+
+- Modify the YAML inputs to reflect the image names:
+    ```
+    cd /weblogic-kubernetes-operator/kubernetes
+    ```
+- Open and modify the following parameters in the create-weblogic-operator-inputs.yaml input file:
+
