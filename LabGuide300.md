@@ -42,6 +42,213 @@ In this lab, we describe the steps to run a WebLogic cluster using the Oracle Cl
       kubectl create clusterrolebinding my-cluster-admin-binding --clusterrole=cluster-admin --user==<Paste your User OCID Here>
       ```
 ![](images/300/LabGuide300_1003.png)
+
 ### **STEP 2**: Set up the NFS server
 
-- Instructions for Step 2
+- In the above step, let’s install the NFS server on Node1 with the IP address 129.213.34.235, and use Node2 (IP:129.213.60.103)and Node3 (IP:132.145.138.193) as clients. Log in to each of the nodes using ssh to retrieve the private IP address, by executing the command:
+      ```
+      ssh -i ~/.ssh/id_rsa opc@[Public IP of Node]
+      ip addr | grep ens3
+      ```
+~/.ssh/id_rsa is the path to the private ssh RSA key.
+- Type **yes** and **press enter** when asked if you want to continue connecting
+
+    ![](images/200/LabGuide200-edc8f079.png)
+
+- Retrieve private IP address executing this command:
+     ```
+	$ ip addr | grep ens3
+	2: ens3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9000 qdisc mq state UP qlen 1000
+    	inet 10.0.12.4/24 brd 10.0.12.255 scope global dynamic ens3
+     ```
+    Find the inet value. For example the private address in the example above: 10.0.12.4
+
+    Repeat the query for each node. Note the IP addresses for easier usage:
+
+| Nodes:             | Public IP       | Private IP |
+|--------------------|-----------------|------------|
+| Node1 - NFS Server | 129.213.103.156 | 10.0.12.4  |
+| Node2              | 129.146.133.192 | 10.0.11.3  |
+| Node3              | 129.146.166.187 | 10.0.10.3  |
+
+
+- Log in using `ssh` to **Node1**, and set up NFS Server:
+
+	$ ssh -i ~/.ssh/id_rsa opc@129.146.103.156
+	Oracle Linux Server 7.4
+	Last login: Sat Jun 16 10:51:32 2018 from 86.59.134.172
+
+- Change to *root* user.
+     ```
+	[opc]$ sudo su -
+     ```
+- Create `/scratch/external-domain-home/pv001` shared directory for domain binaries.
+     ```
+	[root]$ mkdir -m 777 -p /scratch/external-domain-home/pv001
+	[root]$ chown -R opc:opc /scratch
+    ```
+- Modify `/etc/exports` to enable Node2, Node3 access to Node1 NFS server.
+     ```
+	[root]$ vi /etc/exports
+     ```
+**NOTE!** By the default the NFS server has to be installed but stopped on OKE node. If the NFS is not installed on node then run `yum install -y nfs-utils` first as super user.
+
+- Add private IP addresses of Node2 and Node3.
+     ```
+	/scratch 10.0.11.3(rw)
+	/scratch 10.0.10.3(rw)
+	~                                                                                                                                                                               
+	~                                                                                                                                                                               
+	~                                                                                                                                                                               
+	~                                                                                                                                                                               
+	~                                                                                                                                                                               
+	~                                                                                                                                                                               
+	~                                                                                                                                                                               
+	"/etc/exports" 2L, 46C
+     ```
+- Save the changes and restart NFS service.
+     ```
+	[root]$ systemctl restart nfs
+     ```
+- Type **exit** to end *root* session.
+     ```
+	[root]$ exit
+     ```
+- Log in using `ssh` to **Node2** and configure NFS client:
+     ```
+	$ ssh -i ~/.ssh/id_rsa opc@129.146.133.192
+	Oracle Linux Server 7.4
+	Last login: Sat Jun 16 10:51:32 2018 from 86.59.134.172
+     ```
+- Change to *root* user.
+    ```
+	[opc]$ sudo su -
+    ```
+- Create `/scratch` shared directory.
+    ```
+	[root]$ mkdir /scratch
+    ```
+- Edit the `/etc/fstab` file.
+    ```
+	[root]$ vi /etc/fstab
+    ```
+- Add the internal IP address and parameters of **Node1 - NFS server**. Append as last row.
+    ```
+	#
+	# /etc/fstab
+	# Created by anaconda on Fri Feb  9 01:25:44 2018
+	#
+	# Accessible filesystems, by reference, are maintained under '/dev/disk'
+	# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
+	#
+	UUID=7247af6c-4b59-4934-a6be-a7929d296d83 /                       xfs     defaults,_netdev,_netdev 0 0
+	UUID=897D-798C          /boot/efi               vfat    defaults,uid=0,gid=0,umask=0077,shortname=winnt,_netdev,_netdev,x-initrd.mount 0 0
+	######################################
+	## ORACLE BARE METAL CLOUD CUSTOMERS
+	##
+	## If you are adding an iSCSI remote block volume to this file you MUST
+	## include the '_netdev' mount option or your instance will become
+	## unavailable after the next reboot.
+	##
+	## Example:
+	## /dev/sdb /data1  ext4    defaults,noatime,_netdev    0   2
+	##
+	## More information:
+	## https://docs.us-phoenix-1.oraclecloud.com/Content/Block/Tasks/connectingtoavolume.htm
+	##
+	10.0.12.4:/scratch /scratch  nfs nfsvers=3 0 0
+	~                                                                                                                                                                               
+	~                                                                                                                                                                               
+	~                                                                                                                                                                               
+	~                                                                                                                                                                               
+	~                                                                                                                                                                               
+	~                                                                                                                                                                               
+	~                                                                                                                                                                               
+	~                                                                                                                                                                               
+	"/etc/fstab" 24L, 957C
+    ```
+- Save changes. Mount the shared `/scratch` directory.
+    ```
+	[root]$ mount /scratch
+    ```
+- Restart the NFS service.
+    ```
+	[root]$ service nfs-server restart
+    ```
+- Type **exit** to end *root* session.
+    ```
+		[root]$ exit
+    ```
+- Node2 preparation is done type **exit** again to end the *ssh* session.
+    ```
+	[opc]$ exit
+    ```
+- Log in using `ssh` to **Node3** and configure NFS client:
+    ```
+	$ ssh -i ~/.ssh/id_rsa opc@129.146.166.187
+	Oracle Linux Server 7.4
+	Last login: Sat Jun 16 10:51:32 2018 from 86.59.134.172
+    ```
+- Change to *root* user.
+    ```
+	[opc]$ sudo su -
+    ```
+- Create `/scratch` shared directory.
+    ```
+	[root]$ mkdir /scratch
+    ```
+- Edit the `/etc/fstab` file.
+    ```
+	[root]$ vi /etc/fstab
+    ```
+- Add the internal IP address and parameters of **Node1 - NFS server**. Append as last row.
+    ```
+	#
+	# /etc/fstab
+	# Created by anaconda on Fri Feb  9 01:25:44 2018
+	#
+	# Accessible filesystems, by reference, are maintained under '/dev/disk'
+	# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
+	#
+	UUID=7247af6c-4b59-4934-a6be-a7929d296d83 /                       xfs     defaults,_netdev,_netdev 0 0
+	UUID=897D-798C          /boot/efi               vfat    defaults,uid=0,gid=0,umask=0077,shortname=winnt,_netdev,_netdev,x-initrd.mount 0 0
+	######################################
+	## ORACLE BARE METAL CLOUD CUSTOMERS
+	##
+	## If you are adding an iSCSI remote block volume to this file you MUST
+	## include the '_netdev' mount option or your instance will become
+	## unavailable after the next reboot.
+	##
+	## Example:
+	## /dev/sdb /data1  ext4    defaults,noatime,_netdev    0   2
+	##
+	## More information:
+	## https://docs.us-phoenix-1.oraclecloud.com/Content/Block/Tasks/connectingtoavolume.htm
+	##
+	10.0.12.4:/scratch /scratch  nfs nfsvers=3 0 0
+	~                                                                                                                                                                               
+	~                                                                                                                                                                               
+	~                                                                                                                                                                               
+	~                                                                                                                                                                               
+	~                                                                                                                                                                               
+	~                                                                                                                                                                               
+	~                                                                                                                                                                               
+	~                                                                                                                                                                               
+	"/etc/fstab" 24L, 957C
+    ```
+- Save changes. Mount the shared `/scratch` directory.
+    ```
+	[root]$ mount /scratch
+    ```
+- Restart the NFS service.
+    ```
+	[root]$ service nfs-server restart
+    ```
+- Type **exit** to end *root* session.
+    ```
+	[root]$ exit
+    ```
+- Node3 preparation is done type **exit** again to end the *ssh* session.
+    ```
+	[opc]$ exit
+    ```
