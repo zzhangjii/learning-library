@@ -268,5 +268,74 @@ In this lab, we describe the steps to run a WebLogic cluster using the Oracle Cl
     ```
     cd /weblogic-kubernetes-operator/kubernetes
     ```
-- Open and modify the following parameters in the create-weblogic-operator-inputs.yaml input file:
+- Open and modify the following parameters in the **create-weblogic-operator-inputs.yaml** input file:
+    ```
+    targetNamespaces: domain1
+    weblogicOperatorImage: oracle/weblogic-kubernetes-operator:1.0
+    ```  
+- Save the changes. Open and modify the following parameters in the **create-weblogic-domain-inputs.yaml** input file:
+    ```
+    domainUID: domain1  
+    weblogicDomainStoragePath: /scratch/external-domain-home/pv001
+    exposeAdminT3Channel: true
+    exposeAdminNodePort: true
+    loadBalancer: TRAEFIK
+    ```
+### **STEP 5**: Deploy WebLogic Kubernetes Operator and WebLogic Domain
 
+- Create output directory for the operator and domain scripts.
+    ```
+    mkdir -p /PATH_TO/output
+    mkdir -p /PATH_TO/domain_output
+    ```
+- Run the create operator script, pointing it at your inputs file and the output directory. The best to execute in the locally cloned weblogic-kubernetes-operator/kubernetes folder:
+    ```
+    ./create-weblogic-operator.sh -i create-weblogic-operator-inputs.yaml -o /PATH_TO/weblogic-output-directory
+    ```
+    ![](images/300/operator_output.png)
+
+- Run this command to check the operator pod status:
+    ```
+    kubectl get pods -n weblogic-operator
+    ```
+    ![](images/300/operator_running.png)
+
+- Create the persistent volume directory on the NFS server
+    ```
+    ssh -i /Users/sasanka/.ssh/id_rsa opc@129.213.150.77
+    chmod 777 /scratch/external-domain-home/pv001
+    ```
+- Create namespace domain1, execute this command: 
+    ```
+    kubectl create namespace domain1
+    ```
+- The username and password credentials for access to the Administration Server must be stored in a Kubernetes secret in the same namespace that the domain will run in. The script does not create the secret in order to avoid storing the credentials in a file. Oracle recommends that this command be executed in a secure shell and that the appropriate measures be taken to protect the security of the credentials. To create the secret, issue the following command:
+    ```
+    kubectl -n domain1 create secret generic domain1-weblogic-credentials --from-literal=username=weblogic --from-literal=password=welcome1
+    ```
+- Finally, run the create script, pointing it at your inputs file and the output directory:
+    ```
+    ./create-weblogic-domain.sh –i create-weblogic-domain-job-inputs.yaml  -o /path/to/domain_output
+    ```
+    ![](images/300/domain_output.png)
+
+- To check the status of the WebLogic cluster, run this command:
+    ```
+    kubectl get pods -n domain1
+    ```
+    ![](images/300/domain_result.png)
+- Let’s see how the load balancer works. For that, let’s access the WebLogic Server Administration Console and deploy the testwebapp.war application. In the customized inputs for the WebLogic domain, we have specified to expose the AdminNodePort. To review the port number, run this command:
+    ```
+    kubectl describe service domain1-admin-server -n domain1
+    ```
+    ![](images/300/describe_admin_server.png)
+
+- Let’s use one of the node’s external IP addresses to access the Administration Console. Example: http://129.213.150.77:30701/console/
+    
+    ![](images/300/console1.png)
+
+- Log in to the WebLogic Server Administration Console using the credentials weblogic/welcome1.
+
+    ![](images/300/console2.png)
+    
+  
