@@ -153,6 +153,8 @@ Compute instance and id_rsa to connect via SSH into compute instance.
 
 10. Click **Create**
 
+**NOTE:** If 'Service limit' error is displayed choose a different shape such as VM.Standard.E2.2 OR VM.Standard2.2
+
 ![]( img/RESERVEDIP_HOL0011.PNG)
 
 ***Next we will ssh to the compute instance and install Docker.***
