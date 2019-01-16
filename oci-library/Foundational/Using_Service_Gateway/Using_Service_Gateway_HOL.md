@@ -53,41 +53,44 @@ Service Gateway alleviates the preceding concerns by enabling the following func
 6.  Click **Create Bucket**
 ![]( img/OBJECT-STORAGE002.PNG)
 
-7. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
+7. Click the Apps icon in the toolbar and select Git-Bash to open a terminal window.
 
 ![]( img/OBJECT-STORAGE004.PNG)
 
-7. Change directory to the Downloads folder Enter command:
+8. Change directory to the Downloads folder Enter command:
 ```
 $ cd /c/Users/PhotonUser/Downloads/
 ```
 ![]( img/OBJECT-STORAGE005.PNG)
 
-8. Create a sample file, Enter command:
-**touch samplefile**  This should create a file by the name"samplefile" in the Downloads folder
+9. Create a sample file, Enter command:
+```
+touch samplefile
+```
+This should create a file by the name"samplefile" in the Downloads folder
 
-9. Switch to OCI window and click the Bucket Name.
+10. Switch to OCI window and click the Bucket Name.
 
 **HINT:** You can swap between OCI window and any other application(git-bash etc) by clicking switch window
 ![]( img/OBJECT-STORAGE006.PNG)
 
-10. Bucket detail window should be visible. Click **Upload Object**
+11. Bucket detail window should be visible. Click **Upload Object**
 ![]( img/OBJECT-STORAGE007.PNG)
 
-11. Click on Upload Object > Browse > This PC > Downloads. You should see the sample file created earlier
+12. Click on Upload Object > Browse > This PC > Downloads. You should see the sample file created earlier
 
-12. Select the file, then click **Upload Object** in the Dialog box.
+13. Select the file, then click **Upload Object** in the Dialog box.
 
-13. File should be visible under Objects
+14. File should be visible under Objects
 
-14. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
+15. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
 
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
 ![]( img/RESERVEDIP_HOL001.PNG)
 ![]( img/RESERVEDIP_HOL002.PNG)
 
-15. Fill out the dialog box:
+16. Fill out the dialog box:
 
 - **Create in Compartment:** Has the correct compartment
 
@@ -98,7 +101,6 @@ $ cd /c/Users/PhotonUser/Downloads/
 - Click **Create Virtual Cloud Network**
 
 - Click **Close**
-
 ![]( img/RESERVEDIP_HOL003.PNG)
 ![]( img/RESERVEDIP_HOL004.PNG)
 
@@ -108,8 +110,10 @@ $ cd /c/Users/PhotonUser/Downloads/
 
 ![]( img/RESERVEDIP_HOL006.PNG)
 
-2. Enter command **ssh-keygen**
-
+2. Enter command 
+```
+ssh-keygen
+```
 **HINT:** You can swap between OCI window, 
 git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
 
@@ -126,10 +130,21 @@ git-bash sessions and any other application (Notepad, etc.) by clicking the Swit
 **NOTE:** id_rsa.pub will be used to create 
 Compute instance and id_rsa to connect via SSH into compute instance.
 
-**HINT:** Enter command **cd /C/Users/PhotonUser/.ssh** (No Spaces) and then **ls** to verify the two files exist. 
+**HINT:** Enter command 
+```
+cd /C/Users/PhotonUser/.ssh (No Spaces) 
+```
+and then 
+```
+ls 
+```
+to verify the two files exist. 
 
 5. In git-bash Enter command  
-**cat /C/Users/PhotonUser/.ssh/id_rsa.pub** , highlight the key and copy 
+```
+cat /C/Users/PhotonUser/.ssh/id_rsa.pub
+```
+ , highlight the key and copy 
 
 ![]( img/RESERVEDIP_HOL009.PNG)
 
@@ -168,12 +183,16 @@ Compute instance and id_rsa to connect via SSH into compute instance.
 **NOTE:** If 'Service limit' error is displayed choose a different shape such as VM.Standard.E2.2 OR VM.Standard2.2
 ![]( img/RESERVEDIP_HOL0011.PNG)
 
-10. Wait for Instance to be in **Running** state. In git-bash type cd /C/Users/PhotonUser/.ssh
-
+10. Wait for Instance to be in **Running** state. In git-bash Enter Command:
+```
+ cd /C/Users/PhotonUser/.ssh
+```
 11. Enter **ls** and verify id_rsa file exists
 
-12. Enter command **ssh –i id_rsa opc@<PUBLIC_IP_OF_COMPUTE_INSTANCE>**
-
+12. Enter command 
+```
+ssh –i id_rsa opc@<PUBLIC_IP_OF_COMPUTE_INSTANCE>
+```
 **NOTE:** User name is opc
 
 **HINT:** If ‘Permission denied error’ is seen, ensure you are using ‘-i’ in the ssh command
@@ -184,12 +203,22 @@ Compute instance and id_rsa to connect via SSH into compute instance.
  
 14. Verify opc@<COMPUTE_INSTANCE_NAME> appears on the prompt
 
-15. In the compute instance Enter command **ssh-keygen** , Press Enter at all the prompts. We now have a ssh key pair that we will use to launch a second compute instance.
+15. In the compute instance Enter command 
+```ssh-keygen
+```
+, Press Enter at all the prompts. We now have a ssh key pair that we will use to launch a second compute instance.
 ![]( img/SGW_013.PNG)
 
-16. Enter command **cd /home/opc/.ssh**
+16. Enter command 
+```
+cd /home/opc/.ssh
+```
 
-17. Enter command **cat id_rsa.pub**, highlight and copy the key starting at ssh
+17. Enter command 
+```
+cat id_rsa.pub
+```
+, highlight and copy the key starting at ssh
 ![]( img/SGW_014.PNG)
 
 18.  Switch to OCI Console window
@@ -204,11 +233,14 @@ Compute instance and id_rsa to connect via SSH into compute instance.
 ![]( img/SGW_015.PNG)
 
 22. Switch to git-bash session used to ssh into first compute instance and ssh to second compute instance using the Private IP, Enter Command:
-**ssh –i id_rsa opc@<PRIVATE_IP_OF_COMPUTE_INSTANCE>**
-
+```
+ssh –i id_rsa opc@<PRIVATE_IP_OF_COMPUTE_INSTANCE>
+```
 23. To install OCI CLI on the compute instance, Enter Command:
 
-**bash -c "$(curl –L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"**
+```
+bash -c "$(curl –L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
+```
 ![]( img/SGW_001.PNG)
 
 24.  When prompted for Install directory, Press Enter (choose default)
@@ -220,12 +252,18 @@ Compute instance and id_rsa to connect via SSH into compute instance.
 26. When prompted for ‘Y/N’ for $Path, Enter Y, when prompted for path for rc file Press Enter (choose default)
 ![]( img/SGW_004.PNG)
 
-27. Check oci CLI installed version, Enter command oci -v
+27. Check oci CLI installed version, Enter command:
+```
+oci -v
+```
 **NOTE:** Version shoudl be minimum 2.4.2X
 ![]( img/SGW_005.PNG)
 
-28. Next we will configure OCI CLI. Enter command 
-**oci setup config** . Press Enter when prompted for directory name to accept the default. You will be prompted to enter user OCID
+28. Next we will configure OCI CLI. Enter command: 
+```
+oci setup config
+```
+ . Press Enter when prompted for directory name to accept the default. You will be prompted to enter user OCID
 ![]( img/SGW_006.PNG)
 
 29. Switch to OCI Console window, Click user icon (Top Right of OCI Console Window) and click **User Settings**. In User settings click **copy** next to OCID for your user name
@@ -245,10 +283,20 @@ Enter Tenancy OCID
 RSA key pair’. Press Enter and accept default options for directories. Press Enter when prompted for passphrase (i.e leave it empty)
 ![]( img/SGW_010.PNG)
 
-34.  In git-bash session for second compute, Enter command cd /home/opc/.oci and then ls.Verify the API key files and OCI CLI config files exist.
+34.  In git-bash session for second compute, Enter command:
+```
+cd /home/opc/.oci
+```
+and then 
+```ls
+```
+Verify the API key files and OCI CLI config files exist.
 ![]( img/SGW_011.PNG)
 
-35. Enter command cat config and ensure fingerprint exists. Leave the git-bash session open as we will verify the
+35. Enter command 
+```cat config
+```
+and ensure fingerprint exists. Leave the git-bash session open as we will verify the
 finger print in config file aginst OCI, once we upload api
 keys next.
 ![]( img/SGW_012.PNG)
@@ -256,7 +304,11 @@ keys next.
 
 ## Practice 3: Upload API keys, Create Service gateway and verify functionality
 
-1. In git-bash window for second compute, Enter command **cat /home/opc/.oci/oci_api_key_public.pem**, highlight the output, right click mouse/touchpad and click copy
+1. In git-bash window for second compute, Enter command 
+```
+cat /home/opc/.oci/oci_api_key_public.pem
+```
+, highlight the output, right click mouse/touchpad and click copy
 ![]( img/SGW_016.PNG)
 
 2. Switch to OCI Console window, Click user iconc(Top Right of OCI Console Window) and click User Settings. In User settings click **API Keys** and **Add Public Key**.
@@ -265,9 +317,13 @@ keys next.
 3. Paste the content of oci_api_key_public.pem copied earlier and click **Add**.
 ![]( img/SGW_018.PNG)
 
-4. A new finger print will be generated. Switch to git-bash window and enter command cat /home/opc/.oci/config
+4. A new finger print will be generated. Switch to git-bash window and enter command
+```
+cat /home/opc/.oci/config
+```
 Compare the finger print in the output of config file to 
 the one in OCI console window and make sure they match
+
 **NOTE:** If multiple finger prints exist in OCI console window then identify your finger print by looking at the time stamp.
 ![]( img/SGW_019.PNG)
 
@@ -278,17 +334,25 @@ the one in OCI console window and make sure they match
 ![]( img/SGW_020.PNG)
 
 6. Switch to git-bash window (ssh session to second compute instance) and download samplefile. Enter command:
-
-**oci os object get --namespace <NAME_SPACE> --bucket-name <BUCKET_NAME> --name samplefile --file ./samplefile**
+```
+oci os object get --namespace <NAME_SPACE> --bucket-name <BUCKET_NAME> --name samplefile --file ./samplefile
+```
 **HINT:** In this example the command will be:
 oci os object get --namespace us_training --bucket-name
 Service-Gateway-Bucket --name samplefile --file ./samplefile
 ![]( img/SGW_021.PNG)
 
-7. Enter command **ls** and verify sample file was downloaded
+7. Enter command 
+```ls
+```
+ and verify sample file was downloaded
+
 **NOTE:** The file was downloaded using Public IP of compute instance along with Internet Gateway. Next we will remove the Public IP of compute instance and verify the file can not be downloaded anymore.
 
-8. Enter command **rm samplefile** to remove the file.
+8. Enter command 
+```rm samplefile
+```
+to remove the file.
 
 9. Switch to OCI Console window. From OCI services menu, 
 Click **Instances** under Compute. Locate your instance and click on Instance name.
@@ -302,10 +366,13 @@ This will remove the Public IP of the compute instance.
 ![]( img/SGW_024.PNG)
 
 12. Switch to git-bash window (with ssh to second compute instance) Re-enter the download command:
-
-**oci os object get --namespace <NAME_SPACE> --bucket-name <BUCKET_NAME> --name samplefile --file ./samplefile**
-
-13. No output will be displayed and no file will be downloaded. Enter Ctrl+C to terminate the command. Enter command **ls** and verify samplefile was not downloaded.
+```
+oci os object get --namespace <NAME_SPACE> --bucket-name <BUCKET_NAME> --name samplefile --file ./samplefile**
+```
+13. No output will be displayed and no file will be downloaded. Enter Ctrl+C to terminate the command. Enter command 
+```ls
+```
+and verify samplefile was not downloaded.
 ![]( img/SGW_025.PNG)
 
 ***Since there is no Public IP on the second compute instance it can no longer access Object storage. Next will create a Service gateway, initialize the route table and re-download the file. (without assigning Public IP to compute instance)***
@@ -333,8 +400,9 @@ Fill out the dialog box:
 19. Switch to git-bash window (with ssh to second compute instance).
 
 20. Re-enter download command:
-
-**oci os object get --namespace <NAME_SPACE> --bucket-name<BUCKET_NAME> --name samplefile --file ./samplefile**
+```
+oci os object get --namespace <NAME_SPACE> --bucket-name<BUCKET_NAME> --name samplefile --file ./samplefile**
+```
 ![]( img/SGW_029.PNG)
 
 ***This completes the lab for provisioing service gateway for Private Instances access to other OCI resources.***
