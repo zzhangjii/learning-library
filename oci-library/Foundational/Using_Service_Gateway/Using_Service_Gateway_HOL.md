@@ -44,21 +44,23 @@ Service Gateway alleviates the preceding concerns by enabling the following func
 4. Select the  correct Compartment (Left side of the OCI console) as shown below.
 ![]( img/RESERVEDIP_HOL002.PNG)
 
-4. Click Create Bucket, Fill out the dialog box:
+5. Click Create Bucket, Fill out the dialog box:
+
 - Bucket Name: Provide a name (Test-Bucket in this lab)
 - Bucket Name: Provide a name (Test-Bucket in this lab)
 - Storage Tier: STANDARD 
 
-5.  Click **Create Bucket**
+6.  Click **Create Bucket**
 ![]( img/OBJECT-STORAGE002.PNG)
 
-6- Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
+7. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
 ![]( img/OBJECT-STORAGE004.PNG)
 
 7. Change directory to the Downloads folder Enter command:
-
-**$ cd /c/Users/PhotonUser/Downloads/**
+```
+$ cd /c/Users/PhotonUser/Downloads/
+```
 ![]( img/OBJECT-STORAGE005.PNG)
 
 8. Create a sample file, Enter command:
