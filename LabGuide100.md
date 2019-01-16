@@ -14,7 +14,6 @@ To run the operator in a Kubernetes cluster, you need to build the Docker image 
 ## Objectives
 
 - Setup Environment
-- Using Oracle Pipelines (Wercker) which requires only an internet browser.
 
 ## Required Artifacts
 

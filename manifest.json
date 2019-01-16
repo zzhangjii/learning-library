@@ -1,6 +1,6 @@
 {
     "workshop": {
-        "title": "Workshop Title",
+        "title": "On-premises WebLogic to OKE",
         "description": "Description of this workshop.",
         "theme": "default",
         "interactive":"https://launch.oracle.com/?",
