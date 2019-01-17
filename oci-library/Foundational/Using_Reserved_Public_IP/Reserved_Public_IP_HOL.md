@@ -84,8 +84,10 @@ The purpose of this lab is to give you an overview of the Reserved Public IP Ser
 
 ![]( img/RESERVEDIP_HOL006.PNG)
 
-3. Enter command **ssh-keygen**
-
+3. Enter command 
+```
+ssh-keygen
+```
 **HINT:** You can swap between OCI window, 
 git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
 
@@ -102,10 +104,21 @@ git-bash sessions and any other application (Notepad, etc.) by clicking the Swit
 **NOTE:** id_rsa.pub will be used to create 
 Compute instance and id_rsa to connect via SSH into compute instance.
 
-**HINT:** Enter command **cd /C/Users/PhotonUser/.ssh** (No Spaces) and then **ls** to verify the two files exist. 
+**HINT:** Enter command (No Spaces)
+```
+cd /C/Users/PhotonUser/.ssh
+```
+and then 
+```
+ls
+```
+to verify the two files exist. 
 
 6. In git-bash Enter command  
-**cat /C/Users/PhotonUser/.ssh/id_rsa.pub** , highlight the key and copy 
+```
+cat /C/Users/PhotonUser/.ssh/id_rsa.pub 
+```
+highlight the key and copy 
 
 ![]( img/RESERVEDIP_HOL009.PNG)
 
@@ -167,8 +180,10 @@ the Reserved Public IP created earlier. Click **Update**
 
 2. Enter **ls** and verify id_rsa file exists
 
-3. Enter command **ssh –i id_rsa opc@<PUBLIC_IP_OF_COMPUTE_INSTANCE>**
-
+3. Enter command 
+```
+ssh –i id_rsa opc@<PUBLIC_IP_OF_COMPUTE_INSTANCE>
+```
 **NOTE:** User name is opc
 
 **HINT:** If ‘Permission denied error’ is seen, ensure you are using ‘-i’ in the ssh command
@@ -215,10 +230,16 @@ the Reserved Public IP created earlier. Click **Update**
 
 7. In git-bash type cd /C/Users/PhotonUser/.ssh
 
-8. Enter **ls** and verify id_rsa file exists
+8. Enter 
+```
+ls
+``` 
+and verify id_rsa file exists
 
-9. Enter Command **ssh -o GlobalKnownHostsFile=/dev/null -o  UserKnownHostsFile=/dev/null  –i id_rsa opc@<PUBLIC_IP_OF_COMPUTE_INSTANCE>**
-
+9. Enter Command:
+ ```
+ ssh -o GlobalKnownHostsFile=/dev/null -o  UserKnownHostsFile=/dev/null  –i id_rsa opc@<PUBLIC_IP_OF_COMPUTE_INSTANCE>
+```
 **NOTE:** We are specifying additional options since this sameIP was used for a different compute instance earlier.
 
 10. Enter ‘Yes’ when prompted for security message
