@@ -102,9 +102,63 @@ We require a Database to store the Alpha Office data which is accessed later in 
 
     ![](images/050/image15.png)
 
-### **STEP 6**: Create a New Visual Builder Cloud Service and Application
+### **STEP 6**: Create a New Visual Builder Cloud Service
 
-Fill in the text/image for creating VBCS instance and application......
+In this step you will create a VBCS instance that will be used in Lab 400. It takes about 20 minutes for the underlying infrastructure to be created. We just need to fire off the create instance process at this point. We'll check the status of the instance at the beginning of Lab 400.
+
+- From the OCI console go back to your Services Dashboard by clicking on the hamburger menu in the upper left hand side of the page and selecting **Administration-->My Services Dashboard**
+
+  ![](images/050/LabGuide50-vbcs1.png)
+
+  ![](images/050/LabGuide50-vbcs2.png)
+
+- You should be back at the main Dashboard:
+
+  ![](images/050/cloud_dash.png)
+
+- Click the **Customize Dashboard** button.
+
+  ![](images/050/custom_dash.png)
+
+- Then select `Autonomous Visual Builder` and click the **Show** button.
+
+  ![](images/050/show_dash_vb.png)
+
+- You should see the following:
+
+  ![](images/050/LabGuide50-80c36c4c.png)
+
+### **STEP 7**: Create a New Visual Builder Instance
+
+- In the Autonomous Visual Builder panel click the hamburger menu and right-click **Open Service Console** and **Open link in new tab**.
+
+  ![](images/050/LabGuide50-6196f9d1.png)
+
+- Next, click the **Create Instance** button.
+
+  ![](images/050/LabGuide50-11580389.png)
+
+- On the next screen set your `Instance Name` to:
+
+  ```
+  monoTOmicro
+  ```
+  
+- Enter a `Description` and for the `Region` select **No Preference**.
+
+  ![](images/050/LabGuide50-vbcs3.png)
+
+- Review your information and press **Create**.
+
+  ![](images/050/LabGuide50-vbcs4.png)
+
+- You will see the following screen once your request is submitted. The refresh button can to used to update the provioning status:
+
+  ![](images/050/LabGuide50-fcc49616.png)
+
+- You should see your instance being created. We will check for completion at the beginning of Lab 400.
+
+  ![](images/050/LabGuide50-vbcs5.png)
 
 **This completes the Lab!**
 
