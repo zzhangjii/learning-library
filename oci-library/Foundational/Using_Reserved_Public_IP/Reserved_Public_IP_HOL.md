@@ -100,6 +100,7 @@ git-bash sessions and any other application (Notepad, etc.) by clicking the Swit
 5. You should now have the Public and Private keys:
 
 /C/Users/ PhotonUser/.ssh/id_rsa (Private Key)
+
 /C/Users/PhotonUser/.ssh/id_rsa.pub (Public Key)
 
 **NOTE:** id_rsa.pub will be used to create 
