@@ -2,7 +2,8 @@
 
   ![](images/050/Title.png)
 
-## Introduction ans Overview
+## Introduction and Overview
+_Time to Complete: 4 hours_
 
 In this lab you are guided through using many of the Oracle's Cloud Services to support a transition from a monolithic on-prem environment to a Cloud based microservices environment. Along the way you'll by using the Compute Cloud Service (IaaS) which supports the Docker, Kubernetes and Autonomous Transaction Processing Database. Then you'll be using the Autonomous Visual Builder (Integration). The high level flow will be:
 
@@ -29,15 +30,36 @@ You will create all required infrastructure components that support this worksho
 
 The client image is a pre-installed Compute Service Instance that has GIT and SQL Developer already installed. You will use VNC Viewer to access this instance.
 
-### **STEP 1**: Your Oracle Cloud Trial Account
+### **STEP 1**: Start the Jumpstart Client Image
 
   - You have already applied for and received your Oracle Cloud Trial Account.
 
-### **STEP 2**: Connect to Client Image
 
-Fill in the text/image for connecting to client image running in OCI using VNC Viewer......
 
-### **STEP 3**: Clone GIT Repository
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Fill in the text/image for opening terminal window and running the "git clone...." command......
 
