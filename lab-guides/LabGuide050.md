@@ -30,38 +30,53 @@ You will create all required infrastructure components that support this worksho
 
 The client image is a pre-installed Compute Service Instance that has GIT and SQL Developer already installed. You will use VNC Viewer to access this instance.
 
+### Prerequisite
+
+Once the infrastructure is provisioned you can access your enironment using `VNC Viewer`. Please download and install from: [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/)
+
 ### **STEP 1**: Start the Jumpstart Client Image
 
-  - You have already applied for and received your Oracle Cloud Trial Account.
+- Click **Demo Lab**.
+   ![](images/050/JS3.PNG)
+
+- In **5** minutes the Oracle IaaS infrastructure including the client image will be available.
+
+  ![](images/050/JS4.PNG)
+
+- While you're waiting, check out the short video that gives an overview of this workshop.
+
+  ![](images/050/JS5.PNG)
+
+- When the environment is ready you will see the following along with the connect string to use in VNC Viewer. (In this example 129.213.167.192:10. `Your IP address will be different`)
+
+  ![](images/050/JS6.PNG)
+
+- **NOTE: You have 4 hours** before the environment will go away.
+
+  ![](images/050/JS7.PNG)
 
 
+### **STEP 2**: Start VNC Viewer
 
+Using VNC Viewer to connect to your provisioned account.
 
+- Enter the connect string you were given and hit **Return**. (Example Shown below).
 
+**NOTE: Do NOT click the Sign In button**
 
+  ![](images/050/JS8.PNG)
 
+- If presented with this prompt, click **Continue**.
 
+  ![](images/050/JS9.PNG)
 
+- Enter the VNC password  **Oracle123** and click **OK**.
 
+  ![](images/050/JS10.PNG)
 
+- Your Desktop is displayed.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Fill in the text/image for opening terminal window and running the "git clone...." command......
+  ![](images/050/JS11.PNG)
 
 ## Your Trial Account
 
