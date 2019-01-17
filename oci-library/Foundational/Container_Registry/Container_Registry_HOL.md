@@ -96,8 +96,10 @@ the repository (as shown in OCI console)
 
 2. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
-3. Enter command **ssh-keygen**
-
+3. Enter command:
+```
+ssh-keygen
+```
 **HINT:** You can swap between OCI window, 
 git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
 
@@ -113,11 +115,20 @@ git-bash sessions and any other application (Notepad, etc.) by clicking the Swit
 **NOTE:** id_rsa.pub will be used to create 
 Compute instance and id_rsa to connect via SSH into compute instance.
 
-**HINT:** Enter command
- **cd /C/Users/PhotonUser/.ssh** (No Spaces) and then **ls** to verify the two files exist. 
+**HINT:** Enter command: (No Spaces)
+ ```
+ cd /C/Users/PhotonUser/.ssh
+```
+ and then 
+ ```ls
+ ```
+to verify the two files exist. 
 
-6. In git-bash Enter command  
-**cat /C/Users/PhotonUser/.ssh/id_rsa.pub** , highlight the key and copy 
+6. In git-bash Enter command:
+```
+cat /C/Users/PhotonUser/.ssh/id_rsa.pub
+```
+, highlight the key and copy 
 
 ![]( img/RESERVEDIP_HOL009.PNG)
 
@@ -163,11 +174,16 @@ Compute instance and id_rsa to connect via SSH into compute instance.
 
 1. In git-bash type cd /C/Users/PhotonUser/.ssh
 
-2. Enter **ls** and verify id_rsa file exists
+2. Enter command
+```
+ls
+```
+and verify id_rsa file exists
 
 3. Enter command 
-**ssh –i id_rsa opc@<PUBLIC_IP_OF_COMPUTE_INSTANCE>**
-
+```
+ssh –i id_rsa opc@<PUBLIC_IP_OF_COMPUTE_INSTANCE>
+```
 **NOTE:** User name is opc
 
 **HINT:** If ‘Permission denied error’ is seen, ensure you are using ‘-i’ in the ssh command
@@ -178,44 +194,60 @@ Compute instance and id_rsa to connect via SSH into compute instance.
  
 5. Verify opc@<COMPUTE_INSTANCE_NAME(reserved-ip-instance1 in this case) appears on the prompt
 
-6.  Enter commands:
-
-**sudo yum install -y yum-utils device-mapper-persistent-data lvm2**
+6.  Enter command:
+```
+sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+```
 ![]( img/OCIR_HOL0020.PNG)
 
 7. Enter command:
-
-**sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo**
+```
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo**
+```
 ![]( img/OCIR_HOL0021.PNG)
 
 8. Enter command:
-
-**sudo yum install docker-ce –y**  (Wait for ‘Complete’message)
+```
+sudo yum install docker-ce –y
+```
+(Wait for ‘Complete’message)
 ![]( img/OCIR_HOL0022.PNG)
 
 9. Enter command:
-
-**sudo systemctl enable docker**
+```
+sudo systemctl enable docker
+```
 
 10. Enter command:
+```
+sudo systemctl start docker
+```
+11. Enter command: (To add user opc to Docker)
+```
+sudo usermod -aG docker opc
+```  
 
-**sudo systemctl start docker**
-
-11. Enter command:
-
-**sudo usermod -aG docker opc**  (To add user opc to Docker)
-
-12. Docker is installed and user opc enabled to use Docker. Enter Command **Exit** to logout of ssh session on compute instance and then ssh back in to the compute instance. Enter command **Docker images** and ensure no error is displayed
+12. Docker is installed and user opc enabled to use Docker. Enter Command 
+```Exit
+```
+to logout of ssh session on compute instance and then ssh back in to the compute instance. Enter command **Docker images** and ensure no error is displayed
 ![]( img/OCIR_HOL0023.PNG)
 
-13. We will now pull a example image from Docker registry  to the compute instance. Enter Command **docker image pull alpine**. 
-Verify image pull was successful, Enter Command **Docker images** and verify alpine is present
+13. We will now pull a example image from Docker registry  to the compute instance. Enter Command:
+```
+docker image pull alpine
+``` 
+Verify image pull was successful, Enter Command 
+```
+Docker images
+``` 
+and verify alpine is present
 ![]( img/OCIR_HOL0024.PNG)
 
 14. Now we will push this image to Docker registry created in OCI. First login to Registry in OCI. Enter command 
-
-**docker login <Region_Name_Code>.ocir.io**
-
+```
+docker login <Region_Name_Code>.ocir.io
+```
 **NOTE:** Region name code are, fra for Frankfurt, iad for Ashburn, lhr for London, phx for Phoenix.
 
 ![]( img/OCIR_HOL0025.PNG)
@@ -231,11 +263,19 @@ Verify image pull was successful, Enter Command **Docker images** and verify alp
 
 15. Verify Login Succeeded message is displayed.
 
-16. Next we will tag the image that we pulled from the web. Enter command **docker images** and note down the image id of alpine. Enter command: 
-
-**docker tag <image_id>  <Region_Name_Code>.ocir.io/<TenancyName>/<docker_registry_name>:<image_name>** (No Spaces)
-
-17. Verify the tag was created, Enter command **docker images** and verify version x.y.test is present. x and y will be the numeric version number)
+16. Next we will tag the image that we pulled from the web. Enter command 
+```
+docker images
+``` 
+and note down the image id of alpine. Enter command: (No Spaces)
+```
+docker tag <image_id>  <Region_Name_Code>.ocir.io/<TenancyName>/<docker_registry_name>:<image_name> 
+```
+17. Verify the tag was created, Enter command 
+```
+docker images
+``` 
+and verify version x.y.test is present. x and y will be the numeric version number)
 
 **NOTE:** In below example:
 
@@ -252,9 +292,9 @@ Verify image pull was successful, Enter Command **Docker images** and verify alp
 
 18. We will now push the image to docker registry in OCI. 
 Enter command: 
-
-**docker push <Region_Name_Code>.ocir.io/<Tenancy_Name>/<docker_registry_name>:<image_name>** (No Spaces)
-
+```
+docker push <Region_Name_Code>.ocir.io/<Tenancy_Name>/<docker_registry_name>:<image_name>** (No Spaces)
+```
 **NOTE:** In below example:
 - <Region_Name_Code> is **iad**
 - <Tenancy_Name> is **us_training**
@@ -269,9 +309,9 @@ Enter command:
 ![]( img/OCIR_HOL0030.PNG)
 
 20. Switch to compute instance ssh window. Enter command 
-
-**docker pull <Region_Name_Code>.ocir.io/<Tenancy_Name>/<docker_registry_name>:<image_name>**  (No Spaces)    
-
+```
+docker pull <Region_Name_Code>.ocir.io/<Tenancy_Name>/<docker_registry_name>:<image_name>**  (No Spaces)    
+```
 21. Verify the pull command was successful
 ![]( img/OCIR_HOL0031.PNG)
 
