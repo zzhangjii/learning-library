@@ -109,6 +109,7 @@ git-bash sessions and any other application (Notepad, etc.) by clicking the Swit
 ![]( img/RESERVEDIP_HOL008.PNG)
 
 5. You should now have the Public and Private keys:
+
 /C/Users/ PhotonUser/.ssh/id_rsa (Private Key)
 /C/Users/PhotonUser/.ssh/id_rsa.pub (Public Key)
 
@@ -120,7 +121,8 @@ Compute instance and id_rsa to connect via SSH into compute instance.
  cd /C/Users/PhotonUser/.ssh
 ```
  and then 
- ```ls
+ ```
+ ls
  ```
 to verify the two files exist. 
 
@@ -329,6 +331,7 @@ docker pull <Region_Name_Code>.ocir.io/<Tenancy_Name>/<docker_registry_name>:<im
 ![]( img/RESERVEDIP_HOL0016.PNG)
 
 4. Make sure Permanently delete the attached Boot Volume is checked, Click Terminate Instance. Wait for instance to fully Terminate
+
 ![]( img/RESERVEDIP_HOL0017.PNG)
 
 5. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will 
