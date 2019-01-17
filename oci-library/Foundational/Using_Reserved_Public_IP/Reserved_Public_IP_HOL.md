@@ -98,6 +98,7 @@ git-bash sessions and any other application (Notepad, etc.) by clicking the Swit
 ![]( img/RESERVEDIP_HOL008.PNG)
 
 5. You should now have the Public and Private keys:
+
 /C/Users/ PhotonUser/.ssh/id_rsa (Private Key)
 /C/Users/PhotonUser/.ssh/id_rsa.pub (Public Key)
 
@@ -176,9 +177,14 @@ the Reserved Public IP created earlier. Click **Update**
 
 ## Practice 3: ssh to compute instance using Reserved Public IP
 
-1. In git-bash type cd /C/Users/PhotonUser/.ssh
-
-2. Enter **ls** and verify id_rsa file exists
+1. In git-bash Enter Command
+```
+ cd /C/Users/PhotonUser/.ssh
+```
+2. Then 
+```ls
+```
+and verify id_rsa file exists
 
 3. Enter command 
 ```
