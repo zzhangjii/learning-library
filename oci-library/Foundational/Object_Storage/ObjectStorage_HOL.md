@@ -63,12 +63,16 @@ The purpose of this lab is to give you an overview of the Object Service and an 
 ![]( img/OBJECT-STORAGE004.PNG)
 
 2. Change directory to the Downloads folder Enter command:
-
-**$ cd /c/Users/PhotonUser/Downloads/**
+```
+$ cd /c/Users/PhotonUser/Downloads/**
+```
 ![]( img/OBJECT-STORAGE005.PNG)
 
 3. Create a sample file, Enter command:
-**touch samplefile**  This should create a file by the name"samplefile" in the Downloads folder
+```
+touch samplefile
+```
+This should create a file by the name"samplefile" in the Downloads folder
 
 4. Switch to OCI window and click the Bucket Name.
 
