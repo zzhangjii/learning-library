@@ -2,21 +2,28 @@
 
   ![](images/050/Title.png)
 
-## Introduction
+## Introduction ans Overview
 
-In this lab you will use your Oracle Cloud Trial Account to clone a GIT Repository, create an Autonomous Transaction Processing (ATP) Database and finally, provision a new Visual Builder Cloud Service and Application.
+In this lab you are guided through using many of the Oracle's Cloud Services to support a transition from a monolithic on-prem environment to a Cloud based microservices environment. Along the way you'll by using the Compute Cloud Service (IaaS) which supports the Docker, Kubernetes and Autonomous Transaction Processing Database. Then you'll be using the Autonomous Visual Builder (Integration). The high level flow will be:
+
+- Lab 050: Provision supporting services (Client Image, Database, Visual builder Instance)
+- Lab 100: Populate your database with seed data
+- Lab 200: Create a Compute Instance and use Docker to deploy a Java based REST application
+- Lab 300: Deploy and explore the REST services application into a Kubernetes Cluster
+- Lab 400: Create a Visual Builder Mobile application to use the REST endpoints of the Java application. 
 
 ***To log issues***, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
-## Objectives
+## Objectives in this Lab
 
+- Start up the supporting Client Image
 - Clone GIT Repository
 - Create Autonomous Transaction Processing (ATP) Database
 - Provision a new Visual Builder Cloud Service and Application
 
-# Log into your Trial Account and Create Infrastructure
+# Infrastructure Setup
 
-You will create all required infrastructure components within your Trial account.
+You will create all required infrastructure components to support this Workshop
   
 ## Your Trial Account
 
@@ -31,6 +38,12 @@ Fill in the text/image for connecting to client image running in OCI using VNC V
 ### **STEP 3**: Clone GIT Repository
 
 Fill in the text/image for opening terminal window and running the "git clone...." command......
+
+## Your Trial Account
+
+### STEP 1: Your Oracle Cloud Trial Account
+
+You have already applied for and received your Oracle Cloud Trial Account.
   
 ### **STEP 4**: Log in to your OCI dashboard
 
