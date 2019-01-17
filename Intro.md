@@ -1,11 +1,11 @@
 # Bike Share Demand Prediction Workshop
 
 Welcome to the Bike Share Demand Prediciton workshop. This workshop will walk you through the process of using the Autonomous Data Warehouse (ADW) to build and apply predictive Machine Learning models. 
-To learn more about this workshop please watch the video below. (TODO: UPDATE THE VIDEO LINK)
+To learn more about this workshop please watch the video below. 
 
 ![](images/oraclecode/youtube.png)
 
-<a href="https://youtu.be/" target="_video">Workshop Overview</a>
+<a href="https://otube.oracle.com/media/Demand+Prediction/1_lzg5m7ts/105282352" target="_video">Workshop Overview</a>
 
 ### **Step 1**: Acquire an Oracle Cloud Trial or Workshop Account
 
