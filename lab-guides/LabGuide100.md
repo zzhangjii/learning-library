@@ -10,16 +10,37 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 ## Objectives
 
+- Clone GIT Repository
 - Create Object Storage Bucket and Upload Data Pump Exprt File to the Bucket
 - Create an Oracle Cloud Infrastructure (OCI) User and Gernerate Auth Token
 - Setup SQL Developer Connection to Autonomous Transaction Processing (ATP) Database
 - Create ATP Database user and DBMS_CLOUD Credential
 - Import Data into ATP Database using SQL Developer Data Pump Import Wizard
 - Download and Review Data Pump Import Log
-  
+
+# Clone GIT Repository
+
+### **STEP 1**: Open a Terminal Window and Clone GIT Repository
+
+While still connected to the Client Image using VNC Viewer, complete the following step to clone the GIT Repository.
+	
+	- Right-click on the Desktop and select ```Open Terminal```
+	
+	![](images/100/image01.png)	
+	
+	- Within the open Terminal Window, issue the following GIT Command
+	
+	```
+	git clone https://github.com/derekoneil/monolithic-to-microservice.git
+	```
+	
+	![](images/100/image02.png)	
+	
+	**Note:**  The GIT clone creates the ```monolithic-to-microservice``` directory which contains contents used throughout the labs.
+	  
 # Object Storage Setup, OCI User Creation and Auth Token Generation
 
-### **STEP 1**: Log in to your OCI dashboard
+### **STEP 2**: Log in to your OCI dashboard
 
   - From any browser go to
 
@@ -41,7 +62,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 	![](images/100/image4.png)
 
-### **STEP 2**: Create Object Storage Bucket
+### **STEP 3**: Create Object Storage Bucket
 
   - Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Core Infrastructure** section, select **Object Storage** then **Object Storage** .
 
@@ -59,7 +80,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 	![](images/100/image8.png)
 
-### **STEP 3**: Upload Data Pump File into Object Storage Bucket
+### **STEP 4**: Upload Data Pump File into Object Storage Bucket
 
   - Click on the `atpData` Bucket and click **Upload Object**
 
@@ -73,7 +94,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 	![](images/100/image11.png)
 
-### **STEP 4**: Create OCI User 
+### **STEP 5**: Create OCI User 
 
   - Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Governance and Administration** section, select **Identity** and select **Users**.
 
@@ -99,7 +120,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 	![](images/100/image17.png)
 
-### **STEP 5**: Generate Auth Token for OCI User
+### **STEP 6**: Generate Auth Token for OCI User
 
   - For the new user `impdp-ATP`, select the **Resource** `Auth Tokens` and click **Generate Token**
 
@@ -115,7 +136,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 # Setup SQL Developer Connection to ATP, Create Database User and DBMS_CLOUD Credential in ATP
 
-### **STEP 6**: Download ATP Wallet Zip File
+### **STEP 7**: Download ATP Wallet Zip File
 
   - Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Database** section, select **Autonomous Transaction Processing**.
 
@@ -141,7 +162,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 	![](images/100/image26.png)
 
-### **STEP 7**: Create SQL Developer Connection to ATP Database
+### **STEP 8**: Create SQL Developer Connection to ATP Database
 
   - Open **SQL Developer** available on the client image
 
@@ -160,7 +181,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 	
 	![](images/100/image29.png)
 
-### **STEP 8**: Create Database User in ATP Database
+### **STEP 9**: Create Database User in ATP Database
 
   - In the **SQL Developer Worksheet**, execute the following SQL Statements to create the `alpha` database user.
 	
@@ -171,7 +192,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 	![](images/100/image30.png)
 
-### **STEP 9**: Create DBMS_CLOUD Credential 
+### **STEP 10**: Create DBMS_CLOUD Credential 
 
   - In the same **SQL Developer Worksheet**, execute the following SQL Statements to create the **DBMS_CLOUD Credential** `impdp_OBJ_STORE`.
 
@@ -180,7 +201,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 	  DBMS_CLOUD.create_credential(
 		credential_name => 'impdp_OBJ_STORE',
 		username => 'impdp-ATP',
-		password => 'Auth Token Generated in STEP 5'
+		password => 'Auth Token Generated in STEP 6'
 	  );
 	end;
 	/
@@ -190,7 +211,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 # Import Data Pump Export file into ATP Databse and Download/Inspect Data Pump Log File 
 
-### **STEP 10**: Add DBA View and ATP SQL Developer Connection 
+### **STEP 11**: Add DBA View and ATP SQL Developer Connection 
 
   - In **SQL Developer**, click on the menu **View** and select **DBA**
 
@@ -200,7 +221,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 	![](images/100/image33.png)
 
-  - Next, you will add the **Connection** you created in STEP 7 to the **DBA** pane. Click ![](images/100/image27.png) below **DBA**, select the Connection `atp-AlphaOffice-Admin` and click **OK**
+  - Next, you will add the **Connection** you created in STEP 8 to the **DBA** pane. Click ![](images/100/image27.png) below **DBA**, select the Connection `atp-AlphaOffice-Admin` and click **OK**
 
 	![](images/100/image34.png)
 
@@ -208,7 +229,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 	![](images/100/image35.png)
 
-### **STEP 11**: Import Data into ATP Instance using Data Pump Import Wizard
+### **STEP 12**: Import Data into ATP Instance using Data Pump Import Wizard
 
   - Expand the `atp-AlphaOffice-Admin` connection under the **DBA** pane until the **Data Pump** section is expanded.
 
@@ -221,12 +242,12 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
   - On **Step 1** of the **Import Wizard**, select and/or enter the following and click **Next**
 
 	- **Type of Import:** ```Full```
-	- **Credentials or Directories:** ```IMPDP_OBJ_STORE``` (Created in STEP 9)
+	- **Credentials or Directories:** ```IMPDP_OBJ_STORE``` (Created in STEP 10)
 	- **File Names or URI:** ```https://swiftobjectstorage.{REGION}.oraclecloud.com/v1/{OBJECT_STORAGE_NAMESPACE}/{BUCKET}/{FILENAME}```
 	
 	![](images/100/image38.png)
 
-	**Note:** For example, the **Swift URI** for the Data Pump DMP file uploaded to Object Storage in STEP 3 would be
+	**Note:** For example, the **Swift URI** for the Data Pump DMP file uploaded to Object Storage in STEP 4 would be
 
 	```
 	https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/{OBJECT_STORAGE_NAMESPACE}/atpData/expdp_alpha121.dmp
@@ -270,7 +291,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 	
 	![](images/100/image48.png)
 
-### **STEP 12**: Review Data Pump Import Log
+### **STEP 13**: Review Data Pump Import Log
 
 The **DBMS_CLOUD** package provides the **LIST_FILES** and **PUT_OBJECTS** subprogams which allow you to interact with an **Autonomous Transaction Processing Database**
 
