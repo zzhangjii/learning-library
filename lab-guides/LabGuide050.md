@@ -10,15 +10,14 @@ In this lab you are guided through using many of the Oracle's Cloud Services to 
 - Lab 050: Provision supporting services (Client Image, Database, Visual builder Instance)
 - Lab 100: Populate your database with seed data
 - Lab 200: Create a Compute Instance and use Docker to deploy a Java based REST application
-- Lab 300: Deploy and explore the REST services application into a Kubernetes Cluster
-- Lab 400: Create a Visual Builder Mobile application to use the REST endpoints of the Java application. 
+- Lab 300: Deploy and explore the REST application into a Kubernetes Cluster
+- Lab 400: Create a Visual Builder mobile application to use the REST endpoints of the Java application. 
 
 ***To log issues***, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
 ## Objectives in this Lab
 
 - Start up the supporting Client Image
-- Clone GIT Repository
 - Create Autonomous Transaction Processing (ATP) Database
 - Provision a new Visual Builder Cloud Service and Application
 
@@ -26,7 +25,7 @@ In this lab you are guided through using many of the Oracle's Cloud Services to 
 
 You will create all required infrastructure components that support this workshop.
   
-## Startup your Jumpstart Client Image
+## Startup your `monoTOmicro` Client Image
 
 The client image is a pre-installed Compute Service Instance that has GIT and SQL Developer already installed. You will use VNC Viewer to access this instance.
 
@@ -58,7 +57,7 @@ Once the infrastructure is provisioned you can access your enironment using `VNC
 
 ### **STEP 2**: Start VNC Viewer
 
-Using VNC Viewer to connect to your provisioned account.
+Use VNC Viewer to connect to your provisioned account.
 
 - Enter the connect string you were given and hit **Return**. (Example Shown below).
 
@@ -172,7 +171,7 @@ In this step you will create a VBCS instance that will be used in Lab 400. It ta
 
   ![](images/050/cloud_dash.png)
 
-- Click the **Customize Dashboard** button.
+- Click the **Customize Dashboard** panel.
 
   ![](images/050/custom_dash.png)
 
@@ -180,13 +179,13 @@ In this step you will create a VBCS instance that will be used in Lab 400. It ta
 
   ![](images/050/show_dash_vb.png)
 
-- You should see the following:
+- You should see the following added to your dashboard:
 
   ![](images/050/LabGuide50-80c36c4c.png)
 
 ### **STEP 2**: Create a New Visual Builder Instance
 
-- In the Autonomous Visual Builder panel click the hamburger menu and right-click **Open Service Console** and **Open link in new tab**.
+- In the Autonomous Visual Builder panel click the **hamburger menu**, right-click **Open Service Console** and select **Open link in new tab**.
 
   ![](images/050/LabGuide50-6196f9d1.png)
 
@@ -200,7 +199,7 @@ In this step you will create a VBCS instance that will be used in Lab 400. It ta
   monoTOmicro
   ```
   
-- Enter a `Description` and for the `Region` select **No Preference**.
+- Enter a `Description` and for the `Region` select **No Preference**. Click **Next**.
 
   ![](images/050/LabGuide50-vbcs3.png)
 
