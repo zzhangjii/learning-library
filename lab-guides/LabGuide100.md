@@ -24,11 +24,11 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 While still connected to the Client Image using VNC Viewer, complete the following step to clone the GIT Repository.
 	
-	- Right-click on the Desktop and select ```Open Terminal```
+  - Right-click on the Desktop and select ```Open Terminal```
 	
 	![](images/100/image01.png)	
 	
-	- Within the open Terminal Window, issue the following GIT Command
+  - Within the open Terminal Window, issue the following GIT Command
 	
 	```
 	git clone https://github.com/derekoneil/monolithic-to-microservice.git
