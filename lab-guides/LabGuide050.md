@@ -73,7 +73,7 @@ Use VNC Viewer to connect to your provisioned account.
 
   ![](images/050/JS10.PNG)
 
-- Your Desktop is displayed.
+- Your Desktop is displayed:
 
   ![](images/050/JS11.PNG)
 
