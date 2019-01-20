@@ -552,7 +552,7 @@ In this step you will copy the `dbconfig.properties` file modifed in a previous 
   Example:
   `http://129.213.109.189:8080/AlphaProductsRestService/webresources/restCall/`
 
-  **Another NOTE:** Be patient the first time you test. It may take several seconds before you see data returned...
+  **Another NOTE: Be patient**, the first time you test. It may take several seconds before you see data returned...
 
   ![](images/200/58.PNG)
 
