@@ -402,7 +402,7 @@ In this section you will clone a github repository containing a Java Application
   
   **Windows** (Using the pscp utility bundled with Putty)
 
-- Use Powershell fot this command:
+- **NOTE** Use a Command Prompt or Powershell window for this command:
   ```
   pscp -i .\dockerkey.ppk .\Wallet-mattoATP.zip opc@<YOUR-PUBLIC-IP>:/home/opc/monolithic-to-microservice/lab-resources/docker
   ```
