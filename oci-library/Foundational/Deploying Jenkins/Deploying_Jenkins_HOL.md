@@ -8,7 +8,7 @@
 
 [Practice 1: Sign in to OCI Console and create VCN](#practice-1-sign-in-to-oci-console-and-create-vcn)
 
-[Practice 2: Generate ssh keys, Create Compute instance, install OCI CLI and upload API keys](#practice-2-generate-ssh-keys,-create-compute-instance-install-oci-cli-and-upload-api-keys)
+[Practice 2: Generate ssh keys, Create Compute instance, install OCI CLI and upload API keys](#practice-2-generate-ssh-keys-create-compute-instance-install-oci-cli-and-upload-api-keys)
 
 [Practice 3: Install Jenkins, Configure Jenkins Master instance and create Jenkins Slave instancee](#practice-3-install-jenkins-configure-jenkins-master-instance-and-create-jenkins-slave-instance)
 
