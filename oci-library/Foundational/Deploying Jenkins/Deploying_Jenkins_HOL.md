@@ -1,4 +1,4 @@
-#  Deploying Jenkins
+# Deploying Jenkins
   
 ## Table of Contents
 
@@ -8,9 +8,9 @@
 
 [Practice 1: Sign in to OCI Console and create VCN](#practice-1-sign-in-to-oci-console-and-create-vcn)
 
-[Practice 2: Generate ssh keys, Create Compute instance, install OCI CLI and upload API keys](#practice-2-generate-ssh-keys,-create-compute-instance,-install-oci-cli-and-upload-api-keys)
+[Practice 2: Generate ssh keys, Create Compute instance, install OCI CLI and upload API keys](#practice-2-generate-ssh-keys,-create-compute-instance-install-oci-cli-and-upload-api-keys)
 
-[Practice 3: Install Jenkins, Configure Jenkins Master instance and create Jenkins Slave instancee](#practice-3-install-jenkins,-configure-jenkins-master-instance-and-create-jenkins-slave-instance)
+[Practice 3: Install Jenkins, Configure Jenkins Master instance and create Jenkins Slave instancee](#practice-3-install-jenkins-configure-jenkins-master-instance-and-create-jenkins-slave-instance)
 
 [Practice 4: Delete the resources](#practice-4-delete-the-resources)
 
@@ -309,13 +309,13 @@ Fill out the dialog box:
 - **SOURCE PORT RANGE:** All
 - **DESTINATION PORT RANGE:** 8080
 
-6. Click **Save Security List Rules** (At the bottom of dialog box)
+8. Click **Save Security List Rules** (At the bottom of dialog box)
 
-7. In OCI Console window, open a new browser tab 
+9. In OCI Console window, open a new browser tab 
 
 ![]( img/Jenkins_008.PNG)
 
-8. Enter the URL 
+10. Enter the URL 
 http://<PUBLIC_IP_OF_COMPUTE_INSTANCE>:8080
 In the ‘Unlock Jenkins’ Screen, under ‘Administrator password’, copy/paste the password retrieved using command:
 ```
@@ -326,42 +326,42 @@ from computeinstance earlier (32 character password)
 ![]( img/Jenkins_009.PNG)
 ![]( img/Jenkins_010.PNG)
 
-9. In ‘Customize Jenkins’ screen, click **Install suggested plugins**. Wait for plugins installation  to complete
+11. In ‘Customize Jenkins’ screen, click **Install suggested plugins**. Wait for plugins installation  to complete
 
 ![]( img/Jenkins_011.PNG)
 ![]( img/Jenkins_012.PNG)
 
-10. In ‘Create First Admin User’ screen, click **Continue as admin**
+12. In ‘Create First Admin User’ screen, click **Continue as admin**
 
 ![]( img/Jenkins_013.PNG)
 
-11.  In ‘Instance Configuration’ screen, verify the correct IP (Public IP of compute instance) and port number is displayed. Click **Save and Finish**
+13.  In ‘Instance Configuration’ screen, verify the correct IP (Public IP of compute instance) and port number is displayed. Click **Save and Finish**
 
 ![]( img/Jenkins_014.PNG)
 
-12. In ‘Jenkins is ready’ screen, click **Start using Jenkins**
+14. In ‘Jenkins is ready’ screen, click **Start using Jenkins**
 
 ![]( img/Jenkins_015.PNG)
 
-13. In ‘Welcome to Jenkins’ screen, click **Manage Jenkins**, Scroll down and Click **Manage Plugins**
+15. In ‘Welcome to Jenkins’ screen, click **Manage Jenkins**, Scroll down and Click **Manage Plugins**
 
 ![]( img/Jenkins_017.PNG)
 ![]( img/Jenkins_018.PNG)
 
-14. In Plugin Manager screen, Click **Available**, In the Filter search box type oracle. In the resulting list, check **Oracle Cloud Infrastructure Compute** and then click **Install Without restart**
+16. In Plugin Manager screen, Click **Available**, In the Filter search box type oracle. In the resulting list, check **Oracle Cloud Infrastructure Compute** and then click **Install Without restart**
 
 ![]( img/Jenkins_019.PNG)
 
-15. Once installation is complete, scroll up and click **Manage Jenkins**.
+17. Once installation is complete, scroll up and click **Manage Jenkins**.
 
 ![]( img/Jenkins_020.PNG)
 
-16. In Manage Jenkins screen, Click **Configure System**, Scroll Down and click **drop down arrow under Add a new cloud**. Click **Oracle Cloud Infrastructure Compute**. New dialog box will appear
+18. In Manage Jenkins screen, Click **Configure System**, Scroll Down and click **drop down arrow under Add a new cloud**. Click **Oracle Cloud Infrastructure Compute**. New dialog box will appear
 
 ![]( img/Jenkins_021.PNG)
 ![]( img/Jenkins_022.PNG)
 
-17. Fill out the dialog box:
+19. Fill out the dialog box:
 - **Name:** Use easy to remember name (This is the slave node that will be created)
 - **Fingerprint:** Copy/paste OCI_api_key_fingerprint file content save earlier
 - **APIKey:** Copy/paste OCI_api_key.pem file content saved earlier
@@ -370,11 +370,11 @@ from computeinstance earlier (32 character password)
 - **User Id:** Copy/Pare User OCID saved earlier
 - **Region:** Type your region Name (Shown in OCI console window, us-ashburn-1 etc)
 
-18. Click **Test Connection** and verify ‘Successful’ message. We have now verified connectivityto OCI via the master Jenkins compute node. Next we will create a slave Jenkins node
+20. Click **Test Connection** and verify ‘Successful’ message. We have now verified connectivityto OCI via the master Jenkins compute node. Next we will create a slave Jenkins node
 
 ![]( img/Jenkins_023.PNG)
 
-19. Click **Add a new instance template**. Fill out the dialog box:
+21. Click **Add a new instance template**. Fill out the dialog box:
 - Instance Template Description: Provide description (Jenkins-Slave etc)
 - Usage: Leave as is (use this node as much as possible)
 - Label: Provide label(Jenkins-Slave etc)
@@ -394,11 +394,11 @@ from computeinstance earlier (32 character password)
 ![]( img/Jenkins_024.PNG)
 ![]( img/Jenkins_025.PNG)
 
-20. Click **Verify SSH key pair** and confirm Successful message
+22. Click **Verify SSH key pair** and confirm Successful message
 
 ![]( img/Jenkins_026.PNG)
 
-21. Click **Advanced**, Fill out the dialog box:
+23. Click **Advanced**, Fill out the dialog box:
 - Remote FS Root: /tmp
 - Remote SSH User: opc
 - Instance Creation Timeout: 300
@@ -410,20 +410,20 @@ from computeinstance earlier (32 character password)
 
 ![]( img/Jenkins_027.PNG)
 
-22. Click **Save** . Main Jenkins page will appear
+24. Click **Save** . Main Jenkins page will appear
 
-23. In main Jenkins web page, Click Build Executor Status (Left Navigation pan). Click **drop down menu (Under master node information section)** and choose the Newly saved template.(Jenkins-Slave in this case)
+25. In main Jenkins web page, Click Build Executor Status (Left Navigation pan). Click **drop down menu (Under master node information section)** and choose the Newly saved template.(Jenkins-Slave in this case)
 
-24. Verify ‘Started Provisioning’ message is displayed
+26. Verify ‘Started Provisioning’ message is displayed
 
 ![]( img/Jenkins_028.PNG)
 
-25. Switch to OCI console window and Click **Instance** (if not already displayed). Verify new compute node (Jenkins-Slave) is being provisioned.
+27. Switch to OCI console window and Click **Instance** (if not already displayed). Verify new compute node (Jenkins-Slave) is being provisioned.
 **HINT:** Ensure correct compartment is selected
 
 ![]( img/Jenkins_029.PNG)
 
-26. Once compute instance is fully provisioned, switch back to Jenkins window and verify the new node appears on the screen. Click **Refresh Status** a few times to ensure Node is fully accessible (no next to it). You have now successfully deployed Jenkins with two compute nodes
+28. Once compute instance is fully provisioned, switch back to Jenkins window and verify the new node appears on the screen. Click **Refresh Status** a few times to ensure Node is fully accessible (no next to it). You have now successfully deployed Jenkins with two compute nodes
 
 ![]( img/Jenkins_030.PNG)
 
