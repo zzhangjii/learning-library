@@ -62,7 +62,7 @@ To create database you first need to create VCN (Virtual Cloud Network) if you h
 #### 5. Click Create Virtual Cloud Network and then click close.
  ![](./images/dbaas6.png)
 #### 6. Generating an SSH Key Pair Using PuTTY Key Generator : When you define your Oracle DBaaS database instance, you will need to provide a secure shell (SSH) public key to establish secure connections. Perform the following steps to generate an SSH key pair using the PuTTY Key Generator on Windows.
-- Find puttygen.exe in the PuTTY folder on your computer, for example,        #### C:\Program Files (x86)\PuTTY. Double-click puttygen.exe to open it.
+- Find puttygen.exe in the PuTTY folder on your computer, for example,        **C:\Program Files (x86)\PuTTY. Double-click puttygen.exe** to open it.
  ![](./images/dbaas7.png)
 - Accept the default key type, RSA.
 - Set the Number of bits in a generated key to 2048 bits, if it is not already set with that value.
@@ -205,7 +205,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 - standalone.mode=TRUE
 - standalone.http.port=8080
 - standalone.use.https=false
-  #### CUSTOMIZE standalone.static.images to point to the directory  containing the images directory of your APEX distribution
+  #### Note: CUSTOMIZE standalone.static.images to point to the directory  containing the images directory of your APEX distribution
 - standalone.static.images=/home/oracle/apex/images
 - user.apex.listener.password=BEstrO0ng_#11
 - user.apex.restpublic.password=BEstrO0ng_#11
