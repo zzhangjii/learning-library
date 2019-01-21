@@ -62,7 +62,7 @@ To create database you first need to create VCN (Virtual Cloud Network) if you h
 #### 5. Click Create Virtual Cloud Network and then click close.
  ![](./images/dbaas6.png)
 #### 6. Modify Security list for your VCN.
-- Click **apexvcn** which you created, on left menu you can Security List as below.
+- Click **apexvcn** which you have created, on left side menu you can see Security List as below.
 ![](./images/dbaas23.PNG)
 - Click Security List and then click "Default Security List for apexvcn" 
 - Now click **Edit All Rules** button and add ingress rule for your VCN to allow public internet to 8080 and 1521 as below
