@@ -5,12 +5,14 @@ January 21, 2019
 
 Version 1.0
 
+you should follow the instructions available here: [Auto_Scale_ADW_Demo_Setup.md](Auto_Scale_ADW_Demo_Setup.md)
+
 ### Before you begin
 #### Purpose
 The purpose of this document is to help setting up the Autonomous data warehouse Auto scaling demo on your tenancy. This document covers systematic process to install the demo into any tenancy on oracle cloud.
 
 Time to Complete
-Approximately 120 minutes.
+Approximately 180 minutes.
 
 Topics covered in this document
 
@@ -27,21 +29,6 @@ Topics covered in this document
 ### Notional Architecture
 
 ![](./images/Notional_Architecure.PNG)
-
-#### Background
-
-Oracle Autonomous Data Warehouse Cloud provides an easy-to-use; fully autonomous database that scales elastically delivers fast query performance and requires no database administration.
-
-#### Easy
-Fully managed cloud service that makes it very simple to provision a data warehouse, quickly and easily load data and query that data using built-in web-based tools such as notebooks.
- 
-Oracle’s unique autonomous database framework ensures high availability and automatic security–without requiring any additional tasks.
-#### Fast
-Delivers high performance data warehousing straight out-of-the-box with unparalleled scalability and reliability. Built on key Oracle Database capabilities: parallelism, columnar processing and compression. All aspects of performance tuning are automatically managed so the service requires no database tuning.
-#### Elastic
-Scale as needed-create and expand your data warehouse’s compute and storage capacity on demand and independently of each other with no downtime. Pay only for the resources you consume.
-#### Complete
-Integrates directly with the full spectrum of business analytics, data integration and IoT services within Oracle's comprehensive range of integrated cloud solutions.
 
 #### What Do You Need?
 Before starting this instruction, you should:
@@ -68,5 +55,5 @@ If you are using a SQL Developer version earlier than 18.2, see the documentatio
 3.	Google Chrome: version 29 and later
 4.	Apple Safari: version 6
 
-you should follow the instructions available here: [Auto_Scale_ADW_Demo_Setup.md](Auto_Scale_ADW_Demo_Setup.md)
+
 
