@@ -87,7 +87,7 @@ If you are using a SQL Developer version earlier than 18.2, see the documentatio
 ![](./images/adwc1.png)
 2. The console for Autonomous Data Warehouse displays. You can use the List Scope drop-down menu to select a compartment; in this example the gse000#### (root) compartment is selected. Click Create Autonomous Data Warehouse.
 ![](./images/adwc2.png)
-3. In the Create Autonomous Data Warehouse dialog, enter the following information:
+3. In the Create Autonomous Data Warehouse dialog, enter the following information.
 - Display Name - Enter a name for the data warehouse for display purposes (eg. adwapexdemo).
 - Database Name - Use letters and numbers only, starting with a letter (eg. adwapexdemo). Maximum length is 14 characters. (Underscores not initially supported.)
 - CPU Core Count - Number of CPUs for your service.(Minimum to be 5)
@@ -106,7 +106,7 @@ If you are using a SQL Developer version earlier than 18.2, see the documentatio
 4. The Create Autonomous Data Warehouse dialog closes. On the console, the State field indicates that the data warehouse is Provisioning. Once creation is completed, the State field changes from Provisioning to Available.
 ![](./images/adwc5.png)
 ![](./images/adwc6.png)
-5. Download the Credentials Zip File. Once you have created the data warehouse, download the credentials zip file for client access to that data warehouse. Click newly created instance and then select DB Connection
+5. Download the Credentials Zip File. Once you have created the data warehouse, download the credentials zip file for client access to that data warehouse. Click newly created instance and then select DB Connection.
 6. The Database Connection dialog opens for downloading client credentials. Click Download.
 ![](./images/adwc7.png)
 7. In the Download Wallet dialog, enter an encryption password (BEstrO0ng_#11) for the wallet, confirm the password, and then click Download. 
@@ -115,7 +115,7 @@ If you are using a SQL Developer version earlier than 18.2, see the documentatio
 9. Store the zip file and make note of the password. You will use the zip file in the next step to define a SQL Developer connection to your Autonomous Data Warehouse database.
 10.	Open SQL Developer on your local computer. In the Connections panel, right-click Connections and select New Connection.
 ![](./images/adwc9.png)
-11. The New/Select Database Connection dialog appears. Enter the following information:
+11. The New/Select Database Connection dialog appears. Enter the following information.
 - Connection Name - Enter the name for this cloud connection.
 - Username - Enter the database username. Use the default administrator database account (admin) that is provided as part of the service.
 - Password - Enter the admin user's password that you or your Autonomous Data Warehouse administrator specified when creating the service instance.
