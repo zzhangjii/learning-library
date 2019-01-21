@@ -435,7 +435,7 @@ Note : Admin password should be same as adwcs instance admin password
 ![](./images/demo24.png)
 ![](./images/demo25.png)
 #### 13. Login to ORDS with user same as we have in ORDS installation.
-**http://<DbaaS intance IP Address:8080/ords**
+- **http://<DbaaS intance IP Address:8080/ords**
 ![](./images/demo26.png)
 #### 14. Click Sign in
 ![](./images/demo27.png)
@@ -446,7 +446,7 @@ Note : Admin password should be same as adwcs instance admin password
 #### 18. Once you finish you will be able to see in Existing Workspace
 ![](./images/demo29.png)
 #### 19.	After importing workspace logout and again login with below credential.
- **Workspace   : pdbuser, Username    : APEXDEMO ,Password     : apexdemo**
+- **Workspace: pdbuser, Username: APEXDEMO ,Password: apexdemo**
 ![](./images/demo30.png)
 #### 20.	Click Sign In.
 ![](./images/demo31.png)
