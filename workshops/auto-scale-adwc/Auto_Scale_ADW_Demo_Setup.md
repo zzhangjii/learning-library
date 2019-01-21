@@ -38,7 +38,7 @@ Topics covered in this document
 
 **5. Auto Scaling Demo Installation**
 
-## Notional Architecture
+### Notional Architecture
 
 ![](./images/Notional_Architecure.PNG)
 
@@ -82,7 +82,7 @@ If you are using a SQL Developer version earlier than 18.2, see the documentatio
 3.	Google Chrome: version 29 and later
 4.	Apple Safari: version 6
 
-## ADWCS Provisioning
+### ADWCS Provisioning
 1. Login to cloud environment, Click Services to show the available services. In the list of available services, select Autonomous Data Warehouse.
 ![](./images/adwc1.png)
 2. The console for Autonomous Data Warehouse displays. You can use the List Scope drop-down menu to select a compartment; in this example the gse000#### (root) compartment is selected. Click Create Autonomous Data Warehouse.
@@ -127,7 +127,7 @@ Note: Earlier versions of SQL Developer may not support this feature.
 12.	Click Test. 
 Status: Success displays at the left-most bottom of the New/Select Database Connection dialog.
 
-## DBaaS Provisioning
+### DBaaS Provisioning
 
 To create database you first need to create VCN (Virtual Cloud Network) if you have already created VCN then you can skip 1-5 steps.
 
@@ -214,7 +214,7 @@ cat /etc/oratab
  ![](./images/dbaas22.png)
 17. Once you we see pdbs. Exit from sqlplus and install APEX and ORDS in Dbaas Instance.
 
-## APEX Installation
+### APEX Installation
    Approximately time 30 Minutes.
 1. Login to DbaaS Instance through Putty.
 - Login as opc user.
@@ -254,7 +254,7 @@ cat /etc/oratab
 - /
 9. Exit SQL*Plus.
 	
-## ORDS Installation in Dbaas Instance
+### ORDS Installation in Dbaas Instance
       Approximately time 20 minutes.
 
 1. Login to Dbaas Instance through Putty.
@@ -277,7 +277,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 - db.hostname=apex (Change Hostname for your Dbaas Instance)
 - db.port=1521
 - db.servicename=pdb1.demosubnet1.vcn1.oraclevcn.com
-  ### Note: CUSTOMIZE **db.servicename** (Change service name for your Dbaas Instance. Run “lsnrctl status” to check for pdb1 and give same as servicename)
+  #### Note: CUSTOMIZE **db.servicename** (Change service name for your Dbaas Instance. Run “lsnrctl status” to check for pdb1 and give same as servicename)
 - db.username=APEX_PUBLIC_USER
 - db.password=BEstrO0ng_#11
 - migrate.apex.rest=false
@@ -289,7 +289,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 - standalone.mode=TRUE
 - standalone.http.port=8080
 - standalone.use.https=false
-### CUSTOMIZE standalone.static.images to point to the directory  containing the images directory of your APEX distribution
+  #### CUSTOMIZE standalone.static.images to point to the directory  containing the images directory of your APEX distribution
 - standalone.static.images=/home/oracle/apex/images
 - user.apex.listener.password=BEstrO0ng_#11
 - user.apex.restpublic.password=BEstrO0ng_#11
