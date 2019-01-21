@@ -353,6 +353,10 @@ Note : Admin password should be same as adwcs instance admin password
 - Modify adwc.sh file and change oci-curl (Replace Cloud host and ADWC OCID as below)
 ![](./images/demo24.png)
 ![](./images/demo25.png)
+- Now start below script
+  * cd /home/oracle/scripts
+  * ./start_adwc_load.sh
+  * ./ start_adwc.sh
 #### 13. Login to ORDS with user same as we have in ORDS installation.
 - **http://DbaaS intance IP Address:8080/ords**
 ![](./images/demo26.png)
