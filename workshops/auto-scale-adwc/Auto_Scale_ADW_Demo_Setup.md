@@ -391,10 +391,10 @@ Note : Admin password should be same as adwcs instance admin password
 ![](./images/demo9.png)
 - Click Ok.
 - ![](./images/demo10.png)
-- Now open Dbaas schema script "Dbaas_Pdbuser.sql"[apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript) and go to section **change DBPROVISIONEDOCPUS** and DBPROVISIONEDOCPUS value same as number of CPU provisioned for ADW.
-- Now create connection for Dbaas database and run Dbaas schema scrip "Dbaas_Pdbuser.sql"[apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript)
+- Now open Dbaas schema script "Dbaas_Pdbuser.sql" from  [apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript) and go to section **change DBPROVISIONEDOCPUS** and DBPROVISIONEDOCPUS value same as number of CPU provisioned for ADW.
+- Now create connection for Dbaas database and run Dbaas schema scrip "Dbaas_Pdbuser.sql" from [apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript)
 ![](./images/demo11.png)
-#### 9. Open Sql developer and connect to your ADWC environment and run ADWC schema script "Adwc_Schema.sql" [apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript)
+#### 9. Open Sql developer and connect to your ADWC environment and run ADWC schema script "Adwc_Schema.sql" from [apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript)
 ![](./images/demo12.png)
 #### 10. Download ADWCS Demo shell script(scripts folder) from GitHub and copy in oracle home directory.
 ![](./images/demo13.png)
