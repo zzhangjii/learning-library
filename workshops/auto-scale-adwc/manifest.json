@@ -10,7 +10,7 @@
                 "description": "Autonomous Data Warehouse Auto Scaling Demo - Workshop"
             },
             {
-                "number": "1",
+                "number": "Steps",
                 "filename": "Auto_Scale_ADW_Demo_Setup.md",
                 "title": "Setup Steps:",
                 "description": "Building your first Autonomous Data Warehouse Auto Scaling Demo"
