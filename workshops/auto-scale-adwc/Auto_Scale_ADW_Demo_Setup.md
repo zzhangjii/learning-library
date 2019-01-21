@@ -61,7 +61,13 @@ To create database you first need to create VCN (Virtual Cloud Network) if you h
 ![](./images/dbaas5.png)
 #### 5. Click Create Virtual Cloud Network and then click close.
  ![](./images/dbaas6.png)
-#### 6. Generating an SSH Key Pair Using PuTTY Key Generator : When you define your Oracle DBaaS database instance, you will need to provide a secure shell (SSH) public key to establish secure connections. Perform the following steps to generate an SSH key pair using the PuTTY Key Generator on Windows.
+#### 6. Modify Security list for your VCN.
+- Click **apexvcn** which you created, on left menu you can Security List as below.
+![](./images/dbaas23.png)
+- Click Security List and then click "Default Security List for apexvcn" 
+- Now click **Edit All Rules** button and add ingress rule for your VCN to allow public internet to 8080 and 1521 as below
+![](./images/ords9.png)
+#### 7. Generating an SSH Key Pair Using PuTTY Key Generator : When you define your Oracle DBaaS database instance, you will need to provide a secure shell (SSH) public key to establish secure connections. Perform the following steps to generate an SSH key pair using the PuTTY Key Generator on Windows.
 - Find puttygen.exe in the PuTTY folder on your computer, for example,        **C:\Program Files (x86)\PuTTY. Double-click puttygen.exe** to open it.
  ![](./images/dbaas7.png)
 - Accept the default key type, RSA.
@@ -72,10 +78,10 @@ To create database you first need to create VCN (Virtual Cloud Network) if you h
 - The generated key appears under Public key for pasting into OpenSSH authorized_keys file. Copy public key in notepad we will need this while creating Dbaas provisioning.
  ![](./images/dbaas9.png)
 - To save the key in the PuTTY PPK format, click Save private key to save the private key of the key pair.
-#### 7. Login to cloud environment, Click Services to show the available services. In the list of available services, under Database select Baremetal ,VM and Exadata
+#### 8. Login to cloud environment, Click Services to show the available services. In the list of available services, under Database select Baremetal ,VM and Exadata
  ![](./images/dbaas10.png)
-#### 8. The console for Database displays. You can use the List Scope drop-down menu to select a compartment; in this example the gse00014135 (root) compartment is selected. Click Launch DB System.
-#### 9. In the Create Launch DB System dialog, enter the following information:
+#### 9. The console for Database displays. You can use the List Scope drop-down menu to select a compartment; in this example the gse00014135 (root) compartment is selected. Click Launch DB System.
+#### 10. In the Create Launch DB System dialog, enter the following information:
 - Display Name - Enter a name of the database.
 - Select Availability Domain
 - Select Shape Type
@@ -103,16 +109,16 @@ The password must be between 12 and 30 characters long and must include at least
 ![](./images/dbaas13.png)
 ![](./images/dbaas14.png)
 ![](./images/dbaas15.png)
-#### 10. The Launch DB System dialog closes. On the console, the State field indicates that the data warehouse is Provisioning. When creation is completed, the State field changes from Provisioning to Available.
-#### 11. When Provisioning is completed it will show like below.
+#### 11. The Launch DB System dialog closes. On the console, the State field indicates that the data warehouse is Provisioning. When creation is completed, the State field changes from Provisioning to Available.
+#### 12. When Provisioning is completed it will show like below.
 ![](./images/dbaas16.png)
-#### 12. Now login to putty with Public IP and use private key which we saved in step 6.
-#### 13. Login as opc and then change user to oracle as show in below screen shot.
+#### 13. Now login to putty with Public IP and use private key which we saved in step 6.
+#### 14. Login as opc and then change user to oracle as show in below screen shot.
 ![](./images/dbaas17.png) 
-#### 14. To check ORACLE_SID and ORACLE_HOME, Type below command 
+#### 15. To check ORACLE_SID and ORACLE_HOME, Type below command 
 cat /etc/oratab
 ![](./images/dbaas18.png)
-#### 15. Add ORACLE_SID and ORACLE_HOME in .bash_profile
+#### 16. Add ORACLE_SID and ORACLE_HOME in .bash_profile
 - Log in as oracle user sudo su – oracle
 - Edit .bash_profile. vi ~/.bash_profile
 - Add below environment variable at the end of the file and save it.
@@ -124,11 +130,11 @@ cat /etc/oratab
 ![](./images/dbaas20.png)
 - Run source command 
   * source ~/.bash_profile
-#### 16. Now login to sqlplus using below command 
+#### 17. Now login to sqlplus using below command 
  - sqlplus / as sysdba
  - show pdbs;
  ![](./images/dbaas22.png)
-#### 17. Once you we see pdbs. Exit from sqlplus and install APEX and ORDS in Dbaas Instance.
+#### 18. Once you we see pdbs. Exit from sqlplus and install APEX and ORDS in Dbaas Instance.
 
 ### APEX Installation
    Approximately time 30 Minutes.
@@ -193,7 +199,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 - db.hostname=apex (Change Hostname for your Dbaas Instance)
 - db.port=1521
 - db.servicename=pdb1.demosubnet1.vcn1.oraclevcn.com
-  #### Note: CUSTOMIZE **db.servicename** (Change service name for your Dbaas Instance. Run “lsnrctl status” to check for pdb1 and give same as servicename)
+  **Note: Change service name for your Dbaas Instance. Run “lsnrctl status” to check for pdb1 and give same as servicename**
 - db.username=APEX_PUBLIC_USER
 - db.password=BEstrO0ng_#11
 - migrate.apex.rest=false
@@ -205,8 +211,8 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 - standalone.mode=TRUE
 - standalone.http.port=8080
 - standalone.use.https=false
-  #### Note: CUSTOMIZE standalone.static.images to point to the directory  containing the images directory of your APEX distribution
 - standalone.static.images=/home/oracle/apex/images
+  **Note:Standalone.static.images to point to the directory containing the images directory of your APEX distribution**
 - user.apex.listener.password=BEstrO0ng_#11
 - user.apex.restpublic.password=BEstrO0ng_#11
 - user.public.password=BEstrO0ng_#11
@@ -217,17 +223,16 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 #### 6. Configure and start ORDS in stand-alone mode.  You'll be prompted for the SYS username and SYS password.kindly use the DBaaS Admin password as set above.
 - java -Dconfig.dir=/home/oracle/ords -jar ords.war install simple –preserveParamFile
 ![](./images/ords6.png)
-#### 7. Please add ingress rule for your VCN to allow from public internet to 8080 and 1521.
-![](./images/ords9.png)
-#### 8. Browse below URL to check whether ORDS is up and running.
-- http://<DbaaS Instance IP address<DbaaS Instance IP address>>:8080/ords
-#### 9. Use below credentials to login.
+
+#### 7. Browse below URL to check whether ORDS is up and running.
+- **http://DbaaS Instance IP address:8080/ords**
+#### 8. Use below credentials to login.
     - Workspace : INTERNAL
     - Username  : ADMIN
     - Password  : BEstrO0ng_#11 (Admin password which you set earlier if Admin password does not work reset  password using below   step)
       ![](./images/ords7.png)
-#### 10. Change your working directory to the apex directory where you unzipped the installation software. Login to sqlPlus   and run @apxchpwd. For more information refer below Url.[Oracle Community](https://community.oracle.com/thread/2332882?start=0&tstart=0) 
-#### 11. Click sign In.
+#### 9. Change your working directory to the apex directory where you unzipped the installation software. Login to sqlPlus   and run @apxchpwd. For more information refer below Url.[Oracle Community](https://community.oracle.com/thread/2332882?start=0&tstart=0) 
+#### 10. Click sign In.
 ![](./images/ords8.png)
 	
 ### ADWC Scaling Demo Installation
