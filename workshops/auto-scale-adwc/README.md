@@ -16,15 +16,13 @@ Approximately 180 minutes.
 
 Topics covered in this document
 
-**1. Notional Architecture of the Demo**
+**1. ADWCS Provisioning**
 
-**2. ADWCS Provisioning**
+**2. DBaaS Provisioning**
 
-**3. DBaaS Provisioning**
+**3. APEX and ORDS Installation**
 
-**4. APEX and ORDS Installation**
-
-**5. Auto Scaling Demo Installation**
+**4. Auto Scaling Demo Installation**
 
 ### Notional Architecture
 
