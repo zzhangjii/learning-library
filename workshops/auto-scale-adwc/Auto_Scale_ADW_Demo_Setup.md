@@ -288,7 +288,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 #### 7. Create link and check whether password less user is working.
 - SQL> sqlplus / as sysdba
 - SQL> alter session set container=pdb1;
-- SQL> Grant connect, resource,dba to pdbuser;
+- SQL> grant connect, resource,dba to pdbuser;
 - SQL> connect /@pdb1;
 - SQL> drop database link adwc;
 - SQL> create database link adwc connect to admin identified by "BEstrO0ng_#11" using 'aadwapexdemo_medium’;
