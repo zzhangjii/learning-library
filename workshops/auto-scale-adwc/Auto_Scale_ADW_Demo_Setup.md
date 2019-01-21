@@ -101,8 +101,8 @@ If you are using a SQL Developer version earlier than 18.2, see the documentatio
 - License Type - Select whether you have existing licenses or if you want to subscribe to new database software licenses and the database cloud service.
 - Tags - (Optional) Tagging is a metadata system that allows you to organize and track resources within your tenancy. Tags are composed of keys and values which can be attached to resources. 
 - Click Create Autonomous Data Warehouse.
- ![](./images/adwc3.png)
- ![](./images/adwc4.png)
+- ![](./images/adwc3.png)
+- ![](./images/adwc4.png)
 4. The Create Autonomous Data Warehouse dialog closes. On the console, the State field indicates that the data warehouse is Provisioning. Once creation is completed, the State field changes from Provisioning to Available.
  ![](./images/adwc5.png)
  ![](./images/adwc6.png)
