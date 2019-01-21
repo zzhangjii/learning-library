@@ -371,8 +371,9 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 ![](./images/demo6.png)
 7. Create link and check whether password less user is working.
 - SQL> sqlplus / as sysdba
-- SQL> connect /@pdb1;
+- alter session set container=pdb1;
 - SQL> Grant connect, resource,dba to pdbuser;
+- SQL> connect /@pdb1;
 - SQL> drop database link adwc;
 - SQL> create database link adwc connect to admin identified by "BEstrO0ng_#11" using 'aadwapexdemo_medium’;
 Note : Admin password should be same as adwcs instance admin password
@@ -390,10 +391,10 @@ Note : Admin password should be same as adwcs instance admin password
 ![](./images/demo9.png)
 - Click Ok.
 - ![](./images/demo10.png)
-- Now open Dbaas schema script "Dbaas_Pdbuser.sql"[apexdemoscript](https://github.com/sambhawjain/sambhawjain.github.io/tree/master/apexdemoscript) and go to section **change DBPROVISIONEDOCPUS** and DBPROVISIONEDOCPUS value same as number of CPU provisioned for ADW.
-- Now create connection for Dbaas database and run Dbaas schema scrip "Dbaas_Pdbuser.sql"[apexdemoscript](https://github.com/sambhawjain/sambhawjain.github.io/tree/master/apexdemoscript)
+- Now open Dbaas schema script "Dbaas_Pdbuser.sql"[apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript) and go to section **change DBPROVISIONEDOCPUS** and DBPROVISIONEDOCPUS value same as number of CPU provisioned for ADW.
+- Now create connection for Dbaas database and run Dbaas schema scrip "Dbaas_Pdbuser.sql"[apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript)
 ![](./images/demo11.png)
-9. Open Sql developer and connect to your ADWC environment and run ADWC schema script "Adwc_Schema.sql" [apexdemoscript](https://github.com/sambhawjain/sambhawjain.github.io/tree/master/apexdemoscript).
+9. Open Sql developer and connect to your ADWC environment and run ADWC schema script "Adwc_Schema.sql" [apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript)
 ![](./images/demo12.png)
 10. Download ADWCS Demo shell script(scripts folder) from GitHub and copy in oracle home directory.
 ![](./images/demo13.png)
@@ -440,7 +441,7 @@ Note : Admin password should be same as adwcs instance admin password
 ![](./images/demo27.png)
 15. Click Manage Workspace and select import.
 ![](./images/demo28.png)
-16. Download workspace "Apex_Demo_Workspace.sql" file from git [apexdemoscript](https://github.com/sambhawjain/sambhawjain.github.io/tree/master/apexdemoscript) in local and give location
+16. Download workspace "Apex_Demo_Workspace.sql" file from git [apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript) in local and give location
 17. Click next and complete import on default value
 18. Once you finish you will be able to see in Existing Workspace
 ![](./images/demo29.png)
@@ -451,7 +452,7 @@ Note : Admin password should be same as adwcs instance admin password
 ![](./images/demo31.png)
 21.	Click App Builder menu and select import.
 ![](./images/demo32.png)
-22.	Download application script "Apex_Demo_Application.sql" from [apexdemoscript](https://github.com/sambhawjain/sambhawjain.github.io/tree/master/apexdemoscript) in local and give location in Choose file. 
+22.	Download application script "Apex_Demo_Application.sql" from [apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript) in local and give location in Choose file. 
 23.	Click Next and finish application deployment.
 24.	Once you finish you can run application
 ![](./images/demo33.png)
