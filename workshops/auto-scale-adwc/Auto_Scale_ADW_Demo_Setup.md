@@ -408,7 +408,7 @@ Note : Admin password should be same as adwcs instance admin password
 ![](./images/demo17.png)
 - Copy admin OCID in notepad as AuthuserId.
 - Login to Dbaas instance and change user as oracle and run below command to generate public key PEM file to generate fingerprint for authuserid.
-### https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm
+  #### https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm
   * mkdir ~/.oci 
   * openssl genrsa -out ~/.oci/oci_api_key.pem 2048
   * chmod go-rwx ~/.oci/oci_api_key.pem
