@@ -1,6 +1,6 @@
 {
     "workshop": {
-        "title": "Oracle Autonomous Data Warehouse: Getting Started Workshop",
+        "title": "Autonomous Data Warehouse Auto Scaling Demo Workshop",
         "description": "This workshop will show you how to get started with Oracle Autonomous Data Warehouse  in the Oracle Public Cloud.",
         "labs": [
             {
