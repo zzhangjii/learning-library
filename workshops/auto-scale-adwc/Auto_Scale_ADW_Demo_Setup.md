@@ -228,7 +228,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 - **http://DbaaS Instance IP address:8080/ords**
 #### 8. Use below credentials to login.
 - **Workspace: INTERNAL, Username: ADMIN ,Password: BEstrO0ng_#11**
-   ### if the ADMIN password does not work reset password using below step
+### if the ADMIN password does not work reset password using below step
 ![](./images/ords7.png)
 #### 9. Change your working directory to the apex directory where you unzipped the installation software. Login to sqlPlus   and run @apxchpwd. For more information refer below Url.[Oracle Community](https://community.oracle.com/thread/2332882?start=0&tstart=0) 
 #### 10. Click sign In.
