@@ -350,7 +350,7 @@ Note : Admin password should be same as adwcs instance admin password
 ![](./images/demo24.png)
 ![](./images/demo25.png)
 #### 13. Login to ORDS with user same as we have in ORDS installation.
-- **http://<DbaaS intance IP Address>:8080/ords**
+- **http://DbaaS intance IP Address:8080/ords**
 ![](./images/demo26.png)
 #### 14. Click Sign in
 ![](./images/demo27.png)
