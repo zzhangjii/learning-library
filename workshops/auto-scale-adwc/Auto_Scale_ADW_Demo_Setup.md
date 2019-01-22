@@ -304,25 +304,15 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 - SQL> alter system set global_names=FALSE scope=both sid='*';
 - SQL> select * from dual@adwc;
 ![](./images/demo7.png)
-#### 9. Open SQL developer (version 18.3)  and connect to your Dbaas database. Please follow below step.
-- Configure SSH connection. Right click SSH Hosts and select “New SSH Host..”
-![](./images/apexdemo.png)
-- Enter Name, Host (Public IP of Dbaas intsnace), Username and give path to private key(Which you use to connect Dbaas Instance)
-- ![](./images/demo8.png)
-- Click Ok
-- Right click on newly created SSH Host and select “New Local Port Forward”
-- Enter Name, Host(Private IP of Dbaas intsnace) and port IP
-![](./images/demo9.png)
-- Click Ok.
-- ![](./images/demo10.png)
-- Now open Dbaas schema script "Dbaas_Pdbuser.sql" from  [apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript) and go to section **change DBPROVISIONEDOCPUS** and DBPROVISIONEDOCPUS value same as number of CPU provisioned for ADW.
-- Now create connection for Dbaas database and run Dbaas schema scrip "Dbaas_Pdbuser.sql" from [apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript)
-![](./images/demo11.png)
-#### 10. Open Sql developer and connect to your ADWC environment and run ADWC schema script "Adwc_Schema.sql" from [apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript)
-![](./images/demo12.png)
-#### 11. Download ADWCS Demo shell script(scripts folder) from GitHub and copy in oracle home directory.
+#### 9. Run Dbaas schema scrips "Dbaas_Pdbuser.sql" using below command [apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript)
+- sqlplus / as sysdba
+- SQL> alter session set container=pdb1;
+- SQL> START /home/oracle/Dbaas_Pdbuser.sql;
+- SQL> connect @/adwapexdemo_high;
+- SQL> START /home/oracle/Adwc_Schema.sql;
+#### 10. Download ADWCS Demo shell scripts from [scripts](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/shellscripts) and copy in oracle home directory.
 ![](./images/demo13.png)
-#### 12. Below are the environment information we will need to run our script.
+#### 11. Below are the steps for environment information that we will need to run our script.
 - Tenancy OCID: Login to cloud environment, Click Services to show the available services. In the list of available services, select Administration ->Tenancy Details.
 ![](./images/demo14.png)
 ![](./images/demo15.png)
