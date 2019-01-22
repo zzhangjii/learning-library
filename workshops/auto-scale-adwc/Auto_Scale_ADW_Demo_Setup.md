@@ -312,7 +312,8 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 - SQL> START /home/oracle/Adwc_Schema.sql;
 #### 10. Download ADWCS Demo shell scripts from [scripts](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/shellscripts) and copy in oracle home directory.
 ![](./images/demo13.png)
-#### 11. Below are the steps for environment information that we will need to run our script.
+#### 11. Open restapi.sh from scripts folder we will need the values for below fields tenancyId,authUserId,keyFingerprint,privateKeyPath and below is the screen shots to get the value from your environment.
+
 - Tenancy OCID: Login to cloud environment, Click Services to show the available services. In the list of available services, select Administration ->Tenancy Details.
 ![](./images/demo14.png)
 ![](./images/demo15.png)
@@ -321,7 +322,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 ![](./images/demo16.png)
 ![](./images/demo17.png)
 - Copy admin OCID in notepad as AuthuserId.
-- Login to Dbaas instance and change user as oracle and run below command to generate public key PEM file to generate fingerprint for authuserid(https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm)
+- Login to Dbaas instance and change user as oracle and run below command to generate public key PEM file. 
   * mkdir ~/.oci 
   * openssl genrsa -out ~/.oci/oci_api_key.pem 2048
   * chmod go-rwx ~/.oci/oci_api_key.pem
@@ -347,7 +348,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 - Modify adwc.sh file and change oci-curl (Replace Cloud host and ADWC OCID as below)
 ![](./images/demo24.png)
 ![](./images/demo25.png)
-- Now start below script
+- Now start below scripts.
   * cd /home/oracle/scripts
   * ./start_adwc_load.sh
   * ./ start_adwc.sh
