@@ -279,7 +279,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
   * ##SSL_VERSION = 0
 ![](./images/demo3.png)
 ![](./images/demo4.png)
-#### 5. Change **/u01/app/oracle/product/12.1.0.2/dbhome_1/network/admin/tnsnames.ora** and create entry for your Dbaas PDB that is pdb1 as below. Change Host and service name you can fine service name for pdb1 by running **lsnrctl status** and Host name you copy from existing entry.
+#### 5. Change **/u01/app/oracle/product/12.1.0.2/dbhome_1/network/admin/tnsnames.ora** and create entry for your Dbaas PDB that is pdb1 as below. Change host and service name, you can fine service name for pdb1 by running **lsnrctl status** and host name you copy from existing entry.
 - PDB1 = (DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = apexdemo.sub1018160041.hdp.oraclevcn.com)(PORT = 1521))
     (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = pdb1.sub1018160041.hdp.oraclevcn.com)))
 ![](./images/demo5.png)
