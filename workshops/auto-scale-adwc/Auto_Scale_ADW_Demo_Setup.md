@@ -312,7 +312,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 - SQL> START /home/oracle/Adwc_Schema.sql;
 #### 10. Download ADWCS Demo shell scripts from [scripts](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/shellscripts) and copy in oracle home directory.
 ![](./images/demo13.png)
-#### 11. Open restapi.sh from scripts folder we will need the values for below fields tenancyId,authUserId,keyFingerprint,privateKeyPath and below is the screen shots to get the value from your environment.
+#### 11. Open restapi.sh from scripts folder we will need the values for below fields tenancyId,authUserId,keyFingerprint,privateKeyPath, Below are the screen shots to get the value from your environment.
 
 - Tenancy OCID: Login to cloud environment, Click Services to show the available services. In the list of available services, select Administration ->Tenancy Details.
 ![](./images/demo14.png)
@@ -327,7 +327,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
   * openssl genrsa -out ~/.oci/oci_api_key.pem 2048
   * chmod go-rwx ~/.oci/oci_api_key.pem
   * openssl rsa -pubout -in ~/.oci/oci_api_key.pem -out ~/.oci/oci_api_key_public.pem
-- Open oci_api_key_public.pem file and copy the content 
+- Open oci_api_key_public.pem file and copy the content
 - Use copied content to generate finger print for admin user
 - Click the admin user for which you had taken AuthuserID and then click Add Public Key
 ![](./images/demo18.png)
@@ -336,22 +336,19 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 - You can see new finger print as below
 ![](./images/demo20.png)
 - Copy new fingerprint in notepad.
+- Modify restapi.sh  and change tenancyId, authUserId, keyFingerprint, privateKeyPath(Give these value which we have noted in earlier step )
+![](./images/demo23.png)- 
+
+#### 12. Now open adwc.sh from scripts folder we will need the values for below fields ADWC OCID and Cloud host,Below are the screen shots to get the value from your environment.
 - Copy ADWC OCID in notepad.
 ![](./images/demo21.png)
-#### 13. Login to Dbaas Instance through Putty.
-- Login as opc user.
-- Change user to oracle  and got to oracle home directory as below screen shot
-- cd /home/oracle/scripts
-![](./images/demo22.png)
-- Modify restapi.sh  and change tenancyId, authUserId, keyFingerprint, privateKeyPath(Give these value which we have noted in earlier step )
-![](./images/demo23.png)
 - Modify adwc.sh file and change oci-curl (Replace Cloud host and ADWC OCID as below)
 ![](./images/demo24.png)
 ![](./images/demo25.png)
-- Now start below scripts.
-  * cd /home/oracle/scripts
-  * ./start_adwc_load.sh
-  * ./ start_adwc.sh
+#### 13. Now start below scripts.
+- cd /home/oracle/scripts
+- ./start_adwc_load.sh
+- ./ start_adwc.sh
 #### 14. Login to ORDS with user same as we have in ORDS installation.
 - **http://DbaaS intance IP Address:8080/ords**
 ![](./images/demo26.png)
