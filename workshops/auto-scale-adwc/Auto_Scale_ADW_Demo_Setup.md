@@ -285,7 +285,8 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 ![](./images/demo5.png)
 #### 6. Add ADWC Wallet tnsname.ora entry in **/u01/app/oracle/product/12.1.0.2/dbhome_1/network/admin/tnsnames.ora** in addition to above step(Copy only for your ADWC consumer group or you can copy all)
 ![](./images/demo5.png)
-#### 7. Create password less login add below credential in ADWC wallet location(where you copied your ADWC wallet in oracle home directory) for more information go through below link [Password Less Setup](https://docs.oracle.com/cd/B19306_01/network.102/b14266/cnctslsh.htm#g1033548)
+#### 7. Create password less login and add below credential in ADWC wallet location(where you copied your ADWC wallet in oracle home directory) for more information go through below link [Password Less Setup](https://docs.oracle.com/cd/B19306_01/network.102/b14266/cnctslsh.htm#g1033548)
+- cd /home/oracle/wallet_adwc
 - mkstore -wrl  .  -createCredential pdb1 pdbuser  BEstrO0ng_#11 (pdbuser password in Dbaas)
 - mkstore -wrl  .  -createCredential adwapexdemo_high admin BEstrO0ng_#11(ADWC admin password)
 - mkstore -wrl  .  -createCredential adwapexdemo_low admin BEstrO0ng_#11(ADWC admin password)
