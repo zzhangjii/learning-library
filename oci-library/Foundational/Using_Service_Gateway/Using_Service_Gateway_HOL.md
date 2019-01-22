@@ -124,7 +124,9 @@ git-bash sessions and any other application (Notepad, etc.) by clicking the Swit
 ![]( img/RESERVEDIP_HOL008.PNG)
 
 4. You should now have the Public and Private keys:
+
 /C/Users/ PhotonUser/.ssh/id_rsa (Private Key)
+
 /C/Users/PhotonUser/.ssh/id_rsa.pub (Public Key)
 
 **NOTE:** id_rsa.pub will be used to create 
@@ -288,13 +290,15 @@ RSA key pair’. Press Enter and accept default options for directories. Press E
 cd /home/opc/.oci
 ```
 and then 
-```ls
+```
+ls
 ```
 Verify the API key files and OCI CLI config files exist.
 ![]( img/SGW_011.PNG)
 
 35. Enter command 
-```cat config
+```
+cat config
 ```
 and ensure fingerprint exists. Leave the git-bash session open as we will verify the
 finger print in config file aginst OCI, once we upload api
@@ -343,14 +347,16 @@ Service-Gateway-Bucket --name samplefile --file ./samplefile
 ![]( img/SGW_021.PNG)
 
 7. Enter command 
-```ls
+```
+ls
 ```
  and verify sample file was downloaded
 
 **NOTE:** The file was downloaded using Public IP of compute instance along with Internet Gateway. Next we will remove the Public IP of compute instance and verify the file can not be downloaded anymore.
 
 8. Enter command 
-```rm samplefile
+```
+rm samplefile
 ```
 to remove the file.
 
@@ -370,7 +376,8 @@ This will remove the Public IP of the compute instance.
 oci os object get --namespace <NAME_SPACE> --bucket-name <BUCKET_NAME> --name samplefile --file ./samplefile**
 ```
 13. No output will be displayed and no file will be downloaded. Enter Ctrl+C to terminate the command. Enter command 
-```ls
+```
+ls
 ```
 and verify samplefile was not downloaded.
 ![]( img/SGW_025.PNG)
