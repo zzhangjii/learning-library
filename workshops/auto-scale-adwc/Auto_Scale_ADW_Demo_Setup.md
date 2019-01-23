@@ -235,7 +235,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 - The application will ask to change the password kindly choose the password as BEstrO0ng_#22
 #### if the ADMIN password does not work reset password using below step
 ![](./images/ords7.png)
-#### 10. Change your working directory to the apex directory where you unzipped the installation software. Login to sqlPlus   and run @apxchpwd. For more information refer below Url.[Oracle Community](https://community.oracle.com/thread/2332882?start=0&tstart=0) 
+#### 10. Change your working directory to the apex directory where you unzipped the installation software. Login to sqlPlus   and run @apxchpwd. For more information refer Url.[Oracle Community](https://community.oracle.com/thread/2332882?start=0&tstart=0) 
 #### 11. Click sign In.
 ![](./images/ords8.png)
 
