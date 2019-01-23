@@ -1,3 +1,4 @@
+#!/bin/bash
 #: Author : "david.bayard@oracle.com"
 #: Version : v1
 #: Description : Generate load on adwc

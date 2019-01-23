@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/sh
 
 # Version: 1.0.2
 # Usage:
