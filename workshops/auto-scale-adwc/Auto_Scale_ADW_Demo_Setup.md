@@ -252,7 +252,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
   * Copy the file name and assign ORACLE_UNQNAME in below command
 - vi ~/.bash_profile
 - export ORACLE_UNQNAME=**Dbaas Unique Name**
-- After editing the bash_profile press esc and typing wq to save. 
+- After editing the bash_profile press esc and type wq to save. 
 - source ~/.bash_profile
 ![](./images/demo1.png)
 #### 3. Copy ADWC wallet in oracle home directory and unzip.
@@ -279,11 +279,11 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
   * ##SSL_VERSION = 0
 ![](./images/demo3.png)
 ![](./images/demo4.png)
-#### 5. Change **/u01/app/oracle/product/12.1.0.2/dbhome_1/network/admin/tnsnames.ora** and create entry for your Dbaas PDB that is pdb1 as below. Change host and service name, you can fine service name for pdb1 by running **lsnrctl status** and host name you copy from existing entry.
+#### 5. Change **/u01/app/oracle/product/12.1.0.2/dbhome_1/network/admin/tnsnames.ora** and create entry for your Dbaas PDB that is pdb1 as below. Change host and service name, you can find service name for pdb1 by running **lsnrctl status** and host name you copy from existing entry.
 - PDB1 = (DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = apexdemo.sub1018160041.hdp.oraclevcn.com)(PORT = 1521))
     (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = pdb1.sub1018160041.hdp.oraclevcn.com)))
 ![](./images/demo5.png)
-#### 6. Add ADWC Wallet tnsname.ora entry in **/u01/app/oracle/product/12.1.0.2/dbhome_1/network/admin/tnsnames.ora** in addition to above step(Copy only for your ADWC consumer group or you can copy all)
+#### 6. Add ADWC Wallet tnsname.ora entry in **/u01/app/oracle/product/12.1.0.2/dbhome_1/network/admin/tnsnames.ora** in addition to above step(Note: Copy only for your ADWC consumer group or you can copy all)
 ![](./images/demo5.png)
 #### 7. Go to your ADWC wallet location and run below command for more information go through below link [Password Less Setup](https://docs.oracle.com/cd/B19306_01/network.102/b14266/cnctslsh.htm#g1033548)
 - cd /home/oracle/wallet_adwc
@@ -309,7 +309,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 - sqlplus / as sysdba
 - SQL> alter session set container=pdb1;
 - SQL> START /home/oracle/Dbaas_Pdbuser.sql;
-  **Note : Please change below insert and give number of OCPU which you provisioned  in ADW**
+  **Note : Please change below insert query and give number of OCPU which you provisioned  in ADW**
 - SQL> Insert into PDBUSER.VW_DBOCPU (DBPROVISIONEDOCPUS,CURRENT_OCPU,DATARETENTIONDAYS) values ("Number of OCPU provisioned in ADW",2,16);
 - SQL> connect /@adwapexdemo_high;
 - SQL> START /home/oracle/Adwc_Schema.sql;
