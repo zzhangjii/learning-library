@@ -304,11 +304,14 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 - SQL> alter system set global_names=FALSE scope=both sid='*';
 - SQL> select * from dual@adwc;
 ![](./images/demo7.png)
-#### 9. Run Dbaas schema scrips "Dbaas_Pdbuser.sql" using below command [apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript)
+#### 9. Run Dbaas schema scripts "Dbaas_Pdbuser.sql" and Adwc_Schema.sql using below command [apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript)
+  
 - sqlplus / as sysdba
 - SQL> alter session set container=pdb1;
 - SQL> START /home/oracle/Dbaas_Pdbuser.sql;
-- SQL> connect @/adwapexdemo_high;
+  **Note : Please change below insert and give number of OCPU which you provisioned  in ADW**
+- SQL> Insert into PDBUSER.VW_DBOCPU (DBPROVISIONEDOCPUS,CURRENT_OCPU,DATARETENTIONDAYS) values ("Number of OCPU provisioned in ADW",2,16);
+- SQL> connect /@adwapexdemo_high;
 - SQL> START /home/oracle/Adwc_Schema.sql;
 #### 10. Download ADWCS Demo shell scripts from [scripts](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/shellscripts) and copy in oracle home directory.
 ![](./images/demo13.png)
