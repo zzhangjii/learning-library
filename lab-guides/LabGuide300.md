@@ -320,14 +320,14 @@ docker push iad.ocir.io/<your-tenancy-name>/alphaoffice-rest:v1
 
 - The wizard will create a **Deployment** and a **Service** that make up your application. You will see the status of both on the dashboard overview page:
 
-  ![](images/LabGuide300-775cc9ba.png)
+  ![](images/300/LabGuide300-775cc9ba.png)
 
   - The **deployment** represents the running containers that execute your application. Child objects including replica sets and pods are created by the deployment to satisfy the desired number of running instances you specified.
   - The **service** represents the exposure of your application on the network, in this case to the internet via an OCI load balancer. It will take a couple of minutes to provision the load balancer, and once it is finished you will see an external endpoint link populated with its IP address.
 
 - Refresh the dashboard overview page (it does not automatically update) to see the **External endpoint** of your load balancer. **Click the link** to open it in a new tab.
 
-  ![](images/LabGuide300-35c477c7.png)
+  ![](images/300/LabGuide300-35c477c7.png)
 
 - You should see the Glassfish welcome page. That means we are successfully talking to our application server inside of the running container on our Kubernetes cluster, through the load balancer that exposes it to the internet.
 
@@ -343,7 +343,7 @@ docker push iad.ocir.io/<your-tenancy-name>/alphaoffice-rest:v1
   /AlphaProductsRestService/webresources/restCall/
   ```
 
-  ![](images/LabGuide300-136077c7.png)
+  ![](images/300/LabGuide300-136077c7.png)
 
 - You should see JSON data returned from the REST service, meaning we've successfully deployed our microservice to the Kubernetes cluster. We could stop here, but let's explore one more way to interact with our running containers inside the cluster.
 
@@ -379,7 +379,7 @@ docker push iad.ocir.io/<your-tenancy-name>/alphaoffice-rest:v1
   ./kubectl exec -it <full-name-of-your-pod-from-previous-step> -- /bin/sh -c 'curl $HOSTNAME:8080/AlphaProductsRestService/webresources/restCall/1050'
   ```
 
-  ![](images/LabGuide300-4ed6486b.png)
+  ![](images/300/LabGuide300-4ed6486b.png)
 
 - Once again you should see JSON data returned. This method of executing commands inside running containers is great for debugging. Often, you will have running containers that do not have a load balancer in front of them (because they are only accessed by other services in the cluster, not end users), and being able to run commands inside of them can help you diagnose issues.
 
