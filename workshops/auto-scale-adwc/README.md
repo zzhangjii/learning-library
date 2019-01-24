@@ -56,7 +56,8 @@ Read on to begin your Getting Started journey with Oracle Autonomous Data Wareho
 
 
 **Lab Prerequisites – Required Software**
-This workshop needs two desktop tools to be installed on your computer to do the exercises in this lab.
+- Oracle APEX Release 18.2.0.00.12
+- Oracle REST Data Services 18.4
 
 <a href="https://cloudcustomerconnect.oracle.com/resources/32a53f8587/summary" target="_blank">**Cloud Customer Connect**</a> Forum for Autonomous Data Warehouse
 If you have a question during this workshop then use the Autonomous Data Warehouse Forum to post questions, connect with experts, and share your thoughts and ideas about Oracle Autonomous Data Warehouse.
