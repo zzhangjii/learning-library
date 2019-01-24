@@ -1,36 +1,27 @@
-![](images/300/Picture-lab.png)  
-Updated: Date
+![](images/300/LabGuide300-481162ea.png)
 
 ## Introduction
 
-Introductory Text
+Thus far on our journey from a monolithic applcation to microservices, we have created our supporting infrastructure, populated our database, and packaged our Java application as a Docker container. Now we need to deploy that Docker image somewhere that it will be accessible to our customers, as well as be manageable, observable, and scalable -- a Kubernetes cluster.
+
+During this lab, you will take the Docker image that you created in Lab 200 and store it in a Docker registry in OCI. You will create a managed Kubernetes cluster in OCI and deploy the application to the cluster from the Docker registry.
 
 **_To log issues_**, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
 ## Objectives
 
-- Objective 1
-- Objective 2
+- Provision a Kubernetes cluster on OCI (OKE)
+- Store Docker image in OCI Repository (OCIR)
+- Deploy application to Kubernetes cluster
+- Validate application deployment
 
 ## Required Artifacts
 
-- List of Prerequisites
+- You should already have completed labs 50, 100, and 200 before beginning this lab.
 
-# Main Heading 1
+## Provision a Kubernetes Cluster on OCI (OKE)
 
-## Sub Heading 1
-
-### **STEP 1**: Title of Step 1
-
-- Instructions for Step 1
-
-### **STEP 2**: Title of Step 2
-
-- Instructions for Step 2
-
-# Provision a Kubernetes Cluster on OKE
-
-### **STEP**: Prerequisite: Add a Policy Statement for OKE
+### **STEP 1**: Prerequisite: Add a Policy Statement for OKE
 
 - You should already have a browser tab logged in to the OCI Console. If you do not, log in again:
 
@@ -56,7 +47,7 @@ Introductory Text
 
   ![](images/300/LabGuide200-bd5bcbd1.png)
 
-### **STEP 4**: Provision Kubernetes Using the OCI Console
+### **STEP 2**: Provision Kubernetes Using the OCI Console
 
 - Now we're ready to create our Kubernetes cluster. From the OCI Console navigation menu, select **Developer Services->Container Clusters (OKE)**.
 
@@ -85,7 +76,7 @@ Introductory Text
 
 - Click **Create**. You will be brought to the cluster detail page. Your cluster will take a while to provision, so let's use this time to set up the OCI CLI and Kubernetes CLI that we will use to interact with our cluster.
 
-### Install and Configure OCI CLI on your OCI VM
+### **STEP 3**: Install and Configure OCI CLI on your OCI VM
 
 - You should still have an SSH session connected to the OCI VM where you installed Docker in the previous lab. If you have closed it, reopen it using either PuTTY or `ssh` from the command line, as you did in the previous lab.
 
@@ -165,7 +156,9 @@ Introductory Text
 
 - While we are still connected to our OCI VM, let's push our Docker image that we created in the previous lab to our Docker registry on OCI (OCIR).
 
-### Push Docker Image from your OCI VM to OCI Registry
+## Store Docker image in OCI Repository (OCIR)
+
+### **STEP 4**: Push Docker Image from your OCI VM to OCI Registry
 
 - In order to push our function Docker image into our OCI Registry, we will need to log in using the Docker CLI. The password we use to authenticate is an **OCI Auth Token**, just as we created for Wercker in Lab 200. Navigate to the **OCI Console** in a web browser on your local machine. Open your **User Settings** page by using the navigation menu to go to Identity->Users and select **View User Details** from the three-dots menu for your user.
 
@@ -238,7 +231,9 @@ docker push iad.ocir.io/<your-tenancy-name>/alphaoffice-rest:v1
 
 - Now that our Docker image is stored in a container registry, we can deploy it to our Kubernetes cluster.
 
-### Deploy Microservice to Kubernetes
+## Deploy application to Kubernetes cluster
+
+### **STEP 5**: Install kubectl
 
 - In order to interact with your cluster and view the dashboard, you will need to install the Kubernetes command line interface, `kubectl`. We will do that now.
 
@@ -277,6 +272,8 @@ docker push iad.ocir.io/<your-tenancy-name>/alphaoffice-rest:v1
     ./kubectl cluster-info
     ./kubectl get nodes
     ```
+
+### **STEP 6**: Deploy application using Kubernetes dashboard
 
 - We can use `kubectl` to start a proxy that will give us access to the Kubernetes Dashboard through a web browser at a localhost URL. Run the following command in the same terminal window:
 
@@ -336,6 +333,10 @@ docker push iad.ocir.io/<your-tenancy-name>/alphaoffice-rest:v1
 
   ![](images/300/LabGuide300-5b512768.png)
 
+## Validate application deployment
+
+### **STEP 7**: Test REST service in a web browser
+
 - Now let's test out the REST service in that container that is pulling our product catalog data from the Autonomous Transaction Processing database in OCI. At the end of the URL in the address bar (which should be just the IP address of your load balancer), paste the following path and press **enter**
 
   ```
@@ -345,6 +346,8 @@ docker push iad.ocir.io/<your-tenancy-name>/alphaoffice-rest:v1
   ![](images/LabGuide300-136077c7.png)
 
 - You should see JSON data returned from the REST service, meaning we've successfully deployed our microservice to the Kubernetes cluster. We could stop here, but let's explore one more way to interact with our running containers inside the cluster.
+
+### **STEP 8**: Test REST service using the command line
 
 - In your terminal window that is running the `kubectl proxy` command, press **Control-C** to stop the proxy.
 
