@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Thus far on our journey from a monolithic applcation to microservices, we have created our supporting infrastructure, populated our database, and packaged our Java application as a Docker container. Now we need to deploy that Docker image somewhere that it will be accessible to our customers, as well as be manageable, observable, and scalable -- a Kubernetes cluster.
+Thus far on our journey from a monolithic application to microservices, we have created our supporting infrastructure, populated our database, and packaged our Java application as a Docker container. Now we need to deploy that Docker image somewhere that it will be accessible to our customers, as well as be manageable, observable, and scalable -- a Kubernetes cluster.
 
 During this lab, you will take the Docker image that you created in Lab 200 and store it in a Docker registry in OCI. You will create a managed Kubernetes cluster in OCI and deploy the application to the cluster from the Docker registry.
 
