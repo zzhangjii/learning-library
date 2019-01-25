@@ -1,19 +1,25 @@
-Integrating Instant App and Web channel in the CafeteriaAssistance Bot
+Integrating Instant App and a Web Channel in Digital Assistant Skill
 ===========================================================================
-### Objective
-
-- Adding Instant App feature to the Bot.
-- Integrate the Bot with Web Page
-
-### Features Overview
+## Introduction
 
 Intelligent Bots in Oracle Mobile Cloud Enterprise (or just Bots) provide lot of features which can be used based on the requirements like Instant App, Translation Services, Bot-Agent handoff, Quality, and Channels support for the Bot like Web Channel, iOS App, Android App, Facebook Messenger, and some other channels supported using webhook.
-
-### **Step 1**: Adding Instant App feature to the Bot
 
 Natural language conversations are, by their very nature, free-flowing. But they may not always be the best way for your Bot to collect information from its users. For example, some situations like entering credit card or passport details require users to enter specific and precise information. To help your Bot’s users to enter this type of information easily, your Bot can call an Instant App, which provides forms with labels, options, choices, check boxes, data fields, and other UI elements. The CafeteriaAssistance Bot calls an Instant app for the Feedback that walks users through a series of steps to provide feedback.
 
 The CafeteriaAssistance and the Instant App show you how your Bot transitions to an Instant app, how Bots pass variable values to an Instant App, and how the Instant app returns the user to the bot.
+
+
+## Objectives
+- Add an Instant App feature to the Bot.
+- Integrate the Bot with a Web Page.
+
+
+Build and Integrate Instant App and Web Channel
+===========================================================================
+
+### **Step 1**: Adding Instant App feature to the Skill
+
+
 
 ![D:\\Workshop\_Bot\\BotsLab2\\Capture1.PNG](images/200/image1.png)
 
@@ -24,7 +30,7 @@ Once you click on the Link button, you will get a form like below to fill:
 **The Instant App Builder**
 
 
-You can build the Instant Apps using the Instant App Builder, which you access by clicking Instant Apps in the Bots landing page.
+You can build the Instant Apps using the Instant App Builder, which you access by clicking Instant Apps in the Skills landing page.
 
 ![D:\\Workshop\_Bot\\BotsLab2\\Capture2.PNG](images/200/image3.png)
 Instant apps are made up of sets of panes, which gets displayed one at a time. You can populate these panes with various elements that can display charts or images and collect customer data using widgets like checkboxes, radio buttons, and file upload functions.
@@ -123,7 +129,7 @@ Now, if you go back to the Bot you can see the response like below:
 ![](images/200/image13.png)
 
 
-### **Step 2**: Integrating the Bot with website page as a channel
+### **Step 2**: Integrating the Skill with a web page as a Channel
 
 **Channels**
 
