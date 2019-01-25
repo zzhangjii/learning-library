@@ -5,8 +5,6 @@ January 21, 2019
 
 Version 1.0
 
-you should follow the instructions available here: [Auto_Scale_ADW_Demo_Setup.md](Auto_Scale_ADW_Demo_Setup.md)
-
 # Workshop Overview
 
 ### Goals for this workshop
