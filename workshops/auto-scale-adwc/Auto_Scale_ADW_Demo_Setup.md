@@ -227,7 +227,8 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 - java -Dconfig.dir=/home/oracle/ords -jar ords.war install simple –preserveParamFile
 ![](./images/ords6.png)
 #### 7. Kindly exit the session by using ctrl C and start ords by running below command
-- ./home/oracle/scripts/start_ords.sh
+- Copy scripts folder from in /home/oracle [scripts](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/shellscripts)
+- /home/oracle/scripts/start_ords.sh
 #### 8. Browse below URL to check whether ORDS is up and running.
 - **http://DbaaS Instance IP address:8080/ords**
 #### 9. Use below credentials to login.
