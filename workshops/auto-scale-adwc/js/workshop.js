@@ -342,7 +342,7 @@ labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sa
         var updateFilenameInHeader = function(filename) {
           var headerElement = document.getElementsByTagName('h2')[0];
           var labElement = document.createElement('span');
-          labElement.textContent = '- ' + filename.replace("Guide"," ").replace(".md","").replace("OOW","");
+          labElement.textContent = '- ' + filename;
 
           if(headerElement.children[1])
             headerElement.removeChild(headerElement.children[1]);
@@ -377,15 +377,13 @@ labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sa
 
             setTimeout(function () {
                 $("#labguide a").each(function () {
-                    if (this.href.endsWith('.md') && !this.href.includes('?')) {
-                        var filename = this.getAttribute('href');
-                        this.href = window.location.href.split('?')[0] + '?page='+filename;
-
+                    if (this.href.endsWith('.md')) {
                         $(this).on("click", function (event) {
                             event.preventDefault();
-                            console.log('clicked on: ' + filename);
-                            var win = window.open(this.href, '_blank');
-                            win.focus();
+                            console.log('clicked on: ' + this.getAttribute('href'));
+                            $scope.getLabGuide({
+                                filename: this.getAttribute('href')
+                            });
                         });
                     }
                 })
