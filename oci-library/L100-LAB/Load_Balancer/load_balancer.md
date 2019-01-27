@@ -194,15 +194,15 @@ You will create two web servers that will work as backend servers for your Publi
 
 6. Under **Allow Rules for Ingress**, click **+ Another Ingress Rule** and Enter the following ingress rule: 
 
-   - **Source CIDR:** *10.0.0.0/24*
-   - **IP Protocol:** *TCP*
-   - **Destination Port Range:** *80*
-   - Click **Save Security List Rules**
+    - **Source CIDR:** *10.0.0.0/24*
+    - **IP Protocol:** *TCP*
+    - **Destination Port Range:** *80*
+    - Click **Save Security List Rules**
 
-   - **Source CIDR:** *10.0.1.0/24*
-   - **IP Protocol:** *TCP*
-   - **Destination Port Range:** *80*
-   - Click **Save Security List Rules**
+    - **Source CIDR:** *10.0.1.0/24*
+    - **IP Protocol:** *TCP*
+    - **Destination Port Range:** *80*
+    - Click **Save Security List Rules**
 
     ![](media/image10.png)
 
