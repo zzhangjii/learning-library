@@ -42,12 +42,12 @@ Here's a bird's-eye view of bot development.
     - Create utterances
 - Add an entity and associate it with your intent for this chat bot creation.
 - Define the Conversation Flow of your bot.
-- Validate, train and test your Chatbot.
+- Validate, train and test your Skill.
 
 Create a ChatBot with Intents, Entities, Utterances and Flow
 ----------------------------------------------------------------------------
 
-### **STEP 1**: Create a simple Cafeteria Assistance ChatBot
+### **Step 1**: Create a simple Cafeteria Assistance ChatBot
 
 - When chatbotLab is finished provisioning select the menu icon and select **Digital Assistant UI**.
 
@@ -62,13 +62,13 @@ Click **New Skill**.
 
 ![](images/100/6.png)
 
-- You are taken to the home page for your Bot. Here on the left, you can see a list of icons you can use to navigate to your **Intents, Entities, Flow, Resource Bundles, Q&A, Components, Settings and Quality**.
+- You are taken to the home page for your Skill. Here on the left, you can see a list of icons you can use to navigate to your **Intents, Entities, Flow, Resource Bundles, Q&A, Components, Settings and Quality**.
 
 ![D:\\Workshop\_Bot\\image2.PNG](images/100/image5.png)
 
 ### **Step 2**: Add an Intent, Entity for show menu
 
-- From the homepage of your ChatBot, click the **Intent** icon present on left-side navigation bar and then click the green **Intent** button.
+- From the homepage of your Skill, click the **Intent** icon present on left-side navigation bar and then click the green **Intent** button.
 
 ![](images/100/image6.png)
 
@@ -528,7 +528,7 @@ states:
 
 - In this part of the tutorial, you run the training tool on the Bot. This will train the Bot allowing it to understand similar user inputs to the example utterances used when building the Bot. -->
 
-- In the upper right, click the **Train** button. This will kick-off a process that will run an algorithm to take your example utterances and build the model that will be used to ascertain the intents and entities. Anytime the ChatBot platform recognizes your Bot needs to be trained, it will display an exclamation point in the train button. Once the training is complete the exclamation point is replaced by a check mark.
+- In the upper right, click the **Train** button. This will kick-off a process that will run an algorithm to take your example utterances and build the model that will be used to ascertain the intents and entities. Anytime the ChatBot platform recognizes your Skill needs to be trained, it will display an exclamation point in the train button. Once the training is complete the exclamation point is replaced by a check mark.
 
 ![D:\\Workshop\_Bot\\Capture13.PNG](images/100/image22.png)
 
