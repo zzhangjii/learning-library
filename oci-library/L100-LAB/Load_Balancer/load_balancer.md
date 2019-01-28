@@ -14,7 +14,8 @@
 
 [Practice 3: Creating and Testing the Load Balancer](#practice-3-creating-and-testing-the-load-balancer)
 
-[Summary](#summary)
+**Note:** *Some of the UIs might look a little different than the screen shots included in the instructions, but you can still use the instructions to complete the hands-on labs.*
+
 
 ## Overview
 
@@ -30,8 +31,11 @@ The following provide an overview of a simple Public Load Balancer:
 
 ## Pre-Requisites
 
-- Oracle Cloud Infrastructure account credentials (User, Password, and Tenant)
-- Access to Oracle Cloud Infrastructure account
+- Oracle Cloud Infrastructure account credentials (User, Password, and Tenant) 
+- To sign in to the Console, you need the following:
+  -  Tenant, User name and Password
+  -  URL for the Console: [https://console.us-ashburn-1.oraclecloud.com/](https://console.us-ashburn-1.oraclecloud.com/)
+  -  Oracle Cloud Infrastructure supports the latest versions of Google Chrome, Firefox and Internet Explorer 11
 
 ## Practice-1: Creating Virtual Cloud Network
 
