@@ -37,8 +37,8 @@
 |                  **Name**              |    **Type**  | **Version** | 
 |----------------------------------------|:------------:|:-------:|
 |[Terraform and Container Engine for Kubernetes (OKE)](./DevOps/Terraform-and-OKE-LAB/tf_oke_hol.md)| DevOps |   30 minutes   | 
-|[Oracle Cloud Infrastructure Registry](./DevOps/Container_Registry/Container_Registry_HOL.md) | DevOps |   10 minutes   | 
-|[Deploying Jenkins](./DevOps/Deploying_Jenkins/Deploying_Jenkins_HOL.md) | DevOps |   10 minutes   |  
+|[Oracle Cloud Infrastructure Registry](./DevOps/Container_Registry/Container_Registry_HOL.md) | DevOps |   15 minutes   | 
+|[Deploying Jenkins](./DevOps/Deploying_Jenkins/Deploying_Jenkins_HOL.md) | DevOps |   30 minutes   |  
 |Resource Manager                     | DevOps |   TBD   |      
 
 
