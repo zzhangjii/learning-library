@@ -118,7 +118,6 @@ You will create two web servers that will work as backend servers for your Publi
 	# sudo yum install httpd -y
 	```
    - Start the apache server and configure it to start after system reboots:
-
     ```
     # sudo apachectl start
     # sudo systemctl enable httpd
