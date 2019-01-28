@@ -100,6 +100,7 @@ During this lab, you will take the Docker image that you created in Lab 200 and 
   - Enter a tenancy OCID: copy the **Tenancy OCID** from the tenancy details page (found under the administration section of the OCI navigation menu)
 
     ![](images/300/LabGuide300-fefb896c.png)
+
     ![](images/300/LabGuide300-80c6b300.png)
 
   - Enter a region: type the **region shown in the upper right** corner of OCI Console
@@ -110,7 +111,7 @@ During this lab, you will take the Docker image that you created in Lab 200 and 
 
   ![](images/300/LabGuide200-315d446f.png)
 
-- You've just generated an RSA key pair that we will use to authenticate you to the OCI API. On the User Settings page in your browser, click **Add Public Key**
+- You've just generated an RSA key pair that we will use to authenticate you to the OCI API. Click **back** to get back to the User Settings page in your browser, click **Add Public Key**
 
   ![](images/300/LabGuide200-70626501.png)
 
