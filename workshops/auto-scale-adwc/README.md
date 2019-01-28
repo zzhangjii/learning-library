@@ -1,6 +1,6 @@
   
 
-# First Autonomous Data Warehouse Auto Scaling Setup
+# Autonomous Data Warehouse Auto Scaling Setup
 
 ## Workshop Overview
 
