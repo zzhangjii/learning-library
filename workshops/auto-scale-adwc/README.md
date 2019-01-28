@@ -87,6 +87,11 @@ If you are using a SQL Developer version earlier than 18.2, see the documentatio
 3.	Google Chrome: version 29 and later
 4.	Apple Safari: version 6
 
+### Proceed to the Lab Guides
+- Once you are viewing the Workshop's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
+
+![](./images/WorkshopMenu.png)
+
 
 
 
