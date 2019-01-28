@@ -1,3 +1,5 @@
+## Getting Started
+
 ### ADWCS Provisioning
 #### 1. Login to cloud environment, Click Services to show the available services. In the list of available services, select Autonomous Data Warehouse.
 ![](./images/adwc1.png)
