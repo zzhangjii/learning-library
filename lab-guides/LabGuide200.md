@@ -200,23 +200,15 @@ You will now create a Linux based Compute instance using the public key you just
 Name: Docker
 Availability Domain: AD 1 (Use default AD 1)
 Boot Volume: Oracle-Provided OS Image
-Image Operating System: Oracle Linux 7.5 (Select Oracle Linux 7.5)
+Image Operating System: Oracle Linux 7.6 (Default)
 Shape Type: Virtual Machine (Default)
 Shape: VM.Standard2.1 (Default)
 SSH Keys: Choose SSH Key Files
 ```
 
-- After entering the _Docker_ instance name click the **Change Image Source**.
+- After entering the _Docker_ instance name.
 
    ![](images/200/27-2.PNG)
-
-- Select **Oracle Linux 7.5** and click **Select Image**.
-
-   ![](images/200/27-4.PNG)
-
-- This selection will now be shown on the page:
-
-   ![](images/200/27-6.PNG)
 
 - Scroll down furthur on the page and select your PUBLIC SSH Key
 **NOTE:** You will paste the public key you copied in Step 6 into the SSH KEY field by selecting the "Paste SSH Keys" radio button. `The public key should all be on ONE LINE`

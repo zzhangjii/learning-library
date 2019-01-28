@@ -3,7 +3,7 @@
   ![](images/050/Title.png)
 
 ## Introduction and Overview
-_Time to Complete: 4 hours_
+_Time to Complete: 5 hours_
 
 In this lab you are guided through using many of the Oracle's Cloud Services to support a transition from a monolithic on-prem environment to a Cloud based microservices environment. Along the way you'll by using the Compute Cloud Service (IaaS) which supports the Docker, Kubernetes and Autonomous Transaction Processing Database. Then you'll be using the Autonomous Visual Builder (Integration). The high level flow will be:
 
@@ -50,7 +50,7 @@ Once the infrastructure is provisioned you can access your enironment using `VNC
 
   ![](images/050/JS6.PNG)
 
-- **NOTE: You have 4 hours** before the environment will go away.
+- **NOTE: You have 5 hours** before the environment will go away.
 
   ![](images/050/JS7.PNG)
 
