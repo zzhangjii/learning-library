@@ -1,11 +1,8 @@
   
-![](./images/1.PNG)
 
-January 21, 2019
+# First Autonomous Data Warehouse Auto Scaling Setup
 
-Version 1.0
-
-# Workshop Overview
+## Workshop Overview
 
 ### Goals for this workshop
 
@@ -22,14 +19,8 @@ Version 1.0
 **6. Manage and Monitor an ADW instance**
 
 **7. Scale up/down an ADW instance**
-### Before you begin
-#### Purpose
-The purpose of this document is to help setting up the Autonomous data warehouse Auto scaling demo on your tenancy. This document covers systematic process to install the demo into any tenancy on oracle cloud.
+### Acquire an Oracle Cloud Trial Account
 
-Time to Complete
-Approximately 180 minutes.
-
-#### How to Get Your Free Cloud Trial Account
  If you already have an Oracle Cloud account then you can skip this section. If you don't have an Oracle Cloud account then you can quickly and easily sign up for a free trial account that provides:
   $300 of free credits good for up to 3500 hours of Oracle Cloud usage
  Credits can be used on all eligible Cloud Platform and Infrastructure services for the next 30 days
@@ -40,7 +31,14 @@ Approximately 180 minutes.
 
   Once your trial account is created, you will receive a Welcome to Oracle Cloud email that contains your cloud account password along with links to useful collateral. Click here to sign into the Oracle Cloud, go to: <a href="https://myservices.us.oraclecloud.com/mycloud/signup?language=en&sourceType=:ex:tb:::RC_NAMK181017P00031:ADW_IMHOL&SC=:ex:tb:::RC_NAMK181017P00031:ADW_IMHOL&pcode=NAMK181017P00031" target="_blank">https://cloud.oracle.com</a>
 
-**What is an Autonomous Data Warehouse?**
+### Before you begin
+#### Purpose
+The purpose of this document is to help setting up the Autonomous data warehouse Auto scaling demo on your tenancy. This document covers systematic process to install the demo into any tenancy on oracle cloud.
+
+Time to Complete
+Approximately 180 minutes.
+
+#### What is an Autonomous Data Warehouse?
 
 Oracle Autonomous Data Warehouse is built around the market leading Oracle database and comes with fully automated data warehouse specific features that deliver outstanding query performance.  This environment is delivered as a fully managed cloud service running on optimized high-end Oracle hardware systems.  You don’t need to spend time thinking about how you should store your data, when or how to back it up or how to tune your queries.  
 
@@ -53,7 +51,7 @@ Oracle’s Autonomous Data Warehouse is the perfect quick-start service for fast
 Read on to begin your Getting Started journey with Oracle Autonomous Data Warehouse.
 
 
-**Lab Prerequisites – Required Software**
+#### Lab Prerequisites – Required Software
 - Oracle APEX Release 18.2.0.00.12
 - Oracle REST Data Services 18.4
 
@@ -90,6 +88,9 @@ If you are using a SQL Developer version earlier than 18.2, see the documentatio
 2.	Mozilla Firefox: version 24 and later
 3.	Google Chrome: version 29 and later
 4.	Apple Safari: version 6
+
+![](./images/1.PNG)
+
 
 
 
