@@ -7,13 +7,15 @@
 |                  **Name**              |    **Type**  | **Version** |
 |----------------------------------------|:------------:|:-------:|
 |[Identity and Access Management Service](./L100-LAB/Identity_Access_Management/IAM_HOL.md) | Foundational |   2.1   |
-|[Audit Service](./L100-LAB/Audit_Service/AUDIT_HOL.md) | Foundational |   2.1   |
-|[Reserved Public IP](./L100-LAB/Using_Reserved_Public_IP/Reserved_Public_IP_HOL.md) | Foundational |   2.1   |
-|[Compute Service](./L100-LAB/Network_Compute_and_Block_Service/Compute_HOL.md)                        | Foundational |   2.1   |
+|[Virtual Cloud Network](./L100-LAB/Virtual_Cloud_Network/VCN_HOL.md)                        | Foundational |   2.1   |
+|[Compute Service](./L100-LAB/Compute_Services/Compute_HOL.md)                        | Foundational |   2.1   |
+|[Block Volume Service](./L100-LAB/Block_Volume/Block_Volume_HOL.md)                        | Foundational |   2.1   |
 |[File Storage Service](./L100-LAB/File_Storage_Service/FSS_HOL.md)                   | Foundational |   2.1   | 
 |[Object Storage Service](./L100-LAB/Object_Storage/ObjectStorage_HOL.md)                   | Foundational |   2.1   |  
 |[Load Balancer Service](./L100-LAB/Load_Balancer/load_balancer.md)                 | Foundational |   2.1   |      
-|[Autonomous Data Warehouse](./L100-LAB/Autonomous_Data_Warehouse/ADW_HOL.md)             | Foundational |   2.1   |   
+|[Autonomous Data Warehouse](./L100-LAB/Autonomous_Data_Warehouse/ADW_HOL.md)             | Foundational |   2.1   | 
+|[Audit Service](./L100-LAB/Audit_Service/AUDIT_HOL.md) | Foundational |   2.1   |
+|[Reserved Public IP](./L100-LAB/Using_Reserved_Public_IP/Reserved_Public_IP_HOL.md) | Foundational |   2.1   |  
 
 
 
