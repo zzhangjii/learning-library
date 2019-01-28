@@ -6,11 +6,11 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Practice-1 Configuring VCN Security List Rules for File Storage](#practice-1-configuring-vcn-security-list-rules-for-file-storage)
+[Practice-1: Configuring VCN Security List Rules for File Storage](#practice-1-configuring-vcn-security-list-rules-for-file-storage)
 
-[Practice-2 Creating a File System](#practice-2-creating-a-file-system)
+[Practice-2: Creating a File System](#practice-2-creating-a-file-system)
 
-[Practice-3 Mounting a File System](#practice-3-mounting-a-file-system)
+[Practice-3: Mounting a File System](#practice-3-mounting-a-file-system)
 
 **Note:** *Some of the UIs might look a little different than the screen shots included in the instructions, but you can still use the instructions to complete the hands-on labs.*
 
@@ -72,7 +72,7 @@ When you create a VCN, a default security list is also created. Rules in the sec
 
     ![]( img/image005.png)
 
-## Practice-2 Creating a File System
+## Practice-2: Creating a File System
 You can create a shared file system in the cloud using the File Storage service. When you use the Console, creating a file system also creates a mount target that your Compute instances use to access and write to the file system. Once a mount target is created, multiple file systems can be associated with it. Using the API or the Command Line Interface (CLI), you can create file systems and mount targets independently of each other.
 
 1. Open the navigation menu. Under **Core Infrastructure**, click **File Storage**
@@ -94,7 +94,7 @@ You can create a shared file system in the cloud using the File Storage service.
 
     ![]( img/image006.png)
 
-## Practice-3 Mounting a File System
+## Practice-3: Mounting a File System
 
 Users of Ubuntu and Linux operating systems can use the command line to connect to a file system and write files. Mount targets serve as file system network access points. After your mount target is assigned an IP address, you can use it to mount the file system. On the instance from which you want to mount the file system, you need to install an NFS client and create a mount point. When you mount the file system, the mount point effectively represents the root directory of the File Storage file system, allowing you to write files to the file system from the instance
 
