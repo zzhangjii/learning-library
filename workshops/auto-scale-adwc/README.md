@@ -1,4 +1,4 @@
-# Autonomous Data Warehouse Auto Scaling Setup
+![](./images/1.PNG)
 
 ## Workshop Overview
 
@@ -87,7 +87,6 @@ If you are using a SQL Developer version earlier than 18.2, see the documentatio
 3.	Google Chrome: version 29 and later
 4.	Apple Safari: version 6
 
-![](./images/1.PNG)
 
 
 
