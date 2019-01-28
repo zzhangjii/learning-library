@@ -18,7 +18,7 @@
 
 **6. Manage and Monitor an ADW instance**
 
-**7. Scale up/down an ADW instance**
+**7. Auto Scale up/down an ADW instance**
 ### Acquire an Oracle Cloud Trial Account
 
  If you already have an Oracle Cloud account then you can skip this section. If you don't have an Oracle Cloud account then you can quickly and easily sign up for a free trial account that provides:
