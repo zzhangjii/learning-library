@@ -199,9 +199,9 @@ You will create two web servers that will work as backend servers for your Publi
 
     - **Source CIDR:** *10.0.0.0/24*
     - **IP Protocol:** *TCP*
-    - **Destination Port Range:** *80*
-    - Click **Save Security List Rules**
-
+    - **Destination Port Range:** *80*    
+  
+7. Click **+ Another Ingress Rule** and Enter the following ingress rule: 
     - **Source CIDR:** *10.0.1.0/24*
     - **IP Protocol:** *TCP*
     - **Destination Port Range:** *80*
@@ -209,7 +209,7 @@ You will create two web servers that will work as backend servers for your Publi
 
     ![](media/image10.png)
 
-7. Test the functionality of the load balancer by navigating to its public IP address on a web browser.
+8. Test the functionality of the load balancer by navigating to its public IP address on a web browser.
 
     `http://<Public-IP-Address>`
 
