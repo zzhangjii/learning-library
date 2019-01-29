@@ -308,7 +308,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 - SQL> connect /@pdb1;
 - SQL> drop database link adwc;
   Note : Admin password should be same as adwcs instance admin password
-- SQL> create database link adwc connect to admin identified by "BEstrO0ng_#11" using 'adwapexdemo_medium’;
+- SQL> create database link adwc connect to admin identified by "BEstrO0ng_#11" using 'adwapexdemo_medium';
 - SQL> alter system set global_names=FALSE scope=both sid='*';
 - SQL> select * from dual@adwc;
 ![](./images/demo7.png)
