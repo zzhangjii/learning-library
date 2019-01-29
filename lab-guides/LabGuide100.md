@@ -159,8 +159,16 @@ While still connected to the Client Image using VNC Viewer, complete the followi
   - Enter the **Password** `a1phaOffice1_` and click **Download**
 
 	![](images/100/image25.png)
+	
+  - Select `Save File` and Click **OK**
+  
+	![](images/100/image251.png)
 
-  - The ATP Wallet file **Wallet_orcl.zip** contains the following files
+  - The **Wallet_orcl.zip** file was Downloaded to the directory `/home/opc/Downloads/`
+	
+	![](images/100/image252.png)
+
+  - As information, the ATP Wallet file **Wallet_orcl.zip** contains the following files
 
 	![](images/100/image26.png)
 
