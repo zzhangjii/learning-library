@@ -1,5 +1,8 @@
-![](./images/1.PNG)
+# Oracle Autonomous Data Warehouse Auto Scaling Workshop
+The purpose of this document is to help setting up the Autonomous data warehouse Auto scaling demo on your tenancy. This document covers systematic process to install the demo into any tenancy on oracle cloud.
 
+Time to Complete
+Approximately 180 minutes.
 ## Workshop Overview
 
 ### Goals for this workshop
@@ -29,12 +32,7 @@
 
   Once your trial account is created, you will receive a Welcome to Oracle Cloud email that contains your cloud account password along with links to useful collateral. Click here to sign into the Oracle Cloud, go to: <a href="https://myservices.us.oraclecloud.com/mycloud/signup?language=en&sourceType=:ex:tb:::RC_NAMK181017P00031:ADW_IMHOL&SC=:ex:tb:::RC_NAMK181017P00031:ADW_IMHOL&pcode=NAMK181017P00031" target="_blank">https://cloud.oracle.com</a>
 
-### Before you begin
-#### Purpose
-The purpose of this document is to help setting up the Autonomous data warehouse Auto scaling demo on your tenancy. This document covers systematic process to install the demo into any tenancy on oracle cloud.
 
-Time to Complete
-Approximately 180 minutes.
 
 #### What is an Autonomous Data Warehouse?
 
@@ -59,7 +57,7 @@ If you have a question during this workshop then use the Autonomous Data Warehou
 Are you are completely new to the <a href="https://cloudcustomerconnect.oracle.com/resources/32a53f8587/summary" target="_blank">**Cloud Customer Connect**</a> forums? Visit our  <a href="https://cloudcustomerconnect.oracle.com/pages/1f00b02b84" target="_blank">Getting Started forum page</a> to learn how to best leverage community resources.
 
 ### Notional Architecture
-
+![](./images/1.PNG)
 ![](./images/Notional_Architecure.PNG)
 
 #### What Do You Need?
