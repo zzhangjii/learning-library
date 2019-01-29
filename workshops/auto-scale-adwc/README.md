@@ -1,5 +1,5 @@
 # Oracle Autonomous Data Warehouse Auto Scaling Workshop
-The purpose of this document is to help setting up the Autonomous data warehouse Auto scaling demo on your tenancy. This document covers systematic process to install the demo into any tenancy on oracle cloud.
+The purpose of this document is to help setting up the Autonomous data warehouse auto scaling demo on your tenancy. This document covers systematic process to install the demo into any tenancy on oracle cloud.
 
 Time to Complete
 Approximately 180 minutes.
