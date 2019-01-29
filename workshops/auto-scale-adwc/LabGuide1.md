@@ -145,7 +145,7 @@ cat /etc/oratab
 
 ### APEX Installation
    Approximately time 30 Minutes.
-#### 1. Login to DbaaS Instance through Putty.
+#### 1. Login to DbaaS Instance through Putty(To login in putty check Dbaas Provision Step 13 and 14).
 - Login as opc user.
 - Change user to oracle  and got to oracle home directory as below screen shot
 #### 2. Download "Oracle APEX 18.2 - English language" in local machine and then copy and unzip in oracle home directory(you can use WinSCP to copy from local to cloud instance) [APEX](http://www.oracle.com/technetwork/developer-tools/apex/downloads/index.html)
