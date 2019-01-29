@@ -89,6 +89,8 @@ While still connected to the Client Image using VNC Viewer, complete the followi
   - **Browse** or **Drag/Drop** the Data Pump DMP `.../monolithic-to-microservice/lab-resources/database/expdp_alpha121.dmp` included in the GIT repository you cloned earlier. Click **Upload Object**
 
 	![](images/100/image10.png)
+	
+	![](images/100/image101.png)
 
   - In a moment, the file will be uploaded to Object Storage
 
