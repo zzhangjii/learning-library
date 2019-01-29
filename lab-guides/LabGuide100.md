@@ -174,7 +174,9 @@ While still connected to the Client Image using VNC Viewer, complete the followi
 
 ### **STEP 8**: Create SQL Developer Connection to ATP Database
 
-  - Open **SQL Developer** available on the client image
+  - Open **SQL Developer** available on the client image by double-clicking on the Desktop Icon
+  
+	![](images/100/image261.png)  
 
   - In the **Connections** Pane, Click ![](images/100/image27.png)
 
