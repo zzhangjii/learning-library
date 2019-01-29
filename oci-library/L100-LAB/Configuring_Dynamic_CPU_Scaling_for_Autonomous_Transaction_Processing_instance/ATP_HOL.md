@@ -6,11 +6,11 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Practice 1: Sign in to OCI Console, create VCN](#practice-1-sign-in-to-oci-console,-create-vcn)
+[Practice 1: Sign in to OCI Console and create VCN](#practice-1-sign-in-to-oci-console-and-create-vcn)
 
-[Practice 2: Generate ssh keys, Create  Compute instances ](#practice-2-generate-ssh-keys,-create-compute-instances)
+[Practice 2: Generate ssh keys and Create Compute instance](#practice-2-generate-ssh-keys-and-create-compute-instance)
 
-[Practice 3: Create ATP instance in OCI, Configure Swing Bench on Compute instance and generate load traffic](#practice-3-create-atp-instance-in-oci,-configure-swing-bench-on-compute-instance-and-generate-load-traffic)
+[Practice 3: Create ATP instance in OCI and Configure Swing Bench on Compute instance to generate load traffic](#practice-3-create-atp-instance-in-oci-and-configure-swing-bench-on-compute-instance-to-generate-load-traffic)
 
 [Practice 4: Dynamically Scale CPU on ATP instance and verify results](#practice-4-dynamically-scale-cpu-on-atp-instance-and-verify-results)
 
@@ -28,7 +28,7 @@ Oracle Cloud Infrastructure's Autonomous Transaction Processing Cloud Service is
 
 - Oracle Cloud Infrastructure account credentials (User, Password, Tenant, and Compartment)  
 
-## Practice-1: Sign in to OCI Console, create VCN
+## Practice-1: Sign in to OCI Console and create VCN
 
 
 **Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
@@ -63,7 +63,7 @@ Oracle Cloud Infrastructure's Autonomous Transaction Processing Cloud Service is
 ![]( img/RESERVEDIP_HOL003.PNG)
 ![]( img/RESERVEDIP_HOL004.PNG)
 
-## Practice 2: Generate ssh keys, Create  Compute instances 
+## Practice 2: Generate ssh keys and Create Compute instance
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
@@ -195,7 +195,7 @@ unzip swingbench.zip
 ```
 ![]( img/ATP_003.PNG)
 
-## Practice 3: Create ATP instance in OCI, Configure Swing Bench on Compute instance and generate load traffic
+## Practice 3: Create ATP instance in OCI and Configure Swing Bench on Compute instance to generate load traffic
 **In this section we will create a ATP instance in OCI. We will initially create this 
 instance with only 1 OCPU and scale it after generating load test from the compute 
 instance created earlier**
