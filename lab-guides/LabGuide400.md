@@ -1,22 +1,22 @@
-![](images/400/Picture-lab.png)  
-Updated: Date
+![](images/400/Title.png)  
 
 ## Introduction
 
-Introductory Text
+In this lab you will use Oracle Visual Builder which is a cloud-based software development Platform as a Service (PaaS) and a hosted environment for your application development infrastructure. It provides an open-source standards-based solution to develop, collaborate on, and deploy applications within Oracle Cloud.
 
 **_To log issues_**, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
 ## Objectives
 
-- Objective 1
-- Objective 2
+- Create a Mobile Application
+- Access the REST services you deployed in Lab 300 on OKE
+- Deploy the mobile application to your phone (Android based)
 
 ## Required Artifacts
 
-- List of Prerequisites
+- Lab 300 needs to be completed with the AlphaOffice REST application deployed
 
-# Main Heading 1
+# Login in and Create the Application
 
 ## Sub Heading 1
 
