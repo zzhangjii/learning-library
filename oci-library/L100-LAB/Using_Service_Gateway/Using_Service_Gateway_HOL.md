@@ -206,7 +206,8 @@ ssh –i id_rsa opc@<PUBLIC_IP_OF_COMPUTE_INSTANCE>
 14. Verify opc@<COMPUTE_INSTANCE_NAME> appears on the prompt
 
 15. In the compute instance Enter command 
-```ssh-keygen
+```
+ssh-keygen
 ```
 , Press Enter at all the prompts. We now have a ssh key pair that we will use to launch a second compute instance.
 ![]( img/SGW_013.PNG)
