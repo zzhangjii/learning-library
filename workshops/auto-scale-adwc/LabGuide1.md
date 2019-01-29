@@ -315,12 +315,13 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 #### 9. Run Dbaas schema scripts "Dbaas_Pdbuser.sql" and Adwc_Schema.sql using below command [apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript)
   
 - sqlplus / as sysdba
-- SQL> alter session set container=pdb1;
+- SQL> connect /@adwapexdemo_high;
+- SQL> START /home/oracle/Adwc_Schema.sql;
+- SQL> connect /@pdb1;
 - SQL> START /home/oracle/Dbaas_Pdbuser.sql;
   **Note : Please change below insert query and give number of OCPU which you provisioned  in ADW**
 - SQL> Insert into PDBUSER.VW_DBOCPU (DBPROVISIONEDOCPUS,CURRENT_OCPU,DATARETENTIONDAYS) values ("Number of OCPU provisioned in ADW",2,16);
-- SQL> connect /@adwapexdemo_high;
-- SQL> START /home/oracle/Adwc_Schema.sql;
+
 #### 10. Download ADWCS Demo shell scripts from [scripts](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/shellscripts) and copy in oracle home directory.
 ![](./images/demo13.png)
 #### 11. Open restapi.sh from scripts folder we will need the values for below fields tenancyId,authUserId,keyFingerprint,privateKeyPath, Below are the screen shots to get the value from your environment.
