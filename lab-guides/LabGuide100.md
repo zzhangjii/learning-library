@@ -219,7 +219,7 @@ While still connected to the Client Image using VNC Viewer, complete the followi
 	/
 	```
 	
-	![](images/100/image31.png)
+	![](images/100/image311.png)
 
 # Import Data Pump Export file into ATP Databse and Download/Inspect Data Pump Log File 
 
