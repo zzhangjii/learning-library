@@ -115,7 +115,12 @@ The password must be between 12 and 30 characters long and must include at least
 #### 12. When Provisioning is completed it will show like below.
 ![](./images/dbaas16.png)
 #### 13. Now login to putty with Public IP and use private key which we saved in step 6.
-#### 14. Login as opc and then change user to oracle as show in below screen shot.
+- Open PutTTy as below and enter DbasS public IP(Which you can see in above screen shot) as HostName
+![](./images/putty.png)
+- Now expand **connection** from left menu and click **SSH** and give path to private key which we have saved in step 6. Click **Open** button.
+![](./images/ssh.png)
+
+#### 14. Login as opc and then change user to oracle as shown in below screen shot.
 ![](./images/dbaas17.png) 
 #### 15. To check ORACLE_SID and ORACLE_HOME, Type below command 
 cat /etc/oratab
@@ -135,7 +140,7 @@ cat /etc/oratab
 #### 17. Now login to sqlplus using below command 
  - sqlplus / as sysdba
  - show pdbs;
- ![](./images/dbaas22.png)
+![](./images/dbaas22.png)
 #### 18. Once you we see pdbs. Exit from sqlplus and install APEX and ORDS in Dbaas Instance.
 
 ### APEX Installation
@@ -179,12 +184,12 @@ cat /etc/oratab
 #### 9. Exit SQL*Plus.
 	
 ### ORDS Installation in Dbaas Instance
-      Approximately time 20 minutes.
-
-#### 1. Login to Dbaas Instance through Putty.
+  
+#### 1. Login to Dbaas Instance through Putty(To login in putty check Dbaas Provision Step 13 and 14).
 - Login as opc user.
 - Change user to oracle  and got to oracle home directory as below screen shot
-- run **mkdir ords** to create ords directory 
+- Create ords using below command directory
+  * mkdir ords
 #### 2. Download "Oracle REST Data Services" in local machine and then copy  and unzip in ords folder in oracle home directory (you can use WinSCP to copy from local to cloud instance) [ORDS](https://www.oracle.com/technetwork/developer-tools/rest-data-services/downloads/index.html)
 - unzip ords-18.3.0.270.1456.zip -d /home/oracle/ords/
 ![](./images/ords1.png)
@@ -245,7 +250,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 	
 ### ADWC Scaling Demo Installation
 
-#### 1. Login to Dbaas Instance through Putty.
+#### 1. Login to Dbaas Instance through Putty(To login in putty check Dbaas Provision Step 13 and 14).
 - Login as opc user.
 - Change user to oracle  and got to oracle home directory as below screen shot
 #### 2.	Set Environment variable in
