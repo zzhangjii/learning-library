@@ -188,7 +188,7 @@ cat /etc/oratab
 #### 1. Login to Dbaas Instance through Putty(To login in putty check Dbaas Provision Step 13 and 14).
 - Login as opc user.
 - Change user to oracle  and got to oracle home directory as below screen shot
-- Create ords using below command directory
+- Create ords directory using below command. 
   * mkdir ords
 #### 2. Download "Oracle REST Data Services" in local machine and then copy  and unzip in ords folder in oracle home directory (you can use WinSCP to copy from local to cloud instance) [ORDS](https://www.oracle.com/technetwork/developer-tools/rest-data-services/downloads/index.html)
 - unzip ords-18.3.0.270.1456.zip -d /home/oracle/ords/
