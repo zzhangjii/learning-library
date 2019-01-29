@@ -3,7 +3,7 @@ The purpose of this document is to help setting up the Autonomous data warehouse
 
 Time to Complete
 Approximately 180 minutes.
-## Workshop Overview
+## Getting Started
 
 ### Goals for this workshop
 
