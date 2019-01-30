@@ -12,6 +12,8 @@ RUN         apt-get update && \
 #download and install the glassfish server
 RUN         curl -L -o /tmp/glassfish-4.1.zip https://download.oracle.com/glassfish/4.1.1/release/glassfish-4.1.1.zip && \
             unzip /tmp/glassfish-4.1.zip -d /usr/local && \
+            rm -rf /usr/local/glassfish4/glassfish/domains/domain1/osgi-cache/felix && \
+            rm -rf /usr/local/glassfish4/glassfish/modules/jackson* && \
             rm -f /tmp/glassfish-4.1.zip && \
             mkdir /usr/local/wallet_DB && \
             mkdir /usr/local/alpha
@@ -19,14 +21,15 @@ RUN         curl -L -o /tmp/glassfish-4.1.zip https://download.oracle.com/glassf
 #clone and deploy the project on the glassfish server
 #COPY     AlphaProductCatalog.war /usr/local/glassfish4/glassfish/domains/domain1/autodeploy/AlphaProductCatalog.war
 COPY AlphaProductsRestService.war /usr/local/alpha
-COPY Wallet_orcl.zip /usr/local/wallet_DB
+COPY Wallet_mattoATP.zip /usr/local/wallet_DB
 
-RUN         unzip /usr/local/wallet_DB/Wallet_orcl.zip -d /usr/local/wallet_DB/ && \
+RUN         unzip /usr/local/wallet_DB/Wallet_mattoATP.zip -d /usr/local/wallet_DB/ && \
             cd /usr/local/alpha && \
             jar xvf /usr/local/alpha/AlphaProductsRestService.war && \
             rm /usr/local/alpha/AlphaProductsRestService.war
 
 COPY sqlnet.ora /usr/local/wallet_DB
+COPY glassfish_module/* /usr/local/glassfish4/glassfish/modules/
 
 EXPOSE      8080
 
