@@ -6,7 +6,7 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Practice 1: Sign in to OCI Console and create reserved publci IP](#practice-1-sign-in-to-oci-console-and-create-reserved-public-ip)
+[Practice 1: Sign in to OCI Console and create reserved public IP](#practice-1-sign-in-to-oci-console-and-create-reserved-public-ip)
 
 [Practice 2: Assign reserved public IP to first compute instance](#practice-2-assign-reserved-public-ip-to-first-compute-instance)
 
