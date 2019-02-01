@@ -1,4 +1,4 @@
-# Monolithic to Microservice Experience -- Autonomous Microservice Data Structure Configuration
+# Monolithic to Microservice Cloud Native Development -- Autonomous Microservice Data Structure Configuration
 
   ![](images/100/Title.png)
 
@@ -23,21 +23,21 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 ### **STEP 1**: Open a Terminal Window and Clone GIT Repository
 
 While still connected to the Client Image using VNC Viewer, complete the following step to clone the GIT Repository.
-	
+
   - Right-click on the Desktop and select ```Open Terminal```
-	
-	![](images/100/image01.png)	
-	
+
+	![](images/100/image01.png)
+
   - Within the open Terminal Window, issue the following GIT Command
-	
+
 	```
 	git clone https://github.com/derekoneil/monolithic-to-microservice.git
 	```
-	
-	![](images/100/image02.png)	
-	
+
+	![](images/100/image02.png)
+
 	**Note:**  The GIT clone creates the ```monolithic-to-microservice``` directory which contains contents used throughout the labs.
-	  
+
 # Object Storage Setup, OCI User Creation and Auth Token Generation
 
 ### **STEP 2**: Log in to your OCI dashboard
@@ -75,7 +75,7 @@ While still connected to the Client Image using VNC Viewer, complete the followi
   - In the **Bucket Name** field, enter `atpData` and click **Create Bucket**
 
 	![](images/100/image7.png)
-	
+
   - In a moment, your new Object Storage Bucket will show up in the list
 
 	![](images/100/image8.png)
@@ -89,14 +89,14 @@ While still connected to the Client Image using VNC Viewer, complete the followi
   - **Browse** or **Drag/Drop** the Data Pump DMP `.../monolithic-to-microservice/lab-resources/database/expdp_alpha121.dmp` included in the GIT repository you cloned earlier. Click **Upload Object**
 
 	![](images/100/image10.png)
-	
+
 	![](images/100/image101.png)
 
   - In a moment, the file will be uploaded to Object Storage
 
 	![](images/100/image11.png)
 
-### **STEP 5**: Create OCI User 
+### **STEP 5**: Create OCI User
 
   - Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Governance and Administration** section, select **Identity** and select **Users**.
 
@@ -159,13 +159,13 @@ While still connected to the Client Image using VNC Viewer, complete the followi
   - Enter the **Password** `a1phaOffice1_` and click **Download**
 
 	![](images/100/image25.png)
-	
+
   - Select `Save File` and Click **OK**
-  
+
 	![](images/100/image251.png)
 
   - The **Wallet_orcl.zip** file was Downloaded to the directory `/home/opc/Downloads/`
-	
+
 	![](images/100/image252.png)
 
   - As information, the ATP Wallet file **Wallet_orcl.zip** contains the following files
@@ -175,7 +175,7 @@ While still connected to the Client Image using VNC Viewer, complete the followi
 ### **STEP 8**: Create SQL Developer Connection to ATP Database
 
   - Open **SQL Developer** available on the client image by double-clicking on the Desktop Icon
-  
+
 	![](images/100/image261.png)  
 
   - In the **Connections** Pane, Click ![](images/100/image27.png)
@@ -190,13 +190,13 @@ While still connected to the Client Image using VNC Viewer, complete the followi
 	- Select ```Save Password```
 	- **Connection Type:**  ```Cloud Wallet```
 	- **Configuration File:**  The ```Wallet_orcl.zip``` you downloaded in the previous step
-	
+
 	![](images/100/image29.png)
 
 ### **STEP 9**: Create Database User in ATP Database
 
   - In the **SQL Developer Worksheet**, execute the following SQL Statements to create the `alpha` database user.
-	
+
 	```
 	create user alpha identified by "a1phaOffice1_";
 	grant dwrole to alpha;
@@ -204,7 +204,7 @@ While still connected to the Client Image using VNC Viewer, complete the followi
 
 	![](images/100/image30.png)
 
-### **STEP 10**: Create DBMS_CLOUD Credential 
+### **STEP 10**: Create DBMS_CLOUD Credential
 
   - In the same **SQL Developer Worksheet**, execute the following SQL Statements to create the **DBMS_CLOUD Credential** `impdp_OBJ_STORE`.
 
@@ -218,12 +218,12 @@ While still connected to the Client Image using VNC Viewer, complete the followi
 	end;
 	/
 	```
-	
+
 	![](images/100/image311.png)
 
-# Import Data Pump Export file into ATP Databse and Download/Inspect Data Pump Log File 
+# Import Data Pump Export file into ATP Databse and Download/Inspect Data Pump Log File
 
-### **STEP 11**: Add DBA View and ATP SQL Developer Connection 
+### **STEP 11**: Add DBA View and ATP SQL Developer Connection
 
   - In **SQL Developer**, click on the menu **View** and select **DBA**
 
@@ -256,7 +256,7 @@ While still connected to the Client Image using VNC Viewer, complete the followi
 	- **Type of Import:** ```Full```
 	- **Credentials or Directories:** ```IMPDP_OBJ_STORE``` (Created in STEP 10)
 	- **File Names or URI:** ```https://swiftobjectstorage.{REGION}.oraclecloud.com/v1/{OBJECT_STORAGE_NAMESPACE}/{BUCKET}/{FILENAME}```
-	
+
 	![](images/100/image38.png)
 
 	**Note:** For example, the **Swift URI** for the Data Pump DMP file uploaded to Object Storage in STEP 4 would be
@@ -264,7 +264,7 @@ While still connected to the Client Image using VNC Viewer, complete the followi
 	```
 	https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/{OBJECT_STORAGE_NAMESPACE}/atpData/expdp_alpha121.dmp
 	```
-	
+
 	**Note:** To determine the values for **REGION, BUCKET, OBJECT_STORAGE_NAMESPACE, FILENAME** to complete the **Swift URI**, navigate to **Object Storage** and click on the `atpData` **Bucket**
 
 	![](images/100/image39.png)
@@ -300,7 +300,7 @@ While still connected to the Client Image using VNC Viewer, complete the followi
 	```
 	select table_name, num_rows from all_tables where owner = 'ALPHA' order by 1;
 	```
-	
+
 	![](images/100/image48.png)
 
 ### **STEP 13**: Review Data Pump Import Log
@@ -312,7 +312,7 @@ The **DBMS_CLOUD** package provides the **LIST_FILES** and **PUT_OBJECTS** subpr
 	```
 	SELECT * FROM DBMS_CLOUD.LIST_FILES('DATA_PUMP_DIR');
 	```
-	
+
 	![](images/100/image49.png)
 
   - To view the **Data Pump** import log file `IMPORT-18_50_00.LOG` just created by the **Import Job** executed in the previous step, we leverage the **PUT_OBJECTS** subprogram to copy the file from the ATP database to an **Object Storage Bucket** where we can download and review it. Execute the following command in **SQL Developer**
@@ -327,7 +327,7 @@ The **DBMS_CLOUD** package provides the **LIST_FILES** and **PUT_OBJECTS** subpr
 	END;
 	/
 	```
- 
+
 	![](images/100/image50.png)
 
   - If you navigate to **Object Storage Bucket** `atpData`, you will now see the file `impdp_alpha121_sqldev.log` file. Click ![](images/100/image51.png) to the right of the object name and select **Download**.

@@ -1,5 +1,5 @@
 
-# Monolithic to Microservices Workshop - Container Microservice Deployment
+# Monolithic to Microservice Cloud Native Development -  Building, Containerizing Java REST Services
 
   ![](images/200/Title.png)
 
@@ -391,7 +391,7 @@ In this section you will clone a github repository containing a Java Application
   ```
 
   ![](images/200/46-1.1.PNG)
-  
+
   **Windows** (Using the pscp utility bundled with Putty)
 
 - **NOTE** Use a Command Prompt or Powershell window for this command:
@@ -404,7 +404,7 @@ In this section you will clone a github repository containing a Java Application
 - The wallet file should now be in the /home/opc/monolithic-to-microservice/lab-resources/docker directory on the OCI VM:
 
   ![](images/200/46-1.3.PNG)
- 
+
 ### **Step 2**: Edit your ATP instance specific information
 
 In this step you are going to edit the `dbconfig.properties` file to add a DB instance connection name.
@@ -413,7 +413,7 @@ In this step you are going to edit the `dbconfig.properties` file to add a DB in
 
 - The DB Connection information can be found in the OCI Console under your ATP database instance link:
 
-  ![](images/200/46-1.4.PNG) 
+  ![](images/200/46-1.4.PNG)
 
   ![](images/200/46-1.5.PNG)
 
@@ -464,7 +464,7 @@ The docker build will take a baseline java ready docker image from Docker Hub, a
 
 ### **Step 4**: Copy the the database properties file into the container
 
-In this step you will copy the `dbconfig.properties` file modifed in a previous step into the running container. Then you will go into the container and verify all the copied and modied files look good and are in their proper locations. 
+In this step you will copy the `dbconfig.properties` file modifed in a previous step into the running container. Then you will go into the container and verify all the copied and modied files look good and are in their proper locations.
 
 **NOTE:** All of this could be executed automatically at build time but we want you to get a feel for docker commands and what's going on inside the newly executed container.
 

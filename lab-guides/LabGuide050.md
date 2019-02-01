@@ -1,21 +1,20 @@
-# Monolithic to Microservice Experience -- Setup
+# Monolithic to Microservice Cloud Native Development -- Setup Cloud Environment
 
   ![](images/050/Title.png)
 
-## Introduction and Overview
-_Time to Complete: 5 hours_
+## Workshop Overview
 
-In this lab you are guided through using many of the Oracle's Cloud Services to support a transition from a monolithic on-prem environment to a Cloud based microservices environment. Along the way you'll by using the Compute Cloud Service (IaaS) which supports the Docker, Kubernetes and Autonomous Transaction Processing Database. Then you'll be using the Autonomous Visual Builder (Integration). The high level flow will be:
+In this workshop you are guided through using many of the Oracle's Cloud Services to support a transition from a monolithic on-prem environment to a Cloud based microservices environment. The high level flow will be:
 
 - Lab 050: Provision supporting services (Client Image, Database, Visual builder Instance)
 - Lab 100: Populate your database with seed data
 - Lab 200: Create a Compute Instance and use Docker to deploy a Java based REST application
 - Lab 300: Deploy and explore the REST application into a Kubernetes Cluster
-- Lab 400: Create a Visual Builder mobile application to use the REST endpoints of the Java application. 
+- Lab 400: Create a Visual Builder mobile application to use the REST endpoints of the Java application.
 
 ***To log issues***, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
-## Objectives in this Lab
+## Lab 050 Objectives
 
 - Start up the supporting Client Image
 - Create Autonomous Transaction Processing (ATP) Database
@@ -24,8 +23,8 @@ In this lab you are guided through using many of the Oracle's Cloud Services to 
 # Infrastructure Setup
 
 You will create all required infrastructure components that support this workshop.
-  
-## Startup your `monoTOmicro` Client Image
+
+## Startup your Client Image
 
 The client image is a pre-installed Compute Service Instance that has GIT and SQL Developer already installed. You will use VNC Viewer to access this instance.
 
@@ -35,56 +34,37 @@ Once the infrastructure is provisioned you can access your enironment using `VNC
 
 ### **STEP 1**: Start the Jumpstart Client Image
 
+- Open the following link in a new tab in your browser. [Client Image Link](https://oci.qloudable.com/demoLab/public-preview/24007932-775e-42e6-a4c1-528c39b1b757)
+
+- Click the **Sign Up** button in the top right corner. _If you already have and account you can click sign-in._
+
+ ![](images/050/qloudable_signup.png)
+
+- Fill out the required fields and click **Sign Up**.
+
+ ![](images/050/qloudable_form.png)
+
+- You will receive a email asking you to verify your account. Open your email client in a new window and click **Confirm My Account** before proceeding.
+
+ ![](images/050/LabGuide050-1df0ca2e.png)
+
+- Navigate back to your browser window. Enter your email address and password and click **Sign In** on the next screen.
+
+ ![](images/050/LabGuide050-ce7c8377.png)
+
 - Click **Demo Lab**.
-   ![](images/050/JS3.PNG)
+ ![](images/050/JS3.PNG)
 
-- In **5** minutes the Oracle IaaS infrastructure including the client image will be available.
-
-  ![](images/050/JS4.PNG)
-
-- While you're waiting, check out the short video that gives an overview of this workshop.
-
-  ![](images/050/JS5.PNG)
-
-- When the environment is ready you will see the following along with the connect string to use in VNC Viewer. (In this example 129.213.167.192:10. `Your IP address will be different`)
-
-  **NOTE: The screen resolution on VNC port :10 is 1920x1200. If you would prefer to use a smaller resolution of 1680x1050 then use port :11 instead. `Example: 129.213.167.192:11`**
-
-  ![](images/050/JS6.PNG)
-
-- **NOTE: You have 5 hours** before the environment will go away.
-
-  ![](images/050/JS7.PNG)
+- In **5** minutes the Oracle IaaS infrastructure including the client image will be available. Leave this browser window open we will return to it shortly.
+ ![](images/050/JS4.PNG)
 
 
-### **STEP 2**: Start VNC Viewer
-
-Use VNC Viewer to connect to your provisioned account.
-
-- Enter the connect string you were given and hit **Return**. (Example Shown below).
-
-**NOTE: Do NOT click the Sign In button**
-
-  ![](images/050/JS8.PNG)
-
-- If presented with this prompt, click **Continue**.
-
-  ![](images/050/JS9.PNG)
-
-- Enter the VNC password  **Oracle123** and click **OK**.
-
-  ![](images/050/JS10.PNG)
-
-- Your Desktop is displayed:
-
-  ![](images/050/JS11.PNG)
-
-## Your Trial Account
+## Access Your Trial Account
 
 ### **STEP 1:** Your Oracle Cloud Trial Account
 
 You have already applied for and received your Oracle Cloud Trial Account.
-  
+
 ### **STEP 2**: Log in to your OCI dashboard
 
   - Once you receive the **Get Started Now with Oracle Cloud** Email, make note of your **Username, Password and Cloud Account Name**.
@@ -110,7 +90,7 @@ You have already applied for and received your Oracle Cloud Trial Account.
   - Click to expand the **Services** submenu, then click **Compute**
 
     ![](images/050/image5.png)
-	
+
 ### **STEP 3**: Create a Compartment
 
 Compartments are used to isolate resources within your OCI tenant. User-based access policies can be applied to manage access to compute instances and other resources within a Compartment.
@@ -200,7 +180,7 @@ In this step you will create a VBCS instance that will be used in Lab 400. It ta
   ```
   monoTOmicro
   ```
-  
+
 - Enter a `Description` and for the `Region` select **No Preference**. Click **Next**.
 
   ![](images/050/LabGuide50-vbcs3.png)
@@ -216,6 +196,43 @@ In this step you will create a VBCS instance that will be used in Lab 400. It ta
 - You should see your instance being created. We will check for completion at the beginning of Lab 400.
 
   ![](images/050/LabGuide50-vbcs5.png)
+
+# Access Your Client Environment
+
+### **STEP 1**: Access Client Image
+
+- When the environment is ready you will see the following along with the connect string to use in VNC Viewer. (In this example 129.213.167.192:10. `Your IP address will be different`)
+
+  **NOTE: The screen resolution on VNC port :10 is 1920x1200. If you would prefer to use a smaller resolution of 1680x1050 then use port :11 instead. `Example: 129.213.167.192:11`**
+
+  ![](images/050/JS6.PNG)
+
+- **NOTE: You have 5 hours** before the environment will go away.
+
+  ![](images/050/JS7.PNG)
+
+
+### **STEP 2**: Start VNC Viewer
+
+Use VNC Viewer to connect to your provisioned account.
+
+- Enter the connect string you were given and hit **Return**. (Example Shown below).
+
+**NOTE: Do NOT click the Sign In button**
+
+  ![](images/050/JS8.PNG)
+
+- If presented with this prompt, click **Continue**.
+
+  ![](images/050/JS9.PNG)
+
+- Enter the VNC password  **Oracle123** and click **OK**.
+
+  ![](images/050/JS10.PNG)
+
+- Your Desktop is displayed:
+
+  ![](images/050/JS11.PNG)
 
 **This completes the Lab!**
 
