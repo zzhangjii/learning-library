@@ -6,13 +6,13 @@ Create a Skill in Oracle Autonomous Digital Assistant
 ## **Introduction**
 This is the first of several labs that are part of the Oracle Public Cloud Digital Assistant ChatBot workshop. This workshop will walk you through the process of creating a chatbot interface that can be intergrated in any number of ways using the Oracle Public Cloud.
 
-In Oracle's Autonomous Digital Assistant chatbots are called Skills. You can think of your Skill as a virtual personal assistant, one that completes a task through a combination of text messages and simple UI elements like select lists. While a Skill can open your enterprise to messaging, it's not a replacement for a mobile or web app. It instead provides a new channel.
+In Oracle's Autonomous Digital Assistant chatbots are called Skills. You can think of your Skill as a virtual personal assistant, one that completes a task through a combination of text messages and simple UI elements like select lists. While a Skill can open your enterprise to messaging, it's not a replacement for a mobile or web app. It instead provides a new channel to existing applications.
 
 ![](images/100/image1.png)
 
-Skills enables you to connect your users to the enterprise while engaging them in naturalistic conversations. The Skills you create can respond to free-form user input because the Bots' language intelligence framework uses machine learning. While users are probably aware that they're chatting with a Bot, they don't need to limit or constrain their input.
+Skills enable you to connect your users to the enterprise while engaging them in naturalistic conversation. The Skills you create can respond to free-form user input because the Bots' language intelligence framework uses machine learning. While users are probably aware that they're chatting with a Bot, they don't need to limit or constrain their input.
 
-You can build the Skill, test it, and configure it to run on different messaging services using the Skill Builder, a simple user interface. Although, you can run this Bot through Facebook Messenger and other platforms or websites, you need only write the bot once. Bots optimizes the Bot for the target platform.
+You can build the Skill, test it, and configure it to run on different messaging services using the Skill Builder, a simple user interface. Although, you can run this Skill through Facebook Messenger and other platforms or websites, you need only write the Skill once. Digital assistant optimizes the Bot for the target platform.
 
 <!-- ### **How Do you create a Chatbot?**
 
@@ -132,7 +132,7 @@ Click **New Skill**.
 
 ### **Step 6**: Create Entity and Add to OrderFood Intent
 
-- If you want the list of options i.e. sizes (based on the quantity) in this Bot for the item which user can choose to order, you would probably need to show the list of different available sizes of the item. On the left-navigation bar, click the second icon down named **"Entities"** and you'll be able to view pre-populated system entities. These are standard entities that can be used in your ChatBot without having to explicitly define them.
+- If you want the list of options i.e. sizes (based on the quantity) in this Bot for the different items users can order, you would probably need to show the list of different available sizes of the item. On the left-navigation bar, click the second icon down named **"Entities"** and you'll be able to view pre-populated system entities. These are standard entities that can be used in your ChatBot without having to explicitly define them.
 
 
 ![](images/100/image13.png)
@@ -141,7 +141,7 @@ Click **New Skill**.
 
 ![D:\\Workshop\_Bot\\screen9.PNG](images/100/image14.png)
 
-- Now that you have an Entity, you need to provide some values that could be used. In our case of the **ItemSize**, you would want to use values that represent size you could query for the order. In the **Configuration** area, ensure the **Type** property is set to Value List (To create the list of values based on the requirement) and then click the green **Value** button.
+- Now that you have an Entity, you need to provide some values that could be used. In our case of **ItemSize**, you would want to use values that represent size you could query for the order. In the **Configuration** area, ensure the **Type** property is set to Value List (To create the list of values based on the requirement) and then click the green **Value** button.
 
 
 ![D:\\Workshop\_Bot\\Capture10.PNG](images/100/image15.png)
@@ -162,7 +162,7 @@ Click **New Skill**.
 
 ![](images/100/image19.png)
 
-- Now you've got 4 intents (ShowMenu, OrderFood, OrderBeverages and ExitFlow) and an entity named as ItemSize. You need to associate the **OrderFood** and **OrderBeverages** intents with **ItemSize** entity, and it's easy to do it.
+- Now you have 4 intents (ShowMenu, OrderFood, OrderBeverages and ExitFlow) and an entity named as ItemSize.  In the next steps you will associate the **OrderFood** and **OrderBeverages** intents with **ItemSize** entity.
 
 - On the left-navigation bar, click the **Intent** icon, and on the right, find the **Intent Entities** area. Click the green **Entity** button and select **ItemSize** from the list, after selection your screen will look like image shown below:
 
@@ -528,7 +528,7 @@ states:
 
 - In this part of the tutorial, you run the training tool on the Bot. This will train the Bot allowing it to understand similar user inputs to the example utterances used when building the Bot. -->
 
-- In the upper right, click the **Train** button. This will kick-off a process that will run an algorithm to take your example utterances and build the model that will be used to ascertain the intents and entities. Anytime the ChatBot platform recognizes your Skill needs to be trained, it will display an exclamation point in the train button. Once the training is complete the exclamation point is replaced by a check mark.
+- In the upper right, click the **Train** button. This will kick-off a process that will run an algorithm to take your example utterances and build the model that will be used to ascertain the intents and entities. Anytime the ChatBot platform recognizes your Skill needs to be trained, it will display an exclamation point within the train button. Once the training is complete the exclamation point is replaced by a check mark.
 
 ![D:\\Workshop\_Bot\\Capture13.PNG](images/100/image22.png)
 
@@ -550,7 +550,7 @@ states:
 
 ![](images/100/26.png)
 
-- What you type in at the bottom in the **Message** area, is what will be sent to the bot when you click the **Send** button.
+- What you type in at the bottom in the **Message** area, is what will be sent to the skill when you click the **Send** button.
 
 - Let's start out simple to test the bot: In the Message area, type **Show menu** and then click the **Send** button.
 

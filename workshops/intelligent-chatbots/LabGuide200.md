@@ -2,9 +2,9 @@ Integrating Instant App and a Web Channel in Digital Assistant Skill
 ===========================================================================
 ## Introduction
 
-Skills and bots in Oracle's Autonomous Digital Assistant provides a lot of features which can be used based on the requirements like Instant App, Translation Services, Bot-Agent handoff, Quality, and Channels support for the Bot like Web Channel, iOS App, Android App, Facebook Messenger, and others.
+Skills and bots in Oracle's Autonomous Digital Assistant provide a lot of features like Instant App, Translation Services, Bot-Agent handoff, Quality, and Channels support for the Skill like Web Channel, iOS App, Android App, Facebook Messenger, and others.
 
-Natural language conversations are, by their very nature, free-flowing. But they may not always be the best way for your Bot to collect information from its users. For example, some situations like entering credit card or passport details require users to enter specific and precise information. To help your Skill’s users to enter this type of information easily, your Skill can call an Instant App, which provides forms with labels, options, choices, check boxes, data fields, and other UI elements. The CafeteriaAssistance Skill calls an Instant app for the Feedback that walks users through a series of steps to provide feedback.
+Natural language conversations are, by their very nature, free-flowing. But they may not always be the best way for your Bot to collect information from its users. For example, some situations like entering credit card or passport details require users to enter specific and precise information. To help your Skill’s users enter this information easily, your Skill can call an Instant App, which provides forms with labels, options, choices, check boxes, data fields, and other UI elements. The CafeteriaAssistance Skill calls an Instant app for the Feedback that walks users through a series of steps to provide feedback.
 
 The CafeteriaAssistance and the Instant App show you how your Bot transitions to an Instant app, how Skills pass variable values to an Instant App, and how the Instant app returns the user to the bot.
 
@@ -84,7 +84,7 @@ Upload the same picture to the invitation, leaving the other fields as their def
 
 ![D:\\Workshop\_Bot\\BotsLab2\\Capture7.PNG](images/200/image8.png)
 
-Once you have followed the above given instructions, don’t forget to click on the save button.
+Before proceeding, don’t forget to click on the save button.
 
 Now add the below lines after in the CafeteriaAssistanceBot lab1 YAML flow like below:
 
@@ -124,7 +124,7 @@ Now fill the form and click on “Submit Feedback” button:
 
 ![D:\\Workshop\_Bot\\BotsLab2\\Capture15.PNG](images/200/image12.png)
 
-Now, if you go back to the Skill you can see the response like below:
+Now, if you go back to the Skill you can see the response similar to the one below:
 
 ![](images/200/image13.png)
 
@@ -154,7 +154,7 @@ Route the Channel to your new CafeteriaAssistanceBot, enable the channel and cop
 
 ![D:\\Workshop\_Bot\\BotsLab2\\web5.PNG](images/200/17.png)
 
-Now, unzip the below folder and then open index.html file which is inside the html folder in any editor.
+Now, unzip the below folder and then open index.html file which is inside the html folder in any text-editor.
 
 [CafeteriaAssistanceBotWebPage.zip](https://github.com/AdityaVishwekar/IntelligentChatBots/blob/master/workshops/intelligent-chatbots/images/CafeteriaAssistanceBotWebPage.zip)
 
