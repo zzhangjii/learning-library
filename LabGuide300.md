@@ -1,4 +1,4 @@
-![](images/400/header.png)  
+![](images/300/header.png)  
 Updated: 01/18/2019
 
 ## Introduction
@@ -9,7 +9,7 @@ Use this Lab guide to create a WebLogic deployment in a Kubernetes cluster with 
 
 ## Objectives
 
-- Deployment in a Kubernetes cluster with the Oracle WebLogic Kubernetes Operator 2.0 rc2
+- Deployment in a Kubernetes cluster with the Oracle WebLogic Kubernetes Operator 2.0
 - Test Alpha Office Product Catalog with this new environment
 
 ## Required Artifacts
@@ -21,7 +21,7 @@ Use this Lab guide to create a WebLogic deployment in a Kubernetes cluster with 
 $ git clone https://github.com/oracle/weblogic-kubernetes-operator
   ```
 
-# WebLogic deployment in a Kubernetes cluster with the Oracle WebLogic Kubernetes Operator 2.0 rc2
+# WebLogic deployment in a Kubernetes cluster with the Oracle WebLogic Kubernetes Operator 2.0
 
 ### **STEP 1**: Get following images and put them into your local registry
 
@@ -194,4 +194,94 @@ You should also see all the Kubernetes services for the domain.
 $ kubectl get services -n sample-domain1-ns
   ```
 
+- Let’s use one of the node’s external IP addresses to access the Administration Console. Example: http://129.213.150.77:30701/console/
+    
+    ![](images/300/console1.png)
 
+### **STEP 7**: Test Alpha Office Product Catalog war file
+
+- Log in to the WebLogic Server Administration Console using the credentials weblogic/welcome1.
+
+    ![](images/300/console2.png)
+    
+- Click Lock & Edit.
+
+   ![](images/300/Upload_to_JCS/3.png)
+
+- Under Domain Structure, click Deployments.
+
+   ![](images/300/Upload_to_JCS/2.png)
+
+- On the Deployments page, click Install.
+
+   ![](images/300/Upload_to_JCS/5.png)
+
+- On the Install page, click upload your file(s).
+
+   ![](images/300/Upload_to_JCS/6.png)
+
+- On the Install Application Assistant page, click Browse near the Deployment Archive field, and select the alphaOffice.war application that you downloaded earlier.
+
+   ![](images/300/Upload_to_JCS/7.png)
+
+- The name of the selected deployment archive file appears next to the Browse button. Click Next.
+
+   ![](images/300/Upload_to_JCS/8.png)
+
+- Make sure that the deployment archive file is selected, near the bottom of the page, and then click Next.
+
+   ![](images/300/Upload_to_JCS/9.png)
+
+- You can install the deployment as either an application or a library. For this tutorial, we'll install it as an application. Click Next button.
+
+   ![](images/300/Upload_to_JCS/10.png)
+
+- Select the servers or clusters to which you want to deploy the application. For this tutorial, we'll deploy the application to all the servers in the cluster. So click All servers in the cluster, and then click Next. 
+Note that the the cluster name (WebLogic alphaOff_cluster in this example) would be the first eight characters of your service instance's name followed by _cluster.
+
+   ![](images/300/Upload_to_JCS/11.png)
+
+- On the Optional Settings page, click Next. The default settings are adequate for this tutorial.
+
+   ![](images/300/Upload_to_JCS/12.png)
+
+- Review the configuration settings. You can choose to fine-tune your configuration; but for this tutorial, select No, I will review the configuration later, and then click Finish.
+
+   ![](images/300/Upload_to_JCS/13.png)
+
+- A message is displayed that the application was deployed successfully.
+
+   ![](images/300/Upload_to_JCS/14.png)
+
+- In the Change Center, click Activate Changes.
+
+   ![](images/300/Upload_to_JCS/16.png)
+
+- The application is in the Prepared state and ready to be started.
+
+   ![](images/300/Upload_to_JCS/17.png)
+
+- In the WebLogic Server Administration Console, on the Summary of Deployments page, go to the Control tab.
+
+   ![](images/300/Upload_to_JCS/18.png)
+
+- In the Deployments table, select the check box near the application that you just deployed. Click Start, and then select Servicing all requests.
+
+   ![](images/300/Upload_to_JCS/19.png)
+
+- Click Yes to confirm the deployment.
+
+   ![](images/300/Upload_to_JCS/20.png)
+
+- The application is now in the Active state and is ready to accept requests.
+
+   ![](images/300/Upload_to_JCS/21.png)
+
+- Enter the URL that you identified in the previous step in a browser. 
+If you see the untrusted security certificate warning, add the certificate to your browser, as an exception, and continue. The text of this warning and the steps to proceed depend on your browser. In Firefox, for example, you can proceed by clicking Advanced and then Add Exception. 
+  - The URL for the application would be in the format **https://managedServer_publicIP/contextRoot** 
+   Example: http://129.213.150.77/alpha-office-product-catalog/products.jsp
+
+- Once the app is running it will appear something like this
+
+ ![](images/300/Upload_to_JCS/product.png)
