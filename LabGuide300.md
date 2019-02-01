@@ -193,6 +193,9 @@ You should also see all the Kubernetes services for the domain.
   ```
 $ kubectl get services -n sample-domain1-ns
   ```
+- Example: 
+    ![](images/300/kubctl_services.png)
+    
 
 - Let’s use one of the node’s external IP addresses to access the Administration Console. Example: http://129.213.150.77:30701/console/
     
