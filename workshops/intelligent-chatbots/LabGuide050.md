@@ -1,9 +1,13 @@
 <!-- For provisioning in trial account -->
 Provision Autonomous Digital Assistant
 =========================
-### **Objective**
+## **Introduction**
 
 In this guided lab you will create a virtual chatbot to facilitate a cafeteria's ordering process step-by-step. Before you can get started with your bot you must first provision Oracle's Autonomous Digital Assistant in your cloud trial account. This first lab will guide you through the provisioning process, when you are finished navigate to lab 100 to begin working with your bot.
+
+### **Objective**
+
+- Provision Oracle Autonomous Digital Assistant in trial account
 
 ### **Provisioning Oracle Autonomous Digital Assistant in your cloud trial account**
 
