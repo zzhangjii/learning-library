@@ -9,35 +9,42 @@
                 "number": "0",
                 "filename": "Intro.md",
                 "title": "Workshop Introduction",
-                "description": "Step-by-step workshop instructions"
+                "description": ""
+
+            },
+            {
+                "number": "050",
+                "filename": "LabGuide050.md",
+                "title": "Lab 050: Setup Cloud Environment",
+                "description": ""
 
             },
             {
                 "number": "100",
                 "filename": "LabGuide100.md",
-                "title": "Lab 100: Agile Project Management, plus an even longer section of text that will almost assuredly wrap unto the proximate lineage.",
-                "description": "Use Developer Cloud Service to create issues, tasks, and sprints, plus an even longer section of text that will almost assuredly wrap unto the proximate lineage, plus an even longer section of text that will almost assuredly wrap unto the proximate lineage."
+                "title": "Lab 100: Autonomous Microservice Data Structure Configuration",
+                "description": ""
 
             },
             {
                 "number": "200",
                 "filename": "LabGuide200.md",
-                "title": "Lab 200:  Title of Lab 200",
-                "description": "Short description of lab 200"
+                "title": "Lab 200: Containerizing Java REST Services",
+                "description": ""
 
             },
             {
                 "number": "300",
                 "filename": "LabGuide300.md",
-                "title": "Lab 300:  Title of Lab 300",
-                "description": "Short description of lab 300"
+                "title": "Lab 300: Kubernetes REST Service Deployment",
+                "description": ""
 
             },
             {
                 "number": "400",
                 "filename": "LabGuide400.md",
-                "title": "Lab 400: Title of Lab 400",
-                "description": "Short description of lab 400"
+                "title": "Lab 400: Low Code, Microservice Mobile Development",
+                "description": ""
 
             }
 
