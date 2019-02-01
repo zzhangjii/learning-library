@@ -1,4 +1,4 @@
-# Name Of The Workshop
+# Monolithic to Microservice Hands on Lab
 
 Welcome to the Monolithic to Microservice workshop. This workshop will walk you through the process of converting a portion of a legacy java application into a microservice based application leveraging Autonomous Transaction Processing, Oracle Kubernetes Engine, Oracle Container Information Registry, Visual Builder Cloud Service and the Oracle Compute Infrastructure.
 
