@@ -1,11 +1,10 @@
 # Name Of The Workshop
 
-Welcome to the ...workshop. This workshop will walk you through the process of... 
-To learn more about this workshop please watch the video below.
+Welcome to the Monolithic to Microservice workshop. This workshop will walk you through the process of converting a portion of a legacy java application into a microservice based application leveraging Autonomous Transaction Processing, Oracle Kubernetes Engine, Oracle Container Information Registry, Visual Builder Cloud Service and the Oracle Compute Infrastructure.
 
-![](images/oraclecode/youtube.png)
+To learn more about the use case covered inside this workshop please watch the video below.
 
-<a href="https://youtu.be/" target="_video">Workshop Overview</a>
+<a href="https://youtu.be/" target="_video">Add Workshop Overview</a>
 
 ### **Step 1**: Acquire an Oracle Cloud Trial or Workshop Account
 
