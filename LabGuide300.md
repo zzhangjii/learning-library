@@ -30,19 +30,19 @@ Use this Lab guide to create a WebLogic deployment in a Kubernetes cluster with 
 
 - Log in to the Docker Store from your Docker client:
   ```bash
-$ docker login
+  $ docker login
   ```
 - Pull the operator image:
   ```bash
-$ docker pull oracle/weblogic-kubernetes-operator:2.0-rc2
+  $ docker pull oracle/weblogic-kubernetes-operator:2.0-rc2
   ```
 - Pull the Traefik load balancer image:
   ```bash
-$ docker pull traefik:1.7.4
+  $ docker pull traefik:1.7.4
   ```
 - Pull the WebLogic 12.2.1.3 install image:
   ```bash
-$ docker pull store/oracle/weblogic:12.2.1.3
+  $ docker pull store/oracle/weblogic:12.2.1.3
   ```  
 - Copy the image to all the nodes in your cluster, or put it in a Docker registry that your cluster can access.
 
@@ -50,90 +50,90 @@ $ docker pull store/oracle/weblogic:12.2.1.3
 
 - Grant the Helm service account the `cluster-admin` role.  
   ```bash
-$ cat <<EOF | kubectl apply -f -
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-    name: helm-user-cluster-admin-role
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: cluster-admin
-  subjects:
-  kind: ServiceAccount
-  name: default
-  namespace: kube-system
-EOF
+  $ cat <<EOF | kubectl apply -f -
+  apiVersion: rbac.authorization.k8s.io/v1
+  kind: ClusterRoleBinding
+  metadata:
+      name: helm-user-cluster-admin-role
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: cluster-admin
+    subjects:
+    kind: ServiceAccount
+    name: default
+    namespace: kube-system
+  EOF
   ``` 
 ### **STEP 3**: Create a Traefik (Ingress-based) load balancer.
 - Use helm to install the Traefik load balancer. Use the values.yaml in the sample but set kubernetes.namespaces specifically.
   ```bash
-$ helm install stable/traefik \
---name traefik-operator \
---namespace traefik \
---values kubernetes/samples/charts/traefik/values.yaml  \
---set "kubernetes.namespaces={traefik}" \
---wait
+  $ helm install stable/traefik \
+  --name traefik-operator \
+  --namespace traefik \
+  --values kubernetes/samples/charts/traefik/values.yaml  \
+  --set "kubernetes.namespaces={traefik}" \
+  --wait
   ```
 
 ### **STEP 4**: Install the operator.
 - Create a namespace for the operator:
   ```bash
-$ kubectl create namespace sample-weblogic-operator-ns
+  $ kubectl create namespace sample-weblogic-operator-ns
   ``` 
 - Create a service account for the operator in the operator's namespace:
   ```bash
-$ kubectl create serviceaccount -n sample-weblogic-operator-ns sample-weblogic-operator-sa
+  $ kubectl create serviceaccount -n sample-weblogic-operator-ns sample-weblogic-operator-sa
   ``` 
 - Use helm to install and start the operator from the directory you just cloned:
   ```bash
-$ helm install kubernetes/charts/weblogic-operator \
-  --name sample-weblogic-operator \
-  --namespace sample-weblogic-operator-ns \
-  --set image=oracle/weblogic-kubernetes-operator:2.0-rc2 \
-  --set serviceAccount=sample-weblogic-operator-sa \
-  --set "domainNamespaces={}" \
-  --wait
+  $ helm install kubernetes/charts/weblogic-operator \
+    --name sample-weblogic-operator \
+    --namespace sample-weblogic-operator-ns \
+    --set image=oracle/weblogic-kubernetes-operator:2.0-rc2 \
+    --set serviceAccount=sample-weblogic-operator-sa \
+    --set "domainNamespaces={}" \
+    --wait
   ``` 
 - Verify that the operator's pod is running, by listing the pods in the operator's namespace. You should see one for the operator.
   ```bash
-$ kubectl get pods -n sample-weblogic-operator-ns
+  $ kubectl get pods -n sample-weblogic-operator-ns
   ```
   ![](images/300/operatorRunning.png)
 
 - Verify that the operator is up and running by viewing the operator pod's log:
   ```bash
-$ kubectl logs -n sample-weblogic-operator-ns -c weblogic-operator deployments/weblogic-operator
+  $ kubectl logs -n sample-weblogic-operator-ns -c weblogic-operator deployments/weblogic-operator
   ```
     ![](images/300/log.png)
 ### **STEP 5**: Prepare your environment for a domain.
 - Create a namespace that can host one or more domains:
   ```bash
-$ kubectl create namespace sample-domain1-ns
+  $ kubectl create namespace sample-domain1-ns
   ```
 - Use `helm` to configure the operator to manage domains in this namespace:
   ```bash
-$ helm upgrade \
-  --reuse-values \
-  --set "domainNamespaces={sample-domain1-ns}" \
-  --wait \
-  sample-weblogic-operator \
-  kubernetes/charts/weblogic-operator
+  $ helm upgrade \
+    --reuse-values \
+    --set "domainNamespaces={sample-domain1-ns}" \
+    --wait \
+    sample-weblogic-operator \
+    kubernetes/charts/weblogic-operator
   ```
 - Configure Traefik to manage Ingresses created in this namespace:
   ```bash
-$ helm upgrade \
-  --reuse-values \
-  --set "kubernetes.namespaces={traefik,sample-domain1-ns}" \
-  --wait \
-  traefik-operator \
-  stable/traefik
+  $ helm upgrade \
+    --reuse-values \
+    --set "kubernetes.namespaces={traefik,sample-domain1-ns}" \
+    --wait \
+    traefik-operator \
+    stable/traefik
   ```
 ### **STEP 6**: Create a domain in the domain namespace.
 - Create a Kubernetes secret containing the `username` and `password` for the domain using the [`create-weblogic-credentials`]:
   ```bash
-$ kubernetes/samples/scripts/create-weblogic-domain-credentials/create-weblogic-credentials.sh \
-  -u weblogic -p welcome1 -n sample-domain1-ns -d sample-domain1
+  $ kubernetes/samples/scripts/create-weblogic-domain-credentials/create-weblogic-credentials.sh \
+    -u weblogic -p welcome1 -n sample-domain1-ns -d sample-domain1
   ```
 
 - The sample will create a secret named `domainUID-weblogic-credentials` where the `domainUID` is replaced
@@ -151,8 +151,8 @@ with the value you provided.
 
 For example:
   ```bash
-$ cd kubernetes/samples/scripts/create-weblogic-domain/domain-home-in-image
-$ ./create-domain.sh -i create-domain-inputs.yaml -o /some/output/directory -u weblogic -p welcome1 -e
+  $ cd kubernetes/samples/scripts/create-weblogic-domain/domain-home-in-image
+  $ ./create-domain.sh -i create-domain-inputs.yaml -o /some/output/directory -u weblogic -p welcome1 -e
   ```
 
 You need to provide the WebLogic administration user name and password in the `-u` and `-p` options
@@ -185,7 +185,7 @@ If you run the sample from a machine that is remote to the Kubernetes cluster, a
 - Confirm that the operator started the servers for the domain:
 * Use `kubectl` to show that the domain resource was created:
   ```bash
-$ kubectl describe domain sample-domain1 -n sample-domain1-ns
+  $ kubectl describe domain sample-domain1 -n sample-domain1-ns
   ```
  After a short time, you will see the Administration Server and Managed Servers running.
 
@@ -193,14 +193,14 @@ $ kubectl describe domain sample-domain1 -n sample-domain1-ns
 
 - You should also see all the Kubernetes pods for the domain up and running.
   ```
-$ kubectl get pods -n sample-domain1-ns
+  $ kubectl get pods -n sample-domain1-ns
   ```
 
     ![](images/300/pods.png)
 
 - You should also see all the Kubernetes services for the domain.
   ```
-$ kubectl get services -n sample-domain1-ns
+  $ kubectl get services -n sample-domain1-ns
   ```
 
     ![](images/300/kubctl_services.png)
@@ -208,7 +208,7 @@ $ kubectl get services -n sample-domain1-ns
 - If you NodePort service does not have an external IP, you need to edit it and add the external IPs of at least one of your worker nodes.
   
   ```
-$ kubectl edit service sample-domain1-admin-server-external -n sample-domain1-ns
+  $ kubectl edit service sample-domain1-admin-server-external -n sample-domain1-ns
   ```
 
     ![](images/300/editNodePort.png)
