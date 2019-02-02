@@ -1,47 +1,50 @@
 ![](images/300/header.png)  
-Updated: 01/16/2019
+Updated: 01/18/2019
 
 ## Introduction
 
-In this lab, we describe the steps to run a WebLogic cluster using the Oracle Cloud Infrastructure (OCI) Container Engine for Kubernetes. The Kubernetes managed service is fully integrated with the underlying Oracle Cloud Infrastructure (OCI), making it easy to provision a Kubernetes cluster and to provide the required services, such as a load balancer, volumes, and network fabric.
+Use this Lab guide to create a WebLogic deployment in a Kubernetes cluster with the Oracle WebLogic Kubernetes Operator
 
 **_To log issues_**, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
 ## Objectives
 
-- Test accessibility and set up the RBAC policy for the OCI Container Engine for the Kubernetes cluster
-- Set up the NFS server
-- Modify the configuration YAML files to reflect the Docker images’ names in the OCIR
+- Deployment in a Kubernetes cluster with the Oracle WebLogic Kubernetes Operator 2.0
+- Test Alpha Office Product Catalog with this new environment
 
 ## Required Artifacts
 
-- Docker images:
-    - WebLogic Server (weblogic-12.2.1.3:latest).
-    - WebLogic Kubernetes Operator (weblogic-operator:latest)
-    - Traefik Load Balancer (traefik:1.4.5)
-- A workstation with Docker and kubectl, installed and configured.
-- The Oracle Container Engine for Kubernetes on OCI.
-- OCI Container Engine for Kubernetes nodes are accessible using ssh.
-- The Oracle Cloud Infrastructure Registry to push the WebLogic Server, Operator, and Load Balancer images.
+- Kubernetes cluster
+- Helm installation
+- Clone latest weblogic-kubernetes-operator repository
+  ```
+$ git clone https://github.com/oracle/weblogic-kubernetes-operator
+  ```
 
-# Prepare the WebLogic Kubernetes Operator environment
+# WebLogic deployment in a Kubernetes cluster with the Oracle WebLogic Kubernetes Operator 2.0
 
-### **STEP 1**: Test accessibility and set up the RBAC policy for the OKE cluster
+### **STEP 1**: Get following images and put them into your local registry
 
-- To check the accessibility to the OCI Container Engine for Kubernetes nodes, enter the command:
-      ```
-      kubectl get nodes
-      ```
-![](images/300/LabGuide300_1001.png)
+- If you don't already have one, obtain a Docker Store account, log in to the Docker Store
+    and accept the license agreement for the [WebLogic Server image](https://hub.docker.com/_/oracle-weblogic-server-12c).
 
-- In order to have permission to access the Kubernetes cluster, you need to authorize your OCI account as a cluster-admin on the OCI Container Engine for Kubernetes cluster.  This will require your OCID, which is available on the OCI console page, under your user settings.
-  
-![](images/100/user_settings.png)
-![](images/300/LabGuide300_1002.png)
-      ```
-      kubectl create clusterrolebinding my-cluster-admin-binding --clusterrole=cluster-admin --user==<Paste your User OCID Here>
-      ```
-![](images/300/LabGuide300_1003.png)
+- Log in to the Docker Store from your Docker client:
+  ```
+$ docker login
+  ```
+- Pull the operator image:
+  ```
+$ docker pull oracle/weblogic-kubernetes-operator:2.0-rc2
+  ```
+- Pull the Traefik load balancer image:
+  ```
+$ docker pull traefik:1.7.4
+  ```
+- Pull the WebLogic 12.2.1.3 install image:
+  ```
+$ docker pull store/oracle/weblogic:12.2.1.3
+  ```  
+- Copy the image to all the nodes in your cluster, or put it in a Docker registry that your cluster can access.
 
 ### **STEP 2**: Set up the NFS server
 
