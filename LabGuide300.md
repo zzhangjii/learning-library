@@ -148,6 +148,8 @@ with the value you provided.
 - Leaving the `image` empty unless you need to tag the new image that the script builds to a different name. Here the image name has to be `iad.ocir.io/wark2018/domain-home-in-image:12.2.1.3`
 
 **NOTE**: If you set the `domainHomeImageBuildPath` property to `./docker-images/OracleWebLogic/samples/12213-domain-home-in-image-wdt`, make sure that your `JAVA_HOME` is set to a Java JDK version 1.8 or later.
+    ![](images/300/create_domain_input1.png)
+    ![](images/300/create_domain_input2.png)
 
 For example:
   ```bash
