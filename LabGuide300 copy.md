@@ -1,342 +1,221 @@
 ![](images/300/header.png)  
-Updated: 01/18/2019
+Updated: 01/16/2019
 
 ## Introduction
 
-Use this Lab guide to create a WebLogic deployment in a Kubernetes cluster with the Oracle WebLogic Kubernetes Operator
+In this lab, we describe the steps to run a WebLogic cluster using the Oracle Cloud Infrastructure (OCI) Container Engine for Kubernetes. The Kubernetes managed service is fully integrated with the underlying Oracle Cloud Infrastructure (OCI), making it easy to provision a Kubernetes cluster and to provide the required services, such as a load balancer, volumes, and network fabric.
 
 **_To log issues_**, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
 ## Objectives
 
-- Deployment in a Kubernetes cluster with the Oracle WebLogic Kubernetes Operator 2.0
-- Test Alpha Office Product Catalog with this new environment
+- Test accessibility and set up the RBAC policy for the OCI Container Engine for the Kubernetes cluster
+- Set up the NFS server
+- Modify the configuration YAML files to reflect the Docker images’ names in the OCIR
 
 ## Required Artifacts
 
-- Kubernetes cluster
-- Helm installation
-- Clone latest weblogic-kubernetes-operator repository
-  ```
-$ git clone https://github.com/oracle/weblogic-kubernetes-operator
-  ```
+- Docker images:
+    - WebLogic Server (weblogic-12.2.1.3:latest).
+    - WebLogic Kubernetes Operator (weblogic-operator:latest)
+    - Traefik Load Balancer (traefik:1.4.5)
+- A workstation with Docker and kubectl, installed and configured.
+- The Oracle Container Engine for Kubernetes on OCI.
+- OCI Container Engine for Kubernetes nodes are accessible using ssh.
+- The Oracle Cloud Infrastructure Registry to push the WebLogic Server, Operator, and Load Balancer images.
 
-# WebLogic deployment in a Kubernetes cluster with the Oracle WebLogic Kubernetes Operator 2.0
+# Prepare the WebLogic Kubernetes Operator environment
 
-### **STEP 1**: Get following images and put them into your local registry
+### **STEP 1**: Test accessibility and set up the RBAC policy for the OKE cluster
 
-- If you don't already have one, obtain a Docker Store account, log in to the Docker Store
-    and accept the license agreement for the [WebLogic Server image](https://hub.docker.com/_/oracle-weblogic-server-12c).
-
-- Log in to the Docker Store from your Docker client:
-  ```
-$ docker login
-  ```
-- Pull the operator image:
-  ```
-$ docker pull oracle/weblogic-kubernetes-operator:2.0-rc2
-  ```
-- Pull the Traefik load balancer image:
-  ```
-$ docker pull traefik:1.7.4
-  ```
-- Pull the WebLogic 12.2.1.3 install image:
-  ```
-$ docker pull store/oracle/weblogic:12.2.1.3
-  ```  
-- Copy the image to all the nodes in your cluster, or put it in a Docker registry that your cluster can access.
-
-### **STEP 2**: Set up the NFS server
-
-- In the above step, let’s install the NFS server on Node1 with the IP address 129.213.34.235, and use Node2 (IP:129.213.60.103)and Node3 (IP:132.145.138.193) as clients. Log in to each of the nodes using ssh to retrieve the private IP address, by executing the command:
+- To check the accessibility to the OCI Container Engine for Kubernetes nodes, enter the command:
       ```
-      ssh -i ~/.ssh/id_rsa opc@[Public IP of Node]
-      ip addr | grep ens3
+      kubectl get nodes
       ```
-~/.ssh/id_rsa is the path to the private ssh RSA key.
-- Type **yes** and **press enter** when asked if you want to continue connecting
+![](images/300/LabGuide300_1001.png)
 
-    ![](images/300/node1_login.png)
+- In order to have permission to access the Kubernetes cluster, you need to authorize your OCI account as a cluster-admin on the OCI Container Engine for Kubernetes cluster.  This will require your OCID, which is available on the OCI console page, under your user settings.
+  
+![](images/100/user_settings.png)
+![](images/300/LabGuide300_1002.png)
+      ```
+      kubectl create clusterrolebinding my-cluster-admin-binding --clusterrole=cluster-admin --user==<Paste your User OCID Here>
+      ```
+![](images/300/LabGuide300_1003.png)
 
-- Retrieve private IP address executing this command:
-     ```
-	$ ip addr | grep ens3
-     ```
-    ![](images/300/node1_ip.png)
-    Find the inet value. For example the private address in the example above: 10.0.96.2
+### **STEP 2**: Grant the Helm service account the `cluster-admin` role.
 
-    Repeat the query for each node. Note the IP addresses for easier usage:
+- Grant the Helm service account the `cluster-admin` role.  
+  ```
+$ cat <<EOF | kubectl apply -f -
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+    name: helm-user-cluster-admin-role
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+  subjects:
+  kind: ServiceAccount
+  name: default
+  namespace: kube-system
+EOF
+  ``` 
+### **STEP 3**: Create a Traefik (Ingress-based) load balancer.
+- Use helm to install the Traefik load balancer. Use the values.yaml in the sample but set kubernetes.namespaces specifically.
+  ```
+$ helm install stable/traefik \
+--name traefik-operator \
+--namespace traefik \
+--values kubernetes/samples/charts/traefik/values.yaml  \
+--set "kubernetes.namespaces={traefik}" \
+--wait
+  ```
 
-| Nodes:             | Public IP       | Private IP |
-|--------------------|-----------------|------------|
-| Node1 - NFS Server | 129.213.34.235  | 10.0.96.2  |
-| Node2              | 129.213.60.103  | 10.0.32.2  |
-| Node3              | 132.145.138.193 | 10.0.64.2  |
+### **STEP 4**: Install the operator.
+- Create a namespace for the operator:
+  ```
+$ kubectl create namespace sample-weblogic-operator-ns
+  ``` 
+- Create a service account for the operator in the operator's namespace:
+  ```
+$ kubectl create serviceaccount -n sample-weblogic-operator-ns sample-weblogic-operator-sa
+  ``` 
+- Use helm to install and start the operator from the directory you just cloned:
+  ```
+$ helm install kubernetes/charts/weblogic-operator \
+  --name sample-weblogic-operator \
+  --namespace sample-weblogic-operator-ns \
+  --set image=oracle/weblogic-kubernetes-operator:2.0-rc2 \
+  --set serviceAccount=sample-weblogic-operator-sa \
+  --set "domainNamespaces={}" \
+  --wait
+  ``` 
+- Verify that the operator's pod is running, by listing the pods in the operator's namespace. You should see one for the operator.
+  ```
+$ kubectl get pods -n sample-weblogic-operator-ns
+  ```
+  ![](images/300/operatorRunning.png)
+
+- Verify that the operator is up and running by viewing the operator pod's log:
+  ```
+$ kubectl logs -n sample-weblogic-operator-ns -c weblogic-operator deployments/weblogic-operator
+  ```
+    ![](images/300/log.png)
+### **STEP 5**: Prepare your environment for a domain.
+- Create a namespace that can host one or more domains:
+  ```
+$ kubectl create namespace sample-domain1-ns
+  ```
+- Use `helm` to configure the operator to manage domains in this namespace:
+  ```
+$ helm upgrade \
+  --reuse-values \
+  --set "domainNamespaces={sample-domain1-ns}" \
+  --wait \
+  sample-weblogic-operator \
+  kubernetes/charts/weblogic-operator
+  ```
+- Configure Traefik to manage Ingresses created in this namespace:
+  ```
+$ helm upgrade \
+  --reuse-values \
+  --set "kubernetes.namespaces={traefik,sample-domain1-ns}" \
+  --wait \
+  traefik-operator \
+  stable/traefik
+  ```
+### **STEP 6**: Create a domain in the domain namespace.
+- Create a Kubernetes secret containing the `username` and `password` for the domain using the [`create-weblogic-credentials`]:
+  ```
+$ kubernetes/samples/scripts/create-weblogic-domain-credentials/create-weblogic-credentials.sh \
+  -u weblogic -p welcome1 -n sample-domain1-ns -d sample-domain1
+  ```
+
+- The sample will create a secret named `domainUID-weblogic-credentials` where the `domainUID` is replaced
+with the value you provided.  
+  For example, the command above would create a secret named `sample-domain1-weblogic-credentials`.
 
 
-- Log in using `ssh` to **Node1**, and set up NFS Server:
-    ```
-	$ ssh -i ~/.ssh/id_rsa opc@129.213.34.235
-    ```
-    ![](images/300/node1_login.png)
+- Edit the sample `kubernetes/samples/scripts/create-weblogic-domain/domain-home-in-image/create-domain-inputs.yaml` file and update your  `domainUID` (`sample-domain1`), domain namespace (`sample-domain1-ns`), and the `domainHomeImageBase` (`store/oracle/weblogic:12.2.1.3`).
 
-- Change to *root* user.
-     ```
-	[opc]$ sudo su -
-     ```
-- Create `/scratch/external-domain-home/pv001` shared directory for domain binaries.
-     ```
-	[root]$ mkdir -m 777 -p /scratch/external-domain-home/pv001
-	[root]$ chown -R opc:opc /scratch
-    ```
-- Modify `/etc/exports` to enable Node2, Node3 access to Node1 NFS server.
-     ```
-	[root]$ vi /etc/exports
-     ```
-**NOTE!** By the default the NFS server has to be installed but stopped on OKE node. If the NFS is not installed on node then run `yum install -y nfs-utils` first as super user.
+- Setting `weblogicCredentialsSecretName` to the name of the secret containing the WebLogic credentials, in this case `sample-domain1-weblogic-credentials`.
 
-- Add private IP addresses of Node2 and Node3.
-     ```
-	/scratch 10.0.11.3(rw)
-	/scratch 10.0.10.3(rw)
-	~                                                                                                                                                                               
-	~                                                                                                                                                                               
-	~                                                                                                                                                                               
-	~                                                                                                                                                                               
-	~                                                                                                                                                                               
-	~                                                                                                                                                                               
-	~                                                                                                                                                                               
-	"/etc/exports" 2L, 46C
-     ```
-- Save the changes and restart NFS service.
-     ```
-	[root]$ systemctl restart nfs
-     ```
-- Type **exit** to end *root* session.
-     ```
-	[root]$ exit
-     ```
-- Node1 preparation is done type **exit** again to end the *ssh* session.
-    ```
-	[opc]$ exit
-    ```
-### **STEP 3**: Configure NFS clients
+- Leaving the `image` empty unless you need to tag the new image that the script builds to a different name. Here the image name has to be `iad.ocir.io/wark2018/domain-home-in-image:12.2.1.3`
 
-- Log in using `ssh` to **Node2** and configure NFS client:
-     ```
-	$ ssh -i ~/.ssh/id_rsa opc@129.213.60.103  
-     ```
+**NOTE**: If you set the `domainHomeImageBuildPath` property to `./docker-images/OracleWebLogic/samples/12213-domain-home-in-image-wdt`, make sure that your `JAVA_HOME` is set to a Java JDK version 1.8 or later.
 
-- Change to *root* user.
-    ```
-	[opc]$ sudo su -
-    ```
-- Create `/scratch` shared directory.
-    ```
-	[root]$ mkdir /scratch
-    ```
-- Edit the `/etc/fstab` file.
-    ```
-	[root]$ vi /etc/fstab
-    ```
-- Add the internal IP address and parameters of **Node1 - NFS server**. Append as last row.
-    ```
-	#
-	# /etc/fstab
-	# Created by anaconda on Fri Feb  9 01:25:44 2018
-	#
-	# Accessible filesystems, by reference, are maintained under '/dev/disk'
-	# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
-	#
-	UUID=7247af6c-4b59-4934-a6be-a7929d296d83 /                       xfs     defaults,_netdev,_netdev 0 0
-	UUID=897D-798C          /boot/efi               vfat    defaults,uid=0,gid=0,umask=0077,shortname=winnt,_netdev,_netdev,x-initrd.mount 0 0
-	######################################
-	## ORACLE BARE METAL CLOUD CUSTOMERS
-	##
-	## If you are adding an iSCSI remote block volume to this file you MUST
-	## include the '_netdev' mount option or your instance will become
-	## unavailable after the next reboot.
-	##
-	## Example:
-	## /dev/sdb /data1  ext4    defaults,noatime,_netdev    0   2
-	##
-	## More information:
-	## https://docs.us-phoenix-1.oraclecloud.com/Content/Block/Tasks/connectingtoavolume.htm
-	##
-	10.0.96.2:/scratch /scratch  nfs nfsvers=3 0 0
-	~                                                                                                                                                                               
-	~                                                                                                                                                                               
-	~                                                                                                                                                                               
-	~                                                                                                                                                                               
-	~                                                                                                                                                                               
-	~                                                                                                                                                                               
-	~                                                                                                                                                                               
-	~                                                                                                                                                                               
-	"/etc/fstab" 24L, 957C
-    ```
-    ![](images/300/node2_fstab.png)
-- Save changes. Mount the shared `/scratch` directory.
-    ```
-	[root]$ mount /scratch
-    ```
-- Restart the NFS service.
-    ```
-	[root]$ systemctl restart nfs
-    ```
-- Type **exit** to end *root* session.
-    ```
-		[root]$ exit
-    ```
-- Node2 preparation is done type **exit** again to end the *ssh* session.
-    ```
-	[opc]$ exit
-    ```
-- Log in using `ssh` to **Node3** and configure NFS client:
-    ```
-	$ ssh -i ~/.ssh/id_rsa opc@132.145.138.193
-    ```
-- Change to *root* user.
-    ```
-	[opc]$ sudo su -
-    ```
-- Create `/scratch` shared directory.
-    ```
-	[root]$ mkdir /scratch
-    ```
-- Edit the `/etc/fstab` file.
-    ```
-	[root]$ vi /etc/fstab
-    ```
-- Add the internal IP address and parameters of **Node1 - NFS server**. Append as last row.
-    ```
-	#
-	# /etc/fstab
-	# Created by anaconda on Fri Feb  9 01:25:44 2018
-	#
-	# Accessible filesystems, by reference, are maintained under '/dev/disk'
-	# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
-	#
-	UUID=7247af6c-4b59-4934-a6be-a7929d296d83 /                       xfs     defaults,_netdev,_netdev 0 0
-	UUID=897D-798C          /boot/efi               vfat    defaults,uid=0,gid=0,umask=0077,shortname=winnt,_netdev,_netdev,x-initrd.mount 0 0
-	######################################
-	## ORACLE BARE METAL CLOUD CUSTOMERS
-	##
-	## If you are adding an iSCSI remote block volume to this file you MUST
-	## include the '_netdev' mount option or your instance will become
-	## unavailable after the next reboot.
-	##
-	## Example:
-	## /dev/sdb /data1  ext4    defaults,noatime,_netdev    0   2
-	##
-	## More information:
-	## https://docs.us-phoenix-1.oraclecloud.com/Content/Block/Tasks/connectingtoavolume.htm
-	##
-	10.0.96.2:/scratch /scratch nfs nfsvers=3 0 0
-	~                                                                                                                                                                               
-	~                                                                                                                                                                               
-	~                                                                                                                                                                               
-	~                                                                                                                                                                               
-	~                                                                                                                                                                               
-	~                                                                                                                                                                               
-	~                                                                                                                                                                               
-	~                                                                                                                                                                               
-	"/etc/fstab" 24L, 957C
-    ```
-    ![](images/300/node2_fstab.png)
-- Save changes. Mount the shared `/scratch` directory.
-    ```
-	[root]$ mount /scratch
-    ```
-- Restart the NFS service.
-    ```
-	[root]$ systemctl restart nfs
-    ```
-- Type **exit** to end *root* session.
-    ```
-	[root]$ exit
-    ```
-- Node3 preparation is done type **exit** again to end the *ssh* session.
-    ```
-	[opc]$ exit
-    ```
-### **STEP 4**: Modify the configuration YAML files to reflect the Docker image names in the OCIR
+For example:
+  ```
+$ cd kubernetes/samples/scripts/create-weblogic-domain/domain-home-in-image
+$ ./create-domain.sh -i create-domain-inputs.yaml -o /some/output/directory -u weblogic -p welcome1 -e
+  ```
 
-- Use Git to download the WebLogic Kubernetes Operator project:
-    ```
-	[git clone -b "v1.1" https://github.com/oracle/weblogic-kubernetes-operator.git
-    ```
-    ![](images/300/git_clone_1_1.png)
+You need to provide the WebLogic administration user name and password in the `-u` and `-p` options
+respectively, as shown in the example.
 
-- Modify the YAML inputs to reflect the image names:
-    ```
-    cd /weblogic-kubernetes-operator/kubernetes
-    ```
-- Open and modify the following parameters in the **create-weblogic-operator-inputs.yaml** input file:
-    ```
-    targetNamespaces: domain1
-    weblogicOperatorImage: oracle/weblogic-kubernetes-operator:1.0
-    ```  
-- Save the changes. Open and modify the following parameters in the **create-weblogic-domain-inputs.yaml** input file:
-    ```
-    domainUID: domain1  
-    weblogicDomainStoragePath: /scratch/external-domain-home/pv001
-    exposeAdminT3Channel: true
-    exposeAdminNodePort: true
-    loadBalancer: TRAEFIK
-    ```
-### **STEP 5**: Deploy WebLogic Kubernetes Operator and WebLogic Domain
+**NOTE**: When using this sample, the WebLogic Server credentials that you specify, in three separate places, must be consistent:
 
-- Create output directory for the operator and domain scripts.
-    ```
-    mkdir -p /PATH_TO/output
-    mkdir -p /PATH_TO/domain_output
-    ```
-- Run the create operator script, pointing it at your inputs file and the output directory. The best to execute in the locally cloned weblogic-kubernetes-operator/kubernetes folder:
-    ```
-    ./create-weblogic-operator.sh -i create-weblogic-operator-inputs.yaml -o /PATH_TO/weblogic-output-directory
-    ```
-    ![](images/300/operator_output.png)
+1. The secret that you create for the credentials.
+2. The properties files in the sample project you choose to create the Docker image from.
+3. The parameters you supply to the `createDomain.sh` script.
 
-- Run this command to check the operator pod status:
-    ```
-    kubectl get pods -n weblogic-operator
-    ```
-    ![](images/300/operator_running.png)
+If you specify the `-e` option, the script will generate the
+Kubernetes YAML files *and* apply them to your cluster.  If you omit the `-e` option, the
+script will just generate the YAML files, but will not take any action on your cluster.
 
-- Create the persistent volume directory on the NFS server
-    ```
-    ssh -i /Users/sasanka/.ssh/id_rsa opc@129.213.150.77
-    chmod 777 /scratch/external-domain-home/pv001
-    ```
-- Create namespace domain1, execute this command: 
-    ```
-    kubectl create namespace domain1
-    ```
-- The username and password credentials for access to the Administration Server must be stored in a Kubernetes secret in the same namespace that the domain will run in. The script does not create the secret in order to avoid storing the credentials in a file. Oracle recommends that this command be executed in a secure shell and that the appropriate measures be taken to protect the security of the credentials. To create the secret, issue the following command:
-    ```
-    kubectl -n domain1 create secret generic domain1-weblogic-credentials --from-literal=username=weblogic --from-literal=password=welcome1
-    ```
-- Finally, run the create script, pointing it at your inputs file and the output directory:
-    ```
-    ./create-weblogic-domain.sh –i create-weblogic-domain-job-inputs.yaml  -o /path/to/domain_output
-    ```
-    ![](images/300/domain_output.png)
+If you run the sample from a machine that is remote to the Kubernetes cluster, and you need to push the new image to a registry that is local to the cluster, you need to do the following:
+* Set the `image` property in the inputs file to the target image name (including the registry hostname/port, and the tag if needed).
+* Run the `create-domain.sh` script without the `-e` option.
+* Push the `image` to the registry - Already completed Lab 100
 
-- To check the status of the WebLogic cluster, run this command:
-    ```
-    kubectl get pods -n domain1
-    ```
-    ![](images/300/domain_result.png)
-- Let’s see how the load balancer works. For that, let’s access the WebLogic Server Administration Console and deploy the testwebapp.war application. In the customized inputs for the WebLogic domain, we have specified to expose the AdminNodePort. To review the port number, run this command:
-    ```
-    kubectl describe service domain1-admin-server -n domain1
-    ```
-    ![](images/300/describe_admin_server.png)
+    ![](images/300/createDomain1.png)
+    ![](images/300/createDomain2.png)
+
+- Run the following command to create the domain.
+   ```$ kubectl apply -f /some/output/directory/weblogic-domains/sample-domain1/domain.yaml
+   ```
+    ![](images/300/configDomain.png)
+
+- Confirm that the operator started the servers for the domain:
+* Use `kubectl` to show that the domain resource was created:
+  ```
+$ kubectl describe domain sample-domain1 -n sample-domain1-ns
+  ```
+ After a short time, you will see the Administration Server and Managed Servers running.
+
+    ![](images/300/DomainResourceRunning.png)
+
+- You should also see all the Kubernetes pods for the domain up and running.
+  ```
+$ kubectl get pods -n sample-domain1-ns
+  ```
+
+    ![](images/300/pods.png)
+
+- You should also see all the Kubernetes services for the domain.
+  ```
+$ kubectl get services -n sample-domain1-ns
+  ```
+
+    ![](images/300/kubctl_services.png)
+    
+- If you NodePort service does not have an external IP, you need to edit it and add the external IPs of at least one of your worker nodes.
+  
+  ```
+$ kubectl edit service sample-domain1-admin-server-external -n sample-domain1-ns
+  ```
+
+    ![](images/300/editNodePort.png)
+
+- Then when you do get services again, you will see it listed under the EXTERNAL-IP column, instead of none.
+  
+    ![](images/300/NodePortExternal.png)
 
 - Let’s use one of the node’s external IP addresses to access the Administration Console. Example: http://129.213.150.77:30701/console/
     
     ![](images/300/console1.png)
-
 ### **STEP 6**: Test Alpha Office Product Catalog war file
 
 - Log in to the WebLogic Server Administration Console using the credentials weblogic/welcome1.
