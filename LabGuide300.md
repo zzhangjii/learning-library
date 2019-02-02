@@ -184,32 +184,32 @@ If you run the sample from a machine that is remote to the Kubernetes cluster, a
 
 - Confirm that the operator started the servers for the domain:
 * Use `kubectl` to show that the domain resource was created:
-  ```bash
-$ kubectl describe domain sample-domain1 -n sample-domain1-ns
-  ```
+   ```bash
+   $ kubectl describe domain sample-domain1 -n sample-domain1-ns
+   ```
  After a short time, you will see the Administration Server and Managed Servers running.
 
     ![](images/300/DomainResourceRunning.png)
 
 - You should also see all the Kubernetes pods for the domain up and running.
-  ```bash
-$ kubectl get pods -n sample-domain1-ns
-  ```
+   ```bash
+   $ kubectl get pods -n sample-domain1-ns
+   ```
 
     ![](images/300/pods.png)
 
 - You should also see all the Kubernetes services for the domain.
-  ```bash
-$ kubectl get services -n sample-domain1-ns
-  ```
+   ```bash
+   $ kubectl get services -n sample-domain1-ns
+   ```
 
     ![](images/300/kubctl_services.png)
     
 - If you NodePort service does not have an external IP, you need to edit it and add the external IPs of at least one of your worker nodes.
   
-  ```bash
+   ```bash
 $ kubectl edit service sample-domain1-admin-server-external -n sample-domain1-ns
-  ```
+   ```
 
     ![](images/300/editNodePort.png)
 
