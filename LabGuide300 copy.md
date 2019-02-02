@@ -281,60 +281,98 @@ In this lab, we describe the steps to run a WebLogic cluster using the Oracle Cl
     exposeAdminNodePort: true
     loadBalancer: TRAEFIK
     ```
-### **STEP 5**: Deploy WebLogic Kubernetes Operator and WebLogic Domain
+### **STEP 6**: Create a domain in the domain namespace.
+- Create a Kubernetes secret containing the `username` and `password` for the domain using the [`create-weblogic-credentials`]:
+  ```
+$ kubernetes/samples/scripts/create-weblogic-domain-credentials/create-weblogic-credentials.sh \
+  -u weblogic -p welcome1 -n sample-domain1-ns -d sample-domain1
+  ```
 
-- Create output directory for the operator and domain scripts.
-    ```
-    mkdir -p /PATH_TO/output
-    mkdir -p /PATH_TO/domain_output
-    ```
-- Run the create operator script, pointing it at your inputs file and the output directory. The best to execute in the locally cloned weblogic-kubernetes-operator/kubernetes folder:
-    ```
-    ./create-weblogic-operator.sh -i create-weblogic-operator-inputs.yaml -o /PATH_TO/weblogic-output-directory
-    ```
-    ![](images/300/operator_output.png)
+- The sample will create a secret named `domainUID-weblogic-credentials` where the `domainUID` is replaced
+with the value you provided.  
+  For example, the command above would create a secret named `sample-domain1-weblogic-credentials`.
 
-- Run this command to check the operator pod status:
-    ```
-    kubectl get pods -n weblogic-operator
-    ```
-    ![](images/300/operator_running.png)
 
-- Create the persistent volume directory on the NFS server
-    ```
-    ssh -i /Users/sasanka/.ssh/id_rsa opc@129.213.150.77
-    chmod 777 /scratch/external-domain-home/pv001
-    ```
-- Create namespace domain1, execute this command: 
-    ```
-    kubectl create namespace domain1
-    ```
-- The username and password credentials for access to the Administration Server must be stored in a Kubernetes secret in the same namespace that the domain will run in. The script does not create the secret in order to avoid storing the credentials in a file. Oracle recommends that this command be executed in a secure shell and that the appropriate measures be taken to protect the security of the credentials. To create the secret, issue the following command:
-    ```
-    kubectl -n domain1 create secret generic domain1-weblogic-credentials --from-literal=username=weblogic --from-literal=password=welcome1
-    ```
-- Finally, run the create script, pointing it at your inputs file and the output directory:
-    ```
-    ./create-weblogic-domain.sh –i create-weblogic-domain-job-inputs.yaml  -o /path/to/domain_output
-    ```
-    ![](images/300/domain_output.png)
+- Edit the sample `kubernetes/samples/scripts/create-weblogic-domain/domain-home-in-image/create-domain-inputs.yaml` file and update your  `domainUID` (`sample-domain1`), domain namespace (`sample-domain1-ns`), and the `domainHomeImageBase` (`store/oracle/weblogic:12.2.1.3`).
 
-- To check the status of the WebLogic cluster, run this command:
-    ```
-    kubectl get pods -n domain1
-    ```
-    ![](images/300/domain_result.png)
-- Let’s see how the load balancer works. For that, let’s access the WebLogic Server Administration Console and deploy the testwebapp.war application. In the customized inputs for the WebLogic domain, we have specified to expose the AdminNodePort. To review the port number, run this command:
-    ```
-    kubectl describe service domain1-admin-server -n domain1
-    ```
-    ![](images/300/describe_admin_server.png)
+- Setting `weblogicCredentialsSecretName` to the name of the secret containing the WebLogic credentials, in this case `sample-domain1-weblogic-credentials`.
+
+- Leaving the `image` empty unless you need to tag the new image that the script builds to a different name. Here the image name has to be `iad.ocir.io/wark2018/domain-home-in-image:12.2.1.3`
+
+**NOTE**: If you set the `domainHomeImageBuildPath` property to `./docker-images/OracleWebLogic/samples/12213-domain-home-in-image-wdt`, make sure that your `JAVA_HOME` is set to a Java JDK version 1.8 or later.
+
+For example:
+  ```
+$ cd kubernetes/samples/scripts/create-weblogic-domain/domain-home-in-image
+$ ./create-domain.sh -i create-domain-inputs.yaml -o /some/output/directory -u weblogic -p welcome1 -e
+  ```
+
+You need to provide the WebLogic administration user name and password in the `-u` and `-p` options
+respectively, as shown in the example.
+
+**NOTE**: When using this sample, the WebLogic Server credentials that you specify, in three separate places, must be consistent:
+
+1. The secret that you create for the credentials.
+2. The properties files in the sample project you choose to create the Docker image from.
+3. The parameters you supply to the `createDomain.sh` script.
+
+If you specify the `-e` option, the script will generate the
+Kubernetes YAML files *and* apply them to your cluster.  If you omit the `-e` option, the
+script will just generate the YAML files, but will not take any action on your cluster.
+
+If you run the sample from a machine that is remote to the Kubernetes cluster, and you need to push the new image to a registry that is local to the cluster, you need to do the following:
+* Set the `image` property in the inputs file to the target image name (including the registry hostname/port, and the tag if needed).
+* Run the `create-domain.sh` script without the `-e` option.
+* Push the `image` to the registry - Already completed Lab 100
+
+    ![](images/300/createDomain1.png)
+    ![](images/300/createDomain2.png)
+
+- Run the following command to create the domain.
+   ```$ kubectl apply -f /some/output/directory/weblogic-domains/sample-domain1/domain.yaml
+   ```
+    ![](images/300/configDomain.png)
+
+- Confirm that the operator started the servers for the domain:
+* Use `kubectl` to show that the domain resource was created:
+  ```
+$ kubectl describe domain sample-domain1 -n sample-domain1-ns
+  ```
+ After a short time, you will see the Administration Server and Managed Servers running.
+
+    ![](images/300/DomainResourceRunning.png)
+
+- You should also see all the Kubernetes pods for the domain up and running.
+  ```
+$ kubectl get pods -n sample-domain1-ns
+  ```
+
+    ![](images/300/pods.png)
+
+- You should also see all the Kubernetes services for the domain.
+  ```
+$ kubectl get services -n sample-domain1-ns
+  ```
+
+    ![](images/300/kubctl_services.png)
+    
+- If you NodePort service does not have an external IP, you need to edit it and add the external IPs of at least one of your worker nodes.
+  
+  ```
+$ kubectl edit service sample-domain1-admin-server-external -n sample-domain1-ns
+  ```
+
+    ![](images/300/editNodePort.png)
+
+- Then when you do get services again, you will see it listed under the EXTERNAL-IP column, instead of none.
+  
+    ![](images/300/NodePortExternal.png)
 
 - Let’s use one of the node’s external IP addresses to access the Administration Console. Example: http://129.213.150.77:30701/console/
     
     ![](images/300/console1.png)
 
-### **STEP 6**: Test Alpha Office Product Catalog war file
+### **STEP 7**: Test Alpha Office Product Catalog war file
 
 - Log in to the WebLogic Server Administration Console using the credentials weblogic/welcome1.
 
