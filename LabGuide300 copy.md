@@ -56,9 +56,9 @@ In this lab, we describe the steps to run a WebLogic cluster using the Oracle Cl
     ![](images/300/node1_login.png)
 
 - Retrieve private IP address executing this command:
-     ```
+      ```
 	$ ip addr | grep ens3
-     ```
+      ```
     ![](images/300/node1_ip.png)
     Find the inet value. For example the private address in the example above: 10.0.96.2
 
