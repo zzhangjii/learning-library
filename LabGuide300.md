@@ -23,6 +23,8 @@ Use this Lab guide to create a WebLogic deployment in a Kubernetes cluster with 
 
 # WebLogic deployment in a Kubernetes cluster with the Oracle WebLogic Kubernetes Operator 2.0
 
+## Oracle WebLogic Kubernetes Operator 2.0 Installation and Deployment
+
 ### **STEP 1**: Get following images and put them into your local registry
 
 - If you don't already have one, obtain a Docker Store account, log in to the Docker Store
