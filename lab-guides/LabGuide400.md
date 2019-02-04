@@ -120,9 +120,9 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
 - Click the **Copy to Request Body** button.
 
-- Click **Send**. If successfull you should see a return message `"Successfully Saved."`. The PRODUCT_ID is null because a database trigger will automatically create an ID. 
+- Click **Send**. If successfull you should see a return message `"Successfully Saved."`. From the Reponse tab click **Copy to Response Body**. The PRODUCT_ID is null because a database trigger will automatically create an ID. 
 
-- Since the returned payload is plain text we will set the Response body as such. Click the **Response** tab. Click the **Pencil icon** in the Media Type dropdown and add:
+- Since the returned payload is plain text we will set the Response body as such. Click the **Response** tab. Click the **Pencil icon** and the Plus Sign in the Media Type drop down and add:
 
   ```
   plain/text
@@ -133,6 +133,91 @@ Service Connections are REST endpoints pointing to various services. In this ste
 - Click **Done** and then click **Add** to complete the POST definition.
  
   ![](images/400/21.png)
+
+- Using the GET methods that returns all the records we will confirm that the POST inserted a record and we will obtain the PRODUCT_ID of that new record.
+
+- Click the **GET (Get Many) method**:
+
+  ![](images/400/25.png)
+
+- Click the **Test** tab and click **Send**. Scroll down to the bottom of the Response and should see the record for `Dry Erase Test Markers`. **Note the PRODUCT_ID** as we will be using this in subsequent PUT and DELETE calls. In this example the PRODUCT_ID is `232`:
+
+  ![](images/400/26.png)
+
+- Next, create a **PUT** method with the PATH having a **suffix** of **restCall**. Set the Action Hint dropdown to **Update**.
+
+  ![](images/400/27.png)
+
+- Click the **Test** tab. **Copy and Paste** the following payload into the **Request Body** section:
+
+  **NOTE:** We are using the PRODUCT_ID obtained above (You will substitute your specific PRODUCT_ID). In this example `232`. The LIST_PRICE has been bumped to `18`.
+
+  ```
+  {
+    "LIST_PRICE": 18,
+    "PRODUCT_ID": 232,
+    "PRODUCT_NAME": "Dry Erase Test Markers"
+  }
+  ```
+
+  ![](images/400/28.png)
+
+- Click the **Copy to Request Body** button.
+
+- Click **Send**. If successfull you should see a return message `"Successfully Updated."`. From the Response tab click **Copy to Response Body**. 
+
+- Since the returned payload is plain text we will set the Response body as such. Click the **Response** tab. Click the **Pencil icon** and the Plus Sign in the Media Type drop down and add:
+
+  ```
+  plain/text
+  ```
+
+ ![](images/400/29.png)
+
+- Click **Done** and then click **Add** to complete the PUT definition.
+ 
+  ![](images/400/21.png)
+
+- OPTIONAL - Verify the update to the database occur by using the GET (Get Many) method. Scroll to the bottom to find the record and verify that the LIST_PRICE is now `18`:
+
+  ![](images/400/30.png)
+
+- The final method you will create is a **DELETE** with the PATH having a **suffix** of **restCall{id}**. Set the Action Hint dropdown to **Delete**.
+
+  ![](images/400/31.png)
+
+- Click the **Test** tab and then **URL Parameters**. (You will substitute your specific PRODUCT_ID). For our example we enter ID `232`. Click **Send**.
+
+  ![](images/400/32.png)
+
+- Click the **Copy to Request Body** button.
+
+- Click **Send**. If successfull you should see a return message `"Successfully Deleted."`. From the Response tab click **Copy to Response Body**. 
+
+  ![](images/400/33.png)
+
+- Since the returned payload is plain text we will set the Response body as such. Click the **Response** tab. Click the **Pencil icon** and the Plus Sign in the Media Type drop down and add:
+
+  ```
+  plain/text
+  ```
+
+ ![](images/400/34.png)
+
+- Click **Done** and then click **Add** to complete the DELETE definition.
+
+  ![](images/400/21.png)
+
+- All of the endpoints have now been created and tested.
+
+  ![](images/400/35.png)
+
+
+
+
+
+
+
 
 
 
