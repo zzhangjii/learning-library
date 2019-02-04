@@ -15,8 +15,8 @@
             {
                 "number": "100",
                 "filename": "LabGuide100.md",
-                "title": "Lab 100: Build the Docker image for the operator and push to Oracle Cloud Infrastructure Registry (OCIR)",
-                "description": "The Oracle Cloud Infrastructure Registry to push the WebLogic Server, Operator, and Load Balancer images."
+                "title": "Lab 100: Pull the Docker image for the WebLogic and push to Oracle Cloud Infrastructure Registry (OCIR)",
+                "description": "The Oracle Cloud Infrastructure Registry to push the WebLogic Server Docker Image."
 
             },
             {
@@ -32,15 +32,7 @@
                 "title": "Lab 300:  Prepare the WebLogic Kubernetes Operator environment",
                 "description": "How to run WebLogic clusters on the Oracle Cloud Infrastructure Container Engine for Kubernetes"
 
-            },
-            {
-                "number": "400",
-                "filename": "LabGuide400.md",
-                "title": "Lab 400: Title of Lab 400",
-                "description": "Short description of lab 400"
-
             }
-
 
         ]
     }

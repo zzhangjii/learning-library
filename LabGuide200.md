@@ -431,3 +431,5 @@ Compartments are used to isolate resources within your OCI tenant. Role-based ac
   ![](images/200/LabGuide200-eed32915.png)
 
 - Great! We've got Kubernetes installed and accessible.
+
+**You are now ready to move to the next lab: [Lab 300](LabGuide300.md)**

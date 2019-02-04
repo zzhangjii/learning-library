@@ -23,4 +23,6 @@ To learn more about this workshop please watch the video below.
 
 - _You can see a list of Lab Guides_ by clicking on the **Menu Icon** in the upper left corner of the browser window. You're now ready to continue with **Lab 100**.
 
-  ![](images/LabMenuIcon.png)
+  ![](images/help1.png)
+
+  ![](images/help2.png)

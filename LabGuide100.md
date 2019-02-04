@@ -6,7 +6,7 @@ Updated: January 14, 2019
 
 This tutorial is based on the official [Oracle WebLogic Kubernetes Operator](https://github.com/oracle/weblogic-kubernetes-operator/blob/master/site/installation.md) installation guide.
 
-To run the operator in a Kubernetes cluster, you need to build the Docker image and then deploy it to your cluster. The operator sources can be found on github.com and is built using Apache Maven. In this tutorial you can build WebLogic Kubernetes Operator and upload to Container Registry (OCIR) for later deployment:
+To run the operator in a Kubernetes cluster, you need to build the Docker image and then deploy it to your cluster. The operator sources can be found on github.com and is built using Apache Maven. In this tutorial you can pull WebLogic Image and upload to Container Registry (OCIR) for later deployment:
 
 
 **_To log issues_**, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
@@ -22,7 +22,7 @@ To run the operator in a Kubernetes cluster, you need to build the Docker image 
 - [Oracle Container Pipelines (former Wercker)](sign.up.wercker.md) account.
 - [Docker](sign.up.docker.md) account.
 
-# Build the Docker image for the operator and push to Oracle Cloud Infrastructure Registry (OCIR)
+# Pull the Docker image for the WebLogic and push to Oracle Cloud Infrastructure Registry (OCIR)
 
 ## Setup Environment
 
@@ -115,40 +115,42 @@ Now you are ready to pull the  image on docker enabled host after authenticating
         ```
  ![](images/100/docker_login.png) 
 
-- Run the following commands
-        ```
-        docker pull oracle/weblogic-kubernetes-operator:1.0
-        ```
- ![](images/100/docker_pull_operator.png) 
+- Run the following commands 
         ```
         docker pull store/oracle/weblogic:12.2.1.3
         ```
  ![](images/100/weblogic_pull.png) 
+
+- Run the following command to check your imaged is pulled.
         ```
-        docker pull traefik:1.4.5
+        docker images
         ```
-  ![](images/100/docker_traefik_pull.png) 
-    
+- Copy Image ID and paste it for the docker tag command.
+        ```
+        docker tag IMAGE ID iad.ocir.io/your_tenancy/your_user/domain-home-in-image:12.2.1.3
+        ```
+
 - Log in to the OCIR Docker registry by entering this command:
         ```
-        docker login iad.ocir.io
+        docker login iad.ocir.io -u your_tenancy/your_user
         ```
 - When prompted for your username, enter your OCI tenancy name/oci username and auth token.
     
 - Push Docker images into OCIR:
         ```
-        docker push iad.ocir.io/wark2018/weblogic-kubernetes-operator:latest
-        docker push iad.ocir.io/wark2018/weblogic:12.2.1.3
-        docker push iad.ocir.io/wark2018/traefik:1.4.5
+        docker push iad.ocir.io/your_tenancy/your_user/domain-home-in-image:12.2.1.3
         ```
-![](images/100/docker_operator_push.png) 
 ![](images/100/docker_push.png) 
-![](images/100/docker_push_traefik.png) 
 
 - From the OCI Console navigation menu, select **Developer Services->Registry (OCIR)**.
   ![](images/100/ocir.png)
 
 - Click Registry tab and you can see pushed docker images.
   
-    ![](images/100/ocir_registry.png)
+    ![](images/100/docker_registry.png)
 
+- Click Actions dropdown button and change it to public.
+
+    ![](images/100/docker_registry_public.png)
+
+**You are now ready to move to the next lab: [Lab 200](LabGuide200.md)**
