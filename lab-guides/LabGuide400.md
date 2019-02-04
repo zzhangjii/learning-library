@@ -212,37 +212,200 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
   ![](images/400/35.png)
 
+## Create the Mobile Application
 
+### **STEP 1**: Create a Mobile Application
 
+- Select the **Mobile Applications** icon on the left on side of the web page and then click **+ Mobile Application**.
 
+  ![](images/400/36.png)
 
+  ![](images/400/37.png)
 
+- Name the application...
 
+  ```
+  AlphaOffice
+  ```
 
+- ... and select the **None** Navigation Style.
 
+  ![](images/400/38.png)
 
+- Click the **Arrow icon**.
 
+  ![](images/400/39.png)
 
+- Select the **No Content** layout and click **Finish**.
 
+  ![](images/400/40.png)
 
+- Now you have access to (left to right) components, page structure, display canvas and properties. We will be hitting a little of everthing going forward. In the components section find the **Image** component and drag and drop that right below the `Mobile Page Template` in the **Page Structure**.
 
+- Now drag and drop a **Heading** component right below the image field. Your screen should look like:
 
+  ![](images/400/42.png)
 
+- Your application should be in Design Mode:
 
+  ![](images/400/43.png)
 
+- Time to set some Properties. You can select the specific component who wish to set property values for by ether select from the Page Structure OR the display canvas. In some cases it will be easier to use one or the other...
 
+- Name the **Mobile Page Template**
+  
+  ```
+  Catalog
+  ```
 
+- ... by selecting it under the **General** properties area on the right.
 
+- You'll notice the change does not take affect until you tab out of the Page Title field.
 
+- Click on the **Heading** field and set the text to:
 
+  ```
+  Products
+  ```
 
+- ... leaving the Heading size to **H1**. You screen looks like:
 
+  ![](images/400/44.png)
 
+- Download a static image from [AlphaOffice Image](https://github.com/derekoneil/monolithic-to-microservice/blob/master/lab-resources/vbcs/AlphaOfficeSupply.png) by clicking on it and saving locally.
 
+- Now, click on the **Image** component in the canvas and click the **Data** tab in the Properties section. 
 
+  ![](images/400/45.png)
 
+- Click on the **Drop an image here...** box and upload the static image; **AlphaOfficeSupply.png** you just downloaded:
 
+  ![](images/400/46.png)
 
+- The image is uploaded. If it doesn't display right away on the canvas click the **Refresh icon**.
+
+  ![](images/400/47.png)
+
+  - Your screen should now look like:
+
+  ![](images/400/48.png)
+
+- From the Components section drag and drop a **List View** onto the canvas Flex Container below the Products item:
+
+  ![](images/400/49.png)
+
+- The canvas is populated with a default layout and the **List View** item should be highlighted). If it's not, select it in the Page Structure section. In the Properties area if you don't see the `Add Data` option then select the icon all the way over on the right. Then Click **Add Data**. We will associate this List View with data from one of our REST endpoints.
+
+  ![](images/400/50.png)
+
+- In step 1 of the Add Data section only relevant endpoints that would populate the List View are available. **Expand** the available endpoints and select **GET** (Many). Click **Next**.
+
+  ![](images/400/51.png)
+
+- In step 2 choose the following layout and click **Next**.
+
+  ![](images/400/52.png)
+
+- In the Bind Data step select the following 4 columns **IN THIS ORDER**:
+
+  ```
+  PRODUCT_NAME
+  EXTERNAL_URL
+  PRODUCT_ID
+  LIST_PRICE
+  ```
+
+- Set the `PRODUCT_ID` and `LIST_PRICE` to an **Input Number** type.
+
+- Set the `EXTERNAL_URL` to an **Image** type.
+
+- Set the `Primary Key` to **PRODUCT_ID**.
+
+- Before pressing on make sure your screen looks like:
+
+  ![](images/400/53.png)
+
+- Click **Next** and **Finish**.
+
+- The Endpoint is called and the canvas refreshed with the Product Catalog data:
+
+  ![](images/400/55.png)
+
+- Now we'll tydy up some item properties. Delete the Labels for **PRODUCT_NAME** and **EXTERNAL_URL**. 
+
+  **NOTE: We're deleting just the labels, not the data items...**
+
+- Select each of the above mentioned Labels and hit the delete key. The Label will disappear.
+
+  ![](images/400/54.png)
+
+- Select the **Paragraph item for PRODUCT_NAME**. Notice that selecting it highlights the item in the canvas and brings up the Properties values:
+
+  ![](images/400/56.png)
+
+- Select the **ALL** property tab and expand the **General Attributes**:
+
+  ![](images/400/57.png)
+
+- Scroll down the General Attributes until you find the **Style** field. This is where CSS type commands can be entered. We want to enlarge the displayed text for this item. **Type OR Copy and Paste** the following:
+
+  ```
+  font-size: large;
+  ```
+
+  ![](images/400/58.png)
+
+- Upon tabbing out of the field the change will happen.
+
+- Select the **Label** item for **PRODUCT_ID** and under the **General** tab change the title to:
+
+  ```
+  Product ID
+  ```
+
+ - Under the **ALL** tab --> **General Attributes** enter:
+ 
+   ```
+   font-size: large;
+   ```
+  
+  - ... into the **Style** field.
+
+- Select the **Input Number** item for **PRODUCT_ID**. Under the **General** properties tab **de-select the Thousands Separator** checkbox.
+
+ ![](images/400/59.png)
+
+- Upon tabbing out of the field the change will happen.
+
+- Select the **Label** item for **LIST_PRICE** and under the **General** tab change the title to:
+
+  ```
+  List Price
+  ```
+
+ - Under the **ALL** tab --> **General Attributes** enter:
+ 
+   ```
+   font-size: large;
+   ```
+  
+  - ... into the **Style** field.
+
+- Select the **Input Number** item for **LIST_PRICE**. Under the **General** properties tab change the **Converter** attribute to a dollar sign `$`. Also, in the **Currency Code** attribute enter:
+
+  ```
+  USD
+  ```
+
+  ![](images/400/61.png)
+
+- Finally, select the **Image** Item under **Page Structure** (or the canvas). Under the **General** properties tab change image Height and Width to **80**.
+
+  ![](images/400/62.png)
+
+- Your finalized version of the main page will look like:
+
+ ![](images/400/60.png)
 
 
 
