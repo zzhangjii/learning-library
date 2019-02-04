@@ -137,7 +137,7 @@ We require a Database to store the Alpha Office data which is accessed later in 
 
 ## Visual Builder Instance Creation
 
-You will use the Autonomous Visual Builder Cloud Service to create an instance.
+You will use the Visual Builder Cloud Service to create an instance.
 
 ### **STEP 1**: Create a New Visual Builder Cloud Service
 
@@ -157,7 +157,7 @@ In this step you will create a VBCS instance that will be used in Lab 400. It ta
 
   ![](images/050/custom_dash.png)
 
-- Then select `Autonomous Visual Builder` and click the **Show** button.
+- Then select `Visual Builder` and click the **Show** button.
 
   ![](images/050/show_dash_vb.png)
 
@@ -167,7 +167,7 @@ In this step you will create a VBCS instance that will be used in Lab 400. It ta
 
 ### **STEP 2**: Create a New Visual Builder Instance
 
-- In the Autonomous Visual Builder panel click the **hamburger menu**, right-click **Open Service Console** and select **Open link in new tab**.
+- In the Visual Builder panel click the **hamburger menu**, right-click **Open Service Console** and select **Open link in new tab**.
 
   ![](images/050/LabGuide50-6196f9d1.png)
 

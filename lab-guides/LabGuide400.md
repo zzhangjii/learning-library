@@ -20,11 +20,11 @@ In this lab you will use Oracle Visual Builder which is a cloud-based software d
 
 # Login in and Create the Application
 
-## Sub Heading 1
+## Verify the VBCS Instance
 
-### **STEP 1**: Title of Step 1
+### **STEP 1**: Check the creation of the instance from Lab 050
 
-- Instructions for Step 1
+- From the 
 
 ### **STEP 2**: Title of Step 2
 
