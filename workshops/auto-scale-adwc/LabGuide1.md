@@ -278,17 +278,30 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 - cd /home/oracle/ords
 - java -Dconfig.dir=/home/oracle/ords -jar ords.war install simple –preserveParamFile
 ![](./images/ords6.png)
-#### 7. Kindly exit the session by using ctrl C and start ords by running below command
-- Copy scripts folder from in /home/oracle [scripts](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/shellscripts)
-- /home/oracle/scripts/start_ords.sh
-#### 8. Browse below URL to check whether ORDS is up and running.
+#### 7. Kindly exit the session by using ctrl C and create start_ords.sh file in ords folder and put below content
+- #!/bin/bash
+- NOW=$(date +"%F_%H:%M")
+- LOGFILE="ords-$NOW.log"
+- echo
+- echo "~~~~~~~~~~~~~~~~">> $LOGFILE
+- echo `date` >> $LOGFILE
+- echo "~~~~~~~~~~~~~~~">> $LOGFILE
+- nohup java -Dconfig.dir=/home/oracle/ords -jar ords.war install simple --preserveParamFile >> $LOGFILE  2>&1  &
+- echo " Check Logfile : $LOGFILE "
+- echo
+
+#### 8 Now change the permission and run the script
+- chmod 777 start_ords.sh
+- ./start_ords.sh
+
+#### 9. Browse below URL to check whether ORDS is up and running.
 - **http://DbaaS Instance IP address:8080/ords**
-#### 9. Use below credentials to login.
+#### 10. Use below credentials to login.
 - **Workspace: INTERNAL, Username: ADMIN ,Password: BEstrO0ng_#11**
 - The application will ask to change the password kindly choose the password as BEstrO0ng_#22
 #### if the ADMIN password does not work reset password using below step
 ![](./images/ords7.png)
-#### 10. Change your working directory to the apex directory where you unzipped the installation software. Login to sqlPlus   and run @apxchpwd. For more information refer Url.[Oracle Community](https://community.oracle.com/thread/2332882?start=0&tstart=0) 
+#### 11. Change your working directory to the apex directory where you unzipped the installation software. Login to sqlPlus   and run @apxchpwd. For more information refer Url.[Oracle Community](https://community.oracle.com/thread/2332882?start=0&tstart=0) 
 #### 11. Click sign In.
 ![](./images/ords8.png)
 
