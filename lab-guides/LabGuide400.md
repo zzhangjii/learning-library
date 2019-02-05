@@ -448,7 +448,7 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
   ![](images/400/68.PNG)
 
-- With the Image item selected click the **Data** tab in the Properties pane and then click the **Drop and image here...** section.
+- With the **Image** item selected click the **Data** tab in the Properties pane and then click the **Drop and image here...** section.
 
   ![](images/400/69.PNG)
 
@@ -555,9 +555,92 @@ In this section you will maually create a new page and add update and delete cap
 
   ![](images/400/83.PNG)
 
-### **STEP 2**: Create Page Layout
+### **STEP 2**: Create Page Variables
 
-- Lets build out the look and feel of items on this page. First, drag and drop an **Image** item from the Component pane just below the Mobile Page Template item.
+In this step we will define the Types and Variables used within the page.
+
+- With the newly created `main-edit` tab selected click the Variables icon:
+
+  ![](images/400/87.PNG)
+
+- The first thing we will do is create an object array type which will define the structure for the returned set of values from the REST endpoint GET (one). Click on the **Types** tab and then click the **+ Type** button and select **From Endpoint**.
+
+  ![](images/400/87-5.PNG)
+
+  ![](images/400/88.PNG)
+
+- Expand the Service Connections and select the **GET /restCall/{id}** enpoint which will return one record based on the input parameter {id}. Click **Next**.
+
+    ![](images/400/89.PNG)
+
+- Select the following columns:
+    - LIST_PRICE
+    - PRODUCT_ID
+    - PRODUCT_NAME
+
+  ![](images/400/90.PNG)
+
+- Click **Finish**.
+
+- The type is created. Add a suffix **Type** to the generated name in the Properties pane so the id name becomes `getRestCallIdType`:
+
+  ![](images/400/91.PNG)
+
+- Type struture looks like:
+
+  ![](images/400/92.PNG)
+
+- Now, click the **Variables tab** and then click the **+ Variables** button to create a variable based on the new type (this variable is used for content mapping purposes). 
+
+  ![](images/400/92-5.PNG)
+
+  ![](images/400/93.PNG)
+
+- Call the variable:
+
+  ```
+  getRestCallVar
+  ```
+
+- ... using the **getRestCallIdType**.
+
+  ![](images/400/94.PNG)
+
+- Click **Create**.
+
+- Create a variable called:
+
+  ```
+  InputVar1
+  ```
+
+- ... using the *Number** type
+
+  ![](images/400/95.PNG)
+
+- Click **Create**.
+
+- In the Properties pane for **InputVar1** under the **General** tab select the following attribute checkboxes:
+    - **Input Parameter**
+    - **Pass On URL**
+    - **Required**
+
+  ![](images/400/96.PNG)
+
+  **NOTE: This variable is used as an input parameter when called from the main-start page based on a product selection** (Defined later on in this Lab).
+
+- Create three more variables with the following types:
+    - **IDVar       : Number**
+    - **PriceVar    : Number**
+    - **ProdNameVar : String**
+
+- The final variables definitions should look like:
+
+  ![](images/400/97.PNG)
+
+### **STEP 3**: Create Page Layout
+
+- Now, build out the look and feel of items on this page. First, drag and drop an **Image** item from the Component pane just below the Mobile Page Template item.
 
 - Drag and drop a **Form Layout** item **inside** the Flex Container in the canvas.
 
@@ -578,6 +661,43 @@ In this section you will maually create a new page and add update and delete cap
   ![](images/400/85.PNG)
 
 ### **STEP 3**: Set Item Properties
+
+- Starting from top of the canvas items to bottom. Select the **Mobile Page Template** item in the Page Structure. Under the General Properties tab set the **Page Title** attribute to:
+
+  ```
+  Edit
+  ```
+
+- Select the **Left Side Button** item in the Page Structure and in the **General** Properties tab change the **Text** attribute name to:
+
+  ```
+  Cancel
+  ```
+
+- Select the top most **Right Side Button** item in the Page Structure and in the **General** Properties tab change the **Text** attribute name to:
+
+  ```
+  Delete
+  ```
+
+- Select the bottom **Right Side Button** item in the Page Structure and in the **General** Properties tab change the **Text** attribute name to:
+
+  ```
+  Update
+  ```
+
+- Canvas so far looks like:
+
+ ![](images/400/86.PNG)
+
+ - With the **Image** item selected click the **Data** tab in the Properties pane and then click the **Drop and image here...** section.
+
+  ![](images/400/69.PNG)
+
+- Upload the image we used earlier; `AlphaOfficeSupply.png`. The screen should look like:
+
+
+
 
 
 
