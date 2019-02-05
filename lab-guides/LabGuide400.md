@@ -783,7 +783,7 @@ In this step we will finish up the `main-edit` page by defining 4 Events and sub
 
 - Click **Create**. An empty chain flow is presented.
 
-- Drag and drop a **Call REST Endpoint** Actionunder the Start action. Then click the **Select Endpoint** button.
+- Drag and drop a **Call REST Endpoint** Action under the Start action. Then click the **Select Endpoint** button.
 
   ![](images/400/109.PNG)
 
@@ -857,7 +857,33 @@ In this step we will finish up the `main-edit` page by defining 4 Events and sub
 
   ![](images/400/122.PNG)
 
-The remaining three Action Chains and Events follow the same flow as the first one. We will only show relevant screens to a particular Event or Action being created going forward.
+- The remaining three Action Chains and Events in the `main-edit` page (Update, Delete and Cancel) follow the same flow as the first one. We will only show relevant screens to a particular Event or Action being created going forward.
+
+- Create a new Action Chain called **UpdateActionChain**.
+
+- Drag and drop a **Call REST Endpoint** Action under the Start action. Then click the **Select Endpoint** button.
+
+  ![](images/400/109.PNG)
+
+  ![](images/400/110.PNG)
+
+- Choose **PUT /restCall** and click **Select**.
+
+  ![](images/400/123.PNG)
+
+- In the Properties pane set the **Response Body Format** to  **text** click the Parameters **Assign** link.
+
+  ![](images/400/124.PNG)
+
+- Select the **Target** Parameter **body**. Copy and Paste the following into Expression box at the bottom:
+
+  ```
+  {
+   "LIST_PRICE": "{{ $page.variables.PriceVar }}",
+   "PRODUCT_ID": "{{ $page.variables.IDVar }}",
+   "PRODUCT_NAME": "{{ $page.variables.ProdNameVar }}"
+  }
+  ```
 
 
 
@@ -881,13 +907,3 @@ The remaining three Action Chains and Events follow the same flow as the first o
 
 
 
-
-
-
-
-
-### **STEP 1**: Check the creation of the instance from Lab 050
-
-- From the Dashboard 
-
-  ![](images/400/5.PNG)
