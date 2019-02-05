@@ -405,22 +405,139 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
 - Your finalized version of the main page will look like:
 
- ![](images/400/60.PNG)
+  ![](images/400/60.PNG)
 
-## Add a Create Page to the Application
+## Add Record Creation to the Application
 
-### **STEP 1**: 
+### **STEP 1**: Add Create Page
 
-- From the Dashboard 
+- Select the **List View** item in the main-start Page Structure (or the canvas) and if you don't see the various wizard driven options, click the `Quick Start` icon on the far right of the Properties section and select **Add Create Page**. 
 
-  ![](images/400/5.PNG)
+  ![](images/400/63.PNG)
 
+- Expand the available endpoints and select **POST/restCall**. Click **Next**.
 
+  ![](images/400/64.PNG)
 
+- Choose the following columns **IN THIS ORDER**:
 
+  ```
+  PRODUCT_NAME
+  LIST_PRICE
+  ```
 
+- Change the name for the `Button label` and the `Page title` to:
 
+  ```
+  Create
+  ```
 
+  ![](images/400/65.PNG)
+
+- Click **Finish**. A `main-create-post-rest-call` page is created. The main-start page now displays a large PLUS sign at the top right of the display.
+
+  ![](images/400/66.PNG)
+
+  ![](images/400/67.PNG)
+
+- From the Mobile Applications pane click the **main-create-post-rest-call** page. This will open it up on the canvas.
+
+- As we did with the main-start page we will tidy up so properties and add the AlphaOffice image.
+
+- **Drag and drop an Image component** into the Page Structure pane right below the Mobile Page Template item.
+
+  ![](images/400/68.PNG)
+
+- With the Image item selected click the **Data** tab in the Properties pane and then click the **Drop and image here...** section.
+
+  ![](images/400/69.PNG)
+
+- Upload the image we used earlier; `AlphaOfficeSupply.png`. The screen should look like:
+
+  ![](images/400/70.PNG)
+
+- Select the Input Text item **PRODUCT_NAME** in the Page Structure and change the **Label Hint** in the Properties pane under the **General** tab to:
+
+  ```
+  Product Name
+  ```
+
+  ![](images/400/71.PNG)
+
+- Likewise, change the **Label Hint** for the LIST_PRICE Input Number item to:
+
+  ```
+  List Price
+  ```
+
+ - Also change the **Converter** attribute to a dollar sign `$` and type in the following for the **Currency Code** attribute:
+
+   ```
+   USD
+   ```
+
+- The canvas should now look like:  
+
+  ![](images/400/72.PNG)
+
+- When the `main-create-post-rest-call` page was created some supporting Actions and Events associated with that page were also created to handle navigation (For example, what to do when the Cancel and Save links are clicked). The Events are called Chains.
+
+- Click on the **Events** icon for the `main-create-post-rest-call` page (already being displayed), click the **createPostRestCallChain** item under the saveButtonClicked Event to show its Properties and finally select the **createPostRestCallChain** link on the far right hand side of the page (Properties section). 
+
+  ![](images/400/73.PNG)
+
+- This opens up the chain flow where you can see various Actions defined for the cases of success or failure. In the success flow Click the **Fire Notification confirmation** Action. In the Properties section change the **Summary** atrribute to:
+
+  ```
+  Saved:
+  ```
+
+- ... and change the **Message** attribute to:
+
+  ```
+  Record Successfully Created
+  ```
+
+  ![](images/400/74.PNG)
+
+- You can close the tab once the changes are in place.
+
+  ![](images/400/75.PNG)
+
+### **STEP 2**: Test Record Creation
+
+- Select the **main-start** page and then click the **Run** application icon on the right hand side of the main menu bar.
+
+  ![](images/400/76.PNG)
+
+  ![](images/400/77.PNG)
+
+- A new browser tab opens and the application is started. You can scroll up and down to see the available products in the catalog. Clicking the **PLUS sign** will take you to the Create page.
+
+  ![](images/400/78.PNG)
+
+- **Type OR Copy and Paste** the following into the fields:
+
+  ```
+  Product Name:   EXPO Dry Erase Kit, Assorted Colors
+  List Price:     20
+  ```
+
+- Tab out of the List Price field to see the currency formatting. Click the **Save** link. If all goes well you should see the success confirmation pop up for a few seconds.
+
+  ![](images/400/79.PNG)
+
+  ![](images/400/80.PNG)  
+
+- Scroll down the product catalog listing until you find your new product for `EXPO Dry Erase Kit, Assorted Colors` which was inserted into the database. In this case the assigned PRODUCT_ID is 240:
+
+  ![](images/400/81.PNG)  
+
+## Add Update and Delete capabilites
+
+### **STEP 1**: Add Edit Page
+
+- 
 
 
 
