@@ -537,10 +537,47 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
 ### **STEP 1**: Add Edit Page
 
-- 
+In this section you will maually create a new page and add update and delete capabilites to the records in the product catalog. Events and Action Chains will be created to support the flows. This page will eventually be called from the main-start page.
 
+- Close the browser tab with the application running. Back in Visual Builder, in the Mobile Apps pane click the **PLUS icon** next to Main flow to create a new page. 
 
+  **NOTE: Do not create a new Flow... just a page**
 
+  ![](images/400/82.PNG)
+
+- In the Create Page dialog name the page:
+
+  ```
+  main-edit
+  ```
+
+- ... Choose the **Custom** content style and click **Create**.
+
+  ![](images/400/83.PNG)
+
+### **STEP 2**: Create Page Layout
+
+- Lets build out the look and feel of items on this page. First, drag and drop an **Image** item from the Component pane just below the Mobile Page Template item.
+
+- Drag and drop a **Form Layout** item **inside** the Flex Container in the canvas.
+
+- Drag and drop an **input Number** item **inside** the `Form Layout` item in the canvas.
+
+- Drag and drop an **input Text** item just below the Form Layout item in the Page Structure (This ensures the item is embedded within the Form Layout)
+
+- Drag and drop an **input Number** item just below the Form Layout item in the Page Structure (This ensures the item is embedded within the Form Layout)
+
+- Drag and drop a **Button** from the Component pane over to the *Left Side** item in the Page Structure. A small arrow will be pointing at the Left Side item:
+
+  ![](images/400/84.PNG)
+
+- Drag and drop TWO **Button** Components over to the *Right Side** item in the Page Structure. A small arrow will be pointing at the Right Side item:
+
+- So far you canvas looks like:
+
+  ![](images/400/85.PNG)
+
+### **STEP 3**: Set Item Properties
 
 
 
