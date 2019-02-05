@@ -1,3 +1,5 @@
+Prepare the WebLogic Kubernetes Operator environment
+
 ![](images/300/header.png)  
 Updated: 01/16/2019
 

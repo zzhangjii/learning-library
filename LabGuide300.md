@@ -1,3 +1,5 @@
+# WebLogic deployment in a Kubernetes cluster with the Oracle WebLogic Kubernetes Operator 2.0
+
 ![](images/300/header.png)  
 Updated: 01/18/2019
 
@@ -15,7 +17,7 @@ Use this Lab guide to create a WebLogic deployment in a Kubernetes cluster with 
 ## Required Artifacts
 
 - Kubernetes cluster
-- Helm installation
+- Helm installation (https://github.com/helm/helm/blob/master/docs/install.md)
 - Clone latest weblogic-kubernetes-operator repository
   ```bash
   $ git clone https://github.com/oracle/weblogic-kubernetes-operator

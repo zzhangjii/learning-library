@@ -1,3 +1,4 @@
+# Pull the Docker image for the WebLogic and push to Oracle Cloud Infrastructure Registry (OCIR)
 
 ![](images/100/header.png)
 Updated: January 14, 2019
@@ -19,7 +20,6 @@ To run the operator in a Kubernetes cluster, you need to build the Docker image 
 
 - [Oracle Cloud Infrastructure](https://cloud.oracle.com/en_US/cloud-infrastructure) enabled account.
 - [Github](sign.up.github.md) account.
-- [Oracle Container Pipelines (former Wercker)](sign.up.wercker.md) account.
 - [Docker](sign.up.docker.md) account.
 
 # Pull the Docker image for the WebLogic and push to Oracle Cloud Infrastructure Registry (OCIR)

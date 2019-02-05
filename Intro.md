@@ -1,6 +1,6 @@
 # On-premises WLS to OKE 
 
-Welcome to the on-premises WLS to OKE workshop. This workshop will walk you through the process of... 
+Welcome to the on-premises WLS to OKE workshop. This workshop will walk you through the process of moving an existing On-premises WebLogic application into to a Kubernetes cluster in the Oracle Public Cloud
 To learn more about this workshop please watch the video below.
 
 ![](images/oraclecode/youtube.png)
