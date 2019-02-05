@@ -692,9 +692,9 @@ In this step we will define the Types and Variables used within the page.
 
 - Canvas so far looks like:
 
- ![](images/400/86.PNG)
+  ![](images/400/86.PNG)
 
- - With the **Image** item selected click the **Data** tab in the Properties pane and then click the **Drop and image here...** section.
+- With the **Image** item selected click the **Data** tab in the Properties pane and then click the **Drop and image here...** section.
 
   ![](images/400/69.PNG)
 
@@ -702,7 +702,7 @@ In this step we will define the Types and Variables used within the page.
 
 - Select the first Input Number item in the canvas. 
 
- ![](images/400/98.PNG)
+  ![](images/400/98.PNG)
 
 - Under the **General** tab in the Properties pane set the **Label Hint** to:
 
@@ -712,7 +712,7 @@ In this step we will define the Types and Variables used within the page.
 
 - Scroll down the attributes and **check the Readonly checkbox**. Also, **uncheck the Thousands Separator checkbox**:
 
- ![](images/400/99.PNG)
+  ![](images/400/99.PNG)
 
 - Next, select the Input Text item on the canvas. Under the **General** tab in the Properties pane set the **Label Hint** to:
 
@@ -740,7 +740,13 @@ In this step we will define the Types and Variables used within the page.
 
 In this step we will finish up the `main-edit` page by defining 4 Events and subsequent Actions. The first event will define what happens when the page is called from the `main-start` page. The other Events will deal with the Cancel, Delete and Update buttons.
 
-- 
+- From the `main-edit` page click the Events icon followed by clicking the **+ Event Listener** button.
+
+  ![](images/400/101.PNG)
+
+  ![](images/400/102.PNG)
+
+
 
 
 
