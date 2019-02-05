@@ -990,11 +990,19 @@ In this step we will finish up the `main-edit` page by defining 4 Events and sub
 - In the Properties pane rename the new Action Chain:
 
   ```
-   DeleteActionChain
+   CancelActionChain
   ```
+- Drag and drop a **Navigate Back** Action after the Start.
 
+- The chain is completed. We will test the functionality when the entire application is completed.
 
+### **STEP 4**: Call the main-edit page from main-start
 
+This step will complete the design of the application. We will add a Selection Event on the canvas List View and call the `main-edit` page passing the selection's PRODUCT_ID as an input parameter to the `main-edit` which will in turn take that input and query the relevant record from the database. 
+
+- Select the `main-start` tab (page) which should be **Design mode**.
+
+  ![](images/400/122-4.PNG)
 
 
 
