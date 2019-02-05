@@ -640,21 +640,21 @@ In this step we will define the Types and Variables used within the page.
 
 ### **STEP 3**: Create Page Layout
 
-- Now, build out the look and feel of items on this page. First, drag and drop an **Image** item from the Component pane just below the Mobile Page Template item.
+- Now, build out the look and feel of items on this page. First, drag and drop an **Image** item from the Component pane just below the `Mobile Page Template item`.
 
-- Drag and drop a **Form Layout** item **inside** the Flex Container in the canvas.
+- Drag and drop a **Form Layout** item **inside** the `Flex Container` in the canvas.
 
 - Drag and drop an **input Number** item **inside** the `Form Layout` item in the canvas.
 
-- Drag and drop an **input Text** item just below the Form Layout item in the Page Structure (This ensures the item is embedded within the Form Layout)
+- Drag and drop an **input Text** item just below the `Form Layout` item in the Page Structure (This ensures the item is embedded within the Form Layout)
 
-- Drag and drop an **input Number** item just below the Form Layout item in the Page Structure (This ensures the item is embedded within the Form Layout)
+- Drag and drop an **input Number** item just below the `Form Layout` item in the Page Structure (This ensures the item is embedded within the Form Layout)
 
-- Drag and drop a **Button** from the Component pane over to the **Left Side** item in the Page Structure. A small arrow will be pointing at the Left Side item:
+- Drag and drop a **Button** from the Component pane over to the `Left Side` item in the Page Structure. A small arrow will be pointing at the Left Side item:
 
   ![](images/400/84.PNG)
 
-- Drag and drop TWO **Button** Components over to the **Right Side** item in the Page Structure. A small arrow will be pointing at the Right Side item:
+- Drag and drop TWO **Button** Components over to the `Right Side` item in the Page Structure. A small arrow will be pointing at the Right Side item:
 
 - So far you canvas looks like:
 
@@ -694,7 +694,9 @@ In this step we will define the Types and Variables used within the page.
 
   ![](images/400/69.PNG)
 
-- Upload the image we used earlier; `AlphaOfficeSupply.png`. The screen should look like:
+- Upload the image we used earlier; `AlphaOfficeSupply.png`.
+
+-
 
 
 
