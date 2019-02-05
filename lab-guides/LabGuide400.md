@@ -760,11 +760,80 @@ In this step we will define the Types and Variables used within the page.
 
   ![](images/400/100.PNG)
 
-### **STEP 3**: Define the Events on this page
+### **STEP 3**: Define the Actions and Events on this page
 
 In this step we will finish up the `main-edit` page by defining 4 Events and subsequent Actions. The first event will define what happens when the page is called from the `main-start` page. The other Events will deal with the Cancel, Delete and Update buttons.
 
-- From the `main-edit` page click the Events icon followed by clicking the **+ Event Listener** button.
+- From the `main-edit` page click the **Actions icon** followed by clicking the **+ Action Chain** button.
+
+  ![](images/400/106-8.PNG)
+
+  ![](images/400/107.PNG)  
+
+- **Type OR Copy and Paste** the following:
+
+  ```
+  id :  
+      CallRestGetChain
+  Description:  
+      Calls the GET REST (one) endpoint using the parameter passed in by the main-start page via the InputVar1 parameter  
+  ```
+
+  ![](images/400/108.PNG)
+
+- Click **Create**. An empty chain flow is presented.
+
+- Drag and drop a **Call REST Endpoint** Actionunder the Start action. Then click the **Select Endpoint** button.
+
+  ![](images/400/109.PNG)
+
+  ![](images/400/110.PNG)
+
+- Choose **GET /restCall/{id}** and click **Select**.
+
+  ![](images/400/111.PNG)
+
+- In the Properties pane set the **Response Type** attribute to the **getRestCallIdType** we created earlier in this lab. This ensures the returned JSON payload is parsed into the types' objects. Then click **Assign** in the **Input Parameters**. 
+
+  ![](images/400/112.PNG)
+
+- This brings up a dialog where we map and assign variable content. Our **Target** Parameter requires a value for **id** that in the end will be passed in from the `main-start` page but for now we'll hard-wire a value to it so we can test the REST Call and our Chain. Select the Target **id** parameter and in the box at the bottom of the page enter:
+
+  ```
+  1037
+  ```
+
+- ... this is a known PRODUCT_ID in the database.
+
+  ![](images/400/113.PNG)
+
+  ![](images/400/114.PNG)
+
+- The value will show as mapped to id:
+
+  ![](images/400/115.PNG)
+
+- Click **Save**.
+
+- Now, drag and drop an **Assign Variables** Action under the success flow. Then click the **Assign** link for that action.
+
+  ![](images/400/116.PNG)
+
+  ![](images/400/117.PNG)
+
+- Here is where we will map the Results of the REST call to getRestCallVar and also to the variables we attached to Data attributes for the display canvas. On the Sources side expand out **Results** until you see all of the individual fields. **Map** (Drag and drop) the following Sources to Targets:
+    - Source: **callRestEndpoint1-->body-->item[0]** --> Target: **getRestCallVar**
+    - Source: **LIST_PRICE** --> Target: **PriceVar**
+    - Source: **PRODUCT_ID** --> Target: **IDVar**
+    - Source: **PRODUCT_NAME** --> Target: **ProdNameVar**
+
+- When your done it should look like:
+
+  ![](images/400/118.PNG)
+
+- Click **Save**. The Chain is completed.
+
+- Now, create an Event which calls the new chain upon page start up. From the `main-edit` page click the **Events icon** followed by clicking the **+ Event Listener** button.
 
   ![](images/400/101.PNG)
 
@@ -774,13 +843,21 @@ In this step we will finish up the `main-edit` page by defining 4 Events and sub
 
   ![](images/400/103.PNG)
 
+- Select **CallRestGetChain** and click **Select**. The `vbEnter` event is completed.
 
+  ![](images/400/119.PNG)
 
+  ![](images/400/120.PNG)
 
+- Click the **Designer** icon to go back to the `main-edit` canvas.
 
+  ![](images/400/121.PNG)
 
+- The page is reloaded with the new Event and Action Chain firing. If all went well you should see the information displayed for **PRODUCT_ID: 1037**
 
+  ![](images/400/122.PNG)
 
+The remaining three Action Chains and Events follow the same flow as the first one. We will only show relevant screens to a particular Event or Action being created going forward.
 
 
 
