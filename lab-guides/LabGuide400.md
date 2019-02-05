@@ -567,11 +567,11 @@ In this section you will maually create a new page and add update and delete cap
 
 - Drag and drop an **input Number** item just below the Form Layout item in the Page Structure (This ensures the item is embedded within the Form Layout)
 
-- Drag and drop a **Button** from the Component pane over to the *Left Side** item in the Page Structure. A small arrow will be pointing at the Left Side item:
+- Drag and drop a **Button** from the Component pane over to the **Left Side** item in the Page Structure. A small arrow will be pointing at the Left Side item:
 
   ![](images/400/84.PNG)
 
-- Drag and drop TWO **Button** Components over to the *Right Side** item in the Page Structure. A small arrow will be pointing at the Right Side item:
+- Drag and drop TWO **Button** Components over to the **Right Side** item in the Page Structure. A small arrow will be pointing at the Right Side item:
 
 - So far you canvas looks like:
 
