@@ -272,7 +272,7 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
   ![](images/400/44.PNG)
 
-- Download a static image from [AlphaOffice Image](https://github.com/derekoneil/monolithic-to-microservice/blob/master/lab-resources/vbcs/AlphaOfficeSupply.png) by clicking on it and saving locally.
+- Download a static image from here: [AlphaOffice Image](https://github.com/derekoneil/monolithic-to-microservice/blob/master/lab-resources/vbcs/AlphaOfficeSupply.png). Click on this link and save the file locally.
 
 - Now, click on the **Image** component in the canvas and click the **Data** tab in the Properties section. 
 
@@ -294,7 +294,7 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
   ![](images/400/49.PNG)
 
-- The canvas is populated with a default layout and the **List View** item should be highlighted). If it's not, select it in the Page Structure section. In the Properties area if you don't see the `Add Data` option then select the icon all the way over on the right. Then Click **Add Data**. We will associate this List View with data from one of our REST endpoints.
+- The canvas is populated with a default layout and the **List View** item should be highlighted). If it's not, select it in the Page Structure section. In the Properties area if you don't see the `Add Data` option then select the `Quick Start` icon all the way over on the right. Then click **Add Data**. We will associate this List View with data from one of our REST endpoints.
 
   ![](images/400/50.PNG)
 
@@ -407,24 +407,47 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
  ![](images/400/60.PNG)
 
+## Add a Create Page to the Application
 
-
-
-
-
-
-
-
-
-
-
-
-
-### **STEP 1**: Check the creation of the instance from Lab 050
+### **STEP 1**: 
 
 - From the Dashboard 
 
   ![](images/400/5.PNG)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### **STEP 1**: Check the creation of the instance from Lab 050
 
