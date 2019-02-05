@@ -36,7 +36,7 @@ Use this Lab guide to create a WebLogic deployment in a Kubernetes cluster with 
   ```
 - Pull the operator image:
   ```bash
-  $ docker pull oracle/weblogic-kubernetes-operator:2.0-rc2
+  $ docker pull oracle/weblogic-kubernetes-operator:2.0
   ```
 - Pull the Traefik load balancer image:
   ```bash
