@@ -662,6 +662,10 @@ In this step we will define the Types and Variables used within the page.
 
 ### **STEP 3**: Set Item Properties
 
+- Click the **Designer icon** to get back to the page canvas.
+
+  ![](images/400/85-7.PNG)
+
 - Starting from top of the canvas items to bottom. Select the **Mobile Page Template** item in the Page Structure. Under the General Properties tab set the **Page Title** attribute to:
 
   ```
@@ -696,7 +700,22 @@ In this step we will define the Types and Variables used within the page.
 
 - Upload the image we used earlier; `AlphaOfficeSupply.png`.
 
--
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
