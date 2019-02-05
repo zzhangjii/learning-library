@@ -714,11 +714,27 @@ In this step we will define the Types and Variables used within the page.
 
   ![](images/400/99.PNG)
 
+- Click the Properties **Data** tab and then click the **Select Variable** icon (Down arrow) and choose:
+
+  ![](images/400/104.PNG)
+
+- The attribute will show:
+
+  ![](images/400/104-5.PNG)
+
 - Next, select the Input Text item on the canvas. Under the **General** tab in the Properties pane set the **Label Hint** to:
 
   ```
   Product Name
   ```
+
+- Click the Properties **Data** tab and then click the **Select Variable** icon (Down arrow) and choose:
+
+  ![](images/400/105.PNG)
+
+- The attribute will show:
+
+  ![](images/400/105-5.PNG)
 
 - Finally, select the bottom Input Number item on the canvas. Under the **General** tab in the Properties pane set the **Label Hint** to:
 
@@ -732,9 +748,17 @@ In this step we will define the Types and Variables used within the page.
   USD
   ```
 
+- Click the Properties **Data** tab and then click the **Select Variable** icon (Down arrow) and choose:
+
+  ![](images/400/106.PNG)
+
+- The attribute will show:
+
+  ![](images/400/106-5.PNG)
+
 - Your final canvas should look like:
 
--  ![](images/400/100.PNG)
+  ![](images/400/100.PNG)
 
 ### **STEP 3**: Define the Events on this page
 
@@ -746,7 +770,9 @@ In this step we will finish up the `main-edit` page by defining 4 Events and sub
 
   ![](images/400/102.PNG)
 
+- Select the **vbEnter** Event and click **Select**.
 
+  ![](images/400/103.PNG)
 
 
 
