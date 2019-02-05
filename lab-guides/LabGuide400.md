@@ -857,9 +857,21 @@ In this step we will finish up the `main-edit` page by defining 4 Events and sub
 
   ![](images/400/122.PNG)
 
-- The remaining three Action Chains and Events in the `main-edit` page (Update, Delete and Cancel) follow the same flow as the first one. We will only show relevant screens to a particular Event or Action being created going forward.
+- The remaining three Action Chains and Events in the `main-edit` page (Update, Delete and Cancel) are based on Events by clicking the specific button.
 
-- Create a new Action Chain called **UpdateActionChain**.
+- Make sure your still in **Design Mode** on the `main-edit` page.
+
+  ![](images/400/122-2.PNG)
+
+- In the canvas click the **Update** Button. In the Properties pane select the **Events** tab and then Click **+ New Event --> Quick Start 'ojAction'**.
+
+  ![](images/400/122-4.PNG)
+
+- In the Properties pane rename the new Action Chain:
+
+  ```
+   UpdateActionChain
+  ```
 
 - Drag and drop a **Call REST Endpoint** Action under the Start action. Then click the **Select Endpoint** button.
 
@@ -871,11 +883,11 @@ In this step we will finish up the `main-edit` page by defining 4 Events and sub
 
   ![](images/400/123.PNG)
 
-- In the Properties pane set the **Response Body Format** to  **text** click the Parameters **Assign** link.
+- In the Properties pane set the **Response Body Format** to  **text**. Then, click the Parameters **Assign** link.
 
   ![](images/400/124.PNG)
 
-- Select the **Target** Parameter **body**. Copy and Paste the following into Expression box at the bottom:
+- Select the **Target** Parameter: **body**. Copy and Paste the following into Expression box at the bottom:
 
   ```
   {
@@ -885,17 +897,101 @@ In this step we will finish up the `main-edit` page by defining 4 Events and sub
   }
   ```
 
+- Hit the tab key. The expression uses the current values of the canvas display variables to build a JSON payload that is used by the REST call to update the database.
 
+  ![](images/400/125.PNG)
 
+  ![](images/400/126.PNG)
 
+- Click **Save**.
 
+- Drag and drop a **Fire Notification** Action below the **success** flow.
 
+  ![](images/400/127.PNG)
 
+- For the Notification Properties set the following:
+    - Summary:  **Update Product:**
+    - Message:  (Choose the **ProdNameVar** field) using the Down arrow
+    - Display Mode:  **transient**
+    - Notification Type:  **confirmation**
 
+  ![](images/400/128.PNG)
 
+- The chain is completed. Now, **select the `main-edit` tab** (page) and put the application in **Live Mode** to test.
 
+  ![](images/400/129.PNG)
 
+- Change the Product Name to say: **Sharpie Medium Point...** and click the **Update** button. You should get the success flow confirmation:
 
+  ![](images/400/130.PNG)
+
+- Go back to **Design Mode** on the `main-edit` page.
+
+  ![](images/400/122-2.PNG)
+
+- In the canvas click the **Delete** Button. In the Properties pane select the **Events** tab and then Click **+ New Event --> Quick Start 'ojAction'**.
+
+  ![](images/400/122-4.PNG)
+
+- In the Properties pane rename the new Action Chain:
+
+  ```
+   DeleteActionChain
+  ```
+
+- Drag and drop a **Call REST Endpoint** Action under the Start action. Then click the **Select Endpoint** button.
+
+  ![](images/400/109.PNG)
+
+  ![](images/400/110.PNG)
+
+- Choose **DELETE /restCall/{id}** and click **Select**.
+
+  ![](images/400/132.PNG)
+
+- In the Properties pane set the **Response Body Format** to  **text**. Then, click the Parameters **Assign** link.
+
+  ![](images/400/124.PNG)
+
+- Map the Sources **Page-->IDVar** field to the Target Parameter: **id**.
+
+  ![](images/400/133.PNG)
+
+- Click **Save**.
+
+- Drag and drop a **Fire Notification** Action below the **success** flow.
+
+  ![](images/400/127.PNG)
+
+- For the Notification Properties set the following:
+    - Summary:  **Deleted Product:**
+    - Message:  (Choose the **IDVar** field) using the Down arrow
+    - Display Mode:  **transient**
+    - Notification Type:  **confirmation**
+
+  ![](images/400/134.PNG)
+
+- Drag and drop a **Navigate Back** Action below the Notification. This will return us to the `main-start` (page) after the record is deleted.
+
+  ![](images/400/135.PNG)
+
+- The chain is completed. Now, **select the `main-edit` tab** We will test the Delete functionality after the entire application is completed.
+
+- The last Action and Event for this page is the Cancel button which simply returns us to the calling page (which will be `main-start` when we are all done).
+
+- Select the `main-edit` tab (page). Make sure you are in **Design Mode.**
+
+  ![](images/400/122-2.PNG)
+
+- In the canvas click the **Cancel** Button. In the Properties pane select the **Events** tab and then Click **+ New Event --> Quick Start 'ojAction'**.
+
+  ![](images/400/122-4.PNG)
+
+- In the Properties pane rename the new Action Chain:
+
+  ```
+   DeleteActionChain
+  ```
 
 
 
