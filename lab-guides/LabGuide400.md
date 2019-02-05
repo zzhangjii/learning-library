@@ -700,14 +700,47 @@ In this step we will define the Types and Variables used within the page.
 
 - Upload the image we used earlier; `AlphaOfficeSupply.png`.
 
+- Select the first Input Number item in the canvas. 
+
+ ![](images/400/98.PNG)
+
+- Under the **General** tab in the Properties pane set the **Label Hint** to:
+
+  ```
+  Product ID
+  ```
+
+- Scroll down the attributes and **check the Readonly checkbox**. Also, **uncheck the Thousands Separator checkbox**:
+
+ ![](images/400/99.PNG)
+
+- Next, select the Input Text item on the canvas. Under the **General** tab in the Properties pane set the **Label Hint** to:
+
+  ```
+  Product Name
+  ```
+
+- Finally, select the bottom Input Number item on the canvas. Under the **General** tab in the Properties pane set the **Label Hint** to:
+
+  ```
+  List Price
+  ```
+
+- Scroll down the attributes and change **Converter** to the dollar sign symbol `$` and type the following in the **Currency Code** attribute:
+
+  ```
+  USD
+  ```
+
+- Your final canvas should look like:
+
+-  ![](images/400/100.PNG)
+
+### **STEP 3**: Define the Events on this page
+
+In this step we will finish up the `main-edit` page by defining 4 Events and subsequent Actions. The first event will define what happens when the page is called from the `main-start` page. The other Events will deal with the Cancel, Delete and Update buttons.
+
 - 
-
-
-
-
-
-
-
 
 
 
