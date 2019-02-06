@@ -403,7 +403,9 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
   ![](images/400/62.PNG)
 
-- Your finalized version of the `main-start` page will look like:
+- Your finalized version of the `main-start` page will look something like:
+
+  **NOTE:** Different Phone display profiles will present the data differently. 
 
   ![](images/400/60.PNG)
 
@@ -577,16 +579,17 @@ In this step we will define the Types and Variables used within the page.
     - LIST_PRICE
     - PRODUCT_ID
     - PRODUCT_NAME
+    - EXTERNAL_URL
 
   ![](images/400/90.PNG)
 
 - Click **Finish**.
 
-- The type is created. Add a suffix **Type** to the generated name in the Properties pane so the id name becomes `getRestCallIdType`:
+- The type is created. Add the suffix **Type** to the generated name in the Properties pane so the id name becomes `getRestCallIdType`:
 
   ![](images/400/91.PNG)
 
-- Type struture looks like:
+- The structure looks like:
 
   ![](images/400/92.PNG)
 
@@ -633,6 +636,7 @@ In this step we will define the Types and Variables used within the page.
     - **IDVar       : Number**
     - **PriceVar    : Number**
     - **ProdNameVar : String**
+    - **ImageVar    : String**
 
 - The final variables definitions should look like:
 
@@ -647,6 +651,8 @@ In this step we will define the Types and Variables used within the page.
 - Drag and drop an **input Number** item **inside** the `Form Layout` item in the canvas.
 
 - Drag and drop an **input Text** item just below the `Form Layout` item in the Page Structure (This ensures the item is embedded within the Form Layout)
+
+- Drag and drop an **Image** item just below the input Text item you just created (This ensures the item is embedded within the Form Layout)
 
 - Drag and drop an **input Number** item just below the `Form Layout` item in the Page Structure (This ensures the item is embedded within the Form Layout)
 
@@ -736,6 +742,14 @@ In this step we will define the Types and Variables used within the page.
 
   ![](images/400/105-5.PNG)
 
+- Next, select the Image item on the canvas. Under the **General** tab in the Properties pane set the **Width** and the **Height** attributes to 80:
+
+  ![](images/400/105-7.PNG)
+
+- Click the Image item Properties **Data** tab . For the **Source URL** attribute click the **Select Variable** icon (Down arrow) and choose:
+
+  ![](images/400/105-9.PNG)
+
 - Finally, select the bottom Input Number item on the canvas. Under the **General** tab in the Properties pane set the **Label Hint** to:
 
   ```
@@ -823,6 +837,7 @@ In this step we will finish up the `main-edit` page by defining 4 Events and sub
 
 - Here is where we will map the Results of the REST call to getRestCallVar and also to the variables we attached to Data attributes for the display canvas. On the Sources side expand out **Results** until you see all of the individual fields. **Map** (Drag and drop) the following Sources to Targets:
     - Source: **callRestEndpoint1-->body-->item[0]** --> Target: **getRestCallVar**
+    - Source: **EXTERNAL_URL** --> Target: **ImageVar**
     - Source: **LIST_PRICE** --> Target: **PriceVar**
     - Source: **PRODUCT_ID** --> Target: **IDVar**
     - Source: **PRODUCT_NAME** --> Target: **ProdNameVar**
