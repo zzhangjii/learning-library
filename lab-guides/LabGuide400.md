@@ -1050,7 +1050,7 @@ This step will complete the design of the application. We will add a Selection E
 
 - In the mappings select the "hard-wired" value for Target: **id**, right click and choose **Delete**. 
 
-  ![](images/400/145.PNG)
+  ![](images/400/145.png)
 
 - Now map the Sources: **Page-->InputVar1** to Target: **id**.
 
