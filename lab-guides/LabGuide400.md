@@ -1064,7 +1064,7 @@ This step will complete the design of the application. We will add a Selection E
 
   ![](images/400/77.PNG)
 
-- A example test flow could be:
+- Run a test doing the following:
     - Select a Product from the main page. See if it shows up in the Edit page.
     - Cancel out.
     - Insert a new Product from the main page using the following:
@@ -1073,6 +1073,12 @@ This step will complete the design of the application. We will add a Selection E
       List Price:  25
       ```
     - See if the new product is in the Main List, find it, and select.
-    - Modify the List Price to something and save.
-    - Delete the Product.
+    - Modify the Product Name and List Price to:
+      ```
+      Product Name: EXPO Dry Erase Kit - 2 Pak, Assorted Colors 
+      List Price:  50
+      ```
+    - ... and Update.
+    - Cancel out.
+    - Refind the Updated Product, select and Delete.
     
