@@ -128,7 +128,7 @@ Service Connections are REST endpoints pointing to various services. In this ste
   plain/text
   ```
 
- ![](images/400/24.PNG)
+  ![](images/400/24.PNG)
 
 - Click **Done** and then click **Add** to complete the POST definition.
  
@@ -172,7 +172,7 @@ Service Connections are REST endpoints pointing to various services. In this ste
   plain/text
   ```
 
- ![](images/400/29.PNG)
+  ![](images/400/29.PNG)
 
 - Click **Done** and then click **Add** to complete the PUT definition.
  
@@ -202,7 +202,7 @@ Service Connections are REST endpoints pointing to various services. In this ste
   plain/text
   ```
 
- ![](images/400/34.PNG)
+  ![](images/400/34.PNG)
 
 - Click **Done** and then click **Add** to complete the DELETE definition.
 
@@ -373,7 +373,7 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
 - Select the **Input Number** item for **PRODUCT_ID**. Under the **General** properties tab **de-select the Thousands Separator** checkbox.
 
- ![](images/400/59.PNG)
+  ![](images/400/59.PNG)
 
 - Upon tabbing out of the field the change will happen.
 
@@ -403,7 +403,7 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
   ![](images/400/62.PNG)
 
-- Your finalized version of the main page will look like:
+- Your finalized version of the `main-start` page will look like:
 
   ![](images/400/60.PNG)
 
