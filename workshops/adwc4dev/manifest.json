@@ -13,28 +13,28 @@
             },
             {
                 "number": "100",
-                "filename": "L1.md",
+                "filename": "Lab 1.md",
                 "title": "Lab 1: Introduction",
                 "description": "Create and access an Autonomous Database Cloud Service",
                 "labels": {"version": "Self-Guided"}
             },
             {
                 "number": "200",
-                "filename": "L2.md",
+                "filename": "Lab 2.md",
                 "title": "Lab 2: Review Query Performance",
                 "description": "Run sample queries against a 100 million row current data set and a six billion row historic data set",
                 "labels": {"version": "Self-Guided"}
             },
             {
                 "number": "300",
-                "filename": "L3.md",
+                "filename": "Lab 3.md",
                 "title": "Lab 3: Machine Learning",
                 "description": "Work with an Apache Zepplin notebook and create a Machine Learning model to predict customer good credit",
                 "labels": {"version": "Self-Guided"}
             },
             {
                 "number": "400",
-                "filename": "L4.md",
+                "filename": "Lab 4.md",
                 "title": "Lab 4: Create Data Visualizations",
                 "description": "Create data visualizations with Oracle Analytics Cloud to review sales performance and better understand the factors that affect good credit",
                 "labels": {"version": "Self-Guided"}
