@@ -994,6 +994,8 @@ In this step we will finish up the `main-edit` page by defining 4 Events and sub
   ```
 - Drag and drop a **Navigate Back** Action after the Start.
 
+  ![](images/400/135.PNG)
+
 - The chain is completed. We will test the functionality when the entire application is completed.
 
 ### **STEP 4**: Call the main-edit page from main-start
@@ -1002,12 +1004,75 @@ This step will complete the design of the application. We will add a Selection E
 
 - Select the `main-start` tab (page) which should be **Design mode**.
 
-  ![](images/400/122-4.PNG)
+  ![](images/400/122-2.PNG)
 
+- In the Page Structure pane select the **List View** item.
 
+  ![](images/400/136.PNG)
 
+- In the Properties pane select the **Events** tab, then click **+ New Event**, and select **Quick Start: 'selection'**.
 
+  ![](images/400/137.PNG)
 
+- In the generated **ListViewSelectionChangeChain** drag and drop a **Navigate** Action under the Start.
 
+  ![](images/400/138.PNG)
 
+- Click **Select Target**. Choose **Peer Page** and select the **main-edit** page
 
+  ![](images/400/139.PNG)
+
+  ![](images/400/140.PNG)
+
+  ![](images/400/141.PNG)
+
+- Click **Select**.
+
+- It is known that `main-edit` requires an input variable so we must map the selection (PRODUCT_ID (which is the table's primary key)) to the input variable.
+
+- In the Properties pane check the Browser History **push** radio button and then click the **Assign** link for the Input Parameters.
+
+  ![](images/400/142.PNG)
+
+- Map the Sources: **Selection-->item[0]** to the Target: **InputVar1**.
+
+  ![](images/400/143.PNG)
+
+- Click **Save**.
+
+- One last thing we need to do is removed the "hard-wired" value (1037) we put into the CallRestGetChain Action flow within the `main-edit` page and map the incoming value from the `main-start` page to the REST call PRODUCT_ID.
+
+- Go to the `main-edit` tab (page) and click on **Actions**. Then, click on the the **CallRestActionChain**. 
+
+- In the chain click on the **Call REST Endpoint** Action and then click on the **Assign** link in the Properties pane.
+ 
+  ![](images/400/144.PNG)
+
+- In the mappings select the "hard-wired" value for Target: **id**, right click and choose **Delete**. 
+
+  ![](images/400/145.PNG)
+
+- Now map the Sources: **Page-->InputVar1** to Target: **id**.
+
+- Click **Save**.
+
+  ![](images/400/146.PNG)
+
+- The application is completed.
+   
+- To test click the **Run** arrow on the main menu bar.
+
+  ![](images/400/77.PNG)
+
+- A example test flow could be:
+    - Select a Product from the main page. See if it shows up in the Edit page.
+    - Cancel out.
+    - Insert a new Product from the main page using the following:
+      ```
+      Product Name: EXPO Dry Erase Kit, Assorted Colors 
+      List Price:  25
+      ```
+    - See if the new product is in the Main List, find it, and select.
+    - Modify the List Price to something and save.
+    - Delete the Product.
+    
