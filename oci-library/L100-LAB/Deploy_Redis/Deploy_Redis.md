@@ -23,11 +23,16 @@
 
 ## Overview
 
-In this lab we will create a compute instance, install httpd server on it, attach block volume to it and install an app on the Block Volume
-We will then create a second compute instance using the boot volume of the first compute instance and move the Block Volume to 
-the second compute instance (with the app installed).
-The goal of the lab is to demonstrate launching VCN, Compute Instance, using Boot volume of compute instance and 
-how easy it is to move additional storage with applicatons/tools installed between compute instances
+Redis (REmote DIctionary Server) is a popular open-source, in-memory data store that supports a wide array of data
+structures in addition to simple key-value pairs. It is a key-value database where values can contain more complex
+data types, such as strings, hashes, lists, sets, sorted sets, bitmaps, and hyperloglogs, with atomic operations
+defined on those data types. Redis combines in-memory caching with built-in replication, persistence, sharding, and
+the master-slave architecture of a traditional database. Given the rich features offered by Redis out of the box, a
+wide variety of deployment options are available.
+In this lab we will deploy Redis in Master-Slave mode (similar to below) though we will not deploy a NAT instance
+(Bastion host).
+
+![]( img/Redis_014.PNG)
 
 ## Pre-Requisites
 
