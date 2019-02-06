@@ -3,14 +3,7 @@
         "title": "Autonomous Data Warehouse Cloud Service for Developers",
         "description": "These labs will give you an understanding of the Autonomous Data Warehouse Cloud Service and how it can manage vast amounts of data with minimal management, and serve the needs of citizen data scientists and line of business analysts.  The labs will walk you through creating and accessing a new Autonomous Data Warehouse Cloud Service instance.  Next, you will test ADWC's ability to query billions of rows of data quickly to support end user ad-hoc access to their critical business information.  Next you will assume the role of a citizen data scientist, and will create learning models on your customer credit data to identify those most likely to be interested in a loyalty card program.  Lastly you will assume the role of a marketing analyst, and will visualize the credit, sales, and order data to support marketing programs.",
         "interactive":"https://launch.oracle.com/?adwc4dev",
-        "versions": [
-           {
-            "name": "Self-Guided",
-            "description": "Individual self-guided learning",
-            "imageUrl": "https://oracle.github.io/learning-library/workshops/common-content/images/common/Self-Service.png"
-          }
-        ],
-        "labs": [
+         "labs": [
             {
                 "number": "10",
                 "filename": "SG-intro.md",
