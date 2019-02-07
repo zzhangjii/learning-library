@@ -67,7 +67,15 @@ To run the operator in a Kubernetes cluster, you need to build the Docker image 
 - Once you logged in click your name on top-rigth corner and select **User Settings**. 
 
   ![](images/100/user_settings.png)
- 
+
+- Click Users
+  
+  ![](images/100/user_settings1.png)
+
+- You may see two users in the list, one that is named with just your email address, and another that is named `oracleidentitycloudservice`/your-email-address. **Choose the one that is named just your-email-address.**
+  
+  ![](images/100/user_settings2.png)
+
 - On the user details page select **Auth Tokens** in the left menu. Click **Generate Token**.
   
   ![](images/100/auth_keys.png) 
@@ -118,22 +126,44 @@ Now you are ready to pull the  image on docker enabled host after authenticating
         ```
         docker pull store/oracle/weblogic:12.2.1.3
         ```
- ![](images/100/weblogic_pull.png) 
+  ![](images/100/weblogic_pull.png) 
 
 - Run the following command to check your imaged is pulled.
         ```
         docker images
         ```
-- Copy Image ID and paste it for the docker tag command.
+  ![](images/100/weblogic_pull1.png)
+
+- Run the following command with suitable replacements.
         ```
-        docker tag IMAGE ID iad.ocir.io/your_tenancy/your_user/domain-home-in-image:12.2.1.3
+        docker tag IMAGE ID iad.ocir.io/your_tenancy/domain-home-in-image:12.2.1.3
         ```
 
-- Log in to the OCIR Docker registry by entering this command:
+    ![](images/100/docker_tag.png)
+
+- Log in to the OCIR Docker registry by entering this command. When prompted for your username, **enter your OCI tenancy name/oci username and auth token.**
         ```
         docker login iad.ocir.io -u your_tenancy/your_user
         ```
-- When prompted for your username, enter your OCI tenancy name/oci username and auth token.
+    ![](images/100/docker_iad_login.png)
+- **Note:** 
+In the **OCI Console**, look in the top right corner for the currently selected region:
+
+  ![](images/100/oci_console_iad.png)
+
+  - If the region is `ashburn`, then you do not need to change anything. The URL `iad.ocir.io` is correct.
+
+  - If the region is not `ashburn`, replace the `iad` part of the `DOCKER_REGISTRY` environment variable to match your region:
+
+  ```
+  London = lhr
+  Frankfurt = fra
+  Phoenix = phx
+  Ashburn = iad
+  ```
+
+  - For example, if your region is `eu-frankfurt-1`, change the URL to `fra.ocir.io`.
+  
     
 - Push Docker images into OCIR:
         ```
