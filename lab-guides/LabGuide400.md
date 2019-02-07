@@ -1082,7 +1082,7 @@ This step will complete the design of the application. We will add a Selection E
 - Run a test doing the following:
     - Select a Product from the main page. See if it shows up in the Edit page.
     - Cancel out.
-    - Insert a new Product from the main page using the following:
+    - Insert a new Product from the main page **+** PLUS sign using the following:
       ```
       Product Name: EXPO Dry Erase Kit, Assorted Colors 
       List Price:  25
