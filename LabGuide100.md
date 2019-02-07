@@ -117,10 +117,10 @@ Now you are ready to pull the  image on docker enabled host after authenticating
 ### **STEP 4**: Pull Docker images for the operator and push to Oracle Cloud Infrastructure Registry (OCIR)
 
 - Open Terminal (Linux/Mac users) or Command Line (Windows users) and use your docker credentials to access your docker account.
-        ```
-        docker login
-        ```
-        ![](images/100/docker_login.png) 
+  ```
+  docker login
+  ```
+  ![](images/100/docker_login.png) 
 
 - Run the following commands 
         ```
