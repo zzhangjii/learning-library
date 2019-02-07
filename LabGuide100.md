@@ -122,19 +122,19 @@ Now you are ready to pull the  image on docker enabled host after authenticating
   ```
   ![](images/100/docker_login.png) 
 
-- Run the following commands 
+- **Type** the following: 
   ```
   docker pull store/oracle/weblogic:12.2.1.3
   ```
   ![](images/100/weblogic_pull.png) 
 
-- Run the following command to check your imaged is pulled.
+- Run the following command to see your image is successfully pulled.
   ```
   docker images
   ```
   ![](images/100/weblogic_pull1.png)
 
-- Run the following command with suitable replacements.
+- **Type** the following command with suitable replacements.
   ```
   docker tag IMAGE ID iad.ocir.io/your_tenancy/domain-home-in-image:12.2.1.3
   ```
