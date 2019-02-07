@@ -123,29 +123,29 @@ Now you are ready to pull the  image on docker enabled host after authenticating
   ![](images/100/docker_login.png) 
 
 - Run the following commands 
-        ```
-        docker pull store/oracle/weblogic:12.2.1.3
-        ```
+  ```
+  docker pull store/oracle/weblogic:12.2.1.3
+  ```
   ![](images/100/weblogic_pull.png) 
 
 - Run the following command to check your imaged is pulled.
-        ```
-        docker images
-        ```
+  ```
+  docker images
+  ```
   ![](images/100/weblogic_pull1.png)
 
 - Run the following command with suitable replacements.
-        ```
-        docker tag IMAGE ID iad.ocir.io/your_tenancy/domain-home-in-image:12.2.1.3
-        ```
+  ```
+  docker tag IMAGE ID iad.ocir.io/your_tenancy/domain-home-in-image:12.2.1.3
+  ```
 
   ![](images/100/docker_tag.png)
 
 - Log in to the OCIR Docker registry by entering this command. When prompted for your username, **enter your OCI tenancy name/oci username and auth token.**
-        ```
-        docker login iad.ocir.io -u your_tenancy/your_user
-        ```
-    ![](images/100/docker_iad_login.png)
+  ```
+  docker login iad.ocir.io -u your_tenancy/your_user
+  ```
+  ![](images/100/docker_iad_login.png)
 - **Note:** 
 In the **OCI Console**, look in the top right corner for the currently selected region:
 
@@ -166,20 +166,20 @@ In the **OCI Console**, look in the top right corner for the currently selected 
   
     
 - Push Docker images into OCIR:
-        ```
-        docker push iad.ocir.io/your_tenancy/your_user/domain-home-in-image:12.2.1.3
-        ```
-![](images/100/docker_push.png) 
+  ```
+  docker push iad.ocir.io/your_tenancy/your_user/domain-home-in-image:12.2.1.3
+  ```
+  ![](images/100/docker_push.png) 
 
 - From the OCI Console navigation menu, select **Developer Services->Registry (OCIR)**.
   ![](images/100/ocir.png)
 
 - Click Registry tab and you can see pushed docker images.
   
-    ![](images/100/docker_registry.png)
+  ![](images/100/docker_registry.png)
 
 - Click Actions dropdown button and change it to public.
 
-    ![](images/100/docker_registry_public.png)
+  ![](images/100/docker_registry_public.png)
 
 **You are now ready to move to the next lab: [Lab 200](LabGuide200.md)**
