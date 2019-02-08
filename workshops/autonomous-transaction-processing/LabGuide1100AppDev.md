@@ -37,12 +37,12 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 - Start by pulling the image from Docker. Choose 'slim' if you simply want to connect to an ATP instant or issue OCI CLI commands. Choose 'full' if you wish to build and connect applications on ATP.
 
 ```
-docker pull phx.ocir.io/oradbclouducm/openworld/atpclient:slim
+
 ```
 OR
 
 ```
-docker pull phx.ocir.io/oradbclouducm/openworld/atpclient:full
+
 ```
 
 - Next, create a directory on your local machine to download the ATP connection wallet from the Oracle Cloud Console. We will map this local directory to the docker container folder /opt/oracle/database/wallet so that client tools in the container have access to wallet files
