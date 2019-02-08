@@ -128,7 +128,7 @@ Read on to begin your Getting Started journey with Oracle Autonomous Transaction
 **[Click here to run Lab 9](LabGuide900ConfigureOCI-CLI.md)**
 
 
-## Lab 10: Rapid application development with ATP
+## Lab 10: Mastering DevOps in the Oracle Cloud
 
 **Key Objectives**:
 
