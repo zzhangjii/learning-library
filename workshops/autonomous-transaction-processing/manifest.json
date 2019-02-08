@@ -63,16 +63,11 @@
                 "title": "Lab 9: Configure Oracle Cloud Infrastructure Command Line Interface",
                 "description": "Instructions to configure Oracle Cloud Infrastructure Command Line Interface"
             },
+            
             {
                 "number": "10",
-                "filename": "LabGuide1000Kubernetes.md",
-                "title": "Lab 10: Kubernetes and ATP",
-                "description": "Instruction on using Kubernetes"
-            },
-            {
-                "number": "11",
-                "filename": "LabGuide1100AppDev.md",
-                "title": "Lab 11: Rapid Application Development with ATP",
+                "filename": "LabGuide1000AppDev.md",
+                "title": "Lab 10: Rapid Application Development with ATP",
                 "description": "Docker Images for instant connectivity to Oracle Autonomous Database"
             },
             {

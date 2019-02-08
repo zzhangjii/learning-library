@@ -16,14 +16,6 @@ Two docker images are provided here to give you a jumpstart on developing applic
 4. Use sample applications written in Python, Java and Node.js to understand how apps connect to ATP using the secure encryption wallet
 5. Use terraform scripts to work with Oracle cloud. Sample scripts for managing ATP instances are provided
 
-atpclient:slim 
-
-Contains SqlCL, SQL*Plus and OCI command line interface to instantly provision and connect to ATP instances in your cloud account
-
-atpclient:full
-
-Contains SqlCL, SQL*Plus, OCI command line interface, SDK scripts and sample applications for Python, Java, Node.js and Terraform
-
 
 **README files with usage directions and example scripts have been added to each language folder in the image and are also listed below**
 
@@ -34,22 +26,17 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 
 ## **Download Docker image**
 
-- Start by pulling the image from Docker. Choose 'slim' if you simply want to connect to an ATP instant or issue OCI CLI commands. Choose 'full' if you wish to build and connect applications on ATP.
-
-```
-
-```
-OR
-
-```
-
-```
+- Start by pulling the image from Docker, provided by your instructor.
 
 - Next, create a directory on your local machine to download the ATP connection wallet from the Oracle Cloud Console. We will map this local directory to the docker container folder /opt/oracle/database/wallet so that client tools in the container have access to wallet files
 
 On your local machine - 
 ```
 mkdir -p ~/tmp/wallet
+```
+If you are on Windows, you can run a similar command using Powershell as Administrator -
+```
+mkdir tmp/wallet
 ```
 
 - Now you can launch a container using the image you just pulled.
@@ -58,7 +45,11 @@ Note: With this run command you are mapping the local directory ~/tmp/wallet/ to
 This command also maps the port 3050 to your local machine port 3050 which will be used for testing node.js application.
 
 ```
-docker run -it -p 3050:3050 -v ~/tmp/wallet:/opt/oracle/database/wallet phx.ocir.io/oradbclouducm/openworld/atpclient:full /bin/bash
+docker run -it -p 3050:3050 -v ~/tmp/wallet:/opt/oracle/database/wallet {phx.ocir.io/oradbclouducm/openworld/atpclient:full} /bin/bash
+```
+If you are on Windows you can run a similar command using Powershell as Administrator, this will prompt you to enter your system username and password to share volume. Change the username in the line below to your username or where you created the wallet directory. Hit enter when you are done -
+```
+docker run -it -p 3050:3050 -v C:\Users\{Username}\tmp\wallet:/opt/oracle/database/wallet {INSTRUCTOR PROVIDED URL} /bin/bash
 ```
 
 ![](./images/1000/lab1000-1.png)
@@ -602,12 +593,6 @@ Terraform is a popular cloud orchestration tool. Sample terraform scripts are pr
 ### About / Setup
 Utilize Terraform to create and destroy your ATP instances
 
-- Please set your environment variables with the below command:
-
-```
-source /opt/oracle/tools/terraform/env-vars.sh
-```
-
 
 ### Example Scripts 
 These scripts are very simple and do all the work for you. 
@@ -615,13 +600,13 @@ These scripts are very simple and do all the work for you.
 - Enter the /opt/oracle/tools/terraform directory and run:
 
 ```
-terraform init
+chmod +x createATP.sh
+./createATP.sh
 ```
 
-- Follow the instructions after running **terraform apply** and your database will create with the parameters entered
+- Follow the instructions after running the script above and your database will create with the parameters entered
 
 ```
-bash-4.2# terraform apply
 var.autonomous_database_cpu_core_count
   Enter a value: 1
 
@@ -632,10 +617,10 @@ var.autonomous_database_db_name
   Enter a value: DBNAME
 
 var.autonomous_database_display_name
-  Enter a value: dannysDB
+  Enter a value: testDB
 ```
 
-- The password to your database will be output after it has finished creating. The user is ADMIN
+- The **password** to your database will be output after it has finished creating. The user is ADMIN
 
 - To destroy the database created:
 
@@ -643,63 +628,48 @@ var.autonomous_database_display_name
 terraform destroy
 ```
 
-- To update the database created, simply run terraform apply again and you can update the CPU Count and the data storage in TBs as well as the display name with the prompts.
+- To update the database created, simply run 
+```terraform apply``` 
+and you can update the CPU Count and the data storage in TBs as well as the display name with the prompts.
+
+
+### Download Database Wallet
+
+- Enter the `/opt/oracle/tools/terraform/getWallet` directory and run:
+
+```
+chmod +x getWallet.sh
+./getWallet.sh
+```
+
+Enter the database OCID and the password that was output when you created the instance
+
+And now the database wallet will be downloaded into wallet.zip
 
 ### List directory
 
 - Enter the `/opt/oracle/tools/terraform/list` directory and run:
 
 ```
-source /opt/oracle/tools/terraform/list/env-vars.sh
-```
-
-```
-terraform init
-```
-
-```
-terraform apply
+chmod +x listATPInstances.sh
+./listATPInstances.sh
 ```
 
 And now you will see all the database instances in the given compartment
 
-### Backup
-
-- Enter the `/opt/oracle/tools/terraform/backup` directory and run:
-
-```
-source /opt/oracle/tools/terraform/backup/env-vars.sh
-```
-Enter the database OCID you would like to backup
-
-```
-terraform init
-```
-
-```
-terraform apply
-```
-
-And now your database will run a backup
 
 ### Get Database details
 
 - Enter the `/opt/oracle/tools/terraform/getATP` directory and run:
 
 ```
-source /opt/oracle/tools/terraform/getATP/env-vars.sh
-```
-Enter the database OCID for which you would like to view the details
-
-```
-terraform init
+chmod +x listATP.sh
+./listATP.sh
 ```
 
-```
-terraform apply
-```
+Enter the database OCID
 
-And now several details of that database will be displayed
+And now several details of that individual database will be displayed
 
 
 ## **Useful Links**:

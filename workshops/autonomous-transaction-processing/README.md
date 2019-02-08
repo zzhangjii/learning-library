@@ -20,7 +20,6 @@ This workshop walks you through all the steps to get started using the **Oracle 
 - Working with REST APIs
 - Building Microservices on ATP
 - Configure OCI-CLI
-- Using Kubernetes
 - Rapid Application Development with Oracle ATP
 
 # How to Get Your Free Cloud Trial Account
@@ -30,31 +29,8 @@ Please click on the following link to create your <a class=“trial-link” href
 
   ![](images/readme/code_9.png)
 
-# Docker images for instant application connectivity to ATP
 
-Two docker images are provided here to give you a jumpstart on developing applications on Oracle Autonomous Transaction Processing Service.
-
-**atpclient:slim**
-
-Contains SqlCL, SQL*Plus and OCI command line interface to instantly provision and connect to ATP instances in your cloud account
-
-To download image, run- 
-
-```
-docker pull phx.ocir.io/oradbclouducm/openworld/atpclient:slim
-```
-
-**atpclient:full**
-
-Contains SqlCL, SQL*Plus and OCI command line interface, SDK scripts and sample applications for Python, Java, Node.js and Terraform
-
-To download image, run- 
-
-```
-docker pull phx.ocir.io/oradbclouducm/openworld/atpclient:full
-```
-
-Detailed instruction on using the image are provided in <a href="./LabGuide1100AppDev.md" target="_blank">LabGuide11</a>
+Detailed instruction on using the image are provided in <a href="./LabGuide1000AppDev.md" target="_blank">LabGuide10</a>
 
 
 # Workshop Overview
@@ -151,17 +127,8 @@ Read on to begin your Getting Started journey with Oracle Autonomous Transaction
 
 **[Click here to run Lab 9](LabGuide900ConfigureOCI-CLI.md)**
 
-## Lab 10: Kubernetes and ATP
 
-**Key Objectives**:
-
-- Use OCI automation to deploy a full infrastructure stack including load balancers, network, compute and a Kubernetes cluster
-- Automate deployment of ATP database
-- Deploy a microservice on the kubernetes cluster connected to the ATP database
-
-**[Click here to run Lab 10](LabGuide1000Kubernetes.md)**
-
-## Lab 11: Rapid application development with ATP
+## Lab 10: Rapid application development with ATP
 
 **Key Objectives**:
 
@@ -171,7 +138,7 @@ Read on to begin your Getting Started journey with Oracle Autonomous Transaction
 - Utilize Terraform to control ATP
 - Utilize OCI-CLI to control ATP
 
-**[Click here to run Lab 11](LabGuide1100AppDev.md)**
+**[Click here to run Lab 11](LabGuide1000AppDev.md)**
 
 ## Appendix
 
