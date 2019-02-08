@@ -45,7 +45,7 @@ Note: With this run command you are mapping the local directory ~/tmp/wallet/ to
 This command also maps the port 3050 to your local machine port 3050 which will be used for testing node.js application.
 
 ```
-docker run -it -p 3050:3050 -v ~/tmp/wallet:/opt/oracle/database/wallet {phx.ocir.io/oradbclouducm/openworld/atpclient:full} /bin/bash
+docker run -it -p 3050:3050 -v ~/tmp/wallet:/opt/oracle/database/wallet {INSTRUCTOR PROVIDED URL} /bin/bash
 ```
 If you are on Windows you can run a similar command using Powershell as Administrator, this will prompt you to enter your system username and password to share volume. Change the username in the line below to your username or where you created the wallet directory. Hit enter when you are done -
 ```
