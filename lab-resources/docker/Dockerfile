@@ -13,7 +13,7 @@ RUN         apt-get update && \
 RUN         curl -L -o /tmp/glassfish-4.1.zip https://download.oracle.com/glassfish/4.1.1/release/glassfish-4.1.1.zip && \
             unzip /tmp/glassfish-4.1.zip -d /usr/local && \
             rm -rf /usr/local/glassfish4/glassfish/domains/domain1/osgi-cache/felix && \
-            rm -rf /usr/local/glassfish4/glassfish/modules/jackson* && \
+#           rm -rf /usr/local/glassfish4/glassfish/modules/jackson* && \
             rm -f /tmp/glassfish-4.1.zip && \
             mkdir /usr/local/wallet_DB && \
             mkdir /usr/local/alpha
