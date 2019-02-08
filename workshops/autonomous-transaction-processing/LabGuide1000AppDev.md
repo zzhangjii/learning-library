@@ -3,7 +3,7 @@
 October 18, 2018
 </td>
 <td class="td-banner">
-# Lab 11: Docker Images for instant connectivity to Oracle Autonomous Database
+# Lab 10: Docker Images for instant connectivity to Oracle Autonomous Database
 </td></tr><table>
 
 # Rapid Application Devlopment with Oracle Autonomous Database
