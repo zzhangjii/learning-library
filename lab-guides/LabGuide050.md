@@ -203,7 +203,7 @@ In this step you will create a VBCS instance that will be used in Lab 400. It ta
 
 - When the environment is ready you will see the following along with the connect string to use in VNC Viewer. (In this example: `129.213.167.192:10`.
 
-  **NOTE: Your IP address will be different**)
+  **NOTE: Your IP address will be different**
 
   **Also NOTE: The screen resolution on VNC port :10 is 1920x1200. If you would prefer to use a smaller resolution of 1680x1050 then use port :11 instead. `Example: 129.213.167.192:11`**
 
