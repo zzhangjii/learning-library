@@ -32,11 +32,11 @@ The client image is a pre-installed Compute Service Instance that has GIT and SQ
 
 Once the infrastructure is provisioned you can access your enironment using `VNC Viewer`. Please download and install from: <a href="https://www.realvnc.com/en/connect/download/viewer/" target="newwer">VNC Viewer</a>
 
-### **STEP 1**: Start the Jumpstart Client Image
+### **STEP 1**: Access and Register for the Jumpstart Client
 
 - Open the following link in a new tab in your browser. <a href="https://oci.qloudable.com/demoLab/public-preview/24007932-775e-42e6-a4c1-528c39b1b757" target="newwerc">Client Image Link</a>
 
-- Click the **Sign Up** button in the top right corner. _If you already have and account you can click sign-in._
+- Click the **Sign Up** button in the top right corner. _If you already have and account you can proceed to step 2 below._
 
  ![](images/050/qloudable_signup.png)
 
@@ -47,6 +47,8 @@ Once the infrastructure is provisioned you can access your enironment using `VNC
 - You will receive a email asking you to verify your account. Open your email client in a new window and click **Confirm My Account** before proceeding.
 
  ![](images/050/LabGuide050-1df0ca2e.png)
+
+### **STEP 2**: Start the Jumpstart Client Image
 
 - Navigate back to your browser window. Enter your email address and password and click **Sign In** on the next screen.
 
@@ -131,7 +133,7 @@ We require a Database to store the Alpha Office data which is accessed later in 
 
     ![](images/050/image14.png)
 
-  - After approximately 5 minutes, the ATP instance is now **Available**
+  - After approximately 5 minutes, the ATP instance will be provisioned. You can immediately proceed to the next section.
 
     ![](images/050/image15.png)
 
@@ -189,11 +191,11 @@ In this step you will create a VBCS instance that will be used in Lab 400. It ta
 
   ![](images/050/LabGuide50-vbcs4.png)
 
-- You will see the following screen once your request is submitted. The refresh button can to used to update the provioning status:
+- You will see the following screen once your request is submitted. The refresh button can to used to update the provisioning status:
 
   ![](images/050/LabGuide50-fcc49616.png)
 
-- You should see your instance being created. We will check for completion at the beginning of Lab 400.
+- You can immediately proceed to the next section. We will check for completion at the beginning of Lab 400.
 
   ![](images/050/LabGuide50-vbcs5.png)
 
@@ -201,13 +203,13 @@ In this step you will create a VBCS instance that will be used in Lab 400. It ta
 
 ### **STEP 1**: Access Client Image
 
-- When the environment is ready you will see the following along with the connect string to use in VNC Viewer. (In this example 129.213.167.192:10. `Your IP address will be different`)
+- When the environment is ready you will see the following along with the connect string to use in VNC Viewer. (In this example 129.213.167.192:10. _Your IP address will be different_)
 
   **NOTE: The screen resolution on VNC port :10 is 1920x1200. If you would prefer to use a smaller resolution of 1680x1050 then use port :11 instead. `Example: 129.213.167.192:11`**
 
   ![](images/050/JS6.PNG)
 
-- **NOTE: You have 5 hours** before the environment will go away.
+- **NOTE: You have 7 hours** before the environment will go away.
 
   ![](images/050/JS7.PNG)
 
