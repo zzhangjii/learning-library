@@ -111,11 +111,11 @@ While still connected to the Client Image using VNC Viewer, complete the followi
 
 	![](images/100/image39a.png)	
 
-  - Your text editor should lool similar to this
+  - Your text editor should look similar to this
   
 	![](images/100/image11b.png)	
 	
-	**Note:** Your values for **REGION** and **OBJECT_STORAGE_NAMESPACE** will be different.
+	**Note:** Your values for **REGION** and **OBJECT_STORAGE_NAMESPACE** may/will be different.
 	
 ### **STEP 5**: Create OCI User
 
@@ -274,23 +274,15 @@ While still connected to the Client Image using VNC Viewer, complete the followi
 
 	![](images/100/image37.png)
 
-  - On **Step 1** of the **Import Wizard**, select and/or enter the following and click **Next**
+  - On **Step 1** of the **Import Wizard**, select and/or enter the following and click **Next**.  You will use the values you collected in the text editor at the end of **Step 4**.
 
 	- **Type of Import:** ```Full```
 	- **Credentials or Directories:** ```IMPDP_OBJ_STORE``` (Created in STEP 10)
-	- **File Names or URI:** ```https://swiftobjectstorage.{REGION}.oraclecloud.com/v1/{OBJECT_STORAGE_NAMESPACE}/{BUCKET}/{FILENAME}```
+	- **File Names or URI:** ```https://swiftobjectstorage.{REGION}.oraclecloud.com/v1/{OBJECT_STORAGE_NAMESPACE}/{BUCKET}/{FILENAME}``` (Created in STEP 4)
 
+	![](images/100/image11b.png)	
+	
 	![](images/100/image38.png)
-
-	**Note:** For example, the **Swift URI** for the Data Pump DMP file uploaded to Object Storage in STEP 4 would be
-
-	```
-	https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/{OBJECT_STORAGE_NAMESPACE}/atpData/expdp_alpha121.dmp
-	```
-
-	**Note:** To determine the values for **REGION, BUCKET, OBJECT_STORAGE_NAMESPACE, FILENAME** to complete the **Swift URI**, navigate to **Object Storage** and click on the `atpData` **Bucket**
-
-	![](images/100/image39.png)
 
   - Accept the Defaults and click **Next** on **Step 2** of the **Import Wizard**. It can take 30 seconds for the **Next** button to be enabled.
 
