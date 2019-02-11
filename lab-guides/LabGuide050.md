@@ -30,11 +30,11 @@ The client image is a pre-installed Compute Service Instance that has GIT and SQ
 
 ### Prerequisite
 
-Once the infrastructure is provisioned you can access your enironment using `VNC Viewer`. Please download and install from: [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/)
+Once the infrastructure is provisioned you can access your enironment using `VNC Viewer`. Please download and install from: <a href="https://www.realvnc.com/en/connect/download/viewer/" target="newwer">VNC Viewer</a>
 
 ### **STEP 1**: Start the Jumpstart Client Image
 
-- Open the following link in a new tab in your browser. [Client Image Link](https://oci.qloudable.com/demoLab/public-preview/24007932-775e-42e6-a4c1-528c39b1b757)
+- Open the following link in a new tab in your browser. <a href="https://oci.qloudable.com/demoLab/public-preview/24007932-775e-42e6-a4c1-528c39b1b757" target="newwerc">Client Image Link</a>
 
 - Click the **Sign Up** button in the top right corner. _If you already have and account you can click sign-in._
 
