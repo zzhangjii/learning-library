@@ -89,17 +89,17 @@ While still connected to the Client Image using VNC Viewer, complete the followi
 
 ### **STEP 4**: Upload Data Pump File into Object Storage Bucket
 
-  -  Next click **Upload Object**
+  - Next click **Upload Object**
 
 	![](images/100/image9.png)
 
   - **Browse** or **Drag/Drop** the Data Pump DMP `.../monolithic-to-microservice/lab-resources/database/expdp_alpha121.dmp` included in the GIT repository you cloned earlier. Click **Upload Object**
 
-  ![](images/100/image101.png)
+    ![](images/100/image101.png)
 
 	![](images/100/image10.png)
 
-	- In a moment, the file will be uploaded to Object Storage
+  - In a moment, the file will be uploaded to Object Storage
 
 	![](images/100/image11.png)
 
