@@ -37,8 +37,9 @@ While still connected to the Client Image using VNC Viewer, complete the followi
 	![](images/100/image02.png)
 
 	**Note:**  The GIT clone creates the ```monolithic-to-microservice``` directory which contains contents used throughout the labs. You can validate the clone by entering the following command.
-  ```
-  ls -l monolithic-to-microservice/
+	
+    ```
+    ls -l monolithic-to-microservice/
 	```
 
 # Object Storage Setup, OCI User Creation and Auth Token Generation
@@ -138,7 +139,7 @@ While still connected to the Client Image using VNC Viewer, complete the followi
 
 	![](images/100/image19.png)
 
-  - Click **Copy** and save the value of the **Generated Token** in a text document. You will need it later when executing the **DBMS_CLOUD.create_credential** package. Click **Close** after coping the token.
+  - Click **Copy** and save the value of the **Generated Token** in a text document. You will need it later when executing the **DBMS_CLOUD.create_credential** package. Click **Close** after copying the token.
 
 	![](images/100/image20.png)
 
@@ -201,7 +202,7 @@ While still connected to the Client Image using VNC Viewer, complete the followi
 
 ### **STEP 9**: Create Database User in ATP Database
 
-  - You should see the **SQL Developer Worksheet** open. One opened execute the following SQL Statements to create the `alpha` database user.
+  - You should see the **SQL Developer Worksheet** open. Once opened execute the following SQL Statements to create the `alpha` database user.
 
 	```
 	create user alpha identified by "a1phaOffice1_";
