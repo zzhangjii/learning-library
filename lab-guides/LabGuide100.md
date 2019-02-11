@@ -99,19 +99,19 @@ While still connected to the Client Image using VNC Viewer, complete the followi
 
 	![](images/100/image10.png)
 
-  - In a moment, the file will be uploaded to Object Storage.  
+  - In a moment, the file will be uploaded to Object Storage.
 
 	![](images/100/image11.png)
 
-  -  We will now collect Object Storage information for later use in **Step 12**.  Open a text editor in the client window by selecting **Applications --> Accessories --> Text Editor**.
-  
+  - We will now collect Object Storage information for later use in **Step 12**.  Open a text editor in the client window by selecting **Applications --> Accessories --> Text Editor**.
+
 	![](images/100/image11a.png)
 
-  -  Captue the values for **REGION, BUCKET, OBJECT_STORAGE_NAMESPACE, FILENAME** in the text editor from the same screen you uploaded the DMP file.
+  - Captue the values for **REGION, BUCKET, OBJECT_STORAGE_NAMESPACE, FILENAME** in the text editor from the same screen you uploaded the DMP file.
 
 	![](images/100/image39a.png)	
 
-  -  Your text editor should lool similar to this
+  - Your text editor should lool similar to this
   
 	![](images/100/image11b.png)	
 	
