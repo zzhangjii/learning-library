@@ -30,7 +30,7 @@ The client image is a pre-installed Compute Service Instance that has GIT and SQ
 
 ### Prerequisite
 
-Once the infrastructure is provisioned you can access your enironment using `VNC Viewer`. Please download and install from: [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/)
+Once the infrastructure is provisioned you can access your enironment using `VNC Viewer`. Please download and install from: <href="https://www.realvnc.com/en/connect/download/viewer/" target="newwer">VNC Viewer</a>
 
 ### **STEP 1**: Start the Jumpstart Client Image
 
