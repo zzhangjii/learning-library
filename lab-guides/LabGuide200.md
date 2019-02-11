@@ -259,7 +259,7 @@ yum install git
 ```
 su - opc
 docker version
-docker images
+docker images 
 git --version
 ```
 
