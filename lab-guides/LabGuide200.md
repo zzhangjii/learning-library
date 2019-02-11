@@ -140,13 +140,11 @@ A security list provides a virtual firewall for an instance, with ingress and eg
 
     ![](images/200/20.PNG)
 
-### **STEP 5**: Create SSH Key Pair (Linux or Mac client)
+### **STEP 5**: Create SSH Key Pair
 
-Before we create the Compute instance that will contain Docker and application deployments we need to create an ssh key pair so we'll be able to securely connect to the instance and do the Docker installation, etc.
+Before we create the Compute instance that will contain Docker and application deployments we need to create an ssh key pair so we'll be able to securely connect to the instance and do the Docker installation, etc. We'll use the VNC Client to do this.
 
-**NOTE:** `This step focuses on key pair generation for Linux or Mac based terminal sessions. If your going to run your terminal sessions from a Windows client then skip to STEP 7`
-
-- In a `Linux/Mac` client terminal window **Type** the following (**You don't have to worry about any passphrases unless you want to enter one**)
+- In you VCN cleint open up a Terminal session and **Type** the following: (**You don't have to worry about any passphrases unless you want to enter one**)
 
 ```
 ssh-keygen -b 2048 -t rsa -f dockerkey
@@ -156,33 +154,11 @@ ssh-keygen -b 2048 -t rsa -f dockerkey
 
     ![](images/200/24.PNG)
 
-- **NOTE for Linux and Mac Clients:** Just open up the pubic key file in an editor (vi) and select / copy the entire contents to be used in Step 8.   
+- **NOTE:** Just open up the pubic key file in an editor (vi) and select / copy the entire contents to be used in in the Compute Instance creation in the next Step.   
 
     ![](images/200/25-4.PNG)
 
-### **STEP 6**: Create SSH Key Pair (Windows client)
-
-For Windows clients this example will show the use of PuttyGen to generate the keypair. [Putty Packages](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) are available for download.
-
-- From a Command Prompt or PowerShell type **puttygen** and click **Generate**
-
-  ![](images/200/putty3.PNG)
-
-  ![](images/200/25.PNG)
-
-- Once the generation process completes click the **Save Private Key** button and save to a directory of your choice.
-
-- If prompted to save without a passphrase click yes.
-
-  ![](images/200/25a.png)
-
-**NOTE:** `Do not save the public key as the format is not compatable with Linux openSSH.
-
-- Instead, **Select the entire Public Key in the display and right-click copy**. `This content will be pasted into the Create Instance dialog in Step 7.`
-
-  ![](images/200/25-2.PNG)
-
-### **STEP 7**: Create a Compute Instance
+### **STEP 6**: Create a Compute Instance
 
 You will now create a Linux based Compute instance using the public key you just generated.
 
@@ -211,7 +187,7 @@ SSH Keys: Choose SSH Key Files
    ![](images/200/27-2.PNG)
 
 - Scroll down furthur on the page and select your PUBLIC SSH Key
-**NOTE:** You will paste the public key you copied in Step 6 into the SSH KEY field by selecting the "Paste SSH Keys" radio button. `The public key should all be on ONE LINE`
+**NOTE:** You will paste the public key you copied in Step 5 into the SSH KEY field by selecting the "Paste SSH Keys" radio button. `The public key should all be on ONE LINE`
 
    ![](images/200/28.PNG)
 
@@ -228,37 +204,11 @@ After a few minutes you should see a running instance with a Public IP Address.
    ![](images/200/30.PNG)
 
 
-### **STEP 8**: SSH into the Instance and install Docker
+### **STEP 7**: SSH into the Instance and install Docker
 
 Continue the setup: SSH into the Compute image and install Docker and GIT.
 
-- From a Command Prompt or PowerShell type **putty** and select the **Session** section and type in the Public IP address:
-
-   ![](images/200/31.PNG)
-
-- Select the **Data** section and enter the following as the username:
-
-```
-opc
-```
-
-- Screenshot:
-
-  ![](images/200/32.PNG)
-
-- Select **SSH-->Auth** and browse to the Private Key you created back in Step 7:
-
-   ![](images/200/33.PNG)
-
-- Click the **Open** button. You will presented the first time with am alert message. Click **Yes**
-
-   ![](images/200/35.PNG)
-
-- You will logged into the Compute image:
-
-   ![](images/200/36.PNG)
-
-- **NOTE:** For Linux and Mac client sessions "cd" into the directory where your key pair is. Make sure the dockerkey file has the permissions of "600" (chmod 600 dockerkey) and ssh into the compute instance `substituting your IP address`.
+- **NOTE:** Make sure the dockerkey file has the permissions of "600" (chmod 600 dockerkey) and ssh into the compute instance `substituting your IP address`.
 
 Example:
 
@@ -272,7 +222,7 @@ ssh -i ./dockerkey opc@129.213.119.105
 
   ![](images/200/37.PNG)
 
-### **STEP 9**: Install and configure Docker and GIT
+### **STEP 8**: Install and configure Docker and GIT
 
 Docker and GIT are required for the subsuquent labs. You will install the Docker engine, enable it to start on re-boot, grant docker privledges to the `opc` user and finally install GIT.
 
@@ -315,7 +265,7 @@ git --version
 
    ![](images/200/41.PNG)
 
-### **STEP 10**: Edit /etc/sysconfig/selinux
+### **STEP 9**: Edit /etc/sysconfig/selinux
 
 Set the server to Permissive mode and also ensure that permissive mode survives re-boots by editing `/etc/sysconfig/selinux`
 
