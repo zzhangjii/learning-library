@@ -340,7 +340,7 @@ In this section you will again clone the github repository as in Lab 100 as it c
 
   ![](images/200/46-1.1.PNG)
 
-- **BACK IN YOUR SSH session**: The wallet file should now be in the /home/opc/monolithic-to-microservice/lab-resources/docker directory on the OCI VM:
+- **BACK IN YOUR SSH session**: The wallet file should now be in the `/home/opc/monolithic-to-microservice/lab-resources/docker` directory on the OCI VM:
 
   ![](images/200/46-1.3.PNG)
 
