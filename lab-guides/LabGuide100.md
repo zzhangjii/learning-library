@@ -36,12 +36,18 @@ While still connected to the Client Image using VNC Viewer, complete the followi
 
 	![](images/100/image02.png)
 
-	**Note:**  The GIT clone creates the ```monolithic-to-microservice``` directory which contains contents used throughout the labs.
+	**Note:**  The GIT clone creates the ```monolithic-to-microservice``` directory which contains contents used throughout the labs. You can validate the clone by entering the following command.
+  ```
+  ls -l monolithic-to-microservice/
+	```
 
 # Object Storage Setup, OCI User Creation and Auth Token Generation
 
 ### **STEP 2**: Log in to your OCI dashboard
 
+  - Open a new browser in the client window by selecting **Applications --> Firefox**.
+
+  ![](images/100/LabGuide100-7bb922b0.png)
   - From any browser go to
 
     [https://cloud.oracle.com/en_US/sign-in](https://cloud.oracle.com/en_US/sign-in)
@@ -76,23 +82,23 @@ While still connected to the Client Image using VNC Viewer, complete the followi
 
 	![](images/100/image7.png)
 
-  - In a moment, your new Object Storage Bucket will show up in the list
+  - In a moment, your new Object Storage Bucket will show up in the list. Once it appears click on the `atpData` bucket url to view the details.
 
 	![](images/100/image8.png)
 
 ### **STEP 4**: Upload Data Pump File into Object Storage Bucket
 
-  - Click on the `atpData` Bucket and click **Upload Object**
+  -  Next click **Upload Object**
 
 	![](images/100/image9.png)
 
   - **Browse** or **Drag/Drop** the Data Pump DMP `.../monolithic-to-microservice/lab-resources/database/expdp_alpha121.dmp` included in the GIT repository you cloned earlier. Click **Upload Object**
 
+  ![](images/100/image101.png)
+
 	![](images/100/image10.png)
 
-	![](images/100/image101.png)
-
-  - In a moment, the file will be uploaded to Object Storage
+	- In a moment, the file will be uploaded to Object Storage
 
 	![](images/100/image11.png)
 
@@ -110,11 +116,11 @@ While still connected to the Client Image using VNC Viewer, complete the followi
 
 	![](images/100/image14.png)
 
-  - In a moment, your new user will show up in the list
+  - In a moment, your new user will show up in the list. Once it appears click on the new user `impdp-ATP`.
 
 	![](images/100/image15.png)
 
-  - Click on the new user `impdp-ATP`, select the **Resource** `Groups` and click **Add User to Group**
+  - Select the **Resource** `Groups` and click **Add User to Group**
 
 	![](images/100/image16.png)
 
@@ -132,7 +138,7 @@ While still connected to the Client Image using VNC Viewer, complete the followi
 
 	![](images/100/image19.png)
 
-  - Click **Copy** and save the value of the **Generated Token** in a text document. You will need it later when executing the **DBMS_CLOUD.create_credential** Package.
+  - Click **Copy** and save the value of the **Generated Token** in a text document. You will need it later when executing the **DBMS_CLOUD.create_credential** package. Click **Close** after coping the token.
 
 	![](images/100/image20.png)
 
@@ -195,7 +201,7 @@ While still connected to the Client Image using VNC Viewer, complete the followi
 
 ### **STEP 9**: Create Database User in ATP Database
 
-  - In the **SQL Developer Worksheet**, execute the following SQL Statements to create the `alpha` database user.
+  - You should see the **SQL Developer Worksheet** open. One opened execute the following SQL Statements to create the `alpha` database user.
 
 	```
 	create user alpha identified by "a1phaOffice1_";
