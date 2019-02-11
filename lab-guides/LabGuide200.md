@@ -331,7 +331,7 @@ In this section you will again clone the github repository as you did in Lab 100
 
 - **FROM YOUR VNC CLIENT**: Open up another Terminal session, CD to where your dockerkey file is and then copy the database wallet file you downloaded in Lab 100  (Recall that the file is in `/home/opc/Downloads`). You will scp this wallet file into the `/home/opc/monolithic-to-microservice/lab-resources/docker` directory within your OCI VM. 
 
-  **NOTE:** If your wallet file is a different name than **Wallet_orcl.zip** then substitute your name as shown in these examples below:
+  **NOTE:** If your wallet file is a different name than **Wallet_orcl.zip** then substitute your name as appropriate. This example uses `Wallet-mattoATP`:
 
   ```
   cd <into the location where your dockerkey file is>
