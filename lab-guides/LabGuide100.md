@@ -276,6 +276,8 @@ While still connected to the Client Image using VNC Viewer, complete the followi
 
   - On **Step 1** of the **Import Wizard**, select and/or enter the following and click **Next**.  You will use the values you collected in the text editor at the end of **Step 4**.
 
+	**Note:** Your values for **REGION** and **OBJECT_STORAGE_NAMESPACE** may/will be different.
+	
 	- **Type of Import:** ```Full```
 	- **Credentials or Directories:** ```IMPDP_OBJ_STORE``` (Created in STEP 10)
 	- **File Names or URI:** ```https://swiftobjectstorage.{REGION}.oraclecloud.com/v1/{OBJECT_STORAGE_NAMESPACE}/{BUCKET}/{FILENAME}``` (Created in STEP 4)
