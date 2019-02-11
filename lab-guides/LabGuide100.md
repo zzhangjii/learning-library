@@ -105,17 +105,17 @@ While still connected to the Client Image using VNC Viewer, complete the followi
 
   -  We will now collect Object Storage information for later use in **Step 12**.  Open a text editor in the client window by selecting **Applications --> Accessories --> Text Editor**.
   
-  	![](images/100/image11a.png)
+	![](images/100/image11a.png)
 
   -  Captue the values for **REGION, BUCKET, OBJECT_STORAGE_NAMESPACE, FILENAME** in the text editor from the same screen you uploaded the DMP file.
 
-  	![](images/100/image39a.png)	
+	![](images/100/image39a.png)	
 
   -  Your text editor should lool similar to this
   
-  	![](images/100/image11b.png)	
+	![](images/100/image11b.png)	
 	
- 	**Note:** Your values for **REGION** and **OBJECT_STORAGE_NAMESPACE** will be different.
+	**Note:** Your values for **REGION** and **OBJECT_STORAGE_NAMESPACE** will be different.
 	
 ### **STEP 5**: Create OCI User
 
