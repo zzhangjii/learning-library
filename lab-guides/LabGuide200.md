@@ -329,11 +329,12 @@ In this section you will clone a github repository containing a Java Application
 
   ![](images/200/46.PNG)
 
-- From your local machine copy the database wallet file you downloaded in Lab 100 into the `/home/opc/monolithic-to-microservice/lab-resources/docker` directory within your OCI VM. The examples below assume your running the (p)scp command from the directory where the wallet file is located. The private key you generated is also in this directory:
+- **FROM YOUR VNC CLIENT**: Open up another Terminal session, CD to where your dockerkey file is and then copy the database wallet file you downloaded in Lab 100  (Recall that the file was Downloaded to the directory `/home/opc/Downloads/`. You will scp this wallet file into the `/home/opc/monolithic-to-microservice/lab-resources/docker` directory within your OCI VM. 
+
   **NOTE:** If your wallet file is a different name than **Wallet_orcl.zip** then substitute your name as shown in these examples below:
 
   ```
-  scp -i ./dockerkey ./Wallet-mattoATP.zip opc@<YOUR-PUBLIC-IP>:/home/opc/monolithic-to-microservice/lab-resources/docker
+  scp -i ./dockerkey /home/opc/Downloads/Wallet-mattoATP.zip opc@<YOUR-PUBLIC-IP>:/home/opc/monolithic-to-microservice/lab-resources/docker
   ```
 
   ![](images/200/46-1.1.PNG)
@@ -346,7 +347,7 @@ In this section you will clone a github repository containing a Java Application
 
 In this step you are going to edit the `dbconfig.properties` file to add a DB instance connection name.
 
-- Using **vi** edit the **dbconfig.properties** file and add your connection property. We will be using an ATP DB instance called `mattoATP` for the following examples:
+- **BACK IN YOUR SSH session**: Using **vi** edit the **dbconfig.properties** file and add your connection property. We will be using an ATP DB instance called `mattoATP` for the following examples:
 
 - The DB Connection information can be found in the OCI Console under your ATP database instance link:
 
