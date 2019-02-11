@@ -203,11 +203,7 @@ In this step you will create a VBCS instance that will be used in Lab 400. It ta
 
 ### **STEP 1**: Access Client Image
 
-<<<<<<< HEAD
 - When the environment is ready you will see the following along with the connect string to use in VNC Viewer. (In this example 129.213.167.192:10. _Your IP address will be different_)
-=======
-- When the environment is ready you will see the following along with the connect string to use in VNC Viewer. (In this example: `129.213.167.192:10`.
->>>>>>> ca0f696d3891b492d97b62498f1ca32c8dc3689f
 
   **NOTE: Your IP address will be different**
 
