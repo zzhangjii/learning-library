@@ -201,13 +201,15 @@ In this step you will create a VBCS instance that will be used in Lab 400. It ta
 
 ### **STEP 1**: Access Client Image
 
-- When the environment is ready you will see the following along with the connect string to use in VNC Viewer. (In this example 129.213.167.192:10. `Your IP address will be different`)
+- When the environment is ready you will see the following along with the connect string to use in VNC Viewer. (In this example: `129.213.167.192:10`.
 
-  **NOTE: The screen resolution on VNC port :10 is 1920x1200. If you would prefer to use a smaller resolution of 1680x1050 then use port :11 instead. `Example: 129.213.167.192:11`**
+  **NOTE: Your IP address will be different**)
+
+  **Also NOTE: The screen resolution on VNC port :10 is 1920x1200. If you would prefer to use a smaller resolution of 1680x1050 then use port :11 instead. `Example: 129.213.167.192:11`**
 
   ![](images/050/JS6.PNG)
 
-- **NOTE: You have 5 hours** before the environment will go away.
+- **NOTE: You have 7 hours** before the environment will go away.
 
   ![](images/050/JS7.PNG)
 
