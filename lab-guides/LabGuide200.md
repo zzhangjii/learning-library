@@ -303,7 +303,7 @@ Set the server to Permissive mode and also ensure that permissive mode survives 
 
 # Deploy the AlphaOffice Application using Docker
 
-In this section you will clone a github repository containing a Java Application and modify the configuration so it will query your ATP database. After successfull testing you will create a new Docker image.
+In this section you will again clone the github repository as in Lab 100 as it contains a Java Application. Then, You will modify the configuration so it will query your ATP database. After successfull testing you will create a new Docker image.
 
 ## Deploy AlphaOffice Product Catalog Application
 
@@ -334,12 +334,13 @@ In this section you will clone a github repository containing a Java Application
   **NOTE:** If your wallet file is a different name than **Wallet_orcl.zip** then substitute your name as shown in these examples below:
 
   ```
+  cd <into the location where your dockerkey file is>
   scp -i ./dockerkey /home/opc/Downloads/Wallet-mattoATP.zip opc@<YOUR-PUBLIC-IP>:/home/opc/monolithic-to-microservice/lab-resources/docker
   ```
 
   ![](images/200/46-1.1.PNG)
 
-- The wallet file should now be in the /home/opc/monolithic-to-microservice/lab-resources/docker directory on the OCI VM:
+- **BACK IN YOUR SSH session**: The wallet file should now be in the /home/opc/monolithic-to-microservice/lab-resources/docker directory on the OCI VM:
 
   ![](images/200/46-1.3.PNG)
 
@@ -347,7 +348,7 @@ In this section you will clone a github repository containing a Java Application
 
 In this step you are going to edit the `dbconfig.properties` file to add a DB instance connection name.
 
-- **BACK IN YOUR SSH session**: Using **vi** edit the **dbconfig.properties** file and add your connection property. We will be using an ATP DB instance called `mattoATP` for the following examples:
+- Using **vi** edit the **dbconfig.properties** file and add your connection property. We will be using an ATP DB instance called `mattoATP` for the following examples:
 
 - The DB Connection information can be found in the OCI Console under your ATP database instance link:
 
