@@ -17,15 +17,6 @@ In this lab you will use your Oracle Cloud Trial Account, create ssh key pairs, 
 - Customize the container to connect to your ATP DB and save a new image
 - Run a Docker container based off of your new image
 
-
-## Required Artifacts
-
-- If running from Windows and you don't have Bash Shell enabled (later Windows 10 releases) you can donload the Putty Packages. Select the proper .msi file for your operating system. We will be using Putty, PuttyGen and pscp from this installation: [Putty Packages](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
-
-  ![](images/200/putty.PNG)
-
-  ![](images/200/putty2.PNG)
-
 # Log into  your Trial Account and Create Infrastructure
 
 You will create all required infrastructure components within your Trail account.
