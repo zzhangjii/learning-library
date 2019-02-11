@@ -303,7 +303,7 @@ Set the server to Permissive mode and also ensure that permissive mode survives 
 
 # Deploy the AlphaOffice Application using Docker
 
-In this section you will again clone the github repository as in Lab 100 as it contains a Java Application. Then, You will modify the configuration so it will query your ATP database. After successfull testing you will create a new Docker image.
+In this section you will again clone the github repository as you did in Lab 100. It contains a Java REST Application that queries the database. Then, you will modify the configuration to point to your ATP database. After successfull testing you will create a new Docker image.
 
 ## Deploy AlphaOffice Product Catalog Application
 
