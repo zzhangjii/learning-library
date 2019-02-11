@@ -142,7 +142,7 @@ A security list provides a virtual firewall for an instance, with ingress and eg
 
 ### **STEP 5**: Create SSH Key Pair
 
-Before we create the Compute instance that will contain Docker and application deployments we need to create an ssh key pair so we'll be able to securely connect to the instance and do the Docker installation, etc. We'll use the VNC Client to do this.
+Before we create the Compute instance that will contain Docker and application deployments we need to create an ssh key pair so we'll be able to securely connect to the instance and do the Docker installation, etc. **We'll use the VNC Client to do this**.
 
 - In you VCN cleint open up a Terminal session and **Type** the following: (**You don't have to worry about any passphrases unless you want to enter one**)
 
@@ -172,15 +172,15 @@ You will now create a Linux based Compute instance using the public key you just
 
 - **You will (Select / Leave Default) or Type** the following in the `Create Compute Instance` section of the dialog:
 
-```
-Name: Docker
-Availability Domain: AD 1 (Use default AD 1)
-Boot Volume: Oracle-Provided OS Image
-Image Operating System: Oracle Linux 7.6 (Default)
-Shape Type: Virtual Machine (Default)
-Shape: VM.Standard2.1 (Default)
-SSH Keys: Choose SSH Key Files
-```
+  ```
+  Name: Docker
+  Availability Domain: AD 1 (Use default AD 1)
+  Boot Volume: Oracle-Provided OS Image
+  Image Operating System: Oracle Linux 7.6 (Default)
+  Shape Type: Virtual Machine (Default)
+  Shape: VM.Standard2.1 (Default)
+  SSH Keys: Choose SSH Key Files
+  ```
 
 - After entering the _Docker_ instance name.
 
@@ -210,15 +210,13 @@ Continue the setup: SSH into the Compute image and install Docker and GIT.
 
 - **NOTE:** Make sure the dockerkey file has the permissions of "600" (chmod 600 dockerkey) and ssh into the compute instance `substituting your IP address`.
 
-Example:
+  Example:
 
-```
-cd <directory of your key pair>
-chmod 600 dockerkey
-ssh -i ./dockerkey opc@129.213.119.105
-```
-
-- Linux / Mac screenshot:
+  ```
+  cd <directory of your key pair>
+  chmod 600 dockerkey
+  ssh -i ./dockerkey opc@129.213.119.105
+  ```
 
   ![](images/200/37.PNG)
 
@@ -228,13 +226,13 @@ Docker and GIT are required for the subsuquent labs. You will install the Docker
 
 - **Type** the following:
 
-```
-sudo -s
-yum install docker-engine
-usermod -aG docker opc
-systemctl enable docker
-systemctl start docker
-```
+  ```
+  sudo -s
+  yum install docker-engine
+  usermod -aG docker opc
+  systemctl enable docker
+  systemctl start docker
+  ```
 
 - **NOTE:** During the `yum install docker-engine` command press `Y` is asked if installation is ok.
 
@@ -246,9 +244,9 @@ systemctl start docker
 
 - **Type** the following:
 
-```
-yum install git
-```
+  ```
+  yum install git
+  ```
 
 - Screenshot at the end of the GIT installation:
 
@@ -256,12 +254,12 @@ yum install git
 
 - **Type** the following to verify good installations:
 
-```
-su - opc
-docker version
-docker images 
-git --version
-```
+  ```
+  su - opc
+  docker version
+  docker images 
+  git --version
+  ```
 
    ![](images/200/41.PNG)
 
@@ -271,10 +269,10 @@ Set the server to Permissive mode and also ensure that permissive mode survives 
 
 - Using vi, change the SELINUX line to **permissive**. **Type** the following: (**NOTE**: You need to be the root user to edit this file)
 
-```
-sudo -s
-vi /etc/sysconfig/selinux
-```
+  ```
+  sudo -s
+  vi /etc/sysconfig/selinux
+  ```
 
 - **NOTE:** If new to vi, press the letter `i` to edit text. To save press Escape, the type `:wq!`.
 
@@ -284,10 +282,10 @@ vi /etc/sysconfig/selinux
 
 - Now, **Type** the following:
 
-```
-setenforce 0
-sestatus
-```
+  ```
+  setenforce 0
+  sestatus
+  ```
 
 - Verify that your server is in permissive mode.
 
@@ -334,22 +332,11 @@ In this section you will clone a github repository containing a Java Application
 - From your local machine copy the database wallet file you downloaded in Lab 100 into the `/home/opc/monolithic-to-microservice/lab-resources/docker` directory within your OCI VM. The examples below assume your running the (p)scp command from the directory where the wallet file is located. The private key you generated is also in this directory:
   **NOTE:** If your wallet file is a different name than **Wallet_orcl.zip** then substitute your name as shown in these examples below:
 
-  **Linux / MAC**
-
   ```
   scp -i ./dockerkey ./Wallet-mattoATP.zip opc@<YOUR-PUBLIC-IP>:/home/opc/monolithic-to-microservice/lab-resources/docker
   ```
 
   ![](images/200/46-1.1.PNG)
-
-  **Windows** (Using the pscp utility bundled with Putty)
-
-- **NOTE** Use a Command Prompt or Powershell window for this command:
-  ```
-  pscp -i .\dockerkey.ppk .\Wallet-mattoATP.zip opc@<YOUR-PUBLIC-IP>:/home/opc/monolithic-to-microservice/lab-resources/docker
-  ```
-
-   ![](images/200/46-1.2.PNG)
 
 - The wallet file should now be in the /home/opc/monolithic-to-microservice/lab-resources/docker directory on the OCI VM:
 
