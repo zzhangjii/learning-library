@@ -4,7 +4,7 @@
   ![](images/200/Title.png)
 
 ## Introduction
-In this lab you will use your Oracle Cloud Trial Account, create ssh key pairs, login into your Trial, create a VCN (Virtual Compute Network), create a new compute instance and install docker / git into the instance.
+In this lab you will create ssh key pairs, login into your Trial, create a VCN (Virtual Compute Network), create a new compute instance and install docker / git into the instance.
 
 ***To log issues***, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
@@ -23,22 +23,18 @@ You will create all required infrastructure components within your Trail account
 
 ## Your Trial Account
 
-### **Step 1**: Your Oracle Cloud Trial Account
+### **STEP 1**: Your Oracle Cloud Trial Account
 
 - You have already applied for and received you're Oracle Cloud Trial Account.
 
 
 ### **STEP 2**: Log in to your OCI dashboard
 
-- Once you receive the **Get Started with Oracle Cloud** Email, make note of your **Username, Password and Cloud Account Name**.
-
-  ![](images/200/0.1.png)
-
-- From any browser go to. :
+- If your not logged into your trail account, re-login by going to:
 
     [https://cloud.oracle.com/en_US/sign-in](https://cloud.oracle.com/en_US/sign-in)
 
-- Enter your **Cloud Account Name** in the input field and click the **My Services** button. If you have a trial account, this can be found in your welcome email. Otherwise, this will be supplied by your workshop instructor.
+- Enter your **Cloud Account Name** in the input field and click the **My Services** button.
 
   ![](images/200/1.png)
 
