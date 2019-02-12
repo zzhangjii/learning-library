@@ -34,7 +34,7 @@ You will create all required infrastructure components within your Trail account
 
     [https://cloud.oracle.com/en_US/sign-in](https://cloud.oracle.com/en_US/sign-in)
 
-- Enter your **Cloud Account Name** in the input field and click the **My Services** button.
+- Enter your **Cloud Account Name** in the input field and click **Next**.
 
   ![](images/200/1.png)
 
@@ -257,11 +257,11 @@ Set the server to Permissive mode and also ensure that permissive mode survives 
   vi /etc/sysconfig/selinux
   ```
 
-- **NOTE:** If new to vi, press the letter `i` to edit text. To save press Escape, the type `:wq!`.
+- After the changes are made save the file and exit out of vi.
+
+  **NOTE:** If new to vi, press the letter `i` to edit text. To save press Escape, then type `:wq!`.
 
    ![](images/200/42.PNG)
-
-- Save the file and exit out of vi
 
 - Now, **Type** the following:
 
@@ -323,24 +323,34 @@ In this section you will again clone the github repository as you did in Lab 100
 
   ![](images/200/46-1.1.PNG)
 
-- **BACK IN YOUR SSH session**: The wallet file should now be in the `/home/opc/monolithic-to-microservice/lab-resources/docker` directory on the OCI VM:
+- **BACK IN YOUR SSH SESSION**: The wallet file should now be in the `/home/opc/monolithic-to-microservice/lab-resources/docker` directory on the OCI VM:
 
   ![](images/200/46-1.3.PNG)
 
 ### **Step 2**: Edit your ATP instance specific information
 
-In this step you are going to edit the `dbconfig.properties` file to add a DB instance connection name.
+In this step you are going to edit the `dbconfig.properties` file to add your database instance connection name.
 
-- Using **vi** edit the **dbconfig.properties** file and add your connection property. We will be using an ATP DB instance called `mattoATP` for the following examples:
+- Using **vi** edit the **dbconfig.properties** file and add your connection property. In this example the ATP DB instance called `mattoATP` is used. The DB Connection information can be found in the OCI Console under your ATP database instance link.
 
-- The DB Connection information can be found in the OCI Console under your ATP database instance link:
+- From the OCI console select the **hamburger menu** in the upper left hand side on the page. Click the **Autonomous Transaction Processing** link:
+
+  ![](images/200/46-1.2.PNG)
+
+- Click the link of your database:
 
   ![](images/200/46-1.4.PNG)
+
+- Click the **DB Connection** button:
+
+  ![](images/200/47-2.PNG)
+
+- Here you find the connection strings associated with your database:
 
   ![](images/200/46-1.5.PNG)
 
 
-  We will be using the MEDIUM connection name in the application.
+  We will be using the **MEDIUM** connection name in the application.
 
 - For this example the modifed `dbconfig.properties` looks like:
 
