@@ -13,7 +13,7 @@ In this lab you will create ssh key pairs, login into your Trial, create a VCN (
 - Create the baseline infrastructure to support a Compute instance
 - Create a SSH key pair
 - SSH into the instance: Install Docker and GIT
-- Create a baseline Docker image and then dDeploy the AlphaOffice application
+- Create a baseline Docker image and then deploy a java REST application
 - Customize the container to connect to your ATP DB and save a new image
 - Run a Docker container based off of your new image
 
