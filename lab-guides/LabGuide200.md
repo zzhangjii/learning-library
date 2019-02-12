@@ -290,7 +290,7 @@ In this section you will again clone the github repository as you did in Lab 100
 
 ## Deploy AlphaOffice Product Catalog Application
 
-### **Step 1**: Clone the git repository and copy the wallet file
+### **STEP 1**: Clone the git repository and copy the wallet file
 
 - Clone the git repository to your newly created OCI VM. This repo contains support files and the baseline AlphaOffice application that you will modify to connect to your ATP database.
 
@@ -327,7 +327,7 @@ In this section you will again clone the github repository as you did in Lab 100
 
   ![](images/200/46-1.3.PNG)
 
-### **Step 2**: Edit your ATP instance specific information
+### **STEP 2**: Edit your ATP instance specific information
 
 In this step you are going to edit the `dbconfig.properties` file to add your database instance connection name.
 
@@ -362,7 +362,7 @@ In this step you are going to edit the `dbconfig.properties` file to add your da
 
   ![](images/200/46-1.7.PNG)
 
-### **Step 3**: Build the Docker image
+### **STEP 3**: Build the Docker image
 
 The docker build will take a baseline java ready docker image from Docker Hub, add the Glassfish 4.1.1 application server along with your ATP DB instance wallet file and then extract the `AlphaProductsRestService.war` inside the container. The application server will be running on port 8080. If you recall you opened port 8080 in the Networking Security List earlier in this lab so access from the internet can occur.
 
@@ -382,9 +382,13 @@ The docker build will take a baseline java ready docker image from Docker Hub, a
 
 - Typing **docker images** reveals the new image:
 
+  ```
+  docker images
+  ```
+
   ![](images/200/49.PNG)
 
-- Start a container based on the alphaoffice image mapping port 8080 to the same port on the HOST naming the container alphaoffice:
+- Start a container based on the alphaoffice image mapping port 8080 to the same port on the HOST naming the container alphaoffice. **Type OR Copy and Paste**:
 
   ```
   docker run -d --name alphaoffice -p=8080:8080 alphaoffice
@@ -392,13 +396,17 @@ The docker build will take a baseline java ready docker image from Docker Hub, a
 
 - **docker ps** shows the running container. You'll note the asadmin command we stipulated in the CMD of the Dockerfile build is executed and running (This starts up the Glassfish app server):
 
+  ```
+  docker ps
+  ```
+
   ![](images/200/50.PNG)
 
-### **Step 4**: Copy the the database properties file into the container
+### **STEP 4**: Copy the the database properties file into the container
 
 In this step you will copy the `dbconfig.properties` file modifed in a previous step into the running container. Then you will go into the container and verify all the copied and modied files look good and are in their proper locations.
 
-**NOTE:** All of this could be executed automatically at build time but we want you to get a feel for docker commands and what's going on inside the newly executed container.
+**NOTE:** All of this could be executed automatically at build time but we want you to give a feel for docker commands and what's going on inside the newly executed container.
 
 - **Type OR Copy and Paste** the following:
 
@@ -408,7 +416,7 @@ In this step you will copy the `dbconfig.properties` file modifed in a previous 
 
   ![](images/200/53.PNG)
 
-### **Step 5**: Verify files inside the container and deploy the AlphaProductsRestService application
+### **STEP 5**: Verify files inside the container and deploy the `AlphaProductsRestService` application
 
 - **Type OR Copy and Paste:**
 
@@ -420,20 +428,14 @@ In this step you will copy the `dbconfig.properties` file modifed in a previous 
 
     ![](images/200/54.PNG)
 
-- We need to verify our `dbconfig.properties` and `sqlnet.ora` files made it into the environment. **Type OR Copy and Paste** the following commands:
+- We need to verify our `dbconfig.properties` and `sqlnet.ora` files made it into the environment. In the `sqlnet.ora` file DIRECTORY should be set to $TNS_ADMIN and in the `dbconfig.properties` file the dbinstance parameter should reflect your database connection string. **Type OR Copy and Paste** the following commands:
 
   ```
   cat /usr/local/wallet_DB/sqlnet.ora
   cat /usr/local/alpha/WEB-INF/classes/com/oracle/db/dbconfig.properties
   ```
 
-- You should see your specific changes reflected in the output:
-
-  The $TNS_ADMIN environment variable was set on the image during the docker build:
-
-  ...
-  ENV         TNS_ADMIN         /usr/local/wallet_DB/
-  ...  
+- You should see the changes reflected in the outputs:
 
   ![](images/200/55.PNG)
 
@@ -450,13 +452,13 @@ In this step you will copy the `dbconfig.properties` file modifed in a previous 
   cp AlphaProductsRestService.war /usr/local/glassfish4/glassfish/domains/domain1/autodeploy/AlphaProductsRestService.war
   ```
 
-- Confirm the application was deployed by typing the following:
+- Confirm the application was deployed by **typing** the following:
 
   ```
   cd /usr/local/glassfish4/bin
   ./asadmin
 
-  (Once inside the Glassfish admin tool type:)
+  - Once inside the Glassfish admin tool type:
     list-applications
   ```
 
@@ -480,7 +482,7 @@ In this step you will copy the `dbconfig.properties` file modifed in a previous 
 
   ![](images/200/58.PNG)
 
-- You can test querying one product by adding the Product ID to the REST call:
+- Now, test querying one product by adding the Product ID to the REST call:
 
   ```
    http://<YOUR-PUBLIC-IP>:8080/AlphaProductsRestService/webresources/restCall/1050
@@ -502,7 +504,7 @@ In this step you will copy the `dbconfig.properties` file modifed in a previous 
   ```
   docker commit alphaoffice alphaoffice-rest
   ```
-- Typing **docker images** will show the new image is created:
+- Typing **docker images** will show the new image created:
 
   ![](images/200/60.PNG)
 
@@ -525,7 +527,7 @@ In this step you will copy the `dbconfig.properties` file modifed in a previous 
   http://<YOUR-PUBLIC-IP>:8080/AlphaProductsRestService/webresources/restCall/
   ```
 
-- This new docker image will be used in Lab 300...
+- This new docker image will be used in Lab 300.
 
 **This completes the Lab!**
 
