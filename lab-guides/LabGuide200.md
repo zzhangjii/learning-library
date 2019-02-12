@@ -60,11 +60,11 @@ All the availability domains in a region are connected to each other by a low la
 
     ![](images/200/10.PNG)
 
-- Select your compartment from the LOV.
+- Select your compartment:
 
     ![](images/200/10a.png)
 
-- Click **Create Virtual Cloud Network**
+- Click **Create Virtual Cloud Network**.
 
     ![](images/200/11.PNG)
 
@@ -88,19 +88,19 @@ All the availability domains in a region are connected to each other by a low la
 
 A security list provides a virtual firewall for an instance, with ingress and egress rules that specify the types of traffic allowed in and out. Each security list is enforced at the instance level. However, you configure your security lists at the subnet level, which means that all instances in a given subnet are subject to the same set of rules. The security lists apply to a given instance whether it's talking with another instance in the VCN or a host outside the VCN.
 
-- Click on the **DockerVCN** and then **Security Lists**
+- Click on the **DockerVCN** link and then select **Security Lists**:
 
     ![](images/200/16.PNG)
 
     ![](images/200/17.PNG)
 
-- Click on **Default Security List for DockerVCN**
+- Click on **Default Security List for DockerVCN**:
 
     ![](images/200/18.PNG)
 
-  For the purposes of the upcoming Docker application deployment we need to add an Ingress Rule that allows access from the Internet to port 8080.
+  **NOTE:** For the purposes of the upcoming Docker application deployment we need to add an Ingress Rule that allows access from the Internet to port 8080.
 
-- Click **Edit All Rules** and then select **+ Another Ingress Rule**
+- Click **Edit All Rules** and then select **+ Another Ingress Rule**:
 
   **`NOTE: DO NOT EDIT AN ALREADY EXISTING RULE, ADD A NEW ONE`**
 
@@ -110,7 +110,7 @@ A security list provides a virtual firewall for an instance, with ingress and eg
 
 - **Enter the following:**
 
-  **NOTE:** Leave all other values at default
+  **NOTE:** Leave all other values at default.
 
   ```
   Source CIDR: 0.0.0.0/0
@@ -119,7 +119,7 @@ A security list provides a virtual firewall for an instance, with ingress and eg
 
   ![](images/200/19-4.PNG)
 
-- Click the **Save Security List Rules** button
+- Click the **Save Security List Rules** button:
 
     ![](images/200/22.PNG)
 
@@ -129,35 +129,33 @@ A security list provides a virtual firewall for an instance, with ingress and eg
 
 ### **STEP 5**: Create SSH Key Pair
 
-Before we create the Compute instance that will contain Docker and application deployments we need to create an ssh key pair so we'll be able to securely connect to the instance and do the Docker installation, etc. **We'll use the VNC Client to do this**.
+Before we create the Compute instance that will contain Docker and application deployments we need to create a ssh key pair so we'll be able to securely connect to the instance and do the Docker installation, etc. **We'll use the VNC Client to do this**.
 
-- In you VCN cleint open up a Terminal session and **Type** the following: (**You don't have to worry about any passphrases unless you want to enter one**)
+- In your VNC client open up a Terminal window and **Type** the following: (**You don't have to worry about any passphrases unless you want to enter one**)
 
 ```
 ssh-keygen -b 2048 -t rsa -f dockerkey
 ```
 
-- Your key pair is now in the current directory
+- Your key pair is now in the current directory:
 
     ![](images/200/24.PNG)
 
-- **NOTE:** Just open up the pubic key file in an editor (vi) and select / copy the entire contents to be used in in the Compute Instance creation in the next Step.   
+- **NOTE:** Open up the pubic key file in an editor (vi). Select and copy the entire contents. This will be used in the Compute instance creation in the next Step.   
 
     ![](images/200/25-4.PNG)
 
 ### **STEP 6**: Create a Compute Instance
 
-You will now create a Linux based Compute instance using the public key you just generated.
-
-- Go back to your OCI console and from the hamburger menu in the upper left hand corner select **Compute-->Instances**
+- Go back to your OCI console and from the hamburger menu in the upper left hand corner select **Compute-->Instances**.
 
   ![](images/200/26.PNG)
 
-- Click **Create Instance**
+- Click **Create Instance**.
 
  ![](images/200/27.PNG)
 
-- **You will (Select / Leave Default) or Type** the following in the `Create Compute Instance` section of the dialog:
+- **You will (Leave Default) or Type** the following in the `Create Compute Instance` section of the dialog:
 
   ```
   Name: Docker
@@ -173,18 +171,18 @@ You will now create a Linux based Compute instance using the public key you just
 
    ![](images/200/27-2.PNG)
 
-- Scroll down furthur on the page and select your PUBLIC SSH Key
-**NOTE:** You will paste the public key you copied in Step 5 into the SSH KEY field by selecting the "Paste SSH Keys" radio button. `The public key should all be on ONE LINE`
+- Scroll down furthur on the page to insert your PUBLIC SSH Key
+**NOTE:** You will paste the public key you copied in Step 5 into the SSH KEY field by selecting the **Paste SSH Keys** radio button. `The public key should all be on ONE LINE`
 
    ![](images/200/28.PNG)
 
-- In the Configure networking Section you will take ALL of the defaults as shown:
+- In the Configure networking section you will take ALL of the defaults as shown:
 
    ![](images/200/29.PNG)
 
 - Click **Create**
 
-After a few minutes you should see a running instance with a Public IP Address.
+  After a few minutes you should see a running instance with a Public IP Address:
 
 - `Make a note of the IP Address as we will be using this in the next step.`
 
@@ -193,9 +191,7 @@ After a few minutes you should see a running instance with a Public IP Address.
 
 ### **STEP 7**: SSH into the Instance and install Docker
 
-Continue the setup: SSH into the Compute image and install Docker and GIT.
-
-- **NOTE:** Make sure the dockerkey file has the permissions of "600" (chmod 600 dockerkey) and ssh into the compute instance `substituting your IP address`.
+- **NOTE:** Make sure the dockerkey file has the permissions of **600** (chmod 600 dockerkey) and ssh into the compute instance `substituting your IP address`.
 
   Example:
 
@@ -221,7 +217,7 @@ Docker and GIT are required for the subsuquent labs. You will install the Docker
   systemctl start docker
   ```
 
-- **NOTE:** During the `yum install docker-engine` command press `Y` is asked if installation is ok.
+- **NOTE:** During the `yum install docker-engine` command press `Y` when asked if installation is ok.
 
 - Screenshot at the end of the Docker installation:
 
