@@ -4,7 +4,7 @@
   ![](images/200/Title.png)
 
 ## Introduction
-In this lab you will use your Oracle Cloud Trial Account, create ssh key pairs, login into your Trial, create a VCN (Virtual Compute Network) and Compartment, create a new compute instance and install docker / git into the instance.
+In this lab you will use your Oracle Cloud Trial Account, create ssh key pairs, login into your Trial, create a VCN (Virtual Compute Network), create a new compute instance and install docker / git into the instance.
 
 ***To log issues***, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
