@@ -16,8 +16,6 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 - Create and Deploy to a Kubernetes Cluster
   - Set Up Oracle Cloud infrastructure
   - Provision Kubernetes Using the OCI Console
-  - Configure and Run Wercker Deployment Pipelines
-  - Deploy and Test the Product Catalog Application
 
 ## Required Artifacts
 
