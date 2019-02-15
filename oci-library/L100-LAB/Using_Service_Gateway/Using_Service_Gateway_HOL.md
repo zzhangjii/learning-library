@@ -403,11 +403,23 @@ Fill out the dialog box:
 - **TARGET SERVICE GATEWAY:** Choose the service Gateway created earlier
 
 18.  Click **Save**, new route entry should be created.
+
 ![]( img/SGW_028.PNG)
 
-19. Switch to git-bash window (with ssh to second compute instance).
+19. In Your VCN , Click **Security Lists** and then **Default Security List for <VCN_NAME>**
 
-20. Re-enter download command:
+20. Click **Edit All Rules** and then **+Another Egress Rule**. Add the below Rule under Allow Rules for Egress
+- **DESTINATION TYPE:** Service
+- **DESTINATION SERVICE:** OCI IAD Object Storage
+- **IP Protocol:** All Protocol
+
+![]( img/SGW_030.PNG)
+
+21. Click **Save Security List Rules**
+
+22. Switch to git-bash window (with ssh to second compute instance).
+
+23. Re-enter download command:
 ```
 oci os object get --namespace <NAME_SPACE> --bucket-name<BUCKET_NAME> --name samplefile --file ./samplefile**
 ```
