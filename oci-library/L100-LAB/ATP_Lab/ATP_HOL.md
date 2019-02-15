@@ -250,9 +250,9 @@ cd ~/swingbench/bin
 ```
 which java
 ```
-verify java path is displayed, if no java path is displayed then install jave, Enter commads
+verify java path is displayed, if no java path is displayed then install jave, Enter command:
 ```
-sudo yum install java'
+sudo yum install java
 ```
 Answer 'Y' when prompted
 
