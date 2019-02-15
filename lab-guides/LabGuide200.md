@@ -6,8 +6,6 @@
 ## Introduction
 In this lab you will create ssh key pairs, login into your Trial, create a VCN (Virtual Compute Network), create a new compute instance and install docker / git into the instance.
 
-***To log issues***, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
-
 ## Objectives
 
 - Create the baseline infrastructure to support a Compute instance
@@ -23,12 +21,7 @@ You will create all required infrastructure components within your Trail account
 
 ## Your Trial Account
 
-### **STEP 1**: Your Oracle Cloud Trial Account
-
-- You have already applied for and received you're Oracle Cloud Trial Account.
-
-
-### **STEP 2**: Log in to your OCI dashboard
+### **STEP 1**: Log in to your OCI dashboard
 
 - If your not logged into your trail account, re-login by going to:
 
@@ -50,9 +43,9 @@ You will create all required infrastructure components within your Trail account
 
   ![](images/200/4.png)
 
-### **STEP 3**: Create a Virtual Compute Network
+### **STEP 2**: Create a Virtual Compute Network
 
-We need a default VCN to define our networking within the `monoTOmicro` compartment (_Or the name you used for your compartment_). This is where Subnets and Security Lists, to name a couple get defined for each Availablity Domains in your Tenancy. Oracle Cloud Infrastructure is hosted in regions and availability domains. A region is a localized geographic area, and an availability domain is one or more data centers located within a region. A region is composed of several availability domains. Availability domains are isolated from each other, fault tolerant, and very unlikely to fail simultaneously. Because availability domains do not share infrastructure such as power or cooling, or the internal availability domain network, a failure at one availability domain is unlikely to impact the availability of the others.
+We need a default VCN to define our networking within the `monoTOmicro` compartment. This is where Subnets and Security Lists are defined for each Availablity Domain in your Tenancy. Oracle Cloud Infrastructure is hosted in regions and availability domains. A region is a localized geographic area, and an availability domain is one or more data centers located within a region. A region is composed of several availability domains. Availability domains are isolated from each other, fault tolerant, and very unlikely to fail simultaneously. Because availability domains do not share infrastructure such as power or cooling, or the internal availability domain network, a failure at one availability domain is unlikely to impact the availability of the others.
 
 All the availability domains in a region are connected to each other by a low latency, high bandwidth network, which makes it possible for you to provide high-availability connectivity to the Internet and customer premises, and to build replicated systems in multiple availability domains for both high-availability and disaster recovery.
 
@@ -84,7 +77,7 @@ All the availability domains in a region are connected to each other by a low la
 
     ![](images/200/15.PNG)
 
-### **STEP 4**: Add a Security List entry
+### **STEP 3**: Add a Security List entry
 
 A security list provides a virtual firewall for an instance, with ingress and egress rules that specify the types of traffic allowed in and out. Each security list is enforced at the instance level. However, you configure your security lists at the subnet level, which means that all instances in a given subnet are subject to the same set of rules. The security lists apply to a given instance whether it's talking with another instance in the VCN or a host outside the VCN.
 
@@ -127,12 +120,18 @@ A security list provides a virtual firewall for an instance, with ingress and eg
 
     ![](images/200/20.PNG)
 
-### **STEP 5**: Create SSH Key Pair
+### **STEP 4**: Create SSH Key Pair
 
 Before we create the Compute instance that will contain Docker and application deployments we need to create a ssh key pair so we'll be able to securely connect to the instance and do the Docker installation, etc. **We'll use the VNC Client to do this**.
 
-- In your VNC client open up a Terminal window and **Type** the following: (**You don't have to worry about any passphrases unless you want to enter one**)
+- Inside your terminal window navigate to your home directory.
+```
+cd /home/opc
+```
 
+  ![](images/200/LabGuide200-1204a1a6.png)
+
+- In your VNC client open up a Terminal window and **Type** the following: (**You don't have to worry about any passphrases. Press enter to proceed without a passphrase.**)
 ```
 ssh-keygen -b 2048 -t rsa -f dockerkey
 ```
@@ -141,11 +140,20 @@ ssh-keygen -b 2048 -t rsa -f dockerkey
 
     ![](images/200/24.PNG)
 
-- **NOTE:** Open up the pubic key file in an editor (vi). Select and copy the entire contents. This will be used in the Compute instance creation in the next Step.   
+- Open up the pubic key file in an editor (vi) by typing **vi** in the terminal window.
+```
+vi dockerkey.pub
+```
+
+    ![](images/200/LabGuide200-5eed53cd.png)
+
+- Select and copy the entire contents. This will be used in the Compute instance creation in the next Step.   
 
     ![](images/200/25-4.PNG)
 
-### **STEP 6**: Create a Compute Instance
+- Press the  **Escape Key** and type **wq!** to exit vi.
+
+### **STEP 5**: Create a Compute Instance
 
 - Go back to your OCI console and from the hamburger menu in the upper left hand corner select **Compute-->Instances**.
 
@@ -182,28 +190,26 @@ ssh-keygen -b 2048 -t rsa -f dockerkey
 
 - Click **Create**
 
-  After a few minutes you should see a running instance with a Public IP Address:
-
-- `Make a note of the IP Address as we will be using this in the next step.`
+  After a few minutes you should see a running instance with a Public IP Address. _Copy the Public IP Address, we will be using this in the next step._
 
    ![](images/200/30.PNG)
 
 
-### **STEP 7**: SSH into the Instance and install Docker
+### **STEP 6**: SSH into the Instance and install Docker
 
-- **NOTE:** Make sure the dockerkey file has the permissions of **600** (chmod 600 dockerkey) and ssh into the compute instance `substituting your IP address`.
+- Set the correct permissions for the docker key by pasting the following commands in your terminal window. Make sure the dockerkey file has the permissions of **600** (chmod 600 dockerkey) and ssh into the compute instance `substituting your IP address`.
 
   Example:
 
   ```
-  cd <directory of your key pair>
+  cd /home/opc
   chmod 600 dockerkey
   ssh -i ./dockerkey opc@129.213.119.105
   ```
 
   ![](images/200/37.PNG)
 
-### **STEP 8**: Install and configure Docker and GIT
+### **STEP 7**: Install and configure Docker and GIT
 
 Docker and GIT are required for the subsuquent labs. You will install the Docker engine, enable it to start on re-boot, grant docker privledges to the `opc` user and finally install GIT.
 
@@ -240,13 +246,13 @@ Docker and GIT are required for the subsuquent labs. You will install the Docker
   ```
   su - opc
   docker version
-  docker images 
+  docker images
   git --version
   ```
 
    ![](images/200/41.PNG)
 
-### **STEP 9**: Edit /etc/sysconfig/selinux
+### **STEP 8**: Edit /etc/sysconfig/selinux
 
 Set the server to Permissive mode and also ensure that permissive mode survives re-boots by editing `/etc/sysconfig/selinux`
 
@@ -286,13 +292,13 @@ Set the server to Permissive mode and also ensure that permissive mode survives 
 
 # Deploy the AlphaOffice Application using Docker
 
-In this section you will again clone the github repository as you did in Lab 100. It contains a Java REST Application that queries the database. Then, you will modify the configuration to point to your ATP database. After successfull testing you will create a new Docker image.
+In this section you will again clone the github repository as you did in Lab 100. It contains a Java REST Application that queries the database. Then, you will modify the configuration to point to your ATP database. After successful testing you will create a new Docker image.
 
 ## Deploy AlphaOffice Product Catalog Application
 
 ### **STEP 1**: Clone the git repository and copy the wallet file
 
-- Clone the git repository to your newly created OCI VM. This repo contains support files and the baseline AlphaOffice application that you will modify to connect to your ATP database.
+- Clone the git repository to your newly created OCI VM. This repo contains support files and the baseline Alpha Office application that you will modify to connect to your ATP database.
 
 - **Type OR Copy and Paste**:
 
@@ -312,7 +318,7 @@ In this section you will again clone the github repository as you did in Lab 100
 
   ![](images/200/46.PNG)
 
-- **FROM YOUR VNC CLIENT**: Open up another Terminal session, CD to where your dockerkey file is and then copy the database wallet file you downloaded in Lab 100  (Recall that the file is in `/home/opc/Downloads`). You will scp this wallet file into the `/home/opc/monolithic-to-microservice/lab-resources/docker` directory within your OCI VM. 
+- **FROM YOUR VNC CLIENT**: Open up another Terminal session, CD to where your dockerkey file is and then copy the database wallet file you downloaded in Lab 100  (Recall that the file is in `/home/opc/Downloads`). You will scp this wallet file into the `/home/opc/monolithic-to-microservice/lab-resources/docker` directory within your OCI VM.
 
   **NOTE:** If your wallet file is a different name than **Wallet_orcl.zip** then substitute your name as appropriate. This example uses `Wallet-mattoATP`:
 
