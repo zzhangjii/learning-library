@@ -107,13 +107,13 @@ Launching an instance is simple and intuitive with few options to select. Provis
 
 **Note:** For Oracle Linux VMs, the default username is **opc**
 ```
-# ssh opc@PublicIP_Address
+# ssh opc@<public_ip_address>
 ```
 
 If you have a different path for your SSH key enter the following:
 
 ```
-# ssh -i <path-of-pub-ssh-key> opc@PublicIP_Address
+# ssh -i <path_to_private_ssh_key> opc@<public_ip_address>
 ```
 
 5. For this lab, we are going to install an Apache HTTP Webserver and try to connect to it over the public Internet. SSH into the Linux instance and run following commands:
@@ -162,7 +162,7 @@ If you have a different path for your SSH key enter the following:
 
 ![](media/image12.png)
 
-10. Navigate to `http://publicI-PAddress` (the IP address of the Linux VM) in your browser. And now you should see the index page of the webserver we created above.
+10. Navigate to `http://<public_ip_address>` (the IP address of the Linux VM) in your browser. And now you should see the index page of the webserver we created above.
 
 ![](media/image13.png)
 
