@@ -163,7 +163,7 @@ vi dockerkey.pub
 
  ![](images/200/27.PNG)
 
-- **You will (Leave Default) or Type** the following in the `Create Compute Instance` section of the dialog:
+- Type the following in the **Create Compute Instance** section of the dialog:
 
   ```
   Name: Docker
@@ -204,7 +204,7 @@ vi dockerkey.pub
   ```
   cd /home/opc
   chmod 600 dockerkey
-  ssh -i ./dockerkey opc@129.213.119.105
+  ssh -i ./dockerkey opc@<Paste in Your Public IP>
   ```
 
   ![](images/200/37.PNG)
@@ -218,20 +218,22 @@ Docker and GIT are required for the subsuquent labs. You will install the Docker
   ```
   sudo -s
   yum install docker-engine
+  ```
+
+- _During the **yum install docker-engine** command press **Y** when asked if installation is ok._ Screenshot at the end of the Docker installation:
+
+   ![](images/200/38.PNG)
+
+- Next grant the proper privileges to the opc user.
+  ```
   usermod -aG docker opc
   systemctl enable docker
   systemctl start docker
   ```
 
-- **NOTE:** During the `yum install docker-engine` command press `Y` when asked if installation is ok.
-
-- Screenshot at the end of the Docker installation:
-
-   ![](images/200/38.PNG)
-
    ![](images/200/39.PNG)
 
-- **Type** the following:
+- **Type** the following, select **Y** when asked if it is ok to install:
 
   ```
   yum install git
@@ -290,11 +292,11 @@ Set the server to Permissive mode and also ensure that permissive mode survives 
   ![](images/200/44.PNG)
 
 
-# Deploy the AlphaOffice Application using Docker
+# Deploy the AlphaOffice REST Services using Docker
 
-In this section you will again clone the github repository as you did in Lab 100. It contains a Java REST Application that queries the database. Then, you will modify the configuration to point to your ATP database. After successful testing you will create a new Docker image.
+In this section you will clone a github repository that contains a Java REST Application. Then, you will modify the configuration to point to your ATP database. After successful testing you will create a new Docker image.
 
-## Deploy AlphaOffice Product Catalog Application
+## Deploy AlphaOffice REST Services
 
 ### **STEP 1**: Clone the git repository and copy the wallet file
 
@@ -303,33 +305,37 @@ In this section you will again clone the github repository as you did in Lab 100
 - **Type OR Copy and Paste**:
 
   ```
+  cd ~
   git clone https://github.com/derekoneil/monolithic-to-microservice.git
   ```
 
   ![](images/200/45.PNG)
 
-- From the directory you just cloned the repository into **Type**: (Command assumes your in the $HOME directory /home/opc)
-
+- From the directory you just cloned the repository into **Type**:
   ```
   cd monolithic-to-microservice/lab-resources/docker
   ```
 
-- Here you will find the baseline `AlphaProductsRestService.war` file, `dbconfig.properties`, `sqlnet.ora` and a `Dockerfile`:
-
+- Type **ls** and browse the baseline **AlphaProductsRestService.war** file, **dbconfig.properties**, **sqlnet.ora** and a **Dockerfile**:
+  ```
+  ls
+  ```
   ![](images/200/46.PNG)
 
-- **FROM YOUR VNC CLIENT**: Open up another Terminal session, CD to where your dockerkey file is and then copy the database wallet file you downloaded in Lab 100  (Recall that the file is in `/home/opc/Downloads`). You will scp this wallet file into the `/home/opc/monolithic-to-microservice/lab-resources/docker` directory within your OCI VM.
+- Open up a new Terminal window by Right-click on the Desktop and select **Open Terminal**
 
-  **NOTE:** If your wallet file is a different name than **Wallet_orcl.zip** then substitute your name as appropriate. This example uses `Wallet-mattoATP`:
+  ![](images/100/image01.png)
+
+
+- Copy the database wallet file you downloaded in Lab 100  (Recall that the file is in `/home/opc/Downloads`). You will scp this wallet file into the `/home/opc/monolithic-to-microservice/lab-resources/docker` directory.
 
   ```
-  cd <into the location where your dockerkey file is>
-  scp -i ./dockerkey /home/opc/Downloads/Wallet-mattoATP.zip opc@<YOUR-PUBLIC-IP>:/home/opc/monolithic-to-microservice/lab-resources/docker
+  scp -i ./dockerkey /home/opc/Downloads/Wallet_orcl.zip opc@<YOUR-PUBLIC-IP>:/home/opc/monolithic-to-microservice/lab-resources/docker
   ```
 
   ![](images/200/46-1.1.PNG)
 
-- **BACK IN YOUR SSH SESSION**: The wallet file should now be in the `/home/opc/monolithic-to-microservice/lab-resources/docker` directory on the OCI VM:
+- **Return the the ssh session connected into your OCI VM.** and type **ls**. You should see the wallet file in the directory before proceeding.
 
   ![](images/200/46-1.3.PNG)
 
@@ -337,7 +343,10 @@ In this section you will again clone the github repository as you did in Lab 100
 
 In this step you are going to edit the `dbconfig.properties` file to add your database instance connection name.
 
-- Using **vi** edit the **dbconfig.properties** file and add your connection property. In this example the ATP DB instance called `mattoATP` is used. The DB Connection information can be found in the OCI Console under your ATP database instance link.
+- Using **vi** edit the **dbconfig.properties** file and add your connection property.
+```
+vi dbconfig.properties
+```
 
 - From the OCI console select the **hamburger menu** in the upper left hand side on the page. Click the **Autonomous Transaction Processing** link:
 
@@ -358,11 +367,11 @@ In this step you are going to edit the `dbconfig.properties` file to add your da
 
   We will be using the **MEDIUM** connection name in the application.
 
-- For this example the modifed `dbconfig.properties` looks like:
+- For this example the modifed **dbconfig.properties** looks like:
 
   ![](images/200/46-1.6.PNG)
 
-- **If your NOT using the default wallet name of `Wallet_orcl.zip` then you will also need to edit the `Dockerfile`** to point to your instance specific wallet, otherwise, you can skip ahead to Step 3.
+- _If your NOT using the default wallet name of `Wallet_orcl.zip` then you will also need to edit the **Dockerfile**_ to point to your instance specific wallet, otherwise, you can skip ahead to Step 3.
 
 - If applicable, **edit** the following two locations within the `Dockerfile`:
 
@@ -370,7 +379,7 @@ In this step you are going to edit the `dbconfig.properties` file to add your da
 
 ### **STEP 3**: Build the Docker image
 
-The docker build will take a baseline java ready docker image from Docker Hub, add the Glassfish 4.1.1 application server along with your ATP DB instance wallet file and then extract the `AlphaProductsRestService.war` inside the container. The application server will be running on port 8080. If you recall you opened port 8080 in the Networking Security List earlier in this lab so access from the internet can occur.
+The docker build will take a baseline java ready docker image from Docker Hub, add the Glassfish 4.1.1 application server along with your ATP DB instance wallet file and then extract the **AlphaProductsRestService.war** inside the container. The application server will be running on port 8080. If you recall you opened port 8080 in the Networking Security List earlier in this lab so access from the internet can occur.
 
 - **Type:**
 
@@ -378,7 +387,7 @@ The docker build will take a baseline java ready docker image from Docker Hub, a
   docker build -t alphaoffice .
   ```
 
-  The build will take a few minutes and should be successfull:
+  The build will take a few minutes and should be successful:
 
   ![](images/200/47.PNG)
 
@@ -399,6 +408,7 @@ The docker build will take a baseline java ready docker image from Docker Hub, a
   ```
   docker run -d --name alphaoffice -p=8080:8080 alphaoffice
   ```
+  ![](images/200/LabGuide200-9f6c655b.png)
 
 - **docker ps** shows the running container. You'll note the asadmin command we stipulated in the CMD of the Dockerfile build is executed and running (This starts up the Glassfish app server):
 
@@ -408,7 +418,7 @@ The docker build will take a baseline java ready docker image from Docker Hub, a
 
   ![](images/200/50.PNG)
 
-### **STEP 4**: Copy the the database properties file into the container
+### **STEP 4**: Copy the database properties file into the container
 
 In this step you will copy the `dbconfig.properties` file modifed in a previous step into the running container. Then you will go into the container and verify all the copied and modied files look good and are in their proper locations.
 
@@ -422,7 +432,7 @@ In this step you will copy the `dbconfig.properties` file modifed in a previous 
 
   ![](images/200/53.PNG)
 
-### **STEP 5**: Verify files inside the container and deploy the `AlphaProductsRestService` application
+### **STEP 5**: Verify files inside the container and deploy the AlphaProductsRestService application
 
 - **Type OR Copy and Paste:**
 
@@ -474,9 +484,9 @@ In this step you will copy the `dbconfig.properties` file modifed in a previous 
 
 - **Type: `exit` twice** to get out of the admin tool and the container.
 
-- In a browser, test the application by using the Public IP Address of the VM instance.
+    ![](images/200/LabGuide200-8a329fb9.png)
 
-  **NOTE:** If you have a JSON format add-on in your browser the data will be easier to read... however, if you don't it will still show up as a text stream. (**Include the trailing slash!**)
+- In a browser, test the application by using the Public IP Address of the VM instance. The first time you test the endpoint. It may take several seconds before you see data returned...
 
   ```
   http://<YOUR-PUBLIC-IP>:8080/AlphaProductsRestService/webresources/restCall/
@@ -484,7 +494,6 @@ In this step you will copy the `dbconfig.properties` file modifed in a previous 
   Example:
   `http://129.213.109.189:8080/AlphaProductsRestService/webresources/restCall/`
 
-  **Another NOTE: Be patient**, the first time you test. It may take several seconds before you see data returned...
 
   ![](images/200/58.PNG)
 
@@ -499,7 +508,7 @@ In this step you will copy the `dbconfig.properties` file modifed in a previous 
 
   ![](images/200/59.PNG)
 
-- If you get a timeout or receive an error you can check the container logs by typing:
+- At any point you can check the container logs by typing:
 
   ```
   docker logs alphaoffice

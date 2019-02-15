@@ -6,8 +6,6 @@
 
 In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump export file to Object Storage and leverage SQL Developer to import the Data Pump export file into an Autonomous Transaction Processing (ATP) Database.
 
-***To log issues***, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
-
 ## Objectives
 
 - Clone GIT Repository
@@ -37,7 +35,7 @@ While still connected to the Client Image using VNC Viewer, complete the followi
 	![](images/100/image02.png)
 
 	**Note:**  The GIT clone creates the ```monolithic-to-microservice``` directory which contains contents used throughout the labs. You can validate the clone by entering the following command.
-	
+
     ```
     ls -l monolithic-to-microservice/
 	```
@@ -109,14 +107,14 @@ While still connected to the Client Image using VNC Viewer, complete the followi
 
   - Captue the values for **REGION, BUCKET, OBJECT_STORAGE_NAMESPACE, FILENAME** in the text editor from the same screen you uploaded the DMP file.
 
-	![](images/100/image39a.png)	
+	![](images/100/image39a.png)
 
   - Your text editor should look similar to this
-  
-	![](images/100/image11b.png)	
-	
+
+	![](images/100/image11b.png)
+
 	**Note:** Your values for **REGION** and **OBJECT_STORAGE_NAMESPACE** may/will be different.
-	
+
 ### **STEP 5**: Create OCI User
 
   - Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Governance and Administration** section, select **Identity** and select **Users**.
@@ -277,13 +275,13 @@ While still connected to the Client Image using VNC Viewer, complete the followi
   - On **Step 1** of the **Import Wizard**, select and/or enter the following and click **Next**.  You will use the values you collected in the text editor at the end of **Step 4**.
 
 	**Note:** Your values for **REGION** and **OBJECT_STORAGE_NAMESPACE** may/will be different.
-	
+
 	- **Type of Import:** ```Full```
 	- **Credentials or Directories:** ```IMPDP_OBJ_STORE``` (Created in STEP 10)
 	- **File Names or URI:** ```https://swiftobjectstorage.{REGION}.oraclecloud.com/v1/{OBJECT_STORAGE_NAMESPACE}/{BUCKET}/{FILENAME}``` (Created in STEP 4)
 
-	![](images/100/image11b.png)	
-	
+	![](images/100/image11b.png)
+
 	![](images/100/image38.png)
 
   - Accept the Defaults and click **Next** on **Step 2** of the **Import Wizard**. It can take 30 seconds for the **Next** button to be enabled.
