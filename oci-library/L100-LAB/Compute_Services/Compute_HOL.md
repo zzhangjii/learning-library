@@ -162,7 +162,7 @@ If you have a different path for your SSH key enter the following:
 
 ![](media/image12.png)
 
-10. Navigate to `http://publicI-PAddress` (the IP address of the Linux VM) in your browser. And now you should see the index page of the webserver we created above.
+10. Navigate to `http://<public_ip_address>` (the IP address of the Linux VM) in your browser. And now you should see the index page of the webserver we created above.
 
 ![](media/image13.png)
 
