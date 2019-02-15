@@ -244,9 +244,19 @@ put <ZIP_FILE_NAME>
 
 10. Step 9. Switch to ssh session to the public compute instance. Enter command,
 ``` 
-cd ~/swinbench/bin
+cd ~/swingbench/bin
 ```
-11. Enter below commands, replacing the value in < >. 
+11. Enter command:
+```
+which java
+```
+verify java path is displayed, if no java path is displayed then install jave, Enter commads
+```
+sudo yum install java'
+```
+Answer 'Y' when prompted
+
+12. Enter below commands, replacing the value in < >. 
 (This will install a schema to run our transactions against)
 ```
 ./oewizard -cf ~/<CREDENTIAL_ZIP_FILE> -cs <DB_NAME>_medium  -ts DATA -dbap <DB_PASSWORD> -dba ADMIN -u soe -p <DB_PASSWORD> -async_off -scale 0.1 -hashpart -create -cl -v
@@ -254,31 +264,31 @@ cd ~/swinbench/bin
 **NOTE:** In below example,<CREDENTIAL_ZIP_FILE> is 'Wallet_ATPDB3.zip', <DB_NAME> is ATPDB3, <DB_PASSWORD> is Oracle098####.
 ![]( img/ATP_008.PNG)
 
-12. The script will take around 10-15 minutes to populate the Database. Verify the script complete successfully 
+13. The script will take around 10-15 minutes to populate the Database. Verify the script complete successfully 
 
 ![]( img/ATP_009.PNG)
 
-13. Validate the schema, Enter command,
+14. Validate the schema, Enter command,
 ```
 ./sbutil -soe -cf ~/<CREDENTIAL_ZIP_FILE> -cs <DB_NAME>_medium -u soe -p <DB_PASSWORD> -tables
 ```
 ![]( img/ATP_010.PNG)
 
-14. Next we will configure the load generator file. Enter command,
+15. Next we will configure the load generator file. Enter command,
 ```
 cd ~/swingbench/config
 ```
-15. Enter command,
+16. Enter command,
 ```
 vi SOE_Server_Side_V2.xml
 ```
 (You can also use nano as the editor)
 ![]( img/ATP_011.PNG)
 
-16. Search for string **LogonGroupCount** and change the existing number to **4**. On the next line with string **LogonDelay** change the number to **300**. Finally on line with string **WaitTillAllLogon** change the flag to **false** (case sensitive). Save and quite out of the editor. See below example
+17. Search for string **LogonGroupCount** and change the existing number to **4**. On the next line with string **LogonDelay** change the number to **300**. Finally on line with string **WaitTillAllLogon** change the flag to **false** (case sensitive). Save and quite out of the editor. See below example
 ![]( img/ATP_012.PNG)
 
-17. Now we will generate some load. Enter command,
+18. Now we will generate some load. Enter command,
 ```
 cd ~/swingbench/bin. 
 ```
@@ -287,7 +297,7 @@ Then Enter command,
 ./charbench -c ../configs/SOE_Server_Side_V2.xml -cf ~/<CREDENTIAL_ZIP_FILE>  -cs <DB_NAME>_medium -u soe -p <DB_PASSWORD> -v users,tpm,tps,vresp -intermin 0 -intermax 0 -min 0 -max 0 -uc 128 -di SQ,WQ,WA -rt 0:30.30
 ```
 
-18. After a few seconds the number in 4th column (TPS)indicating Transactions Per Seconds will stabalize in 2xx range. Remember the current ATP DB instance has only 1 OCPU. 
+19. After a few seconds the number in 4th column (TPS)indicating Transactions Per Seconds will stabalize in 2xx range. Remember the current ATP DB instance has only 1 OCPU. 
 
 ![]( img/ATP_013.PNG)
 
