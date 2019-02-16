@@ -12,10 +12,10 @@ During this lab, you will take the Docker image that you created in Lab 200 and 
 
 ## Objectives
 
-- Provision a Kubernetes cluster on OCI (OKE)
-- Store Docker image in OCI Repository (OCIR)
-- Deploy application to Kubernetes cluster
-- Validate application deployment
+- Provision a Kubernetes cluster on OCI (OKE).
+- Store Docker image in OCI Repository (OCIR).
+- Deploy application to Kubernetes cluster.
+- Validate application deployment.
 
 ## Required Artifacts
 
