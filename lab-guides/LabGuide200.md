@@ -124,7 +124,7 @@ A security list provides a virtual firewall for an instance, with ingress and eg
 
 Before we create the Compute instance that will contain Docker and application deployments we need to create a ssh key pair so we'll be able to securely connect to the instance and do the Docker installation, etc. **We'll use the VNC Client to do this**.
 
-- Inside your terminal window navigate to your home directory.
+- **In the VNC Client**: Open a Terminal session and navigate to your home directory.
 
   ```
   cd /home/opc
@@ -132,7 +132,7 @@ Before we create the Compute instance that will contain Docker and application d
 
   ![](images/200/LabGuide200-1204a1a6.png)
 
-- In your VNC client open up a Terminal window and **Type** the following: (**You don't have to worry about any passphrases. Press enter to proceed without a passphrase.**)
+- **Type** the following: (**You don't have to worry about any passphrases. Press enter to proceed without a passphrase.**)
 
   ```
   ssh-keygen -b 2048 -t rsa -f dockerkey
@@ -200,7 +200,7 @@ Before we create the Compute instance that will contain Docker and application d
 
 ### **STEP 6**: SSH into the Instance and install Docker
 
-- Set the correct permissions for the docker key by pasting the following commands in your terminal window. Make sure the dockerkey file has the permissions of **600** (chmod 600 dockerkey) and ssh into the compute instance `substituting your IP address`.
+- Set the correct permissions for the docker key by **Typing OR Copy and Pasting** the following commands in your terminal window. Make sure the dockerkey file has the permissions of **600** (chmod 600 dockerkey) and ssh into the compute instance `substituting your IP address`.
 
   Example:
 
@@ -303,7 +303,7 @@ In this section you will clone a github repository that contains a Java REST App
 
 ### **STEP 1**: Clone the git repository and copy the wallet file
 
-- Clone the git repository to your newly created OCI VM. This repo contains support files and the baseline Alpha Office application that you will modify to connect to your ATP database.
+- Clone the git repository to your newly created OCI VM (docker). This repo contains support files and the baseline Alpha Office application that you will modify to connect to your ATP database.
 
 - **Type OR Copy and Paste**:
 
@@ -327,12 +327,12 @@ In this section you will clone a github repository that contains a Java REST App
   ```
   ![](images/200/46.PNG)
 
-- **From the VNC client Session:** Open up a new Terminal window by Right-click on the Desktop and select **Open Terminal**:
+- **From the VNC Session:** Open up a new Terminal window by Right-click on the Desktop and select **Open Terminal**:
 
   ![](images/100/image01.png)
 
 
-- Copy the database wallet file you downloaded in Lab 100  (Recall that the file is in `/home/opc/Downloads`). You will scp this wallet file into the `/home/opc/monolithic-to-microservice/lab-resources/docker` directory.
+- Copy the database wallet file you downloaded in Lab 100 (Recall that the file is in `/home/opc/Downloads`). You will scp this wallet file from the VNC Session VM (atp-js) to the `/home/opc/monolithic-to-microservice/lab-resources/docker` directory on the new OCI VM (docker):
 
   ```
   scp -i ./dockerkey /home/opc/Downloads/Wallet_orcl.zip opc@<YOUR-PUBLIC-IP>:/home/opc/monolithic-to-microservice/lab-resources/docker

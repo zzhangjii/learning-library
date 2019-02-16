@@ -20,7 +20,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 ### **STEP 1**: Open a Terminal Window and Clone GIT Repository
 
-While still connected to the Client Image using VNC Viewer, complete the following step to clone the GIT Repository.
+**While still connected to the Client Image using VNC Viewer**, complete the following step to clone the GIT Repository.
 
   - Right-click on the Desktop and select ```Open Terminal```
 

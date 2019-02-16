@@ -57,7 +57,7 @@ Once the infrastructure is provisioned you can access your enironment using `VNC
 - Click **Demo Lab**.
  ![](images/050/JS3.PNG)
 
-- In **5** minutes the Oracle IaaS infrastructure including the client image will be available. Leave this browser window open we will return to it shortly.
+- In **5** minutes the Oracle IaaS infrastructure including the client image will be available. **Leave this browser tab opened** as we will return to it shortly.
  ![](images/050/JS4.PNG)
 
 
@@ -203,7 +203,7 @@ In this step you will create a VBCS instance that will be used in Lab 400. It ta
 
 ### **STEP 1**: Access Client Image
 
-- When the environment is ready you will see the following along with the connect string to use in VNC Viewer. (In this example 129.213.167.192:10. _Your IP address will be different_)
+- Back at the Demo Lab browser tab (that you left opened)... when the environment is ready you will see the following along with the connect string to use in VNC Viewer. (In this example 129.213.167.192:10. _Your IP address will be different_)
 
   **NOTE: Your IP address will be different**
 
