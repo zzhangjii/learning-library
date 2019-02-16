@@ -8,13 +8,13 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 ## Objectives
 
-- Clone GIT Repository
-- Create Object Storage Bucket and Upload Data Pump Export File to the Bucket
-- Create an Oracle Cloud Infrastructure (OCI) User and Generate Auth Token
-- Setup SQL Developer Connection to Autonomous Transaction Processing (ATP) Database
-- Create ATP Database user and DBMS_CLOUD Credential
-- Import Data into ATP Database using SQL Developer Data Pump Import Wizard
-- Download and Review Data Pump Import Log
+- Clone GIT Repository.
+- Create Object Storage Bucket and Upload Data Pump Export File to the Bucket.
+- Create an Oracle Cloud Infrastructure (OCI) User and Generate Auth Token.
+- Setup SQL Developer Connection to Autonomous Transaction Processing (ATP) Database.
+- Create ATP Database user and DBMS_CLOUD Credential.
+- Import Data into ATP Database using SQL Developer Data Pump Import Wizard.
+- Download and Review Data Pump Import Log.
 
 # Clone GIT Repository
 
