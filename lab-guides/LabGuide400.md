@@ -10,13 +10,13 @@ In this lab you will use Oracle Visual Builder which is a cloud-based software d
 
 ## Objectives
 
-- Create a Mobile Application
-- Access the REST services you deployed in Lab 300 on OKE
-- Deploy the mobile application to your phone (Android based)
+- Create a Mobile Application.
+- Access the REST services you deployed in Lab 300 on OKE.
+- Deploy the mobile application to your phone (Android based).
 
 ## Required Artifacts
 
-- Lab 300 needs to be completed with the AlphaOffice REST application deployed
+- Lab 300 needs to be completed with the AlphaOffice REST application deployed.
 
 # Login in and Create the Application
 
