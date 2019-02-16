@@ -6,10 +6,10 @@
 
 In this workshop you are guided through using many of the Oracle's Cloud Services to support a transition from a monolithic on-prem environment to a Cloud based microservices environment. The high level flow will be:
 
-- Lab 050: Provision supporting services (Client Image, Database, Visual builder Instance)
-- Lab 100: Populate your database with seed data
-- Lab 200: Create a Compute Instance and use Docker to deploy a Java based REST application
-- Lab 300: Deploy and explore the REST application into a Kubernetes Cluster
+- Lab 050: Provision supporting services (Client Image, Database, Visual builder Instance).
+- Lab 100: Populate your database with seed data.
+- Lab 200: Create a Compute Instance and use Docker to deploy a Java based REST application.
+- Lab 300: Deploy and explore the REST application into a Kubernetes Cluster.
 - Lab 400: Create a Visual Builder mobile application to use the REST endpoints of the Java application.
 
 ***To log issues***, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
