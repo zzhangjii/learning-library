@@ -125,27 +125,30 @@ A security list provides a virtual firewall for an instance, with ingress and eg
 Before we create the Compute instance that will contain Docker and application deployments we need to create a ssh key pair so we'll be able to securely connect to the instance and do the Docker installation, etc. **We'll use the VNC Client to do this**.
 
 - Inside your terminal window navigate to your home directory.
-```
-cd /home/opc
-```
+
+  ```
+  cd /home/opc
+  ```
 
   ![](images/200/LabGuide200-1204a1a6.png)
 
 - In your VNC client open up a Terminal window and **Type** the following: (**You don't have to worry about any passphrases. Press enter to proceed without a passphrase.**)
-```
-ssh-keygen -b 2048 -t rsa -f dockerkey
-```
+
+  ```
+  ssh-keygen -b 2048 -t rsa -f dockerkey
+  ```
 
 - Your key pair is now in the current directory:
 
-    ![](images/200/24.PNG)
+  ![](images/200/24.PNG)
 
 - Open up the pubic key file in an editor (vi) by typing **vi** in the terminal window.
-```
-vi dockerkey.pub
-```
 
-    ![](images/200/LabGuide200-5eed53cd.png)
+  ```
+  vi dockerkey.pub
+  ```
+
+  ![](images/200/LabGuide200-5eed53cd.png)
 
 - Select and copy the entire contents. This will be used in the Compute instance creation in the next Step.   
 
@@ -312,17 +315,19 @@ In this section you will clone a github repository that contains a Java REST App
   ![](images/200/45.PNG)
 
 - From the directory you just cloned the repository into **Type**:
+
   ```
   cd monolithic-to-microservice/lab-resources/docker
   ```
 
 - Type **ls** and browse the baseline **AlphaProductsRestService.war** file, **dbconfig.properties**, **sqlnet.ora** and a **Dockerfile**:
+
   ```
   ls
   ```
   ![](images/200/46.PNG)
 
-- Open up a new Terminal window by Right-click on the Desktop and select **Open Terminal**
+- **From the VNC client Session:** Open up a new Terminal window by Right-click on the Desktop and select **Open Terminal**:
 
   ![](images/100/image01.png)
 
@@ -335,7 +340,7 @@ In this section you will clone a github repository that contains a Java REST App
 
   ![](images/200/46-1.1.PNG)
 
-- **Return the the ssh session connected into your OCI VM.** and type **ls**. You should see the wallet file in the directory before proceeding.
+- **Return to the SSH session connected into your OCI VM.** and type **ls**. You should see the wallet file in the directory before proceeding.
 
   ![](images/200/46-1.3.PNG)
 
@@ -344,9 +349,10 @@ In this section you will clone a github repository that contains a Java REST App
 In this step you are going to edit the `dbconfig.properties` file to add your database instance connection name.
 
 - Using **vi** edit the **dbconfig.properties** file and add your connection property.
-```
-vi dbconfig.properties
-```
+
+  ```
+  vi dbconfig.properties
+  ```
 
 - From the OCI console select the **hamburger menu** in the upper left hand side on the page. Click the **Autonomous Transaction Processing** link:
 
