@@ -3,7 +3,7 @@
         "title": "On-premises WebLogic to OKE",
         "description": "Description of this workshop.",
         "theme": "default",
-        "interactive":"https://launch.oracle.com/?",
+        "interactive":"https://launch.oracle.com/?weblogic-to-oke",
         "labs": [
             {
                 "number": "0",

@@ -314,3 +314,7 @@ If you see the untrusted security certificate warning, add the certificate to yo
 - Once the app is running it will appear something like this
 
  ![](images/300/Upload_to_JCS/product.png)
+
+- Congratulations! You've just used the Oracle WebLogic Server Kubernetes Operator to deploy Alpha Office Product Catalog war file into the WebLogic Server.
+  
+- **This completes Lab 300 and the Workshop**
