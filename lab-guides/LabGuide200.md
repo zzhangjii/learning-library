@@ -401,6 +401,65 @@ The docker build will take a baseline java ready docker image from Docker Hub, a
 
   ![](images/200/48.PNG)
 
+- **Here's a more annotated version of the Dockerfile so you can see what the steps are doing while building the `alphaoffice` image**:
+
+  ```
+  # Grab a baseline, java capable Docker image that we will add to:
+
+  FROM        java:8-jdk
+
+  #Set Environment variables that will be visible inside the Docker container when it is spun up from the alphaoffice Docker image. These directory references will be seen inside the container when it is running:
+
+  ENV         JAVA_HOME         /usr/lib/jvm/java-8-openjdk-amd64
+  ENV         GLASSFISH_HOME    /usr/local/glassfish4
+  ENV         PATH              $PATH:$JAVA_HOME/bin:$GLASSFISH_HOME/bin
+  ENV         TNS_ADMIN         /usr/local/wallet_DB/
+
+  #Run a sequence of commands to install needed programs like zip, curl, etc:
+
+  RUN         apt-get update && \
+              apt-get install -y curl unzip zip inotify-tools && \
+              rm -rf /var/lib/apt/lists/*
+
+  #Download and install the Glassfish server. Make directories for the DB Wallet and the REST application that we will be copying into the image. Then, do some directory module cleanup to accomodate the requirements of the AlphaProductsRestService.war (Java REST application):
+
+  RUN         curl -L -o /tmp/glassfish-4.1.zip https://download.oracle.com/glassfish/4.1.1/release/glassfish-4.1.1.zip && \
+              unzip /tmp/glassfish-4.1.zip -d /usr/local && \
+              rm -rf /usr/local/glassfish4/glassfish/domains/domain1/osgi-cache/felix && \
+  #           rm -rf /usr/local/glassfish4/glassfish/modules/jackson* && \
+              rm -f /tmp/glassfish-4.1.zip && \
+              mkdir /usr/local/wallet_DB && \
+              mkdir /usr/local/alpha
+
+  #Copy local (HOST-based) files into the docker image directories:
+ 
+  COPY AlphaProductsRestService.war /usr/local/alpha
+  COPY Wallet_orcl.zip /usr/local/wallet_DB
+
+  #Unzip the DB Wallet and REST application .jar files into their respective directories: 
+
+  RUN         unzip /usr/local/wallet_DB/Wallet_orcl.zip -d /usr/local/wallet_DB/ && \
+              cd /usr/local/alpha && \
+              jar xvf /usr/local/alpha/AlphaProductsRestService.war && \
+              rm /usr/local/alpha/AlphaProductsRestService.war
+
+  #Copy a modifed version of sqlnet.ora from the (HOST) into the Wallet directory. This tells the DB connection to use Oracle TNS connection lookups (Noted with the TNS_ADMIN environment variable set earlier in the Dockerfile). Also copy some required .jar files from the (HOST) to support the application:
+
+  COPY sqlnet.ora /usr/local/wallet_DB
+  COPY glassfish_module/* /usr/local/glassfish4/glassfish/modules/
+
+  *Glassfish server will use port 8080 for the application deployments:
+
+  EXPOSE      8080
+
+  WORKDIR     /usr/local/glassfish4
+
+  #Iniital docker container startup command. Verbose flag causes the Glassfish server process to remain in the foreground:
+  
+  CMD         asadmin start-domain --verbose
+  ```
+
+
 - Typing **docker images** reveals the new image:
 
   ```
