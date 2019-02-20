@@ -91,26 +91,26 @@ To run the operator in a Kubernetes cluster, you need to build the Docker image 
 
 ### **STEP 3**: Accept Licence Agreement to use Oracle WebLogic Server image from Docker Store
 
-- If you have not used the base image [`Oracle WebLogic Serve`](https://hub.docker.com/_/oracle-weblogic-server-12c) before, you will need to visit the [Docker Store web interface](https://hub.docker.com/_/oracle-weblogic-server-12c) and accept the license agreement before the Docker Store will give you permission to pull that image.
+- If you have not used the base image [`Oracle WebLogic Server`](https://hub.docker.com/_/oracle-weblogic-server-12c) before, you will need to visit the [Docker Store web interface](https://hub.docker.com/_/oracle-weblogic-server-12c) and accept the license agreement before the Docker Store will give you permission to pull that image.
 
 Open [https://hub.docker.com/_/oracle-weblogic-server-12c](https://hub.docker.com/_/oracle-weblogic-server-12c) in a new browser and click **Log In**.
 
 ![](images/100/01.docker.store.login.png)
 
-Enter your account details and click **Login**.
+- Enter your account details and click **Login**.
 **Note:** If you don't already have one, obtain a Docker Store account, click Create Account.
   
 ![](images/100/02.docker.store.login.png)
 
-Click **Proceed to Checkout**.
+- Click **Proceed to Checkout**.
 
 ![](images/100/03.docker.store.login.png)
 
-Complete your contact information and accept agreements. Click **Get Content**.
+- Complete your contact information and accept agreements. Click **Get Content**.
 
 ![](images/100/04.docker.store.login.png)
 
-Now you are ready to pull the  image on docker enabled host after authenticating yourself in Docker Hub using your Docker Hub credentials.
+- Now you are ready to pull the  image on docker enabled host after authenticating yourself in Docker Hub using your Docker Hub credentials.
 
 ![](images/100/05.docker.store.login.png)
 
