@@ -5,7 +5,7 @@ Updated: 01/18/2019
 
 ## Introduction
 
-Use this Lab guide to create a WebLogic deployment in a Kubernetes cluster with the Oracle WebLogic Kubernetes Operator
+Use this Lab guide to create a WebLogic deployment in a Kubernetes cluster with the Oracle WebLogic Kubernetes Operator.
 
 **_To log issues_**, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
@@ -64,7 +64,7 @@ Use this Lab guide to create a WebLogic deployment in a Kubernetes cluster with 
     kind: ClusterRole
     name: cluster-admin
     subjects:
-    kind: ServiceAccount
+  - kind: ServiceAccount
     name: default
     namespace: kube-system
   EOF
