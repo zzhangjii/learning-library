@@ -5,7 +5,7 @@ Updated: 01/18/2019
 
 ## Introduction
 
-Use this Lab guide to create a WebLogic deployment in a Kubernetes cluster with the Oracle WebLogic Kubernetes Operator.
+Use this Lab guide to create a WebLogic deployment in a Kubernetes cluster with the Oracle WebLogic Kubernetes Operator
 
 **_To log issues_**, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
@@ -53,22 +53,22 @@ Use this Lab guide to create a WebLogic deployment in a Kubernetes cluster with 
 ### **STEP 2**: Grant the Helm service account the `cluster-admin` role.
 
 - Grant the Helm service account the `cluster-admin` role.  
-  ```
-  $ cat <<EOF | kubectl apply -f -
-  apiVersion: rbac.authorization.k8s.io/v1
-  kind: ClusterRoleBinding
-  metadata:
-    name: helm-user-cluster-admin-role
-  roleRef:
-    apiGroup: rbac.authorization.k8s.io
-    kind: ClusterRole
-    name: cluster-admin
-  subjects:
-  - kind: ServiceAccount
-    name: default
-    namespace: kube-system
-  EOF
-```
+  ```bash
+        cat <<EOF | kubectl apply -f -
+      apiVersion: rbac.authorization.k8s.io/v1
+      kind: ClusterRoleBinding
+      metadata:
+        name: helm-user-cluster-admin-role
+      roleRef:
+        apiGroup: rbac.authorization.k8s.io
+        kind: ClusterRole
+        name: cluster-admin
+      subjects:
+      - kind: ServiceAccount
+        name: default
+        namespace: kube-system
+      EOF
+  ``` 
 ### **STEP 3**: Create a Traefik (Ingress-based) load balancer.
 - Use helm to install the Traefik load balancer. Use the values.yaml in the sample but set kubernetes.namespaces specifically.
   ```bash
@@ -193,7 +193,7 @@ If you run the sample from a machine that is remote to the Kubernetes cluster, a
   ```bash
   $ kubectl describe domain sample-domain1 -n sample-domain1-ns
   ```
-- After a short time, you will see the Administration Server and Managed Servers running.
+ - After a short time, you will see the Administration Server and Managed Servers running.
 
     ![](images/300/DomainResourceRunning.png)
 
