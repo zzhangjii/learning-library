@@ -189,11 +189,11 @@ If you run the sample from a machine that is remote to the Kubernetes cluster, a
     ![](images/300/configDomain.png)
 
 - Confirm that the operator started the servers for the domain:
-* Use `kubectl` to show that the domain resource was created:
+- Use `kubectl` to show that the domain resource was created:
   ```bash
   $ kubectl describe domain sample-domain1 -n sample-domain1-ns
   ```
- After a short time, you will see the Administration Server and Managed Servers running.
+- After a short time, you will see the Administration Server and Managed Servers running.
 
     ![](images/300/DomainResourceRunning.png)
 
