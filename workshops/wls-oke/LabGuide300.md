@@ -69,6 +69,7 @@ Use this Lab guide to create a WebLogic deployment in a Kubernetes cluster with 
         namespace: kube-system
       EOF
   ``` 
+- 
 ### **STEP 3**: Create a Traefik (Ingress-based) load balancer.
 - Use helm to install the Traefik load balancer. Use the values.yaml in the sample but set kubernetes.namespaces specifically.
   ```bash
