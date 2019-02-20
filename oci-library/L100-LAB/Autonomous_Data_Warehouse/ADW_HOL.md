@@ -42,11 +42,7 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 
 > **Note:**  This file will be loaded into Object Storage and later used to load data into the CHANNELS table.
 
-**3.** Download SQL Developer Tool from this link: [https://bit.ly/2OHcBcZ](https://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html).
-
- ![](img/sqldev01.png)
-
- ![](img/sqldev02.png)
+**3.** Download SQL Developer Tool from this link: [https://bit.ly/2OHcBcZ](https://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html) and install on your local computer.
 
 ## Practice 2: Sign in to OCI Console
 
