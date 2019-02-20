@@ -5,7 +5,7 @@ Updated: January 14, 2019
 
 ## Introduction
 
-This tutorial is based on the official [Oracle WebLogic Kubernetes Operator](https://github.com/oracle/weblogic-kubernetes-operator/blob/master/site/installation.md) installation guide.
+This tutorial is based on the official [Oracle WebLogic Kubernetes Operator](https://github.com/oracle/weblogic-kubernetes-operator/blob/master/site/user-guide.md) user guide.
 
 To run the operator in a Kubernetes cluster, you need to build the Docker image and then deploy it to your cluster. The operator sources can be found on github.com and is built using Apache Maven. In this tutorial you can pull WebLogic Image and upload to Container Registry (OCIR) for later deployment:
 
