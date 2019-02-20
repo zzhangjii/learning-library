@@ -54,20 +54,20 @@ Use this Lab guide to create a WebLogic deployment in a Kubernetes cluster with 
 
 - Grant the Helm service account the `cluster-admin` role.  
   ```bash
-        cat <<EOF | kubectl apply -f -
-      apiVersion: rbac.authorization.k8s.io/v1
-      kind: ClusterRoleBinding
-      metadata:
-        name: helm-user-cluster-admin-role
-      roleRef:
-        apiGroup: rbac.authorization.k8s.io
-        kind: ClusterRole
-        name: cluster-admin
-      subjects:
-      - kind: ServiceAccount
-        name: default
-        namespace: kube-system
-      EOF
+    cat <<EOF | kubectl apply -f -
+    apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRoleBinding
+    metadata:
+      name: helm-user-cluster-admin-role
+    roleRef:
+      apiGroup: rbac.authorization.k8s.io
+      kind: ClusterRole
+      name: cluster-admin
+    subjects:
+    - kind: ServiceAccount
+      name: default
+      namespace: kube-system
+    EOF
   ``` 
 - 
 ### **STEP 3**: Create a Traefik (Ingress-based) load balancer.
