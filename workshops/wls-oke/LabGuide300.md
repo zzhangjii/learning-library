@@ -69,7 +69,7 @@ subjects:
   namespace: kube-system
 EOF
 ``` 
-- 
+  ![](images/300/log.png)
 ### **STEP 3**: Create a Traefik (Ingress-based) load balancer.
 - Use helm to install the Traefik load balancer. Use the values.yaml in the sample but set kubernetes.namespaces specifically.
   ```bash
