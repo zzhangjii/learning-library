@@ -19,8 +19,8 @@ To run the operator in a Kubernetes cluster, you need to build the Docker image 
 ## Required Artifacts
 
 - [Oracle Cloud Infrastructure](https://cloud.oracle.com/en_US/cloud-infrastructure) enabled account.
-- [Github](sign.up.github.md) account.
-- [Docker](sign.up.docker.md) account.
+- [Github](https://github.com/) account.
+- [Docker](https://cloud.docker.com/login) account.
 
 # Pull the Docker image for the WebLogic and push to Oracle Cloud Infrastructure Registry (OCIR)
 
@@ -54,7 +54,7 @@ To run the operator in a Kubernetes cluster, you need to build the Docker image 
 
   ![](images/200/3.png)
 
-- Click to expand the **Services** submenu, then click **Compute**
+- Click to expand the **Services** sub menu, then click **Compute**
 
   ![](images/200/4.png)
 
