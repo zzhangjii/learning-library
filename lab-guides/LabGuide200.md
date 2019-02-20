@@ -303,6 +303,25 @@ In this section you will clone a github repository that contains a Java REST App
 
 ### **STEP 1**: Clone the git repository and copy the wallet file
 
+- Before we get into pulling down the completed java .war of the application a couple of screen shots will be helpful to get you a sense of what's going on in the application. The application will be deployed into an application server (Glassfish) and be listening on port 8080 on the following URI's depending. The REST call coming in will determine the method called:
+
+    - restCall
+    - restCall/{product-id}
+
+  GET, PUT, PATCH, DELETE and POST methods are supported taking JSON formatted input:
+
+  ![](images/200/44-2.PNG)
+
+- The source code for this is here:  
+    [RestCall](https://github.com/Sasankaa/alpha-office-product-catalog-webservice/blob/master/AlphaProductsRestService/src/java/com/oracle/ws/RestCallResource.java)
+
+- The appropriate method determining what operation to do with your ATP database is in the ATPDBUtils class. A connection is made to the database (You will update a configuration properties file further on in this lab to tell the program what DB to connect to) and the operation is carried out:
+
+  ![](images/200/44-4.PNG)
+
+- The source code for this is here:  
+    [ATPDBUtils](https://github.com/Sasankaa/alpha-office-product-catalog-webservice/blob/master/AlphaProductsRestService/src/java/com/oracle/db/ATPDBUtils.java)
+
 - Clone the git repository to your newly created OCI VM (docker). This repo contains support files and the baseline Alpha Office application that you will modify to connect to your ATP database.
 
 - **Type OR Copy and Paste**:
