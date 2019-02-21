@@ -1,3 +1,5 @@
+# Building Machine Learning Models in Oracle Analytics Cloud (OAC)
+
 ![](images/400/Picture400-lab.png)  
 Updated: January 4, 2019
 
@@ -18,11 +20,11 @@ This lab walks you through the steps to create and train a machine learning mode
 
 
 
-# Building Machine Learning Models in Oracle Analytics Cloud (OAC)
+# Build and Compare Machine Learning Models in Oracle Analytics Cloud (OAC)
 
-# Part 1. Create Machine Learning Models in OAC
+## Part 1. Create Machine Learning Models in OAC
 
-#### **STEP 1: Create a Linear Regression Model in OAC**
+### **STEP 1: Create a Linear Regression Model in OAC**
 
 -   In your OAC instance, click on **Create**, then select **Data Flow** in the wizard. Once the list of tables popped up, select the dataset we want to use for training the model (**STATION_ST_WTH_TRAINING** ).
 
@@ -44,7 +46,7 @@ This lab walks you through the steps to create and train a machine learning mode
 
 ![](./images/400/Picture400-15.png)
 
--   Now, save both the model and the Data Flow. 
+-   Now, save both the model and the Data Flow.
 
 ![](./images/400/Picture400-16.png)
 
@@ -55,13 +57,13 @@ This lab walks you through the steps to create and train a machine learning mode
 
 
 
-# Part 2. Compare Different Machine Learning Models
+## Part 2. Compare Different Machine Learning Models
 
-In this section, you will compare different machine learning models to find the one which fits this problem the best. One way to do this is to repeate **Part 1** three more times and create other built-in machine learning models one by one. However, to simplify the process, we have already created all those models and the comparison between them in a DVA project. Next steps will shoe you how you can import that project and use it as a base for creating more graphs in the next labs.
+**Note:** In this section, you will compare different machine learning models to find the one which fits this problem the best. One way to do this is to repeate **Part 1** three more times and create other built-in machine learning models one by one. However, to simplify the process, we have already created all those models and the comparison between them in a DVA project. Next steps will shoe you how you can import that project and use it as a base for creating more graphs in the next labs.
 
-#### **STEP 2: 13.    Import the .DVA Project**
+### **STEP 2: Import the .DVA Project**
 
--   Click on the  icon on the top right side of the OAC home page and select **Import Project**. 
+-   Click on the  icon on the top right side of the OAC home page and select **Import Project**.
 
 ![](./images/400/Picture400-21.png)
 

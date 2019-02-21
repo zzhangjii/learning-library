@@ -1,8 +1,10 @@
+Getting Started with Autonomous Data Warehouse (ADW) and Oracle Machine Learning (OML)
+----------------------------------------------------------------------------
 
 ![](images/100/Picture100-lab.png)  
 Updated: January 4, 2019
 
-## Introduction
+## **Introduction**
 
 This lab walks you through the steps to get started using the Oracle Autonomous Data Warehouse (ADW) and the new Oracle Machine Learning (OML) SQL notebook application provided with your Autonomous Data Warehouse on Oracle Infrastructure Cloud (OCI). You will provision a new ADW instance and create a new OML user.
 
@@ -16,15 +18,15 @@ This lab walks you through the steps to get started using the Oracle Autonomous 
 ## Required Artifacts
 -   The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
 
-
-# Getting Started with Autonomous Data Warehouse (ADW) and Oracle Machine Learning (OML)
+#Provision Autonomous Data Warehouse (ADW) and Create Users in Oracle Machine Learning (OML)
 
 ## Part 1. Provisioning an ADW Instance
+
 
 In this section you will be provisioning an ADW instance using the cloud console.
 
 
-#### **STEP 1: Sign in to Oracle Cloud**
+### **STEP 1: Sign in to Oracle Cloud**
 
 -   Go to [cloud.oracle.com](https://cloud.oracle.com), click **Sign In** to sign in with your Oracle Cloud account.
 
@@ -38,7 +40,7 @@ In this section you will be provisioning an ADW instance using the cloud console
 
 ![](./images/100/Picture100-4.png)
 
-#### **STEP 2: Create an ADW Instance**
+### **STEP 2: Create an ADW Instance**
 
 -   Once you are logged in, you are taken to the cloud services dashboard where you can see all the services available to you. Click **Create Instance**.
 
@@ -50,7 +52,7 @@ In this section you will be provisioning an ADW instance using the cloud console
 
 ![](images/100/LabGuide1-39fb4a5b.png)
 
-- Select the compartment of your choice where you will create your new ADW instance. If you want to create a new Compartment or learn more, click <a href="https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#three" target="_blank">here</a>.
+- Select the compartment of your choice where you will create your new ADW instance. If you want to create a new Compartment or learn more, click <a href="https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#three" target="\_blank">here</a>.
 *Note* - Avoid the use of the ManagedCompartmentforPaaS compartment as this is an Oracle default used for Oracle Platform Services.
 
 ![](./images/100/Compartment.jpg)
@@ -98,7 +100,7 @@ In this section you will be provisioning an ADW instance using the cloud console
 ## Part 2. Creating an OML Users
 
 
-#### **STEP 3: Creating OML Users**
+### **STEP 3: Creating OML Users**
 
 -   Go back to the Cloud Console and open the Instances screen. Find your database, click the action menu and select **Service Console**.
 

@@ -1,10 +1,11 @@
+# Getting Started with Oracle Analytics Cloud (OAC)
 
 ![](images/300/Picture300-lab.png)  
 Updated: January 4, 2019
 
 ## Introduction
 
-This lab walks you through the steps to provision an Oracle Analytics Cloud (OAC) instance and connect it to your Autonomous Data Warehouse (ADW) instance. 
+This lab walks you through the steps to provision an Oracle Analytics Cloud (OAC) instance and connect it to your Autonomous Data Warehouse (ADW) instance.
 
 
 **_To log issues_**, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
@@ -18,13 +19,13 @@ This lab walks you through the steps to provision an Oracle Analytics Cloud (OAC
 
 
 
-# Getting Started with Oracle Analytics Cloud (OAC)
+# Provision Oracle Analytics Cloud (OAC) and Connect to Autonomous Data Warehouse (ADW)
 
-# Part 1. Create an OAC Instance
+## Part 1. Create an OAC Instance
 In this section you will create an OAC instance.
 
 
-#### **STEP 1: Sign in to Oracle Cloud**
+### **STEP 1: Sign in to Oracle Cloud**
 
 -   Go to [cloud.oracle.com](https://cloud.oracle.com), click **Sign In** to sign in with your Oracle Cloud account.
 
@@ -40,7 +41,7 @@ In this section you will create an OAC instance.
 
 
 
-#### **STEP 2: Create an OAC Instance**
+### **STEP 2: Create an OAC Instance**
 
 -   Go to your **Dashboard** page and click on **Create Instance**.
 
@@ -82,9 +83,9 @@ In this section you will create an OAC instance.
 
 
 
-# Part 2. Connect OAC to ADW
+## Part 2. Connect OAC to ADW
 
-#### **STEP 3: Connect OAC to ADW**
+### **STEP 3: Connect OAC to ADW**
 
 -   In the Oracle Analytics Cloud Homepage, click on the **Create** button on the top-right and then click on **Connection** in the popped menu.
 
@@ -101,7 +102,7 @@ In this section you will create an OAC instance.
 
 -   **Connection Name:** Type a name for this connection (e.g. ADWDBBIKESHARE)
 
--   **Host:** Copy the Host value from the **tnsnames.ora** file in the (unzipped) **Wallet** (e.g. adb.us-ashburn-1.oraclecloud.com) 
+-   **Host:** Copy the Host value from the **tnsnames.ora** file in the (unzipped) **Wallet** (e.g. adb.us-ashburn-1.oraclecloud.com)
 
 -   **Port:** Copy the Port value from the **tnsnames.ora** file in the (unzipped) **Wallet** (e.g.  1522)
 
@@ -112,7 +113,7 @@ In this section you will create an OAC instance.
 -   **Password:** The password you specified during provision of your ADW instance
 
 -   **Service Name:** Copy the desired service name from three available options (low, medium,high). The Service name is accessible in the **tnsnames.ora** file in the (unzipped) **Wallet** under **<DatabaseName>_<ServiceLevel>** (e.g.  esjdxrwocdkdvja_testadw_medium.adwc.oraclecloud.com)
-  
+
 ![](./images/300/Picture300-33.png)
 
 
@@ -122,9 +123,9 @@ In this section you will create an OAC instance.
 
 
 
-# Part 3. Import Datasets from ADW to OAC
+## Part 3. Import Datasets from ADW to OAC
 
-#### **STEP 4: Import the Training Datasets for the ML Model to OAC**
+### **STEP 4: Import the Training Datasets for the ML Model to OAC**
 
 -   In the Oracle Analytics Cloud Homepage, click on the **Create** button on the top-right and then click on **Data Set** in the popped menu.
 

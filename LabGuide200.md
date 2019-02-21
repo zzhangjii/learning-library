@@ -1,3 +1,4 @@
+# Data Preparation Using SQL Developer
 
 ![](images/200/Picture200-lab.png)  
 Updated: January 4, 2019
@@ -17,17 +18,17 @@ This lab walks you through the steps to upload the required datasets to the Auto
 ## Required Artifacts
 -   The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
 
--   Oracle SQL Developer 18.3 or later (see <a href="http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html" target="_blank">Oracle Technology Network download site</a>)
+-   Oracle SQL Developer 18.3 or later (see <a href="http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html" target="\_blank">Oracle Technology Network download site</a>)
 Please use SQL Developer version 18.3 or later as this version contains enhancements for key Autonomous Data Warehouse features, including using ADW behind a VPN or Firewall.
 
 
-# Data Preparation Using SQL Developer
+# Connect to ADW and Prepare Data Using SQL Developer
 
-# Part 1. Connect SQL Developer to the ADW instance
+## Part 1. Connect SQL Developer to the ADW instance
 In this section you will connect the SQL Developer to the ADW instance that you provisioned in Lab 100.
 
 
-#### **STEP 1: Download the Connection Wallet**
+### **STEP 1: Download the Connection Wallet**
 As ADW only accepts secure connections to the database, you need to download a wallet file containing your credentials first. The wallet can be downloaded either from the instance's details page, or from the ADW service console. In this case, we will be showing you how to download the wallet file from the instance's details page.
 
 -   Go back to the Cloud Console and open the Instances screen. Find your database, click the action menu and select **DB Connection**.
@@ -43,8 +44,7 @@ As ADW only accepts secure connections to the database, you need to download a w
 
 ![](./images/200/Picture200-16.jpg)
 
-
-#### **STEP 2: Connect to the database using SQL Developer**
+### **STEP 2: Connect to the database using SQL Developer**
 Start SQL Developer and create a connection for your database using the default administrator account 'ADMIN' by following these steps.
 
 -   Click the **New Connection** icon in the Connections toolbox on the top left of the SQL Developer homepage.
@@ -72,14 +72,14 @@ example, if you the database you created was named adwfinance, select adwfinance
 
 -   Test your connection by clicking the **Test** button, if it succeeds save your connection information by clicking **Save**, then connect to your database by clicking the **Connect** button. An entry for the new connection appears under Connections.
 
--   If you are behind a VPN or Firewall and this Test fails, make sure you have <a href="https://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html" target="_blank">SQL Developer 18.3</a> or higher. This version and above will allow you to select the "Use HTTP Proxy Host" option for a Cloud Wallet type connection. While creating your new ADW connection here, provide your proxy's Host and Port. If you are unsure where to find this, you may look at your computer's connection settings or contact your Network Administrator.
+-   If you are behind a VPN or Firewall and this Test fails, make sure you have <a href="https://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html" target="\_blank">SQL Developer 18.3</a> or higher. This version and above will allow you to select the "Use HTTP Proxy Host" option for a Cloud Wallet type connection. While creating your new ADW connection here, provide your proxy's Host and Port. If you are unsure where to find this, you may look at your computer's connection settings or contact your Network Administrator.
 
 
 
 
-# Part 2. Load Datasets to the ADW Instance
+## Part 2. Load Datasets to the ADW Instance
 
-#### **STEP 3: Load Datasets to the ADW Instance**
+### **STEP 3: Load Datasets to the ADW Instance**
 
 -   Use the SQLDeveloper to import the [station_info.csv](./files/datasets/station_info.csv) dataset to a table (Station_Info) in the database.
 
@@ -87,7 +87,7 @@ example, if you the database you created was named adwfinance, select adwfinance
 
 
 
-#### **STEP 4: Grant Privileges to the OML User to Access Datasets**
+### **STEP 4: Grant Privileges to the OML User to Access Datasets**
 In order to avoid running into an access error when you run the code in OML, grant all privleges to the OML user for the tables you created in the database.
 
 -   Under your connection in the SQL Developer, left-click on **Station_Info** table, select **Privileges** and then select **Grant**.
@@ -104,7 +104,7 @@ In order to avoid running into an access error when you run the code in OML, gra
 
 
 
-#### **STEP 5: Prepare the Data for Training ML Models in OAC**
+### **STEP 5: Prepare the Data for Training ML Models in OAC**
 
 -   Copy and paste the code snipper in [data_prep.sql](./files/scripts/data_prep.sql) file to your SQL Developer worksheet and run the script. This code prepares the portion of data that you will need for training an ML model in OAC .
 
