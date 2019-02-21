@@ -123,8 +123,9 @@ EOF
     --set "domainNamespaces={sample-domain1-ns}" \
     --wait \
     sample-weblogic-operator \
-    kubernetes/charts/weblogic-operator
+    weblogic-kubernetes-operator/kubernetes/charts/weblogic-operator
   ```
+     ![](images/300/Traefik_Echo.png)
 - Configure Traefik to manage Ingresses created in this namespace:
   ```bash
   $ helm upgrade \
