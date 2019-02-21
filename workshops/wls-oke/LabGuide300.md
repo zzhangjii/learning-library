@@ -81,7 +81,7 @@ EOF
   --wait
   ```
   ![](images/300/Traefik_Echo.png)
-  
+
 ### **STEP 4**: Install the operator.
 - Create a namespace for the operator:
   ```bash
@@ -93,7 +93,7 @@ EOF
   ``` 
 - Use helm to install and start the operator from the directory you just cloned:
   ```bash
-  $ helm install kubernetes/charts/weblogic-operator \
+  $ helm install weblogic-kubernetes-operator/kubernetes/charts/weblogic-operator \
     --name sample-weblogic-operator \
     --namespace sample-weblogic-operator-ns \
     --set image=oracle/weblogic-kubernetes-operator:2.0-rc2 \
@@ -124,7 +124,7 @@ EOF
     --set "domainNamespaces={sample-domain1-ns}" \
     --wait \
     sample-weblogic-operator \
-    kubernetes/charts/weblogic-operator
+    weblogic-kubernetes-operator/kubernetes/charts/weblogic-operator
   ```
 - Configure Traefik to manage Ingresses created in this namespace:
   ```bash
@@ -138,7 +138,7 @@ EOF
 ### **STEP 6**: Create a domain in the domain namespace.
 - Create a Kubernetes secret containing the `username` and `password` for the domain using the [`create-weblogic-credentials`]:
   ```bash
-  $ kubernetes/samples/scripts/create-weblogic-domain-credentials/create-weblogic-credentials.sh \
+  $ weblogic-kubernetes-operator/kubernetes/samples/scripts/create-weblogic-domain-credentials/create-weblogic-credentials.sh \
     -u weblogic -p welcome1 -n sample-domain1-ns -d sample-domain1
   ```
 
