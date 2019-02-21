@@ -19,7 +19,7 @@ This lab walks you through the steps to get started using the Oracle Autonomous 
 
 # Getting Started with Autonomous Data Warehouse (ADW) and Oracle Machine Learning (OML)
 
-# Part 1. Provisioning an ADW Instance
+## Part 1. Provisioning an ADW Instance
 
 In this section you will be provisioning an ADW instance using the cloud console.
 
@@ -95,7 +95,7 @@ In this section you will be provisioning an ADW instance using the cloud console
 
 
 
-# Part 2. Creating an OML Users
+## Part 2. Creating an OML Users
 
 
 #### **STEP 3: Creating OML Users**
