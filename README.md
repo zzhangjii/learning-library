@@ -19,7 +19,7 @@ You will take on 2 Personas during the workshop. The **Data Scientist Persona**
 ## Required Artifacts
 - The following lab requires an Oracle Public Cloud account that will either be supplied by your instructor, or can be obtained through the following steps.
 
-Step 1: Acquire an Oracle Cloud Trial or Workshop Account
+## Step 1: Acquire an Oracle Cloud Trial or Workshop Account
 Bookmark this page for future reference.
 
 Please click on the following link to create your Free Account, and complete all the required steps to get your free Oracle Cloud Trial Account. When you complete the registration process you'll receive a $300 credit that will enable you to complete the lab for free. Additionally, you'll have 1000s of hours left over to continue to explore the Oracle Cloud.
@@ -27,6 +27,6 @@ Please click on the following link to create your Free Account, and complete all
 Soon after requesting your trial you will receive the following email. You may begin working on this lab once you receive this email.
 
 
-Step 2: Navigate to Lab 100
+## Step 2: Navigate to Lab 100
 You can see a list of Lab Guides by clicking on the Menu Icon in the upper left corner of the browser window. You're now ready to continue with Lab 100.
 
