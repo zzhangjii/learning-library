@@ -24,11 +24,11 @@ Please use SQL Developer version 18.3 or later as this version contains enhancem
 # Data Preparation Using SQL Developer
 
 # Part 1. Connect SQL Developer to the ADW instance
-In this section you will connec the SQL Developer to the ADW instance that you provisioned in Lab 100.
+In this section you will connect the SQL Developer to the ADW instance that you provisioned in Lab 100.
 
 
 #### **STEP 1: Download the Connection Wallet**
-As ADW only accepts secure connections to the database, you need to download a wallet file containing your credentials first. The wallet can be downloaded either from the instance's details page, or from the ADW service console.
+As ADW only accepts secure connections to the database, you need to download a wallet file containing your credentials first. The wallet can be downloaded either from the instance's details page, or from the ADW service console. In this case, we will be showing you how to download the wallet file from the instance's details page.
 
 -   Go back to the Cloud Console and open the Instances screen. Find your database, click the action menu and select **DB Connection**.
 
@@ -38,7 +38,7 @@ As ADW only accepts secure connections to the database, you need to download a w
 
 ![](./images/200/Picture200-15.jpg)
 
--   Specify a password of your choice for the wallet. You will need this password when connecting to the database via SQL Developer later, and is also used as the JKS keystore password for JDBC applications that use JKS for security. Click **Download** to download the wallet file to your client machine.
+-   Specify a password of your choice for the wallet. You will need this password when connecting to the database via SQL Developer later, and is also used as the JKS keystore password for JDBC applications that use JKS for security. Click **Download** to download the wallet file to your client machine. Download the wallet to a location you can easily access, because we will be using it in the next step.
 *Note: If you are prevented from downloading your Connection Wallet, it may be due to your browser's pop-blocker. Please disable it or create an exception for Oracle Cloud domains.*
 
 ![](./images/200/Picture200-16.jpg)
@@ -88,7 +88,7 @@ example, if you the database you created was named adwfinance, select adwfinance
 
 
 #### **STEP 4: Grant Privileges to the OML User to Access Datasets**
-You have to give all the privileges to the OML user for the tables you created in the database, otherwise when you run the code in OML you will see an access error.
+In order to avoid running into an access error when you run the code in OML, grant all privleges to the OML user for the tables you created in the database.
 
 -   Under your connection in the SQL Developer, left-click on **Station_Info** table, select **Privileges** and then select **Grant**.
 
