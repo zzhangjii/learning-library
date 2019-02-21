@@ -1,6 +1,6 @@
 # Monolithic to Microservice Cloud Native Development - Kubernetes REST Service Deployment
 
-![](images/300/LabGuide300-481162ea.png)
+![](images/300/Title.png)
 
 ## Introduction
 
@@ -10,7 +10,7 @@ During this lab, you will take the Docker image that you created in Lab 200 and 
 
 **_To log issues_**, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
-## Objectives
+## Lab 300 Objectives
 
 - Provision a Kubernetes cluster on OCI (OKE).
 - Store Docker image in OCI Repository (OCIR).

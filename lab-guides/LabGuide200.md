@@ -6,7 +6,7 @@
 ## Introduction
 In this lab you will create ssh key pairs, login into your Trial, create a VCN (Virtual Compute Network), create a new compute instance and install docker / git into the instance.
 
-## Objectives
+## Lab 200 Objectives
 
 - Create the baseline infrastructure to support a Compute instance
 - Create a SSH key pair

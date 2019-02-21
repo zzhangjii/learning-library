@@ -6,7 +6,7 @@
 
 In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump export file to Object Storage and leverage SQL Developer to import the Data Pump export file into an Autonomous Transaction Processing (ATP) Database.
 
-## Objectives
+## Lab 100 Objectives
 
 - Clone GIT Repository.
 - Create Object Storage Bucket and Upload Data Pump Export File to the Bucket.
