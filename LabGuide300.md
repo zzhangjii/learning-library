@@ -96,7 +96,6 @@ In this section you will create an OAC instance.
 
 -   Complete all the required fields in the wizard as described in the table below and Save the connection. Note that you need the ADW instance **Wallet** in order to be able to complete these fields (similar to connecting the SQL Developer to the ADW instance). Please refer to the instruction in **Lab100** for accessing the **Wallet**.
 
-![](./images/300/Picture300-33.png)
 
 -   You should fill the following connection fileds:
 
@@ -113,6 +112,8 @@ In this section you will create an OAC instance.
 -   **Password:** The password you specified during provision of your ADW instance
 
 -   **Service Name:** Copy the desired service name from three available options (low, medium,high). The Service name is accessible in the **tnsnames.ora** file in the (unzipped) **Wallet** under **<DatabaseName>_<ServiceLevel>** (e.g.  esjdxrwocdkdvja_testadw_medium.adwc.oraclecloud.com)
+  
+![](./images/300/Picture300-33.png)
 
 
 -   You can see your connection listed under the Connections tab in the Data page.
