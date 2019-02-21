@@ -18,7 +18,7 @@ This lab walks you through the steps to get started using the Oracle Autonomous 
 ## Required Artifacts
 -   The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
 
-#Provision Autonomous Data Warehouse (ADW) and Create Users in Oracle Machine Learning (OML)
+# Provision Autonomous Data Warehouse (ADW) and Create Users in Oracle Machine Learning (OML)
 
 ## Part 1. Provisioning an ADW Instance
 
