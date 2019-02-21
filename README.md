@@ -26,7 +26,11 @@ Please click on the following link to create your Free Account, and complete all
 
 Soon after requesting your trial you will receive the following email. You may begin working on this lab once you receive this email.
 
+ ![](images/common/cloud_ready.jpg)
 
 ## Step 2: Navigate to Lab 100
 You can see a list of Lab Guides by clicking on the Menu Icon in the upper left corner of the browser window. You're now ready to continue with Lab 100.
+
+  ![](images/common/WorkshopMenu.png)
+
 
