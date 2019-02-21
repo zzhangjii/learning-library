@@ -76,11 +76,12 @@ EOF
   $ helm install stable/traefik \
   --name traefik-operator \
   --namespace traefik \
-  --values kubernetes/samples/charts/traefik/values.yaml  \
+  --values weblogic-kubernetes-operator/kubernetes/samples/charts/traefik/values.yaml  \
   --set "kubernetes.namespaces={traefik}" \
   --wait
   ```
-
+  ![](images/300/Traefik_Echo.png)
+  
 ### **STEP 4**: Install the operator.
 - Create a namespace for the operator:
   ```bash
@@ -123,9 +124,8 @@ EOF
     --set "domainNamespaces={sample-domain1-ns}" \
     --wait \
     sample-weblogic-operator \
-    weblogic-kubernetes-operator/kubernetes/charts/weblogic-operator
+    kubernetes/charts/weblogic-operator
   ```
-     ![](images/300/Traefik_Echo.png)
 - Configure Traefik to manage Ingresses created in this namespace:
   ```bash
   $ helm upgrade \
