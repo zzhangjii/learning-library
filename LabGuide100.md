@@ -79,7 +79,7 @@ In this section you will be provisioning an ADW instance using the cloud console
 
 -  For this lab, we will select Subscribe To A New Database License. If your organization owns Oracle Database licenses already, you may bring those license to your cloud service.
 
-![](./images/100/Picture100-37.jpg)
+![](./images/100/Picture100-37.JPG)
 
 -  Make sure everything is filled out correctly, then proceed to click on **Create Autonomous Data Warehouse**.
 
