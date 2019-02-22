@@ -92,15 +92,15 @@ In order to avoid running into an access error when you run the code in OML, gra
 
 -   Under your connection in the SQL Developer, right-click on **Station_Info** table, select **Privileges** and then select **Grant**.
 
-![](./images/200/Picture200-41.jpg)
+![](./images/200/Picture200-41.png)
 
 -   In the popped screen, select your OML user in the **Uers/Roles** field, mark **Grant ALL** option and click on **Apply**.
 
-![](./images/200/Picture200-42.jpg)
+![](./images/200/Picture200-42.png)
 
 -   You should see a message indicating that your action was successful. Repeat the same steps to also grant privileges on the table **Station_Status_Weather**.
 
-![](./images/200/Picture200-43.jpg)
+![](./images/200/Picture200-43.png)
 
 
 
