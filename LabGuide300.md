@@ -29,15 +29,15 @@ In this section you will create an OAC instance.
 
 -   Go to [cloud.oracle.com](https://cloud.oracle.com), click **Sign In** to sign in with your Oracle Cloud account.
 
-![](./images/300/Picture100-2.png)
+![](./images/300/Picture300-2.png)
 
 -   Enter your **Cloud Account Name** and click **My Services**.
 
-![](./images/300/Picture100-3.jpg)
+![](./images/300/Picture300-3.jpg)
 
 -   Enter your Oracle Cloud **username** and **password**, and click **Sign In**.
 
-![](./images/300/Picture100-4.png)
+![](./images/300/Picture300-4.png)
 
 
 
