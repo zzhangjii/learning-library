@@ -80,11 +80,7 @@ This lab walks you through the steps to create and train a machine learning mode
 ![](./images/400/Picture400-24.png)
 
 
-<table>
-<tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
-<td class="td-banner">
-## Great Work - All Done!
+
+## Great Work - All Done with Lab400!
 **You are ready to move on to the next lab. You may now close this tab.**
-</td>
-</tr>
-<table>
+
