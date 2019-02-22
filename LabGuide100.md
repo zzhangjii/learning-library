@@ -145,11 +145,9 @@ for that user which they can bookmark.
 ![](./images/100/Picture700-10.png)
 
 You will use these two users later in this workshop.
-<table>
-<tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
-<td class="td-banner">
+
+
+
 ## Great Work - All Done!
 **You are ready to move on to the next lab. You may now close this tab.**
-</td>
-</tr>
-<table>
+
