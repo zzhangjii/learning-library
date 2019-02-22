@@ -169,11 +169,7 @@ Now we should import the **STATION_INFO** and **STATION_ST_WTH_TRAINING** tables
 
 ![](./images/300/Picture300-45.png)
 
-<table>
-<tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
-<td class="td-banner">
-## Great Work - All Done!
+
+## Great Work - All Done with Lab300!
 **You are ready to move on to the next lab. You may now close this tab.**
-</td>
-</tr>
-<table>
+
