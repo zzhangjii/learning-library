@@ -148,6 +148,6 @@ You will use these two users later in this workshop.
 
 
 
-## Great Work - All Done!
+## Great Work - All Done with Lab100!
 **You are ready to move on to the next lab. You may now close this tab.**
 
