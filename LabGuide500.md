@@ -145,11 +145,7 @@ eager@2Snuffer
 
 
 
-<table>
-<tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
-<td class="td-banner">
-## Great Work - All Done!
+
+## Great Work - All Done with Lab500!
 **Congrats! You are all done. You may now close this tab.**
-</td>
-</tr>
-<table>
+
