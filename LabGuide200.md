@@ -109,11 +109,7 @@ In order to avoid running into an access error when you run the code in OML, gra
 -   Copy and paste the code snipper in [data_prep.sql](./files/scripts/data_prep.sql) file to your SQL Developer worksheet and run the script. This code prepares the portion of data that you will need for training an ML model in OAC .
 
 
-<table>
-<tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
-<td class="td-banner">
-## Great Work - All Done!
+
+## Great Work - All Done with Lab200!
 **You are ready to move on to the next lab. You may now close this tab.**
-</td>
-</tr>
-<table>
+
