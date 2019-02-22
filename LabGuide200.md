@@ -90,7 +90,7 @@ example, if you the database you created was named adwfinance, select adwfinance
 ### **STEP 4: Grant Privileges to the OML User to Access Datasets**
 In order to avoid running into an access error when you run the code in OML, grant all privleges to the OML user for the tables you created in the database.
 
--   Under your connection in the SQL Developer, left-click on **Station_Info** table, select **Privileges** and then select **Grant**.
+-   Under your connection in the SQL Developer, right-click on **Station_Info** table, select **Privileges** and then select **Grant**.
 
 ![](./images/200/Picture200-41.jpg)
 
