@@ -67,7 +67,7 @@ This lab walks you through the steps to create and train a machine learning mode
 
 ![](./images/400/Picture400-21.png)
 
--   Click on **Select File** and upload the ![**BikeSharePrediction.dva**](./files/project/BikeSharePrediction.dva) file. Then click on **Import** to import the project to your OAC instance.
+-   Click on **Select File** and upload the [**BikeSharePrediction.dva**](./files/project/BikeSharePrediction.dva) file. Then click on **Import** to import the project to your OAC instance.
 
 ![](./images/400/Picture400-22.png)
 
