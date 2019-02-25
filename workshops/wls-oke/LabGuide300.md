@@ -91,6 +91,7 @@ EOF
   ```bash
   $ kubectl create serviceaccount -n sample-weblogic-operator-ns sample-weblogic-operator-sa
   ``` 
+  ![](images/300/operator_install.png)
 - Use helm to install and start the operator from the directory you just cloned:
   ```bash
   $ helm install weblogic-kubernetes-operator/kubernetes/charts/weblogic-operator \
