@@ -214,7 +214,7 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
 ## Create the Mobile Application
 
-### **STEP 1**: Create a Mobile Application
+### **STEP 3**: Create a Mobile Application
 
 - Select the **Mobile Applications** icon on the left on side of the web page and then click **+ Mobile Application**.
 
@@ -411,7 +411,7 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
 ## Add Record Creation to the Application
 
-### **STEP 1**: Add Create Page
+### **STEP 4**: Add Create Page
 
 - Select the **List View** item in the main-start Page Structure (or the canvas) and if you don't see the various wizard driven options, click the `Quick Start` icon on the far right of the Properties section and select **Add Create Page**. 
 
@@ -506,7 +506,7 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
   ![](images/400/75.PNG)
 
-### **STEP 2**: Test Record Creation
+### **STEP 5**: Test Record Creation
 
 - Select the **main-start** page and then click the **Run** application icon on the right hand side of the main menu bar.
 
@@ -537,7 +537,7 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
 ## Add Update and Delete capabilites
 
-### **STEP 1**: Add Edit Page
+### **STEP 6**: Add Edit Page
 
 In this section you will maually create a new page and add update and delete capabilites to the records in the product catalog. Events and Action Chains will be created to support the flows. This page will eventually be called from the main-start page.
 
@@ -557,7 +557,7 @@ In this section you will maually create a new page and add update and delete cap
 
   ![](images/400/83.PNG)
 
-### **STEP 2**: Create Page Variables
+### **STEP 7**: Create Page Variables
 
 In this step we will define the Types and Variables used within the page.
 
@@ -642,7 +642,7 @@ In this step we will define the Types and Variables used within the page.
 
   ![](images/400/97.PNG)
 
-### **STEP 3**: Create Page Layout
+### **STEP 8**: Create Page Layout
 
 - Now, build out the look and feel of items on this page. First, drag and drop an **Image** item from the Component pane just below the `Mobile Page Template item`.
 
@@ -666,7 +666,7 @@ In this step we will define the Types and Variables used within the page.
 
   ![](images/400/85.PNG)
 
-### **STEP 3**: Set Item Properties
+### **STEP 9**: Set Item Properties
 
 - Click the **Designer icon** to get back to the page canvas.
 
@@ -774,7 +774,7 @@ In this step we will define the Types and Variables used within the page.
 
   ![](images/400/100.PNG)
 
-### **STEP 3**: Define the Actions and Events on this page
+### **STEP 10**: Define the Actions and Events on this page
 
 In this step we will finish up the `main-edit` page by defining 4 Events and subsequent Actions. The first event will define what happens when the page is called from the `main-start` page. The other Events will deal with the Cancel, Delete and Update buttons.
 
@@ -1013,7 +1013,7 @@ In this step we will finish up the `main-edit` page by defining 4 Events and sub
 
 - The chain is completed. We will test the functionality when the entire application is completed.
 
-### **STEP 4**: Call the main-edit page from main-start
+### **STEP 11**: Call the main-edit page from main-start
 
 This step will complete the design of the application. We will add a Selection Event on the canvas List View and call the `main-edit` page passing the selection's PRODUCT_ID as an input parameter to the `main-edit` which will in turn take that input and query the relevant record from the database. 
 
