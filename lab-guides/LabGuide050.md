@@ -117,7 +117,7 @@ We require a Database to store the Alpha Office data which is accessed later in 
 
   - Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Database** section of the menu, click **Autonomous Transaction Processing** .
 
-    ![](images/050/image11.png)
+    ![](images/050/image11a.png)
 
   - Select the **Compartment** `monoTOmicro` and click **Create Autonomous Transaction Processing Database**.
 
