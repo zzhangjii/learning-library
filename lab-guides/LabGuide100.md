@@ -53,19 +53,15 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
   - Enter your **Cloud Account Name** in the input field and click the **Next** button.
 
-	![](images/100/image1.png)
+	![](images/100/image2.png)
 
   - Enter your **Username** and **Password** in the input fields and click **Sign In**.
 
-	![](images/100/image2.png)
+	![](images/100/image03.png)
+	
+  - You are presented with the Oracle Cloud Infrastructure (OCI) Dashboard/Portal
 
-  - In the top left corner of the dashboard, click the **Guided Navigation Drawer**
-
-	![](images/100/image3.png)
-
-  - Click to expand the **Services** submenu, then click **Compute**
-
-	![](images/100/image4.png)
+    ![](images/100/image4a.png)
 
 ### **STEP 3**: Create Object Storage Bucket
 
