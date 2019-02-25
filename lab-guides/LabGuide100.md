@@ -42,7 +42,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 # Object Storage Setup, OCI User Creation and Auth Token Generation
 
-### **STEP 2**: Log in to your OCI dashboard
+### **STEP 2**: Log in to your OCI dashboard and Switch Regions
 
   - Open a new browser in the client window by selecting **Applications --> Firefox**.
 
@@ -63,6 +63,10 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
     ![](images/100/image4a.png)
 
+  - To switch Regions, click on the Region Drop-Down in the upper right-hand corner and select **us-phoenix-1**
+
+    ![](images/100/image4e.png)
+	
 ### **STEP 3**: Create Object Storage Bucket
 
   - Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Core Infrastructure** section, select **Object Storage** then **Object Storage** .
