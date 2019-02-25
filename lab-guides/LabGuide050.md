@@ -95,9 +95,9 @@ Compartments are used to isolate resources within your OCI tenant. User-based ac
 
   - Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Governance and Administration** section, select **Identity** and select **Compartments**.
 
-    ![](images/050/image6.png)
+    ![](images/050/image6a.png)
 
-    ![](images/050/image7.png)
+    ![](images/050/image7a.png)
 
   - Click **Create Compartment**
 
