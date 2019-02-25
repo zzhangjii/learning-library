@@ -318,7 +318,13 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 	![](images/100/image48.png)
 
-### **STEP 13**: Review Data Pump Import Log
+**This completes the Lab!**
+
+**You are ready to proceed to [Lab 200](LabGuide200.md)**
+	
+### **STEP 13**: Review Data Pump Import Log (OPTIONAL)
+
+If you wish to view the output of Data Pump import log, please follow the below steps.
 
 The **DBMS_CLOUD** package provides the **LIST_FILES** and **PUT_OBJECTS** subprogams which allow you to interact with an **Autonomous Transaction Processing Database**
 
@@ -352,7 +358,3 @@ The **DBMS_CLOUD** package provides the **LIST_FILES** and **PUT_OBJECTS** subpr
   - Once downloaded, open it using a text editor to review the import messages. You will notice the **Import Job Name** `IMP_SD_84-18_49_56` in **SQL Developer** is also referenced in the log file.
 
 	![](images/100/image53.png)
-
-**This completes the Lab!**
-
-**You are ready to proceed to [Lab 200](LabGuide200.md)**
