@@ -111,6 +111,8 @@ Compartments are used to isolate resources within your OCI tenant. User-based ac
 
     ![](images/050/image10.png)
 
+## Autonomous Transaction Processing (ATP) Database Creation
+	
 ### **STEP 4**: Create an Autonomous Transaction Processing (ATP) Database
 
 We require a Database to store the Alpha Office data which is accessed later in this workshop.  We will create an Autonomous Transaction Processing (ATP) Database to load data into.  Autonomous Transaction Processing is one of a family of cloud services built on the self-driving, self-securing, and self-repairing Oracle Autonomous Database.  Autonomous Transaction Processing uses machine learning and automation to eliminate human labor, human error, and manual tuning, delivering unprecedented cost saving, security, availability, and production. Autonomous Transaction Processing supports a complex mix of high-performance transactions, reporting, batch, IoT, and machine learning in a single database, allowing much simpler application development and deployment and enabling real-time analytics, personalization, and fraud detection.
