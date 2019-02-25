@@ -63,11 +63,11 @@ Once the infrastructure is provisioned you can access your enironment using `VNC
 
 ## Access Your Trial Account
 
-### **STEP 1:** Your Oracle Cloud Trial Account
+### **STEP 3:** Your Oracle Cloud Trial Account
 
 You have already applied for and received your Oracle Cloud Trial Account.
 
-### **STEP 2**: Log in to your OCI dashboard
+### **STEP 4**: Log in to your OCI dashboard
 
   - Once you receive the **Get Started Now with Oracle Cloud** Email, make note of your **Username, Password and Cloud Account Name**.
 
@@ -89,7 +89,7 @@ You have already applied for and received your Oracle Cloud Trial Account.
 
     ![](images/050/image4a.png)
 
-### **STEP 3**: Create a Compartment
+### **STEP 5**: Create a Compartment
 
 Compartments are used to isolate resources within your OCI tenant. User-based access policies can be applied to manage access to compute instances and other resources within a Compartment.
 
@@ -113,7 +113,7 @@ Compartments are used to isolate resources within your OCI tenant. User-based ac
 
 ## Autonomous Transaction Processing (ATP) Database Creation
 	
-### **STEP 1**: Create an Autonomous Transaction Processing (ATP) Database
+### **STEP 6**: Create an Autonomous Transaction Processing (ATP) Database
 
 We require a Database to store the Alpha Office data which is accessed later in this workshop.  We will create an Autonomous Transaction Processing (ATP) Database to load data into.  Autonomous Transaction Processing is one of a family of cloud services built on the self-driving, self-securing, and self-repairing Oracle Autonomous Database.  Autonomous Transaction Processing uses machine learning and automation to eliminate human labor, human error, and manual tuning, delivering unprecedented cost saving, security, availability, and production. Autonomous Transaction Processing supports a complex mix of high-performance transactions, reporting, batch, IoT, and machine learning in a single database, allowing much simpler application development and deployment and enabling real-time analytics, personalization, and fraud detection.
 
@@ -139,7 +139,7 @@ We require a Database to store the Alpha Office data which is accessed later in 
 
 You will use the Visual Builder Cloud Service to create an instance.
 
-### **STEP 1**: Create a New Visual Builder Cloud Service
+### **STEP 7**: Create a New Visual Builder Cloud Service
 
 In this step you will create a VBCS instance that will be used in Lab 400. It takes about 20 minutes for the underlying infrastructure to be created. We just need to fire off the create instance process at this point. We'll check the status of the instance at the beginning of Lab 400.
 
@@ -165,7 +165,7 @@ In this step you will create a VBCS instance that will be used in Lab 400. It ta
 
   ![](images/050/LabGuide50-80c36c4c.png)
 
-### **STEP 2**: Create a New Visual Builder Instance
+### **STEP 8**: Create a New Visual Builder Instance
 
 - In the Visual Builder panel click the **hamburger menu**, right-click **Open Service Console** and select **Open link in new tab**.
 
@@ -199,7 +199,7 @@ In this step you will create a VBCS instance that will be used in Lab 400. It ta
 
 # Access Your Client Environment
 
-### **STEP 1**: Access Client Image
+### **STEP 9**: Access Client Image
 
 - Back at the Demo Lab browser tab (that you left opened)... when the environment is ready you will see the following along with the connect string to use in VNC Viewer. (In this example 129.213.167.192:10. _Your IP address will be different_)
 
@@ -214,7 +214,7 @@ In this step you will create a VBCS instance that will be used in Lab 400. It ta
   ![](images/050/JS7.PNG)
 
 
-### **STEP 2**: Start VNC Viewer
+### **STEP 10**: Start VNC Viewer
 
 Use VNC Viewer to connect to your provisioned account.
 
