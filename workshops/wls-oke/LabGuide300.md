@@ -20,7 +20,7 @@ Use this Lab guide to create a WebLogic deployment in a Kubernetes cluster with 
 - Helm installation (https://github.com/helm/helm/blob/master/docs/install.md)
 - Clone latest weblogic-kubernetes-operator repository
   ```bash
-  $ git clone https://github.com/oracle/weblogic-kubernetes-operator
+  $ git clone -b "v2.0" https://github.com/oracle/weblogic-kubernetes-operator.git
   ```
 
 # WebLogic deployment in a Kubernetes cluster with the Oracle WebLogic Kubernetes Operator 2.0
@@ -251,7 +251,7 @@ If you run the sample from a machine that is remote to the Kubernetes cluster, a
 
    ![](images/300/Upload_to_JCS/6.png)
 
-- On the Install Application Assistant page, click Browse near the Deployment Archive field, and select the alphaOffice.war application that you downloaded earlier.
+- On the Install Application Assistant page, click Browse near the Deployment Archive field, download the [Alpha Office Product Catalog.war](https://github.com/Sasankaa/Misc/blob/master/AlphaProductCatalog.war) application, and select .war file to upload.
 
    ![](images/300/Upload_to_JCS/7.png)
 
