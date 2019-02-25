@@ -16,6 +16,6 @@ Welcome to the Monolithic to Microservice workshop. This workshop will walk you 
 
   - _You can see a list of Lab Guides_ by clicking on the **Menu Icon** in the upper left corner of the browser window.
 
-  ![](images/Intro-61643a34.png)
+	![](images/Intro-61643a34.png)
   
 You're now ready to continue with [**Lab 050**](LabGuide050.md).
