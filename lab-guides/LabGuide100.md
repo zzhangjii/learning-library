@@ -1,4 +1,4 @@
-# Monolithic to Microservice Cloud Native Development -- Autonomous Microservice Data Structure Configuration
+# Monolithic to Microservice Cloud Native Development - Autonomous Microservice Data Structure Configuration
 
   ![](images/100/Title.png)
 
