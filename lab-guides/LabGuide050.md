@@ -67,7 +67,7 @@ Once the infrastructure is provisioned you can access your enironment using `VNC
 
 You have already applied for and received your Oracle Cloud Trial Account.
 
-### **STEP 4**: Log in to your OCI dashboard
+### **STEP 4**: Log in to your OCI dashboard and Switch Regions
 
   - Once you receive the **Get Started Now with Oracle Cloud** Email, make note of your **Username, Password and Cloud Account Name**.
 
@@ -88,6 +88,24 @@ You have already applied for and received your Oracle Cloud Trial Account.
   - You are presented with the Oracle Cloud Infrastructure (OCI) Dashboard/Portal
 
     ![](images/050/image4a.png)
+
+  - To switch Regions, click on the Region Drop-Down in the upper right-hand corner and select **Manage Regions**
+  
+    ![](images/050/image4b.png)
+
+  - On the Tenancy page, click on the **Subscibe To This Region** button for the **us-phoenix-1** Region
+  
+    ![](images/050/image4c.png)
+
+  - Click **OK** to confirm the subscribtion to the region.
+  
+    ![](images/050/image4d.png)
+
+	**NOTE:** Refresh the Page to verify the Region is now Active (Green Circle).  The subscribtion can take 1 minute to occur.
+	
+  - Once the Region is Active, click on the Region Drop-Down in the upper right-hand corner and select **us-phoenix-1**
+  
+    ![](images/050/image4e.png)
 
 ### **STEP 5**: Create a Compartment
 
