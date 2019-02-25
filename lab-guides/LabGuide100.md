@@ -284,7 +284,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 	![](images/100/image38.png)
 
-  - Accept the Defaults and click **Next** on **Step 2** of the **Import Wizard**. It can take 30 seconds for the **Next** button to be enabled.
+  - Accept the Defaults and click **Next** on **Step 2** of the **Import Wizard**. It can take a minute for the **Next** button to be enabled.  You will see a `Waiting...` message until the **Next** button is enabled.
 
 	![](images/100/image40.png)
 
