@@ -91,7 +91,6 @@ EOF
   ```bash
   $ kubectl create serviceaccount -n sample-weblogic-operator-ns sample-weblogic-operator-sa
   ``` 
-  ![](images/300/operator_install.png)
 - Use helm to install and start the operator from the directory you just cloned:
   ```bash
   $ helm install weblogic-kubernetes-operator/kubernetes/charts/weblogic-operator \
@@ -101,6 +100,8 @@ EOF
     --set "domainNamespaces={}" \
     --wait
   ``` 
+  ![](images/300/operator_install.png)
+
 - Verify that the operator's pod is running, by listing the pods in the operator's namespace. You should see one for the operator.
   ```bash
   $ kubectl get pods -n sample-weblogic-operator-ns
