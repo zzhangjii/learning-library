@@ -147,7 +147,7 @@ In this step you will create a VBCS instance that will be used in Lab 400. It ta
 
   ![](images/050/LabGuide50-vbcs1a.png)
 
-  ![](images/050/LabGuide50-vbcs2b.png)
+  ![](images/050/LabGuide50-vbcs2a.png)
 
 - You are now in the Traditional Dashboard:
 
