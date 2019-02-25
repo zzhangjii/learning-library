@@ -103,8 +103,10 @@ You have already applied for and received your Oracle Cloud Trial Account.
 
 	**NOTE:** Refresh the Page to verify the Region is now Active (Green Circle).  The subscribtion can take 1 minute to occur.
 	
-  - Once the Region is Active, click on the Region Drop-Down in the upper right-hand corner and select **us-phoenix-1**
-  
+  - Once the Region is Active (Green Circle), click on the Region Drop-Down in the upper right-hand corner and select **us-phoenix-1**
+
+    ![](images/050/image4d1.png)
+	
     ![](images/050/image4e.png)
 
 ### **STEP 5**: Create a Compartment
