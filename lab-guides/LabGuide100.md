@@ -338,11 +338,13 @@ The **DBMS_CLOUD** package provides the **LIST_FILES** and **PUT_OBJECTS** subpr
 
   - To view the **Data Pump** import log file `IMPORT-18_50_00.LOG` just created by the **Import Job** executed in the previous step, we leverage the **PUT_OBJECTS** subprogram to copy the file from the ATP database to an **Object Storage Bucket** where we can download and review it. Execute the following command in **SQL Developer**
 
+	**Note:** Your values for **REGION** and **OBJECT_STORAGE_NAMESPACE** may/will be different.
+	
 	```
 	BEGIN
 	  DBMS_CLOUD.PUT_OBJECT(
 		credential_name => 'impdp_OBJ_STORE',
-		object_uri => 'https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/{OBJECT_STORAGE_NAMESPACE}/atpData/impdp_alpha121_sqldev.log',
+		object_uri => 'https://swiftobjectstorage.{REGION}.oraclecloud.com/v1/{OBJECT_STORAGE_NAMESPACE}/atpData/impdp_alpha121_sqldev.log',
 		directory_name  => 'DATA_PUMP_DIR',
 		file_name => 'IMPORT-18_50_00.LOG');
 	END;
