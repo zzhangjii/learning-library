@@ -96,7 +96,6 @@ EOF
   $ helm install weblogic-kubernetes-operator/kubernetes/charts/weblogic-operator \
     --name sample-weblogic-operator \
     --namespace sample-weblogic-operator-ns \
-    --set image=oracle/weblogic-kubernetes-operator:2.0-rc2 \
     --set serviceAccount=sample-weblogic-operator-sa \
     --set "domainNamespaces={}" \
     --wait
