@@ -1,4 +1,4 @@
-# Monolithic to Microservice Cloud Native Development -- Setup Cloud Environment
+# Monolithic to Microservice Cloud Native Development - Setup Cloud Environment
 
   ![](images/050/Title.png)
 
@@ -145,11 +145,11 @@ In this step you will create a VBCS instance that will be used in Lab 400. It ta
 
 - From the OCI console go back to your Services Dashboard by clicking on the hamburger menu in the upper left hand side of the page and selecting **Administration-->My Services Dashboard**
 
-  ![](images/050/LabGuide50-vbcs1.png)
+  ![](images/050/LabGuide50-vbcs1a.png)
 
-  ![](images/050/LabGuide50-vbcs2.png)
+  ![](images/050/LabGuide50-vbcs2b.png)
 
-- You should be back at the main Dashboard:
+- You are now in the Traditional Dashboard:
 
   ![](images/050/cloud_dash.png)
 
