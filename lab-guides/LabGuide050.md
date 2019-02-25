@@ -85,13 +85,9 @@ You have already applied for and received your Oracle Cloud Trial Account.
 
     ![](images/050/image3.png)
 
-  - In the top left corner of the dashboard, click the **Guided Navigation Drawer**
+  - You are presented with the Oracle Cloud Infrastructure (OCI) Dashboard/Portal
 
-    ![](images/050/image4.png)
-
-  - Click to expand the **Services** submenu, then click **Compute**
-
-    ![](images/050/image5.png)
+    ![](images/050/image4a.png)
 
 ### **STEP 3**: Create a Compartment
 
