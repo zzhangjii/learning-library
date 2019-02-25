@@ -311,7 +311,7 @@ docker push iad.ocir.io/<your-tenancy-name>/alphaoffice-rest:v1
 - Fill out the form with the following values:
 
   - App name: **alphaoffice-rest** (this name can be anything we want, and will be used to address our application from other services inside the cluster)
-  - Container image: **iad.ocir.io/<your-tenancy-name\>/alphaoffice-rest:v1** (retrieve this URL from the `docker pull` command that you that you saved in the previous step. Do not include the `docker pull` portion, just the URL at the end, which is the location of our image in OCIR)
+  - Container image: **iad.ocir.io/<your-tenancy-name>/alphaoffice-rest:v1** (retrieve this URL from the `docker pull` command that you that you saved in the previous step. Do not include the `docker pull` portion, just the URL at the end, which is the location of our image in OCIR)
   - Number of Pods: **1** (this can be customized)
   - Service: **External** (this will create a load balancer for our service)
   - Port: **80** (this is the port that will be exposed by the load balancer)
