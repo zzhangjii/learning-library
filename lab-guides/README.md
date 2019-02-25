@@ -14,10 +14,6 @@ Welcome to the Monolithic to Microservice workshop. This workshop will walk you 
 
 ### **Step 2**: Navigate to Lab 050
 
-  - The Lab Guides are best viewed using the Workshop's [GitHub Pages Website URL](https://oracle.github.io/learning-library/workshops/monolithic-to-microservice/lab-guides/)
-
-  - Once you are viewing the Workshop's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
-
-  ![](images/Intro-61643a34.png)
+  - _You can see a list of Lab Guides_ by clicking on the **Menu Icon** in the upper left corner of the browser window.
 
 You're now ready to continue with [**Lab 050**](LabGuide050.md).
