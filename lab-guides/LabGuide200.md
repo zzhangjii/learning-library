@@ -1,5 +1,5 @@
 
-# Monolithic to Microservice Cloud Native Development -  Building, Containerizing Java REST Services
+# Monolithic to Microservice Cloud Native Development - Building, Containerizing Java REST Services
 
   ![](images/200/Title.png)
 
@@ -21,7 +21,7 @@ You will create all required infrastructure components within your Trail account
 
 ## Your Trial Account
 
-### **STEP 1**: Log in to your OCI dashboard
+### **STEP 1**: Log in to your OCI dashboard and Switch Regions
 
 - If your not logged into your trail account, re-login by going to:
 
@@ -35,14 +35,14 @@ You will create all required infrastructure components within your Trail account
 
   ![](images/200/2.png)
 
-- In the top left corner of the dashboard, click the **hamburger menu**
+- You are presented with the Oracle Cloud Infrastructure (OCI) Dashboard/Portal
 
-  ![](images/200/3.png)
+  ![](images/200/image4a.png)
 
-- Click to expand the **Services** submenu, then click **Compute**
+- To switch Regions, click on the Region Drop-Down in the upper right-hand corner and select **us-phoenix-1**
 
-  ![](images/200/4.png)
-
+  ![](images/200/image4e.png)
+  
 ### **STEP 2**: Create a Virtual Compute Network
 
 We need a default VCN to define our networking within the `monoTOmicro` compartment. This is where Subnets and Security Lists are defined for each Availablity Domain in your Tenancy. Oracle Cloud Infrastructure is hosted in regions and availability domains. A region is a localized geographic area, and an availability domain is one or more data centers located within a region. A region is composed of several availability domains. Availability domains are isolated from each other, fault tolerant, and very unlikely to fail simultaneously. Because availability domains do not share infrastructure such as power or cooling, or the internal availability domain network, a failure at one availability domain is unlikely to impact the availability of the others.
@@ -301,7 +301,7 @@ In this section you will clone a github repository that contains a Java REST App
 
 ## Deploy AlphaOffice REST Services
 
-### **STEP 1**: Clone the git repository and copy the wallet file
+### **STEP 9**: Clone the git repository and copy the wallet file
 
 - Before we get into pulling down the completed java .war of the application a couple of screen shots will be helpful to get you a sense of what's going on in the application. The application will be deployed into an application server (Glassfish) and be listening on port 8080 on the following URI's depending. The REST call coming in will determine the method called:
 
@@ -363,7 +363,7 @@ In this section you will clone a github repository that contains a Java REST App
 
   ![](images/200/46-1.3.PNG)
 
-### **STEP 2**: Edit your ATP instance specific information
+### **STEP 10**: Edit your ATP instance specific information
 
 In this step you are going to edit the `dbconfig.properties` file to add your database instance connection name.
 
@@ -396,13 +396,13 @@ In this step you are going to edit the `dbconfig.properties` file to add your da
 
   ![](images/200/46-1.6.PNG)
 
-- _If your NOT using the default wallet name of `Wallet_orcl.zip` then you will also need to edit the **Dockerfile**_ to point to your instance specific wallet, otherwise, you can skip ahead to Step 3.
+- _If your NOT using the default wallet name of `Wallet_orcl.zip` then you will also need to edit the **Dockerfile**_ to point to your instance specific wallet, otherwise, you can skip ahead to Step 11.
 
 - If applicable, **edit** the following two locations within the `Dockerfile`:
 
   ![](images/200/46-1.7.PNG)
 
-### **STEP 3**: Build the Docker image
+### **STEP 11**: Build the Docker image
 
 The docker build will take a baseline java ready docker image from Docker Hub, add the Glassfish 4.1.1 application server along with your ATP DB instance wallet file and then extract the **AlphaProductsRestService.war** inside the container. The application server will be running on port 8080. If you recall you opened port 8080 in the Networking Security List earlier in this lab so access from the internet can occur.
 
@@ -502,7 +502,7 @@ The docker build will take a baseline java ready docker image from Docker Hub, a
 
   ![](images/200/50.PNG)
 
-### **STEP 4**: Copy the database properties file into the container
+### **STEP 12**: Copy the database properties file into the container
 
 In this step you will copy the `dbconfig.properties` file modifed in a previous step into the running container. Then you will go into the container and verify all the copied and modied files look good and are in their proper locations.
 
@@ -516,7 +516,7 @@ In this step you will copy the `dbconfig.properties` file modifed in a previous 
 
   ![](images/200/53.PNG)
 
-### **STEP 5**: Verify files inside the container and deploy the AlphaProductsRestService application
+### **STEP 13**: Verify files inside the container and deploy the AlphaProductsRestService application
 
 - **Type OR Copy and Paste:**
 
