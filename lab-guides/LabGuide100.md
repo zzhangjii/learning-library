@@ -67,7 +67,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
   - Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Core Infrastructure** section, select **Object Storage** then **Object Storage** .
 
-	![](images/100/image5.png)
+	![](images/100/image5a.png)
 
   - Select the **Compartment** `monoTOmicro` and click **Create Bucket**
 

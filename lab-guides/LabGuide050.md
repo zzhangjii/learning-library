@@ -109,7 +109,7 @@ Compartments are used to isolate resources within your OCI tenant. User-based ac
 
   - In a moment, your new Compartment will show up in the list.
 
-    ![](images/050/image10.png)
+    ![](images/050/image10a.png)
 
 ## Autonomous Transaction Processing (ATP) Database Creation
 	
