@@ -268,10 +268,9 @@ If you run the sample from a machine that is remote to the Kubernetes cluster, a
 
    ![](images/300/Upload_to_JCS/10.png)
 
-- Select the servers or clusters to which you want to deploy the application. For this tutorial, we'll deploy the application to all the servers in the cluster. So click All servers in the cluster, and then click Next. 
-Note that the the cluster name (WebLogic alphaOff_cluster in this example) would be the first eight characters of your service instance's name followed by _cluster.
+- Select the servers or clusters to which you want to deploy the application. For this tutorial, we'll deploy the application to admin-server. So click admin-server, and then click Next. 
 
-   ![](images/300/Upload_to_JCS/11.png)
+   ![](images/300/Upload_to_JCS/11_1.png)
 
 - On the Optional Settings page, click Next. The default settings are adequate for this tutorial.
 
