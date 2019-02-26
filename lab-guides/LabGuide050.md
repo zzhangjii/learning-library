@@ -221,7 +221,7 @@ In this step you will create a VBCS instance that will be used in Lab 400. It ta
 
 ### **STEP 9**: Access Client Image
 
-- Back at the Demo Lab browser tab (that you left opened)... when the environment is ready you will see the following along with the connect string to use in VNC Viewer. (In this example 129.213.167.192:10. _Your IP address will be different_)
+- Back at the Demo Lab browser tab (that you left opened)... when the environment is ready you will see the following along with the connect string to use in VNC Viewer. (In this example 129.213.167.192:10.)
 
   **NOTE: Your IP address will be different**
 
