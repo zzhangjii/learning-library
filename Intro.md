@@ -1,26 +1,42 @@
-# Bike Share Demand Prediction Workshop
+ # Bike Share Demand Prediction Workshop
 
-Welcome to the Bike Share Demand Prediciton workshop. This workshop will walk you through the process of using the Autonomous Data Warehouse (ADW) to build and apply predictive Machine Learning models. 
+## Introduction
+
+This is the first of several labs that are part of the **Bike Share Demand Prediction workshop.** This workshop will walk you through the process of using the Autonomous Data Warehouse for storing analytical datasets and applying Machine Learning models in order to learn the correlation between different attributes and predict the future demand.
+
+You will take on 2 Personas during the workshop. The **Data Scientist Persona** will prepare the data for training and validating the machine learning models and apply those models in order to predict the future demand. The **Business Analyst Persona** will also build and apply Machine Learning models using Oracle Analytics Cloud service without writing a single line of code. During the workshop, you will get exposure to Oracle Autonomous Data Warehouse (ADW), Oracle Machine Learning tool (OML) and Oracle Analytics Cloud Service (OAC).
+
 To learn more about this workshop please watch the video below. 
 
 ![](images/oraclecode/youtube.png)
 
 <a href="https://otube.oracle.com/media/Demand+Prediction/1_lzg5m7ts/105282352" target="_video">Workshop Overview</a>
 
-### **Step 1**: Acquire an Oracle Cloud Trial or Workshop Account
 
-- Bookmark this page for future reference.
+**_To log issues_**, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
-- Please click on the following link to create your <a class="trial-link" href="link.to.the.trial.signup.page" target="_trial">Free Account</a>, and complete all the required steps to get your free Oracle Cloud Trial Account. When you complete the registration process you'll receive a $300 credit that will enable you to complete the lab for free.  Additionally, you'll have 1000s of hours left over to continue to explore the Oracle Cloud.
+## Objectives
+- Provision an Autonomous Data Warehouse (ADW) Instance
+- Transfer Data to the ADW Instance
+- Build and Apply Machine Learning Models in Oracle Analytics Cloud (OAC)
+- Connect the OAC instance to the ADW instance to access the datasets
+- Build Machine Learning models in OAC without writing a single line of code!
+- Build and Apply Machine Learning Models Within the Autonomous Data Warehouse (ADW) Instance by using the Oracle Machine Learning Tool (OML)
 
-  - Soon after requesting your trial you will receive the following email. _You may begin working on Lab 100 before you receive this email_, but you will not be able to start Lab 200 until you have received it.
+## Required Artifacts
+- The following lab requires an Oracle Public Cloud account that will either be supplied by your instructor, or can be obtained through the following steps.
 
-  ![](images/oraclecode/code_9.png)
+## Step 1: Acquire an Oracle Cloud Trial or Workshop Account
+Bookmark this page for future reference.
 
+Please click on the following link to create your Free Account, and complete all the required steps to get your free Oracle Cloud Trial Account. When you complete the registration process you'll receive a $300 credit that will enable you to complete the lab for free. Additionally, you'll have 1000s of hours left over to continue to explore the Oracle Cloud.
 
+Soon after requesting your trial you will receive the following email. You may begin working on this lab once you receive this email.
 
-### **Step 2**: Navigate to Lab 100
+ ![](images/common/cloud_ready.jpg)
 
-- _You can see a list of Lab Guides_ by clicking on the **Menu Icon** in the upper left corner of the browser window. You're now ready to continue with **Lab 100**.
+## Step 2: Navigate to Lab 100
+You can see a list of Lab Guides by clicking on the Menu Icon in the upper left corner of the browser window. You're now ready to continue with Lab 100.
 
-  ![](images/LabMenuIcon.png)
+  ![](images/common/WorkshopMenu.png)
+
