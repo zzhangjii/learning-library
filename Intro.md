@@ -8,8 +8,6 @@ You will take on 2 Personas during the workshop. The **Data Scientist Persona**
 
 To learn more about this workshop please watch the video below. 
 
-![](images/oraclecode/youtube.png)
-
 <a href="https://otube.oracle.com/media/Demand+Prediction/1_lzg5m7ts/105282352" target="_video">Workshop Overview</a>
 
 
