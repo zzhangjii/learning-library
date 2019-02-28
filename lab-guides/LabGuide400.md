@@ -70,7 +70,7 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
   ![](images/400/14.PNG)
 
-- Leave the Method to **GET**. From Lab 300 **Copy and Paste the URL** used to test the REST endpoint that retrieved all of the AlphaOffice Product Catalog records. (In this example:  `http://129.213.109.189:8080/AlphaProductsRestService/webresources/restCall`) into the URL field. Leave the Action Hint at **Get Many**:
+- Leave the Method to **GET**. From Lab 300 **Copy and Paste the URL** used to test the REST endpoint that retrieved all of the AlphaOffice Product Catalog records. (In this example:  `http://129.213.168.190/AlphaProductsRestService/webresources/restCall`) into the URL field. Leave the Action Hint at **Get Many**:
 
   ![](images/400/15.PNG)
 
@@ -208,9 +208,15 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
   ![](images/400/21.PNG)
 
-- All of the endpoints have now been created and tested.
+- All of the endpoints have now been created and tested:
 
   ![](images/400/35.PNG)
+
+- Click the **Authentication** tab and then select the **Define Authentication** checkbox and set it to **none**: 
+
+  ![](images/400/35-2.PNG)
+
+  ![](images/400/35-4.PNG)
 
 ## Create the Mobile Application
 
@@ -644,6 +650,10 @@ In this step we will define the Types and Variables used within the page.
 
 ### **STEP 8**: Create Page Layout
 
+- Click the **Designer icon** to get back to the page canvas.
+
+  ![](images/400/85-7.PNG)
+
 - Now, build out the look and feel of items on this page. First, drag and drop an **Image** item from the Component pane just below the `Mobile Page Template item`.
 
 - Drag and drop a **Form Layout** item **inside** the `Flex Container` in the canvas.
@@ -667,10 +677,6 @@ In this step we will define the Types and Variables used within the page.
   ![](images/400/85.PNG)
 
 ### **STEP 9**: Set Item Properties
-
-- Click the **Designer icon** to get back to the page canvas.
-
-  ![](images/400/85-7.PNG)
 
 - Starting from top of the canvas items to bottom. Select the **Mobile Page Template** item in the Page Structure. Under the General Properties tab set the **Page Title** attribute to:
 
