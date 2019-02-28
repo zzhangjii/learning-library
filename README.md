@@ -1,4 +1,4 @@
- # Bike Share Demand Prediction Workshop
+ # Predicting Demand with Oracle Machine Learning & Autonomous Data Warehouse Cloud Service
 
 ## Introduction
 
