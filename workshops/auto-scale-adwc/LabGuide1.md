@@ -20,11 +20,34 @@
 ![](./images/1.PNG)
 ![](./images/Notional_Architecure.PNG)
 
+#### What is an Autonomous Data Warehouse?
+
+Oracle Autonomous Data Warehouse is built around the market leading Oracle database and comes with fully automated data warehouse specific features that deliver outstanding query performance.  This environment is delivered as a fully managed cloud service running on optimized high-end Oracle hardware systems.  You don’t need to spend time thinking about how you should store your data, when or how to back it up or how to tune your queries.  
+
+We take care of everything for you.
+
+Click here to <a href="https://www.youtube.com/watch?v=tZMZODoi2xw" target="_blank">watch our short video</a> that explains the key features in Oracle's Autonomous Data Warehouse.
+
+Oracle’s Autonomous Data Warehouse is the perfect quick-start service for fast data loading and sophisticated data reporting and analysis.  Oracle manages everything for you so you can focus on your data.
+
+Read on to begin your Getting Started journey with Oracle Autonomous Data Warehouse.
+
+
+#### Lab Prerequisites – Required Software
+- Oracle APEX Release 18.2.0.00.12
+- Oracle REST Data Services 18.4
+
+<a href="https://cloudcustomerconnect.oracle.com/resources/32a53f8587/summary" target="_blank">**Cloud Customer Connect**</a> Forum for Autonomous Data Warehouse
+If you have a question during this workshop then use the Autonomous Data Warehouse Forum to post questions, connect with experts, and share your thoughts and ideas about Oracle Autonomous Data Warehouse.
+
+Are you are completely new to the <a href="https://cloudcustomerconnect.oracle.com/resources/32a53f8587/summary" target="_blank">**Cloud Customer Connect**</a> forums? Visit our  <a href="https://cloudcustomerconnect.oracle.com/pages/1f00b02b84" target="_blank">Getting Started forum page</a> to learn how to best leverage community resources.
+
+
 #### What Do You Need?
 Before starting this instruction, you should:
 -  Have already procured and activated a trial or paid subscription to the following cloud services.
 -  Oracle Database Cloud - Database as a Service (DBaaS).
--  Capacity requirement 
+-  Capacity requirement
 -  **Minimum 2 OCPU for DBaaS 256GB of storage**
 -  **Minimum 5 OCPU for Autonomous Data warehouse cloud and 1 TB of storage**
 -  Subscription to Oracle Autonomous Data Warehouse
@@ -32,9 +55,9 @@ Before starting this instruction, you should:
 
 locate your account details in the New Account Information email that you received from Oracle Cloud when your user account was set up. If you do not have your New Account Information email, contact your account administrator.
 -  Tenancy in Oracle Cloud Infrastructure, including the creation of a compartment and the setting of access to resources (see Oracle Cloud Infrastructure documentation for setting up your tenancy).
--  Oracle SQL Developer (see Oracle Technology Network download site). Version 18.3 or later. Versions 18.2 or later contain enhancements for key Autonomous Data Warehouse features. 
+-  Oracle SQL Developer (see Oracle Technology Network download site). Version 18.3 or later. Versions 18.2 or later contain enhancements for key Autonomous Data Warehouse features.
 Note:
-If you are a Windows user on 64-bit platform, download the 'Windows 64-bit with JDK 8 included' distribution as it includes the files necessary to run SQL Developer and connect to your Autonomous Data Warehouse database. 
+If you are a Windows user on 64-bit platform, download the 'Windows 64-bit with JDK 8 included' distribution as it includes the files necessary to run SQL Developer and connect to your Autonomous Data Warehouse database.
 
 If you are using a SQL Developer version earlier than 18.2, see the documentation topic Connecting with Oracle SQL Developer (earlier than Version 18.2).
 -  Have installed PuTTY for Windows. PuTTY is available from many sites, but you can reach the main download site [Download putty](http://www.putty.org)
@@ -43,7 +66,7 @@ If you are using a SQL Developer version earlier than 18.2, see the documentatio
 1.  Microsoft Internet Explorer: version 9 or 10; set Browser Mode to IE9 or IE10
 2.  Mozilla Firefox: version 24 and later
 3.  Google Chrome: version 29 and later
-4.  Apple Safari: version 64. 
+4.  Apple Safari: version 64.
 
 ### ADWCS Provisioning
 #### 1. Login to cloud environment, Click Services to show the available services. In the list of available services, select Autonomous Data Warehouse.
@@ -62,7 +85,7 @@ If you are using a SQL Developer version earlier than 18.2, see the documentatio
   * The password must be different from the last 4 passwords used.
   * The password must not be the same password that is set less than 24 hours ago.
 - License Type - Select whether you have existing licenses or if you want to subscribe to new database software licenses and the database cloud service.
-- Tags - (Optional) Tagging is a metadata system that allows you to organize and track resources within your tenancy. Tags are composed of keys and values which can be attached to resources. 
+- Tags - (Optional) Tagging is a metadata system that allows you to organize and track resources within your tenancy. Tags are composed of keys and values which can be attached to resources.
 - Click Create Autonomous Data Warehouse.
 ![](./images/adwc3.png)
 ![](./images/adwc4.png)
@@ -72,7 +95,7 @@ If you are using a SQL Developer version earlier than 18.2, see the documentatio
 #### 5. Download the Credentials Zip File. Once you have created the data warehouse, download the credentials zip file for client access to that data warehouse. Click newly created instance and then select DB Connection.
 #### 6. The Database Connection dialog opens for downloading client credentials. Click Download.
  ![](./images/adwc7.png)
-#### 7. In the Download Wallet dialog, enter an encryption password (BEstrO0ng_#11) for the wallet, confirm the password, and then click Download. 
+#### 7. In the Download Wallet dialog, enter an encryption password (BEstrO0ng_#11) for the wallet, confirm the password, and then click Download.
  ![](./images/adwc8.png)
 #### 8. Click Save File, and then click OK.
 #### 9. Store the zip file and make note of the password. You will use the zip file in the next step to define a SQL Developer connection to your Autonomous Data Warehouse database.
@@ -87,7 +110,7 @@ If you are using a SQL Developer version earlier than 18.2, see the documentatio
 - Service - In the drop-down menu, service selections are prepended with database names. Select the low, medium, high, or parallel menu item for your database. These service levels map to the LOW, MEDIUM, HIGH, and PARALLEL consumer groups, which provide different levels of priority for your session.
 Note: Earlier versions of SQL Developer may not support this feature.             
  ![](./images/adwc10.png)
-#### 12.	Click Test. 
+#### 12.	Click Test.
 Status: Success displays at the left-most bottom of the New/Select Database Connection dialog.
 
 ### DBaaS Provisioning
@@ -95,7 +118,7 @@ Status: Success displays at the left-most bottom of the New/Select Database Conn
 To create database you first need to create VCN (Virtual Cloud Network) if you have already created VCN then you can skip 1-5 steps.
 
 #### 1. Open the navigation menu. Under Core Infrastructure,go to Networking and click Virtual Cloud Networks.
-- ![](./images/dbaas1.png) 
+- ![](./images/dbaas1.png)
 #### 2. Choose a compartment you have permission to work in (on the left side of the page). The page updates to display only the resources in that compartment. If you're not sure which compartment to use, contact an administrator
 #### 3. Click Create Virtual Cloud Network
 ![](./images/dbaas2.png)
@@ -111,7 +134,7 @@ To create database you first need to create VCN (Virtual Cloud Network) if you h
 #### 6. Modify Security list for your VCN.
 - Click **apexvcn** which you have created, on left side menu you can see Security List as below.
 ![](./images/dbaas23.PNG)
-- Click Security List and then click "Default Security List for apexvcn" 
+- Click Security List and then click "Default Security List for apexvcn"
 - Now click **Edit All Rules** button and add ingress rule for your VCN to allow public internet to 8080 and 1521 as below
 ![](./images/ords9.png)
 #### 7. Generating an SSH Key Pair Using PuTTY Key Generator : When you define your Oracle DBaaS database instance, you will need to provide a secure shell (SSH) public key to establish secure connections. Perform the following steps to generate an SSH key pair using the PuTTY Key Generator on Windows.
@@ -166,23 +189,23 @@ The password must be between 12 and 30 characters long and must include at least
 ![](./images/ssh.png)
 
 #### 14. Login as opc and then change user to oracle as shown in below screen shot.
-![](./images/dbaas17.png) 
-#### 15. To check ORACLE_SID and ORACLE_HOME, Type below command 
+![](./images/dbaas17.png)
+#### 15. To check ORACLE_SID and ORACLE_HOME, Type below command
 cat /etc/oratab
 ![](./images/dbaas18.png)
 #### 16. Add ORACLE_SID and ORACLE_HOME in .bash_profile
 - Log in as oracle user sudo su - oracle
 - Edit vi ~/.bash_profile
 - Add below environment variable at the end of the file and save it.
-  * export ORACLE_SID=APEXDB 
+  * export ORACLE_SID=APEXDB
   * export ORACLE_HOME=/u01/app/oracle/product/12.1.0.2/dbhome_1
   * export PATH=$ORACLE_HOME/bin:$PATH
 - Save the bash_profile by pressing esc and typing wq.
 ![](./images/dbaas19.png)
 ![](./images/dbaas20.png)
-- Run source command 
+- Run source command
   * source ~/.bash_profile
-#### 17. Now login to sqlplus using below command 
+#### 17. Now login to sqlplus using below command
  - sqlplus / as sysdba
  - show pdbs;
 ![](./images/dbaas22.png)
@@ -200,19 +223,19 @@ cat /etc/oratab
 - sqlplus / as sysdba
 - alter session set container=pdb1;
 - @apexins sysaux sysaux temp /i/
-- Wait until you see sql prompt 
+- Wait until you see sql prompt
 ![](./images/apex2.png)
 #### 5. Unlock the APEX_PUBLIC_USER account and set the password.
  - alter user apex_public_user identified by BEstrO0ng_#11 account unlock;
 #### 6. Create the APEX Instance Administration user and set the password (Enter your Email id before run).
 - begin
 - apex_util.set_security_group_id( 10 );
-- apex_util.create_user(p_user_name => 'ADMIN',p_email_address => 
+- apex_util.create_user(p_user_name => 'ADMIN',p_email_address =>
 - 'Enter your Email id',p_web_password => 'BEstrO0ng_#11',p_developer_privs =>'ADMIN' );
 - apex_util.set_security_group_id( null );
 - commit;
 - end;
-- /	
+- /
 #### 7. Run APEX REST configuration, and set the passwords of APEX_REST_PUBLIC_USER and APEX_LISTENER.
  - @apex_rest_config_core.sql ./ BEstrO0ng_#11 BEstrO0ng_#11
 #### 8. Create a network ACE for APEX (this is used when consuming Web services or sending outbound mail).
@@ -227,13 +250,13 @@ cat /etc/oratab
 - end;
 - /
 #### 9. Exit SQL*Plus.
-	
+
 ### ORDS Installation in Dbaas Instance
-  
+
 #### 1. Login to Dbaas Instance through Putty(To login in putty check Dbaas Provision Step 13 and 14).
 - Login as opc user.
 - Change user to oracle  and got to oracle home directory as below screen shot
-- Create ords directory using below command. 
+- Create ords directory using below command.
   * mkdir ords
 #### 2. Download "Oracle REST Data Services" in local machine and then copy  and unzip in ords folder in oracle home directory (you can use WinSCP to copy from local to cloud instance) [ORDS](https://www.oracle.com/technetwork/developer-tools/rest-data-services/downloads/index.html)
 - unzip ords-18.3.0.270.1456.zip -d /home/oracle/ords/
@@ -301,11 +324,11 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 - The application will ask to change the password kindly choose the password as BEstrO0ng_#22
 #### if the ADMIN password does not work reset password using below step
 ![](./images/ords7.png)
-#### 11. Change your working directory to the apex directory where you unzipped the installation software. Login to sqlPlus   and run @apxchpwd. For more information refer Url.[Oracle Community](https://community.oracle.com/thread/2332882?start=0&tstart=0) 
+#### 11. Change your working directory to the apex directory where you unzipped the installation software. Login to sqlPlus   and run @apxchpwd. For more information refer Url.[Oracle Community](https://community.oracle.com/thread/2332882?start=0&tstart=0)
 #### 11. Click sign In.
 ![](./images/ords8.png)
 
-	
+
 ### ADWC Scaling Demo Installation
 
 #### 1. Login to Dbaas Instance through Putty(To login in putty check Dbaas Provision Step 13 and 14).
@@ -318,14 +341,14 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
   * Copy the file name and assign ORACLE_UNQNAME in below command
 - vi ~/.bash_profile
 - export ORACLE_UNQNAME=**Dbaas Unique Name**
-- After editing the bash_profile press esc and type wq to save. 
+- After editing the bash_profile press esc and type wq to save.
 - source ~/.bash_profile
 ![](./images/demo1.png)
 #### 3. Copy ADWC wallet in oracle home directory and unzip.
 -   mkdir wallet_adwc
 -   unzip Wallet_adwapexdemo.zip -d wallet_adwc
 ![](./images/demo2.png)
-#### 4. Reset the sqlnet.ora file in the APEXDB Server environment to the following. Use WALLET_LOCATION as your ADWC unzip folder name, 
+#### 4. Reset the sqlnet.ora file in the APEXDB Server environment to the following. Use WALLET_LOCATION as your ADWC unzip folder name,
 - cd /u01/app/oracle/product/12.1.0.2/dbhome_1/network/admin
 - vi sqlnet.ora
 - Add below property in sqlnet.ora
@@ -371,7 +394,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 - SQL> select * from dual@adwc;
 ![](./images/demo7.png)
 #### 9. Run Dbaas schema scripts "Dbaas_Pdbuser.sql" and Adwc_Schema.sql using below command [apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript)
-  
+
 - sqlplus / as sysdba
 - SQL> connect /@adwapexdemo_high;
 - SQL> START /home/oracle/Adwc_Schema.sql;
@@ -387,13 +410,13 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 - Tenancy OCID: Login to cloud environment, Click Services to show the available services. In the list of available services, select Administration ->Tenancy Details.
 ![](./images/demo14.png)
 ![](./images/demo15.png)
-- Copy Tenancy OCID in notepad. 
+- Copy Tenancy OCID in notepad.
 - AuthuserId : Login to cloud environment, Click Services to show the available services. In the list of available services, select Identity -> Users
 ![](./images/demo16.png)
 ![](./images/demo17.png)
 - Copy admin OCID in notepad as AuthuserId.
-- Login to Dbaas instance and change user as oracle and run below command to generate public key PEM file. 
-  * mkdir ~/.oci 
+- Login to Dbaas instance and change user as oracle and run below command to generate public key PEM file.
+  * mkdir ~/.oci
   * openssl genrsa -out ~/.oci/oci_api_key.pem 2048
   * chmod go-rwx ~/.oci/oci_api_key.pem
   * openssl rsa -pubout -in ~/.oci/oci_api_key.pem -out ~/.oci/oci_api_key_public.pem
@@ -407,7 +430,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 ![](./images/demo20.png)
 - Copy new fingerprint in notepad.
 - Modify restapi.sh  and change tenancyId, authUserId, keyFingerprint, privateKeyPath(Give these value which we have noted in earlier step )
-![](./images/demo23.png)- 
+![](./images/demo23.png)-
 
 #### 12. Now open adwc.sh from scripts folder we will need the values for below fields ADWC OCID and Cloud host,Below are the screen shots to get the value from your environment.
 - Copy ADWC OCID in notepad.
@@ -437,7 +460,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 ![](./images/demo31.png)
 #### 22.	Click App Builder menu and select import.
 ![](./images/demo32.png)
-#### 23.	Download application script "Apex_Demo_Application.sql" from [apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript) in local and give location in Choose file. 
+#### 23.	Download application script "Apex_Demo_Application.sql" from [apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript) in local and give location in Choose file.
 #### 24.	Click Next and finish application deployment.
 #### 25.	Once you finish you can run application
 ![](./images/demo33.png)
