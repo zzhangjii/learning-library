@@ -42,24 +42,9 @@ In this section you will be provisioning an ADW instance using the cloud console
 
 ### **STEP 2: Create an ADW Instance**
 
--   Once you are logged in, you are taken to the cloud services dashboard where you can see all the services available to you. Click **Create Instance**.
+-   Once you are logged in, you are taken to the OCI Console. Click **Create a data warehouse**
 
-*Note:* You may also access your Autonomous Data Warehouse service via the pull out menu on the top left of the page, or by using Customize Dashboard to add the service to your dashboard.
-
-![](./images/100/Picture100-36.JPG)
-
-- Click **Create** on the Autonomous Data Warehouse tile. If it does not appear in your Featured Services, click on All Services and find it there.
-
-![](images/100/LabGuide1-39fb4a5b.png)
-
-- Select the compartment of your choice where you will create your new ADW instance. If you want to create a new Compartment or learn more, click <a href="https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#three" target="\_blank">here</a>.
-*Note* - Avoid the use of the ManagedCompartmentforPaaS compartment as this is an Oracle default used for Oracle Platform Services.
-
-![](./images/100/Compartment.jpg)
-
--  Click on **Create Autonomous Data Warehouse** button to start the instance creation process.
-
-![](./images/100/Picture100-23.jpeg)
+![](images/LabGuide100-4797549d.png)
 
 -  This will bring up the Create Autonomous Data Warehouse screen where you will specify the configurations of the instance. Select the root compartment, or another compartment of your choice.
 
@@ -91,7 +76,7 @@ In this section you will be provisioning an ADW instance using the cloud console
 
 -  You now have created your first Autonomous Data Warehouse instance. Have a look at your instance's details here including its name, database version, CPU count and storage size.
 
-![](./images/100/Picture100-38.jpg)
+![](./images/100/Picture100-38.JPG)
 
 
 
@@ -150,4 +135,3 @@ You will use these two users later in this workshop.
 
 ## Great Work - All Done with Lab100!
 **You are ready to move on to the next lab. You may now close this tab.**
-

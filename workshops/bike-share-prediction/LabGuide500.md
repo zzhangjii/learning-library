@@ -62,9 +62,6 @@ The entire code for creating the model in OML is now accessible in the **Bike Sh
 Run the code in the **Bike Share Availability Prediction** notebook to train and validate a linear regression model and apply it to a weather forecast to predict the bike availability for a future day. Go over paragraphs one-by-one and run each at a time. Make sure each paragraph is completed without error. As the result of running the code in this notebook, several tables will be created. We will load a few of those tables in OAC in the next sections in order to generate our desired graphs. Note that running the entire notebook may take about 45 minutes.
 
 
-eager@1Snuffer
-eager@2Snuffer
-
 ## Part 2. Visualize results in OAC
 
 ### **STEP 3: Load Results of the OML Model to OAC**
@@ -141,11 +138,10 @@ eager@2Snuffer
 
 -   **Category (X-Axis):** SSW_P_RES->Last_Reported->Hour of Day
 
--    **Filters:** SSW_P_RES->Last_Reported (start: 8/31/17 – end: 9/1/17)   and   Station_Info->Station_Name (Avenue D & E 8 St)
+-   **Filters:** SSW_P_RES->Last_Reported (start: 8/31/17 – end: 9/1/17)   and   Station_Info->Station_Name (Avenue D & E 8 St)
 
 
 
 
 ## Great Work - All Done with Lab500!
 **Congrats! You are all done. You may now close this tab.**
-

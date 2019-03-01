@@ -63,7 +63,7 @@ This lab walks you through the steps to create and train a machine learning mode
 
 ### **STEP 2: Import the .DVA Project**
 
--   Click on the  icon on the top right side of the OAC home page and select **Import Project**.
+-   Click on the hamburger icon on the top right side of the OAC home page and select **Import Project**.
 
 ![](./images/400/Picture400-21.png)
 
@@ -83,4 +83,3 @@ This lab walks you through the steps to create and train a machine learning mode
 
 ## Great Work - All Done with Lab400!
 **You are ready to move on to the next lab. You may now close this tab.**
-

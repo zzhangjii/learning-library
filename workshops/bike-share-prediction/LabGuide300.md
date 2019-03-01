@@ -43,19 +43,23 @@ In this section you will create an OAC instance.
 
 ### **STEP 2: Create an OAC Instance**
 
--   Go to your **Dashboard** page and click on **Create Instance**.
+-   Go to your **Dashboard** page by clicking **My Services Dashboard** from the OCI Console navigation menu.
+
+![](images/LabGuide300-029b17f5.png)
+
+- Click on **Create Instance**.
 
 ![](./images/300/Picture300-21.png)
 
--   Under **All Services**, find **Autonomous Analytics** and click on **Create**.
+-   Under **All Services**, find **Analytics** and click on **Create**.
 
 ![](./images/300/Picture300-22.png)
 
--   On the **Autonomous Analytics** page, click on **Create Instance**.
+-   On the **Analytics** page, click on **Create Instance**.
 
 ![](./images/300/Picture300-23.png)
 
--   Provide all the required information (fields specified by *) and then click on **Next**.
+-   Provide all the required information (fields specified by \*) and then click on **Next**.
 
 ![](./images/300/Picture300-24.png)
 
@@ -67,11 +71,11 @@ In this section you will create an OAC instance.
 
 ![](./images/300/Picture300-26.png)
 
--   After a few minutes refresh your page and you will see the status and the sign are disappeared. Now your OAC instance is ready. In order to access your instance, click on the  icon on the right side of your instance.
+-   After a few minutes refresh your page and you will see the status and the sign are disappeared. Now your OAC instance is ready. In order to access your instance, click on the hamburger icon on the right side of your instance.
 
 ![](./images/300/Picture300-27.png)
 
--   Now click on Autonomous Analytics URL which redirects you to a new page.
+-   Now click on Analytics URL which redirects you to a new page.
 
 ![](./images/300/Picture300-28.png)
 
@@ -172,4 +176,3 @@ Now we should import the **STATION_INFO** and **STATION_ST_WTH_TRAINING** tables
 
 ## Great Work - All Done with Lab300!
 **You are ready to move on to the next lab. You may now close this tab.**
-
