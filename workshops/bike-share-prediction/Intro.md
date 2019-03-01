@@ -6,10 +6,6 @@ This is the first of several labs that are part of the **Bike Share Demand Predi
 
 You will take on 2 Personas during the workshop. The **Data Scientist Persona** will prepare the data for training and validating the machine learning models and apply those models in order to predict the future demand. The **Business Analyst Persona** will also build and apply Machine Learning models using Oracle Analytics Cloud service without writing a single line of code. During the workshop, you will get exposure to Oracle Autonomous Data Warehouse (ADW), Oracle Machine Learning tool (OML) and Oracle Analytics Cloud Service (OAC).
 
-To learn more about this workshop please watch the video below. 
-
-<a href="https://otube.oracle.com/media/Demand+Prediction/1_lzg5m7ts/105282352" target="_video">Workshop Overview</a>
-
 
 **_To log issues_**, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
@@ -25,16 +21,15 @@ To learn more about this workshop please watch the video below.
 - The following lab requires an Oracle Public Cloud account that will either be supplied by your instructor, or can be obtained through the following steps.
 
 ## Step 1: Acquire an Oracle Cloud Trial or Workshop Account
-Bookmark this page for future reference.
+- Bookmark this page for future reference.
 
-Please click on the following link to create your Free Account, and complete all the required steps to get your free Oracle Cloud Trial Account. When you complete the registration process you'll receive a $300 credit that will enable you to complete the lab for free. Additionally, you'll have 1000s of hours left over to continue to explore the Oracle Cloud.
+- Please click on the URL to create your <a class=“trial-link”  href="https://myservices.us.oraclecloud.com/mycloud/signup?language=en&sourceType=:ex:tb:::RC_NAMK181017P00031:ADW_IMHOL&SC=:ex:tb:::RC_NAMK181017P00031:ADW_IMHOL&pcode=NAMK181017P00031" target="trial">Free Account</a> and complete all the required steps. When you complete the registration process you'll receive a $300 credit that will enable you to complete the lab for free. Additionally, you'll have 1000s of hours left over to continue to explore the Oracle Cloud.
 
-Soon after requesting your trial you will receive the following email. You may begin working on this lab once you receive this email.
+- Soon after requesting your trial you will receive the following email. You may begin working on this lab once you receive this email.
 
  ![](images/common/cloud_ready.jpg)
 
 ## Step 2: Navigate to Lab 100
-You can see a list of Lab Guides by clicking on the Menu Icon in the upper left corner of the browser window. You're now ready to continue with Lab 100.
+- You can see a list of Lab Guides by clicking on the Menu Icon in the upper left corner of the browser window. You're now ready to continue with Lab 100.
 
   ![](images/common/WorkshopMenu.png)
-
