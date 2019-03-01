@@ -23,7 +23,7 @@
 #### What Do You Need?
 Before starting this instruction, you should:
 -  Have already procured and activated a trial or paid subscription to the following cloud services.
--  Oracle Database Cloud - Database as a Service (DBaaS). Don't have a subscription? Go to Oracle Store or [Oracle Try It](https://cloud.oracle.com/database)
+-  Oracle Database Cloud - Database as a Service (DBaaS).
 -  Capacity requirement 
 -  **Minimum 2 OCPU for DBaaS 256GB of storage**
 -  **Minimum 5 OCPU for Autonomous Data warehouse cloud and 1 TB of storage**
