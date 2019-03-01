@@ -87,18 +87,13 @@ In this section you will be provisioning an ADW instance using the cloud console
 
 ### **STEP 3: Creating OML Users**
 
--   Go back to the Cloud Console and open the Instances screen. Find your database, click the action menu and select **Service Console**.
+- Click the **Service Console** button on your Autonomous Data Warehouse details page.
 
-![](./images/100/Picture700-1.png)
+![](images/LabGuide100-2ba02578.png)
 
--   Log in to the service with your admin password.
+- Click the **Administration** tab and click **Manage Oracle ML Users** to go to the OML user management page.
 
-![](./images/100/Picture700-2.png)
-
--   Go to the **Administration** tab and click **Manage Oracle ML Users** to go to the OML user management page - this page will allow
-you to manage OML users.
-
-![](./images/100/Picture700-3.png)
+![](images/LabGuide100-18cd319d.png)
 
 This will open a new tab within your browser that asks you for a username and password.
 

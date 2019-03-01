@@ -23,13 +23,16 @@ You will take on 2 Personas during the workshop. The **Data Scientist Persona**
 ## Step 1: Acquire an Oracle Cloud Trial or Workshop Account
 - Bookmark this page for future reference.
 
-- Please click on the URL to create your <a class=“trial-link”  href="https://myservices.us.oraclecloud.com/mycloud/signup?language=en&sourceType=:ex:tb:::RC_NAMK181017P00031:ADW_IMHOL&SC=:ex:tb:::RC_NAMK181017P00031:ADW_IMHOL&pcode=NAMK181017P00031" target="trial">Free Account</a> and complete all the required steps. When you complete the registration process you'll receive a $300 credit that will enable you to complete the lab for free. Additionally, you'll have 1000s of hours left over to continue to explore the Oracle Cloud.
+- Please click on the URL to create your <a class=“trial-link”  href="https://myservices.us.oraclecloud.com/mycloud/signup?language=en&sourceType=:ex:tb:::RC_NAMK190227P00084:PredictDemandML_ADW_HOL&SC=:ex:tb:::RC_NAMK190227P00084:PredictDemandML_ADW_HOL&pcode=NAMK190227P00084" target="trial">Free Account</a> and complete all the required steps. When you complete the registration process you'll receive a $300 credit that will enable you to complete the lab for free. Additionally, you'll have 1000s of hours left over to continue to explore the Oracle Cloud.
 
 - Soon after requesting your trial you will receive the following email. You may begin working on this lab once you receive this email.
 
- ![](images/common/cloud_ready.jpg)
+  ![](images/common/cloud_ready.jpg)
 
 ## Step 2: Navigate to Lab 100
+
+- Begin working on [Lab 100](LabGuide100.md)
+
 - You can see a list of Lab Guides by clicking on the Menu Icon in the upper left corner of the browser window. You're now ready to continue with Lab 100.
 
   ![](images/common/WorkshopMenu.png)
