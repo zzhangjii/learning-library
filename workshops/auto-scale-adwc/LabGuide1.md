@@ -1,5 +1,5 @@
 
-# Lab 100 - Creating a Visual Builder Application
+# Lab 100
 
 ## Introduction
 
