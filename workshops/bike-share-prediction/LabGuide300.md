@@ -106,15 +106,16 @@ In this section you will create an OAC instance.
 
 -   **Connection Name:** Type a name for this connection (e.g. ADWDBBIKESHARE)
 
--   **Client Credentials:** Click on **‘Select’** and select the file **cwallet.sso** from the (unzipped) **Wallet**
+-   **Client Credentials:** Click on **‘Select’** and select the zipped **Wallet** file (The **cwallet.sso** file will be automatically extracted from the **Wallet** file)
 
 -   **Username:** Admin (the username you created during the ADW provisioning)
 
 -   **Password:** The password you specified during provision of your ADW instance
 
--   **Service Name:** Select your database name and desired service level (low, medium, high) from the drop down list. (e.g.  ADWFINANCE_low)
+-   **Service Name:** Select your database name and desired service level (low, medium, high) from the drop down list. (e.g.  dbbikeshare_high)
 
-![](images/LabGuide300-3aa7bfa2.png)
+![](images/300/Picture300-33-updated.png)
+
 
 
 -   You can see your connection listed under the Connections tab in the Data page.
