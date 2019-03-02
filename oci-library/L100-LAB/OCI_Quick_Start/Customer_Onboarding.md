@@ -22,8 +22,6 @@
 
 [Appendix B: ISCSI Method to Detach block volume](#appendix-b-iscsi-method-to-detach-block-volume)
 
-
-
 ## Overview
 
 In this lab we will create a compute instance, install httpd server on it, attach block volume to it and install an app on the Block Volume
@@ -37,6 +35,7 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 - Oracle Cloud Infrastructure account credentials (User, Password, Tenant, and Compartment)  
 
 ## Recommended Learning Assets
+
 1. OCI Training : https://cloud.oracle.com/en_US/iaas/training
 
 2. Familiarity with OCI console: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/console.htm
