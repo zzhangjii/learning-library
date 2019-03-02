@@ -50,8 +50,8 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 
 ## Practice-1: Sign in to OCI Console and create VCN
 
-* **Tenant Name:** {{Tenant_Name}}
-* **User Name:** {{User_name}}
+* **Tenant Name:** {{Cloud Tenant}}
+* **User Name:** {{User Name}}
 * **Password:** {{Password}}
 * **Compartment:**{{Compartment}}
 
