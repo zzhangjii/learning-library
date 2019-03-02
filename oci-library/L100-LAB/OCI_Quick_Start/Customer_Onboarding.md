@@ -1,4 +1,4 @@
-# OCI Quick Start : VCN, Compute and Block Volume
+# Lab Title
 
 ## Table of Contents
 
@@ -8,19 +8,27 @@
 
 [Recommended Learning Assets](#recommended-learning-assets)
 
-[Practice 1: Sign in to OCI Console and create VCN](#practice-1-sign-in-to-oci-console-and-create-vcn)
+[Practice 1: Insert text](#practice-1-insert-text)
 
-[Practice 2: Creat ssh keys, compute instance and Block Volume](#practice-2-creat-ssh-keys,-compute-instance-and-block-volume)
+## Overview
 
-[Practice 3: Install httpd on compute instance and install an app on Block Volume](#practice-3-install-httpd-on-compute-instance-and-install-an-app-on-block-volume)
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-[Practice 4: Detach the block volume and launch second compute instance using boot volume and attach Block Volume](#practice-4-detach-the-block-volume-and-launch-second-compute-instance-using-boot-volume-and-attach-block-volume)
+- Tincidunt id aliquet risus feugiat in ante metus.
+- Tempus quam pellentesque nec nam. 
 
-[Practice 5: Delete the resources](#practice-5-delete-the-resources)
+## Pre-Requisites 
 
-[Appendix A: ISCSI Method to Attach Block Volume to Compute Instance](#appendix-a-iscsi-method-to-attach-block-volume-to-compute-instance)
+- Oracle Cloud Infrastructure account credentials (Tenant ID, Username and Password)
 
-[Appendix B: ISCSI Method to Detach block volume](#appendix-b-iscsi-method-to-detach-block-volume)
+## Recommended Learning Assets
+
+- Recommended 1
+- Recommended 2
+- Recommended 3
+- Recommended 4
+# OCI Quick Start : VCN, Compute and Block Volume
+
 
 ## Overview
 
