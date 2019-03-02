@@ -1,5 +1,21 @@
-# OCI Quick Start Lab - VCN, Compute and Block Volume
-  
+# Lab Overview : VCN, Compute and Block Volume
+
+1. Test
+2. Test
+
+# Recommended Learning Assets
+1. OCI Training : https://cloud.oracle.com/en_US/iaas/training
+
+2. Familiarity with OCI console: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/console.htm
+
+3. Overview of Networking: https://docs.us-phoenix-1.oraclecloud.com/Content/Network/Concepts/overview.htm
+
+4. Familiarity with Compartment: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/concepts.htm
+
+5. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
+
+# Lab Tasks
+
 ## Table of Contents
 
 [Overview](#overview)
