@@ -20,7 +20,9 @@ You will take on 2 Personas during the workshop. The **Data Scientist Persona**
 ## Required Artifacts
 - The following lab requires an Oracle Public Cloud account that will either be supplied by your instructor, or can be obtained through the following steps.
 
-## Step 1: Acquire an Oracle Cloud Trial or Workshop Account
+# Acquire Oracle Cloud Account and Sign-in
+
+### Step 1: Acquire an Oracle Cloud Trial or Workshop Account
 - Bookmark this page for future reference.
 
 - Please click on the URL to create your <a class=“trial-link”  href="https://myservices.us.oraclecloud.com/mycloud/signup?language=en&sourceType=:ex:tb:::RC_NAMK190227P00084:PredictDemandML_ADW_HOL&SC=:ex:tb:::RC_NAMK190227P00084:PredictDemandML_ADW_HOL&pcode=NAMK190227P00084" target="trial">Free Account</a> and complete all the required steps. When you complete the registration process you'll receive a $300 credit that will enable you to complete the lab for free. Additionally, you'll have 1000s of hours left over to continue to explore the Oracle Cloud.
@@ -29,7 +31,9 @@ You will take on 2 Personas during the workshop. The **Data Scientist Persona**
 
 ![](images/common/cloud_ready.jpg)
 
-## Step 2: Navigate to Lab 100
+### Step 2: Navigate to Lab 100
+- The Lab Guides are best viewed using the Workshop's [GitHub Pages Website URL](https://oracle.github.io/learning-library/workshops/bike-share-prediction).
+
 - You can see a list of Lab Guides by clicking on the Menu Icon in the upper left corner of the browser window. You're now ready to continue with Lab 100.
 
  ![](images/common/WorkshopMenu.png)
