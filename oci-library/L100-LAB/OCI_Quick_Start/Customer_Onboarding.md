@@ -1,5 +1,5 @@
-# Customer on boarding lab - VCN, Compute and Block Volume
-  
+# Lab Title
+
 ## Table of Contents
 
 [Overview](#overview)
@@ -22,8 +22,6 @@
 
 [Appendix B: ISCSI Method to Detach block volume](#appendix-b-iscsi-method-to-detach-block-volume)
 
-
-
 ## Overview
 
 In this lab we will create a compute instance, install httpd server on it, attach block volume to it and install an app on the Block Volume
@@ -37,6 +35,7 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 - Oracle Cloud Infrastructure account credentials (User, Password, Tenant, and Compartment)  
 
 ## Recommended Learning Assets
+
 1. OCI Training : https://cloud.oracle.com/en_US/iaas/training
 
 2. Familiarity with OCI console: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/console.htm
@@ -50,6 +49,10 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 
 ## Practice-1: Sign in to OCI Console and create VCN
 
+* **Tenant Name:** {{Cloud Tenant}}
+* **User Name:** {{User Name}}
+* **Password:** {{Password}}
+* **Compartment:**{{Compartment}}
 
 **Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
 
@@ -65,8 +68,8 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
-![]( img/RESERVEDIP_HOL001.PNG)
-![]( img/RESERVEDIP_HOL002.PNG)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/RESERVEDIP_HOL002.PNG" alt="image-alt-text" height="100" width="100">
 
 4. Fill out the dialog box:
 
@@ -80,12 +83,13 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 
 - Click **Close**
 
-![]( img/RESERVEDIP_HOL003.PNG)
-![]( img/RESERVEDIP_HOL004.PNG)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="100" width="100">
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text" height="100" width="100">
 
 5. We will open port 80 on this VCN to provide http access to app on the compute instance(to be installed later on. Click **Security List** and then **Default Security list for<YOUR_VCN_NAME>**
 
-![]( img/Customer_Lab_001.PNG)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/Customer_Lab_001.PNG" alt="image-alt-text" height="100" width="100">
 
 6. In Security list details page, Click **Edit All Rules** and Click **+Another Ingress Rule** under 
 Allow Rules for Ingress and add below rule:
@@ -96,7 +100,7 @@ Allow Rules for Ingress and add below rule:
 - SOURCE PORT RANGE: ALL
 - DESTINATION PORT RANGE: 80
 
-![]( img/Customer_Lab_002.PNG)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/Customer_Lab_002.PNG" alt="image-alt-text" height="100" width="100">
 
 7. Click **Save Security List Rules** at the bottom
               
@@ -104,7 +108,7 @@ Allow Rules for Ingress and add below rule:
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
-![]( img/RESERVEDIP_HOL006.PNG)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/RESERVEDIP_HOL006.PNG" alt="image-alt-text" height="100" width="100">
 
 2. Enter command 
 ```
@@ -113,11 +117,11 @@ ssh-keygen
 **HINT:** You can swap between OCI window, 
 git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
 
-![]( img/RESERVEDIP_HOL007.PNG)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text" height="100" width="100">
 
 3. Press Enter When asked for ‘Enter File in which to save the key’, ‘Created Directory, ‘Enter passphrase’, and ‘Enter Passphrase again.
 
-![]( img/RESERVEDIP_HOL008.PNG)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/RESERVEDIP_HOL008.PNG" alt="image-alt-text" height="100" width="100">
 
 4. You should now have the Public and Private keys:
 
@@ -144,11 +148,11 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 ```
  , highlight the key and copy 
 
-![]( img/RESERVEDIP_HOL009.PNG)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/RESERVEDIP_HOL009.PNG" alt="image-alt-text" height="100" width="100">
 
 6. Click the apps icon, launch notepad and paste the key in Notepad (as backup)
 
-![]( img/RESERVEDIP_HOL0010.PNG)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG" alt="image-alt-text" height="100" width="100">
 
 7. Switch to the OCI console. From OCI servies menu, Click **Instances** under **Compute** 
 
@@ -179,7 +183,8 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 9. Click **Create**
 
 **NOTE:** If 'Service limit' error is displayed choose a different shape such as VM.Standard.E2.2 OR VM.Standard2.2 OR choose a different AD
-![]( img/RESERVEDIP_HOL0011.PNG)
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text" height="100" width="100">
 
 10. Wait for Instance to be in **Running** state. In git-bash Enter Command:
 ```
@@ -197,7 +202,7 @@ ssh –i id_rsa opc@<PUBLIC_IP_OF_COMPUTE_INSTANCE>
 
 13. Enter ‘Yes’ when prompted for security message
 
-![]( img/RESERVEDIP_HOL0014.PNG)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/RESERVEDIP_HOL0014.PNG" alt="image-alt-text" height="100" width="100">
  
 14. Verify opc@<COMPUTE_INSTANCE_NAME> appears on the prompt
 
@@ -212,13 +217,13 @@ Compute).
 - **BACKUP POLICY:** Set to None (If this field shows ‘Error Retrieving Value’ then leave it as is)
 17. Click **Create Block Volume**. Wait for volume to become available. Wait for Block Volume state to change from 'Provisioning' to 'Available'
 
-![]( img/Customer_Lab_003.PNG)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/Customer_Lab_003.PNG" alt="image-alt-text" height="100" width="100">
 
 18. Attach Block volume to your compute instance. From OCI services menu Click **Instance** under Compute 
 
 19. For the compute instance created earlier click  Action item. Click **Attach Block Volume**.
 
-![]( img/Customer_Lab_004.PNG)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/Customer_Lab_004.PNG" alt="image-alt-text" height="100" width="100">
 
 20. Fill out the dialog box:
 - Choose how you want to attach your block volume:Check Paravirtualized
@@ -237,8 +242,7 @@ Compute).
 
 23. Verify the Block Volume is attached by clicking the Compute Instance name.
 
-![]( img/Customer_Lab_005.PNG)
-
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/Customer_Lab_005.PNG" alt="image-alt-text" height="100" width="100">
 
 ## Practice 3: Install httpd on compute instance and install an app on Block Volume
 
@@ -293,18 +297,17 @@ sudo mount  /dev/<VOLUME_NAME>  /mnt/www/html
 lsblk 
 ```
 (in this case the volume is called sdc)
-![]( img/Customer_Lab_006.PNG)
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/Customer_Lab_006.PNG" alt="image-alt-text" height="100" width="100">
 
 9. Next we will download an app and install it. Enter command:
 ```
 cd /home/opc
 ```
-
 10. Enter Command:
 ```
 wget https://github.com/snafuz/oci-quickstart-lab/archive/master.zip
 ```
-
 11. Enter Command: 
 ```
 unzip master.zip
@@ -328,7 +331,7 @@ sudo nano  /etc/httpd/conf/httpd.conf  (for nano)
 
 14. Search for string /var/www and replace it with /mnt/www/html . This will be done in 3 locations
 
-![]( img/Customer_Lab_007.PNG)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/Customer_Lab_007.PNG" alt="image-alt-text" height="100" width="100">
 
 15. Save and Exit (in vi user Esc :wq)
 
@@ -349,7 +352,7 @@ http://<COMPUTE_INSTANCE_PUBLIC_IP>
 
 19. Screen like below should appear.
 
-![]( img/Customer_Lab_008.PNG)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/Customer_Lab_008.PNG" alt="image-alt-text" height="100" width="100">
 
 **We have initialized httpd.conf file. Next we will create a second compute instance using the boot volume of the first compute instance and attach Block Volume to it**
 
@@ -363,21 +366,21 @@ sudo umount /dev/<VOLUME_NAME>
 ```
 2. In OCI console window, click your compute instance name and in **Attached Block Volume** section  click the action icon and **click Detach**
 
-![]( img/Customer_Lab_009.PNG)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/Customer_Lab_009.PNG" alt="image-alt-text" height="100" width="100">
 
 3. Stop your compute instance by Clicking **Stop** in compute instance details page and then **OK** in Confirm window
 
-![]( img/Customer_Lab_010.PNG)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/Customer_Lab_010.PNG" alt="image-alt-text" height="100" width="100">
 
 4. Once the instance is in Stopped state, click **Boot Volume**, Click action icon and click **Detach**. Click **OK** in Confirm window.
 
-![]( img/Customer_Lab_011.PNG)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/Customer_Lab_011.PNG" alt="image-alt-text" height="100" width="100">
 
 5. Once the Boot volume is detached, Click **Terminate** to Terminate the instance.
 
 6. Click the action icon, click **View Boot Volume Details**.
 
-![]( img/Customer_Lab_012.PNG)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/Customer_Lab_012.PNG" alt="image-alt-text" height="100" width="100">
 
 7. In the Boot Volume Details window click **Create Instance:*
 - Name: Enter a name (e.g. "boot volume instance").
@@ -399,8 +402,10 @@ sudo umount /dev/<VOLUME_NAME>
 
 8. Click Create Instance.
 **NOTE:** If 'Service limit' error is displayed choose a different shape such as VM.Standard.E2.2 OR VM.Standard2.2 OR Choose a different AD
-![]( img/Customer_Lab_013.PNG)
-![]( img/Customer_Lab_014.PNG)
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/Customer_Lab_013.PNG" alt="image-alt-text" height="100" width="100">
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/Customer_Lab_014.PNG" alt="image-alt-text" height="100" width="100">
 
 9. Once the instance is in Running state, attach the block volume to this new instance using OCI Console.**Ensure to use Paravirtualized mode.**
 
@@ -418,7 +423,8 @@ sudo systemctl restart httpd
 **http://<COMPUTE_INSTANCE_PUBLIC_IP>**
 
 13. Screen like below should appear, Enter the required information
-![]( img/Customer_Lab_015.PNG)
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/Customer_Lab_015.PNG" alt="image-alt-text" height="100" width="100">
 
 **We have now successfully launched a compute instance using another instance's boot volume and re-attached a block volume that was attached to another instance. The block volume preserved all the data on it during this process. Moreover the compute instance launched using the boot volume had httpd server and fire wall configuration already present**
 
@@ -430,11 +436,12 @@ sudo systemctl restart httpd
 
 3. Locate first compute instance, Click Action icon and then **Terminat** 
 
-![]( img/RESERVEDIP_HOL0016.PNG)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text" height="100" width="100">
+
 
 4. Make sure Permanently delete the attached Boot Volume is checked, Click Terminate Instance. Wait for instance to fully Terminate
 
-![]( img/RESERVEDIP_HOL0017.PNG)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/RESERVEDIP_HOL0017.PNG" alt="image-alt-text" height="100" width="100">
 
 5. From OCI services menu Click **Block Volumes** under Block Storage
 
@@ -446,18 +453,19 @@ sudo systemctl restart httpd
 
 8. Click OK in the confirmation window.
 
-![]( img/Customer_Lab_016.PNG)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/Customer_Lab_016.PNG" alt="image-alt-text" height="100" width="100">
 
 9. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will 
 appear.
 
 10. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
 
-![]( img/RESERVEDIP_HOL0018.PNG)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text" height="100" width="100">
 
 11. From OCI services menu Click **Networking**, then **Public IPs**,locate the Reserved Public IP you created. Click Action icon and then **Terminate**
 
-![]( img/RESERVEDIP_HOL0019.PNG)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/RESERVEDIP_HOL0019.PNG" alt="image-alt-text" height="100" width="100">
+
 
 ***Congratulations! You have successfully completed the lab. ***
 
@@ -467,11 +475,11 @@ appear.
 
 **NOTE:** The iSCSI Commands and Information dialog box displays specific identifying information about your volume and the iSCSI commands you'll need. The commands are ready to use with the appropriate information included. You can copy and paste the commands into your instance once you login.
 
-![]( img/Customer_Lab_017.PNG)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/Customer_Lab_017.PNG" alt="image-alt-text" height="100" width="100">
 
 2. Click **Copy** in **ATTACH COMMANDS** section. 
 
-![]( img/Customer_Lab_018.PNG)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/Customer_Lab_018.PNG" alt="image-alt-text" height="100" width="100">
 
 3. Click **Close** to close the window 
 
@@ -489,10 +497,10 @@ appear.
 
 2. Click **Copy** in **DETACH COMMANDS** section. 
 
-![]( img/Customer_Lab_019.PNG)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/Customer_Lab_019.PNG" alt="image-alt-text" height="100" width="100">
 
 3. Paste the detach command in the ssh session to the compute instance
 
 4. In OCI console window, click your compute instance name and in **Attached Block Volumes** section click the action icon and click **Detach**
 
-![]( img/Customer_Lab_020.PNG)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/OCI_Quick_Start/img/Customer_Lab_020.PNG" alt="image-alt-text" height="100" width="100">
