@@ -48,11 +48,24 @@ If you have a question during this workshop then use the Autonomous Data Warehou
 Are you are completely new to the <a href="https://cloudcustomerconnect.oracle.com/resources/32a53f8587/summary" target="_blank">**Cloud Customer Connect**</a> forums? Visit our  <a href="https://cloudcustomerconnect.oracle.com/pages/1f00b02b84" target="_blank">Getting Started forum page</a> to learn how to best leverage community resources.
 
 
+##  Add Your Name Here
 
+### **STEP 1**: Access the Cloud
 
-### ADWCS Provisioning
-#### 1. Login to cloud environment, Click Services to show the available services. In the list of available services, select Autonomous Data Warehouse.
-![](./images/adwc1.png)
+- Navigate to cloud.oracle.com, and click Sign In.
+
+- Enter your tenancy name.
+
+- Enter your username/password.
+
+- Click create Autonomous Data Warehouse.
+
+ ![](images/LabGuide1-e79057af.png)
+
+###  **Step 2:**
+
+ -  
+
 #### 2. The console for Autonomous Data Warehouse displays. You can use the List Scope drop-down menu to select a compartment; in this example the gse000#### (root) compartment is selected. Click Create Autonomous Data Warehouse.
 ![](./images/adwc2.png)
 #### 3. In the Create Autonomous Data Warehouse dialog, enter the following information.
