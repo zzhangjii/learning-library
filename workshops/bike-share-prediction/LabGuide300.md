@@ -53,11 +53,11 @@ In this section you will create an OAC instance.
 
 -   Under **All Services**, find **Analytics** and click on **Create**.
 
-![](./images/300/Picture300-22.png)
+![](./images/300/analyticsDash.png)
 
 -   On the **Analytics** page, click on **Create Instance**.
 
-![](./images/300/Picture300-23.png)
+![](./images/300/AnalyticsInstance.png)
 
 -   Provide all the required information (fields specified by \*) and then click on **Next**.
 
@@ -69,15 +69,15 @@ In this section you will create an OAC instance.
 
 -   It will take a few minutes until your instance is fully provisioned and ready to use. Note the Status and the sign which indicate that the service is being creating. Wait until this process is fully completed.
 
-![](./images/300/Picture300-26.png)
+![](./images/300/OACprovision.png)
 
 -   After a few minutes refresh your page and you will see the status and the sign are disappeared. Now your OAC instance is ready. In order to access your instance, click on the hamburger icon on the right side of your instance.
 
-![](./images/300/Picture300-27.png)
+![](./images/300/expand.png)
 
 -   Now click on Analytics URL which redirects you to a new page.
 
-![](./images/300/Picture300-28.png)
+![](./images/300/OACURL.png)
 
 
 -   Welcome to the Oracle Analytic Cloud! Enjoy exploring it!
