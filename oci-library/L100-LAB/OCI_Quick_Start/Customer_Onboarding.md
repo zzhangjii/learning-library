@@ -8,57 +8,6 @@
 
 [Recommended Learning Assets](#recommended-learning-assets)
 
-[Practice 1: Insert text](#practice-1-insert-text)
-
-## Overview
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-- Tincidunt id aliquet risus feugiat in ante metus.
-- Tempus quam pellentesque nec nam. 
-
-## Pre-Requisites 
-
-- Oracle Cloud Infrastructure account credentials (Tenant ID, Username and Password)
-
-## Recommended Learning Assets
-
-- Recommended 1
-- Recommended 2
-- Recommended 3
-- Recommended 4
-# OCI Quick Start : VCN, Compute and Block Volume
-
-
-## Overview
-
-In this lab we will create a compute instance, install httpd server on it, attach block volume to it and install an app on the Block Volume
-We will then create a second compute instance using the boot volume of the first compute instance and move the Block Volume to 
-the second compute instance (with the app installed).
-The goal of the lab is to demonstrate launching VCN, Compute Instance, using Boot volume of compute instance and 
-how easy it is to move additional storage with applicatons/tools installed between compute instances
-
-# Recommended Learning Assets
-1. OCI Training : https://cloud.oracle.com/en_US/iaas/training
-
-2. Familiarity with OCI console: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/console.htm
-
-3. Overview of Networking: https://docs.us-phoenix-1.oraclecloud.com/Content/Network/Concepts/overview.htm
-
-4. Familiarity with Compartment: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/concepts.htm
-
-5. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
-
-# Lab Tasks
-
-## Table of Contents
-
-[Overview](#overview)
-
-[Pre-Requisites](#pre-requisites)
-
-[Recommended Learning Assets](#recommended-learning-assets)
-
 [Practice 1: Sign in to OCI Console and create VCN](#practice-1-sign-in-to-oci-console-and-create-vcn)
 
 [Practice 2: Creat ssh keys, compute instance and Block Volume](#practice-2-creat-ssh-keys,-compute-instance-and-block-volume)
