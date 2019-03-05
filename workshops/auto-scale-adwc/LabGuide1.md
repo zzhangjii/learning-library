@@ -21,9 +21,9 @@ Th is lab will show you how to setup the Autonomous Data Warehouse and configure
 
 - Auto Scale up/down an ADW instance
 
-## Notional Architecture and Trial Account access 
+## Notional Architecture and Trial Account access
 
-### Notional Architecture
+### **Step 1**: Review Notional Architecture
 ![](./images/1.PNG)
 ![](./images/Notional_Architecure.PNG)
 
@@ -33,43 +33,54 @@ Oracle Autonomous Data Warehouse is built around the market leading Oracle datab
 
 We take care of everything for you.
 
-Click here to <a href="https://www.youtube.com/watch?v=tZMZODoi2xw" target="_blank">watch our short video</a> that explains the key features in Oracle's Autonomous Data Warehouse.
+Click here to <a href="https://www.youtube.com/watch?v=tZMZODoi2xw" target="blank">watch our short video</a> that explains the key features in Oracle's Autonomous Data Warehouse.
 
 Oracle’s Autonomous Data Warehouse is the perfect quick-start service for fast data loading and sophisticated data reporting and analysis.  Oracle manages everything for you so you can focus on your data.
 
 Read on to begin your Getting Started journey with Oracle Autonomous Data Warehouse.
 
 
-#### Lab Prerequisites – Required Software
+### **Step 2**: Lab Prerequisites – Required Software
 - Oracle APEX Release 18.2.0.00.12
 - Oracle REST Data Services 18.4
 
-<a href="https://cloudcustomerconnect.oracle.com/resources/32a53f8587/summary" target="_blank">**Cloud Customer Connect**</a> Forum for Autonomous Data Warehouse
+<a href="https://cloudcustomerconnect.oracle.com/resources/32a53f8587/summary" target="blank">**Cloud Customer Connect**</a> Forum for Autonomous Data Warehouse
 If you have a question during this workshop then use the Autonomous Data Warehouse Forum to post questions, connect with experts, and share your thoughts and ideas about Oracle Autonomous Data Warehouse.
 
-Are you are completely new to the <a href="https://cloudcustomerconnect.oracle.com/resources/32a53f8587/summary" target="_blank">**Cloud Customer Connect**</a> forums? Visit our  <a href="https://cloudcustomerconnect.oracle.com/pages/1f00b02b84" target="_blank">Getting Started forum page</a> to learn how to best leverage community resources.
+Are you are completely new to the <a href="https://cloudcustomerconnect.oracle.com/resources/32a53f8587/summary" target="blank">**Cloud Customer Connect**</a> forums? Visit our  <a href="https://cloudcustomerconnect.oracle.com/pages/1f00b02b84" target="blank">Getting Started forum page</a> to learn how to best leverage community resources.
 
 
-### **STEP 1**: Access the Cloud
+### **STEP 2**: Access the Cloud
+
 - Navigate to https://console.us-ashburn-1.oraclecloud.com
 Note : Change region name(us-ashburn-1) in above URl
+
 - Enter your tenancy name and click continue.
+
    ![](./images/cloud1.png)
+
 - Click continue to go in login page and then enter username/password
+
    ![](./images/cloud2.png)
+
    ![](./images/cloud3.png)
+
 - Click top left menu to see all available service.
+
    ![](./images/cloud4.PNG)
+
 - Enter your username/password.
 
-## ADWCS and Dbaas Provisioning
+## ADWCS and DBaaS Provisioning
 
 ### **STEP 2**: ADWCS Provisioning
 
 - Login to cloud environment,Click on the Menu Icon to show the available services. In the list of available services, select Autonomous Data Warehouse.
- 
+
 - The console for Autonomous Data Warehouse displays. You can use the List Scope drop-down menu to select a compartment; in this example the gse000#### (root) compartment is selected. Click Create Autonomous Data Warehouse.
-![](./images/adwc2.png)
+
+  ![](./images/adwc2.png)
+
 - In the Create Autonomous Data Warehouse dialog, enter the following information.
   * Display Name - Enter a name for the data warehouse for display   (eg. adwapexdemo).
   * Database Name - Use letters and numbers only, starting with a letter (eg. adwapexdemo). Maximum length is 14 characters. (Underscores not initially supported.)
@@ -186,13 +197,28 @@ The password must be between 12 and 30 characters long and must include at least
   ![](./images/ssh.png)
 
 - Login as opc and then change user to oracle as shown in below screen shot.
-![](./images/dbaas17.png)
+  ```
+  sudo su - oracle
+  ```
+
+  ![](./images/dbaas17.png)
+
 - To check ORACLE_SID and ORACLE_HOME, Type below command
+```
 cat /etc/oratab
-![](./images/dbaas18.png)
+```
+
+ ![](./images/dbaas18.png)
+
 - Add ORACLE_SID and ORACLE_HOME in .bash_profile
-  * Log in as oracle user sudo su - oracle
-  * Edit vi ~/.bash_profile
+  * Log in as oracle user
+  ```
+  sudo su - oracle
+  ```
+  * Edit the bash profile
+  ```
+  vi ~/.bash_profile
+  ```
   * Add below environment variable at the end of the file and save it.
       * export ORACLE_SID=APEXDB
       * export ORACLE_HOME=/u01/app/oracle/product/12.1.0.2/dbhome_1
