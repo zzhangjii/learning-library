@@ -51,7 +51,7 @@ Are you are completely new to the <a href="https://cloudcustomerconnect.oracle.c
 
 
 ### **STEP 1**: Access the Cloud
-- Navigate to **https://console.us-ashburn-1.oraclecloud.com**
+- Navigate to https://console.us-ashburn-1.oraclecloud.com
 Note : Change region name(us-ashburn-1) in above URl
 - Enter your tenancy name and click continue.
    ![](./images/cloud1.png)
