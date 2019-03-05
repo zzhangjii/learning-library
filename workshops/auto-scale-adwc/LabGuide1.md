@@ -399,7 +399,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 
 - Download ADWCS Demo shell scripts from [scripts](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/shellscripts) and copy in oracle home directory.
 ![](./images/demo13.png)
-#### 11. Open restapi.sh from scripts folder we will need the values for below fields tenancyId,authUserId,keyFingerprint,privateKeyPath, Below are the screen shots to get the value from your environment.
+- Open restapi.sh from scripts folder we will need the values for below fields tenancyId,authUserId,keyFingerprint,privateKeyPath, Below are the screen shots to get the value from your environment.
 
   * Tenancy OCID: Login to cloud environment, Click Services to show the available services. In the list of available services, select Administration ->Tenancy Details.
   ![](./images/demo14.png)
@@ -438,11 +438,11 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
   * ./ start_adwc.sh
 - Login to ORDS with user same as we have in ORDS installation.
   * **http://DbaaS intance IP Address:8080/ords**
-![](./images/demo26.png)
+   ![](./images/demo26.png)
 - Click Sign in
-![](./images/demo27.png)
+   ![](./images/demo27.png)
 - Click Manage Workspace and select import.
-![](./images/demo28.png)
+   ![](./images/demo28.png)
 - Download workspace "Apex_Demo_Workspace.sql" file from git [apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript) in local and give location
 - Click next and complete import on default value
 - Once you finish you will be able to see in Existing Workspace
