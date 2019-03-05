@@ -421,10 +421,10 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
   * Paste oci_api_key_public.pem content as Public key.
   ![](./images/demo19.png)
   * You can see new finger print as below
-![](./images/demo20.png)
+  ![](./images/demo20.png)
   * Copy new fingerprint in notepad.
   * Modify restapi.sh  and change tenancyId, authUserId, keyFingerprint, privateKeyPath(Give these value which we have noted in earlier step )
-![](./images/demo23.png)
+  ![](./images/demo23.png)
 
 - Now open adwc.sh from scripts folder we will need the values for below fields ADWC OCID and Cloud host,Below are the screen shots to get the value from your environment.
   * Copy ADWC OCID in notepad.
@@ -449,12 +449,12 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 ![](./images/demo29.png)
 -	After importing workspace logout and again login with below credential.
   * **Workspace: pdbuser, Username: APEXDEMO ,Password: apexdemo**
-![](./images/demo30.png)
+  ![](./images/demo30.png)
 -	Click Sign In.
-![](./images/demo31.png)
+  ![](./images/demo31.png)
 -	Click App Builder menu and select import.
-![](./images/demo32.png)
+  ![](./images/demo32.png)
 -	Download application script "Apex_Demo_Application.sql" from [apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript) in local and give location in Choose file.
 -	Click Next and finish application deployment.
 -	Once you finish you can run application
-![](./images/demo33.png)
+  ![](./images/demo33.png)
