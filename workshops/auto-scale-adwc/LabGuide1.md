@@ -51,16 +51,19 @@ Are you are completely new to the <a href="https://cloudcustomerconnect.oracle.c
 ##  Add Your Name Here
 
 ### **STEP 1**: Access the Cloud
-
-- Navigate to cloud.oracle.com, and click Sign In.
-
-- Enter your tenancy name.
-
+- Navigate to **https://console.us-ashburn-1.oraclecloud.com**
+Note : Change region name(us-ashburn-1) in above URl
+- Enter your tenancy name and click continue.
+   ![](./images/cloud1.png)
+- Click continue to go in login page and then enter username/password
+   ![](./images/cloud2.png)
+   ![](./images/cloud3.PNG)
+- Click top left menu to see all available service.
+   ![](./images/cloud4.png)
+ 
 - Enter your username/password.
 
-- Click create Autonomous Data Warehouse.
-
- ![](images/LabGuide1-e79057af.png)
+## ADWCS and Dbaas Provisioning
 
 ### **STEP 2**: ADWCS Provisioning
 - Login to cloud environment,Click on the Menu Icon to show the available services. In the list of available services, select Autonomous Data Warehouse.
@@ -204,7 +207,7 @@ cat /etc/oratab
   * show pdbs;
 ![](./images/dbaas22.png)
 - Once you we see pdbs. Exit from sqlplus and install APEX and ORDS in Dbaas Instance.
-
+## APEX and ORDS Installation in Dbaas Instance
 ### **STEP 4**: APEX Installation
    Approximately time 30 Minutes.
 - Login to DbaaS Instance through Putty(To login in putty check Dbaas Provision Step 13 and 14).
@@ -322,6 +325,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 #### 11. Click sign In.
 ![](./images/ords8.png)
 
+## ADW Scaling APEX Application Installation
 
 ### **STEP 6**: ADWC Scaling Demo Installation
 
