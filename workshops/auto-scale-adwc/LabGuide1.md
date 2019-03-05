@@ -21,6 +21,8 @@ Th is lab will show you how to setup the Autonomous Data Warehouse and configure
 
 - Auto Scale up/down an ADW instance
 
+## Notional Architecture and Trial Account access 
+
 ### Notional Architecture
 ![](./images/1.PNG)
 ![](./images/Notional_Architecure.PNG)
@@ -47,6 +49,7 @@ If you have a question during this workshop then use the Autonomous Data Warehou
 
 Are you are completely new to the <a href="https://cloudcustomerconnect.oracle.com/resources/32a53f8587/summary" target="_blank">**Cloud Customer Connect**</a> forums? Visit our  <a href="https://cloudcustomerconnect.oracle.com/pages/1f00b02b84" target="_blank">Getting Started forum page</a> to learn how to best leverage community resources.
 
+
 ### **STEP 1**: Access the Cloud
 - Navigate to **https://console.us-ashburn-1.oraclecloud.com**
 Note : Change region name(us-ashburn-1) in above URl
@@ -56,8 +59,7 @@ Note : Change region name(us-ashburn-1) in above URl
    ![](./images/cloud2.png)
    ![](./images/cloud3.png)
 - Click top left menu to see all available service.
-   ![](./images/cloud4.png)
- 
+   ![](./images/cloud4.PNG)
 - Enter your username/password.
 
 ## ADWCS and Dbaas Provisioning
