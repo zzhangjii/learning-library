@@ -62,8 +62,9 @@ Are you are completely new to the <a href="https://cloudcustomerconnect.oracle.c
 
  ![](images/LabGuide1-e79057af.png)
 
-### **STEP 2**:ADWCS Provisioning 
-
+### **STEP 2**: ADWCS Provisioning
+- Login to cloud environment,Click on the Menu Icon to show the available services. In the list of available services, select Autonomous Data Warehouse.
+ 
 - The console for Autonomous Data Warehouse displays. You can use the List Scope drop-down menu to select a compartment; in this example the gse000#### (root) compartment is selected. Click Create Autonomous Data Warehouse.
 ![](./images/adwc2.png)
 - In the Create Autonomous Data Warehouse dialog, enter the following information.
@@ -423,7 +424,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 ![](./images/demo20.png)
   * Copy new fingerprint in notepad.
   * Modify restapi.sh  and change tenancyId, authUserId, keyFingerprint, privateKeyPath(Give these value which we have noted in earlier step )
-![](./images/demo23.png)-
+![](./images/demo23.png)
 
 - Now open adwc.sh from scripts folder we will need the values for below fields ADWC OCID and Cloud host,Below are the screen shots to get the value from your environment.
   * Copy ADWC OCID in notepad.
