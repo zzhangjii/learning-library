@@ -47,9 +47,6 @@ If you have a question during this workshop then use the Autonomous Data Warehou
 
 Are you are completely new to the <a href="https://cloudcustomerconnect.oracle.com/resources/32a53f8587/summary" target="_blank">**Cloud Customer Connect**</a> forums? Visit our  <a href="https://cloudcustomerconnect.oracle.com/pages/1f00b02b84" target="_blank">Getting Started forum page</a> to learn how to best leverage community resources.
 
-
-##  Add Your Name Here
-
 ### **STEP 1**: Access the Cloud
 - Navigate to **https://console.us-ashburn-1.oraclecloud.com**
 Note : Change region name(us-ashburn-1) in above URl
@@ -57,7 +54,7 @@ Note : Change region name(us-ashburn-1) in above URl
    ![](./images/cloud1.png)
 - Click continue to go in login page and then enter username/password
    ![](./images/cloud2.png)
-   ![](./images/cloud3.PNG)
+   ![](./images/cloud3.png)
 - Click top left menu to see all available service.
    ![](./images/cloud4.png)
  
