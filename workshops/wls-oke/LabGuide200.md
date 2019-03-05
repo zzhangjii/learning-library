@@ -48,19 +48,9 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 
   ![](images/200/2.png)
 
-**NOTE**: If you have used your trial account already, you may have been prompted to change the temporary password listed in the welcome email. In that case, enter the new password in the password field.
+- You are presented with the Oracle Cloud Infrastructure (OCI) Dashboard/Portal
 
-- In the top left corner of the dashboard, click the **hamburger menu**
-
-  ![](images/200/3.png)
-
-- Click to expand the **Services** submenu, then click **Compute**
-
-  ![](images/200/4.png)
-
-- On the OCI Console sign in page, enter the same **Username** as you did on the previous sign in page. If you are using a trial account and this is your first time logging into the OCI Console, enter the **temporary password** from your trial account welcome email. If you have already visited the OCI Console and changed your password, enter your **new password**. Otherwise, this password will be supplied by your workshop instructor.
-
-  ![](images/200/5.png)
+  ![](images/200/image4a.png)
 
 ### **STEP 2**: Create a Compartment for your Kubernetes nodes
 
