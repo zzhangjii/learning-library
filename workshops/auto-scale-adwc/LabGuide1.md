@@ -65,6 +65,7 @@ Note : Change region name(us-ashburn-1) in above URl
 ## ADWCS and Dbaas Provisioning
 
 ### **STEP 2**: ADWCS Provisioning
+
 - Login to cloud environment,Click on the Menu Icon to show the available services. In the list of available services, select Autonomous Data Warehouse.
  
 - The console for Autonomous Data Warehouse displays. You can use the List Scope drop-down menu to select a compartment; in this example the gse000#### (root) compartment is selected. Click Create Autonomous Data Warehouse.
