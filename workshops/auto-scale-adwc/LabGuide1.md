@@ -73,10 +73,10 @@ Are you are completely new to the <a href="https://cloudcustomerconnect.oracle.c
   * Storage (TB) - Select your storage capacity in terabytes. It is the actual space available to your service instance, including system-related space allocations.(Minimum to be 1 TB)
   * Administrator Credentials - Password (BEstrO0ng_#11) for ADMIN user of the service instance. The password must meet the following requirements:
   * The password must be between 12 and 30 characters long and must include at least one uppercase letter, one lowercase letter, and one numeric character.
-    * The password cannot contain the username.
-    * The password cannot contain the double quote (") character.
-    * The password must be different from the last 4 passwords used.
-    * The password must not be the same password that is set less than 24 hours ago.
+    - The password cannot contain the username.
+    - The password cannot contain the double quote (") character.
+    - The password must be different from the last 4 passwords used.
+    - The password must not be the same password that is set less than 24 hours ago.
   * License Type - Select whether you have existing licenses or if you want to subscribe to new database software licenses and the database cloud service.
   * Tags - (Optional) Tagging is a metadata system that allows you to organize and track resources within your tenancy. Tags are composed of keys and values which can be attached to resources.
   * Click Create Autonomous Data Warehouse.
