@@ -190,14 +190,14 @@ cat /etc/oratab
   * Log in as oracle user sudo su - oracle
   * Edit vi ~/.bash_profile
   * Add below environment variable at the end of the file and save it.
-    * export ORACLE_SID=APEXDB
-    * export ORACLE_HOME=/u01/app/oracle/product/12.1.0.2/dbhome_1
-    * export PATH=$ORACLE_HOME/bin:$PATH
+      * export ORACLE_SID=APEXDB
+      * export ORACLE_HOME=/u01/app/oracle/product/12.1.0.2/dbhome_1
+      * export PATH=$ORACLE_HOME/bin:$PATH
   * Save the bash_profile by pressing esc and typing wq.
   ![](./images/dbaas19.png)
   ![](./images/dbaas20.png)
   * Run source command
-    * source ~/.bash_profile
+      * source ~/.bash_profile
 - Now login to sqlplus using below command
   * sqlplus / as sysdba
   * show pdbs;
@@ -250,7 +250,7 @@ cat /etc/oratab
   * Login as opc user.
   * Change user to oracle  and got to oracle home directory as below screen shot
   * Create ords directory using below command.
-     * mkdir ords
+       * mkdir ords
 - Download "Oracle REST Data Services" in local machine and then copy  and unzip in ords folder in oracle home directory (you can use WinSCP to copy from local to cloud instance) [ORDS](https://www.oracle.com/technetwork/developer-tools/rest-data-services/downloads/index.html)
   * unzip ords-18.3.0.270.1456.zip -d /home/oracle/ords/
 ![](./images/ords1.png)
@@ -329,9 +329,9 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
   * Change user to oracle  and got to oracle home directory as below screen shot
 -	Set Environment variable in
   * Get Dbaas unique name by running below command
-    * cd  /opt/oracle/dcs/commonstore/wallets/tde
-    * ls -ltr
-    * Copy the file name and assign ORACLE_UNQNAME in below command
+      * cd  /opt/oracle/dcs/commonstore/wallets/tde
+      * ls -ltr
+      * Copy the file name and assign ORACLE_UNQNAME in below command
   * vi ~/.bash_profile
   * export ORACLE_UNQNAME=**Dbaas Unique Name**
   * After editing the bash_profile press esc and type wq to save.
@@ -345,22 +345,22 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
   * cd /u01/app/oracle/product/12.1.0.2/dbhome_1/network/admin
   * vi sqlnet.ora
   * Add below property in sqlnet.ora
-    * ENCRYPTION_WALLET_LOCATION=(SOURCE=(METHOD=FILE)(METHOD_DATA=(DIRECTORY=/opt/oracle/dcs/commonstore/wallets/tde/$ORACLE_UNQNAME)))
-    * SQLNET.ENCRYPTION_SERVER=REQUIRED
-    * SQLNET.CRYPTO_CHECKSUM_SERVER=REQUIRED
-    * SQLNET.ENCRYPTION_TYPES_SERVER=(AES256,AES192,AES128)
-    * SQLNET.CRYPTO_CHECKSUM_TYPES_SERVER=(SHA1)
-    * ##SQLNET.ENCRYPTION_CLIENT=REQUIRED
-    * ##SQLNET.CRYPTO_CHECKSUM_CLIENT=REQUIRED
-    * SQLNET.ENCRYPTION_TYPES_CLIENT=(AES256,AES192,AES128)
-    * SQLNET.CRYPTO_CHECKSUM_TYPES_CLIENT=(SHA1)
-    * WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA = (DIRECTORY="/home/oracle/wallet_adwc")))
-    * SSL_SERVER_DN_MATCH=yes
-    * SQLNET.WALLET_OVERRIDE=TRUE
-    * ##SSL_CLIENT_AUTHENTICATION = FALSE
-    * ##SSL_VERSION = 0
-   ![](./images/demo3.png)
-   ![](./images/demo4.png)
+      * ENCRYPTION_WALLET_LOCATION=(SOURCE=(METHOD=FILE)(METHOD_DATA=(DIRECTORY=/opt/oracle/dcs/commonstore/wallets/tde/$ORACLE_UNQNAME)))
+      * SQLNET.ENCRYPTION_SERVER=REQUIRED
+      * SQLNET.CRYPTO_CHECKSUM_SERVER=REQUIRED
+      * SQLNET.ENCRYPTION_TYPES_SERVER=(AES256,AES192,AES128)
+      * SQLNET.CRYPTO_CHECKSUM_TYPES_SERVER=(SHA1)
+      * ##SQLNET.ENCRYPTION_CLIENT=REQUIRED
+      * ##SQLNET.CRYPTO_CHECKSUM_CLIENT=REQUIRED
+      * SQLNET.ENCRYPTION_TYPES_CLIENT=(AES256,AES192,AES128)
+      * SQLNET.CRYPTO_CHECKSUM_TYPES_CLIENT=(SHA1)
+      * WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA = (DIRECTORY="/home/oracle/wallet_adwc")))
+      * SSL_SERVER_DN_MATCH=yes
+      * SQLNET.WALLET_OVERRIDE=TRUE
+      * ##SSL_CLIENT_AUTHENTICATION = FALSE
+      * ##SSL_VERSION = 0
+      ![](./images/demo3.png)
+      ![](./images/demo4.png)
 - Change **/u01/app/oracle/product/12.1.0.2/dbhome_1/network/admin/tnsnames.ora** and create entry for your Dbaas PDB that is pdb1 as below. Change host and service name, you can find service name for pdb1 by running **lsnrctl status** and host name you copy from existing entry.
   * PDB1 = (DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = apexdemo.sub1018160041.hdp.oraclevcn.com)(PORT = 1521))
     (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = pdb1.sub1018160041.hdp.oraclevcn.com)))
@@ -409,10 +409,10 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
   ![](./images/demo17.png)
   * Copy admin OCID in notepad as AuthuserId.
   * Login to Dbaas instance and change user as oracle and run below command to generate public key PEM file.
-    * mkdir ~/.oci
-    * openssl genrsa -out ~/.oci/oci_api_key.pem 2048
-    * chmod go-rwx ~/.oci/oci_api_key.pem
-    * openssl rsa -pubout -in ~/.oci/oci_api_key.pem -out ~/.oci/oci_api_key_public.pem
+      * mkdir ~/.oci
+      * openssl genrsa -out ~/.oci/oci_api_key.pem 2048
+      * chmod go-rwx ~/.oci/oci_api_key.pem
+      * openssl rsa -pubout -in ~/.oci/oci_api_key.pem -out ~/.oci/oci_api_key_public.pem
   * Open oci_api_key_public.pem file and copy the content
   * Use copied content to generate finger print for admin user
   * Click the admin user for which you had taken AuthuserID and then click Add Public Key
