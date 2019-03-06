@@ -69,8 +69,6 @@ Note : Change region name(us-ashburn-1) in above URl
 
    ![](./images/cloud4.PNG)
 
-- Enter your username/password.
-
 ## ADWCS and DBaaS Provisioning
 
 ### **STEP 2**: ADWCS Provisioning
@@ -437,10 +435,10 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
   * Change user to oracle  and got to oracle home directory as below screen shot
 -	Set Environment variable in
   * Get Dbaas unique name by running below command
-       ```
-      cd  /opt/oracle/dcs/commonstore/wallets/tde
-      ls -ltr
-      ```
+   ```
+   cd  /opt/oracle/dcs/commonstore/wallets/tde
+   ls -ltr
+   ```
       
   * Copy the file name and assign ORACLE_UNQNAME in below command
   ```
@@ -465,25 +463,25 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
   vi sqlnet.ora
   ```
   * Add below property in sqlnet.ora
-     ```
-     ENCRYPTION_WALLET_LOCATION=(SOURCE=(METHOD=FILE)(METHOD_DATA=(DIRECTORY=/opt/oracle/dcs/commonstore/wallets/tde/$ORACLE_UNQNAME)))
-     SQLNET.ENCRYPTION_SERVER=REQUIRED
-     SQLNET.CRYPTO_CHECKSUM_SERVER=REQUIRED
-     SQLNET.ENCRYPTION_TYPES_SERVER=(AES256,AES192,AES128)
-     SQLNET.CRYPTO_CHECKSUM_TYPES_SERVER=(SHA1)
-     ##SQLNET.ENCRYPTION_CLIENT=REQUIRED
-     ##SQLNET.CRYPTO_CHECKSUM_CLIENT=REQUIRED
-     SQLNET.ENCRYPTION_TYPES_CLIENT=(AES256,AES192,AES128)
-     SQLNET.CRYPTO_CHECKSUM_TYPES_CLIENT=(SHA1)
-     WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA = (DIRECTORY="/home/oracle/wallet_adwc")))
-     SSL_SERVER_DN_MATCH=yes
-     SQLNET.WALLET_OVERRIDE=TRUE
-     ##SSL_CLIENT_AUTHENTICATION = FALSE
-     ##SSL_VERSION = 0
-     ```
+  ```
+  ENCRYPTION_WALLET_LOCATION=(SOURCE=(METHOD=FILE)(METHOD_DATA=(DIRECTORY=/opt/oracle/dcs/commonstore/wallets/tde/$ORACLE_UNQNAME)))
+  SQLNET.ENCRYPTION_SERVER=REQUIRED
+  SQLNET.CRYPTO_CHECKSUM_SERVER=REQUIRED
+  SQLNET.ENCRYPTION_TYPES_SERVER=(AES256,AES192,AES128)
+  SQLNET.CRYPTO_CHECKSUM_TYPES_SERVER=(SHA1)
+  ##SQLNET.ENCRYPTION_CLIENT=REQUIRED
+  ##SQLNET.CRYPTO_CHECKSUM_CLIENT=REQUIRED
+  SQLNET.ENCRYPTION_TYPES_CLIENT=(AES256,AES192,AES128)
+  SQLNET.CRYPTO_CHECKSUM_TYPES_CLIENT=(SHA1)
+  WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA = (DIRECTORY="/home/oracle/wallet_adwc")))
+  SSL_SERVER_DN_MATCH=yes
+  SQLNET.WALLET_OVERRIDE=TRUE
+  ##SSL_CLIENT_AUTHENTICATION = FALSE
+  ##SSL_VERSION = 0
+  ```
       
-      ![](./images/demo3.png)
-      ![](./images/demo4.png)
+  ![](./images/demo3.png)
+  ![](./images/demo4.png)
       
 - Change **/u01/app/oracle/product/12.1.0.2/dbhome_1/network/admin/tnsnames.ora** and create entry for your Dbaas PDB that is pdb1 as below. Change host and service name, you can find service name for pdb1 by running **lsnrctl status** and host name you copy from existing entry.
   ```
@@ -552,12 +550,12 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
   
   * Copy admin OCID in notepad as AuthuserId.
   * Login to Dbaas instance and change user as oracle and run below command to generate public key PEM file.
-      ```
-      mkdir ~/.oci
-      openssl genrsa -out ~/.oci/oci_api_key.pem 2048
-      chmod go-rwx ~/.oci/oci_api_key.pem
-      openssl rsa -pubout -in ~/.oci/oci_api_key.pem -out ~/.oci/oci_api_key_public.pem
-      ```
+   ```
+   mkdir ~/.oci
+   openssl genrsa -out ~/.oci/oci_api_key.pem 2048
+   chmod go-rwx ~/.oci/oci_api_key.pem
+   openssl rsa -pubout -in ~/.oci/oci_api_key.pem -out ~/.oci/oci_api_key_public.pem
+   ```
   * Open oci_api_key_public.pem file and copy the content
   * Use copied content to generate finger print for admin user
   * Click the admin user for which you had taken AuthuserID and then click Add Public Key
