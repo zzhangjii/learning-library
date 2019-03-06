@@ -32,11 +32,16 @@ This lab will show you how to navigate the Autonomous Data Warehouse auto scalin
   
   ![](./images/adwscale4.png)  
   
-- In Monitoring screen you can see ADWC CPU Utilization and ADWC CPUs Provisioned. Also you can see last 24 CPU cost after auto scaling and static CPU cost if we don't auto scale ADW. 
+- In Monitoring screen you can see below information which you can monitor.
+  * ADWC CPU Utilization% - CPU utilization after load submission
+  * Elastic Last 24 Hour oCPU Cost - Last 24 CPU cost after auto scaling
+  * Static Last Hour 24 oCPU Cost - Static CPU cost if we don't auto scale ADW. 
+  * Current OCPU Count    - CPU count after scaling up/down
+  * CPU Provisioned Count - Maximum CPU Count for ADW instance
+  * Scaling Job Status    - Scaling Job status based on load on ADW Instance
+  * ADWC CPUs Provisioned - CPU count after scaling up/down
 
   ![](./images/adwscale3.png)
-
-
-
+- Below is the ADW console screen where you can see CPU core count up/down based on Scaling Job
 
 
