@@ -2,8 +2,6 @@
 
 The Oracle Autonomous Workshop Catalog is the central location for workshops related to Autonomous Database, including ATP and ADW.  All labs are designed to be modular in nature. To get started, choose one (or more!) of the defined learning paths below:
 
-<section style="border: 1px dashed lightgrey; padding: 15px;">
-
 ## Autonomous Data Warehouse Learning Plan
 
 ### Lab 1: Getting Started and Provisioning a New Autonomous Data Warehouse
@@ -15,10 +13,6 @@ The Oracle Autonomous Workshop Catalog is the central location for workshops rel
   - Connect using Oracle SQL Developer.
 
   **[Click here to launch the lab](https://oracle.github.io/learning-library/workshops/journey4-adwc/?page=LabGuide1.md)**
-
-</section>
-
-<section style="border: 1px dashed lightgrey; padding: 15px;">
 
 ### Lab 2: Working with Data Warehouse Services and the Free Sample Data Sets
 
@@ -37,7 +31,7 @@ The Oracle Autonomous Workshop Catalog is the central location for workshops rel
 
   Key Objectives:
 
-  Learn how to build a linux node.js application server and connect it to an Oracle ATP database service
+  - Learn how to build a linux node.js application server and connect it to an Oracle ATP database service
 
   **[Click here to launch the lab](https://cloudsolutionhubs.github.io/autonomous-transaction-processing/workshops/autonomous-transaction-processing/LabGuide500Configurenode.jsAppWithATP.md)**
 
@@ -46,8 +40,6 @@ The Oracle Autonomous Workshop Catalog is the central location for workshops rel
 
   Key Objectives:
 
-  Learn how to build a linux Java application server and connect it to an Oracle ATP database service
+  - Learn how to build a linux Java application server and connect it to an Oracle ATP database service
 
   **[Click here to launch the lab](https://cloudsolutionhubs.github.io/autonomous-transaction-processing/workshops/autonomous-transaction-processing/LabGuide600ConfigureJavaAppWithATP.md)**
-
-</section>
