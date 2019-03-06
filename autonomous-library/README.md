@@ -1,37 +1,45 @@
-## Welcome to GitHub Pages
+# Oracle Autonomous Database Workshop Catalog
 
-You can use the [editor on GitHub](https://github.com/derekoneil/autonomous-workshop-catalog/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+The Oracle Autonomous Workshop Catalog is the central location for workshops related to Autonomous Database, including ATP and ADW.  All labs are designed to be modular in nature. To get started, choose one (or more!) of the defined learning paths below:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Autonomous Data Warehouse Learning Plan
 
-### Markdown
+### Lab 1: Getting Started and Provisioning a New Autonomous Data Warehouse
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+This lab walks you through:
 
-```markdown
-Syntax highlighted code block
+- logging into OCI and console
+- provision ADW
+- Connect using Oracle SQL Developer.
 
-# Header 1
-## Header 2
-### Header 3
+**[Click here to launch the lab](https://oracle.github.io/learning-library/workshops/journey4-adwc/?page=LabGuide1.md)**
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+### Lab 2: Working with Data Warehouse Services and the Free Sample Data Sets
 
-**Bold** and _Italic_ and `Code` text
+Key Objectives:
 
-[Link](url) and ![Image](src)
-```
+- different levels of ADW service
+- sample data setsStar Schema Benchmark (SSB) & Sales History (SH)
+- How service level affect performance & concurrency
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+**[Click here to launch the lab](https://oracle.github.io/learning-library/workshops/journey4-adwc/?page=LabGuide2.md)**
 
-### Jekyll Themes
+## Autonomous Transaction Processing Learning Plan
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/derekoneil/autonomous-workshop-catalog/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Lab 1: Using Node.js with ATP
 
-### Support or Contact
+Key Objectives:
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Learn how to build a linux node.js application server and connect it to an Oracle ATP database service
+
+**[Click here to launch the lab](https://cloudsolutionhubs.github.io/autonomous-transaction-processing/workshops/autonomous-transaction-processing/LabGuide500Configurenode.jsAppWithATP.md)**
+
+
+### Lab 2: Using Java with ATP
+
+Key Objectives:
+
+Learn how to build a linux Java application server and connect it to an Oracle ATP database service
+
+**[Click here to launch the lab](https://cloudsolutionhubs.github.io/autonomous-transaction-processing/workshops/autonomous-transaction-processing/LabGuide600ConfigureJavaAppWithATP.md)**
