@@ -414,6 +414,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
   http://DbaaS Instance IP address:8080/ords
   ```
 - Use below credentials to login.
+
   ```
   Workspace: INTERNAL, Username: ADMIN ,Password: BEstrO0ng_#11
   ```
@@ -436,131 +437,196 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
   * Change user to oracle  and got to oracle home directory as below screen shot
 -	Set Environment variable in
   * Get Dbaas unique name by running below command
-      * cd  /opt/oracle/dcs/commonstore/wallets/tde
-      * ls -ltr
-      * Copy the file name and assign ORACLE_UNQNAME in below command
-  * vi ~/.bash_profile
-  * export ORACLE_UNQNAME=**Dbaas Unique Name**
-  * After editing the bash_profile press esc and type wq to save.
-  * source ~/.bash_profile
+       ```
+      cd  /opt/oracle/dcs/commonstore/wallets/tde
+      ls -ltr
+      ```
+      
+  * Copy the file name and assign ORACLE_UNQNAME in below command
+  ```
+  vi ~/.bash_profile
+  export ORACLE_UNQNAME=**Dbaas Unique Name**
+  After editing the bash_profile press esc and type wq to save.
+  source ~/.bash_profile
+  ```
+  
   ![](./images/demo1.png)
+  
 - Copy ADWC wallet in oracle home directory and unzip.
-  * mkdir wallet_adwc
-  * unzip Wallet_adwapexdemo.zip -d wallet_adwc
-![](./images/demo2.png)
+  ```
+  mkdir wallet_adwc
+  unzip Wallet_adwapexdemo.zip -d wallet_adwc
+  ```
+  ![](./images/demo2.png)
+  
 - Reset the sqlnet.ora file in the APEXDB Server environment to the following. Use WALLET_LOCATION as your ADWC unzip folder name,
-  * cd /u01/app/oracle/product/12.1.0.2/dbhome_1/network/admin
-  * vi sqlnet.ora
+  ```
+  cd /u01/app/oracle/product/12.1.0.2/dbhome_1/network/admin
+  vi sqlnet.ora
+  ```
   * Add below property in sqlnet.ora
-      * ENCRYPTION_WALLET_LOCATION=(SOURCE=(METHOD=FILE)(METHOD_DATA=(DIRECTORY=/opt/oracle/dcs/commonstore/wallets/tde/$ORACLE_UNQNAME)))
-      * SQLNET.ENCRYPTION_SERVER=REQUIRED
-      * SQLNET.CRYPTO_CHECKSUM_SERVER=REQUIRED
-      * SQLNET.ENCRYPTION_TYPES_SERVER=(AES256,AES192,AES128)
-      * SQLNET.CRYPTO_CHECKSUM_TYPES_SERVER=(SHA1)
-      * ##SQLNET.ENCRYPTION_CLIENT=REQUIRED
-      * ##SQLNET.CRYPTO_CHECKSUM_CLIENT=REQUIRED
-      * SQLNET.ENCRYPTION_TYPES_CLIENT=(AES256,AES192,AES128)
-      * SQLNET.CRYPTO_CHECKSUM_TYPES_CLIENT=(SHA1)
-      * WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA = (DIRECTORY="/home/oracle/wallet_adwc")))
-      * SSL_SERVER_DN_MATCH=yes
-      * SQLNET.WALLET_OVERRIDE=TRUE
-      * ##SSL_CLIENT_AUTHENTICATION = FALSE
-      * ##SSL_VERSION = 0
+     ```
+     ENCRYPTION_WALLET_LOCATION=(SOURCE=(METHOD=FILE)(METHOD_DATA=(DIRECTORY=/opt/oracle/dcs/commonstore/wallets/tde/$ORACLE_UNQNAME)))
+     SQLNET.ENCRYPTION_SERVER=REQUIRED
+     SQLNET.CRYPTO_CHECKSUM_SERVER=REQUIRED
+     SQLNET.ENCRYPTION_TYPES_SERVER=(AES256,AES192,AES128)
+     SQLNET.CRYPTO_CHECKSUM_TYPES_SERVER=(SHA1)
+     ##SQLNET.ENCRYPTION_CLIENT=REQUIRED
+     ##SQLNET.CRYPTO_CHECKSUM_CLIENT=REQUIRED
+     SQLNET.ENCRYPTION_TYPES_CLIENT=(AES256,AES192,AES128)
+     SQLNET.CRYPTO_CHECKSUM_TYPES_CLIENT=(SHA1)
+     WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA = (DIRECTORY="/home/oracle/wallet_adwc")))
+     SSL_SERVER_DN_MATCH=yes
+     SQLNET.WALLET_OVERRIDE=TRUE
+     ##SSL_CLIENT_AUTHENTICATION = FALSE
+     ##SSL_VERSION = 0
+     ```
+      
       ![](./images/demo3.png)
       ![](./images/demo4.png)
+      
 - Change **/u01/app/oracle/product/12.1.0.2/dbhome_1/network/admin/tnsnames.ora** and create entry for your Dbaas PDB that is pdb1 as below. Change host and service name, you can find service name for pdb1 by running **lsnrctl status** and host name you copy from existing entry.
-  * PDB1 = (DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = apexdemo.sub1018160041.hdp.oraclevcn.com)(PORT = 1521))
+  ```
+  PDB1 = (DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = apexdemo.sub1018160041.hdp.oraclevcn.com)(PORT = 1521))
     (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = pdb1.sub1018160041.hdp.oraclevcn.com)))
-  ![](./images/demo5.png)
+   ```
+   
+   ![](./images/demo5.png)
+   
 - Add ADWC Wallet tnsname.ora entry in **/u01/app/oracle/product/12.1.0.2/dbhome_1/network/admin/tnsnames.ora** in addition to above step(Note: Copy only for your ADWC consumer group or you can copy all)
-![](./images/demo5_1.png)
+  
+  ![](./images/demo5_1.png)
+  
 - Go to your ADWC wallet location and run below command for more information go through below link [Password Less Setup](https://docs.oracle.com/cd/B19306_01/network.102/b14266/cnctslsh.htm#g1033548)
-  * cd /home/oracle/wallet_adwc
-  * mkstore -wrl  .  -createCredential pdb1 pdbuser  BEstrO0ng_#11 (pdbuser password in Dbaas)
-  * mkstore -wrl  .  -createCredential adwapexdemo_high admin BEstrO0ng_#11(ADWC admin password)
-  * mkstore -wrl  .  -createCredential adwapexdemo_low admin BEstrO0ng_#11(ADWC admin password)
-  * mkstore -wrl  .  -createCredential adwapexdemo_medium admin BEstrO0ng_#11 (ADWC admin password)
-  * mkstore -wrl . -listCredential [password  BEstrO0ng_#11]
+  ```
+  cd /home/oracle/wallet_adwc
+  mkstore -wrl  .  -createCredential pdb1 pdbuser  BEstrO0ng_#11 (pdbuser password in Dbaas)
+  mkstore -wrl  .  -createCredential adwapexdemo_high admin BEstrO0ng_#11(ADWC admin password)
+  mkstore -wrl  .  -createCredential adwapexdemo_low admin BEstrO0ng_#11(ADWC admin password)
+  mkstore -wrl  .  -createCredential adwapexdemo_medium admin BEstrO0ng_#11 (ADWC admin password)
+  mkstore -wrl . -listCredential [password  BEstrO0ng_#11]
+  ```
   ![](./images/demo6.png)
+  
 - Create link and check whether password less user is working.
-  * sqlplus / as sysdba
-  * SQL> alter session set container=pdb1;
-  * SQL> grant connect, resource,dba to pdbuser;
-  * SQL> connect /@pdb1;
-  * SQL> drop database link adwc;
+  ```
+  sqlplus / as sysdba
+  SQL> alter session set container=pdb1;
+  SQL> grant connect, resource,dba to pdbuser;
+  SQL> connect /@pdb1;
+  SQL> drop database link adwc;
   Note : Admin password should be same as adwcs instance admin password
-  * SQL> create database link adwc connect to admin identified by "BEstrO0ng_#11" using 'adwapexdemo_medium';
-  * SQL> alter system set global_names=FALSE scope=both sid='*';
-  * SQL> select * from dual@adwc;
-![](./images/demo7.png)
+  SQL> create database link adwc connect to admin identified by "BEstrO0ng_#11" using 'adwapexdemo_medium';
+  SQL> alter system set global_names=FALSE scope=both sid='*';
+  SQL> select * from dual@adwc;
+  ```
+  ![](./images/demo7.png)
+  
 - Run Dbaas schema scripts "Dbaas_Pdbuser.sql" and Adwc_Schema.sql using below command [apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript)
-
-  * sqlplus / as sysdba
-  * SQL> connect /@adwapexdemo_high;
-  * SQL> START /home/oracle/Adwc_Schema.sql;
-  * SQL> connect /@pdb1;
-  * SQL> START /home/oracle/Dbaas_Pdbuser.sql;
-  **Note : Please change below insert query and give number of OCPU which you provisioned  in ADW**
-  * SQL> Insert into PDBUSER.VW_DBOCPU (DBPROVISIONEDOCPUS,CURRENT_OCPU,DATARETENTIONDAYS) values ("Number of OCPU provisioned in ADW",2,16);
+  ```
+  sqlplus / as sysdba
+  SQL> connect /@adwapexdemo_high;
+  SQL> START /home/oracle/Adwc_Schema.sql;
+  SQL> connect /@pdb1;
+  SQL> START /home/oracle/Dbaas_Pdbuser.sql;
+  Note : Please change below insert query and give number of OCPU which you provisioned  in ADW
+  SQL> Insert into PDBUSER.VW_DBOCPU (DBPROVISIONEDOCPUS,CURRENT_OCPU,DATARETENTIONDAYS) values ("Number of OCPU provisioned in ADW",2,16);
+  ```
 
 - Download ADWCS Demo shell scripts from [scripts](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/shellscripts) and copy in oracle home directory.
-![](./images/demo13.png)
+   
+   ![](./images/demo13.png)
+   
 - Open restapi.sh from scripts folder we will need the values for below fields tenancyId,authUserId,keyFingerprint,privateKeyPath, Below are the screen shots to get the value from your environment.
 
   * Tenancy OCID: Login to cloud environment, Click Services to show the available services. In the list of available services, select Administration ->Tenancy Details.
+  
   ![](./images/demo14.png)
   ![](./images/demo15.png)
+  
   * Copy Tenancy OCID in notepad.
   * AuthuserId : Login to cloud environment, Click Services to show the available services. In the list of available services, select Identity -> Users
+  
   ![](./images/demo16.png)
   ![](./images/demo17.png)
+  
   * Copy admin OCID in notepad as AuthuserId.
   * Login to Dbaas instance and change user as oracle and run below command to generate public key PEM file.
-      * mkdir ~/.oci
-      * openssl genrsa -out ~/.oci/oci_api_key.pem 2048
-      * chmod go-rwx ~/.oci/oci_api_key.pem
-      * openssl rsa -pubout -in ~/.oci/oci_api_key.pem -out ~/.oci/oci_api_key_public.pem
+      ```
+      mkdir ~/.oci
+      openssl genrsa -out ~/.oci/oci_api_key.pem 2048
+      chmod go-rwx ~/.oci/oci_api_key.pem
+      openssl rsa -pubout -in ~/.oci/oci_api_key.pem -out ~/.oci/oci_api_key_public.pem
+      ```
   * Open oci_api_key_public.pem file and copy the content
   * Use copied content to generate finger print for admin user
   * Click the admin user for which you had taken AuthuserID and then click Add Public Key
-  ![](./images/demo18.png)
+   
+   ![](./images/demo18.png)
+   
   * Paste oci_api_key_public.pem content as Public key.
+  
   ![](./images/demo19.png)
+  
   * You can see new finger print as below
+  
   ![](./images/demo20.png)
+  
   * Copy new fingerprint in notepad.
   * Modify restapi.sh  and change tenancyId, authUserId, keyFingerprint, privateKeyPath(Give these value which we have noted in earlier step )
+  
   ![](./images/demo23.png)
 
 - Now open adwc.sh from scripts folder we will need the values for below fields ADWC OCID and Cloud host,Below are the screen shots to get the value from your environment.
   * Copy ADWC OCID in notepad.
+  
   ![](./images/demo21.png)
+  
   * Modify adwc.sh file and change oci-curl (Replace Cloud host and ADWC OCID as below)
+  
   ![](./images/demo24.png)
   ![](./images/demo25.png)
+  
 - Now start below scripts.
-  * cd /home/oracle/scripts
-  * ./start_adwc_load.sh
-  * ./ start_adwc.sh
+  ```
+  cd /home/oracle/scripts
+  ./start_adwc_load.sh
+  ./ start_adwc.sh
+  ```
 - Login to ORDS with user same as we have in ORDS installation.
   * **http://DbaaS intance IP Address:8080/ords**
+  
    ![](./images/demo26.png)
+   
 - Click Sign in
+   
    ![](./images/demo27.png)
+   
 - Click Manage Workspace and select import.
+   
    ![](./images/demo28.png)
+   
 - Download workspace "Apex_Demo_Workspace.sql" file from git [apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript) in local and give location
 - Click next and complete import on default value
 - Once you finish you will be able to see in Existing Workspace
-![](./images/demo29.png)
+  
+  ![](./images/demo29.png)
+  
 -	After importing workspace logout and again login with below credential.
   * **Workspace: pdbuser, Username: APEXDEMO ,Password: apexdemo**
+  
   ![](./images/demo30.png)
+  
 -	Click Sign In.
+  
   ![](./images/demo31.png)
+  
 -	Click App Builder menu and select import.
+  
   ![](./images/demo32.png)
+  
 -	Download application script "Apex_Demo_Application.sql" from [apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript) in local and give location in Choose file.
 -	Click Next and finish application deployment.
 -	Once you finish you can run application
+  
   ![](./images/demo33.png)
