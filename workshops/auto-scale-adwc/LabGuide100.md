@@ -20,7 +20,7 @@ This lab will show you how to navigate the Autonomous Data Warehouse auto scalin
 
 - Click **Load** Menu to submit load to Autonomous Data Warehouse
 
-   ![](./images/adwscale2.png)
+  ![](./images/adwscale2.png)
    
 - In load page enter below information
   
@@ -34,11 +34,9 @@ This lab will show you how to navigate the Autonomous Data Warehouse auto scalin
   
 - In Monitoring screen you can see ADWC CPU Utilization and ADWC CPUs Provisioned. Also you can see last 24 CPU cost after auto scaling and static CPU cost if we don't auto scale ADW. 
 
-![](./images/adwscale3.png)
+  ![](./images/adwscale3.png)
 
 
 
-![](./images/adwscale5.png)
 
-![](./images/adwscale6.png)
 
