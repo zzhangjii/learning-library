@@ -214,12 +214,13 @@ The password must be between 12 and 30 characters long and must include at least
 
  ![](./images/dbaas16.png)
  
-- Now login to putty with Public IP and use private key which we saved in step 6.
-  * Open PutTTy as below and enter DbasS public IP(Which you can see in above screen shot) as HostName
+- Now login to putty with Public IP and use private key which we saved in above step.
+  * Open PutTTy as below and enter DbasS public IP(Which you can see in above screen shot) as HostName.
   
   ![](./images/putty.png)
   
   * Now expand **connection** from left menu and click **SSH** and give path to private key which we have saved in step 6. Click **Open** button.
+  
   ![](./images/ssh.png)
 
 - Login as opc and then change user to oracle as shown in below screen shot.
@@ -276,38 +277,50 @@ The password must be between 12 and 30 characters long and must include at least
   * Login as opc user.
   * Change user to oracle  and got to oracle home directory as below screen shot
 - Download "Oracle APEX 18.2 - English language" in local machine and then copy and unzip in oracle home directory(you can use WinSCP to copy from local to cloud instance) [APEX](http://www.oracle.com/technetwork/developer-tools/apex/downloads/index.html)
+ 
  ![](./images/apex1.png)
+ 
 - cd to apex directory
-- Start SQL*Plus and ensure you are connecting to your PDB and not to the "root" of the container database (APEX should not be installed at all). Run Below Command to login
-  * sqlplus / as sysdba
-  * alter session set container=pdb1;
-  * @apexins sysaux sysaux temp /i/
-  * Wait until you see sql prompt
+- Start SQL*Plus and ensure you are connecting to your PDB and not to the "root" of the container database (APEX should not be installed at all). Run Below Command to login and Wait until you see sql prompt
+  ```
+  sqlplus / as sysdba
+  alter session set container=pdb1;
+  @apexins sysaux sysaux temp /i/
+  ```
   ![](./images/apex2.png)
+  
 - Unlock the APEX_PUBLIC_USER account and set the password.
-  * alter user apex_public_user identified by BEstrO0ng_#11 account unlock;
+  ```
+  alter user apex_public_user identified by BEstrO0ng_#11 account unlock;
+  ```
 - Create the APEX Instance Administration user and set the password (Enter your Email id before run).
-  * begin
-  * apex_util.set_security_group_id( 10 );
-  * apex_util.create_user(p_user_name => 'ADMIN',p_email_address =>
-  * 'Enter your Email id',p_web_password => 'BEstrO0ng_#11',p_developer_privs =>'ADMIN' );
-  * apex_util.set_security_group_id( null );
-  * commit;
-  * end;
-  * /
+  ```
+  begin
+  apex_util.set_security_group_id( 10 );
+  apex_util.create_user(p_user_name => 'ADMIN',p_email_address =>
+  'Enter your Email id',p_web_password => 'BEstrO0ng_#11',p_developer_privs =>'ADMIN' );
+  apex_util.set_security_group_id( null );
+  commit;
+  end;
+  /
+  ```
 - Run APEX REST configuration, and set the passwords of APEX_REST_PUBLIC_USER and APEX_LISTENER.
- * @apex_rest_config_core.sql ./ BEstrO0ng_#11 BEstrO0ng_#11
+  ```
+  @apex_rest_config_core.sql ./ BEstrO0ng_#11 BEstrO0ng_#11
+  ```
 - Create a network ACE for APEX (this is used when consuming Web services or sending outbound mail).
-  * declare
-  * l_acl_path varchar2(4000);
-  * l_apex_schema varchar2(100);
-  * begin
-  * for c1 in (select schema from sys.dba_registry where comp_id = 'APEX') loop
-  * l_apex_schema := c1.schema;
-  * end loop;sys.dbms_network_acl_admin.append_host_ace(host => '*',ace => xs$ace_type(privilege_list => xs$name_list('connect'),principal_name => l_apex_schema,principal_type => xs_acl.ptype_db));
-  * commit;
-  * end;
-  * /
+  ```
+  declare
+  l_acl_path varchar2(4000);
+  l_apex_schema varchar2(100);
+  begin
+  for c1 in (select schema from sys.dba_registry where comp_id = 'APEX') loop
+  l_apex_schema := c1.schema;
+  end loop;sys.dbms_network_acl_admin.append_host_ace(host => '*',ace => xs$ace_type(privilege_list => xs$name_list('connect'),principal_name => l_apex_schema,principal_type => xs_acl.ptype_db));
+  commit;
+  end;
+  /
+  ```
 - Exit SQL*Plus.
 
 ### **STEP 5**: ORDS Installation
