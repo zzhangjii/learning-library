@@ -215,7 +215,7 @@ The password must be between 12 and 30 characters long and must include at least
 - Now login to putty with Public IP and use private key which we saved in above step.
   * Open PutTTy as below and enter DbasS public IP(Which you can see in above screen shot) as HostName.
   
-  ![](./images/putty.png)
+  ![](./images/Putty.png)
   
   * Now expand **connection** from left menu and click **SSH** and give path to private key which we have saved in step 6. Click **Open** button.
   
