@@ -126,25 +126,37 @@ Status: Success displays at the left-most bottom of the New/Select Database Conn
 To create database you first need to create VCN (Virtual Cloud Network) if you have already created VCN then you can skip 1-5 steps.
 
 - Open the navigation menu. Under Core Infrastructure,go to Networking and click Virtual Cloud Networks.
+
  ![](./images/dbaas1.png)
+ 
 - Choose a compartment you have permission to work in (on the left side of the page). The page updates to display only the resources in that compartment. If you're not sure which compartment to use, contact an administrator
 - Click Create Virtual Cloud Network
+
   [](./images/dbaas2.png)
+  
 - Enter the following:
   * Create in Compartment: Leave as is.
   * Name: A friendly name for the cloud network. It doesn't have to be unique, and it cannot be changed later in the Console (but you can change it with the API). Avoid entering confidential information.
   *	Create Virtual Cloud Network Plus Related Resources: Make sure this radio button is selected.
+  
   ![](./images/dbaas3.png)
   ![](./images/dbaas4.png)
   ![](./images/dbaas5.png)
+  
 - Click Create Virtual Cloud Network and then click close.
+ 
  ![](./images/dbaas6.png)
+ 
 - Modify Security list for your VCN.
   * Click **apexvcn** which you have created, on left side menu you can see Security List as below.
+  
   ![](./images/dbaas23.PNG)
+  
   * Click Security List and then click "Default Security List for apexvcn"
   * Now click **Edit All Rules** button and add ingress rule for your VCN to allow public internet to 8080 and 1521 as below
+  
   ![](./images/ords9.png)
+  
 - Generating an SSH Key Pair Using PuTTY Key Generator : When you define your Oracle DBaaS database instance, you will need to provide a secure shell (SSH) public key to establish secure connections. Perform the following steps to generate an SSH key pair using the PuTTY Key Generator on Windows.
   * Find puttygen.exe in the PuTTY folder on your computer, for example,        **C:\Program Files (x86)\PuTTY. Double-click puttygen.exe** to open it.
   
@@ -234,19 +246,25 @@ The password must be between 12 and 30 characters long and must include at least
   vi ~/.bash_profile
   ```
   * Add below environment variable at the end of the file and save it.
-      * export ORACLE_SID=APEXDB
-      * export ORACLE_HOME=/u01/app/oracle/product/12.1.0.2/dbhome_1
-      * export PATH=$ORACLE_HOME/bin:$PATH
+    ```
+    export ORACLE_SID=APEXDB
+    export ORACLE_HOME=/u01/app/oracle/product/12.1.0.2/dbhome_1
+    export PATH=$ORACLE_HOME/bin:$PATH
+    ```
   * Save the bash_profile by pressing esc and typing wq.
   
   ![](./images/dbaas19.png)
   ![](./images/dbaas20.png)
   
   * Run source command
-      * source ~/.bash_profile
+     ```
+     source ~/.bash_profile
+     ```
 - Now login to sqlplus using below command
-  * sqlplus / as sysdba
-  * show pdbs;
+  ```
+  sqlplus / as sysdba
+  show pdbs;
+  ```
   
   ![](./images/dbaas22.png)
   
