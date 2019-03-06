@@ -1,9 +1,9 @@
 
-# Lab 100
+# Lab 200
 
 ## Introduction
 
-Th is lab will show you how to setup the Autonomous Data Warehouse and configure auto scaling for your instance.
+This lab will show you how to setup the Autonomous Data Warehouse and configure auto scaling for your instance.
 
 ## Objectives
 
@@ -23,7 +23,7 @@ Th is lab will show you how to setup the Autonomous Data Warehouse and configure
 
 ## Notional Architecture and Trial Account access
 
-### **Step 1**: Review Notional Architecture
+### **STEP 1**: Review Notional Architecture
 ![](./images/1.PNG)
 ![](./images/Notional_Architecure.PNG)
 
@@ -40,7 +40,7 @@ Oracle’s Autonomous Data Warehouse is the perfect quick-start service for fast
 Read on to begin your Getting Started journey with Oracle Autonomous Data Warehouse.
 
 
-### **Step 2**: Lab Prerequisites – Required Software
+### **STEP 2**: Lab Prerequisites – Required Software
 - Oracle APEX Release 18.2.0.00.12
 - Oracle REST Data Services 18.4
 
@@ -50,7 +50,7 @@ If you have a question during this workshop then use the Autonomous Data Warehou
 Are you are completely new to the <a href="https://cloudcustomerconnect.oracle.com/resources/32a53f8587/summary" target="blank">**Cloud Customer Connect**</a> forums? Visit our  <a href="https://cloudcustomerconnect.oracle.com/pages/1f00b02b84" target="blank">Getting Started forum page</a> to learn how to best leverage community resources.
 
 
-### **STEP 2**: Access the Cloud
+### **STEP 3**: Access the Cloud
 
 - Navigate to https://console.us-ashburn-1.oraclecloud.com
 Note : Change region name(us-ashburn-1) in above URl
@@ -71,7 +71,7 @@ Note : Change region name(us-ashburn-1) in above URl
 
 ## ADWCS and DBaaS Provisioning
 
-### **STEP 2**: ADWCS Provisioning
+### **STEP 4**: ADWCS Provisioning
 
 - Login to cloud environment,Click on the Menu Icon to show the available services. In the list of available services, select Autonomous Data Warehouse.
 
@@ -119,7 +119,7 @@ Note : Change region name(us-ashburn-1) in above URl
 -	Click Test.
 Status: Success displays at the left-most bottom of the New/Select Database Connection dialog.
 
-### **STEP 3**: DBaaS Provisioning
+### **STEP 5**: DBaaS Provisioning
 
 To create database you first need to create VCN (Virtual Cloud Network) if you have already created VCN then you can skip 1-5 steps.
 
@@ -269,7 +269,7 @@ The password must be between 12 and 30 characters long and must include at least
   
 - Once you we see pdbs. Exit from sqlplus and install APEX and ORDS in Dbaas Instance.
 ## APEX and ORDS Installation in Dbaas Instance
-### **STEP 4**: APEX Installation
+### **STEP 6**: APEX Installation
    Approximately time 30 Minutes.
 - Login to DbaaS Instance through Putty(To login in putty check Dbaas Provision Step 13 and 14).
   * Login as opc user.
@@ -321,7 +321,7 @@ The password must be between 12 and 30 characters long and must include at least
   ```
 - Exit SQL*Plus.
 
-### **STEP 5**: ORDS Installation
+### **STEP 7**: ORDS Installation
 
 - Login to Dbaas Instance through Putty(To login in putty check Dbaas Provision Steps).
   * Login as opc user.
@@ -428,7 +428,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 
 ## ADW Scaling APEX Application Installation
 
-### **STEP 6**: ADWC Scaling Demo Installation
+### **STEP 8**: ADWC Scaling Demo Installation
 
 - Login to Dbaas Instance through Putty(To login in putty check Dbaas Provision Step 13 and 14).
   * Login as opc user.
