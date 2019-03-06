@@ -129,8 +129,8 @@ To create database you first need to create VCN (Virtual Cloud Network) if you h
  ![](./images/dbaas1.png)
 - Choose a compartment you have permission to work in (on the left side of the page). The page updates to display only the resources in that compartment. If you're not sure which compartment to use, contact an administrator
 - Click Create Virtual Cloud Network
-![](./images/dbaas2.png)
-#### 4. Enter the following:
+  [](./images/dbaas2.png)
+- Enter the following:
   * Create in Compartment: Leave as is.
   * Name: A friendly name for the cloud network. It doesn't have to be unique, and it cannot be changed later in the Console (but you can change it with the API). Avoid entering confidential information.
   *	Create Virtual Cloud Network Plus Related Resources: Make sure this radio button is selected.
@@ -144,20 +144,28 @@ To create database you first need to create VCN (Virtual Cloud Network) if you h
   ![](./images/dbaas23.PNG)
   * Click Security List and then click "Default Security List for apexvcn"
   * Now click **Edit All Rules** button and add ingress rule for your VCN to allow public internet to 8080 and 1521 as below
-![](./images/ords9.png)
+  ![](./images/ords9.png)
 - Generating an SSH Key Pair Using PuTTY Key Generator : When you define your Oracle DBaaS database instance, you will need to provide a secure shell (SSH) public key to establish secure connections. Perform the following steps to generate an SSH key pair using the PuTTY Key Generator on Windows.
   * Find puttygen.exe in the PuTTY folder on your computer, for example,        **C:\Program Files (x86)\PuTTY. Double-click puttygen.exe** to open it.
+  
  ![](./images/dbaas7.png)
+ 
   * Accept the default key type, RSA.
   * Set the Number of bits in a generated key to 2048 bits, if it is not already set with that value.
   * Click Generate.
   * Move your mouse around the blank area to generate randomness to the key.
+  
   ![](./images/dbaas8.png)
+  
   * The generated key appears under Public key for pasting into OpenSSH authorized_keys file. Copy public key in notepad we will need this while creating Dbaas provisioning.
- ![](./images/dbaas9.png)
+  
+  ![](./images/dbaas9.png)
+  
   * To save the key in the PuTTY PPK format, click Save private key to save the private key of the key pair.
-- Login to cloud environment, Click Services to show the available services. In the list of available services, under Database select Baremetal ,VM and Exadata
- ![](./images/dbaas10.png)
+- Login to cloud environment, Click Services to show the available   services. In the list of available services, under Database select Baremetal ,VM and Exadata
+
+  ![](./images/dbaas10.png)
+  
 - The console for Database displays. You can use the List Scope drop-down menu to select a compartment; in this example the gse00014135 (root) compartment is selected. Click Launch DB System.
 - In the Create Launch DB System dialog, enter the following information:
   * Display Name - Enter a name of the database.
@@ -181,18 +189,24 @@ The password must be between 12 and 30 characters long and must include at least
   * The password must be different from the last 4 passwords used.
   * The password must not be the same password that is set less than 24 hours ago.
   * Select Automatic Backup
-  * Click Launch DB System      
+  * Click Launch DB System
+  
   ![](./images/dbaas11.png)
   ![](./images/dbaas12.png)
   ![](./images/dbaas13.png)
   ![](./images/dbaas14.png)
   ![](./images/dbaas15.png)
+  
 - The Launch DB System dialog closes. On the console, the State field indicates that the data warehouse is Provisioning. When creation is completed, the State field changes from Provisioning to Available.
 - When Provisioning is completed it will show like below.
-![](./images/dbaas16.png)
+
+ ![](./images/dbaas16.png)
+ 
 - Now login to putty with Public IP and use private key which we saved in step 6.
   * Open PutTTy as below and enter DbasS public IP(Which you can see in above screen shot) as HostName
+  
   ![](./images/putty.png)
+  
   * Now expand **connection** from left menu and click **SSH** and give path to private key which we have saved in step 6. Click **Open** button.
   ![](./images/ssh.png)
 
@@ -204,9 +218,9 @@ The password must be between 12 and 30 characters long and must include at least
   ![](./images/dbaas17.png)
 
 - To check ORACLE_SID and ORACLE_HOME, Type below command
-```
-cat /etc/oratab
-```
+  ```
+  cat /etc/oratab
+  ```
 
  ![](./images/dbaas18.png)
 
@@ -224,14 +238,18 @@ cat /etc/oratab
       * export ORACLE_HOME=/u01/app/oracle/product/12.1.0.2/dbhome_1
       * export PATH=$ORACLE_HOME/bin:$PATH
   * Save the bash_profile by pressing esc and typing wq.
+  
   ![](./images/dbaas19.png)
   ![](./images/dbaas20.png)
+  
   * Run source command
       * source ~/.bash_profile
 - Now login to sqlplus using below command
   * sqlplus / as sysdba
   * show pdbs;
-![](./images/dbaas22.png)
+  
+  ![](./images/dbaas22.png)
+  
 - Once you we see pdbs. Exit from sqlplus and install APEX and ORDS in Dbaas Instance.
 ## APEX and ORDS Installation in Dbaas Instance
 ### **STEP 4**: APEX Installation
