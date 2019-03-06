@@ -4,9 +4,11 @@ The Oracle Autonomous Workshop Catalog is the central location for workshops rel
 
 ## Autonomous Data Warehouse Learning Plan
 
+<hr/>
+
 ### Lab 1: Getting Started and Provisioning a New Autonomous Data Warehouse
 
-This lab walks you through:
+Key Objectives:
 
 - logging into OCI and console
 - provision ADW
@@ -25,7 +27,11 @@ Key Objectives:
 
 **[Click here to launch the lab](https://oracle.github.io/learning-library/workshops/journey4-adwc/?page=LabGuide2.md)**
 
+<hr/>
+
 ## Autonomous Transaction Processing Learning Plan
+
+<hr/>
 
 ### Lab 1: Using Node.js with ATP
 
@@ -43,3 +49,5 @@ Key Objectives:
 Learn how to build a linux Java application server and connect it to an Oracle ATP database service
 
 **[Click here to launch the lab](https://cloudsolutionhubs.github.io/autonomous-transaction-processing/workshops/autonomous-transaction-processing/LabGuide600ConfigureJavaAppWithATP.md)**
+
+<hr/>
