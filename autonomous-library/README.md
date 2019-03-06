@@ -4,50 +4,46 @@ The Oracle Autonomous Workshop Catalog is the central location for workshops rel
 
 ## Autonomous Data Warehouse Learning Plan
 
-<hr/>
-
 ### Lab 1: Getting Started and Provisioning a New Autonomous Data Warehouse
 
-Key Objectives:
+  Key Objectives:
 
-- logging into OCI and console
-- provision ADW
-- Connect using Oracle SQL Developer.
+  - logging into OCI and console
+  - provision ADW
+  - Connect using Oracle SQL Developer.
 
-**[Click here to launch the lab](https://oracle.github.io/learning-library/workshops/journey4-adwc/?page=LabGuide1.md)**
+  **[Click here to launch the lab](https://oracle.github.io/learning-library/workshops/journey4-adwc/?page=LabGuide1.md)**
 
 
 ### Lab 2: Working with Data Warehouse Services and the Free Sample Data Sets
 
-Key Objectives:
+  Key Objectives:
 
-- different levels of ADW service
-- sample data setsStar Schema Benchmark (SSB) & Sales History (SH)
-- How service level affect performance & concurrency
+  - different levels of ADW service
+  - sample data setsStar Schema Benchmark (SSB) & Sales History (SH)
+  - How service level affect performance & concurrency
 
-**[Click here to launch the lab](https://oracle.github.io/learning-library/workshops/journey4-adwc/?page=LabGuide2.md)**
+  **[Click here to launch the lab](https://oracle.github.io/learning-library/workshops/journey4-adwc/?page=LabGuide2.md)**
 
 <hr/>
 
 ## Autonomous Transaction Processing Learning Plan
 
-<hr/>
-
 ### Lab 1: Using Node.js with ATP
 
-Key Objectives:
+  Key Objectives:
 
-Learn how to build a linux node.js application server and connect it to an Oracle ATP database service
+  Learn how to build a linux node.js application server and connect it to an Oracle ATP database service
 
-**[Click here to launch the lab](https://cloudsolutionhubs.github.io/autonomous-transaction-processing/workshops/autonomous-transaction-processing/LabGuide500Configurenode.jsAppWithATP.md)**
+  **[Click here to launch the lab](https://cloudsolutionhubs.github.io/autonomous-transaction-processing/workshops/autonomous-transaction-processing/LabGuide500Configurenode.jsAppWithATP.md)**
 
 
 ### Lab 2: Using Java with ATP
 
-Key Objectives:
+  Key Objectives:
 
-Learn how to build a linux Java application server and connect it to an Oracle ATP database service
+  Learn how to build a linux Java application server and connect it to an Oracle ATP database service
 
-**[Click here to launch the lab](https://cloudsolutionhubs.github.io/autonomous-transaction-processing/workshops/autonomous-transaction-processing/LabGuide600ConfigureJavaAppWithATP.md)**
+  **[Click here to launch the lab](https://cloudsolutionhubs.github.io/autonomous-transaction-processing/workshops/autonomous-transaction-processing/LabGuide600ConfigureJavaAppWithATP.md)**
 
 <hr/>
