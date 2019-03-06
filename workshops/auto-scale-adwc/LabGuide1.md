@@ -325,80 +325,107 @@ The password must be between 12 and 30 characters long and must include at least
 
 ### **STEP 5**: ORDS Installation
 
-- Login to Dbaas Instance through Putty(To login in putty check Dbaas Provision Step 13 and 14).
+- Login to Dbaas Instance through Putty(To login in putty check Dbaas Provision Steps).
   * Login as opc user.
   * Change user to oracle  and got to oracle home directory as below screen shot
   * Create ords directory using below command.
-       * mkdir ords
+      ```
+      mkdir ords
+      ```
 - Download "Oracle REST Data Services" in local machine and then copy  and unzip in ords folder in oracle home directory (you can use WinSCP to copy from local to cloud instance) [ORDS](https://www.oracle.com/technetwork/developer-tools/rest-data-services/downloads/index.html)
-  * unzip ords-18.3.0.270.1456.zip -d /home/oracle/ords/
+  ```
+  unzip ords-18.3.0.270.1456.zip -d /home/oracle/ords/
+  ```
 ![](./images/ords1.png)
 - Check access rule in iptables and open port for 80 and 8080.
   * login as user **opc** and become **root**
   * Run below command as root to open 80 and 8080 port
-  * iptables -I INPUT 8 -p tcp -m state --state NEW -m tcp --dport 8080 -j ACCEPT -m comment --comment "Required for    APEX."
-  * service iptables save
-  * iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
-  * service iptables save
+  ```
+  iptables -I INPUT 8 -p tcp -m state --state NEW -m tcp --dport 8080 -j ACCEPT -m comment --comment "Required for    APEX."
+  service iptables save
+  iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
+  service iptables save
+  ```
+  
   ![](./images/ords2.png)
+  
 Note:- Please add ingress rule for your VCN to allow from public internet to 8080 and 1521.
-![](./images/ords9.png)
+   
+   ![](./images/ords9.png)
+   
 - login using **oracle** and cd to the directory where you unzipped ORDS (ensure that ords.war is in your current directory).
- ![](./images/ords3.png)
+  
+  ![](./images/ords3.png)
+  
 - Go to params directory and replace the contents of  ords_params.properties as below.
-  * db.hostname=apex (Get Hostname from your Dbaas Instance)
-  * db.port=1521
+  ```
+  db.hostname=apex (Get Hostname from your Dbaas Instance)
+  db.port=1521
   **Note: Change service name for your Dbaas Instance. Run “lsnrctl status” to check for pdb1 and give same as servicename**
-  * db.servicename=pdb1.demosubnet1.vcn1.oraclevcn.com
-  * db.username=APEX_PUBLIC_USER
-  * db.password=BEstrO0ng_#11
-  * migrate.apex.rest=false
-  * plsql.gateway.add=true
-  * rest.services.apex.add=true
-  * rest.services.ords.add=true
-  * schema.tablespace.default=SYSAUX
-  * schema.tablespace.temp=TEMP
-  * standalone.mode=TRUE
-  * standalone.http.port=8080
-  * standalone.use.https=false
-  * standalone.static.images=/home/oracle/apex/images
-  * user.apex.listener.password=BEstrO0ng_#11
-  * user.apex.restpublic.password=BEstrO0ng_#11
-  * user.public.password=BEstrO0ng_#11
-  * user.tablespace.default=SYSAUX
-  * user.tablespace.temp=TEMP
+  db.servicename=pdb1.demosubnet1.vcn1.oraclevcn.com
+  db.username=APEX_PUBLIC_USER
+  db.password=BEstrO0ng_#11
+  migrate.apex.rest=false
+  plsql.gateway.add=true
+  rest.services.apex.add=true
+  rest.services.ords.add=true
+  schema.tablespace.default=SYSAUX
+  schema.tablespace.temp=TEMP
+  standalone.mode=TRUE
+  standalone.http.port=8080
+  standalone.use.https=false
+  standalone.static.images=/home/oracle/apex/images
+  user.apex.listener.password=BEstrO0ng_#11
+  user.apex.restpublic.password=BEstrO0ng_#11
+  user.public.password=BEstrO0ng_#11
+  user.tablespace.default=SYSAUX
+  user.tablespace.temp=TEMP
+  ```
   ![](./images/ords4.png)
   ![](./images/ords5.png)
+  
 - Run the below command ORDS in stand-alone mode.  You'll be prompted for the SYS username and SYS password.kindly use the DBaaS Admin password as set above.
-  * cd /home/oracle/ords
-  * java -Dconfig.dir=/home/oracle/ords -jar ords.war install simple –preserveParamFile
-![](./images/ords6.png)
+  ```
+  cd /home/oracle/ords
+  java -Dconfig.dir=/home/oracle/ords -jar ords.war install simple –preserveParamFile
+  ```
+  ![](./images/ords6.png)
+  
 - Kindly exit the session by using ctrl C and create start_ords.sh file in ords folder and put below content
-  * #!/bin/bash
-  * NOW=$(date +"%F_%H:%M")
-  * LOGFILE="ords-$NOW.log"
-  * echo
-  * echo "~~~~~~~~~~~~~~~~">> $LOGFILE
-  * echo `date` >> $LOGFILE
-  * echo "~~~~~~~~~~~~~~~">> $LOGFILE
-  * nohup java -Dconfig.dir=/home/oracle/ords -jar ords.war install simple --preserveParamFile >> $LOGFILE  2>&1  &
-  * echo " Check Logfile : $LOGFILE "
-  * echo
-
+  ```
+  #!/bin/bash
+  NOW=$(date +"%F_%H:%M")
+  LOGFILE="ords-$NOW.log"
+  echo
+  echo "~~~~~~~~~~~~~~~~">> $LOGFILE
+  echo `date` >> $LOGFILE
+  echo "~~~~~~~~~~~~~~~">> $LOGFILE
+  nohup java -Dconfig.dir=/home/oracle/ords -jar ords.war install simple --preserveParamFile >> $LOGFILE  2>&1  &
+  echo " Check Logfile : $LOGFILE "
+  echo
+  ```
 - Now change the permission and run the script
-  * chmod 777 start_ords.sh
-  * ./start_ords.sh
-
+  ```
+  chmod 777 start_ords.sh
+  ./start_ords.sh
+  ```
 - Browse below URL to check whether ORDS is up and running.
-  * **http://DbaaS Instance IP address:8080/ords**
+  ```
+  http://DbaaS Instance IP address:8080/ords
+  ```
 - Use below credentials to login.
-  * **Workspace: INTERNAL, Username: ADMIN ,Password: BEstrO0ng_#11**
+  ```
+  Workspace: INTERNAL, Username: ADMIN ,Password: BEstrO0ng_#11
+  ```
   * The application will ask to change the password kindly choose the password as BEstrO0ng_#22
 #### if the ADMIN password does not work reset password using below step
-![](./images/ords7.png)
+  
+  ![](./images/ords7.png)
+  
 - Change your working directory to the apex directory where you unzipped the installation software. Login to sqlPlus   and run @apxchpwd. For more information refer Url.[Oracle Community](https://community.oracle.com/thread/2332882?start=0&tstart=0)
-#### 11. Click sign In.
-![](./images/ords8.png)
+- Click sign In.
+   
+   ![](./images/ords8.png)
 
 ## ADW Scaling APEX Application Installation
 
