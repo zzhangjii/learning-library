@@ -11,8 +11,14 @@
             },
             {
                 "number": "1",
-                "filename": "LabGuide1.md",
+                "filename": "LabGuide100.md",
                 "title": "Lab 100:Auto Scale ADW Demo Setup",
+                "description": "Building your first Autonomous Data Warehouse Auto Scaling Demo"
+            },
+			{
+                "number": "2",
+                "filename": "LabGuide200.md",
+                "title": "Lab 200:Auto Scale ADW Demo Setup",
                 "description": "Building your first Autonomous Data Warehouse Auto Scaling Demo"
             }
 
