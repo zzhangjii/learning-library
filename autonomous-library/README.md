@@ -2,7 +2,7 @@
 
 The Oracle Autonomous Workshop Catalog is the central location for workshops related to Autonomous Database, including ATP and ADW.  All labs are designed to be modular in nature. To get started, choose one (or more!) of the defined learning paths below:
 
-## Autonomous Data Warehouse Learning Plan
+## **__Autonomous Data Warehouse Learning Plan__**
 
 ### Lab 1: Getting Started and Provisioning a New Autonomous Data Warehouse
 
@@ -25,7 +25,7 @@ The Oracle Autonomous Workshop Catalog is the central location for workshops rel
   **[Click here to launch the lab](https://oracle.github.io/learning-library/workshops/journey4-adwc/?page=LabGuide2.md)**
 
 
-## Autonomous Transaction Processing Learning Plan
+## **__Autonomous Transaction Processing Learning Plan__**
 
 ### Lab 1: Using Node.js with ATP
 
