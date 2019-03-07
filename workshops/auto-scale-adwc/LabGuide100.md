@@ -45,5 +45,6 @@ This lab will show you how to navigate the Autonomous Data Warehouse auto scalin
   
   
 - Below is the ADW console screen where you can see CPU core count up/down based on Scaling Job
+  ![](./images/Picture2.png)
 
 
