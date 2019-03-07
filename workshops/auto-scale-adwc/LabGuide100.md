@@ -16,11 +16,11 @@ This lab will show you how to navigate the Autonomous Data Warehouse auto scalin
 
 - Open browser and Navigate to http:www.oracledatagroup.com. it will show below landing page
 
-![](./images/adwscale1.png)
+![](./images/scale2.png)
 
 - Click **Load** Menu to submit load to Autonomous Data Warehouse
 
-  ![](./images/adwscale2.png)
+  ![](./images/scale1.png)
    
 - In load page enter below information
   
@@ -30,7 +30,7 @@ This lab will show you how to navigate the Autonomous Data Warehouse auto scalin
   * Desired Minimum Run time sec - Select for how many second you want to run query
   * Click Submit Workload.It navigates to Monitoring screen.
   
-  ![](./images/adwscale4.png)  
+  ![](./images/scale4.png)  
   
 - In Monitoring screen you can see below information which you can monitor.
   * ADWC CPU Utilization% - CPU utilization after load submission
@@ -40,8 +40,10 @@ This lab will show you how to navigate the Autonomous Data Warehouse auto scalin
   * CPU Provisioned Count - Maximum CPU Count for ADW instance
   * Scaling Job Status    - Scaling Job status based on load on ADW Instance
   * ADWC CPUs Provisioned - CPU count after scaling up/down
-
-  ![](./images/adwscale3.png)
+  * 
+  ![](./images/scale5.png)
+  
+  
 - Below is the ADW console screen where you can see CPU core count up/down based on Scaling Job
 
 
