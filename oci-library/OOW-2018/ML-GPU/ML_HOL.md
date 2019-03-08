@@ -8,7 +8,7 @@
 
 ### H20ai Lab 
 
-[Practice 1: Open Gitbash on your Desktop](#practice-1-open-gitbash-on-your-desktop)
+[Practice 1: Provision a GPU instance on OCI](#practice-1-provision-a-gpu-instance-on-oci)
 
 [Practice 2: Access the GPU instance](#practice-2-access-the-gpu-instance)
 
@@ -49,7 +49,7 @@ The key topics touched upon by both labs are:
 
 ## H20.ai Lab
 
-## Practice 1: Open Gitbash on your Desktop
+## Practice 1: Provision a GPU instance on OCI
 
 **1.** Open Gitbash program on your desktop. It is already installed on your Windows 10 VM. 
 
@@ -85,13 +85,13 @@ _`<<Hit enter to skip>>`_
 
 ``# sudo nvidia-smi -pm 1``
 
-``# mkdir dai_rel_131``
+``# mkdir h2oai``
 
-``# cd dai_rel_131``
+``# cd h2oai``
 
-``# wget https://s3.amazonaws.com/artifacts.h2o.ai/releases/ai/h2o/dai/rel-1.3.1-12/x86_64-centos7/dai-docker-centos7-x86_64-1.3.1-9.0.tar.gz``
+``# wget http://bit.ly/h2oai-docker``
 
-``# docker load < dai-docker-centos7-x86_64-1.3.1-9.0.tar.gz``
+``# docker load < dai-docker-centos7-x86_64-1.5.4-9.0.tar.gz``
 
 This will take a few minutes to complete
 
@@ -101,7 +101,7 @@ This will take a few minutes to complete
 
 **3.** Start the Driverless AI image using NVIDIA docker:
 
-``# nvidia-docker run --pid=host --init --rm --shm-size=256m -u `id -u`:`id -g` -p 12345:12345 -v `pwd`/data:/data -v `pwd`/log:/log -v `pwd`/license:/license -v `pwd`/tmp:/tmp h2oai/dai-centos7-x86_64:1.3.1-9.0``
+``# nvidia-docker run --pid=host --init --rm --shm-size=256m -u `id -u`:`id -g` -p 12345:12345 -v `pwd`/data:/data -v `pwd`/log:/log -v `pwd`/license:/license -v `pwd`/tmp:/tmp h2oai/dai-centos7-x86_64:1.5.4-cuda9.0 &``
 
 ![](img/h2oimage001.png)
 
@@ -111,7 +111,7 @@ This will keep H20.ai application running. Leave this gitbash open.
 
 **1.** Open a browser and access:
 
-``http://IPaddress:12345``
+``http://<Public_IP_Address>:12345``
 
 Scroll at the bottom of the page and Agree with the terms:
 
