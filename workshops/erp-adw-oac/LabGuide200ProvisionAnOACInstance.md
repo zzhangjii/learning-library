@@ -59,7 +59,7 @@ Now let’s get started!
 
 2. Enter your cloud account name and click on **My Services**.
 
-    ![](images/200/img_1a_2_1.png)  
+    ![](images/200/Picture_200_1.png)  
     
 3. Enter your username and password and click on **Sign In**.
 
