@@ -1,6 +1,6 @@
 <table class="tbl-heading"><tr><td class="td-logo">[![](images/obe_tag.png)](README.md)
 
-Last Updated:<br>February 28, 2019
+Last Updated:<br>March 8, 2019
 </td>
 <td class="td-banner">
 # Getting Started with ADWC, ERP and OAC
@@ -16,7 +16,7 @@ This demo will demonstrate how to utilize Oracle Analytics Cloud to extend analy
 - Gain the additional insights needed to make swift and informed decisions
 
 # How to Get Your Free Cloud Trial Account
-Please click on the following link to create your <a class=“trial-link” href="https://myservices.us.oraclecloud.com/mycloud/signup?language=en&sourceType=:ex:tb:::RC_NAMK181017P00031:ADW_IMHOL&SC=:ex:tb:::RC_NAMK181017P00031:ADW_IMHOL&pcode=NAMK181017P00031" target="trial">Free Account</a>, and complete all the required steps to get your free Oracle Cloud Trial Account. When you complete the registration process you'll receive a $300 credit that will enable you to complete the lab for free.  Additionally, you'll have 1000s of hours left over to continue to explore the Oracle Cloud.
+Please click on the following link to create your <a class=“trial-link” href="https://myservices.us.oraclecloud.com/mycloud/signup?language=en&sourceType=:ow:off:ot::RC_NAMK190304P00003:Erp_adw_oac_trial&intcmp=:ow:off:ot::RC_NAMK190304P00003:Erp_adw_oac_trial" target="trial">Free Account</a>, and complete all the required steps to get your free Oracle Cloud Trial Account. When you complete the registration process you'll receive a $300 credit that will enable you to complete the lab for free.  Additionally, you'll have 1000s of hours left over to continue to explore the Oracle Cloud.
 
   - Soon after requesting your trial you will receive the following email. You may begin working on Lab 100.
 

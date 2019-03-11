@@ -1,6 +1,6 @@
 <table class="tbl-heading"><tr><td class="td-logo">![](images/obe_tag.png)
 
-February 28, 2019
+March 8, 2019
 </td>
 <td class="td-banner">
 # Lab 1: Getting Started with Autonomous Data Warehouse (ADW)
