@@ -339,3 +339,7 @@ code:not(.infra) {
 .toc-item {
     margin-top:10px;
 }
+
+.gh-pages-note {
+	display: none;
+}
