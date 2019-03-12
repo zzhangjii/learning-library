@@ -46,7 +46,7 @@ In this section you will be provisioning an ADW instance using the cloud console
 
 -   Enter your **Cloud Account Name** and click **My Services**.
 
-![](./images/100/Picture100-3.jpg)
+![](./images/100/Picture100-3.png)
 
 -   Enter your Oracle Cloud **username** and **password**, and click **Sign In**.
 
@@ -54,13 +54,13 @@ In this section you will be provisioning an ADW instance using the cloud console
 
 #### **STEP 2: Create an ADW Instance**
 
--   Once you are logged in, you are taken to the cloud services dashboard where you can see all the services available to you. Click **Create Instance**.
+-   Once you are logged in, you are taken to the cloud services dashboard where you can see all the services available to you. Click the **Autonomous Database** tile.
 
 *Note:* You may also access your Autonomous Data Warehouse service via the pull out menu on the top left of the page, or by using Customize Dashboard to add the service to your dashboard.
 
-![](./images/100/Picture100-36.JPG)
+![](./images/100/Picture100-36.png)
 
-- Click **Create** on the Autonomous Data Warehouse tile. If it does not appear in your Featured Services, click on All Services and find it there.
+- Select the Data Warehousing option and click **Create Autonomous Data Warehouse Instance**.
 
 ![](images/100/LabGuide1-39fb4a5b.png)
 
@@ -68,6 +68,10 @@ In this section you will be provisioning an ADW instance using the cloud console
 *Note* - Avoid the use of the ManagedCompartmentforPaaS compartment as this is an Oracle default used for Oracle Platform Services.
 
 ![](./images/100/Compartment.jpg)
+
+- You can see your current default **region** in the top, right hand corner of the page. Go ahead and select a different available region such as **Phoenix** or **Toronto**. 
+
+![](./images/100/Region.jpg)
 
 -  Click on **Create Autonomous Data Warehouse** button to start the instance creation process.
 
