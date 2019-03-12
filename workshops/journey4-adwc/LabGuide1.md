@@ -44,7 +44,7 @@ In this section you will be provisioning an ADW instance using the cloud console
 
 ![](./images/100/Picture100-2.png)
 
--   Enter your **Cloud Account Name** and click **My Services**.
+-   Enter your **Cloud Account Name** and click next.
 
 ![](./images/100/Picture100-3.png)
 
@@ -69,7 +69,7 @@ In this section you will be provisioning an ADW instance using the cloud console
 
 ![](./images/100/Compartment.jpg)
 
-- You can see your current default **region** in the top, right hand corner of the page. Go ahead and select a different available region such as **Phoenix** or **Toronto**. 
+- You can see your current default **region** in the top, right hand corner of the page. Go ahead and select a different available region such as **Phoenix** or **Toronto**.
 
 ![](./images/100/Region.jpg)
 
