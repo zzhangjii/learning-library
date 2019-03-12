@@ -126,56 +126,56 @@ To create database you first need to create VCN (Virtual Cloud Network) if you h
 - Open the navigation menu. Under Core Infrastructure,go to Networking and click Virtual Cloud Networks.
 
  ![](./images/dbaas1.png)
- 
+
 - Choose a compartment you have permission to work in (on the left side of the page). The page updates to display only the resources in that compartment. If you're not sure which compartment to use, contact an administrator
 - Click Create Virtual Cloud Network
 
   [](./images/dbaas2.png)
-  
+
 - Enter the following:
   * Create in Compartment: Leave as is.
   * Name: A friendly name for the cloud network. It doesn't have to be unique, and it cannot be changed later in the Console (but you can change it with the API). Avoid entering confidential information.
   *	Create Virtual Cloud Network Plus Related Resources: Make sure this radio button is selected.
-  
+
   ![](./images/dbaas3.png)
   ![](./images/dbaas4.png)
   ![](./images/dbaas5.png)
-  
+
 - Click Create Virtual Cloud Network and then click close.
- 
+
  ![](./images/dbaas6.png)
- 
+
 - Modify Security list for your VCN.
   * Click **apexvcn** which you have created, on left side menu you can see Security List as below.
-  
+
   ![](./images/dbaas23.PNG)
-  
+
   * Click Security List and then click "Default Security List for apexvcn"
   * Now click **Edit All Rules** button and add ingress rule for your VCN to allow public internet to 8080 and 1521 as below
-  
+
   ![](./images/ords9.png)
-  
+
 - Generating an SSH Key Pair Using PuTTY Key Generator : When you define your Oracle DBaaS database instance, you will need to provide a secure shell (SSH) public key to establish secure connections. Perform the following steps to generate an SSH key pair using the PuTTY Key Generator on Windows.
   * Find puttygen.exe in the PuTTY folder on your computer, for example,        **C:\Program Files (x86)\PuTTY. Double-click puttygen.exe** to open it.
-  
+
  ![](./images/dbaas7.png)
- 
+
   * Accept the default key type, RSA.
   * Set the Number of bits in a generated key to 2048 bits, if it is not already set with that value.
   * Click Generate.
   * Move your mouse around the blank area to generate randomness to the key.
-  
+
   ![](./images/dbaas8.png)
-  
+
   * The generated key appears under Public key for pasting into OpenSSH authorized_keys file. Copy public key in notepad we will need this while creating Dbaas provisioning.
-  
+
   ![](./images/dbaas9.png)
-  
+
   * To save the key in the PuTTY PPK format, click Save private key to save the private key of the key pair.
 - Login to cloud environment, Click Services to show the available   services. In the list of available services, under Database select Baremetal ,VM and Exadata
 
   ![](./images/dbaas10.png)
-  
+
 - The console for Database displays. You can use the List Scope drop-down menu to select a compartment; in this example the gse00014135 (root) compartment is selected. Click Launch DB System.
 - In the Create Launch DB System dialog, enter the following information:
   * Display Name - Enter a name of the database.
@@ -200,25 +200,25 @@ The password must be between 12 and 30 characters long and must include at least
   * The password must not be the same password that is set less than 24 hours ago.
   * Select Automatic Backup
   * Click Launch DB System
-  
+
   ![](./images/dbaas11.png)
   ![](./images/dbaas12.png)
   ![](./images/dbaas13.png)
   ![](./images/dbaas14.png)
   ![](./images/dbaas15.png)
-  
+
 - The Launch DB System dialog closes. On the console, the State field indicates that the data warehouse is Provisioning. When creation is completed, the State field changes from Provisioning to Available.
 - When Provisioning is completed it will show like below.
 
  ![](./images/dbaas16.png)
- 
+
 - Now login to putty with Public IP and use private key which we saved in above step.
   * Open PutTTy as below and enter DbasS public IP(Which you can see in above screen shot) as HostName.
-  
+
   ![](./images/Putty.png)
-  
+
   * Now expand **connection** from left menu and click **SSH** and give path to private key which we have saved in step 6. Click **Open** button.
-  
+
   ![](./images/ssh.png)
 
 - Login as opc and then change user to oracle as shown in below screen shot.
@@ -251,10 +251,10 @@ The password must be between 12 and 30 characters long and must include at least
     export PATH=$ORACLE_HOME/bin:$PATH
     ```
   * Save the bash_profile by pressing esc and typing wq.
-  
+
   ![](./images/dbaas19.png)
   ![](./images/dbaas20.png)
-  
+
   * Run source command
      ```
      source ~/.bash_profile
@@ -264,9 +264,9 @@ The password must be between 12 and 30 characters long and must include at least
   sqlplus / as sysdba
   show pdbs;
   ```
-  
+
   ![](./images/dbaas22.png)
-  
+
 - Once you we see pdbs. Exit from sqlplus and install APEX and ORDS in Dbaas Instance.
 ## APEX and ORDS Installation in Dbaas Instance
 ### **STEP 6**: APEX Installation
@@ -275,9 +275,9 @@ The password must be between 12 and 30 characters long and must include at least
   * Login as opc user.
   * Change user to oracle  and got to oracle home directory as below screen shot
 - Download "Oracle APEX 18.2 - English language" in local machine and then copy and unzip in oracle home directory(you can use WinSCP to copy from local to cloud instance) [APEX](http://www.oracle.com/technetwork/developer-tools/apex/downloads/index.html)
- 
+
  ![](./images/apex1.png)
- 
+
 - cd to apex directory
 - Start SQL*Plus and ensure you are connecting to your PDB and not to the "root" of the container database (APEX should not be installed at all). Run Below Command to login and Wait until you see sql prompt
   ```
@@ -286,7 +286,7 @@ The password must be between 12 and 30 characters long and must include at least
   @apexins sysaux sysaux temp /i/
   ```
   ![](./images/apex2.png)
-  
+
 - Unlock the APEX_PUBLIC_USER account and set the password.
   ```
   alter user apex_public_user identified by BEstrO0ng_#11 account unlock;
@@ -344,17 +344,17 @@ The password must be between 12 and 30 characters long and must include at least
   iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
   service iptables save
   ```
-  
+
   ![](./images/ords2.png)
-  
+
 Note:- Please add ingress rule for your VCN to allow from public internet to 8080 and 1521.
-   
+
    ![](./images/ords9.png)
-   
+
 - login using **oracle** and cd to the directory where you unzipped ORDS (ensure that ords.war is in your current directory).
-  
+
   ![](./images/ords3.png)
-  
+
 - Go to params directory and replace the contents of  ords_params.properties as below.
   ```
   db.hostname=apex (Get Hostname from your Dbaas Instance)
@@ -381,14 +381,14 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
   ```
   ![](./images/ords4.png)
   ![](./images/ords5.png)
-  
+
 - Run the below command ORDS in stand-alone mode.  You'll be prompted for the SYS username and SYS password.kindly use the DBaaS Admin password as set above.
   ```
   cd /home/oracle/ords
   java -Dconfig.dir=/home/oracle/ords -jar ords.war install simple –preserveParamFile
   ```
   ![](./images/ords6.png)
-  
+
 - Kindly exit the session by using ctrl C and create start_ords.sh file in ords folder and put below content
   ```
   #!/bin/bash
@@ -418,12 +418,12 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
   ```
   * The application will ask to change the password kindly choose the password as BEstrO0ng_#22
 #### if the ADMIN password does not work reset password using below step
-  
+
   ![](./images/ords7.png)
-  
+
 - Change your working directory to the apex directory where you unzipped the installation software. Login to sqlPlus   and run @apxchpwd. For more information refer Url.[Oracle Community](https://community.oracle.com/thread/2332882?start=0&tstart=0)
 - Click sign In.
-   
+
    ![](./images/ords8.png)
 
 ## ADW Scaling APEX Application Installation
@@ -439,7 +439,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
    cd  /opt/oracle/dcs/commonstore/wallets/tde
    ls -ltr
    ```
-      
+
   * Copy the file name and assign ORACLE_UNQNAME in below command
   ```
   vi ~/.bash_profile
@@ -447,16 +447,16 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
   After editing the bash_profile press esc and type wq to save.
   source ~/.bash_profile
   ```
-  
+
   ![](./images/demo1.png)
-  
+
 - Copy ADWC wallet in oracle home directory and unzip.
   ```
   mkdir wallet_adwc
   unzip Wallet_adwapexdemo.zip -d wallet_adwc
   ```
   ![](./images/demo2.png)
-  
+
 - Reset the sqlnet.ora file in the APEXDB Server environment to the following. Use WALLET_LOCATION as your ADWC unzip folder name,
   ```
   cd /u01/app/oracle/product/12.1.0.2/dbhome_1/network/admin
@@ -479,22 +479,22 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
   ##SSL_CLIENT_AUTHENTICATION = FALSE
   ##SSL_VERSION = 0
   ```
-      
+
   ![](./images/demo3.png)
   ![](./images/demo4.png)
-      
+
 - Change **/u01/app/oracle/product/12.1.0.2/dbhome_1/network/admin/tnsnames.ora** and create entry for your Dbaas PDB that is pdb1 as below. Change host and service name, you can find service name for pdb1 by running **lsnrctl status** and host name you copy from existing entry.
   ```
   PDB1 = (DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = apexdemo.sub1018160041.hdp.oraclevcn.com)(PORT = 1521))
     (CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = pdb1.sub1018160041.hdp.oraclevcn.com)))
    ```
-   
+
    ![](./images/demo5.png)
-   
+
 - Add ADWC Wallet tnsname.ora entry in **/u01/app/oracle/product/12.1.0.2/dbhome_1/network/admin/tnsnames.ora** in addition to above step(Note: Copy only for your ADWC consumer group or you can copy all)
-  
+
   ![](./images/demo5_1.png)
-  
+
 - Go to your ADWC wallet location and run below command for more information go through below link [Password Less Setup](https://docs.oracle.com/cd/B19306_01/network.102/b14266/cnctslsh.htm#g1033548)
   ```
   cd /home/oracle/wallet_adwc
@@ -505,7 +505,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
   mkstore -wrl . -listCredential [password  BEstrO0ng_#11]
   ```
   ![](./images/demo6.png)
-  
+
 - Create link and check whether password less user is working.
   ```
   sqlplus / as sysdba
@@ -519,7 +519,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
   SQL> select * from dual@adwc;
   ```
   ![](./images/demo7.png)
-  
+
 - Run Dbaas schema scripts "Dbaas_Pdbuser.sql" and Adwc_Schema.sql using below command [apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript)
   ```
   sqlplus / as sysdba
@@ -532,22 +532,22 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
   ```
 
 - Download ADWCS Demo shell scripts from [scripts](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/shellscripts) and copy in oracle home directory.
-   
+
    ![](./images/demo13.png)
-   
+
 - Open restapi.sh from scripts folder we will need the values for below fields tenancyId,authUserId,keyFingerprint,privateKeyPath, Below are the screen shots to get the value from your environment.
 
   * Tenancy OCID: Login to cloud environment, Click Services to show the available services. In the list of available services, select Administration ->Tenancy Details.
-  
+
   ![](./images/demo14.png)
   ![](./images/demo15.png)
-  
+
   * Copy Tenancy OCID in notepad.
   * AuthuserId : Login to cloud environment, Click Services to show the available services. In the list of available services, select Identity -> Users
-  
+
   ![](./images/demo16.png)
   ![](./images/demo17.png)
-  
+
   * Copy admin OCID in notepad as AuthuserId.
   * Login to Dbaas instance and change user as oracle and run below command to generate public key PEM file.
    ```
@@ -559,32 +559,32 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
   * Open oci_api_key_public.pem file and copy the content
   * Use copied content to generate finger print for admin user
   * Click the admin user for which you had taken AuthuserID and then click Add Public Key
-   
+
    ![](./images/demo18.png)
-   
+
   * Paste oci_api_key_public.pem content as Public key.
-  
+
   ![](./images/demo19.png)
-  
+
   * You can see new finger print as below
-  
+
   ![](./images/demo20.png)
-  
+
   * Copy new fingerprint in notepad.
   * Modify restapi.sh  and change tenancyId, authUserId, keyFingerprint, privateKeyPath(Give these value which we have noted in earlier step )
-  
+
   ![](./images/demo23.png)
 
 - Now open adwc.sh from scripts folder we will need the values for below fields ADWC OCID and Cloud host,Below are the screen shots to get the value from your environment.
   * Copy ADWC OCID in notepad.
-  
+
   ![](./images/demo21.png)
-  
+
   * Modify adwc.sh file and change oci-curl (Replace Cloud host and ADWC OCID as below)
-  
+
   ![](./images/demo24.png)
   ![](./images/demo25.png)
-  
+
 - Now start below scripts.
   ```
   cd /home/oracle/scripts
@@ -593,38 +593,42 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
   ```
 - Login to ORDS with user same as we have in ORDS installation.
   * **http://DbaaS intance IP Address:8080/ords**
-  
+
    ![](./images/demo26.png)
-   
+
 - Click Sign in
-   
+
    ![](./images/demo27.png)
-   
+
 - Click Manage Workspace and select import.
-   
+
    ![](./images/demo28.png)
-   
+
 - Download workspace "Apex_Demo_Workspace.sql" file from git [apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript) in local and give location
+
 - Click next and complete import on default value
+
 - Once you finish you will be able to see in Existing Workspace
-  
+
   ![](./images/demo29.png)
-  
+
 -	After importing workspace logout and again login with below credential.
   * **Workspace: pdbuser, Username: APEXDEMO ,Password: apexdemo**
-  
+
   ![](./images/demo30.png)
-  
+
 -	Click Sign In.
-  
+
   ![](./images/demo31.png)
-  
+
 -	Click App Builder menu and select import.
-  
+
   ![](./images/demo32.png)
-  
--	Download application script "Apex_Demo_Application.sql" from [apexdemoscript](https://github.com/cloudsolutionhubs/auto-scale-adwc/tree/master/workshops/auto-scale-adwc/apexdemoscript) in local and give location in Choose file.
+
+-	Download application script [apexdemoscript](apexdemoscript/Apex_Demo_Application.sql) in local and give location in Choose file.
+
 -	Click Next and finish application deployment.
+
 -	Once you finish you can run application
-  
+
   ![](./images/demo33.png)
