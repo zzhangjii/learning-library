@@ -1,6 +1,6 @@
 <table class="tbl-heading"><tr><td class="td-logo">![](images/obe_tag.png)
 
-February 28, 2019
+March 8, 2019
 </td>
 <td class="td-banner">
 # Lab 2 - Getting Started with Oracle Analytics Cloud Data Visualization (OAC DV)
@@ -59,7 +59,7 @@ Now let’s get started!
 
 2. Enter your cloud account name and click on **My Services**.
 
-    ![](images/200/img_1a_2_1.png)  
+    ![](images/200/Picture_200_1.png)  
     
 3. Enter your username and password and click on **Sign In**.
 
