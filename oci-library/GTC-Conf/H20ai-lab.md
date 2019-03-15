@@ -20,7 +20,7 @@
 
 ## Overview
 
-- **H20ai Lab:** In this lab you will experience the first part of a typical Machine Learning process which is training the model. We are going to use a partner tool, H2O.ai on top of one of our **Pascal GPU Bare Metal machines** to run this lab.
+- **H20ai Lab:** In this lab you will experience a typical Machine Learning process which is training the model. We are going to use a partner tool, H2O.ai on top of one of our **Pascal GPU Bare Metal machines** to run this lab.
 
 ## Pre-Requisites 
 
