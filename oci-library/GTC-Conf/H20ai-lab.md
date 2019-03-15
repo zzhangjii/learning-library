@@ -26,7 +26,6 @@
 
 - Access to a GPU instance in Oracle Cloud Infrastructure
 - SSH Client
-- Download the SSH key pairs into your desktop from this link: https://bit.ly/2Ef9GE4
 
 ## H20.ai Lab
 
@@ -58,7 +57,7 @@
 
       - **Choose Instance Type:** Bare Metal Machine
       - **Choose Instance Shape:** Change the Shape and select BM.GPU2.2
-      - **Add SSH Key:** Choose the SSH file name labkey-linux.pub that you saved on your desktop.
+      - **Add SSH Key:** Choose the SSH file name labkey-public.pub from your Desktop Folder.
       - **Virtual Cloud Network Compartment:** Select **common** compartment
       - **Virtual Cloud Network:** VCN-GPU-DEMO
       - **Subnet Compartment:** Select **common** compartment
@@ -76,15 +75,11 @@
    - **IP address**: *Use the Public IP address of the instance you created*
 
 
-    ``# ssh -i ~/Downloads/labkey-linux ubuntu@<Public_IP_Address>``
-
-    ![](img/image000.png)
+    ``# ssh -i ~/Desktop/labkey-private ubuntu@<Public_IP_Address>``
 
     ``Please enter your NGC APIkey to login to the NGC Registry``
 
     _``<<Hit enter to skip>>``_
-
-    ![](img/image001.png)
 
 
 2. Check if your H2Oai docker is running by typing:
