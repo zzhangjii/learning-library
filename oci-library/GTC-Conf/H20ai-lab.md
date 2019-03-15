@@ -34,8 +34,8 @@
 1. Open your browser and navigate to the OCI Console by clicking on: [http://bit.ly/ociash](http://bit.ly/ociash)
 2. Enter the following credentials:
     - **Cloud Tenancy:** hpctraininglab
-    - **Username:** <Instructor will provide your username>
-    - **Password:** <Instructor will provide your password>
+    - **Username:** _Instructor will provide your username_
+    - **Password:** _Instructor will provide your password_
 
     ![](img/login.png)
 
