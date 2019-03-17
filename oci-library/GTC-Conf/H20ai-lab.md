@@ -181,7 +181,7 @@ The key topics touched upon by both labs are:
 
 2. On terminal use SSH command to connect to the GPU instance:
 
-- **Username**: *ubuntu*
+   - **Username**: *ubuntu*
    - **IP address**: *Use the Public IP address of the instance you created*
 
 
