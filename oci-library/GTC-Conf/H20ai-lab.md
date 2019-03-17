@@ -111,7 +111,7 @@
 
     ![](img/h2oimage007.png)
 
-2. Select census_income
+2. Select census_income by typing: `s3://h2o-public-test-data/smalldata/census_income/`
 
     ![](img/h2oimage008.png)
 
