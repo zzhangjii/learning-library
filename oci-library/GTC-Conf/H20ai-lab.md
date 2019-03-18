@@ -51,7 +51,7 @@ The key topics touched upon by both labs are:
 2. Enter the following credentials:
     - **Cloud Tenancy:** hpctraininglab
     - **Username:** _Instructor will provide your username_
-    - **Password:** _Instructor will provide your password_
+    - **Password:** *GTC_OCI_gpu_2019!*
 
     ![](img/login.png)
 
