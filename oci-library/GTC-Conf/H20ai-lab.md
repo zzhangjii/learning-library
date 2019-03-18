@@ -73,7 +73,7 @@ The key topics touched upon by both labs are:
 
       - **Choose Instance Type:** Bare Metal Machine
       - **Choose Instance Shape:** Change the Shape and select BM.GPU2.2
-      - **Add SSH Key:** Choose the SSH file name labkey-public.pub from your Desktop Folder.
+      - **Add SSH Key:** Choose the SSH file name labkey-linux.pub from your Desktop Folder.
       - **Virtual Cloud Network Compartment:** Select **common** compartment
       - **Virtual Cloud Network:** VCN-GPU-DEMO
       - **Subnet Compartment:** Select **common** compartment
@@ -91,7 +91,7 @@ The key topics touched upon by both labs are:
    - **IP address**: *Use the Public IP address of the instance you created*
 
 
-    ``# ssh -i ~/Desktop/labkey-private ubuntu@<Public_IP_Address>``
+    ``# ssh -i ~/Desktop/labkey-linux ubuntu@<Public_IP_Address>``
 
     ``Please enter your NGC APIkey to login to the NGC Registry``
 
@@ -185,7 +185,7 @@ The key topics touched upon by both labs are:
    - **IP address**: *Use the Public IP address of the instance you created*
 
 
-    ``# ssh -i ~/Desktop/labkey-private ubuntu@<Public_IP_Address>``
+    ``# ssh -i ~/Desktop/labkey-linux ubuntu@<Public_IP_Address>``
 
     ``Please enter your NGC APIkey to login to the NGC Registry``
 
