@@ -3,9 +3,9 @@
 **This is a push test to Oracle Learning Library in bold**
 
 Item list
-*item 1
-*item 2
-*item 3
+* item 1
+* item 2
+* item 3
 
 [Oracle](https://www.oracle.com)
 
