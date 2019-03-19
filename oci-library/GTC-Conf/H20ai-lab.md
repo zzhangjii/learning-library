@@ -18,13 +18,11 @@
 
 ### TensorFlow Lab
 
-[Practice 1: Open a second Gitbash window](#practice-1-open-a-second-gitbash-window)
+[Practice 1: Pull the TensorFlow docker image](#practice-1-pull-the-tensorflow-docker-image)
 
-[Practice 2: Pull the TensorFlow docker image](#practice-2-pull-the-tensorflow-docker-image)
+[Practice 2: Use TensorFlow to recognize the visual contents of images](#practice-2-use-tensorflow-to-recognize-the-visual-contents-of-images)
 
-[Practice 3: Use TensorFlow to recognize the visual contents of images](#practice-3-use-tensorflow-to-recognize-the-visual-contents-of-images)
-
-[Practice 4: Try Oracle Cloud Infrastructure for FREE](#practice-4-try-oracle-cloud-infrastructure-for-free)
+[Practice 3: Try Oracle Cloud Infrastructure for FREE](#practice-3-try-oracle-cloud-infrastructure-for-free)
 
 ## Overview
 For this Machine Learning session you will complete two Hands-on-Labs
@@ -35,7 +33,7 @@ For this Machine Learning session you will complete two Hands-on-Labs
 
 The key topics touched upon by both labs are:
 
-- To showcase Nvidia-Docker as a means of containerising ML workloads to leverage GPU (because normal docker cannot  _see_  the GPU).
+- To showcase Nvidia-Docker as a means of containerizing ML workloads to leverage GPU.
 - To show how quickly the GPU can process ML image recognition workloads.
 
 ## Pre-Requisites 
@@ -85,10 +83,10 @@ The key topics touched upon by both labs are:
 
 ## Practice 2: Access the GPU instance
 
-1. On Gitbash terminal use SSH command to connect to the GPU instance:
+1. Hit **Command+Tab** to switch to terminal and use SSH command to connect to the GPU instance:
 
    - **Username**: *ubuntu*
-   - **IP address**: *Use the Public IP address of the instance you created*
+   - **IP address**: *Use the Public IP address of the GPU instance you created*
 
 
     ``# ssh -i ~/Desktop/labkey-linux ubuntu@<Public_IP_Address>``
@@ -102,17 +100,19 @@ The key topics touched upon by both labs are:
 
     ``# nvidia-docker ps`` 
 
+3. Hit **Command+Tab** to switch back to your browser
+
 ## Practice 3: Access H2Oai application
 
-3. Open a browser and access:
+1. Open a browser and access:
 
     ``http://<Public_IP_Address>:12345``
 
-4. Scroll at the bottom of the page and Agree with the terms:
+2. Scroll at the bottom of the page and Agree with the terms:
 
     ![](img/h2oimage002.png)
 
-5. Enter the following credentials and click Sign In:
+3. Enter the following credentials and click Sign In:
 
     - **Username:** admin
     - **Password:** admin
@@ -173,27 +173,9 @@ The key topics touched upon by both labs are:
 
 ## TensorFlow Lab
 
-## Practice 1: Open a second Gitbash window
+## Practice 1: Pull the TensorFlow docker image
 
-1. Rgith click on your current gitbash window and select **New**
-
-![](img/tensorimage000.png)
-
-2. On terminal use SSH command to connect to the GPU instance:
-
-   - **Username**: *ubuntu*
-   - **IP address**: *Use the Public IP address of the instance you created*
-
-
-    ``# ssh -i ~/Desktop/labkey-linux ubuntu@<Public_IP_Address>``
-
-    ``Please enter your NGC APIkey to login to the NGC Registry``
-
-    _``<<Hit enter to skip>>``_
-
-## Practice 2: Pull the TensorFlow docker image
-
-1. Run the following commands to pull and run the docker image:
+1. Hit **Command+Tab** to switch to terminal and run the following commands to pull and run the docker image:
    
 ```
 # sudo su
@@ -210,15 +192,15 @@ The key topics touched upon by both labs are:
 
 ![](img/image003.png)
 
-3. Back to gitbash and type the following command:
+3. Back to terminal and type the following command:
 
 ```
 # watch -n 1 nvidia-smi
 ```
 
-This will show that the GPU is actually getting used by the image recognision process. Keep that terminal open and running.
+This will show that the GPU is actually getting used by the image recognition process. Keep that terminal open and running.
 
-## Practice 3: Use TensorFlow to recognize the visual contents of images
+## Practice 2: Use TensorFlow to recognize the visual contents of images
 
 We will try to solve a problem which is as simple and small as possible while still being difficult enough to teach us valuable lessons. All we want the GPU instance to do is the following: when presented with an image, our system should analyze it and score the images. Our goal is for our model to pick the correct category as often as possible. This task is called image classification. 
 
@@ -242,7 +224,7 @@ For that we will use two images. Please download those images and save to your D
 
 4.  After you finished this lab please go ahead and terminate your instance.
      
-## Practice 4: Try Oracle Cloud Infrastructure for FREE 
+## Practice 3: Try Oracle Cloud Infrastructure for FREE 
 
 Sign up for the free Oracle Cloud Infrastructure trial account. 
 https://cloud.oracle.com/tryit
