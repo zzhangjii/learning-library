@@ -2,7 +2,7 @@
 
 **This is a push test to Oracle Learning Library in bold**
 
-Item list
+*Item list*
 1. item 1
 2. item 2
 3. item 3
