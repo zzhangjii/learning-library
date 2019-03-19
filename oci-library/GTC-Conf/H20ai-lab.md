@@ -29,9 +29,9 @@
 ## Overview
 For this Machine Learning session you will complete two Hands-on-Labs
 
-- **H20ai Lab:** In this lab you will experience the first part of a typical Machine Learning process which is training the model, then you will execute the second part of the process which is known as inferencing. We are going to use a partner tool, H2O.ai on top of one of our **Pascal GPU Bare Metal machines** to run this lab.
+- **H20ai Lab:** In this lab you will experience the first part of a typical Machine Learning process which is training the model, then you will execute the second part of the process which is known as inferencing. We are going to use a partner tool, H2O.ai on top of one of our **Pascal GPU machines** to run this lab.
 
-- **TensorFlow Lab:** This is a demo to show TensorFlow Image Recognition using the power of our **Pascal GPU Bare Metal machine** in order to recognize the visual contents of images.
+- **TensorFlow Lab:** This is a demo to show TensorFlow Image Recognition using the power of our **Pascal GPU machines** in order to recognize the visual contents of images.
 
 The key topics touched upon by both labs are:
 
@@ -66,13 +66,13 @@ The key topics touched upon by both labs are:
 
 5. In the Create Instance dialog box enter the following information:
       - **Name:** H2Oai-demo
-      - **Availability Domain:** AD3
+      - **Availability Domain:** AD2
       - **Image Source:** Click on **Change Image Source** and select **Custom Images**. Now select the **common** compartment and check mark the image **H2Oai-GPU-Image**. Click **Select Image**
   
       ![](img/select_image.png)
 
-      - **Choose Instance Type:** Bare Metal Machine
-      - **Choose Instance Shape:** Change the Shape and select BM.GPU2.2
+      - **Choose Instance Type:** Virtual Machine
+      - **Choose Instance Shape:** Change the Shape and select VM.GPU3.1
       - **Add SSH Key:** Choose the SSH file name labkey-linux.pub from your Desktop Folder.
       - **Virtual Cloud Network Compartment:** Select **common** compartment
       - **Virtual Cloud Network:** VCN-GPU-DEMO
