@@ -80,7 +80,7 @@ The key topics touched upon by both labs are:
       - **Subnet:** subnet-gpu (Regional)
       - Click **Create**
   
-     ![](img/instance_01.png)
+     ![](img/instance_001.png)
      ![](img/instance_02.png)
 
 ## Practice 2: Access the GPU instance
