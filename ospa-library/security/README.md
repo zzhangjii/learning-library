@@ -2,6 +2,18 @@
 
 **This is a push test to Oracle Learning Library in bold**
 
+
+## Getting Started
+
+### **Step 1**: Task 1
+
+- ABC
+
+### **Step 2**: Task 2
+
+- XYZ
+
+
 ~~Strikethrough text~~
 
 ## Item list
@@ -32,7 +44,7 @@ function foo () {
 
 ## Pictures
 
-![Imagen](./picture1.png)
+![Imagen](./images/picture1.png)
 *This is a caption for the image*
 
 ## This is a table 
