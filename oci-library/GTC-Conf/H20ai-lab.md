@@ -123,51 +123,45 @@ The key topics touched upon by both labs are:
 
 ## Practice 4: Loading an adult census dataset
 
-1. Click on Add Dataset and select Amazon S3
+1. Click on Add Dataset and select Upload File
 
     ![](img/h2oimage007.png)
 
-2. Select census_income by typing: `s3://h2o-public-test-data/smalldata/census_income/`
+2. Select **adult.csv** file from Desktop Folder
 
-    ![](img/h2oimage008.png)
-
-3. Select adult_test.csv and click to import selection
-
-    ![](img/h2oimage009.png)
-
-4. After the data is imported, click on **Click for Actions** and select **Visualize**. 
+3. After the data is imported, click on **Click for Actions** and select **Visualize**. 
 
     ![](img/h2oimage010.png)
 
-5. Select a few of the plots to see how the data interacts. For example **Correlation Graph**
+4. Select a few of the plots to see how the data interacts. For example **Correlation Graph**
 
     ![](img/h2oimage011.png)
 
-6. Now lets launch an experiment. Click on **datasets** at the top of the page, then **click for actions** but this time select **Predict**
+5. Now lets launch an experiment. Click on **datasets** at the top of the page, then **click for actions** but this time select **Predict**
 
     ![](img/h2oimage012.png)
 
-7. If a message appears asking if you want to do a tour of H2O, just click **No**.
+6. If a message appears asking if you want to do a tour of H2O, just click **No**.
 
-8. Click **Select target column** and select **Age**
+7. Click **Select target column** and select **Age**
 
     ![](img/h2oimage013.png)
     ![](img/h2oimage014.png)
 
-9. Make sure **Enable GPU** is highlighted in yellow and then click **Launch Experiment**
+8. Make sure **Enable GPU** is highlighted in yellow and **Accuracy** is set to **2** then click **Launch Experiment**
 
     ![](img/h2oimage015.png)
 
-10. Click on **GPU Usage** on the right side of the screen to see GPUs working. This simulation will take about 15 minutes to complete. 
+9.  Click on **GPU Usage** on the right side of the screen to see GPUs working. This simulation will take about 5 minutes to complete. 
 
     ![](img/h2oimage016.png)
 
-11. When the model is complete, click **Interpret this Model** 
+10. When the model is complete, click **Interpret this Model** 
 
     ![](img/h2oimage017.png)
     ![](img/h2oimage018.png)
 
-12. On the left side of the page click on **Dashboard**
+11. On the left side of the page click on **Dashboard**
 
     ![](img/h2oimage019.png)
 
