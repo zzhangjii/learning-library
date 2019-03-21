@@ -1,4 +1,4 @@
-![](images/GitHub1.png)
+![](images/GitHub-Mark-120px-plus.png)
 
 ## Library for GitHub OSPA Discussion
 ### Objectives
