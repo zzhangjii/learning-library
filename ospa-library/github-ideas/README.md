@@ -3,8 +3,8 @@
 ## Library for GitHub OSPA Discussion
 ### Objectives
 * Agree to common method for creating OSPA Hands-On Lab documentation using GitHub.
-* Develop standard methodology for OSPA teams
-* Determine best mechanism for document creation, edit, and deployment
+* Develop standard methodology for OSPA teams.
+* Determine best mechanism for document creation, edit, and deployment.
 
 ### Issues :warning:
 * Only selected **OSPA GitHub Admin** individuals will be able to modify Oracle GitHub's Learning-Library/ospa-library repository(Ale, Dan, John, so far...)
@@ -13,11 +13,14 @@
   * appdev 
   * appint 
   * atp 
-  * big-data-service * db19c
+  * big-data-service
+  * db19c
   * exadata-cloud 
   * migration 
   * nosql 
   * security
+* We have added a 'common-content' folder (managed by the Admins) containing content to be used when creating HTML files to provide a common 'wrapper'
+* We have also added 'common/images' folder where developers may add images to be shared cross-team
  
 * GitHub and Git do not support modification (Cloning, Branching, Merging) of individual files and/or folders; so, 'Clones' and 'Branches' are copies of entire Oracle Learning Library
 * GitHub repositories (repos) have limitations on size of individual files (100MB) and total size of repository (1GB)
@@ -42,7 +45,7 @@
       1. Developers will create, modify, and review documents in Developer Repos
 * We suggest a simple editor for Markdown like the Microsoft Visual Studio Code tool available on [MyDesktop](http://mydesktop.oraclecorp.com/myd/myd_software_licenses.show_complete_list) though any text editor will do
 
-### Alternative Mechanism
+### Alternative Mechanism (not our favorite)
 * Two-level OSPA repository (repo) scheme
    1. Oracle Learning-Library (production)
    1. OSPA Learning-Library (staging, one of Ale's, Dan's, or John's - tbd)
