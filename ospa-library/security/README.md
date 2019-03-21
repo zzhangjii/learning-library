@@ -8,6 +8,7 @@
 ### **Step 1**: Task 1
 
 - ABC
+- DEF
 
 ### **Step 2**: Task 2
 
