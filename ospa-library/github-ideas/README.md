@@ -79,7 +79,7 @@ We were asked to create a "live demo" of how this will work; here are the steps 
 1. Ale will create new document for security folder and post to ospa-security "Dev Repo"
 1. Ale (and peers/manager) will review content
 1. Ale will let John know (email or slack) that changes are ready to go
-1. Dan will push content to "Staging Repo"
+1. John will push content to "Staging Repo"
 1. Ale (and peers/manager) will review on "Staging Repo"
 1. Ale will let John know changes ok
 1. John will merge changes to "Production Repo"
