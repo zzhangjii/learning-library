@@ -58,3 +58,4 @@ We were asked to create a "live demo" of how this will work; here are the steps 
 1. Dan and peers/manager will review on "Staging Repo"
 1. Dan will let Ale know changes ok
 1. Ale will merge changes to "Production Repo"
+1. Dan will double-check on "Production Rep"
