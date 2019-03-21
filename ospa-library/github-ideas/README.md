@@ -19,8 +19,6 @@
   * migration 
   * nosql 
   * security
-* We have added a 'common-content' folder (managed by the Admins) containing content to be used when creating HTML files to provide a common 'wrapper'
-* We have also added 'common/images' folder where developers may add images to be shared cross-team
  
 * GitHub and Git do not support modification (Cloning, Branching, Merging) of individual files and/or folders; so, 'Clones' and 'Branches' are copies of entire Oracle Learning Library
 * GitHub repositories (repos) have limitations on size of individual files (100MB) and total size of repository (1GB)
@@ -37,7 +35,10 @@
 * Documents will be stored in appropriate folders in learning-library/ospa-library
   * Developers might create entirely new documents
   * Developers might modify existing documents
-  
+* We have added a 'common-content' folder (managed by the Admins) containing content to be used when creating HTML files to provide a common 'wrapper'
+* We have added a 'common/images' folder where developers may add images to be shared cross-team
+* We have added a Slack channel 'go-ospa-github' for all to share
+* Once process is finalized we will need a webcast recording to show developers what to do  
 ### Mechanism
 * Three-level OSPA repository (repo) scheme
    1. Oracle Learning-Library (production)
@@ -83,4 +84,4 @@ We were asked to create a "live demo" of how this will work; here are the steps 
 1. Ale (and peers/manager) will review on "Staging Repo"
 1. Ale will let John know changes ok
 1. John will merge changes to "Production Repo"
-1. Dan will double-check on "Production Repo"
+1. Ale will double-check on "Production Repo"
