@@ -3,8 +3,8 @@
 ## Library for GitHub OSPA Discussion
 ### Objectives
 * Agree to common method for creating OSPA Hands-On Lab documentation using GitHub.
-* Develop standard methodology for OSPA teams
-* Determine best mechanism for document creation, edit, and deployment
+* Develop standard methodology for OSPA teams.
+* Determine best mechanism for document creation, edit, and deployment.
 
 ### Issues :warning:
 * Only selected **OSPA GitHub Admin** individuals will be able to modify Oracle GitHub's Learning-Library/ospa-library repository(Ale, Dan, John, so far...)
@@ -13,11 +13,13 @@
   * appdev 
   * appint 
   * atp 
-  * big-data-service * db19c
+  * big-data-service
+  * db19c
   * exadata-cloud 
   * migration 
   * nosql 
   * security
+* We have added a 'common-services' folder where things like OSPA logos might be shared
  
 * GitHub and Git do not support modification (Cloning, Branching, Merging) of individual files and/or folders; so, 'Clones' and 'Branches' are copies of entire Oracle Learning Library
 * GitHub repositories (repos) have limitations on size of individual files (100MB) and total size of repository (1GB)
