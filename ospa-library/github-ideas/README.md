@@ -31,7 +31,8 @@
   * misc. SMALL lab files [Optional]
   * larger files will be **LINKED-to** not included in-line [Optional]
 * Developers will create and modify content then pass it to "Admins" to update in staging learning-library and ultimately production learning-library
-* Content should be simple and limited to only what is needed to complete the lab; this might include text, partial screenshot pictures, and other things that help the learner complete the demo -- THIS IS NOT A MARKETING TOOL NOR A PRESENTATION AND "NORMAL" LP RULES WILL NOT APPLY
+* Content should be simple and limited to only what is needed to complete the lab; this might include text, partial screenshot pictures, and other things that help the learner complete the demo 
+<br/>-- THIS IS NOT A MARKETING TOOL NOR A PRESENTATION AND "NORMAL" LP RULES MAY NOT APPLY
 * Developers will be responsible for CE and QA of their own material; peer review will be essential
 * Documents will be stored in appropriate folders in learning-library/ospa-library
   * Developers might create entirely new documents
@@ -75,11 +76,11 @@
 We were asked to create a "live demo" of how this will work; here are the steps we will follow:
 
 1. John will demo [oracle/learning-library/ospa-library](https://github.com/oracle/learning-library) ("Production Repo"); [jjking2019/learning-library/ospa-library](https://github.com/jjking2019/learning-library) ("Staging Repo"), and the "Developer Repos"
-1. Dan will create new document for ??? folder and post to ??? repository
-1. Dan and peers/manager will review content
-1. Dan will let Ale know (email or slack) that changes are ready to go
-1. Ale will push to "Staging Repo"
-1. Dan and peers/manager will review on "Staging Repo"
-1. Dan will let Ale know changes ok
-1. Ale will merge changes to "Production Repo"
+1. Ale will create new document for security folder and post to ospa-security "Dev Repo"
+1. Ale (and peers/manager) will review content
+1. Ale will let John know (email or slack) that changes are ready to go
+1. Dan will push content to "Staging Repo"
+1. Ale (and peers/manager) will review on "Staging Repo"
+1. Ale will let John know changes ok
+1. John will merge changes to "Production Repo"
 1. Dan will double-check on "Production Repo"
