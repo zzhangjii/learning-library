@@ -1,4 +1,4 @@
-### Useful Git and Github resources
+### Useful Git and Github resources  -- [RETURN](README.md)
 
 Intro to Git and GitHub for Beginners
 https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
