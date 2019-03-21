@@ -32,6 +32,7 @@
 * Documents will be stored in appropriate folders in learning-library/ospa-library
   * Developers might create entirely new documents
   * Developers might modify existing documents
+  
 ### Mechanism
 * Three-level OSPA repository (repo) scheme
    1. Oracle Learning-Library (production)
@@ -40,11 +41,13 @@
       1. Developers will have full authority to Developer Repos - **Note: Developers Github Access is required**
       1. Developers will create, modify, and review documents in Developer Repos
 * We suggest a simple editor for Markdown like the Microsoft Visual Studio Code tool available on [MyDesktop](http://mydesktop.oraclecorp.com/myd/myd_software_licenses.show_complete_list) though any text editor will do
+
 ### Alternative Mechanism
 * Two-level OSPA repository (repo) scheme
    1. Oracle Learning-Library (production)
-   1. OSPA Learning-Library (staging, one of Ale's, Dan's, or John's - tbd
+   1. OSPA Learning-Library (staging, one of Ale's, Dan's, or John's - tbd)
 * Developers create .zip file for desired folder and make it available to "Admins" for unzip and load. Zip file will be share out of the band (email, LCMS, Slack) and Developer Github access is not required.
+
 ### Suggested Workflow(s)
    1. (If new) Developer checks to see if appropriate folder already in repository; if not, request from "Admins"
    1. Developer creates (or gets from somewhere) desired content, makes sure it is in proper form (.md, .html), and that all large files are linked-to rather than part of document (we need to decide if links will be to Confluence, OraDocs, LCMS, etc...)</br>
