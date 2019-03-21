@@ -59,6 +59,10 @@
    1. Developer (and team) review document in "Staging Repo" and let Admin know when ok
    1. Admin __MERGEs__ from "Staging Repo" to "Production Repo" - lets Developer know of success/failure
    1. Developer performs final check of "Production Repo"
+   
+   
+   ![](images/Flowchart.png)
+   
 
 ### Demo
 We were asked to create a "live demo" of how this will work; here are the steps we will follow:
