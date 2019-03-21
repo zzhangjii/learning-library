@@ -8,7 +8,7 @@
 
 ### Issues :warning:
 * Only selected **OSPA GitHub Admin** individuals will be able to modify Oracle GitHub's Learning-Library/ospa-library repository(Ale, Dan, John, so far...)
-* OSPA management has decided upon individual folders for different teams/products/labs; to date they are:  
+* OSPA management has decided upon individual folders for different teams/products/labs; to date they are: adw, appdev, appint, atp, big-data-service, db19c, exadata-cloud, migration, nosql, and security  
 * GitHub and Git do not support modification (Cloning, Branching, Merging) of individual files and/or folders; so, 'Clones' and 'Branches' are copies of entire Oracle Learning Library
 * GitHub repositories (repos) have limitations on size of individual files (100MB) and total size of repository (1GB)
 ### Contents
@@ -43,6 +43,7 @@
    1. Developer (peers, maybe manager, maybe testers...) review content in GitHub; repeat 2-3-4 cycle until happy
    1. Developer notifies "admin" that "Developer Repo" is ready to go
    1. Admin copies contents from "Developer Repo" into "Staging Repo" (we will script this); performs cursory check of file sizes and formatting
+   1. Developer (and team) review document in "Staging Repo" and let Admin know when ok
    1. Admin __MERGEs__ from "Staging Repo" to "Production Repo" - lets Developer know of success/failure
    1. Developer performs final check of "Production Repo"
 
