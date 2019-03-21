@@ -31,7 +31,7 @@
   * misc. SMALL lab files [Optional]
   * larger files will be **LINKED-to** not included in-line [Optional]
 * Developers will create and modify content then pass it to "Admins" to update in staging learning-library and ultimately production learning-library
-* Content should be simple and limited to only what is needed to complete the lab; this might include text, partial screenshot pictures, and other things that help the learner complete the demo -- THIS IS NOT A MARKETING TOOL AND "NORMAL" LP RULES WILL NOT APPLY
+* Content should be simple and limited to only what is needed to complete the lab; this might include text, partial screenshot pictures, and other things that help the learner complete the demo -- THIS IS NOT A MARKETING TOOL NOR A PRESENTATION AND "NORMAL" LP RULES WILL NOT APPLY
 * Developers will be responsible for CE and QA of their own material; peer review will be essential
 * Documents will be stored in appropriate folders in learning-library/ospa-library
   * Developers might create entirely new documents
