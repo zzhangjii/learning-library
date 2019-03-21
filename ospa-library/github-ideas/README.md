@@ -8,15 +8,25 @@
 
 ### Issues :warning:
 * Only selected **OSPA GitHub Admin** individuals will be able to modify Oracle GitHub's Learning-Library/ospa-library repository(Ale, Dan, John, so far...)
-* OSPA management has decided upon individual folders for different teams/products/labs; to date they are: adw, appdev, appint, atp, big-data-service, db19c, exadata-cloud, migration, nosql, and security  
+* OSPA management has decided upon individual folders for different teams/products/labs; to date they are: 
+  * adw 
+  * appdev 
+  * appint 
+  * atp 
+  * big-data-service * db19c
+  * exadata-cloud 
+  * migration 
+  * nosql 
+  * security
+ 
 * GitHub and Git do not support modification (Cloning, Branching, Merging) of individual files and/or folders; so, 'Clones' and 'Branches' are copies of entire Oracle Learning Library
 * GitHub repositories (repos) have limitations on size of individual files (100MB) and total size of repository (1GB)
 ### Contents
 * Contents stored on GitHub will be:
-  * .md (Markdown) files
-  * .html (HTML5) files
-  * misc. SMALL lab files
-  * larger files will be **LINKED-to** not included in-line
+  * .md (Markdown) files - These are the main files containing labs instructions
+  * .html (HTML5) files - [Optional] If developers want to wrap the content and make it available on a static site
+  * misc. SMALL lab files [Optional]
+  * larger files will be **LINKED-to** not included in-line [Optional]
 * Developers will create and modify content then pass it to "Admins" to update in staging learning-library and ultimately production learning-library
 * Developers will be responsible for CE and QA of their own material; peer review will be essential
 * Documents will be stored in appropriate folders in learning-library/ospa-library
@@ -27,14 +37,14 @@
    1. Oracle Learning-Library (production)
    1. OSPA Learning-Library (staging, one of Ale's, Dan's, or John's - tbd)
    1. One 'Developer Repo' for each folder identified earlier
-      1. Developers will have full authority to Developer Repos
+      1. Developers will have full authority to Developer Repos - **Note: Developers Github Access is required**
       1. Developers will create, modify, and review documents in Developer Repos
 * We suggest a simple editor for Markdown like the Microsoft Visual Studio Code tool available on [MyDesktop](http://mydesktop.oraclecorp.com/myd/myd_software_licenses.show_complete_list) though any text editor will do
 ### Alternative Mechanism
 * Two-level OSPA repository (repo) scheme
    1. Oracle Learning-Library (production)
    1. OSPA Learning-Library (staging, one of Ale's, Dan's, or John's - tbd
-* Developers create .zip file for desired folder and make it available to "Admins" for unzip and load
+* Developers create .zip file for desired folder and make it available to "Admins" for unzip and load. Zip file will be share out of the band (email, LCMS, Slack) and Developer Github access is not required.
 ### Suggested Workflow(s)
    1. (If new) Developer checks to see if appropriate folder already in repository; if not, request from "Admins"
    1. Developer creates (or gets from somewhere) desired content, makes sure it is in proper form (.md, .html), and that all large files are linked-to rather than part of document (we need to decide if links will be to Confluence, OraDocs, LCMS, etc...)</br>
