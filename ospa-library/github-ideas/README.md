@@ -87,4 +87,4 @@ We were asked to create a "live demo" of how this will work; here are the steps 
 1. Ale will double-check on "Production Repo"
 
 ### Resources
-[Resource page](resources)
+[Resource page](resources.md)
