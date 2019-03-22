@@ -7,7 +7,7 @@
 * Determine best mechanism for document creation, edit, and deployment.
 
 ### Issues :warning:
-* Only selected **OSPA GitHub Admin** individuals will be able to modify Oracle GitHub's Learning-Library/ospa-library repository(Ale, Dan, John, so far...)
+* Only selected **OSPA GitHub Admin** individuals will be able to modify Oracle GitHub's Learning-Library/ospa-library repository(Ale, Dan, John, so far...) Having repository "gatekeepers" will avoid conflicts on the production repository.
 * OSPA management has decided upon individual folders for different teams/products/labs; to date they are: 
   * adw 
   * appdev 
@@ -21,11 +21,11 @@
   * security
  
 * GitHub and Git do not support modification (Cloning, Branching, Merging) of individual files and/or folders; so, 'Clones' and 'Branches' are copies of entire Oracle Learning Library
-* GitHub repositories (repos) have limitations on size of individual files (100MB) and total size of repository (1GB)
+* GitHub repositories (repos) have limitations on size of individual files **(100MB)** and total size of repository **(1GB)**
 ### Contents
 * Contents stored on GitHub will be:
   * .md (Markdown) files - These are the main files containing labs instructions
-  * .html (HTML5) files - [Optional] If developers want to wrap the content and make it available on a static site
+  * .html (HTML5) files - [Optional] If developers want to wrap the content and make it available on a static web site
   * misc. SMALL lab files [Optional]
   * larger files will be **LINKED-to** not included in-line [Optional]
 * Developers will create and modify content then pass it to "Admins" to update in staging learning-library and ultimately production learning-library
@@ -35,10 +35,10 @@
 * Documents will be stored in appropriate folders in learning-library/ospa-library
   * Developers might create entirely new documents
   * Developers might modify existing documents
-* We have added a 'common-content' folder (managed by the Admins) containing content to be used when creating HTML files to provide a common 'wrapper'
+* We have added a 'common-content' folder (managed by the Admins) containing assets to be used when creating HTML files to provide a common 'wrapper'
 * We have added a 'common/images' folder where developers may add images to be shared cross-team
 * We have added a Slack channel 'go-ospa-github' for all to share
-* Once process is finalized we will need a webcast recording to show developers what to do  
+* Once process is finalized we will need a webcast recording to show developers the process and tools required to built content 
 ### Mechanism
 * Three-level OSPA repository (repo) scheme
    1. Oracle Learning-Library (production)
@@ -48,11 +48,13 @@
       1. Developers will create, modify, and review documents in Developer Repos
 * We suggest a simple editor for Markdown like the Microsoft Visual Studio Code tool available on [MyDesktop](http://mydesktop.oraclecorp.com/myd/myd_software_licenses.show_complete_list) though any text editor will do
 
+![](images/Picture3.png)
+
 ### Alternative Mechanism (not our favorite)
 * Two-level OSPA repository (repo) scheme
    1. Oracle Learning-Library (production)
    1. OSPA Learning-Library (staging, one of Ale's, Dan's, or John's - tbd)
-* Developers create .zip file for desired folder and make it available to "Admins" for unzip and load. Zip file will be share out of the band (email, LCMS, Slack) and Developer Github access is not required.
+* Developers create .zip file for desired folder and make it available to "Admins" for unzip and load. Zip file will be share out-of-the-band (email, LCMS, Slack). Developer Github access is not required.
 
 ### Suggested Workflow(s)
    1. (If new) Developer checks to see if appropriate folder already in repository; if not, request from "Admins"
