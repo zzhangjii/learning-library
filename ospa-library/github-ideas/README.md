@@ -3,7 +3,7 @@
 ## Library for GitHub OSPA Discussion
 ### Objectives
 * Agree to common method for creating OSPA Hands-On Lab documentation using GitHub.
-* Develop standard methodology for OSPA teams.
+* Begin to develop standard methodology for OSPA teams.
 * Determine best mechanism for document creation, edit, and deployment.
 
 ### Issues :warning:
@@ -37,8 +37,8 @@
   * Developers might modify existing documents
 * We have added a 'common-content' folder (managed by the Admins) containing assets to be used when creating HTML files to provide a common 'wrapper'
 * We have added a 'common/images' folder where developers may add images to be shared cross-team
-* We have added a Slack channel 'go-ospa-github' for all to share
-* Once process is finalized we will need a webcast recording to show developers the process and tools required to built content 
+* We have added a Slack channel 'go-ospa-github' for all to share; Developers and Admins will use it to communicate back-and-forth
+* Once process is finalized we will need a webcast recording to show developers the process and tools required to build content 
 ### Mechanism
 * Three-level OSPA repository (repo) scheme
    1. Oracle Learning-Library (production)
@@ -46,6 +46,7 @@
    1. One 'Developer Repo' for each folder identified earlier
       1. Developers will have full authority to Developer Repos - **Note: Developers Github Access is required**
       1. Developers will create, modify, and review documents in Developer Repos
+   [Rationale behind three-level repository](threelevel.md)
 * We suggest a simple editor for Markdown like the Microsoft Visual Studio Code tool available on [MyDesktop](http://mydesktop.oraclecorp.com/myd/myd_software_licenses.show_complete_list) though any text editor will do
 
 ![](images/VSCode.png)
