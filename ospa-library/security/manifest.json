@@ -1,0 +1,17 @@
+{
+  "workshop": {
+    "title": "ClassOf",
+    "description":
+      "This is the first of several labs that are part of the **Oracle Cloud Security Services.**",
+    "theme": "default",
+    "interactive": "",
+    "labs": [
+      {
+        "number": "0",
+        "filename": "README.md",
+        "title": "Test",
+        "description": "First Document"
+      }
+    ]
+  }
+}
