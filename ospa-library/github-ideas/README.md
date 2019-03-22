@@ -49,7 +49,8 @@
    1. One 'Developer Repo' for each folder identified earlier
       1. Developers will have full authority to Developer Repos - **Note: Developers Github Access is required**
       1. Developers will create, modify, and review documents in Developer Repos
-   <br/>[Rationale behind three-level repository](threelevel.md)
+
+<br/>[Rationale behind three-level repository](threelevel.md)
 * We suggest a simple editor for Markdown like the Microsoft Visual Studio Code tool available on [MyDesktop](http://mydesktop.oraclecorp.com/myd/myd_software_licenses.show_complete_list) though any text editor will do
 
 ![](images/VSCode.png)
