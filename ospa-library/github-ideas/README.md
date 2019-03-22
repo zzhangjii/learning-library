@@ -54,7 +54,7 @@
       1. Developers will have full authority to Developer Repos - **Note: Developers Github Access is required**
       1. Developers will create, modify, and review documents in Developer Repos
 
-<br/>[Rationale behind three-level repository](threelevel.md)
+   <br/>[Rationale behind three-level repository](threelevel.md)
 
 ### Alternative Mechanism (not our favorite)
 * Two-level OSPA repository (repo) scheme
