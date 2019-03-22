@@ -42,6 +42,10 @@
 * We have added a 'common/images' folder where developers may add images to be shared cross-team
 * We have added a Slack channel 'go-ospa-github' for all to share; Developers and Admins will use it to communicate back-and-forth
 * Once our process is finalized we will need a webcast recording to show developers the process and tools required to build content 
+### Tooling
+* We suggest a simple editor for Markdown like the Microsoft Visual Studio Code tool available on [MyDesktop](http://mydesktop.oraclecorp.com/myd/myd_software_licenses.show_complete_list) though any text editor will do
+
+![](images/VSCode.png)
 ### Mechanism
 * Three-level OSPA repository (repo) scheme
    1. Oracle Learning-Library (production)
@@ -51,9 +55,6 @@
       1. Developers will create, modify, and review documents in Developer Repos
 
 <br/>[Rationale behind three-level repository](threelevel.md)
-* We suggest a simple editor for Markdown like the Microsoft Visual Studio Code tool available on [MyDesktop](http://mydesktop.oraclecorp.com/myd/myd_software_licenses.show_complete_list) though any text editor will do
-
-![](images/VSCode.png)
 
 ### Alternative Mechanism (not our favorite)
 * Two-level OSPA repository (repo) scheme
