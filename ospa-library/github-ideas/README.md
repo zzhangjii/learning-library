@@ -20,17 +20,20 @@
   * nosql 
   * security
  
-* GitHub and Git do not support modification (Cloning, Branching, Merging) of individual files and/or folders; so, 'Clones' and 'Branches' are copies of entire Oracle Learning Library
-* GitHub repositories (repos) have limitations on size of individual files **(100MB)** and total size of repository **(1GB)**
+* GitHub and Git do not support modification (Cloning, Branching, Merging) of individual files and/or folders; so, 'Clones' and 'Branches' are copies of entire Oracle Learning Library.
+* GitHub repositories (repos) have limitations on size of individual files **(100MB)** and total size of repository **(1GB)**.
 ### Contents
 * Contents stored on GitHub will be:
   * .md (Markdown) files - These are the main files containing labs instructions
   * .html (HTML5) files - [Optional] If developers want to wrap the content and make it available on a static web site
   * misc. SMALL lab files [Optional]
   * larger files will be **LINKED-to** not included in-line [Optional]
-* Developers will create and modify content then pass it to "Admins" to update in staging learning-library and ultimately production learning-library
-* Content should be simple and limited to only what is needed to complete the lab; this might include text, partial screenshot pictures, and other things that help the learner complete the demo 
-<br/>-- THIS IS NOT A MARKETING TOOL NOR A PRESENTATION AND "NORMAL" LP RULES MAY NOT APPLY
+* Developers will create and modify content then pass it to "Admins" to update in staging learning-library and ultimately production learning-library.
+* Content should be simple and limited to only what is needed to complete the lab; this might include text, partial screenshot pictures, and other things that help the learner complete the demo. 
+<br/>-- THIS IS NOT A MARKETING TOOL NOR A PRESENTATION AND "NORMAL" LP FORMATTING MAY NOT APPLY
+<br/>---- No need for "section header" and "title" images; keep images small and to the point if used at all
+<br/>---- These are lab guides; keep it simple and easy; link to complex explanations, videos, etc...
+
 * Developers will be responsible for CE and QA of their own material; peer review will be essential
 * Documents will be stored in appropriate folders in learning-library/ospa-library
   * Developers might create entirely new documents
@@ -38,7 +41,7 @@
 * We have added a 'common-content' folder (managed by the Admins) containing assets to be used when creating HTML files to provide a common 'wrapper'
 * We have added a 'common/images' folder where developers may add images to be shared cross-team
 * We have added a Slack channel 'go-ospa-github' for all to share; Developers and Admins will use it to communicate back-and-forth
-* Once process is finalized we will need a webcast recording to show developers the process and tools required to build content 
+* Once our process is finalized we will need a webcast recording to show developers the process and tools required to build content 
 ### Mechanism
 * Three-level OSPA repository (repo) scheme
    1. Oracle Learning-Library (production)
@@ -55,7 +58,8 @@
 * Two-level OSPA repository (repo) scheme
    1. Oracle Learning-Library (production)
    1. OSPA Learning-Library (staging, one of Ale's, Dan's, or John's - tbd)
-* Developers create .zip file for desired folder and make it available to "Admins" for unzip and load. Zip file will be share out-of-the-band (email, LCMS, Slack). Developer Github access is not required.
+* Developers create .zip file for desired folder and make it available to "Admins" for unzip and load. Zip file will be shared using email, LCMS, or Slack (go-ospa-github). - WCGW? :pray:
+* Developer Github access is not required.
 
 ### Suggested Workflow(s)
    1. (If new) Developer checks to see if appropriate folder already in repository; if not, request from "Admins"
