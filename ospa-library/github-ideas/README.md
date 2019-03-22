@@ -45,7 +45,7 @@
 ### Tooling
 * We suggest a simple editor for Markdown like the Microsoft Visual Studio Code tool available on [MyDesktop](http://mydesktop.oraclecorp.com/myd/myd_software_licenses.show_complete_list) though any text editor will do
 
-![](images/VSCode.png)
+![](images/VisualCode.gif)
 ### Mechanism
 * Three-level OSPA repository (repo) scheme
    1. Oracle Learning-Library (production)
