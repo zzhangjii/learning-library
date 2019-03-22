@@ -1,4 +1,5 @@
-### Three-Level Rationale
+### Three-Level Rationale  -- [RETURN](README.md)
+
 * In GitHub (and Git) a "clone" or "fork" is of the entire repository; so, an OSPA clone of the Oracle learning-library contains everything in the 'master' repository
  * If someone makes changes to the clone or fork; those changes are made to the master when repositories are merged
  * If someone in OSPA inadvertently changes something in another team's folder it might be months before the mistake is noticed (probably not a good thing for OSPA)
