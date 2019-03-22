@@ -48,7 +48,7 @@
       1. Developers will create, modify, and review documents in Developer Repos
 * We suggest a simple editor for Markdown like the Microsoft Visual Studio Code tool available on [MyDesktop](http://mydesktop.oraclecorp.com/myd/myd_software_licenses.show_complete_list) though any text editor will do
 
-![](images/Picture3.png)
+![](images/VSCode.png)
 
 ### Alternative Mechanism (not our favorite)
 * Two-level OSPA repository (repo) scheme
