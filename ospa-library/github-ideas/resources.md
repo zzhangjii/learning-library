@@ -1,37 +1,40 @@
 ### Useful Git and Github resources  -- [RETURN](README.md)
 
-Intro to Git and GitHub for Beginners
+* Intro to Git and GitHub for Beginners
 https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
 
-Markdown Cheatsheet
+* Markdown Cheatsheet
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
-Markdown Guide Cheatsheet
+* Markdown Guide Cheatsheet
 https://www.markdownguide.org/cheat-sheet
 
-Markdown Guide
+* Markdown Guide
 https://www.markdownguide.org
 
-Github Emoji Cheatsheet
+* Github Emoji Cheatsheet
 https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md
 
-Microsoft Visual Studio Code (in Oracle Desktop)
+* Microsoft Visual Studio Code (in Oracle Desktop)
 https://mydesktop.oraclecorp.com/myd/myd_software_licenses.show_complete_list
 
-Online Markdown Editor
+* Online Markdown Editor
 https://dillinger.io/
 
-GitHub Cheat Sheet
+* GitHub Cheat Sheet
 https://education.github.com/git-cheat-sheet-education.pdf
 
-Common GitHub Commands
+* Common GitHub Commands
 https://github.com/joshnh/Git-Commands
 
-Simple GitHub Guide (some text might be NSFW)
+* Simple GitHub Guide (some text might be NSFW)
 http://rogerdudler.github.io/git-guide/
 
-Basic Git commands
+* Basic Git commands
 https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html
 
-Essential Git commands
+* Essential Git commands
 https://www.robinwieruch.de/git-essential-commands/
+
+* GitHub Desktop client
+https://desktop.github.com/
