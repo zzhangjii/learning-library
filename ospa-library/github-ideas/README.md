@@ -72,10 +72,10 @@
    1. Developer will push to appropriate "Developer Repo" (e.g. ospa-lib-appdev)
    1. Developer (peers, maybe manager, maybe testers...) review content in GitHub; repeat 2-3-4 cycle until happy
    1. Developer notifies "admin" that "Developer Repo" is ready to go
-   1. Admin copies contents from "Developer Repo" into "Staging Repo" (we will script this); performs cursory check of file sizes and formatting
-      1. Admin downloads zip file manually and unzips on their local machine
-      1. Admin uploads file contents to "Staging Repo" from their local machine
-      1. Admin "commits" changes
+   1. Admin synchronize from "Developer Repo" into "Staging Repo" through script or command line; performs cursory check of file sizes and formatting
+      1. Admin run script
+      1. Admin select developer repository to update
+      1. Changes are automatically committed to Staging repository
    1. Developer (and team) review document in "Staging Repo" and let Admin know when ok
    1. Admin __MERGEs__ from "Staging Repo" to "Production Repo" - lets Developer know of success/failure
    1. Developer performs final check of "Production Repo"
