@@ -1,3 +1,3 @@
-[submodule "ospa-library/ospa-security"]
-	path = ospa-library/ospa-security
+[submodule "ospa-security"]
+	path = ospa-security
 	url = https://github.com/jjking2019/ospa-security
