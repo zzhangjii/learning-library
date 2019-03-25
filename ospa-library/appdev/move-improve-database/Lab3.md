@@ -1,4 +1,4 @@
-# Lab 3 : Using Oracle Object STORAGE
+# Lab 3 : Using Oracle Object Storage
 
 Oracle Cloud includes Object Storage for holding data. Some tools used
 to import ATP data work with data present in Object Storage. In this lab
