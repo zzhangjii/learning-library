@@ -9,14 +9,16 @@
 ### Issues :warning:
 * Only selected **OSPA GitHub Admin** individuals will be able to modify Oracle GitHub's Learning-Library/ospa-library repository(Ale, Dan, John, so far...) Having repository "gatekeepers" will avoid conflicts on the production repository.
 * OSPA management has decided upon individual folders for different teams/products/labs; to date they are: 
-  * adw 
+  * analytics
   * appdev 
   * appint 
-  * atp 
-  * big-data-service
-  * db19c
-  * exadata-cloud 
-  * migration 
+  * data-mgmt
+    * adw 
+    * atp 
+    * big-data-service
+    * db19c
+    * exadata-cloud 
+    * migration 
   * nosql 
   * security
  
@@ -61,7 +63,7 @@
    1. Oracle Learning-Library (production)
    1. OSPA Learning-Library (staging, one of Ale's, Dan's, or John's - tbd)
 * Developers create .zip file for desired folder and make it available to "Admins" for unzip and load. Zip file will be shared using email, LCMS, or Slack (go-ospa-github). - WCGW? :pray:
-* Developer Github access is not required.
+* Developer Github access is not required
 
 ### Suggested Workflow(s)
    1. (If new) Developer checks to see if appropriate folder already in repository; if not, request from "Admins"
