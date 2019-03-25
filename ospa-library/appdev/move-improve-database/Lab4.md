@@ -1,4 +1,4 @@
-# Lab 4 : Connect with cloud wallet
+# Lab 4 : Connect with Cloud Wallet
 
 SQL Developer is a freely-available tool used primarily by developers
 and DBAs; though, others often find it useful. Download and install SQL
@@ -14,14 +14,14 @@ To successfully perform these labs you will need SQL Developer 18.3 or a
 later installed locally. You will also need a CreateCredential.sql file
 from the Lab4.zip file included in the course files.
 
-![](media/image49.png)
+![](images/image49.png)
 
 Here is the main SQL Developer screen. Notice the ‘Connections’ display
 in the upper-left corner; click on the green plus sign
-![](media/image50.png) (or use the menu: File \> New \> General \>
+![](images/image50.png) (or use the menu: File \> New \> General \>
 Connections \> Database Connection) to start creating a connection.
 
-![](media/image51.png)
+![](images/image51.png)
 
 A dialog will appear where connection details will be added. Complete
 the dialog as follows:
@@ -43,7 +43,7 @@ the dialog as follows:
 
 7.  Look for ‘Status: Success’ then ‘Save’ the connection and ‘Connect’
 
-![](media/image52.png)
+![](images/image52.png)
 
 Once successfully connected, a ‘Worksheet’ tab opens. Open (or copy) the
 provided ‘CreateCredential.sql’ file in a worksheet then make the
@@ -57,17 +57,17 @@ following changes:
 
 3.  Set ‘password’ to the ‘Auth Token’ created and stored earlier
 
-![](media/image53.png)
+![](images/image53.png)
 
 To execute the script; click the ‘Run Script’ icon
-![](media/image54.tiff) (upper-left above the worksheet) or press the F5
+![](images/image54.tiff) (upper-left above the worksheet) or press the F5
 key.
 
-![](media/image55.png)
+![](images/image55.png)
 
 Watch for ‘success’ messages
 
-![](media/image56.png)
+![](images/image56.png)
 
 Congratulations\! You have successfully connected to an ATP Database and
 created a Credential object; you are now ready to begin importing data
