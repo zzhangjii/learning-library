@@ -1,5 +1,7 @@
 ![](media/image1.png)
 
+# Move and Improve Database - Lab Guide
+
 ## Lab Overview 
 
 This lab is for the “Show It and Build It: Move and Improve Database”
