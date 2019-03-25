@@ -76,6 +76,10 @@
       1. Admin run script
       1. Admin select developer repository to update
       1. Changes are automatically committed to Staging repository
+      
+      ![](images/script.png)
+      
+      
    1. Developer (and team) review document in "Staging Repo" and let Admin know when ok
    1. Admin __MERGEs__ from "Staging Repo" to "Production Repo" - lets Developer know of success/failure
    1. Developer performs final check of "Production Repo"
