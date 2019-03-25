@@ -7,60 +7,60 @@ Credentials](#lab-2-obtain-connection-credentials).
 
 First, log in to your Oracle Cloud instance using an ‘admin’ account
 
-![](media/image6.png)
+![](images/image6.png)
 
 Next you need to see the ‘Compute’ instances’ available.
 
-![](media/image7.png)
+![](images/image7.png)
 
 Unless you have already added them to the default view.
 
-![](media/image8.png)
+![](images/image8.png)
 
 Click the ‘Hamburger Icon’ to display the list of available options.
 
-![](media/image9.png)
+![](images/image9.png)
 
 Use the drop-down list and select ‘Compute’ to list available instances
 
-![](media/image10.png)
+![](images/image10.png)
 
 If the instance you want is currently STOPPED, use the ‘ellipsis’ (…) to
 the right to START
 
-![](media/image11.png) ![](media/image12.png)
+![](images/image11.png) ![](images/image12.png)
 
 The icon will turn green and the tag will switch to RUNNING once the
 instance has started. If you won’t be using the instance full-time, STOP
 it when you are not using it to conserve resources (and lower charges).
 
-![](media/image13.png)
+![](images/image13.png)
 
 Click on the instance name to display its information page.
 
-![](media/image14.png)
+![](images/image14.png)
 
-Use the instance ‘Hamburger Icon’ ![](media/image15.tiff) to display the
+Use the instance ‘Hamburger Icon’ ![](images/image15.tiff) to display the
 list of services available; you will use this set of menu options
 frequently.
 
-![](media/image16.png)
+![](images/image16.png)
 
 Choose ‘Autonomous Transaction Processing’ to continue and list any
 existing ATP databases in the instance.
 
-![](media/image17.tiff)
+![](images/image17.tiff)
 
 The Autonomous Transaction Processing page shows all existing ATP
 databases; click “Create Autonomous Transaction Processing Database” to
 begin the process.
 
-![](media/image18.tiff)
+![](images/image18.tiff)
 
 Provide the initial setup information for the database in the top part
 of the displayed set up window:
 
-![](media/image19.tiff)
+![](images/image19.tiff)
 
   - Compartment (select name from drop-down list, ask your administrator
     if you don’t know)
@@ -77,7 +77,7 @@ of the displayed set up window:
 
 Complete the bottom part of the set up window as follows:
 
-![](media/image20.tiff)
+![](images/image20.tiff)
 
   - The username ‘ADMIN’ is pre-selected and read-only
 
@@ -90,22 +90,22 @@ Complete the bottom part of the set up window as follows:
 At the bottom of the set up window, click ‘Create Autonomous Transaction
 Processing Database’ to begin the creation process.
 
-![](media/image21.tiff)
+![](images/image21.tiff)
 
 The screen switches to the ATP Instance list; the new database shows
 ‘Provisioning’ click the new database name for more details
 
-![](media/image22.tiff)
+![](images/image22.tiff)
 
 ATP databases typically provision quickly (less than 5 min, probably
 under 30 sec).
 
-![](media/image23.tiff)
+![](images/image23.tiff)
 
 When complete, the ATP icon will turn green and the text will show
 RUNNING (you may need to refresh your browser screen to see the change).
 
-![](media/image24.tiff)
+![](images/image24.tiff)
 
 Congratulations\! You’ve successfully create an ATP Database instance.
 
