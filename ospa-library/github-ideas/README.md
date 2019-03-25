@@ -74,8 +74,8 @@
    1. Developer (peers, maybe manager, maybe testers...) review content in GitHub; repeat 2-3-4 cycle until happy
    1. Developer notifies "admin" that "Developer Repo" is ready to go
    1. Admin synchronize from "Developer Repo" into "Staging Repo" through script or command line; performs cursory check of file sizes and formatting
-      1. Admin run script
-      1. Admin select developer repository to update
+      1. Admin runs script (in-house script, see menu below)
+      1. Admin selects developer repository to update
       1. Changes are automatically committed to Staging repository
       
       ![](./images/script.png)
