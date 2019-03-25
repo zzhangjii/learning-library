@@ -77,7 +77,7 @@
       1. Admin select developer repository to update
       1. Changes are automatically committed to Staging repository
       
-      ![](images/script.png)
+      ![](./images/script.png)
       
       
    1. Developer (and team) review document in "Staging Repo" and let Admin know when ok
