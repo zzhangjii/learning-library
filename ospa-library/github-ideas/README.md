@@ -20,6 +20,7 @@
     * exadata-cloud 
     * migration 
   * nosql 
+  * oci
   * security
  
 * GitHub and Git do not support modification (Cloning, Branching, Merging) of individual files and/or folders; so, 'Clones' and 'Branches' are copies of entire Oracle Learning Library.
