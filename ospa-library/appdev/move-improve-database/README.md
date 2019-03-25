@@ -1,4 +1,4 @@
-![](media/image1.png)
+![](images/image1.png)
 
 # Move and Improve Database - Lab Guide
 
