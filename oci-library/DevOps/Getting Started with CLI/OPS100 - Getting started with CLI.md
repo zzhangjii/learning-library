@@ -14,7 +14,7 @@
 
 [Practice 4: Create another VCN with one public subnet](#practice-4-create-another-vcn-with-one-public-subnet)
 
-[Practice 5: Use QUERY to find Oracle Linux Image ID, then launch a compute instance](#practice-5-use-query-to-find-oracle-linux-image-id,-then-launch-a-compute-instance)
+[Practice 5: Use QUERY to find Oracle Linux Image ID then launch a compute instance](#practice-5-use-query-to-find-oracle-linux-image-id-then-launch-a-compute-instance)
 
 [Bonus Exercise: Use the CLI to create the rest of the VCN resources](#bonus-exercise-use-the-cli-to-create-the-rest-of-the-vcn-resources)
 
