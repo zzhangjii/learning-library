@@ -144,7 +144,7 @@ oci -v
 ```
 **NOTE:** Version should be minimum 2.5.X (3/23/2019)
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/Using_OCI_CLI/img/100_CLI_001.PNG" >
+<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/DevOps/Getting%20Started%20with%20CLI/img/100_CLI_001.png">
 
 12. Next we will configure OCI CLI. Enter command:
 ```
@@ -234,7 +234,7 @@ oci iam availability-domain list
 
 This will list all availability domains in the current region.  Make note of one of the availability domain names.  It should look something like this ``nESu:PHX-AD-3``.  You will use this in a future step.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/Using_OCI_CLI/img/100_CLI_002.PNG" >
+<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/DevOps/Getting%20Started%20with%20CLI/img/100_CLI_002.png">
 
 6. Return to the OCI Console and navigate to Identity -> Compartments.  Retrieve the OCID of the assigned compartment.
 
@@ -243,7 +243,7 @@ This will list all availability domains in the current region.  Make note of one
 oci network vcn list --compartment-id <your compartment id>
 ```
 
- <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/Using_OCI_CLI/img/100_CLI_003.PNG" >
+ <img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/DevOps/Getting%20Started%20with%20CLI/img/100_CLI_003.png">
 
 **NOTE:** It should return the details of the VCN you created at the start of this lab.  If you encounter an error message, please contact the instructor.
 
@@ -286,7 +286,7 @@ Make a note of the ``id:`` for this resource after it has been created.
 ```
 oci network route-table list -c <your compartment OCID> --vcn-id <your VCN OCID>
 ```
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/Using_OCI_CLI/img/100_CLI_004.PNG" >
+<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/DevOps/Getting%20Started%20with%20CLI/img/100_CLI_004.png">
 
 record the ``id:`` of the `Default Route Table`
 
@@ -295,7 +295,7 @@ record the ``id:`` of the `Default Route Table`
 oci network route-table update --rt-id <route table OCID> --route-rules '[{"cidrBlock":"0.0.0.0/0","networkEntityId":"<your Internet Gateway OCID"}]'
 ```
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/Using_OCI_CLI/img/100_CLI_004.PNG" >
+<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/DevOps/Getting%20Started%20with%20CLI/img/100_CLI_004.png">
 
 **Note:** When updating route tables or security lists you cannot insert a single rule.  You must ``update`` with the entire set of rules.  The prompt shown in the screenshot above illustrates this point.
 
@@ -377,15 +377,15 @@ oci compute instance list-vnics --instance-id <instance OCID> | grep "ip.:"
 1. Open PuttyGen
 2. Click the [Generate] button
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/Using_OCI_CLI/img/puttygen-start.jpg" >
+<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/DevOps/Getting%20Started%20with%20CLI/img/puttygen-start.jpg" >
 
 3. Move your mouse around the screen randomly until the progress bar reaches 100%
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/Using_OCI_CLI/img/puttygen-generate.jpg" >
+<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/DevOps/Getting%20Started%20with%20CLI/img/puttygen-generate.jpg" >
 
 4. Click the [Save private key] button.  This file will *not* have an extension.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/Using_OCI_CLI/img/puttygen-saveprivatekey.jpg" >
+<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/DevOps/Getting%20Started%20with%20CLI/img/puttygen-saveprivatekey.jpg" >
 
 5. Save the public key (displayed in the text field) by copying it to the clipboard and saving it manually to a new text file.  Name the file id_rsa.pub
 
