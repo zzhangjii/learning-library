@@ -64,7 +64,7 @@ In this section you will be provisioning an ADW instance using the cloud console
 
 ![](images/100/LabGuide1-39fb4a5b.png)
 
-- Select the root compartment, or another compartment of your choice where you will create your new ADW instance. If you want to create a new Compartment or learn more, click <a href="https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#three" target="_blank">here</a>.
+- Select your **root compartment**, or another compartment of your choice where you will create your new ADW instance. If you want to create a new compartment or learn more about them, click <a href="https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#three" target="_blank">here</a>.
 *Note* - Avoid the use of the ManagedCompartmentforPaaS compartment as this is an Oracle default used for Oracle Platform Services.
 
 ![](./images/100/Compartment.jpg)
