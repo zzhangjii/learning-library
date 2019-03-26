@@ -8,7 +8,7 @@
 
 [Practice 1: Sign in to OCI Console and create a VCN](#practice-1-sign-in-to-oci-console-and-create-a-vcn)
 
-[Practice 2: Generate SSH keys, Create a Compute instance, and install OCI CLI](#practice-2-generate-ssh-keys,-create-a-compute-instance,-and-install-oci-cli)
+[Practice 2: Create a Compute instance and install OCI CLI](#practice-2-create-a-compute-instance-and-install-oci-cli)
 
 [Practice 3: Upload API keys and verify functionality](#practice-3-upload-api-keys-and-verify-functionality)
 
