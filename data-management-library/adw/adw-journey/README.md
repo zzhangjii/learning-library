@@ -228,7 +228,7 @@ In this lab, you will configure and use Oracle Data Integration Platform Cloud (
 
 **[Click here to run Bonus Lab 10](LabGuide10.md)**
 
-
+## New
 
 ## Learn More About Autonomous Data Warehouse...
 
