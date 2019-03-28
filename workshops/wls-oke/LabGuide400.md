@@ -91,7 +91,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Product Cat
   ![](images/400/imagefileupload6.png)
 ## Import Data into ATP Database using Oracle Machine Learning SQL Query Scratchpad
 
-### **STEP 1**: Create an Autonomous Transaction Processing (ATP) Database
+### **STEP 4**: Create an Autonomous Transaction Processing (ATP) Database
 
 e require a Database to store the Alpha Office data which is accessed later in this workshop.  We will create an Autonomous Transaction Processing (ATP) Database to load data into.  Autonomous Transaction Processing is one of a family of cloud services built on the self-driving, self-securing, and self-repairing Oracle Autonomous Database.  Autonomous Transaction Processing uses machine learning and automation to eliminate human labor, human error, and manual tuning, delivering unprecedented cost saving, security, availability, and production. Autonomous Transaction Processing supports a complex mix of high-performance transactions, reporting, batch, IoT, and machine learning in a single database, allowing much simpler application development and deployment and enabling real-time analytics, personalization, and fraud detection.
 
@@ -112,7 +112,7 @@ e require a Database to store the Alpha Office data which is accessed later in t
 
   ![](images/400/imagecreateatp4.png)
 
-### **STEP 2**: Create an Autonomous Transaction Processing (ATP) Database User (Oracle ML User)
+### **STEP 5**: Create an Autonomous Transaction Processing (ATP) Database User (Oracle ML User)
 
 - Click the **Service Control** to view Overview, Activity, and Administration.
   
@@ -144,7 +144,7 @@ e require a Database to store the Alpha Office data which is accessed later in t
 
   ![](images/400/imagecreateuser8.png)
 
-### **STEP 3**: Import Data into ATP Database using Oracle Machine Learning SQL Query Scratchpad
+### **STEP 6**: Import Data into ATP Database using Oracle Machine Learning SQL Query Scratchpad
 
 - Click **Run SQL Statements** to open Oracle Machine Learning SQL Query Scratchpad.
   
@@ -225,7 +225,7 @@ e require a Database to store the Alpha Office data which is accessed later in t
 
 ## Deploy Modified Alpha Office Product Catalog war file to the Kubernetes Cluster
 
-### **STEP 1**: Download ATP Wallet Zip File
+### **STEP 7**: Download ATP Wallet Zip File
 
   - Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Database** section, select **Autonomous Transaction Processing**.
 
@@ -258,7 +258,7 @@ e require a Database to store the Alpha Office data which is accessed later in t
 
 	![](images/400/ImageDownloadWallet6.png)
 
-### **STEP 2**: Test modified Alpha Office Product Catalog war file
+### **STEP 8**: Test modified Alpha Office Product Catalog war file
 
 - In Lab 300 when you do get services again, you will see it listed under the EXTERNAL-IP column.
   
