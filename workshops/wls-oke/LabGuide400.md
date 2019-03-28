@@ -287,7 +287,7 @@ e require a Database to store the Alpha Office data which is accessed later in t
 
    ![](images/300/Upload_to_JCS/6.png)
 
-- On the Install Application Assistant page, click Browse near the Deployment Archive field, download the [Alpha Office Product Catalog.war](https://github.com/Sasankaa/Misc/blob/master/AlphaProductCatalog.war) application, and select .war file to upload.
+- On the Install Application Assistant page, click Browse near the Deployment Archive field, download the [Alpha Office Product Catalog.war](https://github.com/Sasankaa/Misc/blob/master/Resources/wls-oke/AlphaProductCatalog.war) application, and select .war file to upload.
 
    ![](images/300/Upload_to_JCS/7.png)
 
