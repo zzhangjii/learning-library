@@ -1,6 +1,6 @@
 <table class="tbl-heading"><tr><td class="td-logo">![](images/obe_tag.png)
 
-February 28, 2019
+March 8, 2019
 </td>
 <td class="td-banner">
 # Lab 1: Getting Started with Autonomous Data Warehouse (ADW)
@@ -182,15 +182,15 @@ Start SQL Developer and create a connection for your database using the default 
 
     -   Select **Local File** as source for the data load
 
-    -   Click the browse button and navigate to the channels.csv file (you extracted this file from the zip file you downloaded at the start of this lab).
+    -   Click the browse button and navigate to the 311_Service_Requests_v3.csv file (you extracted this file from the zip file you downloaded at the start of this lab).
 
 After selecting the file, you can preview the data and select the appropriate file formats. You will see that the data preview is interactive and changes according to your selection.
 
 When you are satisfied with the file content view, click **NEXT**.
 
-![](./images/100/snap0014654.jpg)
+![](./images/100/snap0014654.png)
 
--   On Step 2 of the Import Wizard, you control the import method and parameters. Leave the Import Method as Insert. Enter *CHANNELS_LOCAL* as your target table name, this table will be created by the import wizard. Click **NEXT**.
+-   On Step 2 of the Import Wizard, you control the import method and parameters. Leave the Import Method as Insert. Enter *Service_Requests* as your target table name, this table will be created by the import wizard. Click **NEXT**.
 
 ![](./images/100/snap0014655.jpg)
 
@@ -201,11 +201,11 @@ When you are satisfied with the file content view, click **NEXT**.
 
 ![](./images/100/snap0014656.jpg)
 
--   The final screen reflects all your choices made in the Wizard. Click **FINISH** to load the data into your newly created table *CHANNELS_LOCAL*. If you don't see it in your object tree under Tables, right click on Tables and hit refresh.
+-   The final screen reflects all your choices made in the Wizard. Click **FINISH** to load the data into your newly created table *Service_Requests*. If you don't see it in your object tree under Tables, right click on Tables and hit refresh.
 
  ![](./images/100/snap0014657.jpg)
 
- - Repeat the same steps for the other files also.
+-   Repeat the same steps for the other files also.
 
 <table>
 <tr><td class="td-logo">[![](images/obe_tag.png)](#)</td>
