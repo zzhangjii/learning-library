@@ -21,6 +21,9 @@ This lab will show you how to navigate the Autonomous Data Warehouse auto scalin
 - Click **Load** Menu to submit load to Autonomous Data Warehouse
 
   ![](./images/scale1.png)
+- In load page click **Submit Instant Workload** to submit quick load
+   
+   ![](./images/submitquickload.png) 
    
 - In load page enter below information
   
