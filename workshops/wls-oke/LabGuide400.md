@@ -225,7 +225,40 @@ e require a Database to store the Alpha Office data which is accessed later in t
 
 ## Deploy Modified Alpha Office Product Catalog war file to the Kubernetes Cluster
 
-### **STEP 1**: Test modified Alpha Office Product Catalog war file
+### **STEP 1**: Download ATP Wallet Zip File
+
+  - Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Database** section, select **Autonomous Transaction Processing**.
+
+	![](images/400/ImageDownloadWallet1.png)
+
+  - Select the **AlphaOffice** ATP Database
+
+	![](images/400/ImageDownloadWallet2.png)
+
+  - Click **DB Connection**
+
+	![](images/400/ImageDownloadWallet3.png)
+
+  - Click **Download**
+
+	![](images/400/ImageDownloadWallet14.png)
+
+  - Enter the **Password** and click **Download**
+
+	![](images/400/ImageDownloadWallet5.png)
+
+  - The **Wallet_AlphaOfficeDB.zip** file was Downloaded to the Download directory.
+  - Copy the database wallet file you downloaded. You will scp this wallet file from the local computer to the instance you created in lab 200.
+  ```
+  scp -i /path/to/ssh/pub/file opc@hostname /path/to/local/wallet/file opc@hostname:/home/opc
+  ```
+  ![](images/400/ImageDownloadWallet7.png)
+
+  - Unzip **Wallet_AlphaOfficeDB.zip** file.  As information, the ATP Wallet file **Wallet_AlphaOfficeDB.zip** contains the following files
+
+	![](images/400/ImageDownloadWallet6.png)
+
+### **STEP 2**: Test modified Alpha Office Product Catalog war file
 
 - In Lab 300 when you do get services again, you will see it listed under the EXTERNAL-IP column.
   
