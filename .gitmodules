@@ -1,9 +1,0 @@
-[submodule "ospa-library/ospa-appdev"]
-	path = ospa-library/ospa-appdev
-	url = https://github.com/jjking2019/ospa-appdev
-[submodule "ospa-library/ospa-security"]
-	path = ospa-library/ospa-security
-	url = https://github.com/jjking2019/ospa-security
-[submodule "ospa-library/ospa-appint"]
-	path = ospa-library/ospa-appint
-	url = https://github.com/jjking2019/ospa-appint
