@@ -103,17 +103,17 @@ Click the ‘Finish’ button to begin the actual import process.
 Once the import complete, a dialog box will open; click ‘OK’ to
 continue.
 
-![](images/image69.tiff)
+![](images/image69.png)
 
-Use the ‘Refresh’ icon ![](images/image70.tiff)to refresh the table list
+Use the ‘Refresh’ icon ![](images/image70.png)to refresh the table list
 for the current SQL Developer connection. Be sure to check the ‘Columns’
 tab to make sure the table definitions are correct.
 
-![](images/image71.tiff)
+![](images/image71.png)
 
 Check the ‘Data’ tab to make sure the table data looks good too.
 
-![](images/image72.tiff)
+![](images/image72.png)
 
 Congratulations\! You’ve loaded a table into the ATP database using a
 .csv file stored in Oracle Object Storage.
