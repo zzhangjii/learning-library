@@ -60,7 +60,7 @@ following changes:
 ![](images/image53.png)
 
 To execute the script; click the ‘Run Script’ icon
-![](images/image54.tiff) (upper-left above the worksheet) or press the F5
+![](images/image54.png) (upper-left above the worksheet) or press the F5
 key.
 
 ![](images/image55.png)

@@ -40,7 +40,7 @@ Click on the instance name to display its information page.
 
 ![](images/image14.png)
 
-Use the instance ‘Hamburger Icon’ ![](images/image15.tiff) to display the
+Use the instance ‘Hamburger Icon’ ![](images/image15.png) to display the
 list of services available; you will use this set of menu options
 frequently.
 
@@ -49,18 +49,18 @@ frequently.
 Choose ‘Autonomous Transaction Processing’ to continue and list any
 existing ATP databases in the instance.
 
-![](images/image17.tiff)
+![](images/image17.png)
 
 The Autonomous Transaction Processing page shows all existing ATP
 databases; click “Create Autonomous Transaction Processing Database” to
 begin the process.
 
-![](images/image18.tiff)
+![](images/image18.png)
 
 Provide the initial setup information for the database in the top part
 of the displayed set up window:
 
-![](images/image19.tiff)
+![](images/image19.png)
 
   - Compartment (select name from drop-down list, ask your administrator
     if you don’t know)
@@ -77,7 +77,7 @@ of the displayed set up window:
 
 Complete the bottom part of the set up window as follows:
 
-![](images/image20.tiff)
+![](images/image20.png)
 
   - The username ‘ADMIN’ is pre-selected and read-only
 
@@ -90,22 +90,22 @@ Complete the bottom part of the set up window as follows:
 At the bottom of the set up window, click ‘Create Autonomous Transaction
 Processing Database’ to begin the creation process.
 
-![](images/image21.tiff)
+![](images/image21.png)
 
 The screen switches to the ATP Instance list; the new database shows
 ‘Provisioning’ click the new database name for more details
 
-![](images/image22.tiff)
+![](images/image22.png)
 
 ATP databases typically provision quickly (less than 5 min, probably
 under 30 sec).
 
-![](images/image23.tiff)
+![](images/image23.png)
 
 When complete, the ATP icon will turn green and the text will show
 RUNNING (you may need to refresh your browser screen to see the change).
 
-![](images/image24.tiff)
+![](images/image24.png)
 
 Congratulations\! You’ve successfully create an ATP Database instance.
 

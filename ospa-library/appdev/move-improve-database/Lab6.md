@@ -42,7 +42,7 @@ name, choose type of import, and name the file(s) to be imported. You
 will need the name of the credential created earlier and the Object
 Storage file’s URL Path modified to fit SQL Developer’s needs.
 
-![](images/image79.tiff)
+![](images/image79.png)
 
 Reopen your browser and navigate to the Object Storage Bucket details
 display for the bucket where the desired data file may be found; open
@@ -90,7 +90,7 @@ Select a schema name and click the arrow key to ‘shuttle’ add the name
 into Selected source schemas. Click the ‘Next’ button to move to Step 3
 when ready.
 
-![](images/image85.tiff)
+![](images/image85.png)
 
 Step 3 of the Import Wizard allow names to be changed (‘remapped’) for
 Schemas and/or Tablespaces.
@@ -137,7 +137,7 @@ The job(s) will show as ‘NOT RUNNING’ when complete.
 
 ![](images/image92.png)
 
-Refresh ![](images/image93.tiff)the ‘Other User’s list in SQL Developer;
+Refresh ![](images/image93.png)the ‘Other User’s list in SQL Developer;
 note that the ‘MYJJ’ user now appears.
 
 ![](images/image94.png)
