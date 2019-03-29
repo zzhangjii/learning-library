@@ -19,14 +19,14 @@
 1. Obtain copy of .docx file
 1. Execute pandoc command making sure to extract-media and specify github format
 
-    __pandoc --extract-media ./images -s ShowItBuildIt_MoveImproveDatabase_Standardized_LAB_guide_2_13.docx -t gfm -o MoveImproveDatabase.md__
+    __pandoc --extract-media . -s ShowItBuildIt_MoveImproveDatabase_Standardized_LAB_guide_2_13.docx -t gfm -o MoveImproveDatabase.md__
 
     Creates file name MoveImproveDatabase.md
-    Creates images folder with combination of .tiff and .png images
+    Creates media folder with combination of .tiff and .png images
 
 1. Open .md file in editor to verify that it did most of what you wanted
 
-1. Use a tool to convert the .tiff images to .png (on Mac I use Preview; a number of bulk converters are available for Windows); put .png files into /images folder
+1. Use a tool to convert the .tiff images to .png (on Mac I use Preview; a number of bulk converters are available for Windows); put .png files into /media folder
 
 1. Open .md file in editor and REPLACE .tiff with .png - save
 
