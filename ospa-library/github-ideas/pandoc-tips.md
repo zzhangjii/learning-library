@@ -19,7 +19,7 @@
 1. Obtain copy of .docx file
 1. Execute pandoc command making sure to extract-media and specify github format
 
-    __pandoc --extract-media . -s ShowItBuildIt_MoveImproveDatabase_Standardized_LAB_guide_2_13.docx -t gfm -o MoveImproveDatabase.md__
+    __pandoc --extract-media  .  -s ShowItBuildIt_MoveImproveDatabase_Standardized_LAB_guide_2_13.docx -t gfm -o MoveImproveDatabase.md__
 
     Creates file name MoveImproveDatabase.md
     Creates media folder with combination of .tiff and .png images
