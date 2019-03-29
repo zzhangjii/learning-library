@@ -27,7 +27,7 @@ prompt APPLICATION 100 - ADWC Scale Demo (Prod)
 -- Application Export:
 --   Application:     100
 --   Name:            ADWC Scale Demo (Prod)
---   Date and Time:   13:10 Friday November 2, 2018
+--   Date and Time:   15:06 Wednesday March 27, 2019
 --   Exported By:     APEXDEMO
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -36,13 +36,13 @@ prompt APPLICATION 100 - ADWC Scale Demo (Prod)
 --
 
 -- Application Statistics:
---   Pages:                     11
---     Items:                   43
+--   Pages:                     12
+--     Items:                   44
 --     Validations:              1
---     Processes:               20
---     Regions:                 29
---     Buttons:                 16
---     Dynamic Actions:          3
+--     Processes:               21
+--     Regions:                 30
+--     Buttons:                 17
+--     Dynamic Actions:          4
 --   Shared Components:
 --     Logic:
 --     Navigation:
@@ -109,7 +109,7 @@ wwv_flow_api.create_flow(
 ,p_rejoin_existing_sessions=>'P'
 ,p_csv_encoding=>'Y'
 ,p_last_updated_by=>'APEXDEMO'
-,p_last_upd_yyyymmddhh24miss=>'20181101155111'
+,p_last_upd_yyyymmddhh24miss=>'20190321131324'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_ui_type_name => null
 );
@@ -6185,9 +6185,6 @@ wwv_flow_api.create_template_option(
 ,p_group_id=>wwv_flow_api.id(3770115594894031)
 ,p_template_types=>'REGION'
 );
-end;
-/
-begin
 wwv_flow_api.create_template_option(
  p_id=>wwv_flow_api.id(3778722361894039)
 ,p_theme_id=>42
@@ -6210,6 +6207,9 @@ wwv_flow_api.create_template_option(
 ,p_group_id=>wwv_flow_api.id(3770748646894032)
 ,p_template_types=>'REGION'
 );
+end;
+/
+begin
 wwv_flow_api.create_template_option(
  p_id=>wwv_flow_api.id(3778893121894039)
 ,p_theme_id=>42
@@ -7164,9 +7164,6 @@ wwv_flow_api.create_template_option(
 ,p_group_id=>wwv_flow_api.id(3789678366894051)
 ,p_template_types=>'REPORT'
 );
-end;
-/
-begin
 wwv_flow_api.create_template_option(
  p_id=>wwv_flow_api.id(3790129655894051)
 ,p_theme_id=>42
@@ -7211,6 +7208,9 @@ wwv_flow_api.create_template_option(
 ,p_group_id=>wwv_flow_api.id(3789678366894051)
 ,p_template_types=>'REPORT'
 );
+end;
+/
+begin
 wwv_flow_api.create_template_option(
  p_id=>wwv_flow_api.id(3790460463894052)
 ,p_theme_id=>42
@@ -8137,9 +8137,6 @@ wwv_flow_api.create_template_option(
 ,p_template_types=>'FIELD'
 ,p_help_text=>'Adds a large bottom margin for this field.'
 );
-end;
-/
-begin
 wwv_flow_api.create_template_option(
  p_id=>wwv_flow_api.id(3802574676894087)
 ,p_theme_id=>42
@@ -8217,6 +8214,9 @@ wwv_flow_api.create_template_option(
 ,p_template_types=>'REGION'
 ,p_help_text=>'Adds a small bottom margin to the region.'
 );
+end;
+/
+begin
 wwv_flow_api.create_template_option(
  p_id=>wwv_flow_api.id(3803384750894088)
 ,p_theme_id=>42
@@ -10788,8 +10788,8 @@ begin
 wwv_flow_api.create_page(
  p_id=>8
 ,p_user_interface_id=>wwv_flow_api.id(3811740220894099)
-,p_name=>'Submit Load V2'
-,p_step_title=>'Submit Load V2'
+,p_name=>'Submit Load'
+,p_step_title=>'Submit Load'
 ,p_step_sub_title=>'Submit Load V2'
 ,p_step_sub_title_type=>'TEXT_WITH_SUBSTITUTIONS'
 ,p_autocomplete_on_off=>'OFF'
@@ -10797,8 +10797,8 @@ wwv_flow_api.create_page(
 ,p_page_template_options=>'#DEFAULT#'
 ,p_page_is_public_y_n=>'Y'
 ,p_protection_level=>'C'
-,p_last_updated_by=>'ADMIN'
-,p_last_upd_yyyymmddhh24miss=>'20180905175333'
+,p_last_updated_by=>'APEXDEMO'
+,p_last_upd_yyyymmddhh24miss=>'20190320132853'
 );
 wwv_flow_api.create_report_region(
  p_id=>wwv_flow_api.id(3314485534149848)
@@ -11192,6 +11192,19 @@ wwv_flow_api.create_page_plug(
 ,p_attribute_02=>'HTML'
 );
 wwv_flow_api.create_page_button(
+ p_id=>wwv_flow_api.id(8481023465327201)
+,p_button_sequence=>10
+,p_button_plug_id=>wwv_flow_api.id(3515167004621417)
+,p_button_name=>'testload'
+,p_button_action=>'SUBMIT'
+,p_button_template_options=>'#DEFAULT#'
+,p_button_template_id=>wwv_flow_api.id(3800898365894069)
+,p_button_is_hot=>'Y'
+,p_button_image_alt=>'Submit Instant WorkLoad'
+,p_button_position=>'BELOW_BOX'
+,p_button_execute_validations=>'N'
+);
+wwv_flow_api.create_page_button(
  p_id=>wwv_flow_api.id(1810372490110387)
 ,p_button_sequence=>30
 ,p_button_plug_id=>wwv_flow_api.id(3515167004621417)
@@ -11396,6 +11409,7 @@ wwv_flow_api.create_page_item(
 ,p_use_cache_before_default=>'NO'
 ,p_item_default=>'QUERY1'
 ,p_prompt=>'Workload'
+,p_post_element_text=>'<font size=3 color="BLUE"> &nbsp;  Kindly select Analytic View Query 2 from drop down and "High" from consumer group to generate instant load.</font>'
 ,p_source=>'SCRIPT_ID'
 ,p_source_type=>'DB_COLUMN'
 ,p_display_as=>'NATIVE_SELECT_LIST'
@@ -11569,6 +11583,38 @@ wwv_flow_api.create_page_process(
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
 ,p_process_when_button_id=>wwv_flow_api.id(1809926455110386)
 );
+wwv_flow_api.create_page_process(
+ p_id=>wwv_flow_api.id(8481586305327206)
+,p_process_sequence=>50
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'New'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'declare',
+'i number := 0;',
+'begin',
+'for i in 1..3 loop',
+'insert into load_queue(id',
+',submit_date',
+',complete_date',
+',status',
+',submit_user_email',
+',submit_ip',
+',script_id',
+',consumer_group',
+',desired_run_time_secs',
+',num_concurrent_threads)',
+'values (ISEQ$$_83298.nextval,sysdate,null',
+',''SUBMITTED'',''Quickload@oracle.com''',
+',''108.196.8.57'',''6'',''High'',''250'',''1'');',
+'commit;',
+'end loop;',
+'end;',
+'commit;'))
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when_button_id=>wwv_flow_api.id(8481023465327201)
+,p_process_success_message=>'Load Submitted successfully'
+);
 end;
 /
 prompt --application/pages/page_00009
@@ -11583,8 +11629,8 @@ wwv_flow_api.create_page(
 ,p_autocomplete_on_off=>'OFF'
 ,p_page_template_options=>'#DEFAULT#'
 ,p_read_only_when_type=>'ALWAYS'
-,p_last_updated_by=>'APEXDEMO'
-,p_last_upd_yyyymmddhh24miss=>'20181030171356'
+,p_last_updated_by=>'ADMIN'
+,p_last_upd_yyyymmddhh24miss=>'20181116015726'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(1581463280849652)
@@ -11631,6 +11677,7 @@ wwv_flow_api.create_worksheet_column(
 ,p_column_label=>'Submit Date'
 ,p_column_type=>'DATE'
 ,p_heading_alignment=>'LEFT'
+,p_format_mask=>'DD-MON-YYYY HH:MIPM'
 ,p_tz_dependent=>'N'
 );
 wwv_flow_api.create_worksheet_column(
@@ -11641,6 +11688,7 @@ wwv_flow_api.create_worksheet_column(
 ,p_column_label=>'Complete Date'
 ,p_column_type=>'DATE'
 ,p_heading_alignment=>'LEFT'
+,p_format_mask=>'DD-MON-YYYY HH:MIPM'
 ,p_tz_dependent=>'N'
 );
 wwv_flow_api.create_worksheet_column(
@@ -11729,10 +11777,27 @@ wwv_flow_api.create_worksheet_rpt(
  p_id=>wwv_flow_api.id(1586626128878614)
 ,p_application_user=>'APXWS_DEFAULT'
 ,p_report_seq=>10
+,p_report_type=>'GROUP_BY'
 ,p_report_alias=>'15867'
 ,p_status=>'PUBLIC'
 ,p_is_default=>'Y'
+,p_display_rows=>1000
+,p_view_mode=>'REPORT'
 ,p_report_columns=>'ID:SUBMIT_DATE:COMPLETE_DATE:STATUS:SUBMIT_USER_EMAIL:SUBMIT_IP:SCRIPT_ID:CONSUMER_GROUP:DESIRED_RUN_TIME_SECS:NUM_CONCURRENT_THREADS:SCRIPT_OUTPUT'
+,p_sort_column_1=>'ID'
+,p_sort_direction_1=>'DESC'
+);
+wwv_flow_api.create_worksheet_group_by(
+ p_id=>wwv_flow_api.id(8110780927520163)
+,p_report_id=>wwv_flow_api.id(1586626128878614)
+,p_group_by_columns=>'SUBMIT_USER_EMAIL'
+,p_function_01=>'COUNT'
+,p_function_column_01=>'SUBMIT_DATE'
+,p_function_db_column_name_01=>'APXWS_GBFC_01'
+,p_function_format_mask_01=>'999G999G999G999G990'
+,p_function_sum_01=>'N'
+,p_sort_column_01=>'APXWS_GBFC_01'
+,p_sort_direction_01=>'DESC'
 );
 end;
 /
@@ -11755,7 +11820,7 @@ wwv_flow_api.create_page(
 ,p_page_template_options=>'#DEFAULT#'
 ,p_page_is_public_y_n=>'Y'
 ,p_last_updated_by=>'APEXDEMO'
-,p_last_upd_yyyymmddhh24miss=>'20181018122346'
+,p_last_upd_yyyymmddhh24miss=>'20190321131324'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(3326482601823891)
@@ -11805,15 +11870,21 @@ wwv_flow_api.create_jet_chart_series(
 ,p_name=>'CPU Usage'
 ,p_data_source_type=>'SQL'
 ,p_data_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'select to_char(audit_insert,''hh24:mi:ss'') audit_insert, nvl(db_cpu_usage,lead(db_cpu_usage ignore nulls) over (order by s.audit_insert desc)) db_cpu_usage,',
-'''red'' label,',
-'case when nvl(db_cpu_usage,lead(db_cpu_usage ignore nulls) over (order by s.audit_insert desc)) > 100 then 200',
-'else 100 end max_cpu_usage from SCALE_LOG s order by s.audit_insert desc'))
+'--- select to_char(audit_insert,''hh24:mi:ss'') audit_insert, nvl(db_cpu_usage,lead(db_cpu_usage ignore nulls) over (order by s.audit_insert desc)) db_cpu_usage,',
+'--- ''red'' label,',
+'--- case when nvl(db_cpu_usage,lead(db_cpu_usage ignore nulls) over (order by s.audit_insert desc)) > 100 then 200',
+'--- else 100 end max_cpu_usage from SCALE_LOG s order by s.audit_insert desc',
+'select to_char(s.audit_insert,''hh24:mi:ss'') audit_insert',
+',s.db_cpu_usage',
+',''red'' label',
+',100 as max_cpu_usage',
+'from scale_log s',
+'where s.audit_insert = (select max(audit_insert) from scale_log',
+'                       where db_cpu_usage is not null);'))
 ,p_items_value_column_name=>'DB_CPU_USAGE'
 ,p_items_max_value=>'MAX_CPU_USAGE'
 ,p_custom_column_name=>'LABEL'
 ,p_items_label_rendered=>true
-,p_items_label_display_as=>'PERCENT'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(3327044594823896)
@@ -11910,7 +11981,7 @@ wwv_flow_api.create_report_region(
 '       SCRIPT_OUTPUT',
 '  from LOAD_QUEUE',
 ' where status=''SUBMITTED'' or status=''RUNNING'' or (status=''COMPLETED'' and complete_date>sysdate-1/24) or  (status=''ERROR'' and complete_date>sysdate-1/24)',
-' order by submit_date desc'))
+' order by ID desc'))
 ,p_ajax_enabled=>'Y'
 ,p_query_row_template=>wwv_flow_api.id(3788131757894049)
 ,p_query_num_rows=>50
@@ -11930,7 +12001,6 @@ wwv_flow_api.create_report_columns(
 ,p_column_display_sequence=>1
 ,p_column_heading=>'Id'
 ,p_use_as_row_header=>'N'
-,p_disable_sort_column=>'N'
 ,p_derived_column=>'N'
 ,p_include_in_export=>'Y'
 );
@@ -11942,7 +12012,6 @@ wwv_flow_api.create_report_columns(
 ,p_column_heading=>'Submit Date'
 ,p_use_as_row_header=>'N'
 ,p_column_format=>'DD-MON-YYYY HH24:MI'
-,p_disable_sort_column=>'N'
 ,p_derived_column=>'N'
 ,p_include_in_export=>'Y'
 );
@@ -11954,7 +12023,6 @@ wwv_flow_api.create_report_columns(
 ,p_column_heading=>'Complete Date'
 ,p_use_as_row_header=>'N'
 ,p_column_format=>'DD-MON-YYYY HH24:MI'
-,p_disable_sort_column=>'N'
 ,p_derived_column=>'N'
 ,p_include_in_export=>'Y'
 );
@@ -11965,7 +12033,6 @@ wwv_flow_api.create_report_columns(
 ,p_column_display_sequence=>4
 ,p_column_heading=>'Status'
 ,p_use_as_row_header=>'N'
-,p_disable_sort_column=>'N'
 ,p_derived_column=>'N'
 ,p_include_in_export=>'Y'
 );
@@ -11976,7 +12043,6 @@ wwv_flow_api.create_report_columns(
 ,p_column_display_sequence=>5
 ,p_column_heading=>'Submit User'
 ,p_use_as_row_header=>'N'
-,p_disable_sort_column=>'N'
 ,p_derived_column=>'N'
 ,p_include_in_export=>'Y'
 );
@@ -11987,7 +12053,6 @@ wwv_flow_api.create_report_columns(
 ,p_column_display_sequence=>6
 ,p_column_heading=>'Submit Ip'
 ,p_use_as_row_header=>'N'
-,p_disable_sort_column=>'N'
 ,p_derived_column=>'N'
 ,p_include_in_export=>'Y'
 );
@@ -11998,7 +12063,6 @@ wwv_flow_api.create_report_columns(
 ,p_column_display_sequence=>7
 ,p_column_heading=>'Script Id'
 ,p_use_as_row_header=>'N'
-,p_disable_sort_column=>'N'
 ,p_derived_column=>'N'
 ,p_include_in_export=>'Y'
 );
@@ -12009,7 +12073,6 @@ wwv_flow_api.create_report_columns(
 ,p_column_display_sequence=>8
 ,p_column_heading=>'Consumer Group'
 ,p_use_as_row_header=>'N'
-,p_disable_sort_column=>'N'
 ,p_derived_column=>'N'
 ,p_include_in_export=>'Y'
 );
@@ -12020,7 +12083,6 @@ wwv_flow_api.create_report_columns(
 ,p_column_display_sequence=>9
 ,p_column_heading=>'Desired Run Time Secs'
 ,p_use_as_row_header=>'N'
-,p_disable_sort_column=>'N'
 ,p_derived_column=>'N'
 ,p_include_in_export=>'Y'
 );
@@ -12031,7 +12093,6 @@ wwv_flow_api.create_report_columns(
 ,p_column_display_sequence=>10
 ,p_column_heading=>'Num Concurrent Threads'
 ,p_use_as_row_header=>'N'
-,p_disable_sort_column=>'N'
 ,p_derived_column=>'N'
 ,p_include_in_export=>'Y'
 );
@@ -12042,13 +12103,12 @@ wwv_flow_api.create_report_columns(
 ,p_column_display_sequence=>11
 ,p_column_heading=>'Script Output'
 ,p_use_as_row_header=>'N'
-,p_disable_sort_column=>'N'
 ,p_derived_column=>'N'
 ,p_include_in_export=>'Y'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(9862170769567492)
-,p_plug_name=>'ADWC CPUs Provisioned'
+,p_plug_name=>'ADWC CPUs Provisioned Time Series Interval'
 ,p_region_template_options=>'#DEFAULT#:js-showMaximizeButton:t-Region--scrollBody'
 ,p_escape_on_http_output=>'Y'
 ,p_plug_template=>wwv_flow_api.id(3778148119894038)
@@ -12097,8 +12157,8 @@ wwv_flow_api.create_jet_chart_series(
 '--select * from ',
 '--(select to_char(audit_insert,''hh24:mi:ss'') time, DB_CPU_USAGE Value,row_number() over (order by audit_insert desc) r from TIME_CPU_LOG where audit_insert>sysdate-1/24 order by audit_insert desc)',
 '--where r< 5000 order by r ',
-'-- select to_char(audit_insert,''hh24:mi:ss'') time, DB_CPU_USAGE Value from TIME_CPU_LOG where audit_insert>sysdate-1/24 order by audit_insert desc',
-'select distinct to_char(audit_insert,''hh24:mi:ss'') time, DB_CPU_USAGE Value from TIME_CPU_LOG where audit_insert > sysdate-1/24 order by 1 desc'))
+'select to_char(audit_insert,''hh24:mi:ss'') time, DB_CPU_USAGE Value from TIME_CPU_LOG where audit_insert>sysdate-1/24 order by audit_insert desc',
+'---select distinct to_char(audit_insert,''hh24:mi:ss'') time, DB_CPU_USAGE Value from TIME_CPU_LOG where audit_insert > sysdate-1/24 order by 1 desc'))
 ,p_items_value_column_name=>'VALUE'
 ,p_items_label_column_name=>'TIME'
 ,p_color=>'#1765EB'
@@ -12176,7 +12236,7 @@ wwv_flow_api.create_jet_chart_axis(
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(12469811031739930)
-,p_plug_name=>'ADWC CPU Utilization%'
+,p_plug_name=>'ADWC CPU Utilization% Time Series Interval'
 ,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
 ,p_escape_on_http_output=>'Y'
 ,p_plug_template=>wwv_flow_api.id(3778148119894038)
@@ -12223,17 +12283,13 @@ wwv_flow_api.create_jet_chart_series(
 ,p_name=>'CPU Usage'
 ,p_data_source_type=>'SQL'
 ,p_data_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'with cpuusage as',
-'(select to_char(audit_insert,''hh24:mi:ss'') as audit_insert',
-'      , s.db_cpu_usage,lead(s.db_cpu_usage ignore nulls) ',
-'                over (order by s.audit_insert desc) as cpu_usage',
+'select',
+'to_char(nvl(audit_insert,sysdate),''hh24:mi:ss'') audit_insert',
+', nvl(nvl(db_cpu_usage,lead(db_cpu_usage ignore nulls) over (order by nvl(audit_insert,sysdate) desc)),0) db_cpu_usage ',
 'from SCALE_LOG s ',
-'where audit_insert > sysdate-1/24',
-'order by s.audit_insert desc)',
-'select c.audit_insert,avg(c.cpu_usage) as db_cpu_usage',
-'from cpuusage c',
-'group by c.audit_insert',
-'order by c.audit_insert desc'))
+'where audit_insert>SYSDATE - (30/1440)  -- 15 min',
+'order by s.audit_insert desc',
+''))
 ,p_items_value_column_name=>'DB_CPU_USAGE'
 ,p_items_label_column_name=>'AUDIT_INSERT'
 ,p_line_style=>'solid'
@@ -12351,9 +12407,7 @@ wwv_flow_api.create_page_item(
 ,p_item_sequence=>40
 ,p_item_plug_id=>wwv_flow_api.id(3328068767823907)
 ,p_prompt=>'ADWC version'
-,p_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'SELECT version from v$instance@adwc',
-'-- SELECT version from v$instance@adwc_demo'))
+,p_source=>'select VERSION_FULL from v$instance@adwc_demo'
 ,p_source_type=>'QUERY'
 ,p_display_as=>'NATIVE_DISPLAY_ONLY'
 ,p_begin_on_new_line=>'N'
@@ -12462,6 +12516,83 @@ wwv_flow_api.create_page_da_action(
 ,p_affected_elements_type=>'REGION'
 ,p_affected_region_id=>wwv_flow_api.id(5163813989022318)
 ,p_stop_execution_on_error=>'Y'
+);
+end;
+/
+prompt --application/pages/page_00011
+begin
+wwv_flow_api.create_page(
+ p_id=>11
+,p_user_interface_id=>wwv_flow_api.id(3811740220894099)
+,p_name=>'MLoad'
+,p_step_title=>'MLoad'
+,p_step_sub_title_type=>'TEXT_WITH_SUBSTITUTIONS'
+,p_autocomplete_on_off=>'OFF'
+,p_page_template_options=>'#DEFAULT#'
+,p_page_is_public_y_n=>'Y'
+,p_last_updated_by=>'APEXDEMO'
+,p_last_upd_yyyymmddhh24miss=>'20181128154436'
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(7922520837137603)
+,p_plug_name=>'Load'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_plug_template=>wwv_flow_api.id(3778148119894038)
+,p_plug_display_sequence=>10
+,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_display_point=>'BODY'
+,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
+,p_attribute_01=>'N'
+,p_attribute_02=>'HTML'
+);
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(7923777453137615)
+,p_name=>'P11_NEW'
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_api.id(7922520837137603)
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
+wwv_flow_api.create_page_da_event(
+ p_id=>wwv_flow_api.id(7923518215137613)
+,p_name=>'New'
+,p_event_sequence=>10
+,p_bind_type=>'bind'
+,p_bind_event_type=>'ready'
+,p_display_when_type=>'FUNCTION_BODY'
+,p_display_when_cond=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'declare',
+'i number := 0;',
+'begin',
+'for i in 1..40 loop',
+'insert into load_queue(id',
+',submit_date',
+',complete_date',
+',status',
+',submit_user_email',
+',submit_ip',
+',script_id',
+',consumer_group',
+',desired_run_time_secs',
+',num_concurrent_threads)',
+'values (ISEQ$$_83298.nextval,sysdate,null',
+',''SUBMITTED'',''matt.theodoseau@oracle.com''',
+',''108.196.8.57'',''2'',''Medium'',''250'',''1'');',
+'commit;',
+'end loop;',
+'end;',
+'commit;'))
+);
+wwv_flow_api.create_page_da_action(
+ p_id=>wwv_flow_api.id(7923607435137614)
+,p_event_id=>wwv_flow_api.id(7923518215137613)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'Y'
+,p_action=>'NATIVE_SHOW'
+,p_affected_elements_type=>'ITEM'
+,p_affected_elements=>'P11_NEW'
+,p_attribute_01=>'N'
 );
 end;
 /
