@@ -82,7 +82,7 @@
             },
             {
                 "number": "010",
-                "filename": "LabGuides010.md",
+                "filename": "LabGuide010.md",
                 "title": "Lab 010: Virtual Box Setup",
                 "description": "",
                 "labels": {
@@ -109,7 +109,7 @@
             },
             {
                 "number": "200",
-                "filename": "LabGuide200.md",
+                "filename": "LabGuide200Virtual.md",
                 "title": "Lab 200: Building, Containerizing Java REST Services",
                 "description": "",
                 "labels": {

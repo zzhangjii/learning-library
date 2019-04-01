@@ -23,11 +23,9 @@ In this workshop you are guided through using many of the Oracle's Cloud Service
 
 # VirtualBox Setup
 
-You will create all required infrastructure components that support this workshop.
+You will create all required infrastructure components that support this workshop. The client image is a pre-created Linux based image that has GIT and SQL Developer already installed. These tools are used in the subsequent workshop labs.
 
 ## Setup of the Workshop Client Image
-
-The client image is a pre-created Linux based image that has docker, GIT and SQL Developer already installed. These tools are used in the subsequent workshop labs.
 
 ### **STEP 1**: Download and Install VirtualBox
 
