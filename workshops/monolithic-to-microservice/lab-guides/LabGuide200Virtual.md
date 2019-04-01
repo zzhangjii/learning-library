@@ -122,9 +122,9 @@ A security list provides a virtual firewall for an instance, with ingress and eg
 
 ### **STEP 4**: Create SSH Key Pair
 
-Before we create the Compute instance that will contain Docker and application deployments we need to create a ssh key pair so we'll be able to securely connect to the instance and do the Docker installation, etc. **We'll use the VNC Client to do this**.
+Before we create the Compute instance that will contain Docker and application deployments we need to create a ssh key pair so we'll be able to securely connect to the instance and do the Docker installation, etc. **We'll use the Client Image to do this**.
 
-- **In the VNC Client**: Open a Terminal session and navigate to your home directory.
+- **In the Client Image**: Open a Terminal session and navigate to your home directory.
 
   ```
   cd /home/opc
@@ -346,12 +346,12 @@ In this section you will clone a github repository that contains a Java REST App
   ```
   ![](images/200/46.PNG)
 
-- **From the VNC Session:** Open up a new Terminal window by Right-click on the Desktop and select **Open Terminal**:
+- **From the Client Image:** Open up a new Terminal window by Right-click on the Desktop and select **Open Terminal**:
 
   ![](images/100/image01.png)
 
 
-- Copy the database wallet file you downloaded in Lab 100 (Recall that the file is in `/home/opc/Downloads`). You will scp this wallet file from the VNC Session VM (atp-js) to the `/home/opc/monolithic-to-microservice/lab-resources/docker` directory on the new OCI VM (docker):
+- Copy the database wallet file you downloaded in Lab 100 (Recall that the file is in `/home/opc/Downloads`). You will scp this wallet file from the Client Image VM to the `/home/opc/monolithic-to-microservice/lab-resources/docker` directory on the new OCI VM (docker):
 
   ```
   scp -i ./dockerkey /home/opc/Downloads/Wallet_orcl.zip opc@<YOUR-PUBLIC-IP>:/home/opc/monolithic-to-microservice/lab-resources/docker
