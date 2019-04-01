@@ -122,9 +122,9 @@ A security list provides a virtual firewall for an instance, with ingress and eg
 
 ### **STEP 4**: Create SSH Key Pair
 
-Before we create the Compute instance that will contain Docker and application deployments we need to create a ssh key pair so we'll be able to securely connect to the instance and do the Docker installation, etc. **We'll use the VNC session to do this**.
+Before we create the Compute instance that will contain Docker and application deployments we need to create a ssh key pair so we'll be able to securely connect to the instance and do the Docker installation, etc. **We'll use the VNC Client to do this**.
 
-- **In the VNC Session**: Open a Terminal session and navigate to your home directory.
+- **In the VNC Client**: Open a Terminal session and navigate to your home directory.
 
   ```
   cd /home/opc
