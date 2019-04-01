@@ -55,7 +55,7 @@ You will create all required infrastructure components that support this worksho
 
   ![](images/010/5.PNG)
 
-- You will take the image settings defaults. Check the default `base folder` and if you don't think you have enough disk space to accommodate the image in the default you can change the base folder to a disk where you do have enough space. The image requires ....
+- You will take the image settings defaults. Check the default `Base Folder` and if you don't think you have enough disk space to accommodate the image (~7GB) in the default location you can change the base folder to a disk where you do have enough space.
 
   **Example:**
 
@@ -67,7 +67,7 @@ You will create all required infrastructure components that support this worksho
 
 - Once the image is imported click on it and look at the Display setting called **Scaled-factor**. If it is not not 1.00 then click on **Display** and change it to **100%**. Click **OK**.
 
-  ![](images/010/6.PNG)
+  ![](images/010/7.PNG)
 
   ![](images/010/8.PNG)
 
