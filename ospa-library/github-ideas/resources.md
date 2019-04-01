@@ -1,3 +1,10 @@
+### Tips and Tricks
+
+[John's tips on using Pandoc to convert .docx to .md](pandoc-tips.md)
+
+[John's tips on create local repository cloned from Developer repository](dev-repo-local-version.md)
+
+
 ### Useful Git and Github resources  -- [RETURN](README.md)
 
 * Intro to Git and GitHub for Beginners
