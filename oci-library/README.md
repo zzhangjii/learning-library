@@ -39,5 +39,5 @@
 |[Oracle Cloud Infrastructure Registry](./DevOps/Container_Registry/Container_Registry_HOL.md) | DevOps |   15 minutes   | 
 |[Deploying Jenkins](./DevOps/Deploying_Jenkins/Deploying_Jenkins_HOL.md) | DevOps |   30 minutes   |  
 |[Resource Manager](./DevOps/Resource_Manager/Resource_Manager_HOL.md)    | DevOps |   20 minutes   |      
-
+|[OCI CLI](./DevOps/OCI_CLI/OCI_CLI_HOL.md)    | DevOps |   30 minutes   |
 
