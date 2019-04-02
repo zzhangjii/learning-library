@@ -55,7 +55,7 @@ This lab will walk you through installation and configuration of the CLI, along 
 
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
-![](/images/create-vcn.png)
+![](learning-library/oci-library/images/create-vcn.png)
 
 1. Fill out the dialog box:
 
