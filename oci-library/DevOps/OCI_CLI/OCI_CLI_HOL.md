@@ -55,7 +55,7 @@ This lab will walk you through installation and configuration of the CLI, along 
 
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
-![](learning-library/oci-library/images/create-vcn.png)
+![](img/create-vcn.png)
 
 1. Fill out the dialog box:
 
@@ -65,8 +65,8 @@ This lab will walk you through installation and configuration of the CLI, along 
    -  Click **Create Virtual Cloud Network**
    -  Click **Close**
 
-![](/images/create-vcn-related-resources01.png)
-![](/images/create-vcn-related-resources02.png)
+![](img/create-vcn-related-resources01.png)
+![](img/create-vcn-related-resources02.png)
 
 ## Practice 2: Create a Compute instance and install OCI CLI
 
@@ -92,9 +92,9 @@ This lab will walk you through installation and configuration of the CLI, along 
 
 **NOTE:** If 'Service limit' error is displayed choose a different shape such as VM.Standard.E2.2 OR VM.Standard2.2
 
-![](/images/create-instance-01.png)
-![](/images/create-instance-02.png)
-![](/images/create-instance-03.png)
+![](/img/create-instance-01.png)
+![](/img/create-instance-02.png)
+![](/img/create-instance-03.png)
 
 3. Wait for Instance to be in **Running** state. Connect via SSH tool of your choice.
 
@@ -115,6 +115,8 @@ This lab will walk you through installation and configuration of the CLI, along 
 
     `# oci -v`
 
+    ![](img/100_CLI_001.png)
+
     **NOTE:** Version should be minimum 2.5.X (3/23/2019)
 
 10.  Next we will configure OCI CLI. Enter command:
@@ -126,15 +128,15 @@ This lab will walk you through installation and configuration of the CLI, along 
 
 12. Switch to OCI Console window, Click user icon (Top Right of OCI Console Window) and click **User Settings**. In User settings click **copy** next to OCID for your user name
 
-![](/images/user-settings-01.png)
-![](/images/user-settings-02.png)
+![](img/user-settings-01.png)
+![](img/user-settings-02.png)
 
 13. Switch to the SSH terminal session and paste the user OCID using mouse/touch pad and press Enter. You will be prompted to Enter Tenancy OCID
 
 14. Switch to OCI Console window, Click user icon (Top Right of OCI Console Window) and click your Tenancy name, copy the OCID as was done for user OCID. Also note down your region (in this example "us-ashburn-1")
 
-![](/images/user-settings-01.png)
-![](/images/tenancy-ocid.png)
+![](img/user-settings-01.png)
+![](img/tenancy-ocid.png)
 
 16. Switch to the SSH terminal window and paste the tenancy OCID using mouse/touch pad and press Enter. You will be prompted to Enter your region.
 
@@ -184,13 +186,17 @@ Compare the finger print in the output of config file to the one in OCI console 
 
     `# oci iam availability-domain list`
 
-This will list all availability domains in the current region. Make note of one of the availability domain names.  It should look something like this ``nESu:PHX-AD-3``. You will use this in a future step.
+   ![](img/100_CLI_002.PNG)
+
+    This will list all availability domains in the current region. Make note of one of the availability domain names.  It should look something like this ``nESu:PHX-AD-3``. You will use this in a future step.
 
 6. Return to the OCI Console and navigate to **Identity** -> **Compartments**.  Retrieve the OCID of the assigned compartment.
 
 2. Enter the following command to list VCN's:
 
     `# oci network vcn list --compartment-id <your compartment id>`
+
+    ![](img/100_CLI_003.PNG)
 
 **NOTE:** It should return the details of the VCN you created at the start of this lab. If you encounter an error message, please contact the instructor.
 
@@ -233,12 +239,15 @@ This will list all availability domains in the current region. Make note of one 
 
     `# oci network route-table list -c <your compartment OCID> --vcn-id <your VCN OCID>`
 
+    ![](img/100_CLI_004.PNG)
+
     Record the ``id:`` of the `Default Route Table`
 
 6. Update the route table with a route to the internet gateway.
 
     `# oci network route-table update --rt-id <route table OCID> --route-rules '[{"cidrBlock":"0.0.0.0/0","networkEntityId":"<your Internet Gateway OCID"}]'`
 
+    ![](img/100_CLI_005.PNG)
 
     **Note:** When updating route tables or security lists you cannot insert a single rule.  You must ``update`` with the entire set of rules. The prompt shown in the screenshot above illustrates this point.
 
