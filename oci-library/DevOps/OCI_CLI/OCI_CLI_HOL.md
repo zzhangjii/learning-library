@@ -196,7 +196,7 @@ Compare the finger print in the output of config file to the one in OCI console 
 
     `# oci network vcn list --compartment-id <your compartment id>`
 
-    ![](img/100_CLI_003.PNG)
+    ![](img/100_CLI_003.png)
 
 **NOTE:** It should return the details of the VCN you created at the start of this lab. If you encounter an error message, please contact the instructor.
 
@@ -239,7 +239,7 @@ Compare the finger print in the output of config file to the one in OCI console 
 
     `# oci network route-table list -c <your compartment OCID> --vcn-id <your VCN OCID>`
 
-    ![](img/100_CLI_004.PNG)
+    ![](img/100_CLI_004.png)
 
     Record the ``id:`` of the `Default Route Table`
 
@@ -247,7 +247,7 @@ Compare the finger print in the output of config file to the one in OCI console 
 
     `# oci network route-table update --rt-id <route table OCID> --route-rules '[{"cidrBlock":"0.0.0.0/0","networkEntityId":"<your Internet Gateway OCID"}]'`
 
-    ![](img/100_CLI_005.PNG)
+    ![](img/100_CLI_005.png)
 
     **Note:** When updating route tables or security lists you cannot insert a single rule.  You must ``update`` with the entire set of rules. The prompt shown in the screenshot above illustrates this point.
 
