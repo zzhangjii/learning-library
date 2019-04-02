@@ -51,21 +51,29 @@ The key topics touched upon by both labs are:
 
 ## Practice 1: Provision a GPU instance on OCI
 
-**1.** Open Gitbash program on your desktop. It is already installed on your Windows 10 VM. 
-
-![](img/gitbash001.png)
+1. Open your browser and nagivate to the OCI Console by clicking on: [http://bit.ly/ociash](http://bit.ly/ociash)
+2. On the left corner click on the **Menu** then click **Compute**, choose a compartment you have permission to work in, and then click **Create Instance.**
+3. In the Create Instance dialog box execute the following:
+      - **Name:** H2Oai
+      - **Availability Domain:** AD1
+      - **Image Source:** Click on Change Image Source and select Image OCID. Enter the following image ocid: `ocid1.image.oc1.iad.aaaaaaaaikn6ub6heefqxbe5fkiv4otbfe6ivza6y7di5khnkxkyvf2bkdta`
+      - **Shape:** Change the Shape and select VM.GPU3.4
+      - **Instance Type:** Bare Metal
+      - **Add SSH Key:** Choose the SSH file you downloaded before
+      - **Virtual Cloud Network:** VCN-DEMO-AI
+      - **Subnet:** subnet01 (regional)
+      - Click **Create**
  
-**2.** Download the SSH Key from this link [https://bit.ly/2Ef9GE4](https://bit.ly/2Ef9GE4) and save it your Downloads folder
 
 ## Practice 2: Access the GPU instance
 
 **3.** On Gitbash terminal use SSH command to connect to the GPU instance:
 
 - **username**: *ubuntu*
-- **IP address**: *Use the IP address provided by your instructor*
+- **IP address**: *Use the Public IP address of the instance you createdr*
 
 ```
-# ssh -i ~/Downloads/gpu_id_rsa ubuntu@IPAddress 
+# ssh -i ~/Downloads/gpu_id_rsa ubuntu@<Public_IP_Address> 
 ```
 
 ![](img/image000.png)
@@ -127,7 +135,7 @@ Scroll at the bottom of the page and Agree with the terms:
 **3.** Click on Enter License and copy/paste the following trial license:
 
 ```
-JmJF70WfrncHJI7vOK7Fdd3MfaoSu9KqxDT5SAqutbio68C1iev6uaECe_YSf-StuCs2JLD5QzahsZ-IXKLPORyTmXgpk7ESzd31tipG4jn8J8GZnr7ccX_CI1vXYPZhntEM2yCj3gA_Lup2_KX-7c-To7qSIc4nvjyUGLLJmN8bf4zH6HosL8q80jTPyqOLf28IVDrim1dvDg3rL4WQMPcBIDmlDCP32S2mYfvo__Al1QjNN0vGPHL6AHVt-hNJBC4y9NxwBFZxFy4C8Kcmd9C43WxlZFc18QVyANXbThSBolWOC9UU0gwKzV0Zeq5cyfJxY4w1td4ksDJoqnkI5WxpY2Vuc2VfdmVyc2lvbjoxCnNlcmlhbF9udW1iZXI6MjczMjcKbGljZW5zZWVfb3JnYW5pemF0aW9uOm9yYWNsZQpsaWNlbnNlZV9lbWFpbDpuZXdpbGx0QGdtYWlsLmNvbQpsaWNlbnNlZV91c2VyX2lkOjI3MzI3CmlzX2gyb19pbnRlcm5hbF91c2U6ZmFsc2UKY3JlYXRlZF9ieV9lbWFpbDprYXlAaDJvLmFpCmNyZWF0aW9uX2RhdGU6MjAxOC8xMC8xMQpwcm9kdWN0OkRyaXZlcmxlc3NBSQpsaWNlbnNlX3R5cGU6dHJpYWwKZXhwaXJhdGlvbl9kYXRlOjIwMTgvMTEvMDEK
+nHMJw_S6iDjOXcQ8GRbX_B_3YmIsQbDn0L5u8NtHG446g9gWh7AVttgeldLQEHF1vdLQ242NY3zK1pMS-EyG8_NI8CHMJkORkbbABn1vPQtKpLviOu169k8MGkc_riHZsR5OAFy5UB4c3W0bR16TtWPLhyNGHCh47LUCbRIuCfQYPAnPrRko9Ee_6tK0lrUNkPGZAYw3x8A0-FzlckJH4W7R8IozyCY2txUXspm7hwfyWHFnQPZSxNLwjZAbMQEJQ-7cMyB0i7ZWxRwKjDSIaEc1ZMcZy2QOqm9IuQO2LFp856IVqNNJbEibin7Way4pTli31xrYPgo-rQQVL_zU92xpY2Vuc2VfdmVyc2lvbjoxCnNlcmlhbF9udW1iZXI6MzE2MTMKbGljZW5zZWVfb3JnYW5pemF0aW9uOk9yYWNsZQpsaWNlbnNlZV9lbWFpbDpmbGF2aW8ucGVyZWlyYUBvcmFjbGUuY29tCmxpY2Vuc2VlX3VzZXJfaWQ6MzE2MTMKaXNfaDJvX2ludGVybmFsX3VzZTpmYWxzZQpjcmVhdGVkX2J5X2VtYWlsOmtheUBoMm8uYWkKY3JlYXRpb25fZGF0ZToyMDE5LzAzLzA3CnByb2R1Y3Q6RHJpdmVybGVzc0FJCmxpY2Vuc2VfdHlwZTp0cmlhbApleHBpcmF0aW9uX2RhdGU6MjAxOS8wMy8yOAo=
 ```
 
 ![](img/h2oimage004.png)
