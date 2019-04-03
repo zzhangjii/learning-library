@@ -1,1 +1,1 @@
-appdev.git
+appdev.gitoci.git
