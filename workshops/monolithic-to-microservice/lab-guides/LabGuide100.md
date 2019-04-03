@@ -18,6 +18,8 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 # Clone GIT Repository
 
+## Download Workshop Artifacts
+
 ### **STEP 1**: Open a Terminal Window and Clone GIT Repository
 
 **While still connected to the Client Image using VNC Viewer**, complete the following step to clone the GIT Repository.
@@ -41,6 +43,8 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 	```
 
 # Object Storage Setup, OCI User Creation and Auth Token Generation
+
+## Initial Preparations
 
 ### **STEP 2**: Log in to your OCI dashboard and Switch Regions
 
@@ -157,6 +161,8 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 # Setup SQL Developer Connection to ATP, Create Database User and DBMS_CLOUD Credential in ATP
 
+## Connection to the Cloud Database
+
 ### **STEP 7**: Download ATP Wallet Zip File
 
   - Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Database** section, select **Autonomous Transaction Processing**.
@@ -243,6 +249,8 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 	![](images/100/image311.png)
 
 # Import Data Pump Export file into ATP Databse and Download/Inspect Data Pump Log File
+
+## Populate the Database
 
 ### **STEP 11**: Add DBA View and ATP SQL Developer Connection
 
