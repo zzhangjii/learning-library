@@ -70,14 +70,9 @@ You will create all required infrastructure components within your Trail account
 
 **NOTE**: You may (probably) will be prompted to change the temporary password listed in the welcome email. In that case, enter the new password in the password field.
 
-- In the top left corner of the dashboard, click the **hamburger menu**
+- In the top left corner of the dashboard, click the **hamburger menu** and click **Compute**.
 
   ![](images/050Linux/3.png)
-
-- Click to expand the **Services** submenu, then click **Compute**
-
-  ![](images/050Linux/4.png)
-
 
 ### **STEP 3**: Create a Compartment
 
