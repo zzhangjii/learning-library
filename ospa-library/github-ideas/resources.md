@@ -1,5 +1,7 @@
 ### Tips and Tricks
 
+[Ale's .docx - .md conversion scripts (BETA)](docx_md_converter_scripts.md)
+
 [John's tips on using Pandoc to convert .docx to .md](pandoc-tips.md)
 
 [John's tips on create local repository cloned from Developer repository](dev-repo-local-version.md)
