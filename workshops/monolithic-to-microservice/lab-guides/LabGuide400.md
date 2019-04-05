@@ -42,6 +42,10 @@ In this lab you will use Oracle Visual Builder which is a cloud-based software d
 
   ![](images/400/9.PNG)
 
+- Select the **Empty Application** template and click **Next**.
+
+  ![](images/400/9-4.PNG)
+
 - In the Create Application dialog enter:
 
   ```
