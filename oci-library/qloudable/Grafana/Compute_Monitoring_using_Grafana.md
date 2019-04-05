@@ -54,9 +54,9 @@ In this lab we will create a compute instance, install a load generation and mon
 
 1. Sign in using your tenant name, user name and password.
 
-2. Once signed in select the compartment assigned to you from drop down menu on left part of the screen
+2. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
 
-3. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
+3. Select the compartment assigned to you from drop down menu on left part of the screen
 
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
