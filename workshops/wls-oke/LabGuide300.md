@@ -16,12 +16,9 @@ Use this Lab guide to create a WebLogic deployment in a Kubernetes cluster with 
 
 ## Required Artifacts
 
-- Kubernetes cluster
-- Helm installation (https://github.com/helm/helm/blob/master/docs/install.md)
-- Clone latest weblogic-kubernetes-operator repository
-  ```bash
-  $ git clone -b "v2.0" https://github.com/oracle/weblogic-kubernetes-operator.git
-  ```
+- Kubernetes cluster (Already included Helm)
+- [Helm installation](https://github.com/helm/helm/blob/master/docs/install.md)
+
 
 # WebLogic deployment in a Kubernetes cluster with the Oracle WebLogic Kubernetes Operator 2.0
 
@@ -33,30 +30,34 @@ Use this Lab guide to create a WebLogic deployment in a Kubernetes cluster with 
     and accept the license agreement for the [WebLogic Server image](https://hub.docker.com/_/oracle-weblogic-server-12c).
 
 - Log in to the Docker Store from your Docker client:
-  ```bash
+  ```
   $ docker login
   ```
 - Pull the operator image:
-  ```bash
+  ```
   $ docker pull oracle/weblogic-kubernetes-operator:2.0
   ```
 - Pull the Traefik load balancer image:
-  ```bash
+  ```
   $ docker pull traefik:1.7.4
   ```
 - Pull the WebLogic 12.2.1.3 install image:
-  ```bash
+  ```
   $ docker pull store/oracle/weblogic:12.2.1.3
   ```  
 - Copy the image to all the nodes in your cluster, or put it in a Docker registry that your cluster can access.
+- Clone latest weblogic-kubernetes-operator repository
+  ```
+  $ git clone -b "v2.0" https://github.com/oracle/weblogic-kubernetes-operator.git
+  ```
 
 ### **STEP 2**: Grant the Helm service account the `cluster-admin` role.
 - if you have incompatible version of helm client and server you can upgrade it by entering following command.
-```bash
+```
 helm init --upgrade
 ```
 - Grant the Helm service account the `cluster-admin` role.  
-```bash
+```
 $ cat <<EOF | kubectl apply -f -
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -75,7 +76,7 @@ EOF
   ![](images/300/cluster_admin1.png)
 ### **STEP 3**: Create a Traefik (Ingress-based) load balancer.
 - Use helm to install the Traefik load balancer. Use the values.yaml in the sample but set kubernetes.namespaces specifically.
-  ```bash
+  ```
   $ helm install stable/traefik \
   --name traefik-operator \
   --namespace traefik \
@@ -87,15 +88,15 @@ EOF
 
 ### **STEP 4**: Install the operator.
 - Create a namespace for the operator:
-  ```bash
+  ```
   $ kubectl create namespace sample-weblogic-operator-ns
   ``` 
 - Create a service account for the operator in the operator's namespace:
-  ```bash
+  ```
   $ kubectl create serviceaccount -n sample-weblogic-operator-ns sample-weblogic-operator-sa
   ``` 
 - Use helm to install and start the operator from the directory you just cloned:
-  ```bash
+  ```
   $ helm install weblogic-kubernetes-operator/kubernetes/charts/weblogic-operator \
     --name sample-weblogic-operator \
     --namespace sample-weblogic-operator-ns \
@@ -106,7 +107,7 @@ EOF
   ![](images/300/operator_install.png)
 
 - Verify that the operator's pod is running, by listing the pods in the operator's namespace. You should see one for the operator.
-  ```bash
+  ```
   $ kubectl get pods -n sample-weblogic-operator-ns
   ```
   ![](images/300/operatorRunning.png)
