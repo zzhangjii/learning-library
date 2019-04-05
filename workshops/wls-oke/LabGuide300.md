@@ -51,7 +51,10 @@ Use this Lab guide to create a WebLogic deployment in a Kubernetes cluster with 
 - Copy the image to all the nodes in your cluster, or put it in a Docker registry that your cluster can access.
 
 ### **STEP 2**: Grant the Helm service account the `cluster-admin` role.
-
+- if you have incompatible version of helm client and server you can upgrade it by entering following command.
+```bash
+helm init --upgrade
+```
 - Grant the Helm service account the `cluster-admin` role.  
 ```bash
 $ cat <<EOF | kubectl apply -f -

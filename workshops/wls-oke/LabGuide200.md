@@ -98,8 +98,7 @@ Compartments are used to isolate resources within your OCI tenant. Role-based ac
 
   - We don't need to make any changes to the default values on this form, but let's look at what will be created when we submit it.
 
-    ![](images/LabGuide200-6ff14524.png)
-    ![](images/LabGuide200-11191333.png)
+    ![](images/200/creatkubernetescluster.png)
 
     - Starting at the top you'll notice that the cluster will be created in our **Demo** compartment.
     - We can customize the name of this cluster if we want
