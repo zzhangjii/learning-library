@@ -159,7 +159,7 @@ Once you have your domain namespace (WebLogic domain not yet deployed) you have 
 
 Make sure before execute domain `helm` install you are in the WebLogic Operator's local Git repository folder.
 ```
-cd /u01/content/weblogic-kubernetes-operator/
+cd ~/weblogic-kubernetes-operator/
 ```
 To update operator execute the following `helm upgrade` command:
 ```
@@ -185,25 +185,15 @@ Please note the only updated parameter in both cases is the domain namespace.
 
 To deploy WebLogic domain you need to create a domain resource definition which contains the necessary parameters for the operator to start the WebLogic domain properly.
 
-You can modify the provided sample in the local repository or better if you make a copy first.
+You can modify the provided sample in the local repository.
 ```
-cp /u01/content/weblogic-kubernetes-operator/kubernetes/samples/scripts/create-weblogic-domain/manually-create-domain/domain.yaml \
-/u01/domain.yaml
+vi /weblogic-kubernetes-operator/kubernetes/samples/scripts/create-weblogic-domain/manually-create-domain/domain.yaml
 ```
 Use your favourite text editor to modify domain resource definition values. If necessary remove comment leading character (#) of the parameter to activate. Always enter space before the value, after the colon.
 
 Set the following values:
 
-| Key | Value | Example |
-|-|-|-|
-|name:|sample-domain1||
-|namespace:|sample-domain1-ns||
-|weblogic.domainUID:|sample-domain1||
-|domainHome:|/u01/oracle/user_projects/domains/sample-domain1||
-|image:|YOUR_OCI_REGION_CODE.ocir.io/YOUR_TENANCY_NAME/weblogic-operator-tutorial:latest|"fra.ocir.io/johnpsmith/weblogic-operator-tutorial:latest"|
-|imagePullPolicy:|"Always"||
-|imagePullSecrets: <br>- name:|imagePullSecrets: <br>- name: ocirsecret||
-|webLogicCredentialsSecret: <br>&nbsp;name:|webLogicCredentialsSecret: <br>&nbsp;name: sample-domain1-weblogic-credentials||
+![](images/300/Upload_to_JCS/domain_values.png)
 
 Your `domain.yaml` should be almost the same what is [available in the imported tutorial repository (click the link if you want to compare and check)](https://github.com/nagypeter/weblogic-operator-tutorial/blob/master/k8s/domain.yaml).
 
@@ -277,7 +267,7 @@ Once the Ingress has been created construct the URL of the admin console based o
 The EXTERNAL-IP was determined during Traefik install. If you forgot to note the execute the following command to get the public IP address:
 ```
 $ kubectl describe svc traefik-operator --namespace traefik | grep Ingress | awk '{print $3}'
-129.213.172.44
+129.213.150.77
 ```
 - Let’s use one of the node’s external IP addresses to access the Administration Console. Example: http://129.213.150.77:30701/console/
     
