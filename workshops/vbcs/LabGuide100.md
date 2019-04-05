@@ -31,7 +31,7 @@ This is the first of several labs that are part of the **Oracle Visual Builder C
 
 - Select the **Empty Application** template and click **Next**.
 
-  ![](images/100/LabGuide100-9-4.PNG)
+  ![](images/100/LabGuide100-9-4.png)
 
 - On Details screen enter the following data and click on **Next**.
 
