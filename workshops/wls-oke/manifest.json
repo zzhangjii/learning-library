@@ -32,13 +32,6 @@
                 "title": "Lab 300:  Prepare the WebLogic Kubernetes Operator environment",
                 "description": "How to run WebLogic clusters on the Oracle Cloud Infrastructure Container Engine for Kubernetes"
 
-            },
-            {
-                "number": "400",
-                "filename": "LabGuide400.md",
-                "title": "Lab 400:  Autonomous Transaction Processing (ATP) Database Integration",
-                "description": "How to upload a Product Catalog text file to Object Storage and leverage Oracle Machine Learning SQL Query Scratchpad to import the Data file into an ATP Database"
-
             }
 
         ]
