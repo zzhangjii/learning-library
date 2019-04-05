@@ -45,7 +45,6 @@ Use this Lab guide to create a WebLogic deployment in a Kubernetes cluster with 
   ```
   $ docker pull store/oracle/weblogic:12.2.1.3
   ```  
-- Copy the image to all the nodes in your cluster, or put it in a Docker registry that your cluster can access.
 - Clone latest weblogic-kubernetes-operator repository
   ```
   $ git clone -b "v2.0" https://github.com/oracle/weblogic-kubernetes-operator.git
