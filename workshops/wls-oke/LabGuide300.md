@@ -112,7 +112,7 @@ EOF
   ![](images/300/operatorRunning.png)
 
 - Verify that the operator is up and running by viewing the operator pod's log:
-  ```bash
+  ```
   $ kubectl logs -n sample-weblogic-operator-ns -c weblogic-operator deployments/weblogic-operator
   ```
     ![](images/300/log.png)
@@ -135,7 +135,7 @@ kubectl label secret sample-domain1-weblogic-credentials \
   weblogic.domainName=sample-domain1
 ```
 Create OCI image Registry secret to allow Kubernetes to pull you custome WebLogic image. Replace the registry server region code, username and auth token respectively.
-WARNING!!! - be careful about username - docker-username parameter should have a value of YOUR_TENACY_NAME/YOUR_OCIR_USERNAME - don't skip YOUR_TENANCY_NAME please.
+WARNING!!! - be careful about username - docker-username parameter should have a value of **YOUR_TENACY_NAME/YOUR_OCIR_USERNAME** - don't skip YOUR_TENANCY_NAME please.
 ```
 kubectl create secret docker-registry ocirsecret \
   -n sample-domain1-ns \
@@ -187,7 +187,8 @@ To deploy WebLogic domain you need to create a domain resource definition which 
 
 You can modify the provided sample in the local repository.
 ```
-vi /weblogic-kubernetes-operator/kubernetes/samples/scripts/create-weblogic-domain/manually-create-domain/domain.yaml
+cd /weblogic-kubernetes-operator/kubernetes/samples/scripts/create-weblogic-domain/manually-create-domain
+vi domain.yaml
 ```
 Use your favourite text editor to modify domain resource definition values. If necessary remove comment leading character (#) of the parameter to activate. Always enter space before the value, after the colon.
 
@@ -199,7 +200,7 @@ Your `domain.yaml` should be almost the same what is [available in the imported 
 
 Save the changes and create domain resource using the apply command:
 ```
-kubectl apply -f /u01/domain.yaml
+kubectl apply -f domain.yaml
 ```
 Check the introspector job which needs to be run first:
 ```
