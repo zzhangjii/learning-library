@@ -150,7 +150,7 @@ The repository already contains a necessary `wercker.yml` but before the executi
 | OCI_REGISTRY_USERNAME | your_cloud_username |  The username what you note during user settings.  |
 | OCI_REGISTRY_PASSWORD | OCIR Auth Token | The Auth Token you generated previously |
 | TENANCY | Name of your tenancy |
-| REGION | The code of your home region. See the [documentation](https://docs.cloud.oracle.com/iaas/Content/Registry/Concepts/registryprerequisites.htm#Availab) to get your region code. | e.g. `fra` - stands for *eu-frankfurt-1* |
+| REGION | The code of your home region. See the [documentation](https://docs.cloud.oracle.com/iaas/Content/Registry/Concepts/registryprerequisites.htm#Availab) to get your region code. | e.g. `iad` - stands for *us-ashburn-1* `fra` - stands for *eu-frankfurt-1* |
 | DOCKER_USERNAME | Your Docker Hub username | Necessary to pull official WebLogic Server image from Docker Store |
 | DOCKER_PASSWORD | Your Docker Hub password | Necessary to pull official WebLogic Server image from Docker Store |
 
@@ -184,7 +184,7 @@ Go to the **Runs** tab and click ***trigger a build now*** link.
 
 To get more details about the current step click on the pipeline.
 
-![alt text](images/100/wercker/create11png)
+![alt text](images/100/wercker/create11.png)
 
 When the workflow is completed the WebLogic image is available in your image repository.
 
