@@ -187,7 +187,7 @@ To deploy WebLogic domain you need to create a domain resource definition which 
 
 You can modify the provided sample in the local repository.
 ```
-cd /weblogic-kubernetes-operator/kubernetes/samples/scripts/create-weblogic-domain/manually-create-domain
+cd /kubernetes/samples/scripts/create-weblogic-domain/manually-create-domain
 vi domain.yaml
 ```
 Use your favourite text editor to modify domain resource definition values. If necessary remove comment leading character (#) of the parameter to activate. Always enter space before the value, after the colon.
