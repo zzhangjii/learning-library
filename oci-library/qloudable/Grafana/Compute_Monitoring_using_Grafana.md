@@ -52,7 +52,9 @@ In this lab we will create a compute instance, install a load generation and mon
 
 **Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
 
-1. Sign in using your tenant name, user name and password.
+1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text" height="100" width="100">
 
 2. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
 
@@ -184,12 +186,13 @@ ssh -i id_rsa_user opc@129.213.63.223 -L 3000:localhost:3000
 ## Practice 3: Install Grafana and stress tool on compute instance
 
 **As part of preperation for this lab, a dynamic group and IAM policy was created. This configuration enables Grafana based monitoring on the compute instance. Below 2 policy statements are already configured though for any new deployment they must be configured under IAM Policy.**
-**allow group grafana to read metrics in tenancy**
-**allow group grafana to read compartments in tenancy**
+
+**allow group <GROUP_NAME> to read metrics in tenancy**
+**allow group <GROUP_NAME> to read compartments in tenancy**
 
 1. Switch to ssh session to compute install. Install Grafana, Enter Command:
 ```
-sudo yum install https://dl.grafana.com/oss/release/grafana-5.4.2-1.x86_64.rpm
+sudo yum install https://dl.grafana.com/oss/release/grafana-5.4.2-1.x86_64.rpm -y
 ```
 
 Enter **Y** when prompted
