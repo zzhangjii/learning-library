@@ -26,17 +26,16 @@
 
   ![](images/PythonFormBrowse2.png)
 
-1. Use 'Browse' complete file path to docx file<br/>
-   (we're working on a version that lets you 'browse')
+1. Use 'Browse' to complete file path to docx file<br/>
    
-   Windows
+   Windows (your path might be different)
     (C:\Users\Manatee\Documents\mymswordfile.docx)
    
-   Mac/Linux
+   Mac/Linux (your path might be different)
     (/Users/Manatee/Document/mymswordfile.docx)
 
 1. Use 'Browse' to fill in path for local git repo
-   (presumes you have 'cloned' Dev Repo)
+    <br/>(presumes you have 'cloned' Dev Repo; your path might be different)
 
    C:\Users\Manatee\gitrepos\AppDev   (Windows)<br/>
    /Users/Manatee/gitrepos/AppDev     (Mac/Linux  )
@@ -49,7 +48,9 @@
 
 ### The original .docx file will now be found in your local repository converted to .md with all GitHub formatting
 
-* Mac users\ still need to change all .tiff images to .png or .jpg that GitHub will recognize (batch tools work best) and modify the .md file to change the image suffixes from .tiff to .png or .jpg (whatever you created)
+* Mac users still need to: 
+   * Change all .tiff images to .png or .jpg that GitHub will recognize <br/>(batch tools work best) 
+   * Modify the .md file to change the image suffixes from .tiff to .png or .jpg (whatever you created)
 
 * Now you are ready to clean-up the document as desired
 
