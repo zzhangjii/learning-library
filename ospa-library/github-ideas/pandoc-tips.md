@@ -9,7 +9,7 @@
 * I use a Mac so only the command-line is an option
 * Dan and Eugenio have tried the MS Word plug-in "writage" [http://writage.com](http://writage.com/)
 * Remember this is open source and you get what you pay for... - issues we've seen so far
-  * Images get converted to .tiff and .png (not sure what criteria is used)
+  * Images get converted to .tiff and .png (seems to be an issue only on Macs; not sure what criteria is used)
   * "Stray" characters sometimes appear (usually on lines by themselves)
   * I found case where the CASE of some words was altered, usually in headings and titles
   * We've heard reports that tables take lots of additional work after conversion
@@ -30,14 +30,7 @@
 
 1. Open .md file in editor and REPLACE .tiff with .png - save
 
-1. I broke the single file into multiple files:
-   README.md  -  Intro and links to labs
-   Lab1.md
-   Lab2.md
-   Lab3.md
-   Lab4.md
-   Lab5.md
-   Lab6.md
+1. Made the file name README.md (if not already)
 
 1. Open github for developer repository (jjking2019/appdev in my case)
 
