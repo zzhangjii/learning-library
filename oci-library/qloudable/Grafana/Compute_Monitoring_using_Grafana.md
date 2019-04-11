@@ -52,11 +52,13 @@ In this lab we will create a compute instance, install a load generation and mon
 
 **Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
 
-1. Sign in using your tenant name, user name and password.
+1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
-2. Once signed in select the compartment assigned to you from drop down menu on left part of the screen
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text" height="100" width="100">
 
-3. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
+2. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
+
+3. Select the compartment assigned to you from drop down menu on left part of the screen
 
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
@@ -94,7 +96,7 @@ git-bash sessions and any other application (Notepad, etc.) by clicking the Swit
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text" height="100" width="100">
 
-3. Press Enter When asked for ‘Enter File in which to save the key’, ‘Created Directory, ‘Enter passphrase’, and ‘Enter Passphrase again.
+3. Press Enter When asked for 'Enter File in which to save the key', 'Created Directory, 'Enter passphrase', and 'Enter Passphrase again.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL008.PNG" alt="image-alt-text" height="100" width="100">
 
@@ -145,7 +147,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 - **Configure Boot Volume:** Leave the default
 
-- **Add SSH Keys:** Choose ‘Paste SSH Keys’ and paste the Public Key saved earlier.
+- **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
 
 - **Virtual Cloud Network Compartment:** Choose your compartment
 
@@ -173,9 +175,9 @@ ssh -i id_rsa_user opc@129.213.63.223 -L 3000:localhost:3000
 ```
 **NOTE:** User name is opc. This will enable port forwarding on local host which is needed to access Grafana dash board later on
 
-**HINT:** If ‘Permission denied error’ is seen, ensure you are using ‘-i’ in the ssh command
+**HINT:** If 'Permission denied error' is seen, ensure you are using '-i' in the ssh command
 
-13. Enter ‘Yes’ when prompted for security message
+13. Enter 'Yes' when prompted for security message
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0014.PNG" alt="image-alt-text" height="100" width="100">
  
@@ -183,9 +185,14 @@ ssh -i id_rsa_user opc@129.213.63.223 -L 3000:localhost:3000
 
 ## Practice 3: Install Grafana and stress tool on compute instance
 
+**As part of preperation for this lab, a dynamic group and IAM policy was created. This configuration enables Grafana based monitoring on the compute instance. Below 2 policy statements are already configured though for any new deployment they must be configured under IAM Policy.**
+
+**allow group <GROUP_NAME> to read metrics in tenancy**
+**allow group <GROUP_NAME> to read compartments in tenancy**
+
 1. Switch to ssh session to compute install. Install Grafana, Enter Command:
 ```
-sudo yum install https://dl.grafana.com/oss/release/grafana-5.4.2-1.x86_64.rpm
+sudo yum install https://dl.grafana.com/oss/release/grafana-5.4.2-1.x86_64.rpm -y
 ```
 
 Enter **Y** when prompted
@@ -283,7 +290,7 @@ sudo yum install stress
 sudo stress --cpu 5 --io 12 --vm 5 --vm-bytes 256M --timeout 600s
 ```
 
-**We have nwo completed our setup with a compute instance and installed and execetued a tool to stress the CPU and Memory. Next we will monitor observe Grafana dash board for this compute instance**
+**We now have  completed our setup with a compute instance and installed and execetued a tool to stress the CPU and Memory. Next we will monitor observe Grafana dash board for this compute instance**
 
 ## Practice 4: Adjust Parameters in Grafana dashboard
 

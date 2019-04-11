@@ -98,8 +98,7 @@ Compartments are used to isolate resources within your OCI tenant. Role-based ac
 
   - We don't need to make any changes to the default values on this form, but let's look at what will be created when we submit it.
 
-    ![](images/LabGuide200-6ff14524.png)
-    ![](images/LabGuide200-11191333.png)
+    ![](images/200/creatkubernetescluster.png)
 
     - Starting at the top you'll notice that the cluster will be created in our **Demo** compartment.
     - We can customize the name of this cluster if we want
@@ -366,7 +365,7 @@ Compartments are used to isolate resources within your OCI tenant. Role-based ac
 
     ![](images/LabGuide200-397f4902.png)
 
-    ![](images/LabGuide200-778c8b15.png)
+    ![](images/200/kubctlnodes.png)
 
     **NOTE**: You should see in the `cluster-info` that the Kubernetes master has an `oraclecloud.com` URL. If it instead has a `localhost` URL, your `KUBECONFIG` environment variable may not be set correctly. Double check the environment variable against the path and filename of your `kubeconfig` file.
 
@@ -384,7 +383,7 @@ Compartments are used to isolate resources within your OCI tenant. Role-based ac
   ./kubectl patch deployment kubernetes-dashboard -n kube-system -p '{"spec": {"template": {"spec": {"containers": [{"name": "kubernetes-dashboard", "args": ["--token-ttl=43200", "--auto-generate-certificates"]}]}}}}'
   ```
 
-  ![](images/LabGuide200-a5c59f02.png)
+  ![](images/200/kubctlpatches.png)
 
 - Now that we've increased the session timeout, we can use `kubectl` to start a proxy that will give us access to the Kubernetes Dashboard through a web browser at a localhost URL. Run the following command in the same terminal window:
 

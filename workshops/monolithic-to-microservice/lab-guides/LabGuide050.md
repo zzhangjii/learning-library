@@ -157,8 +157,6 @@ We require a Database to store the Alpha Office data which is accessed later in 
 
 ## Visual Builder Instance Creation
 
-You will use the Visual Builder Cloud Service to create an instance.
-
 ### **STEP 7**: Create a New Visual Builder Cloud Service
 
 In this step you will create a VBCS instance that will be used in Lab 400. It takes about 20 minutes for the underlying infrastructure to be created. We just need to fire off the create instance process at this point. We'll check the status of the instance at the beginning of Lab 400.
@@ -217,7 +215,7 @@ In this step you will create a VBCS instance that will be used in Lab 400. It ta
 
   ![](images/050/LabGuide50-vbcs5.png)
 
-# Access Your Client Environment
+## Access Your Client Environment
 
 ### **STEP 9**: Access Client Image
 
