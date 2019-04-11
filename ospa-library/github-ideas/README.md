@@ -64,8 +64,9 @@
    <br/>
        (Still need OSPA email so that we can change jjking2019 to something more generic) 
 
-      * Developers will have full authority to Developer Repos <br/>
-      __** Note: Developer is required to have generic Github Access **__
+      * Developers will have full authority to Developer Repos 
+      
+          __Note: Developer is required to have generic Github Access__
 
       * Developers will create, modify, and review documents in Developer Repos
       
