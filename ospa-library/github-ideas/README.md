@@ -66,7 +66,7 @@
 
       * Developers will have full authority to Developer Repos 
       
-          __Note: Developer is required to have generic Github Access__
+        __NOTE:__ Developer is required to have generic Github Access
 
       * Developers will create, modify, and review documents in Developer Repos
       
