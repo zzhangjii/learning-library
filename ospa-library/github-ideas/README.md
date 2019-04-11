@@ -63,7 +63,9 @@
    1. One 'Developer Repo' for each folder identified earlier (__jjking2019/appdev, jjking2019/data-mgmt/adw, etc.__)
    <br/>
        (Still need OSPA email so that we can change jjking2019 to something more generic) 
+
       1. Developers will have full authority to Developer Repos - **Note: Developers Github Access is required**
+      
       1. Developers will create, modify, and review documents in Developer Repos
       
    [Rationale behind three-level repository](threelevel.md)
