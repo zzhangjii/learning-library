@@ -293,14 +293,7 @@ labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sa
         };
 
         $scope.showOrHideInteractiveTour = function() {
-          if($scope.selection == 'interactive') {
-            $scope.selection = $scope.previousSelection;
-            $scope.previousSelection = 'interactive';
-          }
-          else {
-            $scope.previousSelection = $scope.selection;
-            $scope.selection = 'interactive';
-          }
+          $window.open($scope.interactive.src, "_interactive");
         };
 
         $scope.loadContent = function (page) {
