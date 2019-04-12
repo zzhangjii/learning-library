@@ -1,6 +1,9 @@
 ![](images/GitHub-Mark-120px-plus.png)![](../common/images/O-SalesPartnerAcademy-rgb.png)
 
 ## Library for GitHub OSPA Discussion
+
+#### Updated April 11, 2019 by John King to current ideas
+
 ### Objectives
 * Agree to common method for creating OSPA Hands-On Lab documentation using GitHub.
 * Begin to develop standard methodology for OSPA teams.
@@ -49,32 +52,37 @@
 * We suggest a simple editor for Markdown like the Microsoft Visual Studio Code tool available on [MyDesktop](http://mydesktop.oraclecorp.com/myd/myd_software_licenses.show_complete_list) though any text editor will do
 
 ![](images/VSCode.png)
-### Mechanism
+
+### Mechanism Selected
 * Three-level OSPA repository (repo) scheme
-   1. Oracle Learning-Library (production)
-   1. OSPA Learning-Library (staging, one of Ale's, Dan's, or John's - tbd)
-   1. One 'Developer Repo' for each folder identified earlier
-      1. Developers will have full authority to Developer Repos - **Note: Developers Github Access is required**
-      1. Developers will create, modify, and review documents in Developer Repos
+   1. Oracle Learning-Library (production) - __oracle/learning-library/ospa-library__
+
+   1. OSPA Learning-Library (staging) - __jjking2019/learning-library/ospa-library__ 
+   <br/>(Still need OSPA email so that we can change jjking2019 to something more generic)
+
+   1. One 'Developer Repo' for each folder identified earlier (__jjking2019/appdev, jjking2019/data-mgmt/adw, etc.__)
+   <br/>
+       (Still need OSPA email so that we can change jjking2019 to something more generic) 
+
+      * Developers will have full authority to Developer Repos 
+      
+        NOTE: Developer is required to have generic Github Access
+
+      * Developers will create, modify, and review documents in Developer Repos
       
    [Rationale behind three-level repository](threelevel.md)
 
-### Alternative Mechanism (not our favorite)
-* Two-level OSPA repository (repo) scheme
-   1. Oracle Learning-Library (production)
-   1. OSPA Learning-Library (staging, one of Ale's, Dan's, or John's - tbd)
-* Developers create .zip file for desired folder and make it available to "Admins" for unzip and load. Zip file will be shared using email, LCMS, or Slack (go-ospa-github). - WCGW? :pray:
-* Developer Github access is not required
-
 ### Suggested Workflow(s)
-   1. (If new) Developer checks to see if appropriate folder already in repository; if not, request from "Admins"
-   1. Developer creates (or gets from somewhere) desired content, makes sure it is in proper form (.md, .html), and that all large files are linked-to rather than part of document (we need to decide if links will be to Confluence, OraDocs, LCMS, etc...)</br>
-   __NOTE:__ We can supply a command to copy a relevant folder to a developer's machine
-   1. Developer will push to appropriate "Developer Repo" (e.g. ospa-lib-appdev)
+
+#### Note: When following notes mention "Admin" or "Admins" that includes: Dan Kingsley, Ale Casas, and John King
+   1. (If new topic) Developer checks to see if appropriate folder already in repository; if not, request from "Admins" and "Admins" will create folder in "Staging Repository" (currently 'jjk2019/learning-library') and a matching "Developer Repository"
+   1. Developer creates (or gets from somewhere) desired content, makes sure it is in proper form (.md, .html), and that all large files are linked-to rather than part of document (links will be to Confluence, OraDocs, LCMS, etc...)</br> 
+   __NOTE:__ Ale has created a Python script to convert existing .docx files to .md (markdown)
+   1. Developer will push to appropriate "Developer Repo" (e.g. jjking2019/appdev)
    1. Developer (peers, maybe manager, maybe testers...) review content in GitHub; repeat 2-3-4 cycle until happy
    1. Developer notifies "admin" that "Developer Repo" is ready to go
-   1. Admin synchronize from "Developer Repo" into "Staging Repo" through script or command line; performs cursory check of file sizes and formatting
-      1. Admin runs script (in-house script, see menu below)
+   1. Admin synchronizes from "Developer Repo" into "Staging Repo" through script or command line; performs cursory check of file sizes and formatting
+      1. Admin runs script (in-house script, see early menu example below)
       1. Admin selects developer repository to update
       1. Changes are automatically committed to Staging repository
       
@@ -82,7 +90,9 @@
       
       
    1. Developer (and team) review document in "Staging Repo" and let Admin know when ok
-   1. Admin __MERGEs__ from "Staging Repo" to "Production Repo" - lets Developer know of success/failure
+   1. Admin __creates "PULL REQUEST__ from "Staging Repo" to "Production Repo" 
+   1. "oracle/learning-library" admins (Derek O'Neill and Steven Nicholls) __MERGE__ changes (makes them permanent in oracle/learning-library)
+   1. Admin lets Developer know of success/failure
    1. Developer performs final check of "Production Repo"
    
    

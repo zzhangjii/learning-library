@@ -18,30 +18,29 @@
 
 ### Run the appropriate command from the command line
 
- `python converter_beta.py`
+   `python converter_beta.py`
 
- `python3 converter_py37.py`
+   `python3 converter_py37.py`
 
  ### You will see a dialog that looks like this:
 
-  ![](images/PythonScriptForm.png)
+  ![](images/PythonFormBrowse2.png)
 
-1. Fill in complete file path to docx file<br/>
-   (we're working on a version that lets you 'browse')
+1. Use 'Browse' to complete file path to docx file<br/>
    
-   PC
-   (C:\Users\Manatee\Documents\mymswordfile.docx)
+   Windows (your path might be different)
+    (C:\Users\Manatee\Documents\mymswordfile.docx)
    
-   Mac
-   (/Users/Manatee/Document/mymswordfile.docx)
+   Mac/Linux (your path might be different)
+    (/Users/Manatee/Document/mymswordfile.docx)
 
-1. Fill in path for local git repo
-   (presumes you have 'cloned' Dev Repo)
+1. Use 'Browse' to fill in path for local git repo
+    <br/>(presumes you have 'cloned' Dev Repo; your path might be different)
 
-   C:\Users\gitrepos\AppDev
-   /Users/gitrepos/AppDev
+   C:\Users\Manatee\gitrepos\AppDev   (Windows)<br/>
+   /Users/Manatee/gitrepos/AppDev     (Mac/Linux  )
 
-  ![](images/PythonScriptFormFilled.png)
+  ![](images/PythonFormBrowse1.png)
 
 1. Click "Enter" to convert .docx file to .md in chosen repo; you should see the following when complete
 
@@ -49,7 +48,9 @@
 
 ### The original .docx file will now be found in your local repository converted to .md with all GitHub formatting
 
-* You still need to change all .tiff images to .png or .jpg that GitHub will recognize (batch tools work best)
-* You still need to modify the .md file to change the image suffixes from .tiff to .png or .jpg (whatever you created)
+* Mac users still need to: 
+   * Change all .tiff images to .png or .jpg that GitHub will recognize <br/>(batch tools work best) 
+   * Modify the .md file to change the image suffixes from .tiff to .png or .jpg (whatever you created)
+
 * Now you are ready to clean-up the document as desired
 
