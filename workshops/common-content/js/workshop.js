@@ -39,8 +39,8 @@ labGuide.config(function ($mdThemingProvider) {
     $mdThemingProvider.alwaysWatchTheme(true);
 });
 
-labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sanitize', '$sce', '$mdDialog', '$mdToast'
-    , function ($scope, $http, $mdSidenav, $sanitize, $sce, $mdDialog, $mdToast) {
+labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sanitize', '$sce', '$mdDialog', '$mdToast', '$window'
+    , function ($scope, $http, $mdSidenav, $sanitize, $sce, $mdDialog, $mdToast, $window) {
 
       loadScript(primusJsUrl, () => {
         if(typeof Primus !== 'undefined') {
