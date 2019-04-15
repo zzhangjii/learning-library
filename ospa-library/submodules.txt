@@ -2,7 +2,6 @@ ADW
 ATP
 security
 appint
-appint
 appdev
 analytics
 data-mgmt
