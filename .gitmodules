@@ -7,3 +7,6 @@
 [submodule "ospa-library/appdev"]
 	path = ospa-library/appdev
 	url = https://github.com/jjking2019/appdev.git
+[submodule "ospa-library/analytics"]
+	path = ospa-library/analytics
+	url = https://github.com/jjking2019/analytics.git
