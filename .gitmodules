@@ -16,3 +16,6 @@
 [submodule "ospa-library/oci"]
 	path = ospa-library/oci
 	url = https://github.com/jjking2019/oci.git
+[submodule "ospa-library/github-ideas"]
+	path = ospa-library/github-ideas
+	url = https://github.com/jjking2019/github-ideas.git
