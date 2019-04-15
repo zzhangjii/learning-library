@@ -13,3 +13,6 @@
 [submodule "ospa-library/data-mgmt"]
 	path = ospa-library/data-mgmt
 	url = https://github.com/jjking2019/data-mgmt.git
+[submodule "ospa-library/oci"]
+	path = ospa-library/oci
+	url = https://github.com/jjking2019/oci.git
