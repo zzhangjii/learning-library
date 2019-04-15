@@ -4,3 +4,6 @@
 [submodule "ospa-library/appint"]
 	path = ospa-library/appint
 	url = https://github.com/jjking2019/appint.git
+[submodule "ospa-library/appdev"]
+	path = ospa-library/appdev
+	url = https://github.com/jjking2019/appdev.git
