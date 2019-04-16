@@ -1,3 +1,8 @@
-ADW
-ATP
+
+appint
+appdev
+analytics
+data-mgmt
+oci
 security
+github-ideas
