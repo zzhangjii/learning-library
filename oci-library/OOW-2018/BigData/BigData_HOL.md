@@ -6,15 +6,13 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Practice 1: Setup Windows 10 VM](#practice-1-setup-windows-10-vm)
+[Practice 1: Deploy your Cloudera environment](#practice-1-deploy-your-cloudera-environment)
 
-[Practice 2: Log in OCI Web Console ](#practice-1-log-in-oci-web-console)
+[Practice 2:  Cloudera Enterprise Data Hub on OCI ](#practice-2-cloudera-enterprise-data-hub-on-oci)
 
-[Practice 3:  Cloudera Enterprise Data Hub on OCI ](#practice-3-cloudera-enterprise-data-hub-on-oci)
+[Practice 3: Log in to Cloudera Manager](#practice-3-log-in-to-cloudera-manager)
 
-[Practice 4: Log in to Cloudera Manager](#practice-4-log-in-to-cloudera-manager)
-
-[Practice 5: Benchmarking with Teragen/Terasort](#practice-5-benchmarking-with-teragen/terasort)
+[Practice 4: Benchmarking with Teragen/Terasort](#practice-4-benchmarking-with-teragen/terasort)
 
 [Try Oracle Cloud Infrastructure for FREE](#try-oracle-cloud-infrastructure-for-free)
 
@@ -29,56 +27,30 @@ In this lab, attendees will manage a Cloudera Enterpise Data Hub on OCI and use 
 
 ## Pre-Requisites 
 
-Each attendee would be provided with a set of credentials for Oracle Cloud Infrastructure. The credentials will include 
+* OCI account: If you don't have an OCI account, you can sign up for a free trial [here](https://cloud.oracle.com/trial)
 
-- Tenancy Information
-- Username
-- Password
+* Terraform configuration: That's all detailed [here](https://github.com/cloud-partners/oci-prerequisites)
 
-## Practice 1: Setup Windows 10 VM 
+>NOTE: The free trial only has the Ashburn region enabled by default. Depending on what Terraform modules you're going to deploy, you may need to enable other regions. Similarly, the default quotas are pretty low, so you might need to request increases.
 
-1) Each attendee is provided with a laptop with a Virtual Box. In the Virtual Box, Please start the Windows 10 VM (name of the VM is same as the ID of this Hands on Lab - HOL6379) 
+## Practice 1: Deploy your Cloudera environment
 
-![](media/image1.png)
+1. The Terraform module mentioned on pre-requisites section speed up the process of deploying a Cloudera cluster in OCI. For this HOL we used the development module described [here](https://github.com/cloud-partners/oci-cloudera/tree/master/development)
 
-## Practice 2: Log in OCI Web Console 
+This is for small implementations. This deployment consists of five instances:
 
-1) Open Chrome Browser and Log into Oracle Cloud Infrastructure (OCI) Console. 
-https://console.us-phoenix-1.oraclecloud.com/
-Add the Cloud Tenant name provided to you. 
+* 1 Bastion (VM.Standard1.2) - 2 OCPUs 
+* 1 Utility (VM.Standard2.16) - 16 OCPUs 
+* 3 Worker (VM.Standard2.24) - 24 OCPUs 
 
-![](media/image2.png)
+This environment provides a much higher HDFS storage capacity, along with a compute and memory resources for use with a variety of big data workloads. This environment is not a good fit for users who want high availability.
 
-2) Sign in by providing your username and temporary password. 
+>NOTE: You can find all the modules [here](https://github.com/cloud-partners/oci-cloudera)
+Also, please modify the script `startup.sh` and look for the `MAIN CLUSTER CONFIGURATION` section - this is which you can input your contact information, and set up the Cloudera Manager credentials prior to deployment - those credentials will be used on Practice-3
 
-![](media/image3.png)
+## Practice 2: Cloudera Enterprise Data Hub on OCI 
 
-3) Change the temporary password provided to you. 
-
-```
-Following password will suffice password requirements 
-Oracleoow2018! 
-```
-
-![](media/image4.png)
-
-After log in, you are at the home page of OCI web console. 
-
-<img width="1240" alt="ocihomepage" src="https://user-images.githubusercontent.com/32341971/47040466-2c38dd80-d13b-11e8-8ae1-79f8d48a3214.png">
-
-4) Navigate to the **MENU** on the top left, and Click on **Networking** --> **Virtual Cloud Networks** and select the compartment associated with your userID. 
-
-For instance: For **Username** *OOW10*  use **Compartment** *OOW-HOL10*
-
-![](media/image6.png)
-
-5) Open Gitbash in your windows 10 VM. Its already installed. You will use Gitbash for *ssh*. 
-
-![](media/gitbash1.png)
-
-## Practice 3: Cloudera Enterprise Data Hub on OCI 
-
-Each attendee group is provided with a pre-installed Cloudera EDH on OCI. The setup architecture is provided below. 
+After you finished the deployment you will have a development Cloudera EDH environment on OCI. The setup architecture is provided below. 
 
 ![](media/arch1.png)
 
@@ -88,11 +60,11 @@ In this exercise we will quickly take a look at the infrastructure components th
 
 1) Navigate to the **MENU** on the top left, and Click on **Networking** --> **Virtual Cloud Networks**. It provides details of a virtual cloud network that is setup to host the virtual instances. 
 
-		NOTE: Make sure to select compartment compartment associated with your userID. 
+> NOTE: Make sure to select the compartment associated with your userID. 
 
 ![](media/image7.png)
 
-2) Click on **"cloudera_vcn"** and you will see details of the virtual cloud network. 
+1. Click on **"cloudera_vcn"** and you will see details of the virtual cloud network. 
 	- Subnets 
 	- Route tables
 	- Security Lists
@@ -111,11 +83,11 @@ The shapes of the Hosts are:
 - Utility (VM.Standard2.16) - 16 OCPUs 
 - Worker (VM.Standard2.24) - 24 OCPUs 
 
-[\[More on OCI Compute Shapes\]](https://docs.cloud.oracle.com/iaas/Content/Compute/References/computeshapes.htm?tocpath=Services%7CCompute%7C_____5#ComputeShapes) 
+[More on OCI Compute Shapes](https://docs.cloud.oracle.com/iaas/Content/Compute/References/computeshapes.htm?tocpath=Services%7CCompute%7C_____5#ComputeShapes) 
 
 ![](media/image9.png)
 
-4) For HDFS, each worker host has block volumes attached. It is recommended, that 
+4. For HDFS, each worker host has block volumes attached. It is recommended, that:
 - Minimum 700GB Volume size for maximum throughput
 	- 25K IOPS per Volume
 	- 320mb/s per Volume
@@ -128,9 +100,9 @@ The shapes of the Hosts are:
 ![](media/image10.png)
 
 
-## Practice 4: Log in to Cloudera Manager
+## Practice 3: Log in to Cloudera Manager
 
-1) Navigate to the **MENU** on the top left, and Click on **Compute** --> **Instances**. And click on utility instance **"CDH Utility 1" to get Public IP of the instance. 
+1. Navigate to the **MENU** on the top left, and Click on **Compute** --> **Instances**. And click on utility instance **CDH Utility 1** to get Public IP of the instance. 
 
 ![](media/image11.png)
 
@@ -138,51 +110,41 @@ In the details section, copy the Public IP of the Utility Instance
 
 ![](media/image12.png)
 
-2) Go the following URL and replace it with the Public IP of your Utility instance, and log in! 
+2. Go the following URL and replace it with the Public IP of your Utility instance, and log in:
 
 		http://<utility_public_ip>:7180/cmf/home
 		
 		Username: cdhadmin
 		Password: somepassword
 
+>NOTE: Those credentials are the ones setup inside of the `startup.sh` script.
+
 ![](media/image13.png)
 
-3) Start the cluster (if it is not already started). *Only one person per team needs to perform this step*. 
-Cluster startup takes ~3m.  Proceed to SSH login while this runs.
+3. Start the cluster (if it is not already started).
 
 ![](media/image14.png)
 
-4) Open GitBash in your Windows and SSH to the utility Node. 
-Download an ssh private key from [here](https://bit.ly/2NDfXc4) and use this id_rsa key to log in to the Utility node. Make sure to provide the complete path for the key below.  
 
-```
-$ ssh -i id-rsa opc@<Utility_Node_PublicIP> 
-```
-**NOTE**
-```
-Any persmission issues, 
-$chmod 0600 id_rsa 
-Try log in again. 
-```
-
-5) Confirm is the cluster is started in the Cloud Manager Console. 
+4. Confirm the cluster is started in the Cloud Manager Console. 
 
 ![](media/image15.png)
 
-## Practice 5: Benchmarking with Teragen/Terasort
+## Practice 4: Benchmarking with Teragen/Terasort
 
-1) Open GitBash in your Windows and SSH to the utility Node. 
+1. SSH to the utility Node. 
 ```
-$ ssh -i id-rsa opc@<Utility_Node_PublicIP> 
+$ ssh opc@<Utility_Node_PublicIP> 
 ```
 
-2) Submit a 100GB Teragen. 
-**NOTE**: **<UNIQUE_ID>** is above should be a unique identifier for each participant sharing the cluster.  This will be used in next steps, so ensure this is captured.  A single digit number will suffice
+2. Submit a 100GB Teragen.
 
-	The count above is 1,000,000,000 for 100GB.  We are running a small scale test due to time constraints.
 ```
 $ hadoop jar hadoop-mapreduce-examples.jar teragen -Ddfs.replication=1 1000000000 /user/opc/<UNIQUE_ID>/terasort_in/
 ```
+
+**NOTE**: *UNIQUE_ID* above should be a unique identifier for each participant sharing the cluster. This will be used in next steps, so ensure this is captured.  A single digit number will suffice. The count above is 1,000,000,000 for 100GB. We are running a small scale test due to time constraints.
+
 
 ![](media/image16.png)
 
@@ -200,14 +162,16 @@ $ mapred job -list
 ```
 Copy the jobID and kill this job 
 ![](media/image19.png)
+
 ```
 $ mapred job -kill <jobID>
 $ hdfs dfs -rm -r -skipTrash /user/opc/<UNIQUE_ID>/
 ```
+
 ![](media/image20.png)
 
 
-3)  Submit a 100GB Teragen again but this request more mappers which will result in more cluster resources used for faster job execution.  Lets see how fast this job executes! 
+3.  Submit a 100GB Teragen again but this request more mappers which will result in more cluster resources used for faster job execution.  Lets see how fast this job executes! 
 
 ```
 $ hadoop jar hadoop-mapreduce-examples.jar teragen -Ddfs.replication=1 -Dmapreduce.job.maps=120 1000000000 /user/opc/<UNIQUE_ID>/terasort_in/
@@ -216,11 +180,12 @@ $ hadoop jar hadoop-mapreduce-examples.jar teragen -Ddfs.replication=1 -Dmapredu
 
 ![](media/image22.png)
 
-4) Let’s run a Terasort from our 100GB Teragen and observe what happens, trigger the job using “time” so we get a runtime without having to look at job logs to calculate it.
+4. Let’s run a Terasort from our 100GB Teragen and observe what happens, trigger the job using “time” so we get a runtime without having to look at job logs to calculate it.
 
 ```
 $ time hadoop jar hadoop-mapreduce-examples.jar terasort -Ddfs.replication=1 -Dmapreduce.job.maps=120 -Dmapreduce.job.reduces=120 /user/opc/<UNIQUE_ID>/terasort_in/ /user/opc/<UNIQUE_ID>/terasort_out/
 ```
+
 ![](media/image23.png)
 
 ![](media/image26.png)
@@ -237,7 +202,7 @@ Navigate back to the Home page on Cloudera Manager, observe the utilization grap
 
 ![](media/image27.png)
 
-5) Let’s check the pre-tuned settings for Map-Reduce on this cluster.
+5. Let’s check the pre-tuned settings for Map-Reduce on this cluster.
 - Select YARN > Configuration
 - In the Search Box type **“mapreduce java”** and hit enter
 	- Look at the Map and Reduce Java Opts Base
@@ -296,7 +261,7 @@ Once completed, Click Finish.
 
 ![](media/image38.png)
 
-6) Let’s test our new configuration by submitting a Terasort again, adjusting the output path.
+6. Let’s test our new configuration by submitting a Terasort again, adjusting the output path.
 
 ```
 $ time hadoop jar hadoop-mapreduce-examples.jar terasort -Ddfs.replication=1 -Dmapreduce.job.maps=120 -Dmapreduce.job.reduces=120 /user/opc/<UNIQUE_ID>/terasort_in/ /user/opc/<UNIQUE_ID>/terasort_out_2/
@@ -317,7 +282,7 @@ Time taken to complete the second terasort.
 
 ![](media/image42.png)
 
-7) Now let’s revert back to the original cluster configuration.  Select YARN > Configuration > History and Rollback.
+7. Now let’s revert back to the original cluster configuration.  Select YARN > Configuration > History and Rollback.
 
 ![](media/image43.png)
 
@@ -337,15 +302,18 @@ Confirm that we want to re-deploy client configuration and click the blue button
 
 ![](media/image48.png)
 
-8) If time permits, scale the teragen to 1TB and we can watch Cloudera Manager during execution. *Note that a new path is used, we want to put the 1TB Teragen in a separate location.*
+8. If time permits, scale the teragen to 1TB and we can watch Cloudera Manager during execution. *Note that a new path is used, we want to put the 1TB Teragen in a separate location.*
+
 ```
 $ hadoop jar hadoop-mapreduce-examples.jar teragen -Ddfs.replication=1 -Dmapreduce.job.maps=120 10000000000 /user/opc/<UNIQUE_ID>/1T_terasort_in/
 ```
+
 ![](media/image49.png)
 
 ![](media/image50.png)
 
 ![](media/image51.png)
+
 
 ## Try Oracle Cloud Infrastructure for FREE 
 

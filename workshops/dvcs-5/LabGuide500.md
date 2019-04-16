@@ -1,4 +1,4 @@
-## Lab 5 – Predicting Subscriptions - Machine Learning
+## Lab 500 – Predicting Subscriptions - Machine Learning
 
 Key takeaways from this lab:
 - Learning how to create data flows
@@ -15,11 +15,13 @@ To do this, Isla  has already obtained 4 different data sets: Orders, Customers,
 
 Isla knows that she needs to use KoolKart Orders and KoolKart Customers data sets together. Most importantly, she decides to utilize the Data Flow functionality of OAC that allows her to create a data set tailored to her needs. Let's start!
 
-### 5a) Creating a Data Flow for KoolKart Orders and Customers
+### a) Creating a Data Flow for KoolKart Orders and Customers
 
-1. Create a Data Flow and add a data set
+1. Create a **Data Flow** and add a **Data Set**.
 
-    Select the hamburger menu button and click on the Home button.
+    Download the <a href="https://github.com/oracle/learning-library/raw/master/workshops/dvcs-5/Exercise%20Files/KoolKart%20Orders.xlsx">**KoolKart Orders.xlsx**</a> file.
+
+    Now, select the hamburger menu button and click on the Home button.
 
     ![](images/500/img_5a_1_1.png)
 
@@ -27,23 +29,36 @@ Isla knows that she needs to use KoolKart Orders and KoolKart Customers data set
 
     ![](images/500/img_5a_1_2.png)
 
-    Add the **KoolKart Orders** data set.
+    Select **Create Data Set** to load in the Excel file.
+    
+    ![](images/200/img_2a_2_2.png) 
+    
+    Select **Drop data file here or click to browse** and select the **KoolKart Orders** data set.
+    
+    ![](images/200/img_2a_2_3.png) 
+    
+    Click **Add** to add the **KoolKart Orders** to begin the data flow.
 
     ![](images/500/img_5a_1_3.png)
 
-2. Once the **Data Flow Editor** opens up, click the **Add Data** icon in the **Data Flow Steps** and drag it to the editor. 
+2. Once the **Data Flow Editor** opens up, select the **Data Flow Steps** tab.
 
     ![](images/500/img_5a_2_1.png)
     
-    Add the **KoolKart Customers** data set by selecting **KoolKart Customers** and selecting **Add**.
-
+    Download the <a href="https://github.com/oracle/learning-library/raw/master/workshops/dvcs-5/Exercise%20Files/KoolKart%20Customers.xlsx">**KoolKart Customers.xlsx**</a> file.
+    
+    Click the **Add Data** icon and drag it to the editor. 
+    
     ![](images/500/img_5a_2_2.png)
+    
+    Now, add the **KoolKart Customers** file by selecting **Create Data Set**, followed by **Drop data file here or click to browse** and then selecting **Add**, like we did in the previous steps.
 
     Click on **Join** and add it to the data flow. 
-
     ![](images/500/img_5a_2_3.png)
-
-    Ideally, OAC should detect the joining logic, but in case it doesn't, you will see an Incomplete join message. Click on the circle to complete the join. 
+    
+    Ideally, OAC should detect the joining logic, but in case it doesn't, you will see an Incomplete join message. 
+    
+    Click on the circle to complete the join. 
 
     ![](images/500/img_5a_2_4.png)
 
@@ -80,19 +95,23 @@ Isla knows that she needs to use KoolKart Orders and KoolKart Customers data set
     Select **+** next to **Select Columns** and then select **Group**.
 
     ![](images/500/img_5a_5_1.png)
+    
+    Click **Select column** and select **Customer Country**.
+    
+    ![](images/500/img_5a_5_1b.png)
 
     Set the group name to **Sales Region**.
-    Name the first group **NA** and add **Canada** and **USA** to the group.
+    Then, name the first group **NA** and add **Canada** and **USA** to the group.
 
     ![](images/500/img_5a_5_2.png)
     
-    Select **+ Group** to add a second group and name it **EMEA**. Add the following countries to the group: **France**, **United Kingdom**, and **Germany**.
+    Click **+ Group** to add a second group and name it **EMEA**. Add **France**, **United Kingdom**, and **Germany** to the group.
 
-    Select **+ Group** to add a third group and name it **APAC**. Add **Japan** to the group.
+    Click **+ Group** to add a third group and name it **APAC**. Add **Japan** to the group.
 
     ![](images/500/img_5a_5_3.png)
 
-    Now, drag **Save Data Set** into the editor. Save the data set as **KoolKarts Orders & Customers**. Set **Order ID** and **Customer ID** to attributes.
+    Now, drag **Save Data Set** into the editor. Save the data set as **KoolKart Orders & Customers**. Set **Order ID** and **Customer ID** to attributes.
 
     ![](images/500/img_5a_5_3_2.png)
     
@@ -112,9 +131,13 @@ Isla knows that she needs to use KoolKart Orders and KoolKart Customers data set
     
     ![](images/500/img_5a_5_7.png)
 
-### 5b) Using KoolKart Dataflow for Sales Analysis
+### b) Using KoolKart Dataflow for Sales Analysis
 
-1. Create a new project by double clicking on the the **KoolKart Orders & Customers** data set on the home page or clicking on the ellipses menu and selecting **Create Project**.
+1. Click on the hamburger button on the top left corner and select **Home**.
+
+    ![](images/500/img_5e_1_1.png)
+    
+    Create a new project by double clicking on the the **KoolKart Orders & Customers** data set on the home page or clicking on the ellipses menu and selecting **Create Project**.
 
      ![](images/500/img_8a_2_1.png)
      
@@ -130,17 +153,19 @@ Isla knows that she needs to use KoolKart Orders and KoolKart Customers data set
     
     ![](images/500/img_5b_2_3.png)
     
-    Notice, how the recommendation allows us to group the countries into sales regions with just 1 click and do so much more. Since, we have already grouped our data, let's return to visualizing. Click on **Visualize**.
+    >Notice, how the recommendation allows us to group the countries into sales regions with just 1 click and do so much more. Since, we have already grouped our data, let's return to visualizing. 
+    
+    Click on **Visualize**.
     
      ![](images/300/img_3c_1_1.png)
     
-2. Create Visualizations Order Amount by Date and Category.
+3. Create Visualizations **Order Amount** by **Date** and **Category**.
     
     Select **Order Amount** and **Order Date** and select **Pick Visualization**. 
     
     ![](images/500/img_5a_6_2.png)
     
-    After you selecting **Pick Visualization**, select the **Line** chart. 
+    After you select **Pick Visualization**, select the **Line** chart. 
 
     ![](images/500/img_5a_6_3.png)
     
@@ -154,29 +179,31 @@ Isla knows that she needs to use KoolKart Orders and KoolKart Customers data set
     
     ![](images/500/img_5b_1_3.png)
 
-3. Create Visualization for Order Amount by Category and Sub Category.
+4. Create Visualization for **Order Amount** by **Category** and **Sub Category**.
    
-    Select **Category**, **Sub Category**, and **Order Amount**. Right click attributes while selected then select **Tree Map**.
+    Select **Category**, **Sub Category**, and **Order Amount**. Right click and select **Pick Visualization**. Select **Tree Map**.
 
     ![](images/500/img_8b_2_2.png)
 
     ![](images/500/img_8b_2_3.png)
 
-4. Create Visualization for Order Amount by Order Date.
+5. Create Visualization for **Order Amount** by **Order Date**.
     
-    Select **Order Amount** and **Order Date**. Right click attributes while selected then select **Create best visualization**.
+    Select **Order Amount** and **Order Date**. Right click attributes while selected then select **Create Best Visualization**.
 
     ![](images/500/img_5b_3_1.png)
 
-    Right Click the visualization and select **Add Trend Line**. 
+    Right click the visualization and select **Add Trend Line**. 
 
     ![](images/500/img_5b_3_2.png)
 
-    Right Click the visualization and select **Add Forecast**.
+    Right click the visualization and select **Add Forecast**.
     
     ![](images/500/img_5b_3_3.png)
 
-    Refer to the visualization settings in **Project Components Menu** and select the **Analytics** option. Select the **Forecast** dropdown and enter 6 in the **Periods** textbox.
+    Refer to the visualization settings in **Project Components Menu** and select the **Analytics** option. 
+    
+    Select the **Forecast** dropdown and enter 6 in the **Periods** textbox.
 
     ![](images/500/img_5b_3_4.png)
 
@@ -188,7 +215,7 @@ Isla knows that she needs to use KoolKart Orders and KoolKart Customers data set
 
     ![](images/500/img_5b_3_6.png)
 
-    Hover over the **Canvas 1** tab with your cursor and select the downward arrow.
+    Hover over the **Canvas 1** tab with your cursor and select the downward arrow to **Rename**. You can also right click to select **Rename**.
 
     ![](images/500/img_5b_3_7.png)
 
@@ -202,15 +229,15 @@ Isla knows that she needs to use KoolKart Orders and KoolKart Customers data set
 
     ![](images/500/img_5b_3_10.png)
  
-### 5c) Creating Visualization for Customer Analysis
+### c) Creating Visualization for Customer Analysis
 
-1. Create a visualization of Order Amount by Customer Age Group.
+1. Create a visualization of **Order Amount** by **Customer Age Group**.
 
     Create a new Canvas.
     
     ![](images/500/img_5c_2_1.png)
 
-    Select **Order Amount** from KoolKart Orders and **Customer Age Group** from KoolKart Customers. While having the attributes selected, right click and select **Create best visualization**.
+    Select **Order Amount** and **Customer Age Group**. While the attributes are selected, right click and select **Create Best Visualization**.
     
     ![](images/500/img_5c_2_2.png)
 
@@ -222,7 +249,7 @@ Isla knows that she needs to use KoolKart Orders and KoolKart Customers data set
 
     ![](images/500/img_5c_2_4.png)
 
-    Select **Order Amount** and **Customer Country**. While having the attributes selected, right click and select **Pick Visualization**.
+    Select **Order Amount** and **Customer Country**. While the attributes are selected, right click and select **Pick Visualization**.
 
     ![](images/500/img_5c_2_5.png)
 
@@ -230,15 +257,16 @@ Isla knows that she needs to use KoolKart Orders and KoolKart Customers data set
 
     ![](images/500/img_5c_2_6.png)
 
-    Navigate to settings section and select the data layers section. We've recently added a new feature which enables you to create new data layers. Within this section you can also adjust the map layers, the layer type, and transparency of the map. 
-
-    ![](images/500/img_5c_2_6.1.png)
-
-    Your canvas should reflect the picture below
+    Your canvas should reflect the picture below:
 
    ![](images/500/img_5c_2_7.png)
 
-    Select **Order Amount** and **Customer Gender**. While having the attributes selected, right click and select Pick Visualization.
+    >Navigate to settings section and select the data layers section. Here you can also adjust the map layers, the layer type, and transparency of the map. 
+    
+    >No changes need to be made to the data layers section.
+
+    ![](images/500/img_5c_2_6.1.png)
+    Select **Order Amount** and **Customer Gender**. While the attributes are selected, right click and select **Pick Visualization**.
 
    ![](images/500/img_5c_2_8.png)
 
@@ -246,13 +274,15 @@ Isla knows that she needs to use KoolKart Orders and KoolKart Customers data set
 
    ![](images/500/img_5c_2_9.png)
 
-    Right-click the **Pie Chart** and select **Color** then **Manage Assignments((. 
+    Right-click the **Pie Chart** and select **Color** then **Manage Assignments**. 
     
    ![](images/500/img_5c_2_10.png)
 
     Choose the color pink for F and the color royal blue for M.
 
    ![](images/500/img_5c_2_11.png)
+   
+   ![](images/500/img_5c_2_12.png)
     
     Move pie chart under the donut chart.
 
@@ -261,9 +291,9 @@ Isla knows that she needs to use KoolKart Orders and KoolKart Customers data set
     Name the canvas “Customers” and save the project.
    ![](images/500/img_5c_2_14.png)
 
-### 5d) Using the Explain feature to create a visualization
+### d) Using the Explain feature to create a visualization
     
-Let's take a few moments to learn more about the **Explain** feature. The **Explain** feature allows you to uncover insights and patterns about a particular column within a data set. 
+The **Explain** feature allows you to uncover insights and patterns about a particular column within a data set. 
     
 1. Right-click the **Category** attribute and selected **Explain Category**. 
    
@@ -273,15 +303,15 @@ Let's take a few moments to learn more about the **Explain** feature. The **Expl
    
    ![](images/500/img_5d_2_1.png)
   
-  The **Explain** feature parses the data set and presents different insights about the **Category** column. Listed below is a description of what **Basic Facts**, **Key Drivers**, **Segments** and **Anomalies entail**:
+  The **Explain** feature parses the data set and presents different insights about the **Category** column. Listed below is a description of what **Basic Facts**, **Key Drivers**, **Segments** and **Anomalies** entail:
 
-    **Basic Facts** - Shows the basic distribution of the data element (attribute or measure) values across the data set and its breakdown against each one of the measures in the data set.
+>**Basic Facts** - Shows basic distribution of the data element (attribute or measure) values across the data set and its breakdown against each one of the measures in the data set.
     
-    **Key Drivers** - Shows data elements (attributes or measures) that are more highly correlated to the outcome for the selected data. You will see charts showing the distribution of the selected attribute value across each of the correlated attributes values.
+>**Key Drivers** - Shows data elements (attributes or measures) that are more highly correlated to the outcome for the selected data. You will see charts showing the distribution of the selected attribute value across each of the correlated attributes values.
 
-    **Segments that Explain** - Shows the segments or group in the data set, after examining all the records that can predict the value of the selected data element. You can select a particular segment or group and then continue to analyze it.
+>**Segments that Explain** - Shows segments or group in the data set, after examining all the records that can predict the value of the selected data element. You can select a particular segment or group and then continue to analyze it.
 
-    **Anomalies** - Shows the group of anomalies or unusual values in the data set that you can relate to the selected data element (attribute or measure). You can review and select particular group of anomalies.
+>**Anomalies** - Shows group of anomalies or unusual values in the data set that you can relate to the selected data element (attribute or measure). You can review and select particular group of anomalies.
 
 3. Add a visualization to the the canvas using the explain feature.
 
@@ -293,18 +323,18 @@ Let's take a few moments to learn more about the **Explain** feature. The **Expl
 
     ![](images/500/img_5d_3_2.png)
 
-    Delete the **Explain Category** Canvas by right clicking the tab and selecting **Delete Canvas**. 
+    Delete the **Explain Category** canvas by right clicking the tab and selecting **Delete Canvas**. 
 
     ![](images/500/img_5d_3_3.png)
 
 
-### 5e) Creating a Dataflow and Predicting Subscriptions
+### e) Creating a Dataflow and Predicting Subscriptions
 
-Isla now wants to predict the likeliness of new customers to subscribe and to directly correlate the amount of the coupon to how much they are likely to subscribe anyway.
+>Isla now wants to predict the likeliness of new customers to subscribe and to directly correlate the amount of the coupon to how much they are likely to subscribe anyway.
 
-She wants to take advantage of existing data gathered by looking at subscription patterns on KoolKart website and to develop a model that looks at past subscription data to determine the influence of Customer Age Group, Customer Gender, Customer Country and purchased Product Category into the likeliness to subscribe.
+>She wants to take advantage of existing data gathered by looking at subscription patterns on KoolKart website and to develop a model that looks at past subscription data to determine the influence of Customer Age Group, Customer Gender, Customer Country and purchased Product Category into the likeliness to subscribe.
 
-1. Use Data Flow Editor to Create Model
+1. Use **Data Flow Editor** to create model.
 
     Click the hamburger button and select **Home**.
 
@@ -317,6 +347,8 @@ She wants to take advantage of existing data gathered by looking at subscription
     Select **Create Data Set**.
 
     ![](images/500/img_5e_1_3.png)
+    
+    Download the <a href="https://github.com/oracle/learning-library/raw/master/workshops/dvcs-5/Exercise%20Files/KoolKart%20Subscriptions.xlsx">**KoolKart Subscription.xlsx**</a> file.
 
     Select **Drop data file here or click to browse** and choose the **KoolKart Subscription** data set. 
 
@@ -326,7 +358,11 @@ She wants to take advantage of existing data gathered by looking at subscription
 
     ![](images/500/img_5e_2_1.png)
 
-2. Add a Binary Classifier to the Data Flow
+2. Add a Binary Classifier to the **Data Flow**.
+    
+    Make sure you're on the **Data Flow Steps** tab.
+    
+    ![](images/500/img_5a_2_1.png)
     
     Select **Train Binary Classifier** and drag it to the **+** in front of the **KoolKart Subscription** data set.
 
@@ -344,7 +380,7 @@ She wants to take advantage of existing data gathered by looking at subscription
 
     ![](images/500/img_5e_2_5.png)
 
-    Click Save Model and name the model **Subscribed Prediction Model**. 
+    Click **Save Model** and name the model **Subscribed Prediction Model**. 
 
     ![](images/500/img_5e_2_6.png)
 
@@ -358,13 +394,19 @@ She wants to take advantage of existing data gathered by looking at subscription
 
 3. Create a Scenario that will predict subscription confidence.
     
-    Open the Machine Learning project and create a new canvas
+    Click the hamburger menu at the top left corner and click **Projects**.
+    
+    ![](images/500/img_5e_3_1a.png)
+    
+    Open the Machine Learning project and create a new canvas.
 
     ![](images/500/img_5e_3_1.png)
     
      Rename the canvas you created to **Subscription Prediction**. 
 
     ![](images/500/img_5e_3_2.png)
+    
+    Download the <a href="https://github.com/oracle/learning-library/raw/master/workshops/dvcs-5/Exercise%20Files/KoolKart%20Partner%20Sales%20.xlsx">**KoolKart Partner Sales.xlsx**</a> file.
     
     Click the **+** next to the **Data Elements**, select the **Add Data Set** option.
     
@@ -382,7 +424,9 @@ She wants to take advantage of existing data gathered by looking at subscription
 
     ![](images/500/img_5e_3_6.png)
 
-    Click the **+** next to the **Data Elements** again and select the **Create Scenario** option.
+    Return to the **Visualize** tab and click the **+** next to the **Data Elements**.
+    
+    Select the **Create Scenario** option.
 
     ![](images/500/img_5e_3_7.png)
     
@@ -406,15 +450,7 @@ She wants to take advantage of existing data gathered by looking at subscription
     
     ![](images/500/img_5e_3_12.png)
 
-    Right click the color and the select **Manage Assignments**. 
-
-    ![](images/500/img_5e_3_13.png)
-    
-    Choose the color Royal Blue for No and the color Green for Yes.
-
-    ![](images/500/img_5e_3_14.png)
-
-    If you have successfully completed the steps you will see the visualization below. From looking at the chart, we can predict which customers are more likely to get a subscription.
+    >If you have successfully completed the steps, you will see the visualization below. From looking at the chart, we can predict which customers are more likely to get a subscription.
 
     ![](images/500/img_5e_3_15.png)
 

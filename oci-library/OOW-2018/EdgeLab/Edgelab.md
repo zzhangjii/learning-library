@@ -53,18 +53,9 @@ Add the Cloud Tenant name provided to you.
 
 ![](media/image2.png)
 
-2) Sign in by providing your username and temporary password. 
+2) Sign in by providing your username and password. 
 
 ![](media/image3.png)
-
-3) Change the temporary password provided to you. 
-
-```
-Following password will suffice password requirements 
-Oracleoow2018! 
-```
-
-![](media/image4.png)
 
 After log in, you are at the home page of OCI web console. 
 
@@ -85,8 +76,8 @@ In this exercise we have a web application that has web servers running in OCI i
 
 The webservers are already built in OCI Ashburn and Frankfurt regions, and are hosting a basic apache webserver. The public IPs associated with these webservers are provided below. 
 
-- Webserver Frankfurt: X.X.X.X
-- Webserver Ashburn: X.X.X.X
+- Webserver Frankfurt: 130.61.107.80
+- Webserver Ashburn: 129.213.80.47
 
 Following is a high level architecture diagram. 
 
@@ -121,17 +112,20 @@ Attendees will share the compartment and the domain name resources.
 
 ![](media/image11.png)
 
-Create answer pools that will contain the records and will be provided as answers for DNS queries. They are an effective way to group similar or related answers together to make managing them easier.
+Create answer pools that will contain the records and will be provided as answers for DNS queries. They are an effective way to group similar or related answers together to make managing them easier. 
+
+**NOTE** Use the IP addresses for Web Servers provided to you here, don't use the ones in the snapshot below. 
+
 ```
 Answer pool
 	- Answer Pool Name: Frankfurt-Pool
 		- Answer Name: Webserver-Frankfurt
 		- Type: A 
-		- RData: X.X.X.X (Public IP of Webserver in Frankfurt) 
+		- RData: 130.61.107.80 (Public IP of Webserver in Frankfurt) 
 	- Answer Pool Name: Ashburn-Pool
 		- Answer Name: Webserver-Ashburn
 		- Type: A 
-		- RData: X.X.X.X (Public IP of Webserver in Ashburn) 
+		- RData: 129.213.80.47 (Public IP of Webserver in Ashburn) 
 ```
 
 ![](media/image12.png)
@@ -152,9 +146,16 @@ Next we will create a Health Check for our application. (More on it in next exer
 ```
 For the domains, we already have created a zone for you **oowedgeserviceslab.com**. Each user will add its own domain for this zone. 
 ```
+If your user is in tenancy 'jamalarif' use the below available domain,
 - Attached Domains 
 	- Domain: edgelabuser-X (replace X with your userID)
 	- Zone: oowedgeserviceslab.com 
+	
+OR if you are in Tenancy : bmc-flaviop
+- Attached Domains 
+	- Domain: edgelabuser-X (replace X with your userID)
+	- Zone: flaviosantino.com 
+	
 ```
 
 Click on **Create Policy**.
@@ -174,6 +175,12 @@ Once the health check runs after the interval specified in health check (30 seco
 6) In your browser, open up the domain specified in your traffic policy and you will be directed to a webserver in Ashburn region
 
 	http://edgelabuser-X.oowedgeserviceslab.com
+	
+	(replace X with your userID)
+	
+	OR 
+	
+	http://edgelabuser-X.flaviosantino.com
 	
 	(replace X with your userID)
 
@@ -277,10 +284,11 @@ Navigate to the summarized *traceroute* path to see the summary view of *tracero
 
 ![](media/image33.png) 
 
+**Please help us to improve this LAB by clicking here:** [https://www.surveymonkey.com/r/EDGE-LAB](https://www.surveymonkey.com/r/EDGE-LAB)
+
 
 ## Practice: Try Oracle Cloud Infrastructure for FREE 
 
-Sign up for the free Oracle Cloud Infrastructure trial account. 
-https://cloud.oracle.com/tryit
+Sign up for the [free](#https://cloud.oracle.com/tryit) Oracle Cloud Infrastructure trial account. 
 
 ![](media/image34.png) 

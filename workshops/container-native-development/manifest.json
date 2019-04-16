@@ -14,16 +14,6 @@
             "name": "Linux/Mac Local Install",
             "description": "Setup your own Linux or OS X laptop to run this workshop",
             "imageUrl": "https://oracle.github.io/learning-library/workshops/common-content/images/common/laptop.jpg"
-          },
-          {
-            "name": "VNC Image",
-            "description": "Use an Oracle Provided Cloud Image to perform this Workshop.",
-            "imageUrl": "images/OracleCode.png"
-          },
-          {
-            "name": "Oracle Instructor Guide",
-            "description": "For Oracle Employees: How to prepare for this workshop.",
-            "imageUrl": "images/oracle-logo.png"
           }
         ],
         "labs": [

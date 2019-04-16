@@ -45,7 +45,7 @@
                 "title": "Linux Lab 200: AlphaOffice Deployment",
                 "description": "Multi-container Application deployment using a Database",
                 "labels": {"version": "Linux Trial Account"}
-            }          
+            }
         ]
     }
 }
