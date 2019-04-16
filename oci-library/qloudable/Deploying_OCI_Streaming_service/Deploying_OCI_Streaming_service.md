@@ -1,4 +1,4 @@
-# Visualizing and monitoring compute instance using Grafana
+# Deploying OCI Streaming Service
 
 ## Table of Contents
 
@@ -12,16 +12,14 @@
 
 [Practice 2: Creat ssh keys, compute instance](#practice-2-creat-ssh-keys,-compute-instance)
 
-[Practice 3: Install Grafana and stress tool on compute instance](#practice-3-install-grafana-and-stress-tool-on-compute-instance)
+[Practice 3: Download Script to configure Streaming service and Publish messages](#practice-3-download-script-to-configure-streaming-service-and-publish-messages)
 
-[Practice 4: Adjust Parameters in Grafana dashboard](#practice-4-adjust-parameters-in-grafana-dashboard)
-
-[Practice 5: Delete the resources](#practice-5-delete-the-resources)
+[Practice 4: Delete the resources](#practice-5-delete-the-resources)
 
 
 ## Overview
 
-In this lab we will create a compute instance, install a load generation and montoring application called Grafana. We will then generate load on CPU and memory and use Grafana to monitor this compute instance.
+In this lab we will create a compute instance, dowload a script to configure streaming service, publish and consume messages.The Oracle Cloud Infrastructure Streaming service provides a fully managed, scalable, and durable storage solution for ingesting continuous, high-volume streams of data that you can consume and process in real time. Streaming can be used for messaging, ingesting high-volume data such as application logs, operational telemetry, web click-stream data, or other use cases in which data is produced and processed continually and sequentially in a publish-subscribe messaging model.
 
 ## Pre-Requisites
 
@@ -171,7 +169,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 12. Enter command 
 ```
-ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE> -L 3000:localhost:3000
+ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 ```
 **NOTE:** User name is opc. This will enable port forwarding on local host which is needed to access Grafana dash board later on
 
@@ -183,125 +181,124 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE> -L 3000:localhost:3000
  
 14. Verify opc@<COMPUTE_INSTANCE_NAME> appears on the prompt
 
-## Practice 3: Install Grafana and stress tool on compute instance
+## Practice 3: Download Script to configure Streaming service and Publish messages
 
-**As part of preperation for this lab, a dynamic group and IAM policy was created. This configuration enables Grafana based monitoring on the compute instance. Below 2 policy statements are already configured though for any new deployment they must be configured under IAM Policy.**
-
-**allow group <GROUP_NAME> to read metrics in tenancy**
-**allow group <GROUP_NAME> to read compartments in tenancy**
-
-1. Switch to ssh session to compute install. Install Grafana, Enter Command:
+1. In ssh session to compute instance, first install OCI CLI and configure it. Etner Command: (Type or copy/paste). This is needed so we can setup proper authentication and configuration files so python script (to be installed later on) can interact with the OCI account.
 ```
-sudo yum install https://dl.grafana.com/oss/release/grafana-5.4.2-1.x86_64.rpm -y
+bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
 ```
 
-Enter **Y** when prompted
+2. Press Enter to accept defaults except when asked to **Modify the $PATH ...**, Enter 'y'.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_001.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_001.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_002.PNG" alt="image-alt-text" height="100" width="100">
 
-2. Install OCI Plugin, Enter Command:
-
-```
-sudo grafana-cli plugins install oci-datasource
-```
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_002.PNG" alt="image-alt-text" height="100" width="100">
-
-3. We now need to set execute permission on one of the files, Enter command:
+3. Once installation is completed, configure OCI CLI, Enter command:
 
 ```
-sudo chmod 555 /var/lib/grafana/plugins/oci-datasource/dist/oci-plugin_linux_amd64
+oci setup config
+```
+
+4. Accept the default location. For user OCI switch to OCI Console window. Click Human Icon and then your user name. In the user details page click **copy** to copy the OCID. **Also note down your region name as showin in OCI Console window**. Paste the OCID in ssh session.
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_004.PNG" alt="image-alt-text" height="100" width="100">
+
+5. Repeat the step to find tenancy OCID (Human icon followed by clicking Tenancy Name). Paste the Tenancy OCID in ssh session to compute instance followe by providing your region name (us-ashburn-1, us-phoneix-1 etc)
+
+6. When asked for **Do you want to generate a new RSA key pair?** answer Y. For the rest of the question accept default by pressing Enter
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_005.PNG" alt="image-alt-text" height="100" width="100">
+
+7. **oci setup config** also generated an API key. We will need to upload this API key into our OCI account for authentication of API calls. Switch to ssh session to compute instance, to display the conent of API key Enter command :
+
+```
+cat ~/.oci/oci_api_key_public.pem
+```
+
+8. Hightligh and copy the content from ssh session. Switch to OCI Console, click Human icon followe by your user name. In user details page click **Add Public Key**. In the dialg box paste the public key content and click **Add**.
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_006.PNG" alt="image-alt-text" height="100" width="100">
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_007.PNG" alt="image-alt-text" height="100" width="100">
+
+9. Download and Install pip utility which will be used to install additional software. Enter command:
+
+```
+sudo curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+```
+
+followed by
+
+```
+sudo python get-pip.py
 
 ```
 
-4. Start Grafana server, Enter Command: 
-
-```            
-sudo systemctl start grafana-server
-```
-
-5. Now we will login to Grafana Console, Open a new Broswer tab and enter URL **http://localhost:3000** , You should see grafana console
-
-User name and password are 'admin' 
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_003.PNG" alt="image-alt-text" height="100" width="100">
-
-6. Once logged in you will be asked to change the password or skip the step, click **skip** so the user name and password stays as admin
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_004.PNG" alt="image-alt-text" height="100" width="100">
-
-7. On the Home Dashboard click the gear icon on the left side of the page and click **Add data source**
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_005.PNG" alt="image-alt-text" height="100" width="100">
-
-8. Choose **Oracle Cloud Infrastructure** as your data source type
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_006.PNG" alt="image-alt-text" height="100" width="100">
-
-9. In the next screen you will be asked for some details of your OCI account. To get **Tenancy OCID** switch to OCI console window
-
-10. Click the Human icon on top right corener and then your tenacy name
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_007.PNG" alt="image-alt-text" height="100" width="100">
-
-11. Click **copy** next to **OCID**. Also note down your region.
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_008.PNG" alt="image-alt-text" height="100" width="100">
-
-12. Switch to Grafana tab and paste the OCID in **Tenancy OCID**. Choose your region for **Default Region**(IAD if us-ashburn, PHX if us-phoneix1, LHR if London etc). All region codes are listed at https://docs.cloud.oracle.com/iaas/Content/General/Concepts/regions.htm.
-Choose **OCI Instance** for Enviornment.
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_009.PNG" alt="image-alt-text" height="100" width="100">
-
-13. Click **Save & Test** and verify **Data source is working** message is displayed
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_010.PNG" alt="image-alt-text" height="100" width="100">
-
-14. Click **+** sign and then **Dashboard** to create a new dash board. Click **Graph**
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_011.PNG" alt="image-alt-text" height="100" width="100">
-
-15. Click **Panel Title** and then **Edit** to add metrics to the dashboard
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_012.PNG" alt="image-alt-text" height="100" width="100">
-
-16. Choose the appropriate fields;
-- Region: IAD if us-ashburn, PHX if us-phoneix1, LHR if London etc). All region codes are listed at https://docs.cloud.oracle.com/iaas/Content/General/Concepts/regions.htm.
-
- - Compartment: Choose your compartment
- - Namespace: oci_computeagent
- - Metric: CpuUtilization
-
-17. Click **Add Query** to add a second Query
- - Compartment: Choose your compartment
- - Namespace: oci_computeagent
- - Metric: MemoryUtilization
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_013.PNG" alt="image-alt-text" height="100" width="100">
-
-18. Switch to ssh session to compute instance and install tool called **stress**. We will use this tool to stress the CPU and Memory of the compute instance. Enter Command:
-```
-sudo yum install stress
-```
-
-19. Now generate traffic, Enter Command:
+10. Install a virtual enviornement. This is being done so we have a clean enviornment to execute our python script that will create and publish messages to OCI streaming service. Enter command:
 
 ```
-sudo stress --cpu 5 --io 12 --vm 5 --vm-bytes 256M --timeout 600s
+sudo pip install virtualenv
 ```
 
-**We now have  completed our setup with a compute instance and installed and execetued a tool to stress the CPU and Memory. Next we will monitor observe Grafana dash board for this compute instance**
+11. Now create a virtual enviornment, Enter command:
 
-## Practice 4: Adjust Parameters in Grafana dashboard
+```
+virtualenv <Enviornment_Name>
+```
+For example **virtualenv stream_env**
 
-1. Switch to Grafana dash board, you should observe the CPU utilization and Memory utilization grpah changing. You can adjust parameters such as Time period and refresh rate as shown below
+Now initialize the virtual enviornment, Enter command:
+```
+source ~/stream_env/bin/activate
+```
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_014.PNG" alt="image-alt-text" height="100" width="100">
+12. Once your virtual environment is active, oci can be installed using pip, Enter command:
 
-**We have now completed Grafana setup and can monitor the utilization of parameters on the compute instance. Next we will delete the resources we created**
+```
+pip install oci
+```
 
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_008.PNG" alt="image-alt-text" height="100" width="100">
 
-## Practice 5: Delete the resources
+13. Now download the main script file though first we will remove the existing file, Enter Command:
+
+```
+cd /home/opc
+```
+```
+rm stream_example.py
+```
+```
+wget https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/stream_example.py
+```
+
+14. Now download a dependent script file though first we will remove the existing file, Enter Command:
+
+```
+cd /home/opc/stream_env/lib/python2.7/site-packages/oci/streaming/
+```
+```
+rm stream_admin_client_composite_operations.py
+```
+```
+wget https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/stream_admin_client_composite_operations.py
+```
+
+15. Our setup is now ready. Before running the script switch to OCI Console window, from the main menu click **Compartments** under **Identity**. Click your compartment name and copy the OCID of the compartment. (Just as was done for user OCID earlier)
+
+16. Switch to ssh session and run the script, Enter command:
+
+```
+python ~/stream_example.py <COMPARTMENT_OCID>
+```
+
+For example : 
+
+python ~/stream_example.py ocid1.compartment.oc1..aaaaaaaada2gaukcqoagqoshxq2pyt6cdsj2mhnrz3p5nke33ljx2bp476wq
+
+17. Follow the prompts of the script. The script will create Streaming service called **SdkExampleStream**. It will publish 100 messages, create 2 groups on the compute and read those messages. Finally it will delete the streaming service. **You will be prompted to hit enter after verifying each step**
+
+## Practice 4: Delete the resources
 
 1. Switch to  OCI console window
 
