@@ -64,6 +64,7 @@ Self-paced labs provide hands-on experience with Oracle Cloud Infrastructure in 
 
 
 ### Solutions, Platform and Edge
+
 |                  **Name**              |    **Type**  | **Version** | 
 |----------------------------------------|:------------:|:-------:|
 |[Terraform and Container Engine for Kubernetes (OKE)](./DevOps/Terraform-and-OKE-LAB/tf_oke_hol.md)| DevOps |   30 minutes   | 
