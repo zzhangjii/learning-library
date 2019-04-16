@@ -1,5 +1,5 @@
 
-# Welcome to the Oracle Cloud Infrastructure Hands-on Labs.
+# Welcome to the Oracle Cloud Infrastructure Hands-on Labs
 
 Get hands on experience of Oracle Cloud Infrastructure through these hands on labs. Here are the details of the main page:
  
@@ -23,6 +23,7 @@ Self-paced labs provide hands-on experience with Oracle Cloud Infrastructure in 
 
 
 ### Governance and Administration
+
 |                  **Name**              |    **Type**  | **Time** |
 |----------------------------------------|:------------:|:-------:|
 |[Identity](./L100-LAB/Identity_Access_Management/IAM_HOL.md) | Foundational |   5 minutes   |
@@ -30,6 +31,7 @@ Self-paced labs provide hands-on experience with Oracle Cloud Infrastructure in 
 
 
 ### Core Infrastructure 
+
 |                  **Name**              |    **Type**  | **Time** |
 |----------------------------------------|:------------:|:-------:|
 |[Compute](./L100-LAB/Compute_Services/Compute_HOL.md)                        | Foundational |   10 minutes   |
@@ -42,6 +44,7 @@ Self-paced labs provide hands-on experience with Oracle Cloud Infrastructure in 
 
 
 ### Database
+
 |                  **Name**              |    **Type**  | **Time** |
 |----------------------------------------|:------------:|:-------:|
 |[Autonomous Transaction Processing](./L100-LAB/ATP_Lab/ATP_HOL.md)             | Foundational |   20 minutes   |
@@ -51,6 +54,7 @@ Self-paced labs provide hands-on experience with Oracle Cloud Infrastructure in 
 ## Level 200
 
 ### Core Infrastructure 
+
 |                  **Name**              |    **Type**  | **Time** | 
 |----------------------------------------|:------------:|:-------:|
 |[Console Connection](./L200-LAB/Compute-Console-Connection/HOL-Console-Connection.md)| Advanced |  20 minutes   |
