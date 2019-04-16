@@ -1,5 +1,3 @@
-# Copyright (c) 2016-2019, Oracle and/or its affiliates. All rights reserved.
-
 import oci
 import sys
 import base64
