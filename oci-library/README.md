@@ -1,5 +1,25 @@
 
-## Oracle Cloud Hands-on Labs - Level 100
+# Welcome to the Oracle Cloud Infrastructure Hands-on Labs.
+
+Get hands on experience of Oracle Cloud Infrastructure through these hands on labs. Here are the details of the main page:
+ 
+- [L100-LAB](#level-100) folder has labs covering the basics of Oracle Cloud Infrastructure Services and establishes a platform for more advanced concepts.
+- [L200-LAB](#level-200) folder cover more advanced labs build on top of the basics learned in 100 level. 
+
+## Oracle Cloud Account
+
+### Trial Account
+If you don't have an Oracle Cloud account then you can quickly and easily sign up for a free trial account that provides:
+- $300 of free credits good for up to 3500 hours of Oracle Cloud usage
+- Credits can be used on all eligible Cloud Platform and Infrastructure services for the next 30 days
+- Your credit card will only be used for verification purposes and will not be charged unless you 'Upgrade to Paid' in My Services
+  
+Click here to request your trial account: https://cloud.oracle.com/tryit
+
+### Self-Paced Labs 
+Self-paced labs provide hands-on experience with Oracle Cloud Infrastructure in real cloud environments. You can try self-paced labs here: https://ocitraining.qloudable.com/
+
+## Level 100
 
 
 ### Governance and Administration
@@ -28,7 +48,7 @@
 |[Autonomous Data Warehouse](./L100-LAB/Autonomous_Data_Warehouse/ADW_HOL.md)             | Foundational |   20 minutes   |
   
 
-## Oracle Cloud Hands-on Labs - Level 200
+## Level 200
 
 ### Core Infrastructure 
 |                  **Name**              |    **Type**  | **Time** | 
