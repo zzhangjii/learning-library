@@ -169,7 +169,7 @@ instance created earlier.
 
     **NOTE:** In below example,<CREDENTIAL_ZIP_FILE> is 'Wallet_ATPDB3.zip', <DB_NAME> is ATPDB3, <DB_PASSWORD> is Oracle098####.
 
-    ![](img/ATP_008.png)
+    ![](img/ATP_008.PNG)
 
 14. The script will take around 10-15 minutes to populate the Database. Verify the script complete successfully 
 
