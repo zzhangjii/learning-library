@@ -173,13 +173,13 @@ instance created earlier.
 
 14. The script will take around 10-15 minutes to populate the Database. Verify the script complete successfully 
 
-    ![](img/ATP_009.png)
+    ![](img/ATP_009.PNG)
 
 15. Validate the schema, Enter command:
 
     `./sbutil -soe -cf ~/<CREDENTIAL_ZIP_FILE> -cs <DB_NAME>_medium -u soe -p <DB_PASSWORD> -tables`
 
-    ![](img/ATP_010.png)
+    ![](img/ATP_010.PNG)
 
 15. Next we will configure the load generator file. Enter command:
 
@@ -189,11 +189,11 @@ instance created earlier.
 
     `vi SOE_Server_Side_V2.xml`
 
-     ![](img/atp_011.png)
+     ![](img/ATP_011.PNG)
 
 17. Search for string **LogonGroupCount** and change the existing number to **4**. On the next line with string **LogonDelay** change the number to **300**. Finally on line with string **WaitTillAllLogon** change the flag to **false** (case sensitive). Save and quite out of the editor. See below example
 
-    ![](img/atp_012.png)
+    ![](img/ATP_012.PNG)
 
 18. Now we will generate some load. Enter the following commands:
     ```
@@ -202,7 +202,7 @@ instance created earlier.
     ```
 19. After a few seconds the number in 4th column (TPS)indicating Transactions Per Seconds will stabalize in 2xx range. Remember the current ATP DB instance has only 1 OCPU. 
 
-    ![](img/atp_013.png)
+    ![](img/ATP_013.PNG)
 
 ## Practice 4: Dynamically Scale CPU on ATP instance and verify results
 We have Autonomous Transaction Processing DB instance configured and are testing Transaction per second data using a compute instance. Next we will dynamically scale the OCPU count via OCI console and observe the Transaction Per Second number. We will also see that Dynamic CPU scaling has no impact on the operation of Autonomous Transaction Processing Instance.
@@ -214,17 +214,17 @@ In this section we will utilize the dynamic CPU scaling featue of ATP instance a
 
 3. Click **Scale Up/Down**, in the pop up windowchange CPU CORE COUNT to **4** and click **Update**. Also observe the Automatic backup that are being performed. Instance will be in 'Scaling in Progress' state for some time
 
-    ![](img/atp_014.png)
+    ![](img/ATP_014.PNG)
 
 4. Switch to ssh session to the compute instance. Ensure the script is still running and Transaction per second data is being diaplyed. As the instance becomes Available the Transactions Per Second number will be higher.
 
-    ![](img/atp_015.png)
+    ![](img/ATP_015.PNG)
 
 5. You can Scale the number of CPU UP or Down dynamically and obser TPS number change accordingly.
 
 6. Switch to OCI screen and from your ATP instance details page click **Service Console**. From Service Console you can observe Performance data under **Overview** and **Activity** tabs
 
-![](img/atp_016.png)
+![](img/ATP_016.PNG)
 
 ## Practice 5: Delete the resources
 We have now demonstrated the Dynamic Scaling of CPU for an ATP instance. We also successfully generated load traffic and observed CPU usage and other indicators for the ATP instance. Next we will delete the resources that we created
@@ -233,7 +233,7 @@ We have now demonstrated the Dynamic Scaling of CPU for an ATP instance. We also
 
 2. From your ATP details page, Hover over the action icon  and Click **Terminate**. In the confimration windoe provide the ATP instance name and click **Terminate Database**
 
-    ![](img/atp_017.png)
+    ![](img/ATP_017.PNG)
 
 3. From OCI services menu Click Instances under Compute
 
