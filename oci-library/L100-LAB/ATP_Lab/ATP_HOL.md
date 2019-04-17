@@ -93,7 +93,6 @@ Oracle Cloud Infrastructure's Autonomous Transaction Processing Cloud Service is
 
 18. Next we will install Swing bench, Enter command:(No Spaces)
 
-
     `curl http://www.dominicgiles.com/swingbench/swingbenchlatest.zip -o swingbench.zip`
 
 19. Unzip the file:
