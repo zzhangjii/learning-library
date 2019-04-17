@@ -163,23 +163,23 @@ instance created earlier.
     
     Answer `Y` when prompted
 
-12. Enter below commands, replacing the value in < >. (This will install a schema to run our transactions against)
+13. Enter below commands, replacing the value in < >. (This will install a schema to run our transactions against)
 
     `./oewizard -cf ~/<CREDENTIAL_ZIP_FILE> -cs <DB_NAME>_medium  -ts DATA -dbap <DB_PASSWORD> -dba ADMIN -u soe -p <DB_PASSWORD> -async_off -scale 0.1 -hashpart -create -cl -v`
 
     **NOTE:** In below example,<CREDENTIAL_ZIP_FILE> is 'Wallet_ATPDB3.zip', <DB_NAME> is ATPDB3, <DB_PASSWORD> is Oracle098####.
 
-    ![](img/atp_008.png)
+    ![](img/ATP_008.png)
 
-13. The script will take around 10-15 minutes to populate the Database. Verify the script complete successfully 
+14. The script will take around 10-15 minutes to populate the Database. Verify the script complete successfully 
 
-    ![](img/atp_009.png)
+    ![](img/ATP_009.png)
 
-14. Validate the schema, Enter command:
+15. Validate the schema, Enter command:
 
     `./sbutil -soe -cf ~/<CREDENTIAL_ZIP_FILE> -cs <DB_NAME>_medium -u soe -p <DB_PASSWORD> -tables`
 
-    ![](img/atp_010.png)
+    ![](img/ATP_010.png)
 
 15. Next we will configure the load generator file. Enter command:
 
