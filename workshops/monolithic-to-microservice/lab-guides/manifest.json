@@ -3,7 +3,7 @@
         "title": "Monolithic to Microservice Cloud Native Development",
         "description": "Learn how to transform a legacy java application into a microservice based architecture in the Cloud.",
         "theme": "default",
-        "interactive":"https://launch.oracle.com/?",
+        "interactive":"https://launch.oracle.com/?mono-to-micro",
         "versions": [
             {
               "name": "Instructor Led",
