@@ -1,7 +1,0 @@
-appint
-appdev
-analytics
-data-mgmt
-oci
-github-ideas
-security
