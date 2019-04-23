@@ -10,16 +10,16 @@
 
 [Practice 1: Sign in to OCI Console and create VCN](#practice-1-sign-in-to-oci-console-and-create-vcn)
 
-[Practice 2: Creat ssh keys, compute instance](#practice-2-creat-ssh-keys,-compute-instance)
+[Practice 2: Creat ssh keys and compute instance](#practice-2-creat-ssh-keys-and-compute-instance)
 
 [Practice 3: Download Script to configure Streaming service and Publish messages](#practice-3-download-script-to-configure-streaming-service-and-publish-messages)
 
-[Practice 4: Delete the resources](#practice-5-delete-the-resources)
+[Practice 4: Delete the resources](#practice-4-delete-the-resources)
 
 
 ## Overview
 
-In this lab we will create a compute instance, dowload a script to configure streaming service, publish and consume messages.The Oracle Cloud Infrastructure Streaming service provides a fully managed, scalable, and durable storage solution for ingesting continuous, high-volume streams of data that you can consume and process in real time. Streaming can be used for messaging, ingesting high-volume data such as application logs, operational telemetry, web click-stream data, or other use cases in which data is produced and processed continually and sequentially in a publish-subscribe messaging model.
+In this lab we will create a compute instance, download a script to configure streaming service, publish and consume messages.The Oracle Cloud Infrastructure Streaming service provides a fully managed, scalable, and durable storage solution for ingesting continuous, high-volume streams of data that you can consume and process in real time. Streaming can be used for messaging, ingesting high-volume data such as application logs, operational telemetry, web click-stream data, or other use cases in which data is produced and processed continually and sequentially in a publish-subscribe messaging model.
 
 ## Pre-Requisites
 
@@ -61,6 +61,7 @@ In this lab we will create a compute instance, dowload a script to configure str
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text" height="100" width="100">
+
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL002.PNG" alt="image-alt-text" height="100" width="100">
 
 4. Fill out the dialog box:
@@ -79,7 +80,7 @@ In this lab we will create a compute instance, dowload a script to configure str
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text" height="100" width="100">
               
-## Practice 2: Creat ssh keys, compute instance
+## Practice 2: Creat ssh keys and compute instance
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
@@ -171,7 +172,6 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 ```
 ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 ```
-**NOTE:** User name is opc. This will enable port forwarding on local host which is needed to access Grafana dash board later on
 
 **HINT:** If 'Permission denied error' is seen, ensure you are using '-i' in the ssh command
 
