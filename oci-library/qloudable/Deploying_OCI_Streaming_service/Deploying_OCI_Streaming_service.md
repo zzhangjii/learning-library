@@ -248,6 +248,8 @@ virtualenv <Enviornment_Name>
 For example **virtualenv stream_env**
 
 Now initialize the virtual enviornment, Enter command:
+
+**NOTE** : Below command assumes that the enviornment name is 'stream-env'
 ```
 source ~/stream_env/bin/activate
 ```
