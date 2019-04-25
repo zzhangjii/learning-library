@@ -7,9 +7,6 @@ OSPA ClassOf [Simple MS Word Lab Guide Template](https://raw.githubusercontent.c
 If you insist on doing things manually:
 [John's tips on using Pandoc to convert .docx to .md](pandoc-tips.md)
 
-[John's tips on create local repository cloned from Developer repository](dev-repo-local-version.md)
-
-
 ### Useful Git and GitHub resources  -- [RETURN](README.md)
 
 * Intro to Git and GitHub for Beginners
