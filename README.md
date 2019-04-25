@@ -2,7 +2,7 @@
 ---
 # ORACLE Learning Library #
 
-Note: Content in the README is under development
+Note: Content in the README is under development !
 
 ## Introduction ##
 
