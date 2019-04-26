@@ -1,6 +1,6 @@
 {
     "workshop": {
-        "title": "Monolithic to Microservice Cloud Native Development",
+        "title": "Extending Apps with Containers, Low Code Development",
         "description": "Learn how to transform a legacy java application into a microservice based architecture in the Cloud.",
         "theme": "default",
         "interactive":"https://launch.oracle.com/?mono-to-micro",
