@@ -1,4 +1,4 @@
-# Deploying OCI Streaming Service
+# Configuring Auto Scaling
 
 ## Table of Contents
 
@@ -268,6 +268,7 @@ Click **Create Instance Configuration**
 **Leave other fileds as is**
 
 17. Click **Create**
+
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_005.PNG" alt="image-alt-text" height="100" width="100">
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_006.PNG" alt="image-alt-text" height="100" width="100">
