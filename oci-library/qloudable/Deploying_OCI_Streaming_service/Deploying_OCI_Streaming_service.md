@@ -138,7 +138,9 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 - **Availability Domain:** Select availability domain
 
-- **Image Operating System:** For the image, we recommend using the Latest Oracle Linux available.
+- **Image Operating System:** Click **Change Image Source**. In the new window, Click **Oracle Images** Choose **Oracle Cloud Developer Image**. Scroll down, Accept the Agreement and click **Select Image**
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_009.PNG" alt="image-alt-text" height="100" width="100">
 
 - **Choose Instance Type:** Select Virtual Machine
 
@@ -183,45 +185,35 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 
 ## Practice 3: Download Script to configure Streaming service and Publish messages
 
-1. In ssh session to compute instance, first install OCI CLI and configure it. Etner Command: (Type or copy/paste). This is needed so we can setup proper authentication and configuration files so python script (to be installed later on) can interact with the OCI account.
-```
-bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
-```
-
-2. Press Enter to accept defaults except when asked to **Modify the $PATH ...**, Enter 'y'.
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_001.PNG" alt="image-alt-text" height="100" width="100">
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_002.PNG" alt="image-alt-text" height="100" width="100">
-
-3. Once installation is completed, configure OCI CLI, Enter command:
+1. In ssh session to compute instance, configure OCI CLI, Enter command:
 
 ```
 oci setup config
 ```
 
-4. Accept the default location. For user OCI switch to OCI Console window. Click Human Icon and then your user name. In the user details page click **copy** to copy the OCID. **Also note down your region name as showin in OCI Console window**. Paste the OCID in ssh session.
+2. Accept the default location. For user OCI switch to OCI Console window. Click Human Icon and then your user name. In the user details page click **copy** to copy the OCID. **Also note down your region name as showin in OCI Console window**. Paste the OCID in ssh session.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_004.PNG" alt="image-alt-text" height="100" width="100">
 
-5. Repeat the step to find tenancy OCID (Human icon followed by clicking Tenancy Name). Paste the Tenancy OCID in ssh session to compute instance followe by providing your region name (us-ashburn-1, us-phoneix-1 etc)
+3. Repeat the step to find tenancy OCID (Human icon followed by clicking Tenancy Name). Paste the Tenancy OCID in ssh session to compute instance followe by providing your region name (us-ashburn-1, us-phoneix-1 etc)
 
-6. When asked for **Do you want to generate a new RSA key pair?** answer Y. For the rest of the question accept default by pressing Enter
+4. When asked for **Do you want to generate a new RSA key pair?** answer Y. For the rest of the question accept default by pressing Enter
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_005.PNG" alt="image-alt-text" height="100" width="100">
 
-7. **oci setup config** also generated an API key. We will need to upload this API key into our OCI account for authentication of API calls. Switch to ssh session to compute instance, to display the conent of API key Enter command :
+5. **oci setup config** also generated an API key. We will need to upload this API key into our OCI account for authentication of API calls. Switch to ssh session to compute instance, to display the conent of API key Enter command :
 
 ```
 cat ~/.oci/oci_api_key_public.pem
 ```
 
-8. Hightligh and copy the content from ssh session. Switch to OCI Console, click Human icon followe by your user name. In user details page click **Add Public Key**. In the dialg box paste the public key content and click **Add**.
+6. Hightligh and copy the content from ssh session. Switch to OCI Console, click Human icon followe by your user name. In user details page click **Add Public Key**. In the dialg box paste the public key content and click **Add**.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_006.PNG" alt="image-alt-text" height="100" width="100">
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_007.PNG" alt="image-alt-text" height="100" width="100">
 
-9. Download and Install pip utility which will be used to install additional software. Enter command:
+7. Download and Install pip utility which will be used to install additional software. Enter command:
 
 ```
 sudo curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
@@ -234,13 +226,13 @@ sudo python get-pip.py
 
 ```
 
-10. Install a virtual enviornement. This is being done so we have a clean enviornment to execute our python script that will create and publish messages to OCI streaming service. Enter command:
+8. Install a virtual enviornement. This is being done so we have a clean enviornment to execute our python script that will create and publish messages to OCI streaming service. Enter command:
 
 ```
 sudo pip install virtualenv
 ```
 
-11. Now create a virtual enviornment, Enter command:
+9. Now create a virtual enviornment, Enter command:
 
 ```
 virtualenv <Enviornment_Name>
@@ -254,7 +246,7 @@ Now initialize the virtual enviornment, Enter command:
 source ~/stream_env/bin/activate
 ```
 
-12. Once your virtual environment is active, oci can be installed using pip, Enter command:
+10. Once your virtual environment is active, oci can be installed using pip, Enter command:
 
 ```
 pip install oci
@@ -262,7 +254,7 @@ pip install oci
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_008.PNG" alt="image-alt-text" height="100" width="100">
 
-13. Now download the main script file though first we will remove the existing file, Enter Command:
+11. Now download the main script file though first we will remove the existing file, Enter Command:
 
 ```
 cd /home/opc
@@ -274,7 +266,7 @@ rm stream_example.py
 wget https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/stream_example.py
 ```
 
-14. Now download a dependent script file though first we will remove the existing file, Enter Command:
+12. Now download a dependent script file though first we will remove the existing file, Enter Command:
 
 ```
 cd /home/opc/stream_env/lib/python2.7/site-packages/oci/streaming/
@@ -286,9 +278,9 @@ rm stream_admin_client_composite_operations.py
 wget https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/stream_admin_client_composite_operations.py
 ```
 
-15. Our setup is now ready. Before running the script switch to OCI Console window, from the main menu click **Compartments** under **Identity**. Click your compartment name and copy the OCID of the compartment. (Just as was done for user OCID earlier)
+13. Our setup is now ready. Before running the script switch to OCI Console window, from the main menu click **Compartments** under **Identity**. Click your compartment name and copy the OCID of the compartment. (Just as was done for user OCID earlier)
 
-16. Switch to ssh session and run the script, Enter command:
+14. Switch to ssh session and run the script, Enter command:
 
 ```
 python ~/stream_example.py <COMPARTMENT_OCID>
@@ -298,7 +290,7 @@ For example :
 
 python ~/stream_example.py ocid1.compartment.oc1..aaaaaaaada2gaukcqoagqoshxq2pyt6cdsj2mhnrz3p5nke33ljx2bp476wq
 
-17. Follow the prompts of the script. The script will create Streaming service called **SdkExampleStream**. It will publish 100 messages, create 2 groups on the compute and read those messages. Finally it will delete the streaming service. **You will be prompted to hit enter after verifying each step**
+15. Follow the prompts of the script. The script will create Streaming service called **SdkExampleStream**. It will publish 100 messages, create 2 groups on the compute and read those messages. Finally it will delete the streaming service. **You will be prompted to hit enter after verifying each step**
 
 ## Practice 4: Delete the resources
 
