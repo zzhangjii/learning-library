@@ -343,7 +343,7 @@ In this section you will clone a github repository that contains a Java REST App
   ![](images/100/image01.png)
 
 
-- Copy the database wallet file you downloaded in Lab 100 (Recall that the file is in `/home/opc/Downloads`). You will scp this wallet file from the VNC Session VM (atp-js) to the `/home/opc/monolithic-to-microservice/workshops/monolithic-to-microservice/lab-resources/docker` directory in the new OCI VM (Docker):
+- Copy the database wallet file you downloaded in Lab 100 (Recall that the file is in `/home/opc/Downloads`). You will scp this wallet file to the `/home/opc/monolithic-to-microservice/workshops/monolithic-to-microservice/lab-resources/docker` directory in the new OCI VM (Docker):
 
   ```
   scp -i ./dockerkey /home/opc/Downloads/Wallet_orcl.zip opc@<YOUR-PUBLIC-IP>:/home/opc/monolithic-to-microservice/workshops/monolithic-to-microservice/lab-resources/docker
@@ -353,7 +353,7 @@ In this section you will clone a github repository that contains a Java REST App
 
   ![](images/200/46-1.1.PNG)
 
-- **Now, Return to the SSH session into your OCI VM (Docker).** and type **ls**. You should see the wallet file in the directory before proceeding.
+- **Now, Return to the SSH session into your OCI VM (Docker).** and type **ls**. You should see your wallet file in the directory before proceeding.
 
   ![](images/200/46-1.3.PNG)
 
@@ -614,7 +614,7 @@ In this step you will copy the `dbconfig.properties` file modifed in a previous 
   docker run -d --name alphaoffice -p=8080:8080 alphaoffice-rest
   ```
 
-- You should now be able to go directly to the REST URL and see data returned from your ATP database.
+- You should again be able to go to the REST URL and see data returned from your ATP database.
 
   ```
   http://<YOUR-PUBLIC-IP>:8080/AlphaProductsRestService/webresources/restCall/
