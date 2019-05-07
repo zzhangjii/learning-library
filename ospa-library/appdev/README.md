@@ -63,4 +63,5 @@ This is a test of regular text
 	"LAST_UPDATE_DATE" 		DATE, 
 	"OBJECT_VERSION_ID" 	NUMBER(15,0),
 	"TWITTER_TAG" 			VARCHAR2(1000 BYTE)
-   );
+   ); --
+ 
