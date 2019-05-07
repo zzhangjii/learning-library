@@ -61,7 +61,7 @@ All the availability domains in a region are connected to each other by a low la
 
     ![](images/200/11.PNG)
 
-- Fill in the follow values as highlighted below:
+- Fill in and/or select the follow values as highlighted below:
 
     ![](images/200/12.PNG)
 
@@ -81,27 +81,23 @@ All the availability domains in a region are connected to each other by a low la
 
 A security list provides a virtual firewall for an instance, with ingress and egress rules that specify the types of traffic allowed in and out. Each security list is enforced at the instance level. However, you configure your security lists at the subnet level, which means that all instances in a given subnet are subject to the same set of rules. The security lists apply to a given instance whether it's talking with another instance in the VCN or a host outside the VCN.
 
-- Click on the **DockerVCN** link and then select **Security Lists**:
-
-    ![](images/200/16.PNG)
+- Click the **Security Lists** link:
 
     ![](images/200/17.PNG)
 
-- Click on **Default Security List for DockerVCN**:
+- Click on the **Default Security List for DockerVCN** link:
 
     ![](images/200/18.PNG)
 
   **NOTE:** For the purposes of the upcoming Docker application deployment we need to add an Ingress Rule that allows access from the Internet to port 8080.
 
-- Click **Edit All Rules** and then select **+ Another Ingress Rule**:
+- Click **Add Ingress Rules**:
 
   **`NOTE: DO NOT EDIT AN ALREADY EXISTING RULE, ADD A NEW ONE`**
 
-    ![](images/200/19.PNG)
+  ![](images/200/19.PNG)
 
-    ![](images/200/19-2.PNG)
-
-- **Enter the following:**
+- In the dialog **Enter the following** and then click the **Add Ingress Rules** button:
 
   **NOTE:** Leave all other values at default.
 
@@ -112,19 +108,15 @@ A security list provides a virtual firewall for an instance, with ingress and eg
 
   ![](images/200/19-4.PNG)
 
-- Click the **Save Security List Rules** button:
-
-    ![](images/200/22.PNG)
-
 - Your Ingress Rules should look like:
 
     ![](images/200/20.PNG)
 
 ### **STEP 4**: Create SSH Key Pair
 
-Before we create the Compute instance that will contain Docker and application deployments we need to create a ssh key pair so we'll be able to securely connect to the instance and do the Docker installation, etc. **We'll use the VNC session to do this**.
+Before we create the Compute instance that will contain Docker and application deployments we need to create a ssh key pair so we'll be able to securely connect to the instance and do the Docker installation, etc. **We'll use the VNC session OR Virtual Box Client Image to do this... depending on whether your in the Instructor Led or Virtual version of this Workshop**.
 
-- **In the VNC Session**: Open a Terminal session and navigate to your home directory.
+- **In the VNC or Client Image Session**: Open a Terminal and navigate to your home directory.
 
   ```
   cd /home/opc
@@ -150,7 +142,7 @@ Before we create the Compute instance that will contain Docker and application d
 
   ![](images/200/LabGuide200-5eed53cd.png)
 
-- Select and copy the entire contents. This will be used in the Compute instance creation in the next Step.   
+- **Select and Copy** the entire contents. This will be used in the Compute instance creation in the next Step.   
 
     ![](images/200/25-4.PNG)
 
@@ -166,7 +158,7 @@ Before we create the Compute instance that will contain Docker and application d
 
  ![](images/200/27.PNG)
 
-- Type the following in the **Create Compute Instance** section of the dialog:
+- **Type or Select** the following in the **Create Compute Instance** section of the dialog:
 
   ```
   Name: Docker
@@ -183,7 +175,7 @@ Before we create the Compute instance that will contain Docker and application d
    ![](images/200/27-2.PNG)
 
 - Scroll down furthur on the page to insert your PUBLIC SSH Key
-**NOTE:** You will paste the public key you copied in Step 5 into the SSH KEY field by selecting the **Paste SSH Keys** radio button. `The public key should all be on ONE LINE`
+**NOTE:** You will paste the public key you copied in Step 4 into the SSH KEY field by selecting the **Paste SSH Keys** radio button. `The public key should all be on ONE LINE`
 
    ![](images/200/28.PNG)
 
@@ -193,7 +185,7 @@ Before we create the Compute instance that will contain Docker and application d
 
 - Click **Create**
 
-  After a few minutes you should see a running instance with a Public IP Address. _Copy the Public IP Address, we will be using this in the next step._
+  After a few minutes you should see a running instance with a Public IP Address. _**Copy the Public IP Address** and save it off into a text editor, we will be using this IP in the next step._
 
    ![](images/200/30.PNG)
 
@@ -336,30 +328,32 @@ In this section you will clone a github repository that contains a Java REST App
 - From the directory you just cloned the repository into **Type**:
 
   ```
-  cd monolithic-to-microservice/lab-resources/docker
+  cd /home/opc/monolithic-to-microservice/workshops/monolithic-to-microservice/lab-resources/docker
   ```
 
-- Type **ls** and browse the baseline **AlphaProductsRestService.war** file, **dbconfig.properties**, **sqlnet.ora** and a **Dockerfile**:
+- Type **ls** to see the baseline **glassfish_module** directory, a **AlphaProductsRestService.war** file, **dbconfig.properties**, **sqlnet.ora** and a **Dockerfile**:
 
   ```
   ls
   ```
   ![](images/200/46.PNG)
 
-- **From the VNC Session:** Open up a new Terminal window by Right-click on the Desktop and select **Open Terminal**:
+- **From the VNC session or Client Virtual Box image** (depending on whether or doing the Instructor Led or Virtual version of this workshop): Open up a new Terminal windw by right-clicking on the Desktop and selecting **Open Terminal**:
 
   ![](images/100/image01.png)
 
 
-- Copy the database wallet file you downloaded in Lab 100 (Recall that the file is in `/home/opc/Downloads`). You will scp this wallet file from the VNC Session VM (atp-js) to the `/home/opc/monolithic-to-microservice/lab-resources/docker` directory on the new OCI VM (docker):
+- Copy the database wallet file you downloaded in Lab 100 (Recall that the file is in `/home/opc/Downloads`). You will scp this wallet file from the VNC Session VM (atp-js) to the `/home/opc/monolithic-to-microservice/workshops/monolithic-to-microservice/lab-resources/docker` directory in the new OCI VM (Docker):
 
   ```
-  scp -i ./dockerkey /home/opc/Downloads/Wallet_orcl.zip opc@<YOUR-PUBLIC-IP>:/home/opc/monolithic-to-microservice/lab-resources/docker
+  scp -i ./dockerkey /home/opc/Downloads/Wallet_orcl.zip opc@<YOUR-PUBLIC-IP>:/home/opc/monolithic-to-microservice/workshops/monolithic-to-microservice/lab-resources/docker
   ```
+
+  Example: (**Wallet_mattoATP.zip being shown here. The default wallet name is typically Wallet_orcl.zip**):
 
   ![](images/200/46-1.1.PNG)
 
-- **Return to the SSH session connected into your OCI VM.** and type **ls**. You should see the wallet file in the directory before proceeding.
+- **Now, Return to the SSH session into your OCI VM (Docker).** and type **ls**. You should see the wallet file in the directory before proceeding.
 
   ![](images/200/46-1.3.PNG)
 
