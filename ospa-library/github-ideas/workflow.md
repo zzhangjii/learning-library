@@ -1,4 +1,4 @@
-## Possible Workflow - [RETURN](README.md)
+## Workflow - [RETURN](README.md)
 
 ![](images/Flow.png)
 
