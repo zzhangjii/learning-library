@@ -5,10 +5,10 @@
 
 1. Developer FORKs https://github.com/oracle/learning-library (see GitHub and Git docs) might also find it easy to make local CLONE of this fork to work with off-line
 
-   * Start with oracle/learning-library  <br/>
+   - Start with oracle/learning-library  <br/>
    ![](images/Github-4-26-47-PM.png)
 
-   * Click 'Fork' (upper-right corner) <br/>
+   - Click 'Fork' (upper-right corner) <br/>
    ![](images/Github-4-15-39-PM.png)
 
    - Select your GitHub account <br/>
