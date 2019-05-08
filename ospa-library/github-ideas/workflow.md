@@ -1,5 +1,8 @@
 ## Possible Workflow - [RETURN](README.md)
 
+![](images/Flow.png)
+
+
 1. Developer FORKs https://github.com/oracle/learning-library (see GitHub and Git docs) might also find it easy to make local CLONE of this fork to work with off-line
 
    Start with oracle/learning-library  <br/>
