@@ -21,9 +21,17 @@
    ![](images/Github-4-17-22-PM.png)
    
 1. Developer will generate PULL REQUEST <br/>
+
+   Click the "Pull Request" icon <br/>
    ![](images/Github-4-17-39-PM.png) <br/>
+   
+   Click "Create Pull Request" button <br/>
    ![](images/Github-4-18-02-PM.png)   <br/>
+   
+   Provide a comment and click "Create Pull Request" button<br/>
    ![](images/Github-4-18-32-PM.png) <br/>
+   
+   You will see the request is waiting for review <br/>
    ![](images/Github-4-19-21-PM.png)
 
      
