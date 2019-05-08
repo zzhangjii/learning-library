@@ -5,16 +5,16 @@
 
 1. Developer FORKs https://github.com/oracle/learning-library (see GitHub and Git docs) might also find it easy to make local CLONE of this fork to work with off-line
 
-   Start with oracle/learning-library  <br/>
+   - Start with oracle/learning-library  <br/>
    ![](images/Github-4-26-47-PM.png)
 
-   Click 'Fork' (upper-right corner) <br/>
+   - Click 'Fork' (upper-right corner) <br/>
    ![](images/Github-4-15-39-PM.png)
 
-   Select your GitHub account <br/>
+   - Select your GitHub account <br/>
    ![](images/Github-4-16-15-PM2.png)
 
-    You now have your own "Fork" of the Repo <br/>
+   - You now have your own "Fork" of the Repo <br/>
    ![](images/Github-4-16-31-PM.png)
 
 1. Developer creates (or gets from somewhere) desired content conforming to team Markdown template adds to ospa-library folder<br/>
