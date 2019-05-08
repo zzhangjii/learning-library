@@ -167,7 +167,7 @@ Before we create the Compute instance that will contain Docker and application d
   Image Operating System: Oracle Linux 7.6 (Default)
   Shape Type: Virtual Machine (Default)
   Shape: VM.Standard2.1 (Default)
-  SSH Keys: Choose SSH Key Files
+  SSH Keys: Choose - Paste SSH Keys
   ```
 
 - After entering the _Docker_ instance name.
