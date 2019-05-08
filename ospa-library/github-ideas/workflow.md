@@ -14,7 +14,7 @@
     You now have your own "Fork" or "Clone" of the Repo <br/>
    ![](images/Github-4-16-31-PM.png)
 
-1. Developer creates (or gets from somewhere) desired content conforming to team Markdown template adds to ospa-library folder
+1. Developer creates (or gets from somewhere) desired content conforming to team Markdown template adds to ospa-library folder<br/>
    ![](images/Github-4-19-49-PM.png) <br/>
    ![](images/Github-4-20-12-PM.png)
    
