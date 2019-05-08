@@ -46,7 +46,7 @@
 
 
 ### Suggested Workflow(s) - [Link to Workflow in greater detail](workflow.md)
-   1. Developer FORKs learning-library (see GitHub and Git docs) might also find it easy to make local FORK/CLONE of this fork to work with off-line
+   1. Developer FORKs learning-library (see GitHub and Git docs) might also find it easy to make local FORK of this fork to work with off-line (good idea to create local CLONE)
    1. Developer creates (or gets from somewhere) desired content conforming to team Markdown template adds to ospa-library folder   
    1. Developer will COMMIT changes and test with peers (might make more changes and then COMMIT/test again)
    1. Developer will generate PULL REQUEST
