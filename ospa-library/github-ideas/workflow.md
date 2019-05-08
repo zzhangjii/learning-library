@@ -15,8 +15,7 @@
    ![](images/Github-4-16-31-PM.png)
 
 1. Developer creates (or gets from somewhere) desired content conforming to team Markdown template adds to ospa-library folder<br/>
-   ![](images/Github-12-34-36PM.png) <br/>
-   ![](images/Github-12-34-50PM.png)
+   ![](images/Github-12-34-36PM.png) 
    
 1. Developer will COMMIT changes and test with peers (might make more changes and then COMMIT/test again) <br/>
    ![](images/Github-4-17-22-PM.png)
