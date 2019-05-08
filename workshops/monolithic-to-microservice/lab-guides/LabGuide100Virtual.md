@@ -22,7 +22,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 ### **STEP 1**: Open a Terminal Window and Clone GIT Repository
 
-**Using the VirtualBox Client Image**, complete the following step to clone the GIT Repository.
+**In the VirtualBox Client Image**, complete the following step to clone the GIT Repository.
 
   - Right-click on the Desktop and select ```Open Terminal```
 
@@ -39,7 +39,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 	**Note:**  The GIT clone creates the ```monolithic-to-microservice``` directory which contains contents used throughout the labs. You can validate the clone by entering the following command.
 
     ```
-    ls -l monolithic-to-microservice/
+    ls -l monolithic-to-microservice/workshops/monolithic-to-microservice/
 	```
 
 # Object Storage Setup, OCI User Creation and Auth Token Generation
@@ -91,25 +91,31 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 ### **STEP 4**: Upload Data Pump File into Object Storage Bucket
 
-  - Next click **Upload Object**
+  - Next click **Upload Objects**
 
 	![](images/100/image9.png)
 
-  - **Browse** or **Drag/Drop** the Data Pump DMP `.../monolithic-to-microservice/lab-resources/database/expdp_alpha121.dmp` included in the GIT repository you cloned earlier. Click **Upload Object**
+  - Click on the **select files** link, Navigate to the Data Pump DMP file in `.../monolithic-to-microservice/workshops/monolithic-to-microservice/lab-resources/database/expdp_alpha121.dmp` included in the GIT repository you cloned earlier. Click **Open**.
 
     ![](images/100/image101.png)
 
-	![](images/100/image10.png)
+- Click **Upload Objects**.
 
-  - In a moment, the file will be uploaded to Object Storage.
+    ![](images/100/image102.png)
+
+- Click **Close**.
+
+    ![](images/100/image103.png)
+
+- In a moment, the file will be uploaded to Object Storage.
 
 	![](images/100/image11.png)
 
-  - We will now collect Object Storage information for later use in **Step 12**.  Open a text editor in the client window by selecting **Applications --> Accessories --> Text Editor**.
+ - We will now collect Object Storage information for later use in **Step 12**.  Open a text editor in the client window by selecting **Applications --> Accessories --> Text Editor**. 
 
 	![](images/100/image11a.png)
 
-  - Captue the values for **REGION, BUCKET, OBJECT_STORAGE_NAMESPACE, FILENAME** in the text editor from the same screen you uploaded the DMP file.
+ - Capture the values for **REGION, BUCKET, OBJECT_STORAGE_NAMESPACE, FILENAME** in the text editor from the same screen you uploaded the DMP file.
 
 	![](images/100/image39a.png)
 
@@ -117,7 +123,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 	![](images/100/image11b.png)
 
-	**Note:** Your values for **REGION** and **OBJECT_STORAGE_NAMESPACE** may/will be different.
+	**Note:** Your values for **REGION** and **OBJECT_STORAGE_NAMESPACE** may/will be different. These values will be used to build out the SWIFT URI shown above.
 
 ### **STEP 5**: Create OCI User
 
@@ -209,7 +215,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 	![](images/100/image28.png)
 
-  - Enter/Select the following values, click **Test**. After a `Success` **Status**, click **Save**, then **Connect**
+  - Enter/Select the following values, click **Test**. After a `Success` **Status**, click **Save**, then **Connect**.
 
 	- **Connection Name:**  ```atp-AlphaOffice-Admin```
 	- **Username:**  ```admin```
@@ -233,7 +239,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 ### **STEP 10**: Create DBMS_CLOUD Credential
 
-  - In the same **SQL Developer Worksheet**, execute the following SQL Statements to create the **DBMS_CLOUD Credential** `impdp_OBJ_STORE`.
+  - In the same **SQL Developer Worksheet**, execute the following SQL Statements to create the **DBMS_CLOUD Credential** `impdp_OBJ_STORE` **using the Auth Token you generated in STEP 6**. Look for the PL/SQL procedure to be successfully completed.
 
 	```
 	begin
@@ -328,7 +334,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 **This completes the Lab!**
 
-**You are ready to proceed to [Lab 200](LabGuide200Virtual.md)**
+**You are ready to proceed to [Lab 200](LabGuide200.md)**
 	
 ### **STEP 13**: Review Data Pump Import Log (OPTIONAL)
 
