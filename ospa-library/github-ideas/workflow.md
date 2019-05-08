@@ -25,23 +25,22 @@
    
 1. Developer will generate PULL REQUEST <br/>
 
-   Click the "Pull Request" icon <br/>
+   - Click the "Pull Request" icon <br/>
    ![](images/Github-4-17-39-PM.png) <br/>
    
-   Click "Create Pull Request" button <br/>
+   - Click "Create Pull Request" button <br/>
    ![](images/Github-4-18-02-PM.png)   <br/>
    
-   Provide a comment and click "Create Pull Request" button<br/>
+   - Provide a comment and click "Create Pull Request" button<br/>
    ![](images/Github-4-18-32-PM.png) <br/>
    
-   You will see the request is waiting for review <br/>
+   - You will see the request is waiting for review <br/>
    ![](images/Github-4-19-21-PM.png)
 
      
 1. Developer notifies "admins" using go-ospa-github Slack channel that changes are ready to go <br/>
    ![](images/Github-4-19-49-PM.png) <br/>
    ![](images/Github-4-20-12-PM.png)
-
 
 
 1. Admin reviews changes and if ok MERGEs changes into oracle/learning-library
