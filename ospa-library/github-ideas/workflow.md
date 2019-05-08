@@ -12,7 +12,7 @@
    ![](images/Github-4-16-15-PM2.png)
 
     You now have your own "Fork" or "Clone" of the Repo <br/>
-   ![](images/Github-4-26-47-PM.png)
+   ![](images/Github-4-16-31-PM.png)
 
 1. Developer creates (or gets from somewhere) desired content conforming to team Markdown template adds to ospa-library folder
 
