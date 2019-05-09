@@ -69,9 +69,9 @@ During this lab, you will take the Docker image that you created in Lab 200 and 
   ![](images/300/LabGuide300-cluster1-2.png)
 
   - Starting at the top you'll notice that the cluster will be created in our **monoTomicro** compartment.
-  - We can customize the name of this cluster if we want
-  - Multiple versions of Kubernetes are available, with the newest version selected by default
-  - The default cluster creation mode will automatically create a Virtual Cloud Network for our cluster, including 2 load balancer subnets and 3 subnets for our worker VMs
+  - We can customize the name of this cluster if we want.
+  - Multiple versions of Kubernetes are available, with the newest version selected by default.
+  - The default cluster creation mode will automatically create a Virtual Cloud Network for our cluster, including 2 load balancer subnets and 3 subnets for our worker VMs.
   - We can customize the size and quantity of worker VMs in the node pool; by default we will get 3x 1 OCPU VMs, one in each Availability Domain.
   - We can also add more node pools to the cluster after creation.
   - The dashboard and Tiller will be installed by default.
