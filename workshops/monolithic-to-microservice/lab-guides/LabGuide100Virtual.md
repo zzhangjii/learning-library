@@ -207,7 +207,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 ### **STEP 8**: Create SQL Developer Connection to ATP Database
 
-  - Open **SQL Developer** available on the client image by double-clicking on the Desktop Icon
+  - Open **SQL Developer** available in the VNC Session or VirtualBox Client Image by **double-clicking** on the Desktop Icon.
 
 	![](images/100/image261.png)  
 
@@ -334,7 +334,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 **This completes the Lab!**
 
-**You are ready to proceed to [Lab 200](LabGuide200.md)**
+**You are ready to proceed to [Lab 200](LabGuide200Virtual.md)**
 	
 ### **STEP 13**: Review Data Pump Import Log (OPTIONAL)
 
