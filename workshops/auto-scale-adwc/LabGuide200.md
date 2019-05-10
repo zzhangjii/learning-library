@@ -357,7 +357,7 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 
 - Go to params directory and replace the contents of  ords_params.properties as below.
   ```
-  db.hostname=apex (Get Hostname from your Dbaas Instance)
+  db.hostname=apexdemo (Get Hostname from your Dbaas Instance)
   db.port=1521
   **Note: Change service name for your Dbaas Instance. Run “lsnrctl status” to check for pdb1 and give same as servicename**
   db.servicename=pdb1.demosubnet1.vcn1.oraclevcn.com
@@ -430,23 +430,66 @@ Note:- Please add ingress rule for your VCN to allow from public internet to 808
 
 ### **STEP 8**: ADWC Scaling Demo Installation
 
-- Login to Dbaas Instance through Putty(To login in putty check Dbaas Provision Step 13 and 14).
-  * Login as opc user.
-  * Change user to oracle  and got to oracle home directory as below screen shot
--	Set Environment variable in
-  * Get Dbaas unique name by running below command
-   ```
-   cd  /opt/oracle/dcs/commonstore/wallets/tde
-   ls -ltr
-   ```
+- Login to Dbaas Instance through Putty.
 
-  * Copy the file name and assign ORACLE_UNQNAME in below command
+  * Login as opc user.
+
+- Now login as root by running below command.
+
+   ```
+   sudo su -
+   ```
+  
+-  First we will change time zone for oracle linux by running below command 
+
+    ```
+    rm -f /etc/localtime
+    ln -sf /usr/share/zoneinfo/US/Eastern /etc/localtime
+    ```
+ 
+-  Now we will change time zone for database instance. Run below command to search all **oraenv** file It will show 3 location.
+
   ```
-  vi ~/.bash_profile
-  export ORACLE_UNQNAME=**Dbaas Unique Name**
-  After editing the bash_profile press esc and type wq to save.
-  source ~/.bash_profile
+  find / -name 'oraenv'
   ```
+  
+- Now edit all three file and add below script at the end of the file and save those file
+  ```
+  if [[ ${ORACLE_SID} = "APEXDB" ]]; then
+   TZ=EST+05EDT
+   export TZ
+   echo "Time Zone set to EST"
+  else
+  TZ=PST+08EDT
+   export TZ
+   echo "Time Zone set to PST"
+  fi
+  ```
+  
+- Now exit from root user and login with oracle user and also login to sqlplus  and restart databse as below
+  ```
+  exit
+  sudo su - oracle
+  sqlplus / as sysdba
+  sql>shut immediate;
+  sql>startup;
+  sql>exit;
+  ```
+-	After exiting from sqlplus now we will set Environment variable.
+
+   * Get Dbaas unique name by running below command
+    ```
+    cd  /opt/oracle/dcs/commonstore/wallets/tde
+    ls -ltr
+    ```
+
+   * Copy the file name and assign ORACLE_UNQNAME in below command
+   ```
+   vi ~/.bash_profile
+   export ORACLE_UNQNAME=**Dbaas Unique Name**
+   After editing the bash_profile press esc and type wq to save.
+   source ~/.bash_profile
+   ```
 
   ![](./images/demo1.png)
 
