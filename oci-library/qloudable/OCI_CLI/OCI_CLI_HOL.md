@@ -191,7 +191,7 @@ oci -v
 ```
 **NOTE:** Version should be minimum 2.5.X (3/23/2019)
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/Using_OCI_CLI/img/100_CLI_001.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_CLI/img/100_CLI_001.png" alt="image-alt-text" height="100" width="100">
 
 16. Next we will configure OCI CLI. Enter command:
 ```
@@ -231,7 +231,7 @@ oci iam availability-domain list
 
 This will list all availability domains in the current region.  Make note of one of the availability domain names.  It should look something like this ``nESu:PHX-AD-3``.  You will use this in a future step.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/Using_OCI_CLI/img/100_CLI_002.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_CLI/img/100_CLI_001.png" alt="image-alt-text" height="100" width="100">
 
 2. Return to the OCI Console and navigate to Identity -> Compartments.  Retrieve the OCID of the assigned compartment.
 
@@ -240,7 +240,7 @@ This will list all availability domains in the current region.  Make note of one
 oci network vcn list --compartment-id <your compartment id>
 ```
 
- <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/Using_OCI_CLI/img/100_CLI_003.PNG" alt="image-alt-text" height="100" width="100">
+ <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_CLI/img/100_CLI_003.png" alt="image-alt-text" height="100" width="100">
 
 **NOTE:** It should return the details of the VCN you created at the start of this lab.  If you encounter an error message, please contact the instructor.
 
@@ -281,7 +281,7 @@ Make a note of the ``id:`` for this resource after it has been created.
 ```
 oci network route-table list -c <your compartment OCID> --vcn-id <your VCN OCID>
 ```
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/Using_OCI_CLI/img/100_CLI_004.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_CLI/img/100_CLI_004.png" alt="image-alt-text" height="100" width="100">
 
 record the ``id:`` of the `Default Route Table`
 
@@ -290,7 +290,7 @@ record the ``id:`` of the `Default Route Table`
 oci network route-table update --rt-id <route table OCID> --route-rules '[{"cidrBlock":"0.0.0.0/0","networkEntityId":"<your Internet Gateway OCID"}]'
 ```
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/L100-LAB/Using_OCI_CLI/img/100_CLI_004.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_CLI/img/100_CLI_004.png" alt="image-alt-text" height="100" width="100">
 
 **Note:** When updating route tables or security lists you cannot insert a single rule.  You must ``update`` with the entire set of rules.  The prompt shown in the screenshot above illustrates this point.
 
