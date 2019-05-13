@@ -9,9 +9,6 @@
 
 ***** 
 
-Autonomous Consumer Groups and Workloads
-==================================================
-
 
 ## Module 1:  Managing Priorities on Autonomous Transaction Processing
 
