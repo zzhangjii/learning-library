@@ -80,7 +80,7 @@ In this lab we will create a compute instance, download a script to configure st
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text" height="100" width="100">
               
-## Practice 2: Creat ssh keys and compute instance
+## Practice 2: Create ssh keys and compute instance
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
@@ -191,7 +191,7 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 oci setup config
 ```
 
-2. Accept the default location. For user OCI switch to OCI Console window. Click Human Icon and then your user name. In the user details page click **copy** to copy the OCID. **Also note down your region name as showin in OCI Console window**. Paste the OCID in ssh session.
+2. Accept the default location. For user OCI switch to OCI Console window. Click Human Icon and then your user name. In the user details page click **copy** to copy the OCID. **Also note down your region name as shown in OCI Console window**. Paste the OCID in ssh session.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_004.PNG" alt="image-alt-text" height="100" width="100">
 
