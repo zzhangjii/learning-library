@@ -9,7 +9,7 @@
 
 ***** 
 
-Backups, Recovery, and Cloning an Autonomous Database
+## Backups, Recovery, and Cloning an Autonomous Database
 ============================================================
 
 Oracle Autonomous Database (ADB) is configured to perform automatic backups of
@@ -36,7 +36,7 @@ full database or only the database metadata. Depending on the type of cloning
 being performed, this will provide a full point in time copy of the original
 database into a new standalone Autonomous Database
 
-
+[Back to Top](#table-of-contents)
 
 ## Module 1: Review Backup information from the Console
 
@@ -50,6 +50,8 @@ database into a new standalone Autonomous Database
 
 2. In the picture above you can see the daily backup that have been performed
     on this database and whether they are an incremental or full backup. 
+
+[Back to Top](#table-of-contents)
     
 ## Module 2: Perform a Point In Time Recovery
 
@@ -88,6 +90,8 @@ database into a new standalone Autonomous Database
 
 ![](media/f900886cffab7081cc16edb017720eb6.png)
 <p align="center">Figure 2-5</p>
+
+[Back to Top](#table-of-contents)
 
  ## Module 3: Cloning an Autonomous Database
 
