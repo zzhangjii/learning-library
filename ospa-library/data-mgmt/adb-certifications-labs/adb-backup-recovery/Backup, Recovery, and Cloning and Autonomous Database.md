@@ -38,7 +38,7 @@ database into a new standalone Autonomous Database
 
 [Back to Top](#table-of-contents)
 
-## Module 1: Review Backup information from the Console
+## Module 1:  Review Backup information from the Console
 
 1. Login in to your database console where you will see backups that were
     created for your database. If your database is new and has not undergone a
@@ -53,7 +53,7 @@ database into a new standalone Autonomous Database
 
 [Back to Top](#table-of-contents)
     
-## Module 2: Perform a Point In Time Recovery
+## Module 2:  Perform a Point In Time Recovery
 
 1. To perform a point in time recover of your database select the backup you wish
     to recover from and click on the three dots at the far right of the backup,
@@ -93,7 +93,7 @@ database into a new standalone Autonomous Database
 
 [Back to Top](#table-of-contents)
 
- ## Module 3: Cloning an Autonomous Database
+ ## Module 3:  Cloning an Autonomous Database
 
 1. Login in to your database console where the Autonomous Database you want to
     clone resides.
