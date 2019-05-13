@@ -1,4 +1,4 @@
-![](./media/sectitle.png)
+![](./media/securitytitle.png)
 
 # Security Hands-On Labs
 
