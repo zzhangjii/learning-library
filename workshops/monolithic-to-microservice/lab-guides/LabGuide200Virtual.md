@@ -166,10 +166,18 @@ Before we create the Compute instance that will contain Docker and application d
   Boot Volume: Oracle-Provided OS Image
   Image Operating System: Oracle Linux 7.6 (Default)
   Shape Type: Virtual Machine (Default)
-  Shape: VM.Standard2.1 (Default)
+  Shape: VM.Standard.E2.2
   ```
 
-- After entering the _Docker_ instance name.
+- For the Instance Shape click on the **Change Shape** button. 
+
+  ![](images/200/27.1.1.PNG)
+
+- Select the shape **VM.Standard.E2.2** and click **Select Shape**.
+
+  ![](images/200/27.1.2.PNG)
+
+- After entering the _Docker_ instance details your screen should look like:
 
    ![](images/200/27-2.PNG)
 
