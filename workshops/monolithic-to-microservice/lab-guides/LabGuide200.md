@@ -356,7 +356,7 @@ In this section you will clone a github repository that contains a Java REST App
   scp -i ./dockerkey /home/opc/Downloads/Wallet_orcl.zip opc@<YOUR-PUBLIC-IP>:/home/opc/monolithic-to-microservice/workshops/monolithic-to-microservice/lab-resources/docker
   ```
 
-  Example: (**Wallet_mattoATP.zip being shown here. The default wallet name is typically Wallet_orcl.zip**):
+  Example: (**The default wallet name is Wallet_orcl.zip**)
 
   ![](images/200/46-1.1.PNG)
 
