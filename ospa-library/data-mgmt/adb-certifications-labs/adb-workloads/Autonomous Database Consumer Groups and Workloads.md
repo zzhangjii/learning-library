@@ -13,7 +13,7 @@ Autonomous Consumer Groups and Workloads
 ==================================================
 
 
-## Module 1: Managing Priorities on Autonomous Transaction Processing
+## Module 1:  Managing Priorities on Autonomous Transaction Processing
 
 The priority of user requests in Autonomous Transaction Processing is determined
 by the database service the user is connected with. Users are required to select
@@ -83,7 +83,9 @@ different execution with the \_ TPURGENT service vs. the \_TP service. This is
 dependent on the number of CPU’s allocated to the database and other activity
 that may be running concurrently.
 
-## Module 2: Running the Queries in SQL Developer
+[Back to Top](#table-of-contents)
+
+## Module 2:  Running the Queries in SQL Developer
 
 1. In the previous lab we already created a connection to the **\_tp** service. We
 need to create a new connection to the **\_tpurgent** service to be able to run
@@ -131,7 +133,9 @@ running on the system you will see different results. In another lab you will
 learn how to inspect explain plans to determine if operations were parallelized
 or ran sequentially.
 
-## Module 3: Running the Queries in OML
+[Back to Top](#table-of-contents)
+
+## Module 3:  Running the Queries in OML
 
 Now run the same queries in OML experimenting with different services. OML makes
 it easier to do this because Notebooks automatically “see” all services and it’s
