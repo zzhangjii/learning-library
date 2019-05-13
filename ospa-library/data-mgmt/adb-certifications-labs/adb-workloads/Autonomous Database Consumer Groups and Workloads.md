@@ -4,7 +4,7 @@
 ## Table of Contents
 
 - [Module 1: Managing Priorities in Autonomous Database](#module-1--managing-priorities-in-autonomous-database)
-- [Module 2: Running the Queries in SQL Developer](#module-2--running-the- queries-in-sql-developer)
+- [Module 2: Running the Queries in SQL Developer](#module-2--running-the-queries-in-sql-developer)
 - [Module 3: Running the Queries in OML](#module-3--running-the-queries-in-oml)
 
 ***** 
