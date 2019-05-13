@@ -21,7 +21,7 @@ scaling the Autonomous Database.
 
 -   Scale the Autonomous Database service
 
-## Module 1: Stopping the Autonomous Database
+## Module 1:  Stopping the Autonomous Database
 
 1. Sign in to your Autonomous Database **Service Console** and browse to the
 A**utonomous Database Details** page of your service. Select the Stop button.
@@ -39,7 +39,9 @@ When the service is stopped, the status will change to **STOPPED**.
 ![](media/052a68976edef63ff313f5a71daefbd5.png)
 <p align="center">Figure 1-3</p>
 
-## Module 2: Starting the Autonomous Database
+[Back to Top](#table-of-contents)
+
+## Module 2:  Starting the Autonomous Database
 
 1. From the **Details** page of your ADB service, click **Start** to start your
 service.
@@ -63,7 +65,9 @@ When the service is started, the status will change to **AVAILABLE**.
 ![](media/5cc6e0cbc80024df3ed610e46600864c.png)
 <p align="center">Figure 2-4</p>
 
-## Module 3: Scaling the Autonomous Database
+[Back to Top](#table-of-contents)
+
+## Module 3:  Scaling the Autonomous Database
 
 1. From the **Details** page of your ADB service, click **Scale Up/Down** to scale
 your service.
