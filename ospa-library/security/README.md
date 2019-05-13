@@ -99,7 +99,7 @@ Once in the service dashboard, you can access Oracle CASB Cloud Service by click
 
 7. Access your cloud console dashboard to see if you have access to Oracle Identity Cloud Service:
 
-To access Oracle Identity Cloud Service you must click on the **General Menu** locate at the top-left of your screen, **Users** , your region, and select **Identity(Primary)**
+To access Oracle Identity Cloud Service you must click on the **General Menu** locate at the top-left of your screen, **Users**, your region, and select **Identity(Primary)**
 
 ![IDCS access Dashboard](./media/access_idcs_1.png)
 <p align="center">Figure 1-4</p>
@@ -121,7 +121,7 @@ Now you have access to main Oracle Identity Cloud Service dashboard. You can boo
 
 ## Hands-On Labs
 
-Now that you have verify your access and navigate the main consoles, you can start working on the hands-on labs activities.
+Now that you have verified your access and navigated the main consoles, you can start working on the hands-on labs activities.
 
 - [Lab 1: Oracle CASB Cloud Service]()
 - [Lab 2: Oracle Identity Cloud Service]()
