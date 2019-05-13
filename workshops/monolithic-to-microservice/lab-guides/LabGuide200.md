@@ -370,6 +370,10 @@ In this step you are going to edit the `dbconfig.properties` file to add your da
 
   ![](images/200/46-1.2.PNG)
 
+- Ensure that your in the **momoTOmicro** Compartment:
+
+  ![](images/200/46-1.1.1.PNG)
+
 - Click the link of your database:
 
   ![](images/200/46-1.4.PNG)
@@ -385,13 +389,13 @@ In this step you are going to edit the `dbconfig.properties` file to add your da
 
   We will be using the **MEDIUM** connection name in the application.
 
-- For this example the modifed **dbconfig.properties** looks like:
+- In vi edit the **dbconfig.properties** `dbinstance` parameter to contain the **orcl_MEDIUM** connection string and save the file:
 
   ![](images/200/46-1.6.PNG)
 
 - _If your NOT using the default wallet name of `Wallet_orcl.zip` then you will also need to edit the **Dockerfile**_ to point to your instance specific wallet, otherwise, you can skip ahead to Step 11.
 
-- If applicable, **edit** the following two locations within the `Dockerfile`:
+- If applicable, **edit** the following two locations within the `Dockerfile` (In this example mattoATP is the name of the ATP instance and respective wallet file):
 
   ![](images/200/46-1.7.PNG)
 
