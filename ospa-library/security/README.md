@@ -67,7 +67,7 @@ You have some setup work to perform first before you start the two hands-on labs
 4.	Start your Chrome browser.  Again, other browsers may work just fine, but the lab was tested using Chrome.
 5. Clear browser data
 
-On a Windows PC:
+**On a Windows PC:**
 - Click the Customize and control Google Chrome icon (three vertical dots) in the upper-right corner of the window to display a menu.
 - Select the More tools option from the menu.
 - Select the Clear browsing data option from the submenu.
@@ -77,7 +77,7 @@ On a Windows PC:
 - Cached images and files: checked 
 - Click the Clear data button
 
-On a Mac:
+**On a Mac:**
 - Select the Chrome option from the menu bar to display a menu.
 - Select the Clear Browsing Data option
 - Time range: All time
