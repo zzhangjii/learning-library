@@ -58,6 +58,8 @@ just fyi:
 
 ***** 
 
+[Back to Top](#table-of-contents)
+
 ## Module 2:  Learn How to Provision a New Autonomous Database
 
 1. Click on the “**Create Autonomous Transaction Processing Database**” button, as
