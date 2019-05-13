@@ -3,7 +3,7 @@
 
 ## Table of Contents
 
-- [Module 1: Stopping the Autonomous Database](#module-1--stoping-the-autonomous-database)
+- [Module 1: Stopping the Autonomous Database](#module-1--stopping-the-autonomous-database)
 - [Module 2: Starting the Autonomous Database](#module-2--starting-the-autonomous-database)
 - [Module 3: Scaling the Autonomous Database](#module-3--scaling-the-autonomous-database)
 
