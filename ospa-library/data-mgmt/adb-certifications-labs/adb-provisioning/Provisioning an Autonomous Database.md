@@ -5,7 +5,7 @@
 ## Table of Contents
 
 - [Module 1: Learn how to login to the Oracle Cloud Console](#module-1--learn-how-to-login-to-the-oracle-cloud-console)
-- [Module 2: Learn how to provision a new Autonomous Database](#module-2--examining-the-wallet-file)
+- [Module 2: Learn how to provision a new Autonomous Database](#module-2--learn-how-to-login-to-the-oracle-cloud-console)
 
 ***** 
 
