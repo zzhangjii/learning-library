@@ -79,7 +79,7 @@ Storage using two of the procedures in the DBMS_CLOUD package:
 
 [Back to Top](#table-of-contents) 
 
-## Module 1: Upload Data Files to Your Object Store
+## Module 1:  Upload Data Files to Your Object Store
 --------------------------------------
 
 Upload to your cloud-based object store the data files that you want to load to
@@ -165,7 +165,7 @@ then Save Changes.
 
 [Back to Top](#table-of-contents) 
 
-## Module 2: Create an Object Store Auth Token
+## Module 2:  Create an Object Store Auth Token
 ---------------------------------
 
 To load data from an Oracle Cloud Infrastructure Object Storage object store,
@@ -216,7 +216,7 @@ the Auth Token and username/password authentication.
 
 [Back to Top](#table-of-contents) 
 
-## Module 3: Create Object Store Credentials in your Autonomous Database
+## Module 3:  Create Object Store Credentials in your Autonomous Database
 -----------------------------------------------------------
 
 Now that you have created an object store Auth Token, store in your Autonomous database the credentials of the object store in which your data is staged.
@@ -254,7 +254,7 @@ your Autonomous Database.
 
 [Back to Top](#table-of-contents) 
 
-## Module 4: Copy Data from Object Store to Autonomous Database Table
+## Module 4:  Copy Data from Object Store to Autonomous Database Table
 ---------------------------------------------------------
 
 The copy_data procedure of the DBMS_CLOUD package requires that target tables
@@ -775,7 +775,7 @@ name in SQL Developer
 
 [Back to Top](#table-of-contents) 
 
-## Module 5: Confirm Your Data Loads
+## Module 5:  Confirm Your Data Loads
 ----------------------
 
 All data load operations done using the PL/SQL package DBMS_CLOUD are logged in
