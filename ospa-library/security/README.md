@@ -126,7 +126,7 @@ Click on the **General Menu** locate at the top-left of your screen and then cli
 <p align="center">Figure 1-6</p>
 
 
-Now you have access to main Oracle Identity Cloud Service dashboard. You can bookmark this URL to access the console easily without following these steps.
+Now you have access to main Oracle Identity Cloud Service dashboard. You can bookmark this URL to access the console.
 
 [Back to the top](#Security-Hands-On-Labs)
 
