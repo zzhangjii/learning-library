@@ -254,7 +254,7 @@ your Autonomous Database.
 
 [Back to Top](#table-of-contents) 
 
-## Module 4:  Copy Data from Object Store to Autonomous Database Table
+## Module 4:  Copy Data from Object Store to Autonomous Database Tables
 ---------------------------------------------------------
 
 The copy_data procedure of the DBMS_CLOUD package requires that target tables
