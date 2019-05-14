@@ -50,12 +50,12 @@ These are some of the concerns that the CISO and security team members have shar
 ### Pre-requisites
 
 Before you start the labs you should have:
-- Cloud access to an instance of Oracle CASB Cloud Service instance.
 - Your Oracle Cloud Account Sign In credentials (user name and password).
+- Cloud access to an instance of Oracle CASB Cloud Service.
 - Access to Oracle Identity Cloud Service console. This service is provisioned alongside your Oracle Cloud Account.
 - Access to a compute instance and a compartment.
 - Privileges to create dummy accounts on the OCI tenant.
-- Disable password vaults installed in your laptop, such as OnePassword, LastPass or Dashlane.
+- Disable password vaults solutions installed in your laptop, such as OnePassword, LastPass or Dashlane.
 
 ### Preparing your environment
 
@@ -107,7 +107,7 @@ Once in the service dashboard, you can access Oracle CASB Cloud Service by click
 <p align="center">Figure 1-3</p>
 
 
-7. Access your cloud console dashboard to see if you have access to Oracle Identity Cloud Service:
+8. Access your cloud console dashboard to see if you have access to Oracle Identity Cloud Service:
 
 To access Oracle Identity Cloud Service you must click on the **General Menu** locate at the top-left of your screen, **Users**, your region, and select **Identity(Primary)**
 
