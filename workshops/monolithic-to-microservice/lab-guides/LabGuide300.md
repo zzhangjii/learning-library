@@ -114,6 +114,9 @@ During this lab, you will take the Docker image that you created in Lab 200 and 
   ![](images/300/LabGuide200-f1749ef3.png)
 
 - In your SSH session **Type** `oci setup config` responding to the prompts as follows:
+
+  **NOTE:** (Your still the root user)
+
   - Enter a location for your config: **accept default by pressing enter**
   - Enter a user OCID: copy your OCID by clicking **Copy** in the **User Information** box in OCI Console. **Paste** into your oci setup for the user OCID and hit Return.
 
@@ -162,8 +165,6 @@ During this lab, you will take the Docker image that you created in Lab 200 and 
   ![](images/300/LabGuide200-0c484a65.png)
 
   ![](images/300/LabGuide200-36da5eac.png)
-
-  ![](images/300/LabGuide200-2596f69d.png)
 
   **NOTE**: Copy and paste the commands from the OCI Console window -- the second command below is personalized with your cluster OCID. They are listed here for reference only.
 
@@ -267,7 +268,7 @@ docker push iad.ocir.io/<your-tenancy-name>/alphaoffice-rest:v1
 
 ### **STEP 5**: Install kubectl
 
-- In order to interact with your cluster and view the dashboard, you will need to install the Kubernetes command line interface `kubectl`, ON YOUR LOCAL MACHINE. We will do that now.
+- In order to interact with your cluster and view the dashboard, you will need to **install the Kubernetes command line interface `kubectl`, ON YOUR LOCAL MACHINE**. We will do that now.
 
 - The method you choose to install `kubectl` will depend on your operating system and any package managers that you may already use. The generic method of installation, downloading the binary file using `curl`, is given below (**run the appropriate command in a terminal or command prompt**). If you prefer to use a package manager such as apt-get, yum, homebrew, chocolatey, etc, please find the specific command in the [Kubernetes Documentation](https://kubernetes.io/docs/tasks/tools/install-kubectl/). The `cluster-info` and `get nodes` commands need to be working (returning information on your cluster) before you can proceed.
 
