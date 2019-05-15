@@ -4,13 +4,17 @@
 ## Table of Contents
 
 - [Module 1: Create and monitor a sanctioned application](#module-1--create-and-monitor-a-sanctioned-application)
-- [Module 2: Explore credentials wallet file information](#module-2--examining-the-wallet-file)
+- [Module 2: Create a Policy Alert and Display Threats](#module-2--create-a-policy-alert-and-display-threats)
 - [Module 3: Connect to your ATP instance with SQL Developer](#module-3--connecting-to-the-database-using-sql-developer)
 - [Module 4: Connect to your ATP instance with Oracle ML Notebooks](#module-4--connecting-to-the-database-using-oracle-machine-learning-oml)
 
 ***** 
 
 ## Module 1:  Create and monitor a sanctioned application
+
+The following hands-on labs assume that you are familiar with Oracle Cloud Platform console navigation, as well as access to Oracle CASB Cloud Service console.
+In order to ease the process, we recommend using two separate browsers or windows.
+We will enroll third-party services as part of the exercise and it's imperative to navigate back and forth between CASB and the vendors' dashboards to complete the lab.
 
 Oracle CASB monitors your sanctioned applications after a simple registration process. This enables you to manage risk events from a centralized platform instead of having to enter the individual application to see and remediate security threats. Oracle CASB monitors risk events such as blacklisted IP addresses, anomalous user behavior and unwanted security configurations in the application.
 As part of this first part of the module we will enrol two applications, Box and SalesForce.
@@ -80,11 +84,11 @@ As part of this first part of the module we will enrol two applications, Box and
   3. Save your changes. An Admin Console tab is now added to your main Box.com account.
 
 3. Create the Dedicated Oracle CASB Cloud Service User
-  * Create a dedicated user for Oracle CASB Cloud Service in the Box account that you want to monitor. This user is dedicated for use by Oracle CASB Cloud Service and shouldn’t be used for any other purpose.
-  * Log in to the Box developer account.
-  * Select the Admin Console tab.
-  * Click the Users & Groups section.
-  * Click the + Users button.
+    * Create a dedicated user for Oracle CASB Cloud Service in the Box account that you want to monitor. This user is dedicated for use by Oracle CASB Cloud Service and shouldn’t be used for any other purpose.
+    * Log in to the Box developer account.
+    * Select the Admin Console tab.
+    * Click the Users & Groups section.
+    * Click the + Users button.
 
 
  ![Box Config app](./media/box_usercreation.png)
@@ -149,8 +153,8 @@ To register a Box instance with the Oracle CASB Cloud Service, you need the user
 
 * Oracle CASB Cloud Service monitors these settings in Box:
 
-  1. Password policies, authentication policies, and session settings: These are in the Box business settings page, Security tab.
-  2. Settings: These additional security settings are in the Box business settings page, Content & Sharing tab.
+  * Password policies, authentication policies, and session settings: These are in the Box business settings page, Security tab.
+  * Settings: These additional security settings are in the Box business settings page, Content & Sharing tab.
 
 
 * Login to your Cloud dashboard and open Oracle CASB Cloud Service console
@@ -187,8 +191,8 @@ CASB Cloud Service set your preferred values in the application and subsequently
 * Click Next.
 * In the Enter credentials page, select Sign in with Box username and password.
 * Enter the credentials for the dedicated co-admin user that you set up to communicate with Oracle CASB Cloud Service.
-  1. User name. The username of the Oracle CASB Cloud Service user.
-  2. Password. The password of the Oracle CASB Cloud Service user.
+  * User name. The username of the Oracle CASB Cloud Service user.
+  * Password. The password of the Oracle CASB Cloud Service user.
 
 ![CASB box testing credentials](./media/casb_box_credentials.png)
 <p align="center">Figure 1-20</p>
@@ -211,9 +215,9 @@ CASB Cloud Service set your preferred values in the application and subsequently
 You’ll now add SalesForce as a sanctioned application for monitoring in Oracle CASB, so this business critical application remains compliant with security standards.
 
 1. Navigate to https://developer.salesforce.com/
-* Click the sign-up button in the top right corner
-* Enter the required information
-* Click Sign me up
+    * Click the sign-up button in the top right corner
+    * Enter the required information
+    * Click Sign me up
 
 ![SF registration](./media/sf_registration.png)
 <p align="center">Figure 1-22</p>
@@ -234,7 +238,7 @@ You’ll now add SalesForce as a sanctioned application for monitoring in Oracle
 
 4. Login to your Salesforce account.
 5. On the left Panel navigate to Users => Profiles
-* Click new profile
+    * Click new profile
 
 ![SF Create profile](./media/sf_profile.png)
 <p align="center">Figure 1-25</p>
@@ -247,14 +251,14 @@ You’ll now add SalesForce as a sanctioned application for monitoring in Oracle
 7. Press save
 
 8. Navigate to Users => Users 
-* Click New User
+    * Click New User
 
 ![SF create user](./media/sf_createuser.png)
 <p align="center">Figure 1-27</p>
 
 9. The following Screen will appear. Fill in the required fields. User License must be set to Salesforce
-* Profile name will be the name of the profile we previously created
-* Save
+    * Profile name will be the name of the profile we previously created
+    * Save
 
 ![SF modify user](./media/sf_modifyuser.png)
 <p align="center">Figure 1-28</p>
@@ -311,13 +315,69 @@ This is the last step we need to complete in SalesForce.
 
 ****
 
+## Module 2:  Create a policy alert and display threats
+
+In Oracle CASB you can create application specific to specify the monitoring you want for your sanctioned applications. This adds another layer of customizable security for you. Oracle CASB also has pre-made Managed Policies for the applications to make sure application specific security can be enabled from the beginning.
+You will now create a policy in CASB that will trigger an alert every time a user is logged in to SalesForce.
+
+1. Login to your cloud platform account and select Oracle CASB Cloud Service.
+2. Select Configuration in the Navigation menu to the left 
+3. Select Policy Management
+4. Click New Policy
+    * Fill out the fields as shown below
+    * Click Next
+
+![CASB Create new policy](./media/casb_sf_newpolicy.png)
+<p align="center">Figure 2-1</p>
 
 
+5. Fill out the fields as shown below. Click Next
+
+![CASB Create new policy_2](./media/casb_sf_newpolicy_2.png)
+<p align="center">Figure 2-2</p>
+
+6. Click Next
+
+![CASB Create new policy_3](./media/casb_sf_newpolicy_3.png)
+<p align="center">Figure 2-2</p>
+
+7. Click Next
+
+![CASB Create new policy_4](./media/casb_sf_newpolicy_4.png)
+<p align="center">Figure 2-3</p>
+
+8. Populate fields as shown below. You can fill the message box with anything you consider such as "Verify SalesForce login activities". click Next
+
+![CASB Create new policy_5](./media/casb_sf_newpolicy_5.png)
+<p align="center">Figure 2-4</p>
+
+9. Review details previously entered and click submit
+
+![CASB Create new policy_6](./media/casb_sf_newpolicy_review.png)
+<p align="center">Figure 2-5</p>
+
+We must now trigger the policy that we created
+
+10. Log in to the ![Salesforce console](https://developer.salesforce.com) as the **user we created to be monitored by Oracle CASB**
+
+11. Once logged in to Salesforce, you should be able to see the dashboard
+
+![Login SF](./media/sf_login.png)
+<p align="center">Figure 2-6</p>
 
 
+12. This triggered the policy and an alert for Salesforce was generated. Every time a user logs in to Salesforce, you will be able to check it in your Salesforce instance. Navigate back to Oracle CASB Cloud Service console and click on **Policy alerts** and you will see all the alerts received for Salesforce.
+
+![CASB SF alert](./media/casb_sf_policyalerts.png)
+<p align="center">Figure 2-7</p>
+
+13. Click on a single policy alert generated by an authentication action to see the details
+
+![CASB SF alert_2](./media/casb_sf_polictyalerts_2.png)
+<p align="center">Figure 2-8</p>
 
 
-
+****
 **You have successfully connected and run an operation against ATP with Oracle OML. We will use OML in other labs.**
 
 ***END OF LAB***
