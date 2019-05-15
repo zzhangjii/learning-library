@@ -15,6 +15,10 @@ The following hands-on labs assume that you are familiar with Oracle Cloud Platf
 In order to ease the process, we recommend using two separate browsers or windows.
 We will enroll third-party services as part of the exercise and it's imperative to navigate back and forth between CASB and the vendors' dashboards to complete the lab.
 
+**NOTE: CASB is a dynamic service that is, by design, constantly in flux. As a result, what you see in the console may not match exactly with the lab screenshots. Screenshots are provided solely for illustrative purposes to help guide you directionally through the CASB console.**
+
+****
+
 Oracle CASB monitors your sanctioned applications after a simple registration process. This enables you to manage risk events from a centralized platform instead of having to enter the individual application to see and remediate security threats. Oracle CASB monitors risk events such as blacklisted IP addresses, anomalous user behavior and unwanted security configurations in the application.
 As part of this first part of the module we will enrol two applications, Box and SalesForce.
 
