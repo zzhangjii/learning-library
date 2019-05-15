@@ -859,7 +859,7 @@ available.
 ****
 
 
-## Module 6: Data Loss Protection
+## Module 6:  Data Loss Protection
 
  
 Oracle CASB’s Data Loss Protection (DLP) scans and detects files in
