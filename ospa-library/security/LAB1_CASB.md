@@ -7,6 +7,9 @@
 - [Module 2: Create a Policy Alert and Display Threats](#module-2--create-a-policy-alert-and-display-threats)
 - [Module 3: Oracle CASB Monitoring Oracle Cloud Infrastructure](#module-3--oracle-casb-monitoring-oracle-cloud-infrastructure)
 - [Module 4: Create a Policy for OCI](#module-4--create-a-policy-for-oci)
+- [Module 5: Run a Report in CASB](#module-5--run-a-report-in-casb)
+- [Module 6: Data Loss Protection](#module-6--data-loss-protection)
+
 
 
 ***** 
@@ -470,7 +473,8 @@ We must now trigger the policy that we created
 
 ****
 
-## Module 3: Oracle CASB Monitoring Oracle Cloud Infrastructure
+## Module 3:  Oracle CASB Monitoring Oracle Cloud Infrastructure
+
 
 Oracle CASB has the broadest support of infrastructure as cloud
 services (IaaS). It enables you to monitor infrastructure provided by
@@ -717,10 +721,10 @@ to Customize Dashboard and select Show for Compute.
 
 ****
 
-## Module 4: Create a Policy for OCI
+## Module 4:  Create a Policy for OCI
  
- You’ll now create a policy in Oracle CASB that triggers a policy alert
- every time a user is created in OCI.
+You’ll now create a policy in Oracle CASB that triggers a policy alert
+every time a user is created in OCI.
 
 1.  Click on Configuration (Left-hand menu)
     
@@ -813,6 +817,149 @@ to Customize Dashboard and select Show for Compute.
 
 ![](./media/image118.jpeg)
 <p align="center" Figure 4-15 </p>
+
+****
+
+## Module 5:  Run A Report in CASB
+
+Oracle CASB offers a variety of predefined reports providing detailed
+insight into potential security risks. Unless noted otherwise, reports
+by default display three days of data, with up to 90 days of data
+available.
+
+1.  Open the Navigation menu in the top left corner of the CASB Dashboard ![](./media/image2.png)
+    
+    *  Click Reports
+
+![](./media/image119.jpeg)
+<p align="center" Figure 5-1 </p>
+
+2.  Scroll down to Oracle Cloud Infrastructure Privileged IAM changes –
+    Users and Groups
+    
+    * Double click the name or press the play button on the report you
+        want to run
+
+![](./media/image120.jpeg)
+<p align="center" Figure 5-2 </p>
+
+* You will now be presented with your report findings
+
+![](./media/image121.jpeg)
+<p align="center" Figure 5-3 </p>
+
+****
+
+
+## Module 6: Data Loss Protection
+
+ 
+Oracle CASB’s Data Loss Protection (DLP) scans and detects files in
+sanctioned application for sensitive data that follows a defined
+information type pattern in a rule. Oracle CASB can then manage the
+situation by tagging the detected files as containing sensitive data,
+quarantining the files in folders that only
+ 
+administrators can access or completely delete the files from the
+application. It’s easy to use and has the flexibility to define any
+type of data that needs to be detected and secured.
+ 
+In this you’ll see how Oracle CASB is able to detect sensitive
+information in a managed document in your Box account.
+
+1.  Click to Configuration DLP Management
+
+![](./media/image122.jpeg)
+<p align="center" Figure 6-1 </p>
+
+2.  Click Add Rule
+
+![](./media/image123.jpeg)
+<p align="center" Figure 6-2 </p>
+
+3.  In the first section Content, select the
+    Information Types box and –Top Secret- Keyword and click Next.
+    ![](./media/image124.jpeg)
+    <p align="center" Figure 6-3 </p>
+
+4.  In the second section Remediation, select the options shown below
+    and click Next. This section describes the action to take after the
+    selected content is detected. In this case, the document will be
+    classified as highly confidential, an alert will be created and the
+    document will be quarantined (the document will be moved to a path
+    only accessible by the administrator)
+
+![](./media/image125.jpeg)
+<p align="center" Figure 6-4 </p>
+
+5.  In the last section, enter the following parameters and click Save.
+![](./media/image126.jpeg)
+<p align="center" Figure 6-5 </p>
+
+6.  Now your rule should appear in the list of DLP rules.
+
+![](./media/image127.jpeg)
+<p align="center" Figure 6-6 </p>
+
+7.  The next step is to enable the data protection for your Box account. To do that, go to the section Applications and click to your Box application, select Modify and Update Data Protection. 
+![](./media/image128.jpeg)
+<p align="center" Figure 6-7 </p>
+
+8.  To enable Oracle CASB scan the files in your Box account, you have
+    to enter the internal domain of your account. In this case, the
+    internal domain is a custom domain that you can set in the
+    administrative section for your Box account. Check the box Enable
+    DLP and select the root folder to monitor.
+
+![](./media/image129.jpeg)
+<p align="center" Figure 6-8 </p>
+
+9.  Click Next and once you see the success message, click Done.
+
+![](./media/image130.jpeg)
+<p align="center" Figure 6-9 </p>
+
+10. Now you will be able to run retroactive scans to detect any Top
+    Secret words in the documents in Box. For that, go to DLP Management
+    section and click to Retroactive scan.
+
+![](./media/image131.jpeg)
+<p align="center" Figure 6-10 </p>
+
+11. Click to Add Scan and fill out as shown below. Click Run Scan.
+
+![](./media/image132.jpeg)
+<p align="center" Figure 6-11 </p>
+
+12. Now your scan will appear in the list.
+
+![](./media/image133.jpeg)
+<p align="center" Figure 6-12 </p>
+
+13. You can click on the eye icon to see all related information.
+![](./media/image134.jpeg)
+<p align="center" Figure 6-13 </p>
+
+14. To verify if your document was scan are classified, click to the
+    section Data
+
+![](./media/image135.jpeg)
+<p align="center" Figure 6-14 </p>
+
+15. To verify if any alert was created, you can go to Risk Events section and filter for the category DLP Alert 
+![](./media/image136.jpeg)
+<p align="center" Figure 6-15 </p>
+
+16. Now you can also verify if your file was quarantined. Log in to your
+    Box account and click to My Files. You will be able to see how
+    Oracle CASB quarantined your file.
+
+![](./media/image137.jpeg)
+<p align="center" Figure 6-16 </p>
+
+ **As you logged in as administrator, you will be able to click on the folder and see the file.**
+
+
 
 ****
 **You have successfully connected and monitor third-party apps and OCI with Oracle CASB Cloud Service.**
