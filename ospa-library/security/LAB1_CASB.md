@@ -5,6 +5,9 @@
 
 - [Module 1: Create and monitor a sanctioned application](#module-1--create-and-monitor-a-sanctioned-application)
 - [Module 2: Create a Policy Alert and Display Threats](#module-2--create-a-policy-alert-and-display-threats)
+- [Module 3: Oracle CASB Monitoring Oracle Cloud Infrastructure](#module-3--oracle-casb-monitoring-oracle-cloud-infrastructure)
+- [Module 4: Create a Policy for OCI](#module-4--create-a-policy-for-oci)
+
 
 
 ***** 
@@ -28,22 +31,22 @@ As part of this first part of the module we will enrol two applications, Box and
 *  Click the Console button in the top right corner
 
 ![Box Console](./media/box_console.png)
-<p align="center">Figure 1-1</p>
+<p align="center" Figure 1-1 </p>  
 
 * Click **Sign up**
 
 ![Box Sign Up](./media/box_signup.png)
-<p align="center">Figure 1-2</p>
+<p align="center" Figure 1-2 </p>  
 
 * Select the section Individual Plans and click to Sign Up in the Individual account
 
 ![Box Select Plan](./media/box_selectplan.png)
-<p align="center">Figure 1-3</p>
+<p align="center" Figure 1-3 </p>  
 
 * Enter required information and click **Submit**, you will receive a verification email
 
 ![Box Verify Account](./media/box_verifyaccount.png)
-<p align="center">Figure 1-4</p>
+<p align="center" Figure 1-4 </p>  
 
 
 * Once you have the account for Box, you have to configure it for monitoring.
@@ -54,35 +57,35 @@ As part of this first part of the module we will enrol two applications, Box and
 * Go to My Apps and create an application
 
 ![Box Create Application](./media/box_createapp_1.png)
-<p align="center">Figure 1-5</p>
+<p align="center" Figure 1-5 </p>  
 
 
 * Select **Custom App** and click **Next**
 
 ![Box Create Application](./media/box_createapp_2.png)
-<p align="center">Figure 1-6</p>
+<p align="center" Figure 1-6 </p>  
 
 * Select the recommended authentication method OAuth 2.0 with JWT (Server Authentication) and click **Next**
 
 ![Box Create Application](./media/box_authentication.png)
-<p align="center">Figure 1-7</p>
+<p align="center" Figure 1-7 </p>  
 
 
 * Give an unique name to your app and click **Create App**
 
 ![Box Create Application](./media/box_uniquename.png)
-<p align="center">Figure 1-8</p>
+<p align="center" Figure 1-8 </p>  
 
 
 * Click on your new application, and in the section Configuration, select the following:
 
   1. Authentication Method: OAuth 2.0 with JWT (Server Authentication)
   ![Box Config app](./media/box_appconfig_1.png)
-<p align="center">Figure 1-9</p>
+<p align="center" Figure 1-9 </p>  
 
   2. Application access: **Enterprise**
   ![Box Config app](./media/box_appconfig_2.png)
-<p align="center">Figure 1-10</p>
+<p align="center" Figure 1-10 </p>  
 
   3. Save your changes. An Admin Console tab is now added to your main Box.com account.
 
@@ -95,7 +98,7 @@ As part of this first part of the module we will enrol two applications, Box and
 
 
  ![Box Config app](./media/box_usercreation.png)
-<p align="center">Figure 1-11</p>
+<p align="center" Figure 1-11 </p>  
 
 
 * In the Name field, give the service account an identifier (example: occs.trialservice).
@@ -103,7 +106,7 @@ As part of this first part of the module we will enrol two applications, Box and
 * Open the recently created user and grant this user the Co-Admin role. This account must have either the Admin or Co-Admin role.
 
  ![Box Config app](./media/box_useredit.png)
-<p align="center">Figure 1-12</p>
+<p align="center" Figure 1-12 </p>  
 
 * Assign additional privileges to this user.
 At a minimum, the user should be able to run new reports and access existing reports. If you want to be able to push security controls from Oracle CASB Cloud Service to this Box instance, then this user must also have these privileges:
@@ -119,7 +122,7 @@ At a minimum, the user should be able to run new reports and access existing rep
 `Reports and Settings: Run new reports and access existing reports`
 
 ![Box Config user](./media/box_priv.png)
-<p align="center">Figure 1-13</p>
+<p align="center" Figure 1-13 </p>  
 
 
 * Click **Save**
@@ -128,20 +131,20 @@ At a minimum, the user should be able to run new reports and access existing rep
 * In the users list you should be able now to see the Oracle CASB Cloud Service user that you just created.
 
 ![Box New Account](./media/box_newaccount.png)
-<p align="center">Figure 1-14</p>
+<p align="center" Figure 1-14 </p>  
 
 
 * Check the email account that you provided for that user.
 You should have a message from Box telling you to set a password for this user.
 
 ![Box Verification](./media/box_password_verification.png)
-<p align="center">Figure 1-15</p>
+<p align="center" Figure 1-15 </p>  
 
 * Create a complex password for this account.
 For example, at least 12 characters in length, with a combination of uppercase and lowercase letters, numbers, and special characters.
 
 ![Box New Password](./media/box_newpassword.png)
-<p align="center">Figure 1-15</p>
+<p align="center" Figure 1-15 </p>  
 
 
 * You will use this user name and password to register your Box instance in Oracle CASB Cloud Service. Have a recovery procedure in case there are issues with the account.
@@ -167,19 +170,19 @@ To register a Box instance with the Oracle CASB Cloud Service, you need the user
 
 
 ![CASB add box](./media/casb_addbox.png)
-<p align="center">Figure 1-16</p>
+<p align="center" Figure 1-16 </p>  
 
 * In the Select an instance page, enter a unique name for your application instance.
 
 ![CASB box name](./media/casb_boxname.png)
-<p align="center">Figure 1-17</p>
+<p align="center" Figure 1-17 </p>  
 
 * Click **Next**.
 * In the Select monitoring type page, select Push controls and monitor to have Oracle
 CASB Cloud Service set your preferred values in the application and subsequently monitor for deviations from these values.
 
 ![CASB box push config](./media/casb_boxpush.png)
-<p align="center">Figure 1-18</p>
+<p align="center" Figure 1-18 </p>  
 
 * Oracle CASB Cloud Service generates a security control alert in Risk Events whenever it detects a mismatch between the selections that you make on this page and the settings in the Box instance.
 
@@ -189,7 +192,7 @@ CASB Cloud Service set your preferred values in the application and subsequently
 * Select the checkbox.
 
 ![CASB box security controls](./media/casb_box_securitycontrols.png)
-<p align="center">Figure 1-19</p>
+<p align="center" Figure 1-19 </p>  
 
 * Click **Next**.
 * In the Enter credentials page, select Sign in with Box username and password.
@@ -198,12 +201,12 @@ CASB Cloud Service set your preferred values in the application and subsequently
   * Password. The password of the Oracle CASB Cloud Service user.
 
 ![CASB box testing credentials](./media/casb_box_credentials.png)
-<p align="center">Figure 1-20</p>
+<p align="center" Figure 1-20 </p>  
 
 * When you are done entering your credentials, click **Test Credentials**. A new window pops up to ask you if you set the right permissions for that user in your Box account. Click **Ok**.
 
 ![CASB box accept credentials](./media/casb_box_credentials_2.png)
-<p align="center">Figure 1-21</p>
+<p align="center" Figure 1-21 </p>  
 
 * It can take a minute or two for the application to receive and accept your credentials.
 * When testing is done, you see a success message.
@@ -223,97 +226,97 @@ You’ll now add SalesForce as a sanctioned application for monitoring in Oracle
     * Click **Sign me up**
 
 ![SF registration](./media/sf_registration.png)
-<p align="center">Figure 1-22</p>
+<p align="center" Figure 1-22 </p>  
 
 
 2. You will get an email to confirm your account. Click **Verify Account**
 
 
 ![SF verification](./media/sf_verification.png)
-<p align="center">Figure 1-23</p>
+<p align="center" Figure 1-23 </p>  
 
 
 3. Create a password for your account
 
 ![SF Create Password](./media/sf_password.png)
-<p align="center">Figure 1-24</p>
+<p align="center" Figure 1-24 </p>  
 
 
 4. Login to your Salesforce account.
-5. On the left Panel navigate to Users => Profiles
+5. On the left Panel navigate to Users =  Profiles
     * Click **New Profile**
 
 ![SF Create profile](./media/sf_profile.png)
-<p align="center">Figure 1-25</p>
+<p align="center" Figure 1-25 </p>  
 
 6. Existing Profile needs to be set to System Administrator and Profile Name can be named whatever you like, for example, CASBUSER.
 
 ![SF Set profile](./media/sf_setprofile.png)
-<p align="center">Figure 1-26</p>
+<p align="center" Figure 1-26 </p>  
 
 7. Press save
 
-8. Navigate to Users => Users 
+8. Navigate to Users =  Users 
     * Click **New User**
 
 ![SF create user](./media/sf_createuser.png)
-<p align="center">Figure 1-27</p>
+<p align="center" Figure 1-27 </p>  
 
 9. The following Screen will appear. Fill in the required fields. User License must be set to Salesforce
     * Profile name will be the name of the profile we previously created
     * Save
 
 ![SF modify user](./media/sf_modifyuser.png)
-<p align="center">Figure 1-28</p>
+<p align="center" Figure 1-28 </p>  
 
 
 10. An email will be triggered allowing for verification
 
 ![SF verification](./media/sf_verification_newuser.png)
-<p align="center">Figure 1-29</p>
+<p align="center" Figure 1-29 </p>  
 
 11. Click to Verify account in the link attached in the email and fill password details for the new user. Now you will see the following:
 
 ![SF Dahsboard](./media/sf_dashboard.png)
-<p align="center">Figure 1-30</p>
+<p align="center" Figure 1-30 </p>  
 
 This is the last step we need to complete in SalesForce.
 
 12. Now go to the CASB Console and select the SalesForce application to add the instance in Oracle CASB.
 
 ![CASB SF enrolment](./media/casb_sf_enroll.png)
-<p align="center">Figure 1-31</p>
+<p align="center" Figure 1-31 </p>  
 
 13. Enter a unique name for you instance. Click the checkboxes from the picture below. Click **Next**.
 
 ![CASB SF Unique name](./media/casb_sf_uniquename.png)
-<p align="center">Figure 1-32</p>
+<p align="center" Figure 1-32 </p>  
 
 14. Select Push controls and monitor
 
 ![CASB SF Push](./media/casb_sf_push.png)
-<p align="center">Figure 1-33</p>
+<p align="center" Figure 1-33 </p>  
 
 15. Select Standard Security Controls. Check Approval box and Press Next
 
 ![CASB SF security controls](./media/casb_sf_securitycontrols.png)
-<p align="center">Figure 1-34</p>
+<p align="center" Figure 1-34 </p>  
 
 16. You will redirected to the below page. Login with your User Credentials (the user that you created recently in SalesForce)
 
 ![CASB SF credentials](./media/casb_sf_allowcredentials.png)
-<p align="center">Figure 1-35</p>
+<p align="center" Figure 1-35 </p>  
 
 17. Allow Access
 
 ![CASB SF Allow Access](./media/casb_sf_allowaccess.png)
-<p align="center">Figure 1-36</p>
+<p align="center" Figure 1-36 </p>  
 
 
 18. Success! You will now be able to monitor SalesForce! Click **Done** to finish
 
 ![CASB SF completion](./media/casb_sf_complete.png)
-<p align="center">Figure 1-37</p>
+<p align="center" Figure 1-37 </p>  
 
 
 ****
@@ -331,33 +334,33 @@ You will now create a policy in CASB that will trigger an alert every time a use
     * Click **Next**
 
 ![CASB Create new policy](./media/casb_sf_newpolicy.png)
-<p align="center">Figure 2-1</p>
+<p align="center" Figure 2-1 </p>  
 
 
 5. Fill out the fields as shown below. Click **Next**
 
 ![CASB Create new policy_2](./media/casb_sf_newpolicy_2.png)
-<p align="center">Figure 2-2</p>
+<p align="center" Figure 2-2 </p>  
 
 6. Click **Next**
 
 ![CASB Create new policy_3](./media/casb_sf_newpolicy_3.png)
-<p align="center">Figure 2-2</p>
+<p align="center" Figure 2-2 </p>  
 
 7. Click **Next**
 
 ![CASB Create new policy_4](./media/casb_sf_newpolicy_4.png)
-<p align="center">Figure 2-3</p>
+<p align="center" Figure 2-3 </p>  
 
 8. Populate fields as shown below. You can fill the message box with anything you consider such as "Verify SalesForce login activities". click **Next**
 
 ![CASB Create new policy_5](./media/casb_sf_newpolicy_5.png)
-<p align="center">Figure 2-4</p>
+<p align="center" Figure 2-4 </p>  
 
 9. Review details previously entered and click **Submit**
 
 ![CASB Create new policy_6](./media/casb_sf_newpolicy_review.png)
-<p align="center">Figure 2-5</p>
+<p align="center" Figure 2-5 </p>  
 
 We must now trigger the policy that we created
 
@@ -366,19 +369,451 @@ We must now trigger the policy that we created
 11. Once logged in to Salesforce, you should be able to see the dashboard
 
 ![Login SF](./media/sf_login.png)
-<p align="center">Figure 2-6</p>
+<p align="center" Figure 2-6 </p>  
 
 
 12. This triggered the policy and an alert for Salesforce was generated. Every time a user logs in to Salesforce, you will be able to check it in your Salesforce instance. Navigate back to Oracle CASB Cloud Service console and click on **Policy alerts** and you will see all the alerts received for Salesforce.
 
 ![CASB SF alert](./media/casb_sf_policyalerts.png)
-<p align="center">Figure 2-7</p>
+<p align="center" Figure 2-7 </p>  
 
 13. Click on a single policy alert generated by an authentication action to see the details
 
 ![CASB SF alert_2](./media/casb_sf_polictyalerts_2.png)
-<p align="center">Figure 2-8</p>
+<p align="center" Figure 2-8 </p>  
 
+### We will now do an action in Box account that will be detected as a threat in Oracle CASB
+
+
+1. Check your IP. You can use any service or go to google and type `my ip`
+
+![Check IP](./media/checkip.png)
+<p align="center" Figure 2-9 </p>  
+
+
+2. Go to the Oracle CASB dashboard, section Configuration, **Manage IP Addresses**
+
+![Check IP](./media/casb_manageip.png)
+<p align="center" Figure 2-10 </p>  
+
+![](./media/image68.jpeg)
+<p align="center" Figure 2-11 </p>  
+
+3.  Click Add IP Address in the Blacklist section
+
+![](./media/image69.jpeg)
+<p align="center" Figure 2-12 </p>  
+
+4.  Enter your IP address and select your recently added Box application
+    instance
+
+![](./media/image70.jpeg)
+<p align="center" Figure 2-13 </p>  
+
+5.  Click Save. Your IP address should appear now in the black list
+
+6.  To make Oracle CASB detect a threat, log in to your Box account and
+    do any activity. For example, you can upload a file with the word
+    Top Secret as content (required for the last lab). Oracle CASB
+    detects that you’ve logged in Box through the blacklisted IP address
+    and generates an alert
+
+![](./media/image71.png)
+<p align="center" Figure 2-14 </p>  
+
+7.  Log in to your Box account as the user that we created to be
+    monitored by CASB
+
+![](./media/image72.jpeg)
+<p align="center" Figure 2-15 </p>  
+
+8.  Once you can see the dashboard, go to My Files
+
+![](./media/image73.jpeg)
+<p align="center" Figure 2-16 </p>  
+
+9.  Create a folder as shown below
+
+![](./media/image74.jpeg)
+<p align="center" Figure 2-17 </p>  
+
+10. Upload the file inside the folder
+
+![](./media/image75.jpeg)
+<p align="center" Figure 2-18 </p>  
+
+11. These actions should have generated a threat in Oracle CASB for your
+    Box account. It should also be displayed in the access map as red
+    pins referencing suspicious events.
+
+![](./media/image76.jpeg)
+<p align="center" Figure 2-19 </p>  
+
+12. You can click on the red pin to check the detected suspicious events
+
+![](./media/image77.jpeg)
+<p align="center" Figure 2-20 </p>   
+
+13. Click on the suspicious events to have a better view of this
+
+![](./media/image78.jpeg)
+<p align="center" Figure 2-21 </p>   
+
+14. Check your Box instance to see the generated threats for it
+
+![](./media/image79.jpeg)
+<p align="center" Figure 2-22 </p> 
+
+15. Click on the threats to check their details
+
+![](./media/image80.jpeg)
+<p align="center" Figure 2-23 </p> 
+
+****
+
+## Module 3: Oracle CASB Monitoring Oracle Cloud Infrastructure
+
+Oracle CASB has the broadest support of infrastructure as cloud
+services (IaaS). It enables you to monitor infrastructure provided by
+Amazon Web Services, Microsoft Azure, and Oracle Infrastructure Cloud
+(OCI). With Oracle CASB you can monitor all layers of your IT.
+ 
+To monitor OCI, CASB requires credentials with the appropriate OCI
+access. This section explains how to complete these steps. To
+accomplish this you’ll first need to create an account, group and
+policy within OCI. As a part of those steps you will require a signed
+RSA key.
+ 
+Once you have the OCI credentials, then you’ll register the OCI tenant
+within Oracle CASB for monitoring. Please follow the steps below to
+complete the registration process.
+
+
+1. First, sign into your cloud account
+
+![](./media/image81.jpeg)
+<p align="center" Figure 3-1 </p> 
+
+2. Go to the dashboard
+    
+    *  Click on the menu in the bottom left corner of the cloud service ![](./media/image82.png)
+    
+
+    *  Click Open Service console
+
+![](./media/image83.jpeg)
+<p align="center" Figure 3-2 </p> 
+ 
+Note: if you do not see any Compute instance in the dashboard, click
+to Customize Dashboard and select Show for Compute.
+
+3. Click on the Navigation ![](./media/image2.png) menu at the top left to add users
+
+
+4. Scroll down, click on Identity Users
+
+  ![](./media/image84.jpeg)
+  <p align="center" Figure 3-3 </p> 
+
+5.  Click create user
+
+![](./media/image85.jpeg)
+<p align="center" Figure 3-4 </p> 
+
+6.  Populate fields as shown below.
+
+7.  Click Create
+
+  ![](./media/image86.jpeg)
+  <p align="center" Figure 3-5 </p> 
+
+8.  Click Groups in the left hand menu
+    
+    *  Click Create Group button
+    
+    *  Populate name and description fields as shown below
+    
+    *  Click Submit
+    ![](./media/image87.jpeg)
+    <p align="center" Figure 3-6 </p> 
+
+9.  Click Policies in the left hand menu
+    
+    * Select Compartment from the dropdown menu
+    
+    * Click on the root compartment. In order to create the policy, it
+        must be on the root compartment.
+
+  ![](./media/image88.jpeg)
+  <p align="center" Figure 3-7 </p> 
+
+10.  Create the policy
+    
+  * Click create policy
+    
+  * Populate fields as shown below
+    
+  * Click Create
+    ![](./media/image89.jpeg)
+    <p align="center" Figure 3-8 </p> 
+
+11.  Click on Groups
+    
+  * Click on the group we just created
+    
+  * Click Add user to Group (to the previously created CASB group)
+    
+  * Select user created previously(MY_CASB_ACCOUNT) and click add
+
+ ![](./media/image90.jpeg)
+<p align="center" Figure 3-9 </p> 
+
+12. Now you have to create a new key pair. Ensure that you have a
+    public/private key pair available for use by Oracle Cloud
+    Infrastructure (OCI) before you prepare and register an OCI instance
+    to be monitored by Oracle CASB Cloud Service.
+    
+    * In Oracle CASB, select Configuration from the Navigation menu. If the Navigation Menu is not displayed,click the Navigation Menu icon in the upper left corner ![](./media/image2.png)
+    
+    
+    * From the Configuration submenu, select **CASB Key-Pair Management**.
+    
+    * If the Key generation date is not new enough, according to your organization's security policies, click Create new keys.
+    
+    * Click Generate new keys.
+
+    * The User public key field is updated with a new key value. ![](./media/image91.png)
+  
+
+13. Click Copy to Clipboard icon to copy the User public key value to the clipboard. ![](./media/image92.png)
+
+
+14. You can also use the Download icon to download the public key to a
+    file.
+![](./media/image93.jpeg)
+<p align="center" Figure 3-10 </p> 
+
+15.  Go to OCI, Click Identity and then Users
+    
+  * Click on the user we previously created.
+    
+  * Add a public key we generated to the user
+    
+  * Click on API Keys
+    
+  * Click on Add Public Key
+  ![](./media/image94.jpeg)
+  <p align="center" Figure 3-11 </p> 
+
+16. Copy/Paste the public key from CASB into OCI.
+    
+    * Include the lines “Begin Public Key” and “End Public Key”
+    
+    * Click Add
+
+![](./media/image95.jpeg)
+<p align="center" Figure 3-12 </p> 
+
+### We’ll now show you how to register an application to monitor activity in OCI.
+
+1. Open a new tab on your browser and go to the Oracle CASB dashboard
+
+2. Select Applications from the Navigation menu in the upper left corner ![](./media/image2.png)
+
+
+3. Click Add/Modify App
+
+4. Select OCI and Click Next (bottom right corner of the screen)
+
+  ![](./media/image96.jpeg)
+  <p align="center" Figure 3-13 </p> 
+
+5. Enter unique name into the field for your OCI instance. Then click Next
+
+![](./media/image97.jpeg)
+<p align="center" Figure 3-14 </p> 
+
+6. As you can see, you can add three types of OCI instances in Oracle
+    CASB Cloud Service, based on the type of OCI compartment that is
+    monitored:
+
+![](./media/image98.jpeg)
+<p align="center" Figure 3-15 </p> 
+
+  - **OCI Tenancy** - the root compartment that contains all of your
+    organization's compartments and other Oracle Cloud Infrastructure
+    cloud resources. Everything in all compartments and sub-compartments
+    is monitored.
+
+  - **Compartment under a registered Tenancy** - a specified compartment
+    under a registered OCI tenancy. Only the collection of related
+    resources within the specified compartment, which are accessible
+    only by certain groups that have been given permission by an
+    administrator in your organization, are monitored.
+
+  When you register a compartment inside a tenancy that is already
+  registered in Oracle CASB Cloud Service, the compartment inherits
+  access credentials from the parent tenancy, so you only have to
+  specify the compartment name.
+
+  - **A Standalone Compartment** – an OCI compartment that is accessed
+    directly, without first registering the OCI tenancy in Oracle CASB
+    Cloud Service. As with a compartment under a registered tenancy,
+    only the collection of related resources within the specified
+    compartment, which are accessible only by certain groups that have
+    been given permission by an administrator in your organization, are
+    monitored.
+
+  In our case, we will select the first option.
+
+7. Go to OCI
+
+8.  Copy Tenancy OCID and paste into Tenancy OCID field.
+
+9.  To get the tenancy OCID from the Oracle Cloud Infrastructure Console, go to the Tenancy Details page:
+
+  Open the navigation menu, under Governance and Administration, go to **Administration** and click **Tenancy Details.**
+  
+  ![](./media/image99.jpeg)
+  <p align="center" Figure 3-16 </p> 
+  
+  The tenancy OCID is shown under **Tenancy Information**. Click **Copy** to copy it to your clipboard.
+  
+  ![](./media/image100.jpeg)
+  <p align="center" Figure 3-17 </p> 
+
+10. Get the user's OCID in the Console on the page showing the user's
+    details. To get to that page:
+    
+    * If you're signed in as the user: Open the **User** menu ) in the upper right corner and click **User Settings**. ![](./media/image101.png)
+        
+    
+    * If you're an administrator doing this for another user: Open the
+        navigation menu. Under **Governance and Administration**, go to
+        **Identity** and click **Users**. Select the user created from
+        the list (MY_CASB_ACCOUNT).
+
+![](./media/image102.jpeg)
+<p align="center" Figure 3-18 </p> 
+
+11. Now back to the OCI app in Oracle CASB. Ensure all of the fields are
+    populated with the Tenancy OCID and User OCID credentials as shown
+    below:
+    
+    * Click test credentials. You have to receive the green
+        notification that the direct connection was initiated
+        successfully before the submit button will appear.
+    
+    * Click **Submit**
+
+![](./media/image103.jpeg)
+<p align="center" Figure 3-19 </p> 
+
+12. You should see the screen above.
+
+    * Click **Done**
+  
+  ![](./media/image104.jpeg)
+  <p align="center" Figure 3-20 </p> 
+
+****
+
+## Module 4: Create a Policy for OCI
+ 
+ You’ll now create a policy in Oracle CASB that triggers a policy alert
+ every time a user is created in OCI.
+
+1.  Click on Configuration (Left-hand menu)
+    
+    * Select Policy Management
+
+![](./media/image55.jpeg)
+<p align="center" Figure 4-1 </p> 
+
+2.  Click New Policy
+    
+    * Fill out the fields as shown below.
+  
+    * Click Next
+
+![](./media/image105.jpeg)
+<p align="center" Figure 4-2 </p> 
+
+3.  Fill out the fields as shown below. Click Next.
+
+![](./media/image106.jpeg)
+<p align="center" Figure 4-3 </p> 
+
+4.  Click Next
+
+![](./media/image107.jpeg)
+<p align="center" Figure 4-4 </p> 
+
+5.  Click Next
+
+![](./media/image108.jpeg)
+<p align="center" Figure 4-5 </p> 
+
+6.  Populate fields as shown below. Click Next.
+
+ ![](./media/image109.jpeg)
+ <p align="center" Figure 4-6 </p> 
+
+7.  Review details previously entered. Click Submit.
+![](./media/image110.jpeg)
+<p align="center" Figure 4-7 </p> 
+
+8.  Your screen should show the green notification that a new policy has
+    been added.
+
+![](./media/image111.jpeg)
+<p align="center" Figure 4-8 </p> 
+
+### We must now trigger the policy that we created
+
+9.  In the OCI Console under the compute tile press the menu for Compute ![](./media/image82.png)
+
+    
+10. Click Open Service Console
+    ![](./media/image112.jpeg)
+    <p align="center" Figure 4-9 </p> 
+
+11. Open the Navigation menu in the top left corner
+    
+    *  Navigate to Identity ![](./media/image2.png)    
+    *  Click Users
+    
+    ![](./media/image113.jpeg)
+    <p align="center" Figure 4-10 </p> 
+
+12. This will take you to the create user screen. Click Create User
+![](./media/image114.jpeg)
+<p align="center" Figure 4-11 </p>
+
+
+13. Name your user and fill out the description. The rest can remain
+    blank. Press Create
+
+![](./media/image115.jpeg)
+<p align="center" Figure 4-12 </p>
+
+### YOU HAVE NOW CREATED A USER WHICH WILL TRIGGER THE CASB USER POLICY
+
+ ![](./media/image116.jpeg)
+ <p align="center" Figure 4-13 </p>
+
+14. After some minutes, you will be able to see the policy alert in the
+    Oracle CASB dashboard. Go to Applications and click to the OCI
+    recently added instance to see the health summary
+
+![](./media/image117.jpeg)
+<p align="center" Figure 4-14 </p>
+
+15. As you can see, there is a policy alert. Click on View Details to
+    see the specifics of the user creation event.
+
+![](./media/image118.jpeg)
+<p align="center" Figure 4-15 </p>
 
 ****
 **You have successfully connected and monitor third-party apps and OCI with Oracle CASB Cloud Service.**
