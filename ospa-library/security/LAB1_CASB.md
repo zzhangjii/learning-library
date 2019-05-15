@@ -357,7 +357,7 @@ You will now create a policy in CASB that will trigger an alert every time a use
 
 We must now trigger the policy that we created
 
-10. Log in to the ![Salesforce console](https://developer.salesforce.com) as the **user we created to be monitored by Oracle CASB**
+10. Log in to the [Salesforce console](https://developer.salesforce.com) as the **user we created to be monitored by Oracle CASB**
 
 11. Once logged in to Salesforce, you should be able to see the dashboard
 
