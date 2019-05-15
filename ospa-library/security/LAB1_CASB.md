@@ -320,7 +320,7 @@ This is the last step we need to complete in SalesForce.
 ![CASB SF completion](./media/casb_sf_complete.png)
 <p align="center" Figure 1-37 </p>  
 
-
+[Back to Top](#table-of-contents)
 ****
 
 ## Module 2:  Create a policy alert and display threats
@@ -470,6 +470,8 @@ We must now trigger the policy that we created
 
 ![](./media/image80.jpeg)
 <p align="center" Figure 2-23 </p> 
+
+[Back to Top](#table-of-contents)
 
 ****
 
@@ -719,6 +721,8 @@ to Customize Dashboard and select Show for Compute.
   ![](./media/image104.jpeg)
   <p align="center" Figure 3-20 </p> 
 
+[Back to Top](#table-of-contents)
+
 ****
 
 ## Module 4:  Create a Policy for OCI
@@ -818,6 +822,8 @@ every time a user is created in OCI.
 ![](./media/image118.jpeg)
 <p align="center" Figure 4-15 </p>
 
+[Back to Top](#table-of-contents)
+
 ****
 
 ## Module 5:  Run A Report in CASB
@@ -847,6 +853,8 @@ available.
 
 ![](./media/image121.jpeg)
 <p align="center" Figure 5-3 </p>
+
+[Back to Top](#table-of-contents)
 
 ****
 
