@@ -26,7 +26,7 @@ As part of this first part of the module we will enrol two applications, Box and
 ![Box Console](./media/box_console.png)
 <p align="center">Figure 1-1</p>
 
-* Click Sign up
+* Click **Sign up**
 
 ![Box Sign Up](./media/box_signup.png)
 <p align="center">Figure 1-2</p>
@@ -36,7 +36,7 @@ As part of this first part of the module we will enrol two applications, Box and
 ![Box Select Plan](./media/box_selectplan.png)
 <p align="center">Figure 1-3</p>
 
-* Enter required information and click Submit, you will receive a verification email
+* Enter required information and click **Submit**, you will receive a verification email
 
 ![Box Verify Account](./media/box_verifyaccount.png)
 <p align="center">Figure 1-4</p>
@@ -53,18 +53,18 @@ As part of this first part of the module we will enrol two applications, Box and
 <p align="center">Figure 1-5</p>
 
 
-* Select Custom App and click next
+* Select **Custom App** and click **Next**
 
 ![Box Create Application](./media/box_createapp_2.png)
 <p align="center">Figure 1-6</p>
 
-* Select the recommended authentication method OAuth 2.0 with JWT (Server Authentication) and click next
+* Select the recommended authentication method OAuth 2.0 with JWT (Server Authentication) and click **Next**
 
 ![Box Create Application](./media/box_authentication.png)
 <p align="center">Figure 1-7</p>
 
 
-* Give an unique name to your app and click Create App
+* Give an unique name to your app and click **Create App**
 
 ![Box Create Application](./media/box_uniquename.png)
 <p align="center">Figure 1-8</p>
@@ -118,7 +118,7 @@ At a minimum, the user should be able to run new reports and access existing rep
 <p align="center">Figure 1-13</p>
 
 
-* Click *Save*
+* Click **Save**
 
 
 * In the users list you should be able now to see the Oracle CASB Cloud Service user that you just created.
@@ -159,7 +159,7 @@ To register a Box instance with the Oracle CASB Cloud Service, you need the user
 * Login to your Cloud dashboard and open Oracle CASB Cloud Service console
 * Select Applications from the Navigation menu.
 * Click **Add/Modify App**
-* In the Select an app type page, click the icon for box and click Next.
+* In the Select an app type page, click the icon for box and click **Next**.
 
 
 ![CASB add box](./media/casb_addbox.png)
@@ -170,7 +170,7 @@ To register a Box instance with the Oracle CASB Cloud Service, you need the user
 ![CASB box name](./media/casb_boxname.png)
 <p align="center">Figure 1-17</p>
 
-* Click Next.
+* Click **Next**.
 * In the Select monitoring type page, select Push controls and monitor to have Oracle
 CASB Cloud Service set your preferred values in the application and subsequently monitor for deviations from these values.
 
@@ -179,7 +179,7 @@ CASB Cloud Service set your preferred values in the application and subsequently
 
 * Oracle CASB Cloud Service generates a security control alert in Risk Events whenever it detects a mismatch between the selections that you make on this page and the settings in the Box instance.
 
-* Click Next.
+* Click **Next**.
 
 * In the Select security controls page, select the Standard security controls. In this mode, you will ensure that these values are set to the application's own defaults.
 * Select the checkbox.
@@ -187,7 +187,7 @@ CASB Cloud Service set your preferred values in the application and subsequently
 ![CASB box security controls](./media/casb_box_securitycontrols.png)
 <p align="center">Figure 1-19</p>
 
-* Click Next.
+* Click **Next**.
 * In the Enter credentials page, select Sign in with Box username and password.
 * Enter the credentials for the dedicated co-admin user that you set up to communicate with Oracle CASB Cloud Service.
   * User name. The username of the Oracle CASB Cloud Service user.
@@ -196,7 +196,7 @@ CASB Cloud Service set your preferred values in the application and subsequently
 ![CASB box testing credentials](./media/casb_box_credentials.png)
 <p align="center">Figure 1-20</p>
 
-* When you are done entering your credentials, click Test Credentials. A new window pops up to ask you if you set the right permissions for that user in your Box account. Click Ok.
+* When you are done entering your credentials, click **Test Credentials**. A new window pops up to ask you if you set the right permissions for that user in your Box account. Click **Ok**.
 
 ![CASB box accept credentials](./media/casb_box_credentials_2.png)
 <p align="center">Figure 1-21</p>
@@ -214,15 +214,15 @@ CASB Cloud Service set your preferred values in the application and subsequently
 You’ll now add SalesForce as a sanctioned application for monitoring in Oracle CASB, so this business critical application remains compliant with security standards.
 
 1. Navigate to https://developer.salesforce.com/
-    * Click the sign-up button in the top right corner
+    * Click the **Sign-up** button in the top right corner
     * Enter the required information
-    * Click Sign me up
+    * Click **Sign me up**
 
 ![SF registration](./media/sf_registration.png)
 <p align="center">Figure 1-22</p>
 
 
-2. You will get an email to confirm your account. Click Verify Account
+2. You will get an email to confirm your account. Click **Verify Account**
 
 
 ![SF verification](./media/sf_verification.png)
@@ -237,7 +237,7 @@ You’ll now add SalesForce as a sanctioned application for monitoring in Oracle
 
 4. Login to your Salesforce account.
 5. On the left Panel navigate to Users => Profiles
-    * Click new profile
+    * Click **New Profile**
 
 ![SF Create profile](./media/sf_profile.png)
 <p align="center">Figure 1-25</p>
@@ -250,7 +250,7 @@ You’ll now add SalesForce as a sanctioned application for monitoring in Oracle
 7. Press save
 
 8. Navigate to Users => Users 
-    * Click New User
+    * Click **New User**
 
 ![SF create user](./media/sf_createuser.png)
 <p align="center">Figure 1-27</p>
@@ -280,7 +280,7 @@ This is the last step we need to complete in SalesForce.
 ![CASB SF enrolment](./media/casb_sf_enroll.png)
 <p align="center">Figure 1-31</p>
 
-13. Enter a unique name for you instance. Click the checkboxes from the picture below. Click Next.
+13. Enter a unique name for you instance. Click the checkboxes from the picture below. Click **Next**.
 
 ![CASB SF Unique name](./media/casb_sf_uniquename.png)
 <p align="center">Figure 1-32</p>
@@ -306,7 +306,7 @@ This is the last step we need to complete in SalesForce.
 <p align="center">Figure 1-36</p>
 
 
-18. Success! You will now be able to monitor SalesForce! Click Done to finish
+18. Success! You will now be able to monitor SalesForce! Click **Done** to finish
 
 ![CASB SF completion](./media/casb_sf_complete.png)
 <p align="center">Figure 1-37</p>
@@ -322,35 +322,35 @@ You will now create a policy in CASB that will trigger an alert every time a use
 1. Login to your cloud platform account and select Oracle CASB Cloud Service.
 2. Select Configuration in the Navigation menu to the left 
 3. Select Policy Management
-4. Click New Policy
+4. Click **New Policy**
     * Fill out the fields as shown below
-    * Click Next
+    * Click **Next**
 
 ![CASB Create new policy](./media/casb_sf_newpolicy.png)
 <p align="center">Figure 2-1</p>
 
 
-5. Fill out the fields as shown below. Click Next
+5. Fill out the fields as shown below. Click **Next**
 
 ![CASB Create new policy_2](./media/casb_sf_newpolicy_2.png)
 <p align="center">Figure 2-2</p>
 
-6. Click Next
+6. Click **Next**
 
 ![CASB Create new policy_3](./media/casb_sf_newpolicy_3.png)
 <p align="center">Figure 2-2</p>
 
-7. Click Next
+7. Click **Next**
 
 ![CASB Create new policy_4](./media/casb_sf_newpolicy_4.png)
 <p align="center">Figure 2-3</p>
 
-8. Populate fields as shown below. You can fill the message box with anything you consider such as "Verify SalesForce login activities". click Next
+8. Populate fields as shown below. You can fill the message box with anything you consider such as "Verify SalesForce login activities". click **Next**
 
 ![CASB Create new policy_5](./media/casb_sf_newpolicy_5.png)
 <p align="center">Figure 2-4</p>
 
-9. Review details previously entered and click submit
+9. Review details previously entered and click **Submit**
 
 ![CASB Create new policy_6](./media/casb_sf_newpolicy_review.png)
 <p align="center">Figure 2-5</p>
@@ -377,7 +377,7 @@ We must now trigger the policy that we created
 
 
 ****
-**You have successfully connected and run an operation against ATP with Oracle OML. We will use OML in other labs.**
+**You have successfully connected and monitor third-party apps and OCI with Oracle CASB Cloud Service.**
 
 ***END OF LAB***
 
