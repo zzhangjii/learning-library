@@ -328,6 +328,8 @@ This is the last step we need to complete in SalesForce.
 In Oracle CASB you can create application specific to specify the monitoring you want for your sanctioned applications. This adds another layer of customizable security for you. Oracle CASB also has pre-made Managed Policies for the applications to make sure application specific security can be enabled from the beginning.
 You will now create a policy in CASB that will trigger an alert every time a user is logged in to SalesForce.
 
+### Create a policy
+
 1. Login to your cloud platform account and select Oracle CASB Cloud Service.
 2. Select Configuration in the Navigation menu to the left 
 3. Select Policy Management
@@ -384,7 +386,7 @@ We must now trigger the policy that we created
 ![CASB SF alert_2](./media/casb_sf_polictyalerts_2.png)
 <p align="center" Figure 2-8 </p>  
 
-### We will now do an action in Box account that will be detected as a threat in Oracle CASB
+### Trigger action in Box account that will be detected as a threat in Oracle CASB
 
 
 1. Check your IP. You can use any service or go to google and type `my ip`
@@ -397,9 +399,7 @@ We must now trigger the policy that we created
 
 ![Check IP](./media/casb_manageip.png)
 <p align="center" Figure 2-10 </p>  
-
-![](./media/image68.jpeg)
-<p align="center" Figure 2-11 </p>  
+ 
 
 3.  Click Add IP Address in the Blacklist section
 
@@ -493,6 +493,7 @@ Once you have the OCI credentials, then you’ll register the OCI tenant
 within Oracle CASB for monitoring. Please follow the steps below to
 complete the registration process.
 
+### Register OCI tenant
 
 1. First, sign into your cloud account
 
@@ -619,7 +620,7 @@ to Customize Dashboard and select Show for Compute.
 ![](./media/image95.jpeg)
 <p align="center" Figure 3-12 </p> 
 
-### We’ll now show you how to register an application to monitor activity in OCI.
+###  Register OCI in CASB to monitor activity.
 
 1. Open a new tab on your browser and go to the Oracle CASB dashboard
 
@@ -673,9 +674,9 @@ to Customize Dashboard and select Show for Compute.
 
 7. Go to OCI
 
-8.  Copy Tenancy OCID and paste into Tenancy OCID field.
+8. Copy Tenancy OCID and paste into Tenancy OCID field.
 
-9.  To get the tenancy OCID from the Oracle Cloud Infrastructure Console, go to the Tenancy Details page:
+9. To get the tenancy OCID from the Oracle Cloud Infrastructure Console, go to the Tenancy Details page:
 
   Open the navigation menu, under Governance and Administration, go to **Administration** and click **Tenancy Details.**
   
@@ -730,6 +731,8 @@ to Customize Dashboard and select Show for Compute.
 You’ll now create a policy in Oracle CASB that triggers a policy alert
 every time a user is created in OCI.
 
+### Create a policy
+
 1.  Click on Configuration (Left-hand menu)
     
     * Select Policy Management
@@ -776,7 +779,7 @@ every time a user is created in OCI.
 ![](./media/image111.jpeg)
 <p align="center" Figure 4-8 </p> 
 
-### We must now trigger the policy that we created
+### Trigger the policy that we created
 
 9.  In the OCI Console under the compute tile press the menu for Compute ![](./media/image82.png)
 
@@ -804,7 +807,7 @@ every time a user is created in OCI.
 ![](./media/image115.jpeg)
 <p align="center" Figure 4-12 </p>
 
-### YOU HAVE NOW CREATED A USER WHICH WILL TRIGGER THE CASB USER POLICY
+***YOU HAVE NOW CREATED A USER WHICH WILL TRIGGER THE CASB USER POLICY***
 
  ![](./media/image116.jpeg)
  <p align="center" Figure 4-13 </p>
@@ -832,6 +835,8 @@ Oracle CASB offers a variety of predefined reports providing detailed
 insight into potential security risks. Unless noted otherwise, reports
 by default display three days of data, with up to 90 days of data
 available.
+
+### Run a report
 
 1.  Open the Navigation menu in the top left corner of the CASB Dashboard ![](./media/image2.png)
     
@@ -874,6 +879,8 @@ type of data that needs to be detected and secured.
  
 In this you’ll see how Oracle CASB is able to detect sensitive
 information in a managed document in your Box account.
+
+### Config Data Loss Protection in CASB
 
 1.  Click to Configuration DLP Management
 
