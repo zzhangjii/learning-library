@@ -171,7 +171,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 12. Enter command 
 ```
-ssh -i id_rsa_user opc@129.213.63.223 -L 3000:localhost:3000
+ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE> -L 3000:localhost:3000
 ```
 **NOTE:** User name is opc. This will enable port forwarding on local host which is needed to access Grafana dash board later on
 
