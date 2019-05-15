@@ -3,273 +3,238 @@
 
 ## Table of Contents
 
-- [Module 1: Download Client Credentials](#module-1--download-the-client-credentials-wallet)
+- [Module 1: Create and monitor a sanctioned application](#module-1--create-and-monitor-a-sanctioned-application)
 - [Module 2: Explore credentials wallet file information](#module-2--examining-the-wallet-file)
 - [Module 3: Connect to your ATP instance with SQL Developer](#module-3--connecting-to-the-database-using-sql-developer)
 - [Module 4: Connect to your ATP instance with Oracle ML Notebooks](#module-4--connecting-to-the-database-using-oracle-machine-learning-oml)
 
 ***** 
 
-## Module 1:  Download the Client Credentials (wallet)
+## Module 1:  Create and monitor a sanctioned application
 
-The connection wallet provides the only authentication information that
-can be used to connect to your ATP database. This wallet must be
-downloaded to the client that will be connecting to the database. The
-wallet can be downloaded from two locations, the Database Details page
-or the Service Console
+Oracle CASB monitors your sanctioned applications after a simple registration process. This enables you to manage risk events from a centralized platform instead of having to enter the individual application to see and remediate security threats. Oracle CASB monitors risk events such as blacklisted IP addresses, anomalous user behavior and unwanted security configurations in the application.
+As part of this first part of the module we will enrol two applications, Box and SalesForce.
 
-1. The wallet is downloaded from the **Administration** page in the ATP
-service console. Continuing from where we left off in the previous lab,
-select **Download Client Credentials:**
+1. Navigate to https://developer.box.com/
+*  Click the Console button in the top right corner
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.23.10%20PM.png](./media/image2.png)
+![Box Console](./media/box_console.png)
 <p align="center">Figure 1-1</p>
 
-2. Specify a password of your choice for the wallet. Note that this
-password is separate from the **Admin** user password created earlier
-(but the same password can be used). Make sure you know where the file
-gets downloaded to so you can find it on your system.
+* Click Sign up
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.23.30%20PM.png](./media/image3.png)
+![Box Sign Up](./media/box_signup.png)
 <p align="center">Figure 1-2</p>
 
-3. **Alternatively** use the DB Connection button in the main Database
-Details page to download the credentials:
+* Select the section Individual Plans and click to Sign Up in the Individual account
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.23.36%20PM.png](./media/image4.png)
+![Box Select Plan](./media/box_selectplan.png)
 <p align="center">Figure 1-3</p>
 
-4. This step opens up a screen where the wallet can be downloaded as well as
-connection strings be copied from (more on this in other modules)
+* Enter required information and click Submit, you will receive a verification email
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.23.44%20PM.png](./media/image5.png)
+![Box Verify Account](./media/box_verifyaccount.png)
+<p align="center">Figure 1-4</p>
 
-[Back to Top](#table-of-contents)
 
-***** 
+* Once you have the account for Box, you have to configure it for monitoring.
 
-## Module 2:  Examining the Wallet File
+2. Now that you have create your developer account on Box, let's configure the service account for Monitoring
 
-1. Navigate to the location in your system where the file was downloaded
-(typically your DOWNLOADS directory). 
-2. In this example the file will be called *wallet\_ATPXWEEK.zip*, the format of the file is always
-“wallet\_$dbname.zip”. 
-3. Extract the contents of the wallet into a
-directory (using a zip utility, usually by right clicking on the file),
-you will find the following files:
+* Log in to developer.box.com
+* Go to My Apps and create an application
 
-![](./media/image6.png)
-<p align="center">Figure 2-1</p>
+![Box Create Application](./media/box_createapp_1.png)
+<p align="center">Figure 1-5</p>
 
-4. There are 4 files you will be working with during the different labs.
-Some tools use the wallet file (.zip) and some use specific files
-contained in the wallet. The files used in the labs are:
 
-1.  **wallet\_ATPXWEEK.zip** – the wallet itself
+* Select Custom App and click next
 
-2.  **sqlnet.ora** – points to the location of the wallet for sqlnet
-    connections
+![Box Create Application](./media/box_createapp_2.png)
+<p align="center">Figure 1-6</p>
 
-3.  **tnsnames.ora** – connection description for the database service
-    (please note this file contains connection description for all the
-    databases that exist in that cloud account)
+* Select the recommended authentication method OAuth 2.0 with JWT (Server Authentication) and click next
 
-4.  **ojdbc.properties** – points to the location of the wallet for jdbc
-    connections
-    
-[Back to Top](#table-of-contents)   
+![Box Create Application](./media/box_authentication.png)
+<p align="center">Figure 1-7</p>
 
-***** 
 
-## Module 3:  Connecting to the Database using SQL Developer 
+* Give an unique name to your app and click Create App
 
-*(Make sure you are running the latest version of SQL Developer 18.4. Some older versions will not work with ATP, see lab introductions on how to install)*
+![Box Create Application](./media/box_uniquename.png)
+<p align="center">Figure 1-8</p>
 
-1. Start SQL Developer (by clicking the icon on your desktop or selecting
-from the Windows Start menu) and create a connection for your database
-using the default administrator account, ADMIN, by following these
-steps.
 
-2. Click the **Create Connection** icon in the Connections toolbox on the
-top left of the SQL Developer homepage.
+* Click on your new application, and in the section Configuration, select the following:
 
-![](./media/image7.png)
-<p align="center">Figure 3-1</p>
+  1. Authentication Method: OAuth 2.0 with JWT (Server Authentication)
+  ![Box Config app](./media/box_appconfig_1.png)
+<p align="center">Figure 1-9</p>
 
-3. The new Database Connection screen will appear:
+  2. Application access: **Enterprise**
+  ![Box Config app](./media/box_appconfig_2.png)
+<p align="center">Figure 1-10</p>
 
-![](./media/image8.png)
-<p align="center">Figure 3-2</p>
+  3. Save your changes. An Admin Console tab is now added to your main Box.com account.
 
-4. Fill in the connection details as below:
+3. Create the Dedicated Oracle CASB Cloud Service User
+  * Create a dedicated user for Oracle CASB Cloud Service in the Box account that you want to monitor. This user is dedicated for use by Oracle CASB Cloud Service and shouldn’t be used for any other purpose.
+  * Log in to the Box developer account.
+  * Select the Admin Console tab.
+  * Click the Users & Groups section.
+  * Click the + Users button.
 
-**Connection Name:** `admin`
-**Username:** `admin`
-**Password:** *The admin password you specified during database provisioning*
-**Connection Type:** *Cloud Wallet*
-**Configuration File:** Enter the full path for the wallet file you downloaded before (in my example wallet\_ATPXWEEK.zip), or click the Browse button to point to the location of the file.
 
+ ![Box Config app](./media/box_usercreation.png)
+<p align="center">Figure 1-11</p>
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.24.09%20PM.png](./media/image9.png)
-<p align="center">Figure 3-3</p>
 
-**Service:** *select the service configured specifically for ATP services ( **$dbname\_TP** service) for you database. Many services may be listed but make sure you pick the one for with the database name you created. In this example its **atpxweek\_TP.
+* In the Name field, give the service account an identifier (example: occs.trialservice).
+* If you are going to be the tenant master administrator for Oracle CASB Cloud Service, then provide your email address in the Email field and click **Add User**
+* Open the recently created user and grant this user the Co-Admin role. This account must have either the Admin or Co-Admin role.
 
-5. Test your connection by clicking the **Test** button, if it succeeds
+ ![Box Config app](./media/box_useredit.png)
+<p align="center">Figure 1-12</p>
 
-6. Save your connection information by clicking **Save**
+* Assign additional privileges to this user.
+At a minimum, the user should be able to run new reports and access existing reports. If you want to be able to push security controls from Oracle CASB Cloud Service to this Box instance, then this user must also have these privileges:
 
-7. Connect to your database by clicking the **Connect** button.
+`Users and Groups: Manage users`
 
-8. See below for completed input and test. Notice also that after you save
-your connection it will appear on the list of connections on the top
-left corner of the main dashboard, under connections.
+`Users and Groups: Manage groups`
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.28.02%20PM.png](./media/image10.png)
-<p align="center">Figure 3-4</p>
+`Reports and Settings: View settings and apps for your company`
 
-9. Now that you are connected run test a query. The ATP (or ADW) database
-you created contains the sample Oracle Sales History (SH) schema, we
-will use this schema to run a test query to make sure everything is
-working correctly. 
+`Reports and Settings: Edit settings and apps for your company`
 
-10. Copy the SQL below and paste it on the query builder
-screen in SQL Developer (with standard Windows copy and paste), then
-click F5 or the “Run Script” button as indicated below. Make sure you
-are connected to your database, per the last step on the previous
-process.
+`Reports and Settings: Run new reports and access existing reports`
 
-```
-    SELECT channel_desc, TO_CHAR(SUM(amount_sold),'9,999,999,999')
-    SALES$,  
-    RANK() OVER (ORDER BY SUM(amount_sold)) AS default_rank,  
-    RANK() OVER (ORDER BY SUM(amount_sold) DESC NULLS LAST) AS
-    custom_rank  
-    FROM sh.sales, sh.products, sh.customers, sh.times, sh.channels,
-    sh.countries  
-    WHERE sales.prod_id=products.prod_id AND
-    sales.cust_id=customers.cust_id  
-    AND customers.country_id = countries.country_id AND
-    sales.time_id=times.time_id  
-    AND sales.channel_id=channels.channel_id  
-    AND times.calendar_month_desc IN ('2000-09', '2000-10')  
-    AND country_iso_code='US'  
-    GROUP BY channel_desc;
-```
+![Box Config user](./media/box_priv.png)
+<p align="center">Figure 1-13</p>
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.28.36%20PM.png](./media/image11.png)
-<p align="center">Figure 3-4</p>
 
-11. And you will see the result of your query on the bottom **Script Output** section
+* Click *Save*
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.28.45%20PM.png](./media/image12.png)
-<p align="center">Figure 3-5</p>
 
-**You have successfully connected and run an operation against ATP with SQL Developer. We will use SQL Developer throughout other labs.**
+* In the users list you should be able now to see the Oracle CASB Cloud Service user that you just created.
 
-[Back to Top](#table-of-contents) 
-***** 
+![Box New Account](./media/box_newaccount.png)
+<p align="center">Figure 1-14</p>
 
-## Module 4:  Connecting to the Database using Oracle Machine Learning (OML)
 
-Another tool that can be used to connect and develop in ATP is the
-included Oracle Machine Learning OML Notebook based environment. Because
-OML is easy to access from anywhere and included with the ATP service it
-provides an easy and fast environment to work with ATP. This
-browser-based application provides a web interface to run SQL queries
-and scripts, which can be grouped together within a notebook. Notebooks
-can be used to build single reports, collections of reports and
-dashboards. OML provides a simple way to share workbooks with other OML
-users.
+* Check the email account that you provided for that user.
+You should have a message from Box telling you to set a password for this user.
 
-## OML Key Features
+![Box Verification](./media/box_password_verification.png)
+<p align="center">Figure 1-15</p>
 
-  - Collaborative SQL notebook UI for data scientists  
+* Create a complex password for this account.
+For example, at least 12 characters in length, with a combination of uppercase and lowercase letters, numbers, and special characters.
 
-  - Packaged with Oracle Autonomous Transaction Processing Cloud Service
+![Box New Password](./media/box_newpassword.png)
+<p align="center">Figure 1-15</p>
 
-  - Easy access to shared notebooks, templates, permissions, scheduler,
-    etc.
 
-  - Access to 30+ parallel, scalable in-database implementations of
-    [machine learning
-    algorithms](https://docs.oracle.com/en/database/oracle/oracle-database/12.2/dmcon/algorithms.html#GUID-B901A29B-218C-4F37-91E0-AA94631364E3)
+* You will use this user name and password to register your Box instance in Oracle CASB Cloud Service. Have a recovery procedure in case there are issues with the account.
 
-  - SQL and PL/SQL scripting language support
 
-  - Enables and Supports Deployments of Enterprise Machine Learning
-    Methodologies.
+4. Adding a Box instance (Push Security Controls Mode)
 
-Once you have a database created in ATP, we need to create an OML user,
-which is equivalent to creating a database user.
+* You will add or register your Box instance to Oracle CASB Cloud Service to be monitored, and with the capability to push security configuration settings.
+To register a Box instance with the Oracle CASB Cloud Service, you need the user ID and password that belongs to a Box administrator with the appropriate privileges in the account that you want to monitor. This user must be dedicated to the Oracle CASB Cloud Service. We will use the co-admin user that we created in the previous steps.
 
-1. If you are not already logged into the ATP Service Console, in the main
-ATP service page select Service Console:
+* In push security controls mode, Oracle CASB Cloud Service checks various security control values in the Box instance, and sets them to the values that you set at registration time. Later, you receive notifications when these security configuration settings change.
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.28.53%20PM.png](./media/image13.png)
-<p align="center">Figure 4-1</p>
+* Oracle CASB Cloud Service monitors these settings in Box:
 
-2. On the next page log in with your ADMIN ATP user name/password and click **Sign in:**
+  1. Password policies, authentication policies, and session settings: These are in the Box business settings page, Security tab.
+  2. Settings: These additional security settings are in the Box business settings page, Content & Sharing tab.
 
-3. Select Administration from the top left and once on the Administration
-page select **Manage Oracle ML Users**:
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.29.00%20PM.png](./media/image14.png)
-<p align="center">Figure 4-2</p>
+* Login to your Cloud dashboard and open Oracle CASB Cloud Service console
+* Select Applications from the Navigation menu.
+* Click **Add/Modify App**
+* In the Select an app type page, click the icon for box and click Next.
 
-4. If required (you may not see this page), log into the OML Administration
-console which is different than the database administration console but
-uses the same ADMIN account created when the database was created. Fill
-in the **ADMIN password** and click **Sign In**
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.29.08%20PM.png](./media/image15.png)
-<p align="center">Figure 4-3</p>
+![CASB add box](./media/casb_addbox.png)
+<p align="center">Figure 1-16</p>
 
-5. Next create the actual OML user. Click the **Create** button:
+* In the Select an instance page, enter a unique name for your application instance.
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.29.14%20PM.png](./media/image16.png)
-<p align="center">Figure 4-4</p>
+![CASB box name](./media/casb_boxname.png)
+<p align="center">Figure 1-17</p>
 
-6. This will open up the user creation page, fill in the information for
-your new OML user and click **Create**. This is a completely new user
-account that will be used anytime you want to access OML. Make sure you
-keep this information. Notice that you can specify an email address
-where your user information and a direct link to the OML login will be
-emailed to you. This will help you later when you need to reconnect to
-OML.
+* Click Next.
+* In the Select monitoring type page, select Push controls and monitor to have Oracle
+CASB Cloud Service set your preferred values in the application and subsequently monitor for deviations from these values.
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.29.21%20PM.png](./media/image17.png)
-<p align="center">Figure 4-5</p>
+![CASB box push config](./media/casb_boxpush.png)
+<p align="center">Figure 1-18</p>
 
-7. **You now have a new OML user\!** To connect to OML as your new user,
-click on the Home Icon on the top right, pointed at by the arrow (or the
-link you received by email). This will open up a new tab with the OML
-home page. This time log in with the user you just created.
+* Oracle CASB Cloud Service generates a security control alert in Risk Events whenever it detects a mismatch between the selections that you make on this page and the settings in the Box instance.
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.29.27%20PM.png](./media/image18.png)
-<p align="center">Figure 4-6</p>
+* Click Next.
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.29.36%20PM.png](./media/image19.png)
-<p align="center">Figure 4-7</p>
+* In the Select security controls page, select the Standard security controls. In this mode, you will ensure that these values are set to the application's own defaults.
+* Select the checkbox.
 
+![CASB box security controls](./media/casb_box_securitycontrols.png)
+<p align="center">Figure 1-19</p>
 
-8. You are connected as an OML Notebook user. Run the same query we ran in
-SQL Developer now in OML. Select **Run SQL Scripts** from Quick Actions:
+* Click Next.
+* In the Enter credentials page, select Sign in with Box username and password.
+* Enter the credentials for the dedicated co-admin user that you set up to communicate with Oracle CASB Cloud Service.
+  1. User name. The username of the Oracle CASB Cloud Service user.
+  2. Password. The password of the Oracle CASB Cloud Service user.
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.29.44%20PM.png](./media/image20.png)
-<p align="center">Figure 4-8</p>
+![CASB box testing credentials](./media/casb_box_credentials.png)
+<p align="center">Figure 1-20</p>
 
-9. Copy the same SQL statement you ran in SQL Developer above and paste it
-right under the **%script** statement then select the **Run all
-Paragraphs** icon, as shown below:
+* When you are done entering your credentials, click Test Credentials. A new window pops up to ask you if you set the right permissions for that user in your Box account. Click Ok.
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.29.49%20PM.png](./media/image21.png)
-<p align="center">Figure 4-9</p>
+![CASB box accept credentials](./media/casb_box_credentials_2.png)
+<p align="center">Figure 1-21</p>
 
-10. The results are shown below (and same as on SQL Developer):
+* It can take a minute or two for the application to receive and accept your credentials.
+* When testing is done, you see a success message.
+* Click **Submit**
+* Click **Done**
+* When the registration process is complete, your application instance appears on the Applications page. You start to see data for this instance after 30 minutes or so; although a complete synchronization will take longer.
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.29.55%20PM.png](./media/image22.png)
-<p align="center">Figure 4-10</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 **You have successfully connected and run an operation against ATP with Oracle OML. We will use OML in other labs.**
 

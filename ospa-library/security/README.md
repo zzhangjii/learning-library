@@ -7,7 +7,7 @@
 We recommend you to read the following guide before begin with the labs activities. There are some pre-requisites that you must satisfy in order to proceed with the workshop.
 If you have met the pre-requisites and verified your access already, you can start working on the Hands-on Labs.
 
-- [Lab 1: Oracle CASB Cloud Service]()
+- [Lab 1: Oracle CASB Cloud Service](LAB1_CASB.md)
 - [Lab 2: Oracle Identity Cloud Service]()
 - [Demo: Oracle Management Cloud]()
 
