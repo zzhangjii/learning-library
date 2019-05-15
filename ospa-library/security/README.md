@@ -5,11 +5,7 @@
 ## Hands-On Labs
 
 We recommend you to read the following guide before begin with the labs activities. There are some pre-requisites that you must satisfy in order to proceed with the workshop.
-If you have met the pre-requisites and verified your access already, you can start working on the Hands-on Labs.
-
-- [Lab 1: Oracle CASB Cloud Service](LAB1_CASB.md)
-- [Lab 2: Oracle Identity Cloud Service]()
-- [Demo: Oracle Management Cloud]()
+Please read them very carefuly in order to avoid issues during the labs session.
 
 ****
 
@@ -126,7 +122,17 @@ Click on the **General Menu** locate at the top-left of your screen and then cli
 <p align="center">Figure 1-6</p>
 
 
-Now you have access to main Oracle Identity Cloud Service dashboard. You can bookmark this URL to access the console.
+You have access to main Oracle Identity Cloud Service dashboard. You can bookmark this URL to access the console.
+
+****
+
+Now that you have completed this guide, you can proceed with the workshop.
+
+- [Lab 1: Oracle CASB Cloud Service](LAB1_CASB.md)
+- [Lab 2: Oracle Identity Cloud Service]()
+- [Demo: Oracle Management Cloud]()
+
+
 
 [Back to the top](#Security-Hands-On-Labs)
 
