@@ -114,6 +114,9 @@ During this lab, you will take the Docker image that you created in Lab 200 and 
   ![](images/300/LabGuide200-f1749ef3.png)
 
 - In your SSH session **Type** `oci setup config` responding to the prompts as follows:
+
+  **NOTE:** (Your still the root user)
+
   - Enter a location for your config: **accept default by pressing enter**
   - Enter a user OCID: copy your OCID by clicking **Copy** in the **User Information** box in OCI Console. **Paste** into your oci setup for the user OCID and hit Return.
 
