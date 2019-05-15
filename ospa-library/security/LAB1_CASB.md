@@ -15,6 +15,8 @@
 Oracle CASB monitors your sanctioned applications after a simple registration process. This enables you to manage risk events from a centralized platform instead of having to enter the individual application to see and remediate security threats. Oracle CASB monitors risk events such as blacklisted IP addresses, anomalous user behavior and unwanted security configurations in the application.
 As part of this first part of the module we will enrol two applications, Box and SalesForce.
 
+### Add Box as a Sanctioned Application
+
 1. Navigate to https://developer.box.com/
 *  Click the Console button in the top right corner
 
@@ -202,6 +204,73 @@ CASB Cloud Service set your preferred values in the application and subsequently
 * Click **Done**
 * When the registration process is complete, your application instance appears on the Applications page. You start to see data for this instance after 30 minutes or so; although a complete synchronization will take longer.
 
+****
+
+### Add SalesForce as a Sanctioned Application
+
+You’ll now add SalesForce as a sanctioned application for monitoring in Oracle CASB, so this business critical application remains compliant with security standards.
+
+1. Navigate to https://developer.salesforce.com/
+* Click the sign-up button in the top right corner
+* Enter the required information
+* Click Sign me up
+
+![SF registration](./media/sf_registration.png)
+<p align="center">Figure 1-22</p>
+
+
+2. You will get an email to confirm your account. Click Verify Account
+
+
+![SF verification](./media/sf_verification.png)
+<p align="center">Figure 1-23</p>
+
+
+3. Create a password for your account
+
+![SF Create Password](./media/sf_password.png)
+<p align="center">Figure 1-24</p>
+
+
+4. Login to your Salesforce account.
+5. On the left Panel navigate to Users => Profiles
+* Click new profile
+
+![SF Create profile](./media/sf_profile.png)
+<p align="center">Figure 1-25</p>
+
+6. Existing Profile needs to be set to System Administrator and Profile Name can be named whatever you like, for example, CASBUSER.
+
+![SF Set profile](./media/sf_setprofile.png)
+<p align="center">Figure 1-26</p>
+
+7. Press save
+
+8. Navigate to Users => Users 
+* Click New User
+
+![SF create user](./media/sf_createuser.png)
+<p align="center">Figure 1-27</p>
+
+9. The following Screen will appear. Fill in the required fields. User License must be set to Salesforce
+* Profile name will be the name of the profile we previously created
+* Save
+
+![SF modify user](./media/sf_modifyuser.png)
+<p align="center">Figure 1-28</p>
+
+
+10. An email will be triggered allowing for verification
+
+![SF verification](./media/sf_verification_newuser.png)
+<p align="center">Figure 1-29</p>
+
+11. Click to Verify account in the link attached in the email and fill password details for the new user. Now you will see the following:
+
+![SF verification](./media/sf_dashboard.png)
+<p align="center">Figure 1-30</p>
+
+This is the last step we need to complete in SalesForce.
 
 
 
@@ -209,25 +278,7 @@ CASB Cloud Service set your preferred values in the application and subsequently
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+****
 
 
 
