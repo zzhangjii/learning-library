@@ -267,15 +267,46 @@ You’ll now add SalesForce as a sanctioned application for monitoring in Oracle
 
 11. Click to Verify account in the link attached in the email and fill password details for the new user. Now you will see the following:
 
-![SF verification](./media/sf_dashboard.png)
+![SF Dahsboard](./media/sf_dashboard.png)
 <p align="center">Figure 1-30</p>
 
 This is the last step we need to complete in SalesForce.
 
+12. Now go to the CASB Console and select the SalesForce application to add the instance in Oracle CASB.
+
+![CASB SF enrolment](./media/casb_sf_enroll.png)
+<p align="center">Figure 1-31</p>
+
+13. Enter a unique name for you instance. Click the checkboxes from the picture below. Click Next.
+
+![CASB SF Unique name](./media/casb_sf_uniquename.png)
+<p align="center">Figure 1-32</p>
+
+14. Select Push controls and monitor
+
+![CASB SF Push](./media/casb_sf_push.png)
+<p align="center">Figure 1-33</p>
+
+15. Select Standard Security Controls. Check Approval box and Press Next
+
+![CASB SF security controls](./media/casb_sf_securitycontrols.png)
+<p align="center">Figure 1-34</p>
+
+16. You will redirected to the below page. Login with your User Credentials (the user that you created recently in SalesForce)
+
+![CASB SF credentials](./media/casb_sf_allowcredentials.png)
+<p align="center">Figure 1-35</p>
+
+17. Allow Access
+
+![CASB SF Allow Access](./media/casb_sf_allowaccess.png)
+<p align="center">Figure 1-36</p>
 
 
+18. Success! You will now be able to monitor SalesForce! Click Done to finish
 
-
+![CASB SF completion](./media/casb_sf_complete.png)
+<p align="center">Figure 1-37</p>
 
 
 ****
