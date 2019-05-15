@@ -5,8 +5,7 @@
 
 - [Module 1: Create and monitor a sanctioned application](#module-1--create-and-monitor-a-sanctioned-application)
 - [Module 2: Create a Policy Alert and Display Threats](#module-2--create-a-policy-alert-and-display-threats)
-- [Module 3: Connect to your ATP instance with SQL Developer](#module-3--connecting-to-the-database-using-sql-developer)
-- [Module 4: Connect to your ATP instance with Oracle ML Notebooks](#module-4--connecting-to-the-database-using-oracle-machine-learning-oml)
+
 
 ***** 
 
