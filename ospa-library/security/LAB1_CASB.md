@@ -9,7 +9,6 @@
 - [Module 4: Create a Policy for OCI](#module-4--create-a-policy-for-oci)
 
 
-
 ***** 
 
 ## Module 1:  Create and monitor a sanctioned application
