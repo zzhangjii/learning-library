@@ -406,19 +406,14 @@ We must now trigger the policy that we created
 ![](./media/image69.jpeg)
 <p align="center" Figure 2-12 </p>  
 
-4.  Enter your IP address and select your recently added Box application
-    instance
+4.  Enter your IP address and select your recently added Box application instance
 
 ![](./media/image70.jpeg)
 <p align="center" Figure 2-13 </p>  
 
 5.  Click Save. Your IP address should appear now in the black list
 
-6.  To make Oracle CASB detect a threat, log in to your Box account and
-    do any activity. For example, you can upload a file with the word
-    Top Secret as content (required for the last lab). Oracle CASB
-    detects that you’ve logged in Box through the blacklisted IP address
-    and generates an alert
+6.  To make Oracle CASB detect a threat, log in to your Box account and do any activity. For example, you can upload a file with the word **Top Secret** as content (required for the last lab). Oracle CASB detects that you’ve logged in Box through the blacklisted IP address and generates an alert
 
 ![](./media/image71.png)
 <p align="center" Figure 2-14 </p>  
@@ -444,9 +439,7 @@ We must now trigger the policy that we created
 ![](./media/image75.jpeg)
 <p align="center" Figure 2-18 </p>  
 
-11. These actions should have generated a threat in Oracle CASB for your
-    Box account. It should also be displayed in the access map as red
-    pins referencing suspicious events.
+11. These actions should have generated a threat in Oracle CASB for your Box account. It should also be displayed in the access map as red pins referencing suspicious events.
 
 ![](./media/image76.jpeg)
 <p align="center" Figure 2-19 </p>  
@@ -478,20 +471,11 @@ We must now trigger the policy that we created
 ## Module 3:  Oracle CASB Monitoring Oracle Cloud Infrastructure
 
 
-Oracle CASB has the broadest support of infrastructure as cloud
-services (IaaS). It enables you to monitor infrastructure provided by
-Amazon Web Services, Microsoft Azure, and Oracle Infrastructure Cloud
-(OCI). With Oracle CASB you can monitor all layers of your IT.
+Oracle CASB has the broadest support of infrastructure as cloud services (IaaS). It enables you to monitor infrastructure provided by Amazon Web Services, Microsoft Azure, and Oracle Infrastructure Cloud (OCI). With Oracle CASB you can monitor all layers of your IT.
  
-To monitor OCI, CASB requires credentials with the appropriate OCI
-access. This section explains how to complete these steps. To
-accomplish this you’ll first need to create an account, group and
-policy within OCI. As a part of those steps you will require a signed
-RSA key.
+To monitor OCI, CASB requires credentials with the appropriate OCI access. This section explains how to complete these steps. To accomplish this you’ll first need to create an account, group and policy within OCI. As a part of those steps you will require a signed RSA key.
  
-Once you have the OCI credentials, then you’ll register the OCI tenant
-within Oracle CASB for monitoring. Please follow the steps below to
-complete the registration process.
+Once you have the OCI credentials, then you’ll register the OCI tenant within Oracle CASB for monitoring. Please follow the steps below to complete the registration process.
 
 ### Register OCI tenant
 
@@ -503,15 +487,12 @@ complete the registration process.
 2. Go to the dashboard
     
     *  Click on the menu in the bottom left corner of the cloud service ![](./media/image82.png)
-    
-
     *  Click Open Service console
 
 ![](./media/image83.jpeg)
 <p align="center" Figure 3-2 </p> 
  
-Note: if you do not see any Compute instance in the dashboard, click
-to Customize Dashboard and select Show for Compute.
+Note: if you do not see any Compute instance in the dashboard, click to Customize Dashboard and select Show for Compute.
 
 3. Click on the Navigation ![](./media/image2.png) menu at the top left to add users
 
@@ -547,8 +528,7 @@ to Customize Dashboard and select Show for Compute.
     
     * Select Compartment from the dropdown menu
     
-    * Click on the root compartment. In order to create the policy, it
-        must be on the root compartment.
+    * Click on the root compartment. In order to create the policy, it must be on the root compartment.
 
   ![](./media/image88.jpeg)
   <p align="center" Figure 3-7 </p> 
@@ -574,10 +554,7 @@ to Customize Dashboard and select Show for Compute.
  ![](./media/image90.jpeg)
 <p align="center" Figure 3-9 </p> 
 
-12. Now you have to create a new key pair. Ensure that you have a
-    public/private key pair available for use by Oracle Cloud
-    Infrastructure (OCI) before you prepare and register an OCI instance
-    to be monitored by Oracle CASB Cloud Service.
+12. Now you have to create a new key pair. Ensure that you have a public/private key pair available for use by Oracle Cloud Infrastructure (OCI) before you prepare and register an OCI instance to be monitored by Oracle CASB Cloud Service.
     
     * In Oracle CASB, select Configuration from the Navigation menu. If the Navigation Menu is not displayed,click the Navigation Menu icon in the upper left corner ![](./media/image2.png)
     
@@ -594,8 +571,7 @@ to Customize Dashboard and select Show for Compute.
 13. Click Copy to Clipboard icon to copy the User public key value to the clipboard. ![](./media/image92.png)
 
 
-14. You can also use the Download icon to download the public key to a
-    file.
+14. You can also use the Download icon to download the public key to a file.
 ![](./media/image93.jpeg)
 <p align="center" Figure 3-10 </p> 
 
@@ -626,7 +602,6 @@ to Customize Dashboard and select Show for Compute.
 
 2. Select Applications from the Navigation menu in the upper left corner ![](./media/image2.png)
 
-
 3. Click Add/Modify App
 
 4. Select OCI and Click Next (bottom right corner of the screen)
@@ -639,9 +614,7 @@ to Customize Dashboard and select Show for Compute.
 ![](./media/image97.jpeg)
 <p align="center" Figure 3-14 </p> 
 
-6. As you can see, you can add three types of OCI instances in Oracle
-    CASB Cloud Service, based on the type of OCI compartment that is
-    monitored:
+6. As you can see, you can add three types of OCI instances in Oracle CASB Cloud Service, based on the type of OCI compartment that is monitored:
 
 ![](./media/image98.jpeg)
 <p align="center" Figure 3-15 </p> 
@@ -688,27 +661,17 @@ to Customize Dashboard and select Show for Compute.
   ![](./media/image100.jpeg)
   <p align="center" Figure 3-17 </p> 
 
-10. Get the user's OCID in the Console on the page showing the user's
-    details. To get to that page:
+10. Get the user's OCID in the Console on the page showing the user's details. To get to that page:
     
     * If you're signed in as the user: Open the **User** menu ) in the upper right corner and click **User Settings**. ![](./media/image101.png)
-        
-    
-    * If you're an administrator doing this for another user: Open the
-        navigation menu. Under **Governance and Administration**, go to
-        **Identity** and click **Users**. Select the user created from
-        the list (MY_CASB_ACCOUNT).
+    * If you're an administrator doing this for another user: Open the navigation menu. Under **Governance and Administration**, go to **Identity** and click **Users**. Select the user created from the list (MY_CASB_ACCOUNT).
 
 ![](./media/image102.jpeg)
 <p align="center" Figure 3-18 </p> 
 
-11. Now back to the OCI app in Oracle CASB. Ensure all of the fields are
-    populated with the Tenancy OCID and User OCID credentials as shown
-    below:
+11. Now back to the OCI app in Oracle CASB. Ensure all of the fields are populated with the Tenancy OCID and User OCID credentials as shown below:
     
-    * Click test credentials. You have to receive the green
-        notification that the direct connection was initiated
-        successfully before the submit button will appear.
+    * Click test credentials. You have to receive the green notification that the direct connection was initiated successfully before the submit button will appear.
     
     * Click **Submit**
 
@@ -728,8 +691,7 @@ to Customize Dashboard and select Show for Compute.
 
 ## Module 4:  Create a Policy for OCI
  
-You’ll now create a policy in Oracle CASB that triggers a policy alert
-every time a user is created in OCI.
+You’ll now create a policy in Oracle CASB that triggers a policy alert every time a user is created in OCI.
 
 ### Create a policy
 
@@ -773,8 +735,7 @@ every time a user is created in OCI.
 ![](./media/image110.jpeg)
 <p align="center" Figure 4-7 </p> 
 
-8.  Your screen should show the green notification that a new policy has
-    been added.
+8.  Your screen should show the green notification that a new policy has been added.
 
 ![](./media/image111.jpeg)
 <p align="center" Figure 4-8 </p> 
@@ -785,8 +746,9 @@ every time a user is created in OCI.
 
     
 10. Click Open Service Console
-    ![](./media/image112.jpeg)
-    <p align="center" Figure 4-9 </p> 
+    
+![](./media/image112.jpeg)
+<p align="center" Figure 4-9 </p> 
 
 11. Open the Navigation menu in the top left corner
     
@@ -797,12 +759,12 @@ every time a user is created in OCI.
     <p align="center" Figure 4-10 </p> 
 
 12. This will take you to the create user screen. Click Create User
+
 ![](./media/image114.jpeg)
 <p align="center" Figure 4-11 </p>
 
 
-13. Name your user and fill out the description. The rest can remain
-    blank. Press Create
+13. Name your user and fill out the description. The rest can remain blank. Press Create
 
 ![](./media/image115.jpeg)
 <p align="center" Figure 4-12 </p>
@@ -812,15 +774,12 @@ every time a user is created in OCI.
  ![](./media/image116.jpeg)
  <p align="center" Figure 4-13 </p>
 
-14. After some minutes, you will be able to see the policy alert in the
-    Oracle CASB dashboard. Go to Applications and click to the OCI
-    recently added instance to see the health summary
+14. After some minutes, you will be able to see the policy alert in the Oracle CASB dashboard. Go to Applications and click to the OCI recently added instance to see the health summary
 
 ![](./media/image117.jpeg)
 <p align="center" Figure 4-14 </p>
 
-15. As you can see, there is a policy alert. Click on View Details to
-    see the specifics of the user creation event.
+15. As you can see, there is a policy alert. Click on View Details to see the specifics of the user creation event.
 
 ![](./media/image118.jpeg)
 <p align="center" Figure 4-15 </p>
@@ -831,10 +790,8 @@ every time a user is created in OCI.
 
 ## Module 5:  Run A Report in CASB
 
-Oracle CASB offers a variety of predefined reports providing detailed
-insight into potential security risks. Unless noted otherwise, reports
-by default display three days of data, with up to 90 days of data
-available.
+Oracle CASB offers a variety of predefined reports providing detailed insight into potential security risks. Unless noted otherwise, reports
+by default display three days of data, with up to 90 days of data available.
 
 ### Run a report
 
@@ -867,18 +824,9 @@ available.
 ## Module 6:  Data Loss Protection
 
  
-Oracle CASB’s Data Loss Protection (DLP) scans and detects files in
-sanctioned application for sensitive data that follows a defined
-information type pattern in a rule. Oracle CASB can then manage the
-situation by tagging the detected files as containing sensitive data,
-quarantining the files in folders that only
- 
-administrators can access or completely delete the files from the
-application. It’s easy to use and has the flexibility to define any
+Oracle CASB’s Data Loss Protection (DLP) scans and detects files in sanctioned application for sensitive data that follows a defined information type pattern in a rule. Oracle CASB can then manage the situation by tagging the detected files as containing sensitive data, quarantining the files in folders that only administrators can access or completely delete the files from the application. It’s easy to use and has the flexibility to define any
 type of data that needs to be detected and secured.
- 
-In this you’ll see how Oracle CASB is able to detect sensitive
-information in a managed document in your Box account.
+In this you’ll see how Oracle CASB is able to detect sensitive information in a managed document in your Box account.
 
 ### Config Data Loss Protection in CASB
 
@@ -892,17 +840,12 @@ information in a managed document in your Box account.
 ![](./media/image123.jpeg)
 <p align="center" Figure 6-2 </p>
 
-3.  In the first section Content, select the
-    Information Types box and –Top Secret- Keyword and click Next.
-    ![](./media/image124.jpeg)
-    <p align="center" Figure 6-3 </p>
+3.  In the first section Content, select the Information Types box and –Top Secret- Keyword and click Next.
+    
+![](./media/image124.jpeg)
+<p align="center" Figure 6-3 </p>
 
-4.  In the second section Remediation, select the options shown below
-    and click Next. This section describes the action to take after the
-    selected content is detected. In this case, the document will be
-    classified as highly confidential, an alert will be created and the
-    document will be quarantined (the document will be moved to a path
-    only accessible by the administrator)
+4.  In the second section Remediation, select the options shown below and click Next. This section describes the action to take after the selected content is detected. In this case, the document will be classified as highly confidential, an alert will be created and the document will be quarantined (the document will be moved to a path only accessible by the administrator)
 
 ![](./media/image125.jpeg)
 <p align="center" Figure 6-4 </p>
@@ -920,11 +863,7 @@ information in a managed document in your Box account.
 ![](./media/image128.jpeg)
 <p align="center" Figure 6-7 </p>
 
-8.  To enable Oracle CASB scan the files in your Box account, you have
-    to enter the internal domain of your account. In this case, the
-    internal domain is a custom domain that you can set in the
-    administrative section for your Box account. Check the box Enable
-    DLP and select the root folder to monitor.
+8.  To enable Oracle CASB scan the files in your Box account, you have to enter the internal domain of your account. In this case, the internal domain is a custom domain that you can set in the administrative section for your Box account. Check the box Enable DLP and select the root folder to monitor.
 
 ![](./media/image129.jpeg)
 <p align="center" Figure 6-8 </p>
@@ -934,9 +873,7 @@ information in a managed document in your Box account.
 ![](./media/image130.jpeg)
 <p align="center" Figure 6-9 </p>
 
-10. Now you will be able to run retroactive scans to detect any Top
-    Secret words in the documents in Box. For that, go to DLP Management
-    section and click to Retroactive scan.
+10. Now you will be able to run retroactive scans to detect any Top Secret words in the documents in Box. For that, go to DLP Management section and click to Retroactive scan.
 
 ![](./media/image131.jpeg)
 <p align="center" Figure 6-10 </p>
@@ -965,9 +902,7 @@ information in a managed document in your Box account.
 ![](./media/image136.jpeg)
 <p align="center" Figure 6-15 </p>
 
-16. Now you can also verify if your file was quarantined. Log in to your
-    Box account and click to My Files. You will be able to see how
-    Oracle CASB quarantined your file.
+16. Now you can also verify if your file was quarantined. Log in to your Box account and click to My Files. You will be able to see how Oracle CASB quarantined your file.
 
 ![](./media/image137.jpeg)
 <p align="center" Figure 6-16 </p>
