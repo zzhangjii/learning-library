@@ -15,7 +15,8 @@ If you have met the pre-requisites and verified your access already, you can sta
 
 ## Lab Guide Overview
 
-Here is a brief overview of what you can expect to accomplish in these lab exercises.  The purpose of the labs is to familiarize yourself with the features and functionality of Oracle CASB Cloud Service, Oracle Identity Cloud Service and Oracle Management Cloud.
+Here is a brief overview of what you can expect to accomplish in these lab exercises.  
+The purpose of the labs is to familiarize yourself with the features and functionality of Oracle CASB Cloud Service, Oracle Identity Cloud Service and Oracle Management Cloud.
 To optimize your experience there are some general guidelines that will help you get the most from these lab exercises.
 
 - Read through an entire section before executing any of its steps.  Merely following the screen shots or script files without understanding the flow will diminish your learning experience, so think about what you are doing and why.  If you aren’t sure, ask questions.
