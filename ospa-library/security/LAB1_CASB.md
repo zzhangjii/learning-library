@@ -1,5 +1,5 @@
-![](./media/adbtitle.png)
-# Lab 1:  Connecting to Autonomous Database
+![](./media/securitytitle.png)
+# Lab 1:  Oracle CASB Cloud Service
 
 ## Table of Contents
 
