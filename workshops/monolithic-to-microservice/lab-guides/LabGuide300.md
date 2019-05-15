@@ -90,23 +90,30 @@ During this lab, you will take the Docker image that you created in Lab 200 and 
 
 - You should still have an SSH session connected to the OCI VM where you installed Docker in the previous lab. If you have closed it, reopen it using either PuTTY or `ssh` from the command line, as you did in the previous lab.
 
-- From _inside the SSH session_, run the following command to install the OCI CLI, which will allow you to interact with your cluster:
+- From _inside the SSH session_, run the following commands to install the OCI CLI, which will allow you to interact with your cluster. **Type or Copy and Paste**:
 
-  `bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"`
+  ```
+  sudo -s
+  bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
+  ```
 
   ![](images/300/LabGuide200-41638e46.png)
 
-- For each of the prompts, accept the default by **pressing enter**
+- For each of the prompts, accept the default by **pressing enter**:
 
   ![](images/300/LabGuide200-dd2c64cd.png)
 
-- When the install is finished you'll configure the OCI CLI by running `oci setup config` in your SSH session.
+- **Type** the following to reset your SHELL environment:
 
-- In a web browser on your local machine (where the OCI Console is displayed), open your **User Settings** page: use the navigation menu to go to **Identity->Users** and select **View User Details** from the three-dots menu for the Cloud user you logged in as. You will need some details from this page to complete the setup.
+  ```
+  exec -l $SHELL
+  ```
+
+- In a web browser go back to the OCI Console and open your **User Settings** page: Use the navigation menu to go to **Identity->Users** and select **View User Details** from the three-dots menu for the Cloud user you logged in as. You will need some details from this page to complete the setup.
 
   ![](images/300/LabGuide200-f1749ef3.png)
 
-- After initiating `oci setup config`, respond to the prompts as follows:
+- In your SSH session **Type** `oci setup config` responding to the prompts as follows:
   - Enter a location for your config: **accept default by pressing enter**
   - Enter a user OCID: copy your OCID by clicking **Copy** in the **User Information** box in OCI Console. **Paste** into your oci setup for the user OCID and hit Return.
 
@@ -122,6 +129,8 @@ During this lab, you will take the Docker image that you created in Lab 200 and 
   - Enter a name for your key: **accept default by pressing enter**
   - Enter a passphrase for your private key: **accept default by pressing enter**
 
+  Example:
+
   ![](images/300/LabGuide200-315d446f.png)
 
 - You've just generated an RSA key pair that we will use to authenticate you to the OCI API. Click **back** to get back to the User Settings page in your browser, click **Add Public Key**
@@ -130,7 +139,7 @@ During this lab, you will take the Docker image that you created in Lab 200 and 
 
 - We need to copy and paste the public key into this box. In your _SSH session_, run the following command to output the public key:
 
-  `cat /home/opc/.oci/oci_api_key_public.pem`
+  `cat /root/.oci/oci_api_key_public.pem`
 
   ![](images/300/LabGuide200-6cead97f.png)
 
@@ -171,7 +180,7 @@ During this lab, you will take the Docker image that you created in Lab 200 and 
   
   This will output the contents of the file.
   
-- **Copy** the contents and **paste** them into a new text file on your local machine. Name the file `kubeconfig` and **Save the file wherever you'd like on your local machine**.
+- **Copy** the contents and **paste** them into a new text file on your local machine. Name the file `kubeconfig` and **Save the file wherever you'd like ON YOUR LOCAL MACHINE**.
 
   **NOTE**: Save the `kubeconfig` file as a plain text file, not as a .docx, .rtf, .html, etc.
 
@@ -258,9 +267,9 @@ docker push iad.ocir.io/<your-tenancy-name>/alphaoffice-rest:v1
 
 ### **STEP 5**: Install kubectl
 
-- In order to interact with your cluster and view the dashboard, you will need to install the Kubernetes command line interface, `kubectl`. We will do that now.
+- In order to interact with your cluster and view the dashboard, you will need to install the Kubernetes command line interface `kubectl`, ON YOUR LOCAL MACHINE. We will do that now.
 
-- The method you choose to install `kubectl` will depend on your operating system and any package managers that you may already use. The generic method of installation, downloading the binary file using `curl`, is given below (**run the appropriate command in a terminal or command prompt**). If you prefer to use a package manager such as apt-get, yum, homebrew, chocolatey, etc, please find the specific command in the [Kubernetes Documentation](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
+- The method you choose to install `kubectl` will depend on your operating system and any package managers that you may already use. The generic method of installation, downloading the binary file using `curl`, is given below (**run the appropriate command in a terminal or command prompt**). If you prefer to use a package manager such as apt-get, yum, homebrew, chocolatey, etc, please find the specific command in the [Kubernetes Documentation](https://kubernetes.io/docs/tasks/tools/install-kubectl/). The `cluster-info` and `get nodes` commands need to be working (returning information on your cluster) before you can proceed.
 
 
   **Windows**
@@ -318,7 +327,7 @@ docker push iad.ocir.io/<your-tenancy-name>/alphaoffice-rest:v1
     http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/
     ```
 
-- You are asked to authenticate to view the dashboard. Click **Choose kubeconfig file** and select the `kubeconfig` file you saved on your local server earlier. Click **Open**, then click **Sign In**.
+- You are asked to authenticate to view the dashboard. Click **Choose kubeconfig file** and select the `kubeconfig` configuration file you saved on your local server earlier. Click **Open**, then click **Sign In**.
 
   ![](images/300/LabGuide200-2a1a02ce.png)
 
@@ -337,7 +346,7 @@ docker push iad.ocir.io/<your-tenancy-name>/alphaoffice-rest:v1
 - Fill out the form with the following values:
 
   - App name: **alphaoffice-rest** (this name can be anything we want, and will be used to address our application from other services inside the cluster)
-  - Container image: **iad.ocir.io/{your-tenancy-name}/alphaoffice-rest:v1** (retrieve this URL from the `docker pull` command that you that you saved in the previous step. Do not include the `docker pull` portion, just the URL at the end, which is the location of our image in OCIR)
+  - Container image: Example: **iad.ocir.io/{your-tenancy-name}/alphaoffice-rest:v1** (retrieve this URL from the `docker pull` command that you that you saved in the previous step. **Do not include the `docker pull` portion**, just the URL at the end, which is the location of our image in OCIR)
   - Number of Pods: **1** (this can be customized)
   - Service: **External** (this will create a load balancer for our service)
   - Port: **80** (this is the port that will be exposed by the load balancer)
@@ -411,6 +420,18 @@ docker push iad.ocir.io/<your-tenancy-name>/alphaoffice-rest:v1
   ![](images/300/LabGuide300-4ed6486b.png)
 
 - Once again you should see JSON data returned. This method of executing commands inside running containers is great for debugging. Often, you will have running containers that do not have a load balancer in front of them (because they are only accessed by other services in the cluster, not end users), and being able to run commands inside of them can help you diagnose issues.
+
+- If you want to get back to the Kubernetes Dashboard then run the proxy command again:
+
+  **Windows**
+    ```bash
+    kubectl.exe proxy
+    ```
+
+  **Mac/Linux**
+    ```bash
+    ./kubectl proxy
+    ```
 
 - Now that our REST service is deployed to Kubernetes, let's build a user interface on top of it so that end users can consume our product catalog.
 
