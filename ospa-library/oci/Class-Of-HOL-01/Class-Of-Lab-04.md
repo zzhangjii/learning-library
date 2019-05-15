@@ -180,7 +180,7 @@ Policies](https://docs.cloud.oracle.com/iaas/Content/Block/Tasks/schedulingvolum
 
 4. In the next steps, we'll download a pre-configured web application and install it on our instance.  Download the application zip file and unzip the package into the opc home directory.  Use the *wget* command to download the static web application.
 
-```wget https://github.com/snafuz/oci-quickstart-lab/archive/master.zip```
+```wget https://github.com/dankingsley001/oci-dev/raw/master/Class-Of-HOL-01/static.zip```
 
 
 ![](./media/image104.png)
@@ -189,7 +189,7 @@ Policies](https://docs.cloud.oracle.com/iaas/Content/Block/Tasks/schedulingvolum
 
 Unzip the file into the opc home directory.
 
-```unzip master.zip```
+```unzip static.zip```
 
 ![](./media/image105.png)
 
