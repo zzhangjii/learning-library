@@ -29,7 +29,7 @@ As part of this first part of the module we will enrol two applications, Box and
 
 ### Add Box as a Sanctioned Application
 
-* Navigate to https://developer.box.com/
+* Navigate to [Developer Box](https://developer.box.com/)
   *  Click the Console button in the top right corner
 
 ![Box Console](./media/box_console.png)
@@ -222,7 +222,7 @@ CASB Cloud Service set your preferred values in the application and subsequently
 
 You’ll now add SalesForce as a sanctioned application for monitoring in Oracle CASB, so this business critical application remains compliant with security standards.
 
-* Navigate to https://developer.salesforce.com/
+* Navigate to [Developer SalesForce](https://developer.salesforce.com/)
     * Click the **Sign-up** button in the top right corner
     * Enter the required information
     * Click **Sign me up**
