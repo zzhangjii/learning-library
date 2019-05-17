@@ -44,7 +44,7 @@ Table of Contents
 [Lab 15: Enhanced Insights on Multiple Data Sets 63](#section)
 
 
-# LAB GuIDE OVerview
+# LAB Guide Overview
 
 These labs are designed to complement your training, reinforcing the key
 concepts by applying and demonstrating what you learn in the
