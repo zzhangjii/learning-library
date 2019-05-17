@@ -11,24 +11,15 @@
  
 # Lab Configuration and Details
 
- For the workshop lab exercises, the current version of the Oracle Identity Cloud Service (IDCS) is being demonstrated.
+For the workshop lab exercises, the current version of the Oracle Identity Cloud Service (IDCS) is being demonstrated.
  
- You will use Free Oracle Cloud trial accounts.
- 
- This workshop is hosted in the Oracle Public Cloud (OPC). It includes a combination of cloud services, hosted on-premises software and 3rd
- party software. Aside from the Identity Cloud Service, the remaining components are included to enable demonstrating integration, including
- identity synchronization, federation, authentication, SSO and more.
+This workshop is hosted in the Oracle Public Cloud (OPC). It includes a combination of cloud services, hosted on-premises software and 3rd
+party software. Aside from the Identity Cloud Service, the remaining components are included to enable demonstrating integration, including
+identity synchronization, federation, authentication, SSO and more.
 
- This workbook is primarily designed to provide the necessary
- instructions and context to allow you to complete the labs in the
- Oracle Identity Cloud Service Workshop. If you would like additional
- information about the Oracle solution, you can contact your local
- Oracle account team and/or review some of the following publicly
- available information about the solution.
+This workbook is primarily designed to provide the necessary instructions and context to allow you to complete the labs in the Oracle Identity Cloud Service Workshop. If you would like additional information about the Oracle solution, you can contact your local Oracle account team and/or review some of the following publicly available information about the solution.
 
- For consistency and for the ease of use-cases implementation, you will
- use a Gmail account. The following summarizes the components in our
- workshop:
+For consistency and for the ease of use-cases implementation, you will use a Gmail account. The following summarizes the components in our workshop:
  
 
   * [Oracle Identity Cloud](https://cloud.oracle.com/en_US/identity)
@@ -147,7 +138,7 @@
 
 ### Navigation between IDCS and Cloud My Services Dashboards
 
- * Personas:
+During the Personas:
  
  IDCS Administrator
  IDCS End User
