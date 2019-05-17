@@ -77,7 +77,6 @@ Download Oracle Data Visualization Desktop from here:
 Lab files for Attrition data and Web Sales data can be found in the
 GitHub repository.
 
-# 
 
 # Lab 1: GETTING STARTED
 
@@ -93,7 +92,8 @@ visualization homepage, menus and navigation.
 
 1.  Open the Oracle Data Visualization Desktop Homepage.
     
-    ![](./media/image5.png) Figure 1.1
+    ![](./media/image5.png)
+    <p align="center" Figure 1.1 </p>   
     
     1.  Note that the Homepage can be customized.
 
@@ -105,9 +105,11 @@ visualization homepage, menus and navigation.
     3.  Open existing data sets or make new data source connections and
         more
         
-        ![](./media/image6.png) Figure 1.2
+        ![](./media/image6.png) 
+        <p align="center" Figure 1.2 </p>  
         
         ![](./media/image7.png) Figure 1.3
+        <p align="center" Figure 1.3 </p> 
 
 3.  Click the same icon to return to the Homepage.
 
@@ -155,10 +157,15 @@ the imported data. Topics include:
     and select Data Set and then browse or drop the file in the window.
     In either case, the dataset will appear.
     
-    ![](./media/image9.png) Figure 2.2 ![](./media/image10.png) Figure
-    2.3
+![](./media/image9.png) 
+<p align="center" Figure 2.2 </p> 
     
-    ![](./media/image11.png) Figure 2.4
+![](./media/image10.png) 
+<p align="center" Figure 2.3 </p> 
+
+    
+![](./media/image11.png) 
+<p align="center" Figure 2.4 </p> 
 
 3.  Give the data set a logical name. For example, “HCM Data Set.”
     
