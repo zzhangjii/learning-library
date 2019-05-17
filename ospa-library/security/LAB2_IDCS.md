@@ -37,7 +37,6 @@
  workshop:
  
 
-
   * [Oracle Identity Cloud](https://cloud.oracle.com/en_US/identity)
 
   * [Oracle CASB Cloud Service](https://cloud.oracle.com/en_US/casb)
