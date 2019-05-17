@@ -467,7 +467,7 @@ https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_
  This lab is intended to demonstrate federated Single Sign-on (SSO)
  with a 3rd party SaaS application. The purpose is to illustrate the
  business value of having IDCS as a central Identity Provider for your
- growing portfolio of Oracle and non-Ora
+ growing portfolio of Oracle and non-Oracle.
  
  In this hands-on exercise, we will setup integration with
  **Salesforce** using SAML. IDCS will act as **IdP** (Identity
@@ -476,8 +476,7 @@ https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_
 
 ### Enable SSO on SalesForce
 
-*  Download IDCS Metadata to a local XML file. Metadata is available
-    from the following location - https://**yourtenant**/fed/v1/metadata. Depending on the browser you are using, the simplest way of doing this is to right click anywhere on the page and chose “Save as” option provide a name and save it as XML file. Try not to use the copy / paste option as the xml file may be altered.
+*  Download IDCS Metadata to a local XML file. Metadata is available from the following location - https://**yourtenant**/fed/v1/metadata. Depending on the browser you are using, the simplest way of doing this is to right click anywhere on the page and chose “Save as” option provide a name and save it as XML file. Try not to use the copy / paste option as the xml file may be altered.
 
  ![](./media/idcs47.jpeg)
  <p align="center" Figure 2-1 </p>
