@@ -488,9 +488,7 @@ https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_
  ![](./media/idcs48.jpeg)
  <p align="center" Figure 2-2 </p>
  
- * Log into Salesforce.
- 
- Note: you may have to select “Switch to Salesforce Classic”.
+ * Log into Salesforce. *Note: you may have to select “Switch to Salesforce Classic”.*
 
 *  Access Salesforce application using the URL provided after registration, click on the profile menu as per below print screen and select the option: **“Switch to Salesforce Classic”**.
 
