@@ -175,6 +175,8 @@ Before we create the Compute instance that will contain Docker and application d
 
 - Select the shape **VM.Standard.E2.2** and click **Select Shape**.
 
+  **NOTE: If the VM.Standard.E2.2 shape is not availible then select VM.Standard2.2**
+
   ![](images/200/27.1.2.PNG)
 
 - After entering the _Docker_ instance details your screen should look like:
