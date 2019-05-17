@@ -15,9 +15,6 @@
 ***** 
 
  
-
- 
-
 # Lab Configuration and Details
 
  For the workshop lab exercises, the current version of the Oracle Identity Cloud Service (IDCS) is being demonstrated.
@@ -27,120 +24,67 @@
  This workshop is hosted in the Oracle Public Cloud (OPC). It includes a combination of cloud services, hosted on-premises software and 3rd
  party software. Aside from the Identity Cloud Service, the remaining components are included to enable demonstrating integration, including
  identity synchronization, federation, authentication, SSO and more.
-  
+
+ This workbook is primarily designed to provide the necessary
+ instructions and context to allow you to complete the labs in the
+ Oracle Identity Cloud Service Workshop. If you would like additional
+ information about the Oracle solution, you can contact your local
+ Oracle account team and/or review some of the following publicly
+ available information about the solution.
+
  For consistency and for the ease of use-cases implementation, you will
  use a Gmail account. The following summarizes the components in our
  workshop:
  
- <span class="underline"Oracle Cloud Services</span
-
-  - [<span class="underline"Oracle Identity Cloud
-    Service</span](https://cloud.oracle.com/en_US/identity) (IDCS)
-
-  - [<span class="underline"Oracle Cloud Access Security
-    Broker</span](https://cloud.oracle.com/en_US/casb) (CASB)
 
 
-  - Salesforce – used for IDCS Application Integration and CASB Create
+  * [Oracle Identity Cloud](https://cloud.oracle.com/en_US/identity)
+
+  * [Oracle CASB Cloud Service](https://cloud.oracle.com/en_US/casb)
+
+  * Salesforce – used for IDCS Application Integration and CASB Create
     and Monitor a sanctioned Application use-cases
-
-  - Box – used for CASB Create and Monitor a sanctioned Application
-    use-case
-
-  - Google – used for IDCS Federation
-
-  - Okta – used for IDCS Federation
-
- <span class="underline"Third-party Components</span
-
-  - Postman – used for IDCS REST API User Management
 
  The following configuration information is provided to assist with
  accessing lab assets:
 
-  - <span class="underline"Workshop Actors</span
+  * Workshop Actors
     
-      - IDCS End Users (e.g. employees, customers, partners, etc.)
+      * IDCS End Users (e.g. employees, customers, partners, etc.)
     
-      - IDCS Administrators
+      * IDCS Administrators
 
 # Overview: Oracle Identity Cloud Service
 
 ## Introduction
 
- Identity Cloud Service is Oracle’s next generation comprehensive
- security and identity platform that provides an innovative, fully
- integrated service that delivers all the core
- 
- identity and access management capabilities through a Cloud platform
- “as a service”. The design of Identity Cloud Service (IDCS) is based
- on micro service architecture which is naturally aligned with Cloud
- principles of Scalability, Elasticity, Resilience, Ease of Deployment,
- Functional Agility, Technical Adoption and Organization Alignment.
+ Identity Cloud Service is Oracle’s next generation comprehensive security and identity platform that provides an innovative, fully integrated service that delivers all the core identity and access management capabilities through a Cloud platform “as a service”. The design of Identity Cloud Service (IDCS) is based on micro service architecture which is naturally aligned with Cloud principles of Scalability, Elasticity, Resilience, Ease of Deployment, Functional Agility, Technical Adoption and Organization Alignment.
  
  At high level, Oracle Identity Cloud Service offers the following
  functionalities:
 
-  - Identity & Access Management
+  * Identity & Access Management
 
-  - Integration with on-prem Active Directory or 3rd party Identity
+  * Integration with on-prem Active Directory or 3rd party Identity
     Systems
 
-  - Single-Sign-On (SSO)
+  * Single-Sign-On (SSO)
 
-  - User Authentication Service
+  * User Authentication Service
 
-  - Identity Federation service (SAML)
+  * Identity Federation service (SAML)
 
-  - OAuth services
+  * OAuth services
 
-  - Auditing & Reporting Services
+  * Auditing & Reporting Services
 
-## Concepts and Terminology
+### Concepts and Terminology
 
- This section provides a brief review of a few of the concepts and
- terms, which will be used throughout the workshop.
+ 
 
-  - **Oracle Public Cloud (OPC)** – OPC describes Oracle’s overall cloud
-    portfolio, which
+  * **OAUTH 2.0** – OAUTH is a standard protocol for delegating authorization. It’s a way for an entity to be authorized to access resources (services, API, data) stored in a remote provider. For example, an on-premises application might leverage the IDCS REST API to retrieve information about users or groups from IDCS for use within its application. The REST API is protected by the OAUTH service, to ensure the client application is registered and authorized to a specific scope of REST API. Thus, OAUTH prevents internet-visible services (such as IDCS REST API) from being consumed by an unauthorized user or application.
 
- consists of the industry’s broadest and most complete portfolio of
- SaaS, PaaS and IaaS cloud services. OPC services exist across the
- globe via dozens of global data centers.
-
-  - **SaaS / PaaS / IaaS** – These are the three service categories of
-    Oracle cloud services. **SaaS** stands for software-as-a-service and
-    more generally might represent cloud services such as Oracle
-    Customer Experience (CX), Salesforce.com, WorkDay, Office365, etc.
-    **PaaS** stands for platform-as-a-service and refers to middleware
-    services such as Java, database, integration, identity, etc.
-    **IaaS** stands for infrastructure-as-a-service and represents
-    services such as compute, network and storage. Top providers for
-    IaaS include Microsoft (Azure), Amazon (AWS) and Oracle.
-
-  - **Tenant** – a tenant represents a subscription to a cloud service.
-    Many of Oracle’s cloud services (including Identity Cloud Service)
-    are multi-tenant, which means that multiple customers (e.g.
-    departments, companies, organizations, agencies, etc.) subscribe to
-    and are serviced by a common cloud service operating in OPC. In a
-    multi-tenant scenario,
-
- each tenant has its own data, configuration settings, users and other
- service-related artefacts.
-
-  - **OAUTH 2.0** – OAUTH is a standard protocol for delegating
-    authorization. It’s a way for an entity to be authorized to access
-    resources (services, API, data) stored in a remote provider. For
-    example, an on-premises application might leverage the IDCS REST API
-    to retrieve information about users or groups from IDCS for use
-    within its application.
-
- The REST API is protected by the OAUTH service, to ensure the client
- application is registered and authorized to a specific scope of REST
- API. Thus, OAUTH prevents internet-visible services (such as IDCS REST
- API) from being consumed by an unauthorized user or application.
-
-  - **SAML 2.0** – SAML stands for *Security Assertion Mark-up
+  * **SAML 2.0** – SAML stands for *Security Assertion Mark-up
     Language*. It is a standard for federating user authentication. SAML
     defines two participating entities, the Service Provider and the
     Identity Provider. When a user attempts to access an application or
@@ -152,61 +96,13 @@
     and/or Identity Provider. As a service provider, IDCS enables
     self-service profile management, password reset, etc.
 
-  - **Identity Provider** – This type of provider, also known as an
+  * **Identity Provider** – This type of provider, also known as an
     Identity Assertion provider, provides identifiers for users who want
     to interact with Oracle Identity Cloud Service using a website
     that's external to Oracle Identity Cloud Service.
 
-## Advantages of the Oracle Solution
 
- This section briefly introduces some of the economical, business and
- technical benefits of the Oracle Identity Cloud Service solution:
-
-  - **Open and Standards-based** – Rapidly integrate cloud and
-    on-premises applications using a 100% open and standards-based
-    solution. Examples of supported standards include System for
-    Cross-domain Identity Management (SCIM), Open Authorization (OAUTH
-    2.0), Security Assertion Markup Language (SAML 2.0),
-    Representational State Transfer (REST), OpenID Connect and others\!
-
-  - **Secure Defense In-depth** – Benefit from layers of defense with
-    Oracle’s Identity Cloud Service hosted as an Oracle Public Cloud
-    (OPC) service and integrated with your on-premises enterprise
-    capabilities.
-
-  - **Hybrid Identity**– Manage user identities for both cloud and
-    on-premises applications with enterprise-grade hybrid deployments.
-    Several options exist to integrate and exchange data between your
-    on-premises and IDCS environments.
-
-  - **Oracle’s Market Leadership in Cloud Identity** – Oracle Identity
-    Cloud Service is not Oracle’s first entry into the cloud identity
-    market. We have been providing cloud identity services for the past
-    4-years, for a variety of Oracle Public Cloud (OPC) services.
-    Considering identity services handling the needs of 35,000
-    customers, at scale with over 30-million daily logins and you
-    realize that Oracle is a cloud identity market leader before
-    introducing IDCS\!
-
-  - **Modern architecture** – While some vendors’ idea of cloud services
-    is simply to deploy their on- premises applications in a “cloud”
-    data center, Oracle has completely rewritten our solution from the
-    ground up. The architecture is API-first and built on a
-    micro-services architecture leveraging open standards. It provides a
-    true platform for identity services.
-
-  - **Service Breadth** – Some first-generation vendors solved niche
-    problems for providing identity cloud services (e.g. SSO to SaaS
-    applications, etc.). However, the reality is that enterprises of all
-    sizes will not want to have an integrated-best-of-breed solution in
-    the cloud. The vast majority will select a service partner with the
-    right solution, which solves enterprise-grade needs. Equally
-    imperative is finding a business partner which can support both your
-    on-premises and cloud identity infrastructure and enable the
-    transition to cloud at your pace and in your time- frame. That
-    vendor is Oracle.
-
-## IDCS Architecture
+### IDCS Architecture
 
  Oracle Identity Cloud Service is a new platform service which is
  available as part of Oracle’s broad portfolio of PaaS services. IDCS
@@ -219,35 +115,6 @@
 
 ![](./media/image4.jpeg)
 
-## Additional Information
-
- This workbook is primarily designed to provide the necessary
- instructions and context to allow you to complete the labs in the
- Oracle Identity Cloud Service Workshop. If you would like additional
- information about the Oracle solution, you can contact your local
- Oracle account team and/or review some of the following publicly
- available information about the solution.
-
-### <span class="underline"Identity Cloud Service website</span
-
- [<span class="underline"https://cloud.oracle.com/en\_US/identity</span](https://cloud.oracle.com/en_US/identity)
-
-### <span class="underline"White Papers and eBooks</span
-
- [<span class="underline"https://cloud.oracle.com/opc/paas/ebooks/Oracle\_Identity\_Cloud.pdf</span](https://cloud.oracle.com/opc/paas/ebooks/Oracle_Identity_Cloud.pdf)
-
-### <span class="underline"Solution Data Sheet</span
-
- [<span class="underline"http://www.oracle.com/technetwork/middleware/id-mgmt/overview/idcs-</span](http://www.oracle.com/technetwork/middleware/id-mgmt/overview/idcs-datasheet-3097388.pdf)
- [<span class="underline"datasheet-3097388.pdf</span](http://www.oracle.com/technetwork/middleware/id-mgmt/overview/idcs-datasheet-3097388.pdf)
-
-### <span class="underline"Product documentation</span
-
- [<span class="underline"http://docs.oracle.com/cloud/latest/identity-cloud/index.html</span](http://docs.oracle.com/cloud/latest/identity-cloud/index.html)
-
-### <span class="underline"Blogs</span
-
- [<span class="underline"https://blogs.oracle.com/imc/</span](https://blogs.oracle.com/imc/)
 
 # Business Drivers
 
@@ -282,65 +149,52 @@
  kind of business agility is where the new business opportunity lies
  today.
  
- This workshop shows how **Oracle’s Identity-as-a-Service** solution
- i.e. **Identity Cloud Service (IDCS)** to enable organizations to
- rapidly develop fast, reliable and secure services for their new
+ This workshop shows how **Oracle Identity Cloud Service (IDCS)** enable organizations to rapidly develop fast, reliable and secure services for their new
  business initiatives.
 
-# Navigation between IDCS and Cloud My Services Dashboards
+### Navigation between IDCS and Cloud My Services Dashboards
 
- Personas:
+ * Personas:
  
- \- IDCS Administrator
+ IDCS Administrator
  
  Let’s first get used to how to access IDCS from within Oracle’s Cloud
  console and how to move between the two dashboards.
  
- Login to your Oracle Cloud Account:
- [<span class="underline"https://cloud.oracle.com/en\_US/sign-in</span](https://cloud.oracle.com/en_US/sign-in)
+ * Login to your Oracle Cloud Account:
+ [Login to your Cloud Account](https://cloud.oracle.com/en_US/sign-in)
 
 ![](./media/image5.jpeg)
 
- On the login page, enter your user name and password and click **Sign
- In**
+ * On the login page, enter your user name and password and click **Sign In**
  
- You will be presented with a dashboard displaying the various cloud
+ * You will be presented with a dashboard displaying the various cloud
  services available to this account.
  
  ![](./media/image6.png)
  
- From the **Cloud My Services** dashboard, click on **Users** in the
- upper right-hand corner. Then click on **Identity Console** button
- located towards upper right-hand corner again.
+ * From the **Cloud My Services** dashboard, click on **Users** in the upper right-hand corner. Then click on **Identity Console** button located towards upper right-hand corner again.
 
 ![](./media/image7.png)
 
- If you have logged in using your administrator Account, the users are
- shown up in IDCS admin console. Other admin console sections are also
- available.
+ * If you have logged in using your administrator Account, the users are shown up in IDCS admin console. Other admin console sections are also available.
  
  ![](./media/image8.jpeg)
  
- In the upper left-hand corner select the navigator menu or sometimes
- referred to as the “hamburger menu”. Select **Dashboard** menu. This
- will display the **Identity Cloud Service** dashboard.
+ * In the upper left-hand corner select the navigator menu or sometimes referred to as the "General Menu”. Select **Dashboard**. This will display the **Identity Cloud Service** dashboard.
  
- URL:
- <span class="underline"https://idcs-\<\<instance\\.identity.oraclecloud.com/ui/v1/adminconsole/</span
- You’ll find it useful to bookmark this dashboard link.
- 
- Click on the navigator menu to hide it.
+ * Click on the navigator menu to hide it.
 
 ![](./media/image9.jpeg)
 
- To return to the Cloud Console, do the following:
+* To return to the Cloud Console, do the following:
 
-1)  Select the **My Home** menu from the upper right corner of the
+  *  Select the **My Home** menu from the upper right corner of the
     screen.
 
 ![](./media/image10.jpeg)
 
-2)  Then select the Dashboard button at top right of screen. This will
+  *  Then select the Dashboard button at top right of screen. This will
     return you to the **Cloud My Services** dashboard. Or just use your
     bookmarked URL as suggested earlier.
 
@@ -363,222 +217,113 @@
  
  Click on the following menus and just get familiar with the content:
 
-  - Users
+  * Users
 
-  - Groups
+  * Groups
 
-  - Settings
+  * Settings
 
-  - Security
+  * Security
 
  We’ll get into the details shortly, but this will give you a quick
  navigation overview of the menus and services available.
 
-# Lab: User Management
+# Module 1:  User Management
 
- It is often a requirement for organizations to on-board an employee or
- contractor or some identity manually into a central identity systems
- like IDCS. In this use case, an IDCS user administrator will manually
- add a new user in IDCS service. Typically, this would occur through
- automated provisioning, bulk flat-file import or synchronization with
- your on- premises Active Directory.
+ It is often a requirement for organizations to on-board an employee or contractor or some identity manually into a central identity systems like IDCS. In this use case, an IDCS user administrator will manually add a new user in IDCS service. Typically, this would occur through automated provisioning, bulk flat-file import or synchronization with your on- premises Active Directory.
  
- The IDCS features are built 100% using the IDCS REST API service.
- Therefore, any task we perform interactively in the web interface
- could also be performed via custom app, using these same REST API
- calls. It’s a clear advantage of Oracle’s API-first architecture with
- IDCS.
+ The IDCS features are built 100% using the IDCS REST API service. Therefore, any task we perform interactively in the web interface could also be performed via custom app, using these same REST API calls. It’s a clear advantage of Oracle’s API-first architecture with IDCS.
  
- IDCS supports user (also groups) on-boarding from on-premises **Active
- Directory**, using file upload, REST API, on-premises **Oracle
- Identity Management** solution, or manually from IDCS admin console.
- For the workshop we will be using file upload option and API calls
- user management.
+ IDCS supports user (also groups) on-boarding from on-premises **Active Directory**, using file upload, REST API, on-premises **Oracle Identity Management** solution, or manually from IDCS admin console. For the workshop we will be using file upload option and API calls user management.
 
-## Create User in UI (Persona: Administrator)
+### Create User in UI (Persona: Administrator)
 
-1.  Go to IDCS Admin console using your administrator account
+*  Go to IDCS Admin console using your administrator account
     credentials. Select the **Users** menu on the left and click
     **+Add** or select the **Add a user** icon from the dashboard.
 
 ![](./media/image13.png)
 
-2.  Fill in all required fields and click **Finish**.
+*  Fill in all required fields and click **Finish**. For this lab purposes, create a dummy account using your personal email address (e.g. *name@gmail.com*). We will use this account as part of our Single Sign-On module.
 
  ![](./media/image14.png)
 
-3.  Verify user creation
+*  Verify user creation
     
-      - Go to the **Users** tab in admin console. Verify that the new
+      * Go to the **Users** tab in admin console. Verify that the new
         users are visible on the console.
 
  ![](./media/image15.jpeg)
 
-## Import Users with CSV (Persona: Administrator)
 
- If you are an identity domain administrator or a user administrator,
- you can batch import user accounts using a comma-separated values
- (CSV) file.
-
-### Obtain upload CSV file
-
- Select the **Users** menu on the left and click **Import**. In the
- Help section on the right, click
-
-### Download sample file.
-
- Extract the zip file and open **Users.csv**. Inspect the content of
- the file from your favorite editor. You can use the default examples
- that you find into the csv file or you can fill in some more if you
- want but keep it similar to the examples.
-
-### Import users in IDCS
-
- Go to IDCS Admin console using your administrator account credentials.
- Select the **Users**
  
- menu on the left or select the **Users** icon from the dashboard.
-
-![](./media/image16.jpeg)
-
-3.  Click on the **Import** button.
-
-![](./media/image17.png)
-
-4.  Select the **CSV** file. Click on **Import**
-
- ![](./media/image18.png)
-
-5.  Go to the **Jobs** menu item and verify that the import Job finished
-    successfully. Click on **View Details.** to check if all the users
-    were imported. You’ll also be presented with the list of all the
-    users from csv, together with all the attributes details and status
-    of creation.
-
-![](./media/image19.jpeg)
-
-6.  ### Verify user creation
-    
-      - Go to the **Users** tab in admin console. Verify that the new
-        users are visible on the console.
-
- ![](./media/image15.jpeg)
-
-7.  Click on your target end-user (Danny Crane) and verify user's
-    detailed attribute information
-
-8.  Just for fun, change the email for the user to your own and select
-    **Update User**. Then click the **Reset Password** button.
-
- ![](./media/image20.jpeg)
-
-9.  Check your email for the reset message and change the password.
-
-![](./media/image21.jpeg)
-
-10. Then open another browser (if using Chrome, select **Incognito
-    Window**) and login to your IDCS console with that user.
-
- URL
- 
- https://idcs-\<\<your
- instance\\.identity.oraclecloud.com/ui/v1/adminconsole/
-
-![](./media/image22.jpeg)
-
- You will see that the user has no access to applications yet.
-
 ## API User Creation with REST API’s (Persona: Administrator) – OPTIONAL
 
  This use case involves making API calls to IDCS using a REST client;
  in this case Postman. The Postman collection of relevant REST API
  calls is provided to each participant.
 
-1.  Register a client POSTMAN application in IDCS
+### Register a client POSTMAN application in IDCS
 
-<!-- end list --
-
-1.  Navigate to <span class="underline"
-    https://\<yourtenant\/ui/v1/adminconsole</span
-
- You will be redirected to
- <span class="underline"https://\<yourtenant\/ui/v1/signin</span
+*  Navigate to your tenant https://**<yourtenant>**/ui/v1/adminconsole
  
  ![](./media/image23.jpeg)
 
-2.  Select the Applications tab from the IDCS dashboard presented after
-    log in
+*  Select the Applications tab from the IDCS dashboard presented after log in
 
 ![](./media/image24.png)
 
-3.  Click the **Add** button to create a new application for Postman
-    use. In order for Postman to be able to call IDCS REST APIs, it
-    first requires to have a CLIENT\_ID and CLIENT\_SECRET that
-    authorize Postman to do so. This can be achieved by creating a
-    Confidential Application type into IDCS with specific authorization
-    grant types as you will see into the following steps.
+*  Click the **Add** button to create a new application for Postman use. In order for Postman to be able to call IDCS REST APIs, it first requires to have a **CLIENT_ID** and **CLIENT_SECRET** that authorize Postman to do so. This can be achieved by creating a Confidential Application type into IDCS with specific authorization grant types as you will see into the following steps.
 
  ![](./media/image25.jpeg)
 
-4.  Select Confidential Application from the pop-up menu of application
-    types:
+*  Select Confidential Application from the pop-up menu of application types:
 
 ![](./media/image26.jpeg)
 
-5.  Set the **Name** to “Postman”. Then click **Next**
+*  Set the **Name** to “Postman”. Then click **Next**
 
  ![](./media/image27.jpeg)
 
-6.  Click “**Configure this application as a client now**” in order to
-    provide the authorization grant types and the API role.
+*  Click “**Configure this application as a client now**” in order toprovide the authorization grant types and the API role.
 
 ![](./media/image28.jpeg)
 
- ![](./media/image29.jpeg)
+![](./media/image29.jpeg)
 
-7.  Select all the Allowed Grant Types checkboxes and set Redirect URL
-    to [**https://localhost.**](https://localhost/) Go to “**Grant the
-    client access to Identity Cloud Service Admin APIs**” section
-    (bottom of the page) and add the following API role “**Identity
-    Domain Administrator**”. This way you are basically granting access
-    for this IDCS app to the full set of IDCS APIs.
+*  Select all the Allowed Grant Types checkboxes and set Redirect URL to [**https://localhost.**](https://localhost/) Go to “**Grant the client access to Identity Cloud Service Admin APIs**” section (bottom of the page) and add the following API role “**Identity Domain Administrator**”. This way you are basically granting access for this IDCS app to the full set of IDCS APIs.
 
-8.  Finally, click **Next**.
+*  Finally, click **Next**.
 
 ![](./media/image30.jpeg)
 
-9.  Make no changes in the next screens and click **Next**
+*  Make no changes in the next screens and click **Next**
 
  ![](./media/image31.png)
 
-10. For finalizing the IDCS app that grants API roles to Postman via
-    Auth2.0 standard click **Finish.**
+* For finalizing the IDCS app that grants API roles to Postman via Auth2.0 standard click **Finish.**
 
 ![](./media/image32.jpeg)
 
-11. Once the application is created, note down the **Client ID** and the
-    **Client Secret** then click **Close.** These will be used by
-    Postman desktop application to call IDCS APIs using the Auth2.0
-    standard protocol.
+* Once the application is created, note down the **Client ID** and the **Client Secret** then click **Close.** These will be used by Postman desktop application to call IDCS APIs using the Auth2.0 standard protocol.
 
- ![](./media/image33.jpeg)
+![](./media/image33.jpeg)
 
-12. Click the **Activate** button. Don’t forget to activate the
-    application\!
+* Click the **Activate** button. Don’t forget to activate the application
 
 ![](./media/image34.jpeg)
 
- Confirm the application activation
+* Confirm the application activation
 
 ![](./media/image35.png)
 
- The application is now active and ready to use.
+* The application is now active and ready to use.
  
  ![](./media/image36.jpeg)
  
- Sign out from IDCS
+* Sign out from IDCS
 
-2.  Configure Postman
+###  Configure Postman
     
     1.  Open **Postman**. Ignore all startup messages if any.
 
