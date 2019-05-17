@@ -3,144 +3,72 @@
 
 ## Table of Contents
 
-- [Module 1: Create and monitor a sanctioned application](#module-1--create-and-monitor-a-sanctioned-application)
-- [Module 2: Create a Policy Alert and Display Threats](#module-2--create-a-policy-alert-and-display-threats)
-- [Module 3: Oracle CASB Monitoring Oracle Cloud Infrastructure](#module-3--oracle-casb-monitoring-oracle-cloud-infrastructure)
-- [Module 4: Create a Policy for OCI](#module-4--create-a-policy-for-oci)
-- [Module 5: Run a Report in CASB](#module-5--run-a-report-in-casb)
-- [Module 6: Data Loss Protection](#module-6--data-loss-protection)
-
-
+- [Module 1: User Management](#module-1--user-management)
+- [Module 2: Configure SSO and Provisioning for Salesforce](#module-2--configure-sso-and-provisioning-for-salesforce)
 
 ***** 
 
  
-
- 
-
 # Lab Configuration and Details
 
- For the workshop lab exercises, the current version of the Oracle Identity Cloud Service (IDCS) is being demonstrated.
+For the workshop lab exercises, the current version of the Oracle Identity Cloud Service (IDCS) is being demonstrated.
  
- You will use Free Oracle Cloud trial accounts.
+This workshop is hosted in the Oracle Public Cloud (OPC). It includes a combination of cloud services, hosted on-premises software and 3rd
+party software. Aside from the Identity Cloud Service, the remaining components are included to enable demonstrating integration, including
+identity synchronization, federation, authentication, SSO and more.
+
+This workbook is primarily designed to provide the necessary instructions and context to allow you to complete the labs in the Oracle Identity Cloud Service Workshop. If you would like additional information about the Oracle solution, you can contact your local Oracle account team and/or review some of the following publicly available information about the solution.
+
+For consistency and for the ease of use-cases implementation, you will use a Gmail account. The following summarizes the components in our workshop:
  
- This workshop is hosted in the Oracle Public Cloud (OPC). It includes a combination of cloud services, hosted on-premises software and 3rd
- party software. Aside from the Identity Cloud Service, the remaining components are included to enable demonstrating integration, including
- identity synchronization, federation, authentication, SSO and more.
-  
- For consistency and for the ease of use-cases implementation, you will
- use a Gmail account. The following summarizes the components in our
- workshop:
- 
- <span class="underline"Oracle Cloud Services</span
 
-  - [<span class="underline"Oracle Identity Cloud
-    Service</span](https://cloud.oracle.com/en_US/identity) (IDCS)
+  * [Oracle Identity Cloud](https://cloud.oracle.com/en_US/identity)
 
-  - [<span class="underline"Oracle Cloud Access Security
-    Broker</span](https://cloud.oracle.com/en_US/casb) (CASB)
+  * [Oracle CASB Cloud Service](https://cloud.oracle.com/en_US/casb)
 
-
-  - Salesforce – used for IDCS Application Integration and CASB Create
+  * Salesforce – used for IDCS Application Integration and CASB Create
     and Monitor a sanctioned Application use-cases
-
-  - Box – used for CASB Create and Monitor a sanctioned Application
-    use-case
-
-  - Google – used for IDCS Federation
-
-  - Okta – used for IDCS Federation
-
- <span class="underline"Third-party Components</span
-
-  - Postman – used for IDCS REST API User Management
 
  The following configuration information is provided to assist with
  accessing lab assets:
 
-  - <span class="underline"Workshop Actors</span
+  * Workshop Actors
     
-      - IDCS End Users (e.g. employees, customers, partners, etc.)
+      * IDCS End Users (e.g. employees, customers, partners, etc.)
     
-      - IDCS Administrators
+      * IDCS Administrators
 
 # Overview: Oracle Identity Cloud Service
 
 ## Introduction
 
- Identity Cloud Service is Oracle’s next generation comprehensive
- security and identity platform that provides an innovative, fully
- integrated service that delivers all the core
- 
- identity and access management capabilities through a Cloud platform
- “as a service”. The design of Identity Cloud Service (IDCS) is based
- on micro service architecture which is naturally aligned with Cloud
- principles of Scalability, Elasticity, Resilience, Ease of Deployment,
- Functional Agility, Technical Adoption and Organization Alignment.
+ Identity Cloud Service is Oracle’s next generation comprehensive security and identity platform that provides an innovative, fully integrated service that delivers all the core identity and access management capabilities through a Cloud platform “as a service”. The design of Identity Cloud Service (IDCS) is based on micro service architecture which is naturally aligned with Cloud principles of Scalability, Elasticity, Resilience, Ease of Deployment, Functional Agility, Technical Adoption and Organization Alignment.
  
  At high level, Oracle Identity Cloud Service offers the following
  functionalities:
 
-  - Identity & Access Management
+  * Identity & Access Management
 
-  - Integration with on-prem Active Directory or 3rd party Identity
+  * Integration with on-prem Active Directory or 3rd party Identity
     Systems
 
-  - Single-Sign-On (SSO)
+  * Single-Sign-On (SSO)
 
-  - User Authentication Service
+  * User Authentication Service
 
-  - Identity Federation service (SAML)
+  * Identity Federation service (SAML)
 
-  - OAuth services
+  * OAuth services
 
-  - Auditing & Reporting Services
+  * Auditing & Reporting Services
 
-## Concepts and Terminology
+### Concepts and Terminology
 
- This section provides a brief review of a few of the concepts and
- terms, which will be used throughout the workshop.
+ 
 
-  - **Oracle Public Cloud (OPC)** – OPC describes Oracle’s overall cloud
-    portfolio, which
+  * **OAUTH 2.0** – OAUTH is a standard protocol for delegating authorization. It’s a way for an entity to be authorized to access resources (services, API, data) stored in a remote provider. For example, an on-premises application might leverage the IDCS REST API to retrieve information about users or groups from IDCS for use within its application. The REST API is protected by the OAUTH service, to ensure the client application is registered and authorized to a specific scope of REST API. Thus, OAUTH prevents internet-visible services (such as IDCS REST API) from being consumed by an unauthorized user or application.
 
- consists of the industry’s broadest and most complete portfolio of
- SaaS, PaaS and IaaS cloud services. OPC services exist across the
- globe via dozens of global data centers.
-
-  - **SaaS / PaaS / IaaS** – These are the three service categories of
-    Oracle cloud services. **SaaS** stands for software-as-a-service and
-    more generally might represent cloud services such as Oracle
-    Customer Experience (CX), Salesforce.com, WorkDay, Office365, etc.
-    **PaaS** stands for platform-as-a-service and refers to middleware
-    services such as Java, database, integration, identity, etc.
-    **IaaS** stands for infrastructure-as-a-service and represents
-    services such as compute, network and storage. Top providers for
-    IaaS include Microsoft (Azure), Amazon (AWS) and Oracle.
-
-  - **Tenant** – a tenant represents a subscription to a cloud service.
-    Many of Oracle’s cloud services (including Identity Cloud Service)
-    are multi-tenant, which means that multiple customers (e.g.
-    departments, companies, organizations, agencies, etc.) subscribe to
-    and are serviced by a common cloud service operating in OPC. In a
-    multi-tenant scenario,
-
- each tenant has its own data, configuration settings, users and other
- service-related artefacts.
-
-  - **OAUTH 2.0** – OAUTH is a standard protocol for delegating
-    authorization. It’s a way for an entity to be authorized to access
-    resources (services, API, data) stored in a remote provider. For
-    example, an on-premises application might leverage the IDCS REST API
-    to retrieve information about users or groups from IDCS for use
-    within its application.
-
- The REST API is protected by the OAUTH service, to ensure the client
- application is registered and authorized to a specific scope of REST
- API. Thus, OAUTH prevents internet-visible services (such as IDCS REST
- API) from being consumed by an unauthorized user or application.
-
-  - **SAML 2.0** – SAML stands for *Security Assertion Mark-up
+  * **SAML 2.0** – SAML stands for *Security Assertion Mark-up
     Language*. It is a standard for federating user authentication. SAML
     defines two participating entities, the Service Provider and the
     Identity Provider. When a user attempts to access an application or
@@ -152,61 +80,13 @@
     and/or Identity Provider. As a service provider, IDCS enables
     self-service profile management, password reset, etc.
 
-  - **Identity Provider** – This type of provider, also known as an
+  * **Identity Provider** – This type of provider, also known as an
     Identity Assertion provider, provides identifiers for users who want
     to interact with Oracle Identity Cloud Service using a website
     that's external to Oracle Identity Cloud Service.
 
-## Advantages of the Oracle Solution
 
- This section briefly introduces some of the economical, business and
- technical benefits of the Oracle Identity Cloud Service solution:
-
-  - **Open and Standards-based** – Rapidly integrate cloud and
-    on-premises applications using a 100% open and standards-based
-    solution. Examples of supported standards include System for
-    Cross-domain Identity Management (SCIM), Open Authorization (OAUTH
-    2.0), Security Assertion Markup Language (SAML 2.0),
-    Representational State Transfer (REST), OpenID Connect and others\!
-
-  - **Secure Defense In-depth** – Benefit from layers of defense with
-    Oracle’s Identity Cloud Service hosted as an Oracle Public Cloud
-    (OPC) service and integrated with your on-premises enterprise
-    capabilities.
-
-  - **Hybrid Identity**– Manage user identities for both cloud and
-    on-premises applications with enterprise-grade hybrid deployments.
-    Several options exist to integrate and exchange data between your
-    on-premises and IDCS environments.
-
-  - **Oracle’s Market Leadership in Cloud Identity** – Oracle Identity
-    Cloud Service is not Oracle’s first entry into the cloud identity
-    market. We have been providing cloud identity services for the past
-    4-years, for a variety of Oracle Public Cloud (OPC) services.
-    Considering identity services handling the needs of 35,000
-    customers, at scale with over 30-million daily logins and you
-    realize that Oracle is a cloud identity market leader before
-    introducing IDCS\!
-
-  - **Modern architecture** – While some vendors’ idea of cloud services
-    is simply to deploy their on- premises applications in a “cloud”
-    data center, Oracle has completely rewritten our solution from the
-    ground up. The architecture is API-first and built on a
-    micro-services architecture leveraging open standards. It provides a
-    true platform for identity services.
-
-  - **Service Breadth** – Some first-generation vendors solved niche
-    problems for providing identity cloud services (e.g. SSO to SaaS
-    applications, etc.). However, the reality is that enterprises of all
-    sizes will not want to have an integrated-best-of-breed solution in
-    the cloud. The vast majority will select a service partner with the
-    right solution, which solves enterprise-grade needs. Equally
-    imperative is finding a business partner which can support both your
-    on-premises and cloud identity infrastructure and enable the
-    transition to cloud at your pace and in your time- frame. That
-    vendor is Oracle.
-
-## IDCS Architecture
+### IDCS Architecture
 
  Oracle Identity Cloud Service is a new platform service which is
  available as part of Oracle’s broad portfolio of PaaS services. IDCS
@@ -217,37 +97,8 @@
  The following diagram illustrates the IDCS architecture, organized as
  a series of service layers.
 
-![](./media/image4.jpeg)
+![](./media/idcs4.jpeg)
 
-## Additional Information
-
- This workbook is primarily designed to provide the necessary
- instructions and context to allow you to complete the labs in the
- Oracle Identity Cloud Service Workshop. If you would like additional
- information about the Oracle solution, you can contact your local
- Oracle account team and/or review some of the following publicly
- available information about the solution.
-
-### <span class="underline"Identity Cloud Service website</span
-
- [<span class="underline"https://cloud.oracle.com/en\_US/identity</span](https://cloud.oracle.com/en_US/identity)
-
-### <span class="underline"White Papers and eBooks</span
-
- [<span class="underline"https://cloud.oracle.com/opc/paas/ebooks/Oracle\_Identity\_Cloud.pdf</span](https://cloud.oracle.com/opc/paas/ebooks/Oracle_Identity_Cloud.pdf)
-
-### <span class="underline"Solution Data Sheet</span
-
- [<span class="underline"http://www.oracle.com/technetwork/middleware/id-mgmt/overview/idcs-</span](http://www.oracle.com/technetwork/middleware/id-mgmt/overview/idcs-datasheet-3097388.pdf)
- [<span class="underline"datasheet-3097388.pdf</span](http://www.oracle.com/technetwork/middleware/id-mgmt/overview/idcs-datasheet-3097388.pdf)
-
-### <span class="underline"Product documentation</span
-
- [<span class="underline"http://docs.oracle.com/cloud/latest/identity-cloud/index.html</span](http://docs.oracle.com/cloud/latest/identity-cloud/index.html)
-
-### <span class="underline"Blogs</span
-
- [<span class="underline"https://blogs.oracle.com/imc/</span](https://blogs.oracle.com/imc/)
 
 # Business Drivers
 
@@ -282,76 +133,72 @@
  kind of business agility is where the new business opportunity lies
  today.
  
- This workshop shows how **Oracle’s Identity-as-a-Service** solution
- i.e. **Identity Cloud Service (IDCS)** to enable organizations to
- rapidly develop fast, reliable and secure services for their new
+ This workshop shows how **Oracle Identity Cloud Service (IDCS)** enable organizations to rapidly develop fast, reliable and secure services for their new
  business initiatives.
 
-# Navigation between IDCS and Cloud My Services Dashboards
+### Navigation between IDCS and Cloud My Services Dashboards
 
- Personas:
+During the Personas:
  
- \- IDCS Administrator
+ IDCS Administrator
+ IDCS End User
  
  Let’s first get used to how to access IDCS from within Oracle’s Cloud
  console and how to move between the two dashboards.
  
- Login to your Oracle Cloud Account:
- [<span class="underline"https://cloud.oracle.com/en\_US/sign-in</span](https://cloud.oracle.com/en_US/sign-in)
+ * Login to your Oracle Cloud Account:
+ [Login to your Cloud Account](https://cloud.oracle.com/en_US/sign-in)
 
-![](./media/image5.jpeg)
+![](./media/idcs5.jpeg)
+<p align="center" Figure 1-1 </p>
 
- On the login page, enter your user name and password and click **Sign
- In**
+ * On the login page, enter your user name and password and click **Sign In**
  
- You will be presented with a dashboard displaying the various cloud
+ * You will be presented with a dashboard displaying the various cloud
  services available to this account.
  
- ![](./media/image6.png)
+ ![](./media/idcs6.png)
+ <p align="center" Figure 1-2 </p>
  
- From the **Cloud My Services** dashboard, click on **Users** in the
- upper right-hand corner. Then click on **Identity Console** button
- located towards upper right-hand corner again.
+ * From the **Cloud My Services** dashboard, click on **Users** in the upper right-hand corner. Then click on **Identity Console** button located towards upper right-hand corner again.
 
-![](./media/image7.png)
+![](./media/idcs7.png)
+<p align="center" Figure 1-3 </p>
 
- If you have logged in using your administrator Account, the users are
- shown up in IDCS admin console. Other admin console sections are also
- available.
+ * If you have logged in using your administrator Account, the users are shown up in IDCS admin console. Other admin console sections are also available.
  
- ![](./media/image8.jpeg)
+ ![](./media/idcs8.jpeg)
+ <p align="center" Figure 1-4 </p>
  
- In the upper left-hand corner select the navigator menu or sometimes
- referred to as the “hamburger menu”. Select **Dashboard** menu. This
- will display the **Identity Cloud Service** dashboard.
+ * In the upper left-hand corner select the navigator menu or sometimes referred to as the "General Menu”. Select **Dashboard**. This will display the **Identity Cloud Service** dashboard.
  
- URL:
- <span class="underline"https://idcs-\<\<instance\\.identity.oraclecloud.com/ui/v1/adminconsole/</span
- You’ll find it useful to bookmark this dashboard link.
- 
- Click on the navigator menu to hide it.
+ * Click on the navigator menu to hide it.
 
-![](./media/image9.jpeg)
+![](./media/idcs9.jpeg)
+<p align="center" Figure 1-5 </p>
 
- To return to the Cloud Console, do the following:
+* To return to the Cloud Console, do the following:
 
-1)  Select the **My Home** menu from the upper right corner of the
+  *  Select the **My Home** menu from the upper right corner of the
     screen.
 
-![](./media/image10.jpeg)
+![](./media/idcs10.jpeg)
+<p align="center" Figure 1-6 </p>
 
-2)  Then select the Dashboard button at top right of screen. This will
+  *  Then select the Dashboard button at top right of screen. This will
     return you to the **Cloud My Services** dashboard. Or just use your
     bookmarked URL as suggested earlier.
 
- ![](./media/image11.jpeg)
+ ![](./media/idcs11.jpeg)
+ <p align="center" Figure 1-7 </p>
 
 # IDCS Quick Tour
 
  Return to the IDCS dashboard and click on the navigator menu
  (hamburger menu).
 
-![](./media/image12.jpeg)
+![](./media/idcs12.jpeg)
+<p align="center" Figure 1-8 </p>
 
  You may navigate around IDCS from the dashboard screen items or
  through the menu on the left. Note the **My Services** link at the
@@ -363,713 +210,547 @@
  
  Click on the following menus and just get familiar with the content:
 
-  - Users
+  * Users
 
-  - Groups
+  * Groups
 
-  - Settings
+  * Settings
 
-  - Security
+  * Security
 
  We’ll get into the details shortly, but this will give you a quick
  navigation overview of the menus and services available.
 
-# Lab: User Management
+# Module 1:  User Management
 
- It is often a requirement for organizations to on-board an employee or
- contractor or some identity manually into a central identity systems
- like IDCS. In this use case, an IDCS user administrator will manually
- add a new user in IDCS service. Typically, this would occur through
- automated provisioning, bulk flat-file import or synchronization with
- your on- premises Active Directory.
+ It is often a requirement for organizations to on-board an employee or contractor or some identity manually into a central identity systems like IDCS. In this use case, an IDCS user administrator will manually add a new user in IDCS service. Typically, this would occur through automated provisioning, bulk flat-file import or synchronization with your on- premises Active Directory.
  
- The IDCS features are built 100% using the IDCS REST API service.
- Therefore, any task we perform interactively in the web interface
- could also be performed via custom app, using these same REST API
- calls. It’s a clear advantage of Oracle’s API-first architecture with
- IDCS.
+ The IDCS features are built 100% using the IDCS REST API service. Therefore, any task we perform interactively in the web interface could also be performed via custom app, using these same REST API calls. It’s a clear advantage of Oracle’s API-first architecture with IDCS.
  
- IDCS supports user (also groups) on-boarding from on-premises **Active
- Directory**, using file upload, REST API, on-premises **Oracle
- Identity Management** solution, or manually from IDCS admin console.
- For the workshop we will be using file upload option and API calls
- user management.
+ IDCS supports user (also groups) on-boarding from on-premises **Active Directory**, using file upload, REST API, on-premises **Oracle Identity Management** solution, or manually from IDCS admin console. For the workshop we will be using file upload option and API calls user management.
 
-## Create User in UI (Persona: Administrator)
+### Create User in UI (Persona: Administrator)
 
-1.  Go to IDCS Admin console using your administrator account
+*  Go to IDCS Admin console using your administrator account
     credentials. Select the **Users** menu on the left and click
     **+Add** or select the **Add a user** icon from the dashboard.
 
-![](./media/image13.png)
+![](./media/idcs13.png)
+<p align="center" Figure 1-9 </p>
 
-2.  Fill in all required fields and click **Finish**.
+*  Fill in all required fields and click **Finish**. For this lab purposes, create a dummy account using your personal email address (e.g. *name@gmail.com*). We will use this account as part of our Single Sign-On module.
 
- ![](./media/image14.png)
+ ![](./media/idcs14.png)
+ <p align="center" Figure 1-10 </p>
 
-3.  Verify user creation
+*  Verify user creation
     
-      - Go to the **Users** tab in admin console. Verify that the new
+      * Go to the **Users** tab in admin console. Verify that the new
         users are visible on the console.
 
- ![](./media/image15.jpeg)
+ ![](./media/idcs15.jpeg)
+ <p align="center" Figure 1-11 </p>
 
-## Import Users with CSV (Persona: Administrator)
 
- If you are an identity domain administrator or a user administrator,
- you can batch import user accounts using a comma-separated values
- (CSV) file.
-
-### Obtain upload CSV file
-
- Select the **Users** menu on the left and click **Import**. In the
- Help section on the right, click
-
-### Download sample file.
-
- Extract the zip file and open **Users.csv**. Inspect the content of
- the file from your favorite editor. You can use the default examples
- that you find into the csv file or you can fill in some more if you
- want but keep it similar to the examples.
-
-### Import users in IDCS
-
- Go to IDCS Admin console using your administrator account credentials.
- Select the **Users**
  
- menu on the left or select the **Users** icon from the dashboard.
-
-![](./media/image16.jpeg)
-
-3.  Click on the **Import** button.
-
-![](./media/image17.png)
-
-4.  Select the **CSV** file. Click on **Import**
-
- ![](./media/image18.png)
-
-5.  Go to the **Jobs** menu item and verify that the import Job finished
-    successfully. Click on **View Details.** to check if all the users
-    were imported. You’ll also be presented with the list of all the
-    users from csv, together with all the attributes details and status
-    of creation.
-
-![](./media/image19.jpeg)
-
-6.  ### Verify user creation
-    
-      - Go to the **Users** tab in admin console. Verify that the new
-        users are visible on the console.
-
- ![](./media/image15.jpeg)
-
-7.  Click on your target end-user (Danny Crane) and verify user's
-    detailed attribute information
-
-8.  Just for fun, change the email for the user to your own and select
-    **Update User**. Then click the **Reset Password** button.
-
- ![](./media/image20.jpeg)
-
-9.  Check your email for the reset message and change the password.
-
-![](./media/image21.jpeg)
-
-10. Then open another browser (if using Chrome, select **Incognito
-    Window**) and login to your IDCS console with that user.
-
- URL
- 
- https://idcs-\<\<your
- instance\\.identity.oraclecloud.com/ui/v1/adminconsole/
-
-![](./media/image22.jpeg)
-
- You will see that the user has no access to applications yet.
-
 ## API User Creation with REST API’s (Persona: Administrator) – OPTIONAL
 
  This use case involves making API calls to IDCS using a REST client;
  in this case Postman. The Postman collection of relevant REST API
  calls is provided to each participant.
 
-1.  Register a client POSTMAN application in IDCS
+### Register a client POSTMAN application in IDCS
 
-<!-- end list --
-
-1.  Navigate to <span class="underline"
-    https://\<yourtenant\/ui/v1/adminconsole</span
-
- You will be redirected to
- <span class="underline"https://\<yourtenant\/ui/v1/signin</span
+*  Navigate to your tenant https://**<yourtenant>**/ui/v1/adminconsole
  
- ![](./media/image23.jpeg)
+ ![](./media/idcs23.jpeg)
+ <p align="center" Figure 1-12 </p>
 
-2.  Select the Applications tab from the IDCS dashboard presented after
-    log in
+*  Select the Applications tab from the IDCS dashboard presented after log in
 
-![](./media/image24.png)
+![](./media/idcs24.png)
+<p align="center" Figure 1-13 </p>
 
-3.  Click the **Add** button to create a new application for Postman
-    use. In order for Postman to be able to call IDCS REST APIs, it
-    first requires to have a CLIENT\_ID and CLIENT\_SECRET that
-    authorize Postman to do so. This can be achieved by creating a
-    Confidential Application type into IDCS with specific authorization
-    grant types as you will see into the following steps.
+*  Click the **Add** button to create a new application for Postman use. In order for Postman to be able to call IDCS REST APIs, it first requires to have a **CLIENT_ID** and **CLIENT_SECRET** that authorize Postman to do so. This can be achieved by creating a Confidential Application type into IDCS with specific authorization grant types as you will see into the following steps.
 
- ![](./media/image25.jpeg)
+ ![](./media/idcs25.jpeg)
+ <p align="center" Figure 1-14 </p>
 
-4.  Select Confidential Application from the pop-up menu of application
-    types:
+*  Select Confidential Application from the pop-up menu of application types:
 
-![](./media/image26.jpeg)
+![](./media/idcs26.jpeg)
+<p align="center" Figure 1-15 </p>
 
-5.  Set the **Name** to “Postman”. Then click **Next**
+*  Set the **Name** to “Postman”. Then click **Next**
 
- ![](./media/image27.jpeg)
+ ![](./media/idcs27.jpeg)
+ <p align="center" Figure 1-16 </p>
 
-6.  Click “**Configure this application as a client now**” in order to
-    provide the authorization grant types and the API role.
+*  Click “**Configure this application as a client now**” in order toprovide the authorization grant types and the API role.
 
-![](./media/image28.jpeg)
+![](./media/idcs28.jpeg)
+<p align="center" Figure 1-17 </p>
 
- ![](./media/image29.jpeg)
+![](./media/idcs29.jpeg)
+<p align="center" Figure 1-18 </p>
 
-7.  Select all the Allowed Grant Types checkboxes and set Redirect URL
-    to [**https://localhost.**](https://localhost/) Go to “**Grant the
-    client access to Identity Cloud Service Admin APIs**” section
-    (bottom of the page) and add the following API role “**Identity
-    Domain Administrator**”. This way you are basically granting access
-    for this IDCS app to the full set of IDCS APIs.
+*  Select all the Allowed Grant Types checkboxes and set Redirect URL to [**https://localhost.**](https://localhost/) Go to “**Grant the client access to Identity Cloud Service Admin APIs**” section (bottom of the page) and add the following API role “**Identity Domain Administrator**”. This way you are basically granting access for this IDCS app to the full set of IDCS APIs.
 
-8.  Finally, click **Next**.
+*  Finally, click **Next**.
 
-![](./media/image30.jpeg)
+![](./media/idcs30.jpeg)
+<p align="center" Figure 1-19 </p>
 
-9.  Make no changes in the next screens and click **Next**
+*  Make no changes in the next screens and click **Next**
 
- ![](./media/image31.png)
+ ![](./media/idcs31.png)
+ <p align="center" Figure 1-20 </p>
 
-10. For finalizing the IDCS app that grants API roles to Postman via
-    Auth2.0 standard click **Finish.**
+* For finalizing the IDCS app that grants API roles to Postman via Auth2.0 standard click **Finish.**
 
-![](./media/image32.jpeg)
+![](./media/idcs32.jpeg)
+<p align="center" Figure 1-21 </p>
 
-11. Once the application is created, note down the **Client ID** and the
-    **Client Secret** then click **Close.** These will be used by
-    Postman desktop application to call IDCS APIs using the Auth2.0
-    standard protocol.
+* Once the application is created, note down the **Client ID** and the **Client Secret** then click **Close.** These will be used by Postman desktop application to call IDCS APIs using the Auth2.0 standard protocol.
 
- ![](./media/image33.jpeg)
+![](./media/idcs33.jpeg)
+<p align="center" Figure 1-22 </p>
 
-12. Click the **Activate** button. Don’t forget to activate the
-    application\!
+* Click the **Activate** button. Don’t forget to activate the application
 
-![](./media/image34.jpeg)
+![](./media/idcs34.jpeg)
+<p align="center" Figure 1-23 </p>
 
- Confirm the application activation
+* Confirm the application activation
 
-![](./media/image35.png)
+![](./media/idcs35.png)
+<p align="center" Figure 1-24 </p>
 
- The application is now active and ready to use.
+* The application is now active and ready to use.
  
- ![](./media/image36.jpeg)
+ ![](./media/idcs36.jpeg)
+ <p align="center" Figure 1-25 </p>
  
- Sign out from IDCS
+* Sign out from IDCS
 
-2.  Configure Postman
+###  Configure Postman
     
-    1.  Open **Postman**. Ignore all startup messages if any.
+*  Open **Postman**. Ignore all startup messages if any.
 
-![](./media/image37.jpeg)
+![](./media/idcs37.jpeg)
+<p align="center" Figure 1-26 </p>
 
-2.  First we need to import IDCS Postman environment variables, global
-    variables and IDCS API collection. Click the Import button on the
-    left upper corner:
+*  First we need to import IDCS Postman environment variables, global variables and IDCS API collection. Click the Import button on the left upper corner:
 
- ![](./media/image38.jpeg)
+ ![](./media/idcs38.jpeg)
+ <p align="center" Figure 1-27 </p>
 
-3.  Select “**Import from Link**” and provide the following URL to
-    import the environment variables:
-    [<span class="underline"https://github.com/oracle/idm-samples/raw/master/idcs-</span
-    <span class="underline"rest-clients/example\_environment.json</span](https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/example_environment.json)
-    and then click **Import**
+*  Select “**Import from Link**” and provide the following URL to import the environment variables:
+    https://github.com/oracle/idm-samples/raw/master/idcs
 
-4.  To import the Oracle Identity Cloud Service REST API Postman
+    https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/example_environment.json
+
+    * and then click **Import**
+
+*  To import the Oracle Identity Cloud Service REST API Postman
     collection, on the Postman main page, click **Import**.
 
-5.  In the Import dialog box, select “**Import From Link**”, paste the
+*  In the Import dialog box, select “**Import From Link**”, paste the
     following GitHub Postman collection URL into the box, and then click
     **Import**:
 
- [<span class="underline"https://github.com/oracle/idm-samples/raw/master/idcs-rest-</span](https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_Oracle_Identity_Cloud_Service.postman_collection.json)
- [<span class="underline"clients/REST\_API\_for\_Oracle\_Identity\_Cloud\_Service.postman\_collection.json</span](https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_Oracle_Identity_Cloud_Service.postman_collection.json)
+https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_Oracle_Identity_Cloud_Service.postman_collection.json
+
+https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_Oracle_Identity_Cloud_Service.postman_collection.json
  
- ![](./media/image39.png)
+ ![](./media/idcs39.png)
+ <p align="center" Figure 1-28 </p>
 
-6.  To import the global variables file, click **Import**.
+*  To import the global variables file, click **Import**.
 
-7.  In the Import dialog box, select **“Import From Link”,** paste the
+*  In the Import dialog box, select **“Import From Link”,** paste the
     following GitHub Postman Globals URL into the box, and then click
     **Import**:
 
- [<span class="underline"https://github.com/oracle/idm-samples/raw/master/idcs-rest-</span](https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/oracle_identity_cloud_service_postman_globals.json)
- [<span class="underline"clients/oracle\_identity\_cloud\_service\_postman\_globals.json</span](https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/oracle_identity_cloud_service_postman_globals.json)
+ https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/oracle_identity_cloud_service_postman_globals.json
 
-8.  Click on the **Settings** button (cogwheel icon) to **Manage
-    Environments**
+ https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/oracle_identity_cloud_service_postman_globals.json
 
- ![](./media/image40.png)
+*  Click on the **Settings** button (cogwheel icon) to **Manage Environments**
 
-9.  Click on the newly created environment which will be like “Oracle
-    Identity Cloud Service Example Environment with Variables” and it
-    will probably be the only one available in your cases.
+ ![](./media/idcs40.png)
+ <p align="center" Figure 1-29 </p>
 
-![](./media/image41.png)
+*  Click on the newly created environment which will be like “Oracle Identity Cloud Service Example Environment with Variables” and it will probably be the only one available in your cases.
 
-10. Set the following parameters current values in order to be able to
-    obtain an IDCS access token:
+![](./media/idcs41.png)
+<p align="center" Figure 1-30 </p>
 
- HOST: <span class="underline"https://\<your IDCS tenant\</span Ex:
- https://idcs-
- 8ba16123120745658135edd99d8a5c78.identity.oraclecloud.com CLIENT\_ID:
- *\<the Postman IDCS Client application CLIENT\_ID\* CLIENT\_SECRET:
- *\<the Postman IDCS Client application CLIENT\_SECRET\*
+* Set the following parameters current values in order to be able to obtain an IDCS access token:
 
-![](./media/image42.png)
+ HOST: https://**your IDCS tenant** \
+ Ex: https://idcs-8ba16123120745658135edd99d8a5c78.identity.oraclecloud.com \
+ CLIENT_ID: **the Postman IDCS Client application CLIENT_ID** \
+ CLIENT_SECRET: **the Postman IDCS Client application CLIENT_SECRET** 
 
-11. Click the **Environment** drop-down list, and then select the
+![](./media/idcs42.png)
+<p align="center" Figure 1-31 </p>
+
+* Click the **Environment** drop-down list, and then select the
     updated environment from the list.
 
- ![](./media/image43.png)
+ ![](./media/idcs43.png)
+ <p align="center" Figure 1-32 </p>
 
-3.  Request an Access Token
+*  Request an Access Token
     
-    12. On the **Collections** tab, expand **OAuth**, and then
+    * On the **Collections** tab, expand **OAuth**, and then
         **Tokens**.
     
-    13. Select **Obtain access\_token (client credentials),** and then
+    * Select **Obtain access_token (client credentials),** and then
         click **Send**. The access token is returned in the response
         from Oracle Identity Cloud Service.
     
-    14. Highlight the access token content between the quotation marks,
-        and then **right- click**. In the shortcut menu, select **Set:
+    * Highlight the access token content between the quotation marks,
+        and then **right-click**. In the shortcut menu, select **Set:
         Oracle Identity Cloud Service Example Environment with
-        Variables**  In the secondary menu, select **access\_token**.
+        Variables**  In the secondary menu, select **access_token**.
         The highlighted content is assigned as the access token value.
 
- ![](./media/image44.jpeg)
+ ![](./media/idcs44.jpeg)
+ <p align="center" Figure 1-33 </p>
 
-4.  Create an IDCS User via API
+*  Create an IDCS User via API
     
-    15. On the **Collections** tab, expand **Users**, and then
+    * On the **Collections** tab, expand **Users**, and then
         **Create**.
     
-    16. Select **Create a user**. The request information appears with
+    * Select **Create a user**. The request information appears with
         some default values as can be seen into below print screen. You
         can either change them as per your preference or you can simply
         use the default filled values.
     
-    17. Click **Body**, and then click **Send**.
+    * Click **Body**, and then click **Send**.
 
-![](./media/image45.jpeg)
+![](./media/idcs45.jpeg)
 
-18. In the response, confirm that the status **201 Created** appears and
+* In the response, confirm that the status **201 Created** appears and
     that the response body displays details about the user that was
     successfully created in Oracle Identity Cloud Service.
 
-19. While in the IDCS UI you can see the user as being created.
+* While in the IDCS UI you can see the user as being created.
 
-![](./media/image46.png)
+![](./media/idcs46.png)
 
  You can also **modify** and **delete** users and a lot more via REST
  API. For more information, please check the documentation below.
 
-### More information
 
- Tutorial 1: Oracle Identity Cloud Service: First REST API Call
- [<span class="underline"http://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/idcs/idcs\_rest\_1stcall\_obe/r</span](http://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/idcs/idcs_rest_1stcall_obe/rest_1stcall.html)
- [<span class="underline"est\_1stcall.html</span](http://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/idcs/idcs_rest_1stcall_obe/rest_1stcall.html)
- 
- Tutorial 2: Oracle Identity Cloud Service: Managing Users Using REST
- API Calls
- [<span class="underline"http://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/idcs/idcs\_rest\_users\_obe/re</span](http://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/idcs/idcs_rest_users_obe/rest_users.html)
- [<span class="underline"st\_users.html</span](http://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/idcs/idcs_rest_users_obe/rest_users.html)
- 
- Note: a complete list of IDCS tutorials may be found at
- [<span class="underline"https://docs.oracle.com/en/cloud/paas/identity-cloud/tutorials.html</span](https://docs.oracle.com/en/cloud/paas/identity-cloud/tutorials.html)
 
-# Lab: Configure SSO and Provisioning (Salesforce)
+# Module 2:  Configure SSO and Provisioning for Salesforce
 
- Oracle Identity Cloud Service (IDCS) provides integration with any
- service that can be integrated via **SAML** (Security Access Markup
- Language) protocol. Administrations will be able to manage users into
- various applications via single control panel and end users will be
- able get to applications via single click.
+ Oracle Identity Cloud Service (IDCS) provides integration with any service that can be integrated via **SAML** (Security Access Markup Language) protocol. Administrations will be able to manage users into various applications via single control panel and end users will be able get to applications via single click.
  
- IDCS provides support for standard SAML 2.0 Browser POST Login &
- Logout Profiles.
+ IDCS provides support for standard SAML 2.0 Browser POST Login & Logout Profiles.
  
- Please note, that though IDCS supports SAML and OpenID Connect/OAuth,
- there are many times when a non-SAML enabled system requires SSO. IDCS
- App Gate provides support for non-SAML systems that use header-based,
- cookie-based or form-fill SSO. App Gate is an Nginx-based, software
- appliance deployed in a proxy configuration that can be deployed on
- AWS, OCI, OCI-C or on-premises in VMWare or Oracle Virtualbox. It is
- delivered via Identity Cloud Service and available for IDCS Standard
- customers.
+ Please note, that though IDCS supports SAML and OpenID Connect/OAuth, there are many times when a non-SAML enabled system requires SSO. IDCS App Gate provides support for non-SAML systems that use header-based, cookie-based or form-fill SSO. App Gate is an Nginx-based, software appliance deployed in a proxy configuration that can be deployed on AWS, OCI, OCI-C or on-premises in VMWare or Oracle Virtualbox. It is delivered via Identity Cloud Service and available for IDCS Standard customers.
  
  This lab is intended to demonstrate federated Single Sign-on (SSO)
  with a 3rd party SaaS application. The purpose is to illustrate the
  business value of having IDCS as a central Identity Provider for your
- growing portfolio of Oracle and non-Ora
+ growing portfolio of Oracle and non-Oracle.
  
  In this hands-on exercise, we will setup integration with
  **Salesforce** using SAML. IDCS will act as **IdP** (Identity
  Provider) and Salesforce org as **SP** (Service Provider also known as
  a Relying Party)
 
-1.  Download IDCS Metadata to a local XML file. Metadata is available
-    from the following location - https://\<your
-    tenant\/fed/v1/metadata. Depending on the browser you are using,
-    the simplest way of doing this is to right click anywhere on the
-    page and chose “Save as” option  provide a name and save it as XML
-    file. Try not to use the copy / paste option as the xml file may be
-    altered.
+### Enable SSO on SalesForce
 
- ![](./media/image47.jpeg)
+*  Download IDCS Metadata to a local XML file. Metadata is available from the following location - https://**yourtenant**/fed/v1/metadata. Depending on the browser you are using, the simplest way of doing this is to right click anywhere on the page and chose “Save as” option provide a name and save it as XML file. Try not to use the copy / paste option as the xml file may be altered.
 
-2.  Register for a Salesforce developer account at
-    [https://developer.salesforce.com/.](https://developer.salesforce.com/)
+ ![](./media/idcs47.jpeg)
+ <p align="center" Figure 2-1 </p>
 
- This part was covered in the Pre-requisites file.
+*  Use your Salesforce developer account created on Lab 1 Oracle CASB Cloud Service
+    [https://developer.salesforce.com/](https://developer.salesforce.com/)
+
  
- ![](./media/image48.jpeg)
+ ![](./media/idcs48.jpeg)
+ <p align="center" Figure 2-2 </p>
  
- Once registered, check your email and verify the account registration
- and then log into Salesforce.
+ * Log into Salesforce. *Note: you may have to select “Switch to Salesforce Classic”.*
+
+*  Access Salesforce application using the URL provided after registration, click on the profile menu as per below print screen and select the option: **“Switch to Salesforce Classic”**.
+
+![](./media/idcs49.jpeg)
+<p align="center" Figure 2-3 </p>
+
+*  Go to **Setup** into the upper tab menu, near the profile.
+
+*  Register a custom Domain. Go to **Domain Management**, **My Domain** and register a domain of your choosing. This is to have a custom application URL dedicate for our use case.
+
  
- Note: you may have to select “Switch to Salesforce Classic”.
+ ![](./media/idcs50.jpeg)
+ <p align="center" Figure 2-4 </p>
 
-3.  Access Salesforce application using the URL provided after
-    registration, click on the profile menu as per below print screen
-    and select the option: **“Switch to Salesforce Classic”**.
+*  Check your email for the domain login and login.
 
-![](./media/image49.jpeg)
+*  Bring up the **setup** page.
 
-4.  Go to **Setup** into the upper tab menu, near the profile.
+![](./media/idcs51.jpeg)
+<p align="center" Figure 2-5 </p>
 
-5.  Register a custom Domain. Go to **Domain Management** -\ **My
-    Domain** and register a domain of your choosing. This is to have a
-    custom application URL dedicate for our use case.
+*  From side menu bar, go to **Security Controls**, **Single Sign-On Settings**
 
- This part was covered in the Pre-requisites file.
+![](./media/idcs52.jpeg)
+<p align="center" Figure 2-6 </p>
+
+*  Click on **Edit** and enable **Federated Single Sign-On Using SAML** option.
+
+![](./media/idcs53.png)
+<p align="center" Figure 2-7 </p>
+
+* Click on **New from Metadata File** button to import IDCS metadata. Select the downloaded metadata file using **Choose File** button. Click on **Create**.
+
+![](./media/idcs54.png)
+<p align="center" Figure 2-8 </p>
+
+* Keep all the default information and click on **Save**
+
+![](./media/idcs55.jpeg)
+<p align="center" Figure 2-9 </p>
+
+* Below are the details for this example. Note, your URLs and domain information will be different.
+
+![](./media/idcs56.jpeg)
+<p align="center" Figure 2-10 </p>
+
+![](./media/idcs57.jpeg)
+<p align="center" Figure 2-11 </p>
+
+* Make note the following:
+
+  * Organization ID value
+
+  * Org Domain Name value.
+
+![](./media/idcs58.jpeg)
+<p align="center" Figure 2-12 </p>
+
+Now that the Salesforce configurations are done, we need to configure IDCS to be aware of the Salesforce application.
+
+* Go to IDCS admin console, navigation menu, **Applications**
+
+ ![](./media/idcs59.jpeg)
+ <p align="center" Figure 2-13 </p>
+
+* Click on **Add** button and select **App Catalog** and search for Salesforce. Click on **Add.**
+
+ ![](./media/idcs60.jpeg)
+ <p align="center" Figure 2-14 </p>
+
+* On the first page of configuration screen provide the **Organization**
+
+ **ID** and **Domain Name** values that you made note of from within Salesforce.
+
+![](./media/idcs61.jpeg)
+<p align="center" Figure 2-15 </p>
+
+* Click on **Next** to move to the SSO configuration
+
+ ![](./media/idcs62.jpeg)
+ <p align="center" Figure 2-16 </p>
+
+* Click on **Finish** button
+
+* **Activate** the application
+
+ ![](./media/idcs63.png)
+ <p align="center" Figure 2-17 </p>
+
+### Assign Apps to Group (Persona: Administrator)
+
+In IDCS you have the option to assign access to users directly, by direct assignment to a specific application, or indirectly using dedicated groups. For the purpose of the use case we’ll be using groups to provide users access to Salesforce application.
+
+*  Go to IDCS admin console, **Groups** menu
+
+*  Add a group labeled **Employee**. Check the box **User can request access**.
+
+ ![](./media/idcs64.png)
+ <p align="center" Figure 2-18 </p>
+
+*  Click on **Finish**
+
+*  Go to the **Access** tab. Click on **Assign**.
+
+*  Select **Salesforce** and click on **OK**.
+
+![](./media/idcs65.jpeg)
+<p align="center" Figure 2-19 </p>
+
+Moving back to Salesforce in order to create a corresponding account for one that we have into IDCS.
+
+*  **Login** into **Salesforce** as an administrator.
+
+*  Go to **Setup**.
+
+*  On the left panel, click on **Manage Users**, then on **Users** and then on **New User**.
+
+*  Create a user as shown below. Be sure to use the email address as the login and use one that matches the account created in IDCS in Module 1. In this case, We’ve used *oracleuser3003@gmail.com*
+
+*  Set the **User License** to **Salesforce Platform**.
+
+![](./media/idcs66.jpeg)
+<p align="center" Figure 2-20 </p>
+
+Now that the account is available in Salesforce and IDCS has the authenticated account you are ready to test.
+
+### Request Group Access (Persona: End User)
+
+Remember that we have created the **Employee** group into IDCS which is having access to Salesforce application but there is no user assigned yet to it. Since we chose the option
  
- ![](./media/image50.jpeg)
+**“User can request access”** at the creation of the group, now we should be able to request access to it and implicitly to the alesforce application.
 
-6.  Check your email for the domain login and login.
+*  Close your browser to clear the cache and then login into IDCS https://**Your IDCSInstance**.identity.oraclecloud.com/ui/v1/myconsole.
 
-7.  Bring up the **setup** page.
+*  From **My Apps** page, click on **+ Add** access request button.
 
-![](./media/image51.jpeg)
+![](./media/idcs67.jpeg)
+<p align="center" Figure 2-21 </p>
 
-8.  From side menu bar, go to **Security Controls** -\ **Single Sign-On
-    Settings**
+*  From the **Groups** tab, select **Employee** group and select the **+** sign.
 
-![](./media/image52.jpeg)
+![](./media/idcs68.jpeg)
+<p align="center" Figure 2-22 </p>
 
-9.  Click on **Edit** and enable **Federated Single Sign-On Using SAML**
-    option.
+*  Click on + sign to request access to the group. Provide justification on the resulting popup page. Click on **OK**. This is an auto approved request and access should be granted immediately without the need of and administrator intervention.
 
-![](./media/image53.png)
+ ![](./media/idcs69.jpeg)
+ <p align="center" Figure 2-23 </p>
 
-10. Click on **New from Metadata File** button to import IDCS metadata.
-    Select the downloaded metadata file using **Choose File** button.
-    Click on **Create**.
+*  Go to **My Profile** section from menu located top-right
 
-![](./media/image54.png)
+![](./media/idcs70.jpeg)
+<p align="center" Figure 2-24 </p>
 
-11. Keep all the default information and click on **Save**
+*  Ensure that **Employee** group is visible under **My Access** sub-tab
 
-![](./media/image55.jpeg)
+ ![](./media/idcs71.png)
+ <p align="center" Figure 2-25 </p>
 
- Below are the details for this example. Note, your URLs and domain
- information will be different.
+*  Ensure that Salesforce applications are visible now on the **MyApps** page
 
-![](./media/image56.jpeg)
+![](./media/idcs72.png)
+<p align="center" Figure 2-26 </p>
 
-![](./media/image57.jpeg)
+### Verify SSO Configuration (Persona: End User)
 
-12. Make note the following:
+*  Click on the **Salesforce Chatter** app from **My Apps** page
 
-<!-- end list --
+*  Ensure that user is automatically logged into Salesforce Chatter (**SSO**)
 
-  - Organization ID value
+![](./media/idcs73.jpeg)
+<p align="center" Figure 2-27 </p>
 
-  - Org Domain Name value.
+You should now see the same user profile information, that you started within IDCS, within Salesforce without having had to log into Salesforce.
 
-![](./media/image58.jpeg)
+### Configure Provisioning and Synchronization (Persona: Administrator)
 
- Now that the Salesforce configurations are done, we need to configure
- IDCS to be aware of the Salesforce application.
+ **OPTIONAL**
 
-13. Go to IDCS admin console -\ navigation menu -\ **Applications**
+*  Obtaining Host Name, Organization ID, and Domain Name from Salesforce
 
- ![](./media/image59.jpeg)
+A host name, organization ID, and a domain name are required before you can configure the Salesforce app in Oracle Identity Cloud Service. You obtain these values from Salesforce.
 
-14. Click on **Add** button and select **App Catalog** and search for
-    Salesforce. Click on **Add.**
+*  In the left navigation menu of the home page, search and click Single Sign-On Settings. The Single Sign-On Settings page appears.
 
- ![](./media/image60.jpeg)
+![](./media/idcs74.jpeg)
+<p align="center" Figure 2-28 </p>
 
-15. On the first page of configuration screen provide the
-    **Organization**
+*  Under the SAML Single Sign-On Settings section, **click** the name that you provided for your identity provider in the **Single Sign-On Settings page**. The SAML Single Sign-On Settings page appears.
 
- **ID** and **Domain Name** values that you made note of from within
- Salesforce.
+*  Make note of the host name from the value given in the **Entity ID** 
 
-![](./media/image61.jpeg)
+field: https://Host_Name
 
-16. Click on **Next** to move to the SSO configuration
+*  Under the Endpoints section, make note of the domain name and the organization ID from the **Salesforce Login URL**: https://**Domain_Name**.my.salesforce.com?so=**Organization_ID**
+The domain name appears at the beginning and the organization ID appears at the end of the URL.
 
- ![](./media/image62.jpeg)
+![](./media/idcs75.png)
+<p align="center" Figure 2-29 </p>
 
-17. Click on **Finish** button
+*  Obtaining the Consumer Key and Consumer Secret from Salesforce
 
-18. **Activate** the application
+**Consumer key** and **consumer secret** values are required before you enable provisioning for the Salesforce app. You obtain these values from Salesforce.
 
- ![](./media/image63.png)
+* Switch to **Lightning Experience** in Salesforce, click the **cogwheel** on the top right corner of the page and select **Setup**.
 
-## Assign Apps to Group (Persona: Administrator)
+![](./media/idcs76.jpeg)
+<p align="center" Figure 2-30 </p>
 
- In IDCS you have the option to assign access to users directly, by
- direct assignment to a specific application, or indirectly using
- dedicated groups. For the purpose of the use case we’ll be using
- groups to provide users access to Salesforce application.
+*  In the left navigation menu of the home page, search and click **AppManager**. The Lightning Experience App Manager page appears.
 
-1.  Go to IDCS admin console -\ **Groups** menu
+![](./media/idcs77.jpeg)
+<p align="center" Figure 2-31 </p>
 
-2.  Add a group labeled **Employee**. Check the box **User can request
-    access**.
+*  In the right corner of the page, click **New Connected App**. The New Connected App page appears.
 
- ![](./media/image64.png)
+![](./media/idcs78.png)
+<p align="center" Figure 2-32 </p>
 
-3.  Click on **Finish**
+*  Under the Basic Information section, enter the Connected App Name of the app that you want to connect.
 
-4.  Go to the **Access** tab. Click on **Assign**.
+*  Enter the **Contact Email** of the administrator.
 
-5.  Select **Salesforce** and click on **OK**.
+* Under the API(Enable OAuth Settings) section, select the **Enable OAuth Settings** Check box.
 
-![](./media/image65.jpeg)
+* Enter any public domain URL that receives the access token from the authorization server in the **Callback URL** field. For example, https://login.salesforce.com
 
- Moving back to Salesforce in order to create a corresponding account
- for one that we have into IDCS.
+* In the Selected OAuth Scopes field, select Full access(full) under the **Available OAuth** Scopes list, and then click Add to give full access to modify the OAuth.
 
-1.  **Login** into **Salesforce** as an administrator.
+![](./media/idcs79.jpeg)
+<p align="center" Figure 2-33 </p>
 
-2.  Go to **Setup**.
+* Scroll down and click **Save**.
 
-3.  On the left panel, click on **Manage Users**, then on **Users** and
-    then on **New User**.
+* Wait for 2-10 minutes for the changes to take effect on the server before using the connected app, and then click **Continue**. The newly created app page appears.
 
-4.  Create a user as shown below. Be sure to use the email address as
-    the login and use one that matches an account in IDCS. In this case,
-    I’ve used <span class="underline" </span
-    [<span class="underline"oracleuser3003@gmail.com</span.](mailto:oracleuser3003@gmail.com)
+* Under the API (Enable OAuth Settings) section, click “**Click to reveal**” next to the **Consumer Secret** field.
 
-5.  Set the **User License** to **Salesforce Platform**.
+![](./media/idcs80.png)
+<p align="center" Figure 2-34 </p>
 
-![](./media/image66.jpeg)
+* Make note of the **Consumer Key** and **Consumer Secret** values.
 
- Now that the account is available in Salesforce and IDCS has the
- authenticated account you are ready to test.
+*  Deriving the Administrator Password from Salesforce
 
-## Request Group Access (Persona: End User)
-
- Remember that we have created the **Employee** group into IDCS which
- is having access to Salesforce application but there is no user
- assigned yet to it. Since we chose the option
- 
- **“User can request access”** at the creation of the group, now we
- should be able to request access to it and implicitly to the
- Salesforce application.
-
-1.  Close your browser to clear the cache and then login into IDCS
-    (https://idcs-\<\<Your IDCS
-    Instance\\.identity.oraclecloud.com/ui/v1/myconsole).
-
-2.  From **My Apps** page, click on **+ Add** access request button.
-
-![](./media/image67.jpeg)
-
-3.  From the **Groups** tab, select **Employee** group and select the
-    **+** sign.
-
-![](./media/image68.jpeg)
-
-4.  Click on + sign to request access to the group. Provide
-    justification on the resulting popup page. Click on **OK**. This is
-    an auto approved request and access should be granted immediately
-    without the need of and administrator intervention.
-
- ![](./media/image69.jpeg)
-
-5.  Go to **My Profile** section from menu located top-right
-
-![](./media/image70.jpeg)
-
-6.  Ensure that **Employee** group is visible under **My Access**
-    sub-tab
-
- ![](./media/image71.png)
-
-7.  Ensure that Salesforce applications are visible now on the **My
-    Apps** page
-
-![](./media/image72.png)
-
-## Verify SSO Configuration (Persona: End User)
-
-1.  Click on the **Salesforce Chatter** app from **My Apps** page
-
-2.  Ensure that user is automatically logged into Salesforce Chatter
-    (**SSO**)
-
-![](./media/image73.jpeg)
-
- You should now see the same user profile information, that you started
- within IDCS, within Salesforce without having had to log into
- Salesforce.
-
-## Configure Provisioning and Synchronization (Persona: Administrator)
-
- **- OPTIONAL**
-
-1.  <span id="bookmark19" class="anchor"</spanObtaining Host Name,
-    Organization ID, and Domain Name from Salesforce
-
- A host name, organization ID, and a domain name are required before
- you can configure the Salesforce app in Oracle Identity Cloud Service.
- You obtain these values from Salesforce.
-
-1.  In the left navigation menu of the home page, search and click
-    Single Sign-On Settings. The Single Sign-On Settings page appears.
-
-![](./media/image74.jpeg)
-
-2.  Under the SAML Single Sign-On Settings section, **click** the name
-    that you provided for your identity provider in the **Single Sign-On
-    Settings page**. The SAML Single Sign-On Settings page appears.
-
-3.  Make note of the host name from the value given in the **Entity ID**
-    field: <span class="underline"https://\<Host\_Name</span\.
-
-4.  Under the Endpoints section, make note of the domain name and the
-    organization ID from the **Salesforce Login URL**:
-    https://\<**Domain\_Name**\.my.salesforce.com?so=\<**Organization\_ID**\.
-    The domain name appears at the beginning and the organization ID
-    appears at the end of the URL.
-
-![](./media/image75.png)
-
-2.  <span id="bookmark20" class="anchor"</spanObtaining the Consumer
-    Key and Consumer Secret from Salesforce
-
- **Consumer key** and **consumer secret** values are required before
- you enable provisioning for the Salesforce app. You obtain these
- values from Salesforce.
-
-5.  Switch to **Lightning Experience** in Salesforce, click the
-    **cogwheel** on the top right corner of the page and select
-    **Setup**.
-
-![](./media/image76.jpeg)
-
-6.  In the left navigation menu of the home page, search and click **App
-    Manager**. The Lightning Experience App Manager page appears.
-
-![](./media/image77.jpeg)
-
-7.  In the right corner of the page, click **New Connected App**. The
-    New Connected App page appears.
-
-![](./media/image78.png)
-
-8.  Under the Basic Information section, enter the Connected App Name of
-    the app that you want to connect.
-
-9.  Enter the **Contact Email** of the administrator.
-
-10. Under the API(Enable OAuth Settings) section, select the **Enable
-    OAuth Settings**
-
- check box.
-
-11. Enter any public domain URL that receives the access token from the
-    authorization server in the **Callback URL** field. For example,
-    [<span class="underline"https://login.salesforce.com</span.](https://login.salesforce.com/)
-
-12. In the Selected OAuth Scopes field, select Full access(full) under
-    the **Available OAuth** Scopes list, and then click Add to give full
-    access to modify the OAuth.
-
-![](./media/image79.jpeg)
-
-13. Scroll down and click **Save**.
-
-14. Wait for 2-10 minutes for the changes to take effect on the server
-    before using the connected app, and then click **Continue**. The
-    newly created app page appears.
-
-15. Under the API (Enable OAuth Settings) section, click “**Click to
-    reveal**” next to the
-
- **Consumer Secret** field.
-
-![](./media/image80.png)
-
-16. Make note of the **Consumer Key** and **Consumer Secret** values.
-
-<!-- end list --
-
-3.  <span id="bookmark21" class="anchor"</spanDeriving the
-    Administrator Password from Salesforce
-
- **<span class="underline"A security token must be appended to the
- administrator password</span** before you enable provisioning and
- synchronization for Salesforce app. You obtain the token value from
- Salesforce.
+ A security token must be appended to the administrator password before you enable provisioning and synchronization for Salesforce app. You obtain the token value from Salesforce.
  
  The final value will look like this:
  
- \<yourSalesforceAdminPassword + securityToken(ex:
- LKdMzECdjFKYSj028WJhU1GG)\
+ `yourSalesforceAdminPassword + securityToken`
+ (ex: LKdMzECdjFKYSj028WJhU1GG)
 
-17. In the upper-right corner of the **Salesforce** home page, click the
-    user icon, and then click Settings from the drop-down list.
+* In the upper-right corner of the **Salesforce** home page, click the user icon, and then click Settings from the drop-down list.
 
-![](./media/image82.jpeg)
+![](./media/idcs82.jpeg)
+<p align="center" Figure 2-35 </p>
 
-18. In the left navigation menu, search and click **Reset My Security
-    Token.**
+* In the left navigation menu, search and click **Reset My Security Token.**
 
- ![](./media/image83.jpeg)
+ ![](./media/idcs83.jpeg)
+ <p align="center" Figure 2-36 </p>
 
-19. On the Reset My Security Token page, click **Reset My Security
-    Token**. A security token is sent to the email address of the
-    administrator.
+* On the Reset My Security Token page, click **Reset My Security Token**. A security token is sent to the email address of the administrator.
 
-20. Make note of the security token, and
-    **<span class="underline"append the security token to the
-    administrator password.</span**
+* Make note of the security token, and append the security token to the administrator password.
 
- \<yourSalesforceAdminPassword + securityToken(ex:
- LKdMzECdjFKYSj028WJhU1GG)\ NOTE: the \<\, + and example must not be
- included
+ `yourSalesforceAdminPassword + securityToken`
+ (ex:LKdMzECdjFKYSj028WJhU1GG) 
+ NOTE: the + must not be included
 
-4.  <span id="bookmark22" class="anchor"</spanEnabling Provisioning
-    and Synchronization for Salesforce
+###  Enabling Provisioning and Synchronization for Salesforce
 
  Provisioning will provide you with the following available operations:
  
@@ -1089,948 +770,53 @@
  account fields defined in Salesforce and the corresponding fields
  defined in Oracle Identity Cloud Service.
 
-21. Go to IDCS admin console
+* Go to IDCS admin console
 
-22. Select the Salesforce applications that you have created previously
+* Select the Salesforce applications that you have created previously
 
-23. On the Provisioning page, select **Enable Provisioning**.
+* On the Provisioning page, select **Enable Provisioning**.
 
-24. A window will pop up. Click “**Grant Consent**”
+* A window will pop up. Click “**Grant Consent**”
 
-25. Fill in the **Host Name, Administrator Username**, **Administrator
-    Password**, **Client ID** and **Client Secret** that you derived in
-    the previous steps from Salesforce
+* Fill in the **Host Name, Administrator Username**, **Administrator Password**, **Client ID** and **Client Secret** that you derived in the previous steps from Salesforce
 
-![](./media/image84.jpeg)
+![](./media/idcs84.jpeg)
+<p align="center" Figure 2-37 </p>
 
-26. Click **Test Connectivity** to verify the connection with
-    Salesforce. Oracle Identity Cloud Service displays a confirmation
-    message.
+* Click **Test Connectivity** to verify the connection with Salesforce. Oracle Identity Cloud Service displays a confirmation message.
 
-27. Scroll down on the Provisioning page, select **Enable
-    Synchronization**.
+* Scroll down on the Provisioning page, select **Enable Synchronization**.
 
- ![](./media/image85.jpeg)
+ ![](./media/idcs85.jpeg)
+ <p align="center" Figure 2-38 </p>
  
  This option will synchronize the existing account details from
  Salesforce and link them to the corresponding Oracle Identity Cloud
  Service users.
 
-5.  <span id="bookmark23" class="anchor"</spanTesting Synchronization
-    in IDCS
+###  Testing Synchronization in IDCS
 
-<!-- end list --
+*  On the applications page, select **Import**.
 
-1.  On the applications page, select **Import**.
+![](./media/idcs86.png)
+<p align="center" Figure 2-39 </p>
 
-![](./media/image86.png)
+*  Click on **Import** and wait for a moment
 
-2.  Click on **Import** and wait for a moment
+*  Click **Refresh**
 
-3.  Click **Refresh**
+![](./media/idcs87.png)
+<p align="center" Figure 2-40 </p>
 
-![](./media/image87.png)
+*  The imported users that were imported from IDCS will be displayed.
 
-4.  The imported users that were imported from IDCS will be displayed.
+![](./media/idcs88.jpeg)
+<p align="center" Figure 2-41 </p>
 
-![](./media/image88.jpeg)
 
-# Lab: Configure Federation - Social Identity Provider (Google) - OPTIONAL
+****
+**You have successfully connected and provision IDs on third-party app and enable Single Sign-On to easily login to other vendor services**
 
- An **identity provider**, known as an **Identity Assertion provider**,
- provides identifiers for users who want to interact with Oracle
- Identity Cloud Service using a website that's external to Oracle
- Identity Cloud Service. A **service provider** is a website such as
- Oracle Identity Cloud Service that hosts applications. You can enable
- an identity provider and define one or more service providers. Your
- users can then access the applications hosted by the service providers
- directly from the identity provider.
- 
- Oracle Identity Cloud Service (IDCS) supports social identity
- providers so that users can log in to IDCS with their social
- credentials. Social login feature allows users to self-register in
- IDCS if they do not already have an account.
- 
- Following Social providers comes out-of-the-box with IDCS -
+***END OF LAB***
 
-  - Facebook
-
-  - Google
-
-  - LinkedIn
-
-  - Microsoft
-
-  - Twitter
-
- IDCS also supports any generic social identity provider that is OpenID
- Connect compliant.
- 
- The following links are to a video showing the configuration with
- Google and IDCS. The screens are dated, but the parameters and
- concepts are helpful.
- [<span class="underline"https://apexapps.oracle.com/pls/apex/f?p=44785:24:3378877762177:::24:P24\_CONTEN</span](https://apexapps.oracle.com/pls/apex/f?p=44785%3A24%3A3378877762177%3A%3A%3A24%3AP24_CONTENT_ID%2CP24_PREV_PAGE%3A21307%2C24)
- [<span class="underline"T\_ID,P24\_PREV\_PAGE:21307,24</span](https://apexapps.oracle.com/pls/apex/f?p=44785%3A24%3A3378877762177%3A%3A%3A24%3AP24_CONTENT_ID%2CP24_PREV_PAGE%3A21307%2C24)
- or
- [<span class="underline"https://youtu.be/-OwFAGJw3vo</span](https://youtu.be/-OwFAGJw3vo)
- 
- Another video – with more detail, but with the older style screens:
- [<span class="underline"https://www.youtube.com/watch?v=JU8ArDvzWq0</span](https://www.youtube.com/watch?v=JU8ArDvzWq0)
-
-## Configure Social Provider (Persona: Administrator)
-
- A quick tutorial for integrating Google Sign-in into your web app is
- found at this link:
- [<span class="underline"https://developers.google.com/identity/sign-in/web/sign-in</span](https://developers.google.com/identity/sign-in/web/sign-in)
- 
- This guide also provides a detailed tutorial on how to integrate
- Google as an IdP for IDCS.
- 
- In order to use Google as an IdP for IDCS, we need to obtain Auth 2.0
- credentials from Google. This can be done by having a developer
- account on google and create an application for this purpose.
-
-1.  To start, please click on the following link:
-    <span class="underline"[
-    https://developers.google.com/identity/protocols/OpenIDConnect](https://developers.google.com/identity/protocols/OpenIDConnect)</span
-
-2.  Scroll down to the sub-heading “**Obtain OAuth 2.0 credentials**”
-    and click on the hyperlinked **Credentials page**. A new Window will
-    open which will ask you to login with your Google account. **Sign
-    in** with your Google account.
-
- ![](./media/image89.jpeg)
-
-3.  Click on **Select a project** and select **NEW PROJECT.**
-
- ![](./media/image90.png)
-
-4.  Choose a name for your project and click **CREATE**.
-
-5.  Under APIs and Services, click on **OAuth consent screen**.
-
-6.  Choose an **Application name**.
-
-![](./media/image91.jpeg)
-
-7.  For **authorized domains**, choose **oraclecloud.com** and click on
-    **Save**.
-
-![](./media/image92.jpeg)
-
-8.  Click on **Create credentials** and select **OAuth client ID**.
-
-![](./media/image93.jpeg)
-
-9.  Choose **Web application** and a **name**.
-
-10. Set the **Authorized redirected URL** to the following
-    <span class="underline"https://\<IDCStenant\/oauth2/v1/social/callback</span
-
-11. Click on **Create** in order to create the keys.
-
- ![](./media/image94.jpeg)
-
-12. You will receive the **client ID** and the **client secret**. Save
-    those for later.
-
- ![](./media/image95.jpeg)
- 
- Now return to **IDCS** and enter the provider parameter values in
- order to configure Google as a Social IdP.
-
-1.  Go to IDCS admin console -\ **Security** tab -\ **Identity
-    Providers** from the left sidebar menu
-
-2.  Click on **Add Social IDP**
-
-3.  Select the type as **Google**. Provide a name of the provider and
-    click **Next**.
-
- ![](./media/image96.jpeg)
-
-4.  Fill in the **Client ID** and **Client Secret** we obtained before.
-
-![](./media/image97.png)
-
-5.  Click on **Finish** and **Activate** the provider
-
- ![](./media/image98.jpeg)
- 
- After this we have a social IdP defined into IDCS but this is not
- currently visible into the sign in page. Next steps will be to assign
- it to a IDP policy and make it visible into the login page.
-
-6.  Enable the option **Show on Login Page**
-
-![](./media/image99.jpeg)
-
- Once setup for to **Show on Login Page**, you’ll see an “eye”.
-
-![](./media/image100.png)
-
-7.  Go to IDCS admin console -\ **Security** menu -\ **IDP Policies**
-    from the left sidebar menu
-
- ![](./media/image101.jpeg)
-
-8.  Select **Default Identity Provide Policy** and then select
-    **Identity Providers** tab. Add Google login to the providers list.
-
-![](./media/image102.jpeg)
-
-## Verify Social Login (Persona: End User)
-
- Now login into IDCS, but select the Google provider link for the
- social logins.
-
-![](./media/image103.jpeg)![](./media/image104.jpeg)
-
- In case a user has been already created in IDCS, you are redirected to
- IDCS and logged in to IDCS with your user credentials from Google. You
- have finished with this part of the tutorial and can skip the
- following instructions for those users who do not have a user yet in
- IDCS.
- 
- In case you do not have a user yet, you will be prompted with an
- additional message from IDCS that you do not have an account and that
- you need to register. In this case, click on the hyperlinked text
- “**Click here to register**”.
-
-![](./media/image105.jpeg)
-
- Enter the necessary fields and click on **Register**. You are now
- successfully registered and can use IDCS with Google as an IdP.
-
-# Lab: Configure Federation – External Identity Provider (Okta)
-
- An **identity provider**, known as an **Identity Assertion provider**,
- provides identifiers for users who want to interact with Oracle
- Identity Cloud Service using a website that's external to Oracle
- Identity Cloud Service. A **service provider** is a website such as
- Oracle Identity Cloud Service that hosts applications. You can enable
- an identity provider and define one or more service providers. Your
- users can then access the applications hosted by the service providers
- directly from the identity provider.
- 
- For this exercise, a website can allow users to log in to Oracle
- Identity Cloud Service with Okta credentials. Okta acts as the
- identity provider and Oracle Identity Cloud
- 
- Service functions as the service provider. Okta verifies that the user
- is an authorized user and returns information to Oracle Identity Cloud
- Service.
-
-1.  ## Configure Okta (Persona: Administrator)
-    
-    1.  Go to Okta and signup for a developer account:
-        <span class="underline"[
-        https://www.okta.com/integrate/signup/](https://www.okta.com/integrate/signup/)</span
-
- This part was covered in the Pre-requisites file.
-
-2.  Once you have your trial account credential, then login using the
-    URL you’ve received after requesting the trial (the custom one, ex:
-    <span class="underline" </span
-    [<span class="underline"https://oracleworkshop.oktareview.com</span](https://oracleworkshop.oktareview.com/)
-    ) and go to **Applications**. In upper left menu select **Classic
-    UI**
-
-![](./media/image106.png)
-
-3.  Select **Add Application** button. Then select **Create New App**
-    button.
-
- ![](./media/image107.jpeg)
-
-4.  Select **SAML2.0** in the next screen.
-
-![](./media/image108.jpeg)
-
-5.  Provide an application name – **IDCS\_SP**.
-
- ![](./media/image109.jpeg)
-
-6.  On **Configure SAML** page, enter all the Service Provider related
-    SAML details. Here are some important fields to be filled:
-
-<!-- end list --
-
-  - **Single Sign on URL** – this is the assertion consumer url which is
-    generally of the format <span class="underline"https://IDCS
-    Instance URL/fed/v1/sp/sso</span
-
-  - **Audience URI (SP Entity ID)** – this is the service provider
-    entity ID which is generally of the format
-    <span class="underline"https://IDCS Instance URL/fed</span \*\*\*
-    NOTE: The IDCS instance is different than the Single Sign On URL. Be
-    sure to look carefully at the IDCS Metadata.
-
-  - **Default Relay state** – This identifies a specific application
-    resource in an IDP initiated SSO scenario. This can be left blank
-    too.
-
-  - **Name ID Format** – Identifies SAML processing rules. Use the
-    default value ‘**Unspecified**’ unless the application explicitly
-    requires a specific format
-
-  - **Application Username** – Determines default value for a user’s
-    application username. The application username will be used for
-    assertions subject statement. Leave default as **Okta username.**
-
- In the IDCS Metadata file the following URLs are found (note your
- instance name will be different).
- 
- Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
- Location="https://idcs-
- ca1e1a3b83fe47fbbba8a53c00e4fcda.identity.oraclecloud.com/fed/v1/idp/sso"/
-
-  - Use this for **Single sign on URL** on Okta screen
-
- entityID="https://idcs-ca1e1a3b83fe47fbbba8a53c00e4fcda.identity-
- test.oraclecloud.com/fed"
-
-  - Use this for **Audience URL (SP Entity ID)** on Okta screen. \*\*
-    Notice the slight change of the instance name\!\!
-
- The following link provides the instance metadata:
- 
- https://idcs-\<tenant
- \_ID\.identity.oraclecloud.com**/fed/v1/metadata**
-
-![](./media/image110.jpeg)
-
-7.  Complete the application creation process.
-
-8.  Go to the app that you just created and click on **Sign On** tab.
-    From here there IDP metadata file can be exported. Export the
-    metadata (click on the **Identity Provider metadata** link).
-
-![](./media/image111.jpeg)
-
-9.  The metadata will be displayed in another browser window. Save it to
-    an xml file by right click and choose “Save as”, as you’ll need this
-    in a few minutes inside of IDCS.
-
- ![](./media/image112.jpeg)
-
-10. Now select the **Assignments** tab.
-
- Okta users needs to be assigned to this application in order for
- access to be granted during SSO.
-
-![](./media/image113.jpeg)
-
-11. Assign users to this application.
-
- It should be a user that is already available into IDCS. If not, keep
- in mind that it needs to be created into IDCS as well in order for the
- integration to work.
- 
- ![](./media/image114.jpeg)
-
-2.  ## Configure IDCS (Persona: Administrator)
-    
-    12. Login to IDCS Admin console and go to **Security** -\
-        **Identity Providers**. Click on
-
-**Add SAML IDP**. Enter the name of the application and description and
-click next.
-
-![](./media/image115.jpeg)
-
-13. Upload Okta metadata xml file that was exported previously.
-
- ![](./media/image116.jpeg)
-
-14. Set the following parameters:
-
-<!-- end list --
-
-  - Identity Provider User Attribute = **Name ID**
-
-  - Oracle Identity Cloud Service User Attribute = **Username**
-
-  - Requested NameID Format = **Unspecified**
-
-![](./media/image117.jpeg)
-
-15. Go to **Next** screens. On the export screen there is nothing to do
-    as we had already retrieve the IDCS metadata from the URL and is no
-    need to download them again.
-
- ![](./media/image118.jpeg)
-
-16. Click **Next** and then **Test Login** on the next screen. Make sure
-    to use a username for the test that exists on both the IDP and SP
-    environments. Otherwise the assertion will fail.
-
-![](./media/image119.png)
-
- You should see a result like the following if everything is working.
-
-![](./media/image120.png)
-
-17. Click **Next** and then click **Activate** button.
-
-![](./media/image121.png)
-
-18. Click **Finish** to complete the process and you’ll be returned to
-    the **Identity Providers** screen. Select the menu to **Show on
-    Login Page.**
-
- ![](./media/image122.png)
-
-19. Go to **Security** -\ **IDP Policies** and open the **Default
-    Identity Provide Policy**
-
-![](./media/image123.jpeg)
-
-20. Select the **+ Assign** menu option and add the Okta Provider.
-
-![](./media/image124.png)
-
-## Login in to IdP (Persona: End User)
-
- Now go to the IDCS admin console and you’ll see the additional sign in
- option.
-
-![](./media/image125.jpeg)
-
- Select the Okta login option and then you’ll be asked for your Okta
- credentials and if authenticated successfully the request will be sent
- to the IDCS My Apps screen. Note: for federation to work, you need to
- login with an account that is defined in both IDCS and Okta.
-
-# Lab: Enabling Conditional MFA in IDCS
-
- Multi-Factor Authentication (MFA) is a method of authentication that
- requires the use of more than one factor to verify a user’s identity.
- 
- With MFA enabled in Oracle Identity Cloud Service, when a user signs
- in to an application, they are prompted for their user name and
- password, which is the first factor – something that they know. The
- user is then required to provide a second type of verification. This
- is called 2-Step Verification. The two factors work together to add an
- additional layer of
- 
- security by using either additional information or a second device to
- verify the user’s identity and complete the login process.
- 
- Users are increasingly connected, accessing their accounts and
- applications from anywhere. As an administrator, when you add MFA on
- top of the traditional user name and password, that helps you to
- protect access to data and applications. This also reduces the
- likelihood of online identity theft and fraud, which secures your
- business applications even if an account password is compromised.
-
-1.  ## Select MFA factors that you want to enable (Persona: Administrator)
-    
-    1.  Login into IDCS Admin console as an administrator
-        <span class="underline"https://\<yourtenant\/ui/v1/adminconsole</span
-    
-    2.  Navigate to **Security** -\ **MFA**
-    
-    3.  **Select** the **MFA factor**s that you want to enable and then
-        **click** on **Save**.
-
-![](./media/image126.jpeg)
-
-4.  To manage MFA factor specific setting, you can click on the
-    configure link besides the Factor or navigate to **Security**-\
-    **MFA** -\ ***\<Specific Factor\***
-
-## Define a Sign-On Policy for Salesforce (Persona: Administrator)
-
- A sign-on policy allows identity domain administrators, security
- administrators, and application administrators to define criteria that
- Oracle Identity Cloud Service uses to determine whether to allow a
- user to sign in to Oracle Identity Cloud Service or prevent a user
- from accessing Oracle Identity Cloud Service.
- 
- Oracle Identity Cloud Service provides you with a default sign-on
- policy that contains a default sign-on rule. Oracle Identity Cloud
- Service evaluates the criteria of the rule for any user attempting to
- sign in to Oracle Identity Cloud Service. By default, this rule allows
- all users to sign in to Oracle Identity Cloud Service. This means
- whichever authentication the user uses, either local authentication,
- by supplying a user name and password, or authentication by using an
- external identity provider, will be sufficient.
- 
- However, you can build upon this policy by adding other sign-on rules
- to it. By adding these rules, you can prevent some of your users from
- signing in to Oracle Identity Cloud Service. Or, you can allow them to
- sign in, but prompt them for an additional factor to access resources
- that are protected by Oracle Identity Cloud Service, such as the My
- Profile console or the Identity Cloud Service console.
-
-5.  Navigate to **Security** -\ **Network Perimeters**
-
-![](./media/image127.jpeg)
-
-6.  Click on **Add** to add a new Network Perimeter. Enter an IP range
-    as shown below.
-
-![](./media/image128.jpeg)
-
-7.  Click **Save.**
-
-![](./media/image129.jpeg)
-
-8.  Navigate to **Security** -\ **Sign On policies**
-
-![](./media/image130.jpeg)
-
-9.  To define a Sign-On-Policy for the Salesforce App **click** on
-    **Add**.
-
-10. Enter a **Policy Name** and **Description** in the Details section.
-
-![](./media/image131.jpeg)
-
- ![](./media/image132.png)
-
-11. **Click** on **\** button to move to the next section.
-
-12. In the **Sign-On Rules section** click on **Add** to add a new rule.
-
-![](./media/image133.jpeg)
-
-13. Create a rule to prompt for MFA when a user belongs to the
-    Salesforce Employees group. Ensure following field are set.
-
-<table
-<thead
-<tr class="header"
-<th<blockquote
-<p<strongField</strong</p
-</blockquote</th
-<th<strongValue</strong</th
-</tr
-</thead
-<tbody
-<tr class="odd"
-<td<blockquote
-<pRule Name</p
-</blockquote</td
-<tdMFA for Saleforce Employees</td
-</tr
-<tr class="even"
-<td<blockquote
-<pAnd is a member of these Groups</p
-</blockquote</td
-<tdSalesforce Employees</td
-</tr
-<tr class="odd"
-<td<blockquote
-<pPrompt for additional Factor</p
-</blockquote</td
-<tdChecked</td
-</tr
-<tr class="even"
-<td<blockquote
-<pEnrollment</p
-</blockquote</td
-<tdOptional</td
-</tr
-<tr class="odd"
-<td<blockquote
-<pFrequency of additional factor when</p
-</blockquote</td
-<tdOnce per Session</td
-</tr
-<tr class="even"
-<td<blockquote
-<pusing a trusted device</p
-</blockquote</td
-<td</td
-</tr
-</tbody
-</table
-
- ![](./media/image134.png)
-
-14. Click **Save**.
-
-![](./media/image135.png)
-
-15. Click **Add** to add a second rule. Ensure following field are set.
-
-<table
-<thead
-<tr class="header"
-<th<blockquote
-<p<strongField</strong</p
-</blockquote</th
-<th<strongValue</strong</th
-</tr
-</thead
-<tbody
-<tr class="odd"
-<td<blockquote
-<pRule Name</p
-</blockquote</td
-<tdBlock from blacklisted IP</td
-</tr
-<tr class="even"
-<td<blockquote
-<pAnd user’s client IP address is</p
-</blockquote</td
-<tdIn one or more of these networks</td
-</tr
-<tr class="odd"
-<td</td
-<tdBlacklisted IP’s</td
-</tr
-<tr class="even"
-<td<blockquote
-<pAccess is</p
-</blockquote</td
-<tdDenied</td
-</tr
-</tbody
-</table
-
-![](./media/image136.jpeg)
-
-16. Click **Save** to save the **Rule**.
-
-17. To move the **Block from blacklisted IP** rule to the top click on
-    the reorder icon and drag the rule to the top.
-
-![](./media/image137.png)
-
-18. **Click** on the **Apps** tab.
-
-19. **Click** on **Assign** button, **Select** the **Salesforce App**
-    and **Click** on **OK.**
-
-![](./media/image138.png)
-
-20. Navigate back to Sign-On Policies and **Activate** the **Salesforce
-    App Policy**
-
-![](./media/image139.png)
-
-3.  ## Sign-in as an end user with MFA (Persona: End User)
-    
-    21. Sign in to IDCS console with a user account that has been
-        assigned to the Salesforce application
-    
-    22. Click on the **Salesforce** tile
-
-![](./media/image140.jpeg)
-
-23. You will be prompted to enable 2-Step verification for your account.
-    **Click** on **Enable** to enable 2-Step Verification for the
-    account. Note as Enrollment was set as Optional in the Sign-On
-    policy the end user is given the option to skip this step
-
-![](./media/image2.png)
-
-24. Select the Auth Factor that you want to enroll. For now, select
-    mobile app.
-
-<!-- end list --
-
-  - MFA Options in Oracle Identity Cloud Service: Mobile Authenticator
-    Application
-
-![](./media/image142.jpeg)
-
-25. Download the Oracle Mobile Authenticator App on your mobile phone.
-
-26. If your mobile has internet connectivity
-    
-    1.  Scan the QR code.
-
-27. If your mobile does not have internet connectivity or you are using
-    a 3rd party authenticator (e.g. Google Authenticator)
-    
-    2.  Check “scan offline QR code” and scan the new offline QR code
-        that is generated.
-    
-    3.  After you scan the QR code, the mobile app will generate OTP’s
-        every 30 seconds.
-    
-    4.  Enter the OTP in the passcode field and click Verify.
-
- ![](./media/image143.png)
-
-28. Once you scan the QR code or enter the OTP (offline mode) your
-    mobile app will be enrolled and you will see a Successfully Enrolled
-    screen.
-
-![](./media/image144.jpeg)
-
- You can enroll additional 2-Step Verification methods by clicking on
- the available method.
-
-  - MFA Options in Oracle Identity Cloud Service: Security Questions
-
-<!-- end list --
-
-1.  Click on Security Questions
-
-2.  Select question that you want to use, enter answers that you will
-    remember and optionally enter hits for each answer.
-
-![](./media/image145.jpeg)
-
-  - MFA Options in Oracle Identity Cloud Service: Email
-
-<!-- end list --
-
-1.  Click on **Email**
-
-2.  An email containing a **passcode** will be sent to your email
-    address.
-
-3.  Enter the passcode in the **Passcode** field and click **Verify**.
-
-![](./media/image146.jpeg)
-
-  - MFA Options in Oracle Identity Cloud Service: Text Message (SMS)
-
-<!-- end list --
-
-1.  Click on Mobile Number.
-
-2.  Enter your mobile number and click on Send.
-
-3.  An SMS (text message) containing an OTP will be sent to your mobile
-    number.
-
-4.  Enter the OTP in the passcode field and click on verify
-
- ![](./media/image147.jpeg)
-
-5.  On the successfully enrolled screen click Done and you will be
-    redirected to the Salesforce App.
-
-6.  Click on the Logout link to logout.
-
-7.  Now directly access the Salesforce App URL
-
-8.  Enter your username and password
-
-9.  A notification will be sent to your phone.
-
- ![](./media/image148.jpeg)
-
-![](./media/image149.png)
-
-10. Open the notification that your received on your phone and tap on
-    Allow
-
-11. You will be signed into the Salesforce app.
-
-12. Click on Logout.
-
-13. Now directly access the Salesforce URL
-
-14. Enter your username and password
-
-15. Click on Use backup verification methods.
-
-16. The list of enrolled backup 2-Step Verification methods is
-    displayed.
-
-![](./media/image150.jpeg)
-
-17. Select Security Questions
-
-18. Answer the security Question and click verify
-
- ![](./media/image151.jpeg)
-
-19. You will be signed into the Salesforce app.
-
-20. You can try other 2-Step methods as well.
-
-# Lab: Enabling Adaptive MFA in IDCS
-
- Adaptive Security is an advanced feature that provides strong
- authentication capabilities for your users, based on their behavior
- within Oracle Identity Cloud Service, and across multiple
- heterogeneous on-premises applications and cloud services.
- 
- When activated, the Adaptive Security feature can analyze a user’s
- risk profile
- 
- within Oracle Identity Cloud Service based on their historical
- behavior, such as too many unsuccessful login attempts, too many
- unsuccessful MFA attempts, and real-time device context like logins
- from unknown devices, access from unknown locations, blacklisted IP
- addresses, and so on.
-
-1.  ## Enabling Risk Provider (Persona: Administrator)
-    
-    1.  Login into IDCS Admin console as an administrator
-        <span class="underline"https://\<yourtenant\/ui/v1/adminconsole</span
-    
-    2.  Navigate to **Security** -\ Adaptive
-    
-    3.  The list of Risk Providers is displayed
-    
-    4.  Select Edit from the Default Risk provider menu
-
-![](./media/image152.jpeg)
-
-![](./media/image153.png)
-
-5.  On this page you can view or edit the Default Risk provider
-    configurations.
-
-![](./media/image154.jpeg)
-
-6.  You can adjust the Low, Medium and High Risk Range.
-
-7.  You can select risk events that you want to enable/disable and also
-    associate a risk score with the event.
-
-8.  Navigate back **Security** -\ Adaptive.
-
-9.  Click on the Adaptive Security toggle located at the top of the page
-    to enable the feature.
-
- ![](./media/image155.jpeg)
-
-10. You can add additional Risk Providers by clicking on the Add button.
-    IDCS currently support integration with Symantec Cloud SOC.
-    Integration with Oracle CASB and other 3rd party risk providers are
-    also planned.
-
-11. For this lab we will use the Default Risk Provider.
-
-<!-- end list --
-
-2.  ## Use Risk as a condition in Sign-On Policy (Persona: Administrator)
-    
-    12. Log into IDCS Admin console as an administrator
-
- https://idcs-tenant.identity.oraclecloud.com/ui/v1/adminconsole
-
-13. Navigate to **Security** -\ **Sign On policies**
-
-14. **Click** on **Edit** to edit the Salesforce App Policy
-
-![](./media/image156.png)
-
-15. Navigate to the Sign-On Rules tab and **Click** on **Edit** to edit
-    the MFA for Salesforce Employees rule
-
-![](./media/image157.png)
-
-16. You can now use Risk as a condition in the Rule.
-
-17. ![](./media/image158.png)Add condition
-
-### Risk Provider Name Operator
-
- ![](./media/image159.jpeg)**Score**
- 
- 7\) Scroll down and click Save.
- 
- Default Risk Provider
- 
- \< (less than, note default is greater 90
-
-3.  ## End User risk evaluation (Persona: Administrator / End User)
-    
-    18. Log into IDCS Admin console as an administrator
-
- https://idcs-tenant.identity.oraclecloud.com/ui/v1/adminconsole
-
-19. Navigate to User and click on Add
-
-20. Create a user with the following details
-    
-    1.  First Name: Demo
-    
-    2.  Last Name: User2
-    
-    3.  User Name: demo.user2
-    
-    4.  Email: *\<your email address\*
-
-21. Click on the Groups tab and assign the Salesforce Employee group the
-    user.
-
-![](./media/image160.jpeg)
-
-22. Logout of IDCS.
-
-23. ![](./media/image161.png)Activate the user by clicking on the
-    activation link that was sent to the user’s email address.
-
- ![](./media/image162.jpeg)
-
-24. Enter a password when prompted.
-
-25. Click on the Continue link on the password set success page.
-
-26. Click on the Salesforce application tile to launch the application
-    in a new tab.
-
-![](./media/image163.png)
-
-27. Click on Enable to enable 2-Step verification
-
-28. Enroll any 2-Step verification
-
-29. Click done you will be prompted for MFA.
-
-30. Logout
-
-![](./media/image2.png)
-
-31. Log into IDCS Admin console as an administrator
-
- https://idcs-tenant.identity.oraclecloud.com/ui/v1/adminconsole
-
-32. Navigate to the User
-
-33. Notice that each user now has an associated risk.
-
- ![](./media/image164.jpeg)
-
-34. Click on Demo User2
-
-35. Click on the Security tab.
-
-36. The Default Risk Provider has generated a risk score of 12 for this
-    user based on the risk events that we enabled and configured.
-
- ![](./media/image165.jpeg)
-
-37. Click on the Default Risk Provider tile and then scroll down to view
-    Risk Incident Details.
-
-38. On this page you get a historical view of risk score and the list of
-    Risk Events.
-
-![](./media/image166.jpeg)
-
-# Additional Tutorials, Videos and References for IDCS
-
- Get Started
- 
- [<span class="underline"https://docs.oracle.com/en/cloud/paas/identity-cloud/index.html</span](https://docs.oracle.com/en/cloud/paas/identity-cloud/index.html)
- 
- Tutorials
- 
- [<span class="underline"https://docs.oracle.com/en/cloud/paas/identity-cloud/tutorials.html</span](https://docs.oracle.com/en/cloud/paas/identity-cloud/tutorials.html)
- 
- Videos
- 
- [<span class="underline"https://docs.oracle.com/en/cloud/paas/identity-cloud/videos.html</span](https://docs.oracle.com/en/cloud/paas/identity-cloud/videos.html)
- 
- A-Team Chronicles - PaaS – Security
- [<span class="underline"http://www.ateam-oracle.com/paas-security/</span](http://www.ateam-oracle.com/paas-security/)
- 
- IMC Blog
- 
- [<span class="underline"https://blogs.oracle.com/imc</span](https://blogs.oracle.com/imc)
-
-![](./media/image2.png)
+[Back to Top](#table-of-contents)   
