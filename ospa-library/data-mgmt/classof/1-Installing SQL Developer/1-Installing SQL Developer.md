@@ -83,6 +83,9 @@ right click on the sqldeveloper zip file you just downloaded and select **Extrac
 
 This concludes the installation. You may also get a pop-up window asking to allow automated reporting to Oracle, click **OK**.
 
+![](media/sqldev.jpg)
+<p align="center">Figure 10</p>
+
 #### PLEASE NOTE Mac OSX and Linux:
 
 Java SE Development Kit 8u201 is required and can be installed from here (please
