@@ -126,7 +126,7 @@ During this lab, you will take the Docker image that you created in Lab 200 and 
 
     ![](images/300/LabGuide300-80c6b300.png)
 
-  - Enter a region: type the **region shown in the upper right** corner of OCI Console
+  - Enter your region: type the **region shown in the upper right** corner of OCI Console. (This will most likely be `us-phoenix-1` for this workshop)
   - Do you want to generate a new RSA key pair?: **Y**
   - Enter a directory for your keys to be created: **accept default by pressing enter**
   - Enter a name for your key: **accept default by pressing enter**
