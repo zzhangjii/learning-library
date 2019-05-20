@@ -591,7 +591,7 @@ The following exercise has been developed to showcase the extend of IDCS Single 
 
 A host name, organization ID, and a domain name are required before you can configure the Salesforce app in Oracle Identity Cloud Service. You obtain these values from Salesforce.
 
-*  In the left navigation menu of the home page, search and click Single Sign-On Settings. The Single Sign-On Settings page appears.
+*  Login to [Developer Salesforce](https://developer.salesforce.com). In the left navigation menu of the home page, search and click Single Sign-On Settings. The Single Sign-On Settings page appears.
 
 ![](./media/idcs74.jpeg)
 <p align="center" Figure 2-28 </p>
@@ -600,7 +600,7 @@ A host name, organization ID, and a domain name are required before you can conf
 
 *  Make note of the host name from the value given in the **Entity ID** 
 
-field: https://Host_Name
+* Field: https://Host_Name
 
 *  Under the Endpoints section, make note of the domain name and the organization ID from the **Salesforce Login URL**: https://**Domain_Name**.my.salesforce.com?so=**Organization_ID**
 The domain name appears at the beginning and the organization ID appears at the end of the URL.
