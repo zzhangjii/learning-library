@@ -129,7 +129,7 @@ You have access to main Oracle Identity Cloud Service dashboard. You can bookmar
 Now that you have completed this guide, you can proceed with the workshop.
 
 - [Lab 1: Oracle CASB Cloud Service](LAB1_CASB.md)
-- [Lab 2: Oracle Identity Cloud Service]()
+- [Lab 2: Oracle Identity Cloud Service](LAB2_IDCS.md)
 - [Demo: Oracle Management Cloud]()
 
 
