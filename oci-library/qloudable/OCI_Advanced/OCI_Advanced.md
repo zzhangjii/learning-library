@@ -10,7 +10,7 @@
 
 [Practice 1: Sign in to OCI Console and create VCN](#practice-1-sign-in-to-oci-console-and-create-vcn)
 
-[Practice 2: Creat ssh keys, two compute instances and configure routing](#practice-2-creat-ssh-keys,-two-compute-instances-and-configure-routing)
+[Practice 2: Create ssh keys, two compute instances and configure routing](#practice-2-create-ssh-keys,-two-compute-instances-and-configure-routing)
 
 [Practice 3: ssh to compute instance and test VCN peering](#practice-3-ssh-to-compute-instance-and-test-vcn-peering)
 
@@ -154,7 +154,7 @@ Local VCN peering is the process of connecting two VCNs in the same region and t
 
 **You have now created two VCN with internet gateway for internet traffic, added default rule in the route table, created subnet and added two local peering gateways(one for each VCN). For VCN peering each VCN must have a local peering gateway.**
 
-## Practice 2: Creat ssh keys, two compute instances and configure routing
+## Practice 2: Create ssh keys, two compute instances and configure routing
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
