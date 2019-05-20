@@ -651,7 +651,7 @@ The domain name appears at the beginning and the organization ID appears at the 
 
 * Make note of the **Consumer Key** and **Consumer Secret** values.
 
-*  Deriving the Administrator Password from Salesforce
+### Deriving the Administrator Password from Salesforce
 
  A security token must be appended to the administrator password before you enable provisioning and synchronization for Salesforce app. You obtain the token value from Salesforce.
  
