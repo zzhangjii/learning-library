@@ -63,6 +63,7 @@ Local VCN peering is the process of connecting two VCNs in the same region and t
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text" height="100" width="100">
+
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL002.PNG" alt="image-alt-text" height="100" width="100">
 
 4. Fill out the dialog box:
@@ -79,17 +80,17 @@ Local VCN peering is the process of connecting two VCNs in the same region and t
 
 - Click **Close**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_001" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_001.PNG" alt="image-alt-text" height="100" width="100">
 
 5. Virtual Cloud Network will be created and VCN name will appear on OCI Console. Scroll down to find your VCN if multiple VCN exist, and click your VCN name.
 
 6. In VNC detials page,  Click **Internet Gateways** under Resources, and click **Create Internet Gateway**. Fill out the dialog box. Click **Create Internet Gateway** (ensure correct compartment is selected).
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_002" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_002.PNG" alt="image-alt-text" height="100" width="100">
 
 7. Click **Route tables**, and click **Default Route Table for <VCN_NAME>**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_003" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_003.PNG" alt="image-alt-text" height="100" width="100">
 
 8. Click **Add Route Rules**. Fill out the dialog box:
 - Target Type: Internet Gateway
@@ -120,7 +121,7 @@ Local VCN peering is the process of connecting two VCNs in the same region and t
 
 13. Click **Create Local Peering Gateway**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_004" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_004.PNG" alt="image-alt-text" height="100" width="100">
 
 14. Create a second VCN using steps above use CIDR block:
 
@@ -270,7 +271,7 @@ Fill out the dialog box:
 
 13. Configure **First local peering gateway**. Click **Local Peering gateway** in your VCN details page. Hover over the action icon (3 vertical dots) and click **Establish Peering Connection**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_005" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_005.PNG" alt="image-alt-text" height="100" width="100">
 
 14. Fill out the dialg box:
 - SPECIFY THE LOCAL PEERING GATEWAY: Browse only (To browse the list of available gateways)
@@ -279,13 +280,13 @@ Fill out the dialog box:
 - LOCAL PEERING GATEWAY COMPARTMENT: Choose the comprtment
 - UNPEERED PEER GATEWAY: Choose the second peering gateway
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_006" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_006.PNG" alt="image-alt-text" height="100" width="100">
 
 15. Repeat the step for second Local peering gateway and peer it with First peering gateway
 
 16. Verify the Local Peering Gateway shows Status as Peered and Peered information is correct.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_007" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_007.PNG" alt="image-alt-text" height="100" width="100">
 
 17. We now need to configure Route tables and Security Lists for the two VCNs. Navigate to First VCN's details page and clik **Route Tables**, then **Default Route table for <FIRST_VCN_NAME>**
 
@@ -298,7 +299,7 @@ Fill out the dialog box:
 
 19. Click **Add Route Rule**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_009" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_009.PNG" alt="image-alt-text" height="100" width="100">
 
 20. Navigate to Security List and Click **Add Ingress Rule**.
 
@@ -309,7 +310,7 @@ Fill out the dialog box:
 - Source Port Range: All
 - Destination Port Range: All
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_008" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_008.PNG" alt="image-alt-text" height="100" width="100">
 
 22. Click **Add Ingress Rule**. 
 
@@ -377,19 +378,19 @@ If ping is successful then we have successfuly created VCN peering across two di
 
 2. Under Resources section on the Instance Details page, click **Console Connections**, and then **Create Console Connection**.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_010" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_010.PNG" alt="image-alt-text" height="100" width="100">
 
 3. Add your public SSH key, by pasting the ssh key created earlier and click **Create Console Connection** Refresh the screen and you will see an Active Console Connection
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_011" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_011.PNG" alt="image-alt-text" height="100" width="100">
 
 4. Click the Actions icon (three dots), and then **Connect with SSH**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_012" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_012.PNG" alt="image-alt-text" height="100" width="100">
 
 5. Select LINUX/MAC OS for PLATFORM, click Copy and paste the command in Note Pad.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_013" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_013.PNG" alt="image-alt-text" height="100" width="100">
 
 6. Since we are using locally generated ssh keys, the command needs to be modified. Add ssh key path in the command as shown below in Yellow highlighted
 
@@ -405,7 +406,7 @@ ls
 ```
 and verify the ssh key files are listed. If Not then switch to the directory where ssh key files are stored. Paste the ssh command from Note pad.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_014" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_014.PNG" alt="image-alt-text" height="100" width="100">
 
 **NOTE:** Once you are connected with an instance console connection, you can perform various tasks, such as:
 
@@ -417,7 +418,7 @@ Both of these tasks require you to boot into a bash shell, in maintenance mode.
 
 8. **Reboot the instance from the Console**. In the Console, in the Instances Details page, click **Reboot**.Once the reboot process starts, switch back to gitbash terminal,  Console messages start to appear. As soon as you see the GRUB boot menu appear, use the up/down arrow key to stop the automatic boot process,enabling you to use the boot menu.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_015" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_015.PNG" alt="image-alt-text" height="100" width="100">
 
 9. In the boot menu, highlight the top item in the menu, and type e to edit the boot entry.
 
@@ -428,11 +429,11 @@ Both of these tasks require you to boot into a bash shell, in maintenance mode.
 init=/bin/bash
 ```
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_016" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_016.PNG" alt="image-alt-text" height="100" width="100">
 
 12. Reboot the instance from the terminal window by entering the keyboard shortcut CTRL+x.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_017" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_017.PNG" alt="image-alt-text" height="100" width="100">
 
 13. Now your instance is on Maintenance Mode and you can can replace your SSH.
 
