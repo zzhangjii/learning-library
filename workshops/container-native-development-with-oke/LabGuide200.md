@@ -269,23 +269,34 @@ Compartments are used to isolate resources within your OCI tenant. Role-based ac
       - In the Category pane, expand Connection, expand SSH, and then click **Auth**. Click **Browse** and select your private key (for example, **C:\Users\\<username\>\container-workshop\ssh-keys\ssh-key.ppk**).
       - Click **Open** to start the session.
 
-  - From _inside the SSH session_, run the following command to install the OCI CLI, which will allow you to interact with your cluster:
+- From _inside the SSH session_, run the following command to install the OCI CLI, which will allow you to interact with your cluster. You will su into the root user and stay as the root user throughout the rest of this step:
 
-    `bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"`
+  ```
+  sudo -s  
+  bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
+  ```
 
     **CAUTION**: When copying the above command, be careful not to copy a newline character at the end. If you paste the command into your SSH session and it executes without you pressing enter, cancel the command with **Control-C**, then press the **up arrow** to retrieve it from the history, and press **enter** to run it without the newline character.
 
     ![](images/200/LabGuide200-41638e46.png)
 
-  - For each of the prompts, accept the default by **pressing enter**
+- For each of the prompts, accept the default by **pressing enter**
 
     ![](images/200/LabGuide200-dd2c64cd.png)
 
-  - When the install is finished, configure the OCI CLI by running `oci setup config` in your SSH session. In a web browser on your local machine, open your **User Settings** page: use the navigation menu to go to Identity->Users and select **View User Details** from the three-dots menu for your user. You will need some details from this page to complete the setup.
+- **Type** the following to reset your SHELL environment:
+
+  ```
+  exec -l $SHELL
+  ```
+
+- In a web browser go back to the OCI Console and open your **User Settings** page: Use the navigation menu to go to **Identity->Users** and select **View User Details** from the three-dots menu for the Cloud user you logged in as. You will need some details from this page to complete the setup.
 
     ![](images/LabGuide200-f1749ef3.png)
 
-  - After initiating `oci setup config`, respond to the prompts as follows:
+- In your SSH session **Type** `oci setup config` responding to the prompts as follows:
+
+  **NOTE:** (Your still the root user)
     - Enter a location for your config: **accept default by pressing enter**
     - Enter a user OCID: copy your OCID by clicking **Copy** in the **User Information** box in OCI Console
     - Enter a tenancy OCID: copy the **Tenancy OCID** from the tenancy details page (found under the administration section of the OCI navigation menu)
@@ -294,21 +305,23 @@ Compartments are used to isolate resources within your OCI tenant. Role-based ac
 
       ![](images/LabGuide300-80c6b300.png)
 
-    - Enter a region: type the **region shown in the upper right** corner of OCI Console
+    - Enter your region: type the **region shown in the upper right** corner of OCI Console. (This will most likely be `us-ashburn-1` for this workshop)
     - Do you want to generate a new RSA key pair?: **Y**
     - Enter a directory for your keys to be created: **accept default by pressing enter**
     - Enter a name for your key: **accept default by pressing enter**
     - Enter a passphrase for your private key: **accept default by pressing enter**
 
-    ![](images/200/LabGuide200-315d446f.png)
+    Example:
 
-  - You've just generated an RSA key pair that we will use to authenticate you to the OCI API. Click **back** to get back to the User Settings page in your browser, click **Add Public Key**
+    ![](images/200/LabGuide200-ashburn.png)
+
+- You've just generated an RSA key pair that we will use to authenticate you to the OCI API. Click **back** to get back to the User Settings page in your browser, click **Add Public Key**
 
     ![](images/200/LabGuide200-70626501.png)
 
-  - We need to copy and paste the public key into this box. In your _SSH session_, run the following command to output the public key:
+ - We need to copy and paste the public key into this box. In your _SSH session_, run the following command to output the public key:
 
-    `cat /home/opc/.oci/oci_api_key_public.pem`
+    `cat /root/.oci/oci_api_key_public.pem`
 
     ![](images/200/LabGuide200-6cead97f.png)
 
@@ -331,8 +344,6 @@ Compartments are used to isolate resources within your OCI tenant. Role-based ac
     ![](images/200/LabGuide200-0c484a65.png)
 
     ![](images/200/LabGuide200-36da5eac.png)
-
-    ![](images/200/LabGuide200-2596f69d.png)
 
     **NOTE**: Copy and paste the commands from the OCI Console window -- the second command below is personalized with your cluster OCID. They are listed here for reference only.
 
