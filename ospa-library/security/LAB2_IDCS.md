@@ -706,7 +706,7 @@ The domain name appears at the beginning and the organization ID appears at the 
 
 * A window will pop up. Click “**Grant Consent**”
 
-* Fill in the **Host Name, Administrator Username**, **Administrator Password**, **Client ID** and **Client Secret** that you derived in the previous steps from Salesforce
+* Fill in the **Host Name (e.g. acasas-dev-ed.my.salesforce.com), Administrator Username**, **Administrator Password**, **Client ID** and **Client Secret** that you derived in the previous steps from Salesforce
 
 ![](./media/idcs84.jpeg)
 <p align="center" Figure 2-37 </p>
@@ -743,7 +743,7 @@ The domain name appears at the beginning and the organization ID appears at the 
 
 
 ****
-**You have successfully connected and provision IDs on third-party app and enable Single Sign-On to easily login to other vendor services**
+**You have successfully connected and provision IDs on third-party app and enable Single Sign-On to easily login to other vendor services.**
 
 ***END OF LAB***
 

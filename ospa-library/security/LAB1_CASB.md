@@ -107,10 +107,14 @@ As part of this first part of the module we will enrol two applications, Box and
 
 * In the Name field, give the service account an identifier (example: occs.trialservice).
 * If you are going to be the tenant master administrator for Oracle CASB Cloud Service, then provide your email address in the Email field and click **Add User**
+
+ ![Box Config app](./media/box_usercreation_2.png)
+<p align="center" Figure 1-12 </p> 
+
 * Open the recently created user and grant this user the Co-Admin role. This account must have either the Admin or Co-Admin role.
 
  ![Box Config app](./media/box_useredit.png)
-<p align="center" Figure 1-12 </p>  
+<p align="center" Figure 1-13 </p>  
 
 * Assign additional privileges to this user.
 At a minimum, the user should be able to run new reports and access existing reports. If you want to be able to push security controls from Oracle CASB Cloud Service to this Box instance, then this user must also have these privileges:
@@ -126,7 +130,7 @@ At a minimum, the user should be able to run new reports and access existing rep
 `Reports and Settings: Run new reports and access existing reports`
 
 ![Box Config user](./media/box_priv.png)
-<p align="center" Figure 1-13 </p>  
+<p align="center" Figure 1-14 </p>  
 
 
 * Click **Save**
@@ -135,20 +139,20 @@ At a minimum, the user should be able to run new reports and access existing rep
 * In the users list you should be able now to see the Oracle CASB Cloud Service user that you just created.
 
 ![Box New Account](./media/box_newaccount.png)
-<p align="center" Figure 1-14 </p>  
+<p align="center" Figure 1-15 </p>  
 
 
 * Check the email account that you provided for that user.
 You should have a message from Box telling you to set a password for this user.
 
 ![Box Verification](./media/box_password_verification.png)
-<p align="center" Figure 1-15 </p>  
+<p align="center" Figure 1-16 </p>  
 
 * Create a complex password for this account.
 For example, at least 12 characters in length, with a combination of uppercase and lowercase letters, numbers, and special characters.
 
 ![Box New Password](./media/box_newpassword.png)
-<p align="center" Figure 1-15 </p>  
+<p align="center" Figure 1-17 </p>  
 
 
 * You will use this user name and password to register your Box instance in Oracle CASB Cloud Service. Have a recovery procedure in case there are issues with the account.
@@ -174,19 +178,19 @@ To register a Box instance with the Oracle CASB Cloud Service, you need the user
 
 
 ![CASB add box](./media/casb_addbox.png)
-<p align="center" Figure 1-16 </p>  
+<p align="center" Figure 1-18 </p>  
 
 * In the Select an instance page, enter a unique name for your application instance.
 
 ![CASB box name](./media/casb_boxname.png)
-<p align="center" Figure 1-17 </p>  
+<p align="center" Figure 1-19 </p>  
 
 * Click **Next**.
 * In the Select monitoring type page, select Push controls and monitor to have Oracle
 CASB Cloud Service set your preferred values in the application and subsequently monitor for deviations from these values.
 
 ![CASB box push config](./media/casb_boxpush.png)
-<p align="center" Figure 1-18 </p>  
+<p align="center" Figure 1-20 </p>  
 
 * Oracle CASB Cloud Service generates a security control alert in Risk Events whenever it detects a mismatch between the selections that you make on this page and the settings in the Box instance.
 
@@ -196,7 +200,7 @@ CASB Cloud Service set your preferred values in the application and subsequently
 * Select the checkbox.
 
 ![CASB box security controls](./media/casb_box_securitycontrols.png)
-<p align="center" Figure 1-19 </p>  
+<p align="center" Figure 1-21 </p>  
 
 * Click **Next**.
 * In the Enter credentials page, select Sign in with Box username and password.
@@ -205,12 +209,12 @@ CASB Cloud Service set your preferred values in the application and subsequently
   * Password. The password of the Oracle CASB Cloud Service user.
 
 ![CASB box testing credentials](./media/casb_box_credentials.png)
-<p align="center" Figure 1-20 </p>  
+<p align="center" Figure 1-22 </p>  
 
 * When you are done entering your credentials, click **Test Credentials**. A new window pops up to ask you if you set the right permissions for that user in your Box account. Click **Ok**.
 
 ![CASB box accept credentials](./media/casb_box_credentials_2.png)
-<p align="center" Figure 1-21 </p>  
+<p align="center" Figure 1-23 </p>  
 
 * It can take a minute or two for the application to receive and accept your credentials.
 * When testing is done, you see a success message.
@@ -230,20 +234,20 @@ You’ll now add SalesForce as a sanctioned application for monitoring in Oracle
     * Click **Sign me up**
 
 ![SF registration](./media/sf_registration.png)
-<p align="center" Figure 1-22 </p>  
+<p align="center" Figure 1-24 </p>  
 
 
 * You will get an email to confirm your account. Click **Verify Account**
 
 
 ![SF verification](./media/sf_verification.png)
-<p align="center" Figure 1-23 </p>  
+<p align="center" Figure 1-25 </p>  
 
 
 * Create a password for your account
 
 ![SF Create Password](./media/sf_password.png)
-<p align="center" Figure 1-24 </p>  
+<p align="center" Figure 1-26 </p>  
 
 
 * Login to your Salesforce account.
@@ -251,12 +255,12 @@ You’ll now add SalesForce as a sanctioned application for monitoring in Oracle
     * Click **New Profile**
 
 ![SF Create profile](./media/sf_profile.png)
-<p align="center" Figure 1-25 </p>  
+<p align="center" Figure 1-27 </p>  
 
 * Existing Profile needs to be set to System Administrator and Profile Name can be named whatever you like, for example, CASBUSER.
 
 ![SF Set profile](./media/sf_setprofile.png)
-<p align="center" Figure 1-26 </p>  
+<p align="center" Figure 1-28 </p>  
 
 * Press save
 
@@ -264,63 +268,63 @@ You’ll now add SalesForce as a sanctioned application for monitoring in Oracle
     * Click **New User**
 
 ![SF create user](./media/sf_createuser.png)
-<p align="center" Figure 1-27 </p>  
+<p align="center" Figure 1-29 </p>  
 
 * The following Screen will appear. Fill in the required fields. User License must be set to Salesforce
     * Profile name will be the name of the profile we previously created
     * Save
 
 ![SF modify user](./media/sf_modifyuser.png)
-<p align="center" Figure 1-28 </p>  
+<p align="center" Figure 1-30 </p>  
 
 
 * An email will be triggered allowing for verification
 
 ![SF verification](./media/sf_verification_newuser.png)
-<p align="center" Figure 1-29 </p>  
+<p align="center" Figure 1-31 </p>  
 
 * Click to Verify account in the link attached in the email and fill password details for the new user. Now you will see the following:
 
 ![SF Dahsboard](./media/sf_dashboard.png)
-<p align="center" Figure 1-30 </p>  
+<p align="center" Figure 1-32 </p>  
 
 This is the last step we need to complete in SalesForce.
 
 * Now go to the CASB Console and select the SalesForce application to add the instance in Oracle CASB.
 
 ![CASB SF enrolment](./media/casb_sf_enroll.png)
-<p align="center" Figure 1-31 </p>  
+<p align="center" Figure 1-33 </p>  
 
 * Enter a unique name for you instance. Click the checkboxes from the picture below. Click **Next**.
 
 ![CASB SF Unique name](./media/casb_sf_uniquename.png)
-<p align="center" Figure 1-32 </p>  
+<p align="center" Figure 1-34 </p>  
 
 * Select Push controls and monitor
 
 ![CASB SF Push](./media/casb_sf_push.png)
-<p align="center" Figure 1-33 </p>  
+<p align="center" Figure 1-35 </p>  
 
 * Select Standard Security Controls. Check Approval box and Press Next
 
 ![CASB SF security controls](./media/casb_sf_securitycontrols.png)
-<p align="center" Figure 1-34 </p>  
+<p align="center" Figure 1-36 </p>  
 
 * You will redirected to the below page. Login with your User Credentials (the user that you created recently in SalesForce)
 
 ![CASB SF credentials](./media/casb_sf_allowcredentials.png)
-<p align="center" Figure 1-35 </p>  
+<p align="center" Figure 1-37 </p>  
 
 * Allow Access
 
 ![CASB SF Allow Access](./media/casb_sf_allowaccess.png)
-<p align="center" Figure 1-36 </p>  
+<p align="center" Figure 1-38 </p>  
 
 
 * Success! You will now be able to monitor SalesForce! Click **Done** to finish
 
 ![CASB SF completion](./media/casb_sf_complete.png)
-<p align="center" Figure 1-37 </p>  
+<p align="center" Figure 1-39 </p>  
 
 [Back to Top](#table-of-contents)
 ****
