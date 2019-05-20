@@ -299,11 +299,7 @@ In this section we will create a new security list. This security list will be u
 
 - CREATE IN COMPARTMENT: Select the compartment assigned to you (if not already selected).
 - SECURITY LIST Name: Specify a name (for example, LB Security List).
-- Allow Rules for Ingress: Delete the entry. (CLick X)
-- Allow Rules for Egress: Delete the entry.(CLick X)
 - Click **Create Security List** 
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_002.PNG" alt="image-alt-text" height="100" width="100">
 
 3. Verify the New Security List got created.
 
@@ -332,7 +328,7 @@ In this section we will create a new security list. This security list will be u
 
 9. Click **Subnets**.
 
-10. Click Create Subnet. Fill out the dialog box:
+10. Click **Create Subnet**. Fill out the dialog box:
 
 - Name: Enter a name (for example, LB-Subnet-1).
 - Subnet Type: Regional
@@ -350,7 +346,7 @@ In this section we will create a new security list. This security list will be u
 
 12. Click **Subnets**.
 
-13. Click Create Subnet. Fill out the dialog box:
+13. Click **Create Subnet**. Fill out the dialog box:
 
 - Name: Enter a name (for example, LB-Subnet-2).
 - Subnet Type: Regional
@@ -361,8 +357,6 @@ In this section we will create a new security list. This security list will be u
 - Security Lists: Select the Security List you created earlier.
 
 14. Leave all other options as default, Click **Create Subnet**.
-
-
 
 ## Practice 4: Create Load Balancer and update Security List
 
@@ -423,42 +417,38 @@ In this section we will create a new security list. This security list will be u
 
 7. Click **Security Lists**, and locate the Load Balancer Security List created earlier.
 
-8. Click Load Balancer Security List created earlier, Click **Edit All Rules**.
-
-9. Under **Allow Rules for Ingress**,  Click **+Another Ingress Rule** and enter the following  ingress rule; Ensure to leave **STATELESS** flag un-checked
-
+8. Click Load Balancer Security List created earlier, Click **Add Ingress Rule**.
+Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure to leave STATELESS flag un-checked
 - Source CIDR: Enter 0.0.0.0/0.
 - IP Protocol: Select TCP.
 - Source Port Range: All.
 - Destination Port Range: Enter 80 (the listener port).
 
-10. Under **Allow Rules for Egress**,  Click **+Another Egress Rule** and enter the following Egress rule; Ensure to leave **STATELESS** flag un-checked
-      
+9. Click **Add Ingress Rule**. 
+
+10. Click **Egress Rule** under Resources. Click **Add Egress Rule**,  click **+Additional Egress Rule** and enter the following Egress rule; Ensure to leave STATELESS flag un-checked
 - Destination CIDR: 0.0.0.0/0
 - IP Protocol: Select TCP.
 - Destination Port Range: All.
 
-11. Click **Save Security List Rules**.
+11. Click **Add Egress Rule**.
 
-12. Click **Security Lists**, and locate the Default Security List of the VCN.
+12. Click **Security Lists**, and locate the Default Security List of the VCN Click **Add Egress Rule**.  Click **+Additional Egress Rule** and Add below 2 Rules for Egress; Ensure to leave STATELESS flag un-checked.:
 
-13. Under **Allow Rules for Ingress** Click **+Another Ingress Rule** and add the following ingress rule; Ensure to leave **STATELESS** flag un-checked
-
+**First Rule**
 - Destination CIDR: 10.0.4.0/24
 - IP Protocol: Select TCP.
 - Source Port Range: All
 - Destination Port Range: 80
 
-14. Under **Allow Rules for Ingress**: Click  **+Another Ingress Rule** and enter the following Ingress rule; Ensure to leave **STATELESS**
-flag un-checked
+13. Click **+Additional Egress Rule** and enter the following Egress rule; Ensure to leave STATELESS flag un-checked
 
+**Second Rule**
 - Destination CIDR: 10.0.5.0/24
 - IP Protocol: Select TCP
 - Destination Port Range: 80
 
-15. Click **Save Security List Rules**.
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_008.PNG" alt="image-alt-text" height="100" width="100">
+14. Click **Add Egress Rule**.
 
 We have now the set-up configured with 2 Compute instances running http server with a index.html file, Load Balancer with all relevant policies and components.
 
