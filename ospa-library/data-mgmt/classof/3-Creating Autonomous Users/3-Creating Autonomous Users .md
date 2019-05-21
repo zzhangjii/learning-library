@@ -7,8 +7,8 @@
 ## Table of Contents
 
 - [Module 1: Download Client Credentials](#module-1--download-the-client-credentials-wallet)
-- [Module 2: Connect to your ATP instance with SQL Developer](#module-3--connecting-to-the-database-using-sql-developer)
-- [Module 3: Create Autonomous Database Users](#module-4--create-autonomous-database-users)
+- [Module 2: Connect to your ADB instance with SQL Developer](#module-2--connect-to-your-adb-instance-with-sql-developer)
+- [Module 3: Create Autonomous Database Users](#module-3--create-autonomous-database-users)
 - [Module 4: Create OML Users](#module-4--create-oml-users)
 
 ***** 
@@ -53,7 +53,7 @@ connection strings be copied from (more on this in other modules)
 ***** 
 
 
-## Module 2:  Connecting to the Database using SQL Developer 
+## Module 2: Connect to your ADB instance with SQL Developer 
 
 *(Make sure you are running the latest version of SQL Developer 18.4. Some older versions will not work with ATP, see lab introductions on how to install)*
 
