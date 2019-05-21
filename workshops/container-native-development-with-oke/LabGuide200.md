@@ -646,7 +646,7 @@ Compartments are used to isolate resources within your OCI tenant. Role-based ac
 
   - **Copy and Paste** the `server` string from your **kubeconfig** file:
 
-    ![](images/200/54-6.png)
+    ![](images/200/54-6.PNG)
 
   **Mac/Linux**
 
