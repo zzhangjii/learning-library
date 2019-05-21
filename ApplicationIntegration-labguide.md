@@ -15,7 +15,7 @@
   - [Configure SQL Developer Database Access](#Configure-SQL-Developer-Database-Access)
   - [Check Integration Status](#Check-Integration-Status)
   - [Prepare a Data Definition](#Prepare-a-Data-Definition)
-- [Lab 1: Creating an Integration](#Lab-1:-Creating-an-Integration)
+- [Lab 1 Creating an Integration](#Lab-1-Creating-an-Integration)
   - [Key Features and Functionality](#Key-Features-and-Functionality)
   - [Create a REST Connection](#Create-a-REST-Connection)
   - [Create an ATP Connection](#Create-an-ATP-Connection)
@@ -26,7 +26,7 @@
     - [Map Data](#Map-Data)
     - [Configure Integration Tracking](#Configure-Integration-Tracking)
   - [Activate an Integration](#Activate-an-Integration)
-- [Lab 2: Building a Process Automation Application](#Lab-2:-Building-a-Process-Automation-Application)
+- [Lab 2 Building a Process Automation Application](#Lab-2-Building-a-Process-Automation-Application)
   - [Key Features and Functionality](#Key-Features-and-Functionality)
   - [Create a Process Application](#Create-a-Process-Application)
   - [Add a Process](#Add-a-Process)
@@ -47,7 +47,7 @@
     - [Work Another Task As a Regional Manager](#Work-Another-Task-As-a-Regional-Manager)
   - [Check Tracking for an Integration](#Check-Tracking-for-an-Integration)
   - [Check the Database Table](#Check-the-Database-Table)
-- [Appendix: Setup for the Labs](#Appendix:-Setup-for-the-Labs)
+- [Appendix Setup for the Labs](#Appendix-Setup-for-the-Labs)
   - [Set Up Oracle ATP](#Set-Up-Oracle-ATP)
   - [Set Up Oracle Integration](#Set-Up-Oracle-Integration)
 
@@ -516,7 +516,7 @@ have done the prerequisites, continue below:
 That completes the steps to prepare your environment. If you have also
 completed the Prerequisites, you are ready to start Lab 1.  Keep right on going.
 
-# Lab 1: Creating an Integration
+# Lab 1 Creating an Integration
 
 In this lab, you use the Integration component of Oracle Integration to
 build an application integration that will be used in Lab 2 to interact
@@ -1090,7 +1090,7 @@ Congratulations\! This completes Lab 1. Your Create New Order
 integration is ready for use in Lab 2. Move right on into Lab 2 to build
 your process automation application.
 
-# Lab 2: Building a Process Automation Application
+# Lab 2 Building a Process Automation Application
 
 In this lab, you use the Process component of Oracle Integration to
 build a process automation application that Mama Maggy’s store managers
@@ -2408,7 +2408,7 @@ This completes the lab exercises. Please review the Appendix material
 below to see what setup steps you need to perform after class so you
 can do these lab exercises again in your own environment.
 
-# Appendix: Setup for the Labs
+# Appendix Setup for the Labs
 
 Here is how you can establish your environment so you can repeat the
 labs after class. You’ll find sections below for Oracle ATP Setup and
