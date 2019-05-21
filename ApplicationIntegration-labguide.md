@@ -8,15 +8,13 @@
   - [Lab Purpose and Guidelines](#lab-purpose-and-guidelines)
   - [Description of the Business Solution](#Description-of-the-Business-Solution)
 - [Prerequisites](#Prerequisites)
-
 - [Preparing Your Environment](#Preparing-Your-Environment)
   - [Clear Browser Data](#Clear-Browser-Data)
-  - [Check Autonomous Database Status](#Check-Autonomous-Database-Status\)
+  - [Check Autonomous Database Status](#Check-Autonomous-Database-Status)
   - [Download Database Wallet](#Download-Database-Wallet)
   - [Configure SQL Developer Database Access](#Configure-SQL-Developer-Database-Access)
   - [Check Integration Status](#Check-Integration-Status)
   - [Prepare a Data Definition](#Prepare-a-Data-Definition)
-
 - [Lab 1: Creating an Integration](#Lab-1:-Creating-an-Integration)
   - [Key Features and Functionality](#Key-Features-and-Functionality)
   - [Create a REST Connection](#Create-a-REST-Connection)
@@ -25,10 +23,9 @@
   - [Define the Integration](#Define-the-Integration)
     - [Add a Trigger](#Add-a-Trigger)
     - [Add an Invoke](#Add-an-Invoke)
-    - [Map Data](#Map-Data:)
+    - [Map Data](#Map-Data)
     - [Configure Integration Tracking](#Configure-Integration-Tracking)
   - [Activate an Integration](#Activate-an-Integration)
-
 - [Lab 2: Building a Process Automation Application](#Lab-2:-Building-a-Process-Automation-Application)
   - [Key Features and Functionality](#Key-Features-and-Functionality)
   - [Create a Process Application](#Create-a-Process-Application)
@@ -50,7 +47,6 @@
     - [Work Another Task As a Regional Manager](#Work-Another-Task-As-a-Regional-Manager)
   - [Check Tracking for an Integration](#Check-Tracking-for-an-Integration)
   - [Check the Database Table](#Check-the-Database-Table)
-
 - [Appendix: Setup for the Labs](#Appendix:-Setup-for-the-Labs)
   - [Set Up Oracle ATP](#Set-Up-Oracle-ATP)
   - [Set Up Oracle Integration](#Set-Up-Oracle-Integration)
