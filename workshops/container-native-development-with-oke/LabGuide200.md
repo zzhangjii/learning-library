@@ -178,19 +178,25 @@ Compartments are used to isolate resources within your OCI tenant. Role-based ac
 
         ![](images/200/LabGuide200-2f7bb25a.png)
 
-        - In the save dialog box:
-          - Navigate to your home directory/user folder (usually **C:\Users\\<username\>**).
-          - Click **New Folder** and name the folder `container-workshop`.
+      - In the save dialog box:
 
-            ![](images/200/LabGuide200-b203da00.png)
-          - **Double-click** the `container-workshop` folder to enter it.
-          - Click **New Folder** again. This time name the folder `ssh-keys`.
+      - Navigate to your home directory/user folder (usually **C:\Users\\<username\>**).
+      
+      - Click **New Folder** and name the folder `container-workshop`.
 
-            ![](images/200/LabGuide200-af71f041.png)
-          - **Double click** on `ssh-keys` to enter that folder.
-          - Finally, name the key **ssh-key.ppk** and click **Save**.
+        ![](images/200/LabGuide200-b203da00.png)
+          
+      - **Double-click** the `container-workshop` folder to enter it.
+      
+      - Click **New Folder** again. This time name the folder `ssh-keys`.
 
-            ![](images/200/LabGuide200-0f4dd743.png)
+          ![](images/200/LabGuide200-af71f041.png)
+          
+      - **Double click** on `ssh-keys` to enter that folder.
+      
+      - Finally, name the key **ssh-key.ppk** and click **Save**.
+
+          ![](images/200/LabGuide200-0f4dd743.png)
 
       - Select and copy the **public key** using Control-C, which is displayed in the `Public key for pasting into OpenSSH authorized_keys file` region. Paste it into a **new text file** using **notepad** and save the file in the `C:\Users\username\container-workshop\ssh-keys` folder.
 
@@ -241,7 +247,7 @@ Compartments are used to isolate resources within your OCI tenant. Role-based ac
 
     ![](images/LabGuide200-585fa5fe.png)
 
-### **STEP 6**: Prepare OCI CLI for Cluster Access and Download kubeconfig
+### **STEP 6**: SSH into your Compute instance 
 
   - Your instance should now be in the **Running** state. Let's SSH into the instance and install the command line utility that will let us interact with our cluster. Still on the instance details page, find the **Public IP Address** and copy it to the clipboard.
     ![](images/200/LabGuide200-3986ce91.png)
@@ -269,46 +275,61 @@ Compartments are used to isolate resources within your OCI tenant. Role-based ac
       - In the Category pane, expand Connection, expand SSH, and then click **Auth**. Click **Browse** and select your private key (for example, **C:\Users\\<username\>\container-workshop\ssh-keys\ssh-key.ppk**).
       - Click **Open** to start the session.
 
-  - From _inside the SSH session_, run the following command to install the OCI CLI, which will allow you to interact with your cluster:
+### **STEP 7**: Prepare OCI CLI for Cluster Access and Download kubeconfig
 
-    `bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"`
+- From _inside the SSH session_, run the following command to install the OCI CLI, which will allow you to interact with your cluster. You will su into the root user and stay as the root user throughout the rest of this step:
+
+  ```
+  sudo -s  
+  bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
+  ```
 
     **CAUTION**: When copying the above command, be careful not to copy a newline character at the end. If you paste the command into your SSH session and it executes without you pressing enter, cancel the command with **Control-C**, then press the **up arrow** to retrieve it from the history, and press **enter** to run it without the newline character.
 
     ![](images/200/LabGuide200-41638e46.png)
 
-  - For each of the prompts, accept the default by **pressing enter**
+- For each of the prompts, accept the default by **pressing enter**
 
     ![](images/200/LabGuide200-dd2c64cd.png)
 
-  - When the install is finished, configure the OCI CLI by running `oci setup config` in your SSH session. In a web browser on your local machine, open your **User Settings** page: use the navigation menu to go to Identity->Users and select **View User Details** from the three-dots menu for your user. You will need some details from this page to complete the setup.
+- **Type** the following to reset your SHELL environment:
+
+  ```
+  exec -l $SHELL
+  ```
+
+- In a web browser go back to the OCI Console and open your **User Settings** page: Use the navigation menu to go to **Identity->Users** and select **View User Details** from the three-dots menu for the Cloud user you logged in as. You will need some details from this page to complete the setup.
 
     ![](images/LabGuide200-f1749ef3.png)
 
-  - After initiating `oci setup config`, respond to the prompts as follows:
+- In your SSH session **Type** `oci setup config` responding to the prompts as follows:
+
+  **NOTE:** (Your still the root user)
     - Enter a location for your config: **accept default by pressing enter**
-    - Enter a user OCID: copy your OCID by clicking **Copy** in the **User Information** box in OCI Console
-    - Enter a tenancy OCID: copy the **Tenancy OCID** from the tenancy details page (found under the administration section of the OCI navigation menu)
+    - Enter a user OCID: In the OCI Console **Copy** your user OCID by clicking **Copy** in the **User Information** box.
+    - Enter a tenancy OCID: **Copy** the **Tenancy OCID** from the `Tenancy Details` page (found under the `Administration` section of the OCI navigation menu)
 
       ![](images/LabGuide300-fefb896c.png)
 
       ![](images/LabGuide300-80c6b300.png)
 
-    - Enter a region: type the **region shown in the upper right** corner of OCI Console
+    - Enter your region: type the **region shown in the upper right** corner of OCI Console. (This will most likely be `us-ashburn-1` for this workshop)
     - Do you want to generate a new RSA key pair?: **Y**
     - Enter a directory for your keys to be created: **accept default by pressing enter**
     - Enter a name for your key: **accept default by pressing enter**
     - Enter a passphrase for your private key: **accept default by pressing enter**
 
-    ![](images/200/LabGuide200-315d446f.png)
+    Example:
 
-  - You've just generated an RSA key pair that we will use to authenticate you to the OCI API. Click **back** to get back to the User Settings page in your browser, click **Add Public Key**
+    ![](images/200/LabGuide200-ashburn.png)
+
+- You've just generated an RSA key pair that we will use to authenticate you to the OCI API. Click **back** to get back to the User Settings page in your browser, click **Add Public Key**
 
     ![](images/200/LabGuide200-70626501.png)
 
-  - We need to copy and paste the public key into this box. In your _SSH session_, run the following command to output the public key:
+ - We need to copy and paste the public key into this box. In your _SSH session_, run the following command to output the public key:
 
-    `cat /home/opc/.oci/oci_api_key_public.pem`
+    `cat /root/.oci/oci_api_key_public.pem`
 
     ![](images/200/LabGuide200-6cead97f.png)
 
@@ -332,8 +353,6 @@ Compartments are used to isolate resources within your OCI tenant. Role-based ac
 
     ![](images/200/LabGuide200-36da5eac.png)
 
-    ![](images/200/LabGuide200-2596f69d.png)
-
     **NOTE**: Copy and paste the commands from the OCI Console window -- the second command below is personalized with your cluster OCID. They are listed here for reference only.
 
     >mkdir -p $HOME/.kube
@@ -348,7 +367,7 @@ Compartments are used to isolate resources within your OCI tenant. Role-based ac
 
   - In order to interact with your cluster and view the dashboard, you will need to install the Kubernetes command line interface, `kubectl`. We will do that next.
 
-### **STEP 7**: Install and Test kubectl on Your Local Machine
+### **STEP 8**: Install and Test kubectl on Your Local Machine
 
 - The method you choose to install `kubectl` will depend on your operating system and any package managers that you may already use. The generic method of installation, downloading the binary file using `curl`, is given below (**run the appropriate command in a terminal or command prompt**). If you prefer to use a package manager such as apt-get, yum, homebrew, chocolatey, etc, please find the specific command in the [Kubernetes Documentation](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
 
@@ -441,7 +460,7 @@ Compartments are used to isolate resources within your OCI tenant. Role-based ac
 
 ## Configure and Run Wercker Deployment Pipelines
 
-### **STEP 8**: Define Kubernetes Deployment Specification
+### **STEP 9**: Define Kubernetes Deployment Specification
 
 - From a browser, navigate to your forked twitter-feed repository on GitHub. If you've closed the tab, you can get back by going to [GitHub](https://github.com/), clicking the **Repositories** tab at the top of the page, and clicking the **twitter-feed-oke** link.
 
@@ -514,7 +533,7 @@ Compartments are used to isolate resources within your OCI tenant. Role-based ac
 
   - Since you've committed to the repository, Wercker will trigger another execution of your workflow. We haven't defined the deployment pipelines yet, so this will just result in a new entry in Wercker's Runs tab and a new image pushed to the container registry. You don't need to do anything with those; you can move on to the next step.
 
-### **STEP 9**: Define Wercker Deployment Pipelines
+### **STEP 10**: Define Wercker Deployment Pipelines
 
   - Click the file **wercker.yml** and then click the **pencil** button to begin editing the file.
 
@@ -569,7 +588,7 @@ Compartments are used to isolate resources within your OCI tenant. Role-based ac
 
 - Since you've committed to the repository again, Wercker will once again trigger an execution of your workflow. We still haven't configured the deployment pipelines in Wercker yet, so we'll still end up with a new Run and a new image, but not a deployment to Kubernetes.
 
-### **STEP 10**: Set up deployment pipelines in Wercker
+### **STEP 11**: Set up deployment pipelines in Wercker
 
 - Open **[Wercker](https://app.wercker.com)** in a new tab or browser window, or switch to it if you already have it open. In the top navigation bar, click **Pipelines**, then click on your **twitter-feed-oke** application.
 
@@ -595,7 +614,7 @@ Compartments are used to isolate resources within your OCI tenant. Role-based ac
 
 - Now we've got our workflow updated with our deployment pipelines, but there's one more thing we need to do before we can actually deploy. We need to set a few environment variables that tell Wercker the address of our Kubernetes master and provide authentication tokens for Wercker to issue commands to Kubernetes and to OCI.
 
-### **STEP 11**: Set up environment variables in Wercker
+### **STEP 12**: Set up environment variables in Wercker
 
 - Our first step is to set our cluster's authentication token as a Wercker environment variable. In your **terminal window**, run the following commands to output the token, then **select it and copy it** to your clipboard:
 
@@ -689,7 +708,7 @@ Compartments are used to isolate resources within your OCI tenant. Role-based ac
 
 - Now we're ready to try out our workflow from start to finish. We could do that by making another commit on GitHub, since Wercker is monitoring our source code. We can also trigger a workflow execution right from Wercker. We'll see how in the next step.
 
-### **STEP 12**: Trigger a retry of the pipeline
+### **STEP 13**: Trigger a retry of the pipeline
 
 - On your Wercker application page in your browser, click the **Runs** tab. Your most recent run should have a successful build pipeline and a failed push-release pipeline. Click the **push-release** pipeline.
 
@@ -703,7 +722,7 @@ Compartments are used to isolate resources within your OCI tenant. Role-based ac
 
   ![](images/200/42.png)
 
-### **STEP 13**: Validate deployment
+### **STEP 14**: Validate deployment
 
 - First we will validate that our Docker image is visible in the OCI Registry. In your **OCI Console** browser tab, select **Registry (OCIR)** from the navigation menu, under the Developer Services category.
 
@@ -765,7 +784,7 @@ Compartments are used to isolate resources within your OCI tenant. Role-based ac
 
 ## Deploy and Test the Product Catalog Application
 
-### **STEP 14**: Download the Product Catalog Kubernetes YAML file
+### **STEP 15**: Download the Product Catalog Kubernetes YAML file
 
 - From a browser, navigate to your forked twitter-feed repository on GitHub. If you've closed the tab, you can get back by going to [GitHub](https://github.com/), clicking the **Repositories** tab at the top of the page, and clicking the **twitter-feed-oke** link.
 
@@ -781,7 +800,7 @@ Compartments are used to isolate resources within your OCI tenant. Role-based ac
 
 **NOTE**: This YAML file contains the configuration for a Kubernetes deployment and service, much like the configuration for our twitter feed microservice. In a normal development environment, the product catalog application would be managed by Wercker as well, so that builds and deploys would be automated. In this workshop, however, you will perform a one-off deployment of a pre-built Docker image containing the product catalog application from within the Kubernetes dashboard.
 
-### **STEP 15**: Deploy and test the Product Catalog using the Kubernetes dashboard
+### **STEP 16**: Deploy and test the Product Catalog using the Kubernetes dashboard
 
 - Switch back to your **Kubernetes dashboard** browser tab. If you have closed it, navigate to the Kubernetes dashboard at [**Kubernetes dashboard**](http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/)
 

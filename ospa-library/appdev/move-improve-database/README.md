@@ -2,11 +2,11 @@
 
 TABLE OF CONTENTS
 
-[Lab Overview 3](#lab-overview)
+[Lab Overview](#lab-overview)
 
-[Lab Activities 3](#lab-activities)
+[Lab Activities](#lab-activities)
 
-[Lab 1 Create ATP Database 5](#lab-1-create-atp-database)
+[Lab 1 Create ATP Database](#lab-1-create-atp-database)
 
 [Lab 2 Obtain Connection Credentials 15](#lab-2-obtain-connection-credentials)
 
