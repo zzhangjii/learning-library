@@ -11,49 +11,49 @@
 
 - [Preparing Your Environment](#Preparing-Your-Environment)
   - [Clear Browser Data](#Clear-Browser-Data)
-  - [Check Autonomous Database Status](#Check-Autonomous-Database-Status\:)
-  - [Download Database Wallet](#Download-Database-Wallet\:)
-  - [Configure SQL Developer Database Access](#Configure-SQL-Developer-Database-Access\:)
-  - [Check Integration Status](#Check-Integration-Status\:)
-  - [Prepare a Data Definition](#Prepare-a-Data-Definition\:)
+  - [Check Autonomous Database Status](#Check-Autonomous-Database-Status\)
+  - [Download Database Wallet](#Download-Database-Wallet)
+  - [Configure SQL Developer Database Access](#Configure-SQL-Developer-Database-Access)
+  - [Check Integration Status](#Check-Integration-Status)
+  - [Prepare a Data Definition](#Prepare-a-Data-Definition)
 
 - [Lab 1: Creating an Integration](#Lab-1:-Creating-an-Integration)
   - [Key Features and Functionality](#Key-Features-and-Functionality)
-  - [Create a REST Connection](#Create-a-REST-Connection\:)
-  - [Create an ATP Connection](#Create-an-ATP-Connection:)
-  - [Create a New Integration](#Create-a-New-Integration:)
-  - [Define the Integration](#Define-the-Integration:)
-    - [Add a Trigger](#Add-a-Trigger:)
-    - [Add an Invoke](#Add-an-Invoke:)
+  - [Create a REST Connection](#Create-a-REST-Connection)
+  - [Create an ATP Connection](#Create-an-ATP-Connection)
+  - [Create a New Integration](#Create-a-New-Integration)
+  - [Define the Integration](#Define-the-Integration)
+    - [Add a Trigger](#Add-a-Trigger)
+    - [Add an Invoke](#Add-an-Invoke)
     - [Map Data](#Map-Data:)
-    - [Configure Integration Tracking](#Configure-Integration-Tracking:)
-  - [Activate an Integration](#Activate-an-Integration:)
+    - [Configure Integration Tracking](#Configure-Integration-Tracking)
+  - [Activate an Integration](#Activate-an-Integration)
 
 - [Lab 2: Building a Process Automation Application](#Lab-2:-Building-a-Process-Automation-Application)
   - [Key Features and Functionality](#Key-Features-and-Functionality)
-  - [Create a Process Application](#Create-a-Process-Application:)
-  - [Add a Process](#Add-a-Process:)
-[Tailor Roles for Each Process Swimlane](#Tailor-Roles-for-Each-Process-Swimlane:)
-  - [Implement the Submit Request Event](#Implement-the-Submit-Request-Event:)
-  - [Implement the Approve Request Activity](#Implement-the-Approve-Request-Activity:)
-  - [Implement the Resubmit Activity](#Implement-the-Resubmit-Activity:)
-  - [Perform Data Associations](#Perform-Data-Associations:)
-  - [Configure the Conditional Flow](#Configure-the-Conditional-Flow:)
-  - [Access an Integration from a Process Model](#Access-an-Integration-from-a-Process-Model:)
-  - [Map Users to Swimlane Roles](#Map-Users-to-Swimlane-Roles:)
-  - [Publish an Application](#Publish-an-Application:)
-  - [Activate an Application](#Activate-an-Application:)
-  - [Test an Application](#Test-an-Application:)
-    - [Initiate a Request as a Store Manager](#Initiate-a-Request-as-a-Store-Manager:)
-    - [Work a Task As a Regional Manager](#Work-a-Task-As-a-Regional-Manager:)
-    - [Work a Task As a Store Manager](#Work-a-Task-As-a-Store-Manager:)
-    - [Work Another Task As a Regional Manager](#Work-Another-Task-As-a-Regional-Manager:)
-  - [Check Tracking for an Integration](#Check-Tracking-for-an-Integration:)
-  - [Check the Database Table](#Check-the-Database-Table:)
+  - [Create a Process Application](#Create-a-Process-Application)
+  - [Add a Process](#Add-a-Process)
+[Tailor Roles for Each Process Swimlane](#Tailor-Roles-for-Each-Process-Swimlane)
+  - [Implement the Submit Request Event](#Implement-the-Submit-Request-Event)
+  - [Implement the Approve Request Activity](#Implement-the-Approve-Request-Activity)
+  - [Implement the Resubmit Activity](#Implement-the-Resubmit-Activity)
+  - [Perform Data Associations](#Perform-Data-Associations)
+  - [Configure the Conditional Flow](#Configure-the-Conditional-Flow)
+  - [Access an Integration from a Process Model](#Access-an-Integration-from-a-Process-Model)
+  - [Map Users to Swimlane Roles](#Map-Users-to-Swimlane-Roles)
+  - [Publish an Application](#Publish-an-Application)
+  - [Activate an Application](#Activate-an-Application)
+  - [Test an Application](#Test-an-Application)
+    - [Initiate a Request as a Store Manager](#Initiate-a-Request-as-a-Store-Manager)
+    - [Work a Task As a Regional Manager](#Work-a-Task-As-a-Regional-Manager)
+    - [Work a Task As a Store Manager](#Work-a-Task-As-a-Store-Manager)
+    - [Work Another Task As a Regional Manager](#Work-Another-Task-As-a-Regional-Manager)
+  - [Check Tracking for an Integration](#Check-Tracking-for-an-Integration)
+  - [Check the Database Table](#Check-the-Database-Table)
 
 - [Appendix: Setup for the Labs](#Appendix:-Setup-for-the-Labs)
-  - [Set Up Oracle ATP](#Set-Up-Oracle-ATP:)
-  - [Set Up Oracle Integration](#Set-Up-Oracle-Integration:)
+  - [Set Up Oracle ATP](#Set-Up-Oracle-ATP)
+  - [Set Up Oracle Integration](#Set-Up-Oracle-Integration)
 
 
 
@@ -252,7 +252,7 @@ have done the prerequisites, continue below:
         
           - Click the *Clear data* button.
 
-## Check Autonomous Database Status:
+## Check Autonomous Database Status
 
 7.  Access your Autonomous Database to see if it has been started:
 
@@ -295,7 +295,7 @@ have done the prerequisites, continue below:
 
       Figure 3: ATP Status Display
 
-## Download Database Wallet:
+## Download Database Wallet
 
 8.  Download your database credentials as a “wallet file” so that you
     will have them for later to access the database:
@@ -323,7 +323,7 @@ have done the prerequisites, continue below:
     uses to access your ATP database. You’ll use it soon to access the
     ATP database from SQL Developer.
 
-## Configure SQL Developer Database Access:
+## Configure SQL Developer Database Access
 
 9.  Establish access to your ATP database from your SQL Developer:
 
@@ -399,7 +399,7 @@ have done the prerequisites, continue below:
     
         - *Exit* SQL Developer.
 
-## Check Integration Status:
+## Check Integration Status
 
 10. Access your Oracle Integration instance to make sure that it is
     running:
@@ -452,7 +452,7 @@ have done the prerequisites, continue below:
 
        Figure 10: Oracle Integration Home Page
 
-## Prepare a Data Definition:
+## Prepare a Data Definition
 
 11. We need to have data definition available to use during Lab 1 as we
     configure an endpoint for our integration. So, let’s get the data
@@ -572,7 +572,7 @@ Let's get started.  Follow the steps and ask questions if you get confused:
 
     Figure 13: Integration Page Highlighting the Connections Menu Option
 
-## Create a REST Connection:
+## Create a REST Connection
 
 Create a REST Trigger connection that will allow your integration to be
 initiated:
@@ -624,7 +624,7 @@ initiated:
 14. Click the *Close* button in the upper-right to return to the
         Connections page.
 
-## Create an ATP Connection:
+## Create an ATP Connection
 
 Create an ATP Invoke connection that will allow your integration to
 interact with the ATP Database:
@@ -718,7 +718,7 @@ interact with the ATP Database:
 
     Figure 14: Integration Page Listing Connections
 
-## Create a New Integration:
+## Create a New Integration
 
 Create an integration that uses your two connections:
 
@@ -764,12 +764,12 @@ Create an integration that uses your two connections:
     important to Save often so you don’t lose any of your work along the
     way.
 
-## Define the Integration:
+## Define the Integration
 
 Let's start adding elements to the integration editor canvas to define your
 integration.
 
-### Add a Trigger:
+### Add a Trigger
 
 33. Find the *Triggers* icon ![A close up of a logo Description
     automatically generated](./media/image21.png)at the extreme
@@ -860,7 +860,7 @@ Figure 20: Integration With a Trigger Specified
 
 38. Click *Save* in the upper-right corner.
 
-### Add an Invoke:
+### Add an Invoke
 
 39. Find the *Invokes* icon ![](./media/image26.png)at the extreme right
     side of the window and click on it so we can add your
@@ -934,7 +934,7 @@ Figure 23: Integration Editor Showing an App Driven Orchestration
 
 43. Click *Save* in the upper-right corner.
 
-### Map Data:
+### Map Data
 
 44. Let’s use the data mapper to indicate how incoming order data from
     the REST POST request is to be passed to the outbound invocation of
@@ -998,7 +998,7 @@ Figure 23: Integration Editor Showing an App Driven Orchestration
 
     - Click *Save* in the upper-right corner.
 
-### Configure Integration Tracking:
+### Configure Integration Tracking
 46. Notice the *red 1 icon* at the top of the canvas indicating that we
     aren’t done yet. Let’s explore the error:
 
@@ -1049,7 +1049,7 @@ Figure 23: Integration Editor Showing an App Driven Orchestration
     editor canvas window. The Integrations page redisplays and shows
     your new integration at the top.
 
-## Activate an Integration:
+## Activate an Integration
 
 Our last step in this lab is to activate our integration.
 
@@ -1162,7 +1162,7 @@ Let's keep going. Again, follow the steps and ask questions if you get confused:
 5.  Click the *Process Applications* menu option at the left to display
     the Process Applications page.
 
-## Create a Process Application:
+## Create a Process Application
 
 We want to quickly start modeling our business process, but a process
 needs to be part of a process application. Let’s create one:
@@ -1202,7 +1202,7 @@ Figure 35: Creating a New Process Application
 
     Figure 36: Creating a New Process for a New Application
 
-## Add a Process:
+## Add a Process
 
 7.  Add a new process that will contain the business logic to automate
     order request processing:
@@ -1254,7 +1254,7 @@ Figure 35: Creating a New Process Application
 
     Figure 40: Starting Point for Our Process Modeling
 
-## Tailor Roles for Each Process Swimlane:
+## Tailor Roles for Each Process Swimlane
 
 11. Tailor the roles to correspond to our Mama Maggy use case. The
     default roles for this pattern are Process Owner and Process
@@ -1290,7 +1290,7 @@ Figure 35: Creating a New Process Application
 13. Click the *Save* button to safely store away your updates. (Saving
     often is a great idea.)
 
-## Implement the Submit Request Event:
+## Implement the Submit Request Event
 
 14. Let’s work on the Submit Request start event so the store manager
     can initiate a new order request:
@@ -1415,7 +1415,7 @@ later.
 
 17. Click Save to safely store away your new process.
 
-## Implement the Approve Request Activity:
+## Implement the Approve Request Activity
 
 18. Let’s work on the Approve Request human activity so the regional
     manager can evaluate an order request. They each order request, they
@@ -1485,7 +1485,7 @@ later.
 19.  Turn your attention back to your process model again by clicking on
     the *Request Evaluation* tab at the upper-left:
 
-## Implement the Resubmit Activity:
+## Implement the Resubmit Activity
 
 20. Let’s work on the Resubmit human activity so the store manager can
     look at a rejected request, edit it and resubmit it:
@@ -1557,7 +1557,7 @@ later.
 
       Figure 50: Using the Tabs to Switch Panels
 
-## Perform Data Associations:
+## Perform Data Associations
 
 Form data needs to be passed along from form to form as the process
 executes. To do this, we need to configure the data associations for
@@ -1769,7 +1769,7 @@ for the Evaluate Form
 
 28. Click *Save* in the upper-right corner.
 
-## Configure the Conditional Flow:
+## Configure the Conditional Flow
 
 29.  Let’s now condition the *No* branching flow at the *Approved?*
     exclusive gateway so that when a regional manager, working in the
@@ -1839,7 +1839,7 @@ our condition to see if the order request should be routed along the
 30. Click *Save* in the upper-right corner of the window.
 
 
-## Access an Integration from a Process Model:
+## Access an Integration from a Process Model
 
 31.  There is one more task we need to perform to complete the process
     model. Based on our initial Mama Maggy scenario, what didn’t get
@@ -1963,7 +1963,7 @@ cells:
 32. When the modeling canvas reappears, click *Save* in the upper-right
     corner.
 
-## Map Users to Swimlane Roles:
+## Map Users to Swimlane Roles
 We are getting close to being able to test the application, but
     first we need to perform some user role management for those
     swimlanes we configured earlier. You see at the extreme left of your
@@ -2038,7 +2038,7 @@ We are getting close to being able to test the application, but
 
 34. Don’t forget to select *Save* to store the new role definitions.
 
-## Publish an Application:
+## Publish an Application
 
 You can now publish your process application so you can perform an
     end-to-end test. 
@@ -2082,7 +2082,7 @@ You can now publish your process application so you can perform an
 45. There is no feedback when the publishing is done. However, wait
     about 15 seconds before proceeding.
 
-## Activate an Application:
+## Activate an Application
 
 Our last step before we can test is to activate your process
     application so it is installed on the server:
@@ -2129,7 +2129,7 @@ Our last step before we can test is to activate your process
   53. Click the *Save* button in the upper-right corner of your Order
     Request Processing window when it redisplays.
 
-## Test an Application:
+## Test an Application
 
 Let’s now perform an end-to-end test of your application by assuming
     the Store Manager and Regional Manager roles. We’ll use the same
@@ -2146,7 +2146,7 @@ Let’s now perform an end-to-end test of your application by assuming
         Preparing Your Environment section to sign in again. You’ll be
         browsing to the URL to access your My Oracle Services page.
 
-### Initiate a Request as a Store Manager:
+### Initiate a Request as a Store Manager
 
 56. Initiate your Order Request Processing application:
         
@@ -2219,7 +2219,7 @@ Let’s now perform an end-to-end test of your application by assuming
 
       Figure 90: Current State of the Process
 
-### Work a Task As a Regional Manager:
+### Work a Task As a Regional Manager
 
 56. Recall that you also designed a form (*EvaluateForm*) for this
     Approve Request human activity. Use it now, as a regional manager,
@@ -2267,7 +2267,7 @@ Let’s now perform an end-to-end test of your application by assuming
 
       Figure 93: Current State of the Process
 
-### Work a Task As a Store Manager:
+### Work a Task As a Store Manager
 
 57. Put your store manager’s hat back on and review tasks that have been
     assigned to you in the Workspace by clicking on the *Refresh* icon
@@ -2310,7 +2310,7 @@ Let’s now perform an end-to-end test of your application by assuming
 
       Figure 96: Current State of the Process
 
-### Work Another Task As a Regional Manager:
+### Work Another Task As a Regional Manager
 
 58. Put your regional manager’s hat back on and review tasks that have
     been assigned to you in the *Workspace* by clicking on the *Refresh
@@ -2350,7 +2350,7 @@ Let’s now perform an end-to-end test of your application by assuming
 
       ![](./media/image106.png)
       Figure 99: Current State of the Process
-### Check Tracking for an Integration:
+### Check Tracking for an Integration
 
 59. Let’s check to see if the new order really got created in the
     backend system (the ATP database). In other words, did your Create
@@ -2371,7 +2371,7 @@ Let’s now perform an end-to-end test of your application by assuming
 
             Figure 100: Tracking Integrations
 
-### Check the Database Table:
+### Check the Database Table
 
   60. The tracking evidence looks compelling so far. Now, let’s see if the row was
     really added to the ORDERS table by using SQL Developer to look into
@@ -2418,7 +2418,7 @@ Here is how you can establish your environment so you can repeat the
 labs after class. You’ll find sections below for Oracle ATP Setup and
 Oracle Integration Setup.
 
-## Set Up Oracle ATP:
+## Set Up Oracle ATP
 
 1.  Start fresh by clearing your Chrome browser cache (all browsing
     data). If you need help, refer to the Preparing Your Environment
@@ -2745,7 +2745,7 @@ stockId,quantityOrdered) VALUES('tnb001', date '2019-04-15', 100,
       
     - Again, don’t forget to *Commit* your changes.
 
-## Set Up Oracle Integration:
+## Set Up Oracle Integration
 
 1.  Start fresh by clearing your Chrome browser cache (all browsing
     data). If you need help, refer to the Preparing Your Environment
