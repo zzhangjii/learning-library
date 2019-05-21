@@ -10,7 +10,7 @@
 - [Prerequisites](#Prerequisites)
 
 - [Preparing Your Environment](#Preparing-Your-Environment)
-  - [Clear Browser Data](#Clear-Browser-Data\:)
+  - [Clear Browser Data](#Clear-Browser-Data:)
   - [Check Autonomous Database Status](#Check-Autonomous-Database-Status\:)
   - [Download Database Wallet](#Download-Database-Wallet\:)
   - [Configure SQL Developer Database Access](#Configure-SQL-Developer-Database-Access\:)
@@ -209,7 +209,7 @@ have done the prerequisites, continue below:
 5.  Start your Chrome browser. Again, other browsers may work just fine,
     but these labs were tested using Chrome.
 
-## Clear Browser Data:
+## Clear Browser Data
 
 6.  During interactions with the Oracle Cloud, users sometimes have browser difficulties.  To prevent this, we'll clear the browser data (cache) periodically throughout the lab exercises.  Clear your browser data now:
     
