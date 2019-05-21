@@ -53,7 +53,7 @@ connection strings be copied from (more on this in other modules)
 ***** 
 
 
-## Module 2: Connect to your ADB instance with SQL Developer 
+## Module 2:  Connect to your ADB instance with SQL Developer 
 
 *(Make sure you are running the latest version of SQL Developer 18.4. Some older versions will not work with ATP, see lab introductions on how to install)*
 
