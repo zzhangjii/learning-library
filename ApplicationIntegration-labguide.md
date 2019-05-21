@@ -264,8 +264,7 @@ have done the prerequisites, continue below:
 
     - Use the *Search* field to search for: *ATP*
 
-      ![](./media/image5.png)
-
+      ![](./media/image5.png)        
       Figure 1: My Oracle Services Page Showing Services
 
     - Click on *Autonomous Transaction Processing*
