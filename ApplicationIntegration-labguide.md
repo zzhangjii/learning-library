@@ -130,7 +130,7 @@ The solution will provide the following business value for Mama Maggy:
 
 # Prerequisites
 
-Before starting these labs, you determine following:
+Before starting these labs, you will need:
 
   - Oracle Cloud access from: *<https://cloud.oracle.com/en_US/sign-in>*
     
@@ -138,10 +138,8 @@ Before starting these labs, you determine following:
     
       - Oracle Account Sign In (User Name and Password)
 
-  - URL to access your My Oracle Services page (like:
-    *https://myservices-\<InsertYourCloudAccountNameHere\>.console.oraclecloud.com/mycloud/cloudportal/cloudHome*)
 
-You will also need this information about your environment.  If you have used the Appendix section to set up your own Integration and ATP  instances, you will already have this data.  If the instances were set up for you, this information will be provided for you:
+You will also need the environment information listed below.  If you have used the Appendix section to set up your own Integration and ATP  instances, you will already have this data.  If the instances were set up for you, this information will be provided for you:
 
   - Oracle Integration Instance Name
 
@@ -153,12 +151,12 @@ You will also need this information about your environment.  If you have used th
 
   In addition, you should make sure that you have the following software on your computer:
 
-  - Google Chrome browser installed on your computer. Other browsers
+  - Google Chrome browser. Other browsers
     should work well, but this lab was tested with Chrome. The Chrome
     software can be found at:
     [*https://www.google.com/chrome*](https://www.google.com/chrome)
 
-  - Oracle SQL Developer installed on your computer:
+  - Oracle SQL Developer:
 
     - The latest version: (at least version 19.1): Mac: OSX or Windows
     64-bit with JDK 8 included
