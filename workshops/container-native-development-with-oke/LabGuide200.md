@@ -643,11 +643,15 @@ Compartments are used to isolate resources within your OCI tenant. Role-based ac
 - The next environment variable we need to add is the address of the Kubernetes master we want to deploy to. We can get the URL from `kubectl`. Run the following command in your **terminal window** to output the URL, then **select it and copy it** to your clipboard:
 
   **Windows**
-    ```bash
-    kubectl.exe config view | grep server | cut -f 2- -d ":" | tr -d " "
-    ```
+
+  - **Copy and Paste** the `server` string from your **kubeconfig** file:
+
+    ![](images/200/54-6.png)
 
   **Mac/Linux**
+
+  - For Linux/Mac:
+
     ```bash
     echo $(./kubectl config view | grep server | cut -f 2- -d ":" | tr -d " ")
     ```
