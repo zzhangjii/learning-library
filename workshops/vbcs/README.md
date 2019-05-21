@@ -17,7 +17,7 @@ This Oracle Public Cloud Low Code Application Development workshop will walk you
 ### **Step 2**: Proceed to the Lab Guides
 
 <span id=“ghpagesnote”>
-- The Lab documentation is <b>best viewed</b> by using the Workshop’s <a href=“https://oracle.github.io/learning-library/workshops/container-native-development-with-oke/“>GitHub Pages site</a>
+- The Lab documentation is <b>best viewed</b> by using the Workshop’s <a href=“https://oracle.github.io/learning-library/workshops/vbcs/?page=README.md“>GitHub Pages site</a>
 </span>
 
 - Once you are viewing the Workshop's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
