@@ -1,6 +1,6 @@
 # Application Integration Lab Guide
 
-## May 21, 2019
+## May 22, 2019
 
 # Table of Contents
 
@@ -50,8 +50,6 @@
 - [Appendix Setup for the Labs](#Appendix-Setup-for-the-Labs)
   - [Set Up Oracle ATP](#Set-Up-Oracle-ATP)
   - [Set Up Oracle Integration](#Set-Up-Oracle-Integration)
-
-
 
 
 # Lab Guide Overview
