@@ -10,7 +10,7 @@
 - [Prerequisites](#Prerequisites)
 
 - [Preparing Your Environment](#Preparing-Your-Environment)
-  - [Clear Browser Data](#Clear-Browser-Data:)
+  - [Clear Browser Data](#Clear-Browser-Data)
   - [Check Autonomous Database Status](#Check-Autonomous-Database-Status\:)
   - [Download Database Wallet](#Download-Database-Wallet\:)
   - [Configure SQL Developer Database Access](#Configure-SQL-Developer-Database-Access\:)
