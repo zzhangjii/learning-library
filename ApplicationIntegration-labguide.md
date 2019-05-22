@@ -2821,3 +2821,16 @@ Provisioned
     browser page to update the status message.
 
     - Your instance has been established and is ready for use.
+4. Check to make sure that the ATP adapter feature is available in your instance.  As of May, 2019 it was not generally available.  As documented in https://blogs.oracle.com/integration/enabling-the-future-today-feature-flags-in-oracle-integration-cloud, it was available in feature controlled general availability and you have to ask for it to be enabled for your instance.  Here is how to check if the oic.cloudadapter.adapters.atpdatabase feature flag is enabled in your Oracle Integration instance:
+    - Browse to your *Oracle Integration Home Page*.
+
+    - Click on the *Integrations* menu option at the left.
+
+    - Click on the *Adapters* menu option at the left to display all available adapters.
+
+    - Use the Search field to search for *ATP*.
+
+    - If the Oracle ATP adapter appears, then the oic.cloudadapter.adapters.atpdatabase feature flag is enabled for your instance.
+    
+    - If the Oracle ATP adapter does not appear, you'll need to file a Service Request (SR) with Oracle Support as documented in the *How to Request a Feature Flag* section in the link target shown above.
+
