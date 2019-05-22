@@ -1,0 +1,9 @@
+Endpoints for App Dev Service Connections
+
+Store
+
+https://ospavbcs1-ospatee.builder.ocp.oraclecloud.com/ic/builder/rt/Mama_Maggy/live/resources/data/Store/describe
+
+Associate
+
+https://ospavbcs1-ospatee.builder.ocp.oraclecloud.com/ic/builder/rt/Mama_Maggy/live/resources/data/Associate/describe
