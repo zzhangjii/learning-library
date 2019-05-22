@@ -155,13 +155,13 @@ For example, at least 12 characters in length, with a combination of uppercase a
 <p align="center" Figure 1-17 </p>  
 
 
-* You will use this user name and password to register your Box instance in Oracle CASB Cloud Service. Have a recovery procedure in case there are issues with the account.
+* You will use this email addrress and password to register your Box instance in Oracle CASB Cloud Service. Have a recovery procedure in case there are issues with the account.
 
 
 * Adding a Box instance (Push Security Controls Mode)
 
 * You will add or register your Box instance to Oracle CASB Cloud Service to be monitored, and with the capability to push security configuration settings.
-To register a Box instance with the Oracle CASB Cloud Service, you need the user ID and password that belongs to a Box administrator with the appropriate privileges in the account that you want to monitor. This user must be dedicated to the Oracle CASB Cloud Service. We will use the co-admin user that we created in the previous steps.
+To register a Box instance with the Oracle CASB Cloud Service, you need the user ID (email address) and password that belongs to a Box administrator with the appropriate privileges in the account that you want to monitor. This user must be dedicated to the Oracle CASB Cloud Service. We will use the co-admin user that we created in the previous steps.
 
 * In push security controls mode, Oracle CASB Cloud Service checks various security control values in the Box instance, and sets them to the values that you set at registration time. Later, you receive notifications when these security configuration settings change.
 
