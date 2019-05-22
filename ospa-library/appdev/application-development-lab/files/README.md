@@ -1,9 +1,19 @@
 ## Files for App Dev lab
 
-### [Lab file 1 (Product.csv)](Product.csv)
+### Download all lab files as a zip
 
-### [Lab file 2 (ProductOrder.csv)](https://raw.githubusercontent.com/oracle/learning-library/ospa-library/appdev/application-development-lab/ProductOrder.csv)
+  &nbsp;&nbsp;&nbsp;[Download all lab files as .zip](vbcsfiles.zip)
 
-### [Lab file 3 (ProductOrderLine.csv)](https://raw.githubusercontent.com/oracle/learning-library/ospa-library/appdev/application-development-lab/ProductOrderLine.csv)
+### View/Download individual lab files:
 
-### [URLs for Service Connections](https://raw.githubusercontent.com/oracle/learning-library/ospa-library/appdev/application-development-lab/AppDev_Endpoints.txt)
+  1. Click a file link below to view the file
+  2. Select "Raw" format for viewing in native form
+  3. Use Browser's "Save As" to download the file contents
+  
+  &nbsp;&nbsp;&nbsp;[Lab file 1 (Product.csv)](Product.csv)
+
+  &nbsp;&nbsp;&nbsp;[Lab file 2 (ProductOrder.csv)](ProductOrder.csv)
+
+  &nbsp;&nbsp;&nbsp;[Lab file 3 (ProductOrderLine.csv)](ProductOrderLine.csv)
+
+  &nbsp;&nbsp;&nbsp;[URLs for Service Connections](AppDev_Endpoints.txt)
