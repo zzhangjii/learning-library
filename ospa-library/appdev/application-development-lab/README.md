@@ -2,16 +2,12 @@
 
 ### [Lab Guide](applicationdevelopment-labguide.md)
 
-test<a href="files/Product.csv" download="Product.csv">download</a>
-
-### Lab file 1 (<a href="files/Product.csv" download="Product.csv">Product.csv</a>) <a href="files/Product.csv" download="Product.csv">download</a>
-
 ### [Lab file 1 (Product.csv)](files/Product.csv)
 
-### [Lab file 1 (Product.csv)](https://raw.githubusercontent.com/oracle/learning-library/ospa-library/appdev/application-development-lab/master/files/Product.csv)
+### [Lab file 2 (ProductOrder.csv)](files/ProductOrder.csv)
 
-### [Lab file 2 (ProductOrder.csv)](https://raw.githubusercontent.com/oracle/learning-library/ospa-library/appdev/application-development-lab/files/ProductOrder.csv)
+### [Lab file 3 (ProductOrderLine.csv)](files/ProductOrderLine.csv)
 
-### [Lab file 3 (ProductOrderLine.csv)](https://raw.githubusercontent.com/oracle/learning-library/ospa-library/appdev/application-development-lab/files/ProductOrderLine.csv)
+### [URLs for Service Connections](files/AppDev_Endpoints.txt)
 
-### [URLs for Service Connections](https://raw.githubusercontent.com/oracle/learning-library/ospa-library/appdev/application-development-lab/files/AppDev_Endpoints.txt)
+### [Download all files above as .zip](files/vbcsfiles.zip)
