@@ -89,13 +89,13 @@ classroom and supporting lab files.
 
 ![](./media/image5.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.1 - Login
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.1 - Login
 
 2.  On some systems you will see a “dashboard” as shown below
 
 ![](./media/image6.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2 - Dashboard
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2 - Dashboard
 
 Click the “Visual Builder” service (next step)
 
@@ -104,23 +104,23 @@ Dashboard”)
 
 ![](./media/image7.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.1 – Customize Dashboard 1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.1 – Customize Dashboard 1
 
 Scroll to “Visual Builder” and click the “Show Button”
 
 ![](./media/image8.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.2 – Show Visual Builder
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.2 – Show Visual Builder
 
 On other systems you may see a different style of Dashboard
 
 ![](./media/image9.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.3 – Visual Builder Icon
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.3 – Visual Builder Icon
 
 ![](./media/image10.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.4 – Visual Builder Icon (version 2)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.4 – Visual Builder Icon (version 2)
 
 3.  Use the “Hamburger Icon” ![](./media/image11.png) in the Visual
     Builder selection box and choose “Open Service Console” or from the
@@ -129,7 +129,7 @@ On other systems you may see a different style of Dashboard
 
 ![](./media/image13.png) ![](./media/image14.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.3.1 – Open Service Console Menu &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.3.2 – Open Service
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.3.1 – Open Service Console Menu &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.3.2 – Open Service
 Console Button
 
 4.  A VBCS instance has been created and designated for your class to
@@ -138,30 +138,30 @@ Console Button
 
 ![](./media/image15.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.4 – VBCS Instances
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.4 – VBCS Instances
 
 5.  Using the “Hamburger Icon” ![](./media/image16.png)on the far right;
     choose “Open Oracle Visual Builder Cloud Service Home Page”
 
 ![](./media/image17.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.5 – Open VBCS
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.5 – Open VBCS
 
 6.  You should briefly see the VBCS “splash” page
 
 ![](./media/image18.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.6 – VBCS Splash
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.6 – VBCS Splash
 
 7.  When the “Visual Applications” list appears; choose the “New” button
 
 ![](./media/image19.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.7.1 – Visual Applications
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.7.1 – Visual Applications
 
 ![](./media/image20.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.7.2 – Import New Buttons
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.7.2 – Import New Buttons
 
 8.  When the “Create Application” page appears provide a name for the
     application; please use your last name (all lower-case) followed by
@@ -176,13 +176,13 @@ Console Button
 
 ![](./media/image21.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.8 – Name application
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.8 – Name application
 
 9.  You are now ready to begin creating your application\!
 
 ![](./media/image22.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.9 – Start Building Application
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.9 – Start Building Application
 
 This concludes Lab 1.
 
@@ -202,21 +202,21 @@ as those used for service connections (more on this in Lab 4).
 
 ![](./media/image22.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.1 – Start Building Your Application
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.1 – Start Building Your Application
 
 2.  From the application page, click “+ Business Object” to begin adding
     a business object
 
 ![](./media/image23.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.2 – Plus Business Object
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.2 – Plus Business Object
 
 3.  Set the business object name to “Product” as shown here and click
     the Checkmark ![](./media/image24.png) when ready to continue
 
 ![](./media/image25.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.3 – New Business Object
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.3 – New Business Object
 
 4.  The Business Object page allows you to create Fields and manage your
     Business Object. Note that some fields have been defined
@@ -226,13 +226,13 @@ as those used for service connections (more on this in Lab 4).
 
 ![](./media/image26.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.4 – Business Objects Start
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.4 – Business Objects Start
 
 5.  To add a field click the “+ New Field” button
 
 ![](./media/image27.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.5 – New Field Button
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.5 – New Field Button
 
 6.  For each new field the Name and General Data Type are specified
 
@@ -248,13 +248,13 @@ as those used for service connections (more on this in Lab 4).
 
 ![](./media/image29.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.6 – New Field Product Name
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.6 – New Field Product Name
 
 7.  Set the field property to “Required”
 
 ![](./media/image30.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.7 – Product Name required
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.7 – Product Name required
 
 8.  Now add three more fields; be sure to mark the all “Required” so
     that you end up with a list like this:
@@ -269,7 +269,7 @@ as those used for service connections (more on this in Lab 4).
 
 ![](./media/image31.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.8 – Product Business Object Fields
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.8 – Product Business Object Fields
 
 9.  Create another Business Object named “Product Order” (ProductOrder)
     be sure to add the following fields:
@@ -286,7 +286,7 @@ as those used for service connections (more on this in Lab 4).
 
 > ![](./media/image34.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.9 – Product Order Business Object Fields
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.9 – Product Order Business Object Fields
 
 10. Create another Business Object named “Product Order Line”
     (ProductOrderLine) be sure to add the following fields:
@@ -303,19 +303,19 @@ as those used for service connections (more on this in Lab 4).
 
 ![](./media/image35.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.1 – Start Product Order Line
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.1 – Start Product Order Line
 
 Click on the “Overview” tab to see where relationships are defined.
 
 ![](./media/image36.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.2 – Overview tab
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.2 – Overview tab
 
 Click on the plus sign “+” to begin adding relationships.
 
 ![](./media/image37.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.3 – Add Relationship
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.3 – Add Relationship
 
 Use the “drop down” on the right side of the screen to select “Product”
 and check to make sure that “Product” is on the “One” side and
@@ -324,13 +324,13 @@ and check to make sure that “Product” is on the “One” side and
 
 ![](./media/image38.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.4 – Product relationship
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.4 – Product relationship
 
 Click on the plus sign “+” to add another relationship.
 
 ![](./media/image39.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.5 – Add next relationship
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.5 – Add next relationship
 
 Using the drop-down on the right side of the screen select the “Product
 Order” and make sure that “Product Order Line” is on the “Many” side and
@@ -339,13 +339,13 @@ that “Product Order” is on the “One” side of the relationship. Click
 
 ![](./media/image40.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.6 – Add second relationship
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.6 – Add second relationship
 
 The relationships have been defined, now to enter remaining fields.
 
 ![](./media/image41.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.7 – Complete relationships
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.7 – Complete relationships
 
 Return to the “Fields” tab; the two relationships are now listed as
 fields with a “reference” icon ![](./media/image42.png) indicating the
@@ -354,23 +354,23 @@ Field” to continue.
 
 ![](./media/image43.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.8 – ProductOrderLine with relationships
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.8 – ProductOrderLine with relationships
 
 Add “Unit Price” and “Quantity” as numeric fields.
 
 ![](./media/image44.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.9 – Add Unit Price
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.9 – Add Unit Price
 
 ![](./media/image45.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.10 – Add Quantity
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.10 – Add Quantity
 
 The completed field list should look like this:
 
 ![](./media/image46.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.11 – Product Order Line fields
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.11 – Product Order Line fields
 
 11. Examine the “Endpoints” created for each of the Business Objects you
     created; these are the RESTful APIs that allow your applications
@@ -385,7 +385,7 @@ The completed field list should look like this:
 
 ![](./media/image48.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.12 – Product Add Row
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.12 – Product Add Row
 
 13. Provide the following values for the new row:
 
@@ -399,7 +399,7 @@ The completed field list should look like this:
 
 ![](./media/image49.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.13.1 – Add Mozzarella
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.13.1 – Add Mozzarella
 
 Add two more rows for DOUGH and PIZZA\_SAUCE:
 
@@ -413,7 +413,7 @@ DOUGH
 
 ![](./media/image50.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.13.2 – Add Dough
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.13.2 – Add Dough
 
 PIZZA\_SAUCE
 
@@ -425,44 +425,44 @@ PIZZA\_SAUCE
 
 ![](./media/image51.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.13.3 – Add Pizza Sauce
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.13.3 – Add Pizza Sauce
 
 14. Review the rows
 
 ![](./media/image52.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.14 – Product row list
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.14 – Product row list
 
 15. To load more rows from a .csv file; click on the “Product” Business
     Object’s hamburger menu ![](./media/image16.png) and choose “Data
     Management”
 
 ![](./media/image53.png)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.15 – Data Manager dropdown
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.15 – Data Manager dropdown
 
 16. Choose “Import from File”
 
 ![](./media/image54.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.16 – Choose Import from File
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.16 – Choose Import from File
 
 17. Click on “Upload a file or drag it here”
 
 ![](./media/image55.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.17.1 – Upload file start
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.17.1 – Upload file start
 
 Select the “Product.csv” file provided
 
 ![](./media/image56.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.17.2 – Product.csv
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.17.2 – Product.csv
 
 Click the “Import” button to upload the selected file
 
 ![](./media/image57.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.17.3 – Confirm Import
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.17.3 – Confirm Import
 
 18. You should see success message like the following; if not, try again
     or ask the instructor for help; click “OK” button when complete
@@ -474,13 +474,13 @@ Click the “Import” button to upload the selected file
 
 ![](./media/image59.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.19 – Product List
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.19 – Product List
 
 20. Create an initial “Product Order” as follows, then review your
     results  
     ![](./media/image60.png)
 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.20 – Add Product Order row
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.20 – Add Product Order row
 
 21. Create an initial “Product Order Item” as follows, use the “Product
     Order” and “Product” pull-downs to choose those values (if the value
@@ -490,7 +490,7 @@ Click the “Import” button to upload the selected file
 
 ![](./media/image61.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.21 – Add Product Order Line
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.21 – Add Product Order Line
 
 22. Now, using the technique illustrated in 16-18 above add data to the
     Product Order and Product Order Line business objects (note: file
@@ -502,13 +502,13 @@ Click the “Import” button to upload the selected file
 
 ![](./media/image62.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.22.1 – Product Order data
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.22.1 – Product Order data
 
   - Product Order Line - ProductOrderLine.csv
 
 ![](./media/image63.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.22.2 – Product Order Line data
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.22.2 – Product Order Line data
 
 23. Click on the business object “Hamburger” icon
     ![](./media/image16.png)and select “Diagram” to see the
@@ -516,11 +516,11 @@ Click the “Import” button to upload the selected file
 
 ![](./media/image64.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.24.1 – Diagram dropdown
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.24.1 – Diagram dropdown
 
 ![](./media/image65.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.24.2 – Business Object diagram
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.24.2 – Business Object diagram
 
 This concludes Lab 2.
 
@@ -570,14 +570,14 @@ them; now you will create a web application to work with them
 | Processes           | ![](./media/image72.png) |
 | Source View         | ![](./media/image73.png) |
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.2.1 – VBCS Icons  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.2.1 – VBCS Icons  
   
 If you don’t see the navigator, click the “Expand Navigator” icon in the
 upper-left corner
 
 > ![](./media/image74.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.2.2 – Expand Navigator button
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.2.2 – Expand Navigator button
 
 3.  Add a new Web Application;
 
@@ -586,14 +586,14 @@ upper-left corner
 > 
 > ![](./media/image75.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.3.1 – Add Web App 1
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.3.1 – Add Web App 1
 > 
 > If you want to add to your existing Web Applications; click the plus
 > sign “+” at the top of the Web Apps list
 > 
 > ![](./media/image76.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.3.2 – Add Web App 2
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.3.2 – Add Web App 2
 
 4.  The first Web Application you will create will be called
     “productList” - type the name in the “Id” box and click the
@@ -601,7 +601,7 @@ upper-left corner
 
 ![](./media/image77.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.4 – Create Web Application
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.4 – Create Web Application
 
 5.  The Visual Builder interface has three main tabs for creating web
     applications: ![](./media/image78.png) Designer,  
@@ -610,24 +610,24 @@ upper-left corner
 
 ![](./media/image81.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.5.1 – Web UI
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.5.1 – Web UI
 
 Visual Builder will also display an object list in the navigator
 
 ![](./media/image82.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.5.2 – Web Navigator Objects
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.5.2 – Web Navigator Objects
 
 6.  Drag a “Heading” component from the Component list (icon is a
     toggle) to the display area
 
 ![](./media/image83.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.6.1 – Heading Component
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.6.1 – Heading Component
 
 ![](./media/image84.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.6.2 – Heading in Design window
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.6.2 – Heading in Design window
 
 Change the heading to “Product List” using the Property Inspector on the
 right-side of the screen. The “slider” may be used to alter the
@@ -635,47 +635,47 @@ heading’s size.
 
 ![](./media/image85.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.6.3 – Heading Property Inspector
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.6.3 – Heading Property Inspector
 
 If you don’t see the Property Inspector; click the “Expand Property
 Inspector Icon” in the upper-right corner.
 
 ![](./media/image86.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.6.4 – Expand Property Inspector icon
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.6.4 – Expand Property Inspector icon
 
 The screen should look something like this now.
 
 ![](./media/image87.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.6.5 – Finished Heading
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.6.5 – Finished Heading
 
 7.  Add a table to the application by scrolling the Components list
     until you see the Table icon.
 
 > ![](./media/image88.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.7.1 – Table icon
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.7.1 – Table icon
 > 
 > Drag the Table icon to the design area.
 > 
 > ![](./media/image89.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.7.2 – Empty table
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.7.2 – Empty table
 
 8.  To add data to the table, select the table and click the “Add Data”
     option from the list on the right.
 
 ![](./media/image90.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.8.1 – Add Data
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.8.1 – Add Data
 
 The “Add Data” wizard will list any Business Objects and/or Service
 Connections currently defined.
 
 ![](./media/image91.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.8.2 – Add Business Object
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.8.2 – Add Business Object
 
 Choose the “Product” business object then click “Next” to go to the next
 step in the wizard.
@@ -687,33 +687,33 @@ objects on the screen.
 
 ![](./media/image92.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.8.3 – Bind Data
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.8.3 – Bind Data
 
 For this app you will not be changing the query, so just click the
 “Finish” button
 
 ![](./media/image93.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.8.4 – Finish Add Data
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.8.4 – Finish Add Data
 
 Visual Builder will then show some data in the design window.
 
 ![](./media/image94.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.8.5 – Table Sample Data
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.8.5 – Table Sample Data
 
 9.  Test the application by clicking the “Run” button
     ![](./media/image95.png) in the upper-right part of the screen.
 
 ![](./media/image96.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.9.1 – Visual Builder menu bar
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.9.1 – Visual Builder menu bar
 
 A new browser window will open with your running application.
 
 ![](./media/image97.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.9.2 – Finished product list
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.9.2 – Finished product list
 
 Success\!
 
@@ -723,13 +723,13 @@ Success\!
 
 ![](./media/image98.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.1 – Table Properties
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.1 – Table Properties
 
 The “Quick Start” button makes adding to your application easy.
 
 ![](./media/image99.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.2 – Quick Start icon
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.2 – Quick Start icon
 
 The Quick Start options include: Adding data, building a Create Page
 (new row), an Edit Page (update row), a Detail page (display single
@@ -741,14 +741,14 @@ Click “Add Detail Page” to begin the wizard.
 
 ![](./media/image101.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.3 – Quick Start options
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.3 – Quick Start options
 
 Once the wizard starts; select the “Product” Business Object and click
 “Next” to continue.
 
 ![](./media/image102.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.4 – Add Detail 1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.4 – Add Detail 1
 
 Select the fields to be displayed; you may either select by checking
 them in the list or “dragging” them to the fields in the center area.
@@ -758,14 +758,14 @@ button that will display on the main page to launch this page. Click
 
 ![](./media/image103.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.5 – Add Detail 2
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.5 – Add Detail 2
 
 When complete, the object navigator on the left will show the new page.
 Select the new page “main-product-detail” to see what it looks like.
 
 ![](./media/image104.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.6 – Detail in flow
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.6 – Detail in flow
 
 You may see an “error” message similar to the following. Remember that
 Visual Builder is WYSIWYG (what you see is what you get) and attempts to
@@ -775,7 +775,7 @@ display.
 
 ![](./media/image105.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.7 – 404 Error
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.7 – 404 Error
 
 Fortunately there is an easy fix for this. First, look for the
 “Live/Design/Code” button in the upper-right part of the Visual
@@ -783,27 +783,27 @@ Builder editor. Click on “Live” to begin the process.
 
 ![](./media/image106.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.8 – Live, Design, Code button 1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.8 – Live, Design, Code button 1
 
 Now, return to the Product List display and select a row, this sets the
 context.
 
 ![](./media/image107.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.9 – Product List live
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.9 – Product List live
 
 Return to the Product Detail display and you should now see data rather
 than the error message.
 
 ![](./media/image108.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.10 – Product Detail live
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.10 – Product Detail live
 
 Now, return to “Design” mode to continue editing.
 
 ![](./media/image109.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.11 – Live, Design, Code 2
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.11 – Live, Design, Code 2
 
 Now, run the application. When the “Product List” displays note the
 “Product Detail” button is not available since no product has been
@@ -813,14 +813,14 @@ for that product.
 
 ![](./media/image110.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.12 – Product List
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.12 – Product List
 
 Once you have reviewed the product details, click the provided “Back”
 button to return to the list.
 
 ![](./media/image111.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.13 – Product Detail page
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.13 – Product Detail page
 
 In this fashion you may also use the “Quick Start” do add Create, Edit,
 and Delete pages for products. (not part of this lab).
@@ -836,7 +836,7 @@ web application.
 
 ![](./media/image65.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.11.1 – Data model
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.11.1 – Data model
 
 In this lab section you will create a two-screen application similar to
 the last one with a twist, the Product Order Detail screen will include
@@ -865,7 +865,7 @@ through.
 
 ![](./media/image112.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.12.1 – Product Order List original
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.12.1 – Product Order List original
 
 Wow, that date does not look very nice\! A simple way to change the
 format is by dragging the “Input Date Time” component from the component
@@ -873,11 +873,11 @@ list and dropping it into the date column.
 
 ![](./media/image113.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.12.2 – Input Date Time component
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.12.2 – Input Date Time component
 
 ![](./media/image114.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.12.3 – Product Order List Changed Date Format
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.12.3 – Product Order List Changed Date Format
 
 13. Create a Product Order Detail page for the Product Order page’s
     table, select these fields:
@@ -899,7 +899,7 @@ to switch into “Live” mode to set the context).
 
 ![](./media/image115.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.13 – Product Order Detail
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.13 – Product Order Detail
 
 Nothing really new so far…
 
@@ -908,7 +908,7 @@ Nothing really new so far…
 
 ![](./media/image116.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.14 – Detail with Heading
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.14 – Detail with Heading
 
 15. Now you’ll add a new table with data from the Product Order Line
     business object making sure that only lines matching the Product
@@ -916,13 +916,13 @@ Nothing really new so far…
 
 ![](./media/image117.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.15 – Empty table component
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.15 – Empty table component
 
 16. Add data to the table from the Product Order Line business object
     
     ![](./media/image118.png)
     
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.16 – Add Data wizard step 1
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.16 – Add Data wizard step 1
 
 17. In the “Bind Data” step of the Add Data wizard, select:
 
@@ -938,7 +938,7 @@ Nothing really new so far…
 
 > ![](./media/image119.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.17 – Add Data wizard step 2
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.17 – Add Data wizard step 2
 
 18. Here’s the key step\! In step 3 “Define Query” of the Add Data
     wizard you will connect the data from the Product Order and the
@@ -948,7 +948,7 @@ Nothing really new so far…
     
     ![](./media/image120.png)
     
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.18.1 – Define Query page 1**  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.18.1 – Define Query page 1**  
     **
     
     On the right-side of the “Define Query” wizard page under “Target”
@@ -957,28 +957,28 @@ Nothing really new so far…
     
     ![](./media/image121.png)
     
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.18.2 – Define Query filterCriterion
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.18.2 – Define Query filterCriterion
     
     Select “attribute” and type “productOrder” as a “static” value
     (references Product Order).
     
     ![](./media/image122.png)
     
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.18.3 – attribute
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.18.3 – attribute
     
     Select “op” and type “$eq” also as a “static value (equal condition
     test).
     
     ![](./media/image123.png)
     
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.18.4 – op
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.18.4 – op
     
     Drag the “ProductOrderId” value from the left-hand “Sources” column
     and drop it onto the “value” under “Target”
     
     ![](./media/image124.png)
     
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.18.5 – value
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.18.5 – value
     
     The Product Order Line information matching the current order should
     be displayed, if not, you may need to reset the context using the
@@ -987,7 +987,7 @@ Nothing really new so far…
     
     ![](./media/image125.png)
     
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.18.6 – Finished screen
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.18.6 – Finished screen
     
     You should now be able to test your Product Order – Product Order
     Line “master-detail” screens.
@@ -1006,64 +1006,64 @@ Nothing really new so far…
 
 ![](./media/image126.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.19 – Mobile Applications icon
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.19 – Mobile Applications icon
 
 20. If you have not created any Mobile Applications yet click the “+
     Mobile Applications” button; otherwise, click the “+” to the right
     of “Mobile Apps”  
     ![](./media/image127.png)  
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.20.1 – Mobile Applications plus button
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.20.1 – Mobile Applications plus button
 
 ![](./media/image128.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.20.2 – Mobile Apps plus
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.20.2 – Mobile Apps plus
 
 21. The New Mobile Application wizard has two steps; select “None” and
     click the right-arrow button “\>” to continue.
 
 ![](./media/image129.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.21 – New Mobile Application wizard 1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.21 – New Mobile Application wizard 1
 
 22. Click “Finish” on the second page of the wizard
 
 ![](./media/image130.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.22 – New Mobile Application wizard 2
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.22 – New Mobile Application wizard 2
 
 23. Notice the “mobile” frame to help visualize a mobile app; select the
     title then modify it in the property inspector.
 
 ![](./media/image131.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.23 – Mobile title
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.23 – Mobile title
 
 24. Drag a “Table” component into the body of the phone, below the
     title.
 
 ![](./media/image132.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.24 – Adding table
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.24 – Adding table
 
 25. Click on the empty table, then use “Quick Start” to “Add Data” -
     choose the “Product Order” business object.
 
 ![](./media/image133.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.25 – Add ProductOrder
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.25 – Add ProductOrder
 
 26. Select the id (Input Number), orderDate (Input Date) , and
     orderStatus (Text) fields
 
 ![](./media/image134.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.26 – Product Order data
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.26 – Product Order data
 
 27. Review the page; test
 
 ![](./media/image135.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.27 – Product Order list
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.27 – Product Order list
 
 28. Add a Detail page using the “Quick Start” menu. Choose \[\] items
     -\> {} item\[0\] -\> Product Name (Input Text) , Unit Price (Input
@@ -1071,7 +1071,7 @@ Nothing really new so far…
 
 ![](./media/image136.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.28 – Order Detail fields
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.28 – Order Detail fields
 
 29. The basic Order Detail page looks like this.
 
@@ -1085,14 +1085,14 @@ Nothing really new so far…
 
 ![](./media/image139.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.30 – Items heading
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.30 – Items heading
 
 31. Add a table below the new heading by again dragging a “Table”
     component to the “Flex Container” in the Page Structure display.
 
 ![](./media/image140.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.31 – Screen with empty table
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.31 – Screen with empty table
 
 32. Use the table’s “Quick Start” to “Add Data” to the table add
     item\[i\] -\> Product Name (Text), Unit Price (Input Number), and
@@ -1100,7 +1100,7 @@ Nothing really new so far…
 
 > ![](./media/image141.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.32 – Items table contents  
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.32 – Items table contents  
 >   
 > Use “Define Query” to connect the Product List to the list of Items as
 > follows:
@@ -1115,7 +1115,7 @@ Nothing really new so far…
 
 ![](./media/image142.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.33 – Define Query complete
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.33 – Define Query complete
 
 33. Product Order Line data populates table row(s).
 
@@ -1126,11 +1126,11 @@ Nothing really new so far…
 
 ![](./media/image144.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.34.1 – Run Order List
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.34.1 – Run Order List
 
 ![](./media/image145.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.34.2 – Order Details
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.34.2 – Order Details
 
 This concludes Lab 3.
 
@@ -1172,7 +1172,7 @@ ask the instructor if you have questions here).
 
 > ![](./media/image147.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.3.1 – Plus Service Connection
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.3.1 – Plus Service Connection
 > 
 > If you are presented with a list of one or more existing connections
 > click the plus “+” sign at the top of the list to the right of the
@@ -1180,7 +1180,7 @@ ask the instructor if you have questions here).
 > 
 > ![](./media/image148.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.3.2 – Services Plus
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.3.2 – Services Plus
 
 4.  The “Create Connection” wizard starts by asking for the source of
     the connection; for this lab we will choose “Define by
@@ -1190,7 +1190,7 @@ ask the instructor if you have questions here).
 
 > ![](./media/image149.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.4 – Define by Endpoint
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.4 – Define by Endpoint
 
 5.  The wizard will then ask for specifics about the endpoint:
 
@@ -1210,7 +1210,7 @@ ask the instructor if you have questions here).
 
 > ![](./media/image150.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.5.1 – Wizard Service Specification
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.5.1 – Wizard Service Specification
 > 
 > When prompted to “Select Endpoints” open the navigator-style list
 > under “Associate” . and for this exercise choose the two GET methods;
@@ -1219,13 +1219,13 @@ ask the instructor if you have questions here).
 > 
 > ![](./media/image151.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.5.2 – Wizard URL complete
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.5.2 – Wizard URL complete
 > 
 > Click “Create” to complete the process.
 > 
 > ![](./media/image152.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.5.3 – Create Button
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.5.3 – Create Button
 
 6.  Next, open the service for testing: select the connection, choose
     the “Endpoints” tab, find and select the desired endpoint
@@ -1233,25 +1233,25 @@ ask the instructor if you have questions here).
 
 > ![](./media/image153.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.6 – Naming Endpoint to test
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.6 – Naming Endpoint to test
 
 7.  Test the connection by selecting the “Test” tab, filling in any
     necessary parameters, and clicking “Send” to make a request.
 
 > ![](./media/image154.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.7.1 – Test connection
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.7.1 – Test connection
 > 
 > When the service responds, look for a response status “200”
 > (everything ok) and check the results.
 > 
 > ![](./media/image155.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.7.2 – Test status 200
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.7.2 – Test status 200
 > 
 > ![](./media/image156.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.7.3 – Response body
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.7.3 – Response body
 > 
 > If the response looks good to you click the “Copy to Response Body” so
 > that Visual Builder will map out the response details as part of the
@@ -1259,44 +1259,44 @@ ask the instructor if you have questions here).
 > 
 > ![](./media/image157.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.7.4 – Copy to Reponse Body
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.7.4 – Copy to Reponse Body
 > 
 > Click the “Create” button to finish the process of building the
 > service connection.
 > 
 > ![](./media/image158.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.7.5 – Create button
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.7.5 – Create button
 
 8.  Locate the next endpoint to test and select it.
 
 > ![](./media/image159.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.8 – Associate by id endpoint
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.8 – Associate by id endpoint
 
 9.  This endpoint gets a single “Associate” row that is identified by
     passing in an “{Associate\_Id}” value (or whatever the key field is
     named). Type an associate id number (“7 in the example”) and “Send”
     to test.  
     ![](./media/image160.png)  
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.9.1 – Test single associate connection
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.9.1 – Test single associate connection
 
 > Provide a name for the connection (“mmassociateget” in the example).
 > 
 > ![](./media/image161.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.9.2 – Name single connection
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.9.2 – Name single connection
 > 
 > ![](./media/image162.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.9.1 – Test single connection
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.9.1 – Test single connection
 > 
 > Check the response status and values, then click “Copy to Response
 > Body” and the “Create” button to finish things up.
 > 
 > ![](./media/image163.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.9.2 – Single connection response
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.9.2 – Single connection response
 > 
 > You have now created and tested two connections.
 
@@ -1323,47 +1323,47 @@ ask the instructor if you have questions here).
 > 
 > ![](./media/image164.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.11 – mmstores data source
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.11 – mmstores data source
 
 12. Choose the id, name, city, and state. Be sure to select “id” as the
     Primary Key too.
 
 > ![](./media/image165.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.12 – Add data items
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.12 – Add data items
 
 13. The finished screen will look something like this.
 
 > ![](./media/image166.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.13 – Store List
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.13 – Store List
 
 14. Use the table’s “Quick Start” ![](./media/image167.png) to “Add
     Detail Page” to get started.
 
 > ![](./media/image168.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.14.1 – Add Detail Page
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.14.1 – Add Detail Page
 > 
 > Use the “mmstores” again (because our connection used the standardized
 > descriptors Visual Builder will choose the correct endpoint.
 
 ![](./media/image164.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.14.2 – mmstores connection
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.14.2 – mmstores connection
 
 15. Choose id, name, address, city, state, and mailcode from the
     Endpoint Structure.
 
 > ![](./media/image169.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.15 – Store Detail data
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.15 – Store Detail data
 
 16. Your Store details screen should look something like this.
 
 > ![](./media/image170.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.16 – Sample Store Details
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.16 – Sample Store Details
 
 17. Now create an “associatelist” web application to display all
     “Associate” rows and provide a “Add Detail Page” to display a
@@ -1384,7 +1384,7 @@ ask the instructor if you have questions here).
 
 > ![](./media/image171.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.18 – Store Details original
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.18 – Store Details original
 
 19. Add a heading “Associates” under the “Back” button and add a “Table”
     component under the heading. Use the table’s “Quick Start“ menu to
@@ -1393,14 +1393,14 @@ ask the instructor if you have questions here).
 
 > ![](./media/image172.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.19.1 – mmassociates connection
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.19.1 – mmassociates connection
 > 
 > Select id, name, email, and hire date. Also be sure the “Primary Key”
 > is set to the “id” field.
 > 
 > ![](./media/image173.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.19.2 – Associates data
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.19.2 – Associates data
 
 20. **STOP** on step (3) “Define Query” so that you can connect the
     Associates to the Store listed on the page. Under “Define Query”
@@ -1408,21 +1408,21 @@ ask the instructor if you have questions here).
 
 > ![](./media/image174.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.20.1 – Filtercriterion
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.20.1 – Filtercriterion
 > 
 > Select “A attribute” and type “store” into the text box provided, this
 > is “static” content.
 > 
 > ![](./media/image175.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.20.2 - attribute
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.20.2 - attribute
 > 
 > Select “A op” and type “$eq” into the text box provided, this is
 > “static” content.
 > 
 > ![](./media/image176.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.20.3 – op  
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.20.3 – op  
 > Expand the “Sources” values under “Page-\>{} store” and drag the “id”
 > value from the left side of the screen to the “A value” postion on the
 > right. This establishes the link between the current screen (source)
@@ -1430,7 +1430,7 @@ ask the instructor if you have questions here).
 > 
 > ![](./media/image177.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.20.4 - value
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.20.4 - value
 
 21. The completed screen should look something like this. Note, if the
     system is under stress it may take a few moments for the filtering
@@ -1439,7 +1439,7 @@ ask the instructor if you have questions here).
 
 > ![](./media/image178.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.21 – Completed screen
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.21 – Completed screen
 
 **Congratulations\!** You’ve now finished the required labs for this
 course.
@@ -1507,13 +1507,13 @@ view.
 
 ![](./media/image182.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure X.1 – Live/Design/Code button
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure X.1 – Live/Design/Code button
 
 This will display the actual code that supports your screen.
 
 ![](./media/image183.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure X.2 - Visual Builder code
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure X.2 - Visual Builder code
 
 Depending upon the time available and your proficiency coding,
 experiment a little with the code.
@@ -1556,13 +1556,13 @@ sometimes take several minutes.
 
 ![](./media/image_a_1.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.1 - Login
+&nbsp;&nbsp;&nbsp;Figure 1.1 - Login
 
 2.  On some systems you will see a “dashboard” as shown below
 
 ![](./media/image_a_2.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;Figure A.2.1 – Starting Dashboard
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure A.2.1 – Starting Dashboard
 
 If you see a “Visual Builder” box as shown below, proceed to step 3.
 
@@ -1571,14 +1571,14 @@ to the display.
 
 ![](./media/image_a_3.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;Figure A.2.2 – Visual Builder box
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure A.2.2 – Visual Builder box
 
 If you don’t see the “Visual Builder” box shown above; click on the
 “Customize Dashboard
 
 ![](./media/image_a_4.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;Figure A.2.3 – Customize Dashboard
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure A.2.3 – Customize Dashboard
 
 Scroll the “Customize Dashboard” looking for “Visual Builder” service.
 Services may be added/removed from the automatic display using the
@@ -1586,35 +1586,35 @@ Services may be added/removed from the automatic display using the
 
 ![](./media/image_a_5.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;Figure A.2.4 – Customize Dash choices
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure A.2.4 – Customize Dash choices
 
 Once you find “Visual Builder” click the “Show” button so that it
 appears in the dashboard.
 
 ![](./media/image_a_6.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;Figure A.2.5 – Show Visual Builder
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure A.2.5 – Show Visual Builder
 
 3.  From the “Visual Builder” service box there are two ways to open a
     service console.
 
 > ![](./media/image_a_3.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;Figure A.3.1.1 – Visual Builder service
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure A.3.1.1 – Visual Builder service
 
 One method is to click on the box’s “Visual Builder” text to display an
 overview page.
 
 ![](./media/image_a_7.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;Figure A.3.1.2 – Visual Builder Overview
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure A.3.1.2 – Visual Builder Overview
 
 From the overview page, click the “Open Service Console” button to
 continue.
 
 ![](./media/image_a_8.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;Figure A.3.1.3 – Open Service Console button
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure A.3.1.3 – Open Service Console button
 
 > Another method is to click the “hamburger” icon
 > ![](./media/image_a_9.png) in the lower-right corner of the  
@@ -1622,13 +1622,13 @@ continue.
 
 ![](./media/image_a_3.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;Figure A.3.2.1 – Visual Builder service box
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure A.3.2.1 – Visual Builder service box
 
 Select “Open Service Console” from the menu.
 
 ![](./media/image_a_10.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;Figure A.3.2.2 – Visual Builder service menu
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure A.3.2.2 – Visual Builder service menu
 
 4.  If you have not created any services the Service Console prompts you
     to begin the process.
@@ -1638,14 +1638,14 @@ Select “Open Service Console” from the menu.
 > 
 > ![](./media/image_a_11.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;Figure A.4.1 – Create Instance invitation
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure A.4.1 – Create Instance invitation
 > 
 > If Visual Builder instances already exist they will be shown in a
 > table.
 > 
 > ![](./media/image_a_12.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;Figure A.4.2 – VBCS existing instance(s)
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure A.4.2 – VBCS existing instance(s)
 > 
 > **DO NOT** CLICK “CREATE INSTANCE” at this time, we will be using
 > “Quick Starts” (see step 5).
@@ -1658,20 +1658,20 @@ Select “Open Service Console” from the menu.
 
 > ![](./media/image_a_13.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;Figure A.5.1 – Quick Starts button
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure A.5.1 – Quick Starts button
 > 
 > When presented with the “QuickStarts” panel; provide an instance name
 > and click the “Start” button to begin the process.
 > 
 > ![](./media/image_a_14.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;Figure A.5.2 – QuickStarts page
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure A.5.2 – QuickStarts page
 > 
 > Creation should take place in less than five minutes.
 > 
 > ![](./media/image_a_15.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;Figure A.5.3 – Create button
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure A.5.3 – Create button
 > 
 > That’s it, you’ve created an instance that can support many VBCS
 > applications and user.
@@ -1687,7 +1687,7 @@ Select “Open Service Console” from the menu.
 
 > ![](./media/image_1.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.1 – Plus Service Connection
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.1 – Plus Service Connection
 > 
 > If you are presented with a list of one or more existing connections
 > click the plus “+” sign at the top of the list to the right of the
@@ -1695,7 +1695,7 @@ Select “Open Service Console” from the menu.
 > 
 > ![](./media/image_2.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.2 – Services Plus
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.2 – Services Plus
 
 2.  The “Create Connection” wizard starts by asking for the source of
     the connection; for this lab we will choose “Define by Endpoint” for
@@ -1704,13 +1704,13 @@ Select “Open Service Console” from the menu.
 
 > ![](./media/image_3.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.4 – Define by Endpoint
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.4 – Define by Endpoint
 
 3.  The wizard will then ask for specifics about the endpoint.
 
 > ![](./media/image_4.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.5.1 – Wizard URL
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.5.1 – Wizard URL
 > 
 > Provide the “Method” (GET), “URL” (from course specifications), and
 > “Action Hint” (Get Many) then click “Next” to continue. This
@@ -1718,31 +1718,31 @@ Select “Open Service Console” from the menu.
 > 
 > ![](./media/image_5.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.5.2 – Wizard URL complete
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.5.2 – Wizard URL complete
 
 4.  Provide a name for the connection (“mmassociate” in the example).
 
 > ![](./media/image_6.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.6 – Naming connection
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.6 – Naming connection
 
 5.  Test the connection by selecting the “Test” tab, filling in any
     necessary parameters, and clicking “Send” to make a request.
 
 > ![](./media/image_7.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.7.1 – Test connection
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.7.1 – Test connection
 > 
 > When the service responds, look for a response status “200”
 > (everything ok) and check the results.
 > 
 > ![](./media/image_8.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.7.2 – Test status 200
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.7.2 – Test status 200
 > 
 > ![](./media/image_9.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.7.3 – Response body
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.7.3 – Response body
 > 
 > If the response looks good to you click the “Copy to Response Body” so
 > that Visual Builder will map out the response details as part of the
@@ -1750,7 +1750,7 @@ Select “Open Service Console” from the menu.
 > 
 > ![](./media/image_10.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.7.4 – Copy to Reponse Body
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.7.4 – Copy to Reponse Body
 > 
 > Click the “Create” button to finish the process of building the
 > service connection.
@@ -1761,13 +1761,13 @@ Select “Open Service Console” from the menu.
     is identified by passing in an “{id}” value (or whatever the key
     field is named).  
     ![](./media/image_12.png)  
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.6.1 – Create single associate connection
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.6.1 – Create single associate connection
 
 > Provide a name for the connection (“mmassociateget” in the example).
 > 
 > ![](./media/image_13.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.6.2 – Name single connection
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.6.2 – Name single connection
 
 7.  Test the connection; be sure to specify a valid id for the test.
     Please notice that the parameters are surrounded by curly-style
@@ -1776,14 +1776,14 @@ Select “Open Service Console” from the menu.
 
 > ![](./media/image_14.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.7.1 – Test single connection
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.7.1 – Test single connection
 > 
 > Check the response status and values, then click “Copy to Response
 > Body” and the “Create” button to finish things up.
 > 
 > ![](./media/image_15.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.7.2 – Single connection response
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure B.7.2 – Single connection response
 > 
 > You have now created and tested two connections.
 
