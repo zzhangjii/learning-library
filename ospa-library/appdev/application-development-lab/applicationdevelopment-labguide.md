@@ -20,7 +20,7 @@
 
   &nbsp;&nbsp;&nbsp;&nbsp;[Extra Lab 6: Review and edit JavaScript code “under the covers” of VBCS](#extra-lab-6-review-and-edit-javascript-code-under-the-covers-of-vbcs)
 
-### [Appendix](#appendix)
+### [Appendices](#appendix)
 
 &nbsp;&nbsp;&nbsp;&nbsp;[Appendix A: Create VBCS Instance](appendix-a-vbcs-instance)
 
