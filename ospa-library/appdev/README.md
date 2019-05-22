@@ -1,5 +1,5 @@
 ## Library for appdev
 
-### [Application Development Lab Guide](applicationdevelopment-labguide.md)
+### [Application Development Lab](application-development-lab)
 
 ### [Move and Improve Database](move-improve-database)
