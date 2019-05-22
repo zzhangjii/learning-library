@@ -1,4 +1,4 @@
-# Deploying and configuring Autonomous Data Warehouse.
+# Deploying and configuring Autonomous Data Warehouse
 
 ## Table of Contents
 
@@ -215,14 +215,14 @@ end;
 
 15. Verify **PL/SQL Procedure successfully completed** message
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_015.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_015.PNG" alt="image-alt-text" height="100" width="100">
 
 16. We will now query the table and veirfy the data Enter command:
 ```
 select * from channels;
 ```
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_016.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_016.PNG" alt="image-alt-text" height="100" width="100">
 
 **We have successfully deployed a Autonomous Data Warehouse instance,populated a table using a file stored in Object storage and successfully run a query against the table.**
 
@@ -233,11 +233,11 @@ select * from channels;
 
 1. Navigate to User Settings ,Click **Auth Token** and Click **Delete** for your Auth Token by Hovering your mouse over action icon (Three Dots)
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_017.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_017.PNG" alt="image-alt-text" height="100" width="100">
 
 2. Navigate to Autonomoud Data Warehouse menu, Hover over the action icon(Three dots) and Click **Terminate**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_018.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_018.PNG" alt="image-alt-text" height="100" width="100">
 
 **Congratulations! You have successfully completed the lab.**
 

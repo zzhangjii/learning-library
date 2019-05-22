@@ -1,4 +1,4 @@
-#  Autonmous Transaction Processing
+#  Autonmous Transaction Processing.
   
 ## Table of Contents
 
@@ -390,8 +390,8 @@ In this section we will generate auth token for the user of this lab. An Auth to
 
 4. Launch SQL devleoper using Apps icon and click **+** to create a new connection
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ATP_008.PNG" alt="image-alt-text" height="100" width="100">
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ATP_009.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_008.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_009.PNG" alt="image-alt-text" height="100" width="100">
 
 5. Fill out the diaog box:
 - Connection Name: Provide a name
@@ -473,7 +473,7 @@ NAME_total NUMBER NOT NULL );
 
 13. Verify **Table CHANNELS created** message
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_016.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_016.PNG" alt="image-alt-text" height="100" width="100">
 
 14. Load data from file in Object Storage to newly created table.
 
@@ -491,14 +491,14 @@ end;
 
 15. Verify **PL/SQL Procedure successfully completed** message
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_015.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_015.PNG" alt="image-alt-text" height="100" width="100">
 
 16. We will now query the table and veirfy the data Enter command:
 ```
 select * from channels;
 ```
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_016.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_016.PNG" alt="image-alt-text" height="100" width="100">
 
 **We have successfully deployed a ATP instance,populated a table using a file stored in Object storage and successfully run a query against the table.**
 
@@ -508,20 +508,20 @@ select * from channels;
 
 1. Switch to OCI console. From your ATP instance details page click **Service Console**. This will open a new tab. In the new tab click **Administration** and then **Manage Oracle ML Users**.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ATP_020.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_020.PNG" alt="image-alt-text" height="100" width="100">
 
 2. This will open a new tab (Machine Learning User Administration). Click Create and in the new window fill out the dialog box. Ensure to un-check 'Generate Password ... ' flag so that you can provide your own password. Click **create** to create a new user 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ATP_021.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_021.PNG" alt="image-alt-text" height="100" width="100">
 
 3. Verify the user is created, Click the home button. This will open a new tab, the login fileds should be filled out (if not then fill them out) and login as newly created Machine Lerning user.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ATP_022.PNG" alt="image-alt-text" height="100" width="100">
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ATP_023.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_022.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_023.PNG" alt="image-alt-text" height="100" width="100">
 
 4. Verify new project space is created and all the options (Run SQl statement, Run SQL script etc) are available.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ATP_024.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_024.PNG" alt="image-alt-text" height="100" width="100">
 
 5. Now we need to assign priviliges to this new user so it can access the data uploaded by the user we created earlier. Switch to SQL developer window and  from admin tab,Enter command:
 ```
@@ -530,11 +530,11 @@ grant read any table to <USER_NAME>;
 
 **Note :** USER_NAME is the user you created earlier in this section. (We are granting read any table permissions though for specific deployment the admin should authorize appropriate access  level), For example : **grant read any table to MLADMIN**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ATP_025.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_025.PNG" alt="image-alt-text" height="100" width="100">
 
 6. Switch back to Machine learning User console window. Click **Run SQL Statements**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ATP_026.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_026.PNG" alt="image-alt-text" height="100" width="100">
 
 7. In the SQL statement section, Enter statement:
 ```
@@ -546,21 +546,21 @@ Click the run icon (right end of sql statement) Verify all the data is uploaded
 **Note:** The USER_NAME will be the user that uploaded the data. In this lab we had used ocitest as the user that uploaded the data. Hence the statement for this
 user will be , **select * from ocitest.channels;** 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ATP_027.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_027.PNG" alt="image-alt-text" height="100" width="100">
 
 8. Now you can look at this data in different charts form available options
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ATP_028.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_028.PNG" alt="image-alt-text" height="100" width="100">
 
 **This is just an example of simple data that we uploaded but as you can see very complex data can be uploaded,accessed and analyzed using this feature.**
 
 9. There are some example data sets that can be accessed by clicking Home under Servies menu from Machine Learning user tab
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ATP_029.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_029.PNG" alt="image-alt-text" height="100" width="100">
 
 10. Click **Examples** and then any of the available data set
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ATP_030.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_030.PNG" alt="image-alt-text" height="100" width="100">
 
 **Next we will delete the resources we created which will complete this lab**
 
