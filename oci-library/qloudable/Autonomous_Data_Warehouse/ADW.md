@@ -10,17 +10,9 @@
 
 [Practice 1: Sign in to OCI Console and create ADW instance](#practice-1-sign-in-to-oci-console-and-create-adw-instance)
 
-[Practice 2: Create Auth token for the user and connect to ADW](#practice-2-create-auth-token-for-the-user-and-connect-to-adw)
+[Practice 2: Create Auth token for the user connect to ADW and load data](#practice-2-create-auth-token-for-the-user-connect-to-adw-and-load-data)
 
-[Practice 3: Install httpd on compute instance and install an app on Block Volume](#practice-3-install-httpd-on-compute-instance-and-install-an-app-on-block-volume)
-
-[Practice 4: Detach the block volume and launch second compute instance using boot volume and attach Block Volume](#practice-4-detach-the-block-volume-and-launch-second-compute-instance-using-boot-volume-and-attach-block-volume)
-
-[Practice 5: Delete the resources](#practice-5-delete-the-resources)
-
-[Appendix A: ISCSI Method to Attach Block Volume to Compute Instance](#appendix-a-iscsi-method-to-attach-block-volume-to-compute-instance)
-
-[Appendix B: ISCSI Method to Detach block volume](#appendix-b-iscsi-method-to-detach-block-volume)
+[Practice 3: Delete the resources](#practice-5-delete-the-resources)
 
 ## Overview
 
@@ -100,7 +92,7 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 
 **We now have a Autonomous Data Warehouse instance created. We have also downloaded the Client Credentials file. We will use this file when connecting to the database instance  using Sql Developer. Next we will create a Data file and use Object stroage to upload it to Database instance.**
               
-## Practice 2: Create Auth token for the user and connect to ADW
+## Practice 2: Create Auth token for the user connect to ADW and load data
 
 In this section we will generate auth token for the user of this lab. An Auth token is an Oracle-generated token that you can use to authenticate with third-party APIs and Autonomous Database instance.
 
@@ -235,7 +227,7 @@ select * from channels;
 **We have successfully deployed a Autonomous Data Warehouse instance,populated a table using a file stored in Object storage and successfully run a query against the table.**
 
 
-## Practice 5: Delete the resources
+## Practice 3: Delete the resources
 
 **Delete Auth Token and Autonomous Data Warehouse**
 
