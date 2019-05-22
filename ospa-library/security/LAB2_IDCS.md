@@ -24,8 +24,6 @@ For consistency and for the ease of use-cases implementation, you will use a Gma
 
   * [Oracle Identity Cloud](https://cloud.oracle.com/en_US/identity)
 
-  * [Oracle CASB Cloud Service](https://cloud.oracle.com/en_US/casb)
-
   * Salesforce – used for IDCS Application Integration and CASB Create
     and Monitor a sanctioned Application use-cases
 
@@ -38,7 +36,7 @@ For consistency and for the ease of use-cases implementation, you will use a Gma
     
       * IDCS Administrators
 
-*NOTE: This lab contains two main modules with optional exercises. Because of timing constraints,we encourage you to complete first the mandatory modules and then go back to the optional tasks.*
+*NOTE: This lab contains two main modules with optional exercises. Due to timing constraints, we encourage you to complete first the mandatory modules and then go back to the optional tasks.*
 
 # Overview: Oracle Identity Cloud Service
 
@@ -69,7 +67,11 @@ For consistency and for the ease of use-cases implementation, you will use a Gma
 
   * **SAML 2.0** – SAML stands for *Security Assertion Mark-up Language*. It is a standard for federating user authentication. SAML defines two participating entities, the Service Provider and the Identity Provider. When a user attempts to access an application or service (at the Service Provider) which is configured for SAML, rather than log the user in through local ID/PW, the SP causes the user authentication to be performed by the Identity Provider. There is therefore a trust relationship established between SP and IDP. Oracle IDCS can be configured to take the role of Service Provider and/or Identity Provider. As a service provider, IDCS enables self-service profile management, password reset, etc.
 
-  * **Identity Provider** – This type of provider, also known as an Identity Assertion provider, provides identifiers for users who want to interact with Oracle Identity Cloud Service using a website that's external to Oracle Identity Cloud Service.
+  * **Identity Provider (IdP)** – This type of provider, also known as an Identity Assertion provider, provides identifiers for users who want to interact with Oracle Identity Cloud Service using a website that's external to Oracle Identity Cloud Service.
+
+  * **Service Provider (SP)** - Third-party actor who provides a service. Offers application services but does not act as identity provider.
+
+  * **Federation** - Federation in identity management enables two or more partners to work together, exchanging identity information securely across internet domains providing secure single sign-on (SSO). Common to a SAML federation are the concepts of identity provider (IdP) and service provider (SP)
 
 
 # Business Drivers
@@ -199,6 +201,8 @@ The following exercise has been developed to showcase IDCS API capabilities.
 This use case involves making API calls to IDCS using a REST client; in this case Postman. The Postman collection of relevant REST API calls is provided to each participant.
 
 ### Register a client POSTMAN application in IDCS
+
+* If you don't have POSTMAN installed in your system, please visit [POSTMAN Website](https://www.getpostman.com/products), download and install it following the site instructions.
 
 *  Navigate to your tenant https://**yourtenant**/ui/v1/adminconsole
  
