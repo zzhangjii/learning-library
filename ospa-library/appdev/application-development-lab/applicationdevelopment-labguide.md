@@ -2,11 +2,11 @@
 
 ## Table of Contents
 
-[Lab Guide Overview](#lab-guide-overview)
+### [Lab Guide Overview](#lab-guide-overview)
 
-[Lab Purpose and Rules](#lab-purpose-and-rules)
+### [Lab Purpose and Rules](#lab-purpose-and-rules)
 
-[Labs](#labs)
+### [Labs](#labs)
 
   &nbsp;&nbsp;&nbsp;&nbsp;[Lab 1: Introduction, setup, and demo](#lab-1-introduction-setup-and-demo)
 
@@ -20,7 +20,7 @@
 
   &nbsp;&nbsp;&nbsp;&nbsp;[Extra Lab 6: Review and edit JavaScript code “under the covers” of VBCS](#extra-lab-6-review-and-edit-javascript-code-under-the-covers-of-vbcs)
 
-# [Appendix](#appendix)
+### [Appendix](#appendix)
 
 &nbsp;&nbsp;&nbsp;&nbsp;[Appendix A: Create VBCS Instance](appendix-a-vbcs-instance)
 
