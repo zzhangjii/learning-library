@@ -202,10 +202,7 @@ This use case involves making API calls to IDCS using a REST client; in this cas
 
 ### Register a client POSTMAN application in IDCS
 
-* If you don't have POSTMAN installed in your system, please visit [POSTMAN Website](https://www.getpostman.com/products) download and install it following the site instructions.
-
-<a href="https://www.getpostman.com/products" target="_blank">POSTMAN</a>
-
+* If you don't have POSTMAN installed in your system, please visit [POSTMAN Website](https://www.getpostman.com/products target="_blank) download and install it following the site instructions.
 
 *  Navigate to your tenant https://**yourtenant**/ui/v1/adminconsole
  
