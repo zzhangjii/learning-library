@@ -77,7 +77,7 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 - CNFIRM PASSWORD: Provide same password (example Oracle123!!!!)
 - LICENSE TYPE: SUBSCRIBE TO NEW DATABASE SOFTWARE LICENSES AND THE DATABASE CLOUD SERVICE
 
-4. Leave **Tags** information as is, Click Create Autonomous Datawarehouse. Wait for State to change to Available (few minutes) 
+4. Leave **Tags** information as is, Click **Create Autonomous Database**. Wait for State to change to Available (few minutes) 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_002.PNG" alt="image-alt-text" height="100" width="100">
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_003.PNG" alt="image-alt-text" height="100" width="100">
