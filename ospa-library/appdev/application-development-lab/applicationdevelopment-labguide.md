@@ -22,11 +22,11 @@
 
 ### [Appendices](#appendix)
 
-&nbsp;&nbsp;&nbsp;&nbsp;[Appendix A: Create VBCS Instance](appendix-a-vbcs-instance)
+&nbsp;&nbsp;&nbsp;&nbsp;[Appendix A: Create VBCS Instance](#appendix-a-vbcs-instance)
 
-&nbsp;&nbsp;&nbsp;&nbsp;[Appendix B: Create Service Connection from Endpoint](appendix-b-create-service-connection-from-endpoint)
+&nbsp;&nbsp;&nbsp;&nbsp;[Appendix B: Create Service Connection from Endpoint](#appendix-b-create-service-connection-from-endpoint)
 
-&nbsp;&nbsp;&nbsp;&nbsp;[Appendix C: Build Mama Maggy Data Application](appendix-c-build-mama-maggy-data-application)
+&nbsp;&nbsp;&nbsp;&nbsp;[Appendix C: Build Mama Maggy Data Application](#appendix-c-build-mama-maggy-data-application)
 
 # Lab Guide Overview
 
