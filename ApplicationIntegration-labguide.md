@@ -249,7 +249,7 @@ have done the prerequisites, continue below:
 7.  Access your Autonomous Database to see if it has been started:
 
     - Sign in to the Oracle Public Cloud by browsing to:
-    https://cloud.oracle.com/en\_US/sign-in
+    https://cloud.oracle.com/en_US/sign-in
 
     - When prompted for User Name and Password, enter your Oracle Cloud
     Account Sign In credentials (user name and password)
@@ -309,7 +309,7 @@ have done the prerequisites, continue below:
     - Notice that your wallet zip file has been download to your Downloads
     directory.
 
-    - Move that zip file into your ApplicationIntegrationLabs folder. This
+    - Move that zip file into your *ApplicationIntegrationLabs* folder. This
     wallet is a package of sign in information that a database client
     uses to access your ATP database. You’ll use it soon to access the
     ATP database from SQL Developer.
@@ -335,19 +335,19 @@ have done the prerequisites, continue below:
     
       - Name: *MyATPConnection*
     
-      - Username: atpc\_user
+      - Username: *atpc\_user*
     
-      - Password: enter the \<atpc\_user Autonomous Database Password\>
+      - Password: enter the *\<atpc\_user Autonomous Database Password\>*
         that you noted in the Prerequisites section above.
     
-      - Connection Type: Cloud Wallet
+      - Connection Type: *Cloud Wallet*
     
       - Configuration File: Browse to and select your wallet zip file
         that you saved in your ApplicationIntegrationLabs folder above.
     
-      - Service: dbappint\_high
+      - Service: *dbappint\_high*
     
-      - Click on the Save Password field so you aren’t prompted for the
+      - Click on the "Save Password* field so you aren’t prompted for the
         atpc\_user password each time you activate your connection.
 
     - Click the *Test* button at the bottom to see if SQL Developer can
@@ -406,8 +406,10 @@ have done the prerequisites, continue below:
       Figure 7: Dashboard Display Showing Accessible Services
 
     - In the *Service: Oracle Integration* page that appears, click on the
-    *Open Service Console* button in the upper-right corner. *Click on
-    your Oracle Integration Instance Name*. You noted that name in the
+    *Open Service Console* button in the upper-right corner. 
+    
+    - Click on
+    your *Oracle Integration Instance Name*. You noted that name in the
     Prerequisites section above.
 
     - Click on the *Open Service Console* button in the upper-right
@@ -420,13 +422,12 @@ have done the prerequisites, continue below:
 
       Figure 8: Checking Status on the Service Page for Oracle Integration
 
-    - If the Status field doesn’t show “*Ready*,” click on the *Start
+    - If the *Status* field doesn’t show “*Ready*,” click on the *Start
     Instance* icon (arrowhead icon) in the upper-right to start the
     instance.
 
     - Keep *refreshing the browser page* until you see that the instance
     has started.
-
 
     - Access your Integration instance’s home page:
 
@@ -441,7 +442,7 @@ have done the prerequisites, continue below:
 
         ![](./media/image14.png)
 
-       Figure 10: Oracle Integration Home Page
+         Figure 10: Oracle Integration Home Page
 
 ## Prepare a Data Definition
 
@@ -457,7 +458,7 @@ have done the prerequisites, continue below:
      - Open your Notepad or TextEdit editor so we can add the XML
     statements.
 
-    - Copy and paste the following XML into your editing session:
+    - Copy and paste the following XML statements into your editing session:
 
         \<?xml version="1.0" encoding="UTF-8" ?\>
 
@@ -808,36 +809,36 @@ integration.
     - Make sure that XML Schema (the default) is selected from the
     dropdown menu.
 
-    - At the Schema Location field, click the Choose File button to
+    - At the *Schema Location* field, click the *Choose File* button to
     display a file chooser dialog:
 
       - Navigate to your ApplicationIntegrationLab directory and choose your
-    RESTEndpointRequestPayload.xsd file where you saved it in the
+    *RESTEndpointRequestPayload.xsd* file where you saved it in the
     Preparing Your Environment section.
 
-      - Notice in the Element field that the tooling has read the file and
-    has selected Order. That’s the only element defined in your XSD.  
+      - Notice in the *Element* field that the tooling has read the file and
+    has selected *Order*. That’s the only element defined in your XSD.  
     NOTE: If the tooling has trouble validating your xsd file, you may
     need to edit it and clean up some formatting. Sometimes, copying and
     pasting drags along some hidden characters at the end of lines.
 
       - In the area labeled Select the type of payload with which you want
-    the endpoint to receive, select JSON. “JSON” stands for “JavaScript
+    the endpoint to receive, select *JSON*. “JSON” stands for “JavaScript
     Object Notation.” It is a lightweight data interchange format that
     is easy for humans to read and write. Later, in Lab 2, you’ll see
     that this request payload will be supplied by a web form and web
     forms deal in JSON data structures.
 
-    - Click Next in the upper-right corner to display the Summary dialog
+    - Click *Next* in the upper-right corner to display the Summary dialog
     so you can review your settings for this request endpoint.
 
-    - Expand the Endpoint Summary field to see that you have defined an
+    - Expand the *Endpoint Summary* field to see that you have defined an
     endpoint that will accept a *JSON payload* via a *POST* to a REST
     service URI called */order*:
 
         ![](./media/image24.png)
 
-    Figure 19: Reviewing a REST Endpoint Configuration
+         Figure 19: Reviewing a REST Endpoint Configuration
 
   - Click *Done* in the in the upper-right corner to close the Configure
     REST Endpoint dialog.
@@ -847,7 +848,7 @@ integration.
 
     ![](./media/image25.png)
 
-Figure 20: Integration With a Trigger Specified
+ Figure 20: Integration With a Trigger Specified
 
 38. Click *Save* in the upper-right corner.
 
@@ -902,8 +903,8 @@ Figure 20: Integration With a Trigger Specified
     selected and click *Next* in the upper-right corner.
 
     - The wizard displays the *Summary* step page. See that you have
-    configured your ATP connection to perform an Insert database
-    operation on the ORDERS table:
+    configured your ATP connection to perform an *Insert* database
+    operation on the *ORDERS* table:
 
       ![](./media/image28.png)
 
@@ -1055,9 +1056,9 @@ Our last step in this lab is to activate our integration.
     appears:
 
 
-    - Enable tracing: Click the check box to On
+    - Enable tracing: Click the check box to *On*
 
-    - Include payload: Click the check box to On:
+    - Include payload: Click the check box to *On*
     - Enable tracing: Click the check box to *On*
 
       ![](./media/image38.png)
@@ -1183,7 +1184,7 @@ needs to be part of a process application. Let’s create one:
 
           ![](./media/image43.png)
 
-Figure 35: Creating a New Process Application
+          Figure 35: Creating a New Process Application
 
 - The tooling assumes that you want to immediately add a process to
     your new process application, so the Create a Process panel appears:
@@ -1204,7 +1205,7 @@ Figure 35: Creating a New Process Application
     patterns. The Form Approval pattern fits our needs well. The Create
     Process dialog appears.
 
-    - In the Create Process Dialog, fill in the fields:
+    - In the Create Process dialog, fill in the fields:
 
       - Name: *Request Evaluation*
 
@@ -1218,8 +1219,8 @@ Figure 35: Creating a New Process Application
 
         Figure 37: Creating a New Process
 
-      - The process model displays containing elements from the Form
-    Approval pattern you selected. This minimizes the amount of dragging
+      - The process model displays containing elements from the *Form
+    Approval* pattern you selected. This minimizes the amount of dragging
     and dropping we need to do to place elements from the palette onto
     the modelling canvas:
 
@@ -1236,7 +1237,7 @@ Figure 35: Creating a New Process Application
 
     Figure 39: Finding the Trash Can Icon
 
-9.  Click Save to safely store away your new process.
+9.  Click *Save* to safely store away your new process.
 
 10. Here is the starting point for our initial model implementation
     efforts:
@@ -1258,7 +1259,7 @@ Figure 35: Creating a New Process Application
 
     - Click on the *Process Owner* label at the left in the top swimlane.
 
-    - Click on the Edit (pencil) option that appears.
+    - Click on the *Edit* (pencil) option that appears.
 
     - In the bottom panel, click on the *plus icon* to the right of the Role
     dropdown menu to add a new role.
@@ -1278,8 +1279,7 @@ Figure 35: Creating a New Process Application
 
     Figure 41: Process Model with Updated Swimlane Roles
 
-13. Click the *Save* button to safely store away your updates. (Saving
-    often is a great idea.)
+13. Click the *Save* button to safely store away your updates. (Saving often is a great idea.)
 
 ## Implement the Submit Request Event
 
@@ -1288,7 +1288,7 @@ Figure 35: Creating a New Process Application
 
     - Click on the *Submit Request* event at the left-side of the model.
 
-    - Click the hamburger menu icon that appears. If a popup menu doesn’t
+    - Click the *hamburger menu icon* that appears. If a popup menu doesn’t
     appear, click another element (like the Resubmit activity) to reset
     the selection and try clicking on the hamburger icon again to
     display the popup menu:
@@ -1308,11 +1308,10 @@ Figure 35: Creating a New Process Application
     in these fields:
     
       - How will the end user identify the process? Title:
-        \<insertYourInitialsHere\>\_Create New Order Request
-        (TNB\_Create New Order Request, for example)
+        *\<insertYourInitialsHere\>\_Create New Order Request*
+        (*TNB\_Create New Order Request*, for example)
     
-      - Description: Event that starts a new process instance and
-        captures order request information from the store manager
+      - Description: *Event that starts a new process instance and captures order request information from the store manager*
 
 
 15. Create the form for the store managers to use to submit a new order
@@ -1339,7 +1338,7 @@ Figure 35: Creating a New Process Application
 
     - Define the layout of the Initiate Form:
     
-      - Click on the *Edit (pencil) icon* to the right of *InitiateForm*
+      - Click on the *Edit* (pencil) icon to the right of *InitiateForm*
         in the properties panel to display the form editor.
     
       - Notice the palette at the right containing the elements you can
@@ -1371,11 +1370,7 @@ Figure 35: Creating a New Process Application
 
         Figure 47: Form Editor's Property Panel Highlighting the Binding Object
 
-        - Notice that a *Binding* object has been identified where data will be
-stored for the form element. It is also named orderID. Binding objects
-are data structures that store values that users enter into a web form
-field. You will deal with these objects as you do data associations
-later.
+        - Notice that a *Binding* object has been identified where data will be stored for the form element. It is also named orderID. Binding objects are data structures that store values that users enter into a web form field. You will deal with these objects as you do data associations later.
 
     - Using the steps above, add the other elements to the form:
 
@@ -2831,6 +2826,6 @@ Provisioned
     - Use the Search field to search for *ATP*.
 
     - If the Oracle ATP adapter appears, then the oic.cloudadapter.adapters.atpdatabase feature flag is enabled for your instance.
-    
+
     - If the Oracle ATP adapter does not appear, you'll need to file a Service Request (SR) with Oracle Support as documented in the *How to Request a Feature Flag* section in the link target shown above.
 
