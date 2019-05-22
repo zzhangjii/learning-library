@@ -8,19 +8,25 @@
 
 [Labs](#labs)
 
-  [Lab 1: Introduction, setup, and demo](#lab-1-introduction-setup-and-demo)
+  &nbsp;&nbsp;&nbsp;&nbsp;[Lab 1: Introduction, setup, and demo](#lab-1-introduction-setup-and-demo)
 
-  [Lab 2: Spreadsheet-based Business Objects](#lab-2-spreadsheet-based-business-objects)
+  &nbsp;&nbsp;&nbsp;&nbsp;[Lab 2: Spreadsheet-based Business Objects](#lab-2-spreadsheet-based-business-objects)
 
-  [Lab 3: Web and Mobile Apps](#lab-3-web-and-mobile-apps)
+  &nbsp;&nbsp;&nbsp;&nbsp;[Lab 3: Web and Mobile Apps](#lab-3-web-and-mobile-apps)
 
-  [Lab 4: Data from service](#lab-4-data-from-service)
+  &nbsp;&nbsp;&nbsp;&nbsp;[Lab 4: Data from service](#lab-4-data-from-service)
 
-  [Extra Lab 5: Add Data Using REST Call](#extra-lab-5-add-data-using-rest-call)
+  &nbsp;&nbsp;&nbsp;&nbsp;[Extra Lab 5: Add Data Using REST Call](#extra-lab-5-add-data-using-rest-call)
 
-  [Extra Lab 6: Review and edit JavaScript code “under the covers” of VBCS](#extra-lab-6-review-and-edit-javascript-code-under-the-covers-of-vbcs)
+  &nbsp;&nbsp;&nbsp;&nbsp;[Extra Lab 6: Review and edit JavaScript code “under the covers” of VBCS](#extra-lab-6-review-and-edit-javascript-code-under-the-covers-of-vbcs)
 
-[Appendix: Name of Appendix](#appendix-a-create-vbcs-instance)
+# [Appendix](#appendix)
+
+&nbsp;&nbsp;&nbsp;&nbsp;[Appendix A: Create VBCS Instance](appendix-a-vbcs-instance)
+
+&nbsp;&nbsp;&nbsp;&nbsp;[Appendix B: Create Service Connection from Endpoint](appendix-b-create-service-connection-from-endpoint)
+
+&nbsp;&nbsp;&nbsp;&nbsp;[Appendix C: Build Mama Maggy Data Application](appendix-c-build-mama-maggy-data-application)
 
 # Lab Guide Overview
 
@@ -1501,13 +1507,13 @@ view.
 
 ![](./media/image182.png)
 
-Figure Extra.1 – Live/Design/Code button
+Figure X.1 – Live/Design/Code button
 
 This will display the actual code that supports your screen.
 
 ![](./media/image183.png)
 
-Figure Extra.2 - Visual Builder code
+Figure X.2 - Visual Builder code
 
 Depending upon the time available and your proficiency coding,
 experiment a little with the code.
@@ -1524,42 +1530,27 @@ This concludes Lab 6.
 
 [Return to Table of Contents](#table-of-contents)
 
-# Table of Contents
+# Appendix
 
-[Lab Guide Overview 4](#lab-guide-overview)
+&nbsp;&nbsp;&nbsp;&nbsp;[Appendix A: Create VBCS Instance](appendix-a-vbcs-instance)
 
-[Lab Purpose and Rules 4](#lab-purpose-and-rules)
+&nbsp;&nbsp;&nbsp;&nbsp;[Appendix B: Create Service Connection from Endpoint](appendix-b-create-service-connection-from-endpoint)
 
-[Labs 4](#labs)
-
-[Lab 1: Introduction, setup, and demo
-4](#lab-1-introduction-setup-and-demo)
-
-[Lab 2: Spreadsheet-based Business Objects
-5](#lab-2-spreadsheet-based-business-objects)
-
-[Lab 3: Web and Mobile Apps 6](#lab-3-web-and-mobile-apps)
-
-[Lab 4: Data from service 6](#lab-4-data-from-service)
-
-[EXTRA Lab 5: ADD DATA USING REST CALL
-6](#extra-lab-5-add-data-using-rest-call)
-
-[extra Lab 6: Review and edit JavaScript code “under the covers” of VBCS
-7](#extra-lab-6-review-and-edit-javascript-code-under-the-covers-of-vbcs)
-
-[Appendix: Name of Appendix 7](#appendix-a-create-vbcs-instance)
+&nbsp;&nbsp;&nbsp;&nbsp;[Appendix C: Build Mama Maggy Data Application](appendix-c-build-mama-maggy-data-application)
 
 # Appendix A: Create VBCS Instance
 
+[Return to Table of Contents](#table-of-contents)
+
 # Appendix B: Create Service Connection from Endpoint
+
 
 1.  If you have not yet created any “Service Connections” click the “+
     Service Connection” button
 
 > ![](./media/image_1.png)
 > 
-> Figure AppendixB.1 – Plus Service Connection
+> Figure B.1 – Plus Service Connection
 > 
 > If you are presented with a list of one or more existing connections
 > click the plus “+” sign at the top of the list to the right of the
@@ -1567,7 +1558,7 @@ This concludes Lab 6.
 > 
 > ![](./media/image_2.png)
 > 
-> Figure AppendixB.2 – Services Plus
+> Figure B.2 – Services Plus
 
 2.  The “Create Connection” wizard starts by asking for the source of
     the connection; for this lab we will choose “Define by Endpoint” for
@@ -1576,13 +1567,13 @@ This concludes Lab 6.
 
 > ![](./media/image_3.png)
 > 
-> Figure AppendixB.4 – Define by Endpoint
+> Figure B.4 – Define by Endpoint
 
 3.  The wizard will then ask for specifics about the endpoint.
 
 > ![](./media/image_4.png)
 > 
-> Figure AppendixB.5.1 – Wizard URL
+> Figure B.5.1 – Wizard URL
 > 
 > Provide the “Method” (GET), “URL” (from course specifications), and
 > “Action Hint” (Get Many) then click “Next” to continue. This
@@ -1590,31 +1581,31 @@ This concludes Lab 6.
 > 
 > ![](./media/image_5.png)
 > 
-> Figure AppendixB.5.2 – Wizard URL complete
+> Figure B.5.2 – Wizard URL complete
 
 4.  Provide a name for the connection (“mmassociate” in the example).
 
 > ![](./media/image_6.png)
 > 
-> Figure AppendixB.6 – Naming connection
+> Figure B.6 – Naming connection
 
 5.  Test the connection by selecting the “Test” tab, filling in any
     necessary parameters, and clicking “Send” to make a request.
 
 > ![](./media/image_7.png)
 > 
-> Figure AppendixB.7.1 – Test connection
+> Figure B.7.1 – Test connection
 > 
 > When the service responds, look for a response status “200”
 > (everything ok) and check the results.
 > 
 > ![](./media/image_8.png)
 > 
-> Figure AppendixB.7.2 – Test status 200
+> Figure B.7.2 – Test status 200
 > 
 > ![](./media/image_9.png)
 > 
-> Figure AppendixB.7.3 – Response body
+> Figure B.7.3 – Response body
 > 
 > If the response looks good to you click the “Copy to Response Body” so
 > that Visual Builder will map out the response details as part of the
@@ -1622,7 +1613,7 @@ This concludes Lab 6.
 > 
 > ![](./media/image_10.png)
 > 
-> Figure AppendixB.7.4 – Copy to Reponse Body
+> Figure B.7.4 – Copy to Reponse Body
 > 
 > Click the “Create” button to finish the process of building the
 > service connection.
@@ -1633,13 +1624,13 @@ This concludes Lab 6.
     is identified by passing in an “{id}” value (or whatever the key
     field is named).  
     ![](./media/image_12.png)  
-    Figure AppendixB.6.1 – Create single associate connection
+    Figure B.6.1 – Create single associate connection
 
 > Provide a name for the connection (“mmassociateget” in the example).
 > 
 > ![](./media/image_13.png)
 > 
-> Figure AppendixB.6.2 – Name single connection
+> Figure B.6.2 – Name single connection
 
 7.  Test the connection; be sure to specify a valid id for the test.
     Please notice that the parameters are surrounded by curly-style
@@ -1648,14 +1639,14 @@ This concludes Lab 6.
 
 > ![](./media/image_14.png)
 > 
-> Figure AppendixB.7.1 – Test single connection
+> Figure B.7.1 – Test single connection
 > 
 > Check the response status and values, then click “Copy to Response
 > Body” and the “Create” button to finish things up.
 > 
 > ![](./media/image_15.png)
 > 
-> Figure AppendixB.7.2 – Single connection response
+> Figure B.7.2 – Single connection response
 > 
 > You have now created and tested two connections.
 
@@ -1670,3 +1661,8 @@ This concludes Lab 6.
 > Be sure to test your connections. Please ask the instructor if you
 > need assistance.
 
+[Return to Table of Contents](#table-of-contents)
+
+# Appendix C: Build Mama Maggy Data Application
+
+[Return to Table of Contents](#table-of-contents)
