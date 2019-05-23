@@ -87,15 +87,15 @@ classroom and supporting lab files.
 
 1.  Log into class tenancy using cloud.oracle.com
 
-![](./media/image5.png)
+&nbsp;&nbsp;![](./media/image5.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.1 - Login
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.1 - Login<br/>
 
-2.  On some systems you will see a “dashboard” as shown below
+2.  On some systems you will see a “dashboard” as shown below.
 
 ![](./media/image6.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2 - Dashboard
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2 - Dashboard<br/>
 
 Click the “Visual Builder” service (next step)
 
@@ -104,32 +104,36 @@ Dashboard”)
 
 ![](./media/image7.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.1 – Customize Dashboard 1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.1 – Customize Dashboard 1<br/>
 
 Scroll to “Visual Builder” and click the “Show Button”
 
 ![](./media/image8.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.2 – Show Visual Builder
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.2 – Show Visual Builder<br/>
 
-On other systems you may see a different style of Dashboard
+On other systems you may see a different style of Dashboard<br/>
 
 ![](./media/image9.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.3 – Visual Builder Icon
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.3 – Visual Builder Icon<br/>
 
 ![](./media/image10.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.4 – Visual Builder Icon (version 2)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.4 – Visual Builder Icon (version 2)<br/>
 
 3.  Use the “Hamburger Icon” ![](./media/image11.png) in the Visual
     Builder selection box and choose “Open Service Console” or from the
     upper-right corner of the Visual Builder page click “Open Service
     Console”![](./media/image12.png)
 
-![](./media/image13.png) ![](./media/image14.png)
+![](./media/image13.png) 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.3.1 – Open Service Console Menu &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.3.2 – Open Service
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.3.1 – Open Service Console Menu<br/> 
+
+![](./media/image14.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.3.2 – Open Service
 Console Button
 
 4.  A VBCS instance has been created and designated for your class to
