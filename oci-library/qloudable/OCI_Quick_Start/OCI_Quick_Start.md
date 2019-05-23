@@ -8,15 +8,15 @@
 
 [Recommended Learning Assets](#recommended-learning-assets)
 
-[Practice 1: Sign in to OCI Console and create VCN](#practice-1-sign-in-to-oci-console-and-create-vcn)
+[Sign in to OCI Console and create VCN](#sign-in-to-oci-console-and-create-vcn)
 
-[Practice 2: Creat ssh keys, compute instance and Block Volume. Attach block volume to compute instance](#practice-2-creat-ssh-keys,-compute-instance-and-block-volume.-attach-block-volume-to-compute-instance)
+[ Creat ssh keys, compute instance and Block Volume. Attach block volume to compute instance](#creat-ssh-keys,-compute-instance-and-block-volume.-attach-block-volume-to-compute-instance)
 
-[Practice 3: Install httpd on compute instance and install an app on Block Volume](#practice-3-install-httpd-on-compute-instance-and-install-an-app-on-block-volume)
+[Install httpd on compute instance and install an app on Block Volume](#install-httpd-on-compute-instance-and-install-an-app-on-block-volume)
 
-[Practice 4: Detach the block volume and launch second compute instance using boot volume and attach Block Volume](#practice-4-detach-the-block-volume-and-launch-second-compute-instance-using-boot-volume-and-attach-block-volume)
+[Detach the block volume and launch second compute instance using boot volume and attach Block Volume](#detach-the-block-volume-and-launch-second-compute-instance-using-boot-volume-and-attach-block-volume)
 
-[Practice 5: Delete the resources](#practice-5-delete-the-resources)
+[Delete the resources](#delete-the-resources)
 
 [Appendix A: ISCSI Method to Attach Block Volume to Compute Instance](#appendix-a-iscsi-method-to-attach-block-volume-to-compute-instance)
 
@@ -30,32 +30,13 @@ the second compute instance (with the app installed).
 The goal of the lab is to demonstrate launching VCN, Compute Instance, using Boot volume of compute instance and 
 how easy it is to move additional storage with applicatons/tools installed between compute instances
 
-## Pre-Requisites
-
-- Oracle Cloud Infrastructure account credentials (User, Password, Tenant, and Compartment)  
-
-## Recommended Learning Assets
-
-1. OCI Training : https://cloud.oracle.com/en_US/iaas/training
-
-2. Familiarity with OCI console: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/console.htm
-
-3. Overview of Networking: https://docs.us-phoenix-1.oraclecloud.com/Content/Network/Concepts/overview.htm
-
-4. Familiarity with Compartment: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/concepts.htm
-
-5. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
-
-**Before You Begin**
+**Some Key points;**
 
 - We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
-- All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
-- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
 
-**Cloud Tenant Name**
-**User Name**
-**Password**
-**Compartment Name (Provided Later)**
+- All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
+
+- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
 
 - Do NOT use compartment name and other data from screen shots.Only use  data(including compartment name) provided in the content section of the lab
 
@@ -63,7 +44,22 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 
 **Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
 
-## Practice-1: Sign in to OCI Console and create VCN
+## Pre-Requisites
+
+1. Oracle Cloud Infrastructure account credentials (User, Password, Tenant, and Compartment)  
+
+2. OCI Training : https://cloud.oracle.com/en_US/iaas/training
+
+3. Familiarity with OCI console: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/console.htm
+
+4. Overview of Networking: https://docs.us-phoenix-1.oraclecloud.com/Content/Network/Concepts/overview.htm
+
+5. Familiarity with Compartment: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/concepts.htm
+
+6. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
+
+
+## Sign in to OCI Console and create VCN
 
 * **Tenant Name:** {{Cloud Tenant}}
 * **User Name:** {{User Name}}
@@ -117,7 +113,7 @@ Allow Rules for Ingress and add below rule:
 
 7. Click **Save Security List Rules** at the bottom
               
-## Practice 2: Creat ssh keys, compute instance and Block Volume. Attach block volume to compute instance
+## Creat ssh keys, compute instance and Block Volume. Attach block volume to compute instance
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
@@ -256,7 +252,7 @@ Compute).
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_005.PNG" alt="image-alt-text" height="100" width="100">
 
-## Practice 3: Install httpd on compute instance and install an app on Block Volume
+## Install httpd on compute instance and install an app on Block Volume
 
 1. Switch to ssh session to compute install. Install httpd server, Enter Command:
 ```
@@ -377,7 +373,7 @@ http://<COMPUTE_INSTANCE_PUBLIC_IP>
 
 **We have initialized httpd.conf file. Next we will create a second compute instance using the boot volume of the first compute instance and attach Block Volume to it**
 
-## Practice 4: Detach the block volume and launch second compute instance using boot volume and attach Block Volume
+## Detach the block volume and launch second compute instance using boot volume and attach Block Volume
 
 **In this section we will detach the block volume, Stop the compute instance, use its boot volume to launch a second compute instnace and delete the second compute instance**
 
@@ -445,7 +441,7 @@ sudo systemctl restart httpd
 
 **We have now successfully launched a compute instance using another instance's boot volume and re-attached a block volume that was attached to another instance. The block volume preserved all the data on it during this process. Moreover the compute instance launched using the boot volume had httpd server and fire wall configuration already present**
 
-## Practice 5: Delete the resources
+## Delete the resources
 
 1. Switch to  OCI console window
 
