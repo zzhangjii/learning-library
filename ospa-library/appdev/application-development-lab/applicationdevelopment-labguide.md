@@ -1802,4 +1802,372 @@ Select “Open Service Console” from the menu.
 
 # Appendix C: Build Mama Maggy Data Application
 
+This appendix shows how the “Mama Maggy” application was created to serve
+as a data source for the Application Development labs.
+
+Make sure a co-worker has not already performed this task. However, it
+is possible you may need to create this VBCS application; it is used to
+simulate “external” data available via RESTful APIs.
+
+In this lab you will create:
+
+  - A VBCS Application to house the data components (we suggest the name
+    “Mama Maggy”)
+
+  - A “Store” Business Object containing fields and data for the list of
+    Mama Maggy’s stores
+
+  - An “Associate” Business Object containing fields and data for Mama
+    Maggy associates
+
+  - Two .csv files are provided to provide data for Store and
+    Associate  
+    (be sure to create “Store” before “Associate” (Associate references
+    Store), and  
+    load data into “Store” first before loading data into “Associate”)
+
+<!-- end list -->
+
+1.  Log into your tenancy using cloud.oracle.com; be sure it has been
+    provisioned to allow Visual Builder Cloud Service and the database
+    and object storage instances also required.  
+    (check with your tenancy admin if unsure)
+
+![](./media/image_c_1.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.1 - Login
+
+2.  On some systems you will see a “dashboard” as shown below
+
+![](./media/image_c_2.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.2.1 – Starting Dashboard
+
+If you see a “Visual Builder” box as shown below, proceed to step 3.
+
+If you don’t see the “Visual Builder” service box like this we’ll add it
+to the display.
+
+![](./media/image_c_3.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.2.2 – Visual Builder box
+
+If you don’t see the “Visual Builder” box shown above; click on the
+“Customize Dashboard
+
+![](./media/image_c_4.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.2.3 – Customize Dashboard
+
+Scroll the “Customize Dashboard” looking for “Visual Builder” service.
+Services may be added/removed from the automatic display using the
+“Automatic/Expand/Collapse” buttons provided.
+
+![](./media/image_c_5.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.2.4 – Customize Dash choices
+
+Once you find “Visual Builder” click the “Show” button so that it
+appears in the dashboard.
+
+![](./media/image_c_6.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.2.5 – Show Visual Builder
+
+3.  From the “Visual Builder” service box there are two ways to open a
+    service console.
+
+> ![](./media/image_c_3.png)
+> 
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.3.1.1 – Visual Builder service
+
+One method is to click on the box’s “Visual Builder” text to display an
+overview page.
+
+![](./media/image_c_7.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.3.1.2 – Visual Builder Overview
+
+From the overview page, click the “Open Service Console” button to
+continue.
+
+![](./media/image_c_8.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.3.1.3 – Open Service Console button
+
+> Another method is to click the “hamburger” icon
+> ![](./media/image_c_9.png) in the lower-right corner of the  
+> “Visual Builder” service box to display a menu.
+
+![](./media/image_c_3.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.3.2.1 – Visual Builder service box
+
+Select “Open Service Console” from the menu.
+
+![](./media/image_c_10.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.3.2.2 – Visual Builder service menu
+
+4.  When the VBCS Service Console “Instances” list appears; use the
+    “Hamburger Icon” ![](./media/image_c_9.png)on the far right and
+    choose “Open Oracle Visual Builder Cloud Service Home Page” to begin
+    creating your new application.
+
+![](./media/image_c_11.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.4 – Open Home Page
+
+5.  When the “Visual Applications” list appears; choose the “New” button
+
+![](./media/image_c_12.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.5.1 – Visual Applications
+
+![](./media/image_c_13.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.5.2 – Import New Buttons
+
+6.  When the “Create Application” panel opens; provide an “Application
+    Name” of “Mama Maggy” (“Application Info” will default based upon
+    what you type), provide a description (optional), and select the
+    “Empty Application” template (should be the default).
+
+> ![](./media/image_c_14.png)
+> 
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.6.1 – Create Application
+
+Click the “Finish” button when done.
+
+![](./media/image_c_15.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.6.2 – Finish button
+
+7.  This application will be used to host two Business Objects that will
+    be used by other applications via RESTful APIs; this is simulating
+    the use of external API access such as database or SaaS application.
+
+> Select the “Business Object” button to start creating business
+> objects.
+> 
+> ![](./media/image_c_16.png)
+> 
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.7 – Business Object button
+
+8.  From the application page, click “+ Business Object” to begin adding
+    a business object.
+
+> ![](./media/image_c_17.png)
+> 
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.8.1 – Application Page
+> 
+> Provide a name “Store” and click the “checkbox” icon.
+> 
+> ![](./media/image_c_18.png)
+> 
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.8.2 – Plus Business Object
+
+9.  Add Fields to the Store object as follows (please create them as
+    shown to match the .csv data):
+
+<!-- end list -->
+
+  - Name
+
+  - Address
+
+  - City
+
+  - State
+
+  - Mailcode
+
+![](./media/image_c_19.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.9 – Store object fields
+
+10. Create an “Associate” object next; this will happen in steps to
+    account for the reference in the “Associate” row to the “Store” row.
+    Add fields as follows:
+
+<!-- end list -->
+
+  - From the “Fields” tab, click “+ New Field” and add “Name”
+
+  - Define the “Store” relationship:
+    
+    1.  Switch to the “Overview” tab
+    
+    2.  Click “Relationships +”
+    
+    3.  Use dropdown to select “Store”
+    
+    4.  Make sure the relationship is one “Store” to many “Associate”
+    
+    5.  Click “Done” when finished
+
+  - From the “Fields” tab, click “+ New Field” and add “Hire Date” (date
+    field)
+
+  - From the “Fields” tab, click “+ New Field” and add “Email” (email
+    field)
+
+> ![](./media/image_c_20.png)
+> 
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.10 – Associate object fields
+
+11. Use the Business Object “hamburger” icon’s ![](./media/image_c_9.png)
+    menu to select “Diagram” option.
+
+> ![](./media/image_c_21.png)
+> 
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.11.1 – Diagram option
+
+The business object diagram should look like the following; if not
+please correct or redo.
+
+> ![](./media/image_c_22.png)
+> 
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.11.2 – Object relationship diagram
+
+12. To load data into the objects, start by once again using the
+    Business Object “hamburger” ![](./media/image_c_9.png)icon but this
+    time select the “Data Manager” option.
+
+> ![](./media/image_c_23.png)
+> 
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.12.1 – Data Manager option
+> 
+> Click on “Import from File” from the “Manage Application Data” panel.
+> 
+> ![](./media/image_c_24.png)
+> 
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.12.2 – Manage Application Data
+> 
+> Click on the “Upload a file or drag it here” picture.
+> 
+> ![](./media/image_c_25.png)
+> 
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.12.3 – Empty import data
+> 
+> Select the “Store.csv” file supplied as part of the course setup and
+> click the “Import” button.
+> 
+> ![](./media/image_c_26.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.12.4 – Import Store.csv
+
+Visual Builder will report upon the success/failure of the import.
+
+![](./media/image_c_27.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.12.5 – Import Store results
+
+Import the “Associate.csv” file using the same technique.
+
+![](./media/image_c_28.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.12.6 – Import Associate.csv
+
+Results should be.
+
+![](./media/image_c_29.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.12.8 – Import Associate results
+
+13. Review the added data using the “Data” tab for the two objects.
+
+> ![](./media/image_c_30.png)
+> 
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.13.1 – Store data
+> 
+> ![](./media/image_c_31.png)
+> 
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.13.2 – Associate data
+
+14. Access points currently have a “version” number and will change each
+    time the objects are modified. Currently only the “development”
+    addresses are available.
+
+> ![](./media/image_c_32.png)
+> 
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.14 – Development-only Resource API addresses
+
+15. To “set” the access points so that they will not change over time;
+    you must first “Stage” and then “Publish” the application.  
+      
+    First, return to the list of business objects.
+
+> ![](./media/image_c_33.png)
+> 
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.15.1 – Application list
+> 
+> Using the “hamburger” icon ![](./media/image_c_9.png) (far right) open
+> the menu and select “Stage” for the application.
+> 
+> ![](./media/image_c_34.png)
+> 
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.15.2 – Select stage
+> 
+> Select “Populate Stage with Development data” to copy the data loaded
+> previously into the staging environment, then click the “Stage”
+> button.
+> 
+> ![](./media/image_c_35.png)
+> 
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.15.3 – Stage application
+
+The addresses we need are still not final, so the application must be
+published. Return to the list of applications and click the “hamburger”
+icon again. This time choose the “Publish” option.
+
+![](./media/image_c_36.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.15.4 – Publish option
+
+Be sure to “Include data from Stage” before you click the “Publish”
+button.
+
+![](./media/image_c_37.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.15.5 – Publish Application
+
+16. Reopen the application. In order for others to use REST APIs to
+    access the data in the application’s business objects the Resource
+    API addresses must be made available.
+
+> Select the “Store” business object and click on the “Endpoints” tab.
+> Addresses are listed for Development, Staging, and Live environments.
+> Also there are two columns, the ones on the left provide Metadata that
+> more-advanced client applications (like Visual Builder) may take
+> advantage of. The column on the right shows data-only “Endpoints” that
+> require a little more work to use.
+> 
+> From the left column select the “Live” address and click the
+> “clipboard” icon ![](./media/image_c_38.png). Paste the resulting
+> string into a text file in your local environment to share with
+> applications wanting to use the data.
+> 
+> This is the address needed to access “Store” data.
+> 
+> ![](./media/image_c_39.png)
+> 
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.16.1 – Store Resource APIs
+> 
+> ![](./media/image_c_40.png)
+> 
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.16.2 – Address to copy
+> 
+> Select the “Associate” business object and once again display the
+> “Endpoints” tab. Copy the value from the “Metadata” column “Live”
+> row using the “clipboard” icon ![](./media/image_c_38.png). Paste the
+> resulting string into a text file in your local environment to share
+> with applications wanting to use the data.
+> 
+> This is the address needed to access “Associate” data
+
+That’s it, you’ve created an application with business objects that may
+be accessed using REST APIs like those used in Lab 4.
+
+
 [Return to Table of Contents](#table-of-contents)
