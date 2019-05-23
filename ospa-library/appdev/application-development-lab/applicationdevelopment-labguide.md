@@ -122,75 +122,81 @@ On other systems you may see a different style of Dashboard<br/>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.4 – Visual Builder Icon (version 2)<br/>
 
-3.  Use the “Hamburger Icon” ![](./media/image11.png) in the Visual
-    Builder selection box and choose “Open Service Console” or from the
-    upper-right corner of the Visual Builder page click “Open Service
-    Console”![](./media/image12.png)
+3.  When the "Visual Builder" service box appears there are two ways to proceed to the service console: click on "Visual Builder" text and go through the "Visual Builder Cloud Service" page or use the service box menu.
 
-![](./media/image13.png) 
+![](./media/image_c_3.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.3.1 – Open Service Console Menu<br/> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.3.1 – Visual Builder service box<br/> 
+
+*  Option 1: Use the “Hamburger Icon” ![](./media/image11.png) in the Visual
+    Builder service box and choose “Open Service Console” from the
+    upper-right corner of the screen.
+    
+![](./media/vb13.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.3.2 – Open Service Console Menu<br/> 
+
+*  Option 2: Click on the text "Visual Builder" to display the "Visual Builder Cloud Service" page.
 
 ![](./media/image14.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.3.2 – Open Service
-Console Button
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.3.3 – Service: Oracle Visual Builder Cloud Service<br/> 
 
 4.  A VBCS instance has been created and designated for your class to
-    share (your instance name may be different than the one shown  
+    share (your instance name may be different than the one shown.  
     (see Appendix A for instructions on creating a VBCS instance)
 
 ![](./media/image15.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.4 – VBCS Instances
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.4 – VBCS Instances<br/>
 
 5.  Using the “Hamburger Icon” ![](./media/image16.png)on the far right;
     choose “Open Oracle Visual Builder Cloud Service Home Page”
 
 ![](./media/image17.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.5 – Open VBCS
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.5 – Open VBCS<br/>
 
-6.  You should briefly see the VBCS “splash” page
+6.  You should briefly see the VBCS “splash” page.
 
 ![](./media/image18.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.6 – VBCS Splash
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.6 – VBCS Splash<br/>
 
-7.  When the “Visual Applications” list appears; choose the “New” button
+7.  When the “Visual Applications” list appears; choose the “New” button in the upper-right corner.
 
 ![](./media/image19.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.7.1 – Visual Applications
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.7.1 – Visual Applications<br/>
 
 ![](./media/image20.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.7.2 – Import New Buttons
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.7.2 – Import New Buttons<br/>
 
-8.  When the “Create Application” page appears provide a name for the
-    application; please use your last name (all lower-case) followed by
-    your First and Middle initials (both uppercase); “mylastnameFM” in
-    the example below; if you do not have a Middle initial please leave
-    the First initial twice “mylastnmeFF” or just leave it out
-    “mylastnameF”- if someone else has the same name and initials
-    please append a digit to make your unique “mylastnameFM1”  
+8.  When the “Create Application” page appears, provide a name for the
+    application; you may call your applications anything you wish.
+    
+    If you are sharing your lab environment with a group of people you might find it convenient to follow a naming convention to make it easier for you to find your work and for the facilitators to help you.
+    
+    Perhaps combining your name or initials (or even employee id) with two-or-three characters representing your location to add as a prefix to the names of all applications you create. Visual Builder's list of applications may be sorted and filtered easily.
       
     Be sure the “Empty Application” template is selected and click
-    “Finish” to continue
+    “Finish” to continue.
 
 ![](./media/image21.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.8 – Name application
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.8 – Name application<br/>
 
 9.  You are now ready to begin creating your application\!
 
 ![](./media/image22.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.9 – Start Building Application
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.9 – Start Building Application<br/>
 
 This concludes Lab 1.
 
 [Go to Lab 2](#lab-4-data-from-service) – [Return to Table of Contents](#table-of-contents)
+<br/>
 
 # Lab 2: Spreadsheet-based Business Objects
 
@@ -206,21 +212,21 @@ as those used for service connections (more on this in Lab 4).
 
 ![](./media/image22.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.1 – Start Building Your Application
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.1 – Start Building Your Application<br/>
 
 2.  From the application page, click “+ Business Object” to begin adding
     a business object
 
 ![](./media/image23.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.2 – Plus Business Object
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.2 – Plus Business Object<br/>
 
 3.  Set the business object name to “Product” as shown here and click
     the Checkmark ![](./media/image24.png) when ready to continue
 
 ![](./media/image25.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.3 – New Business Object
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.3 – New Business Object<br/>
 
 4.  The Business Object page allows you to create Fields and manage your
     Business Object. Note that some fields have been defined
@@ -230,13 +236,13 @@ as those used for service connections (more on this in Lab 4).
 
 ![](./media/image26.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.4 – Business Objects Start
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.4 – Business Objects Start<br/>
 
 5.  To add a field click the “+ New Field” button
 
 ![](./media/image27.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.5 – New Field Button
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.5 – New Field Button<br/>
 
 6.  For each new field the Name and General Data Type are specified
 
@@ -252,13 +258,13 @@ as those used for service connections (more on this in Lab 4).
 
 ![](./media/image29.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.6 – New Field Product Name
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.6 – New Field Product Name<br/>
 
 7.  Set the field property to “Required”
 
 ![](./media/image30.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.7 – Product Name required
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.7 – Product Name required<br/>
 
 8.  Now add three more fields; be sure to mark the all “Required” so
     that you end up with a list like this:
@@ -273,7 +279,7 @@ as those used for service connections (more on this in Lab 4).
 
 ![](./media/image31.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.8 – Product Business Object Fields
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.8 – Product Business Object Fields<br/>
 
 9.  Create another Business Object named “Product Order” (ProductOrder)
     be sure to add the following fields:
@@ -290,7 +296,7 @@ as those used for service connections (more on this in Lab 4).
 
 > ![](./media/image34.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.9 – Product Order Business Object Fields
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.9 – Product Order Business Object Fields<br/>
 
 10. Create another Business Object named “Product Order Line”
     (ProductOrderLine) be sure to add the following fields:
@@ -307,7 +313,7 @@ as those used for service connections (more on this in Lab 4).
 
 ![](./media/image35.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.1 – Start Product Order Line
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.1 – Start Product Order Line`
 
 Click on the “Overview” tab to see where relationships are defined.
 
