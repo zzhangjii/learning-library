@@ -102,29 +102,29 @@ classroom and supporting lab files.
   (if your dashboard does not show “Visual Builder” – click “Customize
 Dashboard”)
 
-  ![](./media/image7.png)
+   ![](./media/image7.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.1 – Customize Dashboard 1<br/>
 
    Scroll to “Visual Builder” and click the “Show Button”
 
-  ![](./media/image8.png)
+   ![](./media/image8.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.2 – Show Visual Builder<br/>
 
    On other systems you may see a different style of Dashboard<br/>
 
-![](./media/image9.png)
+  ![](./media/image9.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.3 – Visual Builder Icon<br/>
 
-![](./media/image10.png)
+  ![](./media/image10.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.4 – Visual Builder Icon (version 2)<br/>
 
 3.  When the "Visual Builder" service box appears there are two ways to proceed to the service console: click on "Visual Builder" text and go through the "Visual Builder Cloud Service" page or use the service box menu.
 
-![](./media/image_c_3.png)
+    ![](./media/image_c_3.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.3.1 – Visual Builder service box<br/> 
 
@@ -132,13 +132,13 @@ Dashboard”)
     Builder service box and choose “Open Service Console” from the
     upper-right corner of the screen.
     
-![](./media/vb_13b.png)
+    ![](./media/vb_13b.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.3.2 – Open Service Console Menu<br/> 
 
 *  Option 2: Click on the text "Visual Builder" to display the "Visual Builder Cloud Service" page.
 
-![](./media/image14.png)
+    ![](./media/image14.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.3.3 – Service: Oracle Visual Builder Cloud Service<br/> 
 
@@ -146,30 +146,30 @@ Dashboard”)
     share (your instance name may be different than the one shown.  
     (see Appendix A for instructions on creating a VBCS instance)
 
-![](./media/image15.png)
+    ![](./media/image15.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.4 – VBCS Instances<br/>
 
 5.  Select the VBCS instance being used for the lab ("ospavcs1" below), then using the “Hamburger Icon” ![](./media/image16.png) on the far right;
     choose “Open Oracle Visual Builder Cloud Service Home Page”
 
-![](./media/image17.png)
+    ![](./media/image17.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.5 – Open VBCS<br/>
 
 6.  You should briefly see the VBCS “splash” page.
 
-![](./media/image18.png)
+    ![](./media/image18.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.6 – VBCS Splash<br/>
 
 7.  When the “Visual Applications” list appears; choose the “New” button in the upper-right corner.
 
-![](./media/image19.png)
+  ![](./media/image19.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.7.1 – Visual Applications<br/>
 
-![](./media/image20.png)
+  ![](./media/image20.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.7.2 – Import New Buttons<br/>
 
@@ -183,13 +183,13 @@ Dashboard”)
     Be sure the “Empty Application” template is selected and click
     “Finish” to continue.
 
-![](./media/image21.png)
+    ![](./media/image21.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.8 – Name application<br/>
 
 9.  You are now ready to begin creating your application\!
 
-![](./media/vbcs_new_start_building.png)
+    ![](./media/vbcs_new_start_building.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.9 – Start Building Application<br/>
 
@@ -236,7 +236,7 @@ upper-left corner.
 
     ![](./media/vbcs_add_biz_object.png)
 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.1.3 – Start Building Your Application<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.1.3 – Top of Business Object list<br/>
 
 2.  From the application page, click “+ Business Object” to begin adding
     a business object
@@ -244,7 +244,7 @@ upper-left corner.
 3.  Set the business object name to “Product” as shown here and click
     the Checkmark ![](./media/image24.png) when ready to continue
 
-![](./media/image25.png)
+    ![](./media/image25.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.3 – New Business Object<br/>
 
@@ -254,13 +254,13 @@ upper-left corner.
     and will be used to access items in the business object
     automatically later.
 
-![](./media/image26.png)
+    ![](./media/image26.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.4 – Business Objects Start<br/>
 
 5.  To add a field click the “+ New Field” button
 
-![](./media/image27.png)
+    ![](./media/image27.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.5 – New Field Button<br/>
 
@@ -276,13 +276,13 @@ upper-left corner.
 
   - Click the “Checkmark” icon ![](./media/vbcs_checkmark.png) when done
 
-![](./media/image29b.png)
+    ![](./media/image29b.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.6 – New Field Product Name<br/>
 
 7.  Set the field property to “Required”
 
-![](./media/image30.png)
+    ![](./media/image30.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.7 – Product Name required<br/>
 
