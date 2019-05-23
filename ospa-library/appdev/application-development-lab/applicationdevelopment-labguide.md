@@ -150,7 +150,7 @@ On other systems you may see a different style of Dashboard<br/>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.4 – VBCS Instances<br/>
 
-5.  Select the VBCS instance being used for the course ("ospavcs1" below), then using the “Hamburger Icon” ![](./media/image16.png) on the far right;
+5.  Select the VBCS instance being used for the lab ("ospavcs1" below), then using the “Hamburger Icon” ![](./media/image16.png) on the far right;
     choose “Open Oracle Visual Builder Cloud Service Home Page”
 
 ![](./media/image17.png)
@@ -189,7 +189,7 @@ On other systems you may see a different style of Dashboard<br/>
 
 9.  You are now ready to begin creating your application\!
 
-![](./media/image22.png)
+![](./media/vbcs_new_start_building.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.9 – Start Building Application<br/>
 
