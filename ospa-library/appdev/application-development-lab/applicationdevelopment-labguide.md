@@ -132,7 +132,7 @@ On other systems you may see a different style of Dashboard<br/>
     Builder service box and choose “Open Service Console” from the
     upper-right corner of the screen.
     
-![](./media/vb13.png)
+![](./media/vb_13b.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.3.2 – Open Service Console Menu<br/> 
 
@@ -150,7 +150,7 @@ On other systems you may see a different style of Dashboard<br/>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.4 – VBCS Instances<br/>
 
-5.  Using the “Hamburger Icon” ![](./media/image16.png)on the far right;
+5.  Select the VBCS instance being used for the course ("ospavcs1" below), then using the “Hamburger Icon” ![](./media/image16.png) on the far right;
     choose “Open Oracle Visual Builder Cloud Service Home Page”
 
 ![](./media/image17.png)
