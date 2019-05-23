@@ -8,7 +8,7 @@
 
 [Recommended Learning Assets](#recommended-learning-assets)
 
-[Practice 1: Sign in to OCI Console and create VCN](#practice-1-sign-in-to-oci-console-and-create-vcn)
+[Practice 1:Sign in to OCI Console and create VCN](#practice-1-sign-in-to-oci-console-and-create-vcn)
 
 [Practice 2: Creat ssh keys, compute instance and Block Volume. Attach block volume to compute instance](#practice-2-creat-ssh-keys,-compute-instance-and-block-volume.-attach-block-volume-to-compute-instance)
 
@@ -63,7 +63,7 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 
 **Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
 
-## Practice-1: Sign in to OCI Console and create VCN
+## Practice 1: Sign in to OCI Console and create VCN
 
 * **Tenant Name:** {{Cloud Tenant}}
 * **User Name:** {{User Name}}

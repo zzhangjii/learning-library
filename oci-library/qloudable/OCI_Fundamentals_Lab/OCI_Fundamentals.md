@@ -1,4 +1,4 @@
-# OCI Quick Start (VCN, Compute and Block Volume)
+# OCI Fundamentals(Deploy HA application using Load Balancer)
 
 ## Table of Contents
 
@@ -8,21 +8,17 @@
 
 [Recommended Learning Assets](#recommended-learning-assets)
 
-[Practice 1: Sign in to OCI Console and create VCN](#practice-1-sign-in-to-oci-console-and-create-vcn)
+[Sign in to OCI Console and create VCN](#sign-in-to-oci-console-and-create-vcn)
 
-[Practice 2: Create Public Private SSH Key Pair Using Built-in Application and two compute instances and install web server](#practice-2-create-public-private-ssh-key-pair-using-built-in-application-and-two-compute-instances-and-install-web-server)
+[Create Public Private SSH Key Pair Using Built-in Application and two compute instances and install web server](#create-public-private-ssh-key-pair-using-built-in-application-and-two-compute-instances-and-install-web-server)
 
-[Practice 3: Create Security List, Route table and two subnets](#practice-3-create-security-list,-route-table-and-two-subnets)
+[Create Security List Route table and two subnets](#create-security-list-route-table-and-two-subnets)
 
-[Practice 4: Create Load Balancer and update Security List](#practice-4-create-load-balancer-and-update-security-list)
+[Create Load Balancer and update Security List](#create-load-balancer-and-update-security-list)
 
-[Practice 5: Verify High Availability of HTTP Servers](#practice-5-verify-high-availability-of-http-servers)
+[Verify High Availability of HTTP Servers](#verify-high-availability-of-http-servers)
 
-[Practice 6: Delete the resources](#practice-5-delete-the-resources)
-
-[Appendix A: ISCSI Method to Attach Block Volume to Compute Instance](#appendix-a-iscsi-method-to-attach-block-volume-to-compute-instance)
-
-[Appendix B: ISCSI Method to Detach block volume](#appendix-b-iscsi-method-to-detach-block-volume)
+[Delete the resources](#delete-the-resources)
 
 ## Overview
 
@@ -68,7 +64,7 @@ https://www.youtube.com/watch?v=FJRnrNMrj3Y
 
 **Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
 
-## Practice-1: Sign in to OCI Console and create VCN
+## Sign in to OCI Console and create VCN
 
 * **Tenant Name:** {{Cloud Tenant}}
 * **User Name:** {{User Name}}
@@ -106,7 +102,7 @@ https://www.youtube.com/watch?v=FJRnrNMrj3Y
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text" height="100" width="100">
               
               
-## Practice 2: Create Public Private SSH Key Pair Using Built-in Application and two compute instances and install web server
+## Create Public Private SSH Key Pair Using Built-in Application and two compute instances and install web server
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
@@ -287,7 +283,7 @@ We now have two Compute instances with Web servers installed and a basis index.h
 
 Load balancers should always reside in different subnets than your application instances. This allows you to keep your application instances secured in private subnets, while allowing public Internet traffic to the load balancers in the public subnets.
 
-## Practice 3: Create Security List, Route table and two subnets
+## Create Security List Route table and two subnets
 
 In this section we will create a new security list. This security list will be used by the load balancer (that will be created later on). This will ensure all traffic to the two web servers is routed properly.
 
@@ -358,7 +354,7 @@ In this section we will create a new security list. This security list will be u
 
 14. Leave all other options as default, Click **Create Subnet**.
 
-## Practice 4: Create Load Balancer and update Security List
+## Create Load Balancer and update Security List
 
 **When you create a load balancer, you choose its shape (size) and you specify two subnets (created earlier) from different Availability Domains. This ensures that the load balancer is highly available and is only active in one subnet at a time.**
 
@@ -456,7 +452,7 @@ We will now test the Load Balancer functionality (load balance using round robin
 
 **Note:** Be sure to take note of the "Health" field in the Networking > Load Balancers dashboard. If the health is "Critical," the load balancer may not work as intended, and the best course of action may be to create a new one. This is likely the result of something being mis-configured, and it should only happen rarely.
 
-# Practice 5: Verify High Availability of HTTP Servers
+# Verify High Availability of HTTP Servers
 
 In this section we will access the two Web servers configured earlier using Load Balancer’s Public IP address and demonstrate Load Balancer’s ability to route traffic on round robin basis(Per the Policy Configured). In case one of the web server becomes un-available the web content will be available via the second server (High Availability)
 
@@ -472,7 +468,7 @@ In this section we will access the two Web servers configured earlier using Load
 
 **This Lab is not intended to test Failover and Recovery of Backend Servers. User can test that functionality at their own discretion. Any trouble shooting in case any issue is encountered is out of scope of this lab**
 
-## Practice 6: Delete the resources
+##  Delete the resources
 
 Delete Load Balancer and associated components:
 
