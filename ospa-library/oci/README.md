@@ -6,3 +6,7 @@ This lab will introduce you to the Oracle Cloud Infrastructure service.  We will
 [Class Of SE - HOL for Technical Training](./Class-Of-HOL-01/README.md)
 Lab for specific Class of SE Event.  4 section introductory hands on lab to accompany lecture.
 
+[Class Of SE - HOL 2 for Technical Training](./Class-Of-HOL-02/README.md)
+Lab #2 for specific Class of SE Event.  OCI CLI practice exercise.
+
+
