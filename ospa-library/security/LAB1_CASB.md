@@ -22,12 +22,14 @@ We will enroll third-party services as part of the exercise and it's imperative 
 
 **NOTE: CASB is a dynamic service that is, by design, constantly in flux. As a result, what you see in the console may not match exactly with the lab screenshots. Screenshots are provided solely for illustrative purposes to help guide you directionally through the CASB console.**
 
-For consistency and for the ease of use-cases implementation, you will use a Gmail account.
+For consistency and for the ease of use-cases implementation, you will use a Gmail account, and for CASB application registration you will use the following name convention:
+
+`location+room_appName_yourOracleUserID` (e.g. **Austin1_Salesforce_acasas**, **Austin1_Box_acasas**, **Austin1_OCI_acasas** )
 
 ****
 
 Oracle CASB monitors your sanctioned applications after a simple registration process. This enables you to manage risk events from a centralized platform instead of having to enter the individual application to see and remediate security threats. Oracle CASB monitors risk events such as blacklisted IP addresses, anomalous user behavior and unwanted security configurations in the application.
-As part of this first part of the module we will enrol two applications, Box and SalesForce.
+As part of this first part of the module we will enroll two applications, Box and SalesForce.
 
 ### Add Box as a Sanctioned Application
 
