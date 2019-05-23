@@ -226,11 +226,11 @@ as those used for service connections (more on this in Lab 4).
 upper-left corner. 
  ![](./media/image74.png)
 
-  - If you don't have any Business Objects already you'll see the following image; click on the "+ Business Object" button.
+  - If you don't have any Business Objects already you'll see the following "You don't have any business objects defined yet" image; click on the "+ Business Object" button.
 
      ![](./media/vbcs_no_biz_objects.png)
 
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.1.2 – Start Building Your Application<br/>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.1.2 – No Business Objects<br/>
 
   - If you already have Business Objects a list will appear; click the plus sign "+" at the top of the Business Objects list.
 
