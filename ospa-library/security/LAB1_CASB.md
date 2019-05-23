@@ -22,7 +22,7 @@ We will enroll third-party services as part of the exercise and it's imperative 
 
 **NOTE: CASB is a dynamic service that is, by design, constantly in flux. As a result, what you see in the console may not match exactly with the lab screenshots. Screenshots are provided solely for illustrative purposes to help guide you directionally through the CASB console.**
 
-For consistency and for the ease of use-cases implementation, you will use a Gmail account, and for CASB application registration you will use the following name convention:
+For consistency and for the ease of use-cases implementation, you will use a Gmail account, and for CASB application registration you will use the following naming convention:
 
 `location+room_appName_yourOracleUserID` (e.g. **Austin1_Salesforce_acasas**, **Austin1_Box_acasas**, **Austin1_OCI_acasas** )
 
