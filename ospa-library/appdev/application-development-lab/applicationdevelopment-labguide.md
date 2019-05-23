@@ -87,32 +87,32 @@ classroom and supporting lab files.
 
 1.  Log into class tenancy using cloud.oracle.com
 
-&nbsp;&nbsp;![](./media/image5.png)
+    ![](./media/image5.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.1 - Login<br/>
 
 2.  On some systems you will see a “dashboard” as shown below.
 
-![](./media/image6.png)
+    ![](./media/image6.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2 - Dashboard<br/>
 
-Click the “Visual Builder” service (next step)
+   Click the “Visual Builder” service (next step)
 
-(if your dashboard does not show “Visual Builder” – click “Customize
+  (if your dashboard does not show “Visual Builder” – click “Customize
 Dashboard”)
 
-![](./media/image7.png)
+  ![](./media/image7.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.1 – Customize Dashboard 1<br/>
 
-Scroll to “Visual Builder” and click the “Show Button”
+   Scroll to “Visual Builder” and click the “Show Button”
 
-![](./media/image8.png)
+  ![](./media/image8.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.2 – Show Visual Builder<br/>
 
-On other systems you may see a different style of Dashboard<br/>
+   On other systems you may see a different style of Dashboard<br/>
 
 ![](./media/image9.png)
 
@@ -208,18 +208,38 @@ of VBCS) and are actually accessed using the same type of RESTful APIs
 as those used for service connections (more on this in Lab 4).
 
 1.  If you have logged out of the Oracle Cloud, please log back in and
-    return to your VBCS application.
+    return to your VBCS application. On the left-hand side of the Visual Builder interface is a navigator
+    listing several options; choose “Business Objects”
 
-![](./media/image22.png)
+      | Mobile Applications | ![](./media/image67.png) |
+      | ------------------- | ------------------------ |
+      | Web Applications    | ![](./media/image68.png) |
+      | Service Connections | ![](./media/image69.png) |
+      | Business Objects    | ![](./media/image70.png) |
+      | Components          | ![](./media/image71.png) |
+      | Processes           | ![](./media/image72.png) |
+      | Source View         | ![](./media/image73.png) |
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.1 – Start Building Your Application<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.1.1 – VBCS Icons  
+  
+   If you don’t see the navigator, click the “Expand Navigator” icon in the
+upper-left corner. 
+ ![](./media/image74.png)
+
+  - If you don't have any Business Objects already you'll see the following image; click on the "+ Business Object" button.
+
+     ![](./media/vbcs_no_biz_objects.png)
+
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.1.2 – Start Building Your Application<br/>
+
+  - If you already have Business Objects a list will appear; click the plus sign "+" at the top of the Business Objects list.
+
+    ![](./media/vbcs_add_biz_object.png)
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.1.3 – Start Building Your Application<br/>
 
 2.  From the application page, click “+ Business Object” to begin adding
     a business object
-
-![](./media/image23.png)
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.2 – Plus Business Object<br/>
 
 3.  Set the business object name to “Product” as shown here and click
     the Checkmark ![](./media/image24.png) when ready to continue
@@ -254,9 +274,9 @@ as those used for service connections (more on this in Lab 4).
   - Set the Type to character by making sure the “A”
     ![](./media/image28.png) is selected as shown below
 
-  - Click the “Checkmark” icon ![](./media/image24.png)when done
+  - Click the “Checkmark” icon ![](./media/vbcs_checkmark.png) when done
 
-![](./media/image29.png)
+![](./media/image29b.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.6 – New Field Product Name<br/>
 
@@ -281,25 +301,28 @@ as those used for service connections (more on this in Lab 4).
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.8 – Product Business Object Fields<br/>
 
-9.  Create another Business Object named “Product Order” (ProductOrder)
-    be sure to add the following fields:
+9.  Create another Business Object named “Product Order” (ProductOrder).
+
+    Add new fields as suggested below so that the final result looks like the screen shot in Figure 2.9.
 
 <!-- end list -->
 
   - \# (numeric) associateId Associate Id
 
-  - ![](./media/image32.png) (date time) orderDate Order Date
+  - ![](./media/image32.png) (datetime) orderDate Order Date
 
   - A (text) orderStatus Order Status
 
-  - ![](./media/image33.png)(date time) actionDate Action Date
+  - ![](./media/image33.png)(datetime) actionDate Action Date
 
 > ![](./media/image34.png)
 > 
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.9 – Product Order Business Object Fields<br/>
 
 10. Create another Business Object named “Product Order Line”
-    (ProductOrderLine) be sure to add the following fields:
+    (ProductOrderLine).
+    
+    Add the following fields so that the result looks like Figure 2.10.1.
 
 <!-- end list -->
 
@@ -336,7 +359,7 @@ and check to make sure that “Product” is on the “One” side and
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.4 – Product relationship
 
-Click on the plus sign “+” to add another relationship.
+   Click on the plus sign “+” to add another relationship.
 
 ![](./media/image39.png)
 
@@ -448,41 +471,44 @@ PIZZA\_SAUCE
     Management”
 
 ![](./media/image53.png)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.15 – Data Manager dropdown
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.15 – Data Manager dropdown
 
 16. Choose “Import from File”
 
 ![](./media/image54.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.16 – Choose Import from File
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.16 – Choose Import from File
 
 17. Click on “Upload a file or drag it here”
 
 ![](./media/image55.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.17.1 – Upload file start
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.17.1 – Upload file start
 
 Select the “Product.csv” file provided
 
 ![](./media/image56.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.17.2 – Product.csv
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.17.2 – Product.csv
 
 Click the “Import” button to upload the selected file
 
 ![](./media/image57.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.17.3 – Confirm Import
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.17.3 – Confirm Import
 
 18. You should see success message like the following; if not, try again
     or ask the instructor for help; click “OK” button when complete
 
 ![](./media/image58.png)
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.18 – Import
+
+
 19. Review the “Product” business object data to see the results of the
     load
 
-![](./media/image59.png)
+    ![](./media/image59.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.19 – Product List
 
@@ -498,7 +524,7 @@ Click the “Import” button to upload the selected file
     value in and it will appear), type in the other two then review your
     results and click the checkmark.
 
-![](./media/image61.png)
+    ![](./media/image61.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.21 – Add Product Order Line
 
@@ -510,13 +536,13 @@ Click the “Import” button to upload the selected file
 
   - Product Order - ProductOrder.csv
 
-![](./media/image62.png)
+    ![](./media/image62.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.22.1 – Product Order data
 
   - Product Order Line - ProductOrderLine.csv
 
-![](./media/image63.png)
+    ![](./media/image63.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.22.2 – Product Order Line data
 
@@ -524,7 +550,7 @@ Click the “Import” button to upload the selected file
     ![](./media/image16.png)and select “Diagram” to see the
     relationships
 
-![](./media/image64.png)
+    ![](./media/image64.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.24.1 – Diagram dropdown
 
