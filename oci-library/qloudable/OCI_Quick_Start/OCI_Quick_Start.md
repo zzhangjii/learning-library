@@ -1,4 +1,4 @@
-# OCI Quick Start (VCN, Compute and Block Volume)
+# OCI Quick Start (VCN, Compute and Block Volume).
 
 ## Table of Contents
 
@@ -30,38 +30,34 @@ the second compute instance (with the app installed).
 The goal of the lab is to demonstrate launching VCN, Compute Instance, using Boot volume of compute instance and 
 how easy it is to move additional storage with applicatons/tools installed between compute instances
 
-## Pre-Requisites
-
-- Oracle Cloud Infrastructure account credentials (User, Password, Tenant, and Compartment)  
-
-## Recommended Learning Assets
-
-1. OCI Training : https://cloud.oracle.com/en_US/iaas/training
-
-2. Familiarity with OCI console: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/console.htm
-
-3. Overview of Networking: https://docs.us-phoenix-1.oraclecloud.com/Content/Network/Concepts/overview.htm
-
-4. Familiarity with Compartment: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/concepts.htm
-
-5. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
-
-**Before You Begin**
+**Some Key points;**
 
 - We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
-- All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
-- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
 
-**Cloud Tenant Name**
-**User Name**
-**Password**
-**Compartment Name (Provided Later)**
+- All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
+
+- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
 
 - Do NOT use compartment name and other data from screen shots.Only use  data(including compartment name) provided in the content section of the lab
 
 - Mac OS Users should use ctrl+C / ctrl+V to copy and paste inside the OCI Console
 
 **Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
+
+## Pre-Requisites
+
+1. Oracle Cloud Infrastructure account credentials (User, Password, Tenant, and Compartment)  
+
+2. OCI Training : https://cloud.oracle.com/en_US/iaas/training
+
+3. Familiarity with OCI console: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/console.htm
+
+4. Overview of Networking: https://docs.us-phoenix-1.oraclecloud.com/Content/Network/Concepts/overview.htm
+
+5. Familiarity with Compartment: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/concepts.htm
+
+6. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
+
 
 ## Practice 1: Sign in to OCI Console and create VCN
 
