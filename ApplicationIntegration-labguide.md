@@ -364,7 +364,7 @@ have done the prerequisites, continue below:
       - Configuration File: Browse to and select your wallet zip file
         that you saved in your ApplicationIntegrationLabs folder above.
     
-      - Service: *dbappint\_high*
+      - Service: *databaseappint\_high*
     
       - Click on the "Save Password* field so you aren’t prompted for the
         atpc\_user password each time you activate your connection.
@@ -2580,7 +2580,9 @@ Oracle Integration Setup.
 6.  Download your database credentials so you can access the database from SQL Developer:
     
     - Click the *DB Connection* button. The Database Connection dialog
-        appears. Click the *Download* button in the *Download Client
+        appears. 
+        
+    - Click the *Download* button in the *Download Client
         Credentials (Wallet)* area:
 
         ![](./media/image8.png)
@@ -2627,7 +2629,7 @@ Oracle Integration Setup.
                 ApplicationIntegrationLabs folder
                 ApplicationIntegrationLabs folder.
             
-          - Service: *dbappint\_high*
+          - Service: *databaseappint\_high*
         
           - Click the *Test* button to see if SQL Developer can connect
             to your ATP instance. Wait for a moment as access is
@@ -2640,7 +2642,7 @@ Oracle Integration Setup.
         
           - Click the *Save* button at the bottom of the dialog.
         
-          - Exit the dialog.
+          - Exit the dialog by clicking the Cancel button in the lower-right corner.
     
 7.  Test your new SQL Developer connection:
         
@@ -2669,9 +2671,9 @@ Oracle Integration Setup.
       Figure 108: Creating a Database User
 
     - Here is the text to copy/edit/paste for these statements:  
-create user atpc\_user identified by
+*create user atpc\_user identified by
 "<span class="underline">DBWelcome1234</span>";  
-grant dwrole to atpc\_user;  
+grant dwrole to atpc\_user;*  
 
     - Of course, your password will likely be different than the one shown
 above (*DBWelcome1234*). Save the password in your
@@ -2679,7 +2681,8 @@ ApplicationIntegrationLabs folder ApplicationIntegrationLabs folder.
 
     - Click the *Run Script* icon (highlighted above) to execute both
     statements. You will see feedback that the user was created and that
-    the grant succeeded.
+    the grant succeeded.  Look in the *Script Output* panel to see the
+    "User ATPC_USER created" and "Grant succeeded" messages
 
     - Click the *Commit icon* (highlighted above) to make sure that the
     changes were committed to the database.
@@ -2708,7 +2711,7 @@ ApplicationIntegrationLabs folder ApplicationIntegrationLabs folder.
             file* that you saved in your ApplicationIntegrationLabs
             folder ApplicationIntegrationLabs folder above.
         
-      - Service: *dbappint\_high*
+      - Service: *databaseappint\_high*
         
       - Click the *Test* button to see if SQL Developer can connect
             to your ATP instance. Wait for a moment as access is
@@ -2721,7 +2724,7 @@ ApplicationIntegrationLabs folder ApplicationIntegrationLabs folder.
         
       - Click the *Save* button at the bottom of the dialog.
         
-      - Exit the dialog.
+      - Exit the dialog by clicking the Cancel button in the lower-right corner.
         
 10. Test your new SQL Developer connection:
             
@@ -2746,15 +2749,17 @@ ApplicationIntegrationLabs folder ApplicationIntegrationLabs folder.
           Figure 109: Creating a Database Table
 
       - Here is the text to copy/edit/paste for these statements:  
-CREATE TABLE atpc\_user.orders (  
+*CREATE TABLE atpc\_user.orders (  
 orderId VARCHAR2(8) PRIMARY KEY,  
 orderDate DATE NOT NULL,  
 storeId NUMBER(3,0) NOT NULL,  
 stockId NUMBER (6,0) NOT NULL,  
-quantityOrdered NUMBER(3,0) NOT NULL);
+quantityOrdered NUMBER(3,0) NOT NULL);*
 
       - Click the *Run Script icon* (highlighted above) to execute both
-    statements. You will see feedback that the table was created.
+    statements. You will see feedback that the table was created.  Look for 
+    the *Table ATPC_USER.ORDERS created* message in the *Script Output*
+    panel.
 
       - Click the *Commit icon* (highlighted above) to make sure that the
     database changes were committed to the database.
@@ -2887,7 +2892,7 @@ Provisioned
 
     - Your instance has been established and is ready for use.
 
-4. Check to make sure that the ATP adapter feature is available in your instance.  As of May, 2019 it was not generally available.  As documented in https://blogs.oracle.com/integration/enabling-the-future-today-feature-flags-in-oracle-integration-cloud, it was available in feature controlled general availability and you have to ask for it to be enabled for your instance.  Here is how to check if the oic.cloudadapter.adapters.atpdatabase feature flag is enabled in your Oracle Integration instance:
+4. Check to make sure that the ATP adapter feature is available in your instance.  As of May, 2019 it was not generally available.  As documented in https://blogs.oracle.com/integration/enabling-the-future-today-feature-flags-in-oracle-integration-cloud, it was available in feature controlled general availability and you have to ask for it to be enabled for your instance.  Here is how to check if the *oic.cloudadapter.adapters.atpdatabase* feature flag is enabled in your Oracle Integration instance:
 
     - Browse to the 
     *Oracle Cloud My Services Page URL* noted in your *MyLabNotes* file
