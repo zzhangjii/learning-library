@@ -99,31 +99,31 @@ During the following exercises we will cover the following Personas:
  [Login to your Cloud Account](https://cloud.oracle.com/en_US/sign-in)
 
 ![](./media/idcs5.jpeg)
-<p align="center" Figure 1-1 </p>
+<p align="center"> Figure 1-1 </p>
 
  * On the login page, enter your user name and password and click **Sign In**
  
  * You will be presented with a dashboard displaying the various cloud services available to this account.
  
  ![](./media/idcs6.png)
- <p align="center" Figure 1-2 </p>
+ <p align="center"> Figure 1-2 </p>
  
  * From the **Cloud My Services** dashboard, click on **Users** in the upper right-hand corner. Then click on **Identity Console** button located towards upper right-hand corner again.
 
 ![](./media/idcs7.png)
-<p align="center" Figure 1-3 </p>
+<p align="center"> Figure 1-3 </p>
 
  * If you have logged in using your administrator Account, the users are shown up in IDCS admin console. Other admin console sections are also available.
  
  ![](./media/idcs8.jpeg)
- <p align="center" Figure 1-4 </p>
+ <p align="center"> Figure 1-4 </p>
  
  * In the upper left-hand corner select the navigator menu or sometimes referred to as the "General Menu”. Select **Dashboard**. This will display the **Identity Cloud Service** dashboard.
  
  * Click on the navigator menu to hide it.
 
 ![](./media/idcs9.jpeg)
-<p align="center" Figure 1-5 </p>
+<p align="center"> Figure 1-5 </p>
 
 * To return to the Cloud Console, do the following:
 
@@ -131,14 +131,14 @@ During the following exercises we will cover the following Personas:
     screen.
 
 ![](./media/idcs10.jpeg)
-<p align="center" Figure 1-6 </p>
+<p align="center"> Figure 1-6 </p>
 
   *  Then select the Dashboard button at top right of screen. This will
     return you to the **Cloud My Services** dashboard. Or just use your
     bookmarked URL as suggested earlier.
 
  ![](./media/idcs11.jpeg)
- <p align="center" Figure 1-7 </p>
+ <p align="center"> Figure 1-7 </p>
 
 # IDCS Quick Tour
 
@@ -146,7 +146,7 @@ During the following exercises we will cover the following Personas:
  (hamburger menu).
 
 ![](./media/idcs12.jpeg)
-<p align="center" Figure 1-8 </p>
+<p align="center"> Figure 1-8 </p>
 
  You may navigate around IDCS from the dashboard screen items or through the menu on the left. Note the **My Services** link at the bottom of the menu list. This provides a shortcut to **Cloud My Services** dashboard.
  
@@ -178,19 +178,19 @@ During the following exercises we will cover the following Personas:
 *  Go to IDCS Admin console using your administrator account credentials. Select the **Users** menu on the left and click **+Add** or select the **Add a user** icon from the dashboard.
 
 ![](./media/idcs13.png)
-<p align="center" Figure 1-9 </p>
+<p align="center"> Figure 1-9 </p>
 
 *  Fill in all required fields and click **Finish**. For this lab purposes, create a dummy account using your personal email address (e.g. *name@gmail.com*). We will use this account as part of our Single Sign-On module.
 
  ![](./media/idcs14.png)
- <p align="center" Figure 1-10 </p>
+ <p align="center"> Figure 1-10 </p>
 
 *  Verify user creation
     
       * Go to the **Users** tab in admin console. Verify that the new users are visible on the console.
 
  ![](./media/idcs15.jpeg)
- <p align="center" Figure 1-11 </p>
+ <p align="center"> Figure 1-11 </p>
 
 ****
 
@@ -207,72 +207,72 @@ This use case involves making API calls to IDCS using a REST client; in this cas
 *  Navigate to your tenant https://**yourtenant**/ui/v1/adminconsole
  
  ![](./media/idcs23.jpeg)
- <p align="center" Figure 1-12 </p>
+ <p align="center"> Figure 1-12 </p>
 
 *  Select the Applications tab from the IDCS dashboard presented after log in
 
 ![](./media/idcs24.png)
-<p align="center" Figure 1-13 </p>
+<p align="center"> Figure 1-13 </p>
 
 *  Click the **Add** button to create a new application for Postman use. In order for Postman to be able to call IDCS REST APIs, it first requires to have a **CLIENT_ID** and **CLIENT_SECRET** that authorize Postman to do so. This can be achieved by creating a Confidential Application type into IDCS with specific authorization grant types as you will see into the following steps.
 
  ![](./media/idcs25.jpeg)
- <p align="center" Figure 1-14 </p>
+ <p align="center"> Figure 1-14 </p>
 
 *  Select Confidential Application from the pop-up menu of application types:
 
 ![](./media/idcs26.jpeg)
-<p align="center" Figure 1-15 </p>
+<p align="center"> Figure 1-15 </p>
 
 *  Set the **Name** to “Postman”. Then click **Next**
 
  ![](./media/idcs27.jpeg)
- <p align="center" Figure 1-16 </p>
+ <p align="center"> Figure 1-16 </p>
 
 *  Click “**Configure this application as a client now**” in order toprovide the authorization grant types and the API role.
 
 ![](./media/idcs28.jpeg)
-<p align="center" Figure 1-17 </p>
+<p align="center"> Figure 1-17 </p>
 
 ![](./media/idcs29.jpeg)
-<p align="center" Figure 1-18 </p>
+<p align="center"> Figure 1-18 </p>
 
 *  Select all the Allowed Grant Types checkboxes and set Redirect URL to [**https://localhost.**](https://localhost/) Go to “**Grant the client access to Identity Cloud Service Admin APIs**” section (bottom of the page) and add the following API role “**Identity Domain Administrator**”. This way you are basically granting access for this IDCS app to the full set of IDCS APIs.
 
 *  Finally, click **Next**.
 
 ![](./media/idcs30.jpeg)
-<p align="center" Figure 1-19 </p>
+<p align="center"> Figure 1-19 </p>
 
 *  Make no changes in the next screens and click **Next**
 
  ![](./media/idcs31.png)
- <p align="center" Figure 1-20 </p>
+ <p align="center"> Figure 1-20 </p>
 
 * For finalizing the IDCS app that grants API roles to Postman via Auth2.0 standard click **Finish.**
 
 ![](./media/idcs32.jpeg)
-<p align="center" Figure 1-21 </p>
+<p align="center"> Figure 1-21 </p>
 
 * Once the application is created, note down the **Client ID** and the **Client Secret** then click **Close.** These will be used by Postman desktop application to call IDCS APIs using the Auth2.0 standard protocol.
 
 ![](./media/idcs33.jpeg)
-<p align="center" Figure 1-22 </p>
+<p align="center"> Figure 1-22 </p>
 
 * Click the **Activate** button. Don’t forget to activate the application
 
 ![](./media/idcs34.jpeg)
-<p align="center" Figure 1-23 </p>
+<p align="center"> Figure 1-23 </p>
 
 * Confirm the application activation
 
 ![](./media/idcs35.png)
-<p align="center" Figure 1-24 </p>
+<p align="center"> Figure 1-24 </p>
 
 * The application is now active and ready to use.
  
  ![](./media/idcs36.jpeg)
- <p align="center" Figure 1-25 </p>
+ <p align="center"> Figure 1-25 </p>
  
 * Sign out from IDCS
 
@@ -281,12 +281,12 @@ This use case involves making API calls to IDCS using a REST client; in this cas
 *  Open **Postman**. Ignore all startup messages if any.
 
 ![](./media/idcs37.jpeg)
-<p align="center" Figure 1-26 </p>
+<p align="center"> Figure 1-26 </p>
 
 *  First we need to import IDCS Postman environment variables, global variables and IDCS API collection. Click the Import button on the left upper corner:
 
  ![](./media/idcs38.jpeg)
- <p align="center" Figure 1-27 </p>
+ <p align="center"> Figure 1-27 </p>
 
 *  Select “**Import from Link**” and provide the following URL to import the environment variables:
    
@@ -305,7 +305,7 @@ https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_
 
  
  ![](./media/idcs39.png)
- <p align="center" Figure 1-28 </p>
+ <p align="center"> Figure 1-28 </p>
 
 *  To import the global variables file, click **Import**.
 
@@ -317,12 +317,12 @@ https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_
 *  Click on the **Settings** button (cogwheel icon) to **Manage Environments**
 
  ![](./media/idcs40.png)
- <p align="center" Figure 1-29 </p>
+ <p align="center"> Figure 1-29 </p>
 
 *  Click on the newly created environment which will be like “Oracle Identity Cloud Service Example Environment with Variables” and it will probably be the only one available in your cases.
 
 ![](./media/idcs41.png)
-<p align="center" Figure 1-30 </p>
+<p align="center"> Figure 1-30 </p>
 
 * Set the following parameters current values in order to be able to obtain an IDCS access token and click **Update**:
 
@@ -340,12 +340,12 @@ https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_
 
 
 ![](./media/idcs42.png)
-<p align="center" Figure 1-31 </p>
+<p align="center"> Figure 1-31 </p>
 
 * Click the **Environment** drop-down list, and then select the updated environment from the list.
 
  ![](./media/idcs43.png)
- <p align="center" Figure 1-32 </p>
+ <p align="center"> Figure 1-32 </p>
 
 *  Request an Access Token
     
@@ -358,7 +358,7 @@ https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_
     * In the secondary menu, select **access_token**. The highlighted content is assigned as the access token value.
 
  ![](./media/idcs44.jpeg)
- <p align="center" Figure 1-33 </p>
+ <p align="center"> Figure 1-33 </p>
 
 *  Create an IDCS User via API
     
@@ -398,21 +398,21 @@ https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_
 * Download IDCS Metadata to a local XML file. Metadata is available from the following location - https://**yourtenant**/fed/v1/metadata. Depending on the browser you are using,the simplest way of doing this is to right click anywhere on the page and chose “Save as” option provide a name and save it as XML file. Try not to use the copy / paste option as the xml file may be altered.
 
  ![](./media/idcs47.jpeg)
- <p align="center" Figure 2-1 </p>
+ <p align="center"> Figure 2-1 </p>
 
 *  Use your Salesforce developer account created on Lab 1 Oracle CASB Cloud Service
     [https://developer.salesforce.com/](https://developer.salesforce.com/)
 
  
  ![](./media/idcs48.jpeg)
- <p align="center" Figure 2-2 </p>
+ <p align="center"> Figure 2-2 </p>
  
  * Log into Salesforce. *Note: you may have to select “Switch to Salesforce Classic”.*
 
 * Access Salesforce application using the URL provided after registration, click on the profile menu as per below print screen and select the option: **“Switch to Salesforce Classic”**.
 
 ![](./media/idcs49.jpeg)
-<p align="center" Figure 2-3 </p>
+<p align="center"> Figure 2-3 </p>
 
 *  Go to **Setup** into the upper tab menu, near the profile.
 
@@ -420,42 +420,42 @@ https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_
 
  
  ![](./media/idcs50.jpeg)
- <p align="center" Figure 2-4 </p>
+ <p align="center"> Figure 2-4 </p>
 
 *  Check your email for the domain login and login.
 
 *  Bring up the **setup** page.
 
 ![](./media/idcs51.jpeg)
-<p align="center" Figure 2-5 </p>
+<p align="center"> Figure 2-5 </p>
 
 *  From side menu bar, go to **Security Controls**, **Single Sign-On Settings**
 
 ![](./media/idcs52.jpeg)
-<p align="center" Figure 2-6 </p>
+<p align="center"> Figure 2-6 </p>
 
 *  Click on **Edit** and enable **Federated Single Sign-On Using SAML** option.
 
 ![](./media/idcs53.png)
-<p align="center" Figure 2-7 </p>
+<p align="center"> Figure 2-7 </p>
 
 * Click on **New from Metadata File** button to import IDCS metadata. Select the downloaded metadata file using **Choose File** button. Click on **Create**.
 
 ![](./media/idcs54.png)
-<p align="center" Figure 2-8 </p>
+<p align="center"> Figure 2-8 </p>
 
 * Keep all the default information and click on **Save**
 
 ![](./media/idcs55.jpeg)
-<p align="center" Figure 2-9 </p>
+<p align="center"> Figure 2-9 </p>
 
 * Below are the details for this example. Note, your URLs and domain information will be different.
 
 ![](./media/idcs56.jpeg)
-<p align="center" Figure 2-10 </p>
+<p align="center"> Figure 2-10 </p>
 
 ![](./media/idcs57.jpeg)
-<p align="center" Figure 2-11 </p>
+<p align="center"> Figure 2-11 </p>
 
 * Make note the following:
 
@@ -464,38 +464,38 @@ https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_
   * Org Domain Name value.
 
 ![](./media/idcs58.jpeg)
-<p align="center" Figure 2-12 </p>
+<p align="center"> Figure 2-12 </p>
 
 Now that the Salesforce configurations are done, we need to configure IDCS to be aware of the Salesforce application.
 
 * Go to IDCS admin console, navigation menu, **Applications**
 
  ![](./media/idcs59.jpeg)
- <p align="center" Figure 2-13 </p>
+ <p align="center"> Figure 2-13 </p>
 
 * Click on **Add** button and select **App Catalog** and search for Salesforce. Click on **Add.**
 
  ![](./media/idcs60.jpeg)
- <p align="center" Figure 2-14 </p>
+ <p align="center"> Figure 2-14 </p>
 
 * On the first page of configuration screen provide the **Organization**
 
  **ID** and **Domain Name** values that you made note of from within Salesforce.
 
 ![](./media/idcs61.jpeg)
-<p align="center" Figure 2-15 </p>
+<p align="center"> Figure 2-15 </p>
 
 * Click on **Next** to move to the SSO configuration
 
  ![](./media/idcs62.jpeg)
- <p align="center" Figure 2-16 </p>
+ <p align="center"> Figure 2-16 </p>
 
 * Click on **Finish** button
 
 * **Activate** the application
 
  ![](./media/idcs63.png)
- <p align="center" Figure 2-17 </p>
+ <p align="center"> Figure 2-17 </p>
 
 ### Assign Apps to Group (Persona: Administrator)
 
@@ -506,7 +506,7 @@ In IDCS you have the option to assign access to users directly, by direct assign
 *  Add a group labeled **Employee**. Check the box **User can request access**.
 
  ![](./media/idcs64.png)
- <p align="center" Figure 2-18 </p>
+ <p align="center"> Figure 2-18 </p>
 
 *  Click on **Finish**
 
@@ -515,7 +515,7 @@ In IDCS you have the option to assign access to users directly, by direct assign
 *  Select **Salesforce** and click on **OK**.
 
 ![](./media/idcs65.jpeg)
-<p align="center" Figure 2-19 </p>
+<p align="center"> Figure 2-19 </p>
 
 Moving back to Salesforce in order to create a corresponding account for one that we have into IDCS.
 
@@ -530,7 +530,7 @@ Moving back to Salesforce in order to create a corresponding account for one tha
 *  Set the **User License** to **Salesforce Platform**.
 
 ![](./media/idcs66.jpeg)
-<p align="center" Figure 2-20 </p>
+<p align="center"> Figure 2-20 </p>
 
 Now that the account is available in Salesforce and IDCS has the authenticated account you are ready to test.
 
@@ -545,32 +545,32 @@ Remember that we have created the **Employee** group into IDCS which is having a
 *  From **My Apps** page, click on **+ Add** access request button.
 
 ![](./media/idcs67.jpeg)
-<p align="center" Figure 2-21 </p>
+<p align="center"> Figure 2-21 </p>
 
 *  From the **Groups** tab, select **Employee** group and select the **+** sign.
 
 ![](./media/idcs68.jpeg)
-<p align="center" Figure 2-22 </p>
+<p align="center"> Figure 2-22 </p>
 
 *  Click on + sign to request access to the group. Provide justification on the resulting popup page. Click on **OK**. This is an auto approved request and access should be granted immediately without the need of and administrator intervention.
 
  ![](./media/idcs69.jpeg)
- <p align="center" Figure 2-23 </p>
+ <p align="center"> Figure 2-23 </p>
 
 *  Go to **My Profile** section from menu located top-right
 
 ![](./media/idcs70.jpeg)
-<p align="center" Figure 2-24 </p>
+<p align="center"> Figure 2-24 </p>
 
 *  Ensure that **Employee** group is visible under **My Access** sub-tab
 
  ![](./media/idcs71.png)
- <p align="center" Figure 2-25 </p>
+ <p align="center"> Figure 2-25 </p>
 
 *  Ensure that Salesforce applications are visible now on the **MyApps** page
 
 ![](./media/idcs72.png)
-<p align="center" Figure 2-26 </p>
+<p align="center"> Figure 2-26 </p>
 
 ### Verify SSO Configuration (Persona: End User)
 
@@ -579,7 +579,7 @@ Remember that we have created the **Employee** group into IDCS which is having a
 *  Ensure that user is automatically logged into Salesforce Chatter (**SSO**)
 
 ![](./media/idcs73.jpeg)
-<p align="center" Figure 2-27 </p>
+<p align="center"> Figure 2-27 </p>
 
 You should now see the same user profile information, that you started within IDCS, within Salesforce without having had to log into Salesforce.
 
@@ -598,7 +598,7 @@ A host name, organization ID, and a domain name are required before you can conf
 *  Login to [Developer Salesforce](https://developer.salesforce.com). In the left navigation menu of the home page, search and click Single Sign-On Settings. The Single Sign-On Settings page appears.
 
 ![](./media/idcs74.jpeg)
-<p align="center" Figure 2-28 </p>
+<p align="center"> Figure 2-28 </p>
 
 *  Under the SAML Single Sign-On Settings section, **click** the name that you provided for your identity provider in the **Single Sign-On Settings page**. The SAML Single Sign-On Settings page appears.
 
@@ -610,7 +610,7 @@ A host name, organization ID, and a domain name are required before you can conf
 The domain name appears at the beginning and the organization ID appears at the end of the URL.
 
 ![](./media/idcs75.png)
-<p align="center" Figure 2-29 </p>
+<p align="center"> Figure 2-29 </p>
 
 *  Obtaining the Consumer Key and Consumer Secret from Salesforce
 
@@ -619,17 +619,17 @@ The domain name appears at the beginning and the organization ID appears at the 
 * Switch to **Lightning Experience** in Salesforce, click the **cogwheel** on the top right corner of the page and select **Setup**.
 
 ![](./media/idcs76.jpeg)
-<p align="center" Figure 2-30 </p>
+<p align="center"> Figure 2-30 </p>
 
 *  In the left navigation menu of the home page, search and click **AppManager**. The Lightning Experience App Manager page appears.
 
 ![](./media/idcs77.jpeg)
-<p align="center" Figure 2-31 </p>
+<p align="center"> Figure 2-31 </p>
 
 *  In the right corner of the page, click **New Connected App**. The New Connected App page appears.
 
 ![](./media/idcs78.png)
-<p align="center" Figure 2-32 </p>
+<p align="center"> Figure 2-32 </p>
 
 *  Under the Basic Information section, enter the Connected App Name of the app that you want to connect.
 
@@ -642,7 +642,7 @@ The domain name appears at the beginning and the organization ID appears at the 
 * In the Selected OAuth Scopes field, select Full access(full) under the **Available OAuth** Scopes list, and then click Add to give full access to modify the OAuth.
 
 ![](./media/idcs79.jpeg)
-<p align="center" Figure 2-33 </p>
+<p align="center"> Figure 2-33 </p>
 
 * Scroll down and click **Save**.
 
@@ -651,7 +651,7 @@ The domain name appears at the beginning and the organization ID appears at the 
 * Under the API (Enable OAuth Settings) section, click “**Click to reveal**” next to the **Consumer Secret** field.
 
 ![](./media/idcs80.png)
-<p align="center" Figure 2-34 </p>
+<p align="center"> Figure 2-34 </p>
 
 * Make note of the **Consumer Key** and **Consumer Secret** values.
 
@@ -667,12 +667,12 @@ The domain name appears at the beginning and the organization ID appears at the 
 * In the upper-right corner of the **Salesforce** home page, click the user icon, and then click Settings from the drop-down list.
 
 ![](./media/idcs82.jpeg)
-<p align="center" Figure 2-35 </p>
+<p align="center"> Figure 2-35 </p>
 
 * In the left navigation menu, search and click **Reset My Security Token.**
 
  ![](./media/idcs83.jpeg)
- <p align="center" Figure 2-36 </p>
+ <p align="center"> Figure 2-36 </p>
 
 * On the Reset My Security Token page, click **Reset My Security Token**. A security token is sent to the email address of the administrator.
 
@@ -713,14 +713,14 @@ The domain name appears at the beginning and the organization ID appears at the 
 * Fill in the **Host Name (e.g. acasas-dev-ed.my.salesforce.com), Administrator Username**, **Administrator Password**, **Client ID** and **Client Secret** that you derived in the previous steps from Salesforce
 
 ![](./media/idcs84.jpeg)
-<p align="center" Figure 2-37 </p>
+<p align="center"> Figure 2-37 </p>
 
 * Click **Test Connectivity** to verify the connection with Salesforce. Oracle Identity Cloud Service displays a confirmation message.
 
 * Scroll down on the Provisioning page, select **Enable Synchronization**.
 
  ![](./media/idcs85.jpeg)
- <p align="center" Figure 2-38 </p>
+ <p align="center"> Figure 2-38 </p>
  
  This option will synchronize the existing account details from
  Salesforce and link them to the corresponding Oracle Identity Cloud
@@ -731,19 +731,19 @@ The domain name appears at the beginning and the organization ID appears at the 
 *  On the applications page, select **Import**.
 
 ![](./media/idcs86.png)
-<p align="center" Figure 2-39 </p>
+<p align="center"> Figure 2-39 </p>
 
 *  Click on **Import** and wait for a moment
 
 *  Click **Refresh**
 
 ![](./media/idcs87.png)
-<p align="center" Figure 2-40 </p>
+<p align="center"> Figure 2-40 </p>
 
 *  The imported users that were imported from IDCS will be displayed.
 
 ![](./media/idcs88.jpeg)
-<p align="center" Figure 2-41 </p>
+<p align="center"> Figure 2-41 </p>
 
 
 ****
