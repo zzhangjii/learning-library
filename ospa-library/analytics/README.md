@@ -34,7 +34,7 @@ Table of Contents
 
 [Lab 13: Data Recommendations on Multiple Data Sets ](#Lab-13--data-recommendations-on-multiple-data-sets)
 
-[Lab 14: Enhanced Insights on Multiple Data Sets ](#Lab-14--enhaced-insights-on-multiple-data-sets)
+[Lab 14: Enhanced Insights on Multiple Data Sets ](#Lab-14--enhanced-insights-on-multiple-data-sets)
 
 [Lab 15: Narration and Storytelling for Collaboration ](#Lab-15--narration-and-storytelling-for-collaboration)
 <br/>
