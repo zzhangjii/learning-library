@@ -1263,7 +1263,7 @@ and generate visualizations automatically.
     language query.
     
     ![](./media/image112.png) <p align="center"> Figure 9.4</p>
-<br/>
+
     
     Click the X on the search bar to clear the query and return to the
     Home Page.
@@ -1273,13 +1273,13 @@ and generate visualizations automatically.
     product category by city.”
     
     ![](./media/image113.png) <p align="center"> Figure 9.5</p>
-<br/>
+
     
     Oracle Analytics examined the semantics of the query and matched it
     with a project that included the combination of those semantics and
     attributes from your natural language query to generate
     visualizations which best matched the query.
-<br/>
+
 <br/>
 <br/>
 
