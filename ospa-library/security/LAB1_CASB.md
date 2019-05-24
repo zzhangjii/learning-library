@@ -529,8 +529,9 @@ Note: if you do not see any Compute instance in the dashboard, click to Customiz
     *  Populate name and description fields as shown below
     
     *  Click Submit
-    ![](./media/image87.jpeg)
-    <p align="center"> Figure 3-6 </p> 
+
+  ![](./media/image87.jpeg)
+  <p align="center"> Figure 3-6 </p> 
 
 *  Click Policies in the left hand menu
     
@@ -557,7 +558,7 @@ Note: if you do not see any Compute instance in the dashboard, click to Customiz
     
   * Click Add user to Group (to the previously created CASB group)
     
-  * Select user created previously(MY_CASB_ACCOUNT) and click add
+  * Select user created previously(**MY_CASB_ACCOUNT**) and click add
 
  ![](./media/image90.jpeg)
 <p align="center"> Figure 3-9 </p> 
