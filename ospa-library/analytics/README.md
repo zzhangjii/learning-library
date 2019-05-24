@@ -1571,7 +1571,7 @@ formatting and more.
 12. Click the + sign next to Group to add another Group.
     
     ![](./media/image140.png) <p align="center"> Figure 12.9</p>
-<br/>
+
     
     Name the second group High and include High and Critical in this
     group.
@@ -1582,7 +1582,7 @@ formatting and more.
 13. Click Add Step
     
     ![](./media/image141.png)<p align="center"> Figure 12.10</p>
-<br/>
+
     
     Note that the newly created Group by Order Priority Group 1 column
     is directly to the right of the original Order Priority column.  Also
@@ -1598,7 +1598,7 @@ formatting and more.
     and select Bin.
     
     ![](./media/image142.png) <p align="center"> Figure 12.11</p>
-<br/>
+
 
 
 15. Create four bins for order size.  Name the first bin Small for orders
@@ -1607,7 +1607,7 @@ formatting and more.
     100.  Name the final bin Bulk for orders over 100.
     
     ![](./media/image143.png) <p align="center"> Figure 12.12</p>
-<br/>
+
 
     
     Click Add Step and Name the new column Order Size.
@@ -1649,7 +1649,7 @@ formatting and more.
 21. Click the 1 which signifies the single key between the data sets.
     
     ![](./media/image148.png)<p align="center"> Figure 12.17</p>
-<br/>
+
     
     Because the system recognized the match of Custid from Web-Customers
     and Web-Sales the data sets.  Thus our link.
@@ -1667,8 +1667,7 @@ formatting and more.
     have been successfully applied.
     
     ![](./media/image149.png) <p align="center"> Figure 12.18</p>
-<br/>
-    
+
     Note, that as you add more enrichments to a data set, the number of
     sequential actions listed in this pane will increase.
 
@@ -1818,7 +1817,7 @@ deeper analysis.
 
     
     ![](./media/image153.png) <p align="center"> Figure 14.3</p>
-<br/>
+
     
     Finally, we have a little more insightful analysis.  Females spend
     almost the same as Males on Technology but they spend more than
@@ -1838,7 +1837,7 @@ deeper analysis.
     the Size box.
     
     ![](./media/image154.png) <p align="center"> Figure 14.4</p>
-<br/>
+
     
     This visualization is interesting.  It indicates that medium size
     orders are the most profitable categories.  Look more closely and you
@@ -1853,7 +1852,7 @@ deeper analysis.
     on the bottom of the screen to create a new canvas.
     
     ![](./media/image155.png) <p align="center"> Figure 14.5</p>
-<br/>
+
 
 8.  Drag the enriched column County, was built based on the City geo
     recommendation, to the center of the new canvas.  Change the
@@ -1875,7 +1874,7 @@ deeper analysis.
     In the Start Range enter 10,000 and simply click on the map.
     
     ![](./media/image157.png) <p align="center"> Figure 14.7</p>
-<br/>
+
     
     Now, you can see the most profitable counties in the country which
     could be an important and insightful analysis that the marketing
@@ -1904,7 +1903,7 @@ collaboration and discussion.
     left side are the four canvases that made up this project.
     
     ![](./media/image159.png) <p align="center"> Figure 15.2</p>
-<br/>
+
     
     Typically, projects are made up of multiple canvases.  Select from
     the thumbnail list of canvases which are available to make up the
@@ -1920,19 +1919,19 @@ collaboration and discussion.
     Select Canvas 1 to Add To Story.
     
     ![](./media/image161.png) <p align="center"> Figure 15.4</p>
-<br/>
+
 
 3.  Next, drag and drop a second canvas thumbnail onto the bottom pane
     next to Canvas 1.
     
     ![](./media/image162.png) <p align="center"> Figure 15.5</p>
-<br/>
+
 
 4.  The properties for each selected canvas can be modified on the
     bottom left.
     
     ![](./media/image163.png) <p align="center"> Figure 15.6</p>
-<br/>
+
 
 5.  You can also click the action menu on any visualization to hide it
     from the narration.
@@ -1944,7 +1943,7 @@ collaboration and discussion.
     stacked bar graph for Sales by Gender and Order Day.
     
     ![](./media/image165.png) <p align="center"> Figure 15.8</p>
-<br/>
+
 
 6.  You can also add page descriptions which will help the story and
     foster collaboration.
