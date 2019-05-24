@@ -8,35 +8,35 @@ Table of Contents
 
 [Lab Guide Overview ](#_Toc1645573)
 
-[Lab 1: Getting Started ](#section)
+[Lab 1: Getting Started ](#Lab-1--getting-started)
 
-[Lab 2: Loading Data ](#section)
+[Lab 2: Loading Data ](#Lab-2--loading-data)
 
-[Lab 3: Building Visualizations](#section)
+[Lab 3: Building Visualizations](#Lab-3--building-visualizations)
 
-[Lab 4: Augmented Analytics](#section)
+[Lab 4: Augmented Analytics](#Lab-4--augmented-analytics)
 
-[Lab 5: Chart Properties ](#section)
+[Lab 5: Chart Properties ](#Lab-5--chart-properties)
 
-[Lab 6: Colors ](#section)
+[Lab 6: Colors ](#Lab-6--colors)
 
-[Lab 7: Filters ](#section)
+[Lab 7: Filters ](#Lab-7--filters)
 
-[Lab 8: Canvas Properties ](#section)
+[Lab 8: Canvas Properties ](#Lab-8--canvas-properties)
 
-[Lab 9: Augmented Analytics ](#section)
+[Lab 9: Augmented Analytics ](#Lab-9--augmented-analytics)
 
-[Lab 10: Collaboration ](#section)
+[Lab 10: Collaboration ](#Lab-10--collaboration)
 
-[Lab 11: Data Preparation Loading Multiple Data Sets](#section)
+[Lab 11: Data Preparation Loading Multiple Data Sets](#Lab-11--data-preparation-loading-multiple-data-sets)
 
-[Lab 12: Data Preparation Transformations on Multiple Data Sets](#section)
+[Lab 12: Data Preparation Transformations on Multiple Data Sets](#Lab-12--data-preparation-transformations-on-multiple-data-sets)
 
-[Lab 13: Data Recommendations on Multiple Data Sets ](#section)
+[Lab 13: Data Recommendations on Multiple Data Sets ](#Lab-13--data-recommendations-on-multiple-data-sets)
 
-[Lab 14: Enhanced Insights on Multiple Data Sets ](#section)
+[Lab 14: Enhanced Insights on Multiple Data Sets ](#Lab-14--enhaced-insights-on-multiple-data-sets)
 
-[Lab 15: Enhanced Insights on Multiple Data Sets ](#section)
+[Lab 15: Enhanced Insights on Multiple Data Sets ](#Lab-15--enhanced-insights-on-multiple-data-sets)
 <br/>
 <br/>
 <br/>
@@ -77,7 +77,7 @@ GitHub repository.
 <br/>
 <br/>
 
-# Lab 1: GETTING STARTED
+# Lab 1:  GETTING STARTED
 
 We will learn how to ingest data and to begin analyzing data sets to
 understand some of the reasons that might be causing employee attrition.
@@ -91,8 +91,8 @@ visualization homepage, menus and navigation.
 
 1.  Open the Oracle Data Visualization Desktop Homepage.
     
-    ![](./media/image5.png)  Figure 1.1
-    <p align="center" Figure 1.1 </p>   
+    ![](./media/image5.png)  
+    <p align="center"> Figure 1.1 </p>     
     
     1.  Note that the Homepage can be customized.
 
@@ -103,11 +103,10 @@ visualization homepage, menus and navigation.
     
     3.  Open existing data sets or make new data source connections and
         more
-<br/>
 
         
-        ![](./media/image6.png)  Figure 1.2
-        <p align="center" Figure 1.2 </p>  
+        ![](./media/image6.png)
+        <p align="center"> Figure 1.2 </p> 
 <br/>
          
 
@@ -118,7 +117,8 @@ visualization homepage, menus and navigation.
     native language queries to “ask” for data insights.  We will, of
     course, review this capability.
     
-    ![](./media/image8.png) Figure 1.3
+    ![](./media/image8.png)
+     <p align="center"> Figure 1.3 </p>  
 
 5.  Under the Ask functionality includes:
     
@@ -127,11 +127,12 @@ visualization homepage, menus and navigation.
     5.  Projects which exposes the user’s projects
     
     6.  Data Sets
+
 <br/>
 <br/>
 <br/>
 
-# Lab 2: LOADING DATA 
+# Lab 2:  LOADING DATA 
 
 In this lab we will load a single data file with attrition data.  We will
 look at multiple methods to bring in data as part of the data ingestion
@@ -154,7 +155,8 @@ the imported data.  Topics include:
     can simply drag and drop it onto the Oracle Data Visualization
     Desktop Home Page.
     
-    ![](./media/image5.png) Figure 2.1
+    ![](./media/image5.png)
+     <p align="center"> Figure 2.1 </p>  
 <br/>
 
 2.  Alternatively, you can click the Create button on the upper right
@@ -162,14 +164,15 @@ the imported data.  Topics include:
 
     In either case, the dataset will appear.
     
-![](./media/image9.png)  Figure 2.2
-<p align="center" Figure 2.2 </p> 
+![](./media/image9.png)
+<p align="center"> Figure 2.2 </p> 
+
 <br/>
     
 
     
-![](./media/image11.png)  Figure 2.3
-<p align="center" Figure 2.3 </p> 
+![](./media/image11.png)
+<p align="center"> Figure 2.3 </p> 
 <br/>
 
 3.  Give the data set a logical name. For example, “HCM Data Set.”
@@ -182,7 +185,8 @@ the imported data.  Topics include:
     Visualize button and immediately begin building visualizations
     directly from the data import process.
     
-    ![](./media/image12.png) Figure 2.4
+    ![](./media/image12.png)
+    <p align="center"> Figure 2.4 </p> 
 <br/>
 
 
@@ -192,18 +196,21 @@ the imported data.  Topics include:
     however, to this point you have not done any data preparation or
     enrichment.
     
-    ![](./media/image13.png) Figure 2.5
+    ![](./media/image13.png)
+    <p align="center"> Figure 2.5 </p> 
 <br/>
 
 6.  Return to the Home Page without saving the visualization by clicking
     the back arrow to the right of “Untitled – Project.
     
-    ![](./media/image14.png) Figure 2.6
+    ![](./media/image14.png)
+    <p align="center"> Figure 2.6 </p> 
 <br/>
 
 7.  You should now see the new HCM\_Terminations data set in the “What’s
     New” area of the Home Page. 
-    ![](./media/image15.png) Figure 2.7
+    ![](./media/image15.png)
+    <p align="center"> Figure 2.7 </p> 
 <br/>
 
 
@@ -213,11 +220,13 @@ the imported data.  Topics include:
     ingestion process is still basically the same, however, our data is
     exposed to more options for augmented data enrichment.
     
-    ![](./media/image16.png) Figure 2.8
+    ![](./media/image16.png)
+    <p align="center"> Figure 2.8 </p> 
 <br/>
 <br/>
 
-![](./media/image17.png) Figure 2.9
+![](./media/image17.png)
+<p align="center"> Figure 2.9 </p> 
 <br/>
 <br/>
 
@@ -227,7 +236,8 @@ the imported data.  Topics include:
     is simply a logical name, the physical data is still the same.  Next
     click Add which creates a dataset in our environment.
     
-    ![](./media/image18.png)Figure 2.10
+    ![](./media/image18.png)
+    <p align="center"> Figure 2.10 </p> 
 <br/>
 
 10. Because we used the Data Set Creation Wizard, the new data is
@@ -237,19 +247,22 @@ the imported data.  Topics include:
     dictionaries and machine learning and artificial intelligence
     frameworks to create recommendations for the attributes.
     
-    ![](./media/image19.png) Figure 2.11
-<br/>
+    ![](./media/image19.png)
+    <p align="center"> Figure 2.11 </p> 
+
     
     There are 30 recommendations for our data set.  The drop down arrow
     shows the specific number of recommendations for each attribute.
     Click the Employee attribute to view those specific recommendations.
     
-    ![](./media/image20.png) Figure 2.12
+    ![](./media/image20.png)
+    <p align="center"> Figure 2.12 </p> 
 <br/>
 <br/>
 <br/>
- ![](./media/image21.png) Figure 2.13
-<br/>
+ ![](./media/image21.png)
+ <p align="center"> Figure 2.13 </p> 
+
 11. Click the check mark in the first Employee attribute recommendation
     to Extract Part\_1 from Employee.  This recommendation will parse or
     extract the Employee first name and add a new an attribute directly
@@ -257,18 +270,21 @@ the imported data.  Topics include:
     that this enrichment recommendation is added as a script.
     
 
-    ![](./media/image22.png) Figure 2.14
-<br/>
+    ![](./media/image22.png)
+    <p align="center"> Figure 2.14 </p> 
+
 
 12. Rename this new column by clicking the options icon on the right of
     the column default name and enter First Name.  Then click Add Step.
     
-    ![](./media/image23.png) Figure 2.15
-<br/>
-<br/>
+    ![](./media/image23.png)
+    <p align="center"> Figure 2.15 </p> 
 
-    ![](./media/image24.png) Figure 2.16
-<br/>
+
+
+    ![](./media/image24.png)
+    <p align="center"> Figure 2.16 </p> 
+
 
 
 13. Follow the same steps and parse the Employee last name and add it as
@@ -285,24 +301,26 @@ the imported data.  Topics include:
     Console.
 
 17. Click the Navigator icon
-![](./media/image25.png) Figure 2.17
-    
+![](./media/image25.png)
+<p align="center"> Figure 2.17 </p> 
     
     and then Data to access the Data Console
-<br/>
+
     
-    ![](./media/image26.png) Figure 2.18
-<br/>
+![](./media/image26.png)
+    <p align="center"> Figure 2.18 </p> 
+
 
 18. The Data Console shows all of your data sets.
     
-    ![](./media/image27.png) Figure 2.19
+    ![](./media/image27.png)
+    <p align="center"> Figure 2.19 </p> 
 
 <br/>
 <br/>
 <br/>
 
-# Lab 3: BUILDING VISUALIZATIONS
+# Lab 3:  BUILDING VISUALIZATIONS
 
 In this lab you will begin building visualizations to understand more
 about attrition.  Topics include:
@@ -318,27 +336,32 @@ about attrition.  Topics include:
 1.  Click the create button on the upper right of the Home Page or click
     on your attrition data set from the Home Page to begin the process
     to build visualizations. 
-![](./media/image15.png) Figure 3.1
-<br/>
+![](./media/image15.png) 
+<p align="center"> Figure 3.1 </p> 
+
 2.  Next click Project.
     
-    ![](./media/image28.png) Figure 3.2
+    ![](./media/image28.png)
+    <p align="center"> Figure 3.2 </p> 
 <br/>
 
 3.  Select the HCM Termination data set and then Add to Project.
     
-    ![](./media/image29.png) Figure 3.3
+    ![](./media/image29.png)
+    <p align="center"> Figure 3.3 </p> 
 <br/>
 
 4.  Now the interface will include the Visualization Pane on the right,
     the Grammar Pane in the middle and the Data Pane on the left.
     
-    ![](./media/image30.png) Figure 3.4
+    ![](./media/image30.png)
+    <p align="center"> Figure 3.4 </p> 
 <br/>
 
 5.  Double click on the \# of Terminations data element.
     
-    ![](./media/image31.png) Figure 3.5
+    ![](./media/image31.png)
+    <p align="center"> Figure 3.5 </p> 
 <br/>
 
 6.  Double click or drag and drop Termination Department on to the
@@ -347,7 +370,8 @@ about attrition.  Topics include:
 7.  Double click or drag and drop Termination Reason on to the
     visualization.
     
-    ![](./media/image32.png) Figure 3.6
+    ![](./media/image32.png)
+    <p align="center"> Figure 3.6 </p> 
 <br/>
 
 8.  Click on the dropdown arrow on the first box in the Grammar Pane
@@ -361,7 +385,8 @@ about attrition.  Topics include:
 10. Click the action menu on the upper right of the visualization to
     delete this chart.
     
-    ![](./media/image33.png) Figure 3.7
+    ![](./media/image33.png)
+    <p align="center"> Figure 3.7 </p> 
 <br/>
     
     This will bring you back to a blank visualization pane.
@@ -373,7 +398,8 @@ about attrition.  Topics include:
     generate the best visualization.  Note that a title was generated for
     the visualization.
     
-    ![](./media/image34.png) Figure 3.8
+    ![](./media/image34.png)
+    <p align="center"> Figure 3.8 </p> 
 <br/>
 
 12. Replace Termination Reason by dragging and dropping Termination Type
@@ -391,21 +417,24 @@ about attrition.  Topics include:
 15. Click on \# of Terminations and then right click to select Pick
     Visualization.
     
-    ![](./media/image35.png) Figure 3.9
-<br/>
+    ![](./media/image35.png)
+    <p align="center"> Figure 3.9 </p> 
+
     
     When the visualization types appear, select Tile to show the total
     number of terminations.  The new visualization is placed to the right
     of the original visualization.
     
-    ![](./media/image36.png) Figure 3.10
+    ![](./media/image36.png)
+    <p align="center"> Figure 3.10 </p> 
 <br/>
 
 16. Create a custom calculation to show the average number of
     terminations and the total number of terminations by department.
      Right click on My Calculations in the Data Pane.
     
-    ![](./media/image37.png) Figure 3.11
+    ![](./media/image37.png)
+    <p align="center"> Figure 3.11 </p> 
 <br/>
 
 17. The New Calculation Wizard allows you to build custom formulas by
@@ -425,12 +454,14 @@ about attrition.  Topics include:
     3.  Note, Data Visualization Desktop documentation (link in the
         Appendix) provides more information on building calculations.
         
-        ![](./media/image38.png) Figure 3.12
+        ![](./media/image38.png)
+        <p align="center"> Figure 3.12 </p> 
 <br/>
 
 18. Create another (slightly more complicated) calculation for the
     Average \# of Terminations by Department. 
-![](./media/image39.png) Figure 3.13
+![](./media/image39.png) 
+<p align="center"> Figure 3.13 </p> 
 <br/>
 
 19. Display the new calculations.
@@ -440,7 +471,8 @@ about attrition.  Topics include:
     
     5.  Repeat for the Average \# of Terminations By Department.
         
-        ![](./media/image40.png) Figure 3.14
+        ![](./media/image40.png)
+        <p align="center"> Figure 3.14 </p> 
 <br/>
 
 20. Delete the 2 new tile visualizations by clicking the menu option on
@@ -452,7 +484,8 @@ about attrition.  Topics include:
     
     The system has created a time series line chart.
     
-    ![](./media/image41.png) Figure 3.15
+    ![](./media/image41.png)
+    <p align="center"> Figure 3.15 </p> 
 <br/>
     
     You know have created a canvas displaying meaningful information. 
@@ -466,7 +499,7 @@ about attrition.  Topics include:
 <br/>
 <br/>
 
-# Lab 4: AUGMENTED ANALYTICS
+# Lab 4:  AUGMENTED ANALYTICS
 
 This lab will review Oracle Analytics’ augmented analytics capabilities
 and “explain or ask” functionality with machine learning driven
@@ -486,13 +519,15 @@ include:
 
 1.  Open your attrition project (which can be found on the Home Page).
     
-    ![](./media/image42.png) Figure 4.1
+    ![](./media/image42.png)
+    <p align="center"> Figure 4.1 </p> 
 <br/>
 
 2.  Right click on the Termination Reason attribute in the Data Elements
     Pane.
     
-    ![](./media/image43.png) Figure 4.2
+    ![](./media/image43.png)
+    <p align="center"> Figure 4.2 </p> 
 <br/>
 
 3.  Click on Explain Termination Reason in the popup menu.  A background
@@ -500,13 +535,15 @@ include:
     you in understanding the factors that maybe impacting terminations
     and design distributions.
     
-    ![](./media/image44.png) Figure 4.3
-<br/>
+    ![](./media/image44.png)
+    <p align="center"> Figure 4.3 </p>
+
     
-    ![](./media/image45.png) Figure 4.4
+    ![](./media/image45.png)
+    <p align="center"> Figure 4.4 </p>
 <br/>
 
-<!-- end list -->
+
 
 23. Add a few of these insights which were generated by the Explain
     feature to the project.
@@ -514,7 +551,7 @@ include:
 24. Select Basic facts about Termination reason by clicking the check
     mark in the upper right of the chart.
 
-25. Scroll down and select \# of Terminations by Termination reason.
+25. Scroll down and select # of Terminations by Termination reason.
 
 26. Click on the Anomalies of Termination Reason box on the right and
     then select the Termination Reason: Career Progression chart.
@@ -522,22 +559,23 @@ include:
 27. Next, click the Add Selected button on the upper right to add these
     to a canvas.
     
-    ![](./media/image46.png) Figure 4.5
+    ![](./media/image46.png)
+    <p align="center"> Figure 4.5 </p>
 <br/>
 
 28. Save the project.
 
-29. Apply the Explain function to the measure \# of Terminations.
+29. Apply the Explain function to the measure # of Terminations.
 
-30. Select \# of Terminations by Job Level.
+30. Select # of Terminations by Job Level.
 
-31. Select \# of Terminations by Department.
+31. Select # of Terminations by Department.
 
-32. Select \# of Terminations by Job ID.
+32. Select # of Terminations by Job ID.
 
-33. Select \# of Terminations by Termination Type.
+33. Select # of Terminations by Termination Type.
 
-34. Select \# of Terminations by Location Country.
+34. Select # of Terminations by Location Country.
 
 35. Next, click the Add Selection button on the upper right to add these
     to a canvas.
@@ -552,7 +590,8 @@ include:
 38. On the Terminations by Termination reason bar chart, click on the
     action menu in the upper right to sort the chart.
     
-    ![](./media/image47.png) Figure 4.6
+    ![](./media/image47.png)
+    <p align="center"> Figure 4.6 </p>
 <br/>
 
 39. On the \# of Terminations by Termination Reason bar chart, click on
@@ -560,7 +599,8 @@ include:
 
 40. Select Sort from High to Low.
     
-    ![](./media/image48.png) Figure 4.7
+    ![](./media/image48.png)
+    <p align="center"> Figure 4.7 </p>
 <br/>
 
 41. Save the project.
@@ -568,7 +608,7 @@ include:
 <br/>
 <br/>
 
-# Lab 5: CHART PROPERTIES
+# Lab 5:  CHART PROPERTIES
 
 This lab is about working with charts and chart properties.  You will
 review different visualization or chart types and manipulate data. We
@@ -587,13 +627,15 @@ pleasing.  Topics include:
 1.  Open your attrition project (which can be found on the Home Page) to
     the canvas where you built your initial charts.
     
-    ![](./media/image49.png) Figure 5.1
+    ![](./media/image49.png)
+    <p align="center"> Figure 5.1 </p>
 <br/>
 
 2.  Focus on the line chart and expand it by clicking diagonal arrows in
     the upper right of the chart.
     
-    ![](./media/image50.png) Figure 5.2
+    ![](./media/image50.png)
+    <p align="center"> Figure 5.2 </p>
 <br/>
     
     This will help us better explore the chart.
@@ -603,7 +645,8 @@ pleasing.  Topics include:
     attributes are positioned on the chart.  It contains the same
     information as in the Grammar Pane.
     
-    ![](./media/image51.png) Figure 5.3
+    ![](./media/image51.png)
+    <p align="center"> Figure 5.3 </p>
 <br/>
 
 4.  Close the Assignment by clicking on the bullseye icon.
@@ -611,10 +654,12 @@ pleasing.  Topics include:
 5.  Click the Bar icon on the chart to change the chart type to an Area
     Chart.
     
-    ![](./media/image52.png) Figure 5.4
-<br/>
+    ![](./media/image52.png)
+    <p align="center"> Figure 5.4 </p>
+
     
-    ![](./media/image53.png)Figure 5.5
+    ![](./media/image53.png)
+    <p align="center"> Figure 5.5 </p>
 <br/>
     
     Any changes will be reflected in the Grammar Pane on the left.
@@ -624,7 +669,8 @@ pleasing.  Topics include:
 7.  Click the action menu which is the right most icon on the upper
     right of the chart to expose more chart properties.
     
-    ![](./media/image54.png) Figure 5.6
+    ![](./media/image54.png)
+    <p align="center"> Figure 5.6 </p>
 <br/>
 
 8.  Click Zoom.  This capability is especially helpful if you have a lot
@@ -635,7 +681,8 @@ pleasing.  Topics include:
     chart (or whichever object: chart, data element…that has been
     selected).
     
-    ![](./media/image55.png) Figure 5.7
+    ![](./media/image55.png)
+    <p align="center"> Figure 5.7 </p>
 <br/>
 
 10. The above graphic is displaying the area chart’s General Properties. 
@@ -644,16 +691,19 @@ pleasing.  Topics include:
 11. By default, the Title property will be Auto.  Click Auto and select
     Custom to customize the name of the chart.
     
-    ![](./media/image56.png) Figure 5.8
+    ![](./media/image56.png)
+    <p align="center"> Figure 5.8 </p>
 <br/>
- ![](./media/image57.png) Figure 5.9
+ ![](./media/image57.png)
+ <p align="center"> Figure 5.9 </p>
 <br/>
 12. Change the title to: Number of Terminations by Month.
 
 13. Click on Line Type and then Straight to display different line
     options.  Click Curved to make the line a bit smoother.
     
-    ![](./media/image58.png) Figure 5.10
+    ![](./media/image58.png)
+    <p align="center"> Figure 5.10 </p>
 <br/>
 
 14. Click Data Points and then change off to on, to display the data
@@ -663,12 +713,14 @@ pleasing.  Topics include:
     the icon with an arrow pointing up and one pointing to the right, to
     view the Axis properties.
     
-    ![](./media/image59.png) Figure 5.11
+    ![](./media/image59.png)
+    <p align="center"> Figure 5.11 </p>
 <br/>
 
 16. To the left, the \# shows data number or value properties.
     
-    ![](./media/image60.png) Figure 5.12
+    ![](./media/image60.png)
+    <p align="center"> Figure 5.12 </p>
 <br/>
 
 17. Click Data Values from off to on to display data values for the \#
@@ -679,7 +731,8 @@ pleasing.  Topics include:
     data ingestion process.  Any change in aggregation will be reflected
     in the chart.
     
-    ![](./media/image61.png) Figure 5.13
+    ![](./media/image61.png)
+    <p align="center"> Figure 5.13 </p>
 <br/>
 
 19. The number Format allows you to change the value format to currency
@@ -687,7 +740,8 @@ pleasing.  Topics include:
 
 20. Move to the clock icon on the left to show time series properties.
     
-    ![](./media/image62.png) Figure 5.14
+    ![](./media/image62.png)
+    <p align="center"> Figure 5.14 </p>
 <br/>
 
 21. These date/time properties are shown because we have a time series
@@ -699,13 +753,15 @@ pleasing.  Topics include:
 
 24. The last icon is for chart’s analytics properties.
     
-    ![](./media/image63.png) Figure 5.15
+    ![](./media/image63.png)
+    <p align="center"> Figure 5.15 </p>
 <br/>
 
 25. Click the + sign to view the additional properties that can be
     changed.
     
-    ![](./media/image64.png) Figure 5.16
+    ![](./media/image64.png)
+    <p align="center"> Figure 5.16 </p>
 <br/>
     
     Depending on the data, you could add advanced analytic functions for
@@ -721,7 +777,7 @@ pleasing.  Topics include:
 <br/>
 <br/>
 
-# Lab 6: COLORS 
+# Lab 6:  COLORS 
 
 This lab is about working with colors and color schemes and how to apply
 them to visualizations.
@@ -731,7 +787,8 @@ them to visualizations.
 1.  Continue to work with your attrition project and open it to the
     canvas where you built your initial charts.
     
-    ![](./media/image65.png) Figure 6.1
+    ![](./media/image65.png)
+    <p align="center"> Figure 6.1 </p>
 <br/>
     
     Colors on charts are auto-assigned based on the current project
@@ -740,13 +797,15 @@ them to visualizations.
 2.  Click the burger-like action menu icon on the upper right above the
     canvas (and below the Save button).
     
-    ![](./media/image66.png) Figure 6.2
+    ![](./media/image66.png)
+    <p align="center"> Figure 6.2 </p>
 <br/>
 
 3.  Click Project Properties to display the Project Properties color
     options.
     
-    ![](./media/image67.png) Figure 6.3
+    ![](./media/image67.png)
+    <p align="center"> Figure 6.3 </p>
 <br/>
 
 4.  Click Default to change the color palette.  You can also build a
@@ -760,15 +819,18 @@ them to visualizations.
 7.  Focus on the stacked bar chart on this canvas and open the
     properties for the chart.
     
-    ![](./media/image50.png) Figure 6.4
-<br/>
+    ![](./media/image50.png)
+    <p align="center"> Figure 6.4 </p>
+
     
-    ![](./media/image68.png) Figure 6.5
+    ![](./media/image68.png)
+    <p align="center"> Figure 6.5 </p>
 <br/>
 
 8.  Click Color and then Manage Assignment.
     
-    ![](./media/image69.png) Figure 6.6
+    ![](./media/image69.png)
+    <p align="center"> Figure 6.6 </p>
 <br/>
 
 9.  You can select a specific color scheme for this chart by selecting a
@@ -776,7 +838,8 @@ them to visualizations.
     by selecting the attribute and clicking from the available colors or
     a custom color.
     
-    ![](./media/image70.png) Figure 6.7
+    ![](./media/image70.png)
+    <p align="center"> Figure 6.7 </p>
 <br/>
 
 10. Reset to the default scheme if you made any changes.
@@ -784,7 +847,7 @@ them to visualizations.
 <br/>
 <br/>
 
-# Lab 7: FILTERS 
+# Lab 7:  FILTERS 
 
 This lab is about working with filters which reduce and focus the amount
 of data shown on visualizations.  Topics include:
@@ -809,21 +872,24 @@ of data shown on visualizations.  Topics include:
 2.  Data elements can be dragged and dropped onto the Expression Filter
     Bar from the Data Pane.
     
-    ![](./media/image71.png) Figure 7.1
+    ![](./media/image71.png)
+    <p align="center"> Figure 7.1 </p>
 <br/>
 
 
 3.  Select \# of Terminations from the Data Pane and then right click to
     create a filter.
     
-    ![](./media/image72.png) Figure 7.2
+    ![](./media/image72.png)
+    <p align="center"> Figure 7.2 </p>
 <br/>
 
 
 4.  Because \# of Terminations is a number, we will build a Range
     Filter.
     
-    ![](./media/image73.png) Figure 7.3
+    ![](./media/image73.png)
+    <p align="center"> Figure 7.3 </p>
 <br/>
 
 5.  For this example, we are interested in terminations greater than 4.
@@ -831,13 +897,15 @@ of data shown on visualizations.  Topics include:
     change the filter range you can see the changes reflected in the
     visualizations.
     
-    ![](./media/image74.png) Figure 7.4
+    ![](./media/image74.png)
+    <p align="center"> Figure 7.4 </p>
 <br/>
 
 6.  Clear the filter by clicking the Clear Filter Selections in the
     filter menu on the filter bar.
     
-    ![](./media/image75.png) Filter 7.5
+    ![](./media/image75.png)
+    <p align="center"> Figure 7.5 </p>
 <br/>
 <br/>
 
@@ -849,14 +917,13 @@ of data shown on visualizations.  Topics include:
     to expose the attributes in the visualization. Then select
     Termination Month.
     
-    ![](./media/image76.png) Figure 7.6
-<br/>
-<br/>
-<br/>
+    ![](./media/image76.png)
+    <p align="center"> Figure 7.6 </p>
 
 
     
-    ![](./media/image77.png) Figure 7.7
+    ![](./media/image77.png)
+    <p align="center"> Figure 7.7 </p>
 <br/>
 <br/>
 
@@ -866,7 +933,8 @@ of data shown on visualizations.  Topics include:
 9.  Select Termination Department from the Data Pane and then right
     click to build a List Filter.
     
-    ![](./media/image78.png) Figure 7.8
+    ![](./media/image78.png)
+    <p align="center"> Figure 7.8 </p>
 <br/>
 
 
@@ -878,13 +946,15 @@ of data shown on visualizations.  Topics include:
 12. Right click on Termination Month in the Data Pane and then right
     click to build a date filter.
     
-    ![](./media/image79.png) Figure 7.9
+    ![](./media/image79.png)
+    <p align="center"> Figure 7.9 </p>
 <br/>
 
 13. In the calendar tool, select December 1, 2014 as the start date and
     March 1, 2015 as the end date.
     
-    ![](./media/image80.png) Figure 7.10
+    ![](./media/image80.png)
+    <p align="center"> Figure 7.10 </p>
 <br/>
 
 14. This range will be selected in the visualizations.
@@ -894,7 +964,8 @@ of data shown on visualizations.  Topics include:
 16. Right click anywhere on the filter bar and select Add Expression
     Filter
     
-    ![](./media/image81.png) Filter 7.11
+    ![](./media/image81.png)
+    <p align="center"> Figure 7.11 </p>
 <br/>
 
 17. Building this filter will be similar to building a calculation where
@@ -907,7 +978,8 @@ of data shown on visualizations.  Topics include:
 
 19. Validate the expression.
     
-    ![](./media/image82.png) Figure 7.12
+    ![](./media/image82.png)
+    <p align="center"> Figure 7.12 </p>
 <br/>
 
 20. Apply the expression filter.
@@ -921,15 +993,18 @@ of data shown on visualizations.  Topics include:
 23. Right click on the Career Progression bar of the \# of Terminations
     by Termination Reason bar chart.
     
-    ![](./media/image83.png) Figure 7.13
+    ![](./media/image83.png)
+    <p align="center"> Figure 7.13 </p>
 <br/>
 
 24. Click Drill and then click Manager ID.
     
-    ![](./media/image84.png) Figure 7.14 
+    ![](./media/image84.png)
+    <p align="center"> Figure 7.14 </p>
 <br/>
 <br/>
-![](./media/image85.png) Figure 7.15
+![](./media/image85.png)
+<p align="center"> Figure 7.15 </p>
 <br/>
 
 
@@ -939,12 +1014,13 @@ of data shown on visualizations.  Topics include:
     Managers visualization).
 
 26. Click the undo button. 
-![](./media/image86.png) Figure 7.16
+![](./media/image86.png)
+<p align="center"> Figure 7.16 </p>
 <br/>
 <br/>
 <br/>
 
-# Lab 8: CANVAS PROPERTIES
+# Lab 8:  CANVAS PROPERTIES
 
 This lab is about canvas management, properties, layout settings and how
 to interact with visualizations to organize the discovery process. 
@@ -963,7 +1039,8 @@ Topics include:
 1.  Continue to work with your attrition project and open it to the
     canvas where you built your initial charts.
     
-    ![](./media/image65.png) Figure 8.1
+    ![](./media/image65.png)
+    <p align="center"> Figure 8.1 </p>
 <br/>
 
 2.  Data elements can be dragged and dropped onto the Expression Filter
@@ -971,7 +1048,7 @@ Topics include:
 
 3.  Click the action menu to the far right of the Expression Filter bar.
     
-    ![](./media/image87.png)    Figure 8.2
+    ![](./media/image87.png)    <p align="center"> Figure 8.2 </p>
 <br/>
 
 4.  Select Refresh Data.  This will retrieve the latest data from the
@@ -984,12 +1061,12 @@ Topics include:
     we don’t want to start fresh, undo the changes by clicking the undo
     arrow.
     
-    ![](./media/image88.png) Figure 8.3
+    ![](./media/image88.png) <p align="center"> Figure 8.3 </p>
 <br/>
 
 7.  Select Canvas Properties
     
-    ![](./media/image89.png) Figure 8.4
+    ![](./media/image89.png) <p align="center"> Figure 8.4 </p>
 <br/>
 
 8.  You can rename the canvas, change the layout, modify the size and
@@ -999,12 +1076,12 @@ Topics include:
     directly on the canvas name on the interface.  You can also Duplicate
     or Delete the Canvas.
     
-    ![](./media/image90.png) Figure 8.5
+    ![](./media/image90.png) <p align="center"> Figure 8.5 </p>
 <br/>
 
 10. Return to the canvas properties.
     
-    ![](./media/image87.png) Figure 8.6
+    ![](./media/image87.png) <p align="center"> Figure 8.6 </p>
 <br/>
 
 11. The synchronize visualizations property is set to yes by default.
@@ -1018,20 +1095,20 @@ Topics include:
     the popup menu.  Select Keep Selected.  You are now focusing only on
     this Termination Reason in each visualization.
     
-    ![](./media/image91.png) Figure 8.7
-<br/>
+    ![](./media/image91.png) <p align="center"> Figure 8.7 </p>
+
     
     Note this action automatically added a filter on the Expression
     Filter bar.
     
-    ![](./media/image92.png) Figure 8.8
+    ![](./media/image92.png) <p align="center"> Figure 8.8</p>
 <br/>
 
 13. Delete this filter.
 
 14. Return to the canvas properties.
     
-    ![](./media/image93.png) Figure 8.9
+    ![](./media/image93.png) <p align="center"> Figure 8.9</p>
 <br/>
 <br/>
 
@@ -1041,7 +1118,7 @@ Topics include:
 16. Click anywhere on the canvas between existing visualizations to
     paste it.
     
-    ![](./media/image94.png) Figure 8.10
+    ![](./media/image94.png) <p align="center"> Figure 8.10</p>
 <br/>
     
     Note that selecting Duplicate Visual performs the same as copy.
@@ -1050,34 +1127,34 @@ Topics include:
     (or most of them), but you want to change the chart type.  On the
     copied visualization change the chart type to Tree Map.
     
-    ![](./media/image95.png) Figure 8.11
-<br/>
+    ![](./media/image95.png) <p align="center"> Figure 8.11</p>
+
     
     Because we don’t need to analyse the tree map by category, delete
     the Termination Department from the Category box.
     
-    ![](./media/image96.png) Figure 8.12
-<br/>
+    ![](./media/image96.png) <p align="center"> Figure 8.12</p>
+
     
     Also, often times with a tree map, a legend is not necessary and
     simply clutters the visualization.  Delete the legend in the Property
     Pane by changing Auto to None (if you would like, do the same for
     the stacked bar chart).
     
-    ![](./media/image97.png) Figure 8.13
-<br/>
+    ![](./media/image97.png) <p align="center"> Figure 8.13</p>
+
     
     Now you have a tree map visualization for the \# of Terminations by
     Termination Reason.
     
-    ![](./media/image98.png) Figure 8.14
+    ![](./media/image98.png) <p align="center"> Figure 8.14</p>
 <br/>
 
 18. This is also helpful if you want to copy a similar visualization
     into another canvas.  Click the + sign on the canvas bar and copy
     this visualization onto it.
     
-    ![](./media/image99.png) Figure 8.15
+    ![](./media/image99.png) <p align="center"> Figure 8.15</p>
 <br/>
 
 19. You can move any visualization on a canvas by simply clicking it and
@@ -1086,14 +1163,14 @@ Topics include:
 20. Drag the tree map to the right of the stacked horizontal bar chart
     and drop it.
     
-    ![](./media/image100.png) Figure 8.16
+    ![](./media/image100.png) <p align="center"> Figure 8.16</p>
 <br/>
 
 21. Visualizations can be resized by “hovering” or “mousing” over a
     chart and dragging the edge.  Resize the tree map and stacked bar by
     dragging them to the right.  Do the same to expand their height.
     
-    ![](./media/image101.png) Figure 8.17
+    ![](./media/image101.png) <p align="center"> Figure 8.17</p>
 <br/>
     
     Notice that the Tile visualization has been readjusted to fit the
@@ -1102,35 +1179,35 @@ Topics include:
 22. Click the diagonal arrows on the stacked bar chart to expand it and
     then click the menu to and re-sort it from Low to High.
     
-    ![](./media/image102.png) Figure 8.18
-<br/>
+    ![](./media/image102.png) <p align="center"> Figure 8.18</p>
+
     
-    ![](./media/image103.png) Figure 8.19
+    ![](./media/image103.png) <p align="center"> Figure 8.19</p>
 <br/>
 
 23. Copy the stacked bar chart into a new canvas.
 
 24. Change the chart type to a table.
     
-    ![](./media/image104.png) Figure 8.20
+    ![](./media/image104.png) <p align="center"> Figure 8.20</p>
 <br/>
 
 25. Click the Property Pane for the table and go to General properties.
     
-    ![](./media/image105.png) Figure 8.21
-<br/>
+    ![](./media/image105.png) <p align="center"> Figure 8.21</p>
+
     
     This is where you can change the title or modify the legend.  Click
     Supress Repeating Values and notice the change in the Termination
     Department column.  The table is now easier to understand.
     
-    ![](./media/image106.png) Figure 8.22
+    ![](./media/image106.png) <p align="center"> Figure 8.22</p>
 <br/>
 
 26. Click the Property Pane for the table and go to the Edge Labels
     which is the second icon.
     
-    ![](./media/image107.png) Figure 8.23
+    ![](./media/image107.png) <p align="center"> Figure 8.23</p>
 <br/>
     
     For the Termination Department, enable Show Total which will display
@@ -1139,7 +1216,7 @@ Topics include:
 27. For the Termination Department, enable Show Total which will display
     the total number of terminations by department.
     
-    ![](./media/image108.png) Figure 8.24
+    ![](./media/image108.png) <p align="center"> Figure 8.24</p>
 <br/>
 
 28. Save the project 
@@ -1148,7 +1225,7 @@ Topics include:
 <br/>
 <br/>
 
-# Lab 9: AUGMENTED ANALYTICS
+# Lab 9:  AUGMENTED ANALYTICS
 
 This lab is about augmented analytics and natural language query
 processing which allows you to ask questions of the data, search content
@@ -1158,7 +1235,7 @@ and generate visualizations automatically.
 
 1.  Go to your Home Page.
     
-    ![](./media/image109.png) Figure 9.1
+    ![](./media/image109.png) <p align="center"> Figure 9.1</p>
 <br/>
 
 2.  Natural Language Query is available on the Home Page by entering a
@@ -1168,13 +1245,13 @@ and generate visualizations automatically.
     count by department and reason.  Type the query, “attrition count by
     department and reasons,” in the search box and then press enter.
     
-    ![](./media/image110.png) Figure 9.2
+    ![](./media/image110.png) <p align="center"> Figure 9.2</p>
 <br/>
 
 4.  The tool now interprets this natural language to find semantics and
     generates a visualization.
     
-    ![](./media/image111.png) Figure 9.3
+    ![](./media/image111.png) <p align="center"> Figure 9.3</p>
 <br/>
     
     Click the X on the search bar to clear the query and return to the
@@ -1186,7 +1263,7 @@ and generate visualizations automatically.
 6.  Even with a typo, you still return results from this natural
     language query.
     
-    ![](./media/image112.png) Figure 9.4
+    ![](./media/image112.png) <p align="center"> Figure 9.4</p>
 <br/>
     
     Click the X on the search bar to clear the query and return to the
@@ -1196,7 +1273,7 @@ and generate visualizations automatically.
     Without opening this project, enter the following query: “profit by
     product category by city.”
     
-    ![](./media/image113.png) Figure 9.5
+    ![](./media/image113.png) <p align="center"> Figure 9.5</p>
 <br/>
     
     Oracle Analytics examined the semantics of the query and matched it
@@ -1208,7 +1285,7 @@ and generate visualizations automatically.
 <br/>
 
 
-# Lab 10: COLLABORATION
+# Lab 10:  COLLABORATION
 
 This lab is addresses how to share visualizations projects with
 colleagues for collaboration.  Topics include:
@@ -1225,18 +1302,18 @@ colleagues for collaboration.  Topics include:
     Home Page by right clicking the action menu on a project and
     selecting Export.
     
-    ![](./media/image114.png) Figure 10.1
+    ![](./media/image114.png) <p align="center"> Figure 10.1</p>
 <br/>
 
 2.  The Export dialogue window allows you to export a project as a file,
     in an email or push it to the cloud.
     
-    ![](./media/image115.png) Figure 10.2
+    ![](./media/image115.png) <p align="center"> Figure 10.2</p>
 <br/>
 
 3.  Click File.
     
-    ![](./media/image116.png) Figure 10.3
+    ![](./media/image116.png) <p align="center"> Figure 10.3</p>
 <br/>
 
 <!-- end list -->
@@ -1257,7 +1334,7 @@ colleagues for collaboration.  Topics include:
 
 4.  It is also possible to share a project from an open project.
     
-    ![](./media/image117.png) Figure 10.4
+    ![](./media/image117.png) <p align="center"> Figure 10.4</p>
 <br/>
 
 5.  The share option form an open project also includes the ability to
@@ -1267,44 +1344,44 @@ colleagues for collaboration.  Topics include:
 6.  You can also import projects. Click the action menu on the home page
     and click Import Project.
     
-    ![](./media/image118.png) Figure 10.5
-<br/>
-<br/>
+    ![](./media/image118.png) <p align="center"> Figure 10.5</p>
+
+
 
     
-    ![](./media/image119.png)Figure 10.6
+    ![](./media/image119.png)<p align="center"> Figure 10.6</p>
 <br/>
 
 7.  Browse for the School Donation Project.DVA (or any .DVA file that
     you have locally) and import it.
     
-    ![](./media/image120.png) Figure 10.7
+    ![](./media/image120.png) <p align="center"> Figure 10.7</p>
 <br/>
 
 8.  View the imported project in the project folder. On the Home Page,
     click the burger icon on the upper left.
     
-    ![](./media/image121.png) Figure 10.8
+    ![](./media/image121.png) <p align="center"> Figure 10.8</p>
 <br/>
 
 9.  Click Projects and the imported project will be displayed under
     “Today” and include a sample visualization with the default name
     “Simple Visual Analysis” in the name.
     
-    ![](./media/image122.png) Figure 10.9
+    ![](./media/image122.png) <p align="center"> Figure 10.9</p>
 <br/>
 
 10. Click on the project to view a project with multiple canvasses and
     multiple visualizations.
     
-    ![](./media/image123.png) Figure 10.10
+    ![](./media/image123.png) <p align="center"> Figure 10.10</p>
 
 <br/>
 <br/>
 <br/>
 
 
-# Lab 11: DATA PREPARATION LOADING MULTIPLE DATA SETS
+# Lab 11:  DATA PREPARATION LOADING MULTIPLE DATA SETS
 
 This lab is addresses data preparation and loading multiple data sets.
 Topics include:
@@ -1339,21 +1416,21 @@ There are multiple ways that you can load data sets:
 
 1.  From the Home Page, select Create on the upper right.
     
-    ![](./media/image124.png) Figure 11.1
+    ![](./media/image124.png) <p align="center"> Figure 11.1</p>
 <br/>
 <br/>
 
 
 2.  Select Data Set and then click to browse.
     
-    ![](./media/image125.png) Figure 11.2
+    ![](./media/image125.png) <p align="center"> Figure 11.2</p>
 <br/>
 
 
 3.  Load and open Web-Sales Data.xlsx.  The data appears in a preview
     window so you can verify that it is the file you want to open
     
-    ![](./media/image126.png) Figure 11.3
+    ![](./media/image126.png) <p align="center"> Figure 11.3</p>
 <br/>
 
 4.  You can change the name of the data set and a description.
@@ -1365,7 +1442,7 @@ There are multiple ways that you can load data sets:
     as a measure.  Change it to an attribute by clicking the measure \#
     sign icon and select Attribute.
     
-    ![](./media/image127.png) Figure 11.4
+    ![](./media/image127.png) <p align="center"> Figure 11.4</p>
 <br/>
 
 
@@ -1373,7 +1450,7 @@ There are multiple ways that you can load data sets:
     The file will be ingested and will go through a complex semantic
     profiling process.
     
-    ![](./media/image128.png) Figure 11.5
+    ![](./media/image128.png) <p align="center"> Figure 11.5</p>
 <br/>
 
 
@@ -1383,18 +1460,16 @@ There are multiple ways that you can load data sets:
     Data tab.  The Data Console will display all of your data sets
     including the two new data sets for Web Sales and Web Customers.
     
-    ![](./media/image129.png) Figure 11.6
-<br/>
-<br/>
-    
-    ![](./media/image130.png) Figure 11.7
+    ![](./media/image129.png) <p align="center"> Figure 11.6</p>
+
+    ![](./media/image130.png) <p align="center"> Figure 11.7</p>
 <br/>
 
 
 10. You can manage your data sets from here by clicking the action menu
     on the right side of each data set.
     
-    ![](./media/image131.png) Figure 11.8
+    ![](./media/image131.png) <p align="center"> Figure 11.8</p>
 <br/>
     
     You can create a project based on the data set, open the data set,
@@ -1403,7 +1478,7 @@ There are multiple ways that you can load data sets:
 <br/>
 <br/>
 
-# Lab 12: DATA PREPARATION with TRANSFORMATIONS ON MULTIPLE DATA SETS
+# Lab 12:  DATA PREPARATION with TRANSFORMATIONS ON MULTIPLE DATA SETS
 
 This lab is addresses data transformations to prepare the data for
 analysis.
@@ -1416,13 +1491,13 @@ formatting and more.
 
 1.  From the Home Page, navigate to the data management screen.
     
-    ![](./media/image132.png) Figure 12.1
+    ![](./media/image132.png) <p align="center"> Figure 12.1</p>
 <br/>
 
 2.  Locate the Web Sales data set.  Click on the actions menu and create
     a project with this data set.
     
-    ![](./media/image133.png) Figure 12.2
+    ![](./media/image133.png) <p align="center"> Figure 12.2</p>
 <br/>
 
 3.  A blank canvas is displayed where you can immediately begin to build
@@ -1430,7 +1505,7 @@ formatting and more.
     prior to building your analysis.  Click on the Prepare option on the
     tool bar.
     
-    ![](./media/image134.png) Figure 12.3
+    ![](./media/image134.png) <p align="center"> Figure 12.3</p>
 <br/>
 
 4.  This takes you to the prepare area with a Script Pane on the left
@@ -1441,7 +1516,7 @@ formatting and more.
     
     By clicking on the Formatted Data drop down to view the Metadata.
     
-    ![](./media/image135.png) Figure 12.4
+    ![](./media/image135.png) <p align="center"> Figure 12.4</p>
 <br/>
     
     Metadata is simply data about the data.  It displays data elements,
@@ -1465,12 +1540,12 @@ formatting and more.
 9.  Select the Profit column and notice in the Property Pane that the
     Name, Treat As, Data Type and Aggregation seem correct.
     
-    ![](./media/image136.png) Figure 12.5
-<br/>
+    ![](./media/image136.png) <p align="center"> Figure 12.5</p>
+
     
     Click on the \# sign in the Property Pane to change the formatting.
     
-    ![](./media/image137.png) Figure 12.6
+    ![](./media/image137.png) <p align="center"> Figure 12.6</p>
 <br/>
     
     Change the Number Format to Currency.  Make similar changes to the
@@ -1481,7 +1556,7 @@ formatting and more.
     perform a Group on this column to make it a little easier to view.
     Click the actions menu and select Group.
     
-    ![](./media/image138.png) Figure 12.7
+    ![](./media/image138.png) <p align="center"> Figure 12.7</p>
 <br/>
 
     
@@ -1491,12 +1566,12 @@ formatting and more.
 11. Name the first group Low and include the values Low and Not
     Specified.
     
-    ![](./media/image139.png) Figure 12.8
+    ![](./media/image139.png) <p align="center"> Figure 12.8</p>
 <br/>
 
 12. Click the + sign next to Group to add another Group.
     
-    ![](./media/image140.png) Figure 12.9
+    ![](./media/image140.png) <p align="center"> Figure 12.9</p>
 <br/>
     
     Name the second group High and include High and Critical in this
@@ -1507,7 +1582,7 @@ formatting and more.
 
 13. Click Add Step
     
-    ![](./media/image141.png)Figure 12.10
+    ![](./media/image141.png)<p align="center"> Figure 12.10</p>
 <br/>
     
     Note that the newly created Group by Order Priority Group 1 column
@@ -1523,7 +1598,7 @@ formatting and more.
     for quantity ordered called Order Size.  Right click the action menu
     and select Bin.
     
-    ![](./media/image142.png) Figure 12.11
+    ![](./media/image142.png) <p align="center"> Figure 12.11</p>
 <br/>
 
 
@@ -1532,7 +1607,7 @@ formatting and more.
     quantities 11 to 50.  Name the third bin Large for quantities 51 to
     100.  Name the final bin Bulk for orders over 100.
     
-    ![](./media/image143.png) Figure 12.12
+    ![](./media/image143.png) <p align="center"> Figure 12.12</p>
 <br/>
 
     
@@ -1549,32 +1624,32 @@ formatting and more.
 17. Click on the + sign to the right of the Data Set tab on the bottom
     of the screen to add another data set.
     
-    ![](./media/image144.png) Figure 12.13
+    ![](./media/image144.png) <p align="center"> Figure 12.13</p>
 <br/>
 
 18. A window displays data sets that are available. Select Web-Customers
     and click Add to Project.
     
-    ![](./media/image145.png) Figure 12.14
+    ![](./media/image145.png) <p align="center"> Figure 12.14</p>
 <br/>
 
 
 19. There are now two data set tabs on the bottom of the screen.  You are
     able to switch between the data sets by clicking on the tabs.
     
-    ![](./media/image146.png) Figure 12.15
+    ![](./media/image146.png) <p align="center"> Figure 12.15</p>
 <br/>
 
 20. Click on Data Diagram tab to the left of the data set tabs.  The
     system has found a common key or join between the two data sets.
     
-    ![](./media/image147.png)Figure 12.16
+    ![](./media/image147.png)<p align="center"> Figure 12.16</p>
 <br/>
 
 
 21. Click the 1 which signifies the single key between the data sets.
     
-    ![](./media/image148.png)Figure 12.17
+    ![](./media/image148.png)<p align="center"> Figure 12.17</p>
 <br/>
     
     Because the system recognized the match of Custid from Web-Customers
@@ -1592,7 +1667,7 @@ formatting and more.
     applied, the blue dots disappear which indicates that the actions
     have been successfully applied.
     
-    ![](./media/image149.png) Figure 12.18
+    ![](./media/image149.png) <p align="center"> Figure 12.18</p>
 <br/>
     
     Note, that as you add more enrichments to a data set, the number of
@@ -1605,7 +1680,7 @@ formatting and more.
 
 
 
-# Lab 13: DATA RECOMMENDATIONS ON MULTIPLE DATA SETS
+# Lab 13:  DATA RECOMMENDATIONS ON MULTIPLE DATA SETS
 
 This lab is about machine language driven data recommendations to
 transform and enrich data leading to more meaningful and deeper insights
@@ -1621,7 +1696,7 @@ and demographic information.
 
 2.  Open the Web Customers data set and navigate to the Prepare Pane.
     
-    ![](./media/image150.png) Figure 13.1
+    ![](./media/image150.png) <p align="center"> Figure 13.1</p>
 <br/>
 
 3.  On the right side there are a significant number of recommended
@@ -1694,7 +1769,7 @@ and demographic information.
 <br/>
 
 
-# Lab 14: ENHANCED INSIGHTS ON MULTIPLE DATA SETS
+# Lab 14:  ENHANCED INSIGHTS ON MULTIPLE DATA SETS
 
 This lab is about enhanced insights with enriched data sets to deliver
 deeper analysis.
@@ -1722,7 +1797,7 @@ deeper analysis.
     Finally, we have something that is a bit interesting. We can see
     that Males are placing more orders on Thursdays.
     
-    ![](./media/image151.png) Figure 14.1
+    ![](./media/image151.png) <p align="center"> Figure 14.1</p>
 <br/>
 
 4.  Create a second visualization to see if we can leverage what we
@@ -1739,12 +1814,11 @@ deeper analysis.
 5.  In order to break this out by sales by category, right click on
     either bar and sort from low to high.
     
-    ![](./media/image152.png) Figure 14.2
-<br/>
-<br/>
+    ![](./media/image152.png) <p align="center"> Figure 14.2</p>
+
 
     
-    ![](./media/image153.png) Figure 14.3
+    ![](./media/image153.png) <p align="center"> Figure 14.3</p>
 <br/>
     
     Finally, we have a little more insightful analysis.  Females spend
@@ -1764,7 +1838,7 @@ deeper analysis.
     column Order Size into the Color box.  Finally, drag \# Sales into
     the Size box.
     
-    ![](./media/image154.png) Figure 14.4
+    ![](./media/image154.png) <p align="center"> Figure 14.4</p>
 <br/>
     
     This visualization is interesting.  It indicates that medium size
@@ -1779,7 +1853,7 @@ deeper analysis.
     marketing and attention to this segment.  First, click on the + sign
     on the bottom of the screen to create a new canvas.
     
-    ![](./media/image155.png) Figure 14.5
+    ![](./media/image155.png) <p align="center"> Figure 14.5</p>
 <br/>
 
 8.  Drag the enriched column County, was built based on the City geo
@@ -1791,17 +1865,17 @@ deeper analysis.
     drop it in the Color box.  Next, drag \# Profit into the Size Box.
     
     This is still difficult to understand.  Add a filter by hovering over
-    \# Profit in the Size box and select Create Filter.
-<br/>
+    # Profit in the Size box and select Create Filter.
+
 
     
-    ![](./media/image156.png) Figure 14.6
-<br/>
+    ![](./media/image156.png) <p align="center"> Figure 14.6</p>
+
 
     
     In the Start Range enter 10,000 and simply click on the map.
     
-    ![](./media/image157.png) Figure 14.7
+    ![](./media/image157.png) <p align="center"> Figure 14.7</p>
 <br/>
     
     Now, you can see the most profitable counties in the country which
@@ -1812,7 +1886,7 @@ deeper analysis.
 <br/>
 
 
-# Lab 15: NARRATION AND STORYTELLING FOR COLLABORATION
+# Lab 15:  NARRATION AND STORYTELLING FOR COLLABORATION
 
 In this lab you will learn how to use narrate to share discoveries as a
 business analyst.  This feature allows you to create visually compelling
@@ -1824,13 +1898,13 @@ collaboration and discussion.
 1.  Open the Web Sales project to the first canvas.  Click on Narrate on
     the top left of the screen.
     
-    ![](./media/image158.png) Figure 15.1
-<br/>
+    ![](./media/image158.png) <p align="center"> Figure 15.1</p>
+
     
     This brings us to a blank canvas in the center of the screen.  On the
     left side are the four canvases that made up this project.
     
-    ![](./media/image159.png) Figure 15.2
+    ![](./media/image159.png) <p align="center"> Figure 15.2</p>
 <br/>
     
     Typically, projects are made up of multiple canvases.  Select from
@@ -1841,75 +1915,75 @@ collaboration and discussion.
 2.  There a two ways to add a canvas to your story, click on the small
     action menu on the upper right of each canvas thumbnail.
     
-    ![](./media/image160.png) Figure 15.3
-<br/>
+    ![](./media/image160.png) <p align="center"> Figure 15.3</p>
+
     
     Select Canvas 1 to Add To Story.
     
-    ![](./media/image161.png) Figure 15.4
+    ![](./media/image161.png) <p align="center"> Figure 15.4</p>
 <br/>
 
 3.  Next, drag and drop a second canvas thumbnail onto the bottom pane
     next to Canvas 1.
     
-    ![](./media/image162.png) Figure 15.5
+    ![](./media/image162.png) <p align="center"> Figure 15.5</p>
 <br/>
 
 4.  The properties for each selected canvas can be modified on the
     bottom left.
     
-    ![](./media/image163.png) Figure 15.6
+    ![](./media/image163.png) <p align="center"> Figure 15.6</p>
 <br/>
 
 5.  You can also click the action menu on any visualization to hide it
     from the narration.
     
-    ![](./media/image164.png) Figure 15.7
-<br/>
+    ![](./media/image164.png) <p align="center"> Figure 15.7</p>
+
     
     On the first narration canvas click the action menu to delete the
     stacked bar graph for Sales by Gender and Order Day.
     
-    ![](./media/image165.png) Figure 15.8
+    ![](./media/image165.png) <p align="center"> Figure 15.8</p>
 <br/>
 
 6.  You can also add page descriptions which will help the story and
     foster collaboration.
     
-    ![](./media/image166.png) Figure 15.9
-<br/>
+    ![](./media/image166.png) <p align="center"> Figure 15.9</p>
+
     
     Click the check box and add a meaningful description or even a
     question.
     
-    ![](./media/image167.png) Figure 15.10
-<br/>
-<br/>
+    ![](./media/image167.png) <p align="center"> Figure 15.10</p>
+
+
 
     
-    ![](./media/image168.png) Figure 15.11
-<br/>
+    ![](./media/image168.png) <p align="center"> Figure 15.11</p>
+
 
 7.  Add a notes and position them in any visualization by clicking the
     Note button on the upper right.
     <br/>
 
-    ![](./media/image169.png) Figure 15.12
-<br/>
+    ![](./media/image169.png) <p align="center"> Figure 15.12</p>
+
 
     
-    ![](./media/image170.png) Figure 15.13
+    ![](./media/image170.png) <p align="center"> Figure 15.13</p>
 <br/>
 
 8.  In the Property Pane, select the Presentation for Story Navigation,
     then choose Filmstrip or Compact.
     
-    ![](./media/image171.png) Figure 15.14
+    ![](./media/image171.png) <p align="center"> Figure 15.14</p>
 <br/>
 
 9.  Click Present to start the presentation.
     
-    ![](./media/image172.png) Figure 15.15
+    ![](./media/image172.png) <p align="center"> Figure 15.15</p>
 <br/>
 
 10. The strip at the bottom of the screen can be used to navigate thru
@@ -1920,7 +1994,7 @@ collaboration and discussion.
 
 11. Click the X in the upper right to exit the presentation.
     
-    ![](./media/image173.png) Figure 15.16
+    ![](./media/image173.png) <p align="center"> Figure 15.16</p>
 <br/>
 
 12. Save the project with the narration to be able to share it.
@@ -1928,15 +2002,14 @@ collaboration and discussion.
 13. Click the Share icon in the upper right to share your story as a
     file, an email, upload it to the cloud or to print it.
     
-    ![](./media/image174.png) Figure 15.17
-<br/>
-<br/>
+    ![](./media/image174.png) <p align="center"> Figure 15.17</p>
+
     
     If you share the narration as a file you can decide to share it as a
     Powerpoint, PDF, or an image, a CSV or a data visualization DVA
     package.
     
-    ![](./media/image175.png) Figure 15.18
+    ![](./media/image175.png) <p align="center"> Figure 15.18</p>
 <br/>
 <br/>
 <br/>
