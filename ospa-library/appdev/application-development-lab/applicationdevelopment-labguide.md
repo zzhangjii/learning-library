@@ -1195,17 +1195,17 @@ applications. Get the correct values for your class and copy them to
 your local machine to make the lab a little quicker to complete (please
 ask the instructor if you have questions here).
 <br/><br/>
-```
+
 *******************************************************************
 NOTE 1:
 
-   If your environment does not have access to the Mama Maggy APIs use the instructions in [Appendix C: Build Mama Maggy Data Application] to create some that you may use.
+  If your environment does not have access to the Mama Maggy APIs; use the instructions in [Appendix C: Build Mama Maggy Data Application](#appendix-c-build-mama-maggy-data-application) to create some that you may use.
 
 NOTE 2:
 
-    Lab 4 assumes access to modern APIs that provide an industry-standard manifest; if only old-style endpoints are available use the instructions in [Appendix B: Create Service Connection from Endpoint] instead of the instructions in this Lab to access the APIs.
+  Lab 4 assumes access to modern APIs that provide an industry-standard manifest; if only old-style endpoints are available use the instructions in [Appendix B: Create Service Connection from Endpoint](#appendix-b-create-service-connection-from-endpoint) instead of the instructions in this Lab to access the APIs.
 *******************************************************************
-```
+
 <br/><br/>
 
 1.  If you have logged out of the Oracle Cloud, please log back in and
