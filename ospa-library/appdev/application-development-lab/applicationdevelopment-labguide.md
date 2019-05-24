@@ -1713,9 +1713,12 @@ Select “Open Service Console” from the menu.
 > applications and user.
 
 
-    NOTE: If others will be sharing your VBCS instance you will need to use Oracle Identity Cloud Service (IDCS) to make sure they have 'ServiceDeveloper' (Visual Builder Administrator) role for your instance if they are developers -- or 'ServiceAdministrator' (Visual Builder Administrator) role if they need to administer other's applications. See Oracle Documentation for more information.
+NOTE:
 
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If others will be sharing your VBCS instance you will need to use Oracle Identity Cloud Service (IDCS)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to make sure they have 'ServiceDeveloper' (Visual Builder Administrator) role for your instance if they are developers<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- or 'ServiceAdministrator' (Visual Builder Administrator) role if they need to administer other's applications.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;See Oracle Documentation for more information.
 
 
 [Return to Table of Contents](#table-of-contents)
