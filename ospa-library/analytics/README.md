@@ -1469,11 +1469,11 @@ There are multiple ways that you can load data sets:
     on the right side of each data set.
     
     ![](./media/image131.png) <p align="center"> Figure 11.8</p>
-<br/>
+
     
     You can create a project based on the data set, open the data set,
     reload the data, delete it and more.
-<br/>
+
 <br/>
 <br/>
 
@@ -1516,7 +1516,7 @@ formatting and more.
     By clicking on the Formatted Data drop down to view the Metadata.
     
     ![](./media/image135.png) <p align="center"> Figure 12.4</p>
-<br/>
+
     
     Metadata is simply data about the data.  It displays data elements,
     data types, aggregation if any, and more.  Similar to the formatted
@@ -1545,7 +1545,7 @@ formatting and more.
     Click on the \# sign in the Property Pane to change the formatting.
     
     ![](./media/image137.png) <p align="center"> Figure 12.6</p>
-<br/>
+
     
     Change the Number Format to Currency.  Make similar changes to the
     other measures which require formatting.
@@ -1556,7 +1556,7 @@ formatting and more.
     Click the actions menu and select Group.
     
     ![](./media/image138.png) <p align="center"> Figure 12.7</p>
-<br/>
+
 
     
     Build 3 groups instead of 5 different values for the rows in this
