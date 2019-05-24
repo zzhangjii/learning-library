@@ -257,9 +257,8 @@ the imported data.  Topics include:
     
     ![](./media/image20.png)
     <p align="center"> Figure 2.12 </p> 
-<br/>
-<br/>
-<br/>
+
+
  ![](./media/image21.png)
  <p align="center"> Figure 2.13 </p> 
 
@@ -387,11 +386,11 @@ about attrition.  Topics include:
     
     ![](./media/image33.png)
     <p align="center"> Figure 3.7 </p> 
-<br/>
+
     
     This will bring you back to a blank visualization pane.
 
-11. Perform a multi-select control click on \# of Terminations,
+11. Perform a multi-select control click on # of Terminations,
     Termination Department and Termination Reason in the Data Pane and
     right click to choose Create Best Visualization.  Data Visualization
     Desktop looks at semantic information for the selected attributes to
@@ -486,7 +485,7 @@ about attrition.  Topics include:
     
     ![](./media/image41.png)
     <p align="center"> Figure 3.15 </p> 
-<br/>
+
     
     You know have created a canvas displaying meaningful information. 
     There is a total number of 132 attritions.  The bar chart shows that
@@ -636,7 +635,7 @@ pleasing.  Topics include:
     
     ![](./media/image50.png)
     <p align="center"> Figure 5.2 </p>
-<br/>
+
     
     This will help us better explore the chart.
 
@@ -660,7 +659,7 @@ pleasing.  Topics include:
     
     ![](./media/image53.png)
     <p align="center"> Figure 5.5 </p>
-<br/>
+
     
     Any changes will be reflected in the Grammar Pane on the left.
 
@@ -693,10 +692,12 @@ pleasing.  Topics include:
     
     ![](./media/image56.png)
     <p align="center"> Figure 5.8 </p>
-<br/>
+
+
  ![](./media/image57.png)
  <p align="center"> Figure 5.9 </p>
-<br/>
+
+
 12. Change the title to: Number of Terminations by Month.
 
 13. Click on Line Type and then Straight to display different line
@@ -762,7 +763,7 @@ pleasing.  Topics include:
     
     ![](./media/image64.png)
     <p align="center"> Figure 5.16 </p>
-<br/>
+
     
     Depending on the data, you could add advanced analytic functions for
     clusters, outliers, a reference line, a trend line or a forecast.
@@ -789,7 +790,7 @@ them to visualizations.
     
     ![](./media/image65.png)
     <p align="center"> Figure 6.1 </p>
-<br/>
+
     
     Colors on charts are auto-assigned based on the current project
     color pallet.
@@ -972,8 +973,8 @@ of data shown on visualizations.  Topics include:
     you build formulas to be considered as a condition to be applied to
     visualizations.
 
-18. Double click on \# of Terminations in the Data Pane to enter it into
-    the expression.  Then enter \> 2 because we want to look at all data
+18. Double click on # of Terminations in the Data Pane to enter it into
+    the expression.  Then enter > 2 because we want to look at all data
     points where the termination count is greater than 2.
 
 19. Validate the expression.
@@ -1001,8 +1002,7 @@ of data shown on visualizations.  Topics include:
     
     ![](./media/image84.png)
     <p align="center"> Figure 7.14 </p>
-<br/>
-<br/>
+
 ![](./media/image85.png)
 <p align="center"> Figure 7.15 </p>
 <br/>
@@ -1119,7 +1119,7 @@ Topics include:
     paste it.
     
     ![](./media/image94.png) <p align="center"> Figure 8.10</p>
-<br/>
+
     
     Note that selecting Duplicate Visual performs the same as copy.
 
@@ -1171,7 +1171,7 @@ Topics include:
     dragging them to the right.  Do the same to expand their height.
     
     ![](./media/image101.png) <p align="center"> Figure 8.17</p>
-<br/>
+
     
     Notice that the Tile visualization has been readjusted to fit the
     screen.
@@ -1208,10 +1208,9 @@ Topics include:
     which is the second icon.
     
     ![](./media/image107.png) <p align="center"> Figure 8.23</p>
-<br/>
+
     
-    For the Termination Department, enable Show Total which will display
-    the total number of terminations by department.
+
 
 27. For the Termination Department, enable Show Total which will display
     the total number of terminations by department.
@@ -1246,13 +1245,13 @@ and generate visualizations automatically.
     department and reasons,” in the search box and then press enter.
     
     ![](./media/image110.png) <p align="center"> Figure 9.2</p>
-<br/>
+
 
 4.  The tool now interprets this natural language to find semantics and
     generates a visualization.
     
     ![](./media/image111.png) <p align="center"> Figure 9.3</p>
-<br/>
+
     
     Click the X on the search bar to clear the query and return to the
     Home Page.
@@ -1264,7 +1263,7 @@ and generate visualizations automatically.
     language query.
     
     ![](./media/image112.png) <p align="center"> Figure 9.4</p>
-<br/>
+
     
     Click the X on the search bar to clear the query and return to the
     Home Page.
@@ -1274,13 +1273,13 @@ and generate visualizations automatically.
     product category by city.”
     
     ![](./media/image113.png) <p align="center"> Figure 9.5</p>
-<br/>
+
     
     Oracle Analytics examined the semantics of the query and matched it
     with a project that included the combination of those semantics and
     attributes from your natural language query to generate
     visualizations which best matched the query.
-<br/>
+
 <br/>
 <br/>
 
@@ -1470,11 +1469,11 @@ There are multiple ways that you can load data sets:
     on the right side of each data set.
     
     ![](./media/image131.png) <p align="center"> Figure 11.8</p>
-<br/>
+
     
     You can create a project based on the data set, open the data set,
     reload the data, delete it and more.
-<br/>
+
 <br/>
 <br/>
 
@@ -1517,7 +1516,7 @@ formatting and more.
     By clicking on the Formatted Data drop down to view the Metadata.
     
     ![](./media/image135.png) <p align="center"> Figure 12.4</p>
-<br/>
+
     
     Metadata is simply data about the data.  It displays data elements,
     data types, aggregation if any, and more.  Similar to the formatted
@@ -1546,7 +1545,7 @@ formatting and more.
     Click on the \# sign in the Property Pane to change the formatting.
     
     ![](./media/image137.png) <p align="center"> Figure 12.6</p>
-<br/>
+
     
     Change the Number Format to Currency.  Make similar changes to the
     other measures which require formatting.
@@ -1557,7 +1556,7 @@ formatting and more.
     Click the actions menu and select Group.
     
     ![](./media/image138.png) <p align="center"> Figure 12.7</p>
-<br/>
+
 
     
     Build 3 groups instead of 5 different values for the rows in this
@@ -1572,7 +1571,7 @@ formatting and more.
 12. Click the + sign next to Group to add another Group.
     
     ![](./media/image140.png) <p align="center"> Figure 12.9</p>
-<br/>
+
     
     Name the second group High and include High and Critical in this
     group.
@@ -1583,7 +1582,7 @@ formatting and more.
 13. Click Add Step
     
     ![](./media/image141.png)<p align="center"> Figure 12.10</p>
-<br/>
+
     
     Note that the newly created Group by Order Priority Group 1 column
     is directly to the right of the original Order Priority column.  Also
@@ -1599,7 +1598,7 @@ formatting and more.
     and select Bin.
     
     ![](./media/image142.png) <p align="center"> Figure 12.11</p>
-<br/>
+
 
 
 15. Create four bins for order size.  Name the first bin Small for orders
@@ -1608,7 +1607,7 @@ formatting and more.
     100.  Name the final bin Bulk for orders over 100.
     
     ![](./media/image143.png) <p align="center"> Figure 12.12</p>
-<br/>
+
 
     
     Click Add Step and Name the new column Order Size.
@@ -1650,7 +1649,7 @@ formatting and more.
 21. Click the 1 which signifies the single key between the data sets.
     
     ![](./media/image148.png)<p align="center"> Figure 12.17</p>
-<br/>
+
     
     Because the system recognized the match of Custid from Web-Customers
     and Web-Sales the data sets.  Thus our link.
@@ -1668,8 +1667,7 @@ formatting and more.
     have been successfully applied.
     
     ![](./media/image149.png) <p align="center"> Figure 12.18</p>
-<br/>
-    
+
     Note, that as you add more enrichments to a data set, the number of
     sequential actions listed in this pane will increase.
 
@@ -1819,7 +1817,7 @@ deeper analysis.
 
     
     ![](./media/image153.png) <p align="center"> Figure 14.3</p>
-<br/>
+
     
     Finally, we have a little more insightful analysis.  Females spend
     almost the same as Males on Technology but they spend more than
@@ -1839,7 +1837,7 @@ deeper analysis.
     the Size box.
     
     ![](./media/image154.png) <p align="center"> Figure 14.4</p>
-<br/>
+
     
     This visualization is interesting.  It indicates that medium size
     orders are the most profitable categories.  Look more closely and you
@@ -1854,7 +1852,7 @@ deeper analysis.
     on the bottom of the screen to create a new canvas.
     
     ![](./media/image155.png) <p align="center"> Figure 14.5</p>
-<br/>
+
 
 8.  Drag the enriched column County, was built based on the City geo
     recommendation, to the center of the new canvas.  Change the
@@ -1876,7 +1874,7 @@ deeper analysis.
     In the Start Range enter 10,000 and simply click on the map.
     
     ![](./media/image157.png) <p align="center"> Figure 14.7</p>
-<br/>
+
     
     Now, you can see the most profitable counties in the country which
     could be an important and insightful analysis that the marketing
@@ -1905,7 +1903,7 @@ collaboration and discussion.
     left side are the four canvases that made up this project.
     
     ![](./media/image159.png) <p align="center"> Figure 15.2</p>
-<br/>
+
     
     Typically, projects are made up of multiple canvases.  Select from
     the thumbnail list of canvases which are available to make up the
@@ -1921,19 +1919,19 @@ collaboration and discussion.
     Select Canvas 1 to Add To Story.
     
     ![](./media/image161.png) <p align="center"> Figure 15.4</p>
-<br/>
+
 
 3.  Next, drag and drop a second canvas thumbnail onto the bottom pane
     next to Canvas 1.
     
     ![](./media/image162.png) <p align="center"> Figure 15.5</p>
-<br/>
+
 
 4.  The properties for each selected canvas can be modified on the
     bottom left.
     
     ![](./media/image163.png) <p align="center"> Figure 15.6</p>
-<br/>
+
 
 5.  You can also click the action menu on any visualization to hide it
     from the narration.
@@ -1945,7 +1943,7 @@ collaboration and discussion.
     stacked bar graph for Sales by Gender and Order Day.
     
     ![](./media/image165.png) <p align="center"> Figure 15.8</p>
-<br/>
+
 
 6.  You can also add page descriptions which will help the story and
     foster collaboration.
