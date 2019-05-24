@@ -635,7 +635,7 @@ pleasing.  Topics include:
     
     ![](./media/image50.png)
     <p align="center"> Figure 5.2 </p>
-<br/>
+
     
     This will help us better explore the chart.
 
@@ -692,10 +692,12 @@ pleasing.  Topics include:
     
     ![](./media/image56.png)
     <p align="center"> Figure 5.8 </p>
-<br/>
+
+
  ![](./media/image57.png)
  <p align="center"> Figure 5.9 </p>
-<br/>
+
+
 12. Change the title to: Number of Terminations by Month.
 
 13. Click on Line Type and then Straight to display different line
@@ -1117,7 +1119,7 @@ Topics include:
     paste it.
     
     ![](./media/image94.png) <p align="center"> Figure 8.10</p>
-<br/>
+
     
     Note that selecting Duplicate Visual performs the same as copy.
 
@@ -1206,10 +1208,9 @@ Topics include:
     which is the second icon.
     
     ![](./media/image107.png) <p align="center"> Figure 8.23</p>
-<br/>
+
     
-    For the Termination Department, enable Show Total which will display
-    the total number of terminations by department.
+
 
 27. For the Termination Department, enable Show Total which will display
     the total number of terminations by department.
@@ -1244,13 +1245,13 @@ and generate visualizations automatically.
     department and reasons,” in the search box and then press enter.
     
     ![](./media/image110.png) <p align="center"> Figure 9.2</p>
-<br/>
+
 
 4.  The tool now interprets this natural language to find semantics and
     generates a visualization.
     
     ![](./media/image111.png) <p align="center"> Figure 9.3</p>
-<br/>
+
     
     Click the X on the search bar to clear the query and return to the
     Home Page.
