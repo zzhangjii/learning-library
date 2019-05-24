@@ -72,7 +72,7 @@ for anyone who happens to finish early. No prior experience with Visual
 Builder is assumed or necessary.
 
 **Prerequisite**: Before starting these labs, you should have an OCI
-login and
+login and "ServerDeveloper" or "ServerAdminstrator" access to a VBCS instance; most formal classes will share an existing VBCS instance and your permissions will already correct. If you do not have a VBCS instance you may create one using the instructions in [Appendix A: Create VBCS Instance](#appendix-a-create-vbcs-instance). 
 
 **NOTE:** Content is driven by external factors such as user data
 entries and login date. As a result, what you see displayed in your
@@ -1194,6 +1194,19 @@ use these “Service Connections” to provide data services to your
 applications. Get the correct values for your class and copy them to
 your local machine to make the lab a little quicker to complete (please
 ask the instructor if you have questions here).
+<br/><br/>
+```
+*******************************************************************
+NOTE 1:
+
+   If your environment does not have access to the Mama Maggy APIs use the instructions in [Appendix C: Build Mama Maggy Data Application] to create some that you may use.
+
+NOTE 2:
+
+    Lab 4 assumes access to modern APIs that provide an industry-standard manifest; if only old-style endpoints are available use the instructions in [Appendix B: Create Service Connection from Endpoint] instead of the instructions in this Lab to access the APIs.
+*******************************************************************
+```
+<br/><br/>
 
 1.  If you have logged out of the Oracle Cloud, please log back in and
     return to your VBCS application. You might find it useful to close
