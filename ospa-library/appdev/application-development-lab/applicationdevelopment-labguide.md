@@ -22,11 +22,11 @@
 
 ### [Appendices](#appendix)
 
-&nbsp;&nbsp;&nbsp;&nbsp;[Appendix A: Create VBCS Instance](#appendix-a-create-vbcs-instance)
+&nbsp;&nbsp;&nbsp;&nbsp;[Appendix A: Create VBCS Instance](#appendix-a-create-vbcs-instance) - In case you don't have one already
 
-&nbsp;&nbsp;&nbsp;&nbsp;[Appendix B: Create Service Connection from Endpoint](#appendix-b-create-service-connection-from-endpoint)
+&nbsp;&nbsp;&nbsp;&nbsp;[Appendix B: Create Service Connection from Endpoint](#appendix-b-create-service-connection-from-endpoint) - For old-style RESTful APIs
 
-&nbsp;&nbsp;&nbsp;&nbsp;[Appendix C: Build Mama Maggy Data Application](#appendix-c-build-mama-maggy-data-application)
+&nbsp;&nbsp;&nbsp;&nbsp;[Appendix C: Build Mama Maggy Data Application](#appendix-c-build-mama-maggy-data-application) - Used in Lab 4 and Extra Lab 5
 
 # Lab Guide Overview
 
@@ -1711,6 +1711,14 @@ Select “Open Service Console” from the menu.
 > 
 > That’s it, you’ve created an instance that can support many VBCS
 > applications and user.
+
+
+NOTE:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If others will be sharing your VBCS instance you will need to use Oracle Identity Cloud Service (IDCS)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to make sure they have 'ServiceDeveloper' (Visual Builder Administrator) role for your instance if they are developers<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- or 'ServiceAdministrator' (Visual Builder Administrator) role if they need to administer other's applications.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;See Oracle Documentation for more information.
 
 
 [Return to Table of Contents](#table-of-contents)
