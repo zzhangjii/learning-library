@@ -36,7 +36,7 @@ Table of Contents
 
 [Lab 14: Enhanced Insights on Multiple Data Sets ](#Lab-14--enhaced-insights-on-multiple-data-sets)
 
-[Lab 15: Enhanced Insights on Multiple Data Sets ](#Lab-15--enhanced-insights-on-multiple-data-sets)
+[Lab 15: Narration and Storytelling for Collaboration ](#Lab-15--narration-and-storytelling-for-collaboration)
 <br/>
 <br/>
 <br/>
