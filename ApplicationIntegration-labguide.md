@@ -1,6 +1,6 @@
 # Application Integration Lab Guide
 
-## May 22, 2019
+## May 24, 2019
 
 # Table of Contents
 
@@ -193,11 +193,6 @@ have done the prerequisites, continue below:
     working with software. Put things here so you can easily copy and
     paste them later. It’s your handy “scratchpad.”
 
-4.  I suggest that you add this to your *MyLabNotes* file right now: the
-    *URL to access your My Oracle Services page*. This URL was
-    referenced in the Prerequisites section above. Don’t forget to save
-    your MyLabNotes file each time you update it.
-
 5.  Start your Chrome browser. Again, other browsers may work just fine,
     but these labs were tested using Chrome.
 
@@ -248,43 +243,67 @@ have done the prerequisites, continue below:
 
 7.  Access your Autonomous Database to see if it has been started:
 
-    - Sign in to the Oracle Public Cloud by browsing to:
-    https://cloud.oracle.com/en_US/sign-in
+    - Sign in to the Oracle Public Cloud by browsing to
+    https://cloud.oracle.com/en_US/sign-in and entering your tenancy name for Account
+    and then clicking Next.
 
     - When prompted for User Name and Password, enter your Oracle Cloud
-    Account Sign In credentials (user name and password)
+    Account Sign In credentials (user name and password).  NOTE: If you are an
+    Oracle employee, click the *Oracle SSO* link at the right to enter your
+    credentials.
 
     - Click the *Sign In* button.
 
-    - You're my Oracle Services page appears.
+    - You're *Oracle Cloud My Services* page appears.  Make a note of this URL 
+    as *Oracle Cloud My Services Page URL* in your *MyLabNotes* "scratchpad" file 
+    so you will have easy access to this page later.
 
-    - Use the *Search* field to search for: *ATP*
+    - Click the *Autonomous Database* option to display the *Autonomous Database Manage
+    Data and Transactions* page.
 
-      ![](./media/image5.png)        
-      Figure 1: My Oracle Services Page Showing Services
+    - Make sure that the *Transaction Processing with Mixed Workloads* option is checked 
+    *On* in the upper-left corner of the page.
 
-    - Click on *Autonomous Transaction Processing*
+    - Click the *Go to My Dashboard* button in the upper-right corner to
+    display the *Dashboard* page.
 
-    - The *Autonomous Databases* page that appears.
+    - Click on the *Customize Dashboard* option at the top-left to display the 
+    *Customize Dashboard* popup dialog.  If you don't see the option, click on the icon
+    in the uppper-right showing a *circle with a dash inside* to display additional
+    options.
 
-    - In the *Compartment* field at the left, select your Autonomous
+    - Find *Autonomous Transaction Processing* in the list and click on the Show button
+    to the right to make sure that it always shows on your dashboard.
+
+    - Close the dialog by clicking on the *X* in the upper-right corner and redisplay
+    the *Dashboard*.
+
+    - Verify that *Autonomous Transaction Processing* now appears and click on it to
+    display the *Service: Autonomous Transaction Processing* page.  
+
+    - Click on the *Open Service Console* button in the upper-right corner to display
+    the *Autonomous Database* page.
+
+      - In the *Compartment* field at the left, select your Autonomous
     Database Compartment from the dropdown list. You noted that name in
     the Prerequisites section above.
 
-    - Click on your *Autonomous Database name* that appears in the table.
-    You noted that name in the Prerequisites section above.
+      - Click on your *Autonomous Database name* that appears in the table.
+  You noted that name in the Prerequisites section above.
 
-      ![](./media/image6.png)
+        ![](./media/image6.png)
 
         Figure 2: Selecting Your Database
 
-    - If you don’t see this
-    “*Available*” icon, click the *Start* button at the top to start the
+    - The *Autonomous Database Details* page appears.
+    
+    - If you don’t see the
+    “*Available*” icon shown below, click the *Start* button at the top to start the
     instance and wait until “AVAILABLE” appears below the ATP icon:
 
-      ![](./media/image7.png)
+        ![](./media/image7.png)
 
-      Figure 3: ATP Status Display
+        Figure 3: ATP Status Display
 
 ## Download Database Wallet
 
@@ -396,9 +415,11 @@ have done the prerequisites, continue below:
     running:
     
     - In a new browser tab, access your Oracle Integration instance by
-        browsing to the URL to access your My Oracle Services page. You
-        noted that URL in the Prerequisites section above.
+        browsing to the *Oracle Cloud My Services Page URL* noted 
+        in your *MyLabNotes* file to access your services.
     
+    ***
+
     - Click on *Integration*:
 
       ![](./media/image11.png)
@@ -540,16 +561,15 @@ Let's get started.  Follow the steps and ask questions if you get confused:
     seem to get “confused.”
 
 2.  Refresh your browser window. Due to clearing the browser cache, you
-    will lose your connection to the Oracle Cloud. Follow the “Access
-    Your Oracle Integration Instance” steps in the Preparing Your
-    Environment section to sign in again. You’ll be browsing to the URL
-    to access your My Oracle Services page.
+    will lose your connection to the Oracle Cloud. Browse to the 
+    *Oracle Cloud My Services Page URL* noted in your *MyLabNotes* file 
+    to access your services.
 
-3.  We will treate two connections that you’ll use in the integration
+3.  We will create two connections that you’ll use in the integration
     that you will build. You’ll create one connection to allow a REST
     client to access the integration. Your other connection will allow
     your integration to communicate with the ATP database. At the
-    Integration Home Page, click the *Integrations* menu option at the
+    *Integration Home Page*, click the *Integrations* menu option at the
     left. If you can’t see the menu options at the left, click the
     hamburger menu icon in the upper-left to reveal the menu:
 
@@ -1132,10 +1152,9 @@ Let's keep going. Again, follow the steps and ask questions if you get confused:
     section for the steps.
 
 2.  Refresh your browser window. Due to clearing the browser cache, you
-    will lose your connection to the Oracle Public Cloud. Follow the
-    “Access Your Oracle Integration Instance” steps in the Preparing
-    Your Environment section to sign in again. You’ll be browsing to the
-    URL to access your My Oracle Services page.
+    will lose your connection to the Oracle Public Cloud. Browse to the
+    *Oracle Cloud My Services Page URL* noted in your *MyLabNotes* file to access 
+    your services.
 
 3.  Return to your *Integration Home Page* by clicking on the *house
     icon* in the upper-left corner of the page:
@@ -2127,10 +2146,9 @@ Let’s now perform an end-to-end test of your application by assuming
         section for the steps.
         
 55. Due to clearing the browser cache,
-        you will lose your connection to the Oracle Public Cloud. Follow
-        the “Access Your Oracle Integration Instance” steps in the
-        Preparing Your Environment section to sign in again. You’ll be
-        browsing to the URL to access your My Oracle Services page.
+        you will lose your connection to the Oracle Public Cloud. Browse to 
+        the *My Oracle Services Page UR*L noted in your *MyLabNotes* file 
+        to access your services.
 
 ### Initiate a Request as a Store Manager
 
@@ -2411,14 +2429,60 @@ Oracle Integration Setup.
     section for the steps.
 
 2.  Refresh your browser window. Due to clearing the browser cache, you
-    will lose your connection to the Oracle Public Cloud. Follow the
-    “Access Your Oracle Integration Instance” steps in the Preparing
-    Your Environment section to sign in again. You’ll be browsing to the
-    URL to access your My Oracle Services page.
+    will lose your connection to the Oracle Public Cloud. Browse to the 
+    *Oracle Cloud My Services Page URL* noted in your *MyLabNotes* file to 
+    access your services.
 
 
 3.  Create a new ATP instance:
-    
+
+    - Browse to you're *Oracle Cloud My Services* page.  You noted the URL 
+    as *Oracle Cloud My Services Page URL* in your *MyLabNotes* "scratchpad" when
+    you initially performed the steps in the *Preparing Your Environment* section.
+
+    - Click the *Autonomous Database* option to display the *Autonomous Database Manage
+    Data and Transactions* page.
+
+    - Make sure that the *Transaction Processing with Mixed Workloads* option is checked 
+    *On* in the upper-left corner of the page.
+
+    - Click the *Go to My Dashboard* button in the upper-right corner to
+    display the *Dashboard* page.
+
+    - Click on the *Customize Dashboard* option at the top-left to display the 
+    *Customize Dashboard* popup dialog.  If you don't see the option, click on the icon
+    in the uppper-right showing a *circle with a dash inside* to display additional
+    options.
+
+    - Find *Autonomous Transaction Processing* in the list and click on the Show button
+    to the right to make sure that it always shows on your dashboard.
+
+    - Close the dialog by clicking on the *X* in the upper-right corner and redisplay
+    the *Dashboard*.
+
+    - Verify that *Autonomous Transaction Processing* now appears and click on it to
+    display the *Service: Autonomous Transaction Processing* page.  
+
+    - Click on the *Open Service Console* button in the upper-right corner to display
+    the *Autonomous Database* page.
+
+      - In the *Compartment* field at the left, select your Autonomous
+    Database Compartment from the dropdown list. You noted that name in
+    the Prerequisites section above.
+
+      - Click on your *Autonomous Database name* that appears in the table.
+  You noted that name in the Prerequisites section above.
+
+        ![](./media/image6.png)
+
+        Figure 2: Selecting Your Database
+
+    - The *Autonomous Database Details* page appears.
+
+
+
+
+
     - Access the Oracle Cloud page for Autonomous Database.
     
     - Select your compartment from the Compartment dropdown menu to
@@ -2466,6 +2530,12 @@ Oracle Integration Setup.
 
     - Click the *Create Autonomous Database button* (highlighted above).
 
+    - When provisioning is complete, look for the "AVAILABLE" message:
+
+      ![](./media/image121.png)
+
+      Figure 103a: Verifying that Database Provisioning was Successful
+
     - For additional assistance, follow the steps in this tutorial to guide you:
     https://docs.oracle.com/en/cloud/paas/atp-cloud/tutorials.html.
     Focus on the *Provisioning Autonomous Transaction Processing*
@@ -2481,8 +2551,8 @@ Oracle Integration Setup.
 4.  Check to see that your database is running:
     
     - Access your ATP instance by opening up a new browser tab and
-        browsing to the URL to access your *My Oracle Services page*.
-        You noted that URL in the Prerequisites section above.
+        browsing to Browse to the *Oracle Cloud My Services Page URL* noted 
+        in your *MyLabNotes* file to access your services.
     
     - When prompted for *User Name* and *Password*, enter your cloud
         credentials and click the Sign In button.
@@ -2738,23 +2808,23 @@ stockId,quantityOrdered) VALUES('tnb001', date '2019-04-15', 100,
     section for the steps.
 
 2.  Refresh your browser window. Due to clearing the browser cache, you
-    will lose your connection to the Oracle Public Cloud. Follow the
-    “Access Your Oracle Integration Instance” steps in the Preparing
-    Your Environment section to sign in again. You’ll be browsing to the
-    URL to access your My Oracle Services page.
+    will lose your connection to the Oracle Public Cloud. 
+    
+3. Browse to the 
+    *Oracle Cloud My Services Page URL* noted in your *MyLabNotes* file
+    (see the *Preparing You Environment section*) to 
+    access your services.
+
+4. You're *Oracle Cloud My Services* page appears.
+
+4. Click the *Integration* option to display the *Integration Integrate Applications
+and Automate Processes* page.
+
+8. Click on the *Open Service Console* button in the upper-right corner to show the
+*Oracle Integration* page.  A list appears showing any existing instances.
 
 3.  Create a new Integration instance:
     
-    - Click on *Integration* in the lower panel:
-
-        ![](./media/image115.png)
-
-      Figure 111: Accessing a Cloud Service at the Dashboard
-
-    - On the *Service: Oracle Integration* page, click the *Open Service
-    Console* button in the upper-right corner.
-
-
     - On the *Oracle Integration* page, click the *Create Instance*
     button:
 
@@ -2779,10 +2849,10 @@ instance you’ll use for learning and prototyping:
 
     - Click the *Next* button in the upper-right corner to see a summary of your inputs.
 
-    - Click the *Create* button in the
-    upper-right corner to provision your new instance.
+    - Click the *Create* button in the upper-right corner to provision 
+    your new instance.
 
-    - The Oracle Integration page redisplays. Notice that the *Status*
+    - The *Oracle Integration* page redisplays. Notice that the *Status*
     field indicates that the service is being created. Also notice that
     the *Messages Packs* field is set to *0*. You entered 1 earlier.
     This indicates that the base instance comes with 1 message pack, so
@@ -2795,7 +2865,7 @@ Provisioned
 
     - Wait a few minutes and refresh the *Instances* *area* periodically,
     by clicking the *Refresh icon* (a circular arrow) at the extreme
-    left periodically.
+    right-side periodically.
 
     - When the instance has been created, the *Instances* *area* shows:
 
@@ -2808,18 +2878,37 @@ Provisioned
     option in the popup menu (as highlighted above). In the popup
     dialog, confirm that you want to start your instance.
 
-        - Click the *Refresh icon* at the extreme left periodically to refresh
+        - Click the *Refresh icon* at the extreme right-side periodically to refresh
     the Instances area.
 
         - In a few moments you’ll see that your instance has started and that
     you can click on it to start using it. You may have to refresh your
-    browser page to update the status message.
+    browser page also to update the status message.
 
     - Your instance has been established and is ready for use.
-4. Check to make sure that the ATP adapter feature is available in your instance.  As of May, 2019 it was not generally available.  As documented in https://blogs.oracle.com/integration/enabling-the-future-today-feature-flags-in-oracle-integration-cloud, it was available in feature controlled general availability and you have to ask for it to be enabled for your instance.  Here is how to check if the oic.cloudadapter.adapters.atpdatabase feature flag is enabled in your Oracle Integration instance:
-    - Browse to your *Oracle Integration Home Page*.
 
-    - Click on the *Integrations* menu option at the left.
+4. Check to make sure that the ATP adapter feature is available in your instance.  As of May, 2019 it was not generally available.  As documented in https://blogs.oracle.com/integration/enabling-the-future-today-feature-flags-in-oracle-integration-cloud, it was available in feature controlled general availability and you have to ask for it to be enabled for your instance.  Here is how to check if the oic.cloudadapter.adapters.atpdatabase feature flag is enabled in your Oracle Integration instance:
+
+    - Browse to the 
+    *Oracle Cloud My Services Page URL* noted in your *MyLabNotes* file
+    (see the *Preparing You Environment section*) to 
+    access your services.
+
+    - You're *Oracle Cloud My Services* page appears.
+
+    - Click the *Integration* option to display the *Integration Integrate Applications
+and Automate Processes* page.
+
+    - Click on the *Open Service Console* button in the upper-right corner to show the
+*Oracle Integration* page.  A list appears showing any existing instances.
+
+    - Click on your instance.
+
+    - Click on the *hamburger menu icon* in the upper-right corner and select *Open Oracle Integration Home Page* from the 
+    popup menu.
+
+    - Click the *Integrations* menu option at the left.
+
 
     - Click on the *Adapters* menu option at the left to display all available adapters.
 
@@ -2828,4 +2917,3 @@ Provisioned
     - If the Oracle ATP adapter appears, then the oic.cloudadapter.adapters.atpdatabase feature flag is enabled for your instance.
 
     - If the Oracle ATP adapter does not appear, you'll need to file a Service Request (SR) with Oracle Support as documented in the *How to Request a Feature Flag* section in the link target shown above.
-
