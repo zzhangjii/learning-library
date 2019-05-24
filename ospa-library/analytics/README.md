@@ -257,9 +257,8 @@ the imported data.  Topics include:
     
     ![](./media/image20.png)
     <p align="center"> Figure 2.12 </p> 
-<br/>
-<br/>
-<br/>
+
+
  ![](./media/image21.png)
  <p align="center"> Figure 2.13 </p> 
 
@@ -387,11 +386,11 @@ about attrition.  Topics include:
     
     ![](./media/image33.png)
     <p align="center"> Figure 3.7 </p> 
-<br/>
+
     
     This will bring you back to a blank visualization pane.
 
-11. Perform a multi-select control click on \# of Terminations,
+11. Perform a multi-select control click on # of Terminations,
     Termination Department and Termination Reason in the Data Pane and
     right click to choose Create Best Visualization.  Data Visualization
     Desktop looks at semantic information for the selected attributes to
@@ -486,7 +485,7 @@ about attrition.  Topics include:
     
     ![](./media/image41.png)
     <p align="center"> Figure 3.15 </p> 
-<br/>
+
     
     You know have created a canvas displaying meaningful information. 
     There is a total number of 132 attritions.  The bar chart shows that
@@ -660,7 +659,7 @@ pleasing.  Topics include:
     
     ![](./media/image53.png)
     <p align="center"> Figure 5.5 </p>
-<br/>
+
     
     Any changes will be reflected in the Grammar Pane on the left.
 
@@ -762,7 +761,7 @@ pleasing.  Topics include:
     
     ![](./media/image64.png)
     <p align="center"> Figure 5.16 </p>
-<br/>
+
     
     Depending on the data, you could add advanced analytic functions for
     clusters, outliers, a reference line, a trend line or a forecast.
@@ -789,7 +788,7 @@ them to visualizations.
     
     ![](./media/image65.png)
     <p align="center"> Figure 6.1 </p>
-<br/>
+
     
     Colors on charts are auto-assigned based on the current project
     color pallet.
@@ -972,8 +971,8 @@ of data shown on visualizations.  Topics include:
     you build formulas to be considered as a condition to be applied to
     visualizations.
 
-18. Double click on \# of Terminations in the Data Pane to enter it into
-    the expression.  Then enter \> 2 because we want to look at all data
+18. Double click on # of Terminations in the Data Pane to enter it into
+    the expression.  Then enter > 2 because we want to look at all data
     points where the termination count is greater than 2.
 
 19. Validate the expression.
@@ -1001,8 +1000,7 @@ of data shown on visualizations.  Topics include:
     
     ![](./media/image84.png)
     <p align="center"> Figure 7.14 </p>
-<br/>
-<br/>
+
 ![](./media/image85.png)
 <p align="center"> Figure 7.15 </p>
 <br/>
@@ -1171,7 +1169,7 @@ Topics include:
     dragging them to the right.  Do the same to expand their height.
     
     ![](./media/image101.png) <p align="center"> Figure 8.17</p>
-<br/>
+
     
     Notice that the Tile visualization has been readjusted to fit the
     screen.
