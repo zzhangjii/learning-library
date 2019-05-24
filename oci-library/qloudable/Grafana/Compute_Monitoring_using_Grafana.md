@@ -21,11 +21,34 @@
 
 ## Overview
 
-In this lab we will create a compute instance, install a load generation and montoring application called Grafana. We will then generate load on CPU and memory and use Grafana to monitor this compute instance.
+**Some Key points;**
+
+- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
+
+- All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
+
+- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
+
+- Do NOT use compartment name and other data from screen shots.Only use  data(including compartment name) provided in the content section of the lab
+
+- Mac OS Users should use ctrl+C / ctrl+V to copy and paste inside the OCI Console
+
+**Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
 
 ## Pre-Requisites
 
-- Oracle Cloud Infrastructure account credentials (User, Password, Tenant, and Compartment)  
+1. Oracle Cloud Infrastructure account credentials (User, Password, Tenant, and Compartment)  
+
+2. OCI Training : https://cloud.oracle.com/en_US/iaas/training
+
+3. Familiarity with OCI console: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/console.htm
+
+4. Overview of Networking: https://docs.us-phoenix-1.oraclecloud.com/Content/Network/Concepts/overview.htm
+
+5. Familiarity with Compartment: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/concepts.htm
+
+6. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
+
 
 ## Recommended Learning Assets
 
@@ -38,10 +61,6 @@ In this lab we will create a compute instance, install a load generation and mon
 4. Familiarity with Compartment: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/concepts.htm
 
 5. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
-
-**Before You Begin**
-
-- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
 
 ## Practice-1: Sign in to OCI Console and create VCN
 
