@@ -1478,7 +1478,7 @@ There are multiple ways that you can load data sets:
 <br/>
 <br/>
 
-# Lab 12:  DATA PREPARATION with TRANSFORMATIONS ON MULTIPLE DATA SETS
+# Lab 12:  DATA PREPARATION TRANSFORMATIONS ON MULTIPLE DATA SETS
 
 This lab is addresses data transformations to prepare the data for
 analysis.
