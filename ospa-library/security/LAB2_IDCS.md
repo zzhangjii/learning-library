@@ -13,13 +13,16 @@
 
 For the workshop lab exercises, the current version of the Oracle Identity Cloud Service (IDCS) is being demonstrated.
  
-This workshop is hosted in the Oracle Public Cloud (OPC). It includes a combination of cloud services, hosted on-premises software and 3rd
-party software. Aside from the Identity Cloud Service, the remaining components are included to enable demonstrating integration, including
-identity synchronization, federation, authentication, SSO and more.
+This workshop is hosted in the Oracle Public Cloud (OPC). It includes a combination of cloud services, hosted on-premises software and 3rd party software. Aside from the Identity Cloud Service, the remaining components are included to enable demonstrating integration, including identity synchronization, federation, authentication, SSO and more.
 
 This workbook is primarily designed to provide the necessary instructions and context to allow you to complete the labs in the Oracle Identity Cloud Service Workshop. If you would like additional information about the Oracle solution, you can contact your local Oracle account team and/or review some of the following publicly available information about the solution.
 
-For consistency and for the ease of use-cases implementation, you will use a Gmail account. The following summarizes the components in our workshop:
+Due to environment privileges constraints, user id creation/modification/deletion and application registration assignments have been already implemented in this tenant.
+The instructor will guide you through the process of creating a new account and onboarding a new application into IDCS. These steps have been highlighted within this workshop for your reference.
+The tasks labeled as **DEMO** will be instructor guide, while the exercises labeled as **EXERCISE** are assignments that you as the learner must complete.
+
+
+The following summarizes the components in our workshop:
  
 
   * [Oracle Identity Cloud](https://cloud.oracle.com/en_US/identity)
@@ -86,7 +89,7 @@ For consistency and for the ease of use-cases implementation, you will use a Gma
  
  This workshop shows how **Oracle Identity Cloud Service (IDCS)** enable organizations to rapidly develop fast, reliable and secure services for their new business initiatives.
 
-### Navigation between IDCS and Cloud My Services Dashboards
+### **DEMO** - Navigation between IDCS and Cloud My Services Dashboards
 
 During the following exercises we will cover the following Personas:
  
@@ -173,7 +176,7 @@ During the following exercises we will cover the following Personas:
  
  IDCS supports user (also groups) on-boarding from on-premises **Active Directory**, using file upload, REST API, on-premises **Oracle Identity Management** solution, or manually from IDCS admin console. For the workshop we will be using file upload option and API calls user management.
 
-### Create User in UI (Persona: Administrator)
+### **DEMO** - Create User in UI (Persona: Administrator)
 
 *  Go to IDCS Admin console using your administrator account credentials. Select the **Users** menu on the left and click **+Add** or select the **Add a user** icon from the dashboard.
 
@@ -200,9 +203,10 @@ During the following exercises we will cover the following Personas:
 The following exercise has been developed to showcase IDCS API capabilities.
 This use case involves making API calls to IDCS using a REST client; in this case Postman. The Postman collection of relevant REST API calls is provided to each participant.
 
-### Register a client POSTMAN application in IDCS
+*NOTE: If you don't have POSTMAN installed in your system, please visit [POSTMAN Website](https://www.getpostman.com/products) download and install it following the site instructions.*
 
-* If you don't have POSTMAN installed in your system, please visit [POSTMAN Website](https://www.getpostman.com/products) download and install it following the site instructions.
+
+### **DEMO** - Register a client POSTMAN application in IDCS
 
 *  Navigate to your tenant https://**yourtenant**/ui/v1/adminconsole
  
@@ -276,7 +280,7 @@ This use case involves making API calls to IDCS using a REST client; in this cas
  
 * Sign out from IDCS
 
-###  Configure Postman
+###  **EXERCISE**  - Configure Postman
     
 *  Open **Postman**. Ignore all startup messages if any.
 
@@ -393,7 +397,7 @@ https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_
  
  In this hands-on exercise, we will setup integration with **Salesforce** using SAML. IDCS will act as **IdP** (Identity Provider) and Salesforce org as **SP** (Service Provider also known as a Relying Party)
 
-### Enable SSO on SalesForce
+### **DEMO** - Enable SSO on SalesForce
 
 * Download IDCS Metadata to a local XML file. Metadata is available from the following location - https://**yourtenant**/fed/v1/metadata. Depending on the browser you are using,the simplest way of doing this is to right click anywhere on the page and chose “Save as” option provide a name and save it as XML file. Try not to use the copy / paste option as the xml file may be altered.
 
@@ -497,7 +501,7 @@ Now that the Salesforce configurations are done, we need to configure IDCS to be
  ![](./media/idcs63.png)
  <p align="center"> Figure 2-17 </p>
 
-### Assign Apps to Group (Persona: Administrator)
+### **DEMO** - Assign Apps to Group (Persona: Administrator)
 
 In IDCS you have the option to assign access to users directly, by direct assignment to a specific application, or indirectly using dedicated groups. For the purpose of the use case we’ll be using groups to provide users access to Salesforce application.
 
@@ -534,7 +538,7 @@ Moving back to Salesforce in order to create a corresponding account for one tha
 
 Now that the account is available in Salesforce and IDCS has the authenticated account you are ready to test.
 
-### Request Group Access (Persona: End User)
+### **EXERCISE** - Request Group Access (Persona: End User)
 
 Remember that we have created the **Employee** group into IDCS which is having access to Salesforce application but there is no user assigned yet to it. Since we chose the option
  
@@ -572,7 +576,7 @@ Remember that we have created the **Employee** group into IDCS which is having a
 ![](./media/idcs72.png)
 <p align="center"> Figure 2-26 </p>
 
-### Verify SSO Configuration (Persona: End User)
+### **EXERCISE** - Verify SSO Configuration (Persona: End User)
 
 *  Click on the **Salesforce Chatter** app from **My Apps** page
 
@@ -589,7 +593,7 @@ You should now see the same user profile information, that you started within ID
 The following exercise has been developed to showcase the extend of IDCS Single Sign-On capabilities by integrating the provisioning and synchronization services with third-party apps.
 
 
-### Configure Provisioning and Synchronization (Persona: Administrator) - OPTIONAL
+### **DEMO** - Configure Provisioning and Synchronization (Persona: Administrator) - OPTIONAL
 
 *  Obtaining Host Name, Organization ID, and Domain Name from Salesforce
 
@@ -655,7 +659,7 @@ The domain name appears at the beginning and the organization ID appears at the 
 
 * Make note of the **Consumer Key** and **Consumer Secret** values.
 
-### Deriving the Administrator Password from Salesforce
+### **DEMO** - Deriving the Administrator Password from Salesforce
 
  A security token must be appended to the administrator password before you enable provisioning and synchronization for Salesforce app. You obtain the token value from Salesforce.
  
@@ -682,7 +686,7 @@ The domain name appears at the beginning and the organization ID appears at the 
  (ex:LKdMzECdjFKYSj028WJhU1GG) 
  NOTE: the + must not be included
 
-###  Enabling Provisioning and Synchronization for Salesforce - OPTIONAL
+###  **DEMO** - Enabling Provisioning and Synchronization for Salesforce - OPTIONAL
 
  Provisioning will provide you with the following available operations:
  
@@ -726,7 +730,7 @@ The domain name appears at the beginning and the organization ID appears at the 
  Salesforce and link them to the corresponding Oracle Identity Cloud
  Service users.
 
-###  Testing Synchronization in IDCS - OPTIONAL
+###  **DEMO** - Testing Synchronization in IDCS - OPTIONAL
 
 *  On the applications page, select **Import**.
 
