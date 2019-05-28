@@ -97,7 +97,7 @@ classroom and supporting lab files.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2 - Dashboard<br/>
 
-   Click the “Visual Builder” service (next step)
+   If you see the "Visual Builder' service box [jump to step 5 Open VBCS Home Page](#-open-vbcs-home-page)
 
   (if your dashboard does not show “Visual Builder” – click “Customize
 Dashboard”)
@@ -150,6 +150,8 @@ Dashboard”)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.4 – VBCS Instances<br/>
 
+#### Open VBCS Home Page  
+
 5.  Select the VBCS instance being used for the lab ("ospavcs1" below), then using the “Hamburger Icon” ![](./media/image16.png) on the far right;
     choose “Open Oracle Visual Builder Cloud Service Home Page”
 
@@ -195,7 +197,7 @@ Dashboard”)
 
 This concludes Lab 1.
 
-[Go to Lab 2](#lab-4-data-from-service) – [Return to Table of Contents](#table-of-contents)
+[Go to Lab 2](#lab-2-spreadsheet-based-business-objects) – [Return to Table of Contents](#table-of-contents)
 <br/>
 
 # Lab 2: Spreadsheet-based Business Objects
