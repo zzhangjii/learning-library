@@ -447,7 +447,7 @@ https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_
 ![](./media/idcs54.png)
 <p align="center"> Figure 2-8 </p>
 
-* Keep all the default information and click on **Save**
+* Update the **Entity ID** with the domain information registered in the previous steps (e.g *https://acasas-dev-ed.my.salesforce.com*) and click **Save**
 
 ![](./media/idcs55.jpeg)
 <p align="center"> Figure 2-9 </p>
