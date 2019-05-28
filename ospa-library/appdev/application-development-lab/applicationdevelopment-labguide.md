@@ -97,7 +97,7 @@ classroom and supporting lab files.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2 - Dashboard<br/>
 
-   If you see the "Visual Builder' service box [jump to step 5 Open VBCS Home Page](#-open-vbcs-home-page)
+   If you see the "Visual Builder' service box [jump to step 5 Open VBCS Home Page](#open-vbcs-home-page)
 
   (if your dashboard does not show “Visual Builder” – click “Customize
 Dashboard”)
