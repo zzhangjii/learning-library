@@ -1,4 +1,4 @@
-# NAT gateway
+# NAT gateway.
 
 ## Table of Contents
 
