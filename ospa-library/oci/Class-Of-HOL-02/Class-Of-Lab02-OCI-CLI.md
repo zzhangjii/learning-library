@@ -501,7 +501,7 @@ Again, record the route table id as a variable.
 
 **Note:**  [*Visit this link to find out more details about the query command. Look for 'Filter Output' commands.*](https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/cliusing.htm#ManagingCLIInputandOutput)
 
-```[opc@cli-instance ~]$ oci compute image list --compartment-id $CID --query 'data[?contains("display-name",`Oracle-Linux-7.6-20`)]|[*].["display-name",id]''```
+```[opc@cli-instance ~]$ oci compute image list --compartment-id $CID --query 'data[?contains("display-name",`Oracle-Linux-7.6-20`)]|[*].["display-name",id]'```
 
 ![](./media/image057.png)
 *<p align="center"> Figure 54. Image query command</p>*
@@ -565,15 +565,19 @@ Capture the ``id:`` of the compute instance launch output.
 
 4. Rerun the command every 30-60 seconds until the lifecycle-state is ``RUNNING``
 
+**Note:** *If finished, please delete the resources you created.
+
+   If you are finished, please retrace your steps and delete the resources you've created.  This will free up resources for others and save costs by not leaving un-used resources running.
+
 ## This completes the exercise for basic usage of the OCI CLI.
 
-![](./media/image99.png)
+- Congratulations, you have finished this lab on the OCI CLI.
+- If there's is time available, you can continue on to the challenge section below.   
+ - If you are finished, please delete the resources you created for this lab.  Use the CLI if possible for further practice, but if time is short, you can use the console.   
+ - Compute resources aren't finite, and they aren't free.  Please help us save costs and keep resources available for other students by stopping or removing any resources you've created for this lab.
+ - Please do not remove other students resources unless you have approval to do so.
 
-
-[Back to top](#Class-of-SE---HOL-Part-2)
-
-##
-
+ [Conclusion](#Conclusion)
 
 # OCI Challenge - Create and Destroy resources
 
@@ -609,7 +613,25 @@ This challenge is optional if you have extra time.   Below are a couple of objec
 
    *Hint - the order in which you delete the resources is very important.*
 
-## Congratulations! You have successfully completed Getting Started with OCI CLI lab.
+# Conclusion
+
+This lab introduced you to the Oracle Cloud Infrastructure command line interface.  Let’s review what you've accomplished.
+
+You created a VCN and an instance.  You installed and configured the OCI CLI utility.   You created API keys and connected to your instance.  Then you used the CLI to create several resources including an instance.  This lab was designed to familiarize you with the CLI and how a customer could use it to configure resources quickly and efficiently.   
+
+## What you completed
+
+  - Create a VCN and launch and instance
+
+  - Install and configure the CLI tool
+
+  - Create a VCN with the CLI
+
+  - Create and launch an instance with the CLI
+
+  - Optionally create block storage
+
+  - Optionally destroy the resources that you created
 
 ![](./media/image99.png)
 
