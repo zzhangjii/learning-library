@@ -87,13 +87,33 @@ classroom and supporting lab files.
 
 1.  Log into class tenancy using cloud.oracle.com
 
-    ![](./media/image5.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.1 - Login<br/>
+    ![](./media/cloud-oracle-com-tenancy.png)
 
-2.  On some systems you will see a “dashboard” as shown below.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.1 - Tenancy<br/>
 
-    ![](./media/vbcs_cloud_dashboard.png)
+
+  ![](./media/image5.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2   - Login<br/>
+
+2.  Some systems will offer a "Guided Journey"
+
+
+   ![](./media/cloud-guided-journey.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.1 - Guided Journey<br/>
+
+If you see the "Guided Journey" select the "Dashboard" icon
+
+   ![](./media/cloud-guided-journey-dashboardbtn.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.2 - Guided Journey<br/>
+
+
+On some systems you will go straight to a “dashboard” as shown below. (same as coming from Guided Journey)
+
+  ![](./media/vbcs_cloud_dashboard.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2 - Dashboard<br/>
 
@@ -293,7 +313,7 @@ upper-left corner.
 
 <!-- end list -->
 
-  - A (text) productName Product Name
+  - A (text) productName Product Name (already done above)
 
   - A (text) product Description Product Description
 
@@ -352,8 +372,8 @@ Click on the plus sign “+” to begin adding relationships.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.3 – Add Relationship
 
-Use the “drop down” on the right side of the screen to select “Product”
-and check to make sure that “Product” is on the “One” side and
+Use the “drop down” on the right side of the screen to select “Product Order”
+and check to make sure that “Product Order” is on the “One” side and
 “ProductOrderLine” is on the “Many” side of the relationship. Click
 “Create Relationship” (default values are ok).
 
@@ -363,16 +383,15 @@ and check to make sure that “Product” is on the “One” side and
 
    Click on the plus sign “+” to add another relationship.
 
-![](./media/image39.png)
+![](./media/image40.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.5 – Add next relationship
 
-Using the drop-down on the right side of the screen select the “Product
-Order” and make sure that “Product Order Line” is on the “Many” side and
-that “Product Order” is on the “One” side of the relationship. Click
+Using the drop-down on the right side of the screen select the “Product” and make sure that “Product Order Line” is on the “Many” side and
+that “Product” is on the “One” side of the relationship. Click
 “Create Relationship” when done (defaults are ok).
 
-![](./media/image40.png)
+![](./media/image39.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.6 – Add second relationship
 
@@ -415,7 +434,7 @@ The completed field list should look like this:
 
 ![](./media/image47.png)
 
-12. Reopen the “Product Business Object” and click “+ Add Row” to add a
+12. Reopen the “Product" Business Object (from the Business Objects list); click on the "Data" tab and then click “+ Add Row” to add a
     row of data
 
 ![](./media/image48.png)
@@ -431,6 +450,8 @@ The completed field list should look like this:
   - Product Description Mozzarella cheese
 
   - Unit Price 7
+
+  (click the "Checkmark" ![](./media/vbcs_checkmark.png) when done)
 
 ![](./media/image49.png)
 
@@ -514,7 +535,7 @@ Click the “Import” button to upload the selected file
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.19 – Product List
 
-20. Create an initial “Product Order” as follows, then review your
+20. Create an initial “Product Order” (Product Order -> Data -> + Add Row) as follows, then review your
     results  
     ![](./media/image60.png)
 
