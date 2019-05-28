@@ -9,6 +9,8 @@
 - [Module 1: Stopping the Autonomous Database](#module-1--stopping-the-autonomous-database)
 - [Module 2: Starting the Autonomous Database](#module-2--starting-the-autonomous-database)
 - [Module 3: Scaling the Autonomous Database](#module-3--scaling-the-autonomous-database)
+- [Module 4: Delete Autonomous Database and Clean Up Environment](#module-4--delete-autonomous-database-and-clean-up-environment)
+
 
 ***** 
 
@@ -100,7 +102,52 @@ the new **CPU Core Count** is reflected in the service details.
 3. Use the same process to scale the system back down to 1 CPU by making the CPU
 Core Count 1 in the scale pop-up.
 
-**This concludes the starting, stopping, and scaling lab.**
+[Back to Top](#table-of-contents)
+
+## Module 4:  Delete Autonomous Database and Clean Up Environment
+
+After you finish all the labs, its important to clean up the environment so the next group has available resources. In this module you will terminate your Autonomous Database so the resources are released. In this example s database called **egtest** is terminated. You should **only** terminate the database your created and be careful not to terminate another groups database.
+
+1. From the **Database Console** page of your ADB service, click on your database.
+
+![](media/2569dd9b76793a71fd87a1e43e54499f.png)
+<p align="center">Figure 4-1</p>
+
+2. From the **Database Details** page of your ADB service, click on the **Actions** drop down 
+
+![](media/a83f510a659e12ee9dc586b20469f1e2.png)
+
+3. Select **Terminate** your service.
+<p align="center">Figure 4-2</p>
+
+![](media/0635adb37c2f8f0a54ea7e8f35d2233b.png)
+<p align="center">Figure 4-3</p>
+
+4. A **Terminate Autonomous Database** pop up appears, type in your  **Database Name** to confirm you want to delete it, then click **Terminate Database**
+
+![](media/30d4b290e26c5fa7ac2fa919dd5fd826.png)
+<p align="center">Figure 4-4</p>
+
+5. The Database Details console will reappear showing the database **Terminating**
+
+![](media/64580f8cdfff174e081282b4641c7f99.png)
+<p align="center">Figure 4-5</p>
+
+6. After a few minutes the database will show **Terminated**
+
+![](media/7fe906e83809bb5acb1c76ab10ddac01.png)
+<p align="center">Figure 4-6</p>
+
+In the Database Console page you will notice that the database remains in **Terminated** status. It takes about 24 hours for the database to dissapear from the Console, but it is no longer active or consuming resources.
+
+![](media/826b82e32721429c43ebdb55c5bf2243.png)
+<p align="center">Figure 4-7</p>
+
+
+
+
+
+**This concludes the starting, stopping, scaling  and terminating lab.**
 
 ***END OF LAB***
 
