@@ -33,6 +33,8 @@ with your Oracle Cloud account.
 ![](media/3bcfe3c10f6b3821c1298edd15f11544.png)
 <p align="center">Figure 1-3</p>
 
+**PLEASE NOTE: Because the environmnet you are using is a LAB environment the pages you land on may be different than the ones  you see in this lab section. We try to incorporate all posibilities, however there may be some cases were the lab does not follow exactly what you see on your screen. Your objective is to get to the Autonomous Database (Datawarehouse or Transaction Processing) page.**
+
 4. This will bring you to the main cloud page which may differ depending on whether
 this cloud account has been used before and the main portal customized. Below
 you will see the main screen for a new account, that shows available Guided
@@ -41,27 +43,34 @@ Journey’s. From here you can launch different Oracle cloud services. If you se
 ![](media/d1fa3898f59c6b6561adedd702f1b891.png)
 <p align="center">Figure 1-4</p>
 
-5. For the group labs you are most likely to see the page below, select the **OCI Console** icon:
+5. If you did not see the previsou pages, for the group labs you are most likely to see the page below, select the **OCI Console** icon and proceed to step 6:
 
 ![](media/mainloginpage.jpg)
 <p align="center">Figure 1-5</p>
 
 
 
-6. Whether you saw the screen on step 4 or 5, following the steps you should see a list of options on the let hand side. One of those options should be Autonomous Transaction Processing or Autonomous Data Warehouse. Select **Autonomous Transaction Processing** from the menu.
+6. Whether you saw the screen on step 4 or 5, following the steps you should see a list of options on the let hand side drop down menu. One of those options should be Autonomous Transaction Processing or Autonomous Data Warehouse. Select **Autonomous Transaction Processing** from the menu.
 
 ![](media/b7a5b961764035c8b0dc66af52e86254.png)
 <p align="center">Figure 1-6</p>
 
 This will put you in the main Autonomous Database Service Console (see below).
-Any ADB Databases created will be listed here. You can also create and access
-databases from this page.
+Any ADB Databases created will be listed here (in its appropriate compartment). You can also create and access databases from this page. If you see a **Forbidden** exclamation point in the middle of the page, its because you defaulted into a **Compartment** you do not have permission to access. Don't worry you will not be using this compartment.
+
+![](media/dc16e9a82c6beb6654b912c56d13af39.png)
+<p align="center">Figure 1-7</p>
 
 It is possible to use different compartments to separate databases into
-different associated groups. Navigate to the appropriate compartment you were instucted to use for these labs to create your database. 
+different associated groups. We will do that for this lab, like you have been doing for other labs. In the **Compartment** drop down list navigate to the appropriate compartment you were instucted to use for these labs to create your database (most likely the name of your HUB). 
 
-![](media/519f90a4b9e0ad0d198c6f6a651979c7.png)
-<p align="center">Figure 1-7</p>
+![](media/fc384837da24a6871f95fc6c5974dd1b.png)
+<p align="center">Figure 1-8</p>
+
+In this case I selected the **Bangalore-Hub** Compartment
+
+![](media/daf5af36eb8087ba0d6a792848e6e2b9.png)
+<p align="center">Figure 1-9</p>
 
 ***** 
 
