@@ -6,23 +6,38 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Recommended Learning Assets](#recommended-learning-assets)
+[Sign in to OCI Console and create ADW instance](#sign-in-to-oci-console-and-create-adw-instance)
 
-[Practice 1: Sign in to OCI Console and create ADW instance](#practice-1-sign-in-to-oci-console-and-create-adw-instance)
+[Create Auth token for the user connect to ADW and load data](#create-auth-token-for-the-user-connect-to-adw-and-load-data)
 
-[Practice 2: Create Auth token for the user connect to ADW and load data](#practice-2-create-auth-token-for-the-user-connect-to-adw-and-load-data)
-
-[Practice 3: Delete the resources](#practice-5-delete-the-resources)
+[Delete the resources](#delete-the-resources)
 
 ## Overview
 
 Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous database that scales elastically, delivers fast query performance and requires no database administration. In this hands on lab, we will walk through deploying an Autonomous Data Warehouse database and loading a table using a text file that is stored in object storage. The purpose of this lab is to get familiar with Oracle Autonomous Data Warehouse primitives. At the end of this lab, you will be familiar with launching an Autonomous Data Warehouse database, creating an object storage bucket and loading a table using a text file stored in object storage
 
+**Some Key points;**
+
+- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
+
+- All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
+
+- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
+
+- Do NOT use compartment name and other data from screen shots.Only use  data(including compartment name) provided in the content section of the lab
+
+- Mac OS Users should use ctrl+C / ctrl+V to copy and paste inside the OCI Console
+
+- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
+
+**Cloud Tenant Name**
+**User Name**
+**Password**
+**Compartment Name (Provided Later)**
+
+**Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
+
 ## Pre-Requisites
-
-- Oracle Cloud Infrastructure account credentials (User, Password, Tenant, and Compartment)  
-
-## Recommended Learning Assets
 
 1. OCI Training : https://cloud.oracle.com/en_US/iaas/training
 
@@ -34,24 +49,8 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 
 5. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
 
-**Before You Begin**
 
-- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
-- All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
-- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
-
-**Cloud Tenant Name**
-**User Name**
-**Password**
-**Compartment Name (Provided Later)**
-
-- Do NOT use compartment name and other data from screen shots.Only use  data(including compartment name) provided in the content section of the lab
-
-- Mac OS Users should use ctrl+C / ctrl+V to copy and paste inside the OCI Console
-
-**Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
-
-## Practice-1: Sign in to OCI Console and create ADW instance
+## Sign in to OCI Console and create ADW instance
 
 * **Tenant Name:** {{Cloud Tenant}}
 * **User Name:** {{User Name}}
@@ -92,7 +91,7 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 
 **We now have a Autonomous Data Warehouse instance created. We have also downloaded the Client Credentials file. We will use this file when connecting to the database instance  using Sql Developer. Next we will create a Data file and use Object stroage to upload it to Database instance.**
               
-## Practice 2: Create Auth token for the user connect to ADW and load data
+## Create Auth token for the user connect to ADW and load data
 
 In this section we will generate auth token for the user of this lab. An Auth token is an Oracle-generated token that you can use to authenticate with third-party APIs and Autonomous Database instance.
 
@@ -226,8 +225,7 @@ select * from channels;
 
 **We have successfully deployed a Autonomous Data Warehouse instance,populated a table using a file stored in Object storage and successfully run a query against the table.**
 
-
-## Practice 3: Delete the resources
+## Delete the resources
 
 **Delete Auth Token and Autonomous Data Warehouse**
 

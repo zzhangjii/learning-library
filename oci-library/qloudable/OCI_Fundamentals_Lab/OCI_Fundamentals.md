@@ -6,8 +6,6 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Recommended Learning Assets](#recommended-learning-assets)
-
 [Sign in to OCI Console and create VCN](#sign-in-to-oci-console-and-create-vcn)
 
 [Create Public Private SSH Key Pair Using Built-in Application and two compute instances and install web server](#create-public-private-ssh-key-pair-using-built-in-application-and-two-compute-instances-and-install-web-server)
@@ -27,15 +25,28 @@ Welcome to the Deploying High Availability Applications Using Load Balancer self
 
 In this lab you will deploy http servers on two compute instances in Oracle Cloud Infrastructure which will be configured in High Availability mode by using a Load Balancer. The Load Balancing Service provides automated traffic distribution from one entry point to multiple servers within your Virtual Cloud Network (VCN). The service offers a Public load balancer with a public IP address, provisioned bandwidth, and high availability. The Load Balancing Service provisions the public IP address across two subnets within a VCN to ensure accessibility even during an Availability Domain outage.
 
-How to Use the Lab Interface:
+**Some Key points;**
 
-https://www.youtube.com/watch?v=FJRnrNMrj3Y
+- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
+
+- All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
+
+- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
+
+- Do NOT use compartment name and other data from screen shots.Only use  data(including compartment name) provided in the content section of the lab
+
+- Mac OS Users should use ctrl+C / ctrl+V to copy and paste inside the OCI Console
+
+- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
+
+**Cloud Tenant Name**
+**User Name**
+**Password**
+**Compartment Name (Provided Later)**
+
+**Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
 
 ## Pre-Requisites
-
-- Oracle Cloud Infrastructure account credentials (User, Password, Tenant, and Compartment)  
-
-## Recommended Learning Assets
 
 1. OCI Training : https://cloud.oracle.com/en_US/iaas/training
 
@@ -46,23 +57,6 @@ https://www.youtube.com/watch?v=FJRnrNMrj3Y
 4. Familiarity with Compartment: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/concepts.htm
 
 5. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
-
-**Before You Begin**
-
-- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
-- All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
-- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
-
-**Cloud Tenant Name**
-**User Name**
-**Password**
-**Compartment Name (Provided Later)**
-
-- Do NOT use compartment name and other data from screen shots.Only use  data(including compartment name) provided in the content section of the lab
-
-- Mac OS Users should use ctrl+C / ctrl+V to copy and paste inside the OCI Console
-
-**Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
 
 ## Sign in to OCI Console and create VCN
 
@@ -309,7 +303,7 @@ In this section we will create a new security list. This security list will be u
 **Click +Additional Route Rules**
 - Target Type: Select **Internet Gateway** 
 - Destination CIDR Block: 0.0.0.0/0 
-- Compartment:  Make sure the correct Compartment is selected: 
+- Compartment: Make sure the correct Compartment is selected: 
 - Target Internet Gateway: Select the Internet Gateway for your VCN. 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_003.PNG" alt="image-alt-text" height="100" width="100">

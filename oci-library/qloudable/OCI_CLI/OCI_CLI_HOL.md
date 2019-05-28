@@ -6,11 +6,11 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Practice 1: Sign in to OCI Console and create a VCN](#practice-1-sign-in-to-oci-console-and-create-a-vcn)
+[Sign in to OCI Console and create a VCN](#sign-in-to-oci-console-and-create-a-vcn)
 
-[Practice 2: Create ssh keys and compute instance](#practice-2-create-ssh-keys-and-compute-instance)
+[Create ssh keys and compute instance](#create-ssh-keys-and-compute-instance)
 
-[Practice 3: Testing the CLI, Create another VCN with one public subnet](#practice-3-testing-the-cli,-create-another-vcn-with-one-public-subnet)
+[Testing the CLI, Create another VCN with one public subnet](#testing-the-cli,-create-another-vcn-with-one-public-subnet)
 
 
 ## Overview
@@ -19,12 +19,29 @@ Automation is a critical component when it comes to managing Cloud workloads at 
 
 This lab will walk you through installation and configuration of the CLI, along with the execution of several create, read, and terminate commands.  Upon completion of this lab you should have a good understanding of how to use the OCI CLI to automate common tasks in OCI.
 
+**Some Key points;**
+
+- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
+
+- All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
+
+- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
+
+- Do NOT use compartment name and other data from screen shots.Only use  data(including compartment name) provided in the content section of the lab
+
+- Mac OS Users should use ctrl+C / ctrl+V to copy and paste inside the OCI Console
+
+- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
+
+**Cloud Tenant Name**
+**User Name**
+**Password**
+**Compartment Name (Provided Later)**
+
+**Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
+
 ## Pre-Requisites
 
-- Oracle Cloud Infrastructure account credentials (User, Password, Tenant, and Compartment)
-- [Create an SSH Key Pair](#create-an-ssh-key-pair)
-
-## Recommended Learning Assets
 1. OCI Training : https://cloud.oracle.com/en_US/iaas/training
 
 2. Familiarity with OCI console: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/console.htm
@@ -35,20 +52,12 @@ This lab will walk you through installation and configuration of the CLI, along 
 
 5. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
 
-## Practice-1: Sign in to OCI Console and create a VCN
-
-
-**Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
-
-**Before You Begin**
-
-- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
+## Sign in to OCI Console and create a VCN
 
 * **Tenant Name:** {{Cloud Tenant}}
 * **User Name:** {{User Name}}
 * **Password:** {{Password}}
 * **Compartment:**{{Compartment}}
-
 
 1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
@@ -80,7 +89,7 @@ This lab will walk you through installation and configuration of the CLI, along 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text" height="100" width="100">
               
-## Practice 2: Create ssh keys and compute instance
+## Create ssh keys and compute instance
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
@@ -221,7 +230,7 @@ cat ~/.oci/oci_api_key_public.pem
 
 ***We will now test the functionality of the CLI***
 
-## Practice 3: Testing the CLI, Create another VCN with one public subnet
+## Testing the CLI, Create another VCN with one public subnet
 
 1. In the SSH terminal session, type the following command:
 

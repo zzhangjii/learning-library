@@ -6,26 +6,41 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Recommended Learning Assets](#recommended-learning-assets)
+[Sign in to OCI Console and create VCN](#sign-in-to-oci-console-and-create-vcn)
 
-[Practice 1: Sign in to OCI Console and create VCN](#practice-1-sign-in-to-oci-console-and-create-vcn)
+[Create ssh keys and compute instance](#create-ssh-keys-and-compute-instance)
 
-[Practice 2: Creat ssh keys and compute instance](#practice-2-creat-ssh-keys-and-compute-instance)
+[Download Script to configure Streaming service and Publish messages](#download-script-to-configure-streaming-service-and-publish-messages)
 
-[Practice 3: Download Script to configure Streaming service and Publish messages](#practice-3-download-script-to-configure-streaming-service-and-publish-messages)
-
-[Practice 4: Delete the resources](#practice-4-delete-the-resources)
+[Delete the resources](#delete-the-resources)
 
 
 ## Overview
 
 In this lab we will create a compute instance, download a script to configure streaming service, publish and consume messages.The Oracle Cloud Infrastructure Streaming service provides a fully managed, scalable, and durable storage solution for ingesting continuous, high-volume streams of data that you can consume and process in real time. Streaming can be used for messaging, ingesting high-volume data such as application logs, operational telemetry, web click-stream data, or other use cases in which data is produced and processed continually and sequentially in a publish-subscribe messaging model.
 
+**Some Key points;**
+
+- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
+
+- All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
+
+- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
+
+- Do NOT use compartment name and other data from screen shots.Only use  data(including compartment name) provided in the content section of the lab
+
+- Mac OS Users should use ctrl+C / ctrl+V to copy and paste inside the OCI Console
+
+- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
+
+**Cloud Tenant Name**
+**User Name**
+**Password**
+**Compartment Name (Provided Later)**
+
+**Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
+
 ## Pre-Requisites
-
-- Oracle Cloud Infrastructure account credentials (User, Password, Tenant, and Compartment)  
-
-## Recommended Learning Assets
 
 1. OCI Training : https://cloud.oracle.com/en_US/iaas/training
 
@@ -37,11 +52,7 @@ In this lab we will create a compute instance, download a script to configure st
 
 5. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
 
-**Before You Begin**
-
-- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
-
-## Practice-1: Sign in to OCI Console and create VCN
+## Sign in to OCI Console and create VCN
 
 * **Tenant Name:** {{Cloud Tenant}}
 * **User Name:** {{User Name}}
@@ -80,7 +91,7 @@ In this lab we will create a compute instance, download a script to configure st
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text" height="100" width="100">
               
-## Practice 2: Create ssh keys and compute instance
+## Create ssh keys and compute instance
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
@@ -181,7 +192,7 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
  
 14. Verify opc@<COMPUTE_INSTANCE_NAME> appears on the prompt
 
-## Practice 3: Download Script to configure Streaming service and Publish messages
+## Download Script to configure Streaming service and Publish messages
 
 1. In ssh session to compute instance, configure OCI CLI, Enter command:
 
@@ -290,7 +301,7 @@ python ~/stream_example.py ocid1.compartment.oc1..aaaaaaaada2gaukcqoagqoshxq2pyt
 
 15. Follow the prompts of the script. The script will create Streaming service called **SdkExampleStream**. It will publish 100 messages, create 2 groups on the compute and read those messages. Finally it will delete the streaming service. **You will be prompted to hit enter after verifying each step**
 
-## Practice 4: Delete the resources
+## Delete the resources
 
 1. Switch to  OCI console window
 

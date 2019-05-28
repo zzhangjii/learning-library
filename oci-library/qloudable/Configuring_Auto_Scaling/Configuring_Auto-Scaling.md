@@ -6,13 +6,11 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Recommended Learning Assets](#recommended-learning-assets)
+[Sign in to OCI Console and create VCN](#sign-in-to-oci-console-and-create-vcn)
 
-[Practice 1: Sign in to OCI Console and create VCN](#practice-1-sign-in-to-oci-console-and-create-vcn)
+[Configure instance pool and auto scaling](#configure-instance-pool-and-auto-scaling)
 
-[Practice 2: Configure instance pool and auto scaling](#practice-2-configure-instance-pool-and-auto-scaling)
-
-[Practice 3: Delete the resources](#practice-3-delete-the-resources)
+[Delete the resources](#delete-the-resources)
 
 
 ## Overview
@@ -26,12 +24,28 @@ Autoscaling relies on performance metrics that are collected by the Monitoring s
 
 A cooldown period between autoscaling events lets the system stabilize at the updated level. The cooldown period starts when the instance pool reaches a steady state. Autoscaling continues to evaluate performance metrics during the cooldown period. When the cooldown period ends, autoscaling adjusts the instance pool's size again if needed.
 
+**Some Key points;**
+
+- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
+
+- All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
+
+- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
+
+- Do NOT use compartment name and other data from screen shots.Only use  data(including compartment name) provided in the content section of the lab
+
+- Mac OS Users should use ctrl+C / ctrl+V to copy and paste inside the OCI Console
+
+- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
+
+**Cloud Tenant Name**
+**User Name**
+**Password**
+**Compartment Name (Provided Later)**
+
+**Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
 
 ## Pre-Requisites
-
-- Oracle Cloud Infrastructure account credentials (User, Password, Tenant, and Compartment)  
-
-## Recommended Learning Assets
 
 1. OCI Training : https://cloud.oracle.com/en_US/iaas/training
 
@@ -43,11 +57,7 @@ A cooldown period between autoscaling events lets the system stabilize at the up
 
 5. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
 
-**Before You Begin**
-
-- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
-
-## Practice-1: Sign in to OCI Console and create VCN
+## Sign in to OCI Console and create VCN
 
 * **Tenant Name:** {{Cloud Tenant}}
 * **User Name:** {{User Name}}
@@ -86,7 +96,7 @@ A cooldown period between autoscaling events lets the system stabilize at the up
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text" height="100" width="100">
               
-## Practice 2: Configure instance pool and auto scaling
+## Configure instance pool and auto scaling
 
 1. Configure instance pool requires creating a instance configuration. First we will create ssh keys and a compute instance to create instance configuration. 
 Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
@@ -332,7 +342,7 @@ sudo stress --cpu 4 --timeout 350
 
 **This is becuase our criteria of CPU utilization < 5 is met**
 
-## Practice 3: Delete the resources
+## Delete the resources
 
 1. Switch to  OCI console window
 
