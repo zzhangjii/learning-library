@@ -93,7 +93,7 @@ classroom and supporting lab files.
 
 2.  On some systems you will see a “dashboard” as shown below.
 
-    ![](./media/image6.png)
+    ![](./media/vbcs_cloud_dashboard.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2 - Dashboard<br/>
 
@@ -146,14 +146,14 @@ Dashboard”)
     share (your instance name may be different than the one shown.  
     (see Appendix A for instructions on creating a VBCS instance)
 
-    ![](./media/image15.png)
+    ![](./media/vbcs_instance_list.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.4 – VBCS Instances<br/>
 
 5.  Select the VBCS instance being used for the lab ("ospavcs1" below), then using the “Hamburger Icon” ![](./media/image16.png) on the far right;
     choose “Open Oracle Visual Builder Cloud Service Home Page”
 
-    ![](./media/image17.png)
+    ![](./media/vbcs_instance_0.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.5 – Open VBCS<br/>
 
@@ -178,7 +178,7 @@ Dashboard”)
     
     If you are sharing your lab environment with a group of people you might find it convenient to follow a naming convention to make it easier for you to find your work and for the facilitators to help you.
     
-    Perhaps combining your name or initials (or even employee id) with two-or-three characters representing your location to add as a prefix to the names of all applications you create. Visual Builder's list of applications may be sorted and filtered easily.
+    Perhaps combining your name or initials (or even employee id) with two-or-three characters representing your location to use as an application name or to add as a prefix to the names of all applications you create. Visual Builder's list of applications may be sorted and filtered easily.
       
     Be sure the “Empty Application” template is selected and click
     “Finish” to continue.
