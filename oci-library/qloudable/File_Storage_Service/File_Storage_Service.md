@@ -1,4 +1,4 @@
-# Cloud Storage (File System ) 
+# File System Storage Service
 
 ## Table of Contents
 
@@ -6,17 +6,15 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Recommended Learning Assets](#recommended-learning-assets)
+[Sign in to OCI Console and create VCN](#sign-in-to-oci-console-and-create-vcn)
 
-[Practice 1: Sign in to OCI Console and create VCN](#practice-1-sign-in-to-oci-console-and-create-vcn)
+[Create File System Storage](#create-file-system-storage)
 
-[Practice 2: Create File System Storage](#practice-2-create-file-system-storage)
+[Creat ssh keys and compute instance](#create-ssh-keys-and-compute-instance)
 
-[Practice 3: Creat ssh keys and compute instance](#practice-3-create-ssh-keys-and-compute-instance)
+[Mount the File Storage System to Compute Instance](#mount-the-file-storage-system-to-compute-instance)
 
-[Practice 4: Mount the File Storage System to Compute Instance](#practice-4-mount-the-file-storage-system-to-compute-instance)
-
-[Practice 5: Delete the resources](#practice-5-delete-the-resources)
+[Delete the resources](#delete-the-resources)
 
 ## Overview
 
@@ -26,11 +24,28 @@ Oracle Cloud Infrastructure File Storage Service provides a durable, scalable, d
 
 In this lab you will create and mount File Storage System to a compute instance and verify availability of the File Storage system.
 
+**Some Key points;**
+
+- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
+
+- All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
+
+- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
+
+- Do NOT use compartment name and other data from screen shots.Only use  data(including compartment name) provided in the content section of the lab
+
+- Mac OS Users should use ctrl+C / ctrl+V to copy and paste inside the OCI Console
+
+- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
+
+**Cloud Tenant Name**
+**User Name**
+**Password**
+**Compartment Name (Provided Later)**
+
+**Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
+
 ## Pre-Requisites
-
-- Oracle Cloud Infrastructure account credentials (User, Password, Tenant, and Compartment)  
-
-## Recommended Learning Assets
 
 1. OCI Training : https://cloud.oracle.com/en_US/iaas/training
 
@@ -42,24 +57,9 @@ In this lab you will create and mount File Storage System to a compute instance 
 
 5. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
 
-**Before You Begin**
-
-- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
-- All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
-- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
-
-**Cloud Tenant Name**
-**User Name**
-**Password**
-**Compartment Name (Provided Later)**
-
-- Do NOT use compartment name and other data from screen shots.Only use  data(including compartment name) provided in the content section of the lab
-
-- Mac OS Users should use ctrl+C / ctrl+V to copy and paste inside the OCI Console
-
 **Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
 
-## Practice-1: Sign in to OCI Console and create VCN
+## Sign in to OCI Console and create VCN
 
 * **Tenant Name:** {{Cloud Tenant}}
 * **User Name:** {{User Name}}
@@ -138,7 +138,7 @@ In this lab you will create and mount File Storage System to a compute instance 
 
 **NOTE:** Note down the Subnet and Availability domain. We will create File Storage system and compute instance in the same subnet and Availability domain later on.
 
-## Practice 2: Create File System Storage
+## Create File System Storage
 
 In this section we will create File System Storage.
 
@@ -180,7 +180,7 @@ In this section we will create File System Storage.
 
 **We now have a File Storage system created. Next we will create a SSH key pair that will be used to login to a compute instance and mount the file system.**
 
-## Practice 3: Create ssh keys and compute instance
+## Create ssh keys and compute instance
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
@@ -281,7 +281,7 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
  
 14. Verify opc@<COMPUTE_INSTANCE_NAME> appears on the prompt
 
-## Practice 4: Mount the File Storage System to Compute Instance
+## Mount the File Storage System to Compute Instance
 
 Users of Ubuntu and Linux operating systems (We launched a Oracle Linux instance) can use the command line to connect to a file system and write files. Mount targets serve as file system network access points. After your mount target is assigned an IP address, you can use it to mount the file system. You need to install an NFS client and create a mount point. When you mount the file system, the mount point effectively represents the root directory of the File Storage file system, allowing you to write files to the file system from the instance.
 
@@ -331,7 +331,7 @@ and verify the mounted File System Storage.
              
 **You have now mounted Enterprise grade File System storage created in OCI to your compute instance. You can place files in this file system and all other VM instances that have mounted the same file system will have access to it.**
 
-## Practice 5: Delete the resources
+## Delete the resources
 
 In this section we will delete all the resources we created in this lab.
 

@@ -6,20 +6,22 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Recommended Learning Assets](#recommended-learning-assets)
+[Sign in to OCI Console and create VCN](#sign-in-to-oci-console-and-create-vcn)
 
-[Practice 1: Sign in to OCI Console and create VCN](#practice-1-sign-in-to-oci-console-and-create-vcn)
+[Create ssh keys, compute instance](#create-ssh-keys,-compute-instance)
 
-[Practice 2: Creat ssh keys, compute instance](#practice-2-creat-ssh-keys,-compute-instance)
+[Install Grafana and stress tool on compute instance](#install-grafana-and-stress-tool-on-compute-instance)
 
-[Practice 3: Install Grafana and stress tool on compute instance](#practice-3-install-grafana-and-stress-tool-on-compute-instance)
+[Adjust Parameters in Grafana dashboard](#adjust-parameters-in-grafana-dashboard)
 
-[Practice 4: Adjust Parameters in Grafana dashboard](#practice-4-adjust-parameters-in-grafana-dashboard)
-
-[Practice 5: Delete the resources](#practice-5-delete-the-resources)
+[Delete the resources](#delete-the-resources)
 
 
 ## Overview
+
+Grafana is an open source visualization tool that can be used on top of a variety of different data stores
+
+Essentially, it’s a feature-rich replacement for Graphite-web, which helps users to easily create and edit dashboards. It contains a unique Graphite target parser that enables easy metric and function editing. Users can create comprehensive charts with smart axis formats (such as lines and points) as a result of Grafana’s fast, client-side rendering — even over long ranges of time — that uses Flot as a default option.
 
 **Some Key points;**
 
@@ -32,6 +34,13 @@
 - Do NOT use compartment name and other data from screen shots.Only use  data(including compartment name) provided in the content section of the lab
 
 - Mac OS Users should use ctrl+C / ctrl+V to copy and paste inside the OCI Console
+
+- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
+
+**Cloud Tenant Name**
+**User Name**
+**Password**
+**Compartment Name (Provided Later)**
 
 **Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
 
@@ -49,20 +58,7 @@
 
 6. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
 
-
-## Recommended Learning Assets
-
-1. OCI Training : https://cloud.oracle.com/en_US/iaas/training
-
-2. Familiarity with OCI console: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/console.htm
-
-3. Overview of Networking: https://docs.us-phoenix-1.oraclecloud.com/Content/Network/Concepts/overview.htm
-
-4. Familiarity with Compartment: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/concepts.htm
-
-5. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
-
-## Practice-1: Sign in to OCI Console and create VCN
+## Sign in to OCI Console and create VCN
 
 * **Tenant Name:** {{Cloud Tenant}}
 * **User Name:** {{User Name}}
@@ -100,7 +96,7 @@
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text" height="100" width="100">
               
-## Practice 2: Creat ssh keys, compute instance
+##  Create ssh keys, compute instance
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
@@ -202,7 +198,7 @@ ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE> -L 3000:localhost:3000
  
 14. Verify opc@<COMPUTE_INSTANCE_NAME> appears on the prompt
 
-## Practice 3: Install Grafana and stress tool on compute instance
+## Install Grafana and stress tool on compute instance
 
 **As part of preperation for this lab, a dynamic group and IAM policy was created. This configuration enables Grafana based monitoring on the compute instance. Below 2 policy statements are already configured though for any new deployment they must be configured under IAM Policy.**
 
@@ -311,7 +307,7 @@ sudo stress --cpu 5 --io 12 --vm 5 --vm-bytes 256M --timeout 600s
 
 **We now have  completed our setup with a compute instance and installed and execetued a tool to stress the CPU and Memory. Next we will monitor observe Grafana dash board for this compute instance**
 
-## Practice 4: Adjust Parameters in Grafana dashboard
+## Adjust Parameters in Grafana dashboard
 
 1. Switch to Grafana dash board, you should observe the CPU utilization and Memory utilization grpah changing. You can adjust parameters such as Time period and refresh rate as shown below
 
@@ -319,8 +315,7 @@ sudo stress --cpu 5 --io 12 --vm 5 --vm-bytes 256M --timeout 600s
 
 **We have now completed Grafana setup and can monitor the utilization of parameters on the compute instance. Next we will delete the resources we created**
 
-
-## Practice 5: Delete the resources
+## Delete the resources
 
 1. Switch to  OCI console window
 

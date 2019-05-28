@@ -6,28 +6,43 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Recommended Learning Assets](#recommended-learning-assets)
+[Sign in to OCI Console and create VCN](#sign-in-to-oci-console-and-create-vcn)
 
-[Practice 1: Sign in to OCI Console and create VCN](#practice-1-sign-in-to-oci-console-and-create-vcn)
+[Create ssh keys two compute instances and configure routing](#create-ssh-keys-two-compute-instances-and-configure-routing)
 
-[Practice 2: Create ssh keys two compute instances and configure routing](#practice-2-create-ssh-keys-two-compute-instances-and-configure-routing)
+[ssh to compute instance and test VCN peering](#ssh-to-compute-instance-and-test-vcn-peering)
 
-[Practice 3: ssh to compute instance and test VCN peering](#practice-3-ssh-to-compute-instance-and-test-vcn-peering)
+[Testing Console Connection to the compute instance](#testing-console-connection-to-the-compute-instance)
 
-[Practice 4: Testing Console Connection to the compute instance](#practice-4-testing-console-connection-to-the-compute-instance)
-
-[Practice 5: Delete the resources](#practice-5-delete-the-resources)
+[Delete the resources](#delete-the-resources)
 
 
 ## Overview
 
 Local VCN peering is the process of connecting two VCNs in the same region and tenancy so that their resources can communicate using private IP addresses without routing the traffic over the internet or through your on-premises network. Without peering, a given VCN would need an internet gateway and public IP addresses for the instances that need to communicate with another VCN
 
+**Some Key points;**
+
+- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
+
+- All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
+
+- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
+
+- Do NOT use compartment name and other data from screen shots.Only use  data(including compartment name) provided in the content section of the lab
+
+- Mac OS Users should use ctrl+C / ctrl+V to copy and paste inside the OCI Console
+
+- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
+
+**Cloud Tenant Name**
+**User Name**
+**Password**
+**Compartment Name (Provided Later)**
+
+**Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
+
 ## Pre-Requisites
-
-- Oracle Cloud Infrastructure account credentials (User, Password, Tenant, and Compartment)  
-
-## Recommended Learning Assets
 
 1. OCI Training : https://cloud.oracle.com/en_US/iaas/training
 
@@ -39,11 +54,7 @@ Local VCN peering is the process of connecting two VCNs in the same region and t
 
 5. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
 
-**Before You Begin**
-
-- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
-
-## Practice-1: Sign in to OCI Console and create VCN
+## Sign in to OCI Console and create VCN
 
 * **Tenant Name:** {{Cloud Tenant}}
 * **User Name:** {{User Name}}
@@ -155,7 +166,7 @@ Local VCN peering is the process of connecting two VCNs in the same region and t
 
 **You have now created two VCN with internet gateway for internet traffic, added default rule in the route table, created subnet and added two local peering gateways(one for each VCN). For VCN peering each VCN must have a local peering gateway.**
 
-## Practice 2: Create ssh keys two compute instances and configure routing
+## Create ssh keys two compute instances and configure routing
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
@@ -334,7 +345,7 @@ Fill out the dialog box:
 
 **We now have two VCNs with one compute instance in each VCN. These VCNs have been connected using a Local Peering Gateway. Any instance in one VCN can reach an instance in the other VCN. Next we will test the connectivity.**
 
-## Practice 3: ssh to compute instance and test VCN peering
+## ssh to compute instance and test VCN peering
 
 1. In git bash window, Enter command:
 
@@ -372,7 +383,7 @@ ping <PRIVATE_IP_OF_SECOND_COMPUTE_INSTANCE>
 
 If ping is successful then we have successfuly created VCN peering across two different VCNs
 
-## Practice 4: Testing Console Connection to the compute instance
+## Testing Console Connection to the compute instance
 
 1. Navigate to compute instance details page by clicking one of the compute instance name
 
@@ -469,7 +480,7 @@ echo '<contents of .pub key file>' >> authorized_keys
 20. Now you can login to your instance using the new SSH key.
 
 
-## Practice 5: Delete the resources
+## Delete the resources
 
 1. Switch to  OCI console window
 

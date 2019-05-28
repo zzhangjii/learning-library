@@ -6,8 +6,6 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Recommended Learning Assets](#recommended-learning-assets)
-
 [Sign in to OCI Console and create VCN](#sign-in-to-oci-console-and-create-vcn)
 
 [ Creat ssh keys, compute instance and Block Volume. Attach block volume to compute instance](#creat-ssh-keys,-compute-instance-and-block-volume.-attach-block-volume-to-compute-instance)
@@ -41,6 +39,13 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 - Do NOT use compartment name and other data from screen shots.Only use  data(including compartment name) provided in the content section of the lab
 
 - Mac OS Users should use ctrl+C / ctrl+V to copy and paste inside the OCI Console
+
+- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
+
+**Cloud Tenant Name**
+**User Name**
+**Password**
+**Compartment Name (Provided Later)**
 
 **Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
 
