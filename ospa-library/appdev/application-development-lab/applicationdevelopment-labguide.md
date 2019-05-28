@@ -72,7 +72,7 @@ for anyone who happens to finish early. No prior experience with Visual
 Builder is assumed or necessary.
 
 **Prerequisite**: Before starting these labs, you should have an OCI
-login and
+login and "ServerDeveloper" or "ServerAdminstrator" access to a VBCS instance; most formal classes will share an existing VBCS instance and your permissions will already correct. If you do not have a VBCS instance you may create one using the instructions in [Appendix A: Create VBCS Instance](#appendix-a-create-vbcs-instance). 
 
 **NOTE:** Content is driven by external factors such as user data
 entries and login date. As a result, what you see displayed in your
@@ -93,11 +93,11 @@ classroom and supporting lab files.
 
 2.  On some systems you will see a “dashboard” as shown below.
 
-    ![](./media/image6.png)
+    ![](./media/vbcs_cloud_dashboard.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2 - Dashboard<br/>
 
-   Click the “Visual Builder” service (next step)
+   If you see the "Visual Builder' service box [jump to step 5 Open VBCS Home Page](#open-vbcs-home-page)
 
   (if your dashboard does not show “Visual Builder” – click “Customize
 Dashboard”)
@@ -146,14 +146,16 @@ Dashboard”)
     share (your instance name may be different than the one shown.  
     (see Appendix A for instructions on creating a VBCS instance)
 
-    ![](./media/image15.png)
+    ![](./media/vbcs_instance_list.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.4 – VBCS Instances<br/>
+
+#### Open VBCS Home Page  
 
 5.  Select the VBCS instance being used for the lab ("ospavcs1" below), then using the “Hamburger Icon” ![](./media/image16.png) on the far right;
     choose “Open Oracle Visual Builder Cloud Service Home Page”
 
-    ![](./media/image17.png)
+    ![](./media/vbcs_instance_0.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.5 – Open VBCS<br/>
 
@@ -178,7 +180,7 @@ Dashboard”)
     
     If you are sharing your lab environment with a group of people you might find it convenient to follow a naming convention to make it easier for you to find your work and for the facilitators to help you.
     
-    Perhaps combining your name or initials (or even employee id) with two-or-three characters representing your location to add as a prefix to the names of all applications you create. Visual Builder's list of applications may be sorted and filtered easily.
+    Perhaps combining your name or initials (or even employee id) with two-or-three characters representing your location to use as an application name or to add as a prefix to the names of all applications you create. Visual Builder's list of applications may be sorted and filtered easily.
       
     Be sure the “Empty Application” template is selected and click
     “Finish” to continue.
@@ -195,7 +197,7 @@ Dashboard”)
 
 This concludes Lab 1.
 
-[Go to Lab 2](#lab-4-data-from-service) – [Return to Table of Contents](#table-of-contents)
+[Go to Lab 2](#lab-2-spreadsheet-based-business-objects) – [Return to Table of Contents](#table-of-contents)
 <br/>
 
 # Lab 2: Spreadsheet-based Business Objects
@@ -1194,6 +1196,19 @@ use these “Service Connections” to provide data services to your
 applications. Get the correct values for your class and copy them to
 your local machine to make the lab a little quicker to complete (please
 ask the instructor if you have questions here).
+<br/><br/>
+
+*******************************************************************
+NOTE 1:
+
+  If your environment does not have access to the Mama Maggy APIs; use the instructions in [Appendix C: Build Mama Maggy Data Application](#appendix-c-build-mama-maggy-data-application) to create some that you may use.
+
+NOTE 2:
+
+  Lab 4 assumes access to modern APIs that provide an industry-standard manifest; if only old-style endpoints are available use the instructions in [Appendix B: Create Service Connection from Endpoint](#appendix-b-create-service-connection-from-endpoint) instead of the instructions in this Lab to access the APIs.
+*******************************************************************
+
+<br/><br/>
 
 1.  If you have logged out of the Oracle Cloud, please log back in and
     return to your VBCS application. You might find it useful to close
