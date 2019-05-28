@@ -15,7 +15,7 @@
 
 ## Module 1:  Download the Client Credentials (wallet)
 
-The Client Creadentials, also known as the wallet, provides the only authentication information that
+The Client Credentials, also known as the wallet, provides the only authentication information that
 can be used to connect to your ATP database. This wallet must be
 downloaded to the client that will be connecting to the database. The
 wallet can be downloaded from two locations, the Database Details page
