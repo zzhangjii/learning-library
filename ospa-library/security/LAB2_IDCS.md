@@ -381,8 +381,7 @@ https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_
 
 ![](./media/idcs46.png)
 
- You can also **modify** and **delete** users and a lot more via REST API. For more information, please check the documentation below.
-
+ You can also **modify** and **delete** users and a lot more via REST API. For more information, please check the Oracle Identity Cloud Service documentation references listed in the *participant guide*.
 
 
 # Module 2:  Configure SSO and Provisioning for Salesforce
