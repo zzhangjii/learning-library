@@ -90,12 +90,12 @@ classroom and supporting lab files.
 
     ![](./media/cloud-oracle-com-tenancy.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.1 - Tenancy<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.1.1 - Tenancy<br/>
 
 
   ![](./media/image5.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2   - Login<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.1.2   - Login<br/>
 
 2.  Some systems will offer a "Guided Journey"
 
@@ -115,7 +115,7 @@ On some systems you will go straight to a “dashboard” as shown below. (same 
 
   ![](./media/vbcs_cloud_dashboard.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2 - Dashboard<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.3 - Dashboard<br/>
 
    If you see the "Visual Builder' service box [jump to step 5 Open VBCS Home Page](#open-vbcs-home-page)
 
@@ -124,23 +124,23 @@ Dashboard”)
 
    ![](./media/image7.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.1 – Customize Dashboard 1<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.4 – Customize Dashboard 1<br/>
 
    Scroll to “Visual Builder” and click the “Show Button”
 
    ![](./media/image8.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.2 – Show Visual Builder<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.5 – Show Visual Builder<br/>
 
    On other systems you may see a different style of Dashboard<br/>
 
   ![](./media/image9.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.3 – Visual Builder Icon<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.6 – Visual Builder Icon<br/>
 
   ![](./media/image10.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.4 – Visual Builder Icon (version 2)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.7 – Visual Builder Icon (version 2)<br/>
 
 3.  When the "Visual Builder" service box appears there are two ways to proceed to the service console: click on "Visual Builder" text and go through the "Visual Builder Cloud Service" page or use the service box menu.
 
@@ -377,13 +377,14 @@ and check to make sure that “Product Order” is on the “One” side and
 “ProductOrderLine” is on the “Many” side of the relationship. Click
 “Create Relationship” (default values are ok).
 
-![](./media/image38.png)
+![](./media/vbcs_productorderlinerel.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.4 – Product relationship
 
    Click on the plus sign “+” to add another relationship.
 
-![](./media/image40.png)
+![](./media/vbcs_onerel.png)
+
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.5 – Add next relationship
 
@@ -391,13 +392,13 @@ Using the drop-down on the right side of the screen select the “Product” and
 that “Product” is on the “One” side of the relationship. Click
 “Create Relationship” when done (defaults are ok).
 
-![](./media/image39.png)
+![](./media/vbcs_productorderproductrel.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.6 – Add second relationship
 
 The relationships have been defined, now to enter remaining fields.
 
-![](./media/image41.png)
+![](./media/vbcs_two_rel.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.7 – Complete relationships
 
@@ -545,7 +546,7 @@ Click the “Import” button to upload the selected file
     Order” and “Product” pull-downs to choose those values (if the value
     you don’t see does not appear in the list you can start to type the
     value in and it will appear), type in the other two then review your
-    results and click the checkmark.
+    results and click the checkmark ![](./media/vbcs_checkmark.png).
 
     ![](./media/image61.png)
 
