@@ -1226,7 +1226,7 @@ application using RESTful API calls rather than Business Objects
 (though, the truth is that VBCS uses RESTful API calls when accessing
 Business Objects too).
 
-Your resources for this lab include two (2) service connection used to
+Your resources for this lab include two (2) service connections used to
 access data for Mama Maggy stores and Mama Maggy associates. You will
 use these “Service Connections” to provide data services to your
 applications. Get the correct values for your class and copy them to
@@ -1273,7 +1273,7 @@ NOTE 2:
     the connection; for this lab we will choose “Define by
     Specification” for the connections created. Please click “Define
     by Specification” to continue. (if you only have an “endpoint” see
-    the appendix for an example of “Define by Endpoint”)
+    [Appendix B: Create Service Connection from Endpoint](#appendix-b-create-service-connection-from-endpoint) for an example of “Define by Endpoint”)
 
 > ![](./media/image149.png)
 > 
@@ -1413,7 +1413,7 @@ NOTE 2:
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.11 – mmstores data source
 
 12. Choose the id, name, city, and state. Be sure to select “id” as the
-    Primary Key too.
+    Primary Key too. (no need to Define Query)
 
 > ![](./media/image165.png)
 > 
@@ -1433,14 +1433,14 @@ NOTE 2:
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.14.1 – Add Detail Page
 > 
 > Use the “mmstores” again (because our connection used the standardized
-> descriptors Visual Builder will choose the correct endpoint.
+> descriptors Visual Builder will choose the correct endpoint).
 
 ![](./media/image164.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.14.2 – mmstores connection
 
 15. Choose id, name, address, city, state, and mailcode from the
-    Endpoint Structure.
+    Endpoint Structure. 
 
 > ![](./media/image169.png)
 
@@ -1453,8 +1453,8 @@ NOTE 2:
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.16 – Sample Store Details
 
 17. Now create an “associatelist” web application to display all
-    “Associate” rows and provide a “Add Detail Page” to display a
-    single Associate.
+    “Associate” rows (you pick the fields) and provide a “Add Detail Page” to display a
+    single Associate (you pick the fields here too).
 
 <!-- end list -->
 
