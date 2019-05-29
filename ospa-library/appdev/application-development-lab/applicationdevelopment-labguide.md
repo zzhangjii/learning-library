@@ -889,6 +889,11 @@ and Delete pages for products. (not part of this lab).
 Congratulations\! You’ve successfully created your first Visual Builder
 web application.
 
+[Return to top of Section 1 – Create First Web Application](#section-1--create-first-web-application)
+
+[Return to Table of Contents](#table-of-contents)
+
+
 ## Section 2 – Create Master-Detail Application
 
 11. In this section you will create a set of screens to represent
@@ -1063,6 +1068,10 @@ Nothing really new so far…
     Congratulations\! You’re now ready to create your first Mobile
     application with Visual Builder.
 
+    [Return to top of Section 2 – Create Master-Detail Application](#section-2--create-master-detail-application)
+
+     [Return to Table of Contents](#table-of-contents)
+
 ## Section 3 – Create Mobile Application
 
 19. Use Visual Builder’s Navigator to open Mobile Applications
@@ -1195,7 +1204,11 @@ Nothing really new so far…
 
 This concludes Lab 3.
 
-[Go to Lab 4](#lab-4-data-from-service) – [Return to Table of Contents](#table-of-contents)
+[Return to top of Section 3 – Create Mobile Application](#section-3--create-mobile-application)
+
+[Go to Lab 4](#lab-4-data-from-service) 
+
+[Return to Table of Contents](#table-of-contents)
 
 # Lab 4: Data from service
 
