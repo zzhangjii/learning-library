@@ -1,6 +1,6 @@
 # Application Integration Lab Guide
 
-## May 29, 2019 
+## May 29, 2019 - 4:06PM
 
 # Table of Contents
 
@@ -504,15 +504,15 @@ have done the prerequisites, continue below:
 
         \<xs:sequence\>
 
-        \<xs:element name="orderID" type="xs:string"\>
+        \<xs:element name="orderID" type="xs:string"/\>
 
-        \<xs:element name="orderDate" type="xs:date"\>
+        \<xs:element name="orderDate" type="xs:date"/\>
 
-        \<xs:element name="storeID" type="xs:decimal"\>
+        \<xs:element name="storeID" type="xs:decimal"/\>
 
-        \<xs:element name="stockID" type="xs:decimal"\>
+        \<xs:element name="stockID" type="xs:decimal"/\>
 
-        \<xs:element name="quantity\_ordered" type="xs:decimal"\>
+        \<xs:element name="quantity\_ordered" type="xs:decimal"/\>
 
         \</xs:sequence\>
 
@@ -743,39 +743,39 @@ interact with the ATP Database:
 
 Create an integration that uses your two connections:
 
-25. Click the *Integrations* menu option at the left side on the
-    Integration page:
+25. Click the *Integrations* menu option at the left-side menu:
 
     ![](./media/image19.png)
 
     Figure 15: Integration Page Showing the Integrations Menu Option
 
-26. The Integrations page appears. Click on the *Create* button in the
+26. The *Integrations* page appears. Click on the *Create* button in the
     upper-right corner.
 
 27. The *Create Integration – Select a Style* dialog appears showing the
     various templates that can be used to create a new integration.
     These styles really speed integration development. Based on the
     purpose of the integration, these styles do a lot of
-    pre-configurations for the user.
+    pre-configurating for the user.
 
-28. Select the *App Driven Orchestration* style.
+28. Read the descriptions for each of the styles so you will appreciate the breadth of the style support.
 
-30. The Create New Integration dialog appears. Fill in the fields:
+29. Select the *App Driven Orchestration* style by clicking on its *Select* button.  This is the best style for our needs because we want our integration to be *triggered by an Application."  You will develop that *application* in Lab 2.
+
+30. The *Create New Integration* dialog appears. Fill in the fields:
 
     - What do you want to call the integration? Enter:
-    *\<insertYourInitialsHere\>\_Create New Order (TNB\_Create New
+    *\<insertYourInitialsHere\><insertCurrentTimeHere\>\_Create New Order* (*TNB1537\_Create New
     Order*, for example)
 
     - What does the integration do? Enter: *Accept a REST POST call and
     create a new order in the ATP database*
 
-    - Click the *Create* button to display the integration canvas*.*
+    - Click the *Create* button to display the *integration editor canvas*.
 
 
 31. Notice the beginnings of the new integration in the integration editor canvas. This is where you will
-    visually define your integration using easy-to-use drag and drop
-    features:
+    visually define your integration using easy-to-use drag and drop features:
 
     ![](./media/image20.png)
 
@@ -792,10 +792,9 @@ integration.
 
 ### Add a Trigger
 
-33. Find the *Triggers* icon ![A close up of a logo Description
-    automatically generated](./media/image21.png)at the extreme
+33. Find the *Triggers* icon ![](./media/image21.png)at the extreme
     right-side of the window and *click on it* so you can use the
-    REST\_Trigger connection you just built:
+    REST\_Trigger connection that you just built.
 
 34. The available trigger connections appear:
 
@@ -824,12 +823,12 @@ integration.
     from the dropdown menu. POST is a standard method to use to send XML
     data to a server in the request body of an HTTP request.
 
-    - Select any options that you want to configure. Check on *Configure a
+    - Select any options that you want to configure: Check on *Configure a
     request payload for this endpoint.*
 
     - Click *Next* in the upper-right corner.
 
-    - Skip over the Attachment Processing Options.
+    - Skip over the *Attachment Processing Options*.
 
     - Find the *Select the request payload format* area so you can define
     the structure of payload data that will come into the integration
@@ -841,8 +840,8 @@ integration.
     - At the *Schema Location* field, click the *Choose File* button to
     display a file chooser dialog:
 
-      - Navigate to your ApplicationIntegrationLab directory and choose your
-    *RESTEndpointRequestPayload.xsd* file where you saved it in the
+      - Navigate to your *ApplicationIntegrationLab* directory and choose your
+    *RESTEndpointRequestPayload.xsd* file you saved in the
     Preparing Your Environment section.
 
       - Notice in the *Element* field that the tooling has read the file and
@@ -851,14 +850,14 @@ integration.
     need to edit it and clean up some formatting. Sometimes, copying and
     pasting drags along some hidden characters at the end of lines.
 
-      - In the area labeled Select the type of payload with which you want
-    the endpoint to receive, select *JSON*. “JSON” stands for “JavaScript
+      - In the area labeled *Select the type of payload with which you want
+    the endpoint to receive*, select *JSON*. “JSON” stands for “JavaScript
     Object Notation.” It is a lightweight data interchange format that
     is easy for humans to read and write. Later, in Lab 2, you’ll see
     that this request payload will be supplied by a web form and web
     forms deal in JSON data structures.
 
-    - Click *Next* in the upper-right corner to display the Summary dialog
+    - Click *Next* in the upper-right corner to display the *Summary* dialog
     so you can review your settings for this request endpoint.
 
     - Expand the *Endpoint Summary* field to see that you have defined an
@@ -883,10 +882,9 @@ integration.
 
 ### Add an Invoke
 
-39. Find the *Invokes* icon ![](./media/image26.png)at the extreme right
-    side of the window and click on it so we can add your
+39. Find the *Invokes* icon ![](./media/image26.png)at the extreme right-side of the window and click on it so we can add your
     *ATP\_Invoke\_Insert\_Into\_DB* connection to the integration
-    canvas. The available invoke connections appear:
+    editor canvas. The available invoke connections appear:
 
     ![](./media/image27.png)
 
@@ -918,28 +916,28 @@ integration.
     - The wizard moves to the *Define the Operation On Table* step. Make
     these selections in the fields:
 
-    - Schema: Select: *ATPC\_USER* from the dropdown menu.
+      - Schema: Select: *ATPC\_USER* from the dropdown menu.
 
-    - Table Type: *Make sure that TABLE is selected*
+      - Table Type: *Make sure that TABLE is selected*
 
-    - For Table Name, click the *Search* button.
+      - For Table Name, click the *Search* button.
 
-    - Move the *ORDERS* table to the *Selected* column in the table that
+      - Move the *ORDERS* table to the *Selected* column in the table that
     appears, by selecting it and clicking the “*\>*” symbol.
 
-    - Click the *Import Tables* button at the bottom to display the
+      - Click the *Import Tables* button at the bottom to display the
     *Select the parent database table* step. Make sure that *ORDERS* is
     selected and click *Next* in the upper-right corner.
 
-    - The wizard displays the *Summary* step page. See that you have
+      - The wizard displays the *Summary* step page. See that you have
     configured your ATP connection to perform an *Insert* database
     operation on the *ORDERS* table:
 
-      ![](./media/image28.png)
+        ![](./media/image28.png)
 
-      Figure 22: Reviewing an Adapter Endpoint Configuration
+        Figure 22: Reviewing an Adapter Endpoint Configuration
 
-    - Click *Done* in the in the upper-right corner to close the Configure
+      - Click *Done* in the in the upper-right corner to close the Configure
     REST Endpoint dialog.
 
 <!-- end list -->
