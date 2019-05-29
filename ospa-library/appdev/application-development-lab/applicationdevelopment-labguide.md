@@ -1148,14 +1148,14 @@ Nothing really new so far…
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.30 – Items heading
 
-31. Add a table below the new heading by again dragging a “Table”
+31. Add a table below the new heading by dragging a “Table”
     component to the “Flex Container” in the Page Structure display.
 
 ![](./media/image140.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.31 – Screen with empty table
 
-32. Use the table’s “Quick Start” to “Add Data” from "ProductOrderLine" to the table add 
+32. Use the table’s “Quick Start” to “Add Data” from "ProductOrderLine" to the table, add 
     item\[i\] -\> Product Name (Text), Unit Price (Input Number), and
     Quantity (Input Number).
 
