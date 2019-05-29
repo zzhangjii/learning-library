@@ -13,15 +13,15 @@
       },
       {
         "number": "50",
-        "filename": "LAB1_CASB.md",
-        "title": "Lab 1: Oracle CASB Cloud Service",
-        "description": "Learn how to secure your apps and infrastructure with Oracle CASB Cloud Service"
+        "filename": "LAB1_IDCS.md",
+        "title": "Lab 1: Oracle Identity Cloud Service",
+        "description": "Learn how to manage your enterprise user ids life cycle"
       },
       {
         "number": "100",
-        "filename": "LAB2_IDCS.md",
-        "title": "Lab 2: Oracle Identity Cloud Service",
-        "description": "Learn how to manage your enterprise user ids life cycle"
+        "filename": "LAB2_CASB.md",
+        "title": "Lab 2: Oracle CASB Cloud Service",
+        "description": "Learn how to secure your apps and infrastructure with Oracle CASB Cloud Service"
       }
     ]
   }

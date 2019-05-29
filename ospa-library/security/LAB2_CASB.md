@@ -1,5 +1,5 @@
 ![](./media/securitytitle.png)
-# Lab 1:  Oracle CASB Cloud Service
+# Lab 2:  Oracle CASB Cloud Service
 
 ## Table of Contents
 
@@ -22,7 +22,7 @@ We will enroll third-party services as part of the exercise and it's imperative 
 
 **NOTE: CASB is a dynamic service that is, by design, constantly in flux. As a result, what you see in the console may not match exactly with the lab screenshots. Screenshots are provided solely for illustrative purposes to help guide you directionally through the CASB console.**
 
-For consistency and for the ease of use-cases implementation, you will use a Gmail account, and for CASB application registration you will use the following naming convention:
+For consistency and for the ease of use-cases implementation, you will use a personal **email account (e.g. Gmail, Yahoo, Outlook) to sign-up for your Salesforce and Box developer instances**, and for CASB application registration you will use the following naming convention:
 
 `location+room_appName_yourOracleUserID` (e.g. **Austin1_Salesforce_acasas**, **Austin1_Box_acasas**, **Austin1_OCI_acasas** )
 
@@ -50,6 +50,7 @@ As part of this first part of the module we will enroll two applications, Box an
 <p align="center"> Figure 1-3 </p>  
 
   * Enter required information and click **Submit**, you will receive a verification email
+  **Note: You must sign-up with your personal account (e.g. Gmail, Yahoo, Outlook)**
 
 ![Box Verify Account](./media/box_verifyaccount.png)
 <p align="center"> Figure 1-4 </p>  
@@ -230,10 +231,14 @@ CASB Cloud Service set your preferred values in the application and subsequently
 
 You’ll now add SalesForce as a sanctioned application for monitoring in Oracle CASB, so this business critical application remains compliant with security standards.
 
+**NOTE: If you have a Salesforce developer account you can move to *Create Salesforce CASB Profile* section.**
+
 * Navigate to [Developer SalesForce](https://developer.salesforce.com/)
     * Click the **Sign-up** button in the top right corner
     * Enter the required information
     * Click **Sign me up**
+
+**Note: You must sign-up with your personal account (e.g. Gmail, Yahoo, Outlook)**
 
 ![SF registration](./media/sf_registration.png)
 <p align="center"> Figure 1-24 </p>  
@@ -251,6 +256,8 @@ You’ll now add SalesForce as a sanctioned application for monitoring in Oracle
 ![SF Create Password](./media/sf_password.png)
 <p align="center"> Figure 1-26 </p>  
 
+
+### Create Salesforce CASB Profile
 
 * Login to your Salesforce account.
 * On the left Panel navigate to Users =  Profiles
