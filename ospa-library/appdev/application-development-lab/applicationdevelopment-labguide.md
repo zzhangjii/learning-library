@@ -80,6 +80,12 @@ environment may not exactly match with the lab screenshots. Screenshots
 are provided solely for illustrative purposes to help guide you through
 the user interface.
 
+**Disclaimer:**  This lab is designed ONLY for large learning groups and assumes the groups are sharing the Oracle Cloud environment to execute this lab.
+ 
+**Options**:
+- Who Should Complete This Lab:  All Participants (preferred)
+- Who Should Complete This Lab:  1 Participant for group
+
 # Lab 1: Introduction, setup, and demo
 
 In this lab you will make sure you can access the VBCS instance for your
