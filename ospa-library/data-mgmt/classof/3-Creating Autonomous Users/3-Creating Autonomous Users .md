@@ -55,6 +55,8 @@ connection strings be copied from (more on this in other modules)
 
 ## Module 2:  Connect to your ADB instance with SQL Developer 
 
+**PLEASE NOTE: SQL DEVELOPER CONNECTONS DO NO WORK IF YOU ARE BEHIND THE VPN OR ORACLE OFFICE PRIVATE NETWORS. IF YOU ARE USING THE VPN CLIENT  YOU MUST DISCONNECT FROM VPN, AND FROM AN ORACLE OFFICE CONNECT TO A OPEN/PUBLIC ACCESS NETWORK**
+
 *(Make sure you are running the latest version of SQL Developer 18.4. Some older versions will not work with ATP, see lab introductions on how to install)*
 
 1. Start SQL Developer (by clicking the icon on your desktop or selecting
@@ -109,6 +111,7 @@ left corner of the main dashboard, under connections.
 **Toubleshooting your connection**
 
 If your test failed the successfuly connect to your database, the most likely reasons are:
+-   you are connected to VPN or in an Oracle office not on the public network
 -   that you used an incorrect password (or username and password)
 -   you are behind the Oracle VPN - you need to be in a public network
 -   you selected the wrong Service for your database

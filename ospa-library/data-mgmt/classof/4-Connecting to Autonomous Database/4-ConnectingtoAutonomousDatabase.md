@@ -85,6 +85,8 @@ contained in the wallet. The files used in the labs are:
 
 ## Module 3:  Connecting to the Database using SQL Developer 
 
+**PLEASE NOTE: SQL DEVELOPER CONNECTONS DO NO WORK IF YOU ARE BEHIND THE VPN OR ORACLE OFFICE PRIVATE NETWORS. IF YOU ARE USING THE VPN CLIENT  YOU MUST DISCONNECT FROM VPN, AND FROM AN ORACLE OFFICE CONNECT TO A OPEN/PUBLIC ACCESS NETWORK**
+
 *(Make sure you are running the latest version of SQL Developer 18.4. Some older versions will not work with ADB, see lab introductions on how to install)*
 
 1. Start SQL Developer (by clicking the icon on your desktop or selecting
@@ -121,6 +123,7 @@ top left of the SQL Developer homepage.
 **Service:** Many services may be listed but make sure you pick the one for with the database name you created. In this example its **atpxweek\_TP. For this lab pick any of the services that contain your database name.
 
 5. Test your connection by clicking the **Test** button, if it succeeds proceed to step 6. If your test failed to successfuly connect to your database, the most likely reasons are:
+-   you are connected to VPN or in an Oracle office not on the public network
 -   that you used an incorrect password (or username and password)
 -   you are behind the Oracle VPN - you need to be in a public network
 -   you selected the wrong Service for your database
