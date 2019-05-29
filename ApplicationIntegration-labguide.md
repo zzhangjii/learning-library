@@ -132,22 +132,22 @@ The solution will provide the following business value for Mama Maggy:
 
 Before starting these labs, you will need:
 
-  - Oracle Cloud access from: *<https://cloud.oracle.com/en_US/sign-in>*
+  - Oracle Cloud access from *<https://cloud.oracle.com/en_US/sign-in>*:
     
-      - Account name
+      - Account name (*orasenatdhubsblue02*)
     
       - Oracle Account Sign In (User Name and Password)
 
 
 You will also need the environment information listed below.  If you have used the Appendix section to set up your own Integration and ATP  instances, you will already have this data.  If the instances were set up for you, this information will be provided for you:
 
-  - Oracle Integration Instance Name
+  - Oracle Integration Instance Name (*AppIntCourse1*)
 
-  - Autonomous Database Compartment
+  - Autonomous Database Compartment (*Training*)
 
-  - Autonomous Database Name
+  - Autonomous Database Name (*DB AppInt*)
 
-  - *atpc\_user* Autonomous Database Password
+  - *atpc\_user* Autonomous Database User Password (*DBWelcome1234*)
 
   In addition, you should make sure that you have the following software on your computer:
 
@@ -165,7 +165,7 @@ You will also need the environment information listed below.  If you have used t
     *<https://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html>*
 
     - For Mac, also download and install JDK SE Development Kit 8 (at
-    least version 8u211) before you install SQL Developer. JDK 8
+    least version 8u211) *before you install Oracle SQL Developer*. JDK 8
     software can be found at:
     [*https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html*](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
@@ -191,7 +191,8 @@ have done the prerequisites, continue below:
     where you can conveniently store items that are important to
     remember and access. This is a good practice whenever you are
     working with software. Put things here so you can easily copy and
-    paste them later. It’s your handy “scratchpad.”
+    paste them later. It’s your handy “scratchpad.”  Leave the document
+    open throughout the labs.
 
 5.  Start your Chrome browser. Again, other browsers may work just fine,
     but these labs were tested using Chrome.
@@ -243,20 +244,23 @@ have done the prerequisites, continue below:
 
 7.  Access your Autonomous Database to see if it has been started:
 
-    - Sign in to the Oracle Public Cloud by browsing to
+    - Sign in to the Oracle Public Cloud:
+      - Browse to
     https://cloud.oracle.com/en_US/sign-in and entering your tenancy name for Account
-    and then clicking Next.
+    and then clicking Next.  Check the *Prerequisites* section above for tenancy name.
 
-    - When prompted for User Name and Password, enter your Oracle Cloud
+      - When prompted for User Name and Password, enter your Oracle Cloud
     Account Sign In credentials (user name and password).  NOTE: If you are an
     Oracle employee, click the *Oracle SSO* link at the right to enter your
     credentials.
 
-    - Click the *Sign In* button.
+      - Click the *Sign In* button.
 
     - You're *Oracle Cloud My Services* page appears.  Make a note of this URL 
     as *Oracle Cloud My Services Page URL* in your *MyLabNotes* "scratchpad" file 
-    so you will have easy access to this page later.
+    so you will have easy access to this page later.  While you are at it, add an 
+    entry for *Tenancy Name* also and insert the name of your tenancy in the scratchpad
+    too.
 
     - Click the *Autonomous Database* option to display the *Autonomous Database Manage
     Data and Transactions* page.
@@ -267,16 +271,14 @@ have done the prerequisites, continue below:
     - Click the *Go to My Dashboard* button in the upper-right corner to
     display the *Dashboard* page.
 
-    - Click on the *Customize Dashboard* option at the top-left to display the 
+    - Click on the *Customize Dashboard* option at the top-right to display the 
     *Customize Dashboard* popup dialog.  If you don't see the option, click on the icon
-    in the uppper-right showing a *circle with a dash inside* to display additional
+    in the upper-rightshowing a *circle with a dash inside* to display additional
     options.
 
-    - Find *Autonomous Transaction Processing* in the list and click on the Show button
-    to the right to make sure that it always shows on your dashboard.
+    - Find *Autonomous Transaction Processing* in the *Data Management* section list and click on the Show button to the right to make sure that it always shows on your dashboard.
 
-    - Close the dialog by clicking on the *X* in the upper-right corner and redisplay
-    the *Dashboard*.
+    - Close the dialog by clicking on the *X* in the upper-right corner.
 
     - Verify that *Autonomous Transaction Processing* now appears and click on it to
     display the *Service: Autonomous Transaction Processing* page.  
@@ -286,7 +288,7 @@ have done the prerequisites, continue below:
 
       - In the *Compartment* field at the left, select your Autonomous
     Database Compartment from the dropdown list. You noted that name in
-    the Prerequisites section above.
+    the Prerequisites section above.  The table of instances redisplays.
 
       - Click on your *Autonomous Database name* that appears in the table.
   You noted that name in the Prerequisites section above.
@@ -299,7 +301,8 @@ have done the prerequisites, continue below:
     
     - If you don’t see the
     “*Available*” icon shown below, click the *Start* button at the top to start the
-    instance and wait until “AVAILABLE” appears below the ATP icon:
+    instance.  When the *Confirm* dialog appears, click the *Start* may take as long as 15 minutes) until the “*AVAILABLE*” message appears there before proceeding.  You might periodically refresh
+    your browser page.  If the database had already been started, forge ahead.  
 
         ![](./media/image7.png)
 
@@ -310,28 +313,29 @@ have done the prerequisites, continue below:
 8.  Download your database credentials as a “wallet file” so that you
     will have them for later to access the database:
 
-     - Click the *DB Connection* button at the upper-left. The Database
+     - Click the *DB Connection* button at the upper-left of the
+     *Autonomous Database Details* page. The Database
     Connection dialog appears.
 
-    - Click the *Download* button in the Download Client Credentials
-    (Wallet) area:
+    - Click the *Download* button in the *Download Client Credentials
+    (Wallet)* area:
 
       ![](./media/image8.png)
 
       Figure 4: Database Connection Dialog
 
     - In the Download Wallet dialog, enter and confirm a *Password* for
-    your wallet. Record your wallet password in your MyLabNotes document
+    your wallet. Record your wallet password as *Wallet Password" in your *MyLabNotes* scratchpad
     that you created above. It’s important not to forget it. Then, click
     the *Download* button on the dialog.
 
-    - Notice that your wallet zip file has been download to your Downloads
+    - Notice that your wallet zip file has been downloaded into your *Downloads*
     directory.
 
-    - Move that zip file into your *ApplicationIntegrationLabs* folder. This
+    - Move your wallet zip file into your *ApplicationIntegrationLabs* folder. This
     wallet is a package of sign in information that a database client
     uses to access your ATP database. You’ll use it soon to access the
-    ATP database from SQL Developer.
+    ATP database from Oracle SQL Developer.
 
 ## Configure SQL Developer Database Access
 
@@ -339,61 +343,64 @@ have done the prerequisites, continue below:
 
     - Close your VPN connection if it is active.
 
-    - Start SQL Developer on your computer.
+    - Start Oracle SQL Developer on your computer.  You installed it in the
+    Prerequisites section above.
 
     - Create a new connection:
     
-        - Click the *File* menu bar option and click the New option. The
-        New Gallery dialog appears.
-    
-      - Click the *General / Connections* option at the left.
+        - Click the *File* menu bar option and click the *New* option. The
+        *New Gallery* dialog appears.
     
       - Double-click the *Database Connection* option at the right. The
-        New / Select Database Connection dialog appears. Fill in the
+        *New / Select Database Connection* dialog appears. Fill in the
         following fields:
     
       - Name: *MyATPConnection*
     
-      - Username: *atpc\_user*
+      - Username: *atpc\_user*  
     
-      - Password: enter the *\<atpc\_user Autonomous Database Password\>*
+      - Password: enter the *\<atpc\_user Autonomous Database User Password\>*
         that you noted in the Prerequisites section above.
     
       - Connection Type: *Cloud Wallet*
     
-      - Configuration File: Browse to and select your wallet zip file
+      - Configuration File: *Browse* to and select your wallet zip file
         that you saved in your ApplicationIntegrationLabs folder above.
     
-      - Service: *databaseappint\_high*
+      - Service: *databaseappint\_high*  NOTE: If you don't find this option,
+      select any other that ends with *_high*.
     
       - Click on the "Save Password* field so you aren’t prompted for the
         atpc\_user password each time you activate your connection.
 
-    - Click the *Test* button at the bottom to see if SQL Developer can
+      - Click the *Test* button at the bottom to see if SQL Developer can
     connect to your ATP database as *atpc\_user*. Wait for a moment as
     access is attempted. When successful, celebrate the “*Status:
     Success*” message that appears in the lower-left corner:
 
-      ![](./media/image9.png)
+        ![](./media/image9.png)
 
-      Figure 5: Creating a New SQL Developer Connection
+        Figure 5: Creating a New SQL Developer Connection
 
-    - Click the *Save* button at the bottom of the dialog.
+      - Click the *Save* button at the bottom of the dialog.
 
-    - Click the *Cancel* button at the bottom to exit the dialog.
+      - Click the *Cancel* button at the bottom to exit the dialog.
 
      - Test your new SQL Developer connection:
     
         - In the Connections panel at the left, *double-click on
-        MyATPConnection*. Since you elected to save your
-        *<span class="underline">atpc\_user</span>* password, you aren’t
+        MyATPConnection*. Since you elected to save your *atpc\_user*
+       password, you aren’t
         prompted for the password and the connection is opened
-        immediately.
+        immediately.  The hierarchy is expanded under your MyATPConnection
+        in the left-side panel.
     
         - *Expand the Tables (Filtered)* option under your connection name
         in the left panel to expose the list of tables established in
-        your ATP database. Click on the *ORDERS* table. The structure of
-        the table displays in the right panel:
+        your ATP database. 
+        
+        - Click on the *ORDERS* table that has already been created for you.
+        The structure of the table displays in the right panel:
 
           ![](./media/image10.png)
 
@@ -405,7 +412,7 @@ have done the prerequisites, continue below:
     - Gracefully exit SQL Developer:
     
         - Right-click on your *MyATPConnection* in the left panel and
-        select *Disconnect*
+        select *Disconnect*.
     
         - *Exit* SQL Developer.
 
@@ -414,11 +421,9 @@ have done the prerequisites, continue below:
 10. Access your Oracle Integration instance to make sure that it is
     running:
     
-    - In a new browser tab, access your Oracle Integration instance by
+    - Access your Oracle Integration instance by
         browsing to the *Oracle Cloud My Services Page URL* noted 
         in your *MyLabNotes* file to access your services.
-    
-    ***
 
     - Click on *Integration*:
 
@@ -431,10 +436,7 @@ have done the prerequisites, continue below:
     
     - Click on
     your *Oracle Integration Instance Name*. You noted that name in the
-    Prerequisites section above.
-
-    - Click on the *Open Service Console* button in the upper-right
-    corner.
+    *Prerequisites* section above.
 
     - Make sure that your Integration instance is available. Look at the
     *Status* field. It should display “*Ready*.”:
@@ -445,41 +447,52 @@ have done the prerequisites, continue below:
 
     - If the *Status* field doesn’t show “*Ready*,” click on the *Start
     Instance* icon (arrowhead icon) in the upper-right to start the
-    instance.
+    instance.  When the *Start Instance* dialog appears, click *OK* to
+    start the instance.
 
     - Keep *refreshing the browser page* until you see that the instance
-    has started.
+    has started. This will display the *Oracle Cloud My Services: Oracle
+    Integration* page.  If you don't see a 
+    *red triangle icon* under your instance name, the instance is ready for use.
+    It may take a minute or two to start.  
 
     - Access your Integration instance’s home page:
 
-        - *Left-click* *the hamburger menu* icon in the upper-right and select
-    the Open Integration Home Page option:
+        - Click on your instance name in the *Instances* list.
+
+        - Verify that the *Status* is *Ready*.
+
+        - Click the *hamburger menu* icon in the upper-right and select
+    the *Open Integration Home Page* option:
 
           ![](./media/image13.png)
 
           Figure 9: Accessing the Oracle Integration Home Page
 
-      - The home page appears:
+      - Click on the *Open Home* button to the right of the menu.  
+      The home page appears:
 
         ![](./media/image14.png)
 
          Figure 10: Oracle Integration Home Page
+      - Copy this URL and save it in your *MyLabNotes* scratchpad file as 
+      *Oracle Integration Home Page URL*.
 
 ## Prepare a Data Definition
 
-11. We need to have data definition available to use during Lab 1 as we
+11. We need to have a data definition available to use during Lab 1 as we
     configure an endpoint for our integration. So, let’s get the data
-    definition file in place now so it will be ready to use in Lab 1. We
+    definition file in place now so it will be ready to use. We
     will use the XSD format to define the data. “XSD” stands for XML
     Schema Definition. It is a standard way to describe the structure of
     an XML document. Our request payload for our endpoint will be
     formatted in XML.
 
+     - Open your Notepad or TextEdit editor and start creating a new
+     file so we can add and save the XML statements for the XML schema.
 
-     - Open your Notepad or TextEdit editor so we can add the XML
-    statements.
-
-    - Copy and paste the following XML statements into your editing session:
+    - Copy and paste the following XML statements into your editing session
+    for the new file:
 
         \<?xml version="1.0" encoding="UTF-8" ?\>
 
@@ -513,7 +526,7 @@ have done the prerequisites, continue below:
     name *RESTEndpointRequestPayload.xsd*. Make sure you save it as a
     text file:
     
-        - NOTE: On a Mac, use the *Format / Make Plain Text* option to
+        - NOTE: On a Mac, before you save, use the *Format / Make Plain Text* option to
         convert the contents to text. Then, change the file extension to
         xsd in the Finder after you save it.
     
@@ -527,11 +540,11 @@ have done the prerequisites, continue below:
 
         Figure 11: XML Schema Definition for the REST Request Payload
 
-      - Check to ensure that the file name extension is “*xsd*” rather than
+      - In your Finder (Mac) or File Explorer (PC), check to ensure that the file name extension is “*xsd*” rather than
     “txt” and change it if necessary.
 
 That completes the steps to prepare your environment. If you have also
-completed the Prerequisites, you are ready to start Lab 1.  Keep right on going.
+completed the steps in the *Prerequisites* section, you are ready to start Lab 1.  Keep right on going.
 
 # Lab 1 Creating an Integration
 
@@ -555,27 +568,24 @@ order based upon an approved order request.
 Let's get started.  Follow the steps and ask questions if you get confused:
 
 1.  Start fresh by clearing your Chrome browser cache (all browsing
-    data). If you need help, refer to the Preparing Your Environment
+    data). If you need help, refer to the *Preparing Your Environment*
     section for the steps. This will help avoid some potential
     frustrations along the way when the Oracle Cloud and the browser
     seem to get “confused.”
 
 2.  Refresh your browser window. Due to clearing the browser cache, you
     will lose your connection to the Oracle Cloud. Browse to the 
-    *Oracle Cloud My Services Page URL* noted in your *MyLabNotes* file 
-    to access your services.
+    *Oracle Integration Home Page URL* you noted in your *MyLabNotes* file 
+    to access your Integration instance.  You'll have to sign in again.  NOTE: If
+    you are an Oracle employee, follow the *Sign in with Oracle SSO* path.
 
-3.  We will create two connections that you’ll use in the integration
-    that you will build. You’ll create one connection to allow a REST
-    client to access the integration. Your other connection will allow
-    your integration to communicate with the ATP database. At the
-    *Integration Home Page*, click the *Integrations* menu option at the
-    left. If you can’t see the menu options at the left, click the
-    hamburger menu icon in the upper-left to reveal the menu:
+3. Click on the *Integrations* option to access the *Oracle Integration: Integrations* page. If you can’t see the menu options at the left, click the
+    hamburger menu icon in the upper-left to reveal the menu
 
-    ![](./media/image16.png)
-
-    Figure 12: Integration Home Page
+We will create two connections that you’ll use in the integration
+    that you will build in Lab 1. One connection will enable a REST
+    client to access the integration. The other connection will allow
+    your integration to communicate with the ATP database. 
 
 4.  On the Integration page, click the *Connections* menu option at the
     left:
@@ -590,32 +600,32 @@ Create a REST Trigger connection that will allow your integration to be
 initiated:
 
 5.  Click the *Create* button in the upper-right corner of the
-    Connections page.
+    *Connections* page.
 
-6.  The Create Connection – Select Adapter dialog appears so you can
-    choose the prebuilt adapter you want to be the basis for your new
+6.  The *Create Connection – Select Adapter* dialog appears so you can
+    choose the prebuilt adapter that you want to be the basis for your new
     connection. Oracle has many prebuilt adapters that shield the user
     from all the details on how to interact with many backend services.
     Prebuilt adapters save time and allow less-technical people to be
     successful building integrations.
 
 7.  In the *Search* field, enter: *REST* and press *Return*. The REST
-    adapter appears. Select the *REST* adapter.
+    adapter appears. Click the *Select* button for the *REST* adapter.
 
-8.  The Create New Connection dialog appears so you can provide details
+8.  The *Create New Connection* dialog appears so you can provide details
     about how this connection will be used in your integration.
 
 9.  Fill in the fields:
     
-    - Name: *\<insertYourInitialsHere\>\_REST\_Trigger* (*TNB\_
-        REST\_Trigger, for example)*
+    - Name: *\<insertYourInitialsHere\><insertCurrentTimeHere\>\_REST\_Trigger* (*TNB1240\_
+        REST\_Trigger*, for example if your initials are *TNB* and it is *12:40* (no colons) in the afternoon).  We append intials and current time to the front of connection names since your may be sharing an Integration instance with others and connection names must be unique within an instance.
     
     - Role: *Select Trigger* from the dropdown menu to indicate that
         this connection will trigger the first step in a series of steps
-        in this integration.
+        in an integration.
     
     - Description: *REST connection to support triggering of an
-        integration*
+        integration*   (copy and paste)
     
     - Click the *Create* button.
     
@@ -627,14 +637,14 @@ initiated:
         in the upper-left corner to indicate that you have created a
         valid connection.
     
-12. Note the message in the upper-right that your connection has
+12. Note the blue icon in the upper-right indicates that your connection has
         been *100%* defined.
     
 13. Click the *Save* button in the upper-right to save your new
         connection.
     
 14. Click the *Close* button in the upper-right to return to the
-        Connections page.
+        *Connections* page.  Notice that your new connection appears in the *Connections* list.
 
 ## Create an ATP Connection
 
@@ -709,7 +719,7 @@ interact with the ATP Database:
     - For the Database Service Username, enter: *atpc\_user*
 
     - For the Database Service Password and Confirm Database Service
-    Password, enter the *\<atpc\_user Autonomous Database Password\>*
+    Password, enter the *\<atpc\_user Autonomous Database User Password\>*
     that you noted in the Prerequisites section.
 
     - Click the *OK* button to close the Credentials dialog.
