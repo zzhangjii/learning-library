@@ -1,6 +1,6 @@
 # Application Integration Lab Guide
 
-## May 24, 2019 
+## May 29, 2019 
 
 # Table of Contents
 
@@ -652,18 +652,18 @@ Create an ATP Invoke connection that will allow your integration to
 interact with the ATP Database:
 
 15. Click the *Create* button in the upper-right corner of the
-    Connections page. The Create Connection – Select Adapter dialog
+    *Connections* page. The *Create Connection – Select Adapter* dialog
     appears so you can choose the prebuilt adapter you want to be the
     basis for your new connection.
 
-16. In the Search field, enter: *ATP* and press *Return*.
+16. In the *Search* field, enter: *ATP* and press *Return*.
 
-17. The *Oracle ATP* adapter appears. Select it.
+17. The *Oracle ATP* adapter appears. Click on its *Select* button.
 
 18. The Create New Connection dialog appears. Fill in the fields:
 
-    - Name: \<*insertYourInitialsHere\>\_ATP\_Invoke\_Insert\_Into\_DB*
-      (TNB\_ Invoke\_Insert\_Into\_DB, for example)
+    - Name: *\<insertYourInitialsHere\><insertCurrentTimeHere\>\_ATP\_Invoke\_Insert\_Into\_DB*
+      (*TNB1452\_ Invoke\_Insert\_Into\_DB*, for example if your initials are *TNB* and it is *14:52* (no colons) in the afternoon).)
 
     - In the Role field, select *Invoke* from the dropdown menu to indicate
     that this connection will not trigger the integration, but instead,
@@ -674,55 +674,54 @@ interact with the ATP Database:
 
     - Click the *Create* button.
 
-19. Enter your email address in the Email Address field so you can be
+19. Enter your *email address* in the *Email Address* field so you can be
     alerted if problems or changes occur to your connection.
 
 20. Establish the Connection Properties for this new ATP invoke
     connection:
 
     - Click the *Configure Connectivity* button at the right of the
-    Connection Properties area. The Connection Properties dialog
+    *Connection Properties* area. The *Connection Properties* dialog
     appears.
 
-    - For Service Name, enter: *dbappint\_high* (That gives us the best
+    - For Service Name, enter: *databaseappint\_high* (That gives us the best
     performance.)
 
-    - Click the *OK* button to close the Create New Connection dialog.
+    - Click the *OK* button to close the *Create New Connection* dialog.
 
 
 14. Establish the Security settings by clicking the *Configure Security*
-    button at the right of the Security area. The Credentials dialog
+    button at the right of the Security area. The *Credentials* dialog
     appears. Perform the necessary configuration:
 
     - For the *Wallet* fields, we can supply the connection with the
     database sign in details (the wallet) you established in the
     Preparing Your Environment work section.
 
-    - Click *on* the *Upload File* check box to begin uploading your
+      - Click *on* the *Upload File* check box to begin uploading your
     wallet file.
 
-    - Select the *Upload button* and the Upload File dialog appears.
+      - Select the *Upload button* and the *Upload File* dialog appears.
 
-    - Click the *Choose File* button and browse to *your Wallet zip file*
+      - Click the *Choose File* button and browse to *your Wallet zip file*
     that you moved into your *ApplicationIntegrationLab* folder earlier.
 
-    - Select your *Wallet zip file* and click the *Open* button.
+      - Select your *Wallet zip file* and click the *Open* button.
 
-    - Click the *Upload* button on the Upload File dialog to upload your
+      - Click the *Upload* button on the *Upload File* dialog to upload your
     database access credentials into your new connection.
 
     - For the *Wallet Password* and *Confirm Wallet Password fields*,
     enter (copy and paste) the wallet password. Remember that you saved
-    it in your MyLabNotes file earlier using your editor so you could
-    copy and paste it whenever you needed it.
+    it in your *MyLabNotes* file earlier.
 
     - For the Database Service Username, enter: *atpc\_user*
 
     - For the Database Service Password and Confirm Database Service
-    Password, enter the *\<atpc\_user Autonomous Database User Password\>*
-    that you noted in the Prerequisites section.
+    Password, enter the *atpc\_user Autonomous Database User Password*
+    that you noted in the *Prerequisites* section.
 
-    - Click the *OK* button to close the Credentials dialog.
+    - Click the *OK* button to close the *Credentials* dialog.
 
     - Click the *Test* button in the upper-right and watch for the
     “*Connection ATP\_Invoke\_Insert\_Into\_DB was tested
@@ -732,9 +731,9 @@ interact with the ATP Database:
     connection.
 
 23. Click the *Close* button in the upper-right corner to return to the
-    Connections page.
+    *Connections* page.
 
-24. Notice that your two new connections appear on the Connections page:
+24. Notice that your two new connections appear on the *Connections* page:
 
     ![](./media/image18.png)
 
