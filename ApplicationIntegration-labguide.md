@@ -1,6 +1,6 @@
 # Application Integration Lab Guide
 
-## May 29, 2019 - 4:06PM
+## May 29, 2019 - 6:09PM
 
 # Table of Contents
 
@@ -968,12 +968,12 @@ Figure 23: Integration Editor Showing an App Driven Orchestration
     REST call) to the corresponding files in the target at the right
     (the outbound ATP invocation):
 
-      - Click a source field (like orderID) at the left.
+      - Click a source field (like *orderID*) at the left.
 
       - Drag the source field and drop it on the target field (like
     *orderID*) at the right. NOTE: As an alternative to drag and drop,
     you can click on the source field at the left, click on the target
-    field at the right and then click the Map+ icon above the source
+    field at the right and then click the *Map+* icon above the source
     fields.
 
       - A green line appears temporarily, but you are looking for both
@@ -983,24 +983,21 @@ Figure 23: Integration Editor Showing an App Driven Orchestration
         - NOTE: If you make a mistake during mapping, you’ll want to know how
     to delete a mapping so you can redo it. Here are the steps:
     
-            - *Click the field name* on the target side (it’s a link) to
-        display the Build Mappings detailed editor.
+            - *Click the field name* on the target side (it’s a link on the right-side) to
+        display the *Build Mappings* detailed editor.
     
             - In the editor, find the statement in the right-side panel
         representing your incorrect mapping. It’s a “*value-of select*”
-        statement. *Right-click on it.*
+        statement. Right-click on it.
     
             - Select the *Delete* option in the popup menu.
     
             - Click the *Close* button in the dialog’s lower-right corner to
-        exit the Build Mappings detailed editor.
+        exit the *Build Mappings* detailed editor.
     
             - Notice that the mapping is gone from the data mapper.
     
             - Perform the desired mapping.
-    
-    - Click the *Save* button in the upper-right corner of the data
-        mapper.
     
     - Continue mapping until all five fields are mapped:
 
@@ -1015,15 +1012,14 @@ Figure 23: Integration Editor Showing an App Driven Orchestration
       - Click the *Close* button in the upper-right corner to close the data
     mapper. The modeling canvas window redisplays.
 
-    - Click *Save* in the upper-right corner.
+    - Click *Save* in the upper-right corner of the editing canvas window.
 
 ### Configure Integration Tracking
-46. Notice the *red 1 icon* at the top of the canvas indicating that we
-    aren’t done yet. Let’s explore the error:
+46. Notice the *red 1 icon* at the top right of the canvas indicating that we aren’t done yet. Let’s explore the error:
 
-    - Click on the *red 1 icon* to display the Errors panel.
+    - Click on the *red 1 icon* to display the *Errors* panel.
 
-    - Hover your mouse over icon to learn the details:
+    - Carefully hover the mouse over the icon to learn the details:
 
       ![](./media/image32.png)
 
@@ -1031,11 +1027,9 @@ Figure 23: Integration Editor Showing an App Driven Orchestration
 
     - You learn that we haven’t supplied the fields that we want to
     display in the tracking facility. Tracking can help us troubleshoot
-    our integration when something goes wrong at runtime, so the tooling
-    makes tracking a mandatory requirement.
+    our integration when something goes wrong at runtime, so the tooling makes tracking a mandatory requirement.
 
-    - Click the *hamburger menu* (highlighted below) right below the Save
-    button:
+    - Click the *hamburger menu* (highlighted below) right below the Save button:
 
       ![](./media/image33.png)
 
@@ -1044,19 +1038,18 @@ Figure 23: Integration Editor Showing an App Driven Orchestration
     - Select the *Tracking* option in the popup menu to display the
     *Business Identifiers For Tracking* dialog.
 
-    - Click the *orderID* field and drag it from the left source panel to
-    the *Tracking Field* cell in the first row of the tracking table at
+    - Click the *orderID* field and drag it from the left source panel to the *Tracking Field* cell in the first row of the tracking table at
     the right. NOTE: If you have trouble dragging the *orderID* field,
-    select it, select the top row in the table and then click the red
+    select it, select the top row in the table and then click the
     arrowhead icon at the bottom of the dialog:
 
       ![](./media/image35.png)
 
       Figure 27: Specifying a Tracking Field for an Integration
 
-    - Click *Save* to record your selection and to close the dialog.
+    - Click *Save* in the lower-right corner to record your selection and to close the dialog.
 
-    - Click *Save* in the upper-right corner of the main page.
+    - Click *Save* in the upper-right corner of the editing canvas page.
 
     - Our Create New Order integration is now complete:
 
@@ -1066,14 +1059,13 @@ Figure 23: Integration Editor Showing an App Driven Orchestration
 
     - Click *Close* in the upper-right corner to exit the integration
     editor canvas window. The Integrations page redisplays and shows
-    your new integration at the top.
+    your new *Create New Order* integration at the top.
 
 ## Activate an Integration
 
 Our last step in this lab is to activate our integration.
 
-47. Click the toggle switch icon *On* to the right of the integration by
-    clicking on it:
+47. Toggle the toggle switch icon *On* to the right of your integration by clicking on it.  The *Activate Integration* dialog appears:
 
     ![](./media/image37.png)
 
@@ -1082,19 +1074,15 @@ Our last step in this lab is to activate our integration.
 48. Select these options in the Activate Integration dialog that
     appears:
 
-
     - Enable tracing: Click the check box to *On*
 
     - Include payload: Click the check box to *On*
-    - Enable tracing: Click the check box to *On*
 
       ![](./media/image38.png)
 
       Figure 30: Activating an Integration
 
-
-    - Click the *Activate* button in the lower-right corner. Wait a
-    moment.
+    - Click the *Activate* button in the lower-right corner. 
 
 49. When the Activate Integration dialog closes, verify that the
     integration has been activated:
@@ -1133,7 +1121,7 @@ you built in Lab 1.
       - Supports evaluation of the requests in a web form by regional
         managers
     
-      - Routes of rejected requests back to the initiator (store
+      - Routes rejected requests back to the initiator (store
         manager) for rework in a web form
     
       - Transforms approved requests into orders and inserts them into
@@ -1143,7 +1131,7 @@ you built in Lab 1.
     store managers and regional managers to process order request
     information.
 
-  - Initiate your integration (Lab 1) from the process model to add a
+  - Initiate your integration (from Lab 1) from the process model to add a
     new order to the ATP database.
 
   - Test the application by assuming the roles of store manager and
@@ -1155,22 +1143,17 @@ you built in Lab 1.
 Let's keep going. Again, follow the steps and ask questions if you get confused:
 
 1.  Start fresh by clearing your Chrome browser cache (all browsing
-    data). If you need help, refer to the Preparing Your Environment
-    section for the steps.
+    data). If you need help, refer to the *Preparing Your Environment*
+    section for the steps. This will help avoid some potential
+    frustrations along the way when the Oracle Cloud and the browser
+    seem to get “confused.”
 
 2.  Refresh your browser window. Due to clearing the browser cache, you
-    will lose your connection to the Oracle Public Cloud. Browse to the
-    *Oracle Cloud My Services Page URL* noted in your *MyLabNotes* file to access 
-    your services.
+    will lose your connection to the Oracle Cloud. Browse to the 
+    *Oracle Integration Home Page URL* you noted in your *MyLabNotes* file 
+    to access your Integration instance.  You'll have to sign in again.  NOTE: If you are an Oracle employee, follow the *Sign in with Oracle SSO* path.
 
-3.  Return to your *Integration Home Page* by clicking on the *house
-    icon* in the upper-left corner of the page:
-
-    ![](./media/image40.png)
-
-    Figure 32: Finding the House Icon
-
-4.  On the Integration *Home Page*, select the *Processes* menu option
+4.  On the *Integration Home Page*, select the *Processes* menu option
     at the left:
 
     ![](./media/image41.png)
@@ -1178,7 +1161,7 @@ Let's keep going. Again, follow the steps and ask questions if you get confused:
     Figure 33: Integration Home Page
 
 5.  Click the *Process Applications* menu option at the left to display
-    the Process Applications page.
+    the *Process Applications* page which lists all applications that have been created in your Oracle Integration instance.
 
 ## Create a Process Application
 
