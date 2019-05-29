@@ -602,11 +602,11 @@ status.
 
 This lab has three sections:
 
-  - Section 1 – Create First Web Application
+  - Section 1 – [Create First Web Application](#section-1--create-first-web-application)
 
-  - Section 2 – Create Master-Detail Application
+  - Section 2 – [Create Master-Detail Application](#section-2--create-master-detail-application)
 
-  - Section 3 – Create Mobile Application
+  - Section 3 – [Create Mobile Application](#section-3--create-mobile-application)
 
 ## Section 1 – Create First Web Application
 
@@ -827,6 +827,8 @@ Select the new page “main-product-detail” to see what it looks like.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.6 – Detail in flow
 
+#### Potential Context Error
+
 You may see an “error” message similar to the following. Remember that
 Visual Builder is WYSIWYG (what you see is what you get) and attempts to
 show real data during the design process. This error frequently occurs
@@ -852,8 +854,7 @@ context.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.9 – Product List live
 
-Return to the Product Detail display and you should now see data rather
-than the error message.
+Click the "Product Detail" button to return to the Product Detail display and you should now see data rather than the error message.
 
 ![](./media/image108.png)
 
@@ -887,6 +888,11 @@ and Delete pages for products. (not part of this lab).
 
 Congratulations\! You’ve successfully created your first Visual Builder
 web application.
+
+[Return to top of Section 1 – Create First Web Application](#section-1--create-first-web-application)
+
+[Return to Table of Contents](#table-of-contents)
+
 
 ## Section 2 – Create Master-Detail Application
 
@@ -955,7 +961,7 @@ list and dropping it into the date column.
   - Action Date
 
 Your page should look something like this when done (again, you may need
-to switch into “Live” mode to set the context).
+to [switch into “Live” mode to set the context](#potential-context-error)).
 
 ![](./media/image115.png)
 
@@ -1034,7 +1040,9 @@ Nothing really new so far…
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.18.4 – op
     
     Drag the “ProductOrderId” value from the left-hand “Sources” column
-    and drop it onto the “value” under “Target”
+    and drop it onto the “value” under “Target”.
+
+    Click the "Finish" button when done.
     
     ![](./media/image124.png)
     
@@ -1042,8 +1050,8 @@ Nothing really new so far…
     
     The Product Order Line information matching the current order should
     be displayed, if not, you may need to reset the context using the
-    “Live” mode again (see Section 1 – Create First Web Application
-    \#10 for more)
+    “Live” mode again (see [Section 1 – Create First Web Application
+    \#10 for more](#potential-context-error))
     
     ![](./media/image125.png)
     
@@ -1059,6 +1067,10 @@ Nothing really new so far…
     
     Congratulations\! You’re now ready to create your first Mobile
     application with Visual Builder.
+
+    [Return to top of Section 2 – Create Master-Detail Application](#section-2--create-master-detail-application)
+
+     [Return to Table of Contents](#table-of-contents)
 
 ## Section 3 – Create Mobile Application
 
@@ -1113,7 +1125,7 @@ Nothing really new so far…
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.25 – Add ProductOrder
 
 26. Select the id (Input Number), orderDate (Input Date) , and
-    orderStatus (Text) fields
+    orderStatus (Text) fields (no need to Define Query)
 
 ![](./media/image134.png)
 
@@ -1125,11 +1137,9 @@ Nothing really new so far…
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.27 – Product Order list
 
-28. Add a Detail page using the “Quick Start” menu. Choose \[\] items
-    -\> {} item\[0\] -\> Product Name (Input Text) , Unit Price (Input
-    Number), and Quantity (Input Number).
+28. Add a Detail page using the “Quick Start” menu and ProductOrder. Select id, associate, orderDate, and orderStatus.
 
-![](./media/image136.png)
+![](./media/vbcs_add_detail_prodordermobile.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.28 – Order Detail fields
 
@@ -1147,14 +1157,14 @@ Nothing really new so far…
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.30 – Items heading
 
-31. Add a table below the new heading by again dragging a “Table”
+31. Add a table below the new heading by dragging a “Table”
     component to the “Flex Container” in the Page Structure display.
 
 ![](./media/image140.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.31 – Screen with empty table
 
-32. Use the table’s “Quick Start” to “Add Data” to the table add
+32. Use the table’s “Quick Start” to “Add Data” from "ProductOrderLine" to the table, add 
     item\[i\] -\> Product Name (Text), Unit Price (Input Number), and
     Quantity (Input Number).
 
@@ -1194,7 +1204,11 @@ Nothing really new so far…
 
 This concludes Lab 3.
 
-[Go to Lab 4](#lab-4-data-from-service) – [Return to Table of Contents](#table-of-contents)
+[Return to top of Section 3 – Create Mobile Application](#section-3--create-mobile-application)
+
+[Go to Lab 4](#lab-4-data-from-service) 
+
+[Return to Table of Contents](#table-of-contents)
 
 # Lab 4: Data from service
 
