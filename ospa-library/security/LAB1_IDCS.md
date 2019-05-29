@@ -364,7 +364,7 @@ https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_
  ![](./media/idcs44.jpeg)
  <p align="center"> Figure 1-33 </p>
 
-*  Create an IDCS User via API
+*  Search an IDCS User via API
     
     * On the **Collections** tab, expand **Users**, and then **Search**.
     * Click on **Search all users (return specific attributes)**
@@ -375,11 +375,11 @@ https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_
 
 ![](./media/idcs45.png)
 
-
-* On the user collection select **Modify** and **Update user (replace single attribute)**
-* On the patch parameters replace **{{userID}}** with your ID string copied in the previous step
-* Select the Body Tab and update the Phone value number as shown on the screen
-* Click **Send**
+*  Modify an IDCS User via API
+    * On the user collection select **Modify** and **Update user (replace single attribute)**
+    * On the patch parameters replace **{{userID}}** with your ID string copied in the previous step
+    * Select the Body Tab and update the Phone value number as shown on the screen
+    * Click **Send**
 
 ![](./media/idcs46.png)
 
