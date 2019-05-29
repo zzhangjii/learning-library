@@ -602,11 +602,11 @@ status.
 
 This lab has three sections:
 
-  - Section 1 – Create First Web Application
+  - Section 1 – [Create First Web Application](#section-1--create-first-web-application)
 
-  - Section 2 – Create Master-Detail Application
+  - Section 2 – [Create Master-Detail Application](#section-2--create-master-detail-application)
 
-  - Section 3 – Create Mobile Application
+  - Section 3 – [Create Mobile Application](#section-3--create-mobile-application)
 
 ## Section 1 – Create First Web Application
 
