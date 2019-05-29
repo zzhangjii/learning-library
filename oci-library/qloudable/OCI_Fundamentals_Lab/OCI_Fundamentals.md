@@ -1,4 +1,4 @@
-# OCI Quick Start (VCN, Compute and Block Volume)
+# OCI Fundamentals(Deploy HA application using Load Balancer)
 
 ## Table of Contents
 
@@ -6,23 +6,17 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Recommended Learning Assets](#recommended-learning-assets)
+[Sign in to OCI Console and create VCN](#sign-in-to-oci-console-and-create-vcn)
 
-[Practice 1: Sign in to OCI Console and create VCN](#practice-1-sign-in-to-oci-console-and-create-vcn)
+[Create Public Private SSH Key Pair Using Built-in Application and two compute instances and install web server](#create-public-private-ssh-key-pair-using-built-in-application-and-two-compute-instances-and-install-web-server)
 
-[Practice 2: Create Public Private SSH Key Pair Using Built-in Application and two compute instances and install web server](#practice-2-create-public-private-ssh-key-pair-using-built-in-application-and-two-compute-instances-and-install-web-server)
+[Create Security List Route table and two subnets](#create-security-list-route-table-and-two-subnets)
 
-[Practice 3: Create Security List, Route table and two subnets](#practice-3-create-security-list,-route-table-and-two-subnets)
+[Create Load Balancer and update Security List](#create-load-balancer-and-update-security-list)
 
-[Practice 4: Create Load Balancer and update Security List](#practice-4-create-load-balancer-and-update-security-list)
+[Verify High Availability of HTTP Servers](#verify-high-availability-of-http-servers)
 
-[Practice 5: Verify High Availability of HTTP Servers](#practice-5-verify-high-availability-of-http-servers)
-
-[Practice 6: Delete the resources](#practice-5-delete-the-resources)
-
-[Appendix A: ISCSI Method to Attach Block Volume to Compute Instance](#appendix-a-iscsi-method-to-attach-block-volume-to-compute-instance)
-
-[Appendix B: ISCSI Method to Detach block volume](#appendix-b-iscsi-method-to-detach-block-volume)
+[Delete the resources](#delete-the-resources)
 
 ## Overview
 
@@ -31,15 +25,28 @@ Welcome to the Deploying High Availability Applications Using Load Balancer self
 
 In this lab you will deploy http servers on two compute instances in Oracle Cloud Infrastructure which will be configured in High Availability mode by using a Load Balancer. The Load Balancing Service provides automated traffic distribution from one entry point to multiple servers within your Virtual Cloud Network (VCN). The service offers a Public load balancer with a public IP address, provisioned bandwidth, and high availability. The Load Balancing Service provisions the public IP address across two subnets within a VCN to ensure accessibility even during an Availability Domain outage.
 
-How to Use the Lab Interface:
+**Some Key points;**
 
-https://www.youtube.com/watch?v=FJRnrNMrj3Y
+- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
+
+- All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
+
+- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
+
+- Do NOT use compartment name and other data from screen shots.Only use  data(including compartment name) provided in the content section of the lab
+
+- Mac OS Users should use ctrl+C / ctrl+V to copy and paste inside the OCI Console
+
+- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
+
+**Cloud Tenant Name**
+**User Name**
+**Password**
+**Compartment Name (Provided Later)**
+
+**Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
 
 ## Pre-Requisites
-
-- Oracle Cloud Infrastructure account credentials (User, Password, Tenant, and Compartment)  
-
-## Recommended Learning Assets
 
 1. OCI Training : https://cloud.oracle.com/en_US/iaas/training
 
@@ -51,24 +58,7 @@ https://www.youtube.com/watch?v=FJRnrNMrj3Y
 
 5. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
 
-**Before You Begin**
-
-- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
-- All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
-- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
-
-**Cloud Tenant Name**
-**User Name**
-**Password**
-**Compartment Name (Provided Later)**
-
-- Do NOT use compartment name and other data from screen shots.Only use  data(including compartment name) provided in the content section of the lab
-
-- Mac OS Users should use ctrl+C / ctrl+V to copy and paste inside the OCI Console
-
-**Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
-
-## Practice-1: Sign in to OCI Console and create VCN
+## Sign in to OCI Console and create VCN
 
 * **Tenant Name:** {{Cloud Tenant}}
 * **User Name:** {{User Name}}
@@ -77,7 +67,7 @@ https://www.youtube.com/watch?v=FJRnrNMrj3Y
 
 1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text" height="200" width="200">
 
 2. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
 
@@ -85,9 +75,9 @@ https://www.youtube.com/watch?v=FJRnrNMrj3Y
 
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text" height="200" width="200">
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL002.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL002.PNG" alt="image-alt-text" height="200" width="200">
 
 4. Fill out the dialog box:
 
@@ -101,16 +91,16 @@ https://www.youtube.com/watch?v=FJRnrNMrj3Y
 
 - Click **Close**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="200" width="200">
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text" height="200" width="200">
               
               
-## Practice 2: Create Public Private SSH Key Pair Using Built-in Application and two compute instances and install web server
+## Create Public Private SSH Key Pair Using Built-in Application and two compute instances and install web server
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL006.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL006.PNG" alt="image-alt-text" height="200" width="200">
 
 2. Enter command 
 ```
@@ -119,11 +109,11 @@ ssh-keygen
 **HINT:** You can swap between OCI window, 
 git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text" height="200" width="200">
 
 3. Press Enter When asked for 'Enter File in which to save the key', 'Created Directory, 'Enter passphrase', and 'Enter Passphrase again.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL008.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL008.PNG" alt="image-alt-text" height="200" width="200">
 
 4. You should now have the Public and Private keys:
 
@@ -150,11 +140,11 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 ```
  , highlight the key and copy 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL009.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL009.PNG" alt="image-alt-text" height="200" width="200">
 
 6. Click the apps icon, launch notepad and paste the key in Notepad (as backup)
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG" alt="image-alt-text" height="200" width="200">
 
 7. Switch to the OCI console. From OCI servies menu, Click **Instances** under **Compute** 
 
@@ -186,7 +176,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 **NOTE:** If 'Service limit' error is displayed choose a different shape such as VM.Standard.E2.2 OR VM.Standard2.2 OR choose a different AD
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text" height="200" width="200">
 
 10. Repeat Steps to launch a second Compute instance and note down its public IP address.
 
@@ -207,14 +197,14 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 
 14. Enter 'Yes' when prompted for security message
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0014.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0014.PNG" alt="image-alt-text" height="200" width="200">
  
 15. Verify opc@<COMPUTE_INSTANCE_NAME> appears on the prompt
 
 16. Launch a second git-bash window using above steps and connect via SSH into the second Compute instance (using the same steps as above. 
 **HINT:** You can swap between the OCI window, git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_001.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_001.PNG" alt="image-alt-text" height="200" width="200">
 
 **HINT:** Ensure to use the IP address of the second Compute instance in the SSH command.
 
@@ -287,7 +277,7 @@ We now have two Compute instances with Web servers installed and a basis index.h
 
 Load balancers should always reside in different subnets than your application instances. This allows you to keep your application instances secured in private subnets, while allowing public Internet traffic to the load balancers in the public subnets.
 
-## Practice 3: Create Security List, Route table and two subnets
+## Create Security List Route table and two subnets
 
 In this section we will create a new security list. This security list will be used by the load balancer (that will be created later on). This will ensure all traffic to the two web servers is routed properly.
 
@@ -310,12 +300,13 @@ In this section we will create a new security list. This security list will be u
 5. Click **Route Tables** (You will be creating a new route table), then **Create Route Table**. Fill out the dialog box:
 - Create in Compartment: This field defaults to your current compartment. Make sure correct Compartment is selected.
 - Name: Enter a name (for example, LB Route Table).
-- Target Type: Select **Internet Gateway** (Under Route Rules).
-- Destination CIDR Block: Enter 0.0.0.0/0 (Under Route Rules).
-- Compartment:  Make sure the correct Compartment is selected: 
-- Target Internet Gateway: Select the Internet Gateway for your VCN. (Under Route Rules).
+**Click +Additional Route Rules**
+- Target Type: Select **Internet Gateway** 
+- Destination CIDR Block: 0.0.0.0/0 
+- Compartment: Make sure the correct Compartment is selected: 
+- Target Internet Gateway: Select the Internet Gateway for your VCN. 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_003.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_003.PNG" alt="image-alt-text" height="200" width="200">
 
 6. Click **Create Route Table**.
 
@@ -340,7 +331,7 @@ In this section we will create a new security list. This security list will be u
 
 11. Leave all other options as default, Click **Create Subnet**.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_004.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_004.PNG" alt="image-alt-text" height="200" width="200">
 
 **Second Subnet:** (Your Virtual Cloud Network should be visible in  OCI Console window.)
 
@@ -358,7 +349,7 @@ In this section we will create a new security list. This security list will be u
 
 14. Leave all other options as default, Click **Create Subnet**.
 
-## Practice 4: Create Load Balancer and update Security List
+## Create Load Balancer and update Security List
 
 **When you create a load balancer, you choose its shape (size) and you specify two subnets (created earlier) from different Availability Domains. This ensures that the load balancer is highly available and is only active in one subnet at a time.**
 
@@ -366,7 +357,7 @@ In this section we will create a new security list. This security list will be u
 
 2. Click **Create Load Balancer**. Fill out the dialog box;
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_005.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_005.PNG" alt="image-alt-text" height="200" width="200">
 
 **Under Load Balancer Information:**
 
@@ -403,9 +394,9 @@ In this section we will create a new security list. This security list will be u
 
 3. Click **Create** 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_006.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_006.PNG" alt="image-alt-text" height="200" width="200">
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_007.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_007.PNG" alt="image-alt-text" height="200" width="200">
 
 4. Wait for the load balancer to become active and then note down it’s Public IP address.
 
@@ -456,7 +447,7 @@ We will now test the Load Balancer functionality (load balance using round robin
 
 **Note:** Be sure to take note of the "Health" field in the Networking > Load Balancers dashboard. If the health is "Critical," the load balancer may not work as intended, and the best course of action may be to create a new one. This is likely the result of something being mis-configured, and it should only happen rarely.
 
-# Practice 5: Verify High Availability of HTTP Servers
+# Verify High Availability of HTTP Servers
 
 In this section we will access the two Web servers configured earlier using Load Balancer’s Public IP address and demonstrate Load Balancer’s ability to route traffic on round robin basis(Per the Policy Configured). In case one of the web server becomes un-available the web content will be available via the second server (High Availability)
 
@@ -466,13 +457,13 @@ In this section we will access the two Web servers configured earlier using Load
 
 3. Refresh the browser multiple times and Observer Load Balancer Balancing traffic between the 2 web servers.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_009.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_009.PNG" alt="image-alt-text" height="200" width="200">
              
 **NOTE:** In case one of the server goes down the Application will be accessible via Load Balancer’s Public IP address.
 
 **This Lab is not intended to test Failover and Recovery of Backend Servers. User can test that functionality at their own discretion. Any trouble shooting in case any issue is encountered is out of scope of this lab**
 
-## Practice 6: Delete the resources
+##  Delete the resources
 
 Delete Load Balancer and associated components:
 
@@ -480,21 +471,21 @@ Delete Load Balancer and associated components:
 
 2. Click **Delete**.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_010.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_010.PNG" alt="image-alt-text" height="200" width="200">
 
 3. Step 3. Click **OK** in the Confirm Window. Wait for Load Balancer to fully delete.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_011.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_011.PNG" alt="image-alt-text" height="200" width="200">
 
 2. From OCI services menu Click **Instances** under Compute
 
 3. Locate first compute instance, Click Action icon and then **Terminat** 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text" height="200" width="200">
 
 4. Make sure **Permanently delete the attached Boot Volume** is checked, Click **Terminate Instance**. Wait for instance to fully Terminate
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0017.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0017.PNG" alt="image-alt-text" height="200" width="200">
 
 5. Repeat the step to delete the second compute intance.
 
@@ -503,11 +494,11 @@ appear.
 
 7. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text" height="200" width="200">
 
 8. From OCI services menu Click **Networking**, then **Public IPs**,locate the Reserved Public IP you created. Click Action icon and then **Terminate**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0019.PNG" alt="image-alt-text" height="100" width="100">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0019.PNG" alt="image-alt-text" height="200" width="200">
 
 
 ***Congratulations! You have successfully completed the lab. ***

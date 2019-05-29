@@ -1,6 +1,4 @@
-
-# NAT Gateway
-
+# NAT gateway.
 
 ## Table of Contents
 
@@ -8,252 +6,348 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Practice 1: Creating Virtual Cloud Network with Public and Private Subnets](#practice-1-creating-virtual-cloud-networks-with-public-and-private-subnets)
+[Recommended Learning Assets](#recommended-learning-assets)
 
-[Practice 2: Create Instances](#practice-2-create-instances)
+[Sign in to OCI Console and create VCN](#sign-in-to-oci-console-and-create-vcn)
 
-[Practice 3: Configuring NAT Gateway](#practice-3-configuring-nat-gateway)
+[Create ssh keys compute instance](#create-ssh-keys-compute-instance)
 
-[Summary](#summary)
+[Create and configure NAT gateway](#create-and-configure-nat-gateway)
+
+[Delete the resources](#delete-the-resources)
+
 
 ## Overview
 
-Oracle Cloud Infrastructure allows you to create a Virtual Cloud Network (VCN) which functions as an extended datacenter in the cloud. The virtual networking primitives offered by the platform give you full flexibility to build a network that meets complex enterprise requirements. You can use any address range for your VCN, segment into subnets, configure security lists and route tables. You can connect your VCN to your on-premises network through a Dynamic Routing Gateway (DRG) through IPSec connections over Internet or through FastConnect over private, dedicated connections.
+Many Oracle Cloud Infrastructure customers have compute instances in virtual cloud networks (VCNs) that, for privacy, security, or operational concerns, are connected to private subnets. To grant these resources access to the public internet for software updates, CRL checks, and so on, a customer’s only option has been to create a NAT instance in a public subnet and route traffic through that instance by using its private IP address as a route target from within the private subnet. Although many have successfully used this approach, it does not scale easily and provides a myriad of administrative and operational challenges.
 
-One of the most common network design requirements is to secure private instances from being accessible from the Internet, while being
-accessible only from the on-premises network or bastion hosts in public subnets. You can achieve this by launching the instances in a private subnet or by choosing to not assign a public IP address at launch. However, these backend instances may need access to the Internet for specific purposes like software updates or CRL verification. You may choose to route this traffic to your on-premises network through your Internet gateway, but that may add unwanted latency or cost.
+NAT gateway,  addresses these challenges and provides Oracle Cloud Infrastructure customers with a simple and intuitive tool to address their networking security needs. NAT gateways provide the following features:
 
-With the recent enhancements on our virtual networking platform, you can now enable outbound Internet access from your private instances using a new feature ‘NAT Gateway’. A NAT  gateway gives cloud resources without public IP addresses access to the internet without exposing those resources to incoming internet connections.
+- Highly Scalable and Fully Managed: Instances on private subnets can initiate large numbers of connections to the public internet. Connections initiated from the internet are blocked.
+- Secure: Traffic through NAT gateways can be disabled with the click of a button.
+Dedicated IP Addresses: Each NAT gateway is assigned a dedicated IP address that can be reliably added to security whitelists.
 
-[Pre-Requisites](#pre-requisites)
+**Some Key points;**
 
-- Oracle Cloud Infrastructure account credentials (User, Password, and Tenant)
-- Access to Oracle Cloud Infrastructure account
+- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
 
-# Practice-1: Creating Virtual Cloud Network with Public and Private Subnets
+- All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
 
-In this exercise, we are going to create a VCN and its required resources.
+- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
 
-1) In the web console, click **MENU** **Networking -> Virtual Cloud Networks**. 
-Click **Create Virtual Cloud Network**.
+- Do NOT use compartment name and other data from screen shots.Only use  data(including compartment name) provided in the content section of the lab
 
-![](media/image1.png)
+- Mac OS Users should use ctrl+C / ctrl+V to copy and paste inside the OCI Console
 
-2) In the dialog box, enter a **Name** *TrainingVCN* for your virtual
-	cloud network and Select *Create Virtual Cloud Network Only*
+**Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
 
-	Choose a CIDR block - 10.0.0.0/16 and keep the remaining options 		as it is.
+## Pre-Requisites
 
-	Click - Create Virtual Cloud Network (This creates a VCN, and you can	see the details page of the created VCN.
+1. Oracle Cloud Infrastructure account credentials (User, Password, Tenant, and Compartment)  
 
-![](media/image2.png)
-![](media/image3.png)
+2. OCI Training : https://cloud.oracle.com/en_US/iaas/training
 
-Within this VCN, we will now create additional resources. 
+3. Familiarity with OCI console: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/console.htm
 
-3) Navigate to **Internet Gateways** on left side panel, and click on **Create Internet Gateway**. Provide a name and create an internet gateway. 
+4. Overview of Networking: https://docs.us-phoenix-1.oraclecloud.com/Content/Network/Concepts/overview.htm
 
-![](media/image4.png)
+5. Familiarity with Compartment: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/concepts.htm
 
-4) Navigate to Route tables and create a Route table for private subnets. We will attach this route table with private instances in private subnet. 
-	
-	Click **Create Route table** Don’t add any rule in it for now, we will add it later.
-
-![](media/image5.png)
-
-> An empty route will automatically appear in the UI. You may ignore  it, or click the red X to remove it.
-
-5) Navigate to Security Lists on the left panel. And Create a Security
-lists for Private subnets.
-
-	Click on **Create Security List**, create a *private_security_list* Remove all ingress and egress rules for now. We will add them later
-
-![](media/image6.png)
-
-6) Navigate back to subnets, and create two subnets. One subnet will be a public subnet which will host our Bastion Host and have access to the internet. Second subnet will be our Private subnet and will host our private instances.
-
-Create a Private Subnet.
-
-  - Name: Private_Subnet
-  - Availability Domain: \<Choose anyone among the three\>
-  - CIDR Block: 10.0.10.0/24
-  - Route table: **Private Route table**
-  - Subnet : Private Subnet
-  - DHCP Options : Default Dhcp options
-  - Security List: **PrivateSecurityList**
-
-![](media/image7.png)
-![](media/image8.png)
-
-Create a Public Subnet.
-
-  - Name: Any name for your Subnet
-  - Availability Domain: \<Choose anyone among the three\>
-  - CIDR Block: 10.0.20.0/24
-  - Route table: **Default Route table**
-  - Subnet : Public Subnet
-  - DHCP Options : Default Dhcp options
-  - Security List: **Default Security List**
-
-![](media/image9.png)
-![](media/image10.png)
-
-The two created subnets are 
-
-![](media/image11.png)
-
-In this exercise, you have created a VCN, a public subnet and a private subnet. Each subnet is associated with its private and public route tables and a security list.
-
-Next we will add route table rules in the  default route table, edit the security list in the private subnet and create instances in each one of the subnet, and connect with them.
+6. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
 
 
-7) Navigate to **Route tables** of your VCN, and add a route table rule in **Default Route Table**
+## Sign in to OCI Console and create VCN
 
-	Click on **Default Route Table**, and **Edit** 
+* **Tenant Name:** {{Cloud Tenant}}
+* **User Name:** {{User Name}}
+* **Password:** {{Password}}
+* **Compartment:**{{Compartment}}
 
-	Target Type: Internet Gateway
-	Compartment: *your compartment name*	
-	Destination CIDR : 0.0.0.0/0
-	Target Internet Gateway: *your internet gateway name*
-	
-![](media/image12.png)
+**Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
 
-![](media/image13.png)
+1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
-8) Navigate to **Security Lists** of your VCN and edit the **private security list** This is the security list created and associated with your private subnets only. 
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text" height="200" width="200">
 
-Click on **private security list** and Click on **Edit All Rules**. Add following rules. And **Save** them! 
+2. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
 
-**Ingress**
-		
-		Source CIDR : 10.0.20.0/24
-		Source Type: CIDR
-		Protocols: All Protocols
+3. Select the compartment assigned to you from drop down menu on left part of the screen
 
-**Egress**
-		
-		Destination CIDR : 0.0.0.0/0
-		Source Type: CIDR
-		Protocols: All Protocols
-		
+**NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
-![](media/image14.png)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL002.PNG" alt="image-alt-text" height="200" width="200">
 
-![](media/image15.png)
-	
-Now you have added security list of private subnet to allow only ingress traffic from a public subnet. 
+4. Fill out the dialog box:
 
-# Practice-2: Create Instances 
+- **Create in Compartment:** Has the correct compartment
 
-In this practice, you create instances in each of the two subnets in our
-VCN. 
+- **Name:** Enter easy to re¬member name
 
-1) Navigate to the **MENU**  --> **Compute** --> **Instances**. Click on **Create Instance** 
-		
-		Name: Bastion Host
-		Availability Domain: <Choose anyone among the three>
-		Operation System: Oracle Linux 7.5 (use default)
-		Instance Type: Virtual Machine
-		Instance Shape: VM.Standard2.1 (Or Use the shape available in your tenancy)
-		Boot Volume: Use default Boot Volume 46 GB
-		SSH key: <use your ssh_key.pub here> 
-		Virtual Cloud Network: TrainingVCN <Your VCN name>
-		Subnet: <Your Public Subnet Name>
+- **Create Virtual Cloud Network Plus Related Resources:** Select this option.
 
-Click **Create**. 
+- Click **Create Virtual Cloud Network**
 
-![](media/image16.png)
-![](media/image17.png)
-![](media/image18.png)
+- Click **Close**
 
->The page shows the detail of this Public Instance. Note down the Public IP from here. We will use the public IP to ssh into the instance. 
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="200" width="200">
 
-![](media/image19.png)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text" height="200" width="200">
+              
+## Create ssh keys compute instance
 
-2) Create a private instance as well. Navigate to the **MENU**  --> **Compute** --> **Instances**. Click on **Create Instance** 
-		
-		Name: Private_Instance
-		Availability Domain: <Choose anyone among the three>
-		Operation System: Oracle Linux 7.5 (use default)
-		Instance Type: Virtual Machine
-		Instance Shape: VM.Standard2.1 (Or Use the shape available in your tenancy)
-		Boot Volume: Use default Boot Volume 46 GB
-		SSH key: <use your ssh_key.pub here> 
-		Virtual Cloud Network: TrainingVCN <Your VCN name>
-		Subnet: <Your Private Subnet Name>
+1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
-Click **Create**. 
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL006.PNG" alt="image-alt-text" height="200" width="200">
 
-![](media/image20.png)
-
-> The page shows the detail of this Private Instance. Note down the Private IP address from here. We will use the private IP to ssh into the instance via our bastion host (public instance). 
-
->NOTE: For following steps
->Mac OS/Linux: use a bash terminal 
-> Windows: use GitBash
-
-
-3) Lets connect to the instances that we launched. Let’s first ssh into our **Bastion Host** Since the instance is in a **public subnet**, and has a public IP address we can directly ssh into it with the same ssh keys we used to launch it. The default username is **opc**
-
+2. Enter command 
 ```
-ssh -i /pathtosshprivatekey/ opc@<Public IP of Bastion Host>
+ssh-keygen
+```
+**HINT:** You can swap between OCI window, 
+git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text" height="200" width="200">
+
+3. Press Enter When asked for 'Enter File in which to save the key', 'Created Directory, 'Enter passphrase', and 'Enter Passphrase again.
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL008.PNG" alt="image-alt-text" height="200" width="200">
+
+4. You should now have the Public and Private keys:
+
+/C/Users/ PhotonUser/.ssh/id_rsa (Private Key)
+
+/C/Users/PhotonUser/.ssh/id_rsa.pub (Public Key)
+
+**NOTE:** id_rsa.pub will be used to create 
+Compute instance and id_rsa to connect via SSH into compute instance.
+
+**HINT:** Enter command 
+```
+cd /C/Users/PhotonUser/.ssh (No Spaces) 
+```
+and then 
+```
+ls 
+```
+to verify the two files exist. 
+
+5. In git-bash Enter command  
+```
+cat /C/Users/PhotonUser/.ssh/id_rsa.pub
+```
+ , highlight the key and copy 
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL009.PNG" alt="image-alt-text" height="200" width="200">
+
+6. Click the apps icon, launch notepad and paste the key in Notepad (as backup)
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG" alt="image-alt-text" height="200" width="200">
+
+7. Switch to the OCI console. From OCI servies menu, Click **Instances** under **Compute** 
+
+8. Click Create Instance. Fill out the dialog box:
+
+- **Name:** Enter a name 
+
+- **Availability Domain:** Select availability domain
+
+- **Image Operating System:** For the image, we recommend using the Latest Oracle Linux available.
+
+- **Choose Instance Type:** Select Virtual Machine
+
+- **Choose Instance Shape:** Select VM shape
+
+- **Configure Boot Volume:** Leave the default
+
+- **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
+
+- **Virtual Cloud Network Compartment:** Choose your compartment
+
+- **Virtual Cloud Network:** Select the VCN you created in the previous section. 
+
+- **Subnet Compartment:** Choose your compartment. 
+
+- **Subnet:** Choose the first Subnet
+
+9. Click **Create**
+
+**NOTE:** If 'Service limit' error is displayed choose a different shape such as VM.Standard.E2.2 OR VM.Standard2.2 OR choose a different AD
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text" height="200" width="200">
+
+10. Wait for Instance to be in **Running** state. In git-bash Enter Command:
+```
+ cd /C/Users/PhotonUser/.ssh
+```
+11. Enter **ls** and verify id_rsa file exists
+
+12. Enter command 
+```
+ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE> 
 ```
 
-![](media/image21.png)
+**HINT:** If 'Permission denied error' is seen, ensure you are using '-i' in the ssh command
 
-We need to connect to the **private instance** to check internet
-connectivity with it. Since the instance has been launched in a private
-subnet therefore doesn’t have any public IP address so we can’t directly ssh into the instance. However, we can ssh into our private  instance from our Public instance which is in the public subnet.
+13. Enter 'Yes' when prompted for security message
 
-In Order to ssh into private instance we will use the ssh proxy command. This command allows us to “tunnel” through the bastion host to our private instance, while maintaining SSH keys locally on our laptop. Storing private SSH keys on a public server such as a Bastion host is not recommended.
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0014.PNG" alt="image-alt-text" height="200" width="200">
+ 
+14. Verify opc@<COMPUTE_INSTANCE_NAME> appears on the prompt
 
+## Create and configure NAT gateway
+
+**We will now create a route table and NAT gateway in the VCN.**
+
+1. Switch to OCI console. From OCI services menu click **Virtual Cloud Networks** under Networking. Locate your VCN and click the VCN name to display VCN details. 
+
+2. Click **NAT Gateways** , then **Create**. Ensure correct compartment is selected and provide a Name and click **Create NAT Gateway**.
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/NAT_Gateway/img/NAT_001.PNG" alt="image-alt-text" height="200" width="200">
+
+3. Once NAT gateway is in Available state, Click **Route Tables**, then **Create Route Table**. Fill out the dialog box:
+- Create in Compartment: This field defaults to your current compartment. Make sure correct Compartment is selected.
+- Name: Enter a name 
+**Click +Additional Route Rules**
+- Target Type: Select **NAT Gateway** 
+- Destination CIDR Block: Enter 0.0.0.0/0 
+- Compartment:  Make sure the correct Compartment is selected: 
+- Target NAT Gateway: Select the NATGateway for your VCN. 
+
+4. Click **Create Route Table**
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/NAT_Gateway/img/NAT_002.PNG" alt="image-alt-text" height="200" width="200">
+
+5. Click your VCN name to display the VCN details.Click **Create Subnet**. Fill out the dialog box:
+
+- Name: Enter a name 
+- Subnet Type: Regional
+- CIDR Block: Provide a CIDR (e.g 10.0.5.0/24).
+- Route Table: Choose the Route table created earlier
+
+**NOTE:** Do not choose the 'Default route table'. This is being done so all routing for compute instances in this subnet are via the NAT gateway 
+
+- Subnet access:Private Subnet.
+- DHCP Options: Select the default.
+- Security Lists: Select the Security List you created earlier.
+
+6. Leave all other options as default, Click **Create Subnet**.
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_004.PNG" alt="image-alt-text" height="200" width="200">
+
+7. Switch to Git bash session with ssh to compute instance Generate ssh key pair, Enter command:
 ```
-$ ssh -t -o ProxyCommand='ssh -i /pathtosshprivatekey/ opc@<Bastion Host public IP> -W %h:%p %r' -i /pathtosshprivatekey/ opc@<private instance
-IP>  
+ssh-keygen 
+```
+8. Press Enter When asked for ‘Enter File in which to save the key’, ‘Created Directory, ‘Enter passphrase’, and ‘Enter Passphrase  again.
+
+9. Enter command 
+```
+cd ~/.ssh
+```
+and then 
+```
+ls
+``` 
+You should have the Public and Private keys:
+/home/opc/.ssh/id_rsa (Private Key)
+/home/opc/.ssh/id_rsa.pub (Public Key)
+
+10. Enter command 
+```
+cat ~/.ssh/id_rsa.pub
+``` 
+
+copy and paste the public key content to Notepad. We will use this public key to launch a compute instance in private subnet of the VCN.
+
+11. Switch to OCI console window and launch a second compute instance as done previously. Ensure the subnet chosen is the private subnet that we created previously.
+
+- **Name:** Enter a name 
+
+- **Availability Domain:** Select availability domain
+
+- **Image Operating System:** For the image, we recommend using the Latest Oracle Linux available.
+
+- **Choose Instance Type:** Select Virtual Machine
+
+- **Choose Instance Shape:** Select VM shape
+
+- **Configure Boot Volume:** Leave the default
+
+- **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
+
+- **Virtual Cloud Network Compartment:** Choose your compartment
+
+- **Virtual Cloud Network:** Select the VCN you created in the previous section. 
+
+- **Subnet Compartment:** Choose your compartment. 
+
+- **Subnet:** choose the subnet under Private Subnet
+
+12. Click **Create**
+
+13. Once the Instance is running, Note down privateIP address of the instance from instance detail page (by Clicking Instance name) 
+
+14. Switch to git-bash window with ssh session to Public compute instsance (first compute instance created earlier). Enter command:
+```
+ cd ~/.ssh
+``` 
+then
+```
+ssh –i id_rsa opc@<Private_IP_OF_COMPUTE_INSTANCE>
 ```
 
-![](media/image22.png)
+**NOTE:** User name is ‘opc’
 
-You are now connected to the Private instance and the bastion host. The bastion host is part of the public subnet and is connected to internet via the internet gateway. The Private instance is in a private subnet, with no public IP or public internet access. You can confirm access as show below. 
+**HINT:** If ‘Permission denied error’ is seen, ensure you are using ‘-i’ in the ssh command
 
-![](media/image23.png)
+**NOTE:** Use the private ip of second compute instance noted earlier
 
-![](media/image24.png)
+15. Enter ‘Yes’ when prompted for security message
 
-# Practice-3: Configuring NAT Gateway
+16. In the private compute instance Enter command:
+```
+ping 8.8.8.8 
+```
+and verify there is internet connectivity
 
-In this exercise, we are going to configure a NAT Gateway in our VCN. After configuring the NAT Gateway, we will modify the route table for our private subnet so that private instances can now access internet via this NAT Gateway. 
+**The compute instance in private subnet has internet access. This is possible since traffic is being routed through the NAT gateway that we created and attached to the VCN. Next we will use the traffic toggle function on NAT gateway to block/allow traffic with a single click.**
 
-1)  Navigate to the **MENU**  --> **Networking** --> **Virtual Cloud Network**. Click on **Training VCN** 
+17. Switch to OCI console window. In your VCN's detail page, click **NAT Gateways**
 
-2) Inside your VCN, click on **NAT Gateway** --> **Create Nat Gateway**. 
+18. Hover over the Action icon  and choose Block Traffic. 
 
-![](media/image25.png)
-		
-	Provide a Name for Nat Gateway device. 
-	Click *Create*
-	*Close* the dialog box
+19. Switch back to ssh session to the private compute instance and Enter command ping 8.8.8.8 (if not already running). Verify there is no repsonse
 
-![](media/image26.png)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/NAT_Gateway/img/NAT_003.PNG" alt="image-alt-text" height="200" width="200">
 
-![](media/image27.png)
-    
-3) Navigate to the **Route tables** --> **Private route table** --> ** Edit Route Rule** 
+20. Switch back to OCI console window and using above step, this time choose Allow Traffic. Switch back to ssh session and verify ping response is received.
+       
 
-		Click *+Another Route Rule*
-		Target Type: Nat Gateway
-		Destination CIDR: 0.0.0.0/0
-		Compartment: <Your Compartment>
-		Target Type Name: Nat Gateway	
+## Delete the resources
 
-![](media/image28.png)
+1. Switch to  OCI console window
 
-This route rule now sends all the traffic of the private subnet to nat gateway.A NAT gateway gives your private instance access to the internet without exposing it to incoming internet connections.
+2. If your Compute instance is not displayed, From OCI services menu Click **Instances** under **Compute**
 
-While still logged in the Private instance, test internet connectivity. As you can see below, it works now via the NAT Gateway device. 
+3. Locate compute instance, Click Action icon and then **Terminat** 
 
-![](media/image29.png)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text" height="200" width="200">
 
-## Summary
+4. Make sure Permanently delete the attached Boot Volume is checked, Click Terminate Instance. Wait for instance to fully Terminate
 
-In this lab, you were able to create a private instance and provide internet access to that instance without providing any public IP to the instance. 
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0017.PNG" alt="image-alt-text" height="200" width="200">
+
+5. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will 
+appear.
+
+6. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text" height="200" width="200">
+
+7. From OCI services menu Click **Networking**, then **Public IPs**,locate the Reserved Public IP you created. Click Action icon and then **Terminate**
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0019.PNG" alt="image-alt-text" height="200" width="200">
+
+***Congratulations! You have successfully completed the lab. ***
+
