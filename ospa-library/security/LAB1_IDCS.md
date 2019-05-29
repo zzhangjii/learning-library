@@ -1,5 +1,5 @@
  ![](./media/securitytitle.png)
-# Lab 2:  Oracle Identity Cloud Service
+# Lab 1:  Oracle Identity Cloud Service
 
 ## Table of Contents
 
@@ -366,22 +366,35 @@ https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_
 
 *  Create an IDCS User via API
     
-    * On the **Collections** tab, expand **Users**, and then
-        **Create**.
+    * On the **Collections** tab, expand **Users**, and then **Search**.
+    * Click on **Search all users (return specific attributes)**
+    * Add the key **Count** and the Value **1000**
+    * Click on **Send**
+    * On the result windown search your user id (e.g. alejandro.casas@oracle.com) and copy the id value without the quotes
     
-    * Select **Create a user**. The request information appears with some default values as can be seen into below print screen. You can either change them as per your preference or you can simply use the default filled values.
-    
-    * Click **Body**, and then click **Send**.
 
-![](./media/idcs45.jpeg)
+![](./media/idcs45.png)
 
-* In the response, confirm that the status **201 Created** appears and that the response body displays details about the user that was successfully created in Oracle Identity Cloud Service.
 
-* While in the IDCS UI you can see the user as being created.
+* On the user collection select **Modify** and **Update user (replace single attribute)**
+* On the patch parameters replace **{{userID}}** with your ID string copied in the previous step
+* Select the Body Tab and update the Phone value number as shown on the screen
+* Click **Send**
 
 ![](./media/idcs46.png)
 
- You can also **modify** and **delete** users and a lot more via REST API. For more information, please check the Oracle Identity Cloud Service documentation references listed in the *participant guide*.
+
+* You will receive an email with the profile update confirmation
+
+![](./media/idcs47.png)
+
+* Open your profile to see the changes
+
+![](./media/idcs48.png)
+
+
+At this point you are able to make REST application programming interface (API) calls to Oracle Identity Cloud Service using Postman to create, delete and modify users.
+For further information about using IDCS REST interface with postman, please visit [Using the Oracle Identity Cloud Service REST APIs with Postman](https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/idcs/idcs_rest_postman_obe/rest_postman.html)
 
 
 # Module 2:  Configure SSO and Provisioning for Salesforce
@@ -403,15 +416,30 @@ https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_
  ![](./media/idcs47.jpeg)
  <p align="center"> Figure 2-1 </p>
 
-*  Use your Salesforce developer account created on Lab 1 Oracle CASB Cloud Service
-    [https://developer.salesforce.com/](https://developer.salesforce.com/)
+* Navigate to [Developer SalesForce](https://developer.salesforce.com/)
+    * Click the **Sign-up** button in the top right corner
+    * Enter the required information
+    * Click **Sign me up**
+
+**Note: You must sign-up with your personal account (e.g. Gmail, Yahoo, Outlook)**
+
+![SF registration](./media/sf_registration.png)
+<p align="center"> Figure 1-24 </p>  
+
+
+* You will get an email to confirm your account. Click **Verify Account**
+
+
+![SF verification](./media/sf_verification.png)
+<p align="center"> Figure 1-25 </p>  
+
+
+* Create a password for your account
+
+![SF Create Password](./media/sf_password.png)
+<p align="center"> Figure 1-26 </p>  
 
  
- ![](./media/idcs48.jpeg)
- <p align="center"> Figure 2-2 </p>
- 
- * Log into Salesforce. *Note: you may have to select “Switch to Salesforce Classic”.*
-
 * Access Salesforce application using the URL provided after registration, click on the profile menu as per below print screen and select the option: **“Switch to Salesforce Classic”**.
 
 ![](./media/idcs49.jpeg)
