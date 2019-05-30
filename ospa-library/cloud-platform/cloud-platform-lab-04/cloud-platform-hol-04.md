@@ -1,11 +1,9 @@
 ![](media/ocpheading.png)
 # Class of SE - Oracle Cloud Hands On Lab
 
-### Who Should Complete This Lab: 
+### Who Should Complete This Lab: All Participants
 
-All Participants
-
-# Objectives:
+Objectives:
 
 -   You’re going to first become proficient logging in and then out of the
     Oracle Cloud
@@ -33,19 +31,19 @@ All Participants
 
 
 
-If you recieved an email that looks like this one 
+If you recieved an email that looks like Figure 1
 
 -   Oracle Cloud access has been made available to you by the Cloud
     Administrator
 
--   Then you next action will be in the To Access the Oracle Cloud section, and these others are examples your customer may recieve; again dependent upon how the Cloud Administrator set up accounts.
+-   Then you next action will be in the #To Access the Oracle Cloud# section further down the page, and others are examples your customer may recieve; again dependent upon how the Cloud Administrator set up accounts.
 
 ## The Account Activation Email - Sign In For the First Time
 
 ![](media/49171907d9801cc1287b8df3a728c9a2.png)
 *<p align="center">Figure 2: Activate Your Account</p>*
 
-If you recieved an email that looks like this one 
+If you recieved an email that looks like Figure 2 
 
 -   Select Activate
 -   It will take you to the reset password page
@@ -64,9 +62,9 @@ In some circumstances, you may receive a separate Oracle Cloud email and in that
 As that may not always be available, we will next go through how to access Oracle Cloud should someone have not gotten that link, or it’s not available
 
 ## To Access the Oracle Cloud
-#### Step 1: Enter URL **http://cloud.oracle.com/en_US/sign-in** into your browser.
+#### Step 1: Enter URL **http://cloud.oracle.com/en_US/sign-in** into your browser and a dialog box like Figure 5 appears.
 
-![](media/4c0ce66dbe90b4c8c4579078bfa0e984.png)
+![](media/984.png)
 *<p align="center">Figure 5: Cloud Account Sign In</p>*
 
 #### Step 2: Enter the Tenancy Name  orasenatdhubsblue02 into the account dialog box
