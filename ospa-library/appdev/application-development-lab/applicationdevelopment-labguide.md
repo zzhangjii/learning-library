@@ -350,21 +350,13 @@ upper-left corner.
 10. Create another Business Object named “Product Order Line”
     (ProductOrderLine).
     
-    Add the following fields so that the result looks like Figure 2.10.1.
+    You will begin with the predefined fields as shown in Figure 2.10.1.
 
-<!-- end list -->
-
-  - relationship productOrder Product Order
-
-  - relationship product Product
-
-  - \# (numeric) unitPrice Unit Price
-
-  - \# (numeric) quantity Quantity
+    But this time before adding fields you will first add two relationships to the other business objects that will show up as 'references' later. Then, you will add two fields in the usual manner.
 
 ![](./media/image35.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.1 – Start Product Order Line`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.1 – Start Product Order Line
 
 Click on the “Overview” tab to see where relationships are defined.
 
