@@ -988,6 +988,8 @@ In this you’ll see how Oracle CASB is able to detect sensitive information in 
 ****
 **You have successfully connected and monitor third-party apps and OCI with Oracle CASB Cloud Service.**
 
+**Now that you have completed this Hands-on lab, each group must remove the registered third-party apps (Salesforce and Box) in CASB. You must go to applications, search your applications *(e.g. COSE_AU1_Salesforce_G1)*, click on it and select remove.**
+
 ***END OF LAB***
 
 [Back to Top](#table-of-contents)   
