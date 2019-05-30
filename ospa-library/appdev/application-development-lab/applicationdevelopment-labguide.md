@@ -62,7 +62,7 @@ these lab exercises.
 
 # Labs
 
-In these labs you will use Visual Builder to help Mama Maggy’s by adding
+In these labs you will use Visual Builder to help Mama Maggy’s (using data supporting the Mama Maggy use case, but, other data could be substituted) by adding
 product ordering and order tracking solutions.
 
 The lab is presented in four parts: Lab 1 – Introduction and Setup, Lab
@@ -229,8 +229,8 @@ This concludes Lab 1.
 # Lab 2: Spreadsheet-based Business Objects
 
 Visual Builder provides two main methods to access data: built-in
-business objects, and service connections. This lab focuses on creating
-and using built-in business objects using spreadsheet (.csv/.xlsx)
+business objects, and service connections. VBCS business objects store data in tables like a database. This lab focuses on creating
+and using built-in business objects with data suppiled via spreadsheet (.csv/.xlsx)
 files. These files get copied into an Oracle Database (under the covers
 of VBCS) and are actually accessed using the same type of RESTful APIs
 as those used for service connections (more on this in Lab 4).
@@ -300,7 +300,7 @@ upper-left corner.
     Builder creates the name as “productName”
 
   - Set the Type to character by making sure the “A”
-    ![](./media/image28.png) is selected as shown below
+    ![](./media/image28.png) is selected as shown below (be sure to select the correct "type")
 
   - Click the “Checkmark” icon ![](./media/vbcs_checkmark.png) when done
 
@@ -308,7 +308,7 @@ upper-left corner.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.6 – New Field Product Name<br/>
 
-7.  Set the field property to “Required”
+7.  In the box at the lower-right part of the VBCS editor set the field property to “Required”
 
     ![](./media/image30.png)
 
@@ -319,33 +319,36 @@ upper-left corner.
 
 <!-- end list -->
 
-  - A (text) productName Product Name (already done above)
+  - A (text)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;productName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Product Name (already done above)
 
-  - A (text) product Description Product Description
+  - A (text)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;product Description&nbsp;&nbsp; Product Description
 
-  - \# (numeric) unitPrice Unit Price
+  - \# (numeric) unitPrice &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unit Price
 
 ![](./media/image31.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.8 – Product Business Object Fields<br/>
 
-9.  Create another Business Object named “Product Order” (ProductOrder).
+9.  Create another Business Object named “Product Order” (ProductOrder) by clicking the "plus sign" at the top of the Business Objects list again ![](./media/vbcs_add_biz_object.png)
 
-    Add new fields as suggested below so that the final result looks like the screen shot in Figure 2.9.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.9.1 – Business Objects +
+<br/>
+
+    Add new fields as suggested below so that the final result looks like the screen shot in Figure 2.9.2 (please be sure to pick the correct "type").
 
 <!-- end list -->
 
-  - \# (numeric) associateId Associate Id
+  - \# (numeric)&nbsp;&nbsp;&nbsp;&nbsp;associateId &nbsp;&nbsp;Associate Id
 
-  - ![](./media/image32.png) (datetime) orderDate Order Date
+  - ![](./media/image32.png) (datetime) orderDate &nbsp;&nbsp;&nbsp;&nbsp;Order Date
 
-  - A (text) orderStatus Order Status
+  - A (text)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderStatus &nbsp;&nbsp;Order Status
 
-  - ![](./media/image33.png)(datetime) actionDate Action Date
+  - ![](./media/image33.png)(datetime)&nbsp;&nbsp;actionDate&nbsp;&nbsp;&nbsp;&nbsp;Action Date
 
 > ![](./media/image34.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.9 – Product Order Business Object Fields<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.9.2 – Product Order Business Object Fields<br/>
 
 10. Create another Business Object named “Product Order Line”
     (ProductOrderLine).
@@ -402,7 +405,7 @@ The relationships have been defined, now to enter remaining fields.
 
 Return to the “Fields” tab; the two relationships are now listed as
 fields with a “reference” icon ![](./media/image42.png) indicating the
-relationship. Select the last row, “Product” as shown in Figure 2.10.8 and click “+ Add Field” to continue (VBCS adds new fields below the currently selected field).
+relationship. Select the last row, “Product” as shown in Figure 2.10.8 and click “+ New Field” icon ![](./media/vbcs_plus_new_field_small.png) to continue (VBCS adds new fields below the currently selected field).
 
 ![](./media/image43.png)
 
@@ -541,8 +544,8 @@ Click the “Import” button to upload the selected file
 
 21. Create an initial “Product Order Line” as follows, use the “Product
     Order” and “Product” pull-downs to choose those values (if the value
-    you don’t see does not appear in the list you can start to type the
-    value in and it will appear), type in the other two then review your
+    you want does not appear in the list you can start to type the
+    value in and it will appear, for instance "M" for "Mozzarella"), type in the other two then review your
     results and click the checkmark ![](./media/vbcs_checkmark.png).
 
     ![](./media/image61.png)
@@ -610,8 +613,11 @@ This lab has three sections:
 In the last lab you created three business objects and added data to
 them; now you will create a web application to work with them
 
-1.  If you have logged out of the Oracle Cloud, please log back in and
-    return to your VBCS application. You might find it useful to close
+1.  If you're still logged in to the Oracle Cloud and VBCS, skip to #2 below. 
+
+    If you have logged out of the Oracle Cloud, please log back in and return to your VBCS application. 
+
+    You might find it useful to close
     any open windows.
 
 2.  On the left-hand side of the Visual Builder interface is a navigator
@@ -629,8 +635,7 @@ them; now you will create a web application to work with them
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.2.1 – VBCS Icons  
   
-If you don’t see the navigator, click the “Expand Navigator” icon in the
-upper-left corner
+  &nbsp;&nbsp;&nbsp;&nbsp;If you don’t see the navigator, click the “Expand Navigator” icon in the upper-left corner, then click the "Web Applications" button
 
 > ![](./media/image74.png)
 > 
@@ -645,7 +650,7 @@ upper-left corner
 > 
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.3.1 – Add Web App 1
 > 
-> If you want to add to your existing Web Applications; click the plus
+> Or, if you want to add to your existing Web Applications; click the plus
 > sign “+” at the top of the Web Apps list
 > 
 > ![](./media/image76.png)
@@ -818,7 +823,7 @@ button that will display on the main page to launch this page. Click
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.5 – Add Detail 2
 
 When complete, the object navigator on the left will show the new page.
-Select the new page “main-product-detail” to see what it looks like.
+Select the new page “main-product-detail” to see what it looks like. Note that the "Product List" screen is called "main-start" and the "Product Detail" screen is called "main-product-detail" in Figure 3.10.6. (These may be renamed if desired but its not really necessary.)
 
 ![](./media/image104.png)
 
@@ -830,13 +835,13 @@ You may see an “error” message similar to the following. Remember that
 Visual Builder is WYSIWYG (what you see is what you get) and attempts to
 show real data during the design process. This error frequently occurs
 because Visual Builder cannot find a “context” to tell it which data to
-display.
+display. (in this case, the VBCS editor wants to show the Product Detail page with "live" data, but, does not know which record to display) The process below uses the VBCS editor's "Live" capability to set the context.
 
 ![](./media/image105.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.7 – 404 Error
 
-Fortunately there is an easy fix for this. First, look for the
+Fortunately there is an easy fix for setting the context. First, look for the
 “Live/Design/Code” button in the upper-right part of the Visual
 Builder editor. Click on “Live” to begin the process.
 
@@ -844,8 +849,7 @@ Builder editor. Click on “Live” to begin the process.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.8 – Live, Design, Code button 1
 
-Now, return to the Product List display and select a row, this sets the
-context.
+Now, return to the Product List display (click "main-start" in the productlist flows - Figure 3.10.6 above) and select a row, this sets the context to the selected row.
 
 ![](./media/image107.png)
 
@@ -857,17 +861,21 @@ Click the "Product Detail" button to return to the Product Detail display and yo
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.10 – Product Detail live
 
-Now, return to “Design” mode to continue editing.
+The VBCS "Live" mode is useful in testing to see how changes might behave, it is not the same as running the application. 
+
+Click "Design" to exit "Live" mode.
 
 ![](./media/image109.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.11 – Live, Design, Code 2
 
-Now, run the application. When the “Product List” displays note the
-“Product Detail” button is not available since no product has been
+Now, to really test the application; run the application using the "run" ![](./media/image95.png) button in the upper-right corner. When the “Product List” displays note the
+“Product Detail” button is not available (it is "grayed out") since no product has been
 chosen. Select one of the products and the “Product Detail” button will
 become active. Click on the “Product Detail” button to see the details
 for that product.
+
+The following two images show something similar your results.
 
 ![](./media/image110.png)
 
@@ -880,8 +888,7 @@ button to return to the list.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.13 – Product Detail page
 
-In this fashion you may also use the “Quick Start” do add Create, Edit,
-and Delete pages for products. (not part of this lab).
+In addition to viewing the data; you may also use the “Quick Start” do add Create, Edit, and Delete pages for products. (not part of this lab).
 
 Congratulations\! You’ve successfully created your first Visual Builder
 web application.
