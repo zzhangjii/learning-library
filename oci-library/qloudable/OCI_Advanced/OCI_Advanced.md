@@ -79,9 +79,9 @@ Local VCN peering is the process of connecting two VCNs in the same region and t
 
 4. Fill out the dialog box:
 
-- **Create in Compartment:** Has the correct compartment
-
 - **Name:** Enter easy to re¬member name
+
+- **Create in Compartment:** Has the correct compartment
 
 - **Create Virtual Cloud Network Only:** Select this option.
 

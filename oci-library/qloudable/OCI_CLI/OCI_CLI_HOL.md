@@ -75,9 +75,9 @@ This lab will walk you through installation and configuration of the CLI, along 
 
 4. Fill out the dialog box:
 
-- **Create in Compartment:** Has the correct compartment
-
 - **Name:** Enter easy to re¬member name
+
+- **Create in Compartment:** Has the correct compartment
 
 - **Create Virtual Cloud Network Plus Related Resources:** Select this option.
 

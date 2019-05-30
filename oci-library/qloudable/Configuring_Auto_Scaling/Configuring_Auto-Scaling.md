@@ -82,9 +82,9 @@ A cooldown period between autoscaling events lets the system stabilize at the up
 
 4. Fill out the dialog box:
 
-- **Create in Compartment:** Has the correct compartment
-
 - **Name:** Enter easy to re¬member name
+
+- **Create in Compartment:** Has the correct compartment
 
 - **Create Virtual Cloud Network Plus Related Resources:** Select this option.
 
