@@ -21,7 +21,7 @@ Primary requirement: supported web browser and working internet connection
 
 ![](media/e262cdebd6f659aa02aba65e6feb0354.png)
 
-*<p align="center">Figure 1: Supported Browsers </p>*
+*<p align="center">Figure 1: Supported Browsers </p>
 
 Email for Login & Link to Cloud My Services
 
