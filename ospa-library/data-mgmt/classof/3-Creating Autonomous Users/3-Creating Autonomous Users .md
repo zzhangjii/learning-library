@@ -17,8 +17,8 @@ This lab picks up exactly where the Provisioning an Autonomous Database lab fini
 
 ## Module 1:  Download the Client Credentials (wallet)
 
-The Client Creadentials, also known as the wallet, provides the only authentication information that
-can be used to connect to your ATP database. This wallet must be
+The Client Credentials, also known as the wallet, provides the only authentication information that
+can be used to connect to your ATB database. This wallet must be
 downloaded to the client that will be connecting to the database. The
 wallet can be downloaded from two locations, the Database Details page
 or the Service Console
@@ -54,6 +54,8 @@ connection strings be copied from (more on this in other modules)
 
 
 ## Module 2:  Connect to your ADB instance with SQL Developer 
+
+**PLEASE NOTE: SQL DEVELOPER CONNECTONS DO NO WORK IF YOU ARE BEHIND THE VPN OR ORACLE OFFICE PRIVATE NETWORS. IF YOU ARE USING THE VPN CLIENT  YOU MUST DISCONNECT FROM VPN, AND FROM AN ORACLE OFFICE CONNECT TO A OPEN/PUBLIC ACCESS NETWORK**
 
 *(Make sure you are running the latest version of SQL Developer 18.4. Some older versions will not work with ATP, see lab introductions on how to install)*
 
@@ -109,6 +111,7 @@ left corner of the main dashboard, under connections.
 **Toubleshooting your connection**
 
 If your test failed the successfuly connect to your database, the most likely reasons are:
+-   you are connected to VPN or in an Oracle office not on the public network
 -   that you used an incorrect password (or username and password)
 -   you are behind the Oracle VPN - you need to be in a public network
 -   you selected the wrong Service for your database

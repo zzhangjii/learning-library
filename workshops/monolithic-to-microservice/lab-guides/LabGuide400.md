@@ -282,7 +282,7 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
   ![](images/400/44.PNG)
 
-- Download a static image from here: [AlphaOffice Image](https://github.com/derekoneil/monolithic-to-microservice/blob/master/lab-resources/vbcs/AlphaOfficeSupply.png). Click on this link and save the file locally.
+- Download a static image from here: [AlphaOffice Image](https://github.com/oracle/learning-library/blob/master/workshops/monolithic-to-microservice/lab-resources/vbcs/AlphaOfficeSupply.png). Click on this link and save the file locally.
 
 - Now, click on the **Image** component in the canvas and click the **Data** tab in the Properties section. 
 

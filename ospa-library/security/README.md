@@ -40,7 +40,7 @@ Their current security and management process rely on manual tasks, is completel
 These are some of the concerns that the CISO and security team members have shared with us
 
 - New employee on-boarding process take too much time.
-- Security Operaction Center analysts are overwhelmed because of the amount of alerts and manual tasks required to investigate an event.
+- Security Operation Center analysts are overwhelmed because of the amount of alerts and manual tasks required to investigate an event.
 - CISO compliants about the lack of visibility into cloud and on-prem infrastructure, inability to respond to governance requirements in a timely manner, and slow detection and response to threats.
 - Security managers must deal with an increasing number of events and capacity to respond to threats that might lead to data breach or expose company assets, and the time wasted on investigations and researches with dead end because of the lack of automated tools and a lack of talent and resources.
 
@@ -51,7 +51,7 @@ Before you start the labs you should have:
 - Cloud access to an instance of Oracle CASB Cloud Service.
 - Access to Oracle Identity Cloud Service console. This service is provisioned alongside your Oracle Cloud Account.
 - Access to a compute instance and a compartment.
-- Privileges to create dummy accounts on the OCI tenant.
+- Privileges to create dummy accounts on the OCI tenant and IDCS.
 - Disable password vaults solutions installed in your laptop, such as OnePassword, LastPass or Dashlane.
 
 ### Preparing your environment
@@ -129,11 +129,8 @@ You have access to main Oracle Identity Cloud Service dashboard. You can bookmar
 
 Now that you have completed this guide, you can proceed with the workshop.
 
-- [Lab 1: Oracle CASB Cloud Service](LAB1_CASB.md)
-- [Lab 2: Oracle Identity Cloud Service](LAB2_IDCS.md)
-- [Demo: Oracle Management Cloud]()
-
-
+- [Lab 1: Oracle Identity Cloud Service](LAB1_IDCS.md)
+- [Lab 2: Oracle CASB Cloud Service](LAB2_CASB.md)
 
 [Back to the top](#Security-Hands-On-Labs)
 
