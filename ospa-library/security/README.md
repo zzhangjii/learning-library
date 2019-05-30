@@ -130,6 +130,7 @@ Now that you have completed this guide, you can proceed with the workshop.
 
 - [Lab 1: Oracle Identity Cloud Service](LAB1_IDCS.md)
 - [Lab 2: Oracle CASB Cloud Service](LAB2_CASB.md)
+- [DEMO: Oracle Management Cloud ](./omc_demo/omc_demo_guide.pdf)
 
 [Back to the top](#Security-Hands-On-Labs)
 
