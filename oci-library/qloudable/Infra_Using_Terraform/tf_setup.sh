@@ -13,7 +13,7 @@ read -p "Press enter to continue"
 sudo yum -y install terraform bzip2 cpio zip unzip dos2unix dialog curl jq git golang iputils wget screen tmux byobu elinks
 
 yes "y" | ssh-keygen -N "" -f ~/.ssh/id_rsa
-
+openssl rsa -in ~/.oci/oci_api_key.pem -pubout -outform DER 2>/dev/null | openssl md5 -c | awk '{print $2}' > ~/.oci/oci_api_key_fingerprint
 mkdir -p tflab
 
 tenancy_id=$(oci iam compartment list --all --raw-output --query 'data[*]|[0]."compartment-id"')
