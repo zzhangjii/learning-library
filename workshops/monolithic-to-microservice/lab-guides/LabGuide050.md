@@ -199,7 +199,7 @@ In this step you will create a VBCS instance that will be used in Lab 400. It ta
   monoTOmicro
   ```
 
-- Enter a `Description` and for the `Region` select **No Preference**. Click **Next**.
+- Enter a `Description` and for the `Region` select the same region you chose for the ATP database. **In this example us-phoenix-1**. Click **Next**.
 
   ![](images/050/LabGuide50-vbcs3.png)
 
