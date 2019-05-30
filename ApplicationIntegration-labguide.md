@@ -1,6 +1,6 @@
 # Application Integration Lab Guide
 
-## May 29, 2019 - 6:09PM
+## May 29, 2019 - 11:54PM
 
 # Table of Contents
 
@@ -199,7 +199,7 @@ have done the prerequisites, continue below:
 
 ## Clear Browser Data
 
-6.  During interactions with the Oracle Cloud, users sometimes have browser difficulties.  To prevent this, we'll clear the browser data (cache) periodically throughout the lab exercises.  Clear your browser data now:
+6.  During interactions with the Oracle Cloud, users sometimes have browser difficulties.  The symptom is the appearance of the "ERR_TOO_MANY_REDIRECTS" message.  To prevent this, we'll clear the browser data (cache) periodically throughout the lab exercises.  Clear your browser data now:
     
       - On a Windows PC:
         
@@ -1170,25 +1170,28 @@ needs to be part of a process application. Let’s create one:
 
 6.  Create a new process application based upon an available style.
     Click on the *Create* button in the upper-right corner to display
-    the Create Process Applications page:
+    the *Create Process Applications* page:
 
     ![](./media/image42.png)
 
     Figure 34: Create Process Applications Page
 
     - Click on the *Create an Application* icon at the right to display
-    the Create an Application prompt.
+    the *Create an Application* prompt.
 
     -  Fill in the basic information for your new process application:
     
-        - Name: \<*insertYourInitialsHere\>\_Order Request Processing*
-        (TNB\_Order Request Processing, for example)
+        - Name: *\<insertYourInitialsHere\><insertCurrentTimeHere\>\_Order Request Processing*
+        (*TNB2139\_Order Request Processing*, for example)
     
-        - Space: *My Space* (the default)
+        - *Space: *[New Space]*  (A space is an area that you can use to group applications together.)
+
+        - New Space: *\<insertYourInitialsHere\><insertCurrentTimeHere\>\_Space* (*TNB2139\_Space*, for example)
     
         - Description: *Workflow management application to process order
         requests*
-    
+  
+
         - Click the *Create* button at the left:
 
           ![](./media/image43.png)
@@ -1196,7 +1199,7 @@ needs to be part of a process application. Let’s create one:
           Figure 35: Creating a New Process Application
 
 - The tooling assumes that you want to immediately add a process to
-    your new process application, so the Create a Process panel appears:
+    your new process application, so the *Create a Process* panel appears:
 
 
     ![](./media/image44.png)
@@ -1209,10 +1212,10 @@ needs to be part of a process application. Let’s create one:
     order request processing:
 
     - Select the *Form Approval Pattern* at the right so that we don’t
-    start with a blank model. Just as the Integration tooling had styles
+    start with a blank model. Just as the Integration tooling had *styles*
     to preconfigure artifacts and save you time, the Process tooling has
-    patterns. The Form Approval pattern fits our needs well. The Create
-    Process dialog appears.
+    *patterns*. The Form Approval pattern fits our needs well. The *Create
+    Process* dialog appears.
 
     - In the Create Process dialog, fill in the fields:
 
@@ -1221,7 +1224,7 @@ needs to be part of a process application. Let’s create one:
       - Description: *Process model that defines the submission and
     evaluation of order requests and creation of orders*
 
-      - With Form Approval Pattern selected at the right, click the *Creat*e
+      - With *Form Approval Pattern* selected at the right, click the *Create*
     button in the lower-right corner to create the new process:
 
         ![](./media/image45.png)
@@ -1229,8 +1232,8 @@ needs to be part of a process application. Let’s create one:
         Figure 37: Creating a New Process
 
       - The process model displays containing elements from the *Form
-    Approval* pattern you selected. This minimizes the amount of dragging
-    and dropping we need to do to place elements from the palette onto
+    Approval* pattern. This minimizes the amount of dragging
+    and dropping you need to do to place elements from the palette onto
     the modelling canvas:
 
         ![](./media/image46.png)
@@ -1238,9 +1241,7 @@ needs to be part of a process application. Let’s create one:
         Figure 38: Form Approval Pattern
 
 8.  Remove the *Fulfill* human activity from the model by clicking on it
-    and selecting the *trash can icon*. Later, in its place, we will
-    include an invocation of your Create New Order integration from Lab
-    1:
+    and selecting the *trash can icon*. If nothing happens when you click the trash can icon, click on another element and then try again.  Later, in place of the *Fulfill* human activity, we will include an invocation of your *Create New Order* integration from Lab 1:
 
     ![](./media/image47.png)
 
@@ -1258,11 +1259,11 @@ needs to be part of a process application. Let’s create one:
 ## Tailor Roles for Each Process Swimlane
 
 11. Tailor the roles to correspond to our Mama Maggy use case. The
-    default roles for this pattern are Process Owner and Process
-    Reviewer. They form two horizontal “swimlanes” across the model. The
+    default roles for this pattern are *Process Owner* and *Process
+    Reviewer*. They form two horizontal “swimlanes” across the model. The
     activities in the model that are in a particular swimlane can be
     executed by members of the associated role. We’ll rename the roles
-    to store manager and regional manager now so that they match our
+    to *Store Manager* and *Regional Manager* now so that they match our
     Mama Maggy use case. Later, before testing, we’ll associate you with
     each of these roles.
 
@@ -1270,19 +1271,19 @@ needs to be part of a process application. Let’s create one:
 
     - Click on the *Edit* (pencil) option that appears.
 
-    - In the bottom panel, click on the *plus icon* to the right of the Role
+    - In the bottom panel, click on the *plus icon* to the right of the *Role*
     dropdown menu to add a new role.
 
-    - In the Create Role popup dialog, enter *Store Manager* as the role
-    name and click the OK button.
+    - In the *Create Role* popup dialog, enter *Store Manager* as the role
+    name and click the *OK* button.
 
     - Repeat the above steps for the *Process Reviewer* swimlane to create a
-    new role called Regional Manager.
+    new role called *Regional Manager*.
 
 
 12. Your new roles, displayed at the left, now properly identify the
-    swimlanes. Store managers can execute Submit Request and Resubmit
-    while regional managers can execute Approve Request:
+    swimlanes. Store Managers can execute Submit Request and Resubmit
+    while Regional Managers can execute Approve Request:
 
     ![](./media/image49.png)
 
@@ -1292,7 +1293,7 @@ needs to be part of a process application. Let’s create one:
 
 ## Implement the Submit Request Event
 
-14. Let’s work on the Submit Request start event so the store manager
+14. Let’s work on the *Submit Request* start event so the store manager
     can initiate a new order request:
 
     - Click on the *Submit Request* event at the left-side of the model.
@@ -1317,8 +1318,8 @@ needs to be part of a process application. Let’s create one:
     in these fields:
     
       - How will the end user identify the process? Title:
-        *\<insertYourInitialsHere\>\_Create New Order Request*
-        (*TNB\_Create New Order Request*, for example)
+        *\<insertYourInitialsHere\><insertCurrentTimeHere\>\_Create New Order Request*
+        (*TNB2219\_Create New Order Request*, for example)
     
       - Description: *Event that starts a new process instance and captures order request information from the store manager*
 
@@ -1327,15 +1328,14 @@ needs to be part of a process application. Let’s create one:
     request. Due to the type of human activity, the form will
     automatically display a SUBMIT button at runtime:
 
-
-    - In the Form area of the properties panel, click the plus sign icon
+    - In the *Form* area of the properties panel, click the *plus sign icon*
     and click the *New Web Form* option:
 
       ![](./media/image52.png)
 
       Figure 44: Property Panel
 
-    - The Create New Web Form dialog appears. Fill in the fields:
+    - The *Create New Web Form* dialog appears. Fill in the fields:
     
         - Name: *InitiateForm*
     
@@ -1343,14 +1343,14 @@ needs to be part of a process application. Let’s create one:
         order request*
     
         - Click *Create* to establish the new form. Notice that the new
-        form name appears in the Form field in the properties panel.
+        form name appears in the *Form* field in the properties panel.
 
     - Define the layout of the Initiate Form:
     
       - Click on the *Edit* (pencil) icon to the right of *InitiateForm*
         in the properties panel to display the form editor.
     
-      - Notice the palette at the right containing the elements you can
+      - Notice the palette at the right containing the elements that you can
         add to a web form:
 
         ![](./media/image53.png)
@@ -1367,7 +1367,7 @@ needs to be part of a process application. Let’s create one:
 
         Figure 46: Form Editor's Properties Panel
 
-    -   In the Properties panel, edit the properties for this field element.
+    -   In the *Properties* panel, edit the properties for this field element.
     Press *Return* after each entry:
     
         - Name: *orderID* (This is the internal field name.)
@@ -1379,7 +1379,7 @@ needs to be part of a process application. Let’s create one:
 
         Figure 47: Form Editor's Property Panel Highlighting the Binding Object
 
-        - Notice that a *Binding* object has been identified where data will be stored for the form element. It is also named orderID. Binding objects are data structures that store values that users enter into a web form field. You will deal with these objects as you do data associations later.
+        - Notice that a *Binding* object has been identified where data will be stored for the form element. It is also named *orderID*. Binding objects are data structures that store values that users enter into a web form field. You will deal with these objects as you do data associations later.
 
     - Using the steps above, add the other elements to the form:
 
@@ -1408,8 +1408,6 @@ needs to be part of a process application. Let’s create one:
 
        Figure 49: Finding the Tabs to Access Tabbed panels
 
-17. Click Save to safely store away your new process.
-
 ## Implement the Approve Request Activity
 
 18. Let’s work on the Approve Request human activity so the regional
@@ -1418,7 +1416,7 @@ needs to be part of a process application. Let’s create one:
     activity, the form will automatically display APPROVE and REJECT
     buttons at runtime:
 
-      - Click on the *Approve Request* event at the left-side of the process
+      - Click on the *Approve Request* human activity at the left-side of the process
     model.
 
       - Click the hamburger icon that appears. If a popup menu doesn’t
@@ -1429,12 +1427,11 @@ needs to be part of a process application. Let’s create one:
       - Select the *Open Properties* option in the popup menu. The
     properties display in the lower panel.
 
-
       - Let’s create the form. In the Form area of the properties panel,
     click the *plus sign icon* and click *New Web Form* in the popup
     menu.
 
-      - The Create New Web Form dialog appears. Fill-in the fields:
+      - The *Create New Web Form* dialog appears. Fill in the fields:
     
           - Name: *EvaluateForm*
     
@@ -1450,7 +1447,7 @@ needs to be part of a process application. Let’s create one:
         - Click on the *Edit* (pencil) icon to the right of *EvaluateForm*
         in the properties panel to display the form editor.
     
-        - By performing the steps that you used earlier, add the elements
+        - By performing the steps that you used earlier, add these elements
         to the form:
 
           | **Palette Element Type** | **Name**            | **Label**            |
@@ -1462,27 +1459,28 @@ needs to be part of a process application. Let’s create one:
           | Number                   | *quantityToOrder*   | *Quantity to Order*  |
           | Money                    | *estimatedCost*     | *Estimated Cost*     |
           | Text Area                | *initiatorComments* | *Initiator Comments* |
+          | Text Area                | *evaluatorComments* | *Evaluator Comments* |
 
            Table 2: Form Fields for the Evaluate Form
 
     - We don’t want the regional managers to be able to change the
     comments entered by the store manager, so we need to disable update
-    for the *initiatorComments* text area:
+    for the *initiatorComments* text area on this form:
     
         - Click the *Initiator Comments* element.
     
         - Scroll the properties list to find the *Disabled* option and
-        click it *On*.
+        click it *On*.  The field data entry area is turns gray.
     
         - Click the *Save* button in the upper-right corner of the form
         editor page.
 
 19.  Turn your attention back to your process model again by clicking on
-    the *Request Evaluation* tab at the upper-left:
+    the *Request Evaluation* tab at the upper-left.
 
 ## Implement the Resubmit Activity
 
-20. Let’s work on the Resubmit human activity so the store manager can
+20. Let’s work on the Resubmit human activity so that the store manager can
     look at a rejected request, edit it and resubmit it:
 
     - Click on the *Resubmit* activity in the process model.
@@ -1509,7 +1507,7 @@ needs to be part of a process application. Let’s create one:
         request and resubmit it for reevaluation by a regional manager*
     
           - Click *Create* to establish the new form. Notice that new form
-        name appears in the Form field in the properties panel.
+        name appears in the *Form* field in the properties panel.
 
     - Define the layout of the Resubmit Form:
     
@@ -1539,14 +1537,13 @@ needs to be part of a process application. Let’s create one:
       - Click the *Evaluator Comments* element.
     
       - Scroll the properties list to find the *Disabled* option and
-        click it *On*.
-
+        click it *On*.  The field is grayed out.
 
     - Click the *Save* button in the upper-right corner of the form editor
     page.
 
 21.  Turn your attention back to your process model by clicking on the
-    Request Evaluation tab at the upper-left:
+    *Request Evaluation* tab at the upper-left:
 
       ![](./media/image58.png)
 
@@ -1555,29 +1552,27 @@ needs to be part of a process application. Let’s create one:
 ## Perform Data Associations
 
 Form data needs to be passed along from form to form as the process
-executes. To do this, we need to configure the data associations for
-each of our form-related activities:
+moves from activity to activity. To do this, we need to configure the data associations for each of our form-related activities:
 
 23.  Configure data associations for the Submit Request start event:
 
-
-      - Click on the Submit Request start event at the left side of the
+      - Click on the *Submit Request* start event at the left side of the
     model.
 
-      - Click the hamburger menu icon that appears. If a popup menu doesn’t
+      - Click the *hamburger menu icon* that appears. If a popup menu doesn’t
     appear, click another element (like the Approve Request activity) to
     reset the selection and try clicking on the hamburger icon again to
     display the popup menu.
 
-      - Select the Open Data Association option in the popup menu. The data
+      - Select the *Open Data Association* option in the popup menu. The data
     mapper displays.
 
-      - Notice in the upper-left that we are mapping Output associations
+      - Notice in the upper-left that we are mapping *Output* associations
     since no data is coming into the Submit Request start event. This
     start event simply creates a new instance of our process and
-    initiates execution of the activities in it.
+    starts execution of the activities in it.
 
-      - Expand the *formArg* data structure in the source panel (left side)
+      - Expand the *formArg* data structure in the source panel (left-side)
     to expose all the data that our *InitiateForm* captures from the
     store manager:
 
@@ -1590,8 +1585,7 @@ each of our form-related activities:
     mapping individual fields in the *formArg* data object underlying
     *InitiateForm* to the corresponding fields in the
     *evaluateFormDataObject* that underlies your *EvaluateForm*. So,
-    *expand the data structure* in the target panel (right side) to
-    expose all the data that your *EvaluateForm* needs from the
+    expand the *RequestEvaluation* data structure in the target panel (right-side) to expose all the data that your *EvaluateForm* needs from the
     *InitiateForm*:
 
         ![](./media/image60.png)
@@ -1600,8 +1594,7 @@ each of our form-related activities:
 
       - By dragging and dropping fields from *formArg* (on the left) to the
     *evaluateFormDataObject* (on the right), map the matching fields so
-    data transfer occurs at runtime. NOTE: Be careful as you map since
-    the fields may be in a different order on the source side than on
+    data transfer occurs at runtime. NOTE: Leave the automatic *formArg* to *initiateFormDataObject* mapping alone.  As you map new rows below it, be careful since the fields may be in a different order on the source side than on
     the target side:
 
         ![](./media/image61.png)
@@ -1613,7 +1606,7 @@ each of our form-related activities:
 
 24.  Click the *Save* button in the upper-right corner.
 
-25.  Configure data associations for the Approve Request human activity:
+25.  Configure data associations for the *Approve Request* human activity:
 
       - Click on the *ApproveRequest* activity at the left side of the
     model.
@@ -1626,7 +1619,7 @@ each of our form-related activities:
       - Select the *Open Data Association* option in the popup menu. The
     data mapper displays.
 
-      - Notice in the upper-left that we have *Input* and *Output* to map.
+      - Notice in the upper-left that we have *Input* and *Output* areas to map.
     Make sure that *Input* is selected:
 
         ![](./media/image62.png)
@@ -1638,7 +1631,7 @@ each of our form-related activities:
     association for the Submit Request start event, you mapped data into
     evaluateFormDataObject that is used to populate fields for the
     EvaluateForm used here in Approve Request. So, all that must be
-    mapped is the *evaluateFormDataObject* data structure into
+    mapped is to map the *evaluateFormDataObject* data structure into
     *evaluateForm* so that the data will be displayed on the form.
     Notice that the tooling assumed that and has done it for you:
 
@@ -1648,12 +1641,12 @@ each of our form-related activities:
 
        - With the *Input* mapping in place for Approve Request, click on
     *Output* in the upper-left corner to perform the output data
-    mappings
+    mappings.
 
       - We have more good news\! The tooling has already established all the
-    output mappings we need. First, notice that the outcome of the
-    evaluation (APPROVE or REJECT (based on the button the regional
-    manager clicks)) is placed in the TaskOutcomeDataObject where we can
+    output mappings we need. First, notice that the *outcome* of the
+    evaluation (*APPROVE* or *REJECT* (based on the button that the regional
+    manager clicks)) is placed in the *TaskOutcomeDataObject* where we can
     access it later for the conditional branching configuration at the
     *Approve?* exclusive gateway. Second, see that the form display
     fields (*evaluateForm* data structure) are already mapped into the
@@ -1665,14 +1658,14 @@ each of our form-related activities:
         Figure 56: Mapping Outcome and Form Fields
 
       - With the Input and Output mappings in place for Approve Request,
-    click on the Cancel button in the upper-right corner to return to
-    the Request Evaluation model. The Apply button isn’t available since
+    click on the *Cancel* button in the upper-right corner to return to
+    the Request Evaluation model. The *Apply* button isn’t available since
     we didn’t make any changes. The tooling had already done all the
     input and output mappings automatically.
 
 26.  Click *Save* in the upper-right corner.
 
-27.  Configure data associations for the Resubmit human activity:
+27.  Configure data associations for the *Resubmit* human activity:
 
       - Click on the *Resubmit* activity in the model.
 
@@ -1685,7 +1678,7 @@ each of our form-related activities:
     data mapper displays.
 
       - Make sure that the *Input* mappings are shown by noting, in the
-    upper-left corner, that *Input* is displayed.
+    upper-left corner, that *Input* is underlined.
 
       - Look at the one mapping that the tooling has already made for us:
 
@@ -1700,12 +1693,14 @@ so the store manager can see the feedback and act upon it. Remove the
 mapping created by the tooling by clicking the *Remove* option in the
 upper-right corner.
 
-      - Expand the data structure in the target panel (on the right-side) to
+      - Expand the data structure in the target panel (on the right) to
     expose all the data that your *ResubmitForm* captures:
 
         ![](./media/image66.png)
 
         Figure 58: Target Fields During Data Mapping
+
+      - Expand the data structure in the source panel (on the left) to expose all the data that the *evaluateFormDataObject* can supply.
 
       - By dragging and dropping fields from the *evaluateFormDataObject*
     (on the left) to the fields in *resubmitForm* (on the right), map
@@ -1727,7 +1722,7 @@ upper-right corner.
         Figure 60: Mapping in the Data Mapper
 
         These look reasonable. First, we typically want to map the *outcome*
-        (the user clicking the SUBMIT button) to the *TaskOutcomeDataObject*
+        (the user clicking the *SUBMIT* button) to the *TaskOutcomeDataObject*
         as we saw earlier. However, we won’t be using it in our model since
         branching in our model is only conditioned on the *outcome* from the
         *Evaluate Request* activity. Second, we see the standard mapping of
@@ -1739,7 +1734,7 @@ upper-right corner.
     data positioned so it can be displayed in the Approve Request human
     activity. This will allow the regional manager to re-evaluate the
     resubmitted order request sent from the Resubmit activity. So,
-    *expand the data structure* in the target panel (on the right side)
+    expand the data structure in the target panel (on the right side)
     to expose all the data that your *EvaluateForm* captures:
 
         ![](./media/image69.png)
@@ -1749,10 +1744,7 @@ Evaluate Form
 
       - By dragging and dropping fields from the *resubmitForm* (on the
     left) to the fields in *evaluateFormDataObject* (on the right), map
-    the corresponding fields so data transfer occurs at runtime. NOTE:
-    Again, be careful as you map since the fields may be in different
-    order on the source and target sides. Notice that we are leaving the
-    two automatic mappings untouched:
+    the corresponding fields so data transfer occurs at runtime. NOTE:  Again, be careful as you map since the fields may be in different order on the source and target sides. Notice that we are leaving the two automatic mappings untouched:
 
         ![](./media/image70.png)
 
@@ -1760,7 +1752,7 @@ Evaluate Form
 for the Evaluate Form
 
       - When mapping is complete, click the *Apply* button in the
-    upper-right corner to return to the Request Evaluation model.
+    upper-right corner to return to the *Request Evaluation* model.
 
 28. Click *Save* in the upper-right corner.
 
@@ -1769,16 +1761,16 @@ for the Evaluate Form
 29.  Let’s now condition the *No* branching flow at the *Approved?*
     exclusive gateway so that when a regional manager, working in the
     Approve Request activity, rejects an order request, the request is
-    routed to the Resubmit activity where the store manager can work on
+    routed to the *Resubmit* activity where the store manager can work on
     ait and resubmit it. 
     
-      - Click on *No* above the Approved? element:
+      - Click on *No* above the *Approved?* exclusive gateway element:
 
         ![](./media/image71.png)
 
         Figure 63: Finding the No Branching Flow
 
-      - Two icons popup in a menu, select the *Edit (pencil) icon* element
+      - Two icons popup in a menu, select the *Edit (pencil) icon* 
     so we can specify the condition to evaluate for this *No* path
     through your model:
 
@@ -1787,13 +1779,13 @@ for the Evaluate Form
         Figure 64: Editing the Condition for the No Branching Flow
 
       - A panel appears at the bottom of the page where you can begin
-    specifying the branching condition. Find the *Edit (pencil) icon* in
-    the *Condition* field and click on that *Edit icon* to display the
-    Expression Editor.
+    specifying the branching condition. Find the *Edit* (pencil) icon in
+    the *Condition* field and click on it to display the
+    *Expression Editor* dialog.
 
       - Recall that our *Output* data association from the Approve Request
     activity included a mapping of the *outcome*. The outcome is set by
-    the regional manager clicking either the APPROVE or the REJECT
+    the regional manager clicking either the *APPROVE* or the *REJECT*
     button:
 
         ![](./media/image73.png)
@@ -1808,7 +1800,7 @@ our condition to see if the order request should be routed along the
 
         Figure 66: Process Model Highlighting the Flow to the Resubmit Activity
 
-      - In the Expression Editor, expand the *RequestEvaluation* hierarchy
+      - In the *Expression Editor*, expand the *RequestEvaluation* hierarchy
     to display its data objects:
 
          ![](./media/image75.png)
@@ -1824,8 +1816,8 @@ our condition to see if the order request should be routed along the
 
         Figure 68: Completed Flow Condition in the Expression Editor
 
-      - Click the *OK* button in the lower-right corner of the Expression
-    Editor to close the dialog.
+      - Click the *OK* button in the lower-right corner of the *Expression
+    Editor* to close the dialog.
 
       - In the lower panel, find the *Description* field for the *No* branch
     and enter: *Route processing to Resubmit for an order request that
@@ -1836,11 +1828,11 @@ our condition to see if the order request should be routed along the
 
 ## Access an Integration from a Process Model
 
-31.  There is one more task we need to perform to complete the process
+31. There is one more task we need to perform to complete the process
     model. Based on our initial Mama Maggy scenario, what didn’t get
     done yet? If you answered: “We haven’t created an order in the
     backend system (ATP database),” you are right. We need to add a call
-    to the Create New Order integration that you built in Lab 1.
+    to the *Create New Order integration* that you built in Lab 1.
     
       - Start by redisplaying your *Application Home Page* by clicking
         on the *Application Home* tab, highlighted below, in the
@@ -1851,7 +1843,7 @@ our condition to see if the order request should be routed along the
         Figure 69: Using the Tabs to Activate a Tabbed Panel
 
       - In the dropdown menu at the right-side, highlighted above, select
-    the *Integrations* option. The Integrations display appears. Click
+    the *Integrations* option. The *Integrations* display appears. Click
     the *Browse Integrations* button so you can find the integration you
     built and activated in Lab 1:
 
@@ -1860,7 +1852,7 @@ our condition to see if the order request should be routed along the
         Figure 70: Finding Integrations to Enable for a Process
 
       - The *Use an Integration* dialog appears. Select your *Create New
-    Order* integration and click the Create button in the lower-right
+    Order* integration and click the *Create* button in the lower-right
     corner to create an integration artifact for your process
     application. The process modeling tooling requires this “linking
     artifact” to be created so you can add the integration to a process
@@ -1882,40 +1874,38 @@ our condition to see if the order request should be routed along the
         to display the list of integrations that can be added to the
         model.
     
-        - Select your *CreateNewOrder* integration and *drag it on top of*
-        the *Yes flow* in your model and *drop it there*. The *Create
+        - Select your *CreateNewOrder* integration and drag it on top of
+        the *Yes* flow in your model and *drop it there*. The *Create
         new order* integration activity appears in the model:
 
           ![](./media/image80.png)
 
           Figure 72: Adding an Integration to a Process Model
 
-      - Double-click the Create new orde*r
-    <span class="underline">label</span>* to edit it. Replace that text
+      - Double-click the *Create new order* label to edit it. Replace that text
     with: *Create Order*.
 
       - Like we did for the other activities in the model, we need to use
-    the data mapper to map the Input and Output fields for it so it has
-    the data it needs to perform the database insert operation:
+    the data mapper to map the Input and Output fields for this integration so it has the data it needs to perform the database insert operation:
 
         -  Click on the new *Create Order* activity to view its popup menu.
     Click the *hamburger menu* option and select the *Open Data
     Association* option. The familiar data mapper appears. Notice that
     the *Input* mapping area is displayed by default.
     
-        - On the source side (the left side), under RequestEvaluation,
-        *expand the Data Object / evaluateFormDataObject hierarchy* to
+        - On the source side (the left-side), under *RequestEvaluation*,
+        expand the *Data Object / evaluateFormDataObject* hierarchy to
         see the data as it is displayed on the regional manager’s
         EvaluateForm.
     
         - On the target side (the right-side), expand the *body* to see
-        the data fields that your CreateOrder integration expects.
+        the data fields that your *Create Order* integration expects.
     
         - Map the fields for the Input to the Create Order integration
         activity as shown below. Notice that some casting (data
         conversion) needs to be done. You’ll use the *string()* function
-        to convert the date data type to string. The *int()* function is
-        used to convert the decimal data to integers. To implement these
+        to convert the *date* data type to *string*. The *int()* function is
+        used to convert the *decimal* data to *integer*. To implement these
         functions, do the drag and drop mapping as you have done before
         and then click in the cells (highlighted below) to add the *int*
         and *string* function calls and to surround the data field with
@@ -1932,7 +1922,7 @@ our condition to see if the order request should be routed along the
           Figure 74: Mapping Inputs into an Integration Activity
 
       - With the Input mapping completed, now click the *Output* option in
-    the upper-left to map the outputs generated by the Create Order
+    the upper-left to map the outputs generated by the *Create Order*
     integration activity. Map the single output field as shown below.
     Again notice that you’ll need to edit the mapping to implement the
     *string()* function to cast the *bodyOutput* to a string. We don’t
@@ -1951,7 +1941,7 @@ cells:
 
         Figure 76: Mapping Outputs from an Integration Activity
 
-      - With our mappings in place for both Input and Output, click *Apply*
+      - With our mappings in place for both *Input* and *Output*, click *Apply*
     in the upper-right corner to save your mappings.
 
 
@@ -1962,34 +1952,33 @@ cells:
 We are getting close to being able to test the application, but
     first we need to perform some user role management for those
     swimlanes we configured earlier. You see at the extreme left of your
-    model that two roles are identified: Store Manager and Regional
-    Manager. Recall that they form two rows across the model called
+    model the two roles that you named: *Store Manager* and *Regional
+    Manager*. Recall that they form two rows across the model called
     swimlanes. The store manager can perform the activities in their
     swimlane (Submit Request and Resubmit) and the regional manager can
     perform their swimlane activities (Approve Request and Create
     Order). We need to assign you as a member of both roles so you can
     test all of these activities.
     
-33. Navigate to the Role Management area to identify yourself as
-        both a Store Manager and a Regional Manager:
+33. *** In the *Request Evaluation* modeling window, Publish, Activate before I can do Role Management.
+
+34. Navigate to the Role Management area to identify yourself as both a Store Manager and a Regional Manager:
         
     - Click the *House icon* at the top of the menu at the left.
         
     - Click the *My Tasks* option on the menu at the left.
         
-    - Click the *Workspace* option in the upper-right corner of
-            the *My Tasks* *page*.
+    - Click the *Workspace* option in the upper-right corner of the *My Tasks* *page*.
         
     - Click the *Administration* option on the menu at the left.
-            The *Manage Roles* *page* appears listing all the roles in
-            all the process applications. Find the two roles for your
-            application:
+
+    - Click the *Manager Roles" option on the menu at the left. The *Manage Roles* *page* appears listing all the roles in all the process applications. Find the two roles for your application:
 
       ![](./media/image85.png)
 
        Figure 77: Finding the Roles for Your Process
 
-    - Establish yourself as a Regional Manager for your process
+    - Establish yourself as a *Regional Manager* for your process
     application:
     
       -  Click on the *Regional Manager* role at the left:
