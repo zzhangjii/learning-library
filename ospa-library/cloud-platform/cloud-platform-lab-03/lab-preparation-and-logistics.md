@@ -29,14 +29,14 @@ Email for Login & Link to Cloud My Services
     you’ll get an email. The email indicates your account is ready or provides
     you with cloud account details and sign in credentials dependent upon how its been setup by the Cloud Administrator.
 
-2.  Typically for customers, they will scroll down in their email invitation to the Access Details section and note user name           and password
+2.  Typically for customers, they will scroll down in their email invitation to the Access Details section and note user name           and password.
 
 3.  And its essential to note the name of the Cloud Account, Access Details, and Identity
-    Domain
+    Domain.
 
-4.  Then click Access your Cloud Services to get started
+4.  Then click Access your Cloud Services to get started.
 
-5.  And a best practices to bookmark it before sign-in
+5.  And a best practices to bookmark it before sign-in.
 
 ![](media/f21526117e392845aab4cd3a838a2f65.png)
 *<p align="center">Figure 2: My Services Details</p>*
