@@ -74,6 +74,20 @@ Builder is assumed or necessary.
 **Prerequisite**: Before starting these labs, you should have an OCI
 login and "ServerDeveloper" or "ServerAdminstrator" access to a VBCS instance; most formal classes will share an existing VBCS instance and your permissions will already correct. If you do not have a VBCS instance you may create one using the instructions in [Appendix A: Create VBCS Instance](#appendix-a-create-vbcs-instance). 
 
+**Data Files**:
+For this lab you will need four data files, three will be used in Lab 3 and one will be used in Lab 4. All four files are available in a single .zip file named [vbcsfiles.zip](https://github.com/oracle/learning-library/blob/master/ospa-library/appdev/application-development-lab/files/vbcsfiles.zip) on GitHub; download the file and expand it to find the following four files (keep them handy they will be used later in this lab):
+- Lab 2 (data for VBCS Business Objects)
+  - Product.csv
+  - ProductOrder.csv
+  - ProductOrderLine.csv
+- Lab 4 (links used for VBCS Service Connections)
+  - AppDev_Endpoints.txt
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NOTE: All four files may also be downloaded directly from GitHub, 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;however, to download the .csv files directly will require extra steps; 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;open the .csv in your browser, then,
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;click 'Save As' to store the file as .csv (use the .zip file it's easier)
+
 **NOTE:** Content is driven by external factors such as user data
 entries and login date. As a result, what you see displayed in your
 environment may not exactly match with the lab screenshots. Screenshots
@@ -234,6 +248,14 @@ and using built-in business objects with data suppiled via spreadsheet (.csv/.xl
 files. These files get copied into an Oracle Database (under the covers
 of VBCS) and are actually accessed using the same type of RESTful APIs
 as those used for service connections (more on this in Lab 4).
+
+ NOTE: For this lab you will need three data files (Product.csv, ProductOrder.csv, and ProductOrderLine.csv), if you have not already downloaded them they may be obtained from GitHub as a .zip file named [vbcsfiles.zip](https://github.com/oracle/learning-library/blob/master/ospa-library/appdev/application-development-lab/files/vbcsfiles.zip); download the file and expand it to find the following three files (keep them handy they will be used later in this lab):
+- Product.csv
+- ProductOrder.csv
+- ProductOrderLine.csv
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A fourth file 'AppDev_Endpoints.txt' will be used in a later lab.
+<br/><br/>
 
 1.  If you have logged out of the Oracle Cloud, please log back in and
     return to your VBCS application. On the left-hand side of the Visual Builder interface is a navigator
@@ -823,7 +845,7 @@ button that will display on the main page to launch this page. Click
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.5 – Add Detail 2
 
 When complete, the object navigator on the left will show the new page.
-Select the new page “main-product-detail” to see what it looks like. Note that the "Product List" screen is called "main-start" and the "Product Detail" screen is called "main-product-detail" in Figure 3.10.6. (These may be renamed if desired but its not really necessary.)
+Select the new page “main-product-detail” to see what it looks like. Note that the "Product List" screen is called "main-start" and the "Product Detail" screen is called "main-product-detail" in Figure 3.10.6. (These may be renamed if desired but it's not really necessary.)
 
 ![](./media/image104.png)
 
@@ -849,7 +871,7 @@ Builder editor. Click on “Live” to begin the process.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.10.8 – Live, Design, Code button 1
 
-Now, return to the Product List display (click "main-start" in the productlist flows - Figure 3.10.6 above) and select a row, this sets the context to the selected row.
+Now, return to the Product List display (click "main-start" in the productlist flows - Figure 3.10.6 above) and select a row, this sets the context to the selected row. ("MOZZARELLA" selected below)
 
 ![](./media/image107.png)
 
