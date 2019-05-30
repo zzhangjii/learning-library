@@ -1227,8 +1227,9 @@ Business Objects too).
 Your resources for this lab include two (2) service connections used to
 access data for Mama Maggy stores and Mama Maggy associates. You will
 use these “Service Connections” to provide data services to your
-applications. Get the correct values for your class and copy them to
-your local machine to make the lab a little quicker to complete (please
+applications. 
+
+Get the correct values for your class from the ["AppDev_Endpoints.txt" file in GitHub](https://github.com/oracle/learning-library/blob/master/ospa-library/appdev/application-development-lab/files/AppDev_Endpoints.txt) and copy them to your local machine to make the lab a little quicker to complete (please
 ask the instructor if you have questions here).
 <br/><br/>
 
