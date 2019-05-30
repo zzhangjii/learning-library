@@ -402,8 +402,7 @@ The relationships have been defined, now to enter remaining fields.
 
 Return to the “Fields” tab; the two relationships are now listed as
 fields with a “reference” icon ![](./media/image42.png) indicating the
-relationship. Select the last row, “Product” as shown and click “+ Add
-Field” to continue.
+relationship. Select the last row, “Product” as shown in Figure 2.10.8 and click “+ Add Field” to continue (VBCS adds new fields below the currently selected field).
 
 ![](./media/image43.png)
 
