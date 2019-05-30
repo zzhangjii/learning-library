@@ -539,7 +539,7 @@ Click the “Import” button to upload the selected file
 
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.20 – Add Product Order row
 
-21. Create an initial “Product Order Item” as follows, use the “Product
+21. Create an initial “Product Order Line” as follows, use the “Product
     Order” and “Product” pull-downs to choose those values (if the value
     you don’t see does not appear in the list you can start to type the
     value in and it will appear), type in the other two then review your
@@ -1059,7 +1059,7 @@ Nothing really new so far…
     
     This is a good time to use “Quick Start” to build Create, Edit, and
     Delete screens for both the Product Order List table (Product Order
-    screen) and the Product Order Item table (Product Order Detail
+    screen) and the Product Order Line table (Product Order Detail
     screen).
     
     Congratulations\! You’re now ready to create your first Mobile
