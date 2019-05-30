@@ -350,21 +350,13 @@ upper-left corner.
 10. Create another Business Object named “Product Order Line”
     (ProductOrderLine).
     
-    Add the following fields so that the result looks like Figure 2.10.1.
+    You will begin with the predefined fields as shown in Figure 2.10.1.
 
-<!-- end list -->
-
-  - relationship productOrder Product Order
-
-  - relationship product Product
-
-  - \# (numeric) unitPrice Unit Price
-
-  - \# (numeric) quantity Quantity
+    But this time before adding fields you will first add two relationships to the other business objects that will show up as 'references' later. Then, you will add two fields in the usual manner.
 
 ![](./media/image35.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.1 – Start Product Order Line`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.1 – Start Product Order Line
 
 Click on the “Overview” tab to see where relationships are defined.
 
@@ -410,8 +402,7 @@ The relationships have been defined, now to enter remaining fields.
 
 Return to the “Fields” tab; the two relationships are now listed as
 fields with a “reference” icon ![](./media/image42.png) indicating the
-relationship. Select the last row, “Product” as shown and click “+ Add
-Field” to continue.
+relationship. Select the last row, “Product” as shown in Figure 2.10.8 and click “+ Add Field” to continue (VBCS adds new fields below the currently selected field).
 
 ![](./media/image43.png)
 
@@ -1235,8 +1226,10 @@ Business Objects too).
 Your resources for this lab include two (2) service connections used to
 access data for Mama Maggy stores and Mama Maggy associates. You will
 use these “Service Connections” to provide data services to your
-applications. Get the correct values for your class and copy them to
-your local machine to make the lab a little quicker to complete (please
+applications. 
+
+Get the correct values for your class from the ["AppDev_Endpoints.txt" file in GitHub](https://github.com/oracle/learning-library/blob/master/ospa-library/appdev/application-development-lab/files/AppDev_Endpoints.txt) and copy them to your local machine to make the lab a little quicker to complete<br/> 
+(please
 ask the instructor if you have questions here).
 <br/><br/>
 
