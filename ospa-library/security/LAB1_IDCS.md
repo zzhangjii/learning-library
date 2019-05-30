@@ -8,6 +8,7 @@
 
 ***** 
 
+**Disclaimer:  This lab is designed ONLY for large learning groups and assumes the groups are sharing the Oracle Cloud environment to execute this lab.**
  
 # Lab Configuration and Details
 
@@ -197,7 +198,7 @@ During the following exercises we will cover the following Personas:
 
 ****
 
-## API User Creation with REST API’s (Persona: Administrator) – OPTIONAL
+## API User administration with REST API’s (Persona: Administrator)
 
 
 The following exercise has been developed to showcase IDCS API capabilities.
@@ -280,7 +281,7 @@ This use case involves making API calls to IDCS using a REST client; in this cas
  
 * Sign out from IDCS
 
-###  **EXERCISE**  - Configure Postman
+###  **EXERCISE** - Configure Postman - Who Should Complete This Lab:  All Participants
     
 *  Open **Postman**. Ignore all startup messages if any.
 
@@ -374,6 +375,7 @@ https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_
     
 
 ![](./media/idcs45.png)
+ <p align="center"> Figure 1-34 </p>
 
 *  Modify an IDCS User via API
     * On the user collection select **Modify** and **Update user (replace single attribute)**
@@ -382,15 +384,18 @@ https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_
     * Click **Send**
 
 ![](./media/idcs46.png)
+ <p align="center"> Figure 1-35 </p>
 
 
 * You will receive an email with the profile update confirmation
 
 ![](./media/idcs47.png)
+ <p align="center"> Figure 1-36 </p>
 
 * Open your profile to see the changes
 
 ![](./media/idcs48.png)
+ <p align="center"> Figure 1-37 </p>
 
 
 At this point you are able to make REST application programming interface (API) calls to Oracle Identity Cloud Service using Postman to create, delete and modify users.
@@ -565,7 +570,7 @@ Moving back to Salesforce in order to create a corresponding account for one tha
 
 Now that the account is available in Salesforce and IDCS has the authenticated account you are ready to test.
 
-### **EXERCISE** - Request Group Access (Persona: End User)
+### **EXERCISE** - Request Group Access (Persona: End User) - Who Should Complete This Lab:  All Participants
 
 Remember that we have created the **Employee** group into IDCS which is having access to Salesforce application but there is no user assigned yet to it. Since we chose the option
  
@@ -603,7 +608,7 @@ Remember that we have created the **Employee** group into IDCS which is having a
 ![](./media/idcs72.png)
 <p align="center"> Figure 2-26 </p>
 
-### **EXERCISE** - Verify SSO Configuration (Persona: End User)
+### **EXERCISE** - Verify SSO Configuration (Persona: End User) Who Should Complete This Lab:  All Participants
 
 *  Click on the **Salesforce Chatter** app from **My Apps** page
 
