@@ -1,6 +1,6 @@
 # Application Integration Lab Guide
 
-## May 29, 2019 - 11:54 PM
+## May 31, 2019 - 1:24 PM
 
 # Table of Contents
 
@@ -37,9 +37,9 @@
   - [Perform Data Associations](#Perform-Data-Associations)
   - [Configure the Conditional Flow](#Configure-the-Conditional-Flow)
   - [Access an Integration from a Process Model](#Access-an-Integration-from-a-Process-Model)
-  - [Map Users to Swimlane Roles](#Map-Users-to-Swimlane-Roles)
   - [Publish an Application](#Publish-an-Application)
   - [Activate an Application](#Activate-an-Application)
+  - [Map Users to Swimlane Roles](#Map-Users-to-Swimlane-Roles)
   - [Test an Application](#Test-an-Application)
     - [Initiate a Request as a Store Manager](#Initiate-a-Request-as-a-Store-Manager)
     - [Work a Task As a Regional Manager](#Work-a-Task-As-a-Regional-Manager)
@@ -1184,7 +1184,7 @@ needs to be part of a process application. Let’s create one:
         - Name: *\<insertYourInitialsHere\><insertCurrentTimeHere\>\_Order Request Processing*
         (*TNB2139\_Order Request Processing*, for example)
     
-        - *Space: *[New Space]*  (A space is an area that you can use to group applications together.)
+        - *Space: *[New Space]*  (A space is an area that you can use to group applications together.  All users who are members of a space will have access to the applications in that space.)
 
         - New Space: *\<insertYourInitialsHere\><insertCurrentTimeHere\>\_Space* (*TNB2139\_Space*, for example)
     
@@ -1948,104 +1948,11 @@ cells:
 32. When the modeling canvas reappears, click *Save* in the upper-right
     corner.
 
-## Map Users to Swimlane Roles
-We are getting close to being able to test the application, but
-    first we need to perform some user role management for those
-    swimlanes we configured earlier. You see at the extreme left of your
-    model the two roles that you named: *Store Manager* and *Regional
-    Manager*. Recall that they form two rows across the model called
-    swimlanes. The store manager can perform the activities in their
-    swimlane (Submit Request and Resubmit) and the regional manager can
-    perform their swimlane activities (Approve Request and Create
-    Order). We need to assign you as a member of both roles so you can
-    test all of these activities.
-    
-33. *** In the *Request Evaluation* modeling window, Publish, Activate before I can do Role Management.
-
-34. Navigate to the Role Management area to identify yourself as both a Store Manager and a Regional Manager:
-        
-    - Click the *House icon* at the top of the menu at the left.
-        
-    - Click the *My Tasks* option on the menu at the left.
-        
-    - Click the *Workspace* option in the upper-right corner of the *My Tasks* *page*.
-        
-    - Click the *Administration* option on the menu at the left.
-
-    - Click the *Manager Roles" option on the menu at the left. The *Manage Roles* *page* appears listing all the roles in all the process applications. Find the two roles for your application:
-
-      ![](./media/image85.png)
-
-       Figure 77: Finding the Roles for Your Process
-
-    - Establish yourself as a *Regional Manager* for your process
-    application:
-    
-      -  Click on the *Regional Manager* role at the left:
-
-          ![](./media/image86.png)
-
-          Figure 78: Selecting a Role
-
-    - Click the *Add Member* button:
-
-      ![](./media/image87.png)
-
-        Figure 79: Adding a Member to a Role
-
-    -  *Search* for your name. When it appears, click the *checkbox to the
-    left* of it and then click the *OK* button in the lower-right
-    corner:
-
-        ![](./media/image88.png)
-
-        Figure 80: Adding a Member to a Role
-
-    - When the right-side panel refreshes, you see that you have been
-    added to the regional manager role. Click the *Save* option in the
-    upper-right:
-
-      ![](./media/image89.png)
-
-        Figure 81: Adding a Member to a Role
-
-    - Add yourself to the Store Manager role for your process application:
-    
-      - Click on the *Store Manager* option at the left.
-    
-      - *Repeat the same steps* as you did above until you see that you
-        are now a Store Manager:
-
-        ![](./media/image90.png)
-
-          Figure 82: Adding a Member to a Role
-
-34. Don’t forget to select *Save* to store the new role definitions.
-
 ## Publish an Application
 
-You can now publish your process application so you can perform an
-    end-to-end test. 
+Your application is finished so you can now publish it.  That gets us one step closer to being able to test it. 
     
-35. Publishing is as simple as clicking the *Publish*
-    button at the top of the Application Home page for your application.
-    
-35. Return to your process application
-        
-36. Click the *House icon* at the menu at the left.
-        
-37. Click the *Processes* option on the menu at the left.
-
-38. Click the *Process Applications* option on the menu at the
-            left. The list of process applications appears.
-        
-39. Click your *Order Request Processing* application.
-        
-40. Click your *Request Evaluation* process in the *Application
-            Home* tab.
-    
-41. Click the *Save* button just to be sure everything is saved
-        away.
+41. Click the *Save* button just to be sure everything is saved away.
 
     ![](./media/image91.png)
 
@@ -2068,8 +1975,7 @@ You can now publish your process application so you can perform an
 
 ## Activate an Application
 
-Our last step before we can test is to activate your process
-    application so it is installed on the server:
+After you publish, you need activate your process application so it is available for use:
     
 46. Click on the *Activate* option at the top right of the window.
         The *Activation tab* appears and the associated panel is
@@ -2080,13 +1986,15 @@ Our last step before we can test is to activate your process
     Figure 85: Activating a Process Application
 
 47. The *Activate Application to My Server* dialog appears indicating
-    that you are about to publish the Last Published Version. 
+    that you are about to publish the *Last Published* Version. 
     
 48. Click the *Validate* button in the lower-right corner.
 
 49. In the *Validation Result* step, you see a green “*Application
     successfully validated*”  
-    message. Click the *Options* button in the lower-right corner to
+    message. 
+    
+50. Click the *Options* button in the lower-right corner to
     move to the *Activation Options* step.
 
 50. In the *Activation Options* fields make these entries/selections:
@@ -2105,45 +2013,114 @@ Our last step before we can test is to activate your process
 
         Figure 86: Setting Activation Options
 
-  51.  In a moment, you will see the results of the Activation Result
-    appear, a green “*Application successfully activated\!*” message.
+  51. In a moment, you will see the results appear in the Activation Result
+    step. A green “*Application successfully activated\!*” message appears.
 
-  52. Click the *Finish* button in the lower-right corner.
+  52. Click the *Finish* button in the lower-right corner to dismiss the dialog.
 
-  53. Click the *Save* button in the upper-right corner of your Order
-    Request Processing window when it redisplays.
+  53. Click the *Save* button in the upper-right corner when it redisplays.
+
+## Map Users to Swimlane Roles
+We are getting very close to being able to test the application, but
+    first we need to perform some user role management on the server for those
+    swimlanes we configured earlier. At the extreme left of your
+    model, remember the two roles that you named: *Store Manager* and *Regional
+    Manager*?. Recall that they form two rows across the model called
+    swimlanes. The store manager can perform the activities in their
+    swimlane (Submit Request and Resubmit) and the regional manager can
+    perform their swimlane activities (Approve Request and Create
+    Order). We need to assign you as a member of both roles so you can
+    test all of these activities.
+
+34. Navigate to the *Role Management* area to identify yourself as both a Store Manager and a Regional Manager:
+        
+    - Click the *House icon* at the top of the menu at the left.
+        
+    - Click the *My Tasks* option on the menu at the left.
+        
+    - Click the *Workspace* option in the upper-right corner of the *My Tasks* *page*.
+        
+    - Click the *Administration* option on the menu at the left.
+
+    - Click the *Manager Roles" option (it may already be preselected) on the menu at the left. The *Manage Roles* *page* appears listing all the roles in all the activated process applications. Find the two roles for your application:
+
+      ![](./media/image85.png)
+
+       Figure 77: Finding the Roles for Your Process
+
+    - Establish yourself as a *Regional Manager* for your process
+ application:
+    
+      -  Click on *your* (with your initials and timestamp appended to the from) *Regional Manager* role at the left:
+
+          ![](./media/image86.png)
+
+          Figure 78: Selecting a Role
+
+    - Click the *Add Member* button at the right to display the *Search users, groups, roles* dialog:
+
+      ![](./media/image87.png)
+
+        Figure 79: Adding a Member to a Role
+
+    -  *Search* for your * first* or *last name*. When your row appears, click the *checkbox to the
+    left* of it and then click the *OK* button in the lower-right
+    corner:
+
+        ![](./media/image88.png)
+
+        Figure 80: Adding a Member to a Role
+
+    - When the right-side panel refreshes, you see that you have been
+    added to the *Regional Manager* role. 
+    
+    - Click the *Save* option in the upper-right:
+
+      ![](./media/image89.png)
+
+        Figure 81: Adding a Member to a Role
+
+    - Now, add yourself to the *Store Manager* role for your process application:
+    
+      - Click on *your* *Store Manager* option at the left.
+    
+      - *Repeat the same steps* as you did above until you see that you
+        are now a *Store Manager*:
+
+        ![](./media/image90.png)
+
+          Figure 82: Adding a Member to a Role
+
+34. Don’t forget to select *Save* to store the updates to the role definitions.
+
 
 ## Test an Application
 
 Let’s now perform an end-to-end test of your application by assuming
-    the Store Manager and Regional Manager roles. We’ll use the same
-    Workspace interface that end users at Mama Maggy will use to
+    the *Store Manager* and *Regional Manager* roles. We’ll use the same
+    *Workspace* interface that end users at Mama Maggy will use to
     initiate processes and accomplish tasks:
     
 54. Start fresh by clearing your Chrome browser cache (all browsing
         data). If you need help, refer to the Preparing Your Environment
         section for the steps.
         
-55. Due to clearing the browser cache,
-        you will lose your connection to the Oracle Public Cloud. Browse to 
-        the *My Oracle Services Page UR*L noted in your *MyLabNotes* file 
+55. Due to clearing the browser cache, you will lose your connection to the Oracle Public Cloud. Browse to 
+        the *Oracle Integration Home Page URL* you noted in the *MyLabNotes* file 
         to access your services.
 
 ### Initiate a Request as a Store Manager
 
 56. Initiate your Order Request Processing application:
         
-    - Click on the *House icon* at the top of the menu at the
-            right.
-        
     - Click on the *My Tasks* option on the menu at the right to
-            see the Workspace interface that store managers and regional
+            see the *Workspace* interface that store managers and regional
             managers will see at Mama Maggy.
         
     - Click the *Initiate Request* button in the upper-right
-            corner to start the process as a store manager. Click on
-            <span class="underline">your</span> *Create New Order
-            Request* start event that appears in the lower panel:
+            corner to start the process as a store manager. 
+            
+    - If you are sharing an environment, you will likely see several processes that can be initiated.  Click on *your* *Create New Order Request* start event that appears in the lower panel:
 
       ![](./media/image95.png)
 
@@ -2159,22 +2136,21 @@ Let’s now perform an end-to-end test of your application by assuming
 
       Figure 88: Current State of the Process
 
-    - Submit a new order request as a store manager by entering the
-    values:
+    - Submit a new order request as a store manager by entering the values in the web form that has appeared:
     
-      - Order ID:
-        \<*insertYourInitialsHere*\>\<*insertAFourDigitNumberHere*\>
+      - Order ID: *\<insertYourInitialsHere\><insertCurrentTimeHere\>*
 
         NOTES:
-        - Your replacement for *\<insertYourInitialsHere\>* must be 4 characters (alpha or numeric\_ or less.
-        - The Order ID must be unique since orderID is the primary key of the ORDERS table in the ATP database. So, for \*<insertAFourDigitNumberHere*\>*, use the current time*.
+        - Your replacement for *\<insertYourInitialsHere\>* must be *4 (or less)* characters (*alpha or numeric*).
 
-        - If it is 1:31 PM right now, use *1331* and if it is 9:38 AM, use *0938*. That 4-digit number combined with your *\<insertYourInitialsHere\>* should provide a unique orderID.
+        - The Order ID must be unique since *orderID* is the primary key of the ORDERS table in our ATP database. So, for \*<insertAFourDigitNumberHere*\>*, use the current time*.
 
-        - For, example: *TNB1105* would be a valid orderID as long as it was never used to create an order before.
+        - If it is 1:31 PM right now, use *1331* and if it is 9:38 AM, use *0938*. Your 4-character value combined with your *\<insertCurrentTimeHere\>* should provide a unique orderID.
+
+        - For, example: *TNB1105* would be a valid *orderID* as long as it was never used to create an order before.
     
-      - Order Date: Select today’s date by clicking on the *Select Date
-        icon* at the right of the field and choosing today’s date.
+      - Order Date: Select *today’s date* by clicking on the *Select Date
+        icon* at the right of the field and picking it from the popup calendar.
     
       - Store ID: *12*
     
@@ -2191,9 +2167,9 @@ Let’s now perform an end-to-end test of your application by assuming
 
         Figure 89: Completing a Task from a Web Form
 
-    - *Click the Submit button* (highlighted above) in the upper-right
+    - Click the *Submit button* (highlighted above) in the upper-right
     corner of the form to move the process instance along its way in the
-    process flow.
+    process flow.  You are returned to the *Initiate Request* window. 
 
     - Here is where we are in the process now as the application is
     waiting for the regional manager at the Approve Request activity:
@@ -2208,11 +2184,11 @@ Let’s now perform an end-to-end test of your application by assuming
     Approve Request human activity. Use it now, as a regional manager,
     to reject the new order request:
     
-      - Click the *Workspace* option in the upper-right corner of the
+      - Click the *Workspace* button in the upper-right corner of the
         *Initiate Request* page.
     
       - See that, since you are also in the Regional Manager role, a
-        task appears for you:
+        task appears for you in the *Workspace*:
 
         ![](./media/image99.png)
 
@@ -2222,10 +2198,10 @@ Let’s now perform an end-to-end test of your application by assuming
 
     - Your Evaluate Form appears with the store manager’s data already
     filled in thanks to the data associations that were mapped. Notice
-    that the *Initiator Comments* field is greyed out since you disabled
-    it in the form designer.
+    that the *Initiator Comments* field is greyed out now since you disabled
+    it in the form designer to prevent the regional manager from modifying its contents.
 
-    - In the Evaluator Comments field, enter the bad news: *Alice at Store
+    - In the *Evaluator Comments* field, enter the bad news: *Alice at Store
     \#19 across town has a huge inventory of this item. Go get some of
     her extras.*
 
@@ -2236,12 +2212,11 @@ Let’s now perform an end-to-end test of your application by assuming
     - Click the *REJECT button* at the top of the form to send this order
     request back to the store manager who submitted it. Thanks to the
     data associations you performed, by clicking the REJECT button, the
-    *TaskOutcomeDataObject* is set to *REJECT*.
+    *TaskOutcomeDataObject* is set to *REJECT*.  
 
-    - Here is where we are in the process now. The execution of our
-    process instance passed through the *Approved*? exclusive gateway
+    - Let's review where we are in the process instance now. The execution passed through the *Approved*? exclusive gateway
     and the workflow engine noticed that your condition for the *No*
-    branch evaluated to *true* (*TaskOutcomeDataObject = “REJECT”*). So,
+    branch evaluated to *true* (*TaskOutcomeDataObject=“REJECT”*). So,
     the process instance followed the *No* flow. Your application is now
     waiting at the Resubmit activity for the store manager to revisit
     their order request:
@@ -2253,7 +2228,7 @@ Let’s now perform an end-to-end test of your application by assuming
 ### Work a Task As a Store Manager
 
 57. Put your store manager’s hat back on and review tasks that have been
-    assigned to you in the Workspace by clicking on the *Refresh* icon
+    assigned to you in the Workspace by clicking on the *Refresh* icon (circular arrow)
     in the upper-right corner of the *My Tasks* window:
 
     ![](./media/image102.png)
@@ -2261,18 +2236,18 @@ Let’s now perform an end-to-end test of your application by assuming
     Figure 94: Refreshing the Workspace
 
       - A task displays. That’s for the request that the regional manager
-    rejected. As a store manager, you have some work to do on it to
-    plead your case. *Click on the task*.
+    just rejected. As a store manager, you have some work to do on it to
+    plead your case. Click on the task.
 
     - The ResubmitForm you built for the Resubmit activity displays with
     the original store request data displayed along with the Evaluator
     Comments just supplied by the regional manager. Again, you are
     seeing data association mappings at work to populate these form
     fields. Notice this time that the *Evaluator Comments* are greyed
-    out since you disabled this field on this form so the store manager
+    out since you disabled this field  so the store manager
     can’t change them.
 
-    - *Append the following comment* to the text that already appears in
+    - *Append the following comment* to the end of the text that already appears in
     the *Initiator Comments* field: *I checked with Alice. She doesn’t
     have any extras. I need this order to be place and fulfilled
     quickly.*
@@ -2297,67 +2272,66 @@ Let’s now perform an end-to-end test of your application by assuming
 
 58. Put your regional manager’s hat back on and review tasks that have
     been assigned to you in the *Workspace* by clicking on the *Refresh
-    icon* in the upper-right corner of the *My Tasks* window:
+    icon* (circular arrow) in the upper-right corner of the *My Tasks* window:
 
     ![](./media/image102.png)
 
     Figure 97: Refreshing the Workspace
 
     - A task displays. This involves re-evaluating the request
-    resubmission from the store manager. *Click on the task*.
+    resubmission from the store manager. Click on the task.
 
-    - Your form displays with all the fields prepopulated (thanks to your
-    data associations):
+    - Thanks to your data associations, the form displays with all the fields prepopulated:
 
       ![](./media/image105.png)
       
       Figure 98: Completing a Task from a Web Form
 
     - You read the additional *Initiator Comments* and sympathize with the
-    store manager. There is no need to add anything to the Evaluator
-    Comments since the additional Initiator Comments have convinced you
+    store manager. There is no need to add anything to the *Evaluator
+    Comments* since the additions to the *Initiator Comments* have convinced you
     that the order request is justified after all. So, just *click the
     APPROVE button* at the top of the form.
 
-    - Again, refresh icon in the upper-right corner of the My Tasks window
+    - Again, click the *Refresh icon* in the upper-right corner of the My Tasks window
     to see that there are no new tasks in either role to process.
 
     - Here is where we are in the process now. The *Approve?* exclusive
     gateway took the default path since your *No* condition
-    (*TaskOutcomeDataObject = “REJECT*”) evaluated to *false* since the
+    (*TaskOutcomeDataObject=“REJECT*”) evaluated to *false* because the
     regional manager clicked the APPROVE button this time. Execution
     proceeded to the *Create Order* integration activity where your Lab
-    1 integration was executed to add a new order to the ATP database.
+    1 integration was executed to add a new order to the ORDERS table in the ATP database.
     Then, the process instance finished by reaching the *Completed* end
     event:
 
       ![](./media/image106.png)
       Figure 99: Current State of the Process
+
 ### Check Tracking for an Integration
 
-59. Let’s check to see if the new order really got created in the
-    backend system (the ATP database). In other words, did your Create
-    Order integration (from Lab 1) do its job?
-    
-      - See what we can learn from the *Tracking* facility:
+59. Let’s check to see if the new order really got created in the backend system (the ATP database). In other words, did your Create Order integration (from Lab 1) do its job?  Let's explore what we can learn from the *Tracking* facility:
         
-          - Click on the *House icon* at the top of the menu at left.
-        
-          - Scroll down and find *Monitoring* button in the Integrations
-            Health section and click on it.
-        
-          - Click the *Tracking* option in the menu at the left.
-        
-          - See that your process instance completed:
+      - Click on the *House icon* at the top of the menu at the left to reach the *Home* page.
 
-            ![](./media/image107.png)
+      - Click on the *Integrations* option on the menu at the left.
+
+      - At the top of the menu, find the *\<* symbol adjacent to the *Designer* title in the upper-left and click on the *\<* symbol.
+
+      - Click on the *Monitoring* option in the menu at the left to display the *Monitoring* menu.
+
+      - Click on the *Tracking* option in the menu at the left to display the *Tracking Instances* page.
+
+      - Find your integration in the list and see that it has *Completed*.
+
+          ![](./media/image107.png)
 
             Figure 100: Tracking Integrations
 
 ### Check the Database Table
 
   60. The tracking evidence looks compelling so far. Now, let’s see if the row was
-    really added to the ORDERS table by using SQL Developer to look into
+    really added to the ORDERS table.  Let's use Oracle SQL Developer to look into
     the ORDERS table in the ATP database:
     
         - Close your VPN connection if it is active.
@@ -2370,8 +2344,9 @@ Let’s now perform an end-to-end test of your application by assuming
         with your connection. If you are prompted for your password
         enter it and proceed.
     
-        - Expand the *Tables (Filtered)* hierarchy at the left and click
-        on *ORDERS* to display your table in the panel at the right.
+        - Expand the *Tables (Filtered)* hierarchy at the left.
+        
+        - Click on *ORDERS* to display your table in the panel at the right.
     
         - Click on the *Data* button at the top of the right-side panel
         and find your new order in the list of database rows. This
@@ -2409,7 +2384,7 @@ Oracle Integration Setup.
 
 2.  Refresh your browser window. Due to clearing the browser cache, you
     will lose your connection to the Oracle Public Cloud. Browse to the 
-    *Oracle Cloud My Services Page URL* noted in your *MyLabNotes* file to 
+    *Oracle Integration Home Page URL* noted in your *MyLabNotes* file to 
     access your services.
 
 
@@ -2781,7 +2756,7 @@ stockId,quantityOrdered) VALUES('tnb001', date '2019-04-15', 100,
     - To drop your ORDERS table so you can recreate it, here is the
     statement to enter, *Run* Script and *Commit* in the Worksheet
     panel:    
-    drop table atpc\_user.orders;  
+    *drop table atpc\_user.orders;*  
       
     - Again, don’t forget to *Commit* your changes.
 
@@ -2795,7 +2770,7 @@ stockId,quantityOrdered) VALUES('tnb001', date '2019-04-15', 100,
     will lose your connection to the Oracle Public Cloud. 
     
 3. Browse to the 
-    *Oracle Cloud My Services Page URL* noted in your *MyLabNotes* file
+    *Oracle Integration Home Page URL* noted in your *MyLabNotes* file
     (see the *Preparing You Environment section*) to 
     access your services.
 
@@ -2873,31 +2848,34 @@ Provisioned
 
 4. Check to make sure that the ATP adapter feature is available in your instance.  As of May, 2019 it was not generally available.  As documented in https://blogs.oracle.com/integration/enabling-the-future-today-feature-flags-in-oracle-integration-cloud, it was available in feature controlled general availability and you have to ask for it to be enabled for your instance.  Here is how to check if the *oic.cloudadapter.adapters.atpdatabase* feature flag is enabled in your Oracle Integration instance:
 
-    - Browse to the 
-    *Oracle Cloud My Services Page URL* noted in your *MyLabNotes* file
-    (see the *Preparing You Environment section*) to 
-    access your services.
+    - Browse to the *Oracle Integration Home Page URL* noted in your *MyLabNotes* file
+    (see the *Preparing You Environment section*) to access your Oracle Integration instance.
 
-    - You're *Oracle Cloud My Services* page appears.
+    - The *Home* page appears.
 
-    - Click the *Integration* option to display the *Integration Integrate Applications
-and Automate Processes* page.
+    - Click on the *Integrations* option at the left.
 
-    - Click on the *Open Service Console* button in the upper-right corner to show the
-*Oracle Integration* page.  A list appears showing any existing instances.
-
-    - Click on your instance.
-
-    - Click on the *hamburger menu icon* in the upper-right corner and select *Open Oracle Integration Home Page* from the 
-    popup menu.
-
-    - Click the *Integrations* menu option at the left.
-
+    - If the left-side menu isn't labeled *Designer* at the top, click the *\<* icon in the upper-left corner of the menu and click on the *Designer* menu option.
 
     - Click on the *Adapters* menu option at the left to display all available adapters.
 
     - Use the Search field to search for *ATP*.
 
-    - If the Oracle ATP adapter appears, then the oic.cloudadapter.adapters.atpdatabase feature flag is enabled for your instance.
+    - If the *Oracle ATP* adapter appears, the instances allows connections to be built using this adapter.
 
-    - If the Oracle ATP adapter does not appear, you'll need to file a Service Request (SR) with Oracle Support as documented in the *How to Request a Feature Flag* section in the link target shown above.
+    If the *Oracle ATP* adapter does not appear, you'll need to file a Service Request (SR) with Oracle Support as documented in the *How to Request a Feature Flag* section in the link target shown above.  To complete that SR, you will need information from you instance's *About* page.  Here's how to access that information:
+
+   - Browse to the *Oracle Integration Home Page URL* noted in your *MyLabNotes* file
+    (see the *Preparing You Environment section*) to access your Oracle Integration instance.
+
+    - Find the *round icon* in the upper-right corner.  It contains your initials.  Click on it to display a popup menu.
+
+    - Select the *About* option in the popup menu to display the *About* dialog that shows details for your instance.
+
+    - Click on the *Enabled Features* control to see a list of feature flags that have been enabled.
+
+    - Look for *Adapter for ATP CS (oic.cloudadapter.adapters.atpdatabase)*  If you see it, the feature flag is enabled.
+
+    - To file your SR, you will need the *Version*, *Service Instance* and *Identity Domain* information shown in the *About* dialog.
+
+    - Copy the information and save it.  Then, click the *Close* button to exit the dialog. 
