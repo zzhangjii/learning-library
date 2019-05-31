@@ -343,7 +343,7 @@ You’ll now add SalesForce as a sanctioned application for monitoring in Oracle
 
 This is the last step we need to complete in SalesForce.
 
-## Registering a Salesforce instance (Push Security Controls Mode) - Who Should Complete This Lab:  1 Participant for group
+### Registering a Salesforce instance (Push Security Controls Mode) - Who Should Complete This Lab:  1 Participant for group
 
 **NOTE: Due to capacity constraints, We will group individuals on teams of three to register the application in CASB. Instructor will provide group numbers. During the registration process learners must use the following name convention COSE_First-Two-letters-of-the location_APP_Group] (e.g. COSE_AU1_SALESFORCE_G1, COSE_AU2_SALESFORCE_G2)**
 
@@ -899,7 +899,7 @@ Oracle CASB’s Data Loss Protection (DLP) scans and detects files in sanctioned
 type of data that needs to be detected and secured.
 In this you’ll see how Oracle CASB is able to detect sensitive information in a managed document in your Box account.
 
-### Config Data Loss Protection in CASB
+### **DEMO** - Config Data Loss Protection in CASB
 
 *  Click to Configuration DLP Management
 

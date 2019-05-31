@@ -26,7 +26,7 @@ The tasks labeled as **DEMO** will be instructor guide, while the exercises labe
 The following summarizes the components in our workshop:
  
 
-  * [Oracle Identity Cloud](https://cloud.oracle.com/en_US/identity)
+  * [Oracle Identity Cloud Service](https://cloud.oracle.com/en_US/identity)
 
   * Salesforce – used for IDCS Application Integration and CASB Create
     and Monitor a sanctioned Application use-cases
