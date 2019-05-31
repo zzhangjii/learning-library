@@ -62,8 +62,25 @@ these lab exercises.
 
 # Labs
 
-In these labs you will use Visual Builder to help Mama Maggy’s (using data supporting the Mama Maggy use case, but, other data could be substituted) by adding
-product ordering and order tracking solutions.
+In these labs you will use Visual Builder to help Mama Maggy’s (using data supporting the Mama Maggy use case, but, other data could be substituted) by adding product ordering and order tracking solutions.
+
+Today when a manager or franchisee needs to order supplies everything is accomplished with a series of phone calls between the manager/franchisee and Mama Maggy headquarters. The only status checks available are by again calling headquarters. 
+1. Manager/franchisee determines need
+2. Manager/franchisee calls HQ for product name and pricing info
+3. Manager/franchisee calls HQ to create an order for one or more products
+4. Manager/franchisee waits for delivery, if they wish to check status they must once again call HQ
+
+In addition, if store managers/franchisees wish to contact other stores to ask about borrowing supplies or to discuss business, they once again have to go through headquarters to get contact information. 
+
+These processes are often inconvenient and slow, the managers/franchisees would like to improve things.
+
+In our lab we will BEGIN to address the needs of the managers/franchisees by adding:
+- Web application allowing managers/franchisees to see what products are available for order and what the prices are
+- Web application to list all product orders including each line in the order's product, quantity, and prices
+- Mobile application allowing busy manager/franchisee to check the status of their orders from anywhere with their phone, even when 
+- Web application to list all Mama Maggy stores and their locations and the list of associates in that location along with contact information.
+
+In the interest of time this lab focuses on creating apps to help managers/franchisees to self-serve information they currently rely on headquarters for. Future work will be necessary to automate the creation and update of orders and/or the other information.
 
 The lab is presented in four parts: Lab 1 – Introduction and Setup, Lab
 2 - Spreadsheet-based Business Objects, Lab 3 – Web and Mobile Apps, Lab
