@@ -26,7 +26,7 @@
 * Let’s register ourselves and become a member of the “Community”. Open your browser to the CASB “trial” pod: https://trial.palerra.net.
 * Login to CASB using the Tenant admin account
 
-**NOTE: Tenatn User id and Password will be delivered by the instructor**
+**NOTE: Tenant User id and Password will be delivered by the instructor**
 
 ![CASB Console](./media/casb_login1.png)
 <p align="center"> Figure 1-1 </p>  
@@ -66,7 +66,7 @@ For consistency and for the ease of use-cases implementation, you will use a per
 `COSE_location+room_appName_GroupNumber` *(e.g. **COSE_AU1_Salesforce_G1**, **COSE_AU1_Salesforce_G2**)*
 
 
-Using this name convention will help us to clean up the environment once the lab has been completed.
+Following this name convention will help us to clean up the environment once the lab is completed.
 
 ****
 ## Monitoring SaaS applications
