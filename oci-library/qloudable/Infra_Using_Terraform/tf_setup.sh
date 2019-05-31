@@ -19,7 +19,7 @@ mkdir -p tflab
 tenancy_id=$(oci iam compartment list --all --raw-output --query 'data[*]|[0]."compartment-id"')
 
 command cat >~/tflab/tftest.tf <<'EOF'
-variable "tenancy_id" {}
+variable "tenancy_ocid" {}
 variable "user_ocid" {}
 variable "fingerprint" {}
 variable "private_key_path" {}
@@ -46,7 +46,7 @@ output "ADprint" {
 EOF
 
 command cat> ~/tflab/env-vars << EOF
-export TF_VAR_tenancy_ocid=$tenancy_id
+export TF_VAR_tenancy_ocid=$tenancy_ocid
 export TF_VAR_user_ocid=ocid1.user.oc1..aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 export TF_VAR_compartment_ocid=ocid1.compartment.oc1..aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
