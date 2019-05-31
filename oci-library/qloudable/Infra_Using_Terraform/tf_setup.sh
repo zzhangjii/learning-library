@@ -14,6 +14,7 @@ sudo yum -y install terraform bzip2 cpio zip unzip dos2unix dialog curl jq git g
 
 yes "y" | ssh-keygen -N "" -f ~/.ssh/id_rsa
 openssl rsa -in ~/.oci/oci_api_key.pem -pubout -outform DER 2>/dev/null | openssl md5 -c | awk '{print $2}' > ~/.oci/oci_api_key_fingerprint
+
 mkdir -p tflab
 
 tenancy_id=$(oci iam compartment list --all --raw-output --query 'data[*]|[0]."compartment-id"')
@@ -45,10 +46,10 @@ output "ADprint" {
 }
 EOF
 
-command cat> ~/tflab/env-vars << EOF
-export TF_VAR_tenancy_ocid=$tenancy_ocid
-export TF_VAR_user_ocid=ocid1.user.oc1..aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-export TF_VAR_compartment_ocid=ocid1.compartment.oc1..aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+echo "export TF_VAR_tenancy_ocid=$tenancy_id" > ~/tflab/env-vars
+command cat >> ~/tflab/env-vars << 'EOF'
+export TF_VAR_user_ocid=[enter user OCID here]
+export TF_VAR_compartment_ocid=[enter user OCID here]
 
 export TF_VAR_fingerprint=$(cat ~/.oci/oci_api_key_fingerprint)
 
@@ -64,12 +65,12 @@ echo
 echo
 echo Next Steps:
 echo
-echo 1 - cd into the subdirectory tftest created by the tfinstaller script - this contains the tftest.tf and env-vars files
+echo 1 - cd into the subdirectory tflab created by the tfinstaller script - this contains the tftest.tf and env-vars files
 echo
-echo cd tftest
+echo cd tflab
 echo
 echo 2 - Review env-vars file to ensure all of the correct values.
-echo      Youw will not need to add / change anything unless you notice missing values.
+echo      You will not need to add / change anything unless you notice missing values.
 echo
 echo 3 - source env-vars
 echo

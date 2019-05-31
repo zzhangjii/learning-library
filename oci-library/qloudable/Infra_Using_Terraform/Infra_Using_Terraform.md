@@ -10,7 +10,7 @@
 
 [Create ssh keys and compute instance](#create-ssh-keys-and-compute-instance)
 
-[Testing the CLI, Create another VCN with one public subnet](#testing-the-cli,-create-another-vcn-with-one-public-subnet)
+[Configure OCI CLI, Install Terraform Upload API keys and verify functionality](#configure-oci-cli,-install-terraform-upload-api-keys-and-verify-functionality)
 
 
 ## Overview
@@ -190,9 +190,9 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
  
 14. Verify opc@<COMPUTE_INSTANCE_NAME> appears on the prompt
 
-## Practice 3: Configure OCI CLI, Upload API keys and verify functionality
+## Configure OCI CLI, Install Terraform Upload API keys and verify functionality: 
 
-15. Check oci CLI installed version, Enter command:
+1. Check oci CLI installed version, Enter command:
 ```
 oci -v
 ```
@@ -200,195 +200,127 @@ oci -v
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_CLI/img/100_CLI_001.png" alt="image-alt-text" height="200" width="200">
 
-16. Install Terraform package, Enter command:
-```
-curl -L -o terraforminstall.sh http://bit.ly/2pw9mpT 
-```
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/infra_Using_Terraform/img/Terraform_001.PNG" alt="image-alt-text" height="200" width="200">
-
-17. We should have a file called terraforminstall.sh downloaded. Change the permissions on this file, Enter Command:
-```
-sudo chmod 655 terraforminstall.sh
-```
-
-18. We will now execute this script which will download oci-cli, create a new directory called .oci, create
-            needed api keys, and also create a directory called 
-            tftest which will hold terraform related files. 
-            Enter command:
-             bash ./terraforminstall.sh
-             Press Enter when prompted.
-
-
-
-
-
-16. Next we will configure OCI CLI. Enter command:
+2. Next we will configure OCI CLI. Enter command:
 ```
 oci setup config
 ```
-17. Accept the default location. For user OCI switch to OCI Console window. Click Human Icon and then your user name. In the user details page click **copy** to copy the OCID. **Also note down your region name as shown in OCI Console window**. Paste the OCID in ssh session.
+3. Accept the default location. For user OCI switch to OCI Console window. Click Human Icon and then your user name. In the user details page click **copy** to copy the OCID. **Also note down your region name as shown in OCI Console window**. Paste the OCID in ssh session.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_004.PNG" alt="image-alt-text" height="200" width="200">
 
-18. Repeat the step to find tenancy OCID (Human icon followed by clicking Tenancy Name). Paste the Tenancy OCID in ssh session to compute instance followe by providing your region name (us-ashburn-1, us-phoneix-1 etc)
+4. Repeat the step to find tenancy OCID (Human icon followed by clicking Tenancy Name). Paste the Tenancy OCID in ssh session to compute instance followed by providing your region name (us-ashburn-1, us-phoneix-1 etc)
 
-19. When asked for **Do you want to generate a new RSA key pair?** answer Y. For the rest of the question accept default by pressing Enter
+5. When asked for **Do you want to generate a new RSA key pair?** answer Y. For the rest of the question accept default by pressing Enter
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_005.PNG" alt="image-alt-text" height="200" width="200">
 
-20. **oci setup config** also generated an API key. We will need to upload this API key into our OCI account for authentication of API calls. Switch to ssh session to compute instance, to display the conent of API key Enter command :
+6. **oci setup config** also generated an API key. We will need to upload this API key into our OCI account for authentication of API calls. Switch to ssh session to compute instance, to display the conent of API key Enter command :
 
 ```
 cat ~/.oci/oci_api_key_public.pem
 ```
 
-21. Hightligh and copy the content from ssh session. Switch to OCI Console, click Human icon followe by your user name. In user details page click **Add Public Key**. In the dialg box paste the public key content and click **Add**.
+7. Hightligh and copy the content from ssh session. Switch to OCI Console, click Human icon followed by your user name. In user details page click **Add Public Key**. In the dialg box paste the public key content and click **Add**.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_006.PNG" alt="image-alt-text" height="200" width="200">
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_007.PNG" alt="image-alt-text" height="200" width="200">
 
-
-
-
-
-
-
-
-
-
-## Testing the CLI, Create another VCN with one public subnet
-
-1. In the SSH terminal session, type the following command:
-
+8. Next, Download script to install Terraform, Enter command:
 ```
-oci iam availability-domain list
+sudo curl https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Infra_Using_Terraform/tf_setup.sh -o tf_setup.sh
 ```
 
-This will list all availability domains in the current region.  Make note of one of the availability domain names.  It should look something like this ``nESu:PHX-AD-3``.  You will use this in a future step.
+This will download a script file called **tf_setup.sh**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_CLI/img/100_CLI_001.png" alt="image-alt-text" height="200" width="200">
-
-2. Return to the OCI Console and navigate to Identity -> Compartments.  Retrieve the OCID of the assigned compartment.
-
-3. Enter the following command to list VCN's:
+9. Next modify the permission on the script and execute it, Enter Commands:
 ```
-oci network vcn list --compartment-id <your compartment id>
+sudo chmod 755 tf_setup.sh
 ```
-
- <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_CLI/img/100_CLI_003.png" alt="image-alt-text" height="200" width="200">
-
-**NOTE:** It should return the details of the VCN you created at the start of this lab.  If you encounter an error message, please contact the instructor.
-
-**TIP:** You can create an environment variable for your compartment ID to avoid having to paste it each time.
 ```
-export cid=<your compartment ocid>
-oci network vcn list --compartment-id $cid
+./tf_setup.sh
 ```
 
-4. Create a new virtual cloud network with a unique CIDR block.  You will need the OCID of your compartment.
-```
-oci network vcn create --cidr-block 192.168.0.0/16 -c <your compartment OCID> --display-name CLI-Demo-VCN --dns-label clidemovcn
-```
-Record the ``id:`` of the resource after it is created.  You will need it in the upcoming steps.
+Press **Enter** when prompted
 
-5. Create a new security list
-```
-oci network security-list create --display-name PubSub1 --vcn-id <your VCN OCID> -c $cid --egress-security-rules  '[{"destination": "0.0.0.0/0", "destination-type": "CIDR_BLOCK", "protocol": "all", "isStateless": false}]' --ingress-security-rules '[{"source": "0.0.0.0/0", "source-type": "CIDR_BLOCK", "protocol": 6, "isStateless": false, "tcp-options": {"destination-port-range": {"max": 80, "min": 80}}}]'
-```
-Make a note of the resource ``id:`` for use in the next step.
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Infra_Using_Terraform/img/Terraform_002.PNG" alt="image-alt-text" height="200" width="200">
 
-6. Create a public subnet.
+10. The script will install needed packages and create a new directory **tflab**. We will need to modify some env variables in the file. Enter command:
 ```
-oci network subnet create --cidr-block 192.168.10.0/24 -c <your compartment OCID> --vcn-id <your VCN OCID> --security-list-ids '["<security list OCID from previous step>"]'
-```
-Record the ``id:`` of the resources after it is created.  You will need it in an upcoming step.
-
-**Note:** You have the option to specify up to 5 security lists and a custom route table.  In this case, we are only assigning one security list and allowing the system to automatically associate the default route table.
-
-7. Create an Internet Gateway.  You will need the OCID of your VCN and Compartment.
-```
-oci network internet-gateway create -c <your compartment OCID> --is-enabled true --vcn-id <your VCN OCID> --display-name DemoIGW
-```
-Make a note of the ``id:`` for this resource after it has been created.
-
-8. Next, we will update the default route table with a route to the internet gateway.  First, you will need to locate the OCID of the default route table.
-
-```
-oci network route-table list -c <your compartment OCID> --vcn-id <your VCN OCID>
-```
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_CLI/img/100_CLI_004.png" alt="image-alt-text" height="200" width="200">
-
-record the ``id:`` of the `Default Route Table`
-
-9. Update the route table with a route to the internet gateway.
-```
-oci network route-table update --rt-id <route table OCID> --route-rules '[{"cidrBlock":"0.0.0.0/0","networkEntityId":"<your Internet Gateway OCID"}]'
+cd tflab
 ```
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_CLI/img/100_CLI_004.png" alt="image-alt-text" height="200" width="200">
-
-**Note:** When updating route tables or security lists you cannot insert a single rule.  You must ``update`` with the entire set of rules.  The prompt shown in the screenshot above illustrates this point.
-
-
-**Use QUERY to find Oracle Linux Image ID, then launch a compute instance**
-
-10. Use the CLI ``query`` command to retrieve the OCID for the latest Oracle Linux image.  Make a note of the image ID for future use.
+11. Now edit the env-variables file. We will updated 2 variables. Enter command:
 ```
-oci compute image list --compartment-id <your compartment OCID> --query 'data[?contains("display-name",`Oracle-Linux-7.6-20`)]|[0:1].["display-name",id]'
+vi env-vars
 ```
+**NOTE: You can use another editor such as nano as well**
 
-You may find more information on the Query command here:
-https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/cliusing.htm#ManagingCLIInputandOutput
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Infra_Using_Terraform/img/Terraform_003.PNG" alt="image-alt-text" height="200" width="200">
 
-11. Launch a compute instance with the following command.  We previously created a regional subnet because our command did not include a specific availability domain. For compute instances, we must specify an availability domain and subnet.
+12. Update the TF_VAR_user_ocid variable with User OCID saved earlier
 
-You will need the following pieces of information:
-- Availability domain name
-- Subnet OCID
-- Valid compute shape (i.e. VM.Standard.E2.1)
-- Your public SSH key
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Infra_Using_Terraform/img/Terraform_005.PNG" alt="image-alt-text" height="200" width="200">
 
+13. Next Update the TF_VAR_Compartment_ocid variable. Switch to OCI Console window, Click **Compartment** under **Identity**. Locate your compartment name and click it. In the compartment details page , clik **copy** to copy the OCID
+Paste this OCID in **env-vars** file
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Infra_Using_Terraform/img/Terraform_006.PNG" alt="image-alt-text" height="200" width="200">
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Infra_Using_Terraform/img/Terraform_007.PNG" alt="image-alt-text" height="200" width="200">
+
+14. After updating env-vars file the content will look like below;
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Infra_Using_Terraform/img/Terraform_008.PNG" alt="image-alt-text" height="200" width="200">
+
+15. Save the file and then source it, Etner command:
 ```
-oci compute instance launch --availability-domain <your AD name> --display-name demo-instance --image-id <ID from previous step> --subnet-id <subnet OCID> --shape VM.Standard.E2.1 --assign-public-ip true --metadata '{"ssh_authorized_keys": "<your public ssh key here>"}'
-```
-Capture the ``id:`` of the compute instance launch output.
-
-12. Check the status of the instances
-```
-oci compute instance get --instance-id <the instance OCID> --query 'data."lifecycle-state"'
+source env-vars
 ```
 
-13. Rerun the command every 30-60 seconds until the lifecycle-state is ``RUNNING``
-
-***This completes the exercise for basic usage of the OCI CLI.***
-
-**Bonus Exercise: Use the CLI to create the rest of the VCN resources**
-
-This section is optional and does not contain detailed instructions.  Instead, there are a series of objectives that you will complete on your own.  Use the OCI CLI reference documentation for guidance.
-https://docs.cloud.oracle.com/iaas/tools/oci-cli/latest/oci_cli_docs/index.html
-
-14. Locate the public IP address of the instance using the CLI
+16. The enviornment is now set. Next we will download a terraform file (.tf) file that will be used to create VCN, Compute instnace, block volume and attach block volume to compute instance. We will download this file in **/home/opc** directory, Enter Command:
 ```
-oci compute instance list-vnics --instance-id <instance OCID> | grep "ip.:"
+cd /home/opc
 ```
 
-15. Attempt to connect via SSH.  Does it work? (hint: it should time out)
-
-16. Use the CLI to create an ingress rule for SSH traffic in your custom security list.  Don't forget the ``oci network security-list update`` command requires you to pass all current and new rules.  If you just pass one rule, it will overwrite the existing rules.
-
-17. Connect via SSH now.  Is it working?
-
-18. Create and attach a 50GB block volume to your instance.
-
-19. Terminate / destroy all of the resources you created in this lab.  Hint: the order in which you delete the resources is very important.
-
-20. Delete the Block volume, then compute instance and then VCN. Example command to delete VCN
+Enter Command: 
 
 ```
- oci network vcn delete --vcn-id <YOUR_VCN_OCID>  
+sudo curl https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Infra_Using_Terraform/compute.tf -o compute.tf
 ```
 
-***Congratulations! You have successfully completed Getting Started with OCI CLI lab.***
+17. Ensure you are in **/home/opc** directory. 
 
+18. Now initialize terraform , Enter Command:
+```
+terraform init
+```
+
+Verify successful initialization
+
+19. To see the deloyment plan, Enter Command:
+```
+terraform plan
+```
+
+This will provide details on what will be configured in OCI
+
+20. Finally apply the plan to create the infrastructure, Enter Command:
+```
+terraform apply
+```
+
+**NOTE:** You must type **yes** when prompted
+
+21. This script will take some time to execute. You can switch to OCI console and observe creation of VCN, Compute instance, Block Volume and attachment of block volume to the compute instance.
+
+22. Finally, destroty the infrastrucutre that we created. Enter Command:
+```
+terraform destroy
+```
+
+**NOTE:** You must type **yes** when prompted
+
+You can switch to OCI console and observe deletion of VCN, Compute instance, Block Volume
+
+**Congratulations! You have successfully completed the lab**

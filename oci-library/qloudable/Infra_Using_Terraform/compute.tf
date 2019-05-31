@@ -27,7 +27,7 @@ variable "AD" {
 }
 
 variable "InstanceShape" {
-    default = "VM.Standard1.1"
+    default = "VM.Standard.E2.1"
 }
 
 variable "InstanceImageOCID" {
@@ -82,7 +82,13 @@ provider "oci" {
 data "oci_identity_availability_domains" "ADs" {
     compartment_id = "${var.tenancy_ocid}"
 }
-
+data "oci_core_images" "OL76ImageOCID" {
+        compartment_id = "${var.compartment_ocid}"
+        operating_system = "Oracle Linux"
+        operating_system_version = "7.6"
+        #compatible shape
+        shape = "VM.Standard.E2.1"
+}
 ## NETWORKING RESOURCES ############################################################################################
 resource "oci_core_virtual_network" "ExampleVCN" {
   cidr_block = "10.1.0.0/16"
@@ -198,8 +204,11 @@ resource "oci_core_instance" "TFInstance" {
   availability_domain = "${lookup(data.oci_identity_availability_domains.ADs.availability_domains[var.AD - 1],"name")}"
   compartment_id = "${var.compartment_ocid}"
   display_name = "TFInstance${count.index}"
-  image = "${var.InstanceImageOCID[var.region]}"
-  shape = "${var.InstanceShape}"
+  source_details {
+    source_type = "image"
+    source_id   = "${lookup(data.oci_core_images.OL76ImageOCID.images[0], "id")}"
+  }
+shape = "${var.InstanceShape}"
 
   create_vnic_details {
     subnet_id = "${oci_core_subnet.ExampleSubnet.id}"
