@@ -899,7 +899,7 @@ Oracle CASB’s Data Loss Protection (DLP) scans and detects files in sanctioned
 type of data that needs to be detected and secured.
 In this you’ll see how Oracle CASB is able to detect sensitive information in a managed document in your Box account.
 
-### Config Data Loss Protection in CASB
+### **DEMO** - Config Data Loss Protection in CASB
 
 *  Click to Configuration DLP Management
 
