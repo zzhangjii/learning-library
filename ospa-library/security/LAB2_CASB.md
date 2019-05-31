@@ -21,7 +21,6 @@
 ## Module 1:  Logging to CASB Community Tenant - Who Should Complete This Lab:  All Participants
 
 
-
 *	We are purposefully using our “Community” tenant instead of the tenant associated with the Cloud Account. 
 *	The “Community” tenant is a persistent sandbox environment where Oracle employees can try out CASB features.
 * Let’s register ourselves and become a member of the “Community”. Open your browser to the CASB “trial” pod: https://trial.palerra.net.
@@ -70,7 +69,7 @@ For consistency and for the ease of use-cases implementation, you will use a per
 Using this name convention will help us to clean up the environment once the lab has been completed.
 
 ****
-
+## Monitoring SaaS applications
 Oracle CASB monitors your sanctioned applications after a simple registration process. This enables you to manage risk events from a centralized platform instead of having to enter the individual application to see and remediate security threats. Oracle CASB monitors risk events such as blacklisted IP addresses, anomalous user behavior and unwanted security configurations in the application.
 As part of this first part of the module we will enroll two applications, Box and SalesForce.
 
@@ -202,8 +201,6 @@ For example, at least 12 characters in length, with a combination of uppercase a
 
 
 * You will use this email addrress and password to register your Box instance in Oracle CASB Cloud Service. Have a recovery procedure in case there are issues with the account.
-
-
 
 
 ### Registering a Box instance (Push Security Controls Mode) - Who Should Complete This Lab:  1 Participant for group
