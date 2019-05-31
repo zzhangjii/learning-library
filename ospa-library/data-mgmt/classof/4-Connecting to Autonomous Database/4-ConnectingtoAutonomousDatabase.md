@@ -85,9 +85,9 @@ contained in the wallet. The files used in the labs are:
 
 ## Module 3:  Connecting to the Database using SQL Developer 
 
-**PLEASE NOTE: SQL DEVELOPER CONNECTONS DO NO WORK IF YOU ARE BEHIND THE VPN OR ORACLE OFFICE PRIVATE NETWORS. IF YOU ARE USING THE VPN CLIENT  YOU MUST DISCONNECT FROM VPN, AND FROM AN ORACLE OFFICE CONNECT TO A OPEN/PUBLIC ACCESS NETWORK**
+**PLEASE NOTE: SQL DEVELOPER CONNECTONS DO NO WORK IF YOU ARE BEHIND THE VPN OR ORACLE OFFICE PRIVATE NETWORKS. IF YOU ARE USING THE VPN CLIENT  YOU MUST DISCONNECT FROM VPN, AND FROM AN ORACLE OFFICE CONNECT TO A OPEN/PUBLIC ACCESS NETWORK**
 
-*(Make sure you are running the latest version of SQL Developer 18.4. Some older versions will not work with ADB, see lab introductions on how to install)*
+*(Make sure you are running the latest version of SQL Developer. Some older versions will not work with ADB, see lab introductions on how to install)*
 
 1. Start SQL Developer (by clicking the icon on your desktop or selecting
 from the Windows Start menu) and create a connection for your database
