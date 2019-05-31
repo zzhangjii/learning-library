@@ -64,7 +64,7 @@ For the purpose of this workshop, you will be using Oracle CASB community tenant
 
 For consistency and for the ease of use-cases implementation, you will use a personal **email account (e.g. Gmail, Yahoo, Outlook) to sign-up for your Salesforce and Box developer instances**, and for CASB application registration you will use the following naming convention:
 
-`location+room_appName_yourOracleUserID` (e.g. **Austin1_Salesforce_acasas**, **Austin1_Box_acasas**, **Austin1_OCI_acasas** )
+`COSE_location+room_appName_yourGroupNumber` (e.g. **COSE_AU1_Salesforce_G1**, **COSE_AU1_Salesforce_G2**)
 
 ****
 
