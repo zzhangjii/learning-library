@@ -70,8 +70,8 @@ Following this name convention will help us to clean up the environment once the
 
 ****
 ## Monitoring SaaS applications
-Oracle CASB monitors your sanctioned applications after a simple registration process. This enables you to manage risk events from a centralized platform instead of having to enter the individual application to see and remediate security threats. Oracle CASB monitors risk events such as blacklisted IP addresses, anomalous user behavior and unwanted security configurations in the application.
-As part of this first part of the module we will enroll two applications, Box and SalesForce.
+Oracle CASB monitors your sanctioned applications after a simple registration process. This enables you to manage risk events from a centralized platform instead of having to monitor the individual application to remediate security threats. Oracle CASB monitors risk events such as blacklisted IP addresses, anomalous user behavior and unwanted security configurations in the application.
+As part of this first part of the module, we will enroll two applications used broadly by our customers base. The main goal of this section of the lab is to guide you through the process of configuring the applications to later integrate them with CASB.
 
 ### Add Box as a Sanctioned Application - Who Should Complete This Lab:  All Participants
 
