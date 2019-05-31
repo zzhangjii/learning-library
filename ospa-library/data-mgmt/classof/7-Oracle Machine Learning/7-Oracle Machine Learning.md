@@ -62,7 +62,7 @@ Otherwise review the steps to connect to OML in Lab 4 - Module 4. A brief rewiew
 After selecting Manage Oracle ML Users you will be placed in the OML Administration page.
 
 1. Sign-in to OML using the link from the welcome email, or by clicking
-    the **Home** button on the top right of Oracle Machine Learning** User Administration**.
+    the **Home** button on the top right of **Oracle Machine Learning** User Administration**.
 
      ![](media/omladmin.jpg)
        <p align="center">Figure 2-1</p>
