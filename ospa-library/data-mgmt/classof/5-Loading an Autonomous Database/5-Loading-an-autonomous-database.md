@@ -179,9 +179,9 @@ You will see the results in the window below as the rows get inserted.
 code and run it (by clicking on Run Script):
 
 ```
-select \* from emp;
+select * from emp;
 
-select \* from dept;
+select * from dept;
 ```
 
 ![](media/ec61529575991b1a30210f04701ec3b2.png)
@@ -205,7 +205,7 @@ load data that is in a comma delimited text file called channels.csv into a new
 table called channels in your database.
 
 1. In the lab directory on git you should find this file called **channels.csv** Right
-click on the file and save it on your machine. Please note what directory you
+click on the file and save it on your machine. If you need to get to the correct page click on this link: [Navigate to file location](https://github.com/oracle/learning-library/blob/master/ospa-library/data-mgmt/classof/5-Loading%20an%20Autonomous%20Database/). Please note what directory you
 save it in as you will need it in the next step.
 
 2. In SQL Developer, under your connection right click on **Tables**. This will open up
