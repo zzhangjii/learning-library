@@ -15,7 +15,18 @@
 
 ***** 
 
-*Disclaimer:  This lab is designed ONLY for large learning groups and assumes the groups are sharing the Oracle Cloud environment to execute this lab.*
+**Disclaimer:  This lab is designed ONLY for large learning groups and assumes the groups are sharing the Oracle Cloud environment to execute this lab.**
+
+
+## Mama Maggy's buisness needs for CASB
+
+Shannon Kim, Director/Manager of IT is seeking to improve the security monitoring capabilities across On-Premise and Cloud services.
+Security Operation Center is overwhelmed because of the number of alerts receive daily. They are barely able to respond on time and proactively identify a threat.
+Security might sound as a stopper for the users, but she needs to introduce a solution that helps both, Line-of-Business and IT to keep the environment safe, available and without introducing radical changes to the user experience.
+The organization needs to shift from a reactive to a proactive approach. That's why Mamma Maggy as opts for Oracle CASB Cloud Service. CASB Keeps enterprises secure by automating responses to threats with forensics, incident management, orchestration and remediation through native capabilities as well as integration with existing technologies.
+Security evolves to become a business enabler and she knows that the best fit to meet this requirement is Oracle CASB Cloud Service.
+Her team is on its way of implementing CASB to monitor SaaS applications and OCI. You as the SOC Manager have to integrate these services with the solution and put them ready to reduce no only the amount of alerts received, but human intervention.
+
 
 
 ## Module 1:  Logging to CASB Community Tenant - Who Should Complete This Lab:  All Participants
@@ -30,7 +41,6 @@
 
 ![CASB Console](./media/casb_login1.png)
 <p align="center"> Figure 1-1 </p>  
-
 
 * Click the following in sequence as shown in the image to navigate to the administration dashboard
 
@@ -55,7 +65,7 @@
 
 The following hands-on labs assume that you are familiar with Oracle Cloud Platform console navigation, as well as access to Oracle CASB Cloud Service console.
 In order to ease the process, we recommend using two separate browsers or windows.
-We will enroll third-party services as part of the exercise and it's imperative to navigate back and forth between CASB and the vendors' dashboards to complete the lab.
+We will enroll third-party services as part of the exercises and it's requires to navigate back and forth between CASB and the vendors' dashboards to complete the lab.
 
 For the purpose of this workshop, you will be using Oracle CASB community tenant which you may use indefinitely for whatever CASB features you’d like to try for yourself.
 
