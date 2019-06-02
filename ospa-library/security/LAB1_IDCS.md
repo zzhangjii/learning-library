@@ -10,7 +10,7 @@
 
 **Disclaimer:  This lab is designed ONLY for large learning groups and assumes the groups are sharing the Oracle Cloud environment to execute this lab.**
 
-## Mama Maggy's buisness needs for IDCS
+## Mama Maggy's Identity Management business needs
 
 Shannon Kim, Director/Manager of IT is seeking to reduce users and privileges' provisioning timeframe while improving security controls and governance.
 Mama Maggy's current Identity Management solution cannot scale to the cloud.
