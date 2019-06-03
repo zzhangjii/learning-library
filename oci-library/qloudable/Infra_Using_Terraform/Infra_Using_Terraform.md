@@ -1,23 +1,20 @@
-# Deploying OCI Streaming Service
-
+# Deploying Infrastructure Using Terraform.
 ## Table of Contents
 
 [Overview](#overview)
 
 [Pre-Requisites](#pre-requisites)
 
-[Sign in to OCI Console and create VCN](#sign-in-to-oci-console-and-create-vcn)
+[Sign in to OCI Console and create a VCN](#sign-in-to-oci-console-and-create-a-vcn)
 
 [Create ssh keys and compute instance](#create-ssh-keys-and-compute-instance)
 
-[Download Script to configure Streaming service and Publish messages](#download-script-to-configure-streaming-service-and-publish-messages)
-
-[Delete the resources](#delete-the-resources)
+[Configure OCI CLI, Install Terraform Upload API keys and verify functionality](#configure-oci-cli,-install-terraform-upload-api-keys-and-verify-functionality)
 
 
 ## Overview
 
-In this lab we will create a compute instance, download a script to configure streaming service, publish and consume messages.The Oracle Cloud Infrastructure Streaming service provides a fully managed, scalable, and durable storage solution for ingesting continuous, high-volume streams of data that you can consume and process in real time. Streaming can be used for messaging, ingesting high-volume data such as application logs, operational telemetry, web click-stream data, or other use cases in which data is produced and processed continually and sequentially in a publish-subscribe messaging model.
+Terraform is Infrastructure as Code tool for building and managing infrastructure efficiently and elegantly. In this lab we will use pre-configured terraform scripts to deploy VCN, Compute Instance, Block storage and attach the block storage to compute instance without using OCI console. We will then delete all these infrastructure resources.
 
 **Some Key points;**
 
@@ -48,18 +45,16 @@ In this lab we will create a compute instance, download a script to configure st
 
 3. Overview of Networking: https://docs.us-phoenix-1.oraclecloud.com/Content/Network/Concepts/overview.htm
 
-4. Familiarity with Compartment: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/concepts.htm
+4. Familiarity with Compartments: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/concepts.htm
 
 5. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
 
-## Sign in to OCI Console and create VCN
+## Sign in to OCI Console and create a VCN
 
 * **Tenant Name:** {{Cloud Tenant}}
 * **User Name:** {{User Name}}
 * **Password:** {{Password}}
 * **Compartment:**{{Compartment}}
-
-**Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
 
 1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
@@ -77,7 +72,7 @@ In this lab we will create a compute instance, download a script to configure st
 
 4. Fill out the dialog box:
 
-- **Name:** Enter easy to remember name
+- **Name:** Enter easy to re¬member name
 
 - **Create in Compartment:** Has the correct compartment
 
@@ -171,6 +166,8 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 9. Click **Create**
 
+**NOTE:** If 'Service limit' error is displayed choose a different shape such as VM.Standard.E2.2 OR VM.Standard2.2 OR choose a different AD
+
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text" height="200" width="200">
 
 10. Wait for Instance to be in **Running** state. In git-bash Enter Command:
@@ -192,139 +189,137 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
  
 14. Verify opc@<COMPUTE_INSTANCE_NAME> appears on the prompt
 
-## Download Script to configure Streaming service and Publish messages
+## Configure OCI CLI, Install Terraform Upload API keys and verify functionality: 
 
-1. In ssh session to compute instance, configure OCI CLI, Enter command:
+1. Check oci CLI installed version, Enter command:
+```
+oci -v
+```
+**NOTE:** Version should be minimum 2.5.X (3/23/2019)
 
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_CLI/img/100_CLI_001.png" alt="image-alt-text" height="200" width="200">
+
+2. Next we will configure OCI CLI. Enter command:
 ```
 oci setup config
 ```
-
-2. Accept the default directory location. For user OCI switch to OCI Console window. Click Human Icon and then your user name. In the user details page click **copy** to copy the OCID. **Also note down your region name as shown in OCI Console window**. Paste the OCID in ssh session.
+3. Accept the default location. For user OCI switch to OCI Console window. Click Human Icon and then your user name. In the user details page click **copy** to copy the OCID. **Also note down your region name as shown in OCI Console window**. Paste the OCID in ssh session.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_004.PNG" alt="image-alt-text" height="200" width="200">
 
-3. Repeat the step to find tenancy OCID (Human icon followed by clicking Tenancy Name). Paste the Tenancy OCID in ssh session to compute instance followe by providing your region name (us-ashburn-1, us-phoneix-1 etc)
+4. Repeat the step to find tenancy OCID (Human icon followed by clicking Tenancy Name). Paste the Tenancy OCID in ssh session to compute instance followed by providing your region name (us-ashburn-1, us-phoneix-1 etc)
 
-4. When asked for **Do you want to generate a new RSA key pair?** answer Y. For the rest of the question accept default by pressing Enter
+5. When asked for **Do you want to generate a new RSA key pair?** answer Y. For the rest of the question accept default by pressing Enter
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_005.PNG" alt="image-alt-text" height="200" width="200">
 
-5. **oci setup config** also generated an API key. We will need to upload this API key into our OCI account for authentication of API calls. Switch to ssh session to compute instance, to display the conent of API key Enter command :
+6. **oci setup config** also generated an API key. We will need to upload this API key into our OCI account for authentication of API calls. Switch to ssh session to compute instance, to display the conent of API key Enter command :
 
 ```
 cat ~/.oci/oci_api_key_public.pem
 ```
 
-6. Hightligh and copy the content from ssh session. Switch to OCI Console, click Human icon followe by your user name. In user details page click **Add Public Key**. In the dialg box paste the public key content and click **Add**.
+7. Hightligh and copy the content from ssh session. Switch to OCI Console, click Human icon followed by your user name. In user details page click **Add Public Key**. In the dialg box paste the public key content and click **Add**.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_006.PNG" alt="image-alt-text" height="200" width="200">
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_007.PNG" alt="image-alt-text" height="200" width="200">
 
-7. Download and Install pip utility which will be used to install additional software. Enter command:
-
+8. Next, Download script to install Terraform, Enter command:
 ```
-sudo curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-```
-
-followed by
-
-```
-sudo python get-pip.py
-
+sudo curl https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Infra_Using_Terraform/tf_setup.sh -o tf_setup.sh
 ```
 
-8. Install a virtual enviornement. This is being done so we have a clean enviornment to execute our python script that will create and publish messages to OCI streaming service. Enter command:
+This will download a script file called **tf_setup.sh**
 
+9. Next modify the permission on the script and execute it, Enter Commands:
 ```
-sudo pip install virtualenv
+sudo chmod 755 tf_setup.sh
 ```
-
-9. Now create a virtual enviornment, Enter command:
-
 ```
-virtualenv <Enviornment_Name>
-```
-For example **virtualenv stream_env**
-
-Now initialize the virtual enviornment, Enter command:
-
-**NOTE** : Below command assumes that the enviornment name is 'stream-env'
-```
-source ~/stream_env/bin/activate
+./tf_setup.sh
 ```
 
-10. Once your virtual environment is active, oci can be installed using pip, Enter command:
+Press **Enter** when prompted
 
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Infra_Using_Terraform/img/Terraform_002.PNG" alt="image-alt-text" height="200" width="200">
+
+10. The script will install needed packages and create a new directory **tflab**. We will need to modify some env variables in the file. Enter command:
 ```
-pip install oci
+cd tflab
 ```
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_008.PNG" alt="image-alt-text" height="200" width="200">
+11. Now edit the env-variables file. We will updated 2 variables. Enter command:
+```
+vi env-vars
+```
+**NOTE: You can use another editor such as nano as well**
 
-11. Now download the main script file though first we will remove the existing file, Enter Command:
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Infra_Using_Terraform/img/Terraform_003.PNG" alt="image-alt-text" height="200" width="200">
 
+12. Update the TF_VAR_user_ocid variable with User OCID saved earlier
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Infra_Using_Terraform/img/Terraform_005.PNG" alt="image-alt-text" height="200" width="200">
+
+13. Next Update the TF_VAR_Compartment_ocid variable. Switch to OCI Console window, Click **Compartment** under **Identity**. Locate your compartment name and click it. In the compartment details page , clik **copy** to copy the OCID
+Paste this OCID in **env-vars** file
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Infra_Using_Terraform/img/Terraform_006.PNG" alt="image-alt-text" height="200" width="200">
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Infra_Using_Terraform/img/Terraform_007.PNG" alt="image-alt-text" height="200" width="200">
+
+14. After updating env-vars file the content will look like below;
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Infra_Using_Terraform/img/Terraform_008.PNG" alt="image-alt-text" height="200" width="200">
+
+15. Save the file and then source it, Etner command:
+```
+source env-vars
+```
+
+16. The enviornment is now set. Next we will download a terraform file (.tf) file that will be used to create VCN, Compute instnace, block volume and attach block volume to compute instance. We will download this file in **/home/opc** directory, Enter Command:
 ```
 cd /home/opc
 ```
-```
-rm stream_example.py
-```
-```
-wget https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/stream_example.py
-```
 
-12. Now download a dependent script file though first we will remove the existing file, Enter Command:
+Enter Command: 
 
 ```
-cd /home/opc/stream_env/lib/python2.7/site-packages/oci/streaming/
-```
-```
-rm stream_admin_client_composite_operations.py
-```
-```
-wget https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/stream_admin_client_composite_operations.py
+sudo curl https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Infra_Using_Terraform/compute.tf -o compute.tf
 ```
 
-13. Our setup is now ready. Before running the script switch to OCI Console window, from the main menu click **Compartments** under **Identity**. Click your compartment name and copy the OCID of the compartment. (Just as was done for user OCID earlier)
+17. Ensure you are in **/home/opc** directory. 
 
-14. Switch to ssh session and run the script, Enter command:
-
+18. Now initialize terraform , Enter Command:
 ```
-python ~/stream_example.py <COMPARTMENT_OCID>
+terraform init
 ```
 
-For example : 
+Verify successful initialization
 
-python ~/stream_example.py ocid1.compartment.oc1..aaaaaaaada2gaukcqoagqoshxq2pyt6cdsj2mhnrz3p5nke33ljx2bp476wq
+19. To see the deloyment plan, Enter Command:
+```
+terraform plan
+```
 
-15. Follow the prompts of the script. The script will create Streaming service called **SdkExampleStream**. It will publish 100 messages, create 2 groups on the compute and read those messages. Finally it will delete the streaming service. **You will be prompted to hit enter after verifying each step**
+This will provide details on what will be configured in OCI
 
-## Delete the resources
+20. Finally apply the plan to create the infrastructure, Enter Command:
+```
+terraform apply
+```
 
-1. Switch to  OCI console window
+**NOTE:** You must type **yes** when prompted
 
-2. If your Compute instance is not displayed, From OCI services menu Click **Instances** under **Compute**
+21. This script will take some time to execute. You can switch to OCI console and observe creation of VCN, Compute instance, Block Volume and attachment of block volume to the compute instance.
 
-3. Locate compute instance, Click Action icon and then **Terminat** 
+22. Finally, destroty the infrastrucutre that we created. Enter Command:
+```
+terraform destroy
+```
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text" height="200" width="200">
+**NOTE:** You must type **yes** when prompted
 
-4. Make sure Permanently delete the attached Boot Volume is checked, Click Terminate Instance. Wait for instance to fully Terminate
+You can switch to OCI console and observe deletion of VCN, Compute instance, Block Volume
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0017.PNG" alt="image-alt-text" height="200" width="200">
-
-5. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will 
-appear.
-
-6. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text" height="200" width="200">
-
-7. From OCI services menu Click **Networking**, then **Public IPs**,locate the Reserved Public IP you created. Click Action icon and then **Terminate**
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0019.PNG" alt="image-alt-text" height="200" width="200">
-
-***Congratulations! You have successfully completed the lab. ***
-
+**Congratulations! You have successfully completed the lab**
