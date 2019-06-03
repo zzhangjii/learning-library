@@ -9,6 +9,18 @@
 ***** 
 
 **Disclaimer:  This lab is designed ONLY for large learning groups and assumes the groups are sharing the Oracle Cloud environment to execute this lab.**
+
+## Mama Maggy's Identity Management business needs
+
+Shannon Kim, Director/Manager of IT is seeking to reduce users and privileges' provisioning timeframe while improving security controls and governance.
+Mama Maggy's current Identity Management solution cannot scale to the cloud.
+Line-of-business has complained about the number of user ids and passwords that they must manage across its heterogeneous environment.
+CIO has identified an exponential trend on the help desk calls for user ids and passwords reset since they have starting to move the workload to the cloud, so he asked Shannon to implement a solution that can help them not only consolidate on-premises and Cloud services user management but also help them to improve productivity and user experience.
+Mama Maggy has acquired Oracle Identity Cloud Services to manage their enterprise infrastructure, regardless if its in the cloud or on-prem. 
+As part of the new project, the CIO office is looking to implement Single Sign-On with their main SaaS applications, which will reduce not only the help desk calls but the average login timeframe.
+You as the IdM Manager must set up Oracle Identity Cloud Service to allow users to log in to third-party services using Open Standards and to manage user id and privileges provisioning.
+
+
  
 # Lab Configuration and Details
 

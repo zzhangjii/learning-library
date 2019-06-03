@@ -15,11 +15,21 @@
 
 ***** 
 
-*Disclaimer:  This lab is designed ONLY for large learning groups and assumes the groups are sharing the Oracle Cloud environment to execute this lab.*
+**Disclaimer:  This lab is designed ONLY for large learning groups and assumes the groups are sharing the Oracle Cloud environment to execute this lab.**
+
+
+## Mama Maggy's security monitoring business needs for SaaS and OCI
+
+Shannon Kim, Director/Manager of IT is seeking to improve the security monitoring capabilities across On-Premise and Cloud services.
+Security Operation Center is overwhelmed because of the number of alerts receive daily. They are barely able to respond on time and proactively identify a threat.
+Security might sound as a stopper for the users, but she needs to introduce a solution that helps both, Line-of-Business and IT to keep the environment safe, available and without introducing radical changes to the user experience.
+The organization needs to shift from a reactive to a proactive approach. That's why Mamma Maggy as opts for Oracle CASB Cloud Service. CASB Keeps enterprises secure by automating responses to threats with forensics, incident management, orchestration and remediation through native capabilities as well as integration with existing technologies.
+Security evolves to become a business enabler and she knows that the best fit to meet this requirement is Oracle CASB Cloud Service.
+Her team is on its way of implementing CASB to monitor SaaS applications and OCI. You as the SOC Manager have to integrate these services with the solution and put them ready to reduce no only the amount of alerts received, but human intervention.
+
 
 
 ## Module 1:  Logging to CASB Community Tenant - Who Should Complete This Lab:  All Participants
-
 
 
 *	We are purposefully using our “Community” tenant instead of the tenant associated with the Cloud Account. 
@@ -27,11 +37,10 @@
 * Let’s register ourselves and become a member of the “Community”. Open your browser to the CASB “trial” pod: https://trial.palerra.net.
 * Login to CASB using the Tenant admin account
 
-**NOTE: Tenatn User id and Password will be delivered by the instructor**
+**NOTE: Tenant User id and Password will be delivered by the instructor**
 
 ![CASB Console](./media/casb_login1.png)
 <p align="center"> Figure 1-1 </p>  
-
 
 * Click the following in sequence as shown in the image to navigate to the administration dashboard
 
@@ -56,7 +65,7 @@
 
 The following hands-on labs assume that you are familiar with Oracle Cloud Platform console navigation, as well as access to Oracle CASB Cloud Service console.
 In order to ease the process, we recommend using two separate browsers or windows.
-We will enroll third-party services as part of the exercise and it's imperative to navigate back and forth between CASB and the vendors' dashboards to complete the lab.
+We will enroll third-party services as part of the exercises and it's requires to navigate back and forth between CASB and the vendors' dashboards to complete the lab.
 
 For the purpose of this workshop, you will be using Oracle CASB community tenant which you may use indefinitely for whatever CASB features you’d like to try for yourself.
 
@@ -64,12 +73,15 @@ For the purpose of this workshop, you will be using Oracle CASB community tenant
 
 For consistency and for the ease of use-cases implementation, you will use a personal **email account (e.g. Gmail, Yahoo, Outlook) to sign-up for your Salesforce and Box developer instances**, and for CASB application registration you will use the following naming convention:
 
-`location+room_appName_yourOracleUserID` (e.g. **Austin1_Salesforce_acasas**, **Austin1_Box_acasas**, **Austin1_OCI_acasas** )
+`COSE_location+room_appName_GroupNumber` *(e.g. **COSE_AU1_Salesforce_G1**, **COSE_AU1_Salesforce_G2**)*
+
+
+Following this name convention will help us to clean up the environment once the lab is completed.
 
 ****
-
-Oracle CASB monitors your sanctioned applications after a simple registration process. This enables you to manage risk events from a centralized platform instead of having to enter the individual application to see and remediate security threats. Oracle CASB monitors risk events such as blacklisted IP addresses, anomalous user behavior and unwanted security configurations in the application.
-As part of this first part of the module we will enroll two applications, Box and SalesForce.
+## Monitoring SaaS applications
+Oracle CASB monitors your sanctioned applications after a simple registration process. This enables you to manage risk events from a centralized platform instead of having to monitor the individual application to remediate security threats. Oracle CASB monitors risk events such as blacklisted IP addresses, anomalous user behavior and unwanted security configurations in the application.
+As part of this first part of the module, we will enroll two applications used broadly by our customers base. The main goal of this section of the lab is to guide you through the process of configuring the applications to later integrate them with CASB.
 
 ### Add Box as a Sanctioned Application - Who Should Complete This Lab:  All Participants
 
@@ -199,8 +211,6 @@ For example, at least 12 characters in length, with a combination of uppercase a
 
 
 * You will use this email addrress and password to register your Box instance in Oracle CASB Cloud Service. Have a recovery procedure in case there are issues with the account.
-
-
 
 
 ### Registering a Box instance (Push Security Controls Mode) - Who Should Complete This Lab:  1 Participant for group
