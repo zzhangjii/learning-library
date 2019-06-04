@@ -72,20 +72,26 @@ top left of the SQL Developer homepage.
 
 3. The new Database Connection screen will appear:
 
-![](./media/image8.png)
+![](./media/5e7ce7da8b1304d89cfad7c628942219.png)
 <p align="center">Figure 2-2</p>
 
 4. Fill in the connection details as below:
 
-**Connection Name:** `admin`
+**Name:** `admin`
+
+**Database Type:** Oracle
+
+**Authentication Type** Default
 
 **Username:** `admin`
 
 **Password:** *The admin password you specified during database provisioning*
 
-**Connection Type:** *Cloud Wallet*
+**Role** Default
 
-**Configuration File:** Enter the full path for the wallet file you downloaded before (in my example wallet\_ATPXWEEK.zip), or click the Browse button to point to the location of the file.
+**Connection Type:** Cloud Wallet
+
+**Configuration File:** Enter the full path for the wallet file you downloaded before, or click the Browse button to point to the location of the file.
 
 
 ![../Desktop/Screen%20Shot%202019-04-22%20at%2012.24.09%20PM.png](./media/image9.png)
@@ -105,7 +111,7 @@ top left of the SQL Developer homepage.
 your connection it will appear on the list of connections on the top
 left corner of the main dashboard, under connections.
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.28.02%20PM.png](./media/image10.png)
+![](./media/77e7f1ed47bd7ef10eee546c361aac8a.png)
 <p align="center">Figure 2-4</p>
 
 **Toubleshooting your connection**
