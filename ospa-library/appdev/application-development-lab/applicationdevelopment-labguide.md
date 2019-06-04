@@ -62,8 +62,25 @@ these lab exercises.
 
 # Labs
 
-In these labs you will use Visual Builder to help Mama Maggy’s (using data supporting the Mama Maggy use case, but, other data could be substituted) by adding
-product ordering and order tracking solutions.
+In these labs you will use Visual Builder to help Mama Maggy’s (using data supporting the Mama Maggy use case, but, other data could be substituted) by adding product ordering and order tracking solutions.
+
+Today when a manager or franchisee needs to order supplies everything is accomplished with a series of phone calls between the manager/franchisee and Mama Maggy headquarters. The only status checks available are by again calling headquarters. 
+1. Manager/franchisee determines need.
+2. Manager/franchisee calls HQ for product name and pricing info.
+3. Manager/franchisee calls HQ to create an order for one or more products.
+4. Manager/franchisee waits for delivery, if they wish to check status they must once again call HQ.
+
+In addition, if store managers/franchisees wish to contact other stores to ask about borrowing supplies or to discuss business, they once again have to go through headquarters to get contact information. 
+
+These processes are often inconvenient and slow, the managers/franchisees would like to improve things.
+
+In our lab we will BEGIN to address the needs of the managers/franchisees by adding:
+- Web application allowing managers/franchisees to see what products are available for order and what the prices are.
+- Web application to list all product orders including each line in the order's product, quantity, and prices.
+- Mobile application allowing busy manager/franchisee to check the status of their orders from anywhere with their phone.
+- Web application to list all Mama Maggy stores and their locations and the list of associates in that location along with contact information.
+
+In the interest of time this lab focuses on creating apps to help managers/franchisees to self-serve information they currently rely on headquarters for. Future work will be necessary to automate the creation and update of orders and/or the other information.
 
 The lab is presented in four parts: Lab 1 – Introduction and Setup, Lab
 2 - Spreadsheet-based Business Objects, Lab 3 – Web and Mobile Apps, Lab
@@ -242,6 +259,8 @@ This concludes Lab 1.
 
 # Lab 2: Spreadsheet-based Business Objects
 
+To build the solutions for Mama Maggy's managers/franchisees, data is required, right now that data is stored in several spreadsheets. We need to make that data available inside VBCS so that it may be used in the web and mobile applications created in these labs.
+
 Visual Builder provides two main methods to access data: built-in
 business objects, and service connections. VBCS business objects store data in tables like a database. This lab focuses on creating
 and using built-in business objects with data suppiled via spreadsheet (.csv/.xlsx)
@@ -250,9 +269,10 @@ of VBCS) and are actually accessed using the same type of RESTful APIs
 as those used for service connections (more on this in Lab 4).
 
  NOTE: For this lab you will need three data files (Product.csv, ProductOrder.csv, and ProductOrderLine.csv), if you have not already downloaded them they may be obtained from GitHub as a .zip file named [vbcsfiles.zip](https://github.com/oracle/learning-library/blob/master/ospa-library/appdev/application-development-lab/files/vbcsfiles.zip); download the file and expand it to find the following three files (keep them handy they will be used later in this lab):
-- Product.csv
-- ProductOrder.csv
-- ProductOrderLine.csv
+- Product.csv&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Products available for managers/franchisees to order
+- ProductOrder.csv&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Existing order information: date of order, status, and associate who made the order.
+- ProductOrderLine.csv&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Order lines showing the products requested in each of the current orders, 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;their unit price, and the quantity desired.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A fourth file 'AppDev_Endpoints.txt' will be used in a later lab.
 <br/><br/>
@@ -291,8 +311,10 @@ upper-left corner.
 2.  From the application page, click “+ Business Object” to begin adding
     a business object
 
-3.  Set the business object name to “Product” as shown here and click
-    the Checkmark ![](./media/image24.png) when ready to continue
+3.  The first Business Object you will create will contain information about what products are available for managers/franchisees to order for their stores; we'll use the name "Product" to keep things simple.
+
+    Set the business object name to “Product” as shown here and click
+    the Checkmark ![](./media/image24.png) when ready to continue.
 
     ![](./media/image25.png)
 
@@ -337,7 +359,7 @@ upper-left corner.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.7 – Product Name required<br/>
 
 8.  Now add three more fields; be sure to mark the all “Required” so
-    that you end up with a list like this:
+    that you end up with a list like this (note that all four of the fields added should be marked "Required"):
 
 <!-- end list -->
 
@@ -351,12 +373,14 @@ upper-left corner.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.8 – Product Business Object Fields<br/>
 
-9.  Create another Business Object named “Product Order” (ProductOrder) by clicking the "plus sign" at the top of the Business Objects list again ![](./media/vbcs_add_biz_object.png)
+9.  Create another Business Object named “Product Order” (ProductOrder) by clicking the "plus sign" at the top of the Business Objects list again ![](./media/vbcs_add_biz_object.png). 
+
+    The "Product Order" Business Object will contain specifics about orders made by managers/franchisees including the associate that made the order, the order date, the current order status (open, shipped, complete) , and the last date some action (order shipped, order closed, etc.) occurred on the order.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.9.1 – Business Objects +
 <br/>
 
-    Add new fields as suggested below so that the final result looks like the screen shot in Figure 2.9.2 (please be sure to pick the correct "type").
+    Add new fields as suggested below so that the final result looks like the screen shot in Figure 2.9.2 (please be sure to pick the correct "type" and make sure that all four of the new fields are marked "Required").
 
 <!-- end list -->
 
@@ -373,11 +397,16 @@ upper-left corner.
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.9.2 – Product Order Business Object Fields<br/>
 
 10. Create another Business Object named “Product Order Line”
-    (ProductOrderLine).
+    (ProductOrderLine). 
+
+    The "Product Order Line" Business Object will contain specifics about each item included in "Product Orders" made by managers/franchisees including the product ordered, its Unit Price, and the Quantity ordered. 
+    
+    To make it possible for VBCS to connect the "Product Order Line" with the correct "Product Order" and the "Product" being ordered (so that the product name can display rather than a product id) you will create two "Relationships" between the "Product Order Line" and its associated "Product Order" record and the "Product Order Line" and the "Product" being ordered.
     
     You will begin with the predefined fields as shown in Figure 2.10.1.
 
-    But this time before adding fields you will first add two relationships to the other business objects that will show up as 'references' later. Then, you will add two fields in the usual manner.
+    But this time before adding fields you will first add two relationships to the other business objects that will show up as 'references' later. These relationships connect specific products to product order lines and product order lines to product orders allowing VBCS to "automatically" connect that data when building web and mobile applications later.
+    
 
 ![](./media/image35.png)
 
@@ -433,6 +462,9 @@ relationship. Select the last row, “Product” as shown in Figure 2.10.8 and c
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.8 – ProductOrderLine with relationships
 
+
+Next, you will add two fields in the usual manner.
+
 Add “Unit Price” and “Quantity” as numeric fields.
 
 ![](./media/image44.png)
@@ -449,15 +481,15 @@ The completed field list should look like this:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.10.11 – Product Order Line fields
 
-11. Examine the “Endpoints” created for each of the Business Objects you
-    created; these are the RESTful APIs that allow your applications
+11. Examine the “Endpoints” created by VBCS for each of the Business Objects you
+    defined; these are the RESTful APIs that allow your applications
     (and others) to access the Business Object; Get (read), Post
-    (create), Patch (update), Delete (delete) – we will use these in the
-    next lab
-
+    (create), Patch (update), Delete (delete) – we will use at least two of these in the next lab.
 ![](./media/image47.png)
 
-12. Reopen the “Product" Business Object (from the Business Objects list); click on the "Data" tab and then click “+ Add Row” to add a
+12. It will be useful for testing purposes to have some data in the "Product" Business Object. VBCS provides a way to load single rows/records manually as shown below. (In #15 below you will add many rows/records from an input file).
+
+    Reopen the “Product" Business Object (from the Business Objects list); click on the "Data" tab and then click “+ Add Row” to add a
     row of data
 
 ![](./media/image48.png)
@@ -474,7 +506,7 @@ The completed field list should look like this:
 
   - Unit Price 7
 
-  (click the "Checkmark" ![](./media/vbcs_checkmark.png) when done)
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(click the "Checkmark" ![](./media/vbcs_checkmark.png) when done)
 
 ![](./media/image49.png)
 
