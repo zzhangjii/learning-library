@@ -18,7 +18,7 @@
 **Disclaimer:  This lab is designed ONLY for large learning groups and assumes the groups are sharing the Oracle Cloud environment to execute this lab.**
 
 
-## Mama Maggy's security monitoring business needs for SaaS
+## Mama Maggy's security monitoring business needs for SaaS and OCI
 
 Shannon Kim, Director/Manager of IT is seeking to improve the security monitoring capabilities across On-Premise and Cloud services.
 Security Operation Center is overwhelmed because of the number of alerts receive daily. They are barely able to respond on time and proactively identify a threat.
