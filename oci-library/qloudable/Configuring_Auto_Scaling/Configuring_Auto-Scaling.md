@@ -181,7 +181,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 10. Wait for Instance to be in **Running** state. 
 
-11. Click instance name and then **Create Instance Configuration**, Fill out the dialog box:
+11. Click Instance name and then select **Create Instance Configuration** from the Action menuFill out the dialog box:
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_001.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -189,13 +189,13 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 - **INSTANCE CONFIGURATION NAME** : Provide a name
 
-Click **Create Instance Configuration**
+12. Click **Create Instance Configuration**
 
-12. Click **Instances** to go back to Instances page and then click **Instance Pools**
+13. In the Instance Configuration page, Click **Create Instance Pools**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_002.PNG" alt="image-alt-text" height="200" width="200">
 
-13.  Click **Create Instance Pool**. A new dialog box will appear. This is used to create initial configuration of the instance pool such as how many compute instance to create initially, VCN, and Availability domain the instance pool should be created in. Fill out the dialog box:
+14.  Click **Create Instance Pool**. A new dialog box will appear. This is used to create initial configuration of the instance pool such as how many compute instance to create initially, VCN, and Availability domain the instance pool should be created in. Fill out the dialog box:
 
 - **CREATE IN COMPARTMENT**: Choose your compartment
 
@@ -237,13 +237,13 @@ Click **Create Instance Configuration**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_003-1.PNG" alt="image-alt-text" height="200" width="200">
 
-14. Click **Create Instance Pool**. Wait for Instance Pool to be in **RUNNING** state (turns green)
+15. Click **Create Instance Pool**. Wait for Instance Pool to be in **RUNNING** state (turns green)
 
-15. From the instance pool details page, click **Actions** and choose **Create Auto Scaling Configuration**
+16. From the instance pool details page, click **Actions** and choose **Create Auto Scaling Configuration**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_004.PNG" alt="image-alt-text" height="200" width="200">
 
-16. Fill out the dialog box:
+17. Fill out the dialog box:
 
 - **COMPARTMENT** : Choose your compartment
 
@@ -277,7 +277,7 @@ Click **Create Instance Configuration**
 
 **Leave other fileds as is**
 
-17. Click **Create**
+18. Click **Create**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_005.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -285,38 +285,38 @@ Click **Create Instance Configuration**
 
 **We have now created a auto scaling policy that will start with creating 1 compute instnace in the designated pool. Once the CPU utilization is determined to be above 10% for atleast 300 seconds another compute instance will be launched automatically. Once the CPU utilization is determined to be less than 5% for 300 seconds, one compute instance will be removed. At all times there will be atleast 1 compute instance in the pool**
 
-18. Click **Instance Pools** under **Compute** and then your pool name. You should see a Compute instance created. Click the Compute Instance name.
+**Original image can be deleted as it's not part of the pool**
+
+19. Click **Instance Pools** under **Compute** and then your pool name. You should see a Compute instance created. Click the Compute Instance name.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_007.PNG" alt="image-alt-text" height="200" width="200">
 
-19. Note down the Publci IP of compute instnace from the details page (Under **Primary VNIC Information** section). Switch to git bash window, if the ssh session to compute instance is still open then exit out of the session (quit command). 
+20. Note down the Publci IP of compute instnace from the details page (Under **Primary VNIC Information** section). Switch to git bash window, if the ssh session to compute instance is still open then exit out of the session (quit command). 
 
-20. Ensure you are in /C/Users/PhotonUser/.ssh directory.
+21. Ensure you are in /C/Users/PhotonUser/.ssh directory.
 
-21. Enter **ls** and verify id_rsa file exists
+22. Enter **ls** and verify id_rsa file exists
 
-22. Enter command 
+23. Enter command 
 ```
 ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 ```
 
 **HINT:** If 'Permission denied error' is seen, ensure you are using '-i' in the ssh command
 
-23. Enter 'Yes' when prompted for security message
+24. Enter 'Yes' when prompted for security message
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0014.PNG" alt="image-alt-text" height="200" width="200">
  
-24. We will now install a tool called stress to trigger CPU load. In ssh session to compute instance, Enter command:
+25. We will now install a tool called stress to trigger CPU load. In ssh session to compute instance, Enter command:
 
 ```
-sudo yum install stress
+sudo yum -y install stress
 ```
-
-Enter 'Y' when prompted
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_008.PNG" alt="image-alt-text" height="200" width="200">
 
-25. Now start CPU stress, Enter command:
+26. Now start CPU stress, Enter command:
 
 ```
 sudo stress --cpu 4 --timeout 350
@@ -324,21 +324,21 @@ sudo stress --cpu 4 --timeout 350
 
 ***spawn 4 workers spinning on sqrt() with a timeout of 350 seconds.***
 
-26. Switch back to OCI console and navigate to Instance pool details page. Click your instance name and scroll down to **Metric** screen, you should see CPU spiking up after a minute or so.
+27. Switch back to OCI console and navigate to Instance pool details page. Click your instance name and scroll down to **Metric** screen, you should see CPU spiking up after a minute or so.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_009.PNG" alt="image-alt-text" height="200" width="200">
 
-27. Navigate to your Instance Pool details page. In about 3-4 minutes (time configured when we created auto scale configuration), status of Pool should change to **Scaling** and a second compute instance should launch.
+28. Navigate to your Instance Pool details page. In about 3-4 minutes (time configured when we created auto scale configuration), status of Pool should change to **Scaling** and a second compute instance should launch.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_010.PNG" alt="image-alt-text" height="200" width="200">
 
 **This is since our criteria of CPU utilization > 10 was met**
 
-28. Switch back to git bash window and if the stress tool is still running, Pree Ctrl + C to stop the script.
+29. Switch back to git bash window and if the stress tool is still running, Pree Ctrl + C to stop the script.
 
-29. Switch back to OCI console window and navigate to your compute instance details page. Verify CPU utilization goes down after a minute.
+30. Switch back to OCI console window and navigate to your compute instance details page. Verify CPU utilization goes down after a minute.
 
-30. Navigate to Instanse pool details page and after 3-4 minute Instance pool status will change to **Scaling** . Additional compute instance will be deleted. 
+31. Navigate to Instanse pool details page and after 3-4 minute Instance pool status will change to **Scaling** . Additional compute instance will be deleted. 
 
 **This is becuase our criteria of CPU utilization < 5 is met**
 
