@@ -101,20 +101,26 @@ top left of the SQL Developer homepage.
 
 3. The new Database Connection screen will appear:
 
-![](./media/image8.png)
+![](./media/5e7ce7da8b1304d89cfad7c628942219.png)
 <p align="center">Figure 3-2</p>
 
 4. Fill in the connection details as below:
 
-**Connection Name:** pick a connetion name
+**Name:** pick a connetion name
+
+**Database Type:** Oracle
+
+**Authentication Type** Default
 
 **Username:** the database user name that was created for you
 
 **Password:** the database user password created for your account
 
-**Connection Type:** *Cloud Wallet*
+**Role** Default
 
-**Configuration File:** Enter the full path for the wallet file you downloaded before (in my example wallet\_ATPXWEEK.zip), or click the Browse button to point to the location of the file.
+**Connection Type:**  Cloud Wallet
+
+**Configuration File:** Enter the full path for the wallet file you downloaded before, or click the Browse button to point to the location of the file.
 
 
 ![../Desktop/Screen%20Shot%202019-04-22%20at%2012.24.09%20PM.png](./media/image9.png)
@@ -140,7 +146,7 @@ Verify that all this information is correct and try your test again. Save your c
 your connection it will appear on the list of connections on the top
 left corner of the main dashboard, under connections.
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.28.02%20PM.png](./media/image10.png)
+![](./media/77e7f1ed47bd7ef10eee546c361aac8a.png)
 <p align="center">Figure 3-4</p>
 
 10. Now that you are connected run test a query. The ATP (or ADW) database
