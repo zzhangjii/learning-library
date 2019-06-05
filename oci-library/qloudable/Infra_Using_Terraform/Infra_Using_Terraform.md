@@ -1,4 +1,4 @@
-# Deploying Infrastructure Using Terraform.
+# Deploying Infrastructure Using Terraform
 ## Table of Contents
 
 [Overview](#overview)
