@@ -84,15 +84,13 @@ In this lab you will create and attach Block Volume Storage to a compute instanc
 
 4. Fill out the dialog box:
 
-- **Create in Compartment:** Has the correct compartment
+- Create in Compartment: Has the correct compartment
+- Name: Enter easy to re¬member name
+- Create Virtual Cloud Network Plus Related Resources: Select this option.
 
-- **Name:** Enter easy to re¬member name
+5. Click **Create Virtual Cloud Network**
 
-- **Create Virtual Cloud Network Plus Related Resources:** Select this option.
-
-- Click **Create Virtual Cloud Network**
-
-- Click **Close**
+6. Click **Close**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -154,25 +152,15 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 8. Click Create Instance. Fill out the dialog box:
 
 - Name: Enter a name 
-
 - Availability Domain: Select availability domain
-
 - Image Operating System: For the image, we recommend using the Latest Oracle Linux available.
-
 - Choose Instance Type: Select Virtual Machine
-
 - Choose Instance Shape: Select VM shape
-
 - Configure Boot Volume: Leave the default
-
 - Add SSH Keys: Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
-
 - Virtual Cloud Network Compartment: Choose your compartment
-
 - Virtual Cloud Network: Select the VCN you created in the previous section. 
-
 - Subnet Compartment: Choose your compartment. 
-
 - Subnet: Choose the first Subnet
 
 9. Click **Create**
@@ -202,7 +190,7 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 
 15. From OCI services menu Click **Block Volumes** under Block Storage, then Click **Create Block Volume**.
 
-16. Fill out the dialog box: 
+16. Fill out the dialog box:
 
 - Name: Enter a name for the block volume 
 - Create in Compartment: Has the correct compartment selected.
