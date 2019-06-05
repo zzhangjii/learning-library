@@ -36,6 +36,7 @@ This lab will show you the installation and configuration of the CLI, along with
 - Chrome browser is recommended
 
 # Create a VCN
+[Back to top](#Class-of-SE---HOL-Part-2)
 
 In this first section, we'll create a VCN and an OCI instance.  We'll install and run the CLI commands from this instance in order to create more resources.
 
@@ -72,6 +73,7 @@ Selecting **Create Virtual Cloud Network Plus Related Resources** is the easy wa
 
 
 # Create a compute instance and install the OCI CLI
+[Back to top](#Class-of-SE---HOL-Part-2)
 
 **Note:**  *You will need an SSH key pair to create and access an OCI instance.  You can use an existing SSH Key pair (the one you created in the last lab), or create a new one.  If you would like to create a new key pair, please reference the key pair creation information from the first hands on lab.*
 
@@ -232,6 +234,7 @@ Use the *cat* command to view the RSA fingerprint listed in the config file.  We
 - Leave the SSH session window open and available.  We will use that information to compare with the OCI console after we've uploaded the API keys.
 
 # Upload API keys and Verify Connectivity
+[Back to top](#Class-of-SE---HOL-Part-2)
 
 In this section, we'll upload the API key to the web console.  
 
@@ -340,6 +343,7 @@ Use the variable we just created in a cli command to list the VCN's in your netw
 **NOTE:** *The command above should return details for the VCN you that you created at the start of this lab. If you encounter an error message, please contact the instructor.*
 
 # Use the CLI to create a VCN
+[Back to top](#Class-of-SE---HOL-Part-2)
 
 From this point in the lab, we'll mainly be using the CLI to add and configure resources.  Feel free to copy/paste the command line examples if you don't want to type each command directly.   The command lines can get quite lengthy with all the different available options.  This is where you can start thinking about how automation and scripting could make things faster and easier for customers.  From the CLI and scripting you can easily branch off to API calls and using other tools like Terraform.
 
@@ -487,6 +491,7 @@ Again, record the route table id as a variable.
 **Note:** *When updating route tables or security lists with the cli, you cannot insert rules one at a time.  If you have multiple rules, they must all be added simultaneously.*
 
 # Launch a Compute Instance
+[Back to top](#Class-of-SE---HOL-Part-2)
 
 1. Use the CLI ``query`` command to retrieve the OCID for the latest Oracle Linux image.  
 
@@ -580,6 +585,7 @@ Capture the ``id:`` of the compute instance launch output.
  [Conclusion](#Conclusion)
 
 # OCI Challenge - Create and Destroy resources
+[Back to top](#Class-of-SE---HOL-Part-2)
 
 This challenge is optional if you have extra time.   Below are a couple of objectives that you can try on your own with no step-by-step instructions.  Use the knowledge that you've gained already plus resources like the OCI CLI reference documentation, Oracle blogs, etc. for guidance.
 
