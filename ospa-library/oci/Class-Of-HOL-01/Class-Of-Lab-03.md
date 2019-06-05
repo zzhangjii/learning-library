@@ -16,6 +16,7 @@ Contents
 #
 
 # Create SSH Key Pair (Linux, Mac, Windows client)
+[Back to top](#Class-of-SE---HOL-Part-3---Creating-and-accessing-an-instance)
 
 SSH keys are required to access a running OCI instance securely. You can use an existing SSH-2 RSA key pair or create a new one. Below are instructions for generating your individual key pair for Linux/Mac and Windows. You can also find instructions on the OCI documentation page.
 <https://docs.cloud.oracle.com/iaas/Content/GSG/Tasks/creatingkeys.htm>
@@ -103,6 +104,7 @@ A third party SSH client needs to be installed for Windows versions prior to Win
 15. Close the Puttygen application
 
 # Create a Compute Instance
+[Back to top](#Class-of-SE---HOL-Part-3---Creating-and-accessing-an-instance)
 
 1.  Navigate to the OCI console, use the top left hamburger menu and choose **Compute \> Instances** to open the Instance Creation menu.
 
@@ -168,6 +170,7 @@ After a few moments, the icon will turn green and the title will change to RUNNI
 20. Take note of the Primary VNIC information which contains the assigned Public and Private IP Addresses.  You will need this information to access the instance later in the lab.  
 
 # Access the instance 
+[Back to top](#Class-of-SE---HOL-Part-3---Creating-and-accessing-an-instance)
 
 We will use SSH through a terminal session to access the compute image. From there we will install the web application.
 
