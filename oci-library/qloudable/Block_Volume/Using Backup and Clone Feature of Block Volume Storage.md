@@ -153,27 +153,27 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 8. Click Create Instance. Fill out the dialog box:
 
-- **Name:** Enter a name 
+- Name: Enter a name 
 
-- **Availability Domain:** Select availability domain
+- Availability Domain: Select availability domain
 
-- **Image Operating System:** For the image, we recommend using the Latest Oracle Linux available.
+- Image Operating System: For the image, we recommend using the Latest Oracle Linux available.
 
-- **Choose Instance Type:** Select Virtual Machine
+- Choose Instance Type: Select Virtual Machine
 
-- **Choose Instance Shape:** Select VM shape
+- Choose Instance Shape: Select VM shape
 
-- **Configure Boot Volume:** Leave the default
+- Configure Boot Volume: Leave the default
 
-- **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
+- Add SSH Keys: Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
 
-- **Virtual Cloud Network Compartment:** Choose your compartment
+- Virtual Cloud Network Compartment: Choose your compartment
 
-- **Virtual Cloud Network:** Select the VCN you created in the previous section. 
+- Virtual Cloud Network: Select the VCN you created in the previous section. 
 
-- **Subnet Compartment:** Choose your compartment. 
+- Subnet Compartment: Choose your compartment. 
 
-- **Subnet:** Choose the first Subnet
+- Subnet: Choose the first Subnet
 
 9. Click **Create**
 
@@ -198,17 +198,18 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0014.PNG" alt="image-alt-text" height="200" width="200">
  
-14. Verify opc@<COMPUTE_INSTANCE_NAME> appears on the prompt
+14. Verify opc@<COMPUTE_INSTANCE_NAME> appears at the prompt
 
 15. From OCI services menu Click **Block Volumes** under Block Storage, then Click **Create Block Volume**.
 
 16. Fill out the dialog box: 
-- **Name:** Enter a name for the block volume 
-- **Create in Compartment:** Has the correct compartment selected.
-- **Availability Domain:** Select availability domain **(must be differetn from compute instance's AD)**
-- **SIZE:** Set to 50
-- **BACKUP POLICY:** Leave as is
-- **ENCRYPTION:** ENCRYPT USING ORACLE-MANAGED KEYS
+
+- Name: Enter a name for the block volume 
+- Create in Compartment: Has the correct compartment selected.
+- Availability Domain: Select availability domain **(must be differetn from compute instance's AD)**
+- SIZE: Set to 50
+- BACKUP POLICY: Leave as is
+- ENCRYPTION: ENCRYPT USING ORACLE-MANAGED KEYS
 
 17. Click **Create Block Volume**. Wait for Block Volume state to change from 'Provisioning' to 'Available'
 
@@ -229,6 +230,7 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Block_Volume/img/Block_Volume_003.PNG" alt="image-alt-text" height="200" width="200">
 
 22. Fill out the dialog box:
+
 - Name: Provide a Name
 - BACKUP TYPE: Full Backup
 
@@ -244,12 +246,12 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 
 26. Fill out the dialog box:
 
-- **Name:** Enter a name for the block volume 
-- **Create in Compartment:** Has the correct compartment selected.
-- **Availability Domain:** Select availability domain **(must be the same as compute instance's AD)**
-- **BLOCK VOLUME SIZE:** Should be set to 50
-- **BACKUP POLICY:** Leave as is
-- **ENCRYPTION:** ENCRYPT USING ORACLE-MANAGED KEYS
+- Name: Enter a name for the block volume 
+- Create in Compartment: Has the correct compartment selected.
+- Availability Domain: Select availability domain **(must be the same as compute instance's AD)**
+- BLOCK VOLUME SIZE: Should be set to 50
+- BACKUP POLICY: Leave as is
+- ENCRYPTION: ENCRYPT USING ORACLE-MANAGED KEYS
 
 27. From OCI services menu Click **Instance** under Compute 
 
