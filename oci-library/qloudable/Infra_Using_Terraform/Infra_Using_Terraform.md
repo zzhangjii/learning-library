@@ -1,4 +1,4 @@
-# Deploying Infrastructure Using Terraform.
+# Deploying Infrastructure Using Terraform
 ## Table of Contents
 
 [Overview](#overview)
@@ -9,7 +9,7 @@
 
 [Create ssh keys and compute instance](#create-ssh-keys-and-compute-instance)
 
-[Configure OCI CLI, Install Terraform Upload API keys and verify functionality](#configure-oci-cli,-install-terraform-upload-api-keys-and-verify-functionality)
+[Configure OCI CLI Install Terraform Upload API keys and verify functionality](#configure-oci-cli-install-terraform-upload-api-keys-and-verify-functionality)
 
 
 ## Overview
@@ -189,7 +189,7 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
  
 14. Verify opc@<COMPUTE_INSTANCE_NAME> appears on the prompt
 
-## Configure OCI CLI, Install Terraform Upload API keys and verify functionality: 
+## Configure OCI CLI Install Terraform Upload API keys and verify functionality
 
 1. Check oci CLI installed version, Enter command:
 ```

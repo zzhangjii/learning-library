@@ -49,7 +49,7 @@ EOF
 echo "export TF_VAR_tenancy_ocid=$tenancy_id" > ~/tflab/env-vars
 command cat >> ~/tflab/env-vars << 'EOF'
 export TF_VAR_user_ocid=[enter user OCID here]
-export TF_VAR_compartment_ocid=[enter user OCID here]
+export TF_VAR_compartment_ocid=[enter Compartment OCID here]
 
 export TF_VAR_fingerprint=$(cat ~/.oci/oci_api_key_fingerprint)
 
