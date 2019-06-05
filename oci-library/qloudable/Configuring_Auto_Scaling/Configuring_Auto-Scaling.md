@@ -149,29 +149,29 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 7. Switch to the OCI console. From OCI servies menu, Click **Instances** under **Compute** 
 
-8. Click Create Instance. Fill out the dialog box:
+8. Click **Create Instance**. Fill out the dialog box:
 
-- **Name:** Enter a name 
+- Name: Enter a name 
 
-- **Availability Domain:** Select availability domain
+- Availability Domain: Select availability domain
 
-- **Image Operating System:** For the image, we recommend using the Latest Oracle Linux available.
+- Image Operating System: For the image, we recommend using the Latest Oracle Linux available.
 
-- **Choose Instance Type:** Select Virtual Machine
+- Choose Instance Type: Select Virtual Machine
 
-- **Choose Instance Shape:** Select VM shape
+- Choose Instance Shape: Select VM shape
 
-- **Configure Boot Volume:** Leave the default
+- Configure Boot Volume: Leave the default
 
-- **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
+- Add SSH Keys: Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
 
-- **Virtual Cloud Network Compartment:** Choose your compartment
+- Virtual Cloud Network Compartment: Choose your compartment
 
-- **Virtual Cloud Network:** Select the VCN you created in the previous section. 
+- Virtual Cloud Network: Select the VCN you created in the previous section. 
 
-- **Subnet Compartment:** Choose your compartment. 
+- Subnet Compartment: Choose your compartment. 
 
-- **Subnet:** Choose the first Subnet
+- Subnet: Choose the first Subnet
 
 9. Click **Create**
 
@@ -197,11 +197,11 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 14.  Click **Create Instance Pool**. A new dialog box will appear. This is used to create initial configuration of the instance pool such as how many compute instance to create initially, VCN, and Availability domain the instance pool should be created in. Fill out the dialog box:
 
-- **CREATE IN COMPARTMENT**: Choose your compartment
+- CREATE IN COMPARTMENT: Choose your compartment
 
-- **INSTANCE POOL NAME** : Provide a suitable name
+- INSTANCE POOL NAME : Provide a suitable name
 
-- **NUMBER OF INSTANCES** : 0 
+- NUMBER OF INSTANCES : 0 
 
 (This is the number of computes that should be launched when the pool is created. We will start with no compute)
 
@@ -245,35 +245,35 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 17. Fill out the dialog box:
 
-- **COMPARTMENT** : Choose your compartment
+- COMPARTMENT: Choose your compartment
 
-- **AUTOSCALING CONFIGURATION NAME** : Provide a name
+- AUTOSCALING CONFIGURATION NAME : Provide a name
 
-- **INSTANCE POOL** : This should show your instance pool name created earlier
+- INSTANCE POOL : This should show your instance pool name created earlier
 
-- **COOLDOWN IN SECONDS** : 300 (This is he minimum period of time between scaling actions.)
+- COOLDOWN IN SECONDS : 300 (This is he minimum period of time between scaling actions.)
 
-- **AUTOSCALING POLICY NAME** : Provide a name
+- AUTOSCALING POLICY NAME : Provide a name
 
-- **PERFORMANCE METRIC** : CPU Utilization (This is the Metric to use for triggering scaling actions.)
+- PERFORMANCE METRIC : CPU Utilization (This is the Metric to use for triggering scaling actions.)
 
-- **MINIMUM NUMBER OF INSTANCES** : 1 (this is the minimum number of instances that the pool will always have)
+- MINIMUM NUMBER OF INSTANCES : 1 (this is the minimum number of instances that the pool will always have)
 
-- **MAXIMUM NUMBER OF INSTANCES** : 2 (this is the maximum number of instances that the pool will always have)
+- MAXIMUM NUMBER OF INSTANCES : 2 (this is the maximum number of instances that the pool will always have)
 
-- **INITIAL NUMBER OF INSTANCES** : 1 (this is how many instances will be created in the instance pool initially)
+- INITIAL NUMBER OF INSTANCES : 1 (this is how many instances will be created in the instance pool initially)
 
-- **SCALE-OUT OPERATOR** : Greater than (>)
+- SCALE-OUT OPERATOR : Greater than (>)
 
-- **THRESHOLD PERCENTAGE** : 10
+- THRESHOLD PERCENTAGE : 10
 
-- **NUMBER OF INSTANCES TO ADD** : 1
+- NUMBER OF INSTANCES TO ADD : 1
 
-- **SCALE-IN OPERATOR** : Less than (<)
+- SCALE-IN OPERATOR : Less than (<)
 
-- **THRESHOLD PERCENTAGE** : 5
+- THRESHOLD PERCENTAGE : 5
 
-- **NUMBER OF INSTANCES TO REMOVE**  : 1
+- NUMBER OF INSTANCES TO REMOVE  : 1
 
 **Leave other fileds as is**
 
@@ -322,7 +322,7 @@ sudo yum -y install stress
 sudo stress --cpu 4 --timeout 350
 ```
 
-***spawn 4 workers spinning on sqrt() with a timeout of 350 seconds.***
+**Spawn 4 workers spinning on sqrt() with a timeout of 350 seconds.**
 
 27. Switch back to OCI console and navigate to Instance pool details page. Click your instance name and scroll down to **Metric** screen, you should see CPU spiking up after a minute or so.
 
@@ -362,5 +362,5 @@ appear.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text" height="200" width="200">
 
-***Congratulations! You have successfully completed the lab. ***
+***Congratulations! You have successfully completed the lab.***
 
