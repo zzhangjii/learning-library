@@ -10,7 +10,8 @@
 
 [Create ssh keys, compute instance and Block Volume](#create-ssh-keys,-compute-instance-and-block-volume)
 
-[Clone Block Volume](#clone-block-volume)
+[Clone Block Volume and explore Volume Groups
+](#clone-block-volume-and-explore-volume-groups)
 
 [Delete the resources](#delete-the-resources)
 
@@ -269,7 +270,7 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 
 **We successfully attached a block volume that existed in a different Availability domain than the compute instance.Next we will Clone the original block volume.**
 
-## Clone Block Volume
+## Clone Block Volume and explore Volume Groups
 
 1. From OCI services menu Click **Block Volumes** under Block Storage, locate the Original Block Volume create.Click Action icon  and then Create Clone.Fill out the dialog box:
 
@@ -282,6 +283,34 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 
 3. Once the clones volume is in Available State, navigate back to compute instance page and try to attach the cloned volume. Verify the Cloned volume is not available to be attached. **This is due to the same reason as for the original volume i.e the cloned volume is in a different Availability Domain then the compute instance**
 
+**Volume Groups**
+
+The Oracle Cloud Infrastructure Block Volume service provides you with the capability to group together multiple volumes in a volume group. A volume group can include both types of volumes, boot volumes, which are the system disks for your Compute instances, and block volumes for your data storage. You can use volume groups to create volume group backups and clones that are point-in-time and crash-consistent.
+
+This simplifies the process to create time-consistent backups of running enterprise applications that span multiple storage volumes across multiple instances. You can then restore an entire group of volumes from a volume group backup.
+
+4. Next we will look at how to create volume groups. In OCI Console window navigate to **Block Storage**.
+
+5. Click **Volume Groups** and then **Create Volume Group**. Fill out the dialog box:
+
+- NAME: Provide a Name
+- CREATE IN COMPARTMENT: Choose your Compartment
+- CREATE IN AVAILABILITY DOMAIN: Choose the availability domain whose volume need to be grouped
+
+**NOTE: Only volumes that exist in this AD will appear in the list**
+
+Under **Volumes**
+- COMPARTMENT: Choose your comparment
+- VOLUME: Click on the drop down and choose the volume that you want to group togehter
+ 
+6. To choose additional volumes (Block or boot) click **+Volume** and add additional volumes
+
+7. Click **Create Volume Group**
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Block_Volume/img/Block_Volume_007.PNG" alt="image-alt-text" height="200" width="200">
+
+8. New Volume group will be created
+
 ## Delete the resources
 
 1. Switch to  OCI console window
@@ -292,20 +321,19 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text" height="200" width="200">
 
-
 4. Make sure Permanently delete the attached Boot Volume is checked, Click Terminate Instance. Wait for instance to fully Terminate
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0017.PNG" alt="image-alt-text" height="200" width="200">
 
-5. From OCI services menu Click **Block Volumes** under Block Storage
+5. Navigate to **Block Storage** and then click **Volume Groups**. Click on Volume Group name that was created and then click **Terminate**
 
-6. Find the storage block volume you created.
+6. Locate any additioan volumes not part of the Volume Group (Cloned Volme) that you created.
 
 **HINT:** If multiple storage block volumes are listed, scroll down to find the volumes you created.   
 
 7. Click the Action icon and select **Terminate**
 
-8. Click OK in the confirmation window.
+8. Click **OK** in the confirmation window.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_016.PNG" alt="image-alt-text" height="200" width="200">
 
