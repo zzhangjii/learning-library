@@ -1,13 +1,13 @@
 ![](./media/image1.png)
 
-## Class of SE - HOL Part 1 - Cloud access and creating a compartment
+## Class of SE - HOL Part 1 - Cloud access and locating your compartment
 Contents
 
 [Section 1. Overview](#overview)
 
 [Section 2. Oracle Cloud Account](#oracle-cloud-account)
 
-[Section 3. Locate Your Compartment](#create-a-compartment)
+[Section 3. Locate Your Compartment](#locate-your-compartment)
 
 
 ## 
@@ -49,6 +49,7 @@ To optimize your experience there are some general guidelines that will help you
   The only dumb questions are those that are not asked.
 
 # Oracle Cloud Account
+[Back to top](#Class-of-SE---HOL-Part-1---Cloud-access-and-locating-your-compartment)
 
 1.  Login to the Oracle Cloud. Your username and tenancy have been
     created in advance. Your login information will be sent via email.
@@ -105,6 +106,7 @@ your email.  The initial invitation will expire within 24 hours.  If your login 
 *<p align="center"> Figure 5: Guided Journey Screen</p>*
 
 # Locate your compartment
+[Back to top](#Class-of-SE---HOL-Part-1---Cloud-access-and-locating-your-compartment)
 
 Compartments are logical containers used to isolate resources within your OCI tenancy.    When working with OCI, creating compartments for resource organization is highly recommended.  
 
@@ -148,6 +150,6 @@ For more information on Compartments, like best practices and examples, see the 
 
 This lab segment is complete.    If there is time left before the next lecture, browse the OCI cloud interface and familiarize yourself with the layout and basic services.  Wait for the instructor to let you know when to begin section 2.
 
-[Back to top](#Class-of-SE---HOL-Part-1---Cloud-access-and-creating-a-compartment)
+[Back to top](#Class-of-SE---HOL-Part-1---Cloud-access-and-locating-your-compartment)
 
 ##
