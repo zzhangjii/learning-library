@@ -7,7 +7,7 @@ Contents
 
 [Section 2. Oracle Cloud Account](#oracle-cloud-account)
 
-[Section 3. Create a Compartment](#create-a-compartment)
+[Section 3. Locate Your Compartment](#create-a-compartment)
 
 
 ## 
@@ -22,7 +22,7 @@ Then we'll create a compartment that will contain the resources we'll create as 
 
 1.  Obtain and access an Oracle Cloud Account
 
-2.  Create a Compartment and a VCN
+2.  Locate your Compartment
 
 ## Requirements
 
@@ -104,10 +104,21 @@ your email.  The initial invitation will expire within 24 hours.  If your login 
 
 *<p align="center"> Figure 5: Guided Journey Screen</p>*
 
-# Create a Compartment
+# Locate your compartment
 
-Compartments are logical containers used to isolate resources within your OCI tenant.  Creating resources in the root compartment is not a best practice.  During the lab exercises, we suggest that you create a compartment for your team. You can create all required resources and apply user based
-access policies within a compartment.
+Compartments are logical containers used to isolate resources within your OCI tenancy.    When working with OCI, creating compartments for resource organization is highly recommended.  
+
+There is an absolute limit on OCI compartments and due to the large number of students who will be taking this HOL at the same time, we've created compartments in advance.  You should create your resources in the compartment labeled for your hub location.  
+
+- Austin-Hub
+- Bangalore-Hub
+- Burlington-Hub
+- Reston-Hub
+- SantaMonica-Hub
+
+Please create your resources like VCN and instances within the hub compartment name that matches your physical location.  
+
+For more information on Compartments, like best practices and examples, see the [documentation](https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm).
 
 1.  Click the **hamburger icon** in the upper left corner to open the navigation menu. Under the **Identity** section of the menu, click **Compartments**
 
@@ -115,34 +126,23 @@ access policies within a compartment.
 
 *<p align="center"> Figure 6: OCI Console Compartments menu</p>*
 
-2. Click **Create Compartment**
+2. Click on the **Training** compartment
 
-**Note:** *If you don’t have the proper permissions, see your tenancy administrator*
+![](./media/image13a.png)
 
-![](./media/image13.png)
+*<p align="center"> Figure 7:  Choose Compartment</p>*
 
-*<p align="center"> Figure 7:  Create compartment button</p>*
+3.  Locate the compartment name that matches your physical training location and utilize this compartment for the following exercises.  
 
-3.  Choose a descriptive **name** and enter it in the name field. Enter
-    a **Description** and click **Create Compartment**.
-
-![](./media/image14.png)
+![](./media/image14a.png)
 
 *<p align="center"> Figure 8: Create compartment dialog</p>*
 
-4.  The compartment name will show up in the list.
-
-![](./media/image15.png)
-
-*<p align="center"> Figure 9: Compartment List</p>*
-
-**Note:** If you want to view the compartment details, change the
-compartment name, or delete the compartment, click the ellipses and
-choose an option.
+4.  If you want to view the compartment details, change the compartment name, or delete the compartment, click the ellipses and choose an option.
 
 ![](./media/image16.png)
 
-*<p align="center"> Figure 10: Compartment options</p>*
+*<p align="center"> Figure 9: Compartment options</p>*
 
 ![](./media/image99.png)
 
