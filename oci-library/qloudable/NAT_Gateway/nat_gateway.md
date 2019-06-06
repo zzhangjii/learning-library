@@ -207,6 +207,7 @@ ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE>
 
 3. Once NAT gateway is in Available state, Click **Route Tables**, then **Create Route Table**. Fill out the dialog box:
 - Create in Compartment: This field defaults to your current compartment. Make sure correct Compartment is selected.
+
 - Name: Enter a name 
 **Click +Additional Route Rules**
 - Target Type: Select **NAT Gateway** 
