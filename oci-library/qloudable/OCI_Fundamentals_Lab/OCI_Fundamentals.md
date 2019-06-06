@@ -298,12 +298,14 @@ In this section we will create a new security list. This security list will be u
 4. Click your Virtual Cloud Network name 
 
 5. Click **Route Tables** (You will be creating a new route table), then **Create Route Table**. Fill out the dialog box:
-- Create in Compartment: This field defaults to your current compartment. Make sure correct Compartment is selected.
+
 - Name: Enter a name (for example, LB Route Table).
+- Create in Compartment: This field defaults to your current compartment. Make sure correct Compartment is selected.
+
 **Click +Additional Route Rules**
 - Target Type: Select **Internet Gateway** 
 - Destination CIDR Block: 0.0.0.0/0 
-- Compartment: Make sure the correct Compartment is selected: 
+- Compartment: Make sure the correct Compartment is selected
 - Target Internet Gateway: Select the Internet Gateway for your VCN. 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_003.PNG" alt="image-alt-text" height="200" width="200">
