@@ -3,13 +3,13 @@
 
 ## Table of Contents
 
-- [Module 1: Create and monitor a sanctioned application](#module-1--logging-to-casb-community-tenant)
+- [Module 1: Logging to CASB Community Tenant](#module-1--logging-to-casb-community-tenant)
 - [Module 2: Create and monitor a sanctioned application](#module-2--create-and-monitor-a-sanctioned-application)
 - [Module 3: Create a Policy Alert and Display Threats](#module-3--create-a-policy-alert-and-display-threats)
 - [Module 4: Oracle CASB Monitoring Oracle Cloud Infrastructure](#module-4--oracle-casb-monitoring-oracle-cloud-infrastructure)
 - [Module 5: Create a Policy for OCI](#module-5--create-a-policy-for-oci)
 - [Module 6: Run a Report in CASB](#module-6--run-a-report-in-casb)
-- [Module 7: Data Loss Protection](#module-7--data-loss-protection)
+- [Module 7: Demo Data Loss Protection](#module-7--demo-data-loss-protection)
 
 
 
@@ -29,7 +29,9 @@ Her team is on its way of implementing CASB to monitor SaaS applications and OCI
 
 
 
-## Module 1:  Logging to CASB Community Tenant - Who Should Complete This Lab:  All Participants
+## Module 1:  Logging to CASB Community Tenant
+
+**Who Should Complete This Lab:  All Participants**
 
 
 *	We are purposefully using our “Community” tenant instead of the tenant associated with the Cloud Account. 
@@ -396,7 +398,9 @@ This is the last step we need to complete in SalesForce.
 [Back to Top](#table-of-contents)
 ****
 
-## Module 3:  Create a policy alert and display threats - Who Should Complete This Lab:  All Participants
+## Module 3:  Create a policy alert and display threats
+
+**Who Should Complete This Lab:  All Participants**
 
 In Oracle CASB you can create application specific to specify the monitoring you want for your sanctioned applications. This adds another layer of customizable security for you. Oracle CASB also has pre-made Managed Policies for the applications to make sure application specific security can be enabled from the beginning.
 You will now create a policy in CASB that will trigger an alert every time a user is logged in to SalesForce.
@@ -770,7 +774,9 @@ Note: if you do not see any Compute instance in the dashboard, click to Customiz
 
 ****
 
-## Module 5:  Create a Policy for OCI - Who Should Complete This Lab:  All Participants
+## Module 5:  Create a Policy for OCI 
+
+**Who Should Complete This Lab:  All Participants**
  
 You’ll now create a policy in Oracle CASB that triggers a policy alert every time a user is created in OCI.
 
@@ -869,7 +875,9 @@ You’ll now create a policy in Oracle CASB that triggers a policy alert every t
 
 ****
 
-## Module 6:  Run A Report in CASB - Who Should Complete This Lab:  All Participants
+## Module 6:  Run A Report in CASB 
+
+**Who Should Complete This Lab:  All Participants**
 
 Oracle CASB offers a variety of predefined reports providing detailed insight into potential security risks. Unless noted otherwise, reports
 by default display three days of data, with up to 90 days of data available.
