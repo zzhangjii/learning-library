@@ -910,7 +910,7 @@ by default display three days of data, with up to 90 days of data available.
 ****
 
 
-## Module 7:  **DEMO** - Data Loss Protection
+## Module 7:  **DEMO** Data Loss Protection
 
  
 Oracle CASB’s Data Loss Protection (DLP) scans and detects files in sanctioned application for sensitive data that follows a defined information type pattern in a rule. Oracle CASB can then manage the situation by tagging the detected files as containing sensitive data, quarantining the files in folders that only administrators can access or completely delete the files from the application. It’s easy to use and has the flexibility to define any
