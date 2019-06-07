@@ -1,4 +1,4 @@
-# OCI Fundamentals(Deploy HA application using Load Balancer)
+# OCI Fundamentals (Deploy HA application using Load Balancer)
 
 ## Table of Contents
 
@@ -60,10 +60,12 @@ In this lab you will deploy http servers on two compute instances in Oracle Clou
 
 ## Sign in to OCI Console and create VCN
 
+
 * **Tenant Name:** {{Cloud Tenant}}
 * **User Name:** {{User Name}}
 * **Password:** {{Password}}
 * **Compartment:**{{Compartment}}
+
 
 1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
@@ -81,7 +83,8 @@ In this lab you will deploy http servers on two compute instances in Oracle Clou
 
 4. Fill out the dialog box:
 
-- **Name:** Enter easy to re¬member name
+
+- **Name:** Enter easy to remember name
 
 - **Create in Compartment:** Has the correct compartment
 
@@ -90,6 +93,7 @@ In this lab you will deploy http servers on two compute instances in Oracle Clou
 - Click **Create Virtual Cloud Network**
 
 - Click **Close**
+
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -150,6 +154,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 8. Click Create Instance. Fill out the dialog box:
 
+
 - **Name:** Enter a name 
 
 - **Availability Domain:** Select availability domain
@@ -171,6 +176,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 - **Subnet Compartment:** Choose your compartment. 
 
 - **Subnet:** Choose the first Subnet
+
 
 9. Click **Create**
 
@@ -287,9 +293,11 @@ In this section we will create a new security list. This security list will be u
 
 2. Click your VCN name, then **Security Lists** and then **Create Security List** (You will be creating a new security list).
 
+
 - CREATE IN COMPARTMENT: Select the compartment assigned to you (if not already selected).
 - SECURITY LIST Name: Specify a name (for example, LB Security List).
 - Click **Create Security List** 
+
 
 3. Verify the New Security List got created.
 
@@ -299,14 +307,19 @@ In this section we will create a new security list. This security list will be u
 
 5. Click **Route Tables** (You will be creating a new route table), then **Create Route Table**. Fill out the dialog box:
 
+
 - Name: Enter a name (for example, LB Route Table).
 - Create in Compartment: This field defaults to your current compartment. Make sure correct Compartment is selected.
 
+
 **Click +Additional Route Rules**
+
+
 - Target Type: Select **Internet Gateway** 
 - Destination CIDR Block: 0.0.0.0/0 
 - Compartment: Make sure the correct Compartment is selected
 - Target Internet Gateway: Select the Internet Gateway for your VCN. 
+
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_003.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -323,6 +336,7 @@ In this section we will create a new security list. This security list will be u
 
 10. Click **Create Subnet**. Fill out the dialog box:
 
+
 - Name: Enter a name (for example, LB-Subnet-1).
 - Subnet Type: Regional
 - CIDR Block: Enter 10.0.4.0/24 
@@ -330,6 +344,7 @@ In this section we will create a new security list. This security list will be u
 - Subnet access: select Public Subnet.
 - DHCP Options: Select the default.
 - Security Lists: Select the Security List you created earlier.
+
 
 11. Leave all other options as default, Click **Create Subnet**.
 
@@ -341,6 +356,7 @@ In this section we will create a new security list. This security list will be u
 
 13. Click **Create Subnet**. Fill out the dialog box:
 
+
 - Name: Enter a name (for example, LB-Subnet-2).
 - Subnet Type: Regional
 - CIDR Block: Enter 10.0.5.0/24 
@@ -348,6 +364,7 @@ In this section we will create a new security list. This security list will be u
 - Subnet access: select Public Subnet.
 - DHCP Options: Select the default.
 - Security Lists: Select the Security List you created earlier.
+
 
 14. Leave all other options as default, Click **Create Subnet**.
 
@@ -363,25 +380,34 @@ In this section we will create a new security list. This security list will be u
 
 **Under Load Balancer Information:**
 
+
 - Name: Enter a name for your load balancer.
 - Shape: Select 100Mbps. This specifies the bandwidth of the load balancer.
 
+
 **NOTE:** Shape cannot be changed later.
+
 
 - Visibility Type: PUBLIC LOAD BALANCER
 
+
 **Under Network Information:**
+
 
 -Virtual Cloud Network: Select the Virtual Cloud Network for your load balancer.
 - Subnet1: Choose the first subnet created earlier
 - Subnet2: Choose the second subnet created earlier 
 
+
 **Under Listener Information:**
+
 
 - Protocol:  HTTP
 - Port: Enter 80 (as the port on which to listen for incoming traffic)
 
+
 **Under Backend set Information:**
+
 
 - Traffic Distribution Policy: Weighted Round Robin
 - Choose a compute instance private IP address: Select this option 
@@ -391,6 +417,7 @@ In this section we will create a new security list. This security list will be u
 - Port: 80
 - Weight: 1
 - Click **+Additional Backend**
+
 
 **Repeat above steps to add the second compute instance information**
 
@@ -406,12 +433,13 @@ In this section we will create a new security list. This security list will be u
 
 5. From OCI Services menu, click **Virtual Cloud Network** under Networking. Locate the VCN you created.
 
-6. . Click  VCN name to display VCN detail page.
+6. Click  VCN name to display VCN detail page.
 
 7. Click **Security Lists**, and locate the Load Balancer Security List created earlier.
 
 8. Click Load Balancer Security List created earlier, Click **Add Ingress Rule**.
 Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure to leave STATELESS flag un-checked
+
 
 
 - Source Type: CIDR 
@@ -420,14 +448,17 @@ Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure 
 - Source Port Range: All.
 - Destination Port Range: Enter 80 (the listener port).
 
+
 9. Click **Add Ingress Rule**. 
 
 10. Click **Egress Rule** under Resources. Click **Add Egress Rule**,  click **+Additional Egress Rule** and enter the following Egress rule; Ensure to leave STATELESS flag un-checked
+
 
 - Destination Type: CIDR
 - Destination CIDR: 0.0.0.0/0
 - IP Protocol: Select TCP.
 - Destination Port Range: All.
+
 
 11. Click **Add Egress Rule**.
 
@@ -435,20 +466,24 @@ Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure 
 
 **First Rule**
 
+
 - Destination Type: CIDR
 - Destination CIDR: 10.0.4.0/24
 - IP Protocol: Select TCP.
 - Source Port Range: All
 - Destination Port Range: 80
 
+
 13. Click **+Additional Egress Rule** and enter the following Egress rule; Ensure to leave STATELESS flag un-checked
 
 **Second Rule**
+
 
 - Destination Type: CIDR
 - Destination CIDR: 10.0.5.0/24
 - IP Protocol: Select TCP
 - Destination Port Range: 80
+
 
 14. Click **Add Egress Rule**.
 
