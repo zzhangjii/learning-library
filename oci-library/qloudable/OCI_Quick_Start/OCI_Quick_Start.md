@@ -105,8 +105,7 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_001.PNG" alt="image-alt-text" height="200" width="200">
 
-6. In Security list details page, Click **Edit All Rules** and Click **+Another Ingress Rule** under 
-Allow Rules for Ingress and add below rule:
+6. Click **Add Ingress Rule** under **Ingress Rules** and add below rule:
 - **Make sure STATELESS Flag in un-checked**
 - **SOURCE TYPE:** CIDR
 - **SOURCE CIDR:** 0.0.0.0/0
@@ -116,7 +115,7 @@ Allow Rules for Ingress and add below rule:
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_002.PNG" alt="image-alt-text" height="200" width="200">
 
-7. Click **Save Security List Rules** at the bottom
+7. Click **Add Ingress Rule** at the bottom
               
 ## Creat ssh keys, compute instance and Block Volume. Attach block volume to compute instance
 
@@ -456,31 +455,32 @@ sudo systemctl restart httpd
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text" height="200" width="200">
 
-
 4. Make sure Permanently delete the attached Boot Volume is checked, Click Terminate Instance. Wait for instance to fully Terminate
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0017.PNG" alt="image-alt-text" height="200" width="200">
 
-5. From OCI services menu Click **Block Volumes** under Block Storage
+5. Repeat the step to delete second compute instance
 
-6. Find the storage block volume you created.
+6. From OCI services menu Click **Block Volumes** under Block Storage
+
+7. Find the storage block volume you created.
 
 **HINT:** If multiple storage block volumes are listed, scroll down to find the one you created.   
 
-7. Click the Action icon and select **Terminate**
+8. Click the Action icon and select **Terminate**
 
-8. Click OK in the confirmation window.
+9. Click OK in the confirmation window.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_016.PNG" alt="image-alt-text" height="200" width="200">
 
-9. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will 
+10. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will 
 appear.
 
-10. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
+11. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text" height="200" width="200">
 
-11. From OCI services menu Click **Networking**, then **Public IPs**,locate the Reserved Public IP you created. Click Action icon and then **Terminate**
+12. From OCI services menu Click **Networking**, then **Public IPs**,locate the Reserved Public IP you created. Click Action icon and then **Terminate**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0019.PNG" alt="image-alt-text" height="200" width="200">
 

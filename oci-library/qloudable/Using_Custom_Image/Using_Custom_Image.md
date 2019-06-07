@@ -1,20 +1,22 @@
-# Create Docker registry in OCI
-  
+# Creating Compute Instance using Custom Image 
+
 ## Table of Contents
 
 [Overview](#overview)
 
 [Pre-Requisites](#pre-requisites)
 
-[Sign in to OCI Console and create VCN, Auth token and Docker Registry](#sign-in-to-oci-console-and-create-vcn,-auth-token-and-docker-registry)
+[Sign in to OCI Console and create VCN](#sign-in-to-oci-console-and-create-vcn)
 
-[Create compute instance, install Docker and push images to registry](#create-compute-instance,-install-docker-and-push-images-to-registry)
+[Create ssh keys and compute instance ](#create-ssh-keys-and-compute-instance)
+
+[Install httpd on compute instance and create custom image](#install-httpd-on-compute-instance-and-create-custom-image)
 
 [Delete the resources](#delete-the-resources)
 
 ## Overview
 
-Oracle Cloud Infrastructure Registry is an Oracle-managed registry that enables you to simplify your development to production workflow. Oracle Cloud Infrastructure Registry makes it easy for you as a developer to store, share, and manage development artifacts like Docker images. And the highly available and scalable architecture of Oracle Cloud Infrastructure ensures you can reliably deploy your applications.
+In this lab we will use Custom image feature of OCI. Using this feature an existing Compute instance with software packages and updates installed can be used to created additional compute instance.  These new compute instances will come with all the software packages and updates pre-installed.
 
 **Some Key points;**
 
@@ -52,8 +54,7 @@ Oracle Cloud Infrastructure Registry is an Oracle-managed registry that enables 
 6. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
 
 
-## Practice-1: Sign in to OCI Console and create VCN, Auth token and Docker Registry
-
+## Sign in to OCI Console and create VCN
 
 * **Tenant Name:** {{Cloud Tenant}}
 * **User Name:** {{User Name}}
@@ -90,32 +91,8 @@ Oracle Cloud Infrastructure Registry is an Oracle-managed registry that enables 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text" height="200" width="200">
             
-
-***We will now create an Auth Token. This token will be used to login to connect to OCI Docker registry from the Docker computeinstance that will be created later one***
-
-5. In OCI console click the user icon (top right)  then **User settings**. Under Resrouces Click **Auth Token**, then **Generate Token**. In pop up window provide a description then click **Generate Token**
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_005.PNG" alt="image-alt-text" height="200" width="200">
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_006.PNG" alt="image-alt-text" height="200" width="200">
-
-6.  Click **Copy** and save the token in Notepad.**Do not close the window without saving the token as it can not be retrieved later**
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_007.PNG" alt="image-alt-text" height="200" width="200">
-
-7. From OCI Services menu, click **Registry(OCIR)** under **Developer Services**
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Container_Registry/img/OCIR_HOL0033.PNG" alt="image-alt-text" height="200" width="200">
- 
-8. Click **Create Repository**. Provide Repository name (all Lowercase), Check **Public** for **Acess**, click **Submit**
-
-9.  Once created, verify there are no existing images in the repository (as shown in OCI console)
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Container_Registry/img/OCIR_HOL0034.PNG" alt="image-alt-text" height="200" width="200">
-
-***We now have a Docker registry and Auth token (to validate login to the registry). Next we will create a Public/Private key pair and then compute instance to test pushing and pulling images from the registry.***
-
-## Create compute instance, install Docker and push images to registry
+              
+## Create ssh keys and compute instance
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
@@ -214,141 +191,60 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0014.PNG" alt="image-alt-text" height="200" width="200">
  
-14. Verify opc@<COMPUTE_INSTANCE_NAME> appears on the prompt. Nex install Dcoker, Enter command:
+14. Verify opc@<COMPUTE_INSTANCE_NAME> appears on the prompt
 
-```
-sudo yum install -y yum-utils device-mapper-persistent-data lvm2
-```
+## Install httpd on compute instance and create custom image
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Container_Registry/img/OCIR_HOL0035.PNG" alt="image-alt-text" height="200" width="200">
-
-15. Enter command:
+1. Switch to ssh session to compute install. Install httpd server, Enter Command:
 ```
-sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo**
+sudo yum -y install httpd 
 ```
 
-16. Enter command:
+2. Start httpd, Enter command:
 ```
-sudo yum install docker-ce –y
-```
-(Wait for ‘Complete’message)
-
-17. Enter command:
-```
-sudo systemctl enable docker
+sudo systemctl start httpd 
 ```
 
-18. Enter command:
-```
-sudo systemctl start docker
-```
-
-19. Enter command: (To add user opc to Docker)
-```
-sudo usermod -aG docker opc
-```  
-
-20. Docker is installed and user opc enabled to use Docker. Enter Command 
-```
-Exit
-```
-
-to logout of ssh session on compute instance and then ssh back in to the compute instance. Enter command **Docker images** and ensure no error is displayed
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Container_Registry/img/OCIR_HOL0036.PNG" alt="image-alt-text" height="200" width="200">
-
-21. We will now pull a example image from Docker registry  to the compute instance. Enter Command:
+3. Verify hhtp status, Enter command:
 
 ```
-docker image pull alpine
-``` 
-Verify image pull was successful, Enter Command 
-```
-Docker images
-``` 
-and verify alpine is present
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Container_Registry/img/OCIR_HOL0037.PNG" alt="image-alt-text" height="200" width="200">
-
-22. Now we will push this image to Docker registry created in OCI. First login to Registry in OCI. Enter command:
-
-```
-docker login <Region_Name_Code>.ocir.io
+sudo service httpd status
 ```
 
-**NOTE:** Region name code are, fra for Frankfurt, iad for Ashburn, lhr for London, phx for Phoenix.
+4. We now have installed httpd server on a compute instance and will create a custom image. Switch back to OCI Console window
 
-**HINT:** Your region is shown on top right corner of OCI console window
+5. From OCI servies menu, Click **Instances** under **Compute** 
 
-23. Provide the information:
+6. Click your compute instance name and click **Stop**
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Custom_Image/img/Custom_Image_001.PNG" alt="image-alt-text" height="200" width="200">
+
+7. Once Stooped, Click **Create Custom Image** from **Actions** menu
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Custom_Image/img/Custom_Image_002.PNG" alt="image-alt-text" height="200" width="200">
+
+8. Fill out the dialog box and click **Create Custom Image**. VMs status will change to **Creating Image**
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Custom_Image/img/Custom_Image_003.PNG" alt="image-alt-text" height="200" width="200">
 
 
-- Username:  Enter it in format Tenancy Name/User name (for example: TS-SPL-55/john_doe)
-- Password: Paste the Auth key saved earlier (Characters wont be visible)
+9. Navigate to main Instances page under compute and click **Custom Images**. Locate your custom image, click the Action icon and then **Create Instance**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Container_Registry/img/OCIR_HOL0038.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Custom_Image/img/Custom_Image_004.PNG" alt="image-alt-text" height="200" width="200">
 
-24. Verify Login Succeeded message is displayed.
 
-25. Next we will tag the image that we pulled from the web. Enter command:
+10. Fill out the dialog box and Click **Create**. Once the instance is in running state note down it's Public IP address.
 
+11. ssh to compute instance as before and Enter command:
 ```
-docker images
-``` 
-and note down the image id of alpine. Enter command: (No Spaces)
-
+ sudo service httpd start.
 ```
-docker tag <image_id>  <Region_Name_Code>.ocir.io/<TenancyName>/<docker_registry_name>:<image_name> 
-```
-26. Verify the tag was created, Enter command:
 
-```
-docker images
-``` 
-and verify version x.y.test is present. x and y will be the numeric version number)
+12. This will start httpd service, Check the status of httpd service as before
 
-**NOTE:** In below example:
+**You have successfully created a custom image with httpd already installed and used this custom image to launch a compute instance and started httpd service. In this new compute instance there was no need to re-install httpd server as it was already present when the custom image was created.**
+**A compute instance can have a lot more applications installed and this custom image feature facilitates launching new compute instances with these applications pre-installed.**
 
-- <image_id> is **3fd9065eaf02** 
-
-- <Region_Name_Code> is **iad** 
-
-- <Tenancy_Name> is **us_training** 
-
-- <docker_registry_name> is **docker-test-image**
-
-- <image_name> is **version4.0.test**  
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Container_Registry/img/OCIR_HOL0039.PNG" alt="image-alt-text" height="200" width="200">
-
-27. We will now push the image to docker registry in OCI. Enter command: 
-
-```
-docker push <Region_Name_Code>.ocir.io/<Tenancy_Name>/<docker_registry_name>:<image_name>** (No Spaces)
-```
-**NOTE:** In below example:
-- <Region_Name_Code> is **iad**
-- <Tenancy_Name> is **us_training**
-- <docker_registry_name> is **docker-test-image**
-- <image_name> is **version4.0.test**  
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Container_Registry/img/OCIR_HOL0040.PNG" alt="image-alt-text" height="200" width="200">
-
-28. Switch to OCI window and navigate to your registry. Newly pushed image should be visible.
-
-**HINT:** Refresh the browser window if image is not displayed
-
-29. Switch to compute instance ssh window. Enter command:
-```
-docker pull <Region_Name_Code>.ocir.io/<Tenancy_Name>/<docker_registry_name>:<image_name>**  (No Spaces)    
-```
-30. Verify the pull command was successful
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Container_Registry/img/OCIR_HOL0041.PNG" alt="image-alt-text" height="200" width="200">
-
-**HINT:** We are pulling the same image that we just pushed.
-
-***We now have a working Docker registry and can successfully push and pull images to/from it.***
 
 ## Delete the resources
 
@@ -374,8 +270,6 @@ appear.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text" height="200" width="200">
 
-7. Navigate to your registry(**Registry(OCIR)** under **Developer Services**), click Registry Name, Under **Actions** click **Delete Repository**  ,click **Delete** in confirmation window
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Container_Registry/img/OCIR_HOL0042.PNG" alt="image-alt-text" height="200" width="200">
+***Congratulations! You have successfully completed the lab. ***
 
-***Congratulations! You have successfully completed the lab.***
