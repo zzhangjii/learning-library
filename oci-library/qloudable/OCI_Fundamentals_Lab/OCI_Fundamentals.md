@@ -412,6 +412,9 @@ In this section we will create a new security list. This security list will be u
 
 8. Click Load Balancer Security List created earlier, Click **Add Ingress Rule**.
 Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure to leave STATELESS flag un-checked
+
+
+- Source Type: CIDR 
 - Source CIDR: Enter 0.0.0.0/0.
 - IP Protocol: Select TCP.
 - Source Port Range: All.
@@ -420,6 +423,8 @@ Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure 
 9. Click **Add Ingress Rule**. 
 
 10. Click **Egress Rule** under Resources. Click **Add Egress Rule**,  click **+Additional Egress Rule** and enter the following Egress rule; Ensure to leave STATELESS flag un-checked
+
+- Destination Type: CIDR
 - Destination CIDR: 0.0.0.0/0
 - IP Protocol: Select TCP.
 - Destination Port Range: All.
@@ -429,6 +434,8 @@ Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure 
 12. Click **Security Lists**, and locate the Default Security List of the VCN Click **Add Egress Rule**.  Click **+Additional Egress Rule** and Add below 2 Rules for Egress; Ensure to leave STATELESS flag un-checked.:
 
 **First Rule**
+
+- Destination Type: CIDR
 - Destination CIDR: 10.0.4.0/24
 - IP Protocol: Select TCP.
 - Source Port Range: All
@@ -437,6 +444,8 @@ Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure 
 13. Click **+Additional Egress Rule** and enter the following Egress rule; Ensure to leave STATELESS flag un-checked
 
 **Second Rule**
+
+- Destination Type: CIDR
 - Destination CIDR: 10.0.5.0/24
 - IP Protocol: Select TCP
 - Destination Port Range: 80
