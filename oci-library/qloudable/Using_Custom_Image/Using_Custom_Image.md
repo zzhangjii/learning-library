@@ -263,22 +263,10 @@ sudo service httpd status
 
 5. Repeat the step to delete second compute instance
 
-6. From OCI services menu Click **Block Volumes** under Block Storage
-
-7. Find the storage block volume you created.
-
-**HINT:** If multiple storage block volumes are listed, scroll down to find the one you created.   
-
-8. Click the Action icon and select **Terminate**
-
-9. Click OK in the confirmation window.
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_016.PNG" alt="image-alt-text" height="200" width="200">
-
-10. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will 
+6. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will 
 appear.
 
-11. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
+7. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text" height="200" width="200">
 

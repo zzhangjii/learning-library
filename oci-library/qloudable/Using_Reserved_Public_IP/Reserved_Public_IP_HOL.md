@@ -86,6 +86,7 @@ The purpose of this lab is to give you an overview of the Reserved Public IP Ser
 
 4. Fill out the dialog box:
 
+
 - Create in Compartment: Has the correct compartment
 - Name: Enter easy to re¬member name
 - Create Virtual Cloud Network Plus Related Resources: Select this option.
@@ -101,6 +102,7 @@ The purpose of this lab is to give you an overview of the Reserved Public IP Ser
 7. From OCI servies menu click **Public IPs** under **Networking** 
 
 8. Click **Create Reserved Public IP**.  Fill out the dialog box:
+
 
 - **NAME:** Provide a name (optional)
 - **COMPARTMENT:** Ensure correct compartment is selected
@@ -162,6 +164,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 7. Switch to the OCI console. From OCI servies menu, Click **Instances** under **Compute** 
 
 8. Click **Create Instance**. Fill out the dialog box:
+
 
 - Name: Enter a name 
 
