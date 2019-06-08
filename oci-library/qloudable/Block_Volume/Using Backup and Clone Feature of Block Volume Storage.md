@@ -10,8 +10,7 @@
 
 [Create ssh keys, compute instance and Block Volume](#create-ssh-keys,-compute-instance-and-block-volume)
 
-[Clone Block Volume and explore Volume Groups
-](#clone-block-volume-and-explore-volume-groups)
+[Clone Block Volume and explore Volume Groups](#clone-block-volume-and-explore-volume-groups)
 
 [Delete the resources](#delete-the-resources)
 
@@ -68,6 +67,7 @@ In this lab you will create and attach Block Volume Storage to a compute instanc
 * **Password:** {{Password}}
 * **Compartment:**{{Compartment}}
 
+
 1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text" height="200" width="200">
@@ -84,9 +84,11 @@ In this lab you will create and attach Block Volume Storage to a compute instanc
 
 4. Fill out the dialog box:
 
+
 - Create in Compartment: Has the correct compartment
 - Name: Enter easy to re¬member name
 - Create Virtual Cloud Network Plus Related Resources: Select this option.
+
 
 5. Click **Create Virtual Cloud Network**
 
@@ -151,6 +153,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 8. Click Create Instance. Fill out the dialog box:
 
+
 - Name: Enter a name 
 - Availability Domain: Select availability domain
 - Image Operating System: For the image, we recommend using the Latest Oracle Linux available.
@@ -162,6 +165,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 - Virtual Cloud Network: Select the VCN you created in the previous section. 
 - Subnet Compartment: Choose your compartment. 
 - Subnet: Choose the first Subnet
+
 
 9. Click **Create**
 
@@ -192,12 +196,14 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 
 16. Fill out the dialog box:
 
+
 - Name: Enter a name for the block volume 
 - Create in Compartment: Has the correct compartment selected.
 - Availability Domain: Select availability domain **(must be differetn from compute instance's AD)**
 - SIZE: Set to 50
 - BACKUP POLICY: Leave as is
 - ENCRYPTION: ENCRYPT USING ORACLE-MANAGED KEYS
+
 
 17. Click **Create Block Volume**. Wait for Block Volume state to change from 'Provisioning' to 'Available'
 
@@ -219,8 +225,10 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 
 22. Fill out the dialog box:
 
+
 - Name: Provide a Name
 - BACKUP TYPE: Full Backup
+
 
 23. Click **Create Block Volume Backup**
 
@@ -234,6 +242,7 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 
 26. Fill out the dialog box:
 
+
 - Name: Enter a name for the block volume 
 - Create in Compartment: Has the correct compartment selected.
 - Availability Domain: Select availability domain **(must be the same as compute instance's AD)**
@@ -241,16 +250,19 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 - BACKUP POLICY: Leave as is
 - ENCRYPTION: ENCRYPT USING ORACLE-MANAGED KEYS
 
+
 27. From OCI services menu Click **Instance** under Compute 
 
 28. For the compute instance created earlier click Action item. Click **Attach Block Volume**.
 
 29. Fill out the dialog box:
 
+
 - Choose how you want to attach your block volume: PARAVIRTUALIZED
 - BLOCK VOLUME COMPARTMENT: Choose your compartment
 - BLOCK VOLUME: Choose the block volume created in the same AD as the compute instance
 - ACCESS: Read/Write
+
 
 30. Click **Attach**
 
@@ -264,12 +276,14 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 
 1. From OCI services menu Click **Block Volumes** under Block Storage, locate the Original Block Volume create.Click Action icon  and then Create Clone.Fill out the dialog box:
 
+
 - NAME: Provide a Name
 - CREATE IN COMPARTMENT: Choose your compartment
 - BLOCK VOLUME SIZE: Should be set to 50
 - ENCRYPTION: ENCRYPT USING ORACLE-MANAGED KEYS
 
-2. Click **Creat Clone**
+
+2. Click **Create Clone**
 
 3. Once the clones volume is in Available State, navigate back to compute instance page and try to attach the cloned volume. Verify the Cloned volume is not available to be attached. **This is due to the same reason as for the original volume i.e the cloned volume is in a different Availability Domain then the compute instance**
 
@@ -283,15 +297,20 @@ This simplifies the process to create time-consistent backups of running enterpr
 
 5. Click **Volume Groups** and then **Create Volume Group**. Fill out the dialog box:
 
+
 - NAME: Provide a Name
 - CREATE IN COMPARTMENT: Choose your Compartment
 - CREATE IN AVAILABILITY DOMAIN: Choose the availability domain whose volume need to be grouped
 
+
 **NOTE: Only volumes that exist in this AD will appear in the list**
 
 Under **Volumes**
+
+
 - COMPARTMENT: Choose your comparment
 - VOLUME: Click on the drop down and choose the volume that you want to group togehter
+ 
  
 6. To choose additional volumes (Block or boot) click **+Volume** and add additional volumes
 
