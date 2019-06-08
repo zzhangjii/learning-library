@@ -52,10 +52,12 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 
 ## Sign in to OCI Console and create ADW instance
 
+
 * **Tenant Name:** {{Cloud Tenant}}
 * **User Name:** {{User Name}}
 * **Password:** {{Password}}
 * **Compartment:**{{Compartment}}
+
 
 1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
@@ -66,6 +68,8 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_001.PNG" alt="image-alt-text" height="200" width="200">
 
 3. Fill out the dialog box:
+
+
 - Workload Type: AUTONOMOUS DATA WAREHOUSE
 - COMPARTMENT: Choose your compartment
 - DISPLAY NAME: Provide a name
@@ -73,8 +77,9 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 - CPU CORE COUNT: 1
 - STORAGE(TB): 1
 - PASSWORD: Provide password per guideline (example Oracle123!!!!)
-- CNFIRM PASSWORD: Provide same password (example Oracle123!!!!)
+- CONFIRM PASSWORD: Provide same password (example Oracle123!!!!)
 - LICENSE TYPE: SUBSCRIBE TO NEW DATABASE SOFTWARE LICENSES AND THE DATABASE CLOUD SERVICE
+
 
 4. Leave **Tags** information as is, Click **Create Autonomous Database**. Wait for State to change to Available (few minutes) 
 
@@ -116,6 +121,8 @@ In this section we will generate auth token for the user of this lab. An Auth to
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_009.PNG" alt="image-alt-text" height="200" width="200">
 
 5. Fill out the diaog box:
+
+
 - Connection Name: Provide a name
 - Username: admin
 - Password: Password used at ADW instance creation
@@ -124,11 +131,14 @@ In this section we will generate auth token for the user of this lab. An Auth to
 - Configuration file: File that was dowloaded from ADW service console (Client credenitla zip file)
 - Keystore password: Password you provided when downloading the client credentials file 
 
+
 **NOTE:** If using SQL devleoper 18.2.0 or higher this field is not available and not required
+
 
 - Service: <ADW_Instance_name>_medium 
 - Click **Save**
 - Click **Connect** and verify Successful connection
+
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_010.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -144,6 +154,8 @@ Grant dwrole to ocitest;
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_011.PNG" alt="image-alt-text" height="200" width="200">
 
 8. Create another connection in SQL Developer (same steps as abovea), use following values:
+
+
 - Connection Name: Provide a name
 - Username: OCITEST
 - Password:  P#ssw0rd12## 
@@ -152,11 +164,14 @@ Grant dwrole to ocitest;
 - Configuration file: File that was dowloaded from ADW service console (Client credenitla zip file)
 - Keystore password: Password you provided when downloading the client credentials file 
 
+
 **NOTE:** If using SQL devleoper 18.2.0 or higher this field is not available and not required
+
 
 - Service: <ADW_Instance_name>_medium 
 - Click **Save**
 - Click **Connect** and verify Successful connection
+
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_012.PNG" alt="image-alt-text" height="200" width="200">
 
