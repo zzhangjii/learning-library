@@ -66,10 +66,12 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 
 ## Sign in to OCI Console and create VCN
 
+
 * **Tenant Name:** {{Cloud Tenant}}
 * **User Name:** {{User Name}}
 * **Password:** {{Password}}
 * **Compartment:**{{Compartment}}
+
 
 1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
@@ -87,15 +89,17 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 
 4. Fill out the dialog box:
 
+
 - **Create in Compartment:** Has the correct compartment
 
-- **Name:** Enter easy to re¬member name
+- **Name:** Enter easy to remember name
 
 - **Create Virtual Cloud Network Plus Related Resources:** Select this option.
 
 - Click **Create Virtual Cloud Network**
 
 - Click **Close**
+
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -105,8 +109,9 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_001.PNG" alt="image-alt-text" height="200" width="200">
 
-6. In Security list details page, Click **Edit All Rules** and Click **+Another Ingress Rule** under 
-Allow Rules for Ingress and add below rule:
+6. Click **Add Ingress Rule** under **Ingress Rules** and add below rule:
+
+
 - **Make sure STATELESS Flag in un-checked**
 - **SOURCE TYPE:** CIDR
 - **SOURCE CIDR:** 0.0.0.0/0
@@ -114,9 +119,10 @@ Allow Rules for Ingress and add below rule:
 - **SOURCE PORT RANGE:** ALL
 - **DESTINATION PORT RANGE:** 80
 
+
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_002.PNG" alt="image-alt-text" height="200" width="200">
 
-7. Click **Save Security List Rules** at the bottom
+7. Click **Add Ingress Rule** at the bottom
               
 ## Creat ssh keys, compute instance and Block Volume. Attach block volume to compute instance
 
@@ -172,6 +178,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 8. Click Create Instance. Fill out the dialog box:
 
+
 - **Name:** Enter a name 
 
 - **Availability Domain:** Select availability domain
@@ -193,6 +200,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 - **Subnet Compartment:** Choose your compartment. 
 
 - **Subnet:** Choose the first Subnet
+
 
 9. Click **Create**
 
@@ -222,12 +230,16 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 15. From OCI services menu Click **Block Volumes** under Block Storage, then Click **Create Block Volume**.
 
 16. Fill out the dialog box: 
+
+
 - **Create in Compartment:** Has the correct compartment selected.
 - **Name:** Enter a name for the block volume (e.g. "block_vm).
 - **Availability Domain:** Select the first available domain (must be same as 
 Compute).
 - **SIZE:** Set to 50
 - **BACKUP POLICY:** Set to None (If this field shows ‘Error Retrieving Value’ then leave it as is)
+
+
 17. Click **Create Block Volume**. Wait for volume to become available. Wait for Block Volume state to change from 'Provisioning' to 'Available'
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_003.PNG" alt="image-alt-text" height="200" width="200">
@@ -242,10 +254,14 @@ Compute).
 - Choose how you want to attach your block volume:Check Paravirtualized
 
 **NOTE:** We can also use ISCSI mode, in which case we will not have to use ISCSI commands as detailed later on. For more information please refer to ;
+
 **https://docs.cloud.oracle.com/iaas/Content/Block/Concepts/overview.htm#attachtype** OR refer Appendix section at the end of the lab.
+
+
 - BLOCK VOLUME COMPARTMENT: Ensure correct compartment is selected
 - Block Volume: Choose the volume created earlire
 - Access: Choose READ/WRITE
+
 
 21. Click **Attach**.
 
@@ -405,10 +421,14 @@ sudo umount /dev/<VOLUME_NAME>
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_012.PNG" alt="image-alt-text" height="200" width="200">
 
 7. In the Boot Volume Details window click **Create Instance:**
+
+
 - **Name:** Enter a name (e.g. "boot volume instance").
 - **Availability Domain:** Make sure its same AD as where the block volume was created
 
+
 **NOTE :** Boot Volume field is set to BOOT VOLUME and to the boot volume you detached from the original Instance.
+
 
 - **Intance Type:** Select Virtual Machine
 - **Instance Shape:** Choose the shape with least OCPU
@@ -417,6 +437,8 @@ sudo umount /dev/<VOLUME_NAME>
 - **Virtual Cloud Network:** Select the VCN created earlier
 - **Subnet compartment:** Select yor compartment 
 - **Subnet:** Select the Public subnet.
+
+
 8. Click **Create Instance**.
 
 **NOTE:** If 'Service limit' error is displayed choose a different shape such as VM.Standard.E2.2 OR VM.Standard2.2 OR Choose a different AD
@@ -456,31 +478,32 @@ sudo systemctl restart httpd
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text" height="200" width="200">
 
-
 4. Make sure Permanently delete the attached Boot Volume is checked, Click Terminate Instance. Wait for instance to fully Terminate
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0017.PNG" alt="image-alt-text" height="200" width="200">
 
-5. From OCI services menu Click **Block Volumes** under Block Storage
+5. Repeat the step to delete second compute instance
 
-6. Find the storage block volume you created.
+6. From OCI services menu Click **Block Volumes** under Block Storage
+
+7. Find the storage block volume you created.
 
 **HINT:** If multiple storage block volumes are listed, scroll down to find the one you created.   
 
-7. Click the Action icon and select **Terminate**
+8. Click the Action icon and select **Terminate**
 
-8. Click OK in the confirmation window.
+9. Click OK in the confirmation window.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_016.PNG" alt="image-alt-text" height="200" width="200">
 
-9. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will 
+10. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will 
 appear.
 
-10. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
+11. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text" height="200" width="200">
 
-11. From OCI services menu Click **Networking**, then **Public IPs**,locate the Reserved Public IP you created. Click Action icon and then **Terminate**
+12. From OCI services menu Click **Networking**, then **Public IPs**,locate the Reserved Public IP you created. Click Action icon and then **Terminate**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0019.PNG" alt="image-alt-text" height="200" width="200">
 

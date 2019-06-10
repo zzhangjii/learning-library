@@ -1,4 +1,4 @@
-#  Autonmous Transaction Processing.
+#  Autonomous Transaction Processing.
   
 ## Table of Contents
 
@@ -24,9 +24,11 @@
 
 Oracle Cloud Infrastructure's Autonomous Transaction Processing Cloud Service is a fully managed, preconfigured database environment. You do not need to configure or manage any hardware, or install any software. After provisioning, you can scale the number of CPU cores or the storage capacity of the database at any time without impacting availability or performance. Autonomous Transaction Processing handles creating the database, as well as the following maintenance tasks:
 
+
 - Backing up the database
 - Patching the database
 - Upgrading the database
+
 
 **Some Key points;**
 
@@ -70,6 +72,7 @@ Oracle Cloud Infrastructure's Autonomous Transaction Processing Cloud Service is
 
 **Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
 
+
 1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text" height="200" width="200">
@@ -77,6 +80,7 @@ Oracle Cloud Infrastructure's Autonomous Transaction Processing Cloud Service is
 2. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
 
 3. Select the compartment assigned to you from drop down menu on left part of the screen
+
 
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
@@ -86,15 +90,17 @@ Oracle Cloud Infrastructure's Autonomous Transaction Processing Cloud Service is
 
 4. Fill out the dialog box:
 
+
 - **Create in Compartment:** Has the correct compartment
 
-- **Name:** Enter easy to re¬member name
+- **Name:** Enter easy to remember name
 
 - **Create Virtual Cloud Network Plus Related Resources:** Select this option.
 
 - Click **Create Virtual Cloud Network**
 
 - Click **Close**
+
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -154,6 +160,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 8. Click Create Instance. Fill out the dialog box:
 
+
 - **Name:** Enter a name 
 
 - **Availability Domain:** Select availability domain
@@ -175,6 +182,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 - **Subnet Compartment:** Choose your compartment. 
 
 - **Subnet:** Choose the first Subnet
+
 
 9. Click **Create**
 
@@ -242,7 +250,10 @@ unzip swingbench.zip
 instance with only 1 OCPU and scale it after generating load test from the compute 
 instance created earlier**
 
+
 1. Switch to OCI console, from services menu click **Autonomous Transaction Processing** under Databse.Click **Create Autonmous Trasnaction Processing Database**. Fill out the dialog box:
+
+
 - Workload Type: AUTONOMOUS TRANSACTION PROCESSING
 - COMPARTMENT: Choose your compartment
 - DISPLAY NAME: Provide a name
@@ -250,11 +261,14 @@ instance created earlier**
 - CPU CORE COUNT: 1
 - STORAGE(TB): 1
 - PASSWORD: Provide password per guideline 
-- CNFIRM PASSWORD: Provide same password 
+- CONFIRM PASSWORD: Provide same password 
+
 
 **NOTE:** Do not use &, ), ( in the password due to script limitation that we will execute later.
 
+
 - LICENSE TYPE: SUBSCRIBE TO NEW DATABASE SOFTWARE LICENSES AND THE DATABASE CLOUD SERVICE
+
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_018.PNG" alt="image-alt-text" height="200" width="200">
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_019.PNG" alt="image-alt-text" height="200" width="200">
@@ -405,6 +419,8 @@ In this section we will generate auth token for the user of this lab. An Auth to
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_009.PNG" alt="image-alt-text" height="200" width="200">
 
 5. Fill out the diaog box:
+
+
 - Connection Name: Provide a name
 - Username: admin
 - Password: Password used at ATP instance creation
@@ -412,6 +428,7 @@ In this section we will generate auth token for the user of this lab. An Auth to
 - Connection Type: Cloud PDB
 - Configuration file: File that was dowloaded from ATP service console (Client credenitla zip file)
 - Keystore password: Password you provided when downloading the client credentials file 
+
 
 **NOTE:** If using SQL devleoper 18.2.0 or higher this field is not available and not required
 
@@ -433,6 +450,8 @@ Grant dwrole to ocitest;
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_011.PNG" alt="image-alt-text" height="200" width="200">
 
 8. Create another connection in SQL Developer (same steps as abovea), use following values:
+
+
 - Connection Name: Provide a name
 - Username: OCITEST
 - Password:  P#ssw0rd12## 
@@ -441,11 +460,14 @@ Grant dwrole to ocitest;
 - Configuration file: File that was dowloaded from ATP service console (Client credenitla zip file)
 - Keystore password: Password you provided when downloading the client credentials file 
 
+
 **NOTE:** If using SQL devleoper 18.2.0 or higher this field is not available and not required
+
 
 - Service: <ATP_Instance_name>_medium 
 - Click **Save**
 - Click **Connect** and verify Successful connection
+
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_012.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -586,7 +608,7 @@ user will be , **select * from ocitest.channels;**
 
 3. From OCI services menu Click **Instances** under Compute
 
-4. Locate first compute instance, Click Action icon and then **Terminat** 
+4. Locate first compute instance, Click Action icon and then **Terminate** 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text" height="200" width="200">
 

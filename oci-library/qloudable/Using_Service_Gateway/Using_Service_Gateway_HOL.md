@@ -17,9 +17,14 @@
 ## Overview
 
 If you're a typical Oracle Cloud Infrastructure customer, you may have resources in your virtual cloud network (VCN) that need to access the Oracle Cloud Infrastructure Object Storage service, which has publicly addressable endpoints. Until now, you could use either public subnets or a NAT instance, with an internet gateway in your VCN to access the service. However, you might not have wanted to use these options because of privacy, security, or operational concerns.
+
 Service Gateway alleviates the preceding concerns by enabling the following functions:
+
+
 - Private connectivity between your VCNs and Object Storage: You can add a service gateway to a VCN and use the VCN's private address space to access Object Storage without exposing the instances to the public internet. You don't need a public subnet, NAT instance, or internet gateway in your VCN. 
+
 - Enhanced security for your Object Storage buckets: You can limit access to Object Storage buckets from an authorized VCN or from a specific range of IP addresses within the subnet. You can add  conditional references to VCN and IP addresses in IAM policies, which can only be satisfied when you initiate connections through a service gateway 
+
 
 **Some Key points;**
 
@@ -63,6 +68,7 @@ Service Gateway alleviates the preceding concerns by enabling the following func
 * **Password:** {{Password}}
 * **Compartment:**{{Compartment}}
 
+
 1. From the OCI Services menu, click **Object Storage**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_031.PNG" alt="image-alt-text" height="200" width="200">
@@ -71,9 +77,11 @@ Service Gateway alleviates the preceding concerns by enabling the following func
 
 3. Click **Create Bucket**, Fill out the dialog box:
 
+
 - Bucket Name: Provide a name
 - Storage Tier: STANDARD 
 - Encryption: ENCRYPT USING ORACLE-MANAGED KEYS
+
 
 4.  Click **Create Bucket**
 
@@ -105,9 +113,12 @@ This should create a file by the name"samplefile" in the Downloads folder
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/OBJECT-STORAGE007.PNG" alt="image-alt-text" height="200" width="200">
 
 10. Click on **Upload Object**. Fill out the dialog box
+
+
 - OBJECT NAME PREFIX: Provide a Prefix (Optional)
 
 - CHOOSE FILES FROM YOUR COMPUTER: Click **Select File** and then browse to the location where 'Sample File' was created
+
 
 11. Select the file, then click **Upload Object** in the Dialog box.
 
@@ -125,15 +136,17 @@ This should create a file by the name"samplefile" in the Downloads folder
 
 15. Fill out the dialog box:
 
-- **Create in Compartment:** Has the correct compartment
 
-- **Name:** Enter easy to re¬member name
+- **Name:** Enter easy to remember name
+
+- **Create in Compartment:** Has the correct compartment
 
 - **Create Virtual Cloud Network Plus Related Resources:** Select this option.
 
 - Click **Create Virtual Cloud Network**
 
 - Click **Close**
+
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -144,16 +157,21 @@ This should create a file by the name"samplefile" in the Downloads folder
 17. Locate your VCN and click VCN name. This will bring up VCN details page.
 
 18. Click **Create Subnet**. Fill out the dialog box:
+
+
 - Name: Enter a name
 - Subnet Type: Regional
 - CIDR Block: Enter 10.0.5.0/24 
 - Route Table: Select the Default Route Table
 
+
 **NOTE:** For Prodcution deployment we strongly recommend Creating a seperate route table.        
+
 
 - Subnet access: select Private Subnet.
 - DHCP Options: Select the default.
 - Security Lists: Select the Default Security List 
+
 
 **NOTE:** For Prodcution deployment we strongly recommendCreating a seperate security list.
 
@@ -215,13 +233,16 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 8. Click Create Instance. Fill out the dialog box:
 
+
 - **Name:** Enter a name 
 
 - **Availability Domain:** Select availability domain
 
 - **Image Operating System:** Click **Change Image Source**. In the new window, Click **Oracle Images** Choose **Oracle Cloud Developer Image**. Scroll down, Accept the Agreement and click **Select Image**
 
+
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_009.PNG" alt="image-alt-text" height="200" width="200">
+
 
 - **Choose Instance Type:** Select Virtual Machine
 
@@ -239,6 +260,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 - **Subnet:** Select Public Subnet (Do not select the private subnet created earlier)
 
+
 9. Click **Create**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text" height="200" width="200">
@@ -249,13 +271,16 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 12. Click **Create Instance**. Fill out the dialog box:
 
+
 - **Name:** Enter a name 
 
 - **Availability Domain:** Select availability domain
 
 - **Image Operating System:** Click **Change Image Source**. In the new window, Click **Oracle Images** Choose **Oracle Cloud Developer Image**. Scroll down, Accept the Agreement and click **Select Image**
 
+
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_009.PNG" alt="image-alt-text" height="200" width="200">
+
 
 - **Choose Instance Type:** Select Virtual Machine
 
@@ -272,6 +297,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 - **Subnet Compartment:** Choose your compartment. 
 
 - **Subnet:** Select the Private subnet created earlier
+
 
 13. Click **Create**
 
@@ -363,9 +389,12 @@ and verify samplefile was not downloaded.
 
 8. Click **Service Gateways** , then **Create Service Gateway**. 
 Fill out the dialog box:
+
+
 - **Name:** Provide a name.
 - **Create in Compartment:** Ensure correct compartment is selected.
 - **Services:** Click **Drop down** and choose OCI IAD-ObjectStorage.
+
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_027.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -376,10 +405,13 @@ Fill out the dialog box:
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_003.PNG" alt="image-alt-text" height="200" width="200">
 
 11. Click **Add Route Rules**. Fill out the dialog box:
+
+
 - **TARGET TYPE:**  Service Gateway
 - **DESTINATION SERVICE:** OCI IAD-ObjectStorage
 - **COMPARTMENT:** Choose the assigned compartment
 - **TARGET SERVICE GATEWAY:** Choose the service Gateway created earlier
+
 
 12.  Click **Add Route Rules**, new route entry should be created.
 
@@ -389,10 +421,12 @@ Fill out the dialog box:
 
 14. Add following Egress rule; Ensure to leave STATELESS flag un-checked
 
+
 - **DESTINATION TYPE:** Service
 - **DESTINATION SERVICE:** OCI IAD Object Storage
 - **SOURCE PORT RANGE:** ALL
 - **DESTINATION PORT RANGE:** ALL
+
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_036.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -416,7 +450,7 @@ oci os object get --namespace <NAME_SPACE> --bucket-name<BUCKET_NAME> --name sam
 
 2. If your Compute instance is not displayed, From OCI services menu Click **Instances** under **Compute**
 
-3. Locate compute instance, Click Action icon and then **Terminat** 
+3. Locate compute instance, Click Action icon and then **Terminate** 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text" height="200" width="200">
 

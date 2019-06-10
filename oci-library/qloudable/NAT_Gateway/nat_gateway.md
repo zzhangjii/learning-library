@@ -23,9 +23,12 @@ Many Oracle Cloud Infrastructure customers have compute instances in virtual clo
 
 NAT gateway,  addresses these challenges and provides Oracle Cloud Infrastructure customers with a simple and intuitive tool to address their networking security needs. NAT gateways provide the following features:
 
+
 - Highly Scalable and Fully Managed: Instances on private subnets can initiate large numbers of connections to the public internet. Connections initiated from the internet are blocked.
+
 - Secure: Traffic through NAT gateways can be disabled with the click of a button.
 Dedicated IP Addresses: Each NAT gateway is assigned a dedicated IP address that can be reliably added to security whitelists.
+
 
 **Some Key points;**
 
@@ -63,7 +66,9 @@ Dedicated IP Addresses: Each NAT gateway is assigned a dedicated IP address that
 * **Password:** {{Password}}
 * **Compartment:**{{Compartment}}
 
+
 **Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
+
 
 1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
@@ -80,15 +85,17 @@ Dedicated IP Addresses: Each NAT gateway is assigned a dedicated IP address that
 
 4. Fill out the dialog box:
 
-- **Create in Compartment:** Has the correct compartment
 
-- **Name:** Enter easy to re¬member name
+- **Name:** Enter easy to remember name
+
+- **Create in Compartment:** Has the correct compartment
 
 - **Create Virtual Cloud Network Plus Related Resources:** Select this option.
 
 - Click **Create Virtual Cloud Network**
 
 - Click **Close**
+
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -148,6 +155,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 8. Click Create Instance. Fill out the dialog box:
 
+
 - **Name:** Enter a name 
 
 - **Availability Domain:** Select availability domain
@@ -169,6 +177,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 - **Subnet Compartment:** Choose your compartment. 
 
 - **Subnet:** Choose the first Subnet
+
 
 9. Click **Create**
 
@@ -207,6 +216,8 @@ ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE>
 
 3. Once NAT gateway is in Available state, Click **Route Tables**, then **Create Route Table**. Fill out the dialog box:
 - Create in Compartment: This field defaults to your current compartment. Make sure correct Compartment is selected.
+
+
 - Name: Enter a name 
 **Click +Additional Route Rules**
 - Target Type: Select **NAT Gateway** 
@@ -214,22 +225,27 @@ ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE>
 - Compartment:  Make sure the correct Compartment is selected: 
 - Target NAT Gateway: Select the NATGateway for your VCN. 
 
+
 4. Click **Create Route Table**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/NAT_Gateway/img/NAT_002.PNG" alt="image-alt-text" height="200" width="200">
 
 5. Click your VCN name to display the VCN details.Click **Create Subnet**. Fill out the dialog box:
 
+
 - Name: Enter a name 
 - Subnet Type: Regional
 - CIDR Block: Provide a CIDR (e.g 10.0.5.0/24).
 - Route Table: Choose the Route table created earlier
 
+
 **NOTE:** Do not choose the 'Default route table'. This is being done so all routing for compute instances in this subnet are via the NAT gateway 
+
 
 - Subnet access:Private Subnet.
 - DHCP Options: Select the default.
 - Security Lists: Select the Security List you created earlier.
+
 
 6. Leave all other options as default, Click **Create Subnet**.
 
@@ -262,6 +278,7 @@ copy and paste the public key content to Notepad. We will use this public key to
 
 11. Switch to OCI console window and launch a second compute instance as done previously. Ensure the subnet chosen is the private subnet that we created previously.
 
+
 - **Name:** Enter a name 
 
 - **Availability Domain:** Select availability domain
@@ -283,6 +300,7 @@ copy and paste the public key content to Notepad. We will use this public key to
 - **Subnet Compartment:** Choose your compartment. 
 
 - **Subnet:** choose the subnet under Private Subnet
+
 
 12. Click **Create**
 

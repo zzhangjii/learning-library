@@ -61,10 +61,12 @@ In this lab you will create and mount File Storage System to a compute instance 
 
 ## Sign in to OCI Console and create VCN
 
+
 * **Tenant Name:** {{Cloud Tenant}}
 * **User Name:** {{User Name}}
 * **Password:** {{Password}}
 * **Compartment:**{{Compartment}}
+
 
 1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
@@ -82,15 +84,17 @@ In this lab you will create and mount File Storage System to a compute instance 
 
 4. Fill out the dialog box:
 
-- **Create in Compartment:** Has the correct compartment
 
-- **Name:** Enter easy to re¬member name
+- **Name:** Enter easy to remember name
+
+- **Create in Compartment:** Has the correct compartment
 
 - **Create Virtual Cloud Network Plus Related Resources:** Select this option.
 
 - Click **Create Virtual Cloud Network**
 
 - Click **Close**
+
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -106,6 +110,7 @@ In this lab you will create and mount File Storage System to a compute instance 
 
 **Rule # 1 for access of NFS and NLM traffic with Destination Port Range of 2048-2050. (Type the values).**
 
+
 - **Make sure STATELESS Flag in un-checked**
 - **SOURCE TYPE:** CIDR
 - **SOURCE CIDR:** 10.0.0.0/16
@@ -113,7 +118,9 @@ In this lab you will create and mount File Storage System to a compute instance 
 - **SOURCE PORT RANGE:** ALL
 - **DESTINATION PORT RANGE:** 2048-2050
 
+
 **Rule # 2 for access of NFS and NLM traffic with Destination Port Range of 2048-2050. (Type the values).**
+
 
 - **Make sure STATELESS Flag in un-checked**
 - **SOURCE TYPE:** CIDR
@@ -122,17 +129,24 @@ In this lab you will create and mount File Storage System to a compute instance 
 - **SOURCE PORT RANGE:** 2048-2050
 - **DESTINATION PORT RANGE:** All
 
+
 7. Click **+Additional Ingress Rule** to add third ingress rule allowing traffic to a Destination Port Range of 111 for the NFS rpcbind utility.
+
+
 - Source CIDR: 10.0.0.0/16
 - IP Protocol: TCP
 - Source Port Range: All
 - Destination Port Range: 111
 
+
 8. Click **+Additional Ingress** Rule  to add fourth ingress rule allowing traffic to a Source Port Range of 111 for the NFS rpcbind utility.
+
+
 - Source CIDR: 10.0.0.0/16
 - IP Protocol: TCP
 - Source Port Range: 111
 - Destination Port Range: All
+
 
 9. Click **Add Ingress Rule**
 
@@ -153,11 +167,15 @@ In this section we will create File System Storage.
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/File_Storage_Service/img/FSS_002.png" alt="image-alt-text" height="200" width="200">
 
 4. In Create File System dialog, under File System Information, enter the following:
+
+
 - Create in Compartment: Choose your compartment
 - Name: Provide a name
 - Availability Domain: Choose any AD.
 
+
 **Under Mount Target Information**
+
 
 - Select **Create Mount Target**
 - Name: Provide a name
@@ -167,6 +185,7 @@ In this section we will create File System Storage.
 - Hostname: Leave blank.
 - Path Name: Enter /
 - Maximum Free space: choose Recommended Size
+
 
 5. Click **Create File System**.
 
@@ -234,6 +253,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 8. Click Create Instance. Fill out the dialog box:
 
+
 - **Name:** Enter a name 
 
 - **Availability Domain:** Select availability domain
@@ -255,6 +275,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 - **Subnet Compartment:** Choose your compartment. 
 
 - **Subnet:** Choose the first Subnet
+
 
 9. Click **Create**
 
@@ -320,10 +341,13 @@ and verify the mounted File System Storage.
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/File_Storage_Service/img/FSS_008.png" alt="image-alt-text" height="200" width="200">
 
 5. If you want to ping the mount point then modify the security list of the VCN for Ingress ICMP rule:
+
+
 - Source CIDR: 0.0.0.0/0
 - IP Protocol: ICMP
 - Source port range: All
 - Destination port range: All
+
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/File_Storage_Service/img/FSS_009.png" alt="image-alt-text" height="200" width="200">
 
@@ -346,7 +370,7 @@ In this section we will delete all the resources we created in this lab.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/File_Storage_Service/img/FSS_011.png" alt="image-alt-text" height="200" width="200">
 
- 4. Click **File Systems**
+4. Click **File Systems**
 
 5. Click **Manage Mount Targets**, Select the Mount Target and Click **Delete**
 

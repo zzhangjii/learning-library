@@ -77,9 +77,9 @@ In this lab we will create a compute instance, download a script to configure st
 
 4. Fill out the dialog box:
 
-- **Create in Compartment:** Has the correct compartment
+- **Name:** Enter easy to remember name
 
-- **Name:** Enter easy to re¬member name
+- **Create in Compartment:** Has the correct compartment
 
 - **Create Virtual Cloud Network Plus Related Resources:** Select this option.
 
