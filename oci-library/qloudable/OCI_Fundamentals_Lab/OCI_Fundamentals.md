@@ -1,4 +1,4 @@
-# OCI Fundamentals(Deploy HA application using Load Balancer)
+# OCI Fundamentals (Deploy HA application using Load Balancer)
 
 ## Table of Contents
 
@@ -60,10 +60,12 @@ In this lab you will deploy http servers on two compute instances in Oracle Clou
 
 ## Sign in to OCI Console and create VCN
 
+
 * **Tenant Name:** {{Cloud Tenant}}
 * **User Name:** {{User Name}}
 * **Password:** {{Password}}
 * **Compartment:**{{Compartment}}
+
 
 1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
@@ -82,7 +84,8 @@ In this lab you will deploy http servers on two compute instances in Oracle Clou
 4. Fill out the dialog box:
 
 
-- **Name:** Enter easy to re¬member name
+
+- **Name:** Enter easy to remember name
 
 - **Create in Compartment:** Has the correct compartment
 
@@ -92,7 +95,9 @@ In this lab you will deploy http servers on two compute instances in Oracle Clou
 
 - Click **Close**
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="200" width="200">
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="200" width="200">
+
 
 <img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text" height="200" width="200">
               
@@ -173,6 +178,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 - **Subnet Compartment:** Choose your compartment. 
 
 - **Subnet:** Choose the first Subnet
+
 
 9. Click **Create**
 
@@ -294,6 +300,7 @@ In this section we will create a new security list. This security list will be u
 - SECURITY LIST Name: Specify a name (for example, LB Security List).
 - Click **Create Security List** 
 
+
 3. Verify the New Security List got created.
 
 **We now have a Security List that will be used by the load balancer. Next we will create a Route table that will be used by two new subnets (that will be used by the load balancer, once created).**
@@ -306,6 +313,7 @@ In this section we will create a new security list. This security list will be u
 - Name: Enter a name (for example, LB Route Table).
 - Create in Compartment: This field defaults to your current compartment. Make sure correct Compartment is selected.
 
+
 **Click +Additional Route Rules**
 
 
@@ -314,7 +322,9 @@ In this section we will create a new security list. This security list will be u
 - Compartment: Make sure the correct Compartment is selected
 - Target Internet Gateway: Select the Internet Gateway for your VCN. 
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_003.PNG" alt="image-alt-text" height="200" width="200">
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_003.PNG" alt="image-alt-text" height="200" width="200">
+
 
 6. Click **Create Route Table**.
 
@@ -342,9 +352,10 @@ In this section we will create a new security list. This security list will be u
 - DHCP Options: Select the default.
 - Security Lists: Select the Security List you created earlier.
 
+
 11. Leave all other options as default, Click **Create Subnet**.
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_004.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_004.PNG" alt="image-alt-text" height="200" width="200">
 
 
 ## Create Load Balancer and update Security List
@@ -358,11 +369,14 @@ In this section we will create a new security list. This security list will be u
 **Under Add Details**
 
 
+
 - LOAD BALANCER NAME: Enter a name for your load balancer.
 - CHOOSE VISIBILITY TYPE: Public
 - CHOOSE THE MAXIMUM TOTAL BANDWIDTH: Select 100Mbps. (This specifies the bandwidth of the load balancer.)
 
+
 **NOTE:** Shape cannot be changed later.
+
 
 - VIRTUAL CLOUD NETWORK: Choose your Virtual Cloud Network
 - SUBNET (1 OF 2): Choose the Regional Subnet we created. 
@@ -388,6 +402,7 @@ In this section we will create a new security list. This security list will be u
 
 ***Leave other options as default***
 
+
 **Under Configure Listener**
 
 - SPECIFY THE TYPE OF TRAFFIC YOUR LISTENER HANDLES: HTTP
@@ -406,7 +421,7 @@ In this section we will create a new security list. This security list will be u
 
 5. From OCI Services menu, click **Virtual Cloud Network** under Networking. Locate the VCN you created.
 
-6. . Click  VCN name to display VCN detail page.
+6. Click  VCN name to display VCN detail page.
 
 7. Click **Security Lists**, and locate the Load Balancer Security List created earlier.
 
@@ -414,11 +429,13 @@ In this section we will create a new security list. This security list will be u
 Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure to leave STATELESS flag un-checked
 
 
+
 - Source Type: CIDR 
 - Source CIDR: Enter 0.0.0.0/0.
 - IP Protocol: Select TCP.
 - Source Port Range: All.
 - Destination Port Range: Enter 80 (the listener port).
+
 
 9. Click **Add Ingress Rule**. 
 
@@ -429,6 +446,7 @@ Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure 
 - Destination CIDR: 0.0.0.0/0
 - IP Protocol: Select TCP.
 - Destination Port Range: All.
+
 
 11. Click **Add Egress Rule**.
 
@@ -443,6 +461,7 @@ Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure 
 - Source Port Range: All
 - Destination Port Range: 80
 
+
 13. Click **+Additional Egress Rule** and enter the following Egress rule; Ensure to leave STATELESS flag un-checked
 
 **Second Rule**
@@ -452,6 +471,7 @@ Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure 
 - Destination CIDR: 10.0.5.0/24
 - IP Protocol: Select TCP
 - Destination Port Range: 80
+
 
 14. Click **Add Egress Rule**.
 

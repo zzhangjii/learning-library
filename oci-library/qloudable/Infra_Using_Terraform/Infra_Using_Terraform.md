@@ -56,6 +56,7 @@ Terraform is Infrastructure as Code tool for building and managing infrastructur
 * **Password:** {{Password}}
 * **Compartment:**{{Compartment}}
 
+
 1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text" height="200" width="200">
@@ -72,7 +73,8 @@ Terraform is Infrastructure as Code tool for building and managing infrastructur
 
 4. Fill out the dialog box:
 
-- **Name:** Enter easy to re¬member name
+
+- **Name:** Enter easy to remember name
 
 - **Create in Compartment:** Has the correct compartment
 
@@ -81,6 +83,7 @@ Terraform is Infrastructure as Code tool for building and managing infrastructur
 - Click **Create Virtual Cloud Network**
 
 - Click **Close**
+
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -140,13 +143,16 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 8. Click Create Instance. Fill out the dialog box:
 
+
 - **Name:** Enter a name 
 
 - **Availability Domain:** Select availability domain
 
 - **Image Operating System:** Click **Change Image Source**. In the new window, Click **Oracle Images** Choose **Oracle Cloud Developer Image**. Scroll down, Accept the Agreement and click **Select Image**
 
+
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_009.PNG" alt="image-alt-text" height="200" width="200">
+
 
 - **Choose Instance Type:** Select Virtual Machine
 
@@ -163,6 +169,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 - **Subnet Compartment:** Choose your compartment. 
 
 - **Subnet:** Choose the first Subnet
+
 
 9. Click **Create**
 
