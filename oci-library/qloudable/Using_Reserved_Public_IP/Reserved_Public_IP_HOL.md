@@ -47,6 +47,7 @@ The purpose of this lab is to give you an overview of the Reserved Public IP Ser
 
 ## Pre-Requisites
 
+
 1. Oracle Cloud Infrastructure account credentials (User, Password, Tenant, and Compartment)  
 
 2. OCI Training : https://cloud.oracle.com/en_US/iaas/training
@@ -59,16 +60,19 @@ The purpose of this lab is to give you an overview of the Reserved Public IP Ser
 
 6. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
 
+
 ## Sign in to OCI console and create reserved Public IP
 
 **Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
 
 **Before You Begin**
 
+
 * **Tenant Name:** {{Cloud Tenant}}
 * **User Name:** {{User Name}}
 * **Password:** {{Password}}
 * **Compartment:**{{Compartment}}
+
 
 1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
@@ -88,8 +92,9 @@ The purpose of this lab is to give you an overview of the Reserved Public IP Ser
 
 
 - Create in Compartment: Has the correct compartment
-- Name: Enter easy to re¬member name
+- Name: Enter easy to remember name
 - Create Virtual Cloud Network Plus Related Resources: Select this option.
+
 
 5. Click **Create Virtual Cloud Network**
 
@@ -107,6 +112,7 @@ The purpose of this lab is to give you an overview of the Reserved Public IP Ser
 - **NAME:** Provide a name (optional)
 - **COMPARTMENT:** Ensure correct compartment is selected
 
+
 9. Click **Create Reserved Public IP**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Reserved_Public_IP/img/RESERVEDIP_HOL0020.PNG" alt="image-alt-text" height="200" width="200">
@@ -118,9 +124,11 @@ The purpose of this lab is to give you an overview of the Reserved Public IP Ser
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL006.PNG" alt="image-alt-text" height="200" width="200">
 
 2. Enter command 
+
 ```
 ssh-keygen
 ```
+
 **HINT:** You can swap between OCI window, 
 git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
 
@@ -140,20 +148,26 @@ git-bash sessions and any other application (Notepad, etc.) by clicking the Swit
 Compute instance and id_rsa to connect via SSH into compute instance.
 
 **HINT:** Enter command 
+
 ```
 cd /C/Users/PhotonUser/.ssh (No Spaces) 
 ```
+
 and then 
+
 ```
 ls 
 ```
+
 to verify the two files exist. 
 
 5. In git-bash Enter command  
+
 ```
 cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 ```
- , highlight the key and copy 
+
+, highlight the key and copy 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL009.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -187,6 +201,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 - Subnet Compartment: Choose your compartment. 
 
 - Subnet: Choose the first Subnet
+
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Reserved_Public_IP/img/RESERVEDIP_HOL0021.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -267,7 +282,7 @@ Reserved Public IP will be unassigned) . Click **Update**
 
 2. If your Compute instance is not displayed, From OCI services menu Click Instances under Compute
 
-3. Locate first compute instance, Click Action icon and then **Terminat** 
+3. Locate first compute instance, Click Action icon and then **Terminate** 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text" height="200" width="200">
 
