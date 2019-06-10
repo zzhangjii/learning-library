@@ -64,15 +64,15 @@ Object Storage is a regional service and is not tied to any specific compute ins
 
 1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
-<img src="raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent/umairs123/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text" height="200" width="200">
 
 2. From the OCI Services menu,click **Object Storage** under **Object Storage**
 
-<img src="raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE001.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent/umairs123/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE001.PNG" alt="image-alt-text" height="200" width="200">
 
 3. Ensure compartment assigned to you is selected. Click **Create Bucket**
 
-<img src="raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE002.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent/umairs123/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE002.PNG" alt="image-alt-text" height="200" width="200">
 
 4. Fill out the dialog box:
 
@@ -86,13 +86,13 @@ Object Storage is a regional service and is not tied to any specific compute ins
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
-<img src="raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE004.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent/umairs123/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE004.PNG" alt="image-alt-text" height="200" width="200">
 
 2. Change directory to the Downloads folder Enter command:
 ```
 $ cd /c/Users/PhotonUser/Downloads/**
 ```
-<img src="raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE005.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent/umairs123/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE005.PNG" alt="image-alt-text" height="200" width="200">
 
 3. Create a sample file, Enter command:
 ```
@@ -105,11 +105,11 @@ This should create a file by the name"samplefile" in the Downloads folder
 
 **HINT:** You can swap between OCI window and any other application(git-bash etc) by clicking switch window
 
-<img src="raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE006.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent/umairs123/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE006.PNG" alt="image-alt-text" height="200" width="200">
 
 5. Bucket detail window should be visible. Click **Upload Object**
 
-<img src="raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE007.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent/umairs123/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE007.PNG" alt="image-alt-text" height="200" width="200">
 
 6. Click on Upload Object > Browse > This PC > Downloads. You should see the sample file created earlier
 
@@ -117,7 +117,7 @@ This should create a file by the name"samplefile" in the Downloads folder
 
 8. File should be visible under Objects. Click Action icon and click **Create Pre-Authenticated Request**. This will create a web link that can be used to access the object Without requiring any additional authentication.
 
-<img src="raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE008.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent/umairs123/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE008.PNG" alt="image-alt-text" height="200" width="200">
 
 9. Fill out the dialog box:
 
@@ -137,7 +137,7 @@ This should create a file by the name"samplefile" in the Downloads folder
 
 12. Click **Close**
 
-<img src="raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE010.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent/umairs123/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE010.PNG" alt="image-alt-text" height="200" width="200">
 
 13. Open a new browser window and paste Pre-Authenticated link. 
 
