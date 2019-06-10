@@ -1,12 +1,13 @@
 # Application Integration Lab Guide
 
-## May 31, 2019 - 3:47 PM
+## June 10, 2019 - 12:30 PM
 
 # Table of Contents
 
 - [Lab Guide Overview](#lab-guide-overview)
   - [Lab Purpose and Guidelines](#lab-purpose-and-guidelines)
   - [Description of the Business Solution](#Description-of-the-Business-Solution)
+  - [Description of the Technical Solution](#Description-of-the-Technical-Solution)
 - [Prerequisites](#Prerequisites)
 - [Preparing Your Environment](#Preparing-Your-Environment)
   - [Clear Browser Data](#Clear-Browser-Data)
@@ -85,8 +86,6 @@ help you get the most from these lab exercises.
   - Help out your fellow students. You can learn a lot by trying to
     explain a concept or step to someone else.
 
-
-
 ## Description of the Business Solution
 
 Mama Maggy has an inventory control problem with its stores and
@@ -115,6 +114,28 @@ been approved, the new process automation solution is to interact with a
 backend system in the cloud to create a new order. In these labs, the
 backend system will be a cloud-based database rather than a SaaS system.
 
+Let’s follow a scenario through the process during runtime:
+- The workflow begins at the Submit Request start event where the Store Manager uses a web form to provide details for an inventory request for their store.  
+- When the Store Manager is done filling in the form, they press the Submit button.  This generates a workflow task for the Regional Manager at the Approve Request human activity.
+- The Regional Manager accepts the task and uses a web form to evaluate the request.  
+- If the request looks reasonable:
+  - The Store Manager presses the Approve button on the web form.
+  - Processing continues into the Create Order integration activity where an order is created in the backend system.  
+  - The process then ends at the Completed end event.
+- If the request looks unreasonable:
+  - The Regional Manager enters comments into the web form and presses the Reject button on the web form.
+  - The “Approved?” exclusive gateway routes the request back to the Store Manager at the Resubmit human activity.
+  - The Store Manager accepts the task and uses a web form to read the Regional Manager’s comments and to add some additional notes to the request to plead their case.
+  - When the Store Manager is done editing their request in the web form, they press the Submit button.  This generates a workflow task for the Regional Manager at the Approve Request human activity again.
+- The Regional Manager accepts the task and uses a web form to evaluate the updated request.  
+- They approve the request this time by pressing the Approve button.
+- Processing continues through the Create Order integration activity where an order is created in the backend system.
+- Processing concludes at the Completed end event.   
+
+
+ ![](./media/image123.png)
+ Figure 1: Business View of the Solution
+
 The solution will provide the following business value for Mama Maggy:
 
   - Lower costs: more efficient entry and evaluation of order requests
@@ -128,26 +149,45 @@ The solution will provide the following business value for Mama Maggy:
   - Enhanced visibility: status of in-process order requests is
     constantly available
 
+## Description of the Technical Solution
+
+With the business process architecture as a backdrop, let’s review the technical architecture to reveal what Oracle products are used to provide the new solution for Mama Maggy.  We’ll again follow an inventory request through the architecture using a scenario:
+- A Mama Maggy user, either a Store Manager or a Regional Manager interacts with the process automation application, built for Mama Maggy, that is hosted by Oracle Application Integration (commonly referred to as OIC).
+- OIC utilizes Oracle Identity Management to authenticate the user to the current role (Store Manager or Regional Manager) in the application.
+- OIC allows the user to view and execute workflow tasks in OIC Process based on the specifications in the business process model for the application.  
+- Store Managers and Regional Managers then submit and evaluate order requests.
+- Once a Regional Manager has approved an inventory order request:
+  - OIC Process sends a REST request to OIC Integration that hosts an integration built for Mama Maggy.  
+  - The integration:
+    - Uses the Oracle REST Adapter to accept the order request information from the Regional Manager
+    - Maps the order request data into an Order
+    -    Uses the Oracle Autonomous Transaction Processing Adapter to insert a new Order row in the ORDERS table in the Oracle Autonomous Processing database.
+  - Control is passed back to OIC Process to end the process.
+
+![](./media/image122.png)
+ Figure 2: Technical View of the Solution
+
+
 # Prerequisites
 
 Before starting these labs, you will need:
 
   - Oracle Cloud access from *<https://cloud.oracle.com/en_US/sign-in>*:
     
-      - Account name (*orasenatdhubsblue02*)
+      - Account name (*tenancy*)
     
       - Oracle Account Sign In (User Name and Password)
 
 
 You will also need the environment information listed below.  If you have used the Appendix section to set up your own Integration and ATP  instances, you will already have this data.  If the instances were set up for you, this information will be provided for you:
 
-  - Oracle Integration Instance Name (*AppIntCourse1*)
+  - Oracle Integration Instance Name 
 
-  - Autonomous Database Compartment (*Training*)
+  - Autonomous Database Compartment 
 
-  - Autonomous Database Name (*DB AppInt*)
+  - Autonomous Database Name 
 
-  - *atpc\_user* Autonomous Database User Password (*DBWelcome1234*)
+  - *atpc\_user* Autonomous Database User Password 
 
   In addition, you should make sure that you have the following software on your computer:
 
