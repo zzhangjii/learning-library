@@ -365,8 +365,7 @@ In this section we will create a new security list. This security list will be u
 **NOTE:** Shape cannot be changed later.
 
 - VIRTUAL CLOUD NETWORK: Choose your Virtual Cloud Network
-- SUBNET (1 OF 2): Choose the Regional Subnet we created. 
-- SUBNET (2 OF 2): Choose the Regional Subnet we created. **Ensure to choose different AD then the one in SUBNET(1 OF 2)**
+- SUBNET: Choose the Regional Subnet we created. 
 
 <img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_006.PNG" alt="image-alt-text" height="200" width="200">
 
