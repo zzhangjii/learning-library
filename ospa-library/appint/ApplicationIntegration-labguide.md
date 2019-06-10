@@ -114,7 +114,7 @@ been approved, the new process automation solution is to interact with a
 backend system in the cloud to create a new order. In these labs, the
 backend system will be a cloud-based database rather than a SaaS system.
 
-Let’s follow a scenario through the process during runtime:
+As you reference the business process model below, let’s follow a scenario through the process during runtime:
 - The workflow begins at the Submit Request start event where the Store Manager uses a web form to provide details for an inventory request for their store.  
 - When the Store Manager is done filling in the form, they press the Submit button.  This generates a workflow task for the Regional Manager at the Approve Request human activity.
 - The Regional Manager accepts the task and uses a web form to evaluate the request.  
@@ -131,7 +131,6 @@ Let’s follow a scenario through the process during runtime:
 - They approve the request this time by pressing the Approve button.
 - Processing continues through the Create Order integration activity where an order is created in the backend system.
 - Processing concludes at the Completed end event.   
-
 
  ![](./media/image123.png)
  Figure 1: Business View of the Solution
@@ -151,7 +150,7 @@ The solution will provide the following business value for Mama Maggy:
 
 ## Description of the Technical Solution
 
-With the business process architecture as a backdrop, let’s review the technical architecture to reveal what Oracle products are used to provide the new solution for Mama Maggy.  We’ll again follow an inventory request through the architecture using a scenario:
+With the business process architecture as a backdrop, let’s review the technical architecture to reveal what Oracle products are used to provide the new solution for Mama Maggy.  Refer to the technical architecture diagram below.  We’ll again follow an inventory request through the architecture using a scenario:
 - A Mama Maggy user, either a Store Manager or a Regional Manager interacts with the process automation application, built for Mama Maggy, that is hosted by Oracle Application Integration (commonly referred to as OIC).
 - OIC utilizes Oracle Identity Management to authenticate the user to the current role (Store Manager or Regional Manager) in the application.
 - OIC allows the user to view and execute workflow tasks in OIC Process based on the specifications in the business process model for the application.  
@@ -163,7 +162,6 @@ With the business process architecture as a backdrop, let’s review the technic
     - Maps the order request data into an Order
     -    Uses the Oracle Autonomous Transaction Processing Adapter to insert a new Order row in the ORDERS table in the Oracle Autonomous Processing database.
   - Control is passed back to OIC Process to end the process.
-
 ![](./media/image122.png)
  Figure 2: Technical View of the Solution
 
@@ -178,9 +176,6 @@ Before starting these labs, you will need:
     
       - Oracle Account Sign In (User Name and Password)
 
-
-You will also need the environment information listed below.  If you have used the Appendix section to set up your own Integration and ATP  instances, you will already have this data.  If the instances were set up for you, this information will be provided for you:
-
   - Oracle Integration Instance Name 
 
   - Autonomous Database Compartment 
@@ -188,6 +183,8 @@ You will also need the environment information listed below.  If you have used t
   - Autonomous Database Name 
 
   - *atpc\_user* Autonomous Database User Password 
+
+If you are using this lab guide as part of an Oracle class (like *Class Of SE*), the Oracle Integration and Autonomous Database instances are already set up for you and the environment information is provided for you in the *Lab Environment Details* section the *Participant Guide* for your class.  If you are using this lab guide outside of an Oracle class, refer to the *Appendix* section to establish your own instances and collect the above information as you create your Oracle Integration and Autonomous Database instances.  
 
   In addition, you should make sure that you have the following software on your computer:
 
@@ -199,7 +196,7 @@ You will also need the environment information listed below.  If you have used t
   - Oracle SQL Developer:
 
     - The latest version: (at least version 19.1): Mac: OSX or Windows
-    64-bit with JDK 8 included
+    64-bit. JDK 8 is included in the Windows 64-bit version.
 
     - The SQL Developer software can be found at:
     *<https://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html>*
@@ -534,34 +531,22 @@ have done the prerequisites, continue below:
     - Copy and paste the following XML statements into your editing session
     for the new file:
 
-        \<?xml version="1.0" encoding="UTF-8" ?\>
-
-        \<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://www.oracle.com"\>
-
-        \<xs:element name="Order"\>
-
-        \<xs:complexType\>
-
-        \<xs:sequence\>
-
-        \<xs:element name="orderID" type="xs:string"/\>
-
-        \<xs:element name="orderDate" type="xs:date"/\>
-
-        \<xs:element name="storeID" type="xs:decimal"/\>
-
-        \<xs:element name="stockID" type="xs:decimal"/\>
-
-        \<xs:element name="quantity\_ordered" type="xs:decimal"/\>
-
-        \</xs:sequence\>
-
-        \</xs:complexType\>
-
-        \</xs:element\>
-
-        \</xs:schema\>
-
+         ```
+         <?xml version="1.0" encoding="UTF-8" ?>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://www.oracle.com">
+        <xs:element name="Order">
+                  <xs:complexType>
+                            <xs:sequence>
+                                      <xs:element name="orderID" type="xs:string"/>
+                                      <xs:element name="orderDate" type="xs:date"/>
+                                      <xs:element name="storeID" type="xs:decimal"/>
+                                      <xs:element name="stockID" type="xs:decimal"/>
+                                      <xs:element name="quantity\_ordered" type="xs:decimal"/>
+                              </xs:sequence>
+                    </xs:complexType>
+          </xs:element>
+          </xs:schema>
+        ```
     - Save the file in your *ApplicationIntegrationLab* directory with the
     name *RESTEndpointRequestPayload.xsd*. Make sure you save it as a
     text file:
@@ -2665,9 +2650,10 @@ Oracle Integration Setup.
       Figure 108: Creating a Database User
 
     - Here is the text to copy/edit/paste for these statements:  
-*create user atpc\_user identified by
-"<span class="underline">DBWelcome1234</span>";  
-grant dwrole to atpc\_user;*  
+      ```
+      create user atpc_user identified by "DBWelcome1234";  
+      grant dwrole to atpc_user;
+      ```  
 
     - Of course, your password will likely be different than the one shown
 above (*DBWelcome1234*). Save the password in your
@@ -2743,12 +2729,14 @@ ApplicationIntegrationLabs folder ApplicationIntegrationLabs folder.
           Figure 109: Creating a Database Table
 
       - Here is the text to copy/edit/paste for these statements:  
-*CREATE TABLE atpc\_user.orders (  
-orderId VARCHAR2(8) PRIMARY KEY,  
-orderDate DATE NOT NULL,  
-storeId NUMBER(3,0) NOT NULL,  
-stockId NUMBER (6,0) NOT NULL,  
-quantityOrdered NUMBER(3,0) NOT NULL);*
+        ```
+        CREATE TABLE atpc_user.orders (  
+        orderId VARCHAR2(8) PRIMARY KEY,  
+        orderDate DATE NOT NULL,  
+        storeId NUMBER(3,0) NOT NULL,  
+        stockId NUMBER (6,0) NOT NULL,  
+        quantityOrdered NUMBER(3,0) NOT NULL);
+        ```
 
       - Click the *Run Script icon* (highlighted above) to execute both
     statements. You will see feedback that the table was created.  Look for 
