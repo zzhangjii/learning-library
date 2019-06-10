@@ -174,20 +174,20 @@ Before starting these labs, you will need:
 
   - Oracle Cloud access from *<https://cloud.oracle.com/en_US/sign-in>*:
     
-      - Account name (*orasenatdhubsblue02*)
+      - Account name (*tenancy*)
     
       - Oracle Account Sign In (User Name and Password)
 
 
 You will also need the environment information listed below.  If you have used the Appendix section to set up your own Integration and ATP  instances, you will already have this data.  If the instances were set up for you, this information will be provided for you:
 
-  - Oracle Integration Instance Name (*AppIntCourse1*)
+  - Oracle Integration Instance Name 
 
-  - Autonomous Database Compartment (*Training*)
+  - Autonomous Database Compartment 
 
-  - Autonomous Database Name (*DB AppInt*)
+  - Autonomous Database Name 
 
-  - *atpc\_user* Autonomous Database User Password (*DBWelcome1234*)
+  - *atpc\_user* Autonomous Database User Password 
 
   In addition, you should make sure that you have the following software on your computer:
 
