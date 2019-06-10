@@ -279,7 +279,7 @@ We now have two Compute instances with Web servers installed and a basis index.h
 
 Load balancers should always reside in different subnets than your application instances. This allows you to keep your application instances secured in private subnets, while allowing public Internet traffic to the load balancers in the public subnets.
 
-## Create Security List Route table and two subnets
+## Create Security List Route table and additional subnet
 
 In this section we will create a new security list. This security list will be used by the load balancer (that will be created later on). This will ensure all traffic to the two web servers is routed properly.
 
@@ -307,6 +307,8 @@ In this section we will create a new security list. This security list will be u
 - Create in Compartment: This field defaults to your current compartment. Make sure correct Compartment is selected.
 
 **Click +Additional Route Rules**
+
+
 - Target Type: Select **Internet Gateway** 
 - Destination CIDR Block: 0.0.0.0/0 
 - Compartment: Make sure the correct Compartment is selected
@@ -330,6 +332,10 @@ In this section we will create a new security list. This security list will be u
 
 - Name: Enter a name (for example, LB-Subnet-1).
 - Subnet Type: Regional
+
+ **(When using a regional subnet, OCI selects two AD's. If you would like to control which two AD's are used, you would want to create individual AD-speicfic subnets)**
+
+
 - CIDR Block: Enter 10.0.4.0/24 
 - Route Table: Select the Route Table you created earlier.
 - Subnet access: select Public Subnet.
@@ -340,75 +346,59 @@ In this section we will create a new security list. This security list will be u
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_004.PNG" alt="image-alt-text" height="200" width="200">
 
-**Second Subnet:** (Your Virtual Cloud Network should be visible in  OCI Console window.)
-
-12. Click **Subnets**.
-
-13. Click **Create Subnet**. Fill out the dialog box:
-
-
-- Name: Enter a name (for example, LB-Subnet-2).
-- Subnet Type: Regional
-- CIDR Block: Enter 10.0.5.0/24 
-- Route Table: Select the Route Table you created earlier.
-- Subnet access: select Public Subnet.
-- DHCP Options: Select the default.
-- Security Lists: Select the Security List you created earlier.
-
-14. Leave all other options as default, Click **Create Subnet**.
 
 ## Create Load Balancer and update Security List
 
-**When you create a load balancer, you choose its shape (size) and you specify two subnets (created earlier) from different Availability Domains. This ensures that the load balancer is highly available and is only active in one subnet at a time.**
+**When you create a load balancer, you choose its shape (size) and you specify subnet (created earlier) from different Availability Domains. This ensures that the load balancer is highly available and is only active in one subnet at a time.**
 
 1. From OCI Services menu, click **Load Balancers** under **Networking**
 
 2. Click **Create Load Balancer**. Fill out the dialog box;
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_005.PNG" alt="image-alt-text" height="200" width="200">
-
-**Under Load Balancer Information:**
+**Under Add Details**
 
 
-- Name: Enter a name for your load balancer.
-- Shape: Select 100Mbps. This specifies the bandwidth of the load balancer.
+- LOAD BALANCER NAME: Enter a name for your load balancer.
+- CHOOSE VISIBILITY TYPE: Public
+- CHOOSE THE MAXIMUM TOTAL BANDWIDTH: Select 100Mbps. (This specifies the bandwidth of the load balancer.)
 
 **NOTE:** Shape cannot be changed later.
 
-- Visibility Type: PUBLIC LOAD BALANCER
-
-**Under Network Information:**
-
-
--Virtual Cloud Network: Select the Virtual Cloud Network for your load balancer.
-- Subnet1: Choose the first subnet created earlier
-- Subnet2: Choose the second subnet created earlier 
-
-**Under Listener Information:**
-
-
-- Protocol:  HTTP
-- Port: Enter 80 (as the port on which to listen for incoming traffic)
-
-**Under Backend set Information:**
-
-
-- Traffic Distribution Policy: Weighted Round Robin
-- Choose a compute instance private IP address: Select this option 
-- Compartment: Select your compartment
-- Instance Name: Select the first compute instance
-- Private IP address: Select private ip of compute (if not selected alread)
-- Port: 80
-- Weight: 1
-- Click **+Additional Backend**
-
-**Repeat above steps to add the second compute instance information**
-
-3. Click **Create** 
+- VIRTUAL CLOUD NETWORK: Choose your Virtual Cloud Network
+- SUBNET (1 OF 2): Choose the Regional Subnet we created. 
+- SUBNET (2 OF 2): Choose the Regional Subnet we created. **Ensure to choose different AD then the one in SUBNET(1 OF 2)**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_006.PNG" alt="image-alt-text" height="200" width="200">
 
+**Under Choose Backends:**
+
+
+- SPECIFY A LOAD BALANCING POLICY: Weighted Round Robin
+- Click **Add Backend** and choose the two backend compute instance created earlier
+
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_007.PNG" alt="image-alt-text" height="200" width="200">
+
+
+***Under SPECIFY HEALTH CHECK POLICY***
+
+
+- PROTOCOL: HTTP
+- Port: Enter 80 
+- URL PATH (URI): /
+
+***Leave other options as default***
+
+**Under Configure Listener**
+
+- SPECIFY THE TYPE OF TRAFFIC YOUR LISTENER HANDLES: HTTP
+- SPECIFY THE PORT YOUR LISTENER MONITORS FOR INGRESS TRAFFIC: 80
+
+***Leave other options as default***
+
+
+**Under Backend set Information:**
+
+3. Click **Create Load Balancer** 
 
 4. Wait for the load balancer to become active and then note down it’s Public IP address.
 
