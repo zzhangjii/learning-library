@@ -1,4 +1,4 @@
-# Object Practice - Object Storage Service
+# Object Practice - Object Storage Service.
   
 ## Table of Contents
 
