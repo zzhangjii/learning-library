@@ -87,6 +87,8 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 
 4. Fill out the dialog box:
 
+
+
 - **Create in Compartment:** Has the correct compartment
 
 - **Name:** Enter easy to re¬member name
@@ -106,6 +108,8 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_001.PNG" alt="image-alt-text" height="200" width="200">
 
 6. Click **Add Ingress Rule** under **Ingress Rules** and add below rule:
+
+
 - **Make sure STATELESS Flag in un-checked**
 - **SOURCE TYPE:** CIDR
 - **SOURCE CIDR:** 0.0.0.0/0
@@ -171,6 +175,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 8. Click Create Instance. Fill out the dialog box:
 
+
 - **Name:** Enter a name 
 
 - **Availability Domain:** Select availability domain
@@ -221,27 +226,33 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 15. From OCI services menu Click **Block Volumes** under Block Storage, then Click **Create Block Volume**.
 
 16. Fill out the dialog box: 
+
+
 - **Create in Compartment:** Has the correct compartment selected.
 - **Name:** Enter a name for the block volume (e.g. "block_vm).
 - **Availability Domain:** Select the first available domain (must be same as 
 Compute).
 - **SIZE:** Set to 50
 - **BACKUP POLICY:** Set to None (If this field shows ‘Error Retrieving Value’ then leave it as is)
+
 17. Click **Create Block Volume**. Wait for volume to become available. Wait for Block Volume state to change from 'Provisioning' to 'Available'
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_003.PNG" alt="image-alt-text" height="200" width="200">
 
 18. Attach Block volume to your compute instance. From OCI services menu Click **Instance** under Compute 
 
-19. For the compute instance created earlier click  Action item. Click **Attach Block Volume**.
+19. For the compute instance created earlier, click Action item. Click **Attach Block Volume**.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_004.PNG" alt="image-alt-text" height="200" width="200">
 
 20. Fill out the dialog box:
+
+
 - Choose how you want to attach your block volume:Check Paravirtualized
 
 **NOTE:** We can also use ISCSI mode, in which case we will not have to use ISCSI commands as detailed later on. For more information please refer to ;
 **https://docs.cloud.oracle.com/iaas/Content/Block/Concepts/overview.htm#attachtype** OR refer Appendix section at the end of the lab.
+
 - BLOCK VOLUME COMPARTMENT: Ensure correct compartment is selected
 - Block Volume: Choose the volume created earlire
 - Access: Choose READ/WRITE
@@ -409,6 +420,7 @@ sudo umount /dev/<VOLUME_NAME>
 
 **NOTE :** Boot Volume field is set to BOOT VOLUME and to the boot volume you detached from the original Instance.
 
+
 - **Intance Type:** Select Virtual Machine
 - **Instance Shape:** Choose the shape with least OCPU
 - **SSH Keys:** Choose ‘Paste SSH Keys’ and paste the Public Key saved earlier.
@@ -416,6 +428,7 @@ sudo umount /dev/<VOLUME_NAME>
 - **Virtual Cloud Network:** Select the VCN created earlier
 - **Subnet compartment:** Select yor compartment 
 - **Subnet:** Select the Public subnet.
+
 8. Click **Create Instance**.
 
 **NOTE:** If 'Service limit' error is displayed choose a different shape such as VM.Standard.E2.2 OR VM.Standard2.2 OR Choose a different AD
