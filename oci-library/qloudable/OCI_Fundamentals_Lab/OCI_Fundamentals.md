@@ -81,6 +81,7 @@ In this lab you will deploy http servers on two compute instances in Oracle Clou
 
 4. Fill out the dialog box:
 
+
 - **Name:** Enter easy to re¬member name
 
 - **Create in Compartment:** Has the correct compartment
@@ -149,6 +150,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 7. Switch to the OCI console. From OCI servies menu, Click **Instances** under **Compute** 
 
 8. Click Create Instance. Fill out the dialog box:
+
 
 - **Name:** Enter a name 
 
@@ -287,6 +289,7 @@ In this section we will create a new security list. This security list will be u
 
 2. Click your VCN name, then **Security Lists** and then **Create Security List** (You will be creating a new security list).
 
+
 - CREATE IN COMPARTMENT: Select the compartment assigned to you (if not already selected).
 - SECURITY LIST Name: Specify a name (for example, LB Security List).
 - Click **Create Security List** 
@@ -298,6 +301,7 @@ In this section we will create a new security list. This security list will be u
 4. Click your Virtual Cloud Network name 
 
 5. Click **Route Tables** (You will be creating a new route table), then **Create Route Table**. Fill out the dialog box:
+
 
 - Name: Enter a name (for example, LB Route Table).
 - Create in Compartment: This field defaults to your current compartment. Make sure correct Compartment is selected.
@@ -323,6 +327,7 @@ In this section we will create a new security list. This security list will be u
 
 10. Click **Create Subnet**. Fill out the dialog box:
 
+
 - Name: Enter a name (for example, LB-Subnet-1).
 - Subnet Type: Regional
 - CIDR Block: Enter 10.0.4.0/24 
@@ -340,6 +345,7 @@ In this section we will create a new security list. This security list will be u
 12. Click **Subnets**.
 
 13. Click **Create Subnet**. Fill out the dialog box:
+
 
 - Name: Enter a name (for example, LB-Subnet-2).
 - Subnet Type: Regional
@@ -363,6 +369,7 @@ In this section we will create a new security list. This security list will be u
 
 **Under Load Balancer Information:**
 
+
 - Name: Enter a name for your load balancer.
 - Shape: Select 100Mbps. This specifies the bandwidth of the load balancer.
 
@@ -372,16 +379,19 @@ In this section we will create a new security list. This security list will be u
 
 **Under Network Information:**
 
+
 -Virtual Cloud Network: Select the Virtual Cloud Network for your load balancer.
 - Subnet1: Choose the first subnet created earlier
 - Subnet2: Choose the second subnet created earlier 
 
 **Under Listener Information:**
 
+
 - Protocol:  HTTP
 - Port: Enter 80 (as the port on which to listen for incoming traffic)
 
 **Under Backend set Information:**
+
 
 - Traffic Distribution Policy: Weighted Round Robin
 - Choose a compute instance private IP address: Select this option 
@@ -424,6 +434,7 @@ Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure 
 
 10. Click **Egress Rule** under Resources. Click **Add Egress Rule**,  click **+Additional Egress Rule** and enter the following Egress rule; Ensure to leave STATELESS flag un-checked
 
+
 - Destination Type: CIDR
 - Destination CIDR: 0.0.0.0/0
 - IP Protocol: Select TCP.
@@ -435,6 +446,7 @@ Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure 
 
 **First Rule**
 
+
 - Destination Type: CIDR
 - Destination CIDR: 10.0.4.0/24
 - IP Protocol: Select TCP.
@@ -444,6 +456,7 @@ Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure 
 13. Click **+Additional Egress Rule** and enter the following Egress rule; Ensure to leave STATELESS flag un-checked
 
 **Second Rule**
+
 
 - Destination Type: CIDR
 - Destination CIDR: 10.0.5.0/24
@@ -488,26 +501,26 @@ Delete Load Balancer and associated components:
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_011.PNG" alt="image-alt-text" height="200" width="200">
 
-2. From OCI services menu Click **Instances** under Compute
+4. From OCI services menu Click **Instances** under Compute
 
-3. Locate first compute instance, Click Action icon and then **Terminat** 
+5. Locate first compute instance, Click Action icon and then **Terminat** 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text" height="200" width="200">
 
-4. Make sure **Permanently delete the attached Boot Volume** is checked, Click **Terminate Instance**. Wait for instance to fully Terminate
+6. Make sure **Permanently delete the attached Boot Volume** is checked, Click **Terminate Instance**. Wait for instance to fully Terminate
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0017.PNG" alt="image-alt-text" height="200" width="200">
 
-5. Repeat the step to delete the second compute intance.
+7. Repeat the step to delete the second compute intance.
 
-6. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will 
+8. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will 
 appear.
 
-7. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
+9. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text" height="200" width="200">
 
-8. From OCI services menu Click **Networking**, then **Public IPs**,locate the Reserved Public IP you created. Click Action icon and then **Terminate**
+10. From OCI services menu Click **Networking**, then **Public IPs**,locate the Reserved Public IP you created. Click Action icon and then **Terminate**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0019.PNG" alt="image-alt-text" height="200" width="200">
 
