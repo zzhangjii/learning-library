@@ -31,7 +31,7 @@
   - [Key Features and Functionality](#Key-Features-and-Functionality)
   - [Create a Process Application](#Create-a-Process-Application)
   - [Add a Process](#Add-a-Process)
-[Tailor Roles for Each Process Swimlane](#Tailor-Roles-for-Each-Process-Swimlane)
+  - [Tailor Roles for Each Process Swimlane](#Tailor-Roles-for-Each-Process-Swimlane)
   - [Implement the Submit Request Event](#Implement-the-Submit-Request-Event)
   - [Implement the Approve Request Activity](#Implement-the-Approve-Request-Activity)
   - [Implement the Resubmit Activity](#Implement-the-Resubmit-Activity)
