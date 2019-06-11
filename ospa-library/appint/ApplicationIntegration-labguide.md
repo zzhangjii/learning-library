@@ -1,6 +1,6 @@
 # Application Integration Lab Guide
 
-## June 10, 2019 - 12:30 PM
+## June 11, 2019 - 2:00 PM
 
 # Table of Contents
 
@@ -59,7 +59,7 @@
 
 Here is a brief overview of what you can expect to accomplish in these
 lab exercises. The purpose of the labs is to familiarize yourself with
-the features and functionality of Oracle products.
+the features and functionality of Oracle Integration so you can represent the product in customer sessions, deliver demonstrations and begin developing skills to build your own proof-of-concept (POC) projects for customers.
 
 To optimize your experience there are some general guidelines that will
 help you get the most from these lab exercises.
@@ -114,24 +114,19 @@ been approved, the new process automation solution is to interact with a
 backend system in the cloud to create a new order. In these labs, the
 backend system will be a cloud-based database rather than a SaaS system.
 
-Let’s follow a scenario through the process during runtime:
-- The workflow begins at the Submit Request start event where the Store Manager uses a web form to provide details for an inventory request for their store.  
-- When the Store Manager is done filling in the form, they press the Submit button.  This generates a workflow task for the Regional Manager at the Approve Request human activity.
-- The Regional Manager accepts the task and uses a web form to evaluate the request.  
+As you reference the business process model below, follow a scenario through the process during runtime:
+- The workflow begins at the *Submit Request* start event where the Store Manager uses a web form to provide details for an inventory request for their store.  
+- When the Store Manager is done filling in the form, they press the *Submit* button.  This generates a workflow task for the Regional Manager at the *Approve Request* human activity.
+- \* The Regional Manager accepts the task and uses a web form to evaluate the request.  
 - If the request looks reasonable:
-  - The Store Manager presses the Approve button on the web form.
-  - Processing continues into the Create Order integration activity where an order is created in the backend system.  
-  - The process then ends at the Completed end event.
+  - The Store Manager presses the *Approve* button on the web form.
+  - Processing continues into the *Create Order* integration activity where an order is created in the backend system.  
+  - The process then ends at the *Completed* end event.
 - If the request looks unreasonable:
-  - The Regional Manager enters comments into the web form and presses the Reject button on the web form.
-  - The “Approved?” exclusive gateway routes the request back to the Store Manager at the Resubmit human activity.
+  - The Regional Manager enters comments into the web form and presses the *Reject* button on the web form.
+  - The *Approved?* exclusive gateway routes the request back to the Store Manager at the *Resubmit* human activity.
   - The Store Manager accepts the task and uses a web form to read the Regional Manager’s comments and to add some additional notes to the request to plead their case.
-  - When the Store Manager is done editing their request in the web form, they press the Submit button.  This generates a workflow task for the Regional Manager at the Approve Request human activity again.
-- The Regional Manager accepts the task and uses a web form to evaluate the updated request.  
-- They approve the request this time by pressing the Approve button.
-- Processing continues through the Create Order integration activity where an order is created in the backend system.
-- Processing concludes at the Completed end event.   
-
+  - When the Store Manager is done editing their request in the web form, they press the *Submit* button. This generates a workflow task for the Regional Manager at the *Approve Request* human activity again. (Processing continues at * above.)  
 
  ![](./media/image123.png)
  Figure 1: Business View of the Solution
@@ -151,13 +146,13 @@ The solution will provide the following business value for Mama Maggy:
 
 ## Description of the Technical Solution
 
-With the business process architecture as a backdrop, let’s review the technical architecture to reveal what Oracle products are used to provide the new solution for Mama Maggy.  We’ll again follow an inventory request through the architecture using a scenario:
-- A Mama Maggy user, either a Store Manager or a Regional Manager interacts with the process automation application, built for Mama Maggy, that is hosted by Oracle Application Integration (commonly referred to as OIC).
+With the business process architecture as a backdrop, let’s review the technical architecture to reveal what Oracle products are used to provide the new solution for Mama Maggy.  Refer to the technical architecture diagram below.  We’ll again follow an inventory request through the architecture using a scenario:
+- A Mama Maggy user, either a Store Manager or a Regional Manager, interacts with the process automation application, built for Mama Maggy, that is hosted by Oracle Integration (commonly referred to as *OIC*).
 - OIC utilizes Oracle Identity Management to authenticate the user to the current role (Store Manager or Regional Manager) in the application.
-- OIC allows the user to view and execute workflow tasks in OIC Process based on the specifications in the business process model for the application.  
+- OIC allows the user to view and execute workflow tasks based on the specifications in the business process model for the application.  
 - Store Managers and Regional Managers then submit and evaluate order requests.
 - Once a Regional Manager has approved an inventory order request:
-  - OIC Process sends a REST request to OIC Integration that hosts an integration built for Mama Maggy.  
+  - OIC Process sends a REST request (JSON payload) to OIC Integration that hosts an integration built for Mama Maggy.  
   - The integration:
     - Uses the Oracle REST Adapter to accept the order request information from the Regional Manager
     - Maps the order request data into an Order
@@ -178,9 +173,6 @@ Before starting these labs, you will need:
     
       - Oracle Account Sign In (User Name and Password)
 
-
-You will also need the environment information listed below.  If you have used the Appendix section to set up your own Integration and ATP  instances, you will already have this data.  If the instances were set up for you, this information will be provided for you:
-
   - Oracle Integration Instance Name 
 
   - Autonomous Database Compartment 
@@ -189,7 +181,9 @@ You will also need the environment information listed below.  If you have used t
 
   - *atpc\_user* Autonomous Database User Password 
 
-  In addition, you should make sure that you have the following software on your computer:
+If you are using this lab guide as part of an Oracle class (like *Class Of SE*), the Oracle Integration and Autonomous Database instances are already set up for you and the environment information is provided for you in the *Lab Environment Details* section the *Participant Guide* for your class.  If you are using this lab guide outside of an Oracle class, refer to the *Appendix* section to establish your own instances and collect the above information as you create your Oracle Integration and Autonomous Database instances.  
+
+  In addition, you should make sure that you have Google Chrome and Oracle SQL Developer installed on your computer.  They may already be there so there is no need to reinstall them.  If you need them,  here is where you can find the software: 
 
   - Google Chrome browser. Other browsers
     should work well, but this lab was tested with Chrome. The Chrome
@@ -199,10 +193,10 @@ You will also need the environment information listed below.  If you have used t
   - Oracle SQL Developer:
 
     - The latest version: (at least version 19.1): Mac: OSX or Windows
-    64-bit with JDK 8 included
+    64-bit. JDK 8 is included in the Windows 64-bit version.
 
-    - The SQL Developer software can be found at:
-    *<https://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html>*
+    - Oracle SQL Developer software can be found at:
+    *<https://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html>*.  The JDK is not included in the Oracle SQL Developer download.
 
     - For Mac, also download and install JDK SE Development Kit 8 (at
     least version 8u211) *before you install Oracle SQL Developer*. JDK 8
@@ -239,7 +233,7 @@ have done the prerequisites, continue below:
 
 ## Clear Browser Data
 
-6.  During interactions with the Oracle Cloud, users sometimes have browser difficulties.  The symptom is the appearance of the "ERR_TOO_MANY_REDIRECTS" message.  To prevent this, we'll clear the browser data (cache) periodically throughout the lab exercises.  Clear your browser data now:
+6.  During interactions with the Oracle Cloud, users sometimes have browser difficulties.  The symptom is the appearance of the *"ERR_TOO_MANY_REDIRECTS"* message.  To prevent this, we'll clear the browser data (cache) periodically throughout the lab exercises.  Clear your browser data now:
     
       - On a Windows PC:
         
@@ -286,10 +280,10 @@ have done the prerequisites, continue below:
 
     - Sign in to the Oracle Public Cloud:
       - Browse to
-    https://cloud.oracle.com/en_US/sign-in and entering your tenancy name for Account
+    https://cloud.oracle.com/en_US/sign-in and entering your tenancy name for *Account*
     and then clicking Next.  Check the *Prerequisites* section above for tenancy name.
 
-      - When prompted for User Name and Password, enter your Oracle Cloud
+      - When prompted for *User Name* and *Password*, enter your Oracle Cloud
     Account Sign In credentials (user name and password).  NOTE: If you are an
     Oracle employee, click the *Oracle SSO* link at the right to enter your
     credentials.
@@ -302,29 +296,11 @@ have done the prerequisites, continue below:
     entry for *Tenancy Name* also and insert the name of your tenancy in the scratchpad
     too.
 
-    - Click the *Autonomous Database* option to display the *Autonomous Database Manage
-    Data and Transactions* page.
+    - Look for the *Autonomous Transaction Processing* option.  If it doesn't appear, click the *Customize Dashboard* button in the upper-right corner to display the *Customize Dashboard* dialog.  Click the *Show* button next to *Autonomous Transaction Processing* and click the *X* at the top of the dialog to close it.
 
-    - Make sure that the *Transaction Processing with Mixed Workloads* option is checked 
-    *On* in the upper-left corner of the page.
+    - Click the *Autonomous Transaction Processing* option to display the *Service: Autonomous Transaction Processing* window.   
 
-    - Click the *Go to My Dashboard* button in the upper-right corner to
-    display the *Dashboard* page.
-
-    - Click on the *Customize Dashboard* option at the top-right to display the 
-    *Customize Dashboard* popup dialog.  If you don't see the option, click on the icon
-    in the upper-rightshowing a *circle with a dash inside* to display additional
-    options.
-
-    - Find *Autonomous Transaction Processing* in the *Data Management* section list and click on the Show button to the right to make sure that it always shows on your dashboard.
-
-    - Close the dialog by clicking on the *X* in the upper-right corner.
-
-    - Verify that *Autonomous Transaction Processing* now appears and click on it to
-    display the *Service: Autonomous Transaction Processing* page.  
-
-    - Click on the *Open Service Console* button in the upper-right corner to display
-    the *Autonomous Database* page.
+    - Click on the *Open Service Console* button in the upper-right corner to display the *Autonomous Databases* page.
 
       - In the *Compartment* field at the left, select your Autonomous
     Database Compartment from the dropdown list. You noted that name in
@@ -337,10 +313,13 @@ have done the prerequisites, continue below:
 
         Figure 2: Selecting Your Database
 
-    - The *Autonomous Database Details* page appears.
+    - The *Autonomous Database Details* page appears:
+
+       ![](./media/image124.png)
+
+        Figure 3: Autonomous Database Details Page
     
-    - If you don’t see the
-    “*Available*” icon shown below, click the *Start* button at the top to start the
+    - If you don’t see the “*Available*” icon shown below, click the *Start* button at the top to start the
     instance.  When the *Confirm* dialog appears, click the *Start* may take as long as 15 minutes) until the “*AVAILABLE*” message appears there before proceeding.  You might periodically refresh
     your browser page.  If the database had already been started, forge ahead.  
 
@@ -407,8 +386,7 @@ have done the prerequisites, continue below:
       - Configuration File: *Browse* to and select your wallet zip file
         that you saved in your ApplicationIntegrationLabs folder above.
     
-      - Service: *databaseappint\_high*  NOTE: If you don't find this option,
-      select any other that ends with *_high*.
+      - Service: *databaseappint\_high* (That gives us the best performance.)
     
       - Click on the "Save Password* field so you aren’t prompted for the
         atpc\_user password each time you activate your connection.
@@ -521,10 +499,10 @@ have done the prerequisites, continue below:
 ## Prepare a Data Definition
 
 11. We need to have a data definition available to use during Lab 1 as we
-    configure an endpoint for our integration. So, let’s get the data
+    configure an a REST endpoint for our integration. So, let’s get the data
     definition file in place now so it will be ready to use. We
-    will use the XSD format to define the data. “XSD” stands for XML
-    Schema Definition. It is a standard way to describe the structure of
+    will use the XSD format to define the data. *“XSD”* stands for *XML
+    Schema Definition*. It is a standard way to describe the structure of
     an XML document. Our request payload for our endpoint will be
     formatted in XML.
 
@@ -534,43 +512,32 @@ have done the prerequisites, continue below:
     - Copy and paste the following XML statements into your editing session
     for the new file:
 
-        \<?xml version="1.0" encoding="UTF-8" ?\>
-
-        \<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://www.oracle.com"\>
-
-        \<xs:element name="Order"\>
-
-        \<xs:complexType\>
-
-        \<xs:sequence\>
-
-        \<xs:element name="orderID" type="xs:string"/\>
-
-        \<xs:element name="orderDate" type="xs:date"/\>
-
-        \<xs:element name="storeID" type="xs:decimal"/\>
-
-        \<xs:element name="stockID" type="xs:decimal"/\>
-
-        \<xs:element name="quantity\_ordered" type="xs:decimal"/\>
-
-        \</xs:sequence\>
-
-        \</xs:complexType\>
-
-        \</xs:element\>
-
-        \</xs:schema\>
-
+         ```
+         <?xml version="1.0" encoding="UTF-8" ?>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://www.oracle.com">
+        <xs:element name="Order">
+                  <xs:complexType>
+                            <xs:sequence>
+                                      <xs:element name="orderID" type="xs:string"/>
+                                      <xs:element name="orderDate" type="xs:date"/>
+                                      <xs:element name="storeID" type="xs:decimal"/>
+                                      <xs:element name="stockID" type="xs:decimal"/>
+                                      <xs:element name="quantity\_ordered" type="xs:decimal"/>
+                              </xs:sequence>
+                    </xs:complexType>
+          </xs:element>
+          </xs:schema>
+        ```
     - Save the file in your *ApplicationIntegrationLab* directory with the
     name *RESTEndpointRequestPayload.xsd*. Make sure you save it as a
     text file:
     
-        - NOTE: On a Mac, before you save, use the *Format / Make Plain Text* option to
+        - NOTES: 
+          - On a Mac, before you save, use the *Format / Make Plain Text* option to
         convert the contents to text. Then, change the file extension to
         xsd in the Finder after you save it.
     
-        - NOTE: On a Windows PC, save the file as a *Text Document*
+          - On a Windows PC, save the file as a *Text Document*
         (\*.txt) and then change the file extension to xsd in the File
         Explorer.
 
@@ -604,8 +571,12 @@ order based upon an approved order request.
     order data via a REST POST and creates a new order row in the ORDERS
     table in the ATP database.
 
+  Revisit the technical architecture, displayed below, to get your bearings.  Focus on the *OIC Integration* area.  In the integration we are about to build, we will create connections to utilize these two adapters and we will perform data mappings to make sure the right data is available to them.  Ultimately, a new order will be added to *Oracle Autonomous Transaction Processing*:
 
-Let's get started.  Follow the steps and ask questions if you get confused:
+![](./media/image122.png)
+ Figure 2: Technical View of the Solution
+
+Let's get started!
 
 1.  Start fresh by clearing your Chrome browser cache (all browsing
     data). If you need help, refer to the *Preparing Your Environment*
@@ -916,7 +887,7 @@ integration.
 
     ![](./media/image25.png)
 
- Figure 20: Integration With a Trigger Specified
+      Figure 20: Integration With a Trigger Specified
 
 38. Click *Save* in the upper-right corner.
 
@@ -929,8 +900,6 @@ integration.
     ![](./media/image27.png)
 
     Figure 21: Accessing Available Invokes in the Integration Editor
-
-
 
 40. Drag your *ATP\_Invoke\_Insert\_Into\_DB* connection and drop it
     onto the *plus icon* that appears on the diagram right below your
@@ -1180,6 +1149,11 @@ you built in Lab 1.
   - Verify that an order is inserted into the database for each approved
     order request.
 
+Again, revisit the technical architecture, displayed below, to review the big picture.  Focus on the *OIC Process* element this time.  In the process automation application we are about to build, we will make a RESTful API call to your Lab 1 integration.  This will bring the two adapters into action and will result in a new order being added to *Oracle Autonomous Transaction Processing*:
+
+![](./media/image122.png)
+ Figure 2: Technical View of the Solution
+
 Let's keep going. Again, follow the steps and ask questions if you get confused:
 
 1.  Start fresh by clearing your Chrome browser cache (all browsing
@@ -1366,7 +1340,7 @@ needs to be part of a process application. Let’s create one:
 
 15. Create the form for the store managers to use to submit a new order
     request. Due to the type of human activity, the form will
-    automatically display a SUBMIT button at runtime:
+    automatically display a *SUBMIT* button at runtime:
 
     - In the *Form* area of the properties panel, click the *plus sign icon*
     and click the *New Web Form* option:
@@ -1444,14 +1418,21 @@ needs to be part of a process application. Let’s create one:
 16. Turn your attention back to your process model by clicking on the
     *Request Evaluation* tab at the upper-left:
 
-    ![](./media/image57.png)
+      ![](./media/image57.png)
 
-       Figure 49: Finding the Tabs to Access Tabbed panels
+      Figure 49: Finding the Tabs to Access Tabbed panels
 
 ## Implement the Approve Request Activity
 
 18. Let’s work on the Approve Request human activity so the regional
-    manager can evaluate an order request. They each order request, they
+    manager can evaluate an order request:
+
+    ![](./media/image125.png)
+
+       Figure 49: Approve Request Human Activity
+
+    
+19. For each order request, they
     will either approve it or reject it. Due to the type of human
     activity, the form will automatically display APPROVE and REJECT
     buttons at runtime:
@@ -1520,8 +1501,13 @@ needs to be part of a process application. Let’s create one:
 
 ## Implement the Resubmit Activity
 
-20. Let’s work on the Resubmit human activity so that the store manager can
-    look at a rejected request, edit it and resubmit it:
+20. Let’s work on the Resubmit human activity next:
+
+    ![](./media/image126.png)
+
+    Figure 49: Resubmit Human Activity
+
+21. Recall that the Resubmit human activity allows the store manager to review a rejected request, edit it and resubmit it:
 
     - Click on the *Resubmit* activity in the process model.
 
@@ -1870,9 +1856,13 @@ our condition to see if the order request should be routed along the
 
 31. There is one more task we need to perform to complete the process
     model. Based on our initial Mama Maggy scenario, what didn’t get
-    done yet? If you answered: “We haven’t created an order in the
-    backend system (ATP database),” you are right. We need to add a call
-    to the *Create New Order integration* that you built in Lab 1.
+    done yet? If you answered: *“We haven’t created an order in the
+    backend system (ATP database),”* you are right. We need to add a call
+    to the *Create New Order integration* that you built in Lab 1.  Here is the *Create Order* activity in your process model:
+
+    ![](./media/image127.png)
+
+      Figure 68: Create Order Integration Activity
     
       - Start by redisplaying your *Application Home Page* by clicking
         on the *Application Home* tab, highlighted below, in the
@@ -2495,25 +2485,25 @@ Oracle Integration Setup.
 
     - Fill in the fields:
     
-      - Workload Type: Click On Autonomous Transaction Processing
+      - Workload Type: Click *On* for *Autonomous Transaction Processing*
     
-      - Display Name: \<EnterYourDesiredDisplayName\>
+      - Display Name: *\<EnterYourDesiredDisplayName\>*
     
-      - Database Name: \<EnterYourDesiredDatabaseNameWithNoSpaces\>
+      - Database Name: *\<EnterYourDesiredDatabaseNameWithNoSpaces\>*
     
-      - CPU Core Count: \<EnterDesiredNumberOfCores\> (1 works well for
+      - CPU Core Count: *\<EnterDesiredNumberOfCores\>* (*1* works well for
         a training sandbox.)
     
-      - Storage (TB): \<EnterDesiredStorageSize\> (1 works well for a
+      - Storage (TB): *\<EnterDesiredStorageSize\>* (*1* works well for a
         training sandbox.)
     
       - Administrator Credentials
         
-        - UserName: ADMIN (default)
+        - UserName: *ADMIN* (default)
         
-        - Password: \<EnterYourDesiredAdminDBPassword\>
+        - Password: *\<EnterYourDesiredAdminDBPassword\>*
 
-        - Confirm Password: \<EnterYourDesiredAdminDBPassword\>
+        - Confirm Password: *\<EnterYourDesiredAdminDBPassword\>*
     
         - License Type: Leave *My Organization Already Owns Oracle
         Database Software Licenses* checked *On*.
@@ -2623,7 +2613,7 @@ Oracle Integration Setup.
                 ApplicationIntegrationLabs folder
                 ApplicationIntegrationLabs folder.
             
-          - Service: *databaseappint\_high*
+          - Service: *databaseappint\_high*  (That gives us the best performance.)
         
           - Click the *Test* button to see if SQL Developer can connect
             to your ATP instance. Wait for a moment as access is
@@ -2665,9 +2655,10 @@ Oracle Integration Setup.
       Figure 108: Creating a Database User
 
     - Here is the text to copy/edit/paste for these statements:  
-*create user atpc\_user identified by
-"<span class="underline">DBWelcome1234</span>";  
-grant dwrole to atpc\_user;*  
+      ```
+      create user atpc_user identified by "DBWelcome1234";  
+      grant dwrole to atpc_user;
+      ```  
 
     - Of course, your password will likely be different than the one shown
 above (*DBWelcome1234*). Save the password in your
@@ -2705,7 +2696,7 @@ ApplicationIntegrationLabs folder ApplicationIntegrationLabs folder.
             file* that you saved in your ApplicationIntegrationLabs
             folder ApplicationIntegrationLabs folder above.
         
-      - Service: *databaseappint\_high*
+      - Service: *databaseappint\_high*  (That gives us the best performance.)
         
       - Click the *Test* button to see if SQL Developer can connect
             to your ATP instance. Wait for a moment as access is
@@ -2743,12 +2734,14 @@ ApplicationIntegrationLabs folder ApplicationIntegrationLabs folder.
           Figure 109: Creating a Database Table
 
       - Here is the text to copy/edit/paste for these statements:  
-*CREATE TABLE atpc\_user.orders (  
-orderId VARCHAR2(8) PRIMARY KEY,  
-orderDate DATE NOT NULL,  
-storeId NUMBER(3,0) NOT NULL,  
-stockId NUMBER (6,0) NOT NULL,  
-quantityOrdered NUMBER(3,0) NOT NULL);*
+        ```
+        CREATE TABLE atpc_user.orders (  
+        orderId VARCHAR2(8) PRIMARY KEY,  
+        orderDate DATE NOT NULL,  
+        storeId NUMBER(3,0) NOT NULL,  
+        stockId NUMBER (6,0) NOT NULL,  
+        quantityOrdered NUMBER(3,0) NOT NULL);
+        ```
 
       - Click the *Run Script icon* (highlighted above) to execute both
     statements. You will see feedback that the table was created.  Look for 
@@ -2785,9 +2778,9 @@ quantityOrdered NUMBER(3,0) NOT NULL);*
       Figure 110: Inserting a Row in a Database Table
 
       - Here is the text to copy/edit/paste for this statement:  
-INSERT INTO atpc\_user.orders(orderId,orderDate,storeId,
-stockId,quantityOrdered) VALUES('tnb001', date '2019-04-15', 100,
-9000, 6);  
+        ```
+        INSERT INTO atpc_user.orders(orderId,orderDate,storeId,stockId,quantityOrdered) VALUES('tnb001', date '2019-04-15', 100, 9000, 6);
+        ```  
 
       - Make sure that whatever you include for orderID ('tnb001') doesn’t match an existing row in the table.  
 
@@ -2795,8 +2788,10 @@ stockId,quantityOrdered) VALUES('tnb001', date '2019-04-15', 100,
 
     - To drop your ORDERS table so you can recreate it, here is the
     statement to enter, *Run* Script and *Commit* in the Worksheet
-    panel:    
-    *drop table atpc\_user.orders;*  
+    panel:  
+      ```  
+      drop table atpc_user.orders; 
+      ```
       
     - Again, don’t forget to *Commit* your changes.
 
