@@ -284,7 +284,7 @@ sudo yum -y install httpd
 ```
 2. Configure Compute instance firewall, Enter commands:
 ```
-sudo firewall-cmd --permanent --add-port=80/tcp `
+sudo firewall-cmd --permanent --add-port=80/tcp 
 ```
 (Open port 80 on the firewall to allow http and https traffic).
 
