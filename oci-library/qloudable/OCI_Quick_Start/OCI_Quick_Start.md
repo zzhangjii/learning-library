@@ -90,6 +90,7 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 4. Fill out the dialog box:
 
 
+
 - **Create in Compartment:** Has the correct compartment
 
 - **Name:** Enter easy to remember name
@@ -246,11 +247,13 @@ Compute).
 
 18. Attach Block volume to your compute instance. From OCI services menu Click **Instance** under Compute 
 
-19. For the compute instance created earlier click  Action item. Click **Attach Block Volume**.
+19. For the compute instance created earlier, click Action item. Click **Attach Block Volume**.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_004.PNG" alt="image-alt-text" height="200" width="200">
 
 20. Fill out the dialog box:
+
+
 - Choose how you want to attach your block volume:Check Paravirtualized
 
 **NOTE:** We can also use ISCSI mode, in which case we will not have to use ISCSI commands as detailed later on. For more information please refer to ;

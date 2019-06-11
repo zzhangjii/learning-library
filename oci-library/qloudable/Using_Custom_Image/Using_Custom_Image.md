@@ -77,6 +77,7 @@ In this lab we will use Custom image feature of OCI. Using this feature an exist
 
 4. Fill out the dialog box:
 
+
 - **Create in Compartment:** Has the correct compartment
 
 - **Name:** Enter easy to re¬member name
@@ -145,6 +146,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 7. Switch to the OCI console. From OCI servies menu, Click **Instances** under **Compute** 
 
 8. Click Create Instance. Fill out the dialog box:
+
 
 - **Name:** Enter a name 
 
