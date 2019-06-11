@@ -2485,25 +2485,25 @@ Oracle Integration Setup.
 
     - Fill in the fields:
     
-      - Workload Type: Click On Autonomous Transaction Processing
+      - Workload Type: Click *On* for *Autonomous Transaction Processing*
     
-      - Display Name: \<EnterYourDesiredDisplayName\>
+      - Display Name: *\<EnterYourDesiredDisplayName\>*
     
-      - Database Name: \<EnterYourDesiredDatabaseNameWithNoSpaces\>
+      - Database Name: *\<EnterYourDesiredDatabaseNameWithNoSpaces\>*
     
-      - CPU Core Count: \<EnterDesiredNumberOfCores\> (1 works well for
+      - CPU Core Count: *\<EnterDesiredNumberOfCores\>* (*1* works well for
         a training sandbox.)
     
-      - Storage (TB): \<EnterDesiredStorageSize\> (1 works well for a
+      - Storage (TB): *\<EnterDesiredStorageSize\>* (*1* works well for a
         training sandbox.)
     
       - Administrator Credentials
         
-        - UserName: ADMIN (default)
+        - UserName: *ADMIN* (default)
         
-        - Password: \<EnterYourDesiredAdminDBPassword\>
+        - Password: *\<EnterYourDesiredAdminDBPassword\>*
 
-        - Confirm Password: \<EnterYourDesiredAdminDBPassword\>
+        - Confirm Password: *\<EnterYourDesiredAdminDBPassword\>*
     
         - License Type: Leave *My Organization Already Owns Oracle
         Database Software Licenses* checked *On*.
@@ -2778,9 +2778,9 @@ ApplicationIntegrationLabs folder ApplicationIntegrationLabs folder.
       Figure 110: Inserting a Row in a Database Table
 
       - Here is the text to copy/edit/paste for this statement:  
-INSERT INTO atpc\_user.orders(orderId,orderDate,storeId,
-stockId,quantityOrdered) VALUES('tnb001', date '2019-04-15', 100,
-9000, 6);  
+        ```
+        INSERT INTO atpc_user.orders(orderId,orderDate,storeId,stockId,quantityOrdered) VALUES('tnb001', date '2019-04-15', 100, 9000, 6);
+        ```  
 
       - Make sure that whatever you include for orderID ('tnb001') doesn’t match an existing row in the table.  
 
@@ -2788,8 +2788,10 @@ stockId,quantityOrdered) VALUES('tnb001', date '2019-04-15', 100,
 
     - To drop your ORDERS table so you can recreate it, here is the
     statement to enter, *Run* Script and *Commit* in the Worksheet
-    panel:    
-    *drop table atpc\_user.orders;*  
+    panel:  
+      ```  
+      drop table atpc_user.orders; 
+      ```
       
     - Again, don’t forget to *Commit* your changes.
 
