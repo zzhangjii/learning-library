@@ -8,9 +8,9 @@
 
 [Sign in to OCI Console and create VCN](#sign-in-to-oci-console-and-create-vcn)
 
-[Create Public Private SSH Key Pair Using Built-in Application and two compute instances and install web server](#create-public-private-ssh-key-pair-using-built-in-application-and-two-compute-instances-and-install-web-server)
+[Create Public Private SSH Key Pair, two compute instances and install web server](#create-public-private-ssh-key-pair,-two-compute-instances-and-install-web-server)
 
-[Create Security List Route table and two subnets](#create-security-list-route-table-and-two-subnets)
+[Create Security List Route table and additional subnet](#create-security-list-route-table-and-additional-subnet)
 
 [Create Load Balancer and update Security List](#create-load-balancer-and-update-security-list)
 
@@ -102,7 +102,7 @@ In this lab you will deploy http servers on two compute instances in Oracle Clou
 <img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text" height="200" width="200">
               
               
-## Create Public Private SSH Key Pair Using Built-in Application and two compute instances and install web server
+## Create Public Private SSH Key Pair, two compute instances and install web server
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
@@ -210,6 +210,7 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 15. Verify opc@<COMPUTE_INSTANCE_NAME> appears on the prompt
 
 16. Launch a second git-bash window using above steps and connect via SSH into the second Compute instance (using the same steps as above. 
+
 **HINT:** You can swap between the OCI window, git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
 
 <img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_001.PNG" alt="image-alt-text" height="200" width="200">
@@ -480,7 +481,7 @@ We will now test the Load Balancer functionality (load balance using round robin
 
 **Note:** Be sure to take note of the "Health" field in the Networking > Load Balancers dashboard. If the health is "Critical," the load balancer may not work as intended, and the best course of action may be to create a new one. This is likely the result of something being mis-configured, and it should only happen rarely.
 
-# Verify High Availability of HTTP Servers
+## Verify High Availability of HTTP Servers
 
 In this section we will access the two Web servers configured earlier using Load Balancer’s Public IP address and demonstrate Load Balancer’s ability to route traffic on round robin basis(Per the Policy Configured). In case one of the web server becomes un-available the web content will be available via the second server (High Availability)
 
