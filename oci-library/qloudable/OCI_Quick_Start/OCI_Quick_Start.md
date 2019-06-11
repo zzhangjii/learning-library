@@ -452,7 +452,7 @@ sudo umount /dev/<VOLUME_NAME>
 
 9. Once the instance is in Running state, attach the block volume to this new instance using OCI Console.**Ensure to use Paravirtualized mode.**
 
-10. Mount the block volume as before, Enter Command:
+10. ssh to compute instance and mount the block volume as before, Enter Command:
 ```
 sudo mount  /dev/<VOLUME_NAME>  /mnt/www/html
 ```
