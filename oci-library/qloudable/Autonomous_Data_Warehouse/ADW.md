@@ -134,7 +134,7 @@ In this section we will generate auth token for the user of this lab. An Auth to
 **NOTE:** If using SQL devleoper 18.2.0 or higher this field is not available and not required
 
 
-- Service: <ADW_Instance_name>_medium 
+- Service: YOUR_ADW_INSTANCE_NAME_medium 
 - Click **Save**
 - Click **Connect** and verify Successful connection
 
@@ -162,7 +162,7 @@ Grant dwrole to ocitest;
 - Connection Type: Cloud PDB
 - Configuration file: File that was dowloaded from ADW service console (Client credenitla zip file)
 - Keystore password: Password you provided when downloading the client credentials file (NOTE:If using SQL devleoper 18.2.0 or higher this field is not available and not required)
-- Service: <ADW_Instance_name>_medium 
+- Service: YOUR_ADW_INSTANCE_NAME_medium 
 - Click **Save**
 - Click **Connect** and verify Successful connection
 
