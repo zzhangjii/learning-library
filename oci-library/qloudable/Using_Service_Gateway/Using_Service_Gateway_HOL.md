@@ -28,7 +28,8 @@ Service Gateway alleviates the preceding concerns by enabling the following func
 
 **Some Key points;**
 
-- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
+**We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%**
+
 
 - All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
 
@@ -82,7 +83,6 @@ Service Gateway alleviates the preceding concerns by enabling the following func
 - Storage Tier: STANDARD 
 - Encryption: ENCRYPT USING ORACLE-MANAGED KEYS
 
-
 4.  Click **Create Bucket**
 
 5. Click the Apps icon in the toolbar and select Git-Bash to open a terminal window.
@@ -116,9 +116,7 @@ This should create a file by the name"samplefile" in the Downloads folder
 
 
 - OBJECT NAME PREFIX: Provide a Prefix (Optional)
-
 - CHOOSE FILES FROM YOUR COMPUTER: Click **Select File** and then browse to the location where 'Sample File' was created
-
 
 11. Select the file, then click **Upload Object** in the Dialog box.
 
@@ -138,15 +136,10 @@ This should create a file by the name"samplefile" in the Downloads folder
 
 
 - **Name:** Enter easy to remember name
-
 - **Create in Compartment:** Has the correct compartment
-
 - **Create Virtual Cloud Network Plus Related Resources:** Select this option.
-
 - Click **Create Virtual Cloud Network**
-
 - Click **Close**
-
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -164,14 +157,12 @@ This should create a file by the name"samplefile" in the Downloads folder
 - CIDR Block: Enter 10.0.5.0/24 
 - Route Table: Select the Default Route Table
 
-
 **NOTE:** For Prodcution deployment we strongly recommend Creating a seperate route table.        
 
 
 - Subnet access: select Private Subnet.
 - DHCP Options: Select the default.
 - Security Lists: Select the Default Security List 
-
 
 **NOTE:** For Prodcution deployment we strongly recommendCreating a seperate security list.
 
@@ -235,31 +226,21 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 
 - **Name:** Enter a name 
-
 - **Availability Domain:** Select availability domain
 
 - **Image Operating System:** Click **Change Image Source**. In the new window, Click **Oracle Images** Choose **Oracle Cloud Developer Image**. Scroll down, Accept the Agreement and click **Select Image**
-
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_009.PNG" alt="image-alt-text" height="200" width="200">
 
 
 - **Choose Instance Type:** Select Virtual Machine
-
 - **Choose Instance Shape:** Select VM shape
-
 - **Configure Boot Volume:** Leave the default
-
 - **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
-
 - **Virtual Cloud Network Compartment:** Choose your compartment
-
 - **Virtual Cloud Network:** Select the VCN you created in the previous section. 
-
 - **Subnet Compartment:** Choose your compartment. 
-
 - **Subnet:** Select Public Subnet (Do not select the private subnet created earlier)
-
 
 9. Click **Create**
 
@@ -273,9 +254,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 
 - **Name:** Enter a name 
-
 - **Availability Domain:** Select availability domain
-
 - **Image Operating System:** Click **Change Image Source**. In the new window, Click **Oracle Images** Choose **Oracle Cloud Developer Image**. Scroll down, Accept the Agreement and click **Select Image**
 
 
@@ -283,21 +262,13 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 
 - **Choose Instance Type:** Select Virtual Machine
-
 - **Choose Instance Shape:** Select VM shape
-
 - **Configure Boot Volume:** Leave the default
-
 - **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier
-
 - **Virtual Cloud Network Compartment:** Choose your compartment
-
 - **Virtual Cloud Network:** Select the VCN you created in the previous section. 
-
 - **Subnet Compartment:** Choose your compartment. 
-
 - **Subnet:** Select the Private subnet created earlier
-
 
 13. Click **Create**
 
@@ -395,7 +366,6 @@ Fill out the dialog box:
 - **Create in Compartment:** Ensure correct compartment is selected.
 - **Services:** Click **Drop down** and choose OCI IAD-ObjectStorage.
 
-
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_027.PNG" alt="image-alt-text" height="200" width="200">
 
 9. Click **Create Service Gateway**
@@ -412,7 +382,6 @@ Fill out the dialog box:
 - **COMPARTMENT:** Choose the assigned compartment
 - **TARGET SERVICE GATEWAY:** Choose the service Gateway created earlier
 
-
 12.  Click **Add Route Rules**, new route entry should be created.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_035.PNG" alt="image-alt-text" height="200" width="200">
@@ -426,7 +395,6 @@ Fill out the dialog box:
 - **DESTINATION SERVICE:** OCI IAD Object Storage
 - **SOURCE PORT RANGE:** ALL
 - **DESTINATION PORT RANGE:** ALL
-
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_036.PNG" alt="image-alt-text" height="200" width="200">
 

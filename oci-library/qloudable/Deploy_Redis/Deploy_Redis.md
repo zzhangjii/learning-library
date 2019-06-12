@@ -32,7 +32,8 @@ In this lab we will deploy Redis in Master-Slave mode (similar to below) though 
 
 **Some Key points;**
 
-- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
+**We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%**
+
 
 - All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
 
@@ -90,21 +91,17 @@ In this lab we will deploy Redis in Master-Slave mode (similar to below) though 
 
 4. Fill out the dialog box:
 
+
 - **Create in Compartment:** Has the correct compartment
-
 - **Name:** Enter easy to re¬member name
-
 - **Create Virtual Cloud Network Plus Related Resources:** Select this option.
-
 - Click **Create Virtual Cloud Network**
-
 - Click **Close**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="200" width="200">
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text" height="200" width="200">
-            
-              
+                    
 ## Create ssh keys, two compute instances and install Redis
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
@@ -159,26 +156,17 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 8. Click Create Instance. Fill out the dialog box:
 
+
 - **Name:** Enter a name 
-
 - **Availability Domain:** Select availability domain
-
 - **Image Operating System:** For the image, we recommend using the Latest Oracle Linux available.
-
 - **Choose Instance Type:** Select Virtual Machine
-
 - **Choose Instance Shape:** Select VM shape
-
 - **Configure Boot Volume:** Leave the default
-
 - **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
-
 - **Virtual Cloud Network Compartment:** Choose your compartment
-
 - **Virtual Cloud Network:** Select the VCN you created in the previous section. 
-
 - **Subnet Compartment:** Choose your compartment. 
-
 - **Subnet:** Choose the first Subnet
 
 9. Click **Create**
@@ -211,7 +199,6 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
  
 14. Verify opc@<COMPUTE_INSTANCE_NAME> appears on the prompt
 
-
 **We now have a VCN and two compute instance (Master and Slave). Next we will  install and configure Redis.**
 
 15. In ssh session to first compute instance, Enter Command:
@@ -237,7 +224,6 @@ sudo systemctl status redis.service
 Verify service is active and is using loop back  interface (127.0.0.1) on port 6379
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Redis_002.PNG" alt="image-alt-text" height="200" width="200">)
-
 
 19. Test the set-up. Enter command:
 ```
@@ -349,14 +335,13 @@ redis-cli -h <PRIVATE_IP_OF_REDIS_MASTER> -p 6379
 ```             
 **NOTE:** This will start CLI mode. Provide below inputs
 
+
 - **auth <Password_From_redis.conf>**
 This will authenticate the user per the password in redis.conf file. In this lab this password is 'foobared'
-
 - **info replication**
 This will provide us replication information. This command will also confirm that this redis node is master and there is a slave instance.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Redis_011.PNG" alt="image-alt-text" height="200" width="200">)
-
 
 8. If the slave information is not available, it could be due to keep alive timer expiration. Switch to git-bash window with ssh connection to second compute instance and restart redis service:
 ``` 

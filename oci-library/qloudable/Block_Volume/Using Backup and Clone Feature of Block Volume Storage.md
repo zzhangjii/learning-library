@@ -26,7 +26,8 @@ In this lab you will create and attach Block Volume Storage to a compute instanc
 
 **Some Key points;**
 
-- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
+**We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%**
+
 
 - All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
 
@@ -88,7 +89,6 @@ In this lab you will create and attach Block Volume Storage to a compute instanc
 - Create in Compartment: Has the correct compartment
 - Name: Enter easy to re¬member name
 - Create Virtual Cloud Network Plus Related Resources: Select this option.
-
 
 5. Click **Create Virtual Cloud Network**
 
@@ -166,7 +166,6 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 - Subnet Compartment: Choose your compartment. 
 - Subnet: Choose the first Subnet
 
-
 9. Click **Create**
 
 **NOTE:** If 'Service limit' error is displayed choose a different shape such as VM.Standard.E2.2 OR VM.Standard2.2 OR choose a different AD
@@ -204,7 +203,6 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 - BACKUP POLICY: Leave as is
 - ENCRYPTION: ENCRYPT USING ORACLE-MANAGED KEYS
 
-
 17. Click **Create Block Volume**. Wait for Block Volume state to change from 'Provisioning' to 'Available'
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_003.PNG" alt="image-alt-text" height="200" width="200">
@@ -229,7 +227,6 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 - Name: Provide a Name
 - BACKUP TYPE: Full Backup
 
-
 23. Click **Create Block Volume Backup**
 
 24. Click **Block Volume Backups** and verify backup was created and is in **Available** state
@@ -250,7 +247,6 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 - BACKUP POLICY: Leave as is
 - ENCRYPTION: ENCRYPT USING ORACLE-MANAGED KEYS
 
-
 27. From OCI services menu Click **Instance** under Compute 
 
 28. For the compute instance created earlier click Action item. Click **Attach Block Volume**.
@@ -262,7 +258,6 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 - BLOCK VOLUME COMPARTMENT: Choose your compartment
 - BLOCK VOLUME: Choose the block volume created in the same AD as the compute instance
 - ACCESS: Read/Write
-
 
 30. Click **Attach**
 
@@ -281,7 +276,6 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 - CREATE IN COMPARTMENT: Choose your compartment
 - BLOCK VOLUME SIZE: Should be set to 50
 - ENCRYPTION: ENCRYPT USING ORACLE-MANAGED KEYS
-
 
 2. Click **Create Clone**
 
@@ -302,7 +296,6 @@ This simplifies the process to create time-consistent backups of running enterpr
 - CREATE IN COMPARTMENT: Choose your Compartment
 - CREATE IN AVAILABILITY DOMAIN: Choose the availability domain whose volume need to be grouped
 
-
 **NOTE: Only volumes that exist in this AD will appear in the list**
 
 Under **Volumes**
@@ -310,7 +303,6 @@ Under **Volumes**
 
 - COMPARTMENT: Choose your comparment
 - VOLUME: Click on the drop down and choose the volume that you want to group togehter
- 
  
 6. To choose additional volumes (Block or boot) click **+Volume** and add additional volumes
 

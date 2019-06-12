@@ -25,7 +25,8 @@ A cooldown period between autoscaling events lets the system stabilize at the up
 
 **Some Key points;**
 
-- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
+**We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%**
+
 
 - All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
 
@@ -81,14 +82,11 @@ A cooldown period between autoscaling events lets the system stabilize at the up
 
 4. Fill out the dialog box:
 
+
 - **Name:** Enter easy to re¬member name
-
 - **Create in Compartment:** Has the correct compartment
-
 - **Create Virtual Cloud Network Plus Related Resources:** Select this option.
-
 - Click **Create Virtual Cloud Network**
-
 - Click **Close**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="200" width="200">
@@ -150,26 +148,17 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 8. Click **Create Instance**. Fill out the dialog box:
 
+
 - Name: Enter a name 
-
 - Availability Domain: Select availability domain
-
 - Image Operating System: For the image, we recommend using the Latest Oracle Linux available.
-
 - Choose Instance Type: Select Virtual Machine
-
 - Choose Instance Shape: Select VM shape
-
 - Configure Boot Volume: Leave the default
-
 - Add SSH Keys: Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
-
 - Virtual Cloud Network Compartment: Choose your compartment
-
 - Virtual Cloud Network: Select the VCN you created in the previous section. 
-
 - Subnet Compartment: Choose your compartment. 
-
 - Subnet: Choose the first Subnet
 
 9. Click **Create**
@@ -184,8 +173,8 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_001.PNG" alt="image-alt-text" height="200" width="200">
 
-- **CREATE IN COMPARTMENT**: Choose your compartment
 
+- **CREATE IN COMPARTMENT**: Choose your compartment
 - **INSTANCE CONFIGURATION NAME** : Provide a name
 
 12. Click **Create Instance Configuration**
@@ -196,35 +185,35 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 14.  Click **Create Instance Pool**. A new dialog box will appear. This is used to create initial configuration of the instance pool such as how many compute instance to create initially, VCN, and Availability domain the instance pool should be created in. Fill out the dialog box:
 
+
 - CREATE IN COMPARTMENT: Choose your compartment
-
 - INSTANCE POOL NAME : Provide a suitable name
-
 - NUMBER OF INSTANCES : 0 
 
 (This is the number of computes that should be launched when the pool is created. We will start with no compute)
+
 
 - INSTANCE CONFIGURATION COMPARTMENT : Provide your compartment
 
 (This is the compartment where instance configuration will be placed and can only be used in this specific compartmen)
 
+
 - INSTANCE CONFIGURATION: Choose the instance configuration created earlier
 
 (Any computes launched in this pool will inherit shape, image and ssh keys of the compute whose instance configuration we are using)
+
 
 - ATTACH A LOAD BALANCER: Keep it un-checked
 
 (If the instances in this pool need to be placed behing a load balancer then this option can be used. A Load Balancer must already exist. We will not use this option for the lab)
 
+
 - AVAILABILITY DOMAIN: Choose the AD you want to places instances (you can choose first AD)
-
 - VIRTUAL CLOUD NETWORK COMPARTMENT: Choose VCN's compartment
-
 - VIRTUAL CLOUD NETWORK: Choose your VCN
-
 - SUBNET COMPARTMENT: Choose your compartment
-
 - SUBNET: Choose the Public Subnet 
+
 15. Click **+ Additional Selection** and select a different availability domain for the instance pool. Then, specify the VCN details for the second availability domain.
 
 **We configured instances to be deployed in two different Avaialability domain though they can be deployed in the same Availability domain as long as service limits allow it.**
@@ -243,34 +232,21 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 18. Fill out the dialog box:
 
+
 - COMPARTMENT: Choose your compartment
-
 - AUTOSCALING CONFIGURATION NAME : Provide a name
-
 - INSTANCE POOL : This should show your instance pool name created earlier
-
 - COOLDOWN IN SECONDS : 300 (This is he minimum period of time between scaling actions.)
-
 - AUTOSCALING POLICY NAME : Provide a name
-
 - PERFORMANCE METRIC : CPU Utilization (This is the Metric to use for triggering scaling actions.)
-
 - MINIMUM NUMBER OF INSTANCES : 1 (this is the minimum number of instances that the pool will always have)
-
 - MAXIMUM NUMBER OF INSTANCES : 2 (this is the maximum number of instances that the pool will always have)
-
 - INITIAL NUMBER OF INSTANCES : 1 (this is how many instances will be created in the instance pool initially)
-
 - SCALE-OUT OPERATOR : Greater than (>)
-
 - THRESHOLD PERCENTAGE : 10
-
 - NUMBER OF INSTANCES TO ADD : 1
-
 - SCALE-IN OPERATOR : Less than (<)
-
 - THRESHOLD PERCENTAGE : 5
-
 - NUMBER OF INSTANCES TO REMOVE  : 1
 
 **Leave other fileds as is**

@@ -10,6 +10,8 @@
 
 [Upload Object and create pre authenticated link](#upload-object-and-create-pre-authenticated-link)
 
+[Delete the Reources](#delete-the-resources)
+
 
 ## Overview
 
@@ -21,7 +23,8 @@ Object Storage is a regional service and is not tied to any specific compute ins
 
 **Some Key points;**
 
-- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
+**We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%**
+
 
 - All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
 
@@ -77,13 +80,13 @@ Object Storage is a regional service and is not tied to any specific compute ins
 
 4. Fill out the dialog box:
 
+
 - BUCKET NAME: Provide a name (Test-Bucket in this lab)
 - Storage Tier: STANDARD 
 
 5.  Click **Create Bucket**
 
-
-## Practice-2: Upload Object and create pre authenticated link
+## Upload Object and create pre authenticated link
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
@@ -122,12 +125,10 @@ This should create a file by the name"samplefile" in the Downloads folder
 
 9. Fill out the dialog box:
 
+
 - NAME: Use an easy to remember name.
-
 - PRE AUTHENTICATION REQUEST TARGET: OBJECT
-
 - ACCESS TYPE: PERMIT READS ON THE OBJECT
-
 - EXPIRATION DATE/TIME: Specify link expiration date
 
 10. Click **Create Pre-Authenticated Request**
@@ -140,7 +141,6 @@ This should create a file by the name"samplefile" in the Downloads folder
 
 <img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE010.PNG" alt="image-alt-text" height="200" width="200">
 
-
 13. Open a new browser window and paste Pre-Authenticated link. 
 
 14.  An option to download the file will appear.
@@ -148,3 +148,13 @@ This should create a file by the name"samplefile" in the Downloads folder
 **NOTE:** Do NOT download the file as due to space restrictions it is not allowed for the purpose of this lab.
 
 ***You have uploaded an object to Object Storage bucket, created a pre-authenticated link and successfully accessed the object. The Pre-Authenticated link can be shared with other users to provide them access to the object. Multiple objects of any size can be uploaded to the bucket and shared across teams/users.**
+
+## Delete the resources
+
+1. From the Object Storage detail window, Click **Pre-Authenticated Requests**, click **Delete**, then Click **OK** in Confirm window.
+
+2. Click **Objects**, Click the action icon , select Delete, click **OK** in the Confirm window.
+
+3. Under Bucket Name, Click **Delete**, then click **OK** in the Confirm window.
+
+**Congratulations! You have successfully completed the Lab** 

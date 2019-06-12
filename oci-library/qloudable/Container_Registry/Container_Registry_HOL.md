@@ -18,7 +18,9 @@ Oracle Cloud Infrastructure Registry is an Oracle-managed registry that enables 
 
 **Some Key points;**
 
-- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
+**We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%**
+
+
 
 - All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
 
@@ -76,14 +78,11 @@ Oracle Cloud Infrastructure Registry is an Oracle-managed registry that enables 
 
 4. Fill out the dialog box:
 
+
 - **Create in Compartment:** Has the correct compartment
-
 - **Name:** Enter easy to re¬member name
-
 - **Create Virtual Cloud Network Plus Related Resources:** Select this option.
-
 - Click **Create Virtual Cloud Network**
-
 - Click **Close**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="200" width="200">
@@ -169,26 +168,17 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 8. Click Create Instance. Fill out the dialog box:
 
+
 - **Name:** Enter a name 
-
 - **Availability Domain:** Select availability domain
-
 - **Image Operating System:** For the image, we recommend using the Latest Oracle Linux available.
-
 - **Choose Instance Type:** Select Virtual Machine
-
 - **Choose Instance Shape:** Select VM shape
-
 - **Configure Boot Volume:** Leave the default
-
 - **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
-
 - **Virtual Cloud Network Compartment:** Choose your compartment
-
 - **Virtual Cloud Network:** Select the VCN you created in the previous section. 
-
 - **Subnet Compartment:** Choose your compartment. 
-
 - **Subnet:** Choose the first Subnet
 
 9. Click **Create**
@@ -201,6 +191,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 ```
  cd /C/Users/PhotonUser/.ssh
 ```
+
 11. Enter **ls** and verify id_rsa file exists
 
 12. Enter command 
@@ -300,6 +291,7 @@ and note down the image id of alpine. Enter command: (No Spaces)
 ```
 docker tag <image_id>  <Region_Name_Code>.ocir.io/<TenancyName>/<docker_registry_name>:<image_name> 
 ```
+
 26. Verify the tag was created, Enter command:
 
 ```
@@ -309,14 +301,11 @@ and verify version x.y.test is present. x and y will be the numeric version numb
 
 **NOTE:** In below example:
 
+
 - <image_id> is **3fd9065eaf02** 
-
 - <Region_Name_Code> is **iad** 
-
 - <Tenancy_Name> is **us_training** 
-
 - <docker_registry_name> is **docker-test-image**
-
 - <image_name> is **version4.0.test**  
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Container_Registry/img/OCIR_HOL0039.PNG" alt="image-alt-text" height="200" width="200">
@@ -327,6 +316,8 @@ and verify version x.y.test is present. x and y will be the numeric version numb
 docker push <Region_Name_Code>.ocir.io/<Tenancy_Name>/<docker_registry_name>:<image_name>** (No Spaces)
 ```
 **NOTE:** In below example:
+
+
 - <Region_Name_Code> is **iad**
 - <Tenancy_Name> is **us_training**
 - <docker_registry_name> is **docker-test-image**
@@ -374,7 +365,7 @@ appear.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text" height="200" width="200">
 
-7. Navigate to your registry(**Registry(OCIR)** under **Developer Services**), click Registry Name, Under **Actions** click **Delete Repository**  ,click **Delete** in confirmation window
+8. Navigate to your registry(**Registry(OCIR)** under **Developer Services**), click Registry Name, Under **Actions** click **Delete Repository**  ,click **Delete** in confirmation window
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Container_Registry/img/OCIR_HOL0042.PNG" alt="image-alt-text" height="200" width="200">
 
