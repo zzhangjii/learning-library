@@ -218,6 +218,7 @@ java -version
 <img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_001.PNG" alt="image-alt-text" height="200" width="200">
 
 18. Next we will install Swing bench, Enter command:(No Spaces)
+
 ```
 curl http://www.dominicgiles.com/swingbench/swingbenchlatest.zip -o swingbench.zip
 ```
@@ -301,7 +302,7 @@ cd ~/swingbench/bin
 which java
 ```
 
-11. verify java path is displayed, if no java path is displayed then install java, Enter command:
+11. Verify java path is displayed, if no java path is displayed then install java, Enter command:
 ```
 sudo yum install java
 ```
@@ -312,7 +313,7 @@ Answer 'Y' when prompted
 ```
 ./oewizard -cf ~/<CREDENTIAL_ZIP_FILE> -cs <DB_NAME>_medium  -ts DATA -dbap <DB_PASSWORD> -dba ADMIN -u soe -p <DB_PASSWORD> -async_off -scale 0.1 -hashpart -create -cl -v
 ```
-**NOTE:** In below example,<CREDENTIAL_ZIP_FILE> is 'Wallet_ATPDB3.zip', <DB_NAME> is ATPDB3, <DB_PASSWORD> is Oracle098####.
+**NOTE:** In below example, **CREDENTIAL_ZIP_FILE** is 'Wallet_ATPDB3.zip', **DB_NAME** is ATPDB3, **DB_PASSWORD** is Oracle098####.
 
 <img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_008.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -428,7 +429,8 @@ In this section we will generate auth token for the user of this lab. An Auth to
 6. Create a new user called ocitest and grant the DWROLE to ocitest user. Enter commands:
 ```
 create user ocitest identified by P#ssw0rd12##
-
+```
+```
 Grant dwrole to ocitest;
 ```
 
@@ -450,7 +452,7 @@ Grant dwrole to ocitest;
 **NOTE:** If using SQL devleoper 18.2.0 or higher this field is not available and not required
 
 
-- Service: <ATP_Instance_name>_medium 
+- Service: YOUR_ATP_INSTANCE_NAME_medium 
 - Click **Save**
 - Click **Connect** and verify Successful connection
 
