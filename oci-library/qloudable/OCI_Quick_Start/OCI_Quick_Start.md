@@ -217,7 +217,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 12. Enter command 
 ```
-ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
+ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE>
 ```
 
 **HINT:** If 'Permission denied error' is seen, ensure you are using '-i' in the ssh command. You MUST type the command, do NOT copy and paste ssh command
@@ -452,7 +452,7 @@ sudo umount /dev/<VOLUME_NAME>
 
 9. Once the instance is in Running state, attach the block volume to this new instance using OCI Console.**Ensure to use Paravirtualized mode.**
 
-10. Mount the block volume as before, Enter Command:
+10. ssh to compute instance and mount the block volume as before, Enter Command:
 ```
 sudo mount  /dev/<VOLUME_NAME>  /mnt/www/html
 ```
