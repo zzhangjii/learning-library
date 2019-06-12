@@ -369,7 +369,7 @@ openssl rsa -in ~/.oci/oci_api_key.pem -pubout -outform DER 2>/dev/null | openss
 
 11. We will now install OCI CLI.Switch to git-bash window, Enter Command:
 ```
-bash -c "$(curl -L https://raw.githubusercontent.com/umairs123/oci-cli/master/scripts/install/install.sh)"
+bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
 ```
 
 12. Accept the default (Press Enter) for Install directory Prompts
