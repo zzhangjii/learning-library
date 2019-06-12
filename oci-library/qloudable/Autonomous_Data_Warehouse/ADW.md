@@ -178,13 +178,13 @@ https://objectstorage.us-ashburn-1.oraclecloud.com/n/us_training/b/Lab-images/o/
 10. Using OCITEST user store your Object Storage credenitals. From the ADW-File.txt content copy and paste the commands under  
 /**** Set Definitions ****/ section. The commands will look like below
 
-**Begin**
-**DBMS_CLOUD.create_credential (**
-**credential_name => 'OCI_CRED_NAME',**
-**username => '<YOUR_USER_NAME>',**
-**password => '<AUTH_TOKEN>'**
-**) ;**
-**end;**
+Begin
+DBMS_CLOUD.create_credential (
+credential_name => 'OCI_CRED_NAME',
+username => '<YOUR_USER_NAME>',
+password => '<AUTH_TOKEN>'
+) ;
+end;
 
 **NOTE:** user name should be your user name and password should be the Auth Token generated earlier.
 
