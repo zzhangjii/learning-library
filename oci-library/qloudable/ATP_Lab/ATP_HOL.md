@@ -313,7 +313,8 @@ Answer 'Y' when prompted
 ```
 ./oewizard -cf ~/<CREDENTIAL_ZIP_FILE> -cs <DB_NAME>_medium  -ts DATA -dbap <DB_PASSWORD> -dba ADMIN -u soe -p <DB_PASSWORD> -async_off -scale 0.1 -hashpart -create -cl -v
 ```
-**NOTE:** In below example, **CREDENTIAL_ZIP_FILE** is 'Wallet_ATPDB3.zip', **DB_NAME** is ATPDB3, **DB_PASSWORD** is Oracle098####.
+
+**NOTE:** In below example, CREDENTIAL_ZIP_FILE is 'Wallet_ATPDB3.zip', DB_NAME is ATPDB3, DB_PASSWORD is Oracle098####.
 
 <img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_008.PNG" alt="image-alt-text" height="200" width="200">
 
