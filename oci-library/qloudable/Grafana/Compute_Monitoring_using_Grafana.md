@@ -25,7 +25,8 @@ Essentially, it’s a feature-rich replacement for Graphite-web, which helps use
 
 **Some Key points;**
 
-- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
+**We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%**
+
 
 - All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
 
@@ -82,14 +83,11 @@ Essentially, it’s a feature-rich replacement for Graphite-web, which helps use
 
 4. Fill out the dialog box:
 
+
 - **Name:** Enter easy to re¬member name
-
 - **Create in Compartment:** Has the correct compartment
-
 - **Create Virtual Cloud Network Plus Related Resources:** Select this option.
-
 - Click **Create Virtual Cloud Network**
-
 - Click **Close**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="200" width="200">
@@ -150,26 +148,17 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 8. Click Create Instance. Fill out the dialog box:
 
+
 - **Name:** Enter a name 
-
 - **Availability Domain:** Select availability domain
-
 - **Image Operating System:** For the image, we recommend using the Latest Oracle Linux available.
-
 - **Choose Instance Type:** Select Virtual Machine
-
 - **Choose Instance Shape:** Select VM shape
-
 - **Configure Boot Volume:** Leave the default
-
 - **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
-
 - **Virtual Cloud Network Compartment:** Choose your compartment
-
 - **Virtual Cloud Network:** Select the VCN you created in the previous section. 
-
 - **Subnet Compartment:** Choose your compartment. 
-
 - **Subnet:** Choose the first Subnet
 
 9. Click **Create**
@@ -281,6 +270,8 @@ Choose **OCI Instance** for Enviornment.
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_012.PNG" alt="image-alt-text" height="200" width="200">
 
 16. Choose the appropriate fields;
+
+
 - Region: IAD if us-ashburn, PHX if us-phoneix1, LHR if London etc). All region codes are listed at https://docs.cloud.oracle.com/iaas/Content/General/Concepts/regions.htm.
 
  - Compartment: Choose your compartment
@@ -288,6 +279,8 @@ Choose **OCI Instance** for Enviornment.
  - Metric: CpuUtilization
 
 17. Click **Add Query** to add a second Query
+
+
  - Compartment: Choose your compartment
  - Namespace: oci_computeagent
  - Metric: MemoryUtilization

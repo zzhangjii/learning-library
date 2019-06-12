@@ -21,7 +21,8 @@ This lab will walk you through installation and configuration of the CLI, along 
 
 **Some Key points;**
 
-- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
+**We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%**
+
 
 - All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
 
@@ -60,7 +61,6 @@ This lab will walk you through installation and configuration of the CLI, along 
 * **Password:** {{Password}}
 * **Compartment:**{{Compartment}}
 
-
 1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text" height="200" width="200">
@@ -79,15 +79,10 @@ This lab will walk you through installation and configuration of the CLI, along 
 
 
 - **Name:** Enter easy to remember name
-
 - **Create in Compartment:** Has the correct compartment
-
 - **Create Virtual Cloud Network Plus Related Resources:** Select this option.
-
 - Click **Create Virtual Cloud Network**
-
 - Click **Close**
-
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -149,31 +144,21 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 
 - **Name:** Enter a name 
-
 - **Availability Domain:** Select availability domain
 
 - **Image Operating System:** Click **Change Image Source**. In the new window, Click **Oracle Images** Choose **Oracle Cloud Developer Image**. Scroll down, Accept the Agreement and click **Select Image**
-
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_009.PNG" alt="image-alt-text" height="200" width="200">
 
 
 - **Choose Instance Type:** Select Virtual Machine
-
 - **Choose Instance Shape:** Select VM shape
-
 - **Configure Boot Volume:** Leave the default
-
 - **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
-
 - **Virtual Cloud Network Compartment:** Choose your compartment
-
 - **Virtual Cloud Network:** Select the VCN you created in the previous section. 
-
 - **Subnet Compartment:** Choose your compartment. 
-
 - **Subnet:** Choose the first Subnet
-
 
 9. Click **Create**
 
@@ -200,7 +185,7 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
  
 14. Verify opc@<COMPUTE_INSTANCE_NAME> appears on the prompt
 
-## Practice 3: Configure OCI CLI, Upload API keys and verify functionality
+## Configure OCI CLI, Upload API keys and verify functionality
 
 15. Check oci CLI installed version, Enter command:
 ```
@@ -311,7 +296,6 @@ oci network route-table update --rt-id <route table OCID> --route-rules '[{"cidr
 
 **Note:** When updating route tables or security lists you cannot insert a single rule.  You must ``update`` with the entire set of rules.  The prompt shown in the screenshot above illustrates this point.
 
-
 **Use QUERY to find Oracle Linux Image ID, then launch a compute instance**
 
 10. Use the CLI ``query`` command to retrieve the OCID for the latest Oracle Linux image.  Make a note of the image ID for future use.
@@ -331,7 +315,6 @@ You will need the following pieces of information:
 - Subnet OCID
 - Valid compute shape (i.e. VM.Standard.E2.1)
 - Your public SSH key
-
 
 ```
 oci compute instance launch --availability-domain <your AD name> --display-name demo-instance --image-id <ID from previous step> --subnet-id <subnet OCID> --shape VM.Standard.E2.1 --assign-public-ip true --metadata '{"ssh_authorized_keys": "<your public ssh key here>"}'

@@ -18,7 +18,8 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 
 **Some Key points;**
 
-- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
+**We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%**
+
 
 - All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
 
@@ -80,7 +81,6 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 - CONFIRM PASSWORD: Provide same password (example Oracle123!!!!)
 - LICENSE TYPE: SUBSCRIBE TO NEW DATABASE SOFTWARE LICENSES AND THE DATABASE CLOUD SERVICE
 
-
 4. Leave **Tags** information as is, Click **Create Autonomous Database**. Wait for State to change to Available (few minutes) 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_002.PNG" alt="image-alt-text" height="200" width="200">
@@ -131,14 +131,12 @@ In this section we will generate auth token for the user of this lab. An Auth to
 - Configuration file: File that was dowloaded from ADW service console (Client credenitla zip file)
 - Keystore password: Password you provided when downloading the client credentials file 
 
-
 **NOTE:** If using SQL devleoper 18.2.0 or higher this field is not available and not required
 
 
 - Service: <ADW_Instance_name>_medium 
 - Click **Save**
 - Click **Connect** and verify Successful connection
-
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_010.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -163,7 +161,6 @@ Grant dwrole to ocitest;
 - Connection Type: Cloud PDB
 - Configuration file: File that was dowloaded from ADW service console (Client credenitla zip file)
 - Keystore password: Password you provided when downloading the client credentials file 
-
 
 **NOTE:** If using SQL devleoper 18.2.0 or higher this field is not available and not required
 
@@ -211,7 +208,6 @@ NAME_total NUMBER NOT NULL );
 13. Verify **Table CHANNELS created** message
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_014.PNG" alt="image-alt-text" height="200" width="200">
-
 
 14. Load data from file in Object Storage to newly created table.
 

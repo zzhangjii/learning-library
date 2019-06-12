@@ -26,7 +26,8 @@ In this lab you will create and mount File Storage System to a compute instance 
 
 **Some Key points;**
 
-- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
+**We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%**
+
 
 - All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
 
@@ -86,15 +87,10 @@ In this lab you will create and mount File Storage System to a compute instance 
 
 
 - **Name:** Enter easy to remember name
-
 - **Create in Compartment:** Has the correct compartment
-
 - **Create Virtual Cloud Network Plus Related Resources:** Select this option.
-
 - Click **Create Virtual Cloud Network**
-
 - Click **Close**
-
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -118,7 +114,6 @@ In this lab you will create and mount File Storage System to a compute instance 
 - **SOURCE PORT RANGE:** ALL
 - **DESTINATION PORT RANGE:** 2048-2050
 
-
 **Rule # 2 for access of NFS and NLM traffic with Destination Port Range of 2048-2050. (Type the values).**
 
 
@@ -129,7 +124,6 @@ In this lab you will create and mount File Storage System to a compute instance 
 - **SOURCE PORT RANGE:** 2048-2050
 - **DESTINATION PORT RANGE:** All
 
-
 7. Click **+Additional Ingress Rule** to add third ingress rule allowing traffic to a Destination Port Range of 111 for the NFS rpcbind utility.
 
 
@@ -138,7 +132,6 @@ In this lab you will create and mount File Storage System to a compute instance 
 - Source Port Range: All
 - Destination Port Range: 111
 
-
 8. Click **+Additional Ingress** Rule  to add fourth ingress rule allowing traffic to a Source Port Range of 111 for the NFS rpcbind utility.
 
 
@@ -146,7 +139,6 @@ In this lab you will create and mount File Storage System to a compute instance 
 - IP Protocol: TCP
 - Source Port Range: 111
 - Destination Port Range: All
-
 
 9. Click **Add Ingress Rule**
 
@@ -173,7 +165,6 @@ In this section we will create File System Storage.
 - Name: Provide a name
 - Availability Domain: Choose any AD.
 
-
 **Under Mount Target Information**
 
 
@@ -185,7 +176,6 @@ In this section we will create File System Storage.
 - Hostname: Leave blank.
 - Path Name: Enter /
 - Maximum Free space: choose Recommended Size
-
 
 5. Click **Create File System**.
 
@@ -255,27 +245,16 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 
 - **Name:** Enter a name 
-
 - **Availability Domain:** Select availability domain
-
 - **Image Operating System:** For the image, we recommend using the Latest Oracle Linux available.
-
 - **Choose Instance Type:** Select Virtual Machine
-
 - **Choose Instance Shape:** Select VM shape
-
 - **Configure Boot Volume:** Leave the default
-
 - **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
-
 - **Virtual Cloud Network Compartment:** Choose your compartment
-
 - **Virtual Cloud Network:** Select the VCN you created in the previous section. 
-
 - **Subnet Compartment:** Choose your compartment. 
-
 - **Subnet:** Choose the first Subnet
-
 
 9. Click **Create**
 
@@ -347,7 +326,6 @@ and verify the mounted File System Storage.
 - IP Protocol: ICMP
 - Source port range: All
 - Destination port range: All
-
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/File_Storage_Service/img/FSS_009.png" alt="image-alt-text" height="200" width="200">
 

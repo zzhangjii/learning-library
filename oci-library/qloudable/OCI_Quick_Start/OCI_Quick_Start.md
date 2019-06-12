@@ -30,7 +30,8 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 
 **Some Key points;**
 
-- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
+**We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%**
+
 
 - All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
 
@@ -92,15 +93,10 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 
 
 - **Create in Compartment:** Has the correct compartment
-
 - **Name:** Enter easy to remember name
-
 - **Create Virtual Cloud Network Plus Related Resources:** Select this option.
-
 - Click **Create Virtual Cloud Network**
-
 - Click **Close**
-
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -119,7 +115,6 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 - **IP PROTOCOL:** TCP
 - **SOURCE PORT RANGE:** ALL
 - **DESTINATION PORT RANGE:** 80
-
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_002.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -181,27 +176,16 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 
 - **Name:** Enter a name 
-
 - **Availability Domain:** Select availability domain
-
 - **Image Operating System:** For the image, we recommend using the Latest Oracle Linux available.
-
 - **Choose Instance Type:** Select Virtual Machine
-
 - **Choose Instance Shape:** Select VM shape
-
 - **Configure Boot Volume:** Leave the default
-
 - **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
-
 - **Virtual Cloud Network Compartment:** Choose your compartment
-
 - **Virtual Cloud Network:** Select the VCN you created in the previous section. 
-
 - **Subnet Compartment:** Choose your compartment. 
-
 - **Subnet:** Choose the first Subnet
-
 
 9. Click **Create**
 
@@ -240,7 +224,6 @@ Compute).
 - **SIZE:** Set to 50
 - **BACKUP POLICY:** Set to None (If this field shows ‘Error Retrieving Value’ then leave it as is)
 
-
 17. Click **Create Block Volume**. Wait for volume to become available. Wait for Block Volume state to change from 'Provisioning' to 'Available'
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_003.PNG" alt="image-alt-text" height="200" width="200">
@@ -264,7 +247,6 @@ Compute).
 - BLOCK VOLUME COMPARTMENT: Ensure correct compartment is selected
 - Block Volume: Choose the volume created earlire
 - Access: Choose READ/WRITE
-
 
 21. Click **Attach**.
 
@@ -302,7 +284,6 @@ sudo systemctl start httpd
 4. Enter commad lsblk to verify the Block volume storage is initialized. This could be sda, sdb or somethig else strting with 'sd'. In below example this volume is called sdb. Below screen shot shows a 1 TB volume though in this lab we have created a 50GB volume thus the size in your compute instance will be 50GB.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/OCI_Quick_Start001.PNG" alt="image-alt-text" height="200" width="200">
-
 
 **HINT:** The Name sdb is the block volume storage. This name could change for your specific attachment (i.e sdc)
 
@@ -429,7 +410,6 @@ sudo umount /dev/<VOLUME_NAME>
 - **Name:** Enter a name (e.g. "boot volume instance").
 - **Availability Domain:** Make sure its same AD as where the block volume was created
 
-
 **NOTE :** Boot Volume field is set to BOOT VOLUME and to the boot volume you detached from the original Instance.
 
 
@@ -440,7 +420,6 @@ sudo umount /dev/<VOLUME_NAME>
 - **Virtual Cloud Network:** Select the VCN created earlier
 - **Subnet compartment:** Select yor compartment 
 - **Subnet:** Select the Public subnet.
-
 
 8. Click **Create Instance**.
 
@@ -475,7 +454,7 @@ sudo systemctl restart httpd
 
 1. Switch to  OCI console window
 
-2. If your Compute instance is not displayed, From OCI services menu Click Instances under Compute
+2. If your Compute instance is not displayed, From OCI services menu Click **Instances** under **Compute**
 
 3. Locate first compute instance, Click Action icon and then **Terminat** 
 

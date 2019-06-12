@@ -405,7 +405,7 @@ oci setup config
 cat ~/.oci/oci_api_key_public.pem
 ```
 
-21. Hightligh and copy the content from ssh session. Switch to OCI Console, click Human icon followed by your user name. In user details page click **Add Public Key**. In the dialg box paste the public key content and click **Add**.
+21. Highligh and copy the content from ssh session. Switch to OCI Console, click Human icon followed by your user name. In user details page click **Add Public Key**. In the dialg box paste the public key content and click **Add**.
 
 <img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_006.PNG" alt="image-alt-text" height="200" width="200">
 

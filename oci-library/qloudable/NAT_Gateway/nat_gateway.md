@@ -32,7 +32,8 @@ Dedicated IP Addresses: Each NAT gateway is assigned a dedicated IP address that
 
 **Some Key points;**
 
-- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
+**We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%**
+
 
 - All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
 
@@ -87,15 +88,10 @@ Dedicated IP Addresses: Each NAT gateway is assigned a dedicated IP address that
 
 
 - **Name:** Enter easy to remember name
-
 - **Create in Compartment:** Has the correct compartment
-
 - **Create Virtual Cloud Network Plus Related Resources:** Select this option.
-
 - Click **Create Virtual Cloud Network**
-
 - Click **Close**
-
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -157,27 +153,16 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 
 - **Name:** Enter a name 
-
 - **Availability Domain:** Select availability domain
-
 - **Image Operating System:** For the image, we recommend using the Latest Oracle Linux available.
-
 - **Choose Instance Type:** Select Virtual Machine
-
 - **Choose Instance Shape:** Select VM shape
-
 - **Configure Boot Volume:** Leave the default
-
 - **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
-
 - **Virtual Cloud Network Compartment:** Choose your compartment
-
 - **Virtual Cloud Network:** Select the VCN you created in the previous section. 
-
 - **Subnet Compartment:** Choose your compartment. 
-
 - **Subnet:** Choose the first Subnet
-
 
 9. Click **Create**
 
@@ -218,13 +203,15 @@ ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE>
 - Create in Compartment: This field defaults to your current compartment. Make sure correct Compartment is selected.
 
 
-- Name: Enter a name 
+- Name: Enter a name
+
 **Click +Additional Route Rules**
+
+
 - Target Type: Select **NAT Gateway** 
 - Destination CIDR Block: Enter 0.0.0.0/0 
 - Compartment:  Make sure the correct Compartment is selected: 
 - Target NAT Gateway: Select the NATGateway for your VCN. 
-
 
 4. Click **Create Route Table**
 
@@ -238,14 +225,12 @@ ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE>
 - CIDR Block: Provide a CIDR (e.g 10.0.5.0/24).
 - Route Table: Choose the Route table created earlier
 
-
 **NOTE:** Do not choose the 'Default route table'. This is being done so all routing for compute instances in this subnet are via the NAT gateway 
 
 
 - Subnet access:Private Subnet.
 - DHCP Options: Select the default.
 - Security Lists: Select the Security List you created earlier.
-
 
 6. Leave all other options as default, Click **Create Subnet**.
 
@@ -280,27 +265,16 @@ copy and paste the public key content to Notepad. We will use this public key to
 
 
 - **Name:** Enter a name 
-
 - **Availability Domain:** Select availability domain
-
 - **Image Operating System:** For the image, we recommend using the Latest Oracle Linux available.
-
 - **Choose Instance Type:** Select Virtual Machine
-
 - **Choose Instance Shape:** Select VM shape
-
 - **Configure Boot Volume:** Leave the default
-
 - **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
-
 - **Virtual Cloud Network Compartment:** Choose your compartment
-
 - **Virtual Cloud Network:** Select the VCN you created in the previous section. 
-
 - **Subnet Compartment:** Choose your compartment. 
-
 - **Subnet:** choose the subnet under Private Subnet
-
 
 12. Click **Create**
 
@@ -341,7 +315,6 @@ and verify there is internet connectivity
 
 20. Switch back to OCI console window and using above step, this time choose Allow Traffic. Switch back to ssh session and verify ping response is received.
        
-
 ## Delete the resources
 
 1. Switch to  OCI console window

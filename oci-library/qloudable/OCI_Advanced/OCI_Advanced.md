@@ -23,7 +23,8 @@ Local VCN peering is the process of connecting two VCNs in the same region and t
 
 **Some Key points;**
 
-- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
+**We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%**
+
 
 - All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
 
@@ -83,17 +84,11 @@ Local VCN peering is the process of connecting two VCNs in the same region and t
 
 
 - **Name:** Enter easy to remember name
-
 - **Create in Compartment:** Has the correct compartment
-
 - **Create Virtual Cloud Network Only:** Select this option.
-
 -**CIDR BLOCK**: 10.0.0.0/16
-
 - Click **Create Virtual Cloud Network**
-
 - Click **Close**
-
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_001.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -115,7 +110,6 @@ Local VCN peering is the process of connecting two VCNs in the same region and t
 - Compartment: Your Compartment.
 - Target Internet Gateway: Select the Internet Gateway created previously.
 
-
 9. Click **Add Route Rules**.
 
 10. Click **Subnets** then **Create Subnet**. Fill out the dialog box:
@@ -129,7 +123,6 @@ Local VCN peering is the process of connecting two VCNs in the same region and t
 - DHCP Options: Select the default.
 - Security Lists: Default Security List
 
-
 11. Leave all other options as default, Click **Create Subnet**.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_004.PNG" alt="image-alt-text" height="200" width="200">
@@ -140,12 +133,12 @@ Local VCN peering is the process of connecting two VCNs in the same region and t
 - NAME: Provide a Name 
 - CREATE IN COMPARTMENT: Select your compartment
 
-
 13. Click **Create Local Peering Gateway**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_004.PNG" alt="image-alt-text" height="200" width="200">
 
 14. Create a second VCN using steps above use CIDR block:
+
 
 -**CIDR BLOCK**: 10.10.0.0/16
 
@@ -162,7 +155,6 @@ Local VCN peering is the process of connecting two VCNs in the same region and t
 - DHCP Options: Select the default.
 - Security Lists: Default Security List
 
-
 17. Add route table for second VCN, use below data
 
 
@@ -170,16 +162,16 @@ Local VCN peering is the process of connecting two VCNs in the same region and t
 - Destination CIDR Block: 0.0.0.0/0
 - Compartment: Your Compartment.
 
-
 18. Leave all other options as default, Click **Create Subnet**.
 
 
 19. Create second Local peering gateway. Once the Subnet is in the ‘Available’ state, click **Local Peering Gateways**, then **Create Local Peering Gateway** (local peering gateway  is a component on a VCN for routing traffic to a locally peered VCN). Fill out the dialog box:
 
+
 - NAME: Provide a Name 
 - CREATE IN COMPARTMENT: Select your compartment
 
-**You have now created two VCN with internet gateway for internet traffic, added default rule in the route table, created subnet and added two local peering gateways(one for each VCN). For VCN peering each VCN must have a local peering gateway.**
+**WE have created two VCN with internet gateway for internet traffic, added default rule in the route table, created subnet and added two local peering gateways(one for each VCN). For VCN peering each VCN must have a local peering gateway.**
 
 ## Create ssh keys two compute instances and configure routing
 
@@ -241,27 +233,16 @@ Fill out the dialog box:
 
 
 - **Name:** Enter a name 
-
 - **Availability Domain:** Select availability domain
-
 - **Image Operating System:** For the image, we recommend using the Latest Oracle Linux available.
-
 - **Choose Instance Type:** Select Virtual Machine
-
 - **Choose Instance Shape:** Select VM shape
-
 - **Configure Boot Volume:** Leave the default
-
 - **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
-
 - **Virtual Cloud Network Compartment:** Choose your compartment
-
 - **Virtual Cloud Network:** Select the first VCN you created in the previous section. 
-
 - **Subnet Compartment:** Choose your compartment. 
-
 - **Subnet:** Choose the Subnet
-
 
 9. Click **Create**
 
@@ -273,27 +254,16 @@ Fill out the dialog box:
 
 
 - **Name:** Enter a name 
-
 - **Availability Domain:** Select availability domain
-
 - **Image Operating System:** For the image, we recommend using the Latest Oracle Linux available.
-
 - **Choose Instance Type:** Select Virtual Machine
-
 - **Choose Instance Shape:** Select VM shape
-
 - **Configure Boot Volume:** Leave the default
-
 - **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
-
 - **Virtual Cloud Network Compartment:** Choose your compartment
-
 - **Virtual Cloud Network:** Select the Second VCN you created in the previous section. 
-
 - **Subnet Compartment:** Choose your compartment. 
-
 - **Subnet:** Choose the Subnet
-
 
 11. Click **Create**
 
@@ -311,7 +281,6 @@ Fill out the dialog box:
 - VIRTUAL CLOUD NETWORK: Choose the **second VCN** (Gateway1 needs to pair with Gateway2 that is in second VCN)
 - LOCAL PEERING GATEWAY COMPARTMENT: Choose the comprtment
 - UNPEERED PEER GATEWAY: Choose the second peering gateway
-
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_006.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -331,7 +300,6 @@ Fill out the dialog box:
 - Compartment:  Make sure the correct Compartment is selected: 
 - TARGET LOCAL PEERING GATEWAY: Select the Local peering Gateway of second VCN 
 
-
 19. Click **Add Route Rule**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_009.PNG" alt="image-alt-text" height="200" width="200">
@@ -345,7 +313,6 @@ Fill out the dialog box:
 - IP Protocol: Select ICMP.
 - Source Port Range: All
 - Destination Port Range: All
-
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_008.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -361,7 +328,6 @@ Fill out the dialog box:
 - Compartment:  Make sure the correct Compartment is selected: 
 - TARGET LOCAL PEERING GATEWAY: Select the Local peering Gateway of second VCN 
 
-
 **Second VCN Security list rule** (Navigate to Security List and Click **Add Ingress Rule**.)
 
 24. Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure to leave STATELESS flag un-checked
@@ -371,7 +337,6 @@ Fill out the dialog box:
 - IP Protocol: Select ICMP.
 - Source Port Range: All
 - Destination Port Range: All
-
 
 **We now have two VCNs with one compute instance in each VCN. These VCNs have been connected using a Local Peering Gateway. Any instance in one VCN can reach an instance in the other VCN. Next we will test the connectivity.**
 

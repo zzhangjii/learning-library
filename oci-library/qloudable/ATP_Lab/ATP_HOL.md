@@ -32,7 +32,8 @@ Oracle Cloud Infrastructure's Autonomous Transaction Processing Cloud Service is
 
 **Some Key points;**
 
-- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
+**We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%**
+
 
 - All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
 
@@ -162,27 +163,16 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 
 - **Name:** Enter a name 
-
 - **Availability Domain:** Select availability domain
-
 - **Image Operating System:** For the image, we recommend using the Latest Oracle Linux available.
-
 - **Choose Instance Type:** Select Virtual Machine
-
 - **Choose Instance Shape:** Select VM shape
-
 - **Configure Boot Volume:** Leave the default
-
 - **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
-
 - **Virtual Cloud Network Compartment:** Choose your compartment
-
 - **Virtual Cloud Network:** Select the VCN you created in the previous section. 
-
 - **Subnet Compartment:** Choose your compartment. 
-
 - **Subnet:** Choose the first Subnet
-
 
 9. Click **Create**
 
@@ -263,12 +253,9 @@ instance created earlier**
 - PASSWORD: Provide password per guideline 
 - CONFIRM PASSWORD: Provide same password 
 
-
 **NOTE:** Do not use &, ), ( in the password due to script limitation that we will execute later.
 
-
 - LICENSE TYPE: SUBSCRIBE TO NEW DATABASE SOFTWARE LICENSES AND THE DATABASE CLOUD SERVICE
-
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_018.PNG" alt="image-alt-text" height="200" width="200">
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_019.PNG" alt="image-alt-text" height="200" width="200">
@@ -429,8 +416,8 @@ In this section we will generate auth token for the user of this lab. An Auth to
 - Configuration file: File that was dowloaded from ATP service console (Client credenitla zip file)
 - Keystore password: Password you provided when downloading the client credentials file 
 
-
 **NOTE:** If using SQL devleoper 18.2.0 or higher this field is not available and not required
+
 
 - Service: <ATP_Instance_name>_medium 
 - Click **Save**
@@ -460,14 +447,12 @@ Grant dwrole to ocitest;
 - Configuration file: File that was dowloaded from ATP service console (Client credenitla zip file)
 - Keystore password: Password you provided when downloading the client credentials file 
 
-
 **NOTE:** If using SQL devleoper 18.2.0 or higher this field is not available and not required
 
 
 - Service: <ATP_Instance_name>_medium 
 - Click **Save**
 - Click **Connect** and verify Successful connection
-
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_012.PNG" alt="image-alt-text" height="200" width="200">
 

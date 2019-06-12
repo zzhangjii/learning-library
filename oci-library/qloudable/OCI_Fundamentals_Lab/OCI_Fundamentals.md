@@ -27,7 +27,8 @@ In this lab you will deploy http servers on two compute instances in Oracle Clou
 
 **Some Key points;**
 
-- We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%
+**We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%**
+
 
 - All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
 
@@ -86,18 +87,12 @@ In this lab you will deploy http servers on two compute instances in Oracle Clou
 
 
 - **Name:** Enter easy to remember name
-
 - **Create in Compartment:** Has the correct compartment
-
 - **Create Virtual Cloud Network Plus Related Resources:** Select this option.
-
 - Click **Create Virtual Cloud Network**
-
 - Click **Close**
 
-
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="200" width="200">
-
 
 <img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text" height="200" width="200">
               
@@ -112,8 +107,7 @@ In this lab you will deploy http servers on two compute instances in Oracle Clou
 ```
 ssh-keygen
 ```
-**HINT:** You can swap between OCI window, 
-git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
+**HINT:** You can swap between OCI window, git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
 
 <img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -158,27 +152,16 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 
 - **Name:** Enter a name 
-
 - **Availability Domain:** Select availability domain
-
 - **Image Operating System:** For the image, we recommend using the Latest Oracle Linux available.
-
 - **Choose Instance Type:** Select Virtual Machine
-
 - **Choose Instance Shape:** Select VM shape
-
 - **Configure Boot Volume:** Leave the default
-
 - **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
-
 - **Virtual Cloud Network Compartment:** Choose your compartment
-
 - **Virtual Cloud Network:** Select the VCN you created in the previous section. 
-
 - **Subnet Compartment:** Choose your compartment. 
-
 - **Subnet:** Choose the first Subnet
-
 
 9. Click **Create**
 
@@ -280,7 +263,7 @@ echo 'WebServer2' >>/var/www/html/index.html
 ```
 (create index.html file. The content of the file will be displayed when the web server is accessed.)
 
-20. Switch back to OCI Console window.
+19. Switch back to OCI Console window.
 
 We now have two Compute instances with Web servers installed and a basis index.html file. Before we create the load balancer we will need to create a new security list, route table and subnet that theload balancer will use.
 
@@ -301,7 +284,6 @@ In this section we will create a new security list. This security list will be u
 - SECURITY LIST Name: Specify a name (for example, LB Security List).
 - Click **Create Security List** 
 
-
 3. Verify the New Security List got created.
 
 **We now have a Security List that will be used by the load balancer. Next we will create a Route table that will be used by two new subnets (that will be used by the load balancer, once created).**
@@ -314,7 +296,6 @@ In this section we will create a new security list. This security list will be u
 - Name: Enter a name (for example, LB Route Table).
 - Create in Compartment: This field defaults to your current compartment. Make sure correct Compartment is selected.
 
-
 **Click +Additional Route Rules**
 
 
@@ -323,9 +304,7 @@ In this section we will create a new security list. This security list will be u
 - Compartment: Make sure the correct Compartment is selected
 - Target Internet Gateway: Select the Internet Gateway for your VCN. 
 
-
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_003.PNG" alt="image-alt-text" height="200" width="200">
-
 
 6. Click **Create Route Table**.
 
@@ -353,7 +332,6 @@ In this section we will create a new security list. This security list will be u
 - DHCP Options: Select the default.
 - Security Lists: Select the Security List you created earlier.
 
-
 11. Leave all other options as default, Click **Create Subnet**.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_004.PNG" alt="image-alt-text" height="200" width="200">
@@ -370,11 +348,9 @@ In this section we will create a new security list. This security list will be u
 **Under Add Details**
 
 
-
 - LOAD BALANCER NAME: Enter a name for your load balancer.
 - CHOOSE VISIBILITY TYPE: Public
 - CHOOSE THE MAXIMUM TOTAL BANDWIDTH: Select 100Mbps. (This specifies the bandwidth of the load balancer.)
-
 
 **NOTE:** Shape cannot be changed later.
 
@@ -392,7 +368,6 @@ In this section we will create a new security list. This security list will be u
 
 <img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_007.PNG" alt="image-alt-text" height="200" width="200">
 
-
 ***Under SPECIFY HEALTH CHECK POLICY***
 
 
@@ -402,16 +377,14 @@ In this section we will create a new security list. This security list will be u
 
 ***Leave other options as default***
 
-
 **Under Configure Listener**
+
 
 - SPECIFY THE TYPE OF TRAFFIC YOUR LISTENER HANDLES: HTTP
 - SPECIFY THE PORT YOUR LISTENER MONITORS FOR INGRESS TRAFFIC: 80
 
 ***Leave other options as default***
 
-
-**Under Backend set Information:**
 
 3. Click **Create Load Balancer** 
 
@@ -436,7 +409,6 @@ Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure 
 - Source Port Range: All.
 - Destination Port Range: Enter 80 (the listener port).
 
-
 9. Click **Add Ingress Rule**. 
 
 10. Click **Egress Rule** under Resources. Click **Add Egress Rule**,  click **+Additional Egress Rule** and enter the following Egress rule; Ensure to leave STATELESS flag un-checked
@@ -446,7 +418,6 @@ Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure 
 - Destination CIDR: 0.0.0.0/0
 - IP Protocol: Select TCP.
 - Destination Port Range: All.
-
 
 11. Click **Add Egress Rule**.
 
@@ -461,7 +432,6 @@ Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure 
 - Source Port Range: All
 - Destination Port Range: 80
 
-
 13. Click **+Additional Egress Rule** and enter the following Egress rule; Ensure to leave STATELESS flag un-checked
 
 **Second Rule**
@@ -472,10 +442,9 @@ Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure 
 - IP Protocol: Select TCP
 - Destination Port Range: 80
 
-
 14. Click **Add Egress Rule**.
 
-We have now the set-up configured with 2 Compute instances running http server with a index.html file, Load Balancer with all relevant policies and components.
+We now have the set-up configured with 2 Compute instances running http server with a index.html file, Load Balancer with all relevant policies and components.
 
 We will now test the Load Balancer functionality (load balance using round robin). In case one of the http server in High Availability configuration is un-available, Load Balancer will automatically route the traffic to the available http server.
 
