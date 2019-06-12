@@ -143,7 +143,8 @@ In this section we will generate auth token for the user of this lab. An Auth to
 6. Create a new user called ocitest and grant the DWROLE to ocitest user. Enter commands:
 ```
 create user ocitest identified by P#ssw0rd12##
-
+```
+```
 Grant dwrole to ocitest;
 ```
 
@@ -151,8 +152,7 @@ Grant dwrole to ocitest;
 
 <img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_011.PNG" alt="image-alt-text" height="200" width="200">
 
-
-8. Create another connection in SQL Developer (same steps as abovea), use following values:
+8. Create another connection in SQL Developer (same steps as above), use following values:
 
 
 - Connection Name: Provide a name
@@ -161,11 +161,7 @@ Grant dwrole to ocitest;
 - Save Password: Check the flag
 - Connection Type: Cloud PDB
 - Configuration file: File that was dowloaded from ADW service console (Client credenitla zip file)
-- Keystore password: Password you provided when downloading the client credentials file 
-
-**NOTE:** If using SQL devleoper 18.2.0 or higher this field is not available and not required
-
-
+- Keystore password: Password you provided when downloading the client credentials file (NOTE:If using SQL devleoper 18.2.0 or higher this field is not available and not required)
 - Service: <ADW_Instance_name>_medium 
 - Click **Save**
 - Click **Connect** and verify Successful connection
@@ -173,7 +169,7 @@ Grant dwrole to ocitest;
 
 <img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_012.PNG" alt="image-alt-text" height="200" width="200">
 
-9. We will now download a text file from OCI Object storage. This file has commands that will be used to upload data into ADW and retreive it. Open a new browser tab and copy/paste or Etner URL;
+9. We will now download a text file from OCI Object storage. This file has commands that will be used to upload data into ADW and retreive it. Open a new browser tab and copy/paste or Enter URL;
 
 https://objectstorage.us-ashburn-1.oraclecloud.com/n/us_training/b/Lab-images/o/ADW-File.txt
 
