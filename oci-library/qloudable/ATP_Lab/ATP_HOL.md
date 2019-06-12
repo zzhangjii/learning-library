@@ -310,8 +310,9 @@ Answer 'Y' when prompted
 
 12. Enter below commands, replacing the value in < >. 
 (This will install a schema to run our transactions against)
+
 ```
-./oewizard -cf ~/<CREDENTIAL_ZIP_FILE> -cs <DB_NAME>_medium  -ts DATA -dbap <DB_PASSWORD> -dba ADMIN -u soe -p <DB_PASSWORD> -async_off -scale 0.1 -hashpart -create -cl -v
+./oewizard -cf ~/<CREDENTIAL_ZIP_FILE> -cs <DB_NAME>_medium  -ts DATA -dbap <DB_PASSWORD> -dba ADMIN -u soe -p <DB_PASSWORD> -async_off-scale 0.1 -hashpart -create -cl -v
 ```
 
 **NOTE:** In below example, CREDENTIAL_ZIP_FILE is 'Wallet_ATPDB3.zip', DB_NAME is ATPDB3, DB_PASSWORD is Oracle098####.
@@ -428,9 +429,11 @@ In this section we will generate auth token for the user of this lab. An Auth to
 <img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_010.PNG" alt="image-alt-text" height="200" width="200">
 
 6. Create a new user called ocitest and grant the DWROLE to ocitest user. Enter commands:
+
 ```
 create user ocitest identified by P#ssw0rd12##
 ```
+
 ```
 Grant dwrole to ocitest;
 ```
