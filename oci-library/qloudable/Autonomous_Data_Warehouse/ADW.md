@@ -190,7 +190,7 @@ https://objectstorage.us-ashburn-1.oraclecloud.com/n/us_training/b/Lab-images/o/
 
 **) ;**
 
-end;
+**end;**
 
 **NOTE:** user name should be your user name and password should be the Auth Token generated earlier.
 
