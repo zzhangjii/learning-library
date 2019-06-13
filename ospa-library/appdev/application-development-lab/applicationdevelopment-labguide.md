@@ -392,7 +392,7 @@ upper-left corner.
 
   - ![](./media/image33.png)(datetime)&nbsp;&nbsp;actionDate&nbsp;&nbsp;&nbsp;&nbsp;Action Date
 
-> ![](./media/appdev2.9.2.png)
+> ![](./media/AppDev2.9.2.png)
 > 
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.9.2 – Product Order Business Object Fields<br/>
 
@@ -595,7 +595,7 @@ Click the “Import” button to upload the selected file
 
 20. Create an initial “Product Order” (Product Order -> Data -> + Add Row) as follows, then review your
     results  
-    ![](./media/appdev2.20.png)
+    ![](./media/AppDev2.20.png)
 
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.20 – Add Product Order row
 
@@ -617,7 +617,7 @@ Click the “Import” button to upload the selected file
 
   - Product Order - ProductOrder.csv
 
-    ![](./media/appdev2.22.1.png)
+    ![](./media/AppDev2.22.1.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.22.1 – Product Order data
 
