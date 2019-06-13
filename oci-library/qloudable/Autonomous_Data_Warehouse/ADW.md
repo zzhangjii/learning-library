@@ -134,7 +134,7 @@ In this section we will generate auth token for the user of this lab. An Auth to
 **NOTE:** If using SQL devleoper 18.2.0 or higher this field is not available and not required
 
 
-- Service: <ADW_Instance_name>_medium 
+- Service: YOUR_ADW_INSTANCE_NAME_medium 
 - Click **Save**
 - Click **Connect** and verify Successful connection
 
@@ -162,7 +162,7 @@ Grant dwrole to ocitest;
 - Connection Type: Cloud PDB
 - Configuration file: File that was dowloaded from ADW service console (Client credenitla zip file)
 - Keystore password: Password you provided when downloading the client credentials file (NOTE:If using SQL devleoper 18.2.0 or higher this field is not available and not required)
-- Service: <ADW_Instance_name>_medium 
+- Service: YOUR_ADW_INSTANCE_NAME_medium 
 - Click **Save**
 - Click **Connect** and verify Successful connection
 
@@ -178,29 +178,35 @@ https://objectstorage.us-ashburn-1.oraclecloud.com/n/us_training/b/Lab-images/o/
 10. Using OCITEST user store your Object Storage credenitals. From the ADW-File.txt content copy and paste the commands under  
 /**** Set Definitions ****/ section. The commands will look like below
 
-**NOTE:** user name shoud be your user name and password should be the Auth Token generated earlier.
+**Begin**
 
-```
-Begin
-          DBMS_CLOUD.create_credential (
-          credential_name => 'OCI_CRED_NAME',
-           username => '<YOUR_USER_NAME>',
-           password => '<AUTH_TOKEN>'
-) ;
-end;
-```
+**DBMS_CLOUD.create_credential (**
+
+**credential_name => 'OCI_CRED_NAME',**
+
+**username => '<YOUR_USER_NAME>',**
+
+**password => '<AUTH_TOKEN>'**
+
+**) ;**
+
+**end;**
+
+**NOTE:** user name should be your user name and password should be the Auth Token generated earlier.
 
 11. Verify **PL/SQL Procedure successfully completed** message is displayed.
 
 <img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_013.PNG" alt="image-alt-text" height="200" width="200">
 
 12. Create a new table (We will load data from file in Object Storage to this table). From the ADW-File.txt content copy and paste the commands undrer /**** Create Table ****/ section. The commands will look like below
-```
-CREATE TABLE CHANNELS (
-NAME VARCHAR2(20) NOT NULL ,
-gender VARCHAR2(20) NOT NULL ,
-NAME_total NUMBER NOT NULL );
-```
+
+**CREATE TABLE CHANNELS (**
+
+**NAME VARCHAR2(20) NOT NULL ,**
+
+**gender VARCHAR2(20) NOT NULL ,**
+
+**NAME_total NUMBER NOT NULL );**
 
 13. Verify **Table CHANNELS created** message
 
@@ -209,16 +215,20 @@ NAME_total NUMBER NOT NULL );
 14. Load data from file in Object Storage to newly created table.
 
 **NOTE:** A data file with 1000s of records exists in OCI Object storage and we will use this file records to populate ADW From the ADW-File.txt content copy and paste the commands undrer  /**** DBMS ****/ section. The commands will look like below
-```
-begin
-dbms_cloud.copy_data(
-table_name =>'CHANNELS',
-credential_name =>'OCI_CRED_NAME',
-file_uri_list =>'https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/us_training/Lab-images/century_names_new.txt',
-format => json_object('delimiter' value ',', 'trimspaces' value 'lrtrim')
-);
-end;
-```
+
+**begin**
+
+**dbms_cloud.copy_data(**
+
+**table_name =>'CHANNELS',**
+
+**credential_name =>'OCI_CRED_NAME',**
+
+**file_uri_list =>'https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/us_training/Lab-images/century_names_new.txt',format => json_object('delimiter' value ',', 'trimspaces' value 'lrtrim')**
+
+**);**
+
+**end;**
 
 15. Verify **PL/SQL Procedure successfully completed** message
 
