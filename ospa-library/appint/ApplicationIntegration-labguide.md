@@ -1,6 +1,6 @@
 # Application Integration Lab Guide
 
-## June 11, 2019 - 5:30 PM
+## June 13, 2019 - 12:20 PM
 
 # Table of Contents
 
@@ -64,16 +64,15 @@ the features and functionality of Oracle Integration so you can represent the pr
 To optimize your experience there are some general guidelines that will
 help you get the most from these lab exercises.
 
-  - Read through an entire section before executing any of its steps.
-    Merely following the steps and screenshots without understanding the
+  - Merely following the steps and screenshots without understanding the
     flow will diminish your learning experience, so think about what you
     are doing and why. If you aren’t sure, ask questions.
 
-  - Ask before you do. Please ask a lab assistant before you spend time
+  - Ask before you do. Please ask a lab assistant before you spend a lot of time
     marching down a path that may lead to unsatisfactory results.
 
   - Follow the steps as shown in this guide. Do not freestyle during the
-    labs. This is a live environment. If you want to do something that
+    labs. If you want to do something that
     is not in the labs, ask a lab assistant first.
 
   - There is no prize for finishing first and there is no penalty for
