@@ -7,6 +7,8 @@
 
 [Sign in to OCI Console and create VCN](#sign-in-to-oci-console-and-create-vcn)
 
+[Create Load Balancer and update Security List](#create-load-balancer-and-update-security-list)
+
 [Configure instance pool and auto scaling](#configure-instance-pool-and-auto-scaling)
 
 [Delete the resources](#delete-the-resources)
@@ -14,7 +16,8 @@
 
 ## Overview
 
-In this lab we will create a compute instance, instance configuration and then configure auto scaling. We will then verify auto scaling feature as configured threshold on CPU are crossed.
+In this lab we will build a load-balanced web application that can automatically scale out/in based on CPU utilization.  
+We will create load balancer, compute instance, instance configuration and then configure auto scaling. We will then verify auto scaling feature as configured threshold on CPU are crossed.
 Autoscaling enables you to automatically adjust the number of Compute instances in an instance pool based on performance metrics such as CPU utilization. This helps you provide consistent performance for your end users during periods of high demand, and helps you reduce your costs during periods of low demand.
 
 You select a performance metric to monitor, and set thresholds that the performance metric must reach to trigger an autoscaling event. When system usage meets a threshold, autoscaling dynamically allocates resources in near-real time. As load increases, instances are automatically provisioned: the instance pool scales out. As load decreases, instances are automatically removed: the instance pool scales in.
@@ -32,7 +35,7 @@ A cooldown period between autoscaling events lets the system stabilize at the up
 
 - Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
 
-- Do NOT use compartment name and other data from screen shots.Only use  data(including compartment name) provided in the content section of the lab
+- Do NOT use compartment name and other data from screen shots. Only use  data(including compartment name) provided in the content section of the lab
 
 - Mac OS Users should use ctrl+C / ctrl+V to copy and paste inside the OCI Console
 
@@ -56,6 +59,8 @@ A cooldown period between autoscaling events lets the system stabilize at the up
 4. Familiarity with Compartment: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/concepts.htm
 
 5. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
+
+6. Familiarity with Load Balancer concepts: https://docs.cloud.oracle.com/iaas/Content/Balance/Concepts/balanceoverview.htm
 
 ## Sign in to OCI Console and create VCN
 
@@ -92,7 +97,84 @@ A cooldown period between autoscaling events lets the system stabilize at the up
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="200" width="200">
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text" height="200" width="200">
-              
+
+## Create Load Balancer and update Security List
+
+**When you create a load balancer, you choose its shape (size) and specify subnets from different Availability Domains. This ensures that the load balancer is highly available.**
+
+1. From OCI Services menu, click **Load Balancers** under **Networking**
+
+2. Click **Create Load Balancer**. Fill out the dialog box;
+
+**Under Add Details**
+
+
+- LOAD BALANCER NAME: Enter a name for your load balancer.
+- CHOOSE VISIBILITY TYPE: Public
+- CHOOSE THE MAXIMUM TOTAL BANDWIDTH: Select 100Mbps. (This specifies the bandwidth of the load balancer.)
+
+
+**NOTE:** Shape cannot be changed later.
+
+
+- VIRTUAL CLOUD NETWORK: Choose your Virtual Cloud Network
+- SUBNET: Choose the  Availability Domain specific subnet in AD1 as first subnet. Then choose the Availability Domain specific subnet in AD2 as second subnet.
+
+<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_006.PNG" alt="image-alt-text" height="200" width="200">
+
+**Under Choose Backends:**
+
+
+- SPECIFY A LOAD BALANCING POLICY: Weighted Round Robin
+- Don't add any backend. This will be managed by the instance pool. *
+
+<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_007.PNG" alt="image-alt-text" height="200" width="200">
+
+
+***Under SPECIFY HEALTH CHECK POLICY***
+
+
+- PROTOCOL: HTTP
+- Port: Enter 80 
+- URL PATH (URI): /
+
+***Leave other options as default***
+
+
+**Under Configure Listener**
+
+- SPECIFY THE TYPE OF TRAFFIC YOUR LISTENER HANDLES: HTTP
+- SPECIFY THE PORT YOUR LISTENER MONITORS FOR INGRESS TRAFFIC: 80
+
+***Leave other options as default***
+
+
+3. Click **Create Load Balancer** 
+
+4. Wait for the load balancer to become active and then note down it’s Public IP address.
+
+5. From OCI Services menu, click **Virtual Cloud Network** under Networking. Locate the VCN you created earlier.
+
+6. Click  VCN name to display VCN detail page.
+
+7. Click **Security Lists**, and locate the Default Security List.
+
+8. Click Load Default Security List, Click **Add Ingress Rule**.
+Enter the following ingress rule; Ensure to leave STATELESS flag un-checked
+
+
+
+- Source Type: CIDR 
+- Source CIDR: Enter 0.0.0.0/0.
+- IP Protocol: Select TCP.
+- Source Port Range: All.
+- Destination Port Range: Enter 80 (the listener port).
+
+
+9. Click **Add Ingress Rule**. 
+
+
+
 ## Configure instance pool and auto scaling
 
 1. Configure instance pool requires creating a instance configuration. First we will create ssh keys and a compute instance to create instance configuration. 
@@ -161,15 +243,36 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 - Subnet Compartment: Choose your compartment. 
 - Subnet: Choose the first Subnet
 
-9. Click **Create**
+9. Click  **Show Advanced Options**
+
+**Under Management**
+
+- User Data: Choose '*Paste cloud-init script*' and paste the below script. Cloud-init script will be executed at the first boot only to configure the instance. 
+
+```YAML
+#cloud-config
+packages:
+- httpd
+- stress
+
+runcmd:
+- [sh, -c, echo "<html>Web Server IP `hostname --ip-address`</html>" > /var/www/html/index.html]
+- [firewall-offline-cmd, --add-port=80/tcp]
+- [systemctl, start, httpd]
+- [systemctl, restart, firewalld]
+```
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_013.PNG" alt="cloud-init setup" height="200" width="200">
+
+10. Click **Create**
 
 **NOTE:** If 'Service limit' error is displayed choose a different shape such as VM.Standard.E2.2 OR VM.Standard2.2 OR choose a different AD
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text" height="200" width="200">
 
-10. Wait for Instance to be in **Running** state. 
+11. Wait for Instance to be in **Running** state. 
 
-11. Click Instance name and then select **Create Instance Configuration** from the Action menuFill out the dialog box:
+12. Click Instance name and then select **Create Instance Configuration** from the Action menu.  
+Fill out the dialog box:
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_001.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -177,13 +280,13 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 - **CREATE IN COMPARTMENT**: Choose your compartment
 - **INSTANCE CONFIGURATION NAME** : Provide a name
 
-12. Click **Create Instance Configuration**
+13. Click **Create Instance Configuration**
 
-13. In the Instance Configuration page, Click **Create Instance Pools**
+14. In the Instance Configuration page, Click **Create Instance Pools**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_002.PNG" alt="image-alt-text" height="200" width="200">
 
-14.  Click **Create Instance Pool**. A new dialog box will appear. This is used to create initial configuration of the instance pool such as how many compute instance to create initially, VCN, and Availability domain the instance pool should be created in. Fill out the dialog box:
+15.  Click **Create Instance Pool**. A new dialog box will appear. This is used to create initial configuration of the instance pool such as how many compute instance to create initially, VCN, and Availability domain the instance pool should be created in. Fill out the dialog box:
 
 
 - CREATE IN COMPARTMENT: Choose your compartment
@@ -202,19 +305,38 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 (Any computes launched in this pool will inherit shape, image and ssh keys of the compute whose instance configuration we are using)
 
+<<<<<<< HEAD
+- ATTACH A LOAD BALANCER: Check it.
+=======
 
 - ATTACH A LOAD BALANCER: Keep it un-checked
+>>>>>>> refs/remotes/origin/master
 
-(If the instances in this pool need to be placed behing a load balancer then this option can be used. A Load Balancer must already exist. We will not use this option for the lab)
+- LOAD BALANCER COMPARTMENT : Choose your compartment
+
+- LOAD BALANCER : Choose the Load Balancer created earlier
+
+- BACKEND SET : Choose the first backend set
+
+- PORT : 80
+
+- VNIC : Leave the default
 
 
 - AVAILABILITY DOMAIN: Choose the AD you want to places instances (you can choose first AD)
 - VIRTUAL CLOUD NETWORK COMPARTMENT: Choose VCN's compartment
 - VIRTUAL CLOUD NETWORK: Choose your VCN
 - SUBNET COMPARTMENT: Choose your compartment
+<<<<<<< HEAD
+
+- SUBNET: Choose the Public Subnet  
+
+16. Click **+ Additional Selection** and select a different availability domain for the instance pool. Then, specify the VCN details for the second availability domain.
+=======
 - SUBNET: Choose the Public Subnet 
 
 15. Click **+ Additional Selection** and select a different availability domain for the instance pool. Then, specify the VCN details for the second availability domain.
+>>>>>>> refs/remotes/origin/master
 
 **We configured instances to be deployed in two different Avaialability domain though they can be deployed in the same Availability domain as long as service limits allow it.**
 
@@ -224,13 +346,13 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_003-1.PNG" alt="image-alt-text" height="200" width="200">
 
-16. Click **Create Instance Pool**. Wait for Instance Pool to be in **RUNNING** state (turns green)
+17. Click **Create Instance Pool**. Wait for Instance Pool to be in **RUNNING** state (turns green)
 
-17. From the instance pool details page, click **Actions** and choose **Create Auto Scaling Configuration**
+18. From the instance pool details page, click **Actions** and choose **Create Auto Scaling Configuration**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_004.PNG" alt="image-alt-text" height="200" width="200">
 
-18. Fill out the dialog box:
+19. Fill out the dialog box:
 
 
 - COMPARTMENT: Choose your compartment
@@ -251,70 +373,70 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 **Leave other fileds as is**
 
-19. Click **Create**
+20. Click **Create**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_005.PNG" alt="image-alt-text" height="200" width="200">
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_006.PNG" alt="image-alt-text" height="200" width="200">
 
-**We have now created a auto scaling policy that will start with creating 1 compute instnace in the designated pool. Once the CPU utilization is determined to be above 10% for atleast 300 seconds another compute instance will be launched automatically. Once the CPU utilization is determined to be less than 5% for 300 seconds, one compute instance will be removed. At all times there will be atleast 1 compute instance in the pool**
+**We have now created a auto scaling policy that will start with creating 1 compute instance in the designated pool. Once the CPU utilization is determined to be above 10% for at least 300 seconds another compute instance will be launched automatically. Once the CPU utilization is determined to be less than 5% for 300 seconds, one compute instance will be removed. At all times there will be at least 1 compute instance in the pool**
 
 **Original image can be deleted as it's not part of the pool**
 
-20. Click **Instance Pools** under **Compute** and then your pool name. You should see a Compute instance created. Click the Compute Instance name.
+## Test the setup
+
+1. Click **Instance Pools** under **Compute** and then your pool name. You should see a Compute instance created. Click the Compute Instance name.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_007.PNG" alt="image-alt-text" height="200" width="200">
 
-21. Note down the Publci IP of compute instnace from the details page (Under **Primary VNIC Information** section). Switch to git bash window, if the ssh session to compute instance is still open then exit out of the session (quit command). 
+2. Note down the Public and Private IP of compute instance from the details page (Under **Primary VNIC Information** section). 
 
-22. Ensure you are in /C/Users/PhotonUser/.ssh directory.
+3. Open a web browser and enter load balancer's public IP address. You should see the message: `Web Server IP: <instance private IP>`
 
-23. Enter **ls** and verify id_rsa file exists
+4. Switch to git bash window, if the ssh session to compute instance is still open then exit out of the session (quit command). 
 
-24. Enter command 
+5. Ensure you are in /C/Users/PhotonUser/.ssh directory.
+
+6. Enter **ls** and verify id_rsa file exists
+
+7. Enter command 
 ```
 ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 ```
 
 **HINT:** If 'Permission denied error' is seen, ensure you are using '-i' in the ssh command
 
-25. Enter 'Yes' when prompted for security message
+8. Enter 'Yes' when prompted for security message
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0014.PNG" alt="image-alt-text" height="200" width="200">
  
-26. We will now install a tool called stress to trigger CPU load. In ssh session to compute instance, Enter command:
+9. Now start CPU stress, Enter command:
 
-```
-sudo yum -y install stress
-```
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_008.PNG" alt="image-alt-text" height="200" width="200">
-
-27. Now start CPU stress, Enter command:
-
-```
+```BASH
 sudo stress --cpu 4 --timeout 350
 ```
 
 **Spawn 4 workers spinning on sqrt() with a timeout of 350 seconds.**
 
-28. Switch back to OCI console and navigate to Instance pool details page. Click your instance name and scroll down to **Metric** screen, you should see CPU spiking up after a minute or so.
+10. Switch back to OCI console and navigate to Instance pool details page. Click your instance name and scroll down to **Metric** screen, you should see CPU spiking up after a minute or so.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_009.PNG" alt="image-alt-text" height="200" width="200">
 
-29. Navigate to your Instance Pool details page. In about 3-4 minutes (time configured when we created auto scale configuration), status of Pool should change to **Scaling** and a second compute instance should launch.
+11. Navigate to your Instance Pool details page. In about 3-4 minutes (time configured when we created auto scale configuration), status of Pool should change to **Scaling** and a second compute instance should launch.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_010.PNG" alt="image-alt-text" height="200" width="200">
 
 **This is since our criteria of CPU utilization > 10 was met**
 
-30. Switch back to git bash window and if the stress tool is still running, Pree Ctrl + C to stop the script.
+12. When the second instance is up and running and the instance pool status is  'Running', switch to the web browser and refresh the page multiple times and observe the load balancer balancing traffic between the two web servers.
 
-31. Switch back to OCI console window and navigate to your compute instance details page. Verify CPU utilization goes down after a minute.
+13. Switch back to git bash window and if the stress tool is still running, Prees Ctrl + C to stop the script.
 
-32. Navigate to Instanse pool details page and after 3-4 minute Instance pool status will change to **Scaling** . Additional compute instance will be deleted. 
+14. Switch back to OCI console window and navigate to your compute instance details page. Verify CPU utilization goes down after a minute.
 
-**This is becuase our criteria of CPU utilization < 5 is met**
+15. Navigate to Instanse pool details page and after 3-4 minute Instance pool status will change to **Scaling** . Additional compute instance will be deleted. 
+
+**This is because our criteria of CPU utilization < 5 is met**
 
 ## Delete the resources
 
@@ -325,14 +447,13 @@ sudo stress --cpu 4 --timeout 350
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_011.PNG" alt="image-alt-text" height="200" width="200">
 
 
-3. Navigate to **Instances** Under **Compute**. Click **Instace Configuration** and for your Instance Configuration Click Delete under the three Vertical dots.
+3. Navigate to **Instance Configurations** Under **Compute**. For your Instance Configuration, Click Delete under the three Vertical dots.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_012.PNG" alt="image-alt-text" height="200" width="200">
 
-4. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will 
-appear.
+4. From OCI services menu Click **Load Balancers** under Networking, locate your Load Balancer and Click Terminate under the three Vertical dots.
 
-5. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
+5. From OCI services menu Click **Virtual Cloud Networks** under Networking, Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text" height="200" width="200">
 
