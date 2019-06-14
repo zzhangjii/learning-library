@@ -65,7 +65,7 @@ Faster software development has become a competitive advantage for companies. Th
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text" height="200" width="200">
 
-2. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
+2. From the OCI Services menu, Click **Virtual Cloud Network** under Networking and Click **Create Virtual Cloud Network**
 
 3. Select the compartment assigned to you from drop down menu on left part of the screen
 
@@ -98,8 +98,7 @@ Faster software development has become a competitive advantage for companies. Th
 ```
 ssh-keygen
 ```
-**HINT:** You can swap between OCI window, 
-git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
+**HINT:** You can swap between OCI window, git-bash sessions and any other application (Notepad, etc.) by Clicking the Switch Window icon 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -145,8 +144,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 - **Name:** Enter a name 
 - **Availability Domain:** Select availability domain
-
-- **Image Operating System:** Click **Change Image Source**. In the new window, Click **Oracle Images** Choose **Oracle Cloud Developer Image**. Scroll down, Accept the Agreement and click **Select Image**
+- **Image Operating System:** Click **Change Image Source**. In the new window, Click **Oracle Images** Choose **Oracle Cloud Developer Image**. Scroll down, Accept the Agreement and Click **Select Image**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_009.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -170,6 +168,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 ```
  cd /C/Users/PhotonUser/.ssh
 ```
+
 11. Enter **ls** and verify id_rsa file exists
 
 12. Enter command 
@@ -198,11 +197,11 @@ oci -v
 oci setup config
 ```
 
-17. Accept the default location. For user OCI switch to OCI Console window. Click Human Icon and then your user name. In the user details page click **copy** to copy the OCID. **Also note down your region name as shown in OCI Console window**. Paste the OCID in ssh session.
+17. Accept the default location. For user OCI switch to OCI Console window. Click Human Icon and then your user name. In the user details page Click **copy** to copy the OCID. **Also note down your region name as shown in OCI Console window**. Paste the OCID in ssh session.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_004.PNG" alt="image-alt-text" height="200" width="200">
 
-18. Repeat the step to find tenancy OCID (Human icon followed by clicking Tenancy Name). Paste the Tenancy OCID in ssh session to compute instance followe by providing your region name (us-ashburn-1, us-phoneix-1 etc)
+18. Repeat the step to find tenancy OCID (Human icon followed by Clicking Tenancy Name). Paste the Tenancy OCID in ssh session to compute instance followe by providing your region name (us-ashburn-1, us-phoneix-1 etc)
 
 19. When asked for **Do you want to generate a new RSA key pair?** answer Y. For the rest of the question accept default by pressing Enter
 
@@ -214,7 +213,7 @@ oci setup config
 cat ~/.oci/oci_api_key_public.pem
 ```
 
-21. Hightligh and copy the content from ssh session. Switch to OCI Console, click Human icon followe by your user name. In user details page click **Add Public Key**. In the dialg box paste the public key content and click **Add**.
+21. Hightligh and copy the content from ssh session. Switch to OCI Console, Click Human icon followe by your user name. In user details page Click **Add Public Key**. In the dialg box paste the public key content and Click **Add**.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_006.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -266,9 +265,9 @@ Copy and paste the password to Notepad
 
 3. Now we need to open port 8080 in Firewall rule for the compute instance. Switch to OCI console window. 
 
-4. From OCI Services menu, click **Virtual Cloud Network** under Networking
+4. From OCI Services menu, Click **Virtual Cloud Network** under Networking
 
-5. From OCI services menus Navigate to your VCN created earlier and click your VCN name, Click **Security List** and then **Default Security list for<YOUR_VCN_NAME>**
+5. From OCI services menus Navigate to your VCN created earlier and Click your VCN name, Click **Security List** and then **Default Security list for<YOUR_VCN_NAME>**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Customer_Lab_001.PNG" alt="image-alt-text" height="200" width="200">)
 
@@ -302,13 +301,13 @@ from computeinstance earlier (32 character password)
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_Jenkins/img/Jenkins_010.PNG" alt="image-alt-text" height="200" width="200">
 
-11. In ‘Customize Jenkins’ screen, click **Install suggested plugins**. Wait for plugins installation  to complete
+11. In ‘Customize Jenkins’ screen, Click **Install suggested plugins**. Wait for plugins installation  to complete
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_Jenkins/img/Jenkins_011.PNG" alt="image-alt-text" height="200" width="200">
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_Jenkins/img/Jenkins_012.PNG" alt="image-alt-text" height="200" width="200">
 
-12. In ‘Create First Admin User’ screen, click **Continue as admin**
+12. In ‘Create First Admin User’ screen, Click **Continue as admin**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_Jenkins/img/Jenkins_013.PNG" alt="image-alt-text" height="200" width="200">
 
@@ -316,25 +315,25 @@ from computeinstance earlier (32 character password)
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_Jenkins/img/Jenkins_014.PNG" alt="image-alt-text" height="200" width="200">
 
-14. In ‘Jenkins is ready’ screen, click **Start using Jenkins**
+14. In ‘Jenkins is ready’ screen, Click **Start using Jenkins**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_Jenkins/img/Jenkins_015.PNG" alt="image-alt-text" height="200" width="200">
 
-15. In ‘Welcome to Jenkins’ screen, click **Manage Jenkins**, Scroll down and Click **Manage Plugins**
+15. In ‘Welcome to Jenkins’ screen, Click **Manage Jenkins**, Scroll down and Click **Manage Plugins**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_Jenkins/img/Jenkins_017.PNG" alt="image-alt-text" height="200" width="200">
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_Jenkins/img/Jenkins_018.PNG" alt="image-alt-text" height="200" width="200">
 
-16. In Plugin Manager screen, Click **Available**, In the Filter search box type oracle. In the resulting list, check **Oracle Cloud Infrastructure Compute** and then click **Install Without restart**
+16. In Plugin Manager screen, Click **Available**, In the Filter search box type oracle. In the resulting list, check **Oracle Cloud Infrastructure Compute** and then Click **Install Without restart**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_Jenkins/img/Jenkins_019.PNG" alt="image-alt-text" height="200" width="200">
 
-17. Once installation is complete, scroll up and click **Manage Jenkins**.
+17. Once installation is complete, scroll up and Click **Manage Jenkins**.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_Jenkins/img/Jenkins_020.PNG" alt="image-alt-text" height="200" width="200">
 
-18. In Manage Jenkins screen, Click **Configure System**, Scroll Down and click **drop down arrow under Add a new cloud**. Click **Oracle Cloud Infrastructure Compute**. New dialog box will appear
+18. In Manage Jenkins screen, Click **Configure System**, Scroll Down and Click **drop down arrow under Add a new cloud**. Click **Oracle Cloud Infrastructure Compute**. New dialog box will appear
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_Jenkins/img/Jenkins_021.PNG" alt="image-alt-text" height="200" width="200">
 
