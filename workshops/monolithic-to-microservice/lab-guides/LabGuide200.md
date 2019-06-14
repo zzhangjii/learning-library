@@ -166,10 +166,20 @@ Before we create the Compute instance that will contain Docker and application d
   Boot Volume: Oracle-Provided OS Image
   Image Operating System: Oracle Linux 7.6 (Default)
   Shape Type: Virtual Machine (Default)
-  Shape: VM.Standard2.1 (Default)
+  Shape: VM.Standard.E2.2
   ```
 
-- After entering the _Docker_ instance name.
+- For the Instance Shape click on the **Change Shape** button. 
+
+  ![](images/200/27.1.1.PNG)
+
+- Select the shape **VM.Standard.E2.2** and click **Select Shape**.
+
+  **NOTE: If the VM.Standard.E2.2 shape is not availible then select VM.Standard2.2**
+
+  ![](images/200/27.1.2.PNG)
+
+- After entering the _Docker_ instance details your screen should look like:
 
    ![](images/200/27-2.PNG)
 
@@ -348,7 +358,7 @@ In this section you will clone a github repository that contains a Java REST App
   scp -i ./dockerkey /home/opc/Downloads/Wallet_orcl.zip opc@<YOUR-PUBLIC-IP>:/home/opc/monolithic-to-microservice/workshops/monolithic-to-microservice/lab-resources/docker
   ```
 
-  Example: (**Wallet_mattoATP.zip being shown here. The default wallet name is typically Wallet_orcl.zip**):
+  Example: (**The default wallet name is Wallet_orcl.zip**)
 
   ![](images/200/46-1.1.PNG)
 
@@ -370,6 +380,10 @@ In this step you are going to edit the `dbconfig.properties` file to add your da
 
   ![](images/200/46-1.2.PNG)
 
+- Ensure that your in the **momoTOmicro** Compartment:
+
+  ![](images/200/46-1.1.1.PNG)
+
 - Click the link of your database:
 
   ![](images/200/46-1.4.PNG)
@@ -385,13 +399,13 @@ In this step you are going to edit the `dbconfig.properties` file to add your da
 
   We will be using the **MEDIUM** connection name in the application.
 
-- For this example the modifed **dbconfig.properties** looks like:
+- In vi edit the **dbconfig.properties** `dbinstance` parameter to contain the **orcl_MEDIUM** connection string and save the file:
 
   ![](images/200/46-1.6.PNG)
 
 - _If your NOT using the default wallet name of `Wallet_orcl.zip` then you will also need to edit the **Dockerfile**_ to point to your instance specific wallet, otherwise, you can skip ahead to Step 11.
 
-- If applicable, **edit** the following two locations within the `Dockerfile`:
+- If applicable, **edit** the following two locations within the `Dockerfile` (In this example mattoATP is the name of the ATP instance and respective wallet file):
 
   ![](images/200/46-1.7.PNG)
 

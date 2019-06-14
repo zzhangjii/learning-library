@@ -1,7 +1,7 @@
 # Container Native Application Development Workshop
 
 Welcome to the Oracle Public Cloud Container Native Development workshop. This workshop will walk you through the process of moving an existing application into a containerized CI/CD pipeline and deploying it to a managed Kubernetes service in the Oracle Public Cloud.
-To learn more about this workshop please watch the video below.
+To learn more about this workshop please watch the video below. 
 
 ![](images/oraclecode/youtube.png)
 
