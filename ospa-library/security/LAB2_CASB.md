@@ -335,11 +335,14 @@ You’ll now add SalesForce as a sanctioned application for monitoring in Oracle
 ![SF create user](./media/sf_createuser.png)
 <p align="center"> Figure 2-29 </p>  
 
-* The following Screen will appear. Fill in the required fields. User License must be set to Salesforce
-    * Profile name will be the name of the profile we previously created
-    * Save
+* The following Screen will appear. Fill in the required fields. User License must be set to Salesforce.
 
-![SF modify user](./media/sf_modifyuser.png)
+*Note: You must use another email address for this new account. (e.g. oracle.com)*
+    
+  * Profile name will be the name of the profile we previously created (e.g. CASBUSER)
+  * Save
+
+![SF modify user](./media/sf_user_profile.png)
 <p align="center"> Figure 2-30 </p>  
 
 
@@ -379,7 +382,7 @@ This is the last step we need to complete in SalesForce.
 ![CASB SF security controls](./media/casb_sf_securitycontrols.png)
 <p align="center"> Figure 2-36 </p>  
 
-* You will redirected to the below page. Login with your User Credentials (the user that you created recently in SalesForce)
+* You will redirected to the below page. Login with the user information created with the CASB profile (e.g. casbuser). Do not use your Salesforce developer administrator credentials.
 
 ![CASB SF credentials](./media/casb_sf_allowcredentials.png)
 <p align="center"> Figure 2-37 </p>  
@@ -951,53 +954,63 @@ In this you’ll see how Oracle CASB is able to detect sensitive information in 
 
 ### Enable DLP for the group BOX account - Who Should Complete This Lab:  1 Participant for group
 
-*  The next step is to enable the data protection for your Box account. To do that, go to the section Applications and click to your Box application *(e.g. COSE_AU1_BOX_G1)*, select Modify and Update Data Protection. 
-![](./media/image128.jpeg)
+*  To enable Oracle CASB scan the files in your Box account, you have to enter the internal domain of your account. In this case, the internal domain is a custom domain that you can set in the administrative section for your Box account. 
+
+* Log in to your Box developer account and navigate to the Admin Console.
+* In the left pane, click Enterprise Settings.
+* At the top of the page, click Custom Setup.
+* Company Profile: Here you will have the option to include your company name as well as designate a custom URL
+
+![](./media/box_custom_domain.png)
 <p align="center"> Figure 7-7 </p>
 
-*  To enable Oracle CASB scan the files in your Box account, you have to enter the internal domain of your account. In this case, the internal domain is a custom domain that you can set in the administrative section for your Box account. Check the box Enable DLP and select the root folder to monitor.
+*  The next step is to enable the data protection for your Box account. To do that, go to the section Applications and click to your Box application *(e.g. COSE_AU1_BOX_G1)*, select Modify and Update Data Protection. 
+![](./media/image128.jpeg)
+<p align="center"> Figure 7-8 </p>
+
+* Check the box Enable DLP and select the root folder to monitor.
 
 ![](./media/image129.jpeg)
-<p align="center"> Figure 7-8 </p>
+<p align="center"> Figure 7-9 </p>
 
 *  Click Next and once you see the success message, click Done.
 
 ![](./media/image130.jpeg)
-<p align="center"> Figure 7-9 </p>
+<p align="center"> Figure 7-10 </p>
 
 * Now you will be able to run retroactive scans to detect any Top Secret words in the documents in Box. For that, go to DLP Management section and click to Retroactive scan.
 
 ![](./media/image131.jpeg)
-<p align="center"> Figure 7-10 </p>
+<p align="center"> Figure 7-11 </p>
 
 * Click to Add Scan and fill out as shown below. Click Run Scan.
 
 ![](./media/image132.jpeg)
-<p align="center"> Figure 7-11 </p>
+<p align="center"> Figure 7-12 </p>
 
 * Now your scan will appear in the list.
 
 ![](./media/image133.jpeg)
-<p align="center"> Figure 7-12 </p>
+<p align="center"> Figure 7-13 </p>
 
 * You can click on the eye icon to see all related information.
 ![](./media/image134.jpeg)
-<p align="center"> Figure 7-13 </p>
+<p align="center"> Figure 7-14 </p>
 
 * To verify if your document was scan are classified, click to the
     section Data
 
 ![](./media/image135.jpeg)
-<p align="center"> Figure 7-14 </p>
+<p align="center"> Figure 7-15 </p>
 
 * To verify if any alert was created, you can go to Risk Events section and filter for the category DLP Alert 
 ![](./media/image136.jpeg)
-<p align="center"> Figure 7-15 </p>
+<p align="center"> Figure 7-16 </p>
 
 * Now you can also verify if your file was quarantined. Log in to your Box account and click to My Files. You will be able to see how Oracle CASB quarantined your file.
 
 ![](./media/image137.jpeg)
-<p align="center"> Figure 7-16 </p>
+<p align="center"> Figure 7-17 </p>
 
  **As you logged in as administrator, you will be able to click on the folder and see the file.**
 
