@@ -76,7 +76,7 @@ Oracle Cloud Infrastructure's Autonomous Transaction Processing Cloud Service is
 
 1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
 2. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
 
@@ -85,9 +85,9 @@ Oracle Cloud Infrastructure's Autonomous Transaction Processing Cloud Service is
 
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text">
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL002.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL002.PNG" alt="image-alt-text">
 
 4. Fill out the dialog box:
 
@@ -103,15 +103,15 @@ Oracle Cloud Infrastructure's Autonomous Transaction Processing Cloud Service is
 - Click **Close**
 
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text">
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text">
               
 ## Create ssh keys Compute instance and ssh to compute instance
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL006.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL006.PNG" alt="image-alt-text">
 
 2. Enter command 
 ```
@@ -120,11 +120,11 @@ ssh-keygen
 **HINT:** You can swap between OCI window, 
 git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text">
 
 3. Press Enter When asked for 'Enter File in which to save the key', 'Created Directory, 'Enter passphrase', and 'Enter Passphrase again.
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL008.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL008.PNG" alt="image-alt-text">
 
 4. You should now have the Public and Private keys:
 
@@ -151,11 +151,11 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 ```
  , highlight the key and copy 
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL009.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL009.PNG" alt="image-alt-text">
 
 6. Click the apps icon, launch notepad and paste the key in Notepad (as backup)
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG" alt="image-alt-text">
 
 7. Switch to the OCI console. From OCI servies menu, Click **Instances** under **Compute** 
 
@@ -178,7 +178,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 **NOTE:** If 'Service limit' error is displayed choose a different shape such as VM.Standard.E2.2 OR VM.Standard2.2 OR choose a different AD
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text">
 
 10. Wait for Instance to be in **Running** state. In git-bash Enter Command:
 ```
@@ -196,7 +196,7 @@ ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE> -L 3000:localhost:3000
 
 13. Enter 'Yes' when prompted for security message
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0014.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0014.PNG" alt="image-alt-text">
  
 14. Verify opc@<COMPUTE_INSTANCE_NAME> appears on the prompt
 
@@ -215,7 +215,7 @@ sudo yum install java-1.8.0-openjdk-headless.x86_64
 java -version
 ```
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_001.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_001.PNG" alt="image-alt-text">
 
 18. Next we will install Swing bench, Enter command:(No Spaces)
 
@@ -223,7 +223,7 @@ java -version
 curl http://www.dominicgiles.com/swingbench/swingbenchlatest.zip -o swingbench.zip
 ```
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_002.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_002.PNG" alt="image-alt-text">
 
 19. Enter command,
 ```
@@ -233,7 +233,7 @@ and verify swinbench.zip file exists. Unzip the file, Enter command,
 ```
 unzip swingbench.zip
 ```
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_003.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_003.PNG" alt="image-alt-text">
 
 ## Create ATP instance in OCI and Configure Swing Bench on Compute instance to generate load traffic
 
@@ -258,8 +258,8 @@ instance created earlier**
 
 - LICENSE TYPE: SUBSCRIBE TO NEW DATABASE SOFTWARE LICENSES AND THE DATABASE CLOUD SERVICE
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_018.PNG" alt="image-alt-text" height="200" width="200">
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_019.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_018.PNG" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_019.PNG" alt="image-alt-text">
 
 2. Leave **Tags** information as is. Click **Create Autonomous Database**. Wait for State to change to Available (few minutes)
 
@@ -267,13 +267,13 @@ instance created earlier**
 
 **NOTE:** If pop up blocker appears then click 'Allow'
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_005.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_005.PNG" alt="image-alt-text">
 
 4. In the pop up window Click **Download** under **Download Client Credentials (Wallet)**. Provide a password, Click **Download** and save the zip file (Note down zip file location)
 
 **HINT:** You can use the same password that was used to create the instance or choose a new password. Note down the password
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_004.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_004.PNG" alt="image-alt-text">
               
 5. Save the file in and Note down the directory name where the file was saved. We will need to upload this zip file on to public Compute instance
 
@@ -291,7 +291,7 @@ put <ZIP_FILE_NAME>
 ```
 **NOTE:** Usually the file name starts with 'Wallet'. Verify the file transfer completed
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_007.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_007.PNG" alt="image-alt-text">
 
 9. Switch to ssh session to the public compute instance. Enter command,
 ``` 
@@ -317,17 +317,17 @@ Answer 'Y' when prompted
 
 **NOTE:** In below example, CREDENTIAL_ZIP_FILE is 'Wallet_ATPDB3.zip', DB_NAME is ATPDB3, DB_PASSWORD is Oracle098####.
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_008.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_008.PNG" alt="image-alt-text">
 
 13. The script will take around 10-15 minutes to populate the Database. Verify the script complete successfully 
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_009.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_009.PNG" alt="image-alt-text">
 
 14. Validate the schema, Enter command:
 ```
 ./sbutil -soe -cf ~/<CREDENTIAL_ZIP_FILE> -cs <DB_NAME>_medium -u soe -p <DB_PASSWORD> -tables
 ```
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_010.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_010.PNG" alt="image-alt-text">
 
 15. Next we will configure the load generator file. Enter command:
 ```
@@ -339,11 +339,11 @@ vi SOE_Server_Side_V2.xml
 ```
 (You can also use nano as the editor)
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_011.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_011.PNG" alt="image-alt-text">
 
 17. Search for string **LogonGroupCount** and change the existing number to **4**. On the next line with string **LogonDelay** change the number to **300**. Finally on line with string **WaitTillAllLogon** change the flag to **false** (case sensitive). Save and quite out of the editor. See below example
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_012.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_012.PNG" alt="image-alt-text">
 
 18. Now we will generate some load. Enter command:
 ```
@@ -356,7 +356,7 @@ Then Enter command:
 
 19. After a few seconds the number in 4th column (TPS)indicating Transactions Per Seconds will stabalize in 2xx range. Remember the current ATP DB instance has only 1 OCPU. 
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_013.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_013.PNG" alt="image-alt-text">
 
 **We have Autonomous Transaction Processing DB instance configured and are testing Transaction per second data using a compute instance.Next we will dynamically scale the OCPU count via OCI console and observe the Transaction Per Second number. We will also see that Dynamic CPU scaling has no impact on the operation of Autonomous Transaction Processing Instance**
 
@@ -370,17 +370,17 @@ Then Enter command:
 
 3. Click **Scale Up/Down**, in the pop up windowchange CPU CORE COUNT to **4** and click **Update**. Also observe the Automatic backup that are being performed. Instance will be in 'Scaling in Progress' state for some time
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_014.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_014.PNG" alt="image-alt-text">
 
 4. Switch to ssh session to the compute instance. Ensure the script is still running and Transaction per second data is being diaplyed. As the instance becomes Available the Transactions Per Second number will be higher.
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_015.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_015.PNG" alt="image-alt-text">
 
 5. You can Scale the number of CPU UP or Down dynamically and obser TPS number change accordingly.
 
 6. Switch to OCI screen and from your ATP instance details page click **Service Console**. From Service Console you can observe Performance data under **Overview** and **Activity** tabs
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_016.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_016.PNG" alt="image-alt-text">
 
 **We have now demonstrated the Dynamic Scaling of CPU for an ATP instance. We also successfully generated load traffic and observed CPU usage and other indicators for the ATP instance.**
 
@@ -390,12 +390,12 @@ In this section we will generate auth token for the user of this lab. An Auth to
 
 1. In OCI console click the user icon (top right)  then **User settings**. Under Resrouces Click **Auth Token**, then **Generate Token**. In pop up window provide a description then click **Generate Token**
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_005.PNG" alt="image-alt-text" height="200" width="200">
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_006.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_005.PNG" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_006.PNG" alt="image-alt-text">
 
 2.  Click **Copy** and save the token in Notepad.**Do not close the window without saving the token as it can not be retrieved later**
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_007.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_007.PNG" alt="image-alt-text">
 
 3. Note down your user name
 
@@ -405,8 +405,8 @@ In this section we will generate auth token for the user of this lab. An Auth to
 
 4. Launch SQL devleoper using Apps icon and click **+** to create a new connection
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_008.PNG" alt="image-alt-text" height="200" width="200">
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_009.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_008.PNG" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_009.PNG" alt="image-alt-text">
 
 5. Fill out the diaog box:
 
@@ -426,7 +426,7 @@ In this section we will generate auth token for the user of this lab. An Auth to
 - Click **Save**
 - Click **Connect** and verify Successful connection
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_010.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_010.PNG" alt="image-alt-text">
 
 6. Create a new user called ocitest and grant the DWROLE to ocitest user. Enter commands:
 
@@ -440,7 +440,7 @@ Grant dwrole to ocitest;
 
 7. Verify the user was created
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_011.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_011.PNG" alt="image-alt-text">
 
 8. Create another connection in SQL Developer (same steps as abovea), use following values:
 
@@ -460,7 +460,7 @@ Grant dwrole to ocitest;
 - Click **Save**
 - Click **Connect** and verify Successful connection
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_012.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_012.PNG" alt="image-alt-text">
 
 9. We will now download a text file from OCI Object storage. This file has commands that will be used to upload data into ATP and retreive it. Open a new browser tab and copy/paste or Etner URL;
 
@@ -490,7 +490,7 @@ end;
 
 11. Verify **PL/SQL Procedure successfully completed** message is displayed.
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_013.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_013.PNG" alt="image-alt-text">
 
 12. Create a new table (We will load data from file in Object Storage to this table). From the ADW-File.txt content copy and paste the commands undrer /**** Create Table ****/ section. The commands will look like below
 
@@ -505,7 +505,7 @@ NAME_total NUMBER NOT NULL );
 
 13. Verify **Table CHANNELS created** message
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_016.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_016.PNG" alt="image-alt-text">
 
 14. Load data from file in Object Storage to newly created table.
 
@@ -528,14 +528,14 @@ end;
 
 15. Verify **PL/SQL Procedure successfully completed** message
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_015.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_015.PNG" alt="image-alt-text">
 
 16. We will now query the table and veirfy the data Enter command:
 ```
 select * from channels;
 ```
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_016.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_016.PNG" alt="image-alt-text">
 
 **We have successfully deployed a ATP instance,populated a table using a file stored in Object storage and successfully run a query against the table.**
 
@@ -545,20 +545,20 @@ select * from channels;
 
 1. Switch to OCI console. From your ATP instance details page click **Service Console**. This will open a new tab. In the new tab click **Administration** and then **Manage Oracle ML Users**.
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_020.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_020.PNG" alt="image-alt-text">
 
 2. This will open a new tab (Machine Learning User Administration). Click Create and in the new window fill out the dialog box. Ensure to un-check 'Generate Password ... ' flag so that you can provide your own password. Click **create** to create a new user 
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_021.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_021.PNG" alt="image-alt-text">
 
 3. Verify the user is created, Click the home button. This will open a new tab, the login fileds should be filled out (if not then fill them out) and login as newly created Machine Lerning user.
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_022.PNG" alt="image-alt-text" height="200" width="200">
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_023.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_022.PNG" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_023.PNG" alt="image-alt-text">
 
 4. Verify new project space is created and all the options (Run SQl statement, Run SQL script etc) are available.
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_024.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_024.PNG" alt="image-alt-text">
 
 5. Now we need to assign priviliges to this new user so it can access the data uploaded by the user we created earlier. Switch to SQL developer window and  from admin tab,Enter command:
 ```
@@ -567,11 +567,11 @@ grant read any table to <USER_NAME>;
 
 **Note :** USER_NAME is the user you created earlier in this section. (We are granting read any table permissions though for specific deployment the admin should authorize appropriate access  level), For example : **grant read any table to MLADMIN**
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_025.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_025.PNG" alt="image-alt-text">
 
 6. Switch back to Machine learning User console window. Click **Run SQL Statements**
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_026.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_026.PNG" alt="image-alt-text">
 
 7. In the SQL statement section, Enter statement:
 ```
@@ -583,21 +583,21 @@ Click the run icon (right end of sql statement) Verify all the data is uploaded
 **Note:** The USER_NAME will be the user that uploaded the data. In this lab we had used ocitest as the user that uploaded the data. Hence the statement for this
 user will be , **select * from ocitest.channels;** 
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_027.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_027.PNG" alt="image-alt-text">
 
 8. Now you can look at this data in different charts form available options
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_028.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_028.PNG" alt="image-alt-text">
 
 **This is just an example of simple data that we uploaded but as you can see very complex data can be uploaded,accessed and analyzed using this feature.**
 
 9. There are some example data sets that can be accessed by clicking Home under Servies menu from Machine Learning user tab
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_029.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_029.PNG" alt="image-alt-text">
 
 10. Click **Examples** and then any of the available data set
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_030.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_030.PNG" alt="image-alt-text">
 
 **Next we will delete the resources we created which will complete this lab**
 
@@ -608,18 +608,18 @@ user will be , **select * from ocitest.channels;**
 
 2. From your ATP details page, Hover over the action icon  and Click **Terminate**. In the confimration windoe provide the ATP instance name and click **Terminate Database**
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_017.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_017.PNG" alt="image-alt-text">
 
 3. From OCI services menu Click **Instances** under Compute
 
 4. Locate first compute instance, Click Action icon and then **Terminate** 
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text">
 
 
 5. Make sure Permanently delete the attached Boot Volume is checked, Click Terminate Instance. Wait for instance to fully Terminate
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/ATP_Lab/img/RESERVEDIP_HOL0017.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/RESERVEDIP_HOL0017.PNG" alt="image-alt-text">
 
 6. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will 
 appear.
