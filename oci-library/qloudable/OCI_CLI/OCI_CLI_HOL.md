@@ -8,7 +8,7 @@
 
 [Sign in to OCI Console and create a VCN](#sign-in-to-oci-console-and-create-a-vcn)
 
-[Create ssh keys and compute instance](#create-ssh-keys-and-compute-instance)
+[Create Compute instance, configure OCI CLI and upload API keys](#create-compute-instance,-configure-oci-cli-and-upload-api-keys)
 
 [Testing the CLI, Create another VCN with one public subnet](#testing-the-cli,-create-another-vcn-with-one-public-subnet)
 
@@ -88,7 +88,7 @@ This lab will walk you through installation and configuration of the CLI, along 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text" height="200" width="200">
               
-## Create ssh keys and compute instance
+## Create Compute instance, configure OCI CLI and upload API keys
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
@@ -145,7 +145,6 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 - **Name:** Enter a name 
 - **Availability Domain:** Select availability domain
-
 - **Image Operating System:** Click **Change Image Source**. In the new window, Click **Oracle Images** Choose **Oracle Cloud Developer Image**. Scroll down, Accept the Agreement and click **Select Image**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_009.PNG" alt="image-alt-text" height="200" width="200">
@@ -184,8 +183,6 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0014.PNG" alt="image-alt-text" height="200" width="200">
  
 14. Verify opc@<COMPUTE_INSTANCE_NAME> appears on the prompt
-
-## Configure OCI CLI, Upload API keys and verify functionality
 
 15. Check oci CLI installed version, Enter command:
 ```
