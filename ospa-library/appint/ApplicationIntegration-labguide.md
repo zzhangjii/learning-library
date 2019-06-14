@@ -1,6 +1,6 @@
 # Application Integration Lab Guide
 
-## June 13, 2019 - 12:20 PM
+## June 14, 2019 - 12:30 PM
 
 # Table of Contents
 
@@ -64,26 +64,16 @@ the features and functionality of Oracle Integration so you can represent the pr
 To optimize your experience there are some general guidelines that will
 help you get the most from these lab exercises.
 
-  - Merely following the steps and screenshots without understanding the
-    flow will diminish your learning experience, so think about what you
-    are doing and why. If you aren’t sure, ask questions.
+  - Merely following the steps and screenshots without understanding the flow will diminish your learning experience, so think about what you are doing and why.  The explanatory text in this Lab Guide will help address the "whys."  Please read this text. 
 
-  - Ask before you do. Please ask a lab assistant before you spend a lot of time
-    marching down a path that may lead to unsatisfactory results.
+  - Follow the steps as shown in this guide. Do not "freestyle" during the
+    labs. It may get you into a bind.
 
-  - Follow the steps as shown in this guide. Do not freestyle during the
-    labs. If you want to do something that
-    is not in the labs, ask a lab assistant first.
-
-  - There is no prize for finishing first and there is no penalty for
-    finishing last. The goal is to gain a firm understanding of Oracle
-    Integration.
-
-  - Ask questions freely. The only dumb questions are those that are not
-    asked.
-
-  - Help out your fellow students. You can learn a lot by trying to
-    explain a concept or step to someone else.
+  - If you are in an Oracle class:
+      - Ask a lab assistant before you spend a lot of time marching down a path that may lead to unsatisfactory results. 
+    - Ask questions freely. The only dumb questions are those that are not asked.
+    - Help out your fellow students. You can learn a lot by trying to explain a concept or step to someone else.
+    - There is no prize for finishing first and there is no penalty for finishing last. The goal is to gain a firm understanding of Oracle Integration.
 
 ## Description of the Business Solution
 
@@ -116,7 +106,7 @@ backend system will be a cloud-based database rather than a SaaS system.
 As you reference the business process model below, follow a scenario through the process during runtime:
 - The workflow begins at the *Submit Request* start event where the Store Manager uses a web form to provide details for an inventory request for their store.  
 - When the Store Manager is done filling in the form, they press the *Submit* button.  This generates a workflow task for the Regional Manager at the *Approve Request* human activity.
-- \* The Regional Manager accepts the task and uses a web form to evaluate the request.  
+- \* Loop \* The Regional Manager accepts the task and uses a web form to evaluate the request.  
 - If the request looks reasonable:
   - The Store Manager presses the *Approve* button on the web form.
   - Processing continues into the *Create Order* integration activity where an order is created in the backend system.  
@@ -125,7 +115,7 @@ As you reference the business process model below, follow a scenario through the
   - The Regional Manager enters comments into the web form and presses the *Reject* button on the web form.
   - The *Approved?* exclusive gateway routes the request back to the Store Manager at the *Resubmit* human activity.
   - The Store Manager accepts the task and uses a web form to read the Regional Manager’s comments and to add some additional notes to the request to plead their case.
-  - When the Store Manager is done editing their request in the web form, they press the *Submit* button. This generates a workflow task for the Regional Manager at the *Approve Request* human activity again. (Processing continues at * above.)  
+  - When the Store Manager is done editing their request in the web form, they press the *Submit* button. This generates a workflow task for the Regional Manager at the *Approve Request* human activity again. (Processing continues at \* Loop \* above.)  
 
  ![](./media/image123.png)
  Figure 1: Business View of the Solution
@@ -180,7 +170,7 @@ Before starting these labs, you will need:
 
   - *atpc\_user* Autonomous Database User Password 
 
-If you are using this lab guide as part of an Oracle class (like *Class Of SE*), the Oracle Integration and Autonomous Database instances are already set up for you and the environment information is provided for you in the *Lab Environment Details* section the *Participant Guide* for your class.  If you are using this lab guide outside of an Oracle class, refer to the *Appendix* section to establish your own instances and collect the above information as you create your Oracle Integration and Autonomous Database instances.  
+If you are using this lab guide as part of an Oracle class (like *Class Of SE*), the Oracle Integration and Autonomous Database instances are already set up for you and the environment information is provided for you in the *Lab Environment Details* section the *Participant Guide* for your class.  If you are using this lab guide outside of an Oracle class, refer to the *Appendix* section to establish your own instances and collect the above information as you perform the setup steps.  
 
   In addition, you should make sure that you have Google Chrome and Oracle SQL Developer installed on your computer.  They may already be there so there is no need to reinstall them.  If you need them,  here is where you can find the software: 
 
@@ -295,7 +285,11 @@ have done the prerequisites, continue below:
     entry for *Tenancy Name* also and insert the name of your tenancy in the scratchpad
     too.
 
-    - Look for the *Autonomous Transaction Processing* option.  If it doesn't appear, click the *Customize Dashboard* button in the upper-right corner to display the *Customize Dashboard* dialog.  Click the *Show* button next to *Autonomous Transaction Processing* and click the *X* at the top of the dialog to close it.
+      ![](./media/image128.png)
+
+        Figure 2: My Oracle Services Page
+
+    - Scroll down to find the *Autonomous Transaction Processing* option.  
 
     - Click the *Autonomous Transaction Processing* option to display the *Service: Autonomous Transaction Processing* window.   
 
@@ -305,7 +299,7 @@ have done the prerequisites, continue below:
     Database Compartment from the dropdown list. You noted that name in
     the Prerequisites section above.  The table of instances redisplays.
 
-      - Click on your *Autonomous Database name* that appears in the table.
+      - Click on your *Autonomous Database Name* that appears in the table.
   You noted that name in the Prerequisites section above.
 
         ![](./media/image6.png)
@@ -319,7 +313,7 @@ have done the prerequisites, continue below:
         Figure 3: Autonomous Database Details Page
     
     - If you don’t see the “*Available*” icon shown below, click the *Start* button at the top to start the
-    instance.  When the *Confirm* dialog appears, click the *Start* may take as long as 15 minutes) until the “*AVAILABLE*” message appears there before proceeding.  You might periodically refresh
+    instance.  When the *Confirm* dialog appears, click the *Start*.  It may take as long as 15 minutes until the “*AVAILABLE*” message appears there before proceeding.  You might periodically refresh
     your browser page.  If the database had already been started, forge ahead.  
 
         ![](./media/image7.png)
@@ -332,8 +326,8 @@ have done the prerequisites, continue below:
     will have them for later to access the database:
 
      - Click the *DB Connection* button at the upper-left of the
-     *Autonomous Database Details* page. The Database
-    Connection dialog appears.
+     *Autonomous Database Details* page. The *Database
+    Connection* dialog appears.
 
     - Click the *Download* button in the *Download Client Credentials
     (Wallet)* area:
@@ -362,7 +356,7 @@ have done the prerequisites, continue below:
     - Close your VPN connection if it is active.
 
     - Start Oracle SQL Developer on your computer.  You installed it in the
-    Prerequisites section above.
+    *Prerequisites* section above.
 
     - Create a new connection:
     
@@ -378,14 +372,14 @@ have done the prerequisites, continue below:
       - Username: *atpc\_user*  
     
       - Password: enter the *\<atpc\_user Autonomous Database User Password\>*
-        that you noted in the Prerequisites section above.
+        that you noted in the *Prerequisites* section above.
     
       - Connection Type: *Cloud Wallet*
     
       - Configuration File: *Browse* to and select your wallet zip file
-        that you saved in your ApplicationIntegrationLabs folder above.
+        that you just saved in your *ApplicationIntegrationLabs* folder above.
     
-      - Service: *databaseappint\_high* (That gives us the best performance.)
+      - Service: *\<Autonomous Database Name (all lowercase without spaces)\>\_high* option. Select it from the dropdown list.  The *high* option gives us the best performance.
     
       - Click on the "Save Password* field so you aren’t prompted for the
         atpc\_user password each time you activate your connection.
@@ -409,7 +403,7 @@ have done the prerequisites, continue below:
         MyATPConnection*. Since you elected to save your *atpc\_user*
        password, you aren’t
         prompted for the password and the connection is opened
-        immediately.  The hierarchy is expanded under your MyATPConnection
+        immediately.  The hierarchy is expanded under MyATPConnection*
         in the left-side panel.
     
         - *Expand the Tables (Filtered)* option under your connection name
@@ -424,7 +418,7 @@ have done the prerequisites, continue below:
           Figure 6: Table Structure in SQL Developer
 
         - Click on the *Data* option at the top of the right panel to see if
-    there are any test rows in the ORDERS table.
+    there are any test rows in the ORDERS table.  It might have some data in it already.
 
     - Gracefully exit SQL Developer:
     
@@ -442,11 +436,7 @@ have done the prerequisites, continue below:
         browsing to the *Oracle Cloud My Services Page URL* noted 
         in your *MyLabNotes* file to access your services.
 
-    - Click on *Integration*:
-
-      ![](./media/image11.png)
-
-      Figure 7: Dashboard Display Showing Accessible Services
+    - Click on the *Integration* option.
 
     - In the *Service: Oracle Integration* page that appears, click on the
     *Open Service Console* button in the upper-right corner. 
@@ -1197,7 +1187,7 @@ needs to be part of a process application. Let’s create one:
         - Name: *\<insertYourInitialsHere\><insertCurrentTimeHere\>\_Order Request Processing*
         (*TNB2139\_Order Request Processing*, for example)
     
-        - *Space: *[New Space]*  (A space is an area that you can use to group applications together.  All users who are members of a space will have access to the applications in that space.)
+        - *Space: *[New Space]*  (A space is an area that you can use to group applications together.  All users who are members of a space will have access to the applications in that space.  By granting access to a space, you can share process applications with an entire team.)
 
         - New Space: *\<insertYourInitialsHere\><insertCurrentTimeHere\>\_Space* (*TNB2139\_Space*, for example)
     
