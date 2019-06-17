@@ -73,7 +73,7 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
-2. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
+2. From the OCI Services menu,Click **Virtual Cloud Network** under Networking and Click **Create Virtual Cloud Network**
 
 3. Select the compartment assigned to you from drop down menu on left part of the screen
 
@@ -100,13 +100,13 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_001.PNG" alt="image-alt-text">
 
-5. Virtual Cloud Network will be created and VCN name will appear on OCI Console. Scroll down to find your VCN if multiple VCN exist, and click your VCN name.
+5. Virtual Cloud Network will be created and VCN name will appear on OCI Console. Scroll down to find your VCN if multiple VCN exist, and Click your VCN name.
 
-6. In VNC detials page,  Click **Internet Gateways** under Resources, and click **Create Internet Gateway**. Fill out the dialog box. Click **Create Internet Gateway** (ensure correct compartment is selected).
+6. In VNC detials page,  Click **Internet Gateways** under Resources, and Click **Create Internet Gateway**. Fill out the dialog box. Click **Create Internet Gateway** (ensure correct compartment is selected).
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_002.PNG" alt="image-alt-text">
 
-7. Click **Route tables**, and click **Create Route Table**
+7. Click **Route tables**, and Click **Create Route Table**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_003.PNG" alt="image-alt-text">
 
@@ -305,7 +305,7 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 ssh-keygen
 ```
 **HINT:** You can swap between OCI window, 
-git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
+git-bash sessions and any other application (Notepad, etc.) by Clicking the Switch Window icon 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text">
 
@@ -387,11 +387,11 @@ to check OCI CLI version which should be 2.5.x or higher
 oci setup config
 ```
 
-16. Accept the default location. For user OCI switch to OCI Console window. Click Human Icon and then your user name. In the user details page click **copy** to copy the OCID. **Also note down your region name as shown in OCI Console window**. Paste the OCID in git bash.
+16. Accept the default location. For user OCI switch to OCI Console window. Click Human Icon and then your user name. In the user details page Click **copy** to copy the OCID. **Also note down your region name as shown in OCI Console window**. Paste the OCID in git bash.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_004.PNG" alt="image-alt-text">
 
-17. Repeat the step to find tenancy OCID (Human icon followed by clicking Tenancy Name). Paste the Tenancy OCID in ssh session to compute instance followed by providing your region name (us-ashburn-1, us-phoneix-1 etc)
+17. Repeat the step to find tenancy OCID (Human icon followed by Clicking Tenancy Name). Paste the Tenancy OCID in ssh session to compute instance followed by providing your region name (us-ashburn-1, us-phoneix-1 etc)
 
 18. When asked for **Do you want to generate a new RSA key pair?** answer **N**.
 
@@ -405,7 +405,7 @@ oci setup config
 cat ~/.oci/oci_api_key_public.pem
 ```
 
-21. Highligh and copy the content from ssh session. Switch to OCI Console, click Human icon followed by your user name. In user details page click **Add Public Key**. In the dialg box paste the public key content and click **Add**.
+21. Highligh and copy the content from ssh session. Switch to OCI Console, Click Human icon followed by your user name. In user details page Click **Add Public Key**. In the dialg box paste the public key content and Click **Add**.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_006.PNG" alt="image-alt-text">
 
@@ -413,7 +413,7 @@ cat ~/.oci/oci_api_key_public.pem
 
 ## Create  Kubernetes Cluster
 
-1. From OCI Services menu, click **Container Clusters (OKE)** under Developer Services
+1. From OCI Services menu, Click **Container Clusters (OKE)** under Developer Services
 
 2. Click **Create Cluster**. Fill out the dialog box
 
@@ -461,7 +461,7 @@ cat ~/.oci/oci_api_key_public.pem
 
 - Leave the fields as is
 
-6. Click **Review** . Review the configuration and click **Create**
+6. Click **Review** . Review the configuration and Click **Create**
 
 7. Wait for Cluster status to change from **Creating** to **Active**
 
@@ -491,7 +491,7 @@ ls
 
 ## Download get-kubeconfig.sh file and Initialize your environment
 
-1. Switch to OCI console window and navigate to your cluster. In Cluster detail window click **Access Kubeconfig**. Copy the 2nd command and enviornement variable command to notepad (using Built in Application)
+1. Switch to OCI console window and navigate to your cluster. In Cluster detail window Click **Access Kubeconfig**. Copy the 2nd command and enviornement variable command to notepad (using Built in Application)
             
 **NOTE:** Since we already created .kube directory we dont need toexecute the first command 
 
@@ -511,7 +511,7 @@ In this section we will start Kubernetes Dashboard which is
 a web-based user interface that you can use as an alternative
 to the Kubernetes kubectl command line tool
 
-1. Switch to OCI Console window. From services menu, click **Container Clusters(OKE)** under **Developer services**.
+1. Switch to OCI Console window. From services menu, Click **Container Clusters(OKE)** under **Developer services**.
 
 2. Click your cluster name and verify Compute Node State shows active for all compute nodes
 
@@ -569,7 +569,7 @@ cd $HOME/.kube
 ./kubectl expose deployment nginx --port=80 --type=LoadBalancer
 ```
 
-6. Switch to OCI console window. From OCI Services menu click **Load Balancers** under Networking. A new OCI LB should be getting  provisioned (This is due to the command above). 
+6. Switch to OCI console window. From OCI Services menu Click **Load Balancers** under Networking. A new OCI LB should be getting  provisioned (This is due to the command above). 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OKE/img/OKE_011.PNG" alt="image-alt-text">
 
@@ -612,7 +612,7 @@ appear.
 
 **Delete API Key**
 
-1. Navigate to user settings. Click on Action icon and click **Delete** to delete the API key
+1. Navigate to user settings. Click on Action icon and Click **Delete** to delete the API key
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OKE/img/OKE_014.PNG" alt="image-alt-text">
 

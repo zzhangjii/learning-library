@@ -75,7 +75,7 @@ A cooldown period between autoscaling events lets the system stabilize at the up
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
-2. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
+2. From the OCI Services menu,Click **Virtual Cloud Network** under Networking and Click **Create Virtual Cloud Network**
 
 3. Select the compartment assigned to you from drop down menu on left part of the screen
 
@@ -102,7 +102,7 @@ A cooldown period between autoscaling events lets the system stabilize at the up
 
 **When you create a load balancer, you choose its shape (size) and specify subnets from different Availability Domains. This ensures that the load balancer is highly available.**
 
-1. From OCI Services menu, click **Load Balancers** under **Networking**
+1. From OCI Services menu, Click **Load Balancers** under **Networking**
 
 2. Click **Create Load Balancer**. Fill out the dialog box;
 
@@ -153,7 +153,7 @@ A cooldown period between autoscaling events lets the system stabilize at the up
 
 4. Wait for the load balancer to become active and then note down it’s Public IP address.
 
-5. From OCI Services menu, click **Virtual Cloud Network** under Networking. Locate the VCN you created earlier.
+5. From OCI Services menu, Click **Virtual Cloud Network** under Networking. Locate the VCN you created earlier.
 
 6. Click  VCN name to display VCN detail page.
 
@@ -187,7 +187,7 @@ Click the Apps icon in the toolbar and select  Git-Bash to open a terminal windo
 ssh-keygen
 ```
 **HINT:** You can swap between OCI window, 
-git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
+git-bash sessions and any other application (Notepad, etc.) by Clicking the Switch Window icon 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text">
 
@@ -348,7 +348,7 @@ Fill out the dialog box:
 
 17. Click **Create Instance Pool**. Wait for Instance Pool to be in **RUNNING** state (turns green)
 
-18. From the instance pool details page, click **Actions** and choose **Create Auto Scaling Configuration**
+18. From the instance pool details page, Click **Actions** and choose **Create Auto Scaling Configuration**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_004.PNG" alt="image-alt-text">
 
@@ -442,7 +442,7 @@ sudo stress --cpu 4 --timeout 350
 
 1. Switch to  OCI console window
 
-2. From Instance Pool Details page, Click **Terminate** under **Action**. Provide Instance Pool name in the pop up dialog box and click **Terminate**. This will delete the pool along with the compute instance and auto scale configuration.
+2. From Instance Pool Details page, Click **Terminate** under **Action**. Provide Instance Pool name in the pop up dialog box and Click **Terminate**. This will delete the pool along with the compute instance and auto scale configuration.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_011.PNG" alt="image-alt-text">
 

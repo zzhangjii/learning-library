@@ -73,7 +73,7 @@ In this lab you will create and mount File Storage System to a compute instance 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
-2. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
+2. From the OCI Services menu,Click **Virtual Cloud Network** under Networking and Click **Create Virtual Cloud Network**
 
 3. Select the compartment assigned to you from drop down menu on left part of the screen
 
@@ -148,7 +148,7 @@ In this lab you will create and mount File Storage System to a compute instance 
 
 In this section we will create File System Storage.
 
-1. From OCI Services menu, click **File System** under **File Storage**
+1. From OCI Services menu, Click **File System** under **File Storage**
 
 2. Click **Creat File System**
 
@@ -183,7 +183,7 @@ In this section we will create File System Storage.
               
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/File_Storage_Service/img/FSS_004.png" alt="image-alt-text">
 
-6. Once created, click **File System Name** and under Mount Targets Note down the Private IP address
+6. Once created, Click **File System Name** and under Mount Targets Note down the Private IP address
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/File_Storage_Service/img/FSS_005.png" alt="image-alt-text">
 
@@ -200,7 +200,7 @@ In this section we will create File System Storage.
 ssh-keygen
 ```
 **HINT:** You can swap between OCI window, 
-git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
+git-bash sessions and any other application (Notepad, etc.) by Clicking the Switch Window icon 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text">
 
@@ -305,7 +305,7 @@ sudo mount 10.x.x.x:/ /mnt/nfs-data
 ```
 **NOTE:** The 10.x.x.x should be replaced with the Private IP of File Storage system noted earlier (Example: sudo mount 10.0.0.3:/ /mnt/nfs-data).
 
-**NOTE:** Mount commands can also be see by clicking Action icon  in File Storage detail page though 'localpath' in sudo mkdir and sudo mount MUST be replaced by the directory created (nfs-data).
+**NOTE:** Mount commands can also be see by Clicking Action icon  in File Storage detail page though 'localpath' in sudo mkdir and sudo mount MUST be replaced by the directory created (nfs-data).
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/File_Storage_Service/img/FSS_006.png" alt="image-alt-text">
 
@@ -338,13 +338,13 @@ and verify the mounted File System Storage.
 In this section we will delete all the resources we created in this lab.
 
 **Delete File System Storage**
-1. From OCI Services menu, click **File Systems**, then File System name that was created.
+1. From OCI Services menu, Click **File Systems**, then File System name that was created.
 
 2. Under Mount Target, Click the action icon and select **Detach**.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/File_Storage_Service/img/FSS_010.png" alt="image-alt-text">
 
-3. Verify there is no data under ‘Mount Targets’, then click Delete, click **OK** in Confirmation window.
+3. Verify there is no data under ‘Mount Targets’, then Click Delete, Click **OK** in Confirmation window.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/File_Storage_Service/img/FSS_011.png" alt="image-alt-text">
 
@@ -357,13 +357,13 @@ In this section we will delete all the resources we created in this lab.
 **Delete File System Storage**
 In this section we will delete all the resources we created in this lab.
 
-1. From OCI Services menu, Navigate to File System and click File System name that was created.
+1. From OCI Services menu, Navigate to File System and Click File System name that was created.
 
 2. Under Mount Target, Click the action icon and select **Detach**.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/File_Storage_Service/img/FSS_013.png" alt="image-alt-text">
 
-3. Verify there is no data under ‘Mount Targets’, then click **Delete**, click **OK** in Confirmation window.
+3. Verify there is no data under ‘Mount Targets’, then Click **Delete**, Click **OK** in Confirmation window.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/File_Storage_Service/img/FSS_014.png" alt="image-alt-text">
 

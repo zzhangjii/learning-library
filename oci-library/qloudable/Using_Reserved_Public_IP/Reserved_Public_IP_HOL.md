@@ -79,7 +79,7 @@ The purpose of this lab is to give you an overview of the Reserved Public IP Ser
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
-2. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
+2. From the OCI Services menu,Click **Virtual Cloud Network** under Networking and Click **Create Virtual Cloud Network**
 
 3. Select the compartment assigned to you from drop down menu on left part of the screen
 
@@ -104,7 +104,7 @@ The purpose of this lab is to give you an overview of the Reserved Public IP Ser
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text">
 
-7. From OCI servies menu click **Public IPs** under **Networking** 
+7. From OCI servies menu Click **Public IPs** under **Networking** 
 
 8. Click **Create Reserved Public IP**.  Fill out the dialog box:
 
@@ -129,7 +129,7 @@ ssh-keygen
 ```
 
 **HINT:** You can swap between OCI window, 
-git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
+git-bash sessions and any other application (Notepad, etc.) by Clicking the Switch Window icon 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text">
 
@@ -203,7 +203,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 11. Click **Create**
 
-12. Once the instance is in Running state, click Instance name
+12. Once the instance is in Running state, Click Instance name
 
 13. In the instance detail page Click **Attached VNICs** and then VNIC name
 

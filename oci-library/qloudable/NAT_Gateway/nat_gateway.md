@@ -26,7 +26,7 @@ NAT gateway,  addresses these challenges and provides Oracle Cloud Infrastructur
 
 - Highly Scalable and Fully Managed: Instances on private subnets can initiate large numbers of connections to the public internet. Connections initiated from the internet are blocked.
 
-- Secure: Traffic through NAT gateways can be disabled with the click of a button.
+- Secure: Traffic through NAT gateways can be disabled with the Click of a button.
 Dedicated IP Addresses: Each NAT gateway is assigned a dedicated IP address that can be reliably added to security whitelists.
 
 
@@ -75,7 +75,7 @@ Dedicated IP Addresses: Each NAT gateway is assigned a dedicated IP address that
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
-2. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
+2. From the OCI Services menu,Click **Virtual Cloud Network** under Networking and Click **Create Virtual Cloud Network**
 
 3. Select the compartment assigned to you from drop down menu on left part of the screen
 
@@ -108,7 +108,7 @@ Dedicated IP Addresses: Each NAT gateway is assigned a dedicated IP address that
 ssh-keygen
 ```
 **HINT:** You can swap between OCI window, 
-git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
+git-bash sessions and any other application (Notepad, etc.) by Clicking the Switch Window icon 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text">
 
@@ -193,9 +193,9 @@ ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE>
 
 **We will now create a route table and NAT gateway in the VCN.**
 
-1. Switch to OCI console. From OCI services menu click **Virtual Cloud Networks** under Networking. Locate your VCN and click the VCN name to display VCN details. 
+1. Switch to OCI console. From OCI services menu Click **Virtual Cloud Networks** under Networking. Locate your VCN and Click the VCN name to display VCN details. 
 
-2. Click **NAT Gateways** , then **Create**. Ensure correct compartment is selected and provide a Name and click **Create NAT Gateway**.
+2. Click **NAT Gateways** , then **Create**. Ensure correct compartment is selected and provide a Name and Click **Create NAT Gateway**.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/NAT_Gateway/img/NAT_001.PNG" alt="image-alt-text">
 
@@ -303,9 +303,9 @@ ping 8.8.8.8
 ```
 and verify there is internet connectivity
 
-**The compute instance in private subnet has internet access. This is possible since traffic is being routed through the NAT gateway that we created and attached to the VCN. Next we will use the traffic toggle function on NAT gateway to block/allow traffic with a single click.**
+**The compute instance in private subnet has internet access. This is possible since traffic is being routed through the NAT gateway that we created and attached to the VCN. Next we will use the traffic toggle function on NAT gateway to block/allow traffic with a single Click.**
 
-17. Switch to OCI console window. In your VCN's detail page, click **NAT Gateways**
+17. Switch to OCI console window. In your VCN's detail page, Click **NAT Gateways**
 
 18. Hover over the Action icon  and choose Block Traffic. 
 

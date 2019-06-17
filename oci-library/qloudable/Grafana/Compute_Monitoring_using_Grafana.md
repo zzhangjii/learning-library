@@ -72,7 +72,7 @@ Essentially, it’s a feature-rich replacement for Graphite-web, which helps use
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
-2. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
+2. From the OCI Services menu,Click **Virtual Cloud Network** under Networking and Click **Create Virtual Cloud Network**
 
 3. Select the compartment assigned to you from drop down menu on left part of the screen
 
@@ -105,7 +105,7 @@ Essentially, it’s a feature-rich replacement for Graphite-web, which helps use
 ssh-keygen
 ```
 **HINT:** You can swap between OCI window, 
-git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
+git-bash sessions and any other application (Notepad, etc.) by Clicking the Switch Window icon 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text">
 
@@ -230,11 +230,11 @@ User name and password are 'admin'
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_003.PNG" alt="image-alt-text">
 
-6. Once logged in you will be asked to change the password or skip the step, click **skip** so the user name and password stays as admin
+6. Once logged in you will be asked to change the password or skip the step, Click **skip** so the user name and password stays as admin
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_004.PNG" alt="image-alt-text">
 
-7. On the Home Dashboard click the gear icon on the left side of the page and click **Add data source**
+7. On the Home Dashboard Click the gear icon on the left side of the page and Click **Add data source**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_005.PNG" alt="image-alt-text">
 

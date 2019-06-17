@@ -78,7 +78,7 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
-2. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
+2. From the OCI Services menu,Click **Virtual Cloud Network** under Networking and Click **Create Virtual Cloud Network**
 
 3. Select the compartment assigned to you from drop down menu on left part of the screen
 
@@ -131,7 +131,7 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 ssh-keygen
 ```
 **HINT:** You can swap between OCI window, 
-git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
+git-bash sessions and any other application (Notepad, etc.) by Clicking the Switch Window icon 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text">
 
@@ -230,7 +230,7 @@ Compute).
 
 18. Attach Block volume to your compute instance. From OCI services menu Click **Instance** under Compute 
 
-19. For the compute instance created earlier, click Action item. Click **Attach Block Volume**.
+19. For the compute instance created earlier, Click Action item. Click **Attach Block Volume**.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_004.PNG" alt="image-alt-text">
 
@@ -254,7 +254,7 @@ Compute).
 
 **We now have a block volume created and attached to the Compute instance.**
 
-23. Verify the Block Volume is attached by clicking the Compute Instance name.
+23. Verify the Block Volume is attached by Clicking the Compute Instance name.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_005.PNG" alt="image-alt-text">
 
@@ -386,7 +386,7 @@ http://<COMPUTE_INSTANCE_PUBLIC_IP>
 ```
 sudo umount /dev/<VOLUME_NAME> 
 ```
-2. In OCI console window, click your compute instance name and in **Attached Block Volume** section  click the action icon and **click Detach**
+2. In OCI console window, Click your compute instance name and in **Attached Block Volume** section  Click the action icon and **Click Detach**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_009.PNG" alt="image-alt-text">
 
@@ -394,17 +394,17 @@ sudo umount /dev/<VOLUME_NAME>
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_010.PNG" alt="image-alt-text">
 
-4. Once the instance is in Stopped state, click **Boot Volume**, Click action icon and click **Detach**. Click **OK** in Confirm window.
+4. Once the instance is in Stopped state, Click **Boot Volume**, Click action icon and Click **Detach**. Click **OK** in Confirm window.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_011.PNG" alt="image-alt-text">
 
 5. Once the Boot volume is detached, Click **Terminate** to Terminate the instance.
 
-6. Click the action icon, click **View Boot Volume Details**.
+6. Click the action icon, Click **View Boot Volume Details**.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_012.PNG" alt="image-alt-text">
 
-7. In the Boot Volume Details window click **Create Instance:**
+7. In the Boot Volume Details window Click **Create Instance:**
 
 
 - **Name:** Enter a name (e.g. "boot volume instance").
@@ -506,9 +506,9 @@ appear.
 
 3. Click **Close** to close the window 
 
-4. In OCI Console Window, click the Apps icon and click Notepad. 
+4. In OCI Console Window, Click the Apps icon and Click Notepad. 
 
-**HINT:** You can swap between the OCI window and any other application (Notepad etc.) by clicking the Switch Window icon
+**HINT:** You can swap between the OCI window and any other application (Notepad etc.) by Clicking the Switch Window icon
 
 5. Paste the ISCSI commands in Notepad using your mouse/touch pad or Ctrl v. 
 
@@ -524,6 +524,6 @@ appear.
 
 3. Paste the detach command in the ssh session to the compute instance
 
-4. In OCI console window, click your compute instance name and in **Attached Block Volumes** section click the action icon and click **Detach**
+4. In OCI console window, Click your compute instance name and in **Attached Block Volumes** section Click the action icon and Click **Detach**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_020.PNG" alt="image-alt-text">
