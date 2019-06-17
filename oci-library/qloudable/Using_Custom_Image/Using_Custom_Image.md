@@ -66,7 +66,7 @@ In this lab we will use Custom image feature of OCI. Using this feature an exist
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
-2. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
+2. From the OCI Services menu,Click **Virtual Cloud Network** under Networking and Click **Create Virtual Cloud Network**
 
 3. Select the compartment assigned to you from drop down menu on left part of the screen
 
@@ -101,7 +101,7 @@ In this lab we will use Custom image feature of OCI. Using this feature an exist
 ssh-keygen
 ```
 **HINT:** You can swap between OCI window, 
-git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
+git-bash sessions and any other application (Notepad, etc.) by Clicking the Switch Window icon 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text">
 
@@ -204,7 +204,7 @@ sudo service httpd status
 
 5. From OCI servies menu, Click **Instances** under **Compute** 
 
-6. Click your compute instance name and click **Stop**
+6. Click your compute instance name and Click **Stop**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Custom_Image/img/Custom_Image_001.PNG" alt="image-alt-text">
 
@@ -212,12 +212,12 @@ sudo service httpd status
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Custom_Image/img/Custom_Image_002.PNG" alt="image-alt-text">
 
-8. Fill out the dialog box and click **Create Custom Image**. VMs status will change to **Creating Image**
+8. Fill out the dialog box and Click **Create Custom Image**. VMs status will change to **Creating Image**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Custom_Image/img/Custom_Image_003.PNG" alt="image-alt-text">
 
 
-9. Navigate to main Instances page under compute and click **Custom Images**. Locate your custom image, click the Action icon and then **Create Instance**
+9. Navigate to main Instances page under compute and Click **Custom Images**. Locate your custom image, Click the Action icon and then **Create Instance**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Custom_Image/img/Custom_Image_004.PNG" alt="image-alt-text">
 

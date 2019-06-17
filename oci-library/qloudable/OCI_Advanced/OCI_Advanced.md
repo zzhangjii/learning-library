@@ -70,7 +70,7 @@ Local VCN peering is the process of connecting two VCNs in the same region and t
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
-2. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
+2. From the OCI Services menu,Click **Virtual Cloud Network** under Networking and Click **Create Virtual Cloud Network**
 
 3. Select the compartment assigned to you from drop down menu on left part of the screen
 
@@ -92,13 +92,13 @@ Local VCN peering is the process of connecting two VCNs in the same region and t
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_001.PNG" alt="image-alt-text">
 
-5. Virtual Cloud Network will be created and VCN name will appear on OCI Console. Scroll down to find your VCN if multiple VCN exist, and click your VCN name.
+5. Virtual Cloud Network will be created and VCN name will appear on OCI Console. Scroll down to find your VCN if multiple VCN exist, and Click your VCN name.
 
-6. In VNC detials page,  Click **Internet Gateways** under Resources, and click **Create Internet Gateway**. Fill out the dialog box. Click **Create Internet Gateway** (ensure correct compartment is selected).
+6. In VNC detials page,  Click **Internet Gateways** under Resources, and Click **Create Internet Gateway**. Fill out the dialog box. Click **Create Internet Gateway** (ensure correct compartment is selected).
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_002.PNG" alt="image-alt-text">
 
-7. Click **Route tables**, and click **Default Route Table for <VCN_NAME>**
+7. Click **Route tables**, and Click **Default Route Table for <VCN_NAME>**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_003.PNG" alt="image-alt-text">
 
@@ -127,7 +127,7 @@ Local VCN peering is the process of connecting two VCNs in the same region and t
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_004.PNG" alt="image-alt-text">
 
-12. Once the Subnet is in the ‘Available’ state, click **Local Peering Gateways**, then **Create Local Peering Gateway** (local peering gateway  is a component on a VCN for routing traffic to a locally peered VCN). Fill out the dialog box:
+12. Once the Subnet is in the ‘Available’ state, Click **Local Peering Gateways**, then **Create Local Peering Gateway** (local peering gateway  is a component on a VCN for routing traffic to a locally peered VCN). Fill out the dialog box:
 
 
 - NAME: Provide a Name 
@@ -165,7 +165,7 @@ Local VCN peering is the process of connecting two VCNs in the same region and t
 18. Leave all other options as default, Click **Create Subnet**.
 
 
-19. Create second Local peering gateway. Once the Subnet is in the ‘Available’ state, click **Local Peering Gateways**, then **Create Local Peering Gateway** (local peering gateway  is a component on a VCN for routing traffic to a locally peered VCN). Fill out the dialog box:
+19. Create second Local peering gateway. Once the Subnet is in the ‘Available’ state, Click **Local Peering Gateways**, then **Create Local Peering Gateway** (local peering gateway  is a component on a VCN for routing traffic to a locally peered VCN). Fill out the dialog box:
 
 
 - NAME: Provide a Name 
@@ -184,7 +184,7 @@ Local VCN peering is the process of connecting two VCNs in the same region and t
 ssh-keygen
 ```
 **HINT:** You can swap between OCI window, 
-git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
+git-bash sessions and any other application (Notepad, etc.) by Clicking the Switch Window icon 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text">
 
@@ -269,7 +269,7 @@ Fill out the dialog box:
 
 12. Once the instances are in running state, note down the public and private IP addresses of the two compute instances
 
-13. Configure **First local peering gateway**. Click **Local Peering gateway** in your VCN details page. Hover over the action icon (3 vertical dots) and click **Establish Peering Connection**
+13. Configure **First local peering gateway**. Click **Local Peering gateway** in your VCN details page. Hover over the action icon (3 vertical dots) and Click **Establish Peering Connection**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_005.PNG" alt="image-alt-text">
 
@@ -380,13 +380,13 @@ If ping is successful then we have successfuly created VCN peering across two di
 
 ## Testing Console Connection to the compute instance
 
-1. Navigate to compute instance details page by clicking one of the compute instance name
+1. Navigate to compute instance details page by Clicking one of the compute instance name
 
-2. Under Resources section on the Instance Details page, click **Console Connections**, and then **Create Console Connection**.
+2. Under Resources section on the Instance Details page, Click **Console Connections**, and then **Create Console Connection**.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_010.PNG" alt="image-alt-text">
 
-3. Add your public SSH key, by pasting the ssh key created earlier and click **Create Console Connection** Refresh the screen and you will see an Active Console Connection
+3. Add your public SSH key, by pasting the ssh key created earlier and Click **Create Console Connection** Refresh the screen and you will see an Active Console Connection
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_011.PNG" alt="image-alt-text">
 
@@ -394,7 +394,7 @@ If ping is successful then we have successfuly created VCN peering across two di
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_012.PNG" alt="image-alt-text">
 
-5. Select LINUX/MAC OS for PLATFORM, click Copy and paste the command in Note Pad.
+5. Select LINUX/MAC OS for PLATFORM, Click Copy and paste the command in Note Pad.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_013.PNG" alt="image-alt-text">
 
@@ -422,7 +422,7 @@ Add or reset the SSH keys for the opc user.
 
 Both of these tasks require you to boot into a bash shell, in maintenance mode.
 
-8. **Reboot the instance from the Console**. In the Console, in the Instances Details page, click **Reboot**.Once the reboot process starts, switch back to gitbash terminal,  Console messages start to appear. As soon as you see the GRUB boot menu appear, use the up/down arrow key to stop the automatic boot process,enabling you to use the boot menu.
+8. **Reboot the instance from the Console**. In the Console, in the Instances Details page, Click **Reboot**.Once the reboot process starts, switch back to gitbash terminal,  Console messages start to appear. As soon as you see the GRUB boot menu appear, use the up/down arrow key to stop the automatic boot process,enabling you to use the boot menu.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_015.PNG" alt="image-alt-text">
 

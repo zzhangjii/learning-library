@@ -62,7 +62,7 @@ Terraform is Infrastructure as Code tool for building and managing infrastructur
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
-2. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
+2. From the OCI Services menu,Click **Virtual Cloud Network** under Networking and Click **Create Virtual Cloud Network**
 
 3. Select the compartment assigned to you from drop down menu on left part of the screen
 
@@ -96,7 +96,7 @@ Terraform is Infrastructure as Code tool for building and managing infrastructur
 ssh-keygen
 ```
 **HINT:** You can swap between OCI window, 
-git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
+git-bash sessions and any other application (Notepad, etc.) by Clicking the Switch Window icon 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text">
 
@@ -142,7 +142,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 - **Name:** Enter a name 
 - **Availability Domain:** Select availability domain
-- **Image Operating System:** Click **Change Image Source**. In the new window, Click **Oracle Images** Choose **Oracle Cloud Developer Image**. Scroll down, Accept the Agreement and click **Select Image**
+- **Image Operating System:** Click **Change Image Source**. In the new window, Click **Oracle Images** Choose **Oracle Cloud Developer Image**. Scroll down, Accept the Agreement and Click **Select Image**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_009.PNG" alt="image-alt-text">
 
@@ -195,11 +195,11 @@ oci -v
 ```
 oci setup config
 ```
-3. Accept the default location. For user OCI switch to OCI Console window. Click Human Icon and then your user name. In the user details page click **copy** to copy the OCID. **Also note down your region name as shown in OCI Console window**. Paste the OCID in ssh session.
+3. Accept the default location. For user OCI switch to OCI Console window. Click Human Icon and then your user name. In the user details page Click **copy** to copy the OCID. **Also note down your region name as shown in OCI Console window**. Paste the OCID in ssh session.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_004.PNG" alt="image-alt-text">
 
-4. Repeat the step to find tenancy OCID (Human icon followed by clicking Tenancy Name). Paste the Tenancy OCID in ssh session to compute instance followed by providing your region name (us-ashburn-1, us-phoneix-1 etc)
+4. Repeat the step to find tenancy OCID (Human icon followed by Clicking Tenancy Name). Paste the Tenancy OCID in ssh session to compute instance followed by providing your region name (us-ashburn-1, us-phoneix-1 etc)
 
 5. When asked for **Do you want to generate a new RSA key pair?** answer Y. For the rest of the question accept default by pressing Enter
 
@@ -211,7 +211,7 @@ oci setup config
 cat ~/.oci/oci_api_key_public.pem
 ```
 
-7. Hightligh and copy the content from ssh session. Switch to OCI Console, click Human icon followed by your user name. In user details page click **Add Public Key**. In the dialg box paste the public key content and click **Add**.
+7. Hightligh and copy the content from ssh session. Switch to OCI Console, Click Human icon followed by your user name. In user details page Click **Add Public Key**. In the dialg box paste the public key content and Click **Add**.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_006.PNG" alt="image-alt-text">
 
@@ -253,7 +253,7 @@ vi env-vars
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Infra_Using_Terraform/img/Terraform_005.PNG" alt="image-alt-text">
 
-13. Next Update the TF_VAR_Compartment_ocid variable. Switch to OCI Console window, Click **Compartment** under **Identity**. Locate your compartment name and click it. In the compartment details page , clik **copy** to copy the OCID
+13. Next Update the TF_VAR_Compartment_ocid variable. Switch to OCI Console window, Click **Compartment** under **Identity**. Locate your compartment name and Click it. In the compartment details page , clik **copy** to copy the OCID
 Paste this OCID in **env-vars** file
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Infra_Using_Terraform/img/Terraform_006.PNG" alt="image-alt-text">

@@ -66,7 +66,7 @@ Oracle Cloud Infrastructure Registry is an Oracle-managed registry that enables 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
-2. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
+2. From the OCI Services menu,Click **Virtual Cloud Network** under Networking and Click **Create Virtual Cloud Network**
 
 3. Select the compartment assigned to you from drop down menu on left part of the screen
 
@@ -92,7 +92,7 @@ Oracle Cloud Infrastructure Registry is an Oracle-managed registry that enables 
 
 ***We will now create an Auth Token. This token will be used to login to connect to OCI Docker registry from the Docker computeinstance that will be created later one***
 
-5. In OCI console click the user icon (top right)  then **User settings**. Under Resrouces Click **Auth Token**, then **Generate Token**. In pop up window provide a description then click **Generate Token**
+5. In OCI console Click the user icon (top right)  then **User settings**. Under Resrouces Click **Auth Token**, then **Generate Token**. In pop up window provide a description then Click **Generate Token**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_005.PNG" alt="image-alt-text">
 
@@ -102,11 +102,11 @@ Oracle Cloud Infrastructure Registry is an Oracle-managed registry that enables 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_007.PNG" alt="image-alt-text">
 
-7. From OCI Services menu, click **Registry(OCIR)** under **Developer Services**
+7. From OCI Services menu, Click **Registry(OCIR)** under **Developer Services**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Container_Registry/img/OCIR_HOL0033.PNG" alt="image-alt-text">
  
-8. Click **Create Repository**. Provide Repository name (all Lowercase), Check **Public** for **Acess**, click **Submit**
+8. Click **Create Repository**. Provide Repository name (all Lowercase), Check **Public** for **Acess**, Click **Submit**
 
 9.  Once created, verify there are no existing images in the repository (as shown in OCI console)
 
@@ -125,7 +125,7 @@ Oracle Cloud Infrastructure Registry is an Oracle-managed registry that enables 
 ssh-keygen
 ```
 **HINT:** You can swap between OCI window, 
-git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
+git-bash sessions and any other application (Notepad, etc.) by Clicking the Switch Window icon 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text">
 
@@ -365,7 +365,7 @@ appear.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text">
 
-8. Navigate to your registry(**Registry(OCIR)** under **Developer Services**), click Registry Name, Under **Actions** click **Delete Repository**  ,click **Delete** in confirmation window
+8. Navigate to your registry(**Registry(OCIR)** under **Developer Services**), Click Registry Name, Under **Actions** Click **Delete Repository**  ,Click **Delete** in confirmation window
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Container_Registry/img/OCIR_HOL0042.PNG" alt="image-alt-text">
 
