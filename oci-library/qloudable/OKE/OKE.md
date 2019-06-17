@@ -71,7 +71,7 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 
 1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
 2. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
 
@@ -79,9 +79,9 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text">
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL002.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL002.PNG" alt="image-alt-text">
 
 4. Fill out the dialog box:
 
@@ -98,17 +98,17 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 
 - Click **Close**
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_001.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_001.PNG" alt="image-alt-text">
 
 5. Virtual Cloud Network will be created and VCN name will appear on OCI Console. Scroll down to find your VCN if multiple VCN exist, and click your VCN name.
 
 6. In VNC detials page,  Click **Internet Gateways** under Resources, and click **Create Internet Gateway**. Fill out the dialog box. Click **Create Internet Gateway** (ensure correct compartment is selected).
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_002.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_002.PNG" alt="image-alt-text">
 
 7. Click **Route tables**, and click **Create Route Table**
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_003.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_003.PNG" alt="image-alt-text">
 
 8. **Click +Additional Route Rules**
 - Target Type: Select **Internet Gateway** 
@@ -118,7 +118,7 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 
 9. Click **Add Route Rules**.
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_003.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_003.PNG" alt="image-alt-text">
 
 10. Click your VCN name, then **Security Lists** and then **Create Security List** (You will be creating a new security list). Fill out the dialog box:
 
@@ -230,7 +230,7 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 - DHCP Options: Select the default.
 - Security Lists: Select the First Security List created earlier.
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_004.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_004.PNG" alt="image-alt-text">
 
 25. Leave all other options as default, Click **Create Subnet**.
 
@@ -297,7 +297,7 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 
 1. Click the Apps icon in the toolbar and select Git-Bash to open a terminal window.
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL006.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL006.PNG" alt="image-alt-text">
 
 
 4. Enter command 
@@ -307,11 +307,11 @@ ssh-keygen
 **HINT:** You can swap between OCI window, 
 git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text">
 
 5. Press Enter When asked for 'Enter File in which to save the key', 'Created Directory, 'Enter passphrase', and 'Enter Passphrase again.
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL008.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL008.PNG" alt="image-alt-text">
 
 6. You should now have the Public and Private keys:
 
@@ -338,11 +338,11 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 ```
  , highlight the key and copy 
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL009.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL009.PNG" alt="image-alt-text">
 
 8. Click the apps icon, launch notepad and paste the key in Notepad
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG" alt="image-alt-text">
 
 
 9. Change directory to .oci, Enter command:
@@ -389,7 +389,7 @@ oci setup config
 
 16. Accept the default location. For user OCI switch to OCI Console window. Click Human Icon and then your user name. In the user details page click **copy** to copy the OCID. **Also note down your region name as shown in OCI Console window**. Paste the OCID in git bash.
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_004.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_004.PNG" alt="image-alt-text">
 
 17. Repeat the step to find tenancy OCID (Human icon followed by clicking Tenancy Name). Paste the Tenancy OCID in ssh session to compute instance followed by providing your region name (us-ashburn-1, us-phoneix-1 etc)
 
@@ -397,7 +397,7 @@ oci setup config
 
 19.  When prompted for ‘Enter a location for your private key file’, Type the full directory path Of oci_api_key.pem file location and press Enter (~/.oci/oci_api_key.pem. For rest of questions accept default by pressing Enter. 
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_005.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_005.PNG" alt="image-alt-text">
 
 20. Now we need to upload  API key into our OCI account for authentication of API calls. To display the conent of API key Enter command :
 
@@ -407,9 +407,9 @@ cat ~/.oci/oci_api_key_public.pem
 
 21. Highligh and copy the content from ssh session. Switch to OCI Console, click Human icon followed by your user name. In user details page click **Add Public Key**. In the dialg box paste the public key content and click **Add**.
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_006.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_006.PNG" alt="image-alt-text">
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_007.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_007.PNG" alt="image-alt-text">
 
 ## Create  Kubernetes Cluster
 
@@ -419,7 +419,7 @@ cat ~/.oci/oci_api_key_public.pem
 
 3. There is Quick Create option which will create all  neccessay resources including VCN. Since we created VCN seperately in this lab we  will choose Custom Create options as it shows different options available. Choose **Custom Create**
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OKE/img/OKE_002.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OKE/img/OKE_002.PNG" alt="image-alt-text">
 
 4. Fill out the dialog box:
 
@@ -465,7 +465,7 @@ cat ~/.oci/oci_api_key_public.pem
 
 7. Wait for Cluster status to change from **Creating** to **Active**
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OKE/img/OKE_003.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OKE/img/OKE_003.PNG" alt="image-alt-text">
 
 ## Install Kubectl, OCI CLI and configure OCI CLI
 
@@ -481,7 +481,7 @@ cd $HOME/.kube
 ```
 curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
 ```
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OKE/img/OKE_004.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OKE/img/OKE_004.PNG" alt="image-alt-text">
 
 2.  Wait for download to complete. Enter command 
 ```
@@ -495,11 +495,11 @@ ls
             
 **NOTE:** Since we already created .kube directory we dont need toexecute the first command 
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OKE/img/OKE_005.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OKE/img/OKE_005.PNG" alt="image-alt-text">
 
 2. Switch to git bash window and Enter the commands copied. Ensure the command is entered on a single line Ignore any errors related to Power shell.
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OKE/img/OKE_006.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OKE/img/OKE_006.PNG" alt="image-alt-text">
 
 3. Enter command ls and verify a file named **config** exists.
 
@@ -517,7 +517,7 @@ to the Kubernetes kubectl command line tool
 
 3. Click **Getting Started** and Copy the URL under Getting Started
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OKE/img/OKE_007.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OKE/img/OKE_007.PNG" alt="image-alt-text">
 
 4. Switch to Git bash window, Enter Command:
 ```
@@ -530,11 +530,11 @@ to the Kubernetes kubectl command line tool
 
 7. Ensure Kubeconfig is selected, Click Action icon and browse to the location where config file is stored loclaly (/C/Users/Photonuser/.kube). This is being done for Authentication purposes.
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OKE/img/OKE_008.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OKE/img/OKE_008.PNG" alt="image-alt-text">
 
 8. Kubernetes dash board should be displayed. Click **Overview** to see the applications deployed on the cluster
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OKE/img/OKE_009.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OKE/img/OKE_009.PNG" alt="image-alt-text">
 
 **We now have successfully accessed the Kubernetes Dash board**
 
@@ -562,7 +562,7 @@ cd $HOME/.kube
 
 **NOTE:** You can see thse deployment using Kubernetes Dashboard under Deployment
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OKE/img/OKE_010.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OKE/img/OKE_010.PNG" alt="image-alt-text">
 
 5.  Create a service to expose the application. The cluster is integrated with the OCI Cloud Controller Manager (CCM). As a result, creating a service of type --type=LoadBalancer will expose the pods to the Internet using an OCI Load Balancer.In git-bash window Enter command:
 ```
@@ -571,15 +571,15 @@ cd $HOME/.kube
 
 6. Switch to OCI console window. From OCI Services menu click **Load Balancers** under Networking. A new OCI LB should be getting  provisioned (This is due to the command above). 
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OKE/img/OKE_011.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OKE/img/OKE_011.PNG" alt="image-alt-text">
 
 7. Once Load Balancer is Active, Click Load Balancer name and from Load Balancer details page note down its IP address.
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OKE/img/OKE_012.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OKE/img/OKE_012.PNG" alt="image-alt-text">
 
 8. open a new browser tab and enter URL  http://<Load-Balancer-Public-IP> (http://129.213.76.26 in this example). Nginx Welcome screen should be displayed
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OKE/img/OKE_013.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OKE/img/OKE_013.PNG" alt="image-alt-text">
 
 
 ##  Delete the resources
@@ -607,14 +607,14 @@ appear.
 
 2. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text">
 
 
 **Delete API Key**
 
 1. Navigate to user settings. Click on Action icon and click **Delete** to delete the API key
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OKE/img/OKE_014.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OKE/img/OKE_014.PNG" alt="image-alt-text">
 
 
 **Congratulations! You have successfully completed the lab**

@@ -77,7 +77,7 @@ In this lab we will deploy Redis in Master-Slave mode (similar to below) though 
 
 1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
 2. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
 
@@ -85,9 +85,9 @@ In this lab we will deploy Redis in Master-Slave mode (similar to below) though 
 
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text">
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL002.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL002.PNG" alt="image-alt-text">
 
 4. Fill out the dialog box:
 
@@ -98,15 +98,15 @@ In this lab we will deploy Redis in Master-Slave mode (similar to below) though 
 - Click **Create Virtual Cloud Network**
 - Click **Close**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text">
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text">
                     
 ## Create ssh keys, two compute instances and install Redis
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL006.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL006.PNG" alt="image-alt-text">
 
 2. Enter command 
 ```
@@ -115,11 +115,11 @@ ssh-keygen
 **HINT:** You can swap between OCI window, 
 git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text">
 
 3. Press Enter When asked for 'Enter File in which to save the key', 'Created Directory, 'Enter passphrase', and 'Enter Passphrase again.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL008.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL008.PNG" alt="image-alt-text">
 
 4. You should now have the Public and Private keys:
 
@@ -146,11 +146,11 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 ```
  , highlight the key and copy 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL009.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL009.PNG" alt="image-alt-text">
 
 6. Click the apps icon, launch notepad and paste the key in Notepad (as backup)
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG" alt="image-alt-text">
 
 7. Switch to the OCI console. From OCI servies menu, Click **Instances** under **Compute** 
 
@@ -173,7 +173,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 **NOTE:** If 'Service limit' error is displayed choose a different shape such as VM.Standard.E2.2 OR VM.Standard2.2 OR choose a different AD
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text">
 
 16. Repeat the steps to create second Compute Instance. This compute instance should be created in a different AD then the first instance. **Ensure to choose a different AD then the first compute instance**
 
@@ -195,7 +195,7 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 
 13. Enter 'Yes' when prompted for security message
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0014.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0014.PNG" alt="image-alt-text">
  
 14. Verify opc@<COMPUTE_INSTANCE_NAME> appears on the prompt
 
@@ -223,7 +223,7 @@ sudo systemctl status redis.service
 ```
 Verify service is active and is using loop back  interface (127.0.0.1) on port 6379
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Redis_002.PNG" alt="image-alt-text" height="200" width="200">)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Redis_002.PNG" alt="image-alt-text">)
 
 19. Test the set-up. Enter command:
 ```
@@ -249,14 +249,14 @@ sudo vi /etc/redis.conf
 
 3. Search for string 'bind 127.0.0.1'. Replace 127.0.0.1 with the private ip of the compute instance (redis-master) saved earlier.
 **NOTE:** Below example is showing 10.0.0.6 as the private IP
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Redis_003.PNG" alt="image-alt-text" height="200" width="200">)
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Redis_004.PNG" alt="image-alt-text" height="200" width="200">)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Redis_003.PNG" alt="image-alt-text">)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Redis_004.PNG" alt="image-alt-text">)
 
 4. In redis.conf file search for string 'requirepass'. Un-comment the line and note down the password. 
 
 **NOTE:** We will use this default password for this lab. In the last section where we cover additional security methods we will go over the process of how to change this password to a more complex and secure password
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Redis_005.PNG" alt="image-alt-text" height="200" width="200">)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Redis_005.PNG" alt="image-alt-text">)
 
 5. Save and exit out of the editor and restart redis service. Enter command:
 ```
@@ -267,7 +267,7 @@ sudo systemctl restart redis.service
 sudo systemctl status redis.service
 ```
 Verify service is active and is using Private IP of the compute instance on port 6379
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Redis_006.PNG" alt="image-alt-text" height="200" width="200">)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Redis_006.PNG" alt="image-alt-text">)
 
 7. Redis Master node has been configued. We will now configure Redis Slave node. Bring up the git-bash window with ssh session to second compute node(redis-slave).
 
@@ -276,10 +276,10 @@ Verify service is active and is using Private IP of the compute instance on port
 9. Edit /etc/redis.conf file as above. Change the bind address to the private IP of the second compute instance. Do not exit out of the file.
 
 10. Search for string 'slaveof'. Un-comment the line and change the IP address to the private IP address of the master node(10.0.0.6 in this example). Keep the port number as 6379. Do not exit out of the file.
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Redis_007.PNG" alt="image-alt-text" height="200" width="200">)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Redis_007.PNG" alt="image-alt-text">)
 
 11. Search for string 'masterauth' and change the password noted down from master node config file (foobared in this example)
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Redis_008.PNG" alt="image-alt-text" height="200" width="200">)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Redis_008.PNG" alt="image-alt-text">)
 
 12. Save and exit out of the file. Restart Redis service and verify status to make sure Redis service is using the private IP of the second compute node
 (redis-slave).
@@ -294,7 +294,7 @@ Verify service is active and is using Private IP of the compute instance on port
 1. Switch to OCI console window.
 
 2. From OCI services menus Navigate to your VCN created earlier and click your VCN name, Click **Security List** and then **Default Security list for<YOUR_VCN_NAME>**
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Customer_Lab_001.PNG" alt="image-alt-text" height="200" width="200">)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Customer_Lab_001.PNG" alt="image-alt-text">)
 
 3. In Security list details page, Click **Add Ingress Rule**. Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure to leave STATELESS flag un-checked
 
@@ -327,7 +327,7 @@ sudo firewall-cmd --reload
 sudo systemctl restart redis.service
 ```
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Redis_010.PNG" alt="image-alt-text" height="200" width="200">)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Redis_010.PNG" alt="image-alt-text">)
 
 7. Initiate redis cli mode on Redis Master node and verify Replication status. Enter Commands:
 ```
@@ -341,7 +341,7 @@ This will authenticate the user per the password in redis.conf file. In this lab
 - **info replication**
 This will provide us replication information. This command will also confirm that this redis node is master and there is a slave instance.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Redis_011.PNG" alt="image-alt-text" height="200" width="200">)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Redis_011.PNG" alt="image-alt-text">)
 
 8. If the slave information is not available, it could be due to keep alive timer expiration. Switch to git-bash window with ssh connection to second compute instance and restart redis service:
 ``` 
@@ -353,7 +353,7 @@ sudo systemctl restart redis.service
 ```
 info replication
 ```
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Redis_012.PNG" alt="image-alt-text" height="200" width="200">)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Redis_012.PNG" alt="image-alt-text">)
 
 10. To exit out of cli prompt Enter command exit
 
@@ -378,7 +378,7 @@ you're restricting the public access of the Redis
 instance and allowing access only via the bastion 
 server The deployment will look similar to:
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Redis_013.PNG" alt="image-alt-text" height="200" width="200">)
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Redis_013.PNG" alt="image-alt-text">)
 
 **Recommendation #2.** Using Strong Password. In 
 this lab we used the default password (foobared) 
@@ -412,18 +412,18 @@ address
 
 3. Locate first compute instance, Click Action icon and then **Terminat** 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text">
 
 4. Make sure Permanently delete the attached Boot Volume is checked, Click Terminate Instance. Wait for instance to fully Terminate
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0017.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0017.PNG" alt="image-alt-text">
 
 5. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will 
 appear.
 
 6. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text">
 
 
 ***Congratulations! You have successfully completed the lab. ***

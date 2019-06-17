@@ -72,7 +72,7 @@ Service Gateway alleviates the preceding concerns by enabling the following func
 
 1. From the OCI Services menu, click **Object Storage**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_031.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_031.PNG" alt="image-alt-text">
 
 2. Ensure correct Compartment (Left side of the OCI console).
 
@@ -87,14 +87,14 @@ Service Gateway alleviates the preceding concerns by enabling the following func
 
 5. Click the Apps icon in the toolbar and select Git-Bash to open a terminal window.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/OBJECT-STORAGE004.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/OBJECT-STORAGE004.PNG" alt="image-alt-text">
 
 6. Change directory to the Downloads folder Enter command:
 ```
 $ cd /c/Users/PhotonUser/Downloads/
 ```
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/OBJECT-STORAGE005.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/OBJECT-STORAGE005.PNG" alt="image-alt-text">
 
 7. Create a sample file, Enter command:
 ```
@@ -106,11 +106,11 @@ This should create a file by the name"samplefile" in the Downloads folder
 
 **HINT:** You can swap between OCI window and any other application(git-bash etc) by clicking switch window
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/OBJECT-STORAGE006.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/OBJECT-STORAGE006.PNG" alt="image-alt-text">
 
 9. Bucket detail window should be visible. Click **Upload Object**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/OBJECT-STORAGE007.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/OBJECT-STORAGE007.PNG" alt="image-alt-text">
 
 10. Click on **Upload Object**. Fill out the dialog box
 
@@ -128,9 +128,9 @@ This should create a file by the name"samplefile" in the Downloads folder
 
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text">
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL002.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL002.PNG" alt="image-alt-text">
 
 15. Fill out the dialog box:
 
@@ -141,9 +141,9 @@ This should create a file by the name"samplefile" in the Downloads folder
 - Click **Create Virtual Cloud Network**
 - Click **Close**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text">
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text">
 
 16. We will now add a private subnet to this VCN which will be used to created a private compute instance later on.
 
@@ -168,13 +168,13 @@ This should create a file by the name"samplefile" in the Downloads folder
 
 19. Leave all other options as default, Click **Create Subnet**.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_033.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_033.PNG" alt="image-alt-text">
 
 ## Create ssh keys, Create two Compute instances with OCI CLI pre installed
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL006.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL006.PNG" alt="image-alt-text">
 
 2. Enter command 
 ```
@@ -183,11 +183,11 @@ ssh-keygen
 **HINT:** You can swap between OCI window, 
 git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text">
 
 3. Press Enter When asked for 'Enter File in which to save the key', 'Created Directory, 'Enter passphrase', and 'Enter Passphrase again.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL008.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL008.PNG" alt="image-alt-text">
 
 4. You should now have the Public and Private keys:
 
@@ -214,11 +214,11 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 ```
  , highlight the key and copy 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL009.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL009.PNG" alt="image-alt-text">
 
 6. Click the apps icon, launch notepad and paste the key in Notepad (as backup)
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG" alt="image-alt-text">
 
 7. Switch to the OCI console. From OCI services menu, Click **Instances** under **Compute** 
 
@@ -230,7 +230,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 - **Image Operating System:** Click **Change Image Source**. In the new window, Click **Oracle Images** Choose **Oracle Cloud Developer Image**. Scroll down, Accept the Agreement and click **Select Image**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_009.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_009.PNG" alt="image-alt-text">
 
 
 - **Choose Instance Type:** Select Virtual Machine
@@ -244,7 +244,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 9. Click **Create**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text">
 
 10. Note down the Public IP address of compute instance
 
@@ -258,7 +258,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 - **Image Operating System:** Click **Change Image Source**. In the new window, Click **Oracle Images** Choose **Oracle Cloud Developer Image**. Scroll down, Accept the Agreement and click **Select Image**
 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_009.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_009.PNG" alt="image-alt-text">
 
 
 - **Choose Instance Type:** Select Virtual Machine
@@ -276,7 +276,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 14. Once the instance is in Running state, click **Instance name** and note down its **Private IP address**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_015.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_015.PNG" alt="image-alt-text">
 
 15. In Order to ssh into private instance we will use the ssh proxy command. This command allows us to “tunnel” through the bastion host to our private instance. Storing private SSH keys on a public server such as a Bastion host(First Compute instance) is not recommended.
 
@@ -285,7 +285,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 ssh -t -o ProxyCommand='ssh -i <SSH_Private_Key_Name> opc@<FIRST_COMPUTE_PUBLIC_IP> -W %h:%p %r' -i <SSH_Private_Key_Name> opc@<SECOND_COMPUTE_PRIVATE_IP>
 ```
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_034.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_034.PNG" alt="image-alt-text">
 
 17. Enter Yes at Security Prompt
 
@@ -295,7 +295,7 @@ oci -v
 ```
 **NOTE:** Version shoudl be minimum 2.4.2X
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_005.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_005.PNG" alt="image-alt-text">
 
 19. Next we will configure OCI CLI. Enter command: 
 ```
@@ -303,13 +303,13 @@ oci setup config
 ```
 20. Accept the default directory location. For user OCI switch to OCI Console window. Click Human Icon and then your user name. In the user details page click **copy** to copy the OCID. **Also note down your region name as shown in OCI Console window**. Paste the OCID in ssh session.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_004.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_004.PNG" alt="image-alt-text">
 
 21. Repeat the step to find tenancy OCID (Human icon followed by clicking Tenancy Name). Paste the Tenancy OCID in ssh session to compute instance followe by providing your region name (us-ashburn-1, us-phoneix-1 etc)
 
 22. When asked for **Do you want to generate a new RSA key pair?** answer Y. For the rest of the question accept default by pressing Enter
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_005.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_005.PNG" alt="image-alt-text">
 
 ## Upload API keys, Create Service gateway and verify functionality
 
@@ -321,9 +321,9 @@ cat ~/.oci/oci_api_key_public.pem
 
 2. Hightligh and copy the content from ssh session. Switch to OCI Console, click Human icon followe by your user name. In user details page click **Add Public Key**. In the dialg box paste the public key content and click **Add**.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_006.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_006.PNG" alt="image-alt-text">
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_007.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_007.PNG" alt="image-alt-text">
 
 3. A new finger print will be generated. Switch to git-bash window and enter command
 ```
@@ -336,7 +336,7 @@ the one in OCI console window and make sure they match
 
 4. Switch back to OCI Console window and navigate to your Object Storage bucket details page. Note down the name space and object storage name
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_032.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_032.PNG" alt="image-alt-text">
 
 5. Switch to git-bash window (ssh session to second compute instance) and download samplefile. Enter command:
 ```
@@ -347,7 +347,7 @@ oci os object get --namespace <NAME_SPACE> --bucket-name <BUCKET_NAME> --name sa
 oci os object get --namespace us_training --bucket-name
 Service-Gateway-Bucket --name samplefile --file ./samplefile
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_021.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_021.PNG" alt="image-alt-text">
 
 6. No output will be displayed and no file will be downloaded. Enter Ctrl+C to terminate the command. Enter command 
 ```ls
@@ -366,13 +366,13 @@ Fill out the dialog box:
 - **Create in Compartment:** Ensure correct compartment is selected.
 - **Services:** Click **Drop down** and choose OCI IAD-ObjectStorage.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_027.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_027.PNG" alt="image-alt-text">
 
 9. Click **Create Service Gateway**
 
 10. Click **Route tables**, and click **Default Route Table for <VCN_NAME>**. 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_003.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_003.PNG" alt="image-alt-text">
 
 11. Click **Add Route Rules**. Fill out the dialog box:
 
@@ -384,7 +384,7 @@ Fill out the dialog box:
 
 12.  Click **Add Route Rules**, new route entry should be created.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_035.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_035.PNG" alt="image-alt-text">
 
 13. In Your VCN , Click **Security Lists**, then **Default Security List for <VCN_NAME>** . Click **Add Egress Rules**
 
@@ -396,7 +396,7 @@ Fill out the dialog box:
 - **SOURCE PORT RANGE:** ALL
 - **DESTINATION PORT RANGE:** ALL
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_036.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_036.PNG" alt="image-alt-text">
 
 15. Click **Add Egress Rules**
 
@@ -407,7 +407,7 @@ Fill out the dialog box:
 oci os object get --namespace <NAME_SPACE> --bucket-name<BUCKET_NAME> --name samplefile --file ./samplefile**
 ```
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_029.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_029.PNG" alt="image-alt-text">
 
 **Using Servie Gateway, compute instance was able to access Object stored in Object Storage. This was done using the private backbone network of OCI rather than public internet. ***
 
@@ -420,11 +420,11 @@ oci os object get --namespace <NAME_SPACE> --bucket-name<BUCKET_NAME> --name sam
 
 3. Locate compute instance, Click Action icon and then **Terminate** 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text">
 
 4. Make sure Permanently delete the attached Boot Volume is checked, Click Terminate Instance. Wait for instance to fully Terminate
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0017.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0017.PNG" alt="image-alt-text">
 
 5. Repeat steps to delete the second compute instance
 
@@ -432,6 +432,6 @@ oci os object get --namespace <NAME_SPACE> --bucket-name<BUCKET_NAME> --name sam
 
 7. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text">
 
 **Congratulations! You have successfully completed Using Service Gateway lab.**
