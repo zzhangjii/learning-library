@@ -124,14 +124,14 @@ A third party SSH client needs to be installed for Windows versions prior to Win
 
 17. Enter information to create your compute instance.
 
-**Note:** *Depending on available resources for Class of SE labs, you may need to select resources from a particular Availability Domain.   If resources aren't available, try another AD.  If in doubt, ask your instructor which AD you should utilize.*
+**Note:** *Depending on available resources for Class of SE labs, you may need to select resources from a particular Availability Domain, or use a different compute shape.   If resources aren't available, try another AD, or use **Choose Instance Shape** to find another instance type that has availability.  If in doubt, ask your instructor which AD you should utilize.*
 
 | **Name:**                | \<instance name\> |
 | ------------------------ | ------------------------------------------------ |
 | Availability Domain: | AD of your choice, AD1, AD2, or AD3   |
 | Operating System:    | Oracle Linux 7.6                            |
 | Instance Type:       | Virtual Machine                             |
-| Shape:               | VM.Standard2.1                              |
+| Shape:               | VM.Standard1.2                              |
 | Boot Volume:         | Default                                     |
 | SSH Key:             | Choose SSH Key file or Paste SSH keys      |
 | Compartment:         | Your compartment* (*ex:* team-100)     |
