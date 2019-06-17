@@ -72,7 +72,7 @@ In this lab you will deploy http servers on two compute instances in Oracle Clou
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
-2. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
+2. From the OCI Services menu,Click **Virtual Cloud Network** under Networking and Click **Create Virtual Cloud Network**
 
 3. Select the compartment assigned to you from drop down menu on left part of the screen
 
@@ -107,7 +107,7 @@ In this lab you will deploy http servers on two compute instances in Oracle Clou
 ```
 ssh-keygen
 ```
-**HINT:** You can swap between OCI window, git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
+**HINT:** You can swap between OCI window, git-bash sessions and any other application (Notepad, etc.) by Clicking the Switch Window icon 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text">
 
@@ -194,7 +194,7 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 
 16. Launch a second git-bash window using above steps and connect via SSH into the second Compute instance (using the same steps as above. 
 
-**HINT:** You can swap between the OCI window, git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
+**HINT:** You can swap between the OCI window, git-bash sessions and any other application (Notepad, etc.) by Clicking the Switch Window icon 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_001.PNG" alt="image-alt-text">
 
@@ -273,7 +273,7 @@ Load balancers should always reside in different subnets than your application i
 
 In this section we will create a new security list. This security list will be used by the load balancer (that will be created later on). This will ensure all traffic to the two web servers is routed properly.
 
-1. From OCI Services menu, click **Virtual Cloud Network** under **Networking**. This displays the list of VCNs in current compartment.
+1. From OCI Services menu, Click **Virtual Cloud Network** under **Networking**. This displays the list of VCNs in current compartment.
 
 **HINT:** If there are multiple Networks, scroll down to locate the one you just created. 
 
@@ -341,7 +341,7 @@ In this section we will create a new security list. This security list will be u
 
 **When you create a load balancer, you choose its shape (size) and you specify subnet (created earlier) from different Availability Domains. This ensures that the load balancer is highly available and is only active in one subnet at a time.**
 
-1. From OCI Services menu, click **Load Balancers** under **Networking**
+1. From OCI Services menu, Click **Load Balancers** under **Networking**
 
 2. Click **Create Load Balancer**. Fill out the dialog box;
 
@@ -392,7 +392,7 @@ In this section we will create a new security list. This security list will be u
 
 **We now have a load balancer that will manage the 2 subnets we had created earlier.**
 
-5. From OCI Services menu, click **Virtual Cloud Network** under Networking. Locate the VCN you created.
+5. From OCI Services menu, Click **Virtual Cloud Network** under Networking. Locate the VCN you created.
 
 6. Click  VCN name to display VCN detail page.
 
@@ -411,7 +411,7 @@ Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure 
 
 9. Click **Add Ingress Rule**. 
 
-10. Click **Egress Rule** under Resources. Click **Add Egress Rule**,  click **+Additional Egress Rule** and enter the following Egress rule; Ensure to leave STATELESS flag un-checked
+10. Click **Egress Rule** under Resources. Click **Add Egress Rule**,  Click **+Additional Egress Rule** and enter the following Egress rule; Ensure to leave STATELESS flag un-checked
 
 
 - Destination Type: CIDR
@@ -470,7 +470,7 @@ In this section we will access the two Web servers configured earlier using Load
 
 Delete Load Balancer and associated components:
 
-1. From OCI Services menu, click **Load Balancers**, under Networking. Click your Load Balancer Name
+1. From OCI Services menu, Click **Load Balancers**, under Networking. Click your Load Balancer Name
 
 2. Click **Delete**.
 
