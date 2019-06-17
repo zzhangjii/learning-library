@@ -89,7 +89,7 @@ for anyone who happens to finish early. No prior experience with Visual
 Builder is assumed or necessary.
 
 **Prerequisite**: Before starting these labs, you should have an OCI
-login and "ServerDeveloper" or "ServerAdminstrator" access to a VBCS instance; most formal classes will share an existing VBCS instance and your permissions will already correct. If you do not have a VBCS instance you may create one using the instructions in [Appendix A: Create VBCS Instance](#appendix-a-create-vbcs-instance). 
+login and "ServerDeveloper" or "ServerAdminstrator" access to our VBCS instance **"OSPA-Class-Of-SE"**  (if you are doing this lab NOT with Class Of SE; most formal classes will share an existing VBCS instance and your permissions will already correct. If you do not have a VBCS instance you may create one using the instructions in [Appendix A: Create VBCS Instance](#appendix-a-create-vbcs-instance)). 
 
 **Data Files**:
 You will need four data files, three will be used in Lab 3 and one will be used in Lab 4. All four files are available in a single .zip file named [vbcsfiles.zip](https://github.com/oracle/learning-library/blob/master/ospa-library/appdev/application-development-lab/files/vbcsfiles.zip) on GitHub; download the file and expand it to find the following four files (keep them handy they will be used later in this lab):
@@ -199,8 +199,9 @@ Dashboard”)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.3.3 – Service: Oracle Visual Builder Cloud Service<br/> 
 
+## ** For 2019 Class Of SE - All participants will share the "OSPA-Class-Of-SE" instance **
 4.  A VBCS instance has been created and designated for your class to
-    share (your instance name may be different than the one shown.  
+    share **"OSPA-Class-Of-SE"** please create your VBCS application in the OSPA-Class-Of-SE instance unless your facilitator says differently (your instance name may be different than the one shown; the facilitator will let you know.) 
     (see Appendix A for instructions on creating a VBCS instance)
 
     ![](./media/vbcs_instance_list.png)
@@ -235,6 +236,8 @@ Dashboard”)
 8.  When the “Create Application” page appears, provide a name for the
     application; you may call your applications anything you wish.
     
+    ### ** Note you must be working within VBCS instance "OSPA-Class-Of-SE" for all labs to work properly **
+
     If you are sharing your lab environment with a group of people you might find it convenient to follow a naming convention to make it easier for you to find your work and for the facilitators to help you.
     
     Perhaps combining your name or initials (or even employee id) with two-or-three characters representing your location to use as an application name or to add as a prefix to the names of all applications you create. Visual Builder's list of applications may be sorted and filtered easily.
@@ -1120,7 +1123,7 @@ Nothing really new so far…
     “Live” mode again (see [Section 1 – Create First Web Application
     \#10 for more](#potential-context-error))
     
-    ![](./media/image125.png)
+    ![](./media/AppDev3.18.6.png)
     
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.18.6 – Finished screen
     
@@ -1305,6 +1308,8 @@ Your resources for this lab include two (2) service connections used to
 access data for Mama Maggy stores and Mama Maggy associates. You will
 use these “Service Connections” to provide data services to your
 applications. 
+
+ ### ** Note you must be working within VBCS instance "OSPA-Class-Of-SE" for this lab to work properly **
 
 Get the correct connection URL values for your class from the ["AppDev_Endpoints.txt" file in GitHub](https://github.com/oracle/learning-library/blob/master/ospa-library/appdev/application-development-lab/files/AppDev_Endpoints.txt) and copy them to your local machine to make the lab a little quicker to complete<br/> 
 (please
