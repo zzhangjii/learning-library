@@ -199,9 +199,9 @@ Dashboard”)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.3.3 – Service: Oracle Visual Builder Cloud Service<br/> 
 
-## ** For (2019) Class Of SE - All participants will share the "OSPA-Class-Of-SE" instance **
+## ** For 2019 Class Of SE - All participants will share the "OSPA-Class-Of-SE" instance **
 4.  A VBCS instance has been created and designated for your class to
-    share **"OSPA-Class-Of-SE"** (your instance name may be different than the one shown.  
+    share **"OSPA-Class-Of-SE"** please create your VBCS application in the OSPA-Class-Of-SE instance unless your facilitator says differently (your instance name may be different than the one shown; the facilitator will let you know.) 
     (see Appendix A for instructions on creating a VBCS instance)
 
     ![](./media/vbcs_instance_list.png)
