@@ -633,9 +633,7 @@ You should now see the same user profile information, that you started within ID
 
 ## Configuring Provisioning and Synchronization – OPTIONAL
 
-
 The following exercise has been developed to showcase the extend of IDCS Single Sign-On capabilities by integrating the provisioning and synchronization services with third-party apps.
-
 
 ### **DEMO** - Configure Provisioning and Synchronization (Persona: Administrator) - OPTIONAL
 
