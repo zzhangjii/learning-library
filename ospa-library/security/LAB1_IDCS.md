@@ -631,11 +631,9 @@ Remember that we have created the **Employee** group into IDCS which is having a
 
 You should now see the same user profile information, that you started within IDCS, within Salesforce without having had to log into Salesforce.
 
-## Configuring Privisioning and Synchronization – OPTIONAL
-
+## Configuring Provisioning and Synchronization – OPTIONAL
 
 The following exercise has been developed to showcase the extend of IDCS Single Sign-On capabilities by integrating the provisioning and synchronization services with third-party apps.
-
 
 ### **DEMO** - Configure Provisioning and Synchronization (Persona: Administrator) - OPTIONAL
 
