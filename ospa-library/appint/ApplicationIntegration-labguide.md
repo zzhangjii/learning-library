@@ -1,6 +1,6 @@
 # Application Integration Lab Guide
 
-## June 14, 2019 - 12:30 PM
+## June 18, 2019 - 5:00 PM
 
 # Table of Contents
 
@@ -336,9 +336,8 @@ have done the prerequisites, continue below:
 
       Figure 4: Database Connection Dialog
 
-    - In the Download Wallet dialog, enter and confirm a *Password* for
-    your wallet. Record your wallet password as *Wallet Password" in your *MyLabNotes* scratchpad
-    that you created above. It’s important not to forget it. Then, click
+    - In the *Download Wallet* dialog, enter and confirm a *Password* for
+    your wallet. Record whatever wallet password you chose in your *MyLabNotes* scratchpad.  Label it as *Wallet Password". It’s important not to forget it. Then, click
     the *Download* button on the dialog.
 
     - Notice that your wallet zip file has been downloaded into your *Downloads*
@@ -511,7 +510,7 @@ have done the prerequisites, continue below:
                                       <xs:element name="orderDate" type="xs:date"/>
                                       <xs:element name="storeID" type="xs:decimal"/>
                                       <xs:element name="stockID" type="xs:decimal"/>
-                                      <xs:element name="quantity\_ordered" type="xs:decimal"/>
+                                      <xs:element name="quantity_ordered" type="xs:decimal"/>
                               </xs:sequence>
                     </xs:complexType>
           </xs:element>
@@ -2563,12 +2562,12 @@ Oracle Integration Setup.
         Figure 107: Downloading Database Client Credentials (Wallet)
 
      - In the *Download Wallet* dialog, enter and confirm a *Password* for
-    your wallet. Record your wallet password in your MyLabNotes document
-    in your ApplicationIntegrationLabs folder. Then, click the
+    your wallet. Record your wallet password in your *MyLabNotes* document
+    in your *ApplicationIntegrationLabs* folder.  Label it *Wallet Password*.  Then, click the
     *Download* button on the dialog.
 
     - Notice that your wallet zip file has been download to your Downloads
-    directory. Copy that zip file to your ApplicationIntegrationLabs
+    directory. Copy that zip file to your *ApplicationIntegrationLabs*
     folder.
 
 7.  Establish a connection to your ATP instance in SQL Developer:
