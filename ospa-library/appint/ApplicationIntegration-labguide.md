@@ -1,6 +1,6 @@
 # Application Integration Lab Guide
 
-## June 18, 2019 - 5:00 PM
+## June 19, 2019 - 3:20 PM
 
 # Table of Contents
 
@@ -293,13 +293,15 @@ have done the prerequisites, continue below:
 
     - Click the *Autonomous Transaction Processing* option to display the *Service: Autonomous Transaction Processing* window.   
 
-    - Click on the *Open Service Console* button in the upper-right corner to display the *Autonomous Databases* page.
+    - Click on the *Open Service Console* button in the upper-right corner to display the *Autonomous Databases* page.  NOTE: If you see a window with this message, *"Feature Autonomous Databases is not available in your currently selected region*," perform this following workaround:
+      - Click the *hamburger menu* in the upper-left corner to display a menu.
+      - From the *Database* section of the menu, click the *Autonomous Transaction Processing* option.  The *Autonomous Databases* page displays.
 
-      - In the *Compartment* field at the left, select your Autonomous
+    - In the *Compartment* field at the left, select your Autonomous
     Database Compartment from the dropdown list. You noted that name in
     the Prerequisites section above.  The table of instances redisplays.
 
-      - Click on your *Autonomous Database Name* that appears in the table.
+    - Click on your *Autonomous Database Name* that appears in the table.
   You noted that name in the Prerequisites section above.
 
         ![](./media/image6.png)
