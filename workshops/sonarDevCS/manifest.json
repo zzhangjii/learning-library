@@ -1,7 +1,7 @@
 {
     "workshop": {
-        "title": "Continuous Inspection with Sonar Qube",
-        "description": "This workshop will walk you through how to manage application lifecycle and do code review using sonarQube. Learn how SonarQube can save time and improve performance by reviewing code and how to to solve those bugs in Agile development",
+        "title": "Automated Code Inspection",
+        "description": "This workshop will walk you through application lifecycle management with embedded code review using SonarQube. It will showcase how SonarQube can save time and improve code quality directly inside the agile development process.",
         "theme": "default",
         "interactive":"https://launch.oracle.com/?",
         "labs": [
