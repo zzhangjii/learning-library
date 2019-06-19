@@ -1,6 +1,6 @@
 # Application Integration Lab Guide
 
-## June 18, 2019 - 5:00 PM
+## June 19, 2019 - 3:20 PM
 
 # Table of Contents
 
