@@ -117,7 +117,9 @@ Compute instance and id_rsa to connect via SSH into compute instance.
 ```
 cd /C/Users/PhotonUser/.ssh (No Spaces) 
 ```
+
 and then 
+
 ```
 ls 
 ```
@@ -127,7 +129,8 @@ to verify the two files exist.
 ```
 cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 ```
- , highlight the key and copy 
+
+, highlight the key and copy 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL009.PNG" alt="image-alt-text">
 
@@ -195,6 +198,7 @@ oci -v
 ```
 oci setup config
 ```
+
 3. Accept the default location. For user OCI switch to OCI Console window. Click Human Icon and then your user name. In the user details page Click **copy** to copy the OCID. **Also note down your region name as shown in OCI Console window**. Paste the OCID in ssh session.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_004.PNG" alt="image-alt-text">
@@ -228,6 +232,7 @@ This will download a script file called **tf_setup.sh**
 ```
 sudo chmod 755 tf_setup.sh
 ```
+
 ```
 ./tf_setup.sh
 ```
@@ -245,6 +250,7 @@ cd tflab
 ```
 vi env-vars
 ```
+
 **NOTE: You can use another editor such as nano as well**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Infra_Using_Terraform/img/Terraform_003.PNG" alt="image-alt-text">
