@@ -1,6 +1,6 @@
 # Application Integration Lab Guide
 
-## June 20, 2019 - 8:45 PM
+## June 20, 2019 - 11:40 AM
 
 # Table of Contents
 
@@ -1438,8 +1438,11 @@ needs to be part of a process application. Let’s create one:
     the selection and try clicking on the hamburger icon again to
     display the popup menu.
 
-      - Select the *Open Properties* option in the popup menu. The
-    properties display in the lower panel.
+      - Select the *Open Properties* option in the popup menu. The properties display in the lower panel.
+
+      - In the *Title* field at the right, enter *Order Request Needing Evaluation*.  This will make the task clear to the Regional Manager when it is dispatched to them.
+
+      - In the associated *Task Summary* field, enter *This is an order request from a store manager that needs evaluation.* 
 
       - Let’s create the form. In the Form area of the properties panel,
     click the *plus sign icon* and click *New Web Form* in the popup
@@ -1511,6 +1514,10 @@ needs to be part of a process application. Let’s create one:
 
     - Select the *Open Properties* option in the popup menu. The
     properties display in the lower panel.
+
+    - In the *Title* field at the right, enter *Order Request Needing Reconsideration*.  This will make the task clear to the Store Manager when the task is dispatched to them.
+
+    - In the associated *Task Summary* field, enter *This is an order request that has been evaluated by a regional manager.  It needs additional justification.* 
 
     - Create the form for the store managers to use to edit an order
     request and resubmit it for re-evaluation:
@@ -2410,7 +2417,6 @@ Here is a list of problems and solutions that may help you throughout the labs:
     - Click the *Unlock* option.  The *Unlock Integration?* popup dialog displays.
     - Click the *Unlock* button.
     - Click on your integration and it will be loaded into the editor in edit mode.
-   
 
 # Appendix Setup for the Labs
 
