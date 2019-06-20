@@ -1,6 +1,6 @@
 # Application Integration Lab Guide
 
-## June 19, 2019 - 3:20 PM
+## June 20, 2019 - 8:45 PM
 
 # Table of Contents
 
@@ -48,6 +48,7 @@
     - [Work Another Task As a Regional Manager](#Work-Another-Task-As-a-Regional-Manager)
   - [Check Tracking for an Integration](#Check-Tracking-for-an-Integration)
   - [Check the Database Table](#Check-the-Database-Table)
+- [Troubleshooting](#Troubleshooting)
 - [Appendix Setup for the Labs](#Appendix-Setup-for-the-Labs)
   - [Set Up Oracle ATP](#Set-Up-Oracle-ATP)
   - [Set Up Oracle Integration](#Set-Up-Oracle-Integration)
@@ -68,6 +69,8 @@ help you get the most from these lab exercises.
 
   - Follow the steps as shown in this guide. Do not "freestyle" during the
     labs. It may get you into a bind.
+    
+  - Check the *Troubleshooting* section if you get stuck.
 
   - If you are in an Oracle class:
       - Ask a lab assistant before you spend a lot of time marching down a path that may lead to unsatisfactory results. 
@@ -2387,8 +2390,27 @@ Let’s now perform an end-to-end test of your application by assuming
         - Exit SQL Developer.
 
 This completes the lab exercises. Please review the Appendix material
-below to see what setup steps you need to perform after class so you
+to see what setup steps you need to perform after class so you
 can do these lab exercises again in your own environment.
+
+# Troubleshooting
+
+Here is a list of problems and solutions that may help you throughout the labs:
+
+- What if something just weird happens?
+  - Try clearing the browser data and starting again.  If you need help, refer to the *Preparing Your Environment*
+    section for the steps.
+
+- What if my integration gets locked?
+  - Something odd may happen with the browser or your connection to the Oracle Cloud. When you try to edit your integration, you see "*Edit is not possible for *your integration* because the integration is locked.  Integration is displayed in view mode.*"  To unlock your integration:
+    - Close the integration editor window by clicking on the *Close* button in the upper-right corner.
+    - Click on the *House* icon at the top of the menu to return to the *Integration Home* page.
+    - Click in the *Integrations* menu option to display the *Integrations* page.
+    - Find your locked integration in the list and click on the *hamburger* menu at the far right.  A popup menu displays.
+    - Click the *Unlock* option.  The *Unlock Integration?* popup dialog displays.
+    - Click the *Unlock* button.
+    - Click on your integration and it will be loaded into the editor in edit mode.
+   
 
 # Appendix Setup for the Labs
 
@@ -2399,7 +2421,7 @@ Oracle Integration Setup.
 ## Set Up Oracle ATP
 
 1.  Start fresh by clearing your Chrome browser cache (all browsing
-    data). If you need help, refer to the Preparing Your Environment
+    data). If you need help, refer to the *Preparing Your Environment*
     section for the steps.
 
 2.  Refresh your browser window. Due to clearing the browser cache, you
