@@ -249,7 +249,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 - User Data: Choose '*Paste cloud-init script*' and paste the below script. Cloud-init script will be executed at the first boot only to configure the instance. 
 
-```YAML
+```
 #cloud-config
 packages:
 - httpd
@@ -305,12 +305,7 @@ Fill out the dialog box:
 
 (Any computes launched in this pool will inherit shape, image and ssh keys of the compute whose instance configuration we are using)
 
-<<<<<<< HEAD
 - ATTACH A LOAD BALANCER: Check it.
-=======
-
-- ATTACH A LOAD BALANCER: Keep it un-checked
->>>>>>> refs/remotes/origin/master
 
 - LOAD BALANCER COMPARTMENT : Choose your compartment
 
@@ -327,16 +322,10 @@ Fill out the dialog box:
 - VIRTUAL CLOUD NETWORK COMPARTMENT: Choose VCN's compartment
 - VIRTUAL CLOUD NETWORK: Choose your VCN
 - SUBNET COMPARTMENT: Choose your compartment
-<<<<<<< HEAD
 
 - SUBNET: Choose the Public Subnet  
 
 16. Click **+ Additional Selection** and select a different availability domain for the instance pool. Then, specify the VCN details for the second availability domain.
-=======
-- SUBNET: Choose the Public Subnet 
-
-15. Click **+ Additional Selection** and select a different availability domain for the instance pool. Then, specify the VCN details for the second availability domain.
->>>>>>> refs/remotes/origin/master
 
 **We configured instances to be deployed in two different Avaialability domain though they can be deployed in the same Availability domain as long as service limits allow it.**
 
