@@ -36,14 +36,14 @@ If you recieved an email that looks like Figure 1
 -   Oracle Cloud access has been made available to you by the Cloud
     Administrator
 
--   Then you next action will be in the #To Access the Oracle Cloud# section further down the page, and others are examples your customer may recieve; again dependent upon how the Cloud Administrator set up accounts.
+-   Then you next action will be in the # To Access the Oracle Cloud # section further down the page, and others are examples your customer may recieve; again dependent upon how the Cloud Administrator set up accounts.
 
 ## The Account Activation Email - Sign In For the First Time
 
 ![](media/49171907d9801cc1287b8df3a728c9a2.png)
 *<p align="center">Figure 2: Activate Your Account</p>*
 
-If you recieved an email that looks like Figure 2 
+If you received an email that looks like Figure 2 
 
 -   Select Activate
 -   It will take you to the reset password page
@@ -176,4 +176,4 @@ Summary of Learning
 -   You can now successfully login and out of the Oracle Cloud so you can use it
 -   You can now navigate around the Oracle Cloud console to perform different
     activities and initiate new cloud services instances
--   You are ready to execute the additional Oracle Cloud Hands On Labs this week
+-   You are ready to execute the additional Oracle Cloud Hands On Labs 
