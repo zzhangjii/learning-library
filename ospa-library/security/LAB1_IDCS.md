@@ -631,11 +631,9 @@ Remember that we have created the **Employee** group into IDCS which is having a
 
 You should now see the same user profile information, that you started within IDCS, within Salesforce without having had to log into Salesforce.
 
-## Configuring Privisioning and Synchronization – OPTIONAL
-
+## Configuring Provisioning and Synchronization – OPTIONAL
 
 The following exercise has been developed to showcase the extend of IDCS Single Sign-On capabilities by integrating the provisioning and synchronization services with third-party apps.
-
 
 ### **DEMO** - Configure Provisioning and Synchronization (Persona: Administrator) - OPTIONAL
 
@@ -758,7 +756,7 @@ The domain name appears at the beginning and the organization ID appears at the 
 
 * A window will pop up. Click “**Grant Consent**”
 
-* Fill in the **Host Name (e.g. acasas-dev-ed.my.salesforce.com), Administrator Username**, **Administrator Password**, **Client ID** and **Client Secret** that you derived in the previous steps from Salesforce
+* Fill in the **Host Name (e.g. acasas-dev-ed.my.salesforce.com), Administrator Username**, **Administrator Password** that you derived in the previous steps from Salesforce, **Client ID** and **Client Secret** from the Salesforce app created in the previous section. 
 
 ![](./media/idcs84.jpeg)
 <p align="center"> Figure 2-37 </p>

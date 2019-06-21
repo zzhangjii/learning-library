@@ -206,10 +206,9 @@ your new OML user and click **Create**. This is a completely new user
 account that will be used anytime you want to access OML. Make sure you
 keep this information. Notice that you can specify an email address
 where your user information and a direct link to the OML login will be
-emailed to you. This will help you later when you need to reconnect to
-OML.
+emailed to you **by selecting the Generate password...** selection box. This will help you later when you need to reconnect to OML, but will also required a password change at first login. If you select this option, make sure that the email address is different and correct for every user that is created.
 
-A different account needs to be created for each member of your group just like you did in the module above in SQL Developer. To make things simple you can use the same account names (and passwords) for the OML accounts as you did for the database accounts.
+**A different account needs to be created for each member of your group** just like you did in the module above in SQL Developer. To make things simple you can use the same account names (and passwords) for the OML accounts as you did for the database accounts.
 
 ![../Desktop/Screen%20Shot%202019-04-22%20at%2012.29.21%20PM.png](./media/image17.png)
 <p align="center">Figure 4-5</p>

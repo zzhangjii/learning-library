@@ -67,16 +67,16 @@ Object Storage is a regional service and is not tied to any specific compute ins
 
 1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
 
-2. From the OCI Services menu,click **Object Storage** under **Object Storage**
+2. From the OCI Services menu,Click **Object Storage** under **Object Storage**
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE001.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE001.PNG" alt="image-alt-text">
 
 3. Ensure compartment assigned to you is selected. Click **Create Bucket**
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE002.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE002.PNG" alt="image-alt-text">
 
 4. Fill out the dialog box:
 
@@ -90,13 +90,13 @@ Object Storage is a regional service and is not tied to any specific compute ins
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE004.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE004.PNG" alt="image-alt-text">
 
 2. Change directory to the Downloads folder Enter command:
 ```
 $ cd /c/Users/PhotonUser/Downloads/**
 ```
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE005.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE005.PNG" alt="image-alt-text">
 
 3. Create a sample file, Enter command:
 ```
@@ -105,23 +105,23 @@ touch samplefile
 
 This should create a file by the name"samplefile" in the Downloads folder
 
-4. Switch to OCI window and click the Bucket Name.
+4. Switch to OCI window and Click the Bucket Name.
 
-**HINT:** You can swap between OCI window and any other application(git-bash etc) by clicking switch window
+**HINT:** You can swap between OCI window and any other application(git-bash etc) by Clicking switch window
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE006.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE006.PNG" alt="image-alt-text">
 
 5. Bucket detail window should be visible. Click **Upload Object**
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE007.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE007.PNG" alt="image-alt-text">
 
 6. Click on Upload Object > Browse > This PC > Downloads. You should see the sample file created earlier
 
-7. Select the file, then click **Upload Object** in the Dialog box.
+7. Select the file, then Click **Upload Object** in the Dialog box.
 
-8. File should be visible under Objects. Click Action icon and click **Create Pre-Authenticated Request**. This will create a web link that can be used to access the object Without requiring any additional authentication.
+8. File should be visible under Objects. Click Action icon and Click **Create Pre-Authenticated Request**. This will create a web link that can be used to access the object Without requiring any additional authentication.
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE008.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE008.PNG" alt="image-alt-text">
 
 9. Fill out the dialog box:
 
@@ -139,7 +139,7 @@ This should create a file by the name"samplefile" in the Downloads folder
 
 12. Click **Close**
 
-<img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE010.PNG" alt="image-alt-text" height="200" width="200">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Object_Storage/img/OBJECT-STORAGE010.PNG" alt="image-alt-text">
 
 13. Open a new browser window and paste Pre-Authenticated link. 
 
@@ -151,10 +151,10 @@ This should create a file by the name"samplefile" in the Downloads folder
 
 ## Delete the resources
 
-1. From the Object Storage detail window, Click **Pre-Authenticated Requests**, click **Delete**, then Click **OK** in Confirm window.
+1. From the Object Storage detail window, Click **Pre-Authenticated Requests**, Click **Delete**, then Click **OK** in Confirm window.
 
-2. Click **Objects**, Click the action icon , select Delete, click **OK** in the Confirm window.
+2. Click **Objects**, Click the action icon , select Delete, Click **OK** in the Confirm window.
 
-3. Under Bucket Name, Click **Delete**, then click **OK** in the Confirm window.
+3. Under Bucket Name, Click **Delete**, then Click **OK** in the Confirm window.
 
 **Congratulations! You have successfully completed the Lab** 

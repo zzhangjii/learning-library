@@ -90,23 +90,31 @@ Confirm that the proper compartment is selected and click on either **Create Ins
    ![](./media/image008.png)
 *<p align="center"> Figure 7: Compartment verification and Create Instance</p>*
 
-2. Use the following information to complete the instance dialog box.
+2. Use the following information to complete the create instance dialog box.
 
-   - **Name:** Enter a name.  *ex:*  cli-instance
-   - **Availability Domain:** Select AD1 unless otherwise instructed
-   - **Image Operating System:** Select **Oracle Linux 7.6** with the latest build
-   - **Choose Instance Type:** Choose **Virtual Machine**
-   - **Choose Instance Shape:** Select VM.Standard2.1 or smaller shape
-   - **Add SSH Keys:** Select your preferred SSH key 
-   
+| **Name:**                | \<instance name\> |
+| ------------------------ | ------------------------------------------------ |
+| Instance Name: | Name of your choice   |
+| Availability Domain: | AD of your choice, AD1, AD2, or AD3   |
+| Operating System:    | Oracle Linux 7.6                            |
+| Instance Type:       | Virtual Machine                             |
+| Shape:               | VM.Standard1.2                              |
+| Boot Volume:         | Default                                     |
+| SSH Key:             | Choose SSH Key file or Paste SSH keys      |
+| Compartment:         | Your compartment (*ex: team-100*)     |
+| VCN:                 | Your VCN (*ex: Team 100 VCN*)              |
+| Subnet Compartment:  | Your subnet compartment* (*ex: team-100*)     |
+| Subnet:              | Public Subnet in your compartment            |
+
    The following selections should contain default information.  Verify and change if necessary before continuing.
    - **Virtual Cloud Network Compartment:** Verify that your compartment is selected
    - **Virtual Cloud Network:** Select the VCN you created in the previous section.
    - **Subnet Compartment:** Verify the same compartment has been selected
    - **Subnet:** Choose the first public subnet
-   - Click **Create**
 
-**NOTE:** *If creation results in a 'Service limit' error.  Check the service limits and try a different shape such as VM.Standard.E2.1. You may need to alert an administrator for service limit and instance shape availability information*
+Click **Create**
+
+**NOTE:** *If creation results in a 'Service limit' error, try another Availability Domain or check the service limits and try a different shape.  You may need to alert an administrator for service limit and instance shape availability information*
 
    ![](./media/image009.png)
 *<p align="center"> Figure 8: Instance creation dialog</p>*

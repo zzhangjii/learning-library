@@ -162,7 +162,6 @@ group by d.d_date
 ```
 ![](./images/IL-2/008.png)
 
-- Vijay was surprised to see that the execution time to retrieve the first 5000 rows was again only a few seconds.
 - Vijay has requests from analysts about support for analytic queries.  The analysts have started to use these views in their on-premise Oracle Database, and have found them to be fast and suited to the historical type queries they typically run.  To test this expand 'Other Users in your connection.
 
   ![](./images/IL-2/009.png)
@@ -194,7 +193,7 @@ WHERE
 ```
 ![](./images/IL-2/011.png)
 
-- In this particular case the query took a bit longer, but was still extremely fast, and now offers analtytic support they never had before.
+- In this particular case the query took a bit longer, but was still fast, and now offers analtytic support they never had before.
 
 - Finally, what about a simple query to retrieve a single orderkey, realizing again there are no indexes on the table.  Enter the following.
 ```
@@ -202,7 +201,7 @@ select * from ssb.lineorder where lo_orderkey = 1174002208;
 ```
   ![](./images/IL-2/012.png)
 
-Note: Some queries may take two-three minutes (but no more), depending on how many rows are processed and returned, and the aggregation level.  These are not included so that the lab can proceed without delay.
+Note: Some queries may take longer, depending on how many rows are processed and returned, and the aggregation level.  These are not included so that the lab can proceed without delay.
 
 ## Review Database Activity
 
