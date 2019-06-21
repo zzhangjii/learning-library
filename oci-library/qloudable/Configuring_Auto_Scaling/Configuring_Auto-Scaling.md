@@ -207,11 +207,11 @@ Compute instance and id_rsa to connect via SSH into compute instance.
 **HINT:** Enter command 
 ```
 cd /C/Users/PhotonUser/.ssh (No Spaces) 
-```
+```  
 and then 
 ```
 ls 
-```
+```  
 to verify the two files exist. 
 
 5. In git-bash Enter command  
@@ -261,6 +261,7 @@ runcmd:
 - [systemctl, start, httpd]
 - [systemctl, restart, firewalld]
 ```
+
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_013.PNG" alt="cloud-init setup">
 
 10. Click **Create**
