@@ -207,11 +207,11 @@ Compute instance and id_rsa to connect via SSH into compute instance.
 **HINT:** Enter command 
 ```
 cd /C/Users/PhotonUser/.ssh (No Spaces) 
-```
+```  
 and then 
 ```
 ls 
-```
+```  
 to verify the two files exist. 
 
 5. In git-bash Enter command  
@@ -249,7 +249,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 - User Data: Choose '*Paste cloud-init script*' and paste the below script. Cloud-init script will be executed at the first boot only to configure the instance. 
 
-```YAML
+```
 #cloud-config
 packages:
 - httpd
@@ -261,6 +261,7 @@ runcmd:
 - [systemctl, start, httpd]
 - [systemctl, restart, firewalld]
 ```
+
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_013.PNG" alt="cloud-init setup">
 
 10. Click **Create**
@@ -305,12 +306,7 @@ Fill out the dialog box:
 
 (Any computes launched in this pool will inherit shape, image and ssh keys of the compute whose instance configuration we are using)
 
-<<<<<<< HEAD
 - ATTACH A LOAD BALANCER: Check it.
-=======
-
-- ATTACH A LOAD BALANCER: Keep it un-checked
->>>>>>> refs/remotes/origin/master
 
 - LOAD BALANCER COMPARTMENT : Choose your compartment
 
@@ -327,16 +323,10 @@ Fill out the dialog box:
 - VIRTUAL CLOUD NETWORK COMPARTMENT: Choose VCN's compartment
 - VIRTUAL CLOUD NETWORK: Choose your VCN
 - SUBNET COMPARTMENT: Choose your compartment
-<<<<<<< HEAD
 
 - SUBNET: Choose the Public Subnet  
 
 16. Click **+ Additional Selection** and select a different availability domain for the instance pool. Then, specify the VCN details for the second availability domain.
-=======
-- SUBNET: Choose the Public Subnet 
-
-15. Click **+ Additional Selection** and select a different availability domain for the instance pool. Then, specify the VCN details for the second availability domain.
->>>>>>> refs/remotes/origin/master
 
 **We configured instances to be deployed in two different Avaialability domain though they can be deployed in the same Availability domain as long as service limits allow it.**
 
