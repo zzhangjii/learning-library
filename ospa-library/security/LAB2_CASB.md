@@ -627,6 +627,8 @@ Note: if you do not see any Compute instance in the dashboard, click to Customiz
   * Click create policy
     
   * Populate fields as shown below
+  
+  * On the policy statement field, add the following line "Allow group *name_of_the_group_you_created* to read all-resources IN-TENANCY" 
     
   * Click Create
     ![](./media/image89.jpeg)
