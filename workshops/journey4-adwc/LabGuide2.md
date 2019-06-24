@@ -7,7 +7,7 @@ September 21, 2018
 </td></tr><table>
 
 
-## Introduction - Testing to Show Rick
+## Introduction
 
 In this lab you will explore the provided sample data sets and learn more about the choices of database services that come with your ADW instance.
 
