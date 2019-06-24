@@ -79,7 +79,7 @@ In this lab we will deploy Redis in Master-Slave mode (similar to below) though 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
-2. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
+2. From the OCI Services menu,Click **Virtual Cloud Network** under Networking and Click **Create Virtual Cloud Network**
 
 3. Select the compartment assigned to you from drop down menu on left part of the screen
 
@@ -113,7 +113,7 @@ In this lab we will deploy Redis in Master-Slave mode (similar to below) though 
 ssh-keygen
 ```
 **HINT:** You can swap between OCI window, 
-git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
+git-bash sessions and any other application (Notepad, etc.) by Clicking the Switch Window icon 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text">
 
@@ -293,7 +293,7 @@ Verify service is active and is using Private IP of the compute instance on port
 
 1. Switch to OCI console window.
 
-2. From OCI services menus Navigate to your VCN created earlier and click your VCN name, Click **Security List** and then **Default Security list for<YOUR_VCN_NAME>**
+2. From OCI services menus Navigate to your VCN created earlier and Click your VCN name, Click **Security List** and then **Default Security list for<YOUR_VCN_NAME>**
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Customer_Lab_001.PNG" alt="image-alt-text">)
 
 3. In Security list details page, Click **Add Ingress Rule**. Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure to leave STATELESS flag un-checked

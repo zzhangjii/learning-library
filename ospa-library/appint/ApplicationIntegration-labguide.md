@@ -1,6 +1,6 @@
 # Application Integration Lab Guide
 
-## June 14, 2019 - 12:30 PM
+## June 20, 2019 - 11:40 AM
 
 # Table of Contents
 
@@ -48,6 +48,7 @@
     - [Work Another Task As a Regional Manager](#Work-Another-Task-As-a-Regional-Manager)
   - [Check Tracking for an Integration](#Check-Tracking-for-an-Integration)
   - [Check the Database Table](#Check-the-Database-Table)
+- [Troubleshooting](#Troubleshooting)
 - [Appendix Setup for the Labs](#Appendix-Setup-for-the-Labs)
   - [Set Up Oracle ATP](#Set-Up-Oracle-ATP)
   - [Set Up Oracle Integration](#Set-Up-Oracle-Integration)
@@ -68,6 +69,8 @@ help you get the most from these lab exercises.
 
   - Follow the steps as shown in this guide. Do not "freestyle" during the
     labs. It may get you into a bind.
+    
+  - Check the *Troubleshooting* section if you get stuck.
 
   - If you are in an Oracle class:
       - Ask a lab assistant before you spend a lot of time marching down a path that may lead to unsatisfactory results. 
@@ -293,13 +296,15 @@ have done the prerequisites, continue below:
 
     - Click the *Autonomous Transaction Processing* option to display the *Service: Autonomous Transaction Processing* window.   
 
-    - Click on the *Open Service Console* button in the upper-right corner to display the *Autonomous Databases* page.
+    - Click on the *Open Service Console* button in the upper-right corner to display the *Autonomous Databases* page.  NOTE: If you see a window with this message, *"Feature Autonomous Databases is not available in your currently selected region*," perform this following workaround:
+      - Click the *hamburger menu* in the upper-left corner to display a menu.
+      - From the *Database* section of the menu, click the *Autonomous Transaction Processing* option.  The *Autonomous Databases* page displays.
 
-      - In the *Compartment* field at the left, select your Autonomous
+    - In the *Compartment* field at the left, select your Autonomous
     Database Compartment from the dropdown list. You noted that name in
     the Prerequisites section above.  The table of instances redisplays.
 
-      - Click on your *Autonomous Database Name* that appears in the table.
+    - Click on your *Autonomous Database Name* that appears in the table.
   You noted that name in the Prerequisites section above.
 
         ![](./media/image6.png)
@@ -336,9 +341,8 @@ have done the prerequisites, continue below:
 
       Figure 4: Database Connection Dialog
 
-    - In the Download Wallet dialog, enter and confirm a *Password* for
-    your wallet. Record your wallet password as *Wallet Password" in your *MyLabNotes* scratchpad
-    that you created above. It’s important not to forget it. Then, click
+    - In the *Download Wallet* dialog, enter and confirm a *Password* for
+    your wallet. Record whatever wallet password you chose in your *MyLabNotes* scratchpad.  Label it as *Wallet Password". It’s important not to forget it. Then, click
     the *Download* button on the dialog.
 
     - Notice that your wallet zip file has been downloaded into your *Downloads*
@@ -511,7 +515,7 @@ have done the prerequisites, continue below:
                                       <xs:element name="orderDate" type="xs:date"/>
                                       <xs:element name="storeID" type="xs:decimal"/>
                                       <xs:element name="stockID" type="xs:decimal"/>
-                                      <xs:element name="quantity\_ordered" type="xs:decimal"/>
+                                      <xs:element name="quantity_ordered" type="xs:decimal"/>
                               </xs:sequence>
                     </xs:complexType>
           </xs:element>
@@ -1434,8 +1438,11 @@ needs to be part of a process application. Let’s create one:
     the selection and try clicking on the hamburger icon again to
     display the popup menu.
 
-      - Select the *Open Properties* option in the popup menu. The
-    properties display in the lower panel.
+      - Select the *Open Properties* option in the popup menu. The properties display in the lower panel.
+
+      - In the *Title* field at the right, enter *Order Request Needing Evaluation*.  This will make the task clear to the Regional Manager when it is dispatched to them.
+
+      - In the associated *Task Summary* field, enter *This is an order request from a store manager that needs evaluation.* 
 
       - Let’s create the form. In the Form area of the properties panel,
     click the *plus sign icon* and click *New Web Form* in the popup
@@ -1507,6 +1514,10 @@ needs to be part of a process application. Let’s create one:
 
     - Select the *Open Properties* option in the popup menu. The
     properties display in the lower panel.
+
+    - In the *Title* field at the right, enter *Order Request Needing Reconsideration*.  This will make the task clear to the Store Manager when the task is dispatched to them.
+
+    - In the associated *Task Summary* field, enter *This is an order request that has been evaluated by a regional manager.  It needs additional justification.* 
 
     - Create the form for the store managers to use to edit an order
     request and resubmit it for re-evaluation:
@@ -2386,8 +2397,26 @@ Let’s now perform an end-to-end test of your application by assuming
         - Exit SQL Developer.
 
 This completes the lab exercises. Please review the Appendix material
-below to see what setup steps you need to perform after class so you
+to see what setup steps you need to perform after class so you
 can do these lab exercises again in your own environment.
+
+# Troubleshooting
+
+Here is a list of problems and solutions that may help you throughout the labs:
+
+- What if something just weird happens?
+  - Try clearing the browser data and starting again.  If you need help, refer to the *Preparing Your Environment*
+    section for the steps.
+
+- What if my integration gets locked?
+  - Something odd may happen with the browser or your connection to the Oracle Cloud. When you try to edit your integration, you see "*Edit is not possible for *your integration* because the integration is locked.  Integration is displayed in view mode.*"  To unlock your integration:
+    - Close the integration editor window by clicking on the *Close* button in the upper-right corner.
+    - Click on the *House* icon at the top of the menu to return to the *Integration Home* page.
+    - Click in the *Integrations* menu option to display the *Integrations* page.
+    - Find your locked integration in the list and click on the *hamburger* menu at the far right.  A popup menu displays.
+    - Click the *Unlock* option.  The *Unlock Integration?* popup dialog displays.
+    - Click the *Unlock* button.
+    - Click on your integration and it will be loaded into the editor in edit mode.
 
 # Appendix Setup for the Labs
 
@@ -2398,7 +2427,7 @@ Oracle Integration Setup.
 ## Set Up Oracle ATP
 
 1.  Start fresh by clearing your Chrome browser cache (all browsing
-    data). If you need help, refer to the Preparing Your Environment
+    data). If you need help, refer to the *Preparing Your Environment*
     section for the steps.
 
 2.  Refresh your browser window. Due to clearing the browser cache, you
@@ -2563,12 +2592,12 @@ Oracle Integration Setup.
         Figure 107: Downloading Database Client Credentials (Wallet)
 
      - In the *Download Wallet* dialog, enter and confirm a *Password* for
-    your wallet. Record your wallet password in your MyLabNotes document
-    in your ApplicationIntegrationLabs folder. Then, click the
+    your wallet. Record your wallet password in your *MyLabNotes* document
+    in your *ApplicationIntegrationLabs* folder.  Label it *Wallet Password*.  Then, click the
     *Download* button on the dialog.
 
     - Notice that your wallet zip file has been download to your Downloads
-    directory. Copy that zip file to your ApplicationIntegrationLabs
+    directory. Copy that zip file to your *ApplicationIntegrationLabs*
     folder.
 
 7.  Establish a connection to your ATP instance in SQL Developer:

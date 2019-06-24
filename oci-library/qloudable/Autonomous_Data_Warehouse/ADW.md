@@ -65,7 +65,7 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
 
-2. From the OCI Services menu,click **Autonomous Data Warehouse** under **Database** and then **Create Autonomous Database**
+2. From the OCI Services menu,Click **Autonomous Data Warehouse** under **Database** and then **Create Autonomous Database**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_001.PNG" alt="image-alt-text">
 
@@ -101,7 +101,7 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 
 In this section we will generate auth token for the user of this lab. An Auth token is an Oracle-generated token that you can use to authenticate with third-party APIs and Autonomous Database instance.
 
-1. In OCI console click the user icon (top right)  then **User settings**. Under Resrouces Click **Auth Token**, then **Generate Token**. In pop up window provide a description then click **Generate Token**
+1. In OCI console Click the user icon (top right)  then **User settings**. Under Resrouces Click **Auth Token**, then **Generate Token**. In pop up window provide a description then Click **Generate Token**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_005.PNG" alt="image-alt-text">
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_006.PNG" alt="image-alt-text">
@@ -116,7 +116,7 @@ In this section we will generate auth token for the user of this lab. An Auth to
 
 **Screen shots for SQL developer are from 18.1.0 version**
 
-4. Launch SQL devleoper using Apps icon and click **+** to create a new connection
+4. Launch SQL devleoper using Apps icon and Click **+** to create a new connection
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_008.PNG" alt="image-alt-text">
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_009.PNG" alt="image-alt-text">

@@ -203,7 +203,7 @@ Unzip the file into the opc home directory.
 
 6. Copy the web files into the newly created directory on the mounted block volume.
 
-```sudo cp -R oci-quickstart-lab-master/static/* /mnt/www/html/```
+```sudo cp -R static/* /mnt/www/html/```
 
 ![](./media/image109.png)
 

@@ -498,7 +498,8 @@ We must now trigger the policy that we created
 
 *  Click Save. Your IP address should appear now in the black list
 
-*  To make Oracle CASB detect a threat, log in to your Box account and do any activity. For example, you can upload a file with the word **Top Secret** as content (required for the last lab). Oracle CASB detects that you’ve logged in Box through the blacklisted IP address and generates an alert
+
+To make Oracle CASB detect a threat, log in to your Box account and do any activity. For example, you can upload a file with the word **Top Secret** as content (required for the last lab). Oracle CASB detects that you’ve logged in Box through the blacklisted IP address and generates an alert
 
 ![](./media/image71.png)
 <p align="center"> Figure 3-14 </p>  
@@ -626,6 +627,8 @@ Note: if you do not see any Compute instance in the dashboard, click to Customiz
   * Click create policy
     
   * Populate fields as shown below
+  
+  * On the policy statement field, add the following line "Allow group *name_of_the_group_you_created* to read all-resources IN-TENANCY" 
     
   * Click Create
     ![](./media/image89.jpeg)
@@ -933,6 +936,8 @@ In this you’ll see how Oracle CASB is able to detect sensitive information in 
 <p align="center"> Figure 7-2 </p>
 
 *  In the first section Content, select the Information Types box and –Top Secret- Keyword and click Next.
+
+**Note: In the community tenant you must select the *Top Secret Documents* option in addition to *Information Type - Top Secret SY***
     
 ![](./media/image124.jpeg)
 <p align="center"> Figure 7-3 </p>

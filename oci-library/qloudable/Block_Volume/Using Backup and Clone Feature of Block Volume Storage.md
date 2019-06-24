@@ -73,7 +73,7 @@ In this lab you will create and attach Block Volume Storage to a compute instanc
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
-2. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
+2. From the OCI Services menu,Click **Virtual Cloud Network** under Networking and Click **Create Virtual Cloud Network**
 
 3. Select the compartment assigned to you from drop down menu on left part of the screen
 
@@ -110,7 +110,7 @@ In this lab you will create and attach Block Volume Storage to a compute instanc
 ssh-keygen
 ```
 **HINT:** You can swap between OCI window, 
-git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
+git-bash sessions and any other application (Notepad, etc.) by Clicking the Switch Window icon 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text" >
 
@@ -209,7 +209,7 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 
 18.  From OCI services menu Click **Instance** under Compute 
 
-19. For the compute instance created earlier click Action item. Click **Attach Block Volume**.
+19. For the compute instance created earlier Click Action item. Click **Attach Block Volume**.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Block_Volume/img/Block_Volume_001.PNG" alt="image-alt-text" >
 
@@ -217,7 +217,7 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Block_Volume/img/Block_Volume_002.PNG" alt="image-alt-text" >
 
-21. Next we will use Manual Backup feature to create a backup of this block volume. We will then restore the backup as a regular volume in the same availability domain as the compute instance.From OCI services menu Click **Block Volumes** under **Block Storage**, Locate the block volume you created earlier, click Action icon  and Click **Create Manual Backup**
+21. Next we will use Manual Backup feature to create a backup of this block volume. We will then restore the backup as a regular volume in the same availability domain as the compute instance.From OCI services menu Click **Block Volumes** under **Block Storage**, Locate the block volume you created earlier, Click Action icon  and Click **Create Manual Backup**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Block_Volume/img/Block_Volume_003.PNG" alt="image-alt-text" >
 
@@ -249,7 +249,7 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 
 27. From OCI services menu Click **Instance** under Compute 
 
-28. For the compute instance created earlier click Action item. Click **Attach Block Volume**.
+28. For the compute instance created earlier Click Action item. Click **Attach Block Volume**.
 
 29. Fill out the dialog box:
 
@@ -304,7 +304,7 @@ Under **Volumes**
 - COMPARTMENT: Choose your comparment
 - VOLUME: Click on the drop down and choose the volume that you want to group togehter
  
-6. To choose additional volumes (Block or boot) click **+Volume** and add additional volumes
+6. To choose additional volumes (Block or boot) Click **+Volume** and add additional volumes
 
 7. Click **Create Volume Group**
 
@@ -326,7 +326,7 @@ Under **Volumes**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0017.PNG" alt="image-alt-text" >
 
-5. Navigate to **Block Storage** and then click **Volume Groups**. Click on Volume Group name that was created and then click **Terminate**
+5. Navigate to **Block Storage** and then Click **Volume Groups**. Click on Volume Group name that was created and then Click **Terminate**
 
 6. Locate any additioan volumes not part of the Volume Group (Cloned Volme) that you created.
 

@@ -78,7 +78,7 @@ Oracle Cloud Infrastructure's Autonomous Transaction Processing Cloud Service is
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
-2. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
+2. From the OCI Services menu,Click **Virtual Cloud Network** under Networking and Click **Create Virtual Cloud Network**
 
 3. Select the compartment assigned to you from drop down menu on left part of the screen
 
@@ -118,7 +118,7 @@ Oracle Cloud Infrastructure's Autonomous Transaction Processing Cloud Service is
 ssh-keygen
 ```
 **HINT:** You can swap between OCI window, 
-git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
+git-bash sessions and any other application (Notepad, etc.) by Clicking the Switch Window icon 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL007.PNG" alt="image-alt-text">
 
@@ -242,7 +242,7 @@ instance with only 1 OCPU and scale it after generating load test from the compu
 instance created earlier**
 
 
-1. Switch to OCI console, from services menu click **Autonomous Transaction Processing** under Databse.Click **Create Autonmous Trasnaction Processing Database**. Fill out the dialog box:
+1. Switch to OCI console, from services menu Click **Autonomous Transaction Processing** under Databse.Click **Create Autonmous Trasnaction Processing Database**. Fill out the dialog box:
 
 
 - Workload Type: AUTONOMOUS TRANSACTION PROCESSING
@@ -263,9 +263,9 @@ instance created earlier**
 
 2. Leave **Tags** information as is. Click **Create Autonomous Database**. Wait for State to change to Available (few minutes)
 
-3. Once Database is in running state, click its Name. In Database details window click **DB Connection**
+3. Once Database is in running state, Click its Name. In Database details window Click **DB Connection**
 
-**NOTE:** If pop up blocker appears then click 'Allow'
+**NOTE:** If pop up blocker appears then Click 'Allow'
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_005.PNG" alt="image-alt-text">
 
@@ -368,7 +368,7 @@ Then Enter command:
 
 2. Click the name of Autonomous Transaction Processing instance created earlier
 
-3. Click **Scale Up/Down**, in the pop up windowchange CPU CORE COUNT to **4** and click **Update**. Also observe the Automatic backup that are being performed. Instance will be in 'Scaling in Progress' state for some time
+3. Click **Scale Up/Down**, in the pop up windowchange CPU CORE COUNT to **4** and Click **Update**. Also observe the Automatic backup that are being performed. Instance will be in 'Scaling in Progress' state for some time
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_014.PNG" alt="image-alt-text">
 
@@ -378,7 +378,7 @@ Then Enter command:
 
 5. You can Scale the number of CPU UP or Down dynamically and obser TPS number change accordingly.
 
-6. Switch to OCI screen and from your ATP instance details page click **Service Console**. From Service Console you can observe Performance data under **Overview** and **Activity** tabs
+6. Switch to OCI screen and from your ATP instance details page Click **Service Console**. From Service Console you can observe Performance data under **Overview** and **Activity** tabs
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_016.PNG" alt="image-alt-text">
 
@@ -388,7 +388,7 @@ Then Enter command:
 
 In this section we will generate auth token for the user of this lab. An Auth token is an Oracle-generated token that you can use to authenticate with third-party APIs and Autonomous Database instance.
 
-1. In OCI console click the user icon (top right)  then **User settings**. Under Resrouces Click **Auth Token**, then **Generate Token**. In pop up window provide a description then click **Generate Token**
+1. In OCI console Click the user icon (top right)  then **User settings**. Under Resrouces Click **Auth Token**, then **Generate Token**. In pop up window provide a description then Click **Generate Token**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_005.PNG" alt="image-alt-text">
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_006.PNG" alt="image-alt-text">
@@ -403,7 +403,7 @@ In this section we will generate auth token for the user of this lab. An Auth to
 
 **Screen shots for SQL developer are from 18.1.0 version**
 
-4. Launch SQL devleoper using Apps icon and click **+** to create a new connection
+4. Launch SQL devleoper using Apps icon and Click **+** to create a new connection
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_008.PNG" alt="image-alt-text">
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_009.PNG" alt="image-alt-text">
@@ -543,7 +543,7 @@ select * from channels;
 
 **In this section we will create a Machine Learning User and access data that was uploaded. We will also explore other options avaialble in ATP**
 
-1. Switch to OCI console. From your ATP instance details page click **Service Console**. This will open a new tab. In the new tab click **Administration** and then **Manage Oracle ML Users**.
+1. Switch to OCI console. From your ATP instance details page Click **Service Console**. This will open a new tab. In the new tab Click **Administration** and then **Manage Oracle ML Users**.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_020.PNG" alt="image-alt-text">
 
@@ -591,7 +591,7 @@ user will be , **select * from ocitest.channels;**
 
 **This is just an example of simple data that we uploaded but as you can see very complex data can be uploaded,accessed and analyzed using this feature.**
 
-9. There are some example data sets that can be accessed by clicking Home under Servies menu from Machine Learning user tab
+9. There are some example data sets that can be accessed by Clicking Home under Servies menu from Machine Learning user tab
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_029.PNG" alt="image-alt-text">
 
@@ -606,7 +606,7 @@ user will be , **select * from ocitest.channels;**
 
 1. Switch to  OCI console window
 
-2. From your ATP details page, Hover over the action icon  and Click **Terminate**. In the confimration windoe provide the ATP instance name and click **Terminate Database**
+2. From your ATP details page, Hover over the action icon  and Click **Terminate**. In the confimration windoe provide the ATP instance name and Click **Terminate Database**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_017.PNG" alt="image-alt-text">
 
