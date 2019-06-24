@@ -210,7 +210,7 @@ Dashboard”)
 
 #### Open VBCS Home Page  
 
-5.  Select the VBCS instance being used for the lab ("ospavcs1" below), then using the “Hamburger Icon” ![](./media/image16.png) on the far right;
+5.  Select the VBCS instance being used for the lab ("OSPA-Class-Of-SE" below), then using the “Hamburger Icon” ![](./media/image16.png) on the far right;
     choose “Open Oracle Visual Builder Cloud Service Home Page”
 
     ![](./media/vbcs_instance_0.png)
@@ -1102,7 +1102,7 @@ Nothing really new so far…
     
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.18.3 – attribute
     
-    Select “op” and type “$eq” also as a “static value (equal condition
+    Select “op” and type “$eq” also as a “static" value (equal condition
     test).
     
     ![](./media/image123.png)
@@ -1712,9 +1712,9 @@ This concludes Extra Lab 6.
 
 &nbsp;&nbsp;&nbsp;&nbsp;[Appendix A: Create VBCS Instance](#appendix-a-create-vbcs-instance)
 
-&nbsp;&nbsp;&nbsp;&nbsp;[Appendix B: Create Service Connection from Endpoint](appendix-b-create-service-connection-from-endpoint)
+&nbsp;&nbsp;&nbsp;&nbsp;[Appendix B: Create Service Connection from Endpoint](#appendix-b-create-service-connection-from-endpoint)
 
-&nbsp;&nbsp;&nbsp;&nbsp;[Appendix C: Build Mama Maggy Data Application](appendix-c-build-mama-maggy-data-application)
+&nbsp;&nbsp;&nbsp;&nbsp;[Appendix C: Build Mama Maggy Data Application](#appendix-c-build-mama-maggy-data-application)
 
 # Appendix A: Create VBCS Instance
 
@@ -2277,14 +2277,14 @@ Results should be.
 
 14. Access points currently have a “version” number and will change each
     time the objects are modified. Currently only the “development”
-    addresses are available.
+    addresses are available. The steps below will show you how to publish and make the addresses constant.
 
 > ![](./media/image_c_32.png)
 > 
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.14 – Development-only Resource API addresses
 
 15. To “set” the access points so that they will not change over time;
-    you must first “Stage” and then “Publish” the application.  
+    you must first “Stage” and then “Publish” the application.  (When the application is in "Development" and "Staging" the addresses are versioned; once an application is published to the "Live" environment the address will not change and is suitable for sharing.)
       
     First, return to the list of business objects.
 
