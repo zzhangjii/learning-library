@@ -37,7 +37,7 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 - Download this ATP-REST-nodejs.zip file
 
 ```
-$ curl -sS https://github.com/oracle/learning-library/tree/master/workshops/autonomous-transaction-processing/scripts/700/ATP-REST-nodejs.zip  > ATP-REST-nodejs.zip
+$ wget --no-check-certificate --content-disposition https://github.com/oracle/learning-library/blob/master/workshops/autonomous-transaction-processing/scripts/700/ATP-REST-nodejs.zip?raw=true
 ```
 
 ## Steps

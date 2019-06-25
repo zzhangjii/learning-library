@@ -251,13 +251,15 @@ sudo mv /home/opc/instantclient_12_2_linux/instantclient_12_2/ /opt/oracle/insta
 - Download a sample Node application in folder /home/opc
 
 ```
-$ curl -sS https://github.com/oracle/learning-library/tree/master/workshops/autonomous-transaction-processing/scripts/500/ATPnodeapp.zip
+$ wget --no-check-certificate --content-disposition https://github.com/oracle/learning-library/blob/master/workshops/autonomous-transaction-processing/scripts/500/ATPnodeapp.zip?raw=true
 ```
 
-- Unzip ATPnode.zip
+- Unzip ATPnodeapp.zip
 
 ```
-$ unzip /home/opc/ATPnode.zip
+$ mkdir ATPnodeapp && cd ATPnodeapp
+
+$ unzip /home/opc/ATPnodeapp.zip
 ```
 Now that you have a sample application setup, lets get your database's secure wallet for connectivity
 

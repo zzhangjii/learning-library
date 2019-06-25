@@ -40,7 +40,7 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 - Docker installed on your local machine. If you do not have docker please follow this [Mac User link](https://docs.docker.com/docker-for-mac/install/), [Windows User link](https://docs.docker.com/docker-for-windows/install/) and install docker
 - Create a folder and download this repository
 ```
-$ curl -sS https://github.com/oracle/learning-library/tree/master/workshops/autonomous-transaction-processing/scripts/800/ATPDocker.zip > ATPDocker.zip
+$ wget --no-check-certificate --content-disposition https://github.com/oracle/learning-library/blob/master/workshops/autonomous-transaction-processing/scripts/800/ATPDocker.zip?raw=true
 ```
 
 Note: Note there are two Docker files in the repository. That’s because we have two different applications–ATPnodeapp and aOne. Both of these are node.js applications which mimic as microservices in our case.

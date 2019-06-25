@@ -172,9 +172,9 @@ sudo yum install -y java-1.8.0-openjdk-devel
 - Download a sample java application and ojdbc8 in folder /home/opc
 
 ```
-$ curl -sS https://github.com/oracle/learning-library/tree/master/workshops/autonomous-transaction-processing/scripts/600/ojdbc8-master.zip > ojdbc8.zip
+$ wget --no-check-certificate --content-disposition https://github.com/oracle/learning-library/blob/master/workshops/autonomous-transaction-processing/scripts/600/ojdbc8.zip?raw=true
 
-$ curl -sS https://github.com/oracle/learning-library/tree/master/workshops/autonomous-transaction-processing/scripts/600/atpjava-master.zip > ATPJava.zip
+$ wget --no-check-certificate --content-disposition https://github.com/oracle/learning-library/blob/master/workshops/autonomous-transaction-processing/scripts/600/ATPJava.zip?raw=true
 ```
 
 - Unzip the files
