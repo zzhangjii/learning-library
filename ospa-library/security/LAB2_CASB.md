@@ -628,13 +628,14 @@ Note: if you do not see any Compute instance in the dashboard, click to Customiz
     
   * Populate fields as shown below
   
-  * On the policy statement field, add the following line "Allow group *name_of_the_group_you_created* to read all-resources IN-TENANCY" 
+  * On the policy statement field, add the following line "Allow group 
+  *name_of_the_group_you_created* to read all-resources IN TENANCY" 
     
   * Click Create
     ![](./media/image89.jpeg)
     <p align="center"> Figure 4-8 </p> 
 
-*  Click on Groups
+*  Click on **Groups**
     
   * Click on the group we just created
     
