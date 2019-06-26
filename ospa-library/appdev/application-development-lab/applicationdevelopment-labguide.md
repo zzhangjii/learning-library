@@ -225,11 +225,11 @@ Dashboard”)
 
 7.  When the “Visual Applications” list appears; choose the “New” button in the upper-right corner.
 
-  ![](./media/image19.png)
+  ![](./media/New17.1_a.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.7.1 – Visual Applications<br/>
 
-  ![](./media/image20.png)
+  ![](./media/New17.2.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.7.2 – Import New Buttons<br/>
 
@@ -240,12 +240,14 @@ Dashboard”)
 
     If you are sharing your lab environment with a group of people you might find it convenient to follow a naming convention to make it easier for you to find your work and for the facilitators to help you.
     
-    Perhaps combining your name or initials (or even employee id) with two-or-three characters representing your location to use as an application name or to add as a prefix to the names of all applications you create. Visual Builder's list of applications may be sorted and filtered easily.
+    Comgine your name or initials with three characters representing your location to use as an application name or to add as a prefix to the names of all applications you create. Visual Builder's list of applications may be sorted and filtered easily.
+
+    (The facilitator will share a three-character code for you to use in your location.)
       
     Be sure the “Empty Application” template is selected and click
     “Finish” to continue.
 
-    ![](./media/image21.png)
+    ![](./media/New1.8.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.8 – Name application<br/>
 
