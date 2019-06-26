@@ -283,7 +283,9 @@ CASB Cloud Service set your preferred values in the application and subsequently
 
 ****
 
-### Add SalesForce as a Sanctioned Application - Who Should Complete This Lab:  All Participants
+### Add SalesForce as a Sanctioned Application - Who Should Complete This Lab:  1 Participant for group
+
+**Note: The learner signing up for Salesforce must differ from the participant that have requested the SSO access via IDCS on LAB 1**
 
 You’ll now add SalesForce as a sanctioned application for monitoring in Oracle CASB, so this business critical application remains compliant with security standards.
 
@@ -628,13 +630,14 @@ Note: if you do not see any Compute instance in the dashboard, click to Customiz
     
   * Populate fields as shown below
   
-  * On the policy statement field, add the following line "Allow group *name_of_the_group_you_created* to read all-resources IN-TENANCY" 
+  * On the policy statement field, add the following line "Allow group 
+  *name_of_the_group_you_created* to read all-resources IN TENANCY" 
     
   * Click Create
     ![](./media/image89.jpeg)
     <p align="center"> Figure 4-8 </p> 
 
-*  Click on Groups
+*  Click on **Groups**
     
   * Click on the group we just created
     
