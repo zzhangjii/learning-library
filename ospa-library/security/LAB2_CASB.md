@@ -283,7 +283,9 @@ CASB Cloud Service set your preferred values in the application and subsequently
 
 ****
 
-### Add SalesForce as a Sanctioned Application - Who Should Complete This Lab:  All Participants
+### Add SalesForce as a Sanctioned Application - Who Should Complete This Lab:  1 Participant for group
+
+**Note: The learner signing up for Salesforce must differ from the participant that have requested the SSO access via IDCS on LAB 1**
 
 You’ll now add SalesForce as a sanctioned application for monitoring in Oracle CASB, so this business critical application remains compliant with security standards.
 

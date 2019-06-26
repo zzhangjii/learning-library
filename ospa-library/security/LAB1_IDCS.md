@@ -582,7 +582,9 @@ Moving back to Salesforce in order to create a corresponding account for one tha
 
 Now that the account is available in Salesforce and IDCS has the authenticated account you are ready to test.
 
-### **EXERCISE** - Request Group Access (Persona: End User) - Who Should Complete This Lab:  All Participants
+### **EXERCISE** - Request Group Access (Persona: End User) - Who Should Complete This Lab:  1 Participant for group
+
+**Note: The participant requesting the access must differ from the learner creating the salesforce account on the CASB lab**
 
 Remember that we have created the **Employee** group into IDCS which is having access to Salesforce application but there is no user assigned yet to it. Since we chose the option
  
