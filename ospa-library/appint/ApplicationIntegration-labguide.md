@@ -1,6 +1,6 @@
 # Application Integration Lab Guide
 
-## June 24, 2019 - 3:45 PM
+## June 27, 2019 - 8:50 AM
 
 # Table of Contents
 
@@ -386,7 +386,7 @@ have done the prerequisites, continue below:
       - Configuration File: *Browse* to and select your wallet zip file
         that you just saved in your *ApplicationIntegrationLabs* folder above.
     
-      - Service: *\<Autonomous Database Name (all lowercase without spaces)\>\_high* option. Select it from the dropdown list.  The *high* option gives us the best performance.
+      - Service: *\<Autonomous Database Name (all lowercase without spaces)\>\_high* option. Select it from the dropdown list.  The *high* option gives us the best performance.  NOTE: Your *Service* may be different than the one shown in the figure below.
     
       - Click on the "Save Password* field so you aren’t prompted for the
         atpc\_user password each time you activate your connection.
@@ -394,11 +394,13 @@ have done the prerequisites, continue below:
       - Click the *Test* button at the bottom to see if SQL Developer can
     connect to your ATP database as *atpc\_user*. Wait for a moment as
     access is attempted. When successful, celebrate the “*Status:
-    Success*” message that appears in the lower-left corner:
+    Success*” message that appears in the lower-left corner.  If the test fails, it is probably because the *Service* is specified incorrectly.
 
         ![](./media/image9.png)
 
         Figure 5: Creating a New SQL Developer Connection
+
+        
 
       - Click the *Save* button at the bottom of the dialog.
 
