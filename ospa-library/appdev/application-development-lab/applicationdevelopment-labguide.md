@@ -210,7 +210,7 @@ Dashboard”)
 
 #### Open VBCS Home Page  
 
-5.  Select the VBCS instance being used for the lab ("OSPA-Class-Of-SE" below), then using the “Hamburger Icon” ![](./media/image16.png) on the far right;
+5.  Find the VBCS instance being used for the lab in the list ("OSPA-Class-Of-SE" below), then using the “Hamburger Icon” ![](./media/image16.png) on the far right;
     choose “Open Oracle Visual Builder Cloud Service Home Page”
 
     ![](./media/vbcs_instance_0.png)
@@ -223,7 +223,7 @@ Dashboard”)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.6 – VBCS Splash<br/>
 
-7.  When the “Visual Applications” list appears; choose the “New” button in the upper-right corner.
+7.  When the “Visual Applications” welcome appears; choose the “New Application” button.
 
   ![](./media/New17.1_a.png)
 
@@ -1240,8 +1240,16 @@ Mama Maggy's managers/franchisees want to be able to check product order status 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.31 – Screen with empty table
 
-32. Use the table’s “Quick Start” to “Add Data” from "ProductOrderLine" to the table, add 
-    item\[i\] -\> Product Name (Text), Unit Price (Input Number), and
+32. Use the table’s “Quick Start” to “Add Data” from "ProductOrderLine" to the table, add Product Name (text),<br/>
+__*** find Product Name by drilling down ***__<br/>
+&nbsp;&nbsp;&nbsp; __{} response <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [] items <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{} item\[i\] <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{} Product Object <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[] items <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{} item[i] <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Product Name__<br/> 
+    Unit Price (Input Number), and
     Quantity (Input Number).
 
 > ![](./media/image141.png)
@@ -1437,10 +1445,7 @@ In this lab you will create new VBCS Web applications to display a list of Mama 
 > 
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.7.4 – Copy to Reponse Body
 > 
-> Click the “Create” button to finish the process of building the
-> service connection.
-> 
-> ![](./media/image158.png)
+
 > 
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.7.5 – Create button
 
@@ -1468,7 +1473,7 @@ In this lab you will create new VBCS Web applications to display a list of Mama 
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.9.1 – Test single connection
 > 
 > Check the response status and values, then click “Copy to Response
-> Body” and the “Create” button to finish things up.
+> Body” button to finish things up.
 > 
 > ![](./media/image163.png)
 > 
