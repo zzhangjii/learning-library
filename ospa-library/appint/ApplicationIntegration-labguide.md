@@ -308,7 +308,7 @@ have done the prerequisites, continue below:
     the Prerequisites section above.  The table of instances redisplays.
 
     - Click on your *Autonomous Database Name* that appears in the table.
-  You noted that name in the Prerequisites section above.
+  You noted that name in the *Prerequisites* section above.
 
         ![](./media/image6.png)
 
@@ -443,7 +443,7 @@ have done the prerequisites, continue below:
     
     - Access your Oracle Integration instance by
         browsing to the *Oracle Cloud My Services Page URL* noted 
-        in your *MyLabNotes* file to access your services.
+        in your *MyLabNotes* file to access your services.  If you forgot to write this URL down, use your browser history to navigate to *My Services - Dashboard*.  Then, note this URL in your *MyLabNotes* file as *Oracle Cloud My Services Page URL*.
 
     - Click on the *Integration* option.
 
@@ -621,6 +621,10 @@ initiated:
 7.  In the *Search* field, enter: *REST* and press *Return*. The REST
     adapter appears. Click the *Select* button for the *REST* adapter.
 
+    ![](./media/image130.png)
+
+      Figure 13: Creating a new connection based upon a prebuilt adapter
+
 8.  The *Create New Connection* dialog appears so you can provide details
     about how this connection will be used in your integration.
 
@@ -635,6 +639,10 @@ initiated:
     
     - Description: *REST connection to support triggering of an
         integration*   (copy and paste)
+
+        ![](./media/image129.png)
+
+      Figure 14: Creating a new connection
     
     - Click the *Create* button.
     
@@ -681,6 +689,10 @@ interact with the ATP Database:
     -   In the Description field, enter: *Insert an order row into the order
     table in ATP*
 
+        ![](./media/image131.png)
+
+        Figure 15: Creating a new connection based upon a prebuilt adapter
+
     - Click the *Create* button.
 
 19. Enter your *email address* in the *Email Address* field so you can be
@@ -693,7 +705,7 @@ interact with the ATP Database:
     *Connection Properties* area. The *Connection Properties* dialog
     appears.
 
-    - For Service Name, enter: *databaseappint\_high* (That gives us the best
+    - For Service Name, enter: *dbappintshared\_high* (That gives us the best
     performance.)
 
     - Click the *OK* button to close the *Create New Connection* dialog.
@@ -780,7 +792,11 @@ Create an integration that uses your two connections:
     - What does the integration do? Enter: *Accept a REST POST call and
     create a new order in the ATP database*
 
-    - Click the *Create* button to display the *integration editor canvas*.
+      ![](./media/image132.png)
+
+      Figure 15: Creating a new integration
+
+    - Leave the default value (empty) alone for the package field and then click the *Create* button to display the *integration editor canvas*.
 
 
 31. Notice the beginnings of the new integration in the integration editor canvas. This is where you will
@@ -790,9 +806,7 @@ Create an integration that uses your two connections:
 
     Figure 16: Integration Editor Canvas
 
-32. Click the *Save* button in the upper-right corner. NOTE: It is
-    important to Save often so you don’t lose any of your work along the
-    way.
+32. Click the *Save* button in the upper-right corner. 
 
 ## Define the Integration
 
@@ -1202,7 +1216,9 @@ needs to be part of a process application. Let’s create one:
     
         - Description: *Workflow management application to process order
         requests*
-  
+
+        - Make sure that the *Open Immediately" field is checked on so the tooling will take us right into process creation after the process application has been created.   
+
 
         - Click the *Create* button at the left:
 
@@ -1210,8 +1226,7 @@ needs to be part of a process application. Let’s create one:
 
           Figure 35: Creating a New Process Application
 
-- The tooling assumes that you want to immediately add a process to
-    your new process application, so the *Create a Process* panel appears:
+- Wait a moment and the *Create a Process* panel appears:
 
 
     ![](./media/image44.png)
@@ -1235,6 +1250,8 @@ needs to be part of a process application. Let’s create one:
 
       - Description: *Process model that defines the submission and
     evaluation of order requests and creation of orders*
+
+      - For *Document-Only*, leave the default (unchecked) as is.
 
       - With *Form Approval Pattern* selected at the right, click the *Create*
     button in the lower-right corner to create the new process:
@@ -1301,7 +1318,7 @@ needs to be part of a process application. Let’s create one:
 
     Figure 41: Process Model with Updated Swimlane Roles
 
-13. Click the *Save* button to safely store away your updates. (Saving often is a great idea.)
+13. Click the *Save* button to safely store away your updates. 
 
 ## Implement the Submit Request Event
 
