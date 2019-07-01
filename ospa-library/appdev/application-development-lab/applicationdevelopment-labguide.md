@@ -1460,24 +1460,7 @@ In this lab you will create new VBCS Web applications to display a list of Mama 
     named). Type an associate id number (“7 in the example”) and “Send”
     to test.  
     ![](./media/image160.png)  
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.9.1 – Test single associate connection
-
-> Provide a name for the connection (“mmassociateget” in the example).
-> 
-> ![](./media/image161.png)
-> 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.9.2 – Name single connection
-> 
-> ![](./media/image162.png)
-> 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.9.1 – Test single connection
-> 
-> Check the response status and values, then click “Copy to Response
-> Body” button to finish things up.
-> 
-> ![](./media/image163.png)
-> 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.9.2 – Single connection response
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.9 – Test single associate connection
 > 
 > You have now created and tested two connections.
 
