@@ -1,6 +1,6 @@
 # Application Integration Lab Guide
 
-## June 30, 2019 - 4:00 PM
+## July 2, 2019 - 12:10 PM
 
 # Table of Contents
 
@@ -386,7 +386,7 @@ have done the prerequisites, continue below:
       - Configuration File: *Browse* to and select your wallet zip file
         that you just saved in your *ApplicationIntegrationLabs* folder above.
     
-      - Service: *\<Autonomous Database Name (all lowercase without spaces)\>\_high* option. Select it from the dropdown list.  The *high* option gives us the best performance.  NOTE: Your *Service* may be different than the one shown in the figure below.
+      - Service: *\<Autonomous Database Name (all lowercase without spaces)\>\_high* option. Select it from the dropdown list.  The *high* option gives us the best performance.  For example, you might select *dbappintshared_high*. 
     
       - Click on the "Save Password* field so you aren’t prompted for the
         atpc\_user password each time you activate your connection.
@@ -1296,6 +1296,8 @@ needs to be part of a process application. Let’s create one:
     Mama Maggy use case. Later, before testing, we’ll associate you with
     each of these roles.
 
+    - Turn your attention now to the left side of the process model to find the roles for each swimlane.
+
     - Click on the *Process Owner* label at the left in the top swimlane.
 
     - Click on the *Edit* (pencil) option that appears.
@@ -1370,6 +1372,10 @@ needs to be part of a process application. Let’s create one:
     
         - Description: *Form that a store manager uses to enter a new
         order request*
+
+          ![](./media/image135.png)
+
+          Figure 45: Form Editor Palette
     
         - Click *Create* to establish the new form. Notice that the new
         form name appears in the *Form* field in the properties panel.
