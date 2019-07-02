@@ -730,12 +730,12 @@ by default display three days of data, with up to 90 days of data available.
 * Left click on the application
 * Select **Remove**
 
-![](./media/casb_remove.png)
+![](./media/CASB_delete.png)
 <p align="center"> Figure Appendix 1 </p>
 
 * Confirm by clicking **OK**.
 
-![](./media/casb_remove_2.png)
+![](./media/CASB_delete_2.png)
 <p align="center"> Figure Appendix 2 </p>
 
 * Repeat above steps for every application registered during the lab
