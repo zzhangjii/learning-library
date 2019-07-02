@@ -169,41 +169,48 @@ This is the last step we need to complete in SalesForce.
 
 **NOTE: Due to capacity constraints, We will group individuals on teams of three to register the application in CASB. Instructor will provide group numbers. During the registration process learners must use the following name convention COSE_First-Two-letters-of-the location_APP_Group] (e.g. COSE_AU1_SALESFORCE_G1, COSE_AU2_SALESFORCE_G2)**
 
-* Open CASB Console and select the SalesForce application to add the instance in Oracle CASB.
+* Open CASB Console
+
+* Click on **Add/Modify App** on the option located at the left hand side of the dashboard.
+
+![](./media/image76.jpeg)
+<p align="center"> Figure 2-10 </p> 
+
+* Select the SalesForce application to add the instance in Oracle CASB.
 
 ![CASB SF enrolment](./media/casb_sf_enroll.png)
-<p align="center"> Figure 2-10 </p>  
+<p align="center"> Figure 2-11 </p>  
 
 * Enter a unique name for you instance. Click the checkboxes from the picture below. Click **Next**.
 
 ![CASB SF Unique name](./media/casb_sf_uniquename.png)
-<p align="center"> Figure 2-11 </p>  
+<p align="center"> Figure 2-12 </p>  
 
 * Select Push controls and monitor
 
 ![CASB SF Push](./media/casb_sf_push.png)
-<p align="center"> Figure 2-12 </p>  
+<p align="center"> Figure 2-13 </p>  
 
 * Select Standard Security Controls. Check Approval box and Press Next
 
 ![CASB SF security controls](./media/casb_sf_securitycontrols.png)
-<p align="center"> Figure 2-13 </p>  
+<p align="center"> Figure 2-14 </p>  
 
 * You will redirected to the below page. Login with the user information created with the CASB profile (e.g. casbuser). Do not use your Salesforce developer administrator credentials.
 
 ![CASB SF credentials](./media/casb_sf_allowcredentials.png)
-<p align="center"> Figure 2-14 </p>  
+<p align="center"> Figure 2-15 </p>  
 
 * Allow Access
 
 ![CASB SF Allow Access](./media/casb_sf_allowaccess.png)
-<p align="center"> Figure 2-15 </p>  
+<p align="center"> Figure 2-16 </p>  
 
 
 * Success! You will now be able to monitor SalesForce! Click **Done** to finish
 
 ![CASB SF completion](./media/casb_sf_complete.png)
-<p align="center"> Figure 2-16 </p>  
+<p align="center"> Figure 2-17 </p>  
 
 [Back to Top](#table-of-contents)
 ****
