@@ -335,7 +335,11 @@ https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_
 
  HOST: https://**your IDCS tenant** 
 
- Ex: https://idcs-8ba16123120745658135edd99d8a5c78.identity.oraclecloud.com 
+**NOTE: Verify the URL format. Must end in oraclecloud.com, no extra / or endpoints**
+
+ e.g. https://idcs-8ba16123120745658135edd99d8a5c78.identity.oraclecloud.com 
+
+ 
 
  CLIENT_ID: **the Postman IDCS Client application CLIENT_ID** 
 
@@ -432,69 +436,83 @@ For further information about using IDCS REST interface with postman, please vis
 **Note: You must sign-up with your personal account (e.g. Gmail, Yahoo, Outlook)**
 
 ![SF registration](./media/sf_registration.png)
-<p align="center"> Figure 1-24 </p>  
+<p align="center"> Figure 2-2 </p>  
 
 
 * You will get an email to confirm your account. Click **Verify Account**
 
 
 ![SF verification](./media/sf_verification.png)
-<p align="center"> Figure 1-25 </p>  
+<p align="center"> Figure 2-3 </p>  
 
 
 * Create a password for your account
 
 ![SF Create Password](./media/sf_password.png)
-<p align="center"> Figure 1-26 </p>  
+<p align="center"> Figure 2-4 </p>  
 
  
-* Access Salesforce application using the URL provided after registration, click on the profile menu as per below print screen and select the option: **“Switch to Salesforce Classic”**.
+* Access Salesforce application using the URL provided after registration. 
+
+ ![](./media/sf_login_.png)
+ <p align="center"> Figure 2-5 </p>
+
+* On the main page, click under your user name on the top-right corner
+
+![](./media/sf_main_page.png)
+ <p align="center"> Figure 2-6 </p>
+
+ * Select **My Developer account** form the menu
+
+![](./media/sf_menu_profile.png)
+ <p align="center"> Figure 2-7 </p>
+
+* Once in the developer page, click on the profile menu as per below print screen and select the option: **“Switch to Salesforce Classic”**.
 
 ![](./media/idcs49.jpeg)
-<p align="center"> Figure 2-3 </p>
+<p align="center"> Figure 2-8 </p>
 
 *  Go to **Setup** into the upper tab menu, near the profile.
 
 *  Register a custom Domain. Go to **Domain Management**, **My Domain** and register a domain of your choosing. This is to have a custom application URL dedicate for our use case.
-
  
  ![](./media/idcs50.jpeg)
- <p align="center"> Figure 2-4 </p>
+ <p align="center"> Figure 2-9 </p>
 
 *  Check your email for the domain login and login.
 
 *  Bring up the **setup** page.
 
 ![](./media/idcs51.jpeg)
-<p align="center"> Figure 2-5 </p>
+<p align="center"> Figure 2-10 </p>
 
 *  From side menu bar, go to **Security Controls**, **Single Sign-On Settings**
 
 ![](./media/idcs52.jpeg)
-<p align="center"> Figure 2-6 </p>
+<p align="center"> Figure 2-11 </p>
 
 *  Click on **Edit** and enable **Federated Single Sign-On Using SAML** option.
 
 ![](./media/idcs53.png)
-<p align="center"> Figure 2-7 </p>
+<p align="center"> Figure 2-12 </p>
 
 * Click on **New from Metadata File** button to import IDCS metadata. Select the downloaded metadata file using **Choose File** button. Click on **Create**.
 
 ![](./media/idcs54.png)
-<p align="center"> Figure 2-8 </p>
+<p align="center"> Figure 2-13 </p>
 
 * Update the **Entity ID** with the domain information registered in the previous steps (e.g *https://acasas-dev-ed.my.salesforce.com*) and click **Save**
 
 ![](./media/idcs55.jpeg)
-<p align="center"> Figure 2-9 </p>
+<p align="center"> Figure 2-14 </p>
 
 * Below are the details for this example. Note, your URLs and domain information will be different.
 
 ![](./media/idcs56.jpeg)
-<p align="center"> Figure 2-10 </p>
+<p align="center"> Figure 2-15 </p>
 
 ![](./media/idcs57.jpeg)
-<p align="center"> Figure 2-11 </p>
+<p align="center"> Figure 2-16 </p>
 
 * Make note the following:
 
@@ -503,38 +521,38 @@ For further information about using IDCS REST interface with postman, please vis
   * Org Domain Name value.
 
 ![](./media/idcs58.jpeg)
-<p align="center"> Figure 2-12 </p>
+<p align="center"> Figure 2-17 </p>
 
 Now that the Salesforce configurations are done, we need to configure IDCS to be aware of the Salesforce application.
 
 * Go to IDCS admin console, navigation menu, **Applications**
 
  ![](./media/idcs59.jpeg)
- <p align="center"> Figure 2-13 </p>
+ <p align="center"> Figure 2-18 </p>
 
 * Click on **Add** button and select **App Catalog** and search for Salesforce. Click on **Add.**
 
  ![](./media/idcs60.jpeg)
- <p align="center"> Figure 2-14 </p>
+ <p align="center"> Figure 2-19 </p>
 
 * On the first page of configuration screen provide the **Organization**
 
  **ID** and **Domain Name** values that you made note of from within Salesforce.
 
 ![](./media/idcs61.jpeg)
-<p align="center"> Figure 2-15 </p>
+<p align="center"> Figure 2-20 </p>
 
 * Click on **Next** to move to the SSO configuration
 
  ![](./media/idcs62.jpeg)
- <p align="center"> Figure 2-16 </p>
+ <p align="center"> Figure 2-21 </p>
 
 * Click on **Finish** button
 
 * **Activate** the application
 
  ![](./media/idcs63.png)
- <p align="center"> Figure 2-17 </p>
+ <p align="center"> Figure 2-22 </p>
 
 ### **DEMO** - Assign Apps to Group (Persona: Administrator)
 
@@ -545,7 +563,7 @@ In IDCS you have the option to assign access to users directly, by direct assign
 *  Add a group labeled **CoSE_Employee**. Check the box **User can request access**.
 
  ![](./media/idcs64.png)
- <p align="center"> Figure 2-18 </p>
+ <p align="center"> Figure 2-23 </p>
 
 *  Click on **Finish**
 
@@ -554,7 +572,7 @@ In IDCS you have the option to assign access to users directly, by direct assign
 *  Select **Salesforce** and click on **OK**.
 
 ![](./media/idcs65.jpeg)
-<p align="center"> Figure 2-19 </p>
+<p align="center"> Figure 2-24 </p>
 
 Moving back to Salesforce in order to create a corresponding account for one that we have into IDCS.
 
@@ -569,7 +587,7 @@ Moving back to Salesforce in order to create a corresponding account for one tha
 *  Set the **User License** to **Salesforce Platform**.
 
 ![](./media/idcs66.jpeg)
-<p align="center"> Figure 2-20 </p>
+<p align="center"> Figure 2-25 </p>
 
 Now that the account is available in Salesforce and IDCS has the authenticated account you are ready to test.
 
@@ -582,29 +600,29 @@ Remember that we have created the **CoSE_Employee** group into IDCS which is hav
 *  From **My Apps** page, click on **+ Add** access request button.
 
 ![](./media/idcs67.jpeg)
-<p align="center"> Figure 2-21 </p>
+<p align="center"> Figure 2-26 </p>
 
 *  From the **Groups** tab, select **CoSE_Employee** group and select the **+** sign.
 
 *  Click on + sign to request access to the group. Provide justification on the resulting popup page. Click on **OK**. This is an auto approved request and access should be granted immediately without the need of and administrator intervention.
 
  ![](./media/idcs69.jpeg)
- <p align="center"> Figure 2-22 </p>
+ <p align="center"> Figure 2-27 </p>
 
 *  Go to **My Profile** section from menu located top-right
 
 ![](./media/idcs70.png)
-<p align="center"> Figure 2-23 </p>
+<p align="center"> Figure 2-28 </p>
 
 *  Ensure that **CoSE_Employee** group is visible under **My Access** sub-tab
 
  ![](./media/idcs71.png)
- <p align="center"> Figure 2-24 </p>
+ <p align="center"> Figure 2-29 </p>
 
 *  Ensure that Salesforce applications are visible now on the **MyApps** page
 
 ![](./media/idcs72.png)
-<p align="center"> Figure 2-25 </p>
+<p align="center"> Figure 2-30 </p>
 
 ### **EXERCISE** - Verify SSO Configuration (Persona: End User) - Who Should Complete This Lab:  1 Participant for group
 
@@ -613,7 +631,7 @@ Remember that we have created the **CoSE_Employee** group into IDCS which is hav
 *  Ensure that user is automatically logged into Salesforce Chatter (**SSO**)
 
 ![](./media/idcs73.jpeg)
-<p align="center"> Figure 2-26 </p>
+<p align="center"> Figure 2-31 </p>
 
 You should now see the same user profile information, that you started within IDCS, within Salesforce without having had to log into Salesforce.
 
@@ -630,7 +648,7 @@ A host name, organization ID, and a domain name are required before you can conf
 *  Login to [Developer Salesforce](https://developer.salesforce.com). In the left navigation menu of the home page, search and click Single Sign-On Settings. The Single Sign-On Settings page appears.
 
 ![](./media/idcs74.jpeg)
-<p align="center"> Figure 2-27 </p>
+<p align="center"> Figure 2-32 </p>
 
 *  Under the SAML Single Sign-On Settings section, **click** the name that you provided for your identity provider in the **Single Sign-On Settings page**. The SAML Single Sign-On Settings page appears.
 
@@ -642,7 +660,7 @@ A host name, organization ID, and a domain name are required before you can conf
 The domain name appears at the beginning and the organization ID appears at the end of the URL.
 
 ![](./media/idcs75.png)
-<p align="center"> Figure 2-28 </p>
+<p align="center"> Figure 2-33 </p>
 
 *  Obtaining the Consumer Key and Consumer Secret from Salesforce
 
@@ -651,17 +669,17 @@ The domain name appears at the beginning and the organization ID appears at the 
 * Switch to **Lightning Experience** in Salesforce, click the **cogwheel** on the top right corner of the page and select **Setup**.
 
 ![](./media/idcs76.jpeg)
-<p align="center"> Figure 2-29 </p>
+<p align="center"> Figure 2-34 </p>
 
 *  In the left navigation menu of the home page, search and click **AppManager**. The Lightning Experience App Manager page appears.
 
 ![](./media/idcs77.jpeg)
-<p align="center"> Figure 2-30 </p>
+<p align="center"> Figure 2-35 </p>
 
 *  In the right corner of the page, click **New Connected App**. The New Connected App page appears.
 
 ![](./media/idcs78.png)
-<p align="center"> Figure 2-31 </p>
+<p align="center"> Figure 2-36 </p>
 
 *  Under the Basic Information section, enter the Connected App Name of the app that you want to connect.
 
@@ -674,7 +692,7 @@ The domain name appears at the beginning and the organization ID appears at the 
 * In the Selected OAuth Scopes field, select Full access(full) under the **Available OAuth** Scopes list, and then click Add to give full access to modify the OAuth.
 
 ![](./media/idcs79.jpeg)
-<p align="center"> Figure 2-32 </p>
+<p align="center"> Figure 2-37 </p>
 
 * Scroll down and click **Save**.
 
@@ -683,7 +701,7 @@ The domain name appears at the beginning and the organization ID appears at the 
 * Under the API (Enable OAuth Settings) section, click “**Click to reveal**” next to the **Consumer Secret** field.
 
 ![](./media/idcs80.png)
-<p align="center"> Figure 2-33 </p>
+<p align="center"> Figure 2-38 </p>
 
 * Make note of the **Consumer Key** and **Consumer Secret** values.
 
@@ -699,12 +717,12 @@ The domain name appears at the beginning and the organization ID appears at the 
 * In the upper-right corner of the **Salesforce** home page, click the user icon, and then click Settings from the drop-down list.
 
 ![](./media/idcs82.jpeg)
-<p align="center"> Figure 2-34 </p>
+<p align="center"> Figure 2-39 </p>
 
 * In the left navigation menu, search and click **Reset My Security Token.**
 
  ![](./media/idcs83.jpeg)
- <p align="center"> Figure 2-35 </p>
+ <p align="center"> Figure 2-40 </p>
 
 * On the Reset My Security Token page, click **Reset My Security Token**. A security token is sent to the email address of the administrator.
 
@@ -737,7 +755,7 @@ The domain name appears at the beginning and the organization ID appears at the 
 * Fill in the **Host Name (e.g. acasas-dev-ed.my.salesforce.com), Administrator Username**, **Administrator Password** that you derived in the previous steps from Salesforce, **Client ID** and **Client Secret** from the Salesforce app created in the previous section. 
 
 ![](./media/idcs84.png)
-<p align="center"> Figure 2-36 </p>
+<p align="center"> Figure 2-41 </p>
 
 * Click **Test Connectivity** to verify the connection with Salesforce. Oracle Identity Cloud Service displays a confirmation message.
 
@@ -746,7 +764,7 @@ The domain name appears at the beginning and the organization ID appears at the 
 * Click **Save**
 
  ![](./media/idcs85.jpeg)
- <p align="center"> Figure 2-37 </p>
+ <p align="center"> Figure 2-42 </p>
  
  This option will synchronize the existing account details from Salesforce and link them to the corresponding Oracle Identity Cloud Service users.
 
@@ -762,7 +780,7 @@ The domain name appears at the beginning and the organization ID appears at the 
 
 
 ![](./media/idcs86.png)
-<p align="center"> Figure 2-38 </p>
+<p align="center"> Figure 2-43 </p>
 
 ****
 **You have successfully connected and provision IDs on third-party app and enable Single Sign-On to easily login to other vendor services.**
