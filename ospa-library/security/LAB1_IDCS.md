@@ -26,9 +26,9 @@ You as the IdM Manager must set up Oracle Identity Cloud Service to allow users 
 
 For the workshop lab exercises, the current version of the Oracle Identity Cloud Service (IDCS) is being demonstrated.
  
-This workshop is hosted in the Oracle Public Cloud (OPC). It includes a combination of cloud services, hosted on-premises software and 3rd party software. Aside from the Identity Cloud Service, the remaining components are included to enable demonstrating integration, including identity synchronization, federation, authentication, SSO and more.
+This workshop includes a combination of cloud services and 3rd party software. Aside from the Identity Cloud Service, the remaining components are included to enable demonstrating integration, including identity synchronization, federation, authentication, SSO and more.
 
-This workbook is primarily designed to provide the necessary instructions and context to allow you to complete the labs in the Oracle Identity Cloud Service Workshop. If you would like additional information about the Oracle solution, you can contact your local Oracle account team and/or review some of the following publicly available information about the solution.
+This workbook is primarily designed to provide the necessary instructions and context to allow you to complete the labs in the Oracle Identity Cloud Service Workshop. 
 
 Due to environment privileges constraints, user id creation/modification/deletion and application registration assignments have been already implemented in this tenant.
 The instructor will guide you through the process of creating a new account and onboarding a new application into IDCS. These steps have been highlighted within this workshop for your reference.
@@ -52,7 +52,7 @@ The following summarizes the components in our workshop:
     
       * IDCS Administrators
 
-*NOTE: This lab contains two main modules with optional exercises. Due to timing constraints, we encourage you to complete first the mandatory modules and then go back to the optional tasks.*
+**NOTE: This lab contains two main modules with optional exercises. Due to timing constraints, we encourage you to complete first the mandatory modules and then go back to the optional tasks.**
 
 # Overview: Oracle Identity Cloud Service
 
@@ -89,18 +89,7 @@ The following summarizes the components in our workshop:
 
   * **Federation** - Federation in identity management enables two or more partners to work together, exchanging identity information securely across internet domains providing secure single sign-on (SSO). Common to a SAML federation are the concepts of identity provider (IdP) and service provider (SP)
 
-
-# Business Drivers
-
- In new competitive business landscape organizations are trying to launch new services in a quickest timeframe to take early bird advantage. They want to reach out to more *users* and endorse their brand through social media. They want to launch mobile applications to give better services to their *customers* and get competitive advantage. Most of these organizations are developing and hosting these services using PaaS/SaaS model so that can avoid hassles of developing or managing them in-house.
- 
- Security is one of the most critical and important aspects for every new initiative. Data loss & leakage risks, unauthorized access through ***misuse of credentials*** and ***improper access controls***, hijacking of accounts and malicious insiders are some of the biggest concerns that are always present in the ever faster delivery of these
- new services.
- 
- Identity & Access Management (IAM) can provide a single aggregated view of identities to all systems, it enables multi-channel access and provides a platform to define and enforce policies at one layer to ensure consistency. An important consideration for these organizations is to define how IAM is implemented for these new initiatives/services. They can implement security for each application in a monolithic, distinct and unique fashion for that application or they can leverage a platform approach which can give them a shared single identity across multiple applications, shared services, and
- shared policies across multiple applications and provide cross channel visibility. The ability to enable business and drive new opportunities through a solid secure infrastructure and a platform designed for this kind of business agility is where the new business opportunity lies today.
- 
- This workshop shows how **Oracle Identity Cloud Service (IDCS)** enable organizations to rapidly develop fast, reliable and secure services for their new business initiatives.
+***
 
 ### **DEMO** - Navigation between IDCS and Cloud My Services Dashboards
 
@@ -330,6 +319,7 @@ https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_
 
  https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/oracle_identity_cloud_service_postman_globals.json
 
+**NOTE: You might not receive a notification once the variables have imported**
 
 *  Click on the **Settings** button (cogwheel icon) to **Manage Environments**
 
@@ -355,6 +345,7 @@ https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_
 
  USER_PW: **Your Oracle Cloud Password**
 
+**NOTE: CLIENT_ID and CLIENTE_SECRET information is available in the participant guide**
 
 ![](./media/idcs42.png)
 <p align="center"> Figure 1-31 </p>
@@ -551,7 +542,7 @@ In IDCS you have the option to assign access to users directly, by direct assign
 
 *  Go to IDCS admin console, **Groups** menu
 
-*  Add a group labeled **Employee**. Check the box **User can request access**.
+*  Add a group labeled **CoSE_Employee**. Check the box **User can request access**.
 
  ![](./media/idcs64.png)
  <p align="center"> Figure 2-18 </p>
@@ -584,52 +575,45 @@ Now that the account is available in Salesforce and IDCS has the authenticated a
 
 ### **EXERCISE** - Request Group Access (Persona: End User) - Who Should Complete This Lab:  1 Participant for group
 
-**Note: The participant requesting the access must differ from the learner creating the salesforce account on the CASB lab**
+Remember that we have created the **CoSE_Employee** group into IDCS which is having access to Salesforce application but there is no user assigned yet to it. Since we chose the option **“User can request access”** at the creation of the group, now we should be able to request access to it and implicitly to the alesforce application.
 
-Remember that we have created the **Employee** group into IDCS which is having access to Salesforce application but there is no user assigned yet to it. Since we chose the option
- 
-**“User can request access”** at the creation of the group, now we should be able to request access to it and implicitly to the alesforce application.
-
-*  Close your browser to clear the cache and then login into IDCS https://**Your IDCSInstance**.identity.oraclecloud.com/ui/v1/myconsole.
+*  Close your browser to clear the cache and then login into IDCS https://**yourtenant**/ui/v1/myconsole
 
 *  From **My Apps** page, click on **+ Add** access request button.
 
 ![](./media/idcs67.jpeg)
 <p align="center"> Figure 2-21 </p>
 
-*  From the **Groups** tab, select **Employee** group and select the **+** sign.
-
-![](./media/idcs68.jpeg)
-<p align="center"> Figure 2-22 </p>
+*  From the **Groups** tab, select **CoSE_Employee** group and select the **+** sign.
 
 *  Click on + sign to request access to the group. Provide justification on the resulting popup page. Click on **OK**. This is an auto approved request and access should be granted immediately without the need of and administrator intervention.
 
  ![](./media/idcs69.jpeg)
- <p align="center"> Figure 2-23 </p>
+ <p align="center"> Figure 2-22 </p>
 
 *  Go to **My Profile** section from menu located top-right
 
-![](./media/idcs70.jpeg)
-<p align="center"> Figure 2-24 </p>
+![](./media/idcs70.png)
+<p align="center"> Figure 2-23 </p>
 
-*  Ensure that **Employee** group is visible under **My Access** sub-tab
+*  Ensure that **CoSE_Employee** group is visible under **My Access** sub-tab
 
  ![](./media/idcs71.png)
- <p align="center"> Figure 2-25 </p>
+ <p align="center"> Figure 2-24 </p>
 
 *  Ensure that Salesforce applications are visible now on the **MyApps** page
 
 ![](./media/idcs72.png)
-<p align="center"> Figure 2-26 </p>
+<p align="center"> Figure 2-25 </p>
 
-### **EXERCISE** - Verify SSO Configuration (Persona: End User) Who Should Complete This Lab:  All Participants
+### **EXERCISE** - Verify SSO Configuration (Persona: End User) - Who Should Complete This Lab:  1 Participant for group
 
 *  Click on the **Salesforce Chatter** app from **My Apps** page
 
 *  Ensure that user is automatically logged into Salesforce Chatter (**SSO**)
 
 ![](./media/idcs73.jpeg)
-<p align="center"> Figure 2-27 </p>
+<p align="center"> Figure 2-26 </p>
 
 You should now see the same user profile information, that you started within IDCS, within Salesforce without having had to log into Salesforce.
 
@@ -646,7 +630,7 @@ A host name, organization ID, and a domain name are required before you can conf
 *  Login to [Developer Salesforce](https://developer.salesforce.com). In the left navigation menu of the home page, search and click Single Sign-On Settings. The Single Sign-On Settings page appears.
 
 ![](./media/idcs74.jpeg)
-<p align="center"> Figure 2-28 </p>
+<p align="center"> Figure 2-27 </p>
 
 *  Under the SAML Single Sign-On Settings section, **click** the name that you provided for your identity provider in the **Single Sign-On Settings page**. The SAML Single Sign-On Settings page appears.
 
@@ -658,7 +642,7 @@ A host name, organization ID, and a domain name are required before you can conf
 The domain name appears at the beginning and the organization ID appears at the end of the URL.
 
 ![](./media/idcs75.png)
-<p align="center"> Figure 2-29 </p>
+<p align="center"> Figure 2-28 </p>
 
 *  Obtaining the Consumer Key and Consumer Secret from Salesforce
 
@@ -667,17 +651,17 @@ The domain name appears at the beginning and the organization ID appears at the 
 * Switch to **Lightning Experience** in Salesforce, click the **cogwheel** on the top right corner of the page and select **Setup**.
 
 ![](./media/idcs76.jpeg)
-<p align="center"> Figure 2-30 </p>
+<p align="center"> Figure 2-29 </p>
 
 *  In the left navigation menu of the home page, search and click **AppManager**. The Lightning Experience App Manager page appears.
 
 ![](./media/idcs77.jpeg)
-<p align="center"> Figure 2-31 </p>
+<p align="center"> Figure 2-30 </p>
 
 *  In the right corner of the page, click **New Connected App**. The New Connected App page appears.
 
 ![](./media/idcs78.png)
-<p align="center"> Figure 2-32 </p>
+<p align="center"> Figure 2-31 </p>
 
 *  Under the Basic Information section, enter the Connected App Name of the app that you want to connect.
 
@@ -690,7 +674,7 @@ The domain name appears at the beginning and the organization ID appears at the 
 * In the Selected OAuth Scopes field, select Full access(full) under the **Available OAuth** Scopes list, and then click Add to give full access to modify the OAuth.
 
 ![](./media/idcs79.jpeg)
-<p align="center"> Figure 2-33 </p>
+<p align="center"> Figure 2-32 </p>
 
 * Scroll down and click **Save**.
 
@@ -699,7 +683,7 @@ The domain name appears at the beginning and the organization ID appears at the 
 * Under the API (Enable OAuth Settings) section, click “**Click to reveal**” next to the **Consumer Secret** field.
 
 ![](./media/idcs80.png)
-<p align="center"> Figure 2-34 </p>
+<p align="center"> Figure 2-33 </p>
 
 * Make note of the **Consumer Key** and **Consumer Secret** values.
 
@@ -715,12 +699,12 @@ The domain name appears at the beginning and the organization ID appears at the 
 * In the upper-right corner of the **Salesforce** home page, click the user icon, and then click Settings from the drop-down list.
 
 ![](./media/idcs82.jpeg)
-<p align="center"> Figure 2-35 </p>
+<p align="center"> Figure 2-34 </p>
 
 * In the left navigation menu, search and click **Reset My Security Token.**
 
  ![](./media/idcs83.jpeg)
- <p align="center"> Figure 2-36 </p>
+ <p align="center"> Figure 2-35 </p>
 
 * On the Reset My Security Token page, click **Reset My Security Token**. A security token is sent to the email address of the administrator.
 
@@ -734,21 +718,13 @@ The domain name appears at the beginning and the organization ID appears at the 
 
  Provisioning will provide you with the following available operations:
  
- **Create Account**: Automatically creates a Salesforce account when
- Salesforce access is granted to the corresponding user in Oracle
- Identity Cloud Service.
+ **Create Account**: Automatically creates a Salesforce account when Salesforce access is granted to the corresponding user in Oracle Identity Cloud Service.
  
- **De-activate Account**: Automatically deactivates or activates a
- Salesforce account when the Salesforce access is deactivated or
- activated for the corresponding user in Oracle Identity Cloud Service.
+ **De-activate Account**: Automatically deactivates or activates a Salesforce account when the Salesforce access is deactivated or activated for the corresponding user in Oracle Identity Cloud Service.
  
- **Delete Account:** Automatically removes an account from Salesforce
- when Salesforce access is revoked from the corresponding user in
- Oracle Identity Cloud Service.
+ **Delete Account:** Automatically removes an account from Salesforce when Salesforce access is revoked from the corresponding user in Oracle Identity Cloud Service.
  
- Beside this you have the ability to map attributes between the user
- account fields defined in Salesforce and the corresponding fields
- defined in Oracle Identity Cloud Service.
+ Beside this you have the ability to map attributes between the user account fields defined in Salesforce and the corresponding fields defined in Oracle Identity Cloud Service.
 
 * Go to IDCS admin console
 
@@ -760,39 +736,33 @@ The domain name appears at the beginning and the organization ID appears at the 
 
 * Fill in the **Host Name (e.g. acasas-dev-ed.my.salesforce.com), Administrator Username**, **Administrator Password** that you derived in the previous steps from Salesforce, **Client ID** and **Client Secret** from the Salesforce app created in the previous section. 
 
-![](./media/idcs84.jpeg)
-<p align="center"> Figure 2-37 </p>
+![](./media/idcs84.png)
+<p align="center"> Figure 2-36 </p>
 
 * Click **Test Connectivity** to verify the connection with Salesforce. Oracle Identity Cloud Service displays a confirmation message.
 
 * Scroll down on the Provisioning page, select **Enable Synchronization**.
 
+* Click **Save**
+
  ![](./media/idcs85.jpeg)
- <p align="center"> Figure 2-38 </p>
+ <p align="center"> Figure 2-37 </p>
  
- This option will synchronize the existing account details from
- Salesforce and link them to the corresponding Oracle Identity Cloud
- Service users.
+ This option will synchronize the existing account details from Salesforce and link them to the corresponding Oracle Identity Cloud Service users.
 
 ###  **DEMO** - Testing Synchronization in IDCS - OPTIONAL
 
 *  On the applications page, select **Import**.
 
-![](./media/idcs86.png)
-<p align="center"> Figure 2-39 </p>
-
 *  Click on **Import** and wait for a moment
 
 *  Click **Refresh**
 
-![](./media/idcs87.png)
-<p align="center"> Figure 2-40 </p>
-
 *  The imported users that were imported from IDCS will be displayed.
 
-![](./media/idcs88.jpeg)
-<p align="center"> Figure 2-41 </p>
 
+![](./media/idcs86.png)
+<p align="center"> Figure 2-38 </p>
 
 ****
 **You have successfully connected and provision IDs on third-party app and enable Single Sign-On to easily login to other vendor services.**
