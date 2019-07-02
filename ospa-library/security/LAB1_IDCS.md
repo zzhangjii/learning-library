@@ -577,7 +577,7 @@ Now that the account is available in Salesforce and IDCS has the authenticated a
 
 Remember that we have created the **CoSE_Employee** group into IDCS which is having access to Salesforce application but there is no user assigned yet to it. Since we chose the option **“User can request access”** at the creation of the group, now we should be able to request access to it and implicitly to the alesforce application.
 
-*  Close your browser to clear the cache and then login into IDCS https://idcs-2578d480c0ab4f7e84319a24ccc80a69.identity.oraclecloud.com/ui/v1/myconsole
+*  Close your browser to clear the cache and then login into IDCS https://**yourtenant**/ui/v1/myconsole
 
 *  From **My Apps** page, click on **+ Add** access request button.
 
