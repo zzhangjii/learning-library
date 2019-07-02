@@ -9,7 +9,7 @@
 - [Module 4: Oracle CASB Monitoring Oracle Cloud Infrastructure](#module-4--oracle-casb-monitoring-oracle-cloud-infrastructure)
 - [Module 5: Create a Policy for OCI](#module-5--create-a-policy-for-oci)
 - [Module 6: Run a Report in CASB](#module-6--run-a-report-in-casb)
-- [Module 7: Demo Data Loss Protection](#module-7--demo-data-loss-protection)
+
 
 
 
@@ -54,7 +54,6 @@ Her team is on its way of implementing CASB to monitor SaaS applications and OCI
 ![CASB Console](./media/casb_login3.png)
 <p align="center"> Figure 1-3 </p>
 
-
 * You should receive an email within a few minutes.
 
 ![CASB Console](./media/casb_login3.png)
@@ -76,7 +75,7 @@ For the purpose of this workshop, you will be using Oracle CASB community tenant
 
 **NOTE: CASB is a dynamic service that is, by design, constantly in flux. As a result, what you see in the console may not match exactly with the lab screenshots. Screenshots are provided solely for illustrative purposes to help guide you directionally through the CASB console.**
 
-For consistency and for the ease of use-cases implementation, you will use a personal **email account (e.g. Gmail, Yahoo, Outlook) to sign-up for your Salesforce and Box developer instances**, and for CASB application registration you will use the following naming convention:
+For consistency and for the ease of use-cases implementation, you will use a personal **email account (e.g. Gmail, Yahoo, Outlook) to sign-up for your Salesforce developer instance**, and for CASB application registration you will use the following naming convention:
 
 `COSE_location+room_appName_GroupNumber` *(e.g. **COSE_AU1_Salesforce_G1**, **COSE_AU1_Salesforce_G2**)*
 
