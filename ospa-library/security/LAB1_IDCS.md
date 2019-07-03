@@ -376,7 +376,7 @@ https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_
     
     * On the **Collections** tab, expand **Users**, and then **Search**.
     * Click on **Search all users (return specific attributes)**
-    * Add the key **Count** and the Value **1000**
+    * Add the key **count** and the Value **1000**
     * Click on **Send**
     * On the result windown search your user id (e.g. alejandro.casas@oracle.com) and copy the id value without the quotes
     
