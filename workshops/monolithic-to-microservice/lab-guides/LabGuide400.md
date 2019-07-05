@@ -42,9 +42,7 @@ In this lab you will use Oracle Visual Builder which is a cloud-based software d
 
   ![](images/400/9.PNG)
 
-- Select the **Empty Application** template and click **Next**.
 
-  ![](images/400/9-4.PNG)
 
 - In the Create Application dialog enter:
 
@@ -52,7 +50,7 @@ In this lab you will use Oracle Visual Builder which is a cloud-based software d
   Product Catalog
   ```
 
-  ... and click **Finish**.
+- Ensure that the default template is **Empty Application**. Click **Finish**.
 
   ![](images/400/10.PNG)
 
@@ -74,7 +72,7 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
   ![](images/400/14.PNG)
 
-- Leave the Method to **GET**. From Lab 300 **Copy and Paste the URL** used to test the REST endpoint that retrieved all of the AlphaOffice Product Catalog records. (In this example:  `http://129.213.168.190/AlphaProductsRestService/webresources/restCall`) into the URL field. Leave the Action Hint at **Get Many**:
+- Leave the Method as **GET**. From Lab 300 **Copy and Paste the URL** used to test the REST endpoint that retrieved all of the AlphaOffice Product Catalog records. (In this example:  `http://129.213.168.190/AlphaProductsRestService/webresources/restCall`) into the URL field. Leave the Action Hint at **Get Many**:
 
   ![](images/400/15.PNG)
 
@@ -186,7 +184,7 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
   ![](images/400/30.PNG)
 
-- The final method you will create is a **DELETE** with the PATH having a **suffix** of **restCall{id}**. Set the Action Hint dropdown to **Delete**.
+- The final method you will create is a **DELETE** with the PATH having a **suffix** of **restCall/{id}**. Set the Action Hint dropdown to **Delete**.
 
   ![](images/400/31.PNG)
 
@@ -216,11 +214,9 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
   ![](images/400/35.PNG)
 
-- Click the **Authentication** tab and then select the **Define Authentication** checkbox and set it to **none**: 
+- Finally, set the authentication for the endpoints by clicking the **Authentication** tab. Select the **Enable authentication / proxy** checkbox and chose the **None (Use Proxy)** mechanism:
 
   ![](images/400/35-2.PNG)
-
-  ![](images/400/35-4.PNG)
 
 ## Create the Mobile Application
 
@@ -260,15 +256,15 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
   ![](images/400/43.PNG)
 
-- Time to set some Properties. You can select the specific component who wish to set property values for by ether select from the Page Structure OR the display canvas. In some cases it will be easier to use one or the other...
+- Time to set some Properties. You can select the specific component who wish to set property values for by ether selecting from the Page Structure OR the display canvas. In some cases it will be easier to use one or the other...
 
-- Name the **Mobile Page Template**
+- Select the **Mobile Page Template** from the Page Structure pane and name it:
   
   ```
   Catalog
   ```
 
-- ... by selecting it under the **General** properties area on the right.
+- ... which can be found under the **General** properties area on the right.
 
 - You'll notice the change does not take affect until you tab out of the Page Title field.
 
@@ -282,7 +278,7 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
   ![](images/400/44.PNG)
 
-- Download a static image from here: [AlphaOffice Image](https://github.com/derekoneil/monolithic-to-microservice/blob/master/lab-resources/vbcs/AlphaOfficeSupply.png). Click on this link and save the file locally.
+- Download a static image from here: [AlphaOffice Image](https://github.com/oracle/learning-library/blob/master/workshops/monolithic-to-microservice/lab-resources/vbcs/AlphaOfficeSupply.png). Click on this link and save the file locally.
 
 - Now, click on the **Image** component in the canvas and click the **Data** tab in the Properties section. 
 
@@ -300,7 +296,7 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
   ![](images/400/48.PNG)
 
-- From the Components section drag and drop a **List View** onto the canvas Flex Container below the Products item:
+- From the Components section drag and drop a **List View** into the canvas Flex Container below the Products item:
 
   ![](images/400/49.PNG)
 
@@ -464,7 +460,11 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
   ![](images/400/69.PNG)
 
-- Upload the image we used earlier; `AlphaOfficeSupply.png`. The screen should look like:
+- Upload the image we used earlier; `AlphaOfficeSupply.png`. You may have to click the pane refresh icon to update the canvas. 
+
+  ![](images/400/68-4.PNG)
+
+- Your screen should look like:
 
   ![](images/400/70.PNG)
 
@@ -492,7 +492,7 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
   ![](images/400/72.PNG)
 
-- When the `main-create-post-rest-call` page was created some supporting Actions and Events associated with that page were also created to handle navigation (For example, what to do when the Cancel and Save links are clicked). The Events are called Chains.
+- When the `main-create-post-rest-call` page was created some supporting Actions and Events associated with that page were also created to handle navigation (For example, what to do when the Cancel and Save links are clicked). Event execution is handled by `Chains`.
 
 - Click on the **Events** icon for the `main-create-post-rest-call` page (already being displayed), click the **createPostRestCallChain** item under the saveButtonClicked Event to show its Properties and finally select the **createPostRestCallChain** link on the far right hand side of the page (Properties section). 
 
@@ -627,7 +627,7 @@ In this step we will define the Types and Variables used within the page.
   InputVar1
   ```
 
-- ... using the *Number** type
+- ... using the **Number** type
 
   ![](images/400/95.PNG)
 
@@ -658,57 +658,75 @@ In this step we will define the Types and Variables used within the page.
 
   ![](images/400/85-7.PNG)
 
-- Now, build out the look and feel of items on this page. First, drag and drop an **Image** item from the Component pane just below the `Mobile Page Template item`.
+- Now, we will build out the look and feel of items on this page. First, in the Page Structure. Drag and drop an **Image** item from the Component pane just below the `Mobile Page Template item` in the Page Structure.
 
-- Drag and drop a **Form Layout** item **inside** the `Flex Container` in the canvas.
+  ![](images/400/85-16.PNG)
 
-- Drag and drop an **input Number** item **inside** the `Form Layout` item in the canvas.
+- Drag and drop a **Form Layout** item **inside** the `Flex Container` **on the canvas**.
 
-- Drag and drop an **input Text** item just below the `Form Layout` item in the Page Structure (This ensures the item is embedded within the Form Layout)
+  ![](images/400/85-15.PNG)
 
-- Drag and drop an **Image** item just below the input Text item you just created (This ensures the item is embedded within the Form Layout)
+- Drag and drop an **Input Number** item **inside** the `Form Layout` item **on the canvas**.
 
-- Drag and drop an **input Number** item just below the `Form Layout` item in the Page Structure (This ensures the item is embedded within the Form Layout)
+  ![](images/400/85-17.PNG)
 
-- Drag and drop a **Button** from the Component pane over to the `Left Side` item in the Page Structure. A small arrow will be pointing at the Left Side item:
+- In the Page Structure drag and drop an **Input Text** item below the Input Number item you just created in the `Form Layout` item. Ensure that the blue indentation arrow shows the item going into the `Form Layout` (This ensures the item is embedded within the Form Layout)
 
-  ![](images/400/84.PNG)
+  ![](images/400/85-14.PNG)
 
-- Drag and drop TWO **Button** Components over to the `Right Side` item in the Page Structure. A small arrow will be pointing at the Right Side item:
+- Drag and drop an **Image** item just below the Input Text item you just created in the `Form Layout` item (This ensures the item is embedded within the Form Layout)
 
-- So far you canvas looks like:
+- Drag and drop an **Input Number** item just below the Image item you just created in the `Form Layout` item (This ensures the item is embedded within the Form Layout)
 
-  ![](images/400/85.PNG)
+- So far your Page Structure should look like:
+
+  ![](images/400/85-8.PNG)
+
+- In the Page Structure select the **Mobile Page Template** item.
+
+- In the **Properties** pane under the **General** tab on the right side you'll see Left Side / Right Side controls. This is where we are going to define some buttons. Click the **Left Side plus sign** and select the **Button** type.
+
+  ![](images/400/85-9.PNG)
+
+  ![](images/400/85-10.PNG)
+
+- Create **two more buttons on the Right Side**. Your Page Structure should now look like:
+
+  ![](images/400/85-11.PNG)
+
+- In the Page Structure **delete the default Icon** for each button by selecting the Icon items and hitting the delete key. Now, your Page Structure looks like:
+
+  ![](images/400/85-12.PNG)
 
 ### **STEP 9**: Set Item Properties
 
-- Starting from top of the canvas items to bottom. Select the **Mobile Page Template** item in the Page Structure. Under the General Properties tab set the **Page Title** attribute to:
+- Select the **Mobile Page Template** item in the Page Structure. Under the General Properties tab set the **Page Title** attribute to:
 
   ```
   Edit
   ```
 
-- Select the **Left Side Button** item in the Page Structure and in the **General** Properties tab change the **Text** attribute name to:
+- In the Page Structure select the **top** Button item. In the Properties pane under the General tab change the Text to:
 
   ```
   Cancel
   ```
 
-- Select the top most **Right Side Button** item in the Page Structure and in the **General** Properties tab change the **Text** attribute name to:
+- In the Page Structure select the **middle** Button item. In the Properties pane under the General tab change the Text to:
 
   ```
   Delete
   ```
 
-- Select the bottom **Right Side Button** item in the Page Structure and in the **General** Properties tab change the **Text** attribute name to:
+- In the Page Structure select the **bottom** Button item. In the Properties pane under the General tab change the Text to:
 
   ```
   Update
   ```
 
-- Canvas so far looks like:
+- Your Page Structure and Canvas should look something like:
 
-  ![](images/400/86.PNG)
+  ![](images/400/85-13.PNG)
 
 - With the **Image** item selected click the **Data** tab in the Properties pane and then click the **Drop and image here...** section.
 
@@ -738,7 +756,7 @@ In this step we will define the Types and Variables used within the page.
 
   ![](images/400/104-5.PNG)
 
-- Next, select the Input Text item on the canvas. Under the **General** tab in the Properties pane set the **Label Hint** to:
+- Next, below the Product ID item select the Input Text item on the canvas. Under the **General** tab in the Properties pane set the **Label Hint** to:
 
   ```
   Product Name
@@ -786,7 +804,7 @@ In this step we will define the Types and Variables used within the page.
 
 ### **STEP 10**: Define the Actions and Events on this page
 
-In this step we will finish up the `main-edit` page by defining 4 Events and subsequent Actions. The first event will define what happens when the page is called from the `main-start` page. The other Events will deal with the Cancel, Delete and Update buttons.
+In this step we will finish up the `main-edit` page by defining four Events and subsequent Actions. The first event will define what happens when the page is called from the `main-start` page. The other Events will deal with the Cancel, Delete and Update buttons.
 
 - From the `main-edit` page click the **Actions icon** followed by clicking the **+ Action Chain** button.
 
@@ -817,7 +835,7 @@ In this step we will finish up the `main-edit` page by defining 4 Events and sub
 
   ![](images/400/111.PNG)
 
-- In the Properties pane set the **Response Type** attribute to the **getRestCallIdType** we created earlier in this lab. This ensures the returned JSON payload is parsed into the types' objects. Then click **Assign** in the **Input Parameters**. 
+- In the Properties pane set the **Response Type** attribute to the **getRestCallIdType** we created earlier in this lab. This ensures the returned JSON payload is parsed into the proper type object. Then click **Assign** in the **Input Parameters**. 
 
   ![](images/400/112.PNG)
 
@@ -892,7 +910,7 @@ In this step we will finish up the `main-edit` page by defining 4 Events and sub
 
   ![](images/400/122-4.PNG)
 
-- In the Properties pane rename the new Action Chain:
+- In the Properties pane ID field **rename** the new Action Chain to:
 
   ```
    UpdateActionChain
@@ -908,7 +926,7 @@ In this step we will finish up the `main-edit` page by defining 4 Events and sub
 
   ![](images/400/123.PNG)
 
-- In the Properties pane set the **Response Body Format** to  **text**. Then, click the Parameters **Assign** link.
+- In the Properties pane set the **Response Body Format** to  **text**. Then, click the **Parameters Assign** link.
 
   ![](images/400/124.PNG)
 
@@ -935,7 +953,7 @@ In this step we will finish up the `main-edit` page by defining 4 Events and sub
   ![](images/400/127.PNG)
 
 - For the Notification Properties set the following:
-    - Summary:  **Update Product:**
+    - Summary:  **Updated Product:**
     - Message:  (Choose the **ProdNameVar** field) using the Down arrow
     - Display Mode:  **transient**
     - Notification Type:  **confirmation**
@@ -958,7 +976,7 @@ In this step we will finish up the `main-edit` page by defining 4 Events and sub
 
   ![](images/400/122-4.PNG)
 
-- In the Properties pane rename the new Action Chain:
+- In the Properties pane ID field **rename** the new Action Chain:
 
   ```
    DeleteActionChain
@@ -974,9 +992,9 @@ In this step we will finish up the `main-edit` page by defining 4 Events and sub
 
   ![](images/400/132.PNG)
 
-- In the Properties pane set the **Response Body Format** to  **text**. Then, click the Parameters **Assign** link.
+- In the Properties pane set the **Response Body Format** to  **text**. Then, click the **Input Parameters Assign** link.
 
-  ![](images/400/124.PNG)
+  ![](images/400/124-2.PNG)
 
 - Map the Sources **Page-->IDVar** field to the Target Parameter: **id**.
 
@@ -1012,7 +1030,7 @@ In this step we will finish up the `main-edit` page by defining 4 Events and sub
 
   ![](images/400/122-4.PNG)
 
-- In the Properties pane rename the new Action Chain:
+- In the Properties pane ID field rename the new Action Chain:
 
   ```
    CancelActionChain
@@ -1053,9 +1071,9 @@ This step will complete the design of the application. We will add a Selection E
 
 - Click **Select**.
 
-- It is known that `main-edit` requires an input variable so we must map the selection (PRODUCT_ID (which is the table's primary key)) to the input variable.
+- It is known that `main-edit` requires an input variable so we must map the selection (PRODUCT_ID (which is the database table's primary key)) to the input variable.
 
-- In the Properties pane check the Browser History **push** radio button and then click the **Assign** link for the Input Parameters.
+- In the Properties pane check the Browser History **push** radio button and then click the **Assign** link for the **Input Parameters**.
 
   ![](images/400/142.PNG)
 
@@ -1067,9 +1085,11 @@ This step will complete the design of the application. We will add a Selection E
 
 - One last thing we need to do is removed the "hard-wired" value (1037) we put into the CallRestGetChain Action flow within the `main-edit` page and map the incoming value from the `main-start` page to the REST call PRODUCT_ID.
 
-- Go to the `main-edit` tab (page) and click on **Actions**. Then, click on the the **CallRestActionChain**. 
+- Go to the `main-edit` tab (page) and click on **Actions**. Then, click on the the **CallRestGetChain**. 
 
-- In the chain click on the **Call REST Endpoint** Action and then click on the **Assign** link in the Properties pane.
+  ![](images/400/143-2.PNG)
+
+- In the chain click on the **Call REST Endpoint** Action and then click on the **Input Parameters Assign** link in the Properties pane.
  
   ![](images/400/144.PNG)
 

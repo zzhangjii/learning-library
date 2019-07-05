@@ -175,6 +175,8 @@ Before we create the Compute instance that will contain Docker and application d
 
 - Select the shape **VM.Standard.E2.2** and click **Select Shape**.
 
+  **NOTE: If the VM.Standard.E2.2 shape is not availible then select VM.Standard2.2**
+
   ![](images/200/27.1.2.PNG)
 
 - After entering the _Docker_ instance details your screen should look like:
@@ -356,7 +358,7 @@ In this section you will clone a github repository that contains a Java REST App
   scp -i ./dockerkey /home/opc/Downloads/Wallet_orcl.zip opc@<YOUR-PUBLIC-IP>:/home/opc/monolithic-to-microservice/workshops/monolithic-to-microservice/lab-resources/docker
   ```
 
-  Example: (**Wallet_mattoATP.zip being shown here. The default wallet name is typically Wallet_orcl.zip**):
+  Example: (**The default wallet name is Wallet_orcl.zip**)
 
   ![](images/200/46-1.1.PNG)
 

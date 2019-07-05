@@ -41,7 +41,7 @@ application provided with autonomous database.
 -   Please ensure you have provisioned an Oracle **Autonomous Data Warehouse**
     or an **Autonomous Transaction Processing** database.
 
-## Module 1: Sign-In to Autonomous Database Service Console
+## Module 1:  Sign-In to Autonomous Database Service Console
 
 
 1. Sign in to **Oracle Cloud Infrastructure Home Page** using the credentials
@@ -80,7 +80,9 @@ application provided with autonomous database.
 ![](media/9eb48ed2bfdf0548c12694fe771d7ed8.png)
 <p align="center">Figure 1-5</p>
 
-## Module 2: Creating OML Users
+[Back to Top](#table-of-contents)
+
+## Module 2:  Creating OML Users
 
 1. From the **Autonomous Data Warehouse Service Console**, click on
     **Administration** link in the left menu.
@@ -152,7 +154,9 @@ application provided with autonomous database.
 
 -   You will use these two users later in this lab.
 
-## Module 3: Sign-In and Explore the OML Home Page
+[Back to Top](#table-of-contents)
+
+## Module 3:  Sign-In and Explore the OML Home Page
 
 1. Sign-in to OML using the link from the welcome email, or by clicking
     the **Home** button on the top right of Oracle Machine Learning** User Administration**.
@@ -207,7 +211,9 @@ application provided with autonomous database.
 >   **Note:** All your work is automatically saved – i.e. there is no **Save**
 >   button when you are writing scripts and/or queries.
 
-## Module 4: Running a SQL Statement
+[Back to Top](#table-of-contents)
+
+## Module 4:  Running a SQL Statement
 
 1. From the home page click on **Run SQL Statement** in the **Quick Actions**
     panel to open a new SQL query scratchpad.
@@ -346,7 +352,9 @@ application provided with autonomous database.
     ![](media/fbb629bfdee6f0379c582f19e70a49ca.png)
                <p align="center">Figure 4-8</p>
 
-## Module 5: Saving the SQL as a New Notebook
+ [Back to Top](#table-of-contents)
+
+## Module 5:  Saving the SQL as a New Notebook
 
 -   The SQL Scratchpad in the previous section is simply a default type notebook
     with a system generated name. But we can change the name of the scratchpad
@@ -401,7 +409,9 @@ application provided with autonomous database.
     ![](media/d53a157f67b2c99fd2eb0bf0cfa672e1.png)
                    <p align="center">Figure 5-8</p>
 
-## Module 6: Sharing Notebooks
+[Back to Top](#table-of-contents)
+
+## Module 6:  Sharing Notebooks
 
 -   By default, when you create a notebook it’s only visible to you. To make it
     available to other users you need to share the workspace containing the
@@ -489,7 +499,9 @@ application provided with autonomous database.
     ![](media/c601b9c178927454f7ea5897cfaef1aa.png)
                        <p align="center">Figure 6-10</p>
 
-## Module 7: Creating and Running SQL scripts
+[Back to Top](#table-of-contents)
+
+## Module 7:  Creating and Running SQL scripts
 
 1. Log out from user OMLUSER2 and log in as OMLUSER1.
 
