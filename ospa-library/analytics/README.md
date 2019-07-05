@@ -1,3 +1,3 @@
 ## Oracle Analytics Data Visualization folder
 
-### [Lab Guide](analytics-labguide.md)
+### [Lab Guide](analytics_labguide.md)
