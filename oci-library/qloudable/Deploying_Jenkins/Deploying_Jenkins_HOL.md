@@ -10,7 +10,7 @@
 
 [Create Compute instance, configure OCI CLI and upload API keys](#create-compute-instance,-configure-oci-cli-and-upload-api-keys)
 
-[Install Jenkins, Configure Jenkins Master instance and create Jenkins Slave instancee](#install-jenkins,-configure-jenkins-master-instance-and-create-jenkins-slave-instance)
+[Install Jenkins, Configure Jenkins Master instance and create Jenkins Slave instance](#install-jenkins,-configure-jenkins-master-instance-and-create-jenkins-slave-instance)
 
 [Delete the resources](#delete-the-resources)
 
