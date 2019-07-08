@@ -1,6 +1,6 @@
 Lab Guide
 
-Oracle Analytics Data Visualization
+Oracle Analytics Data Visualization - COSE
 
 JULY 2019
 
@@ -33,7 +33,7 @@ Table of Contents
 [Lab 12: Narration and Storytelling for Collaboration](#Lab-12--narration-and-storytelling-for-collaboration)
 
 
-# Lab Overview
+# Analytics Lab Overview
 
 This course is for users of Oracle Analytics Cloud and Oracle DesktopData Visualization. It requires little or no prior experience with ana nalytics tool.
 

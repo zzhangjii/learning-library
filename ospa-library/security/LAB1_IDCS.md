@@ -349,7 +349,7 @@ https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_
 
  USER_PW: **Your Oracle Cloud Password**
 
-**NOTE: CLIENT_ID and CLIENTE_SECRET information is available in the participant guide**
+**NOTE: CLIENT_ID and CLIENT_SECRET information is available in the participant guide**
 
 ![](./media/idcs42.png)
 <p align="center"> Figure 1-31 </p>
