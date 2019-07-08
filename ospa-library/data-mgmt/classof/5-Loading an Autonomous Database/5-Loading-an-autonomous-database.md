@@ -204,8 +204,16 @@ load data stored in the Oracle Storage Cloud. In this part of the lab we will
 load data that is in a comma delimited text file called channels.csv into a new
 table called channels in your database.
 
-1. In the lab directory on git ([click here to go to directory](https://github.com/oracle/learning-library/blob/master/ospa-library/data-mgmt/classof/5-Loading%20an%20Autonomous%20Database/)) you should find the file called **channels.csv** Right
-click on the file and save it on your machine. Please note the local directory you save it in as you will need it in the next step.
+1. Download the file called **channels.csv** ([from here](https://oradocs-corp.documents.us2.oraclecloud.com/documents/link/LD67BF60471BB8666A167A50F6C3FF17C1177A968060/fileview/D58165A8FC2BAB77F65D05CEF6C3FF17C1177A968060/_channels.csv)) Please note the local directory you save it in as you will need it in the next step. See screenshots on how to download and save the file.
+
+![](media/9662ed28b09dcc9f3f65db8f4a182790.png)
+<p align="center">Figure 2-01</p>
+
+![](media/015a3a6f9c75a5d3c831eec259a9b942.png)
+<p align="center">Figure 2-02</p>
+
+![](media/0081628765c552bf7b0a1fea660d884c.png)
+<p align="center">Figure 2-03</p>
 
 2. In SQL Developer, under your connection right click on **Tables**. This will open up
 a selection menu, then select the **Import Data** option

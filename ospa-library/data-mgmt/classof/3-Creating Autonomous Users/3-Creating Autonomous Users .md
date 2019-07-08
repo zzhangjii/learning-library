@@ -147,11 +147,19 @@ The labs will require each member of the group to create and query tables in the
 ![](media/3a8a6539c8e04037636b43ed466d8ba0.png)
 <p align="center">Figure 3-3</p>
 
-4. For each member  in your group, copy  the SQL below, paste it in the Query Builder window and run it. Replicate the same code for each member, changing the information (the username and the password) for each member. The easiest way to do it is to create all users at once, but you can run the same code as many times as members in your group, changing the information each time.
+4. now create 5 student accounts, one for each member  in your group, copy  the SQL below, paste it in the Query Builder window and run it. If your group has less than 5 members don't worry. If your team has more than 5 members run the create student and grant role statements for each additional member. Each member of your group will have their own database account so distribute the accounts to each student. Member one wil be student1, member2 will be student2 and so on. To make it easier all student accounts have the same password "2019Students".
 
 ```
-create user  “studentname” identified by  "studentpassword" ;
-grant dwrole to “studentname”;
+create user student1 identified by "2019Students";
+grant dwrole to student1;
+create user student2 identified by "2019Students";
+grant dwrole to student2;
+create user student3 identified by "2019Students";
+grant dwrole to student3;
+create user student4 identified by "2019Students";
+grant dwrole to student4;
+create user student5 identified by "2019Students";
+grant dwrole to student5;
 ```
 
 In the picture below is an example of creating four accounts at once. I pasted and replicated the code for each user and then selected the run Run Script button.
