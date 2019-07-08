@@ -110,7 +110,7 @@ within your tenancy. Tags are composed of keys and values that can be attached
 to resources.
 
 3. After filling fields, click **Create Autonomous Database** which will open up
-the screen to complete you database information:
+the screen to complete you database information (PLEASE NOTE: YOU WILL HAVE THE OPTION TO CREATE A DATA WAREHOUSE OR TRANSACTION PROCESSING DATABASE IN THE WORKLOAD TYPE SECTION. IF YOU SELECT TRANSACTION PROCESSING YOU WILL SEE AN ADDITIONAL SELECTION FOR SERVERLESS OR DEDICATED. DO NOT CHANGE THE DEFAULT CHOICE WHICH IS SERVERLESS):
 
 ![](media/figure2-2.png)
 <p align="center">Figure 2-2</p>
