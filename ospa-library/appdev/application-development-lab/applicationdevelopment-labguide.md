@@ -122,6 +122,10 @@ the user interface.
 In this lab you will make sure you can access the VBCS instance for your
 classroom and supporting lab files.
 
+First, if you are part of an organized class, try using the URL from the Participant Guide (facilitator will also post on Slack); if that succeeds please jump to [Create Applicion](#create-application) (just before #6)
+
+### ***SKIP TO [Create Applicion](#create-application) UNLESS DOING THIS LAB OUTSIDE OF A FORMAL CLASS*** 
+
 1.  Log into class tenancy using cloud.oracle.com
 
 
@@ -222,6 +226,8 @@ Dashboard”)
     ![](./media/image18.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.6 – VBCS Splash<br/>
+
+## Create Application
 
 7.  When the “Visual Applications” welcome appears; choose the “New Application” button.
 
@@ -516,7 +522,7 @@ The completed field list should look like this:
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(click the "Checkmark" ![](./media/vbcs_checkmark.png) when done)
 
-![](./media/image49.png)
+![](./media/vbcs_add_row_2.13.1.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.13.1 – Add Mozzarella
 
@@ -614,7 +620,7 @@ Click the “Import” button to upload the selected file
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.21 – Add Product Order Line
 
-22. Now, using the technique illustrated in 16-18 above add data to the
+22. Now, using the technique illustrated in 16-18 above add (append to existing) data into the
     Product Order and Product Order Line business objects (note: file
     names same as business object names) using the provided data files
 
