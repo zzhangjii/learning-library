@@ -620,7 +620,7 @@ Click the “Import” button to upload the selected file
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.21 – Add Product Order Line
 
-22. Now, using the technique illustrated in 16-18 above add (append to existing) data into the
+22. Now, using the technique illustrated in 16-18 above add data (append to existing) into the
     Product Order and Product Order Line business objects (note: file
     names same as business object names) using the provided data files
 
