@@ -122,9 +122,9 @@ the user interface.
 In this lab you will make sure you can access the VBCS instance for your
 classroom and supporting lab files.
 
-First, if you are part of an organized class, try using the URL from the Participant Guide (facilitator will also post on Slack); if that succeeds please jump to [Create Applicion](#create-application) (just before #6)
+First, if you are part of an organized class, try using the URL from the Participant Guide (facilitator will also post on Slack); if that succeeds please jump to [Create Application](#create-application) (just before #6)
 
-### ***SKIP TO [Create Applicion](#create-application) UNLESS DOING THIS LAB OUTSIDE OF A FORMAL CLASS*** 
+### ***SKIP TO [Create Application](#create-application) UNLESS DOING THIS LAB OUTSIDE OF A FORMAL CLASS*** 
 
 1.  Log into class tenancy using cloud.oracle.com
 
