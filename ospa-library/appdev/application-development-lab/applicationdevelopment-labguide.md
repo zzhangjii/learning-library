@@ -1258,9 +1258,15 @@ __*** find Product Name by drilling down ***__<br/>
     Unit Price (Input Number), and
     Quantity (Input Number).
 
-> ![](./media/image141.png)
+ ![](./media/endpoint1.png)
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.32.1 – Endpoint Drilldown 1  
+
+ ![](./media/endpoint3.png) 
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.32.2 – Endpoint Drilldown 2  
+
+ ![](./media/endpoint4.png)
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.32 – Items table contents  
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.32.3 – Items table contents  
 >   
 > Use “Define Query” to connect the Product List to the list of Items as
 > follows:
@@ -2006,11 +2012,11 @@ In this lab you will create:
   - An “Associate” Business Object containing fields and data for Mama
     Maggy associates
 
-  - Two .csv files are provided to provide data for Store and
-    Associate  
-    (be sure to create “Store” before “Associate” (Associate references
-    Store), and  
-    load data into “Store” first before loading data into “Associate”)
+  - You will need two data files stored in a single .zip file named [setupfiles.zip](https://github.com/oracle/learning-library/blob/master/ospa-library/appdev/application-development-lab/files/setupfiles.zip) on GitHub; download the file and expand it to find the following two files (keep them handy they will be used later to load data):
+      - Store.csv
+      - Associate.csv
+      
+        (be sure to create “Store” before “Associate” (Associate references Store), and load data into “Store” first before loading data into “Associate”)
 
 <!-- end list -->
 
