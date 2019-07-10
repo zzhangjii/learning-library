@@ -1258,13 +1258,13 @@ __*** find Product Name by drilling down ***__<br/>
     Unit Price (Input Number), and
     Quantity (Input Number).
 
- ![](./media/endpoint1.png)
+![](./media/endpoint1.png)
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.32.1 – Endpoint Drilldown 1  
 
- ![](./media/endpoint3.png) 
+![](./media/endpoint3.png) 
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.32.2 – Endpoint Drilldown 2  
 
- ![](./media/endpoint4.png)
+![](./media/endpoint4.png)
 > 
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.32.3 – Items table contents  
 >   
