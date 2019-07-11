@@ -144,7 +144,7 @@ You’ll now add SalesForce as a sanctioned application for monitoring in Oracle
 
 * The following Screen will appear. Fill in the required fields. User License must be set to Salesforce.
 
-*Note: You must use another email address for this new account. (e.g. oracle.com)*
+*Note: You must use another email address for this new account. (e.g. oracle.com).*
     
   * Profile name will be the name of the profile we previously created (e.g. CASBUSER)
   * Save
