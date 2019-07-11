@@ -145,7 +145,7 @@ During the following exercises we will cover the following Personas:
  ![](./media/idcs11.jpeg)
  <p align="center"> Figure 1-7 </p>
 
-# IDCS Quick Tour
+# **DEMO** - IDCS Quick Tour
 
  Return to the IDCS dashboard and click on the navigator menu
  (hamburger menu).
@@ -340,7 +340,6 @@ https://github.com/oracle/idm-samples/raw/master/idcs-rest-clients/REST_API_for_
  e.g. https://idcs-8ba16123120745658135edd99d8a5c78.identity.oraclecloud.com 
 
  
-
  CLIENT_ID: **the Postman IDCS Client application CLIENT_ID** 
 
  CLIENT_SECRET: **the Postman IDCS Client application CLIENT_SECRET** 
@@ -597,6 +596,56 @@ Moving back to Salesforce in order to create a corresponding account for one tha
 
 Now that the account is available in Salesforce and IDCS has the authenticated account you are ready to test.
 
+### **DEMO** - Request Group Access (Persona: End User)
+
+Remember that we have created the **CoSE_Employee** group into IDCS which is having access to Salesforce application but there is no user assigned yet to it. Since we chose the option **“User can request access”** at the creation of the group, now we should be able to request access to it and implicitly to the salesforce application.
+
+*  Close your browser to clear the cache and then login into IDCS https://**yourtenant**/ui/v1/myconsole
+
+*  From **My Apps** page, click on **+ Add** access request button.
+
+![](./media/idcs67.jpeg)
+<p align="center"> Figure 2-26 </p>
+
+*  From the **Groups** tab, select **CoSE_Employee** group and select the **+** sign.
+
+*  Click on + sign to request access to the group. Provide justification on the resulting popup page. Click on **OK**. This is an auto approved request and access should be granted immediately without the need of and administrator intervention.
+
+ ![](./media/idcs69.jpeg)
+ <p align="center"> Figure 2-27 </p>
+
+*  Go to **My Profile** section from menu located top-right
+
+![](./media/idcs70.png)
+<p align="center"> Figure 2-28 </p>
+
+*  Ensure that **CoSE_Employee** group is visible under **My Access** sub-tab
+
+ ![](./media/idcs71.png)
+ <p align="center"> Figure 2-29 </p>
+
+*  Ensure that Salesforce applications are visible now on the **MyApps** page
+
+![](./media/idcs72.png)
+<p align="center"> Figure 2-30 </p>
+
+### **DEMO** - Verify SSO Configuration (Persona: End User)
+
+*  Click on the **Salesforce Chatter** app from **My Apps** page
+
+*  Ensure that user is automatically logged into Salesforce Chatter (**SSO**)
+
+![](./media/idcs73.jpeg)
+<p align="center"> Figure 2-31 </p>
+
+You should now see the same user profile information, that you started within IDCS, within Salesforce without having had to log into Salesforce.
+
+
+## Configuring Provisioning and Synchronization – OPTIONAL
+
+The following exercise has been developed to showcase the extend of IDCS Single Sign-On capabilities by integrating the provisioning and synchronization services with third-party apps.
+
+
 ### **DEMO** - Configure Provisioning and Synchronization (Persona: Administrator) - OPTIONAL
 
 *  Obtaining Host Name, Organization ID, and Domain Name from Salesforce
@@ -740,54 +789,6 @@ The domain name appears at the beginning and the organization ID appears at the 
 ![](./media/idcs86.png)
 <p align="center"> Figure 2-43 </p>
 
-
-### **EXERCISE** - Request Group Access (Persona: End User) - Who Should Complete This Lab:  1 Participant for group
-
-Remember that we have created the **CoSE_Employee** group into IDCS which is having access to Salesforce application but there is no user assigned yet to it. Since we chose the option **“User can request access”** at the creation of the group, now we should be able to request access to it and implicitly to the salesforce application.
-
-*  Close your browser to clear the cache and then login into IDCS https://**yourtenant**/ui/v1/myconsole
-
-*  From **My Apps** page, click on **+ Add** access request button.
-
-![](./media/idcs67.jpeg)
-<p align="center"> Figure 2-26 </p>
-
-*  From the **Groups** tab, select **CoSE_Employee** group and select the **+** sign.
-
-*  Click on + sign to request access to the group. Provide justification on the resulting popup page. Click on **OK**. This is an auto approved request and access should be granted immediately without the need of and administrator intervention.
-
- ![](./media/idcs69.jpeg)
- <p align="center"> Figure 2-27 </p>
-
-*  Go to **My Profile** section from menu located top-right
-
-![](./media/idcs70.png)
-<p align="center"> Figure 2-28 </p>
-
-*  Ensure that **CoSE_Employee** group is visible under **My Access** sub-tab
-
- ![](./media/idcs71.png)
- <p align="center"> Figure 2-29 </p>
-
-*  Ensure that Salesforce applications are visible now on the **MyApps** page
-
-![](./media/idcs72.png)
-<p align="center"> Figure 2-30 </p>
-
-### **EXERCISE** - Verify SSO Configuration (Persona: End User) - Who Should Complete This Lab:  1 Participant for group
-
-*  Click on the **Salesforce Chatter** app from **My Apps** page
-
-*  Ensure that user is automatically logged into Salesforce Chatter (**SSO**)
-
-![](./media/idcs73.jpeg)
-<p align="center"> Figure 2-31 </p>
-
-You should now see the same user profile information, that you started within IDCS, within Salesforce without having had to log into Salesforce.
-
-## Configuring Provisioning and Synchronization – OPTIONAL
-
-The following exercise has been developed to showcase the extend of IDCS Single Sign-On capabilities by integrating the provisioning and synchronization services with third-party apps.
 
 
 ****
