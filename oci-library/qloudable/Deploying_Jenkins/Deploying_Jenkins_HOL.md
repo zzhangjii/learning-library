@@ -10,7 +10,7 @@
 
 [Create Compute instance, configure OCI CLI and upload API keys](#create-compute-instance,-configure-oci-cli-and-upload-api-keys)
 
-[Install Jenkins, Configure Jenkins Master instance and create Jenkins Slave instancee](#install-jenkins-configure-jenkins-master-instance-and-create-jenkins-slave-instance)
+[Install Jenkins, Configure Jenkins Master instance and create Jenkins Slave instance](#install-jenkins,-configure-jenkins-master-instance-and-create-jenkins-slave-instance)
 
 [Delete the resources](#delete-the-resources)
 
@@ -197,7 +197,7 @@ oci -v
 oci setup config
 ```
 
-17. Accept the default location. For user OCI switch to OCI Console window. Click Human Icon and then your user name. In the user details page Click **copy** to copy the OCID. **Also note down your region name as shown in OCI Console window**. Paste the OCID in ssh session.
+17. Accept the default location. For user OCID switch to OCI Console window. Click Human Icon and then your user name. In the user details page Click **copy** to copy the OCID. **Also note down your region name as shown in OCI Console window**. Paste the OCID in ssh session.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_004.PNG" alt="image-alt-text">
 
@@ -213,7 +213,7 @@ oci setup config
 cat ~/.oci/oci_api_key_public.pem
 ```
 
-21. Hightligh and copy the content from ssh session. Switch to OCI Console, Click Human icon followe by your user name. In user details page Click **Add Public Key**. In the dialg box paste the public key content and Click **Add**.
+21. Hightlight and copy the content from ssh session. Switch to OCI Console, Click Human icon followe by your user name. In user details page Click **Add Public Key**. In the dialg box paste the public key content and Click **Add**.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_006.PNG" alt="image-alt-text">
 
@@ -421,7 +421,7 @@ from computeinstance earlier (32 character password)
 
 2. If your Compute instance is not displayed, From OCI services menu Click Instances under Compute
 
-3. Locate first compute instance, Click Action icon and then **Terminat** 
+3. Locate first compute instance, Click Action icon and then **Terminate** 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text">
 
