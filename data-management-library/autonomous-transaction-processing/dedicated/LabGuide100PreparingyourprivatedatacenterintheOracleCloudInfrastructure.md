@@ -3,7 +3,7 @@
 June 13, 2019
 </td>
 <td class="td-banner">
-# Lab 1: Preparing your private data center in the Oracle Cloud Infrastructure 
+# Lab 1: Preparing your private network in the Oracle Cloud Infrastructure 
 </td></tr><table>
 
 To **log issues**, click [here](https://github.com/oracle/learning-library/issues/new) to go to the github oracle repository issue submission form.
@@ -71,6 +71,7 @@ The following policy statement on the fleetCompartment ensure group fleetAdmins 
 
 - Allow group fleetAdmins to USE virtual-network-family in compartment fleetCompartment
 
+- Allow group fleetAdmins to INSPECT tag-namespaces in compartment fleetCompartment
 - Allow group dbUsers to READ autonomous-container-databases in compartment fleetCompartment
 
 
