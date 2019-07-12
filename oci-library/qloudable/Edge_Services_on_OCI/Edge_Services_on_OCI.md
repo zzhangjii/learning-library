@@ -1,4 +1,4 @@
-# Edge Services on OCI
+# Edge Services on OCI (DNS)
 
 ## Table of Contents
 
@@ -10,10 +10,9 @@
 
 [Create Public Private SSH Key Pair, two compute instances and install web server](#create-public-private-ssh-key-pair,-two-compute-instances-and-install-web-server)
 
-[Create a Traffic Management Policy](#create-a-traffic-management-policy)
+[Create Traffic Management Policy](#create-traffic-management-policy)
 
 [Failover Test for Traffic Management Policy](#failover-test-for-traffic-management-policy) 
-
 
 [Delete the resources](#delete-the-resources)
 
@@ -115,8 +114,6 @@ In this lab, we will learn how to use OCI DNS Traffic Management service to ensu
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_002.PNG" alt="image-alt-text">
 
 7. Click **Add Ingress Rule** at the bottom
-              
-## Creat ssh keys, compute instance and Block Volume. Attach block volume to compute instance
 
 ## Create Public Private SSH Key Pair, two compute instances and install web server
 
@@ -221,9 +218,9 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 
 **HINT:** Ensure to use the IP address of the second Compute instance in the SSH command.
 
-17. Bring up  SSH session for the first Compute instance and install a Web server, Enter Commands: 
+17. Bring up  SSH session for the first Compute instance and install a Web server, Enter Commands: (Install Apache HTTP Server)
 ```
-sudo yum -y install httpd (Install Apache HTTP Server)
+sudo yum -y install httpd 
 ```
 ```
 sudo firewall-cmd --permanent  --add-port=80/tcp 
@@ -290,7 +287,7 @@ We now have two Compute instances with Web servers installed and a basis index.h
 
 **Note down the Public IP addresses of both compute**
 
-## Create a Traffic Management Policy
+## Create Traffic Management Policy
 
 We will now  create a global Failover traffic management policy for this web application, where we will use one of the two computes as primary and the second one as secondary
 
@@ -354,7 +351,7 @@ Click **Add new**
 ***As part of this lab a Domain has already been created, all users need to do is create a sub domain. This sub domain must be the user name of the user***
 
 - **SUBDOMAIN** : Use your user name
-- **COMPARTMENT** : Choose the **root** compartment
+- **COMPARTMENT** : ocispl24(root)
 - **ZONE** : Use the drop down and choose **Ocispl24.com**
 
 3. Click **Create Policy**
@@ -380,6 +377,7 @@ Click **Add new**
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Edge_Services_on_OCI/img/DNS_009.PNG" alt="image-alt-text">
 
 ## Failover Test for Traffic Management Policy
+
 We will now do a failover test of the policy just created. We will STOP Webserver1 and test if the healt check is updated, and the traffic is diverted to webserver2.
 
 1. Switch to OCI Console window and navigate to **Compute** under **Instances**
