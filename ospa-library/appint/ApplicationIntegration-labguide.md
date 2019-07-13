@@ -1,6 +1,6 @@
 # Application Integration Lab Guide
 
-## July 2, 2019 - 12:10 PM
+## July 13, 2019 - 4:35PM
 
 # Table of Contents
 
@@ -174,7 +174,13 @@ Before starting these labs, you will need:
 
   - *atpc\_user* Autonomous Database User Password 
 
-If you are using this lab guide as part of an Oracle class (like *Class Of SE*), the Oracle Integration and Autonomous Database instances are already set up for you and the environment information is provided for you in the *Lab Environment Details* section the *Participant Guide* for your class.  If you are using this lab guide outside of an Oracle class, refer to the *Appendix* section to establish your own instances and collect the above information as you perform the setup steps.  
+  - Oracle SQL Developer Proxy Host (for Oracle classrooms only)
+
+  - Oracle SQL Developer Proxy Port (for Oracle classrooms only)
+
+If you are using this lab guide as part of an Oracle class (like *Class Of SE*), the Oracle Integration and Autonomous Database instances are already set up for you and the environment information is provided for you in the *Lab Environment Details* section the *Participant Guide* for your class.  
+
+If you are using this lab guide outside of an Oracle class, refer to the *Appendix* section to establish your own instances and collect the above information as you perform the setup steps there.  
 
   In addition, you should make sure that you have Google Chrome and Oracle SQL Developer installed on your computer.  They may already be there so there is no need to reinstall them.  If you need them,  here is where you can find the software: 
 
@@ -202,7 +208,7 @@ You have some setup work to perform before starting the two hands-on
 labs in this course. By performing the following steps, you will
 complete all the setup work in advance so you won’t be bothered with it
 during the labs. NOTE: These steps assume that you have already
-satisfied all the prerequisites listed in the Prerequisites section
+satisfied all the prerequisites listed in the *Prerequisites* section
 above. If you haven’t, review the Prerequisites now and catch up. If you
 have done the prerequisites, continue below:
 
@@ -267,7 +273,7 @@ have done the prerequisites, continue below:
         
           - Click the *Clear data* button.
 
-    *Pro Tip:* As an alternative to having to clear browser data periodically (as indicated) in these labs, you can also open your Chrome window in Incognito Mode by using the *File* / *New Incognito Window* / menu options.
+    *Tip:* As an alternative to having to clear browser data periodically (as indicated above), you can also open your Chrome window in *Incognito Mode* by using the *File* / *New Incognito Window* / menu option.
 
 ## Check Autonomous Database Status
 
@@ -276,7 +282,7 @@ have done the prerequisites, continue below:
     - Sign in to the Oracle Public Cloud:
       - Browse to
     https://cloud.oracle.com/en_US/sign-in and entering your tenancy name for *Account*
-    and then clicking Next.  Check the *Prerequisites* section above for tenancy name.
+    and then clicking Next.  Check the *Prerequisites* section above for the tenancy name.
 
       - When prompted for *User Name* and *Password*, enter your Oracle Cloud
     Account Sign In credentials (user name and password).  NOTE: If you are an
@@ -293,7 +299,7 @@ have done the prerequisites, continue below:
 
       ![](./media/image128.png)
 
-        Figure 2: My Oracle Services Page
+        Figure 3: My Oracle Services Page
 
     - Scroll down to find the *Autonomous Transaction Processing* option.  
 
@@ -303,30 +309,28 @@ have done the prerequisites, continue below:
       - Click the *hamburger menu* in the upper-left corner to display a menu.
       - From the *Database* section of the menu, click the *Autonomous Transaction Processing* option.  The *Autonomous Databases* page displays.
 
-    - In the *Compartment* field at the left, select your Autonomous
-    Database Compartment from the dropdown list. You noted that name in
-    the Prerequisites section above.  The table of instances redisplays.
+    - In the *Compartment* field at the left, select your *Autonomous
+    Database Compartment* from the dropdown list. You noted that name in
+    the *Prerequisites* section above.  The table of instances redisplays.
 
     - Click on your *Autonomous Database Name* that appears in the table.
-  You noted that name in the *Prerequisites* section above.
+  You noted that name in the *Prerequisites* section above.  **NOTE:** Your database name may be different than that displayed in the figure below:
 
         ![](./media/image6.png)
 
-        Figure 2: Selecting Your Database
+        Figure 4: Selecting Your Database
 
-    - The *Autonomous Database Details* page appears:
+    - The *Autonomous Database Details* page appears. **NOTE:** Again, your database name may be different than that displayed in the figure below:
 
        ![](./media/image124.png)
 
         Figure 3: Autonomous Database Details Page
     
-    - If you don’t see the “*Available*” icon shown below, click the *Start* button at the top to start the
-    instance.  When the *Confirm* dialog appears, click the *Start*.  It may take as long as 15 minutes until the “*AVAILABLE*” message appears there before proceeding.  You might periodically refresh
-    your browser page.  If the database had already been started, forge ahead.  
+    - If you don’t see the big green “*Available*” icon shown above, click the *Start* button at the top to start the
+    instance.  When the *Confirm* dialog appears, click the *Start*.  It may take as long as 15 minutes until the “*AVAILABLE*” message appears there.  You might periodically refresh
+    your browser page.  When the database has started, forge ahead.  
 
-        ![](./media/image7.png)
-
-        Figure 3: ATP Status Display
+        
 
 ## Download Database Wallet
 
@@ -383,12 +387,18 @@ have done the prerequisites, continue below:
     
       - Connection Type: *Cloud Wallet*
     
-      - Configuration File: *Browse* to and select your wallet zip file
+        - Configuration File: *Browse* to and select your wallet zip file
         that you just saved in your *ApplicationIntegrationLabs* folder above.
     
-      - Service: *\<Autonomous Database Name (all lowercase without spaces)\>\_high* option. Select it from the dropdown list.  The *high* option gives us the best performance.  For example, you might select *dbappintshared_high*. 
+        - Service: *\<Autonomous Database Name (all lowercase without spaces)\>\_high* option. Select it from the dropdown list.  The *high* option gives us the best performance. 
+
+      - If you are in an Oracle class, you may need to configure the *Proxy*:
+        - Click on the *Proxy* tab.
+        - Toggle on the *Use Custom Proxy* radio button.
+        - Enter the *Host* and *Port* values for the *Oracle SQL Developer Proxy*. You noted them in the
+    *Prerequisites* section at the beginning of this document.
     
-      - Click on the "Save Password* field so you aren’t prompted for the
+      - Click on the *Save Password* field so you aren’t prompted for the
         atpc\_user password each time you activate your connection.
 
       - Click the *Test* button at the bottom to see if SQL Developer can
@@ -705,8 +715,7 @@ interact with the ATP Database:
     *Connection Properties* area. The *Connection Properties* dialog
     appears.
 
-    - For Service Name, enter: *dbappintshared\_high* (That gives us the best
-    performance.)
+    - For Service Name, enter: *\<Autonomous Database Name (all lowercase without spaces)\>\_high*  (That gives us the best performance.)
 
     - Click the *OK* button to close the *Create New Connection* dialog.
 
@@ -1436,7 +1445,7 @@ needs to be part of a process application. Let’s create one:
     - Click the *Save* button in the upper-right corner of the form editor
     page.
 
-      *Pro Tip*: Before you leave for *Form Designer,* click on the *Preview* button at the top.  In the *Preview* window that appears, you can explore exactly how your form will display on a variety of different sized devices.  When done exploring, click the *X* in the upper-right corner to exit the *Preview* window.
+      *Tip*: Before you leave for *Form Designer,* click on the *Preview* button at the top.  In the *Preview* window that appears, you can explore exactly how your form will display on a variety of different sized devices.  When done exploring, click the *X* in the upper-right corner to exit the *Preview* window.
 
 16. Turn your attention back to your process model by clicking on the
     *Request Evaluation* tab at the upper-left:
@@ -1991,7 +2000,7 @@ our condition to see if the order request should be routed along the
         and *string* function calls and to surround the data field with
         the *parentheses*. Press *Return* after you perform each edit.
 
-          *Pro Tip*: You can also click the small *fx* symbol to the right of a target field and perform you casting edits in the *Expression Editor* popup window.
+          *Tip*: You can also click the small *fx* symbol to the right of a target field and perform you casting edits in the *Expression Editor* popup window.
 
 
           ![](./media/image81.png)
@@ -2701,11 +2710,15 @@ Oracle Integration Setup.
           - Connection Type: *Cloud Wallet*
             
           - Configuration File: Browse to and select *your wallet
-                zip file* that you saved in your
-                ApplicationIntegrationLabs folder
-                ApplicationIntegrationLabs folder.
+                zip file* that you saved in your *ApplicationIntegrationLabs* folder.
             
-          - Service: *databaseappint\_high*  (That gives us the best performance.)
+          - Service: *\<Autonomous Database Name (all lowercase without spaces)\>\_high*  (That gives us the best performance.)
+
+          - If you are in an Oracle class, you may need to configure the *Proxy*:
+            - Click on the *Proxy* tab.
+            - Toggle on the *Use Custom Proxy* radio button.
+            - Enter the *Host* and *Port* values for the *Oracle SQL Developer Proxy*. You noted them in the
+    *Prerequisites* section at the beginning of this document.
         
           - Click the *Test* button to see if SQL Developer can connect
             to your ATP instance. Wait for a moment as access is
@@ -2788,7 +2801,13 @@ ApplicationIntegrationLabs folder ApplicationIntegrationLabs folder.
             file* that you saved in your ApplicationIntegrationLabs
             folder ApplicationIntegrationLabs folder above.
         
-      - Service: *databaseappint\_high*  (That gives us the best performance.)
+      - Service: *\<Autonomous Database Name (all lowercase without spaces)\>\_high*  (That gives us the best performance.)
+
+      - If you are in an Oracle class, you may need to configure the *Proxy*:
+          - Click on the *Proxy* tab.
+          - Toggle on the *Use Custom Proxy* radio button.
+          - Enter the *Host* and *Port* values for the *Oracle SQL Developer Proxy*. You noted them in the
+    *Prerequisites* section at the beginning of this document.
         
       - Click the *Test* button to see if SQL Developer can connect
             to your ATP instance. Wait for a moment as access is
