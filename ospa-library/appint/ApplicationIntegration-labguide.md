@@ -66,7 +66,7 @@ the features and functionality of Oracle Integration so you can represent the pr
 To optimize your experience there are some general guidelines that will
 help you get the most from these lab exercises.
 
-  - Merely following the steps and screenshots without understanding the flow will diminish your learning experience, so think about what you are doing and why.  The explanatory text in this Lab Guide will help address the "whys."  Please read this text. 
+  - Merely following the steps and screenshots without understanding the flow will diminish your learning experience, so think about what you are doing and why.  The explanatory text in this Lab Guide will help address the "whys."  **Please read this text.** 
 
   - Follow the steps as shown in this guide. Do not "freestyle" during the
     labs. It may get you into a bind.
@@ -162,7 +162,7 @@ Before starting these labs, you will need:
 
   - Oracle Cloud access from *<https://cloud.oracle.com/en_US/sign-in>*:
     
-      - Account name (*tenancy*)
+      - Account Name (*tenancy*)
     
       - Oracle Account Sign In (User Name and Password)
 
@@ -178,7 +178,7 @@ Before starting these labs, you will need:
 
   - Oracle SQL Developer Proxy Port (for Oracle classrooms only)
 
-If you are using this lab guide as part of an Oracle class (like *Class Of SE*), the Oracle Integration and Autonomous Database instances are already set up for you and the environment information is provided for you in the *Lab Environment Details* section the *Participant Guide* for your class.  
+If you are using this lab guide as part of an Oracle class (like *Class Of SE*), the Oracle Integration and Autonomous Database instances are already set up for you and the environment information is provided for you in the *Lab Environment Details* section the **Participant Guide** for your class.  
 
 If you are using this lab guide outside of an Oracle class, refer to the *Appendix* section to establish your own instances and collect the above information as you perform the setup steps there.  
 
@@ -207,9 +207,9 @@ If you are using this lab guide outside of an Oracle class, refer to the *Append
 You have some setup work to perform before starting the two hands-on
 labs in this course. By performing the following steps, you will
 complete all the setup work in advance so you won’t be bothered with it
-during the labs. NOTE: These steps assume that you have already
+during the labs. **NOTE:** These steps assume that you have already
 satisfied all the prerequisites listed in the *Prerequisites* section
-above. If you haven’t, review the Prerequisites now and catch up. If you
+above. If you haven’t, review the *Prerequisites* now and catch up. If you
 have done the prerequisites, continue below:
 
 1.  Close your VPN connection if it is active.
@@ -273,7 +273,7 @@ have done the prerequisites, continue below:
         
           - Click the *Clear data* button.
 
-    *Tip:* As an alternative to having to clear browser data periodically (as indicated above), you can also open your Chrome window in *Incognito Mode* by using the *File* / *New Incognito Window* / menu option.
+    *Tip:* As an alternative to having to clear browser data periodically (as indicated above), you can  open your Chrome window in *Incognito Mode* by using the *File* / *New Incognito Window* / menu option.
 
 ## Check Autonomous Database Status
 
@@ -281,21 +281,20 @@ have done the prerequisites, continue below:
 
     - Sign in to the Oracle Public Cloud:
       - Browse to
-    https://cloud.oracle.com/en_US/sign-in and entering your tenancy name for *Account*
-    and then clicking Next.  Check the *Prerequisites* section above for the tenancy name.
+    https://cloud.oracle.com/en_US/sign-in 
+      - Enter your *Account Name* (tenancy) for *Account*
+    and then clicking Next.  Check the *Prerequisites* section above for the Account Name.
 
       - When prompted for *User Name* and *Password*, enter your Oracle Cloud
-    Account Sign In credentials (user name and password).  NOTE: If you are an
+    Account Sign In credentials (user name and password).  **NOTE:** If you are an
     Oracle employee, click the *Oracle SSO* link at the right to enter your
     credentials.
 
       - Click the *Sign In* button.
 
-    - You're *Oracle Cloud My Services* page appears.  Make a note of this URL 
-    as *Oracle Cloud My Services Page URL* in your *MyLabNotes* "scratchpad" file 
-    so you will have easy access to this page later.  While you are at it, add an 
-    entry for *Tenancy Name* also and insert the name of your tenancy in the scratchpad
-    too.
+    - You're *Oracle Cloud My Services* page appears. **NOTE:** It may look a bit different than the figure below. 
+    
+    - Copy the current URL and paste it into your *MyLabNotes* "scratchpad" file.  Label this URL as *Oracle Cloud My Services Page URL*.
 
       ![](./media/image128.png)
 
@@ -305,34 +304,36 @@ have done the prerequisites, continue below:
 
     - Click the *Autonomous Transaction Processing* option to display the *Service: Autonomous Transaction Processing* window.   
 
-    - Click on the *Open Service Console* button in the upper-right corner to display the *Autonomous Databases* page.  NOTE: If you see a window with this message, *"Feature Autonomous Databases is not available in your currently selected region*," perform this following workaround:
+    - Click on the *Open Service Console* button in the upper-right corner to display the *Autonomous Databases* page.  **NOTE:** If you see a window with this message, *"Feature Autonomous Databases is not available in your currently selected region*," perform this workaround:
       - Click the *hamburger menu* in the upper-left corner to display a menu.
       - From the *Database* section of the menu, click the *Autonomous Transaction Processing* option.  The *Autonomous Databases* page displays.
 
     - In the *Compartment* field at the left, select your *Autonomous
     Database Compartment* from the dropdown list. You noted that name in
-    the *Prerequisites* section above.  The table of instances redisplays.
+    the *Prerequisites* section above.  
 
     - Click on your *Autonomous Database Name* that appears in the table.
-  You noted that name in the *Prerequisites* section above.  **NOTE:** Your database name may be different than that displayed in the figure below:
+  You noted that name in the *Prerequisites* section above.  **NOTE:** Your *Autonomous Database Name* may be different than that displayed in the figure below:
 
         ![](./media/image6.png)
 
         Figure 4: Selecting Your Database
 
-    - The *Autonomous Database Details* page appears. **NOTE:** Again, your database name may be different than that displayed in the figure below:
+    - The *Autonomous Database Details* page appears. **NOTE:** Again, your *Autonomous Database Name* may be different than that displayed in the figure below:
 
        ![](./media/image124.png)
 
-        Figure 3: Autonomous Database Details Page
+        Figure 5: Autonomous Database Details Page
     
-    - If you don’t see the big green “*Available*” icon shown above, click the *Start* button at the top to start the
-    instance.  When the *Confirm* dialog appears, click the *Start*.  It may take as long as 15 minutes until the “*AVAILABLE*” message appears there.  You might periodically refresh
-    your browser page.  When the database has started, forge ahead.  
-
+    - If you don’t see the big, green “*Available*” icon shown above, click the *Start* button at the top to start the instance.  
+    
+    - When the *Confirm* dialog appears, click the *Start*.  It may take as long as 15 minutes until the “*AVAILABLE*” message appears there.  You might periodically refresh
+    your browser page.  When the database has started, proceed.  
         
 
 ## Download Database Wallet
+
+We need credentials to sign in to this database.  Oracle makes this easy with "wallets."  A wallet is a package of sign in information that a database client uses for access. You’ll use it soon to connect to this ATP database from Oracle SQL Developer.  Let's retreive the wallet file now:
 
 8.  Download your database credentials as a “wallet file” so that you
     will have them for later to access the database:
@@ -346,19 +347,16 @@ have done the prerequisites, continue below:
 
       ![](./media/image8.png)
 
-      Figure 4: Database Connection Dialog
+      Figure 6: Database Connection Dialog
 
     - In the *Download Wallet* dialog, enter and confirm a *Password* for
     your wallet. Record whatever wallet password you chose in your *MyLabNotes* scratchpad.  Label it as *Wallet Password". It’s important not to forget it. Then, click
     the *Download* button on the dialog.
 
-    - Notice that your wallet zip file has been downloaded into your *Downloads*
+    - Notice that the wallet zip file has been downloaded into your *Downloads*
     directory.
 
-    - Move your wallet zip file into your *ApplicationIntegrationLabs* folder. This
-    wallet is a package of sign in information that a database client
-    uses to access your ATP database. You’ll use it soon to access the
-    ATP database from Oracle SQL Developer.
+    - Move your wallet zip file into your *ApplicationIntegrationLabs* folder. 
 
 ## Configure SQL Developer Database Access
 
@@ -391,12 +389,6 @@ have done the prerequisites, continue below:
         that you just saved in your *ApplicationIntegrationLabs* folder above.
     
         - Service: *\<Autonomous Database Name (all lowercase without spaces)\>\_high* option. Select it from the dropdown list.  The *high* option gives us the best performance. 
-
-      - If you are in an Oracle class, you may need to configure the *Proxy*:
-        - Click on the *Proxy* tab.
-        - Toggle on the *Use Custom Proxy* radio button.
-        - Enter the *Host* and *Port* values for the *Oracle SQL Developer Proxy*. You noted them in the
-    *Prerequisites* section at the beginning of this document.
     
       - Click on the *Save Password* field so you aren’t prompted for the
         atpc\_user password each time you activate your connection.
@@ -404,11 +396,18 @@ have done the prerequisites, continue below:
       - Click the *Test* button at the bottom to see if SQL Developer can
     connect to your ATP database as *atpc\_user*. Wait for a moment as
     access is attempted. When successful, celebrate the “*Status:
-    Success*” message that appears in the lower-left corner.  If the test fails, it is probably because the *Service* is specified incorrectly.
+    Success*” message that appears in the lower-left corner.  
+        - If the test fails, check that the *Service* is specified incorrectly.
+
+        - If the test still fails and you are in an Oracle class, you may need to configure the *Proxy*:
+          - Click on the *Proxy* tab.
+          - Toggle on the *Use Custom Proxy* radio button.
+          - Enter the *Host* and *Port* values for the *Oracle SQL Developer Proxy*. You noted them in the
+    *Prerequisites* section at the beginning of this document.
 
         ![](./media/image9.png)
 
-        Figure 5: Creating a New SQL Developer Connection
+        Figure 7: Creating a New SQL Developer Connection
 
         
 
@@ -422,7 +421,7 @@ have done the prerequisites, continue below:
         MyATPConnection*. Since you elected to save your *atpc\_user*
        password, you aren’t
         prompted for the password and the connection is opened
-        immediately.  The hierarchy is expanded under MyATPConnection*
+        immediately.  The hierarchy of details appears under *MyATPConnection*
         in the left-side panel.
     
         - *Expand the Tables (Filtered)* option under your connection name
@@ -434,7 +433,7 @@ have done the prerequisites, continue below:
 
           ![](./media/image10.png)
 
-          Figure 6: Table Structure in SQL Developer
+          Figure 8: Table Structure in SQL Developer
 
         - Click on the *Data* option at the top of the right panel to see if
     there are any test rows in the ORDERS table.  It might have some data in it already.
@@ -452,7 +451,7 @@ have done the prerequisites, continue below:
     running:
     
     - Access your Oracle Integration instance by
-        browsing to the *Oracle Cloud My Services Page URL* noted 
+        browsing to the *Oracle Cloud My Services Page URL* that noted earlier 
         in your *MyLabNotes* file to access your services.  If you forgot to write this URL down, use your browser history to navigate to *My Services - Dashboard*.  Then, note this URL in your *MyLabNotes* file as *Oracle Cloud My Services Page URL*.
 
     - Click on the *Integration* option.
@@ -465,11 +464,11 @@ have done the prerequisites, continue below:
     *Prerequisites* section above.
 
     - Make sure that your Integration instance is available. Look at the
-    *Status* field. It should display “*Ready*.”:
+    *Status* field. It should display “*Ready*.” **NOTE:** A different instance name may appear at the top of the page than what you see in the figure below.  Be sure to use **your** *Oracle Integration Instance Name* that you noted in the *Prerequisites* section.
 
       ![](./media/image12.png)
 
-      Figure 8: Checking Status on the Service Page for Oracle Integration
+      Figure 9: Checking Status on the Service Page for Oracle Integration
 
     - If the *Status* field doesn’t show “*Ready*,” click on the *Start
     Instance* icon (arrowhead icon) in the upper-right to start the
@@ -495,13 +494,12 @@ have done the prerequisites, continue below:
 
           Figure 9: Accessing the Oracle Integration Home Page
 
-      - Click on the *Open Home* button to the right of the menu.  
-      The home page appears:
+      - Click on the *Open Home* button to the right of the menu.  The home page appears:
 
         ![](./media/image14.png)
 
          Figure 10: Oracle Integration Home Page
-      - Copy this URL and save it in your *MyLabNotes* scratchpad file as 
+      - Copy this URL and save it in your *MyLabNotes* scratchpad file. Label it as 
       *Oracle Integration Home Page URL*.
 
 ## Prepare a Data Definition
@@ -536,11 +534,12 @@ have done the prerequisites, continue below:
           </xs:element>
           </xs:schema>
         ```
+      Figure 11: XML Schema Definition File 
     - Save the file in your *ApplicationIntegrationLab* directory with the
     name *RESTEndpointRequestPayload.xsd*. Make sure you save it as a
     text file:
     
-        - NOTES: 
+        - **NOTES:** 
           - On a Mac, before you save, use the *Format / Make Plain Text* option to
         convert the contents to text. Then, change the file extension to
         xsd in the Finder after you save it.
@@ -553,13 +552,12 @@ have done the prerequisites, continue below:
 
         ![](./media/image15.png)
 
-        Figure 11: XML Schema Definition for the REST Request Payload
+        Figure 12: XML Schema Definition for the REST Request Payload
 
       - In your Finder (Mac) or File Explorer (PC), check to ensure that the file name extension is “*xsd*” rather than
     “txt” and change it if necessary.
 
-That completes the steps to prepare your environment. If you have also
-completed the steps in the *Prerequisites* section, you are ready to start Lab 1.  Keep right on going.
+That completes the steps to prepare your environment. If you have also completed the steps in the *Prerequisites* section, you are ready to start Lab 1.  Keep right on going.
 
 # Lab 1 Creating an Integration
 
@@ -582,9 +580,9 @@ order based upon an approved order request.
   Revisit the technical architecture, displayed below, to get your bearings.  Focus on the *OIC Integration* area.  In the integration we are about to build, we will create connections to utilize these two adapters and we will perform data mappings to make sure the right data is available to them.  Ultimately, a new order will be added to *Oracle Autonomous Transaction Processing*:
 
 ![](./media/image122.png)
- Figure 2: Technical View of the Solution
+ Figure 13: Technical View of the Solution
 
-Let's get started!
+Let's get started with some housekeeping and some navigation:
 
 1.  Start fresh by clearing your Chrome browser cache (all browsing
     data). If you need help, refer to the *Preparing Your Environment*
@@ -595,14 +593,14 @@ Let's get started!
 2.  Refresh your browser window. Due to clearing the browser cache, you
     may lose your connection to the Oracle Cloud. Browse to the 
     *Oracle Integration Home Page URL* you noted in your *MyLabNotes* file 
-    to access your Integration instance.  You may have to sign in again.  NOTE: If
+    to access your Integration instance.  You may have to sign in again.  **NOTE:** If
     you are an Oracle employee, follow the *Sign in with Oracle SSO* path.
 
 3. Click on the *Integrations* option to access the *Oracle Integration: Integrations* page. If you can’t see the menu options at the left, click the
     hamburger menu icon in the upper-left to reveal the menu
 
 We will create two connections that you’ll use in the integration
-    that you will build in Lab 1. One connection will enable a REST
+    that you will build in a moment. One connection will enable a REST
     client to access the integration. The other connection will allow
     your integration to communicate with the ATP database. 
 
@@ -611,7 +609,7 @@ We will create two connections that you’ll use in the integration
 
     ![](./media/image17.png)
 
-    Figure 13: Integration Page Highlighting the Connections Menu Option
+    Figure 14: Integration Page Highlighting the Connections Menu Option
 
 ## Create a REST Connection
 
@@ -633,7 +631,7 @@ initiated:
 
     ![](./media/image130.png)
 
-      Figure 13: Creating a new connection based upon a prebuilt adapter
+      Figure 15: Creating a new connection based upon a prebuilt adapter
 
 8.  The *Create New Connection* dialog appears so you can provide details
     about how this connection will be used in your integration.
@@ -652,7 +650,7 @@ initiated:
 
         ![](./media/image129.png)
 
-      Figure 14: Creating a new connection
+      Figure 16: Creating a new connection
     
     - Click the *Create* button.
     
@@ -675,8 +673,7 @@ initiated:
 
 ## Create an ATP Connection
 
-Create an ATP Invoke connection that will allow your integration to
-interact with the ATP Database:
+Let's create the second connection we'll need for our integration.  That will be an ATP Invoke connection that will allow your integration to interact with the ATP Database:
 
 15. Click the *Create* button in the upper-right corner of the
     *Connections* page. The *Create Connection – Select Adapter* dialog
@@ -701,7 +698,7 @@ interact with the ATP Database:
 
         ![](./media/image131.png)
 
-        Figure 15: Creating a new connection based upon a prebuilt adapter
+        Figure 17: Creating a new connection based upon a prebuilt adapter
 
     - Click the *Create* button.
 
@@ -767,17 +764,17 @@ interact with the ATP Database:
 
     ![](./media/image18.png)
 
-    Figure 14: Integration Page Listing Connections
+    Figure 18: Integration Page Listing Connections
 
 ## Create a New Integration
 
-Create an integration that uses your two connections:
+With our two connections in place, we can now create our integration:
 
 25. Click the *Integrations* menu option at the left-side menu:
 
     ![](./media/image19.png)
 
-    Figure 15: Integration Page Showing the Integrations Menu Option
+    Figure 19: Integration Page Showing the Integrations Menu Option
 
 26. The *Integrations* page appears. Click on the *Create* button in the
     upper-right corner.
@@ -786,7 +783,7 @@ Create an integration that uses your two connections:
     various templates that can be used to create a new integration.
     These styles really speed integration development. Based on the
     purpose of the integration, these styles do a lot of
-    pre-configurating for the user.
+    pre-configurating for you.
 
 28. Read the descriptions for each of the styles so you will appreciate the breadth of the style support.
 
@@ -803,9 +800,9 @@ Create an integration that uses your two connections:
 
       ![](./media/image132.png)
 
-      Figure 15: Creating a new integration
+      Figure 20: Creating a new integration
 
-    - Leave the default value (empty) alone for the package field and then click the *Create* button to display the *integration editor canvas*.
+    - Leave the default value (empty) alone for the package field at the left and click the *Create* button to display the *Integration Editor*.
 
 
 31. Notice the beginnings of the new integration in the integration editor canvas. This is where you will
@@ -813,7 +810,7 @@ Create an integration that uses your two connections:
 
     ![](./media/image20.png)
 
-    Figure 16: Integration Editor Canvas
+    Figure 21: Integration Editor
 
 32. Click the *Save* button in the upper-right corner. 
 
@@ -832,14 +829,14 @@ integration.
 
     ![](./media/image22.png)
 
-    Figure 17: Accessing Available Triggers in the Integration Editor
+    Figure 22: Accessing Available Triggers in the Integration Editor
 
 35. *Drag your REST\_Trigger* connection and drop it into the *Start*
     element since it will trigger the integration:
 
     ![](./media/image23.png)
 
-    Figure 18: Start Element in the Integration Editor
+    Figure 23: Start Element in the Integration Editor
 
 36. The Configure REST Endpoint dialog appears. Fill in the fields:
 
@@ -877,8 +874,7 @@ integration.
     Preparing Your Environment section.
 
       - Notice in the *Element* field that the tooling has read the file and
-    has selected *Order*. That’s the only element defined in your XSD.  
-    NOTE: If the tooling has trouble validating your xsd file, you may
+    has selected *Order*. That’s the only element defined in your XSD. **NOTE:** If the tooling has trouble validating your xsd file, you may
     need to edit it and clean up some formatting. Sometimes, copying and
     pasting drags along some hidden characters at the end of lines.
 
@@ -898,7 +894,7 @@ integration.
 
         ![](./media/image24.png)
 
-         Figure 19: Reviewing a REST Endpoint Configuration
+         Figure 24: Reviewing a REST Endpoint Configuration
 
   - Click *Done* in the in the upper-right corner to close the Configure
     REST Endpoint dialog.
@@ -908,7 +904,7 @@ integration.
 
     ![](./media/image25.png)
 
-      Figure 20: Integration With a Trigger Specified
+      Figure 25: Integration With a Trigger Specified
 
 38. Click *Save* in the upper-right corner.
 
@@ -920,7 +916,7 @@ integration.
 
     ![](./media/image27.png)
 
-    Figure 21: Accessing Available Invokes in the Integration Editor
+    Figure 26: Accessing Available Invokes in the Integration Editor
 
 40. Drag your *ATP\_Invoke\_Insert\_Into\_DB* connection and drop it
     onto the *plus icon* that appears on the diagram right below your
@@ -965,7 +961,7 @@ integration.
 
         ![](./media/image28.png)
 
-        Figure 22: Reviewing an Adapter Endpoint Configuration
+        Figure 27: Reviewing an Adapter Endpoint Configuration
 
       - Click *Done* in the in the upper-right corner to close the Configure
     REST Endpoint dialog.
@@ -979,7 +975,7 @@ integration.
 
     ![](./media/image29.png)
 
-Figure 23: Integration Editor Showing an App Driven Orchestration
+    Figure 28: Integration Editor Showing an App Driven Orchestration
 
 43. Click *Save* in the upper-right corner.
 
@@ -1001,7 +997,7 @@ Figure 23: Integration Editor Showing an App Driven Orchestration
       - Click a source field (like *orderID*) at the left.
 
       - Drag the source field and drop it on the target field (like
-    *orderID*) at the right. NOTE: As an alternative to drag and drop,
+    *orderID*) at the right.**NOTE:** As an alternative to drag and drop,
     you can click on the source field at the left, click on the target
     field at the right and then click the *Map+* icon above the source
     fields.
@@ -1010,7 +1006,7 @@ Figure 23: Integration Editor Showing an App Driven Orchestration
     fields to show a green check mark icon to indicate that the mapping
     is in place.
 
-        - NOTE: If you make a mistake during mapping, you’ll want to know how
+        - **NOTE:** If you make a mistake during mapping, you’ll want to know how
     to delete a mapping so you can redo it. Here are the steps:
     
             - *Click the field name* on the target side (it’s a link on the right-side) to
@@ -1033,7 +1029,7 @@ Figure 23: Integration Editor Showing an App Driven Orchestration
 
       ![](./media/image31.png)
 
-      Figure 24: Data Mapper
+      Figure 29: Data Mapper
 
       - Click the *Validate* button in the upper-right corner of the mapper
     and look for the “Mapping is valid and ready to use” message in the
@@ -1053,7 +1049,7 @@ Figure 23: Integration Editor Showing an App Driven Orchestration
 
       ![](./media/image32.png)
 
-      Figure 25: Errors Alert
+      Figure 30: Errors Alert
 
     - You learn that we haven’t supplied the fields that we want to
     display in the tracking facility. Tracking can help us troubleshoot
@@ -1063,19 +1059,19 @@ Figure 23: Integration Editor Showing an App Driven Orchestration
 
       ![](./media/image33.png)
 
-      Figure 26: Hamburger Menu Icon
+      Figure 31: Hamburger Menu Icon
 
     - Select the *Tracking* option in the popup menu to display the
     *Business Identifiers For Tracking* dialog.
 
     - Click the *orderID* field and drag it from the left source panel to the *Tracking Field* cell in the first row of the tracking table at
-    the right. NOTE: If you have trouble dragging the *orderID* field,
+    the right. **NOTE:** If you have trouble dragging the *orderID* field,
     select it, select the top row in the table and then click the
     arrowhead icon at the bottom of the dialog:
 
       ![](./media/image35.png)
 
-      Figure 27: Specifying a Tracking Field for an Integration
+      Figure 32: Specifying a Tracking Field for an Integration
 
     - Click *Save* in the lower-right corner to record your selection and to close the dialog.
 
@@ -1085,7 +1081,7 @@ Figure 23: Integration Editor Showing an App Driven Orchestration
 
       ![](./media/image36.png)
 
-      Figure 28: Completed Integration
+      Figure 33: Completed Integration
 
     - Click *Close* in the upper-right corner to exit the integration
     editor canvas window. The Integrations page redisplays and shows
@@ -1099,7 +1095,7 @@ Our last step in this lab is to activate our integration.
 
     ![](./media/image37.png)
 
-    Figure 29: Toggle Switch to Activate an Integration
+    Figure 34: Toggle Switch to Activate an Integration
 
 48. Select these options in the Activate Integration dialog that
     appears:
@@ -1110,7 +1106,7 @@ Our last step in this lab is to activate our integration.
 
       ![](./media/image38.png)
 
-      Figure 30: Activating an Integration
+      Figure 35: Activating an Integration
 
     - Click the *Activate* button in the lower-right corner. 
 
@@ -1125,7 +1121,7 @@ Our last step in this lab is to activate our integration.
 
       ![](./media/image39.png)
 
-      Figure 31: Feedback that an Integration Has Been Activated
+      Figure 36: Feedback that an Integration Has Been Activated
 
 Congratulations\! This completes Lab 1. Your Create New Order
 integration is ready for use in Lab 2. Move right on into Lab 2 to build
@@ -1173,7 +1169,7 @@ you built in Lab 1.
 Again, revisit the technical architecture, displayed below, to review the big picture.  Focus on the *OIC Process* element this time.  In the process automation application we are about to build, we will make a RESTful API call to your Lab 1 integration.  This will bring the two adapters into action and will result in a new order being added to *Oracle Autonomous Transaction Processing*:
 
 ![](./media/image122.png)
- Figure 2: Technical View of the Solution
+ Figure 37: Technical View of the Solution
 
 Let's keep going. Again, follow the steps and ask questions if you get confused:
 
@@ -1186,14 +1182,14 @@ Let's keep going. Again, follow the steps and ask questions if you get confused:
 2.  Refresh your browser window. Due to clearing the browser cache, you
     may lose your connection to the Oracle Cloud. Browse to the 
     *Oracle Integration Home Page URL* you noted in your *MyLabNotes* file 
-    to access your Integration instance.  You may have to sign in again.  NOTE: If you are an Oracle employee, follow the *Sign in with Oracle SSO* path.
+    to access your Integration instance.  You may have to sign in again.  **NOTE:** If you are an Oracle employee, follow the *Sign in with Oracle SSO* path.
 
 4.  On the *Integration Home Page*, select the *Processes* menu option
     at the left:
 
     ![](./media/image41.png)
 
-    Figure 33: Integration Home Page
+    Figure 38: Integration Home Page
 
 5.  Click the *Process Applications* menu option at the left to display
     the *Process Applications* page which lists all applications that have been created in your Oracle Integration instance.
@@ -1209,7 +1205,7 @@ needs to be part of a process application. Let’s create one:
 
     ![](./media/image42.png)
 
-    Figure 34: Create Process Applications Page
+    Figure 39: Create Process Applications Page
 
     - Click on the *Create an Application* icon at the right to display
     the *Create an Application* prompt.
@@ -1663,7 +1659,7 @@ moves from activity to activity. To do this, we need to configure the data assoc
 
       - By dragging and dropping fields from *formArg* (on the left) to the
     *evaluateFormDataObject* (on the right), map the matching fields so
-    data transfer occurs at runtime. NOTE: Leave the automatic *formArg* to *initiateFormDataObject* mapping alone.  As you map new rows below it, be careful since the fields may be in a different order on the source side than on
+    data transfer occurs at runtime. **NOTE:** Leave the automatic *formArg* to *initiateFormDataObject* mapping alone.  As you map new rows below it, be careful since the fields may be in a different order on the source side than on
     the target side:
 
         ![](./media/image61.png)
@@ -1840,7 +1836,7 @@ for the Evaluate Form
 
 29.  Let’s now condition the *No* branching flow at the *Approved?*
     exclusive gateway so that when a regional manager, working in the
-    Approve Request activity, rejects an order request, the request is
+    Approve Request activity, clicks the *REJECT* button for an order request, the request is
     routed to the *Resubmit* activity where the store manager can work on
     it and resubmit it. 
     
@@ -1864,15 +1860,15 @@ for the Evaluate Form
     *Expression Editor* dialog.
 
       - Recall that our *Output* data association from the Approve Request
-    activity included a mapping of the *outcome*. The outcome is set by
+    activity included a mapping of the *outcome*.The outcome is set by
     the regional manager clicking either the *APPROVE* or the *REJECT*
-    button:
+    button.
 
         ![](./media/image73.png)
 
         Figure 65: Form Outcome Button Press is Mapped to a Data Object
 
-        It is the value of the *TaskOutcomeDataObject* that we will check in
+        It is the value of the *TaskOutcomeDataObject* that we will check
 our condition to see if the order request should be routed along the
 *No* path to the *Resubmit* activity:
  
@@ -2069,7 +2065,7 @@ Your application is finished so you can now publish it.  That gets us one step c
     explanation in the Comments fields: *This version is the first
     publication of this process application.*
     
-44. Click the *Publish* button in the lower-right corner.  NOTE: Your *Publish Application* may show a different list of unpublished changes:
+44. Click the *Publish* button in the lower-right corner.  **NOTE:** Your *Publish Application* may show a different list of unpublished changes:
 
       ![](./media/image92.png)
 
@@ -2084,7 +2080,7 @@ After you publish, you need activate your process application so it is available
     
 46. Click on the *Activate* option at the top right of the window.
         The *Activation tab* appears and the associated panel is
-        displayed. Click the *Activate new version* button.  NOTE: If this is the first time your have activated this application, your window may appear slightly differently:
+        displayed. Click the *Activate new version* button.  **NOTE:** If this is the first time your have activated this application, your window may appear slightly differently:
 
     ![](./media/image93.png)
 
@@ -2255,6 +2251,8 @@ Let’s now perform an end-to-end test of your application by assuming
 
         NOTES:
         - The Order ID must be unique since *orderID* is the primary key of the ORDERS table in our ATP database.
+
+        - The Order ID must not exceed 8 characters in length since that is the maximum length for the *orderID* column in the ORDERS table.
         
         - Your replacement for *\<insertYourInitialsHere\>* must be *4 (or less)* characters (*alpha or numeric*).
 
@@ -2580,7 +2578,7 @@ Oracle Integration Setup.
     - Click on the *Create Autonomous Database* button (highlighted above)
     to display the Create Autonomous Database dialog.
 
-    - NOTE: During instance creation, make sure to record your selections (like
+    - **NOTE:** During instance creation, make sure to record your selections (like
     admin password) in the MyLabNotes text file in your
     ApplicationIntegrationLabs folder.
 
@@ -2714,16 +2712,17 @@ Oracle Integration Setup.
             
           - Service: *\<Autonomous Database Name (all lowercase without spaces)\>\_high*  (That gives us the best performance.)
 
-          - If you are in an Oracle class, you may need to configure the *Proxy*:
-            - Click on the *Proxy* tab.
-            - Toggle on the *Use Custom Proxy* radio button.
-            - Enter the *Host* and *Port* values for the *Oracle SQL Developer Proxy*. You noted them in the
-    *Prerequisites* section at the beginning of this document.
-        
           - Click the *Test* button to see if SQL Developer can connect
             to your ATP instance. Wait for a moment as access is
             attempted. When successful, celebrate the “*Status:
             Success*” message that appears in the lower-left corner.
+
+            - If the test fails, check that the *Service* is specified incorrectly.
+
+            - If the test still fails and you are in an Oracle class, you may need to configure the *Proxy*:
+              - Click on the *Proxy* tab.
+              - Toggle on the *Use Custom Proxy* radio button.
+              - Enter the *Host* and *Port* values for the *Oracle SQL Developer Proxy*. You noted them in the *Prerequisites* section at the beginning of this document.
         
           - At the *Save Password* button, click it *On*. This will
             allow you later to just double-click your connection to open
@@ -2802,17 +2801,17 @@ ApplicationIntegrationLabs folder ApplicationIntegrationLabs folder.
             folder ApplicationIntegrationLabs folder above.
         
       - Service: *\<Autonomous Database Name (all lowercase without spaces)\>\_high*  (That gives us the best performance.)
-
-      - If you are in an Oracle class, you may need to configure the *Proxy*:
-          - Click on the *Proxy* tab.
-          - Toggle on the *Use Custom Proxy* radio button.
-          - Enter the *Host* and *Port* values for the *Oracle SQL Developer Proxy*. You noted them in the
-    *Prerequisites* section at the beginning of this document.
         
       - Click the *Test* button to see if SQL Developer can connect
             to your ATP instance. Wait for a moment as access is
             attempted. When successful, celebrate the “*Status:
             Success*” message that appears in the lower-left corner.
+          - If the test fails, check that the *Service* is specified incorrectly.
+          - If the test still fails and you are in an Oracle class, you may need to configure the *Proxy*:
+            - Click on the *Proxy* tab.
+            - Toggle on the *Use Custom Proxy* radio button.
+            - Enter the *Host* and *Port* values for the *Oracle SQL Developer Proxy*. You noted them in the
+    *Prerequisites* section at the beginning of this document.
         
       - At the *Save Password* field, click it *On*. This will allow
             you later to just double-click your connection to open it
