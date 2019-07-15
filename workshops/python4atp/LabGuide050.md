@@ -235,17 +235,11 @@ We require a Database to store the Alpha Office data which is accessed later in 
 
 	![](images/050/048.png)
 
-### **STEP 9:** Clone the workshop git repository
+### **STEP 9:** Download Files Used in this Workshop
 
-- Open a terminal window in the image.
+**Click to Download.  Save the file to your Downloads directory.**
 
-	![](images/050/051.png)
-
-- Enter the following
-
-`git clone https://github.com/dgcameron/python4atp.git`
-
-![](images/050/052.png)
+[lab-resources.zip](https://oracle.github.io/learning-library/workshops/python4atp/lab-resources.zip)
 
 **This completes the Lab!**
 
