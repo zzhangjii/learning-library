@@ -237,7 +237,7 @@ We require a Database to store the Alpha Office data which is accessed later in 
 
 ### **STEP 9:** Download Files Used in this Workshop
 
-**Click to Download**
+**Click to Download.  Save the file to your Downloads directory.**
 
 [lab-resources.zip](https://oracle.github.io/learning-library/workshops/python4atp/lab-resources.zip)
 
