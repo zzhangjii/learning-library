@@ -1,6 +1,6 @@
 # Application Integration Lab Guide
 
-## July 13, 2019 - 11:10PM
+## July 15, 2019 - 12:35PM
 
 # Table of Contents
 
@@ -764,7 +764,7 @@ Let's create the second connection we'll need for our integration.  That will be
 
     ![](./media/image18.png)
 
-    Figure 18: Integration Page Listing Connections
+    Figure 18: Connections Page
 
 ## Create a New Integration
 
@@ -1380,7 +1380,7 @@ needs to be part of a process application. Let’s create one:
 
           ![](./media/image135.png)
 
-          Figure 50: Form Editor Palette
+          Figure 50: Creating a New Web Form
     
         - Click *Create* to establish the new form. Notice that the new
         form name appears in the *Form* field in the properties panel.
@@ -1448,7 +1448,7 @@ needs to be part of a process application. Let’s create one:
 
       ![](./media/image57.png)
 
-      Figure 55: Finding the Tabs to Access Tabbed panels
+      Figure 55: Finding the Tabs to Access Tabbed Panels
 
 ## Implement the Approve Request Activity
 
@@ -1886,7 +1886,9 @@ our condition to see if the order request should be routed along the
       - Select the *TaskOutcomeDataObject* and then click the *Insert Into
     Expression* button to add it to the expression area.
 
-      - Then, finish the expression by entering: *=”REJECT”*
+      - Then, finish the expression by entering: **="REJECT"**
+      
+        **NOTE:** Make sure that the double quotes appear as *straight* (" ") rather than *curly* (“ ”). *Curly* double quotes will produce a validation error.  Copy and pasting from above may be the best approach.
 
         ![](./media/image76.png)
 
@@ -2326,7 +2328,7 @@ Let’s now perform an end-to-end test of your application by assuming
 
     - Let's review where we are in the process instance now. The execution passed through the *Approved*? exclusive gateway
     and the workflow engine noticed that your condition for the *No*
-    branch evaluated to *true* (*TaskOutcomeDataObject=“REJECT”*). So,
+    branch evaluated to *true* (TaskOutcomeDataObject="REJECT"). So,
     the process instance followed the *No* flow. Your application is now
     waiting at the Resubmit activity for the store manager to revisit
     their order request:
@@ -2408,7 +2410,7 @@ Let’s now perform an end-to-end test of your application by assuming
 
     - Here is where we are in the process now. The *Approve?* exclusive
     gateway took the default path since your *No* condition
-    (*TaskOutcomeDataObject=“REJECT*”) evaluated to *false* because the
+    (TaskOutcomeDataObject="REJECT") evaluated to *false* because the
     regional manager clicked the APPROVE button this time. Execution
     proceeded to the *Create Order* integration activity where your Lab
     1 integration was executed to add a new order to the ORDERS table in the ATP database.
