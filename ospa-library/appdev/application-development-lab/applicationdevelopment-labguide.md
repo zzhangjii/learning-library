@@ -221,13 +221,13 @@ Dashboard”)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.5 – Open VBCS<br/>
 
+## Create Application
+
 6.  You should briefly see the VBCS “splash” page.
 
     ![](./media/image18.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.6 – VBCS Splash<br/>
-
-## Create Application
 
 7.  When the “Visual Applications” welcome appears; choose the “New Application” button.
 
