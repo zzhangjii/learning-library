@@ -1,8 +1,0 @@
-The image shows the Application Builder tile on the Oracle Cloud Services Dashboard.
-
-It contains 1 link, 1 field, 2 buttons, and 1 menu:
-* appbuilder link
-* Description field: Application Builder
-* Collapse Details button
-* Select Content button
-* Action Menu (selected): This menu contains two options, View Details and Open Service Console, and Open Service Console is selected.

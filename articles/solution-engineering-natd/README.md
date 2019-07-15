@@ -2,6 +2,15 @@
 
 ***Note:*** This document is best viewed by clicking on this [github.io link](https://sblack4.github.io/learning-library/articles/solution-engineering-natd/)
 
+## The Role 
+Solutions Engineering is more BREADTH than depth. You take the products that is already been built - extend it with your coding skills and integrate it with other products thereby building a “SOLUTION”. **This is primarily a technical job** with client interactions (60-70% technical, 40-30% communication/business).
+
+For a successful solution engineer - you need the following traits
+* Solutions Engineering is more BREADTH than depth. You take the products that is already been built - extend it with your coding skills and integrate it with other products thereby building a “SOLUTION”. This is primarily a technical job with client interactions (60-70% technical, 40-30% communication/business).
+* Good communication skills - you don’t build solutions for yourself -you build it for customers and REAL world!
+* Desire to push yourself to understand a little of lot of things (you may touch upon Machine Learning, Analytics and at the same time core database or file parsing).  This is probably the most critical -do you have the drive and motivation to learn a lot!!
+* Working under tight deadlines - our projects can be 2-6-week bursts.
+
 ## Interview Schedule 
 
 The face to face interview process consists of a technical interview outlined below:
@@ -23,7 +32,7 @@ During this presentation, we ask that you provide a brief overview of yourself, 
 
 The scenario for the presentation is one where you need to present a technical/business overview of Oracle’s cloud platform to a potential customer that is interested in making the journey to the cloud. The customer audience consists of technical and business level attendees. This customer is interested in moving to the cloud but not sure whether it makes sense and whether Oracle is the right vendor. They are strictly on-prem today.  It is important to address both the business value and the technical value of the proposed solution.
 
-This **presentation** should be no longer than <u>**15 minutes**</u> and can be based on the content found in the links provided below. This will leave enough time for Q&A.  A [Powerpoint deck](FY18_Candidate_Cloud_Presentation.pptx) is attached to get you started. You do not have to use this specific presentation so feel free to customize it.  We suggest that you use your own words in presenting the slides. 
+This **presentation** should be no longer than <u>**15 minutes**</u> and can be based on the content found in the links provided below. This will leave enough time for Q&A.  A [Powerpoint deck is available at this link](FY18_Candidate_Cloud_Presentation.pptx). You do not have to use this specific presentation so feel free to customize it.  We suggest that you use your own words in presenting the slides. 
 
 Key focus areas:
 - Expect the audience to ask for clarification on any content you show. 
@@ -44,27 +53,20 @@ Below are some links to study Oracle’s cloud platform, yet feel free to use ot
 
 ![Touch The Cloud](./images/Touch-the-Cloud.jpg)
 
-### **Touch the Cloud Presentation Overview**:
+**Touch the Cloud Presentation Overview**:
 
 During this presentation, we ask that you provide a brief summary of the Oracle Cloud Products you have investigated, and that you feel are of interest and relevance. You can find the information you need from Oracle's main [Cloud Home Page](https://cloud.oracle.com/) website. From this website you can investigate Oracle's three categories of Cloud Offerings: [Platform as a Service](https://cloud.oracle.com/en_US/paas), [Infrastructure as a Service](https://cloud.oracle.com/en_US/iaas) and [Software as a Service](https://cloud.oracle.com/en_US/saas). Note: The job for which you are applying will focus primarily on **Platform as a Service** and **Infrastructure as a Service**.  
 
-In this section of the interview, you will select a single option from the 2 options below:
+In this section of the interview, you will select **a single option** from the 2 options below. **Remember: You only have 15 Minutes!**:
 
-**Option 1: Obtain an Oracle Trial Account**
-Using an Oracle Trial account you can research more in-depth any of the Oracle Infrastructure or Platform Cloud Services, and present or demonstrate in up to 15 minutes what you have learned from hands-on experience and interest in these products.  Instructions for how to secure an Oracle Trial Account are provided below.
-
-**-OR-**
-
-**Option 2: Recent Project Presentation**
-During this presentation, we would like you to provide an overview (or demonstration) of a development project on which you have recently worked. Provide examples of the technology, programming languages, and methodologies you used during this project. Feel free to use the whiteboard or laptop available in the interview room. If you use powerpoint, please keep your presentation to approximately 5 slides.
-
-
+### **Option 1: Obtain an Oracle Trial Account**
+Using an Oracle Trial account you can research more in-depth any of the Oracle Infrastructure or Platform Cloud Services, and present or demonstrate in up to 15 minutes what you have learned from hands-on experience and interest in these products.  Instructions for how to secure an Oracle Trial Account are provided below. If you have any difficulties getting a trial account feel free to use option 2. 
 
 **Instructions to register for Oracle Trial Account (Option1)**
 
 Using an [Oracle Trial](https://github.com/sblack4/learning-library/blob/master/articles/solution-engineering-natd/README.md#oracle-trial-account) account you can research more in-depth any of the Oracle **Infrastructure** or **Platform** Cloud Services, and <u>**present or demonstrate in up to 15 minutes**</u> what you learned from your hands-on experience and interest in these products. ***The Trial account is a $300 credit for a 30 day use.*** Many of Oracle's **Platform** Services (e.g: Application Container Cloud Service, Container Cloud Service, Developer Cloud Service, Oracle Database / MSQL Cloud Services and Java Cloud Service provide simple demonstrations. Examples are also available using Oracle's **Infrastructure** Cloud Services.
 
-- ***Note***: ensure you ***Do NOT*** select "***Yes, convert my account to Pay as you go at the end of the free promotion***" located in the Billing Section, as Checking this option would convert your account to Pay as you go after the $300.00 credit or 30 days have been fulfilled. 
+- ***Note***: ensure you ***Do NOT*** select "***Yes, convert my account to Pay as you go at the end of the free promotion***" located in the Billing Section, as Checking this option would convert your account to Pay as you go after the $300.00 credit or 30 days have been fulfilled, and you would be responsible for the charges after the trial. 
 - **Note**: You would need a valid credit card to register for an account. If you don't have a credit card - please let a recruiter know ASAP - so they can work with you to help you out. 
 
 - **Note**: Depending on the cloud services that you use, the consumption of your cloud credits can vary greatly, so ensure that you understand the pricing structure for each cloud service you intend to use. Also, based on the cost of an individual cloud services, you may want to shut that service down when not in use to conserve credits. Every cloud service will contain information about that service's pricing. As examples, here are links to a few cloud service pricing pages: 
@@ -76,6 +78,11 @@ Using an [Oracle Trial](https://github.com/sblack4/learning-library/blob/master/
     - [Container Cloud Service Pricing](https://cloud.oracle.com/en_US/container/pricing)
 
 If you are not able to secure an Oracle Trial account please notify your recruiter ASAP. 
+
+
+### **Option 2: Recent Project Presentation**
+During this presentation, we would like you to provide an overview (or demonstration) of a development project on which you have recently worked. Provide examples of the technology, programming languages, and methodologies you used during this project. Feel free to use the whiteboard or laptop available in the interview room. If you use powerpoint, please keep your presentation to approximately 5 slides. ***Please Note: If you are going to use Oracle Cloud Trial Account and demonstrate Option 1 you DO NOT need to present your project.*** ***Also Note: we do expect to see code! :)***
+
 
 ### **Expectation** 
 
@@ -107,6 +114,10 @@ Acquiring an Oracle Account is not required for the interview, however, doing so
 To get an Oracle Trial account, please go the [Oracle Try It](https://cloud.oracle.com/tryit). From this website you can find answers to your questions concerning the Free Trial account, along with step by step instructions on how to register your account. After your account is provisioned, some of the services you may desire to use require that your Account's Storage Replication policy is set prior to using those services. Those instructions are provided later in this guide.
 
 ## Step by step instructions on Provisioning your Account
+
+I've tried to keep this information as up-to-date as possible 
+but the crew who creates our [workshops](https://github.com/oracle/learning-library/tree/master/workshops) 
+makes sure the documentation in their [microservices-devops](https://oracle.github.io/learning-library/workshops/microservices-devops/) workshop. 
 
 ### Prerequisites (have these ready)
 * Cell Phone 

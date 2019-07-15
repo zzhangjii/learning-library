@@ -1,3 +1,9 @@
+---
+layout: ziplab
+description: Learn how to prepare a REST application built using Spring Data REST to be deployed to Oracle Application Container Cloud Service.
+tags: ziplab, oracle cloud
+permalink: /ziplabs/java-spring-accs/index.html
+---
 # Deploy a Spring Application to Oracle Cloud #
 
 ## Before You Begin ##
@@ -15,76 +21,81 @@ For your application to run properly on Oracle Application Container Cloud Servi
 
 ### What Do You Need? ###
 
-* Access to an instance of Oracle Application Container Cloud Service
 * [Maven 3.0+](http://maven.apache.org/download.cgi)
 * [cURL 7.0+](http://curl.haxx.se/download.html) with SSL support
 * Book application service [book-service.zip](files/book-service.zip)
 * [Git](https://git-scm.com/downloads) (Git CMD shell to execute cURL commands)
+* Access to an instance of Oracle Application Container Cloud Service
+* [A storage replication policy for your service instance](https://docs.oracle.com/en/cloud/iaas/storage-cloud/cssto/selecting-replication-policy-your-account.html)
+* [A storage container](https://docs.oracle.com/en/cloud/iaas/storage-cloud/cssto/creating-containers.html)
 
 ## Create the Manifest.json File ##
 1. Extract the content of the `book-service.zip` file in your local system.
-2. Create a `manifest.json` file at the same level than the `pom.xml` file and open it in a text editor.
-3. Add the following content and save the file.
-````json
-{
-    "runtime": {
-        "majorVersion": "8"
-    },
-    "command": "java -jar book-service-1.0-SNAPSHOT.jar",
-    "release": {
-        "build": "150520.1154",
-        "commit": "d8c2596364d9584050461",
-        "version": "1.0"
-    },
-    "notes": "Book REST Application using Spring Data REST"
-}
-````
-## Prepare the Application to Read the PORT Environment Variable ##
-1. In the src/main directory, create the resources folder.
-2. In the resources directory, create the application.properties file.
-3. Add the following content:
 
-   `server.port=${PORT}`
+    <pre><code>unzip book-service.zip</code></pre>
+2. Create a `manifest.json` file at the same level than the `pom.xml` file and open it in a text editor.
+3. Add the following content and save the file.<br>
+    ```json
+    {
+        "runtime": {
+            "majorVersion": "8"
+        },
+        "command": "java -jar book-service-1.0-SNAPSHOT.jar",
+        "release": {
+            "build": "150520.1154",
+            "commit": "d8c2596364d9584050461",
+            "version": "1.0"
+        },
+        "notes": "Book REST Application using Spring Data REST"
+    }
+    ```
+
+## Prepare the Application to Read the PORT Environment Variable ##
+1. In the `src/main` directory, create the resources folder.
+2. In the `resources` directory, create the `application.properties` file.
+3. Add the following content to the file:
+
+    <pre><code>server.port=${PORT}</code></pre>
 
 ## Compile and Package Your Application ##
 
 1. Open a command-line window (or Terminal in Linux) and go to the `book-service` directory.
 2. Compile and package your application using the Maven command:
 
-    `mvn compile package`
+    <pre><code>mvn compile package</code></pre>
     
 ## Deploy your Application to Oracle Application Container Cloud Service ##
-1. Log in to Oracle Cloud at [http://cloud.oracle.com/](http://cloud.oracle.com/). Enter the **Identity Domain**, **User Name**, and **Password** for your account.
-2. In the Dashboard, click **Instances** to open the Oracle Application Container Cloud Service console.
-   ![deploy-02.jpg](img/deploy-02.png)
-
-   [Description of the illustration deploy-02.png](files/deploy-02.txt)
-
-3. In the **Applications** list view, click **Create Application**.
-4. Click **Java SE**.
-5. In the Application section, enter a name for your application and click Browse.
-6. In the **File Upload** window, select the `book-service-1.0-SNAPSHOT.zip` file located in the `target` directory, and click **Open**.
-7. Keep the default values in the **Instances** and **Memory** fields and click Create.
-8. When the application is completely created copy the URL. 
+1. In a web browser, go to [https://cloud.oracle.com/home](https://cloud.oracle.com/home) and click **Sign In**.
+2. From the **Cloud Account** drop-down menu, select **Cloud Account with Identity Cloud Service**.
+3. Enter your Cloud Account Name and click **My Services**.
+4. Enter your cloud account credentials and click **Sign In**.
+5. If Oracle Application Container Cloud Service isn't listed in the dashboard, click **Customize Dashboard**.
+6. In the **Application Container** tile, click **Action** and select **Open Service Console**.
+7. Click **Java SE**.
+8. On the **Create Application** page, enter `BookService` for the name. On **Application**, be sure **Upload Archive** is selected and click **Browse**.
+9. In the **File Upload** window, select the `book-service-1.0-SNAPSHOT.zip` file located in the `target` directory, and click **Open**.
+10. Keep the default values in the **Instances** and **Memory** fields and click **Create**.
+11. When the application is completely created copy the URL. 
 
 ## Test Your Application ##
 1. Open a command-line window (or Terminal in Linux).
 2. Create a new book record using the following cURL command. Replace the app_endpoint placeholder with the URL of your application.
 
-   <code>curl -i -X POST -H "Content-Type:application/json" -d "{ \"title\" : \"Hamlet\",  \"author\" : \"William Shakespeare\",\"isbn\":\"978-0486272788\", \"published\":\"1937\",\"genre\":\"Novel\" }" <b>app_endpoint</b>/books</code>
+    <pre><code>curl -i -X POST -H "Content-Type:application/json" -d "{ \"title\" : \"Hamlet\",  \"author\" : \"William Shakespeare\",\"isbn\":\"978-0486272788\", \"published\":\"1937\",\"genre\":\"Novel\" }" <b>app_endpoint</b>/books</code></pre>
+
 3. Query all book entities.
 
-   <code>curl <b>app_endpoint</b>/books</code>
+    <pre><code>curl <b>app_endpoint</b>/books</code></pre>
 
 4. Update the published property of the book. 
 
-   <code>curl -i -X PUT -H "Content-Type:application/json" -d "{ \"title\" : \"Hamlet\",  \"author\" : \"William Shakespeare\",\"isbn\":\"978-0486272788\", \"published\":\"1980\",\"genre\":\"Novel\"}" <b>app_endpoint</b>/books/1</code>
-   
-   **Note:** The PUT method, update all the properties of the entity, if you don't specify one, the property is replaced with null.
+    <pre><code>curl -i -X PUT -H "Content-Type:application/json" -d "{ \"title\" : \"Hamlet\",  \"author\" : \"William Shakespeare\",\"isbn\":\"978-0486272788\", \"published\":\"1980\",\"genre\":\"Novel\"}" <b>app_endpoint</b>/books/1</code></pre>
+
+    **Note:** The PUT method will update all the properties of the entity. If you don't specify a value, the property is replaced with null.
 
 5. Delete the book.
 
-   <code>curl -i -X DELETE curl -i -X DELETE app_endpoint/books/1/books/1</code>
+    <pre><code>curl -i -X DELETE <b>app_endpoint</b>/books/1</code></pre>
 
 ## Want to Learn More? ##
 

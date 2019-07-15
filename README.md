@@ -2,7 +2,7 @@
 ---
 # ORACLE Learning Library #
 
-Note: Content in the README is under development
+Note: Content in the README is under development !
 
 ## Introduction ##
 
@@ -13,19 +13,24 @@ Oracle Cloud is the industry’s broadest and most integrated public cloud. It o
 
 The following directories are contained within this repository:
 
-**/articles** 
+**/articles**
 - This folder will contain interesting Articles on Oracle Technology
 
-**/common** 
+**/common**
 - This folder contains common images and assets used by content in other folders
 
-**/templates** 
+**/oci-library**
+- This folder contains OCI Hands-on-Labs
+
+**/templates**
 - This folder contains templates used for Articles and Workshops
 
-**/workshops** 
-- This folder will contain subfolders, each with documentation for individual workshops. The documentation is always in Markdown Format. 
+**/workshops**
+- This folder will contain subfolders, each with documentation for individual workshops. The documentation is always in Markdown Format.
 
-----
+**/ziplabs
+----This folder will contain subfolders, each with documentation for individual zip Labs in Markdown Format. Oracle Zip Labs are short 10-20 minute labs that guide users through a sequence of steps to accomplish a specific task using Oracle Cloud services.
+
 
 
 ## [Contributing](CONTRIBUTING.md)

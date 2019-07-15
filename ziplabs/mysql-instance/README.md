@@ -1,4 +1,10 @@
-# Creating an Instance of Oracle MySQL Cloud Service
+---
+layout: ziplab
+description: Learn how to create an Oracle MySQL Cloud Service instance.
+tags: ziplab, oracle cloud, Oracle MySQL Cloud Service
+permalink: /ziplabs/mysql-instance/index.html
+---
+# Creating an Instance of Oracle MySQL Cloud Service #
 
 ## Before You Begin ##
 This Oracle By Example (OBE) lab shows you how to create an Instance of Oracle MySQL Cloud Service.
@@ -10,62 +16,56 @@ When you create an instance of Oracle MySQL Cloud Service, you must associate a 
 
 ### What Do You Need? ###
 - An Oracle Cloud account
-- [Git](https://git-scm.com/downloads) (Git Bash shell)
-
-## Create an SSH Key Pair ##
-
-1. Open a Git bash command-line window (or terminal in Linux).
-2. Generate the SSH key pair: 
-
-   <code>ssh-keygen -t rsa -N "<i>passphrase</i>" -b "<i>2048</i>" -C "<i>key comment</i>" -f <i>path/root_name</i></code>
-
-    Argument|Description
-    --------|-----------
-    <code>-t rsa</code>|Use the RSA algorithm
-    <code>-N "<i>passphrase</i>"</code>|Passphrase to protect the use of the key (like a password). If you don't want to set a passphrase, don't enter anything between the quotation marks. **Note**: Although a passphrase isn't required, you should specify one as a security measure to protect the private key from unauthorized use.
-    <code>-b "<i>2048</i>"</code>|Generate a 2048-bit key (default). A minimum of 2048 bits is recommended for SSH-2 RSA. 
-    <code>-C "<i>key commment</i>"</code>|A name to identify the key.
-    <code>-f <i>path/root_name</i></code>|The location where the key pair is saved and the root name for the files. For example, if you make `id_rsa` the root name, then the name of the private key is `id_rsa`, and the name of the public is `id_rsa.pub`.
 
 ## Create an Instance of Oracle MySQL Cloud Service ##
+1. In a web browser, go to [https://cloud.oracle.com/home](https://cloud.oracle.com/home) and click **Sign In**.
+2. From the **Cloud Account** drop-down menu, select **Cloud Account with Identity Cloud Service**.
+3. Enter your Cloud Account Name and click **My Services**.
+4. Enter your cloud account credentials and click **Sign In**.
+5. Click **Customize Dashboard**.
+6. Select **Show** for **MySQL Cloud Service**.
+7. Close the **Customize Dashboard** window.
+8. On the **MySQL Cloud Service** tile, click the **Action Menu Action Menu** and select **Open Service Console**.
+9. If there are no existing services, click the **Instances** tab.
+10. Click **Create Instance**.
+11. Enter or select the following information, and then click **Next**:
+     * **Instance Name**: `TestDB`
+     * **Description**: (optional)
+     * **Notification Email**: (default)
+     * **Region**: No Preference
 
-1. Log in to your Oracle Cloud account. Enter your account credentials in the Identity Domain, User Name, and Password fields.
-2. Click **Customize Dashboard**.
-3. Select **Show** for **MySQL Cloud Service**.
-4. Close the **Customize Dashboard** window.
-5. On the **MySQL Cloud Service** tile, click the **Action Menu Action Menu** and select **Open Service Console**.
-6. If there are no existing services, click the **Services** tab.
-7. Click **Create Service**.
-8. Enter or select the following information, and then click **Next**:
-   * **Service Name**: `TestDB`
-   * **Service Description**: (optional)
-   * **Metering Frequency:**: Hourly
+    ![mysql04.png](img/mysql04.png)
 
-   ![mysql04.png](img/mysql04.png)
+    [Description of the illustration mysql04.png](files/mysql04.txt)
+12. Generate the SSH Public Key
+    * Beside the **SSH Public Key** field, click **Edit**. 
+    * Select **Create a New Key**, and then click **Enter**. A message appears to confirm that your SSH Key pair was successfully created. 
+    * Click **Download**, save the file, and then click **Done**.
+13. Enter or select the following information, and then click **Next**:
+     * **Compute Shape: OC3-1.0 OCPU, 7.5GB RAM**
+     * **Usable Database Storage(GB)**: 25
+     * **Administration User**: root
+     * **Administration Password** (Be sure to use a password with at least 8 characters, one upper case character, one number and one special character.)
+     * **Confirm Administration Password**
+     * **Database Schema Name**: `mydatabase`
+     * **Server Character Set**: `utf8mb4 - UTF-8 Unicode`
+     * **Configure MySQL Enterprise Monitor**: `No`
+     * **Backup Destination**: None
+     * **Create Instance from Existing Backup**: No
 
-   [Description of the illustration mysql04.png](files/mysql04.txt)
+    ![mysql05.png](img/mysql05.png)
 
-9. Enter or select the following information, and then click **Next**:
-   * **Compute Shape: OC3-1.0 OCPU, 7.5GB RAM**
-   *  **SSH Public Key** (Enter the public key that you generated in the previous section.)
-   * **Usable Database Storage(GB)**: 25
-   * **Administration User**: root
-   * **Administration Password**
-   * **Confirm Administration Password**
-   * **Database Schema Name**: `mydatabase`
-   * **Server Character Set**: utf8mb4 - UTF-8 Unicode
-   * **Configure MySQL Enterprise Monitor**: No
-   * **Backup Destination**: None
+    [Description of the illustration mysql05.png](files/mysql05.txt)  
+14. Review the details of your instance and then click **Create**.
 
-   ![mysql05.png](img/mysql05.png)
-   [Description of the illustration mysql05.png](files/mysql05.txt)  
+    ![mysql06.png](img/mysql06.png)
 
-10. Review the details of your instance and then click **Create**.
-   ![mysql06.png](img/mysql06.png)
-   [Description of the illustration mysql06.png](files/mysql06.txt) 
-11. Wait until the instance is created.
-   ![mysql07.png](img/mysql07.png)
-   [Description of the illustration mysql06.png](files/mysql07.txt) 
+    [Description of the illustration mysql06.png](files/mysql06.txt) 
+15. Wait until the instance is created.
+
+    ![mysql07.png](img/mysql07.png)
+
+    [Description of the illustration mysql06.png](files/mysql07.txt) 
 
 ## Want to Learn More? ##
 

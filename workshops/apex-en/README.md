@@ -20,15 +20,19 @@ To run these hands-on-labs, you need to:
 
     -   [Oracle VM Virtual Box](http://www.oracle.com/technetwork/database/enterprise-edition/databaseappdev-vm-161299.html) - Download Oracle VM Virtual Box and then import the [Database Application Development Appliance](http://www.oracle.com/technetwork/database/enterprise-edition/databaseappdev-vm-161299.html) which includes Oracle Database 12c, Application Express and a number of labs pre-installed.
 
--   Download the lab source files from [GitHub Page](https://github.com/ckoratam/OracleAPEX-Curriculum). Alternatively, download the Oracle Application Express Curriculum zip file from [https://apex.oracle.com/education](http://www.oracle.com/technetwork/developer-tools/apex/learnmore/apex-education-2517914.html) and then extract the **apex-course-labs.zip** file into your working directory.  
+-   Download the lab source files from [GitHub Page](https://github.com/ckoratam/OracleAPEX-Curriculum). Alternatively, download the **apex-curriculum-3681867.zip** file from [https://apex.oracle.com/education](http://www.oracle.com/technetwork/developer-tools/apex/learnmore/apex-education-2517914.html) and then extract the **apex-curriculum-labs** folder into your working directory. The apex-curriculum-3681867.zip file also includes the apex-curriculum-ppts folder. This folder contains the slide decks for all of the lessons in this course material. Note that the slide decks for the lessons are not hosted on this GitHub page.
 
 ## IMPORTANT: 
-- The Lab documentation is **best viewed** by using the HOL's [GitHub Pages Website URL](https://ckoratam.github.io/OracleAPEX/workshops/apex-en). Once you are viewing the HOL's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
+- The Lab documentation is **best viewed** by using the HOL's [GitHub Pages Website URL](https://oracle.github.io/learning-library/workshops/apex-en/). Once you are viewing the HOL's GitHub Pages website, you can see a list of Lab Guides at any time by clicking on the **Menu Icon**
 
     ![](images/WorkshopMenu.png)
 
-- To log issues, go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository.
-
+- To view the Lab Guide source, go to the [github oracle](https://github.com/oracle/learning-library/tree/master/workshops/apex-en) repository.
+- To log issues, go to the [github oracle](https://github.com/oracle/learning-library/tree/master/workshops/apex-en) repository and log an issue first.
+- Steps to contribute translated material:
+   1. Go to the [github oracle](https://github.com/oracle/learning-library/tree/master/workshops/apex-en) repository and log an issue first. See [Contributing guidelines](https://github.com/oracle/learning-library/blob/master/CONTRIBUTING.md). Alternatively, you can send an email to the mailing list:oracle-application-express_ww@oracle.com with the subject "Oracle APEX-GitHub Request".
+   2. You are then added as a contributor to this [GitHub](https://github.com/ckoratam/OracleAPEX) repository.
+   3. Upon acceptance, these contributions are pulled and merged with the [github oracle](https://github.com/oracle/learning-library/tree/master/workshops/apex-en) repository.
 ## Hands-on Overview
 
 **Documentation**: [hol_overview_v1.0.2.md](hol_overview_v1.0.2.md)
@@ -66,7 +70,7 @@ To run these hands-on-labs, you need to:
 
 **Documentation**: [hol04_v1.0.2.md](hol04_v1.0.2.md)
 
-### Objectives
+### Labs
 
 - Creating a Dashboard
 - Reviewing Page Designer

@@ -1,7 +1,0 @@
-This illustration shows the Oracle MAX app window on an Android mobile phone.
- The window contains the Edit link and 5 icons:
-* Approvals
-* Incidents
-* Add
-* MAX
-* About

@@ -501,15 +501,21 @@ article p{
     margin-left: 62px;
 }
 
+li p{
+	margin: 0;
+	line-height: 1;
+}
+
 /* TMM 10/14/17 */
 article > figure, section > figure {
     margin-left: 62px;
 }
 
-article > figure img, section > figure img {
+/* TMM: added for MD -> HTML 2/10 */
+article > figure img, section > figure img, article > p img, section > p img {
     border-color: #9B9B9B;
     border-style: solid;
-    border-width: 1px;
+	border-width: 1px;
 }
 
 article p.note {
@@ -576,28 +582,36 @@ article ol li tr td{
 
 
 /* TMM changed border color 4/3/17 */
-article ol figure img{
+/* Changes for MD -> HTML 2/10/18
+article ol figure img{ */
+article ol p img{
     border-color: #9B9B9B;
     border-style: solid;
     border-width: 1px;
     display: block;
-    margin-left: -40px;
+    /*margin-left: -40px;*/
     max-width: 600px;
     position: static;
-    /*width: 75vw;*/
+	/*width: 75vw;*/
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 /* TMM: Added 3/29/17 */
 /* TMM changed border color 4/3/17 */
-article ul figure img{
+/* TMM: changes for MD-> HTML 2/10/18
+article ul figure img{ */
+article ul p img{
     border-color: #9B9B9B;
     border-style: solid;
     border-width: 1px;
     display: block;
-    margin-left: -40px;
+    /*margin-left: -40px;*/
     max-width: 600px;
     position: static;
-    /*width: 75vw;*/
+	/*width: 75vw;*/
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 /* TMM: Added 3/29/17 */
@@ -625,7 +639,8 @@ article ol ul li::before {
   padding-right: 5px;
 }
 
-pre {
+/* TMM: how GitHub defines code blocks */
+pre, p > pre > code {
     -webkit-overflow-scrolling: touch ;
     background-color: #EEF5FC;
     border: 1px solid #E4F0FA;
@@ -636,8 +651,10 @@ pre {
     padding: 10px;
     display: block;
     white-space: pre !important;
-    word-wrap: normal !important;
+	word-wrap: normal !important;
+	margin-top: 15px;
 }
+
 
 code, kbd, pre, samp {
     font-size: 110%;

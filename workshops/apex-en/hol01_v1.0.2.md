@@ -23,26 +23,26 @@ To log in to Oracle Application Express, you need a Workspace name, username, an
 4.  Click **SQL Workshop**.
     The SQL Workshop home page appears. Review each of the SQL Workshop components.
 
-    ![1d](images/hol01/image6.png)
+    ![1d](images/hol01/image7.png)
 
 5.  Then, click **Team Development**.
     Review the Team Development components.
 
-    ![1e](images/hol01/image7.png)
+    ![1e](images/hol01/image8.png)
 
 6.  Click **Packaged Apps**.
 
-    ![1f](images/hol01/image8.png)
+    ![1f](images/hol01/image9.png)
 
 7.  The Packaged Apps page displays all of the Productivity and Sample applications.
     Click **Sample**.
 
-    ![1g](images/hol01/image9.png)
+    ![1g](images/hol01/image10.png)
 
 8.  Now, you install packaged applications.
     Click **Sample Reporting**.
 
-    ![2a](images/hol01/image10.png)
+    ![2a](images/hol01/image11.png)
 
 9.  Click **Install Packaged App**.
 

@@ -1,8 +1,0 @@
-This illustration shows the IMPORT page on the Packages page.
-
-The Import page contains the following:
-* Cancel button
-* Next button (This button is disabled.)
-* Status bar: Displays four steps: Upload (This step is selected.), Confirm, Import Results, and Policies
-* Selected Step description: Upload: Upload a package
-* Upload Package section: This section contains a drag area and the Choose a package file link. You can drag a file into this section to upload it.
