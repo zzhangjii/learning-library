@@ -24,6 +24,10 @@ In this lab you will use Oracle Visual Builder which is a cloud-based software d
 
 ### **STEP 1**: Check the creation of the instance from Lab 050
 
+- From the OCI Console open the **My Services Dashboard** by clicking on the **hamburger** menu in the upper left hand side of the page and selecting it.
+
+  ![](images/400/4.PNG)
+
 - From the Dashboard **click the hamburger menu** in the Visual Builder Cloud Service pane, **right-click on Open Service Console** and select **Open link in new tab**.
 
   ![](images/400/5.png)
@@ -41,8 +45,6 @@ In this lab you will use Oracle Visual Builder which is a cloud-based software d
 - On the Welcome page click **+ New Applcation**.
 
   ![](images/400/9.PNG)
-
-
 
 - In the Create Application dialog enter:
 
