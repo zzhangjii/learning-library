@@ -641,107 +641,15 @@ Remember that we have created the **CoSE_Employee** group into IDCS which is hav
 You should now see the same user profile information, that you started within IDCS, within Salesforce without having had to log into Salesforce.
 
 
-## Configuring Provisioning and Synchronization – OPTIONAL
+## Configuring Provisioning and Synchronization – Additional Reading
 
-The following exercise has been developed to showcase the extend of IDCS Single Sign-On capabilities by integrating the provisioning and synchronization services with third-party apps.
+Now that you have completed the lab, let's review some additional Oracle Identity Cloud Service features that customers can leverage to easily manage their user ids life cycle regardless the environment or application.
 
+User provisioning and synchronization are an important aspect of application management. Provisioning allows you to manage the lifecycle of accounts in applications like creating and deleting accounts using Oracle Identity Cloud Service. For example, when you grant the user access to an application such as Google Suite, then this user account is automatically created in Google Suite. This allows you to quickly add new users to multiple applications and de-provision users from those applications instantly when they change roles or leave your organization.
 
-### **DEMO** - Configure Provisioning and Synchronization (Persona: Administrator) - OPTIONAL
+You can enable and configure provisioning for App Catalog applications either when adding the app or later when modifying it. When you enable provisioning by selecting the option, the following steps appear:
 
-*  Obtaining Host Name, Organization ID, and Domain Name from Salesforce
-
-A host name, organization ID, and a domain name are required before you can configure the Salesforce app in Oracle Identity Cloud Service. You obtain these values from Salesforce.
-
-*  Login to [Developer Salesforce](https://developer.salesforce.com). In the left navigation menu of the home page, search and click Single Sign-On Settings. The Single Sign-On Settings page appears.
-
-![](./media/idcs74.jpeg)
-<p align="center"> Figure 2-32 </p>
-
-*  Under the SAML Single Sign-On Settings section, **click** the name that you provided for your identity provider in the **Single Sign-On Settings page**. The SAML Single Sign-On Settings page appears.
-
-*  Make note of the host name from the value given in the **Entity ID** 
-
-* Field: https://Host_Name
-
-*  Under the Endpoints section, make note of the domain name and the organization ID from the **Salesforce Login URL**: https://**Domain_Name**.my.salesforce.com?so=**Organization_ID**
-The domain name appears at the beginning and the organization ID appears at the end of the URL.
-
-![](./media/idcs75.png)
-<p align="center"> Figure 2-33 </p>
-
-*  Obtaining the Consumer Key and Consumer Secret from Salesforce
-
-**Consumer key** and **consumer secret** values are required before you enable provisioning for the Salesforce app. You obtain these values from Salesforce.
-
-* Switch to **Lightning Experience** in Salesforce, click the **cogwheel** on the top right corner of the page and select **Setup**.
-
-![](./media/idcs76.jpeg)
-<p align="center"> Figure 2-34 </p>
-
-*  In the left navigation menu of the home page, search and click **AppManager**. The Lightning Experience App Manager page appears.
-
-![](./media/idcs77.jpeg)
-<p align="center"> Figure 2-35 </p>
-
-*  In the right corner of the page, click **New Connected App**. The New Connected App page appears.
-
-![](./media/idcs78.png)
-<p align="center"> Figure 2-36 </p>
-
-*  Under the Basic Information section, enter the Connected App Name of the app that you want to connect.
-
-*  Enter the **Contact Email** of the administrator.
-
-* Under the API(Enable OAuth Settings) section, select the **Enable OAuth Settings** Check box.
-
-* Enter any public domain URL that receives the access token from the authorization server in the **Callback URL** field. For example, https://login.salesforce.com
-
-* In the Selected OAuth Scopes field, select Full access(full) under the **Available OAuth** Scopes list, and then click Add to give full access to modify the OAuth.
-
-![](./media/idcs79.jpeg)
-<p align="center"> Figure 2-37 </p>
-
-* Scroll down and click **Save**.
-
-* Wait for 2-10 minutes for the changes to take effect on the server before using the connected app, and then click **Continue**. The newly created app page appears.
-
-* Under the API (Enable OAuth Settings) section, click “**Click to reveal**” next to the **Consumer Secret** field.
-
-![](./media/idcs80.png)
-<p align="center"> Figure 2-38 </p>
-
-* Make note of the **Consumer Key** and **Consumer Secret** values.
-
-### **DEMO** - Deriving the Administrator Password from Salesforce
-
- A security token must be appended to the administrator password before you enable provisioning and synchronization for Salesforce app. You obtain the token value from Salesforce.
- 
- The final value will look like this:
- 
- `yourSalesforceAdminPassword + securityToken`
- (ex: LKdMzECdjFKYSj028WJhU1GG)
-
-* In the upper-right corner of the **Salesforce** home page, click the user icon, and then click Settings from the drop-down list.
-
-![](./media/idcs82.jpeg)
-<p align="center"> Figure 2-39 </p>
-
-* In the left navigation menu, search and click **Reset My Security Token.**
-
- ![](./media/idcs83.jpeg)
- <p align="center"> Figure 2-40 </p>
-
-* On the Reset My Security Token page, click **Reset My Security Token**. A security token is sent to the email address of the administrator.
-
-* Make note of the security token, and append the security token to the administrator password.
-
- `yourSalesforceAdminPassword + securityToken`
- (ex:LKdMzECdjFKYSj028WJhU1GG) 
- NOTE: the + must not be included
-
-###  **DEMO** - Enabling Provisioning and Synchronization for Salesforce - OPTIONAL
-
- Provisioning will provide you with the following available operations:
+Provisioning will provide you with the following available operations:
  
  **Create Account**: Automatically creates a Salesforce account when Salesforce access is granted to the corresponding user in Oracle Identity Cloud Service.
  
@@ -753,13 +661,15 @@ The domain name appears at the beginning and the organization ID appears at the 
 
 * Go to IDCS admin console
 
-* Select the Salesforce applications that you have created previously
+* Select the application
 
 * On the Provisioning page, select **Enable Provisioning**.
 
 * A window will pop up. Click “**Grant Consent**”
 
-* Fill in the **Host Name (e.g. acasas-dev-ed.my.salesforce.com), Administrator Username**, **Administrator Password** that you derived in the previous steps from Salesforce, **Client ID** and **Client Secret** from the Salesforce app created in the previous section. 
+* Fill in the **Host Name (e.g. acasas-dev-ed.my.salesforce.com), Administrator Username**, **Administrator Password**, **Client ID** and **Client Secret**.
+
+NOTE: Visit [IDCS documentation](https://docs.oracle.com/en/cloud/paas/identity-cloud/uaids/enable-provisioning-app-catalog-application.html) for further information on how to enable provisioning for specific applications.
 
 ![](./media/idcs84.png)
 <p align="center"> Figure 2-41 </p>
@@ -773,10 +683,6 @@ The domain name appears at the beginning and the organization ID appears at the 
  ![](./media/idcs85.jpeg)
  <p align="center"> Figure 2-42 </p>
  
- This option will synchronize the existing account details from Salesforce and link them to the corresponding Oracle Identity Cloud Service users.
-
-###  **DEMO** - Testing Synchronization in IDCS - OPTIONAL
-
 *  On the applications page, select **Import**.
 
 *  Click on **Import** and wait for a moment
@@ -785,10 +691,10 @@ The domain name appears at the beginning and the organization ID appears at the 
 
 *  The imported users that were imported from IDCS will be displayed.
 
+This option will synchronize the existing account details from the application and link them to the corresponding Oracle Identity Cloud Service users.
 
 ![](./media/idcs86.png)
 <p align="center"> Figure 2-43 </p>
-
 
 
 ****
