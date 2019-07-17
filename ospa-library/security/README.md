@@ -58,10 +58,11 @@ Before you start the labs you should have:
 
 You have some setup work to perform first before you start the two hands-on labs in this course.  By performing the following steps, you will complete all the setup work upfront so you won’t be bothered with it during the labs.  NOTE: These steps assume that you have already satisfied all the prerequisites enumerated in the Prerequisites section above.  If you have, continue below:
 
-1.	Close your VPN connection if it is active.
-2.	Create an **Security** folder (directory) on your computer’s file system.  This is where you will store various artifacts during the labs.
-3.	Open Notepad (Windows PC) or TextEdit (Mac) on your computer and create a new file called *MyLabNotes*.  Save it into your **Security** folder.  Keep the file open as an area where you can conveniently store items that are important to remember and access.
-4.	Start your Chrome browser.  Again, other browsers may work just fine, but the lab was tested using Chrome.
+1. Close your VPN connection if it is active.
+2. The Labs have been tested inside and outside the corporate network. If you encounter connectivity constraints, we advise learners to connect to CLEAR-INTERNET to complete the exercises.
+2. Create an **Security** folder (directory) on your computer’s file system.  This is where you might store various artifacts during the labs.
+3. Open Notepad (Windows PC) or TextEdit (Mac) on your computer and create a new file called *MyLabNotes*.  Save it into your **Security** folder.  Keep the file open as an area where you can conveniently store items that are important to remember and access.
+4. Start your Chrome browser.  Again, other browsers may work just fine, but the lab was tested using Chrome.
 5. Clear browser data
 
 **On a Windows PC:**
