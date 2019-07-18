@@ -1,6 +1,6 @@
 # Application Integration Lab Guide
 
-## July 15, 2019 - 12:35PM
+## July 18, 2019 - 12:05PM
 
 # Table of Contents
 
@@ -192,12 +192,15 @@ If you are using this lab guide outside of an Oracle class, refer to the *Append
   - Oracle SQL Developer:
 
     - The latest version: (at least version 19.1): Mac: OSX or Windows
-    64-bit. JDK 8 is included in the Windows 64-bit version.
+    64-bit. 
 
     - Oracle SQL Developer software can be found at:
-    *<https://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html>*.  The JDK is not included in the Oracle SQL Developer download.
+    *<https://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html>*.  
+      - **NOTES:** 
+        - For Windows, the JDK IS included in the Oracle SQL Developer download.  
+        - For Mac, the JDK IS NOT included in the download.
 
-    - For Mac, also download and install JDK SE Development Kit 8 (at
+    - For Mac, download and install JDK SE Development Kit 8 (at
     least version 8u211) *before you install Oracle SQL Developer*. JDK 8
     software can be found at:
     [*https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html*](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
