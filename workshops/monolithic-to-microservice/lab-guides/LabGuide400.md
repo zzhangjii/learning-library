@@ -756,7 +756,7 @@ In this step we will define the Types and Variables used within the page.
 
 - The attribute will show:
 
-  ![](images/400/104-5.PNG)
+  ![](images/400/104-6.PNG)
 
 - Next, below the Product ID item select the Input Text item on the canvas. Under the **General** tab in the Properties pane set the **Label Hint** to:
 
