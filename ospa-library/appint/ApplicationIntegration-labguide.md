@@ -1,6 +1,6 @@
 # Application Integration Lab Guide
 
-## July 18, 2019 - 12:05PM
+## July 22, 2019 - 3:15PM
 
 # Table of Contents
 
@@ -295,17 +295,21 @@ have done the prerequisites, continue below:
 
       - Click the *Sign In* button.
 
-    - You're *Oracle Cloud My Services* page appears. **NOTE:** It may look a bit different than the figure below. 
-    
-    - Copy the current URL and paste it into your *MyLabNotes* "scratchpad" file.  Label this URL as *Oracle Cloud My Services Page URL*.
+      - The page you see now is based upon the what you entered for *Account Name* (tenancy) in the *Account* field when you signed in.  Follow the appropriate path documented below based upon what you see on the current page:
+        - Path 1: If you see the *Guided Journey*" page:
+          -  Click on the green *Autonomous Database* icon.
+          -  On the *Autonomous Database Manage Data and Transactions* page, click the *Go to My Dashboard* button in the upper-right.
+        - Path 2: If you see the *Oracle Cloud* page with the *Quick Actions* section at the top:        
+           - Click on the *hamburger* menu icon in the upper-left corner.
+           - On the menu that appears, select the *My Services Dashboard* option.
+      - You're *Oracle Cloud My Services* page appears as shown below. 
+      - Copy the current URL and paste it into your *MyLabNotes* "scratchpad" file.  Label this URL as *Oracle Cloud My Services Page URL*.
 
-      ![](./media/image128.png)
+        ![](./media/image128.png)
 
         Figure 3: My Oracle Services Page
 
-    - Scroll down to find the *Autonomous Transaction Processing* option.  
-
-    - Click the *Autonomous Transaction Processing* option to display the *Service: Autonomous Transaction Processing* window.   
+    - Click the *Autonomous Transaction Processing* option to display the *Service: Autonomous Transaction Processing* window.  **NOTE:** If you can't find this option, click on the *circled + icon* in the upper-left and use the *Customize Dashboard* option to add the *Autonomous Transaction Processing* option to your dashboard.  
 
     - Click on the *Open Service Console* button in the upper-right corner to display the *Autonomous Databases* page.  **NOTE:** If you see a window with this message, *"Feature Autonomous Databases is not available in your currently selected region*," perform this workaround:
       - Click the *hamburger menu* in the upper-left corner to display a menu.
@@ -733,7 +737,7 @@ Let's create the second connection we'll need for our integration.  That will be
 
       - Select the *Upload button* and the *Upload File* dialog appears.
 
-      - Click the *Choose File* button and browse to *your Wallet zip file*
+      - Browse to and select *your Wallet zip file*
     that you moved into your *ApplicationIntegrationLab* folder earlier.
 
       - Select your *Wallet zip file* and click the *Open* button.
@@ -1271,7 +1275,7 @@ needs to be part of a process application. Let’s create one:
       - The process model displays containing elements from the *Form
     Approval* pattern. This minimizes the amount of dragging
     and dropping you need to do to place elements from the palette onto
-    the modelling canvas:
+    the modelling canvas.  **NOTE:** Your screen may show a more colorful process model, but the functionality is just the same.
 
         ![](./media/image46.png)
 
@@ -2767,7 +2771,7 @@ Oracle Integration Setup.
       create user atpc_user identified by "DBWelcome1234";  
       grant dwrole to atpc_user;
       ```  
-      Figure 122: Statements to Create a Database User
+      Figure 122a: Statements to Create a Database User
 
     - Of course, your password will likely be different than the one shown
 above (*DBWelcome1234*). Save the password in your
@@ -2776,11 +2780,25 @@ ApplicationIntegrationLabs folder ApplicationIntegrationLabs folder.
     - Click the *Run Script* icon (highlighted above) to execute both
     statements. You will see feedback that the user was created and that
     the grant succeeded.  Look in the *Script Output* panel to see the
-    "User ATPC_USER created" and "Grant succeeded" messages
+    "User ATPC_USER created" and "Grant succeeded" messages.
 
     - Click the *Commit icon* (highlighted above) to make sure that the
     changes were committed to the database.
 
+    - You need to establish the quota for the new *atpc_user* so they can insert data into tables they might create.  Enter the following statements into the Worksheet pane to alter the user to set quota:
+
+      ```
+      ALTER USER atpc_user quota unlimited on DATA;  
+      ```  
+      Figure 122b: Statements to Alter Quotea for a Database User
+
+    - Click the *Run Script* icon (highlighted above) to execute both
+    statements. You will see feedback that the user was created and that
+    the grant succeeded.  Look in the *Script Output* panel to see the
+    "User ATPC_USER altered" message.
+
+    - Click the *Commit icon* (highlighted above) to make sure that the
+    changes were committed to the database.
     - Close your *MyAdminConnection* by *right-clicking on it* in the
     Connections panel and selecting the *Disconnect* option from the
     popup menu.
