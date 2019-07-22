@@ -83,7 +83,7 @@ You have some setup work to perform first before you start the two hands-on labs
 - Cookies and other site data: checked
 - Cached images and files: checked 
 - Click the Clear data button
-
+***
 
 ## Access your cloud console dashboard
 
@@ -99,6 +99,30 @@ You have some setup work to perform first before you start the two hands-on labs
 
 Here you will find the different services available to you. The services listed in the dashboards might vary depending on your privileges.
 
+***
+
+## Install Postman
+
+If you don't have POSTMAN installed in your laptop, please visit [POSTMAN Website](https://www.getpostman.com/products).
+
+**NOTE: Postman user id is not required to run this lab. Disregard any message during download and/or initial set up**
+
+![](./media/postman.png)
+<p align="center">Figure 1-3</p>
+
+- Download the client. 
+
+- Install Postman. *Follow the instructions guidelines for your platform (e.g. Mac, Windows, Linux)*
+
+![](./media/postman_download.png)
+<p align="center">Figure 1-4</p>
+
+- Run Postman
+
+![](./media/postman_test.png)
+<p align="center">Figure 1-5</p>
+
+- Once opened, close the welcome screen and close Postman. 
 
 ****
 
