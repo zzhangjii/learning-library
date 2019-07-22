@@ -84,7 +84,8 @@ You have some setup work to perform first before you start the two hands-on labs
 - Cached images and files: checked 
 - Click the Clear data button
 
-6. Access your cloud console dashboard.
+
+## Access your cloud console dashboard.
 
 - Click on the **General Menu** located at the top left of the screen
 - Click **My Service Dashboard**
