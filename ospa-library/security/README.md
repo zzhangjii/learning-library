@@ -85,7 +85,7 @@ You have some setup work to perform first before you start the two hands-on labs
 - Click the Clear data button
 
 
-## Access your cloud console dashboard.
+## Access your cloud console dashboard
 
 - Click on the **General Menu** located at the top left of the screen
 - Click **My Service Dashboard**
