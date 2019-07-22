@@ -205,7 +205,7 @@ During the following exercises we will cover the following Personas:
 The following exercise has been developed to showcase IDCS API capabilities.
 This use case involves making API calls to IDCS using a REST client; in this case Postman. The Postman collection of relevant REST API calls is provided to each participant.
 
-*NOTE: If you don't have POSTMAN installed in your system, please visit [POSTMAN Website](https://www.getpostman.com/products) download and install it following the site instructions.*
+*NOTE: If you don't have POSTMAN installed in your system, please visit [POSTMAN Website](https://www.getpostman.com/products) download and install it following the site instructions. You don't need to create a Postman user id to run this lab. Disregard such message during download and/or initial set up*
 
 
 ### **DEMO** - Register a client POSTMAN application in IDCS
@@ -284,7 +284,9 @@ This use case involves making API calls to IDCS using a REST client; in this cas
 
 ###  **EXERCISE** - Configure Postman - Who Should Complete This Lab:  All Participants
     
-*  Open **Postman**. Ignore all startup messages if any.
+*  Open **Postman**. Ignore all startup messages if any. 
+
+**For this lab purposes you don't need to create a Postman user id. You can ignore all the messages**
 
 ![](./media/idcs37.jpeg)
 <p align="center"> Figure 1-26 </p>
