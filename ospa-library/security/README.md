@@ -84,51 +84,24 @@ You have some setup work to perform first before you start the two hands-on labs
 - Cached images and files: checked 
 - Click the Clear data button
 
-6. Access your cloud console dashboard to see if you have access to your compute instance:
+6. Access your cloud console dashboard.
 
-Depending on your configuration, your welcome screen might be your *MyApps* dashboard, or the services console.
-To access your services console, click on your profile on the top-right icon and select **My Services**
+- Click on the **General Menu** located at the top left of the screen
+- Click **My Service Dashboard**
 
-![Access your service console](./media/access_services.png)
+
+![](./media/cloud_new_Dashboard.png)
 <p align="center">Figure 1-1</p>
 
-Once into the service dashboard, you should be able to see your **Compute** service.
-
-![Service Dashboard](./media/dashboard.png)
+![](./media/idcs_access.png)
 <p align="center">Figure 1-2</p>
 
-7. Access your cloud console dashboard to see if you have access to Oracle CASB Cloud Service:
+Here you will find the different services available to you. The services listed in the dashboards might vary depending on your privileges.
 
-Once in the service dashboard, you can access Oracle CASB Cloud Service by clicking on the **General Menu** locate at the top-left of your screen, **Services** , and select **Oracle CASB Cloud Service**
-
-![Service Dashboard](./media/access_casb.png)
-<p align="center">Figure 1-3</p>
-
-
-8. Access your cloud console dashboard to see if you have access to Oracle Identity Cloud Service:
-
-To access Oracle Identity Cloud Service you must click on the **General Menu** locate at the top-left of your screen, **Users**, your region, and select **Identity(Primary)**
-
-![IDCS access Dashboard](./media/access_idcs_1.png)
-<p align="center">Figure 1-4</p>
-
-
-Once in the main screen, click on the **Identity Console** option locate at the top right of your screen, under your profile.
-
-![IDCS access Dashboard](./media/access_idcs_2.png)
-<p align="center">Figure 1-5</p>
-
-Click on the **General Menu** locate at the top-left of your screen and then click on **Dashboard**
-
-![IDCS access Dashboard](./media/access_idcs_3.png)
-<p align="center">Figure 1-6</p>
-
-
-You have access to main Oracle Identity Cloud Service dashboard. You can bookmark this URL to access the console.
 
 ****
 
-Now that you have completed this guide, you can proceed with the workshop.
+Now that you have completed this guide, you can proceed with the labs exercises.
 
 - [Lab 1: Oracle Identity Cloud Service](LAB1_IDCS.md)
 - [Lab 2: Oracle CASB Cloud Service](LAB2_CASB.md)
