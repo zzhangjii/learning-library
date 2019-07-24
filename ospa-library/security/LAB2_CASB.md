@@ -321,10 +321,6 @@ NOTE: In computing, a blacklist is a basic access control mechanism that allows 
 
 *  Click Save. Your IP address should appear now in the black list
 
-
-![](./media/image71.png)
-<p align="center"> Figure 3-16 </p>  
-
 *  Log in to your Salesforce account as the user that we created to be monitored by CASB
 
 
@@ -333,27 +329,27 @@ NOTE: In computing, a blacklist is a basic access control mechanism that allows 
 **Note: Information might take up to 2 hours to be displayed in the CASB console**
 
 ![](./media/image76.jpeg)
-<p align="center"> Figure 3-17 </p>  
+<p align="center"> Figure 3-16 </p>  
 
 * You can click on the red pin to check the detected suspicious events
 
 ![](./media/image77.jpeg)
-<p align="center"> Figure 3-18 </p>   
+<p align="center"> Figure 3-17 </p>   
 
 * Click on the suspicious events to have a better view of this
 
 ![](./media/image78.jpeg)
-<p align="center"> Figure 3-19 </p>   
+<p align="center"> Figure 3-18 </p>   
 
 * Check your Salesforce instance to see the generated threats for it
 
 ![](./media/image79.jpeg)
-<p align="center"> Figure 3-20 </p> 
+<p align="center"> Figure 3-19 </p> 
 
 * Click on the threats to check their details
 
 ![](./media/image80.jpeg)
-<p align="center"> Figure 3-21 </p> 
+<p align="center"> Figure 3-20 </p> 
 
 [Back to Top](#table-of-contents)
 
