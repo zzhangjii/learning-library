@@ -51,16 +51,31 @@ To optimize your experience there are some general guidelines that will help you
 # Oracle Cloud Account
 [Back to top](#Class-of-SE---HOL-Part-1---Cloud-access-and-locating-your-compartment)
 
-1.  Login to the Oracle Cloud. Your username and tenancy have been
-    created in advance. Your login information will be sent via email.
-    Look for an email from Oracle Cloud.
+1.  Sign in to the Oracle Cloud
+
+![](./media/image04.png)
+*<p align="center">Figure 1: Sign in to the Oracle Cloud </p>*
+
+2.  Use the tenancy provided by your instructor.  Click the next button.
+
+![](./media/image02.png)
+*<p align="center">Figure 2: Tenancy </p>*
+
+There are two ways you can potentially access the Oracle Cloud, by using your Oracle SSO or by using an IDS user account created for lab purposes only.
+
+  3.  For internal Oracle trainings you will use your SSO login.
+
+![](./media/image03.png)
+*<p align="center">Figure 3: Oracle Single Sign On </p>*
+
+  4.  For external trainings an IDS username and password have been created in advance.  Your login information will be sent via email. Look for an email from Oracle Cloud.
 
 ![](./media/image6.png)
 
-*<p align="center">Figure 1: Sample email </p>*
+*<p align="center">Figure 4: Sample email </p>*
 
 
-2.  Click the link in the email to access your
+5.  Click the link in the email to access your
     services directly. Use the ***userid*** and ***temporary password***
     from the email to login. You will be asked to change your password.
     Be prepared with a strong password that meets the security criteria.
@@ -69,11 +84,11 @@ To optimize your experience there are some general guidelines that will help you
 
 > ![](./media/image8.png)
 
-*<p align="center"> Figure 2: Cloud Account login screen</p>*
+*<p align="center"> Figure 5: Cloud Account login screen</p>*
 
 > ![](./media/image9.png)
 
-*<p align="center"> Figure 3: Password reset screen</p>*
+*<p align="center"> Figure 6: Password reset screen</p>*
 
 > ***Password Criteria:***
 
@@ -86,16 +101,17 @@ To optimize your experience there are some general guidelines that will help you
   - *Password must have at least 1 numeric character*
   - *Cannot repeat the last 4 passwords*
 
-**Note:** *If you <span class="underline">haven’t received an
-introduction email</span> you can login directly and request a password reset. Open a browser and
-navigate to:* <span class="underline">
+**Note 1:** *If you <span class="underline">haven’t received an
+introduction email</span> you can login directly and request a password reset. Open a browser and navigate to:* <span class="underline">
 <https://cloud.oracle.com/en_US/sign-in>.</span> *Use the ‘**Can’t Sign
 In**’ link to reset your password, a password reset link will be sent to
 your email.  The initial invitation will expire within 24 hours.  If your login offer has expired, contact an admin.*
 
+**Note 2:** *You cannot reset your SSO password with the 'Can't sign in?' link.  If SSO isn't working for you, see your administrator.*
+
 ![](./media/image10.png)
 
-*<p align="center"> Figure 4: Reset password</p>*
+*<p align="center"> Figure 7: Reset password</p>*
 
 3.  After you’ve successfully logged in, you should arrive at the Guided
     Journey screen. Choose the hamburger icon at the top left of the
@@ -103,7 +119,7 @@ your email.  The initial invitation will expire within 24 hours.  If your login 
 
 ![](./media/image11.png)
 
-*<p align="center"> Figure 5: Guided Journey Screen</p>*
+*<p align="center"> Figure 8: Guided Journey Screen</p>*
 
 # Locate your compartment
 [Back to top](#Class-of-SE---HOL-Part-1---Cloud-access-and-locating-your-compartment)
@@ -126,25 +142,25 @@ For more information on Compartments, like best practices and examples, see the 
 
 ![](./media/image12.png)
 
-*<p align="center"> Figure 6: OCI Console Compartments menu</p>*
+*<p align="center"> Figure 9: OCI Console Compartments menu</p>*
 
 2. Click on the **Training** compartment
 
 ![](./media/image13a.png)
 
-*<p align="center"> Figure 7:  Choose Compartment</p>*
+*<p align="center"> Figure 10:  Choose Compartment</p>*
 
 3.  Locate the compartment name that matches your physical training location and utilize this compartment for the following exercises.  
 
 ![](./media/image14a.png)
 
-*<p align="center"> Figure 8: Create compartment dialog</p>*
+*<p align="center"> Figure 11: Create compartment dialog</p>*
 
 4.  If you want to view the compartment details, change the compartment name, or delete the compartment, click the ellipses and choose an option.
 
 ![](./media/image16.png)
 
-*<p align="center"> Figure 9: Compartment options</p>*
+*<p align="center"> Figure 12: Compartment options</p>*
 
 ![](./media/image99.png)
 

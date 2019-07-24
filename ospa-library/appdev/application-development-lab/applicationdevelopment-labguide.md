@@ -122,6 +122,10 @@ the user interface.
 In this lab you will make sure you can access the VBCS instance for your
 classroom and supporting lab files.
 
+First, if you are part of an organized class, try using the URL from the Participant Guide (facilitator will also post on Slack); if that succeeds please jump to [Create Application](#create-application) (just before #6)
+
+### ***SKIP TO [Create Application](#create-application) UNLESS DOING THIS LAB OUTSIDE OF A FORMAL CLASS*** 
+
 1.  Log into class tenancy using cloud.oracle.com
 
 
@@ -210,12 +214,14 @@ Dashboard”)
 
 #### Open VBCS Home Page  
 
-5.  Select the VBCS instance being used for the lab ("ospavcs1" below), then using the “Hamburger Icon” ![](./media/image16.png) on the far right;
+5.  Find the VBCS instance being used for the lab in the list ("OSPA-Class-Of-SE" below), then using the “Hamburger Icon” ![](./media/image16.png) on the far right;
     choose “Open Oracle Visual Builder Cloud Service Home Page”
 
     ![](./media/vbcs_instance_0.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.5 – Open VBCS<br/>
+
+## Create Application
 
 6.  You should briefly see the VBCS “splash” page.
 
@@ -223,13 +229,13 @@ Dashboard”)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.6 – VBCS Splash<br/>
 
-7.  When the “Visual Applications” list appears; choose the “New” button in the upper-right corner.
+7.  When the “Visual Applications” welcome appears; choose the “New Application” button.
 
-  ![](./media/image19.png)
+  ![](./media/New17.1_a.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.7.1 – Visual Applications<br/>
 
-  ![](./media/image20.png)
+  ![](./media/New17.2.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.7.2 – Import New Buttons<br/>
 
@@ -240,12 +246,14 @@ Dashboard”)
 
     If you are sharing your lab environment with a group of people you might find it convenient to follow a naming convention to make it easier for you to find your work and for the facilitators to help you.
     
-    Perhaps combining your name or initials (or even employee id) with two-or-three characters representing your location to use as an application name or to add as a prefix to the names of all applications you create. Visual Builder's list of applications may be sorted and filtered easily.
+    Combine your name or initials with three characters representing your location to use as an application name or to add as a prefix to the names of all applications you create. Visual Builder's list of applications may be sorted and filtered easily.
+
+    (The facilitator will share a three-character code for you to use in your location.)
       
     Be sure the “Empty Application” template is selected and click
     “Finish” to continue.
 
-    ![](./media/image21.png)
+    ![](./media/New1.8.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.8 – Name application<br/>
 
@@ -514,7 +522,7 @@ The completed field list should look like this:
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(click the "Checkmark" ![](./media/vbcs_checkmark.png) when done)
 
-![](./media/image49.png)
+![](./media/vbcs_add_row_2.13.1.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.13.1 – Add Mozzarella
 
@@ -612,7 +620,7 @@ Click the “Import” button to upload the selected file
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.21 – Add Product Order Line
 
-22. Now, using the technique illustrated in 16-18 above add data to the
+22. Now, using the technique illustrated in 16-18 above add data into (append to existing) the
     Product Order and Product Order Line business objects (note: file
     names same as business object names) using the provided data files
 
@@ -1102,7 +1110,7 @@ Nothing really new so far…
     
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.18.3 – attribute
     
-    Select “op” and type “$eq” also as a “static value (equal condition
+    Select “op” and type “$eq” also as a “static" value (equal condition
     test).
     
     ![](./media/image123.png)
@@ -1238,13 +1246,21 @@ Mama Maggy's managers/franchisees want to be able to check product order status 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.31 – Screen with empty table
 
-32. Use the table’s “Quick Start” to “Add Data” from "ProductOrderLine" to the table, add 
-    item\[i\] -\> Product Name (Text), Unit Price (Input Number), and
+32. Use the table’s “Quick Start” to “Add Data” from "ProductOrderLine" to the table, add Product Name (text),<br/>
+__*** find Product Name by drilling down ***__<br/>
+&nbsp;&nbsp;&nbsp; __{} response <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [] items <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{} item\[i\] <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{} Product Object <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[] items <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{} item[i] <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Product Name__<br/> 
+    Unit Price (Input Number), and
     Quantity (Input Number).
 
-> ![](./media/image141.png)
-> 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.32 – Items table contents  
+![](./media/endpoints2.png)
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 3.32 – Endpoint Drilldown and Column List  
+
 >   
 > Use “Define Query” to connect the Product List to the list of Items as
 > follows:
@@ -1435,10 +1451,7 @@ In this lab you will create new VBCS Web applications to display a list of Mama 
 > 
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.7.4 – Copy to Reponse Body
 > 
-> Click the “Create” button to finish the process of building the
-> service connection.
-> 
-> ![](./media/image158.png)
+
 > 
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.7.5 – Create button
 
@@ -1453,24 +1466,7 @@ In this lab you will create new VBCS Web applications to display a list of Mama 
     named). Type an associate id number (“7 in the example”) and “Send”
     to test.  
     ![](./media/image160.png)  
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.9.1 – Test single associate connection
-
-> Provide a name for the connection (“mmassociateget” in the example).
-> 
-> ![](./media/image161.png)
-> 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.9.2 – Name single connection
-> 
-> ![](./media/image162.png)
-> 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.9.1 – Test single connection
-> 
-> Check the response status and values, then click “Copy to Response
-> Body” and the “Create” button to finish things up.
-> 
-> ![](./media/image163.png)
-> 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.9.2 – Single connection response
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.9 – Test single associate connection
 > 
 > You have now created and tested two connections.
 
@@ -1712,9 +1708,9 @@ This concludes Extra Lab 6.
 
 &nbsp;&nbsp;&nbsp;&nbsp;[Appendix A: Create VBCS Instance](#appendix-a-create-vbcs-instance)
 
-&nbsp;&nbsp;&nbsp;&nbsp;[Appendix B: Create Service Connection from Endpoint](appendix-b-create-service-connection-from-endpoint)
+&nbsp;&nbsp;&nbsp;&nbsp;[Appendix B: Create Service Connection from Endpoint](#appendix-b-create-service-connection-from-endpoint)
 
-&nbsp;&nbsp;&nbsp;&nbsp;[Appendix C: Build Mama Maggy Data Application](appendix-c-build-mama-maggy-data-application)
+&nbsp;&nbsp;&nbsp;&nbsp;[Appendix C: Build Mama Maggy Data Application](#appendix-c-build-mama-maggy-data-application)
 
 # Appendix A: Create VBCS Instance
 
@@ -2010,11 +2006,11 @@ In this lab you will create:
   - An “Associate” Business Object containing fields and data for Mama
     Maggy associates
 
-  - Two .csv files are provided to provide data for Store and
-    Associate  
-    (be sure to create “Store” before “Associate” (Associate references
-    Store), and  
-    load data into “Store” first before loading data into “Associate”)
+  - You will need two data files stored in a single .zip file named [setupfiles.zip](https://github.com/oracle/learning-library/blob/master/ospa-library/appdev/application-development-lab/files/setupfiles.zip) on GitHub; download the file and expand it to find the following two files (keep them handy they will be used later to load data):
+      - Store.csv
+      - Associate.csv
+      
+        (be sure to create “Store” before “Associate” (Associate references Store), and load data into “Store” first before loading data into “Associate”)
 
 <!-- end list -->
 
@@ -2277,14 +2273,14 @@ Results should be.
 
 14. Access points currently have a “version” number and will change each
     time the objects are modified. Currently only the “development”
-    addresses are available.
+    addresses are available. The steps below will show you how to publish and make the addresses constant.
 
 > ![](./media/image_c_32.png)
 > 
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure C.14 – Development-only Resource API addresses
 
 15. To “set” the access points so that they will not change over time;
-    you must first “Stage” and then “Publish” the application.  
+    you must first “Stage” and then “Publish” the application.  (When the application is in "Development" and "Staging" the addresses are versioned; once an application is published to the "Live" environment the address will not change and is suitable for sharing.)
       
     First, return to the list of business objects.
 
