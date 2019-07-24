@@ -304,7 +304,6 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
  - On **Step 2** accept the Defaults and click **Next**.  
 
-
 	![](images/100/image40.png)
 
   - Accept the Defaults and click **Next** on **Step 3** of the **Import Wizard**.
