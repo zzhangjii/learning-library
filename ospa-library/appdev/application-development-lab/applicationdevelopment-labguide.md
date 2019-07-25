@@ -1294,7 +1294,11 @@ __*** find Product Name by drilling down ***__<br/>
 
 Congratulations! You have made the daily lives of Mama Maggy managers/franchisees easier. Instead of calling headquarters to check the status of their product orders they can now use your mobile app when and where it is convenient.
 
-This concludes Lab 3.
+This concludes Lab 3.<br/><br/>
+
+For a little "BONUS" activity; try "Publishing" your mobile application as a Progressive Web App; here's a video that will show you how: https://blogs.oracle.com/vbcs/creating-progressive-web-apps-with-oracle-visual-builder
+
+<br/>
 
 [Return to top of Section 3 – Create Mobile Application](#section-3--create-mobile-application)
 
@@ -1419,7 +1423,7 @@ In this lab you will create new VBCS Web applications to display a list of Mama 
 
 6.  Next, open the service for testing: select the connection, choose
     the “Endpoints” tab, find and select the desired endpoint
-    (highlighted below).
+    (highlighted below). Please notice we selected two of the endpoints provided by the API developer : <br/>**&nbsp;&nbsp;&nbsp;&nbsp;Get /Associate   (Get all Associate rows)<br/>&nbsp;&nbsp;&nbsp;&nbsp;Get /Associate/{Associate_Id}   (Get single Associate by ID)**
 
 > ![](./media/image153.png)
 > 
@@ -1469,15 +1473,12 @@ In this lab you will create new VBCS Web applications to display a list of Mama 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 4.9 – Test single associate connection
 > 
 > You have now created and tested two connections.
-
-10. Repeat the steps in 4.6 – 4.9 above to two the “mmstores” connection
-    endpoints.
-
 <!-- end list -->
 
-  - Mama Maggy Store – get all
 
-  - Mama Maggy Store – get single using {Store\_id}
+10. Repeat the steps in 4.6 – 4.9 above to create a service connection named "mmstores" for the two Mama Maggy Store endpoints selected: <br/><br/>**&nbsp;&nbsp;&nbsp;&nbsp;Get /Store   (Get all Store rows)<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;Get /Store/{Store_Id}   (Get single Store by ID)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Test with Store ID value of 7 <br/><br/>
+
 
 > Be sure to test your connections.
 
@@ -1657,6 +1658,8 @@ In this lab you will work more with RESTful API calls.
     (single row access) to provide the associate’s “Name” rather than
     their “id” in the “Product Orders” list and “Product Order Detail”
     displays.
+
+    Hint: You can pick the value of a field and pass it as a param to the REST service. Check out the second half of this video https://www.youtube.com/watch?v=tHDA-BJ53tM See how the country code is passed from the BO to the country service. You can hook this up to a button or add a step to the existing action that fetches the record from your service connection.
 
 3.  (optional) Try to repeat \#2 and add replace the associate id with
     associate name in a copy of your mobile application (again, don’t
