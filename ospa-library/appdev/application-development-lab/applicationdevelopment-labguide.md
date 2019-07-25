@@ -20,6 +20,8 @@
 
   &nbsp;&nbsp;&nbsp;&nbsp;[Extra Lab 6: Review and edit JavaScript code “under the covers” of VBCS](#extra-lab-6-review-and-edit-javascript-code-under-the-covers-of-vbcs)
 
+  &nbsp;&nbsp;&nbsp;&nbsp;[Extra Lab 7: Publish Mobile App as PWA](#extra-lab-7-publish-mobile-app-as-pwa)
+
 ### [Appendices](#appendix)
 
 &nbsp;&nbsp;&nbsp;&nbsp;[Appendix A: Create VBCS Instance](#appendix-a-create-vbcs-instance) - In case you don't have one already
@@ -1294,11 +1296,8 @@ __*** find Product Name by drilling down ***__<br/>
 
 Congratulations! You have made the daily lives of Mama Maggy managers/franchisees easier. Instead of calling headquarters to check the status of their product orders they can now use your mobile app when and where it is convenient.
 
-This concludes Lab 3.<br/><br/>
+This concludes Lab 3.<br/>
 
-For a little "BONUS" activity; try "Publishing" your mobile application as a Progressive Web App; here's a video that will show you how: https://blogs.oracle.com/vbcs/creating-progressive-web-apps-with-oracle-visual-builder
-
-<br/>
 
 [Return to top of Section 3 – Create Mobile Application](#section-3--create-mobile-application)
 
@@ -1705,7 +1704,22 @@ For instance:
 
 This concludes Extra Lab 6.
 
+[Go to Extra Lab 7](#extra-lab-7-publish-mobile-app-as-pwa) – 
 [Return to Table of Contents](#table-of-contents)
+
+# Extra Lab 7: Publish Mobile App as PWA
+
+The “Extra” labs are intended to “flex” the mind-muscles of those who
+have finished the other labs early so, they are short on explanation and
+there are no example solutions provided.
+
+For a little "BONUS" activity; try "Publishing" your mobile application as a Progressive Web App; here's a video that will show you how: https://blogs.oracle.com/vbcs/creating-progressive-web-apps-with-oracle-visual-builder
+
+<br/>
+
+[Return to Table of Contents](#table-of-contents)
+
+<br/>
 
 # Appendix
 
