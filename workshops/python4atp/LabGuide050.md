@@ -161,7 +161,7 @@ We require a Database to store the Alpha Office data which is accessed later in 
 
   ![](images/050/018.1.png)
 
-- After approximately 5 minutes, the ATP instance will be provisioned. You can immediately proceed to the next section.
+- After approximately 5 minutes, the Autonomous Transaction Processing instance will be provisioned. You can immediately proceed to the next section.
 
   ![](images/050/019.png)
 

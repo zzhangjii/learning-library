@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Derek is a Python developer, and so he avoids spending time in secondary tasks such as database-related work. However, some database work is unavoidable. It’s necessary to secure the database with authorization token files. It’s necessary to create database users. And it’s necessary to load application data. The Oracle Autonomous Transaction Processing Cloud Service reduces database-related work to a bare minimum.  In Lab 100 you will first create an Object Store Bucket to provide accessible file storage within the Compartment containing the ATP database. You will then secure database access by creating authorization tokens and distributing the related wallet file. You will also create necessary database users and necessary database objects. Then you will import necessary application data from a remote export file into the ATP database. As a final task you will create an external table (accessible via the ATP database) containing customer credit score data.
+Derek is a Python developer, and so he avoids spending time in secondary tasks such as database-related work. However, some database work is unavoidable. It’s necessary to secure the database with authorization token files. It’s necessary to create database users. And it’s necessary to load application data. The Oracle Autonomous Transaction Processing Database Cloud Service reduces database-related work to a bare minimum.  In Lab 100 you will first create an Object Store Bucket to provide accessible file storage within the Compartment containing the Autonomous Transaction Processing Database. You will then secure database access by creating authorization tokens and distributing the related wallet file. You will also create necessary database users and necessary database objects. Then you will import necessary application data from a remote export file into the Autonomous Transaction Processing Database. As a final task you will create an external table (accessible via the Autonomous Transansaction Processing Database) containing customer credit score data.
 
 ## Lab 100 Objectives
 
@@ -14,7 +14,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 - Generate an auth token.
 - Setup a SQL Developer connection to your Autonomous Transaction Processing (ATP) Database.
 - Create a DBMS_CLOUD credential.
-- Import Data into ATP database.
+- Import Data into the Autonomous Transaction Processing Database.
 - Create an external table.
 
 ## Steps
@@ -78,7 +78,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
   ![](images/100/024.png)
 
 
-### **STEP 4:** Download ATP Wallet Zip File
+### **STEP 4:** Download the Autonmous Transaction Processing Database DB Wallet Zip File
 
 - Open firefox from inside the image (you should still be in the image from the previous step) and log into your cloud account.  Note 
 	
@@ -90,7 +90,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
   ![](images/100/027.png)
 
-- Select the **AlphaOffice** ATP Database.  Be sure to select the correct region, and the correct compartment.
+- Select the **AlphaOffice** Autonomus Transaction Processing Database.  Be sure to select the correct region, and the correct compartment.
 
   ![](images/100/028.png)
 
@@ -116,7 +116,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
   ![](images/100/034.png)
 
-- As information, the ATP Wallet file **Wallet_orcl4py.zip** contains the following files
+- As information, the Autonmous Transaction Processing Database Wallet file **Wallet_orcl4py.zip** contains the following files
 
   ![](images/100/033.png)
 
@@ -146,7 +146,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
   ![](images/100/wallet/32.png)
 
-### **STEP 6:** Create SQL Developer Connection to ATP Database
+### **STEP 6:** Create SQL Developer Connection to the Autonomous Transaction Processing Database
 
 - Open **SQL Developer** through the menu.
 
@@ -167,7 +167,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
 	![](images/100/042.png)
 
-### **STEP 7:** Create Database User in ATP Database
+### **STEP 7:** Create Database User in the Autonomous Transaction Processing Database
 
 - You should see the **SQL Developer Worksheet** open. Once opened execute the following SQL Statements to create the `alpha` database user.
 
@@ -193,7 +193,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
   ![](images/100/044.png)
 
-### **STEP 9:** Add DBA View and ATP SQL Developer Connection
+### **STEP 9:** Add DBA View and an Autonomous Transaction Processing Database SQL Developer Connection
 
 - In **SQL Developer**, click on the menu **View** and select **DBA**
 
@@ -207,7 +207,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
   ![](images/100/048.png)
 
-### **STEP 10:** Import Data into ATP Instance using Data Pump Import Wizard
+### **STEP 10:** Import Data into the Autonomous Transaction Processing Database Instance using Data Pump Import Wizard
 
 - On you desktop browser navigate to object storage and select the py4dev bucket.
 
