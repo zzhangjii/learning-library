@@ -140,6 +140,16 @@ First, if you are part of an organized class, try using the URL from the Partici
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.1.2   - Login<br/>
 
+Some systems will start with a "Quick Actions" screen as shown below
+
+ ![](./media/new_quick_action1.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.1.3 - Quick Actions
+
+Use the "Hamburger" or "Navigator" icon in the upper left corner to display a navigation menu, then select "My Services Dashboard" [(jump to #3 Service Dashboard)](#service-dashboard) 
+
+![](./media/new_quick_action2.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.1.4 - My Services Dashboard choice
+
 2.  Some systems will offer a "Guided Journey"
 
 
@@ -185,6 +195,8 @@ Dashboard”)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.2.7 – Visual Builder Icon (version 2)<br/>
 
+#### Service Dashboard
+
 3.  When the "Visual Builder" service box appears there are two ways to proceed to the service console: click on "Visual Builder" text and go through the "Visual Builder Cloud Service" page or use the service box menu.
 
     ![](./media/image_c_3.png)
@@ -224,6 +236,8 @@ Dashboard”)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.5 – Open VBCS<br/>
 
 ## Create Application
+
+**(if prompted, login to the tenancy first)**
 
 6.  You should briefly see the VBCS “splash” page.
 
@@ -1617,7 +1631,7 @@ This concludes Lab 4.
 **Congratulations\!** You’ve now finished the required labs for this
 course.
 
-You may save today’s work using Visual Builder’s “export” capability, this will provide you with a starting point if you would like to continue working on the labs, **but more importantly will give you a starting point when you want to create a customer demonstration using VBCS**:
+You may save today���s work using Visual Builder’s “export” capability, this will provide you with a starting point if you would like to continue working on the labs, **but more importantly will give you a starting point when you want to create a customer demonstration using VBCS**:
 
   - Return to the list of VBCS applications, highlight your application,
     then click the “Hamburger” menu icon on the right.
