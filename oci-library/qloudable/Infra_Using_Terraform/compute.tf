@@ -134,7 +134,7 @@ resource "oci_core_security_list" "ExampleSL" {
 
   egress_security_rules {
     protocol    = "all"
-    destination = "0.0.0.0.0"
+    destination = "0.0.0.0/0"
   }
 
   ingress_security_rules {
