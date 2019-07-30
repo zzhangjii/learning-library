@@ -215,23 +215,17 @@ We require a Database to store the Alpha Office data which is accessed later in 
 
 	![](images/050/044.png)
 
-- Change directory to `Downloads`.
+- Change directory to  **Downloads** ```cd Downloads```.
 
-`cd Downloads`
+    ![](images/050/045.png)
 
-	![](images/050/045.png)
-
-- Install sudo yum install libXScrnSaver.  Enter `y` when prompted.
-
-`sudo yum install libXScrnSaver`
+- Install sudo yum install libXScrnSaver.  Enter `y` when prompted `sudo yum install libXScrnSaver`.
 
 	![](images/050/046.png)
 
 	![](images/050/047.png)
 
-- Install code.  Enter the following:
-
-`sudo rpm -ivh code-1.35.1-1560350390.el7.x86_64.rpm`
+- Install code.  Enter the following: `sudo rpm -ivh code-1.35.1-1560350390.el7.x86_64.rpm`.
 
 	![](images/050/048.png)
 
