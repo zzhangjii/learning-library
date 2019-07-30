@@ -1,6 +1,6 @@
 # Application Integration Lab Guide
 
-## July 22, 2019 - 3:15PM
+## July 27, 2019 - 8:45PM
 
 # Table of Contents
 
@@ -9,8 +9,10 @@
   - [Description of the Business Solution](#Description-of-the-Business-Solution)
   - [Description of the Technical Solution](#Description-of-the-Technical-Solution)
 - [Prerequisites](#Prerequisites)
+  - [Creating a Scratchpad to Stay Organized](#Creating-a-Scratchpad-to-Stay-Organized)
 - [Preparing Your Environment](#Preparing-Your-Environment)
   - [Clear Browser Data](#Clear-Browser-Data)
+  - [Sign In to the Oracle Cloud Platform](#Sign-In-to-the-Oracle-Cloud-Platform)
   - [Check Autonomous Database Status](#Check-Autonomous-Database-Status)
   - [Download Database Wallet](#Download-Database-Wallet)
   - [Configure SQL Developer Database Access](#Configure-SQL-Developer-Database-Access)
@@ -158,31 +160,49 @@ With the business process architecture as a backdrop, let’s review the technic
 
 # Prerequisites
 
-Before starting these labs, you will need:
-
-  - Oracle Cloud access from *<https://cloud.oracle.com/en_US/sign-in>*:
+## Creating a Scratchpad to Stay Organized
+Create a place on your computer to keep notes that are important to
+    remember and access. This is a good practice whenever you are
+    working with software. A scratchpad area like this will allow you to easily reference and copy items later. You'll leave this file open throughout the labs. To set up your scratchpad:
     
-      - Account Name (*tenancy*)
+  - Create an *ApplicationIntegrationLabs* folder on your
+    computer. This is where you will store various
+    artifacts, like your scratchpad, during the labs.
+
+  - Open Notepad (Windows PC) or TextEdit (Mac) and create a new file called *MyLabNotes*. Save it into your *ApplicationIntegrationLabs* folder. 
+
+Before starting these labs, you will need some basic information.  Please add these items to your scratchpad.
+
+- Refer to the *Appendix* section to establish your own instances and collect the rest of the information listed below as you perform the setup steps in the *Appendix*.
+
+If you are **in an Oracle class**, check your *Participant Guide* now.  Look in the *Lab Environment Details* section based on your location and, in some cases, your last name.  Look for and note the following:
+
+  - Team Size: This informs you if you are to work alone or if you are to team up with a colleague. If you are to team up, find your "buddy" now and proceed together. 
     
-      - Oracle Account Sign In (User Name and Password)
+  - Account Name (Tenancy): Note this in your MyLabNotes file as: *Tenancy: \<insertYourTenancy\>*.  
 
-  - Oracle Integration Instance Name 
+  - Sign In Type: There are two types of sign in paths you may be asked to follow based upon the *Account Name (Tenancy)*.  These paths are: *Use SSO* and *Do not use SSO*. Note your path in your MyLabNotes file as: *Sign In Type: \<yourSignInType\>*. 
 
-  - Autonomous Database Compartment 
+    - If your *Sign In Type* is *Do not use SSO*:
+      - Account User Name: The user name is likely your email address and was supplied to you in the welcome email that invited you to the tenancy. Note this in your MyLabNotes file as: *Account User Name: \<insertYourUserName\>*.
+        
+      - Account Password: This the password that you established when you responded to your welcome email when you were invited to this tenancy.  The link in the welcome email that allows you to set your password.  This link is valid for only a short time.  If that time has expired, you will have to perform a password reset.  Ask your instructor for help.  Do NOT note your password in your MyLabNotes file. 
 
-  - Autonomous Database Name 
+  - Integration Instance Name: Note this in your MyLabNotes file as: *Integration Instance: \<insertYourIntegrationInstance\>*. 
 
-  - *atpc\_user* Autonomous Database User Password 
+  - Autonomous Database Compartment: Note this in your MyLabNotes file as: *DB Compartment: \<yourAutonomousDatabaseCompartment\>*. 
 
-  - Oracle SQL Developer Proxy Host (for Oracle classrooms only)
+  - Autonomous Database Name: Note this in your MyLabNotes file as: *DB Name: \<insertYourAutonomousDatabaseName\>*.
 
-  - Oracle SQL Developer Proxy Port (for Oracle classrooms only)
+  - *atpc\_user* Autonomous Database User Password: Note this in your MyLabNotes file as: *DB User Name: \<insertYourAtpcUser>*.   
 
-If you are using this lab guide as part of an Oracle class (like *Class Of SE*), the Oracle Integration and Autonomous Database instances are already set up for you and the environment information is provided for you in the *Lab Environment Details* section the **Participant Guide** for your class.  
+If you are using this lab guide **outside of an Oracle class**:
 
-If you are using this lab guide outside of an Oracle class, refer to the *Appendix* section to establish your own instances and collect the above information as you perform the setup steps there.  
+- Account User Name: The user name is likely your email address and was supplied to you in the welcome email that invited you to the tenancy. Note this in your MyLabNotes file as: *Account User Name: \<insertYourUserName\>*.
+        
+- Account Password: This the password that you established when you responded to your welcome email when you were invited to this tenancy.  The link in the welcome email that allows you to set your password.  This link is valid for only a short time.  If that time has expired, you will have to contact your system administrator for a password reset.  If the time has expired and you are in an Oracle class, you can sign in using the *Temporary Password* contained in your *Participant Guide*. Do NOT note your password in your MyLabNotes file.
 
-  In addition, you should make sure that you have Google Chrome and Oracle SQL Developer installed on your computer.  They may already be there so there is no need to reinstall them.  If you need them,  here is where you can find the software: 
+In addition, you should make sure that you have Google Chrome and Oracle SQL Developer installed on your computer.  They may already be there so there is no need to reinstall them.  If you need them,  here is where you can find the software: 
 
   - Google Chrome browser. Other browsers
     should work well, but this lab was tested with Chrome. The Chrome
@@ -217,25 +237,12 @@ have done the prerequisites, continue below:
 
 1.  Close your VPN connection if it is active.
 
-2.  Create an *ApplicationIntegrationLabs* folder (directory) on your
-    computer’s file system. This is where you will store various
-    artifacts during the labs.
-
-3.  Open Notepad (Windows PC) or TextEdit (Mac) on your computer and
-    create a new file called *MyLabNotes*. Save it into your
-    *ApplicationIntegrationLabs* folder. Keep the file open as an area
-    where you can conveniently store items that are important to
-    remember and access. This is a good practice whenever you are
-    working with software. Put things here so you can easily copy and
-    paste them later. It’s your handy “scratchpad.”  Leave the document
-    open throughout the labs.
-
-5.  Start your Chrome browser. Again, other browsers may work just fine,
+2.  Start your Chrome browser. Again, other browsers may work just fine,
     but these labs were tested using Chrome.
 
 ## Clear Browser Data
 
-6.  During interactions with the Oracle Cloud, users sometimes have browser difficulties.  The symptom is the appearance of the *"ERR_TOO_MANY_REDIRECTS"* message.  To prevent this, we'll clear the browser data (cache) periodically throughout the lab exercises.  Clear your browser data now:
+3.  During interactions with the Oracle Cloud, users sometimes have browser difficulties.  One symptom is the appearance of the *"ERR_TOO_MANY_REDIRECTS"* message.  To prevent this, we'll clear the browser data (cache) periodically throughout the lab exercises.  Clear your browser data now:
     
       - On a Windows PC:
         
@@ -278,49 +285,51 @@ have done the prerequisites, continue below:
 
     *Tip:* As an alternative to having to clear browser data periodically (as indicated above), you can  open your Chrome window in *Incognito Mode* by using the *File* / *New Incognito Window* / menu option.
 
+## Sign In to the Oracle Cloud Platform ##
+
+6.  Sign in to the Oracle Public Cloud:
+       - Browse to: https://cloud.oracle.com/en_US/sign-in 
+
+      - Enter your *Account Name* (tenancy) for *Account* and then click *Next*.  In *Prerequisites*, you noted your *Tenancy* in your MyLabNotes file.
+
+      - If your *Sign In Type* is *Use SSO*:
+        - Click the *Oracle SSO* link at the right.  In *Prerequisites*, you noted your *Sign In Type* in your MyLabNotes file. 
+
+        - When prompted for *User Name* and *Password*, enter your regular Oracle SSO Sign In credentials (user name and password). 
+
+      - If your *Sign In Type* is *Do not use SSO*:
+        - When prompted for *User Name* and *Password*, enter your *Account User Name* and *Account Password* that you noted in the *Prerequisites* section.  
+         
+      - Click the *Sign In* button.
+
 ## Check Autonomous Database Status
 
 7.  Access your Autonomous Database to see if it has been started:
 
-    - Sign in to the Oracle Public Cloud:
-      - Browse to
-    https://cloud.oracle.com/en_US/sign-in 
-      - Enter your *Account Name* (tenancy) for *Account*
-    and then clicking Next.  Check the *Prerequisites* section above for the Account Name.
+  - The page you see now is based upon the what your tenancy.  Follow the appropriate path documented below based upon what you see on the current page:
+    - Path 1: If you see the *Guided Journey* page:
+      - Click the *Dashboard* link in the upper-right side of the window.
+      - Copy and paste the current URL into your MyLabNotes file as *Oracle Cloud My Services Page URL: \<yourServicesURL\>*.
+      - Click on the green *Autonomous Database* icon.
+      -  On the *Autonomous Database Manage Data and Transactions* page, click the *Go to My Dashboard* button in the upper-right.
 
-      - When prompted for *User Name* and *Password*, enter your Oracle Cloud
-    Account Sign In credentials (user name and password).  **NOTE:** If you are an
-    Oracle employee, click the *Oracle SSO* link at the right to enter your
-    credentials.
-
-      - Click the *Sign In* button.
-
-      - The page you see now is based upon the what you entered for *Account Name* (tenancy) in the *Account* field when you signed in.  Follow the appropriate path documented below based upon what you see on the current page:
-        - Path 1: If you see the *Guided Journey*" page:
-          -  Click on the green *Autonomous Database* icon.
-          -  On the *Autonomous Database Manage Data and Transactions* page, click the *Go to My Dashboard* button in the upper-right.
-        - Path 2: If you see the *Oracle Cloud* page with the *Quick Actions* section at the top:        
-           - Click on the *hamburger* menu icon in the upper-left corner.
-           - On the menu that appears, select the *My Services Dashboard* option.
-      - You're *Oracle Cloud My Services* page appears as shown below. 
-      - Copy the current URL and paste it into your *MyLabNotes* "scratchpad" file.  Label this URL as *Oracle Cloud My Services Page URL*.
-
-        ![](./media/image128.png)
-
-        Figure 3: My Oracle Services Page
-
+    - Path 2: If you see the *Oracle Cloud* page with the *Quick Actions* section at the top:        
+        - Click on the *hamburger* menu icon in the upper-left corner.
+        - On the menu that appears, scroll down and select the *My Services Dashboard* option.
+      - You're *Oracle Cloud My Services* page appears as shown below.
+      - Copy and paste the current URL into your MyLabNotes file as *Oracle Cloud My Services Page URL: \<yourServicesURL\>*.
+       
     - Click the *Autonomous Transaction Processing* option to display the *Service: Autonomous Transaction Processing* window.  **NOTE:** If you can't find this option, click on the *circled + icon* in the upper-left and use the *Customize Dashboard* option to add the *Autonomous Transaction Processing* option to your dashboard.  
 
-    - Click on the *Open Service Console* button in the upper-right corner to display the *Autonomous Databases* page.  **NOTE:** If you see a window with this message, *"Feature Autonomous Databases is not available in your currently selected region*," perform this workaround:
+    - Click on the *Open Service Console* button in the upper-right corner to display the *Autonomous Databases* page.  **NOTE:** If you instead see a window with this message, *"Feature Autonomous Databases is not available in your currently selected region*," perform this workaround:
       - Click the *hamburger menu* in the upper-left corner to display a menu.
       - From the *Database* section of the menu, click the *Autonomous Transaction Processing* option.  The *Autonomous Databases* page displays.
 
     - In the *Compartment* field at the left, select your *Autonomous
-    Database Compartment* from the dropdown list. You noted that name in
-    the *Prerequisites* section above.  
+    Database Compartment* from the dropdown list. In *Prerequisites*, you noted your *DB Compartment* in your MyLabNotes file.
 
     - Click on your *Autonomous Database Name* that appears in the table.
-  You noted that name in the *Prerequisites* section above.  **NOTE:** Your *Autonomous Database Name* may be different than that displayed in the figure below:
+  In *Prerequisites*, you noted your *DB Name* in your MyLabNotes file.  **NOTE:** Your *Autonomous Database Name* may be different than that displayed in the figure below:
 
         ![](./media/image6.png)
 
@@ -332,10 +341,9 @@ have done the prerequisites, continue below:
 
         Figure 5: Autonomous Database Details Page
     
-    - If you don’t see the big, green “*Available*” icon shown above, click the *Start* button at the top to start the instance.  
-    
-    - When the *Confirm* dialog appears, click the *Start*.  It may take as long as 15 minutes until the “*AVAILABLE*” message appears there.  You might periodically refresh
-    your browser page.  When the database has started, proceed.  
+    - If you don’t see the big, green “*Available*” icon shown above:
+      - Click the *Start* button at the top to start the instance.  
+      - When the *Confirm* dialog appears, click the *Start*.  It may take as long as 15 minutes until the “*AVAILABLE*” message appears there.  You might periodically refresh your browser page.  When the database has started, proceed.  
         
 
 ## Download Database Wallet
@@ -357,8 +365,9 @@ We need credentials to sign in to this database.  Oracle makes this easy with "w
       Figure 6: Database Connection Dialog
 
     - In the *Download Wallet* dialog, enter and confirm a *Password* for
-    your wallet. Record whatever wallet password you chose in your *MyLabNotes* scratchpad.  Label it as *Wallet Password". It’s important not to forget it. Then, click
-    the *Download* button on the dialog.
+    your wallet. Record whatever wallet password you chose in your *MyLabNotes* scratchpad.  Label it as: *DB Wallet Password: \<insertYourDBWalletPassword\>*. 
+    
+    - Click the *Download* button on the dialog.
 
     - Notice that the wallet zip file has been downloaded into your *Downloads*
     directory.
@@ -408,9 +417,8 @@ We need credentials to sign in to this database.  Oracle makes this easy with "w
 
         - If the test still fails and you are in an Oracle class, you may need to configure the *Proxy*:
           - Click on the *Proxy* tab.
-          - Toggle on the *Use Custom Proxy* radio button.
-          - Enter the *Host* and *Port* values for the *Oracle SQL Developer Proxy*. You noted them in the
-    *Prerequisites* section at the beginning of this document.
+
+          - Toggle on the *Use SQL Developer Proxy* radio button.
 
         ![](./media/image9.png)
 
@@ -467,7 +475,7 @@ We need credentials to sign in to this database.  Oracle makes this easy with "w
     *Open Service Console* button in the upper-right corner. 
     
     - Click on
-    your *Oracle Integration Instance Name*. You noted that name in the
+    your *Integration Instance Name*. You noted that name in your MyLabNotes file the
     *Prerequisites* section above.
 
     - Make sure that your Integration instance is available. Look at the
@@ -507,7 +515,7 @@ We need credentials to sign in to this database.  Oracle makes this easy with "w
 
          Figure 10: Oracle Integration Home Page
       - Copy this URL and save it in your *MyLabNotes* scratchpad file. Label it as 
-      *Oracle Integration Home Page URL*.
+      *Oracle Integration Home Page URL*. Record this URL in your *MyLabNotes* scratchpad.  Label it as: *Oracle Integration Home Page URL: \<insertYourOracleIntegrationHomePageURL\>*. 
 
 ## Prepare a Data Definition
 
@@ -1189,7 +1197,7 @@ Let's keep going. Again, follow the steps and ask questions if you get confused:
 2.  Refresh your browser window. Due to clearing the browser cache, you
     may lose your connection to the Oracle Cloud. Browse to the 
     *Oracle Integration Home Page URL* you noted in your *MyLabNotes* file 
-    to access your Integration instance.  You may have to sign in again.  **NOTE:** If you are an Oracle employee, follow the *Sign in with Oracle SSO* path.
+    to access your Integration instance.  You may have to sign in again.  **NOTE:** If you are an Oracle employee, check the *Sign In Type* you recorded in your scratchpad in the *Prerequisites* section to determime if you need to *Sign in with Oracle SSO*.
 
 4.  On the *Integration Home Page*, select the *Processes* menu option
     at the left:
@@ -2223,9 +2231,11 @@ Let’s now perform an end-to-end test of your application by assuming
         data). If you need help, refer to the Preparing Your Environment
         section for the steps.
         
-55. Due to clearing the browser cache, you may lose your connection to the Oracle Cloud. Browse to 
-        the *Oracle Integration Home Page URL* you noted in the *MyLabNotes* file 
-        to access your services.
+55. Due to clearing the browser cache, you may lose your connection to the Oracle Cloud. Browse to the 
+    *Oracle Integration Home Page URL* you noted in your *MyLabNotes* file 
+    to access your Integration instance.  You may have to sign in again.  **NOTE:** If you are an Oracle employee, check the *Sign In Type* you recorded in your scratchpad in the *Prerequisites* section to determime if you need to *Sign in with Oracle SSO*.
+    
+57. Browse to the *Oracle Integration Home Page URL* you noted in the *MyLabNotes* file to access your services.
 
 ### Initiate a Request as a Store Manager
 
@@ -2510,7 +2520,7 @@ Here is a list of problems and solutions that may help you throughout the labs:
 # Appendix Setup for the Labs
 
 Here is how you can establish your environment so you can repeat the
-labs after class. You’ll find sections below for Oracle ATP Setup and
+labs after an Oracle class. You’ll find sections below for Oracle ATP Setup and
 Oracle Integration Setup.
 
 ## Set Up Oracle ATP
@@ -2519,17 +2529,12 @@ Oracle Integration Setup.
     data). If you need help, refer to the *Preparing Your Environment*
     section for the steps.
 
-2.  Refresh your browser window. Due to clearing the browser cache, you
-    may lose your connection to the Oracle Public Cloud. Browse to the 
-    *Oracle Integration Home Page URL* noted in your *MyLabNotes* file to 
-    access your services.
+2.  Refresh your browser window. 
 
 
 3.  Create a new ATP instance:
 
-    - Browse to you're *Oracle Cloud My Services* page.  You noted the URL 
-    as *Oracle Cloud My Services Page URL* in your *MyLabNotes* "scratchpad" when
-    you initially performed the steps in the *Preparing Your Environment* section.
+    - Browse to you're *Oracle Cloud My Services* page.  You noted the URL as *Oracle Cloud My Services Page URL* in your *MyLabNotes* "scratchpad" when you initially performed the steps in the *Preparing Your Environment* section. 
 
     - Click the *Autonomous Database* option to display the *Autonomous Database Manage
     Data and Transactions* page.
@@ -2729,8 +2734,9 @@ Oracle Integration Setup.
 
             - If the test still fails and you are in an Oracle class, you may need to configure the *Proxy*:
               - Click on the *Proxy* tab.
-              - Toggle on the *Use Custom Proxy* radio button.
-              - Enter the *Host* and *Port* values for the *Oracle SQL Developer Proxy*. You noted them in the *Prerequisites* section at the beginning of this document.
+
+              - Toggle on the *Use SQL Developer Proxy* radio button.
+  
         
           - At the *Save Password* button, click it *On*. This will
             allow you later to just double-click your connection to open
@@ -2829,12 +2835,13 @@ ApplicationIntegrationLabs folder ApplicationIntegrationLabs folder.
             to your ATP instance. Wait for a moment as access is
             attempted. When successful, celebrate the “*Status:
             Success*” message that appears in the lower-left corner.
+
           - If the test fails, check that the *Service* is specified incorrectly.
-          - If the test still fails and you are in an Oracle class, you may need to configure the *Proxy*:
+
+        - If the test still fails and you are in an Oracle class, you may need to configure the *Proxy*:
             - Click on the *Proxy* tab.
-            - Toggle on the *Use Custom Proxy* radio button.
-            - Enter the *Host* and *Port* values for the *Oracle SQL Developer Proxy*. You noted them in the
-    *Prerequisites* section at the beginning of this document.
+
+            - Toggle on the *Use SQL Developer Proxy* radio button.
         
       - At the *Save Password* field, click it *On*. This will allow
             you later to just double-click your connection to open it
@@ -2939,12 +2946,7 @@ ApplicationIntegrationLabs folder ApplicationIntegrationLabs folder.
 2.  Refresh your browser window. Due to clearing the browser cache, you
     may lose your connection to the Oracle Public Cloud. 
     
-3. Browse to the 
-    *Oracle Integration Home Page URL* noted in your *MyLabNotes* file
-    (see the *Preparing You Environment section*) to 
-    access your services.
-
-4. You're *Oracle Cloud My Services* page appears.
+3. Browse to your *Oracle Cloud My Services* page appears that you noted in your scratchpad file in the *Prerequisites* section.  
 
 4. Click the *Integration* option to display the *Integration Integrate Applications
 and Automate Processes* page.

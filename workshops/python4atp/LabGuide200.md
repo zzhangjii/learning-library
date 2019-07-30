@@ -4,7 +4,7 @@
 
 ## Introduction
 
-In Lab 200 you also continue to play the role of Derek, but now you get to the fun part, building out Python apps.  You have been asked to enhance the customer experience by providing customer access to modify their profiles and enable customers to maintain their own profiles.  You will use Oracle's cx_Oracle Python interface to enable connectivity to ATP, and use the open source technologies Flask micro web framework, Bokeh interactive visualization library, and ReactJS  to support web site development.
+In Lab 200 you also continue to play the role of Derek, but now you get to the fun part, building out Python apps.  You have been asked to enhance the customer experience by providing customer access to modify their profiles and enable customers to maintain their own profiles.  You will use Oracle's cx_Oracle Python interface to enable connectivity to the Autonomous Transaction Processing Database, and use the open source technologies Flask micro web framework, Bokeh interactive visualization library, and ReactJS  to support web site development.
 
 ## Lab 200 Objectives
 
@@ -74,11 +74,11 @@ In Lab 200 you also continue to play the role of Derek, but now you get to the f
 
 ### **STEP 2:** Run python web service
 
-- Leave the terminal open. Click on **config.py** file from the left pane and change the details in the file with your ATP information.
+- Leave the terminal open. Click on **config.py** file from the left pane and change the details in the file with your Autonomous Transaction Processing Database information.
 
   ![](images/200/9.png)
 
-- We are using **flask** library to create the web service and **cx-Oracle** to connect Autonomous database to our application. The data then fetched from database it parsed and converted to JSON format to display.
+- We are using **flask** library to create the web service and **cx-Oracle** to connect the Autonomous Transaction Processing Database to our application. The data then fetched from database it parsed and converted to JSON format to display.
 - If you closed the terminal, open it again and make sure to be in virtual env. Run the command ```python app.py```. Now we have our web service running. Leave the terminal as it is.
 
   ![](images/200/10.png)
@@ -115,7 +115,7 @@ In Lab 200 you also continue to play the role of Derek, but now you get to the f
 
   ![](images/200/15.png)
   
-- In the form enter the name of country you want it to change to. Click on **Save Changes**. This will save changes in the ATP using the web API we created.
+- In the form enter the name of country you want it to change to. Click on **Save Changes**. This will save changes in the Autonomuos Transaction Processing Database using the web API we created.
 
   ![](images/200/16.png)
    
