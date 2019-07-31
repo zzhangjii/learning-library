@@ -7,7 +7,7 @@ permalink: /ziplabs/index.html
 # Zip Labs Index #
 
 ## Oracle Open World 2019 ##
-* [Access an Oracle Cloud Platform Trial Account](2019-account)
+* [Access an Oracle Cloud Platform Trial Account](new-account)
 * [Create a Virtual Machine Instance Using Oracle Cloud Infrastructure Compute](oci-vm)
 * [Provisioning Autonomous Data Warehouse Cloud and Connecting with SQL Developer](adw-provisioning)
 * [Working with Database Services and Sample Data Sets](adw-services)
