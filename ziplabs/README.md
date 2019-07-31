@@ -7,14 +7,14 @@ permalink: /ziplabs/index.html
 # Zip Labs Index #
 
 ## Oracle Open World 2019 ##
-* [Access an Oracle Cloud Platform Trial Account](2019/account)
-* [Create a Virtual Machine Instance Using Oracle Cloud Infrastructure Compute](2019/oci-vm)
-* [Provisioning Autonomous Data Warehouse Cloud and Connecting with SQL Developer](2019/adw-provisioning)
-* [Working with Database Services and Sample Data Sets](2019/adw-services)
-* [Getting Started With Oracle Machine Learning Notebooks](2019/adw-machine-learning)
-* [Provisioning Autonomous Transaction Processing and Connecting with SQL Developer](2019/atp-provisioning)
-* [Working with Database Services and ATP Consumer Groups](2019/atp-services)
-* [Scaling, Performance, and Monitoring in ATP](2019/atp-scaling)
+* [Access an Oracle Cloud Platform Trial Account](2019-account)
+* [Create a Virtual Machine Instance Using Oracle Cloud Infrastructure Compute](oci-vm)
+* [Provisioning Autonomous Data Warehouse Cloud and Connecting with SQL Developer](adw-provisioning)
+* [Working with Database Services and Sample Data Sets](adw-services)
+* [Getting Started With Oracle Machine Learning Notebooks](adw-machine-learning)
+* [Provisioning Autonomous Transaction Processing and Connecting with SQL Developer](atp-provisioning)
+* [Working with Database Services and ATP Consumer Groups](atp-services)
+* [Scaling, Performance, and Monitoring in ATP](atp-scaling)
 * [Running APEX on ATP]
 
 ## Oracle Open World 2018 ##
