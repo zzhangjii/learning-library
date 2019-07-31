@@ -9,6 +9,7 @@ read -p "Press enter to continue"
 #sudo yum -y makecache
 #sudo yum -y upgrade
 #sudo yum -y update
+sudo yum -y erase terraform-provider-oci
 
 sudo yum -y install terraform bzip2 cpio zip unzip dos2unix dialog curl jq git golang iputils wget screen tmux byobu elinks
 

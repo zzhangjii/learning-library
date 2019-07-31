@@ -208,7 +208,7 @@ shape = "${var.InstanceShape}"
     hostname_label = "tfexampleinstance${count.index}"
   }
 
-  metadata {
+  metadata = {
     ssh_authorized_keys = "${var.ssh_public_key}"
     user_data = "${base64encode(var.user-data)}"
   }
