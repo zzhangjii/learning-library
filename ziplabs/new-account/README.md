@@ -45,13 +45,13 @@ In this section, you'll fill out the registration form at [oracle.com/oow19trial
     [Description of the illustration signin.png](files/signin.txt)
 
 
-2. Enter your Cloud Account Name and click **Next**. This is the name you chose when you created your account in the previous section. If you forgot the name, see the confirmation email.
+2. Enter your Cloud Account Name and click **Next**. This is the name you chose while creating your account in the previous section. It's not your email address. If you've forgotten the name, see the confirmation email.
 
     ![](img/accountname.png)
 
     [Description of the illustration accountname.png](files/accountname.txt)
 
-3. Enter your Cloud Account credentials and click **Sign In**. Your username is the email address you used to sign up. Your password is auto-generated and is found in the confirmation email. You're asked to change this password when you sign in for the first time.
+3. Enter your Cloud Account credentials and click **Sign In**. Your username is the email address you used to sign up. Your password is auto-generated and found in the confirmation email. You're asked to change this password when you sign in for the first time.
 
     ![](img/username.png)
     
