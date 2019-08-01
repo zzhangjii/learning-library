@@ -1,4 +1,4 @@
-# OCI Advanced (Configuring Virtual Cloud Network Peering )
+# OCI Advanced (Configuring Virtual Cloud Network Peering)
 
 ## Table of Contents
 

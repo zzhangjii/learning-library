@@ -1,4 +1,4 @@
-# Deploying and configuring Autonomous Data Warehouse
+# Deploying and configuring Autonomous Data Warehouse.
 
 ## Table of Contents
 
