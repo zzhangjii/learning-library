@@ -299,7 +299,7 @@ Fill out the dialog box:
 
 - INSTANCE CONFIGURATION COMPARTMENT : Provide your compartment
 
-(This is the compartment where instance configuration will be placed and can only be used in this specific compartmen)
+(This is the compartment where instance configuration will be placed and can only be used in this specific compartment)
 
 
 - INSTANCE CONFIGURATION: Choose the instance configuration created earlier
