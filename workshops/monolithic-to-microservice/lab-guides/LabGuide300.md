@@ -211,10 +211,10 @@ During this lab, you will take the Docker image that you created in Lab 200 and 
 
     ![](images/300/LabGuide500-68cfd98c.png)
 
-- In your _SSH session_, run the following command, **substituting your OCI tenancy name and your Oracle Cloud username (probably your email address)** for `<your-tenancy-name> and <your-oracle-cloud-username>`, and  **replacing `iad` with your OCI region** :
+- In your _SSH session_, run the following command, **substituting your OCI tenancy name and your Oracle Cloud username (probably your email address)** for `<object-storage-namespace> and <your-oracle-cloud-username>`, and  **replacing `iad` with your OCI region** :
 
   ```bash
-  docker login -u <your-tenancy-name>/<your-oracle-cloud-username> iad.ocir.io
+  docker login -u <object-storage-namespace>/<your-oracle-cloud-username> iad.ocir.io
   ```
 
   **NOTE**: If you are not currently using the Ashburn OCI region, replace `iad` in the preceding URL with the correct abbreviation for your OCI region:
@@ -347,7 +347,7 @@ docker push iad.ocir.io/<your-tenancy-name>/alphaoffice-rest:v1
 - Fill out the form with the following values:
 
   - App name: **alphaoffice-rest** (this name can be anything we want, and will be used to address our application from other services inside the cluster)
-  - Container image: Example: **iad.ocir.io/{your-tenancy-name}/alphaoffice-rest:v1** (retrieve this URL from the `docker pull` command that you that you saved in the previous step. **Do not include the `docker pull` portion**, just the URL at the end, which is the location of our image in OCIR)
+  - Container image: Example: **iad.ocir.io/{object-storage-namespace}/alphaoffice-rest:v1** (retrieve this URL from the `docker pull` command that you that you saved in the previous step. **Do not include the `docker pull` portion**, just the URL at the end, which is the location of our image in OCIR)
   - Number of Pods: **1** (this can be customized)
   - Service: **External** (this will create a load balancer for our service)
   - Port: **80** (this is the port that will be exposed by the load balancer)
