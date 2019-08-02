@@ -246,7 +246,16 @@ Press **Enter** when prompted
 cd tflab
 ```
 
-11. Now edit the env-variables file. We will updated 2 variables. Enter command:
+11. tf_setup.sh creates a example .tf called **tftest.tf**, this file needs to be removed as we will download another .tf file to create infrastructure. Enter command
+
+
+```
+rm tftest.tf
+```
+
+12. Now edit the env-variables file. We will updated 2 variables. Enter command:
+
+
 ```
 vi env-vars
 ```
@@ -255,27 +264,29 @@ vi env-vars
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Infra_Using_Terraform/img/Terraform_003.PNG" alt="image-alt-text">
 
-12. Update the TF_VAR_user_ocid variable with User OCID saved earlier
+13. Update the TF_VAR_user_ocid variable with User OCID saved earlier
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Infra_Using_Terraform/img/Terraform_005.PNG" alt="image-alt-text">
 
-13. Next Update the TF_VAR_Compartment_ocid variable. Switch to OCI Console window, Click **Compartment** under **Identity**. Locate your compartment name and Click it. In the compartment details page , clik **copy** to copy the OCID
+14. Next Update the TF_VAR_Compartment_ocid variable. Switch to OCI Console window, Click **Compartment** under **Identity**. Locate your compartment name and Click it. In the compartment details page , clik **copy** to copy the OCID
 Paste this OCID in **env-vars** file
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Infra_Using_Terraform/img/Terraform_006.PNG" alt="image-alt-text">
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Infra_Using_Terraform/img/Terraform_007.PNG" alt="image-alt-text">
 
-14. After updating env-vars file the content will look like below;
+15. After updating env-vars file the content will look like below;
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Infra_Using_Terraform/img/Terraform_008.PNG" alt="image-alt-text">
 
-15. Save the file and then source it, Etner command:
+16. Save the file and then source it, Etner command:
+
+
 ```
 source env-vars
 ```
 
-16. The enviornment is now set. Next we will download a terraform file (.tf) file that will be used to create VCN, Compute instnace, block volume and attach block volume to compute instance. We will download this file in **/home/opc** directory, Enter Command:
+17. The enviornment is now set. Next we will download a terraform file (.tf) file that will be used to create VCN, Compute instnace, block volume and attach block volume to compute instance. We will download this file in **/home/opc** directory, Enter Command:
 ```
 cd /home/opc
 ```
@@ -286,32 +297,32 @@ Enter Command:
 sudo curl https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Infra_Using_Terraform/compute.tf -o compute.tf
 ```
 
-17. Ensure you are in **/home/opc** directory. 
+18. Ensure you are in **/home/opc** directory. 
 
-18. Now initialize terraform , Enter Command:
+19. Now initialize terraform , Enter Command:
 ```
 terraform init
 ```
 
 Verify successful initialization
 
-19. To see the deloyment plan, Enter Command:
+20. To see the deloyment plan, Enter Command:
 ```
 terraform plan
 ```
 
 This will provide details on what will be configured in OCI
 
-20. Finally apply the plan to create the infrastructure, Enter Command:
+21. Finally apply the plan to create the infrastructure, Enter Command:
 ```
 terraform apply
 ```
 
 **NOTE:** You must type **yes** when prompted
 
-21. This script will take some time to execute. You can switch to OCI console and observe creation of VCN, Compute instance, Block Volume and attachment of block volume to the compute instance.
+22. This script will take some time to execute. You can switch to OCI console and observe creation of VCN, Compute instance, Block Volume and attachment of block volume to the compute instance.
 
-22. Finally, destroty the infrastrucutre that we created. Enter Command:
+23. Finally, destroty the infrastrucutre that we created. Enter Command:
 ```
 terraform destroy
 ```
