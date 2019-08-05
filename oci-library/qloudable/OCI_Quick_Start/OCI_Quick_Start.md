@@ -12,7 +12,7 @@
 
 [Install httpd on compute instance and install an app on Block Volume](#install-httpd-on-compute-instance-and-install-an-app-on-block-volume)
 
-[Detach the block volume and launch second compute instance using boot volume and attach Block Volume](#detach-the-block-volume-and-launch-second-compute-instance-using-boot-volume-and-attach-block-volume)
+[OPTIONAL: Detach the block volume and launch second compute instance using boot volume and attach Block Volume](#detach-the-block-volume-and-launch-second-compute-instance-using-boot-volume-and-attach-block-volume)
 
 [Delete the resources](#delete-the-resources)
 
@@ -378,7 +378,7 @@ http://<COMPUTE_INSTANCE_PUBLIC_IP>
 
 **We have initialized httpd.conf file. Next we will create a second compute instance using the boot volume of the first compute instance and attach Block Volume to it**
 
-## Detach the block volume and launch second compute instance using boot volume and attach Block Volume
+## OPTIONAL: Detach the block volume and launch second compute instance using boot volume and attach Block Volume
 
 **In this section we will detach the block volume, Stop the compute instance, use its boot volume to launch a second compute instnace and delete the second compute instance**
 
