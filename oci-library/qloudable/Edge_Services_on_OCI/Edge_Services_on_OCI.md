@@ -249,10 +249,10 @@ echo 'WebServer1' >>/var/www/html/index.html
 ```
 (create index.html file. The content of the file will be displayed when the web server is accessed.)
 
-18. Bring up the SSH session for the second Compute instance and repeat commands:
+18. Bring up the SSH session for the second Compute instance and repeat commands:(Install Apache HTTP Server)
 
 ```
-sudo yum -y install httpd (Install Apache HTTP Server)
+sudo yum -y install httpd 
 ```
 ```
 sudo firewall-cmd --permanent  --add-port=80/tcp 

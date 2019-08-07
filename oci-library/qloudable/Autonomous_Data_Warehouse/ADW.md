@@ -1,4 +1,4 @@
-# Deploying and configuring Autonomous Data Warehouse
+# Deploying and configuring Autonomous Data Warehouse.
 
 ## Table of Contents
 
@@ -143,8 +143,9 @@ In this section we will generate auth token for the user of this lab. An Auth to
 
 6. Create a new user called ocitest and grant the DWROLE to ocitest user. Enter commands:
 ```
-create user ocitest identified by P#ssw0rd12##
+create user ocitest identified by P#ssw0rd12##;
 ```
+
 ```
 Grant dwrole to ocitest;
 ```

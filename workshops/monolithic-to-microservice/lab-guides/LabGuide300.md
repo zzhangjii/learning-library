@@ -207,17 +207,21 @@ During this lab, you will take the Docker image that you created in Lab 200 and 
 
   ![](images/300/LabGuide500-dd88e19e.png)
 
-- The token is displayed in the dialog box. Leave it open, you will copy it in the next instruction.
+- The token is displayed in the dialog box. **Copy and Save** this auth token into your local editor. It will be used later in this step.
 
-    ![](images/300/LabGuide500-68cfd98c.png)
+![](images/300/LabGuide500-68cfd98c.png)
 
-- In your _SSH session_, run the following command, **substituting your OCI tenancy name and your Oracle Cloud username (probably your email address)** for `<your-tenancy-name> and <your-oracle-cloud-username>`, and  **replacing `iad` with your OCI region** :
+- Gather the Object Storage Namespace by going to the Governance and Administraton section from the OCI Console hamburger and selecting **Administration-->Tenancy Details**:
 
-  ```bash
-  docker login -u <your-tenancy-name>/<your-oracle-cloud-username> iad.ocir.io
-  ```
+  ![](images/300/300-20.PNG)
 
-  **NOTE**: If you are not currently using the Ashburn OCI region, replace `iad` in the preceding URL with the correct abbreviation for your OCI region:
+- Note or save off the **Object Storage Namespace** as it will be use in subsequent docker commands.
+
+  ![](images/300/300-21.PNG)
+
+- In your _SSH session_, run the following command, **substituting your Object Storage Namespace and your Oracle Cloud username (probably your email address)** for `<your-object-storage-name> and <your-oracle-cloud-username>`, and  **replacing `iad` with your OCI region**:
+
+  **NOTE: If you are not currently using the Ashburn OCI region, replace `iad` in the preceding URL with the correct abbreviation for your OCI region**:
 
   ```
   London = lhr
@@ -227,18 +231,19 @@ During this lab, you will take the Docker image that you created in Lab 200 and 
   Toronto = yyz
   ```
 
-- You will be prompted for your registry password. Click the **Copy** link from the OCI Console browser window displaying your newly-generated Auth Token. Then **paste** the token into the password prompt in your SSH session and press enter. (**You may not see anything displayed when pasting the password**)
+  ```bash
+  docker login -u <your-object-storage-name>/<your-oracle-cloud-username> iad.ocir.io
+  ```
+- You will be prompted for your registry password. Then **Copy and Paste** the auth token you saved off earlier in this step into the password prompt in your SSH session and press enter. (**You may not see anything displayed when pasting the password**)
 
   ![](images/300/LabGuide300-ddf9d96f.png)
 
-- Now that you are logged in, we can push the Docker image of the Alpha Office microservice to the registry. Just use the standard **docker push** command, no need to pre-create the repository in OCIR:
+- Now that you are logged in, you can push the Docker image of the Alpha Office microservice to the registry. Just use the standard **docker push** command, no need to pre-create the repository in OCIR. **Remember to subsitute your region if it is not `iad`** as shown in the following commands:
 
-```bash
-docker tag alphaoffice-rest iad.ocir.io/<your-tenancy-name>/alphaoffice-rest:v1
-docker push iad.ocir.io/<your-tenancy-name>/alphaoffice-rest:v1
-```
-
-**NOTE**: If you are not currently using the Ashburn OCI region, replace `iad` in the preceding URLs with the correct abbreviation for your OCI region, as you did for the `docker login` step above.
+  ```bash
+  docker tag alphaoffice-rest iad.ocir.io/<your-object-storage-name>/alphaoffice-rest:v1
+  docker push iad.ocir.io/<your-object-storage-name>/alphaoffice-rest:v1
+  ```
 
   ![](images/300/LabGuide300-8b805a5e.png)
 
