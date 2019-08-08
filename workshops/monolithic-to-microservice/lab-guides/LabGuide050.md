@@ -141,11 +141,11 @@ We require a Database to store the Alpha Office data which is accessed later in 
 
     ![](images/050/image11a.png)
 
-  - Select the **Compartment** `monoTOmicro` and click **Create Autonomous Transaction Processing Database**.
+  - Select the **Compartment** `monoTOmicro` and click **Create Autonomous Database**.
 
     ![](images/050/image12.png)
 
-  - Select the **Compartment** `monoTOmicro` if it is not already selected. Enter the **Display Name** `AlphaOffice`, **Database Name** `orcl`, enter the **Administrator Password** of `a1phaOffice1_` and Click **Create Autonomous Transaction Processing Database**
+  - Verify the **Compartment** `monoTOmicro` is still selected. Enter the **Display Name** `AlphaOffice`, **Database Name** `orcl`. Select a **Workload Type** of `Transaction Processing` and **Deployment Type** of `Serverless`. Enter the **Administrator Password** of `a1phaOffice1_`, and select a **License Type** of `Bring Your Own License`. Click **Create Autonomous Database**.
 
     ![](images/050/image13.png)
 
@@ -161,13 +161,13 @@ We require a Database to store the Alpha Office data which is accessed later in 
 
 In this step you will create a VBCS instance that will be used in Lab 400. It takes about 20 minutes for the underlying infrastructure to be created. We just need to fire off the create instance process at this point. We'll check the status of the instance at the beginning of Lab 400.
 
-- From the OCI console go back to your Services Dashboard by clicking on the hamburger menu in the upper left hand side of the page and selecting **Administration-->My Services Dashboard**
+- From your `Original login page` goto the My Services dashboard by clicking on the hamburger menu in the upper left hand side of the page and selecting under the **Solutions and Platform** section **My Services Dashboard**
 
   ![](images/050/LabGuide50-vbcs1a.png)
 
   ![](images/050/LabGuide50-vbcs2a.png)
 
-- You are now in the Traditional Dashboard:
+- You are now in the Traditional Dashboard. **If prompted set your preferences**.
 
   ![](images/050/cloud_dash.png)
 
@@ -199,7 +199,7 @@ In this step you will create a VBCS instance that will be used in Lab 400. It ta
   monoTOmicro
   ```
 
-- Enter a `Description` and for the `Region` select **No Preference**. Click **Next**.
+- Enter a `Description` and for the `Region` select the same region you chose for the ATP database. **In this example us-phoenix-1**. Click **Next**.
 
   ![](images/050/LabGuide50-vbcs3.png)
 
