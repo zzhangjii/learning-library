@@ -12,7 +12,7 @@
 
 [Install httpd on compute instance and install an app on Block Volume](#install-httpd-on-compute-instance-and-install-an-app-on-block-volume)
 
-[Detach the block volume and launch second compute instance using boot volume and attach Block Volume](#detach-the-block-volume-and-launch-second-compute-instance-using-boot-volume-and-attach-block-volume)
+[OPTIONAL: Detach the block volume and launch second compute instance using boot volume and attach Block Volume](#detach-the-block-volume-and-launch-second-compute-instance-using-boot-volume-and-attach-block-volume)
 
 [Delete the resources](#delete-the-resources)
 
@@ -178,7 +178,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 - **Name:** Enter a name 
 - **Availability Domain:** Select availability domain
 - **Image Operating System:** For the image, we recommend using the Latest Oracle Linux available.
-- **Choose Instance Type:** Select Virtual Machine
+- **Choose Instance Type:** Select Virtual Machine (Choose from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1)
 - **Choose Instance Shape:** Select VM shape
 - **Configure Boot Volume:** Leave the default
 - **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
@@ -189,7 +189,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 9. Click **Create**
 
-**NOTE:** If 'Service limit' error is displayed choose a different shape such as VM.Standard.E2.2 OR VM.Standard2.2 OR choose a different AD
+**NOTE:** If 'Service limit' error is displayed choose a different shape from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1 OR choose a different AD
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text">
 
@@ -378,7 +378,7 @@ http://<COMPUTE_INSTANCE_PUBLIC_IP>
 
 **We have initialized httpd.conf file. Next we will create a second compute instance using the boot volume of the first compute instance and attach Block Volume to it**
 
-## Detach the block volume and launch second compute instance using boot volume and attach Block Volume
+## OPTIONAL: Detach the block volume and launch second compute instance using boot volume and attach Block Volume
 
 **In this section we will detach the block volume, Stop the compute instance, use its boot volume to launch a second compute instnace and delete the second compute instance**
 
@@ -414,7 +414,7 @@ sudo umount /dev/<VOLUME_NAME>
 
 
 - **Intance Type:** Select Virtual Machine
-- **Instance Shape:** Choose the shape with least OCPU
+- **Instance Shape:** Choose a VM shape (Choose from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1)
 - **SSH Keys:** Choose ‘Paste SSH Keys’ and paste the Public Key saved earlier.
 - **Virtual Cloud Network Compartment:** Select yor compartment 
 - **Virtual Cloud Network:** Select the VCN created earlier
