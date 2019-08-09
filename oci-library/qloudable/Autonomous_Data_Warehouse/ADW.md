@@ -151,7 +151,7 @@ Grant dwrole to ocitest;
 ```
 
 ```
-GRANT UNLIMITED TABLESPACE TO ocitest;
+Grant UNLIMITED TABLESPACE TO ocitest;
 ```
 
 7. Verify the user was created
