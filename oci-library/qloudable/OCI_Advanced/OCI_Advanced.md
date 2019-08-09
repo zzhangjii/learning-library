@@ -244,7 +244,7 @@ Fill out the dialog box:
 - **Availability Domain:** Select availability domain
 - **Image Operating System:** For the image, we recommend using the Latest Oracle Linux available.
 - **Choose Instance Type:** Select Virtual Machine
-- **Choose Instance Shape:** Select VM shape
+- **Choose Instance Shape:** Select VM shape (Choose from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1)
 - **Configure Boot Volume:** Leave the default
 - **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
 - **Virtual Cloud Network Compartment:** Choose your compartment
@@ -254,7 +254,7 @@ Fill out the dialog box:
 
 9. Click **Create**
 
-**NOTE:** If 'Service limit' error is displayed choose a different shape such as VM.Standard.E2.2 OR VM.Standard2.2 OR choose a different AD
+**NOTE:** If 'Service limit' error is displayed choose a different shape from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1  OR choose a different AD
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text">
 

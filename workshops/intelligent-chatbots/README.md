@@ -2,15 +2,10 @@
 
 Welcome to the **Oracle Public Cloud** Building Autonomous ChatBot's workshop. This workshop will walk you through the process of creating an Intelligent Chatbot from the ground up.
 
-To learn more about this workshop please watch the video below.  
-
-![](images/100/youtube.png)
-
-<a href="<add link>" target="_video">Workshop Overview</a>
 
 ### **Step 1**: Acquire an Oracle Cloud Trial or Workshop Account
 
-- The Lab documentation is **best viewed** by using the Workshop's [GitHub Pages site](https://oracle.github.io/learning-library/workshops/container-native-development-with-oke/).
+- The Lab documentation is **best viewed** by using the Workshop's [GitHub Pages site](https://oracle.github.io/learning-library/workshops/intelligent-chatbots/).
 
 - Bookmark this page for future reference.
 
