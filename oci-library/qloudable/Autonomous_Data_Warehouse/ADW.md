@@ -175,7 +175,7 @@ Grant UNLIMITED TABLESPACE TO ocitest;
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_012.PNG" alt="image-alt-text">
 
-9. We will now download a text file from OCI Object storage. This file has commands that will be used to upload data into ADW and retreive it. Open a new browser tab and copy/paste or Enter URL;
+9. We will now download a text file from OCI Object storage. This file has commands that will be used to upload data into ADW and retrieve it. Open a new browser tab and copy/paste or Enter URL;
 
 https://objectstorage.us-ashburn-1.oraclecloud.com/n/us_training/b/Lab-images/o/ADW-File.txt
 
