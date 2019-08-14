@@ -1,7 +1,7 @@
 {
     "workshop": {
-        "title": "Getting Started with Oracle APEX Hands on Lab",
-        "description": "Learn how to access and create applications using Oracle APEX in the Oracle Cloud.",
+        "title": "Low Code Application Development with Oracle Autonomous Database Hands on Lab",
+        "description": "Learn how to access and create applications using Oracle APEX and SQL Developer Web in the Oracle Cloud.",
         "theme": "default",
         "interactive":"https://launch.oracle.com/?apex-atp",
         "labs": [
@@ -15,9 +15,36 @@
                 }
             },
             {
-                "number": "100",
-                "filename": "APEXGuide.md",
-                "title": "Lab 100: Getting Started with Oracle APEX",
+                "number": "1",
+                "filename": "Lab1.md",
+                "title": "Lab 1: Obtain a Workspace",
+                "description": "",
+                "labels": {
+                    "version": "Instructor Led"
+                }
+            },
+            {
+                "number": "2",
+                "filename": "Lab2.md",
+                "title": "Lab 2: Create an App from a Spreadsheet",
+                "description": "",
+                "labels": {
+                    "version": "Instructor Led"
+                }
+            },
+            {
+                "number": "3",
+                "filename": "Lab3.md",
+                "title": "Lab 3: Build Database Objects in SQL Developer Web",
+                "description": "",
+                "labels": {
+                    "version": "Instructor Led"
+                }
+            },
+            {
+                "number": "4",
+                "filename": "Lab4.md",
+                "title": "Lab 4: Create and Modify APEX Application",
                 "description": "",
                 "labels": {
                     "version": "Instructor Led"
