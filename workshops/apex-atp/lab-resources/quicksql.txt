@@ -1,0 +1,29 @@
+team_members /insert 10
+  username /nn /upper
+  full name
+  email /nn
+  phone_number
+  profile
+  photo file
+projects /insert 20
+  name /nn
+  project_lead /nn /references team_members
+  budget num
+  status vc30 /nn /check ASSIGNED, IN-PROGRESS, COMPLETED
+  completed_date
+  description
+  milestones /insert 30
+    name /nn
+    due_date /nn
+    description
+  tasks /insert 100
+    name /nn
+    assignee /nn /references team_members
+    milestone_id /references milestones
+    start_date /nn
+    end_date
+    cost num
+    description
+    is_complete_yn /check Y, N
+
+view project_tasks projects tasks
