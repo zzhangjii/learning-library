@@ -58,10 +58,11 @@ Before you start the labs you should have:
 
 You have some setup work to perform first before you start the two hands-on labs in this course.  By performing the following steps, you will complete all the setup work upfront so you won’t be bothered with it during the labs.  NOTE: These steps assume that you have already satisfied all the prerequisites enumerated in the Prerequisites section above.  If you have, continue below:
 
-1.	Close your VPN connection if it is active.
-2.	Create an **Security** folder (directory) on your computer’s file system.  This is where you will store various artifacts during the labs.
-3.	Open Notepad (Windows PC) or TextEdit (Mac) on your computer and create a new file called *MyLabNotes*.  Save it into your **Security** folder.  Keep the file open as an area where you can conveniently store items that are important to remember and access.
-4.	Start your Chrome browser.  Again, other browsers may work just fine, but the lab was tested using Chrome.
+1. Close your VPN connection if it is active.
+2. The Labs have been tested inside and outside the corporate network. If you encounter connectivity constraints, we advise learners to connect to CLEAR-INTERNET to complete the exercises.
+2. Create an **Security** folder (directory) on your computer’s file system.  This is where you might store various artifacts during the labs.
+3. Open Notepad (Windows PC) or TextEdit (Mac) on your computer and create a new file called *MyLabNotes*.  Save it into your **Security** folder.  Keep the file open as an area where you can conveniently store items that are important to remember and access.
+4. Start your Chrome browser.  Again, other browsers may work just fine, but the lab was tested using Chrome.
 5. Clear browser data
 
 **On a Windows PC:**
@@ -82,52 +83,50 @@ You have some setup work to perform first before you start the two hands-on labs
 - Cookies and other site data: checked
 - Cached images and files: checked 
 - Click the Clear data button
+***
 
-6. Access your cloud console dashboard to see if you have access to your compute instance:
+## Access your cloud console dashboard
 
-Depending on your configuration, your welcome screen might be your *MyApps* dashboard, or the services console.
-To access your services console, click on your profile on the top-right icon and select **My Services**
+- Click on the **General Menu** located at the top left of the screen
+- Click **My Service Dashboard**
 
-![Access your service console](./media/access_services.png)
+
+![](./media/cloud_new_Dashboard.png)
 <p align="center">Figure 1-1</p>
 
-Once into the service dashboard, you should be able to see your **Compute** service.
-
-![Service Dashboard](./media/dashboard.png)
+![](./media/idcs_access.png)
 <p align="center">Figure 1-2</p>
 
-7. Access your cloud console dashboard to see if you have access to Oracle CASB Cloud Service:
+Here you will find the different services available to you. The services listed in the dashboards might vary depending on your privileges.
 
-Once in the service dashboard, you can access Oracle CASB Cloud Service by clicking on the **General Menu** locate at the top-left of your screen, **Services** , and select **Oracle CASB Cloud Service**
+***
 
-![Service Dashboard](./media/access_casb.png)
+## Install Postman
+
+If you don't have POSTMAN installed in your laptop, please visit [POSTMAN Website](https://www.getpostman.com/products).
+
+**NOTE: Postman user id is not required to run this lab. Disregard any message during download and/or initial set up**
+
+![](./media/postman.png)
 <p align="center">Figure 1-3</p>
 
+- Download the client. 
 
-8. Access your cloud console dashboard to see if you have access to Oracle Identity Cloud Service:
+- Install Postman. *Follow the instructions guidelines for your platform (e.g. Mac, Windows, Linux)*
 
-To access Oracle Identity Cloud Service you must click on the **General Menu** locate at the top-left of your screen, **Users**, your region, and select **Identity(Primary)**
-
-![IDCS access Dashboard](./media/access_idcs_1.png)
+![](./media/postman_download.png)
 <p align="center">Figure 1-4</p>
 
+- Run Postman
 
-Once in the main screen, click on the **Identity Console** option locate at the top right of your screen, under your profile.
-
-![IDCS access Dashboard](./media/access_idcs_2.png)
+![](./media/postman_test.png)
 <p align="center">Figure 1-5</p>
 
-Click on the **General Menu** locate at the top-left of your screen and then click on **Dashboard**
-
-![IDCS access Dashboard](./media/access_idcs_3.png)
-<p align="center">Figure 1-6</p>
-
-
-You have access to main Oracle Identity Cloud Service dashboard. You can bookmark this URL to access the console.
+- Once opened, close the welcome screen and close Postman. 
 
 ****
 
-Now that you have completed this guide, you can proceed with the workshop.
+Now that you have completed this guide, you can proceed with the labs exercises.
 
 - [Lab 1: Oracle Identity Cloud Service](LAB1_IDCS.md)
 - [Lab 2: Oracle CASB Cloud Service](LAB2_CASB.md)

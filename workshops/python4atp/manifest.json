@@ -1,13 +1,13 @@
 {
     "workshop": {
-        "title": "Introduction to Python Development with ATP Hands on Lab",
+        "title": "Introduction to Python Development with Autonomous Transaction Processing Hands on Lab",
         "description": "Learn how to spin up and Autonomous Transaction Processing Database,load and access data, and create a REST service using Python in minutes.",
         "theme": "default",
-        "interactive":"https://launch.oracle.com/?mono-to-micro",
+        "interactive":"https://isdportal.oracle.com/sfdemo/SF_UPK/user2016/160902-cbaber-1200649797/index.html?jsonId=REPO_f1256738334_P398630059&pin=python-atp",
         "labs": [
             {
                 "number": "0",
-                "filename": "Intro.md",
+                "filename": "README.md",
                 "title": "Workshop Introduction",
                 "description": "",
                 "labels": {

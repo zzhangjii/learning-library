@@ -234,7 +234,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 
 - **Choose Instance Type:** Select Virtual Machine
-- **Choose Instance Shape:** Select VM shape
+- **Choose Instance Shape:** Select VM shape (Choose from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1)
 - **Configure Boot Volume:** Leave the default
 - **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
 - **Virtual Cloud Network Compartment:** Choose your compartment

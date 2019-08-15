@@ -29,9 +29,9 @@ Her team is on its way of implementing CASB to monitor SaaS applications and OCI
 
 
 
-## Module 1:  Logging to CASB Community Tenant
+## **EXERCISE** - Module 1:  Logging to CASB Community Tenant
 
-**Who Should Complete This Lab:  All Participants**
+**Who Should Complete This Lab:  1 Participant for group**
 
 
 *	We are purposefully using our “Community” tenant instead of the tenant associated with the Cloud Account. 
@@ -65,7 +65,7 @@ Her team is on its way of implementing CASB to monitor SaaS applications and OCI
 **Note: Due to environment constraints you might not receive the email. Please proceed with the shared id delivered by the facilitator**
 
 
-## Module 2:  Create and monitor a sanctioned application
+## **EXERCISE** - Module 2:  Create and monitor a sanctioned application
 
 The following hands-on labs assume that you are familiar with Oracle Cloud Platform console navigation, as well as access to Oracle CASB Cloud Service console.
 In order to ease the process, we recommend using two separate browsers or windows.
@@ -165,7 +165,7 @@ You’ll now add SalesForce as a sanctioned application for monitoring in Oracle
 
 This is the last step we need to complete in SalesForce.
 
-### Registering a Salesforce instance (Push Security Controls Mode) - Who Should Complete This Lab:  1 Participant for group
+### **EXERCISE** - Registering a Salesforce instance (Push Security Controls Mode) - Who Should Complete This Lab:  1 Participant for group
 
 **NOTE: Due to capacity constraints, We will group individuals on teams of three to register the application in CASB. Instructor will provide group numbers. During the registration process learners must use the following name convention COSE_First-Two-letters-of-the location_APP_Group] (e.g. COSE_AU1_SALESFORCE_G1, COSE_AU2_SALESFORCE_G2)**
 
@@ -215,9 +215,9 @@ This is the last step we need to complete in SalesForce.
 [Back to Top](#table-of-contents)
 ****
 
-## Module 3:  Create a policy alert and display threats
+## **EXERCISE** - Module 3:  Create a policy alert and display threats
 
-**Who Should Complete This Lab:  All Participants**
+**Who Should Complete This Lab:  1 Participant for group**
 
 In Oracle CASB you can create application specific to specify the monitoring you want for your sanctioned applications. This adds another layer of customizable security for you. Oracle CASB also has pre-made Managed Policies for the applications to make sure application specific security can be enabled from the beginning.
 You will now create a policy in CASB that will trigger an alert every time a user is logged in to SalesForce.
@@ -292,7 +292,7 @@ We must now trigger the policy that we created
 ![CASB SF alert_2](./media/casb_sf_polictyalerts_2.png)
 <p align="center"> Figure 3-11 </p>  
 
-### DEMO - Trigger action in Box account that will be detected as a threat in Oracle CASB
+### **DEMO** - Trigger action in Box account that will be detected as a threat in Oracle CASB
 
 
 * Check your IP. You can use any service or go to google and type `my ip`
@@ -309,6 +309,8 @@ We must now trigger the policy that we created
 
 *  Click Add IP Address in the Blacklist section
 
+NOTE: In computing, a blacklist is a basic access control mechanism that allows everyone access, except for the subjects of the blacklist. The opposite is a whitelist, which means allow nobody, except members of the white list. These are two security control mechanisms that allow customers to protect their assets. While Blacklisting IPs are labor-intensive because you need to keep updating with IPs that have been identified as potential threats, whitelisting IPs block everything by default, except those on the list.
+
 ![](./media/image69.jpeg)
 <p align="center"> Figure 3-14 </p>  
 
@@ -319,10 +321,6 @@ We must now trigger the policy that we created
 
 *  Click Save. Your IP address should appear now in the black list
 
-
-![](./media/image71.png)
-<p align="center"> Figure 3-16 </p>  
-
 *  Log in to your Salesforce account as the user that we created to be monitored by CASB
 
 
@@ -331,27 +329,27 @@ We must now trigger the policy that we created
 **Note: Information might take up to 2 hours to be displayed in the CASB console**
 
 ![](./media/image76.jpeg)
-<p align="center"> Figure 3-17 </p>  
+<p align="center"> Figure 3-16 </p>  
 
 * You can click on the red pin to check the detected suspicious events
 
 ![](./media/image77.jpeg)
-<p align="center"> Figure 3-18 </p>   
+<p align="center"> Figure 3-17 </p>   
 
 * Click on the suspicious events to have a better view of this
 
 ![](./media/image78.jpeg)
-<p align="center"> Figure 3-19 </p>   
+<p align="center"> Figure 3-18 </p>   
 
 * Check your Salesforce instance to see the generated threats for it
 
 ![](./media/image79.jpeg)
-<p align="center"> Figure 3-20 </p> 
+<p align="center"> Figure 3-19 </p> 
 
 * Click on the threats to check their details
 
 ![](./media/image80.jpeg)
-<p align="center"> Figure 3-21 </p> 
+<p align="center"> Figure 3-20 </p> 
 
 [Back to Top](#table-of-contents)
 
@@ -584,9 +582,9 @@ Note: if you do not see any Compute instance in the dashboard, click to Customiz
 
 ****
 
-## Module 5:  Create a Policy for OCI 
+## **EXERCISE** - Module 5:  Create a Policy for OCI 
 
-**Who Should Complete This Lab:  All Participants**
+**Who Should Complete This Lab:  1 Participant for group**
  
 You’ll now create a policy in Oracle CASB that triggers a policy alert every time a user is created in OCI.
 
@@ -609,6 +607,8 @@ You’ll now create a policy in Oracle CASB that triggers a policy alert every t
 <p align="center"> Figure 5-2 </p> 
 
 *  On the Application Instance option select **COSE_OCI_OSPATEE_ACASAS**
+
+NOTE: For demo purposes we will use **COSE_OCI_OSPATEE_ACASAS** instance to trigger the alert
 
 * On the Resource section select **Identity Users**
 
@@ -646,7 +646,7 @@ You’ll now create a policy in Oracle CASB that triggers a policy alert every t
 ![](./media/image111.jpeg)
 <p align="center"> Figure 5-8 </p> 
 
-### DEMO - Trigger the policy that we created
+### **DEMO** - Trigger the policy that we created
 
 *  In the OCI Console under the compute tile press the menu for Compute ![](./media/image82.png)
 
@@ -694,9 +694,9 @@ You’ll now create a policy in Oracle CASB that triggers a policy alert every t
 
 ****
 
-## Module 6:  Run A Report in CASB 
+## **EXERCISE** - Module 6:  Run A Report in CASB 
 
-**Who Should Complete This Lab:  All Participants**
+**Who Should Complete This Lab:  1 Participant for group**
 
 Oracle CASB offers a variety of predefined reports providing detailed insight into potential security risks. Unless noted otherwise, reports
 by default display three days of data, with up to 90 days of data available.

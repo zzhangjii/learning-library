@@ -115,15 +115,13 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 	![](images/100/image11a.png)
 
- - Capture the values for **REGION, BUCKET, OBJECT_STORAGE_NAMESPACE, FILENAME** in the text editor from the same screen you uploaded the DMP file.
+- Click the **triple dot** for the newly uploaded dump file and select **View Object Details**,
 
-	![](images/100/image39a.png)
+	![](images/100/image11c.png)
 
-  - Your text editor should look similar to this
+- **Highlight the entire URL_PATH** and while highlighted right-click **Copy**. Save this URL to the text editor (`Should be all on one line`). We'll use it later during the data pump database import. Click the **close** link. 
 
-	![](images/100/image11b.png)
-
-	**Note:** Your values for **REGION** and **OBJECT_STORAGE_NAMESPACE** may/will be different. These values will be used to build out the SWIFT URI shown above.
+	![](images/100/image11d.png)
 
 ### **STEP 5**: Create OCI User
 
@@ -286,19 +284,25 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 	![](images/100/image37.png)
 
-  - On **Step 1** of the **Import Wizard**, select and/or enter the following and click **Next**.  You will use the values you collected in the text editor at the end of **Step 4**.
+  - On **Step 1** of the **Import Wizard**, select and/or enter the following and click **Next**.  You will use the **URL PATH** value you saved in the text editor at the end of **Step 4**.
 
-	**Note:** Your values for **REGION** and **OBJECT_STORAGE_NAMESPACE** may/will be different.
+	**Example:** Your value for **File Names or URI** will be different.
 
 	- **Type of Import:** ```Full```
 	- **Credentials or Directories:** ```IMPDP_OBJ_STORE``` (Created in STEP 10)
-	- **File Names or URI:** ```https://swiftobjectstorage.{REGION}.oraclecloud.com/v1/{OBJECT_STORAGE_NAMESPACE}/{BUCKET}/{FILENAME}``` (Created in STEP 4)
-
-	![](images/100/image11b.png)
+	- **File Names or URI:** ```<PASTE YOUR URL HERE.. example is shown>: https://objectstorage.us-phoenix-1.oraclecloud.com/n/idfp7feyzvbf/b/atpData/o/expdp_alpha121.dmp``` (Saved from STEP 4)
 
 	![](images/100/image38.png)
 
-  - Accept the Defaults and click **Next** on **Step 2** of the **Import Wizard**. It can take a minute for the **Next** button to be enabled.  You will see a `Waiting...` message until the **Next** button is enabled.
+  - It can take a minute for the **Next** button to be enabled.  You will see a `Waiting...` message until the **Next** button is enabled.
+
+	 **NOTE: If you get an error on the import double check that you entered the proper USERNAME and AUTH TOKEN in the prodecure in Step 10. If you have to create another DBMS_CLOUD credential you can always give the CREDENTIAL NAME a new name and use that new name here in Step 12. Also verify that your `impdp-ATP` user has been put into the Administrators Group (Step 5). If these all look good and it still doesn't read you can use this Public facing URL for the `File Names or URI` parameter:** 
+
+	```
+	https://objectstorage.us-ashburn-1.oraclecloud.com/p/wechxc-Li-TVh3K_wXU8NvwmSBHS8ka9lfP104OXN9s/n/natdcshjumpstartprod/b/atpData/o/expdp_alpha121.dmp
+	```
+
+ - On **Step 2** accept the Defaults and click **Next**.  
 
 	![](images/100/image40.png)
 

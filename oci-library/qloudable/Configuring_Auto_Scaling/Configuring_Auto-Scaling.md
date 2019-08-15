@@ -235,7 +235,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 - Availability Domain: Select availability domain
 - Image Operating System: For the image, we recommend using the Latest Oracle Linux available.
 - Choose Instance Type: Select Virtual Machine
-- Choose Instance Shape: Select VM shape
+- Choose Instance Shape: Select VM shape (Choose from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1)
 - Configure Boot Volume: Leave the default
 - Add SSH Keys: Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
 - Virtual Cloud Network Compartment: Choose your compartment
@@ -299,7 +299,7 @@ Fill out the dialog box:
 
 - INSTANCE CONFIGURATION COMPARTMENT : Provide your compartment
 
-(This is the compartment where instance configuration will be placed and can only be used in this specific compartmen)
+(This is the compartment where instance configuration will be placed and can only be used in this specific compartment)
 
 
 - INSTANCE CONFIGURATION: Choose the instance configuration created earlier
