@@ -428,14 +428,17 @@ In this section we will generate auth token for the user of this lab. An Auth to
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_010.PNG" alt="image-alt-text">
 
-6. Create a new user called ocitest and grant the DWROLE to ocitest user. Enter commands:
-
+6. Create a new user called ocitest and grant the DWROLE to ocitest user. . Also grant this user table space quota to upload the data later on. Enter commands:
 ```
-create user ocitest identified by P#ssw0rd12##
+create user ocitest identified by P#ssw0rd12##;
 ```
 
 ```
 Grant dwrole to ocitest;
+```
+
+```
+Grant UNLIMITED TABLESPACE TO ocitest;
 ```
 
 7. Verify the user was created
@@ -454,7 +457,6 @@ Grant dwrole to ocitest;
 - Keystore password: Password you provided when downloading the client credentials file 
 
 **NOTE:** If using SQL devleoper 18.2.0 or higher this field is not available and not required
-
 
 - Service: YOUR_ATP_INSTANCE_NAME_medium 
 - Click **Save**
