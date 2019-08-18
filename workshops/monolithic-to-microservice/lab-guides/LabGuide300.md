@@ -257,7 +257,7 @@ During this lab, you will take the Docker image that you created in Lab 200 and 
 
 ### **STEP 5**: Install kubectl
 
-- In order to interact with your cluster and view the dashboard, you will need to **install the Kubernetes command line interface `kubectl`, ON YOUR LOCAL MACHINE**. We will do that now.
+- In order to interact with your cluster and view the dashboard, you will need to **install the Kubernetes command line interface `kubectl`.
 
 - The method you choose to install `kubectl` will depend on your operating system and any package managers that you may already use. The generic method of installation, downloading the binary file using `curl`, is given below (**run the appropriate command in a terminal or command prompt**). If you prefer to use a package manager such as apt-get, yum, homebrew, chocolatey, etc, please find the specific command in the [Kubernetes Documentation](https://kubernetes.io/docs/tasks/tools/install-kubectl/). The `cluster-info` and `get nodes` commands need to be working (returning information on your cluster) before you can proceed.
 

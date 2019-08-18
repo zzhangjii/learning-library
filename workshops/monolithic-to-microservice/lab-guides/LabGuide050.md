@@ -94,7 +94,7 @@ Before we create the Compute instance that contains Docker and the other support
 
   ![](images/200/24.PNG)
 
-- Open up the pubic key file in the text editor of your choice: (e.g. vi/TextEdit - Linux/Mac) or (notepad - Windows). Linux screen shots shown here:
+- Open up the pubic key file in the text editor of your choice: (e.g. **vi/TextEdit - Linux/Mac**) or (**notepad - Windows**). Linux screen shots shown here:
 
   ```
   vi/TextEdit/notepad dockerkey.pub
@@ -182,9 +182,17 @@ Compartments are used to isolate resources within your OCI tenant. User-based ac
 
   ![](images/050/50-25.PNG)
 
-- Scroll down the list and click on the **Oracle Cloud Developer Image**.
+- Filter on the following criteria:
 
-  ![](images/050/50-26.PNG)
+  ```
+  Type: Image
+  Publisher: Oracle
+  Category: Developer Tools
+  ```
+
+- You'll see a few image options. Click on the **Oracle Cloud Developer Image**.
+
+  ![](images/050/50-26-2.PNG)
 
 - The next page all of the client tools included in this Linux based image. Select the **monoTOmicro** compartment, check the "...reviewed..." checkbox and click **Launch Instance**.
 
@@ -317,7 +325,7 @@ A Virtual Cloud Network (VCN) is locked down from a security standpoint until yo
 
   ![](images/050/50-40.PNG)
 
-- Set a password for the VNC Server. You be prompted for the password when you connect via VNC Viewer. Type:
+- Set a password for the VNC Server. You be prompted for the password when you connect via VNC Viewer. Say **n** to the `view-only password` prompt. Type:
 
   ```
   vncpasswd
@@ -339,7 +347,7 @@ A Virtual Cloud Network (VCN) is locked down from a security standpoint until yo
 
   ![](images/050/50-42.PNG)
 
-- **OPTIONAL**: You can leave your ssh connection open in case you ave to stop and restart the VNC Server. If you test your connection with VNC Viewer and don't like the screen size you can stop and restart with a different geometry.
+- **OPTIONAL**: You can leave your ssh connection open in case you have to stop and restart the VNC Server. If you test your connection with VNC Viewer and don't like the screen size you can stop and restart with a different geometry.
 
   Example commands to resize screen:
 
@@ -362,7 +370,7 @@ Use VNC Viewer to connect to your provisioned account.
 
   ![](images/050/JS9.PNG)
 
-- Enter the VNC password  **Oracle123** and click **OK**.
+- Enter the VNC password you created in STEP 7 and click **OK**.
 
   ![](images/050/JS10.PNG)
 

@@ -338,6 +338,10 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 	![](images/100/image48.png)
 
+- The **Log Files** tab will show the results of the import. For this import you'll see a few errors and warnings but these are OK.
+
+	![](images/100/image48-2.png)
+
 **This completes the Lab!**
 
 **You are ready to proceed to [Lab 200](LabGuide200.md)**
