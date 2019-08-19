@@ -22,15 +22,13 @@ In this workshop you are guided through using many of the Oracle's Cloud Service
 
 # Infrastructure Setup
 
-You will create all required infrastructure components that support this workshop.
-
-## Create a SSH Key Pair
-
-This Key Pair provides a secure link which will be used to create and access a `Client Image` which is a Compute Service Instance that has all of the ancillary tools required to complete this workshop. Docker, Git and SQL Developer and VNC to, name a few, are already installed. You will use VNC Viewer (Download location is noted below in the **Prerequisite** section) to access this instance.
+Along with the ATP and VBCS Instance creations, a Key Pair provides a secure link which will be used to create and access a `Client Image` which is a Compute Service Instance that has all of the ancillary tools required to complete this workshop. Docker, Git and SQL Developer and VNC to, name a few, are already installed. You will use VNC Viewer (Download location is noted below in the **Prerequisite** section) to access this instance.
 
 ### Prerequisite
 
 Once the infrastructure is provisioned you can access your enironment using `VNC Viewer`. **Please download and install:** <a href="https://www.realvnc.com/en/connect/download/viewer/" target="newwer">VNC Viewer</a>
+
+## Create a SSH Key Pair
 
 ### **STEP 1a**: WINDOWS 10 - Configure OpenSSH 
 
@@ -298,7 +296,7 @@ A Virtual Cloud Network (VCN) is locked down from a security standpoint until yo
 
     ![](images/050/50-39.PNG)
 
-### STEP 7: SSH into the Client Image and configure VNC
+### **STEP 7**: SSH into the Client Image and configure VNC
 
 - The generated public/private Key files should already have the  proper file permissions set when they where created. On Linux/Mac you can double check to see if the  `dockerkey` file has the permissions of **600**. On Windows, don't worry about it. Then, **ssh** into the newly created compute instance using your `dockerkey` and `substituting your Public IP address`. Windows Command Prompt screen shots shown here:
 
@@ -374,13 +372,17 @@ Use VNC Viewer to connect to your provisioned account.
 
   ![](images/050/JS10.PNG)
 
-- There will be some one time preference settings that come up. The english default was chosen. Click **Next**. 
+- There will be some one time preference settings that come up. The English default was chosen. Click **Next**. 
 
   ![](images/050/JS12.PNG)
 
 - Click **Next** at the Typing preference.
 
   ![](images/050/JS13.PNG)
+
+- Click **Next** at the Privacy preference. (Can be On or Off)
+
+    ![](images/050/JS13-6.PNG)
 
 - Click **Skip** at the Online Account preferences.  
 
