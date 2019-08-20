@@ -132,6 +132,8 @@ Before we create the Compute instance that contains Docker and the other support
 
   ![](images/050/image4a.png)
 
+- **NOTE: Currently the Marketplace Image we are going to use for the client tools is only available from the Ashburn (IAD) region. This will change shortly but for right now If your default region is Ashburn (us-ashburn-1) then follow the sub steps below to subscribe to the Phoenix region (PHX - us-phoenix-1). If you defaulted into the Phoenix region then use the sub steps below to subscribe to the Ashburn region. The end result is you'll have two regions available to you. The rest of the workshop will proceed using the `Phoenix`  region.**
+
 - We are going to subscribe to a new Region. Click on the Region Drop-Down in the upper right-hand corner and select **Manage Regions**
   
   ![](images/050/image4b.png)
