@@ -2,7 +2,7 @@
 layout: ziplab
 description: Learn how to get an Oracle Cloud Platform trial account and sign in.
 tags: Oracle Cloud, Oracle Cloud Infrastructure, OCI
-permalink: /ziplabs/new-account/index.html
+permalink: /ziplabs/2019/new-account/index.html
 ---
 # Access an Oracle Cloud Platform Trial Account #
 
