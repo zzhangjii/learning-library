@@ -84,7 +84,7 @@ The Oracle Cloud Infrastructure Resource Manager is a fully managed service that
      - **HC_RETURN_CODE:** 200
      - **HC_TIMEOUT_IN_MILLIS:** 3000
      - **HC_RESPONSE_BODY_REGEX:** .*
-     - **HC_URL_PATH:** ^
+     - **HC_URL_PATH:** /
      - **SSH_PUBLIC_KEY:** <*Enter the content of your public ssh key*>
      
      ![](img/CreateStack02.png)
