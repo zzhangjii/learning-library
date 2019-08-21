@@ -62,7 +62,7 @@ The Oracle Cloud Infrastructure Resource Manager is a fully managed service that
     ![](img/CreateStack01.png)
     
 3. Click **Next**   
-   - **Configure Variables:**
+   - **Configure Variables:** (Information gathered from variables.tf file in orm-lbass-demo.zip)
      - **REGION:** eu-frankfurt-1 
      - **COMPARTMENT_OCID:** ocid1.compartment.oc1..aaaaaaaa... <*The OCID of OCI-ORM compartment*>
      - **BACKENDSET_NAME:** ormdemobackendset
