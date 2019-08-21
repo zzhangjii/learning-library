@@ -26,7 +26,7 @@ The Oracle Cloud Infrastructure Resource Manager is a fully managed service that
 - Oracle Cloud Infrastructure account credentials (User, Password, and Tenant) 
 - To sign in to the Console, you need the following:
   -  Tenant, User name and Password
-  -  URL for the Console: [https://console.us-ashburn-1.oraclecloud.com/](https://console.us-ashburn-1.oraclecloud.com/)
+  -  URL for the Console: [https://console.eu-frankfurt-1.oraclecloud.com/](https://console.eu-frankfurt-1.oraclecloud.com/)
   -  Oracle Cloud Infrastructure supports the latest versions of Google Chrome, Firefox and Internet Explorer 11
 -  Basic concepts of Terraform
 
@@ -37,11 +37,11 @@ The Oracle Cloud Infrastructure Resource Manager is a fully managed service that
 1. Create a Policy by clicking on **Menu** --> **Identity** --> **Policies**
 2. Click **Create Policies**
 
-   - **Name:** *orm-demo-admin-policy*
+   - **Name:** *orm-admin-policy*
    - **Description:** *Admin policy over all Resource Manager Stacks and Jobs in the OCI-ORM compartment*
    - Add the following statements:
-     - `Allow group orm-demo-admin-group to manage orm-stacks in compartment OCI-ORM`
-     - `Allow group orm-demo-admin-group to manage orm-jobs in compartment OCI-ORM`
+     - `Allow group orm-admin-group to manage orm-stacks in compartment OCI-ORM`
+     - `Allow group orm-admin-group to manage orm-jobs in compartment OCI-ORM`
    - Click **Create**
   
 
@@ -54,22 +54,48 @@ The Oracle Cloud Infrastructure Resource Manager is a fully managed service that
 1. Create a Stack by clicking on **Menu** --> **Resource Manager** --> **Stack**
 2. Click **Create Stack**
 
+   - **Select a Terraform Configuration (.zip) File to Upload:** *Upload the zip file [orm-lbass-demo.zip](orm-lbaas-demo/orm-lbass-demo.zip)*
    - **Name:** *HA Load Balanced Simple Web App*
-   - **Description:** *Enter a description of your deployment*
-   - **Upload Zip File:** *Upload the zip file [orm-lbass-demo.zip](orm-lbaas-demo/orm-lbass-demo.zip)*
-   - **Variables:**
-     - **KEY:** compartment_ocid 
-     - **VALUE:** <*Enter the ocid of the compartment you want to deploy your HA Load Balanced Simple App*>
-     - **KEY:** region
-     - **VALUE:** us-phoenix-1
-     - **KEY:** ssh_public_key
-     - **VALUE:** <*Enter the content of your public ssh key*>
+   - **Description:** *Provisions a primary load balancer and a failover load balancer into public subnets distributing load across 2 compute instances hosting a simple web app each in different private subnets*
+   - **Create in Compartment:** *OCI-ORM*
+    
+    ![](img/CreateStack01.png)
+    
+3. Click **Next**   
+   - **Configure Variables:**
+     - **REGION:** eu-frankfurt-1 
+     - **COMPARTMENT_OCID:** ocid1.compartment.oc1..aaaaaaaa... <*The OCID of OCI-ORM compartment*>
+     - **BACKENDSET_NAME:** ormdemobackendset
+     - **BACKENDSET_POLICY:** ROUND_ROBIN
+     - **BOOTSTRAP_FILE:** ./userdata/bootstrap
+     - **INSTANCE_IMAGE_OCID:** <*The OCIDs of instance images in different regions*>
+     - **INSTANCE_SHAPE:** VM.Standard2.1
+     - **LB_SHAPE:** 100Mbps
+     - **AVAILABILITY_DOMAINS:** 3
+     - **VCN_CIDR:** 10.0.0.0/16
+     - **PRIMARY_LB_CIDR:** 10.0.4.0/24
+     - **FAILOVER_LB_CIDR:** 10.0.5.0/24
+     - **BS2_SUBNET_CIDR:** 10.0.2.0/24
+     - **NON_SSL_LISTENER_PORT:** 80
+     - **HC_PROTOCOL:** HTTP
+     - **HC_PORT:** 80
+     - **HC_INTERVAL_MS:** 30000
+     - **HC_RETRIES:** 3
+     - **HC_RETURN_CODE:** 200
+     - **HC_TIMEOUT_IN_MILLIS:** 3000
+     - **HC_RESPONSE_BODY_REGEX:** .*
+     - **HC_URL_PATH:** ^
+     - **SSH_PUBLIC_KEY:** <*Enter the content of your public ssh key*>
+     
+     ![](img/CreateStack02.png)
+
+4. Click **Next**
+   - **Verify your configuration variables**
    - Click **Create**
 
+     ![](img/CreateStack03.png)
 
-    ![](img/image001.png)
-
-3. Before moving on to executing a job, quickly review the newly configured stack and then click on the hyperlinked stack name. 
+5. Before moving on to executing a job, quickly review the newly configured stack and then click on the hyperlinked stack name. 
    
     ![](img/image002.png)
 
