@@ -177,7 +177,7 @@ Grant UNLIMITED TABLESPACE TO ocitest;
 
 9. We will now download a text file from OCI Object storage. This file has commands that will be used to upload data into ADW and retrieve it. Open a new browser tab and copy/paste or Enter URL;
 
-https://objectstorage.us-ashburn-1.oraclecloud.com/n/us_training/b/Lab-images/o/ADW-File.txt
+**https://objectstorage.us-ashburn-1.oraclecloud.com/n/us_training/b/Lab-images/o/ADW-File.txt**
 
 **NOTE:** No spaces in URL
 
