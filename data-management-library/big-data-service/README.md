@@ -1,1 +1,1 @@
-Folder for big-data-service
+This folder will contain hands on labs for the Oracle Big Data Cloud Service
