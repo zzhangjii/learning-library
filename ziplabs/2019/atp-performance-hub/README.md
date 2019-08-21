@@ -1,6 +1,6 @@
 ---
 layout: ziplab
-description: Learn how to use the Performance Hub to analyze resource demand from queries.
+description: Learn how to use the Performance Hub to monitor activity and analyze resource demand from queries.
 tags: Oracle Cloud, Autonomous Transaction Processing, ATP, Oracle Cloud Infrastructure, OCI
 permalink: /ziplabs/2019/atp-performance-hub/index.html
 ---
