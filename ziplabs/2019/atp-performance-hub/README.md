@@ -7,14 +7,14 @@ permalink: /ziplabs/2019/atp-performance-hub/index.html
 # Using Performance Hub to Analyze Resource Demand from Queries #
 
 ## Before You Begin ##
-This 15-minute lab shows you how to run a few queries in SQL Developer Web and monitor those queries through the Performance Hub. SQL Developer Web and Performance Hub are available in both ADW and ATP.
+This 15-minute lab shows you how to run a few queries in SQL Developer Web and monitor those queries through the Performance Hub. SQL Developer Web and Performance Hub are available for both ADW and ATP.
 
 ### Background ###
-SQL Developer Web is a browser-based interface of Oracle SQL Developer and provides a subset of the features from the desktop version.
+SQL Developer Web is a browser-based interface of Oracle SQL Developer. It provides a subset of the features from the desktop version.
 
-The Performance Hub is an HTML5-based interface which offers real time SQL monitoring and active session history performance reporting. If you have a hot query or laggy application, you can use this tool to see exactly where time is being spent.
+The Performance Hub is an HTML5 browser-based interface which offers real time SQL monitoring and active session history performance reporting. If you have a hot query or laggy application, you can use this tool to see exactly where time is being spent.
 
-You'll perform your queries on the Star Schema Benchmark (SSB) sample data. This is 1 TB of read-only data available in all ADW and ATP instances. As as well-known large data set, SSB is a helpful schema to test the performance of your services.
+You'll perform your queries on the Star Schema Benchmark (SSB) sample data. This is 1 TB of read-only data available in all ADW and ATP instances. As well-known large data set, SSB is a helpful schema to test the performance of your services.
 
 
 ### What Do You Need? ###
@@ -32,7 +32,7 @@ You'll perform your queries on the Star Schema Benchmark (SSB) sample data. This
     [Description of the illustration OCIMenu.png](files/OCIMenu.txt)
 
 4. Click the name of the instance you created in the previous lab.  
-5. You're taken to the instance page which displays detail about your instance. Notice the buttons for Performance Hub and Service Console. You'll need both in the upcoming steps.
+5. You're taken to the instance page which displays details about your instance. Notice the buttons for Performance Hub and Service Console. You'll need both in the upcoming steps.
 
     ![](img/atp_instance.png)
 
@@ -40,14 +40,14 @@ You'll perform your queries on the Star Schema Benchmark (SSB) sample data. This
 
 
 ## Run a Simple Query ##
-In the next few steps, you'll run a few queries in SQL Developer Web on the SSB sample data. You'll measure the effects in Performance Hub.
+In the next steps, you'll run a few queries in SQL Developer Web on the SSB sample data. You'll measure the effects in Performance Hub.
 
 1. Click the **Performance Hub** button. It may take a few seconds for Performance Hub to draw open for the first time.
 2. You'll notice three areas as Performance Hub opens. They all appear as clean slates the first time you open Performance Hub.
-    * The top area will show actvity over a long term. A slider lets you pick a timeframe to zoom in on. 
+    * The top area will show actvity over a long-term. A slider lets you pick a timeframe to zoom in on. 
     * The middle area will showing the results of zooming in. 
-    * The bottom area will show individual queries.
-3. Draw close Performance Hub by clicking the **Close** button in the top-right corner.
+    * The bottom area will list individual queries.
+3. Draw close Performance Hub by clicking **Close** in the top-right corner.
 4. Click the **Service Console** button.
 5. Depending on your browser settings, you may need to give permission for the Service Console to open in a new tab. In Firefox:
      * Click **Preferences**
@@ -66,7 +66,7 @@ In the next few steps, you'll run a few queries in SQL Developer Web on the SSB 
 
 5. Sign in using the admin credentials you chose when creating the ATP instance.
     * **Username**: `ADMIN`
-    * **Password**: Use the password you created or generated
+    * **Password**: Use the password you created or auto-generated
 6. Paste this simple query into the worksheet:
  ````SQL
 select c_city,c_region,count(*) 
@@ -87,13 +87,13 @@ order by count(*);
     [Description of the illustration Executing_Query.png](files/Executing_Query.txt)
 
 9. The results are reported below the worksheet.
-10. Go back to the browser tab for the ATP Instance Details.
-11. Open Performance Hub
+10. Go back to the browser tab for the ATP instance's details.
+11. Open Performance Hub.
 12. Notice there is slight activity due to your query.
 
 
 ## Run a Demanding Query ##
-A resouce-demanding query will reveal lots of activity in Performance Hub. Like with any troublesome query, Performace Hub is a great tool to drill down and investigate where resources are being spent.
+A more-demanding query will reveal lots of activity in Performance Hub. Like with any troublesome query, Performace Hub is a great tool to drill down and investigate where time and resources are spent.
 
 1. Navigate back to the SQL Developer Web tab.
 2. Replace the previous query with this:
@@ -116,9 +116,9 @@ order by d_year, p_brand1;
 
     [Description of the illustration Refresh.png](files/Refresh.txt)
 
-6. Scroll down to the second area, which zooms in on ASH Analytics.
-7. SQL Developer Web provides many different dimensions and filters to help you trobleshoot. 
-    * Use the dropdown to change the average sctive sessions filter from **Consumer Group** to **Wait Class**.
+6. Scroll down to the second area for ASH Analytics, which zooms in on the timeframe you specify.
+7. SQL Developer Web provides many different dimensions and filters to help you analyze and troubleshoot. 
+    * Use the dropdown to change the average active sessions filter from **Consumer Group** to **Wait Class**.
     * Click a green CPU bar to apply a filter for that source.
 
     ![](img/WaitClass.png)
@@ -139,7 +139,7 @@ order by d_year, p_brand1;
     [Description of the illustration SQL_ID.png](files/SQL_ID.txt)
 
 10. Click on your query.
-11. You're taking to the **SQL Details** page. Ensure your query's activity is still within the timeframe slider. If it isn't adjust the slider.
+11. You're taking to the **SQL Details** page. Ensure your query's activity is still within the timeframe slider. If it isn't, adjust the slider.
 12. Click the **Execution Statistics** tab.
 
     ![](img/SQL_Details.png)
@@ -152,9 +152,11 @@ order by d_year, p_brand1;
 
     [Description of the illustration Statistics.png](files/Statistics.txt)
 
-You can Performance Hub and SQL Developer Web. You've finished this lab.
+You can close Performance Hub and SQL Developer Web. You've finished this lab.
 
 
 ## Want to Learn More? ##
 * [Autonomous Cloud Platform Courses](https://learn.oracle.com/pls/web_prod-plq-dad/dl4_pages.getpage?page=dl4homepage&get_params=offering:35573#filtersGroup1=&filtersGroup2=.f667&filtersGroup3=&filtersGroup4=&filtersGroup5=&filtersSearch=) from Oracle University 
+* [SQL Courses](https://education.oracle.com/database-application-development/sql-and-pl-sql/product_178) from Oracle University 
+* [Data Warehouse Courses](https://education.oracle.com/data-warehouse/data-warehousing/product_152) from Oracle University 
 * [ATP Self-Guided Hands-On Workshop](https://cloudsolutionhubs.github.io/autonomous-transaction-processing/workshops/?page=README.md)
