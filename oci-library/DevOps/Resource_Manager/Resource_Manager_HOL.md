@@ -113,21 +113,22 @@ From the Stack Details page, we can completely manage the stack's configuration 
     ![](img/image003.png)
     ![](img/image004.png)
 
-    **Note:** Once the modal closes, notice the job's state appears as "Accepted" - which indicates that the platform is spinning up resources needed for executing the command  - followed by "In Progress" and then either "Succeeded" or "Failed". Hovering over the vertical ellipses displays the menu items related to the job. From this menu (or by clicking on the hyperlinked job name) you can view the job details and its logs containing the Terraform output.
+    **Note:** Once the modal closes, notice the job's state appears as "Accepted" - which indicates that the platform is spinning up resources needed for executing the command  - followed by "In Progress" and then either "Succeeded" or "Failed". 
 
     ![](img/image005.png)
 
-2. From the Job Details page, review the information and scroll through the logs.
+2. Once the job succeeded, on the Job Details page review the information and scroll through the logs containing the Terraform output. You may also edit the job or download the Terraform Configuration and logs. 
 
     ![](img/image006.png)
   
-3. Since the previous plan action succeeded, lets select the Apply from the Terraform Actions menu. Click on **Terraform Actions** --> **Apply**
+3. Since the previous plan action succeeded, lets go back to the Stack page by clicking the HA Load Balanced Simple Web App breadcrumb on top of the page. On the Stack details page you can select the Apply from the Terraform Actions menu. Click on **Terraform Actions** --> **Apply**
 
     ![](img/image007.png)
 
 4. Enter the following information:
    
    - **Name:** *HA LB App Apply*
+   - **Apply Job Plan Resolution** *HA LB App Plan* (you can select the latest succeed plan job to apply)
    - Click **Apply**
 
     ![](img/image008.png)
@@ -138,12 +139,12 @@ From the Stack Details page, we can completely manage the stack's configuration 
    ![](img/image010.png)
    ![](img/image011.png)
 
-6. Once the apply action succeeds, verify the resources have been provisioned by reading the Terraform output contained with the logs or navigate to Networking and view the different resources that now exist (VCN, load balancer, subnets, etc.) and that the 2 instances are listed in Compute. 
+6. Once the apply action succeeds, verify the resources have been provisioned by reading the Terraform output contained with the logs or navigate to Networking and view the different resources that now exist (VCN, load balancer, subnets, etc.) and that the 2 instances are listed in Compute. The Health Status of the Load Balancer will need a few minutes to get into OK status.
 
     ![](img/image012.png)
     ![](img/image013.png)
 
-7. Now that we've successfully applied our Terraform to build out our cloud resources, let's use the Resource Manager to tear it all down by clicking on **Terraform Actions** --> **Destroy** and enter the following information:
+7. Now that we've successfully applied our Terraform to build out our cloud resources, let's return to the Stack Details page and use the Resource Manager to tear it all down by clicking on **Terraform Actions** --> **Destroy** and enter the following information:
 
    - **Name:** *HA LB App Destroy*
    - Click **Destroy**
@@ -155,7 +156,7 @@ From the Stack Details page, we can completely manage the stack's configuration 
 
     ![](img/image016.png)
 
-9. The final step is to delete the stack by clicking on the Delete button on Stack Details. Click on **Menu** --> **Resource Manager** --> **Stack** Select the HA Load Balanced Simple Web App and then click **Delete Stack**
+9. The final step is to delete the stack by clicking on the Delete Stack button on Stack Details page. Click on **Delete Stack** and confirm it by clicking **Delete** on the modal window
 
     ![](img/image017.png)
     ![](img/image018.png)
