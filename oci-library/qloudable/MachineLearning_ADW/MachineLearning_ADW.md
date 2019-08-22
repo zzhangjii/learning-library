@@ -167,7 +167,7 @@ Next, you'll import a Zeppelin Notebook into the Oracle Machine Learning instanc
 
    <img src="./img/ADW_017.PNG" alt="image-alt-text">
 
-2. Navigate to Autonomous Data Warehouse menu, hover over the action icon(Three dots) and click **Terminate**
+2. Navigate to Autonomous Data Warehouse menu, hover over the action icon (three dots) and click **Terminate**
 
    <img src="./img/ADW_018.PNG" alt="image-alt-text">
 
