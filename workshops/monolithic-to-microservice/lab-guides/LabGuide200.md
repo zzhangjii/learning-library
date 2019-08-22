@@ -4,20 +4,16 @@
   ![](images/200/Title.png)
 
 ## Introduction
-In this lab you will create ssh key pairs, login into your Trial, create a VCN (Virtual Compute Network), create a new compute instance and install docker / git into the instance.
+In this lab you will deploy a Java application using Docker. This will require you to modify a couple of configuration files so that the application queries your specific Autonomous Transaction Processing (ATP) database instance you created in Lab 050 and populated with a schema using SQL Developer in Lab 100.
 
 ## Lab 200 Objectives
 
-- Create the baseline infrastructure to support a Compute instance
-- Create a SSH key pair
-- SSH into the instance: Install Docker and GIT
+- SSH into the Compute Instance
 - Create a baseline Docker image and then deploy a java REST application
 - Customize the container to connect to your ATP DB and save a new image
 - Run a Docker container based off of your new image
 
-# Log into  your Trial Account and Create Infrastructure
-
-You will create all required infrastructure components within your Trail account.
+# Log into  your Trial Account
 
 ## Your Trial Account
 
@@ -43,266 +39,13 @@ You will create all required infrastructure components within your Trail account
 
   ![](images/200/image4e.png)
   
-### **STEP 2**: Create a Virtual Compute Network
-
-We need a default VCN to define our networking within the `monoTOmicro` compartment. This is where Subnets and Security Lists are defined for each Availablity Domain in your Tenancy. Oracle Cloud Infrastructure is hosted in regions and availability domains. A region is a localized geographic area, and an availability domain is one or more data centers located within a region. A region is composed of several availability domains. Availability domains are isolated from each other, fault tolerant, and very unlikely to fail simultaneously. Because availability domains do not share infrastructure such as power or cooling, or the internal availability domain network, a failure at one availability domain is unlikely to impact the availability of the others.
-
-All the availability domains in a region are connected to each other by a low latency, high bandwidth network, which makes it possible for you to provide high-availability connectivity to the Internet and customer premises, and to build replicated systems in multiple availability domains for both high-availability and disaster recovery.
-
-- Click the **hamburger icon** in the upper left corner to open the navigation menu. Under the **Networking** section of the menu, click **Virtual Cloud Networks**
-
-    ![](images/200/10.PNG)
-
-- Select your compartment:
-
-    ![](images/200/10a.png)
-
-- Click **Create Virtual Cloud Network**.
-
-    ![](images/200/11.PNG)
-
-- Fill in and/or select the follow values as highlighted below:
-
-    ![](images/200/12.PNG)
-
-    ![](images/200/13.PNG)
-
-- Click **Create Virtual Cloud Network**
-
-- Click **Close** on the details page:
-
-    ![](images/200/14.PNG)
-
-- You will see:
-
-    ![](images/200/15.PNG)
-
-### **STEP 3**: Add a Security List entry
-
-A security list provides a virtual firewall for an instance, with ingress and egress rules that specify the types of traffic allowed in and out. Each security list is enforced at the instance level. However, you configure your security lists at the subnet level, which means that all instances in a given subnet are subject to the same set of rules. The security lists apply to a given instance whether it's talking with another instance in the VCN or a host outside the VCN.
-
-- Click the **Security Lists** link:
-
-    ![](images/200/17.PNG)
-
-- Click on the **Default Security List for DockerVCN** link:
-
-    ![](images/200/18.PNG)
-
-  **NOTE:** For the purposes of the upcoming Docker application deployment we need to add an Ingress Rule that allows access from the Internet to port 8080.
-
-- Click **Add Ingress Rules**:
-
-  **`NOTE: DO NOT EDIT AN ALREADY EXISTING RULE, ADD A NEW ONE`**
-
-  ![](images/200/19.PNG)
-
-- In the dialog **Enter the following** and then click the **Add Ingress Rules** button:
-
-  **NOTE:** Leave all other values at default.
-
-  ```
-  Source CIDR: 0.0.0.0/0
-  Destination Port Range: 8080
-  ```
-
-  ![](images/200/19-4.PNG)
-
-- Your Ingress Rules should look like:
-
-    ![](images/200/20.PNG)
-
-### **STEP 4**: Create SSH Key Pair
-
-Before we create the Compute instance that will contain Docker and application deployments we need to create a ssh key pair so we'll be able to securely connect to the instance and do the Docker installation, etc. **We'll use the VNC session OR Virtual Box Client Image to do this... depending on whether your in the Instructor Led or Virtual version of this Workshop**.
-
-- **In the VNC or Client Image Session**: Open a Terminal and navigate to your home directory.
-
-  ```
-  cd /home/opc
-  ```
-
-  ![](images/200/LabGuide200-1204a1a6.png)
-
-- **Type** the following: (**You don't have to worry about any passphrases. Press enter to proceed without a passphrase.**)
-
-  ```
-  ssh-keygen -b 2048 -t rsa -f dockerkey
-  ```
-
-- Your key pair is now in the current directory:
-
-  ![](images/200/24.PNG)
-
-- Open up the pubic key file in an editor (vi) by typing **vi** in the terminal window.
-
-  ```
-  vi dockerkey.pub
-  ```
-
-  ![](images/200/LabGuide200-5eed53cd.png)
-
-- **Select and Copy** the entire contents. This will be used in the Compute instance creation in the next Step.   
-
-    ![](images/200/25-4.PNG)
-
-- Press the  **Escape Key** and type **wq!** to exit vi.
-
-### **STEP 5**: Create a Compute Instance
-
-- Go back to your OCI console and from the hamburger menu in the upper left hand corner select **Compute-->Instances**.
-
-  ![](images/200/26.PNG)
-
-- Click **Create Instance**.
-
- ![](images/200/27.PNG)
-
-- **Type or Select** the following in the **Create Compute Instance** section of the dialog:
-
-  ```
-  Name: Docker
-  Availability Domain: AD 1 (Use default AD 1)
-  Boot Volume: Oracle-Provided OS Image
-  Image Operating System: Oracle Linux 7.6 (Default)
-  Shape Type: Virtual Machine (Default)
-  Shape: VM.Standard.E2.2
-  ```
-
-- For the Instance Shape click on the **Change Shape** button. 
-
-  ![](images/200/27.1.1.PNG)
-
-- Select the shape **VM.Standard.E2.2** and click **Select Shape**.
-
-  **NOTE: If the VM.Standard.E2.2 shape is not availible then select VM.Standard2.2**
-
-  ![](images/200/27.1.2.PNG)
-
-- After entering the _Docker_ instance details your screen should look like:
-
-   ![](images/200/27-2.PNG)
-
-- Scroll down furthur on the page to insert your PUBLIC SSH Key
-**NOTE:** You will paste the public key you copied in Step 4 into the SSH KEY field by selecting the **Paste SSH Keys** radio button. `The public key should all be on ONE LINE`
-
-   ![](images/200/28.PNG)
-
-- In the Configure networking section you will take ALL of the defaults as shown:
-
-   ![](images/200/29.PNG)
-
-- Click **Create**
-
-  After a few minutes you should see a running instance with a Public IP Address. _**Copy the Public IP Address** and save it off into a text editor, we will be using this IP in the next step._
-
-   ![](images/200/30.PNG)
-
-
-### **STEP 6**: SSH into the Instance and install Docker
-
-- Set the correct permissions for the docker key by **Typing OR Copy and Pasting** the following commands in your terminal window. Make sure the dockerkey file has the permissions of **600** (chmod 600 dockerkey) and ssh into the compute instance `substituting your IP address`.
-
-  Example:
-
-  ```
-  cd /home/opc
-  chmod 600 dockerkey
-  ssh -i ./dockerkey opc@<Paste in Your Public IP>
-  ```
-
-  ![](images/200/37.PNG)
-
-### **STEP 7**: Install and configure Docker and GIT
-
-Docker and GIT are required for the subsuquent labs. You will install the Docker engine, enable it to start on re-boot, grant docker privledges to the `opc` user and finally install GIT.
-
-- **Type** the following:
-
-  ```
-  sudo -s
-  yum install docker-engine
-  ```
-
-- _During the **yum install docker-engine** command press **Y** when asked if installation is ok._ Screenshot at the end of the Docker installation:
-
-   ![](images/200/38.PNG)
-
-- Next grant the proper privileges to the opc user.
-  ```
-  usermod -aG docker opc
-  systemctl enable docker
-  systemctl start docker
-  ```
-
-   ![](images/200/39.PNG)
-
-- **Type** the following, select **Y** when asked if it is ok to install:
-
-  ```
-  yum install git
-  ```
-
-- Screenshot at the end of the GIT installation:
-
-   ![](images/200/40.PNG)
-
-- **Type** the following to verify good installations:
-
-  ```
-  su - opc
-  docker version
-  docker images
-  git --version
-  ```
-
-   ![](images/200/41.PNG)
-
-### **STEP 8**: Edit /etc/sysconfig/selinux
-
-Set the server to Permissive mode and also ensure that permissive mode survives re-boots by editing `/etc/sysconfig/selinux`
-
-- Using vi, change the SELINUX line to **permissive**. **Type** the following: (**NOTE**: You need to be the root user to edit this file)
-
-  ```
-  sudo -s
-  vi /etc/sysconfig/selinux
-  ```
-
-- After the changes are made save the file and exit out of vi.
-
-  **NOTE:** If new to vi, press the letter `i` to edit text. To save press Escape, then type `:wq!`.
-
-   ![](images/200/42.PNG)
-
-- Now, **Type** the following:
-
-  ```
-  setenforce 0
-  sestatus
-  ```
-
-- Verify that your server is in permissive mode.
-
-   ![](images/200/43.PNG)
-
-- **Type** the following to exit out of `root` and go back and verify that you're now the `opc` user:
-
-  ```
-  exit
-  whoami
-  ```
-
-  ![](images/200/44.PNG)
-
-
 # Deploy the AlphaOffice REST Services using Docker
 
 In this section you will clone a github repository that contains a Java REST Application. Then, you will modify the configuration to point to your ATP database. After successful testing you will create a new Docker image.
 
 ## Deploy AlphaOffice REST Services
 
-### **STEP 9**: Clone the git repository and copy the wallet file
+### **STEP 2**: Copy the DB Wallet file into the proper Location
 
 - Before we get into pulling down the completed java .war of the application a couple of screen shots will be helpful to get you a sense of what's going on in the application. The application will be deployed into an application server (Glassfish) and be listening on port 8080 on the following URI's depending. The REST call coming in will determine the method called:
 
@@ -323,18 +66,7 @@ In this section you will clone a github repository that contains a Java REST App
 - The source code for this is here:  
     [ATPDBUtils](https://github.com/Sasankaa/alpha-office-product-catalog-webservice/blob/master/AlphaProductsRestService/src/java/com/oracle/db/ATPDBUtils.java)
 
-- Clone the git repository to your newly created OCI VM (docker). This repo contains support files and the baseline Alpha Office application that you will modify to connect to your ATP database.
-
-- **Type OR Copy and Paste**:
-
-  ```
-  cd ~
-  git clone https://github.com/derekoneil/monolithic-to-microservice.git
-  ```
-
-  ![](images/200/45.PNG)
-
-- From the directory you just cloned the repository into **Type**:
+- **In a Terminal Window within the VNC session** change directory into the location you cloned the GitHub repository in Lab 100. **Type**:
 
   ```
   cd /home/opc/monolithic-to-microservice/workshops/monolithic-to-microservice/lab-resources/docker
@@ -347,26 +79,19 @@ In this section you will clone a github repository that contains a Java REST App
   ```
   ![](images/200/46.PNG)
 
-- **From the VNC session or Client Virtual Box image** (depending on whether or doing the Instructor Led or Virtual version of this workshop): Open up a new Terminal windw by right-clicking on the Desktop and selecting **Open Terminal**:
+- Copy the database wallet file you downloaded in Lab 100 (Recall that the file is in `/home/opc/Downloads`) to `/home/opc/monolithic-to-microservice/workshops/monolithic-to-microservice/lab-resources/docker`:
 
-  ![](images/100/image01.png)
-
-
-- Copy the database wallet file you downloaded in Lab 100 (Recall that the file is in `/home/opc/Downloads`). You will scp this wallet file to the `/home/opc/monolithic-to-microservice/workshops/monolithic-to-microservice/lab-resources/docker` directory in the new OCI VM (Docker):
+  **NOTE the "dot" at the end of the next command**
 
   ```
-  scp -i ./dockerkey /home/opc/Downloads/Wallet_orcl.zip opc@<YOUR-PUBLIC-IP>:/home/opc/monolithic-to-microservice/workshops/monolithic-to-microservice/lab-resources/docker
+  cp /home/opc/Downloads/Wallet_orcl.zip .
   ```
 
-  Example: (**The default wallet name is Wallet_orcl.zip**)
-
-  ![](images/200/46-1.1.PNG)
-
-- **Now, Return to the SSH session into your OCI VM (Docker).** and type **ls**. You should see your wallet file in the directory before proceeding.
+- Now type **ls**. You should see your wallet file in the directory before proceeding.
 
   ![](images/200/46-1.3.PNG)
 
-### **STEP 10**: Edit your ATP instance specific information
+### **STEP 3**: Edit your ATP instance specific information
 
 In this step you are going to edit the `dbconfig.properties` file to add your database instance connection name.
 
@@ -409,9 +134,20 @@ In this step you are going to edit the `dbconfig.properties` file to add your da
 
   ![](images/200/46-1.7.PNG)
 
-### **STEP 11**: Build the Docker image
+### **STEP 4**: Build the Docker image
 
 The docker build will take a baseline java ready docker image from Docker Hub, add the Glassfish 4.1.1 application server along with your ATP DB instance wallet file and then extract the **AlphaProductsRestService.war** inside the container. The application server will be running on port 8080. If you recall you opened port 8080 in the Networking Security List earlier in this lab so access from the internet can occur.
+
+- Grant the `opc` user temporary permission to use the docker daemon. **Type** the following commands to enable:
+
+  ```
+  sudo usermod -aG docker opc
+  sudo su opc
+  groups
+  ```
+  - You will now see that the docker group id is now associated with the opc user. 
+
+  ![](images/200/46-3.PNG)
 
 - **Type:**
 
@@ -509,7 +245,7 @@ The docker build will take a baseline java ready docker image from Docker Hub, a
 
   ![](images/200/50.PNG)
 
-### **STEP 12**: Copy the database properties file into the container
+### **STEP 5**: Copy the database properties file into the container
 
 In this step you will copy the `dbconfig.properties` file modifed in a previous step into the running container. Then you will go into the container and verify all the copied and modied files look good and are in their proper locations.
 
@@ -523,7 +259,7 @@ In this step you will copy the `dbconfig.properties` file modifed in a previous 
 
   ![](images/200/53.PNG)
 
-### **STEP 13**: Verify files inside the container and deploy the AlphaProductsRestService application
+### **STEP 6**: Verify files inside the container and deploy the AlphaProductsRestService application
 
 - **Type OR Copy and Paste:**
 

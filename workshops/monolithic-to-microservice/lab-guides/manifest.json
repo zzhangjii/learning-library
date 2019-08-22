@@ -9,11 +9,6 @@
               "name": "Instructor Led",
               "description": "An in-person workshop with an Oracle instructor",
               "imageUrl": "https://oracle.github.io/learning-library/workshops/common-content/images/common/Instructor%20Led.png"
-            },
-            {
-              "name": "Virtual Workshop",
-              "description": "An Oracle-organized remote session",
-              "imageUrl": "https://oracle.github.io/learning-library/workshops/common-content/images/common/virtualbox.png"
             }
           ],
         "labs": [
@@ -75,60 +70,6 @@
                 "number": "0",
                 "filename": "IntroVirtual.md",
                 "title": "Vitual Workshop Introduction",
-                "description": "",
-                "labels": {
-                    "version": "Virtual Workshop"
-                }
-            },
-            {
-                "number": "010",
-                "filename": "LabGuide010.md",
-                "title": "Lab 010: Virtual Box Setup",
-                "description": "",
-                "labels": {
-                    "version": "Virtual Workshop"
-                }
-            },
-            {
-                "number": "050",
-                "filename": "LabGuide050Virtual.md",
-                "title": "Lab 050: Setup Cloud Environment",
-                "description": "",
-                "labels": {
-                    "version": "Virtual Workshop"
-                }
-            },
-            {
-                "number": "100",
-                "filename": "LabGuide100Virtual.md",
-                "title": "Lab 100: Autonomous Microservice Data Structure Configuration",
-                "description": "",
-                "labels": {
-                    "version": "Virtual Workshop"
-                }
-            },
-            {
-                "number": "200",
-                "filename": "LabGuide200Virtual.md",
-                "title": "Lab 200: Building, Containerizing Java REST Services",
-                "description": "",
-                "labels": {
-                    "version": "Virtual Workshop"
-                }
-            },
-            {
-                "number": "300",
-                "filename": "LabGuide300.md",
-                "title": "Lab 300: Kubernetes REST Service Deployment",
-                "description": "",
-                "labels": {
-                    "version": "Virtual Workshop"
-                }
-            },
-            {
-                "number": "400",
-                "filename": "LabGuide400.md",
-                "title": "Lab 400: Low Code, Microservice Mobile Development",
                 "description": "",
                 "labels": {
                     "version": "Virtual Workshop"
