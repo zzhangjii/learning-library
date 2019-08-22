@@ -1,1 +1,4 @@
-This folder will contain hands on labs for the Oracle Big Data Cloud Service
+Oracle Big Data Cloud Service
+
+This folder will contain the latest updates for Oracle Big Data Cloud Service
+
