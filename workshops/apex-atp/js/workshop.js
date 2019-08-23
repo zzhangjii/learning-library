@@ -277,7 +277,7 @@ labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sa
           $scope.previousSelection = $scope.selection;
           $scope.selection = "chooseVersion";
           $scope.version.selected = undefined;
-          updateFilenameInHeader(undefined);
+          // updateFilenameInHeader(undefined);
         }
 
         $scope.showHomeOrVersionSelectPage = function() {
@@ -339,18 +339,18 @@ labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sa
                 }
             });
         }
-        var updateFilenameInHeader = function(filename) {
-          var headerElement = document.getElementsByTagName('h2')[0];
-          var labElement = document.createElement('span');
-          labElement.textContent = '- ' + filename;
+        // var updateFilenameInHeader = function(filename) {
+        //   var headerElement = document.getElementsByTagName('h2')[0];
+        //   var labElement = document.createElement('span');
+        //   labElement.textContent = '- ' + filename;
 
-          if(headerElement.children[1])
-            headerElement.removeChild(headerElement.children[1]);
+        //   if(headerElement.children[1])
+        //     headerElement.removeChild(headerElement.children[1]);
 
-          if(filename)
-            headerElement.appendChild(labElement);
+        //   if(filename)
+        //     headerElement.appendChild(labElement);
 
-        }
+        // }
 
         var loadPage = window.history.state;
         window.onpopstate = function(event) {
@@ -372,7 +372,7 @@ labGuide.controller('labGuideController', ['$scope', '$http', '$mdSidenav', '$sa
               history.replaceState(null, '', newRelativePathQuery);
             }
             $scope.currentFilename = lab.filename;
-            updateFilenameInHeader(lab.filename);
+            // updateFilenameInHeader(lab.filename);
             $scope.loadContent(lab.filename);
 
             setTimeout(function () {
