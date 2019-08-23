@@ -1,32 +1,34 @@
-# Low Code Development with Oracle Autonomous Cloud
+# Low Code Development with Oracle Autonomous Database
 
-Welcome to the Low Code Development with Oracle Autonomous Cloud workshop. This workshop will walk you through the following tasks:
+Welcome to the Low Code Development with Oracle Autonomous Database hands-on lab. This lab will walk you through the following tasks:
 
--  Create an Autonomous Transaction Processing Service
+-  Create an Autonomous Transaction Processing instance
 -  Access APEX in the Oracle Cloud
 -  Create an APEX Workspace
--  Create an Application from a File
--  Use Quick SQL to Create Database Objects
--  Use SQL Developer Web to Access Database Objects
--  Use SQL Developer Web to Create Data Model
--  Create and Modify an APEX Application
+-  Create an application from a file
+-  Use Quick SQL to create database objects
+-  Use SQL Developer Web to access database objects
+-  Use SQL Developer Web to create data model
+-  Create and modify an APEX application
 
-### **Step 1**: Acquire an Oracle Cloud Trial
+## Parts
 
-- Bookmark this page for future reference.
+### **Part 1**: Acquire an Oracle Cloud trial account
 
-- Please click on the following link to create your <a href="https://myservices.us.oraclecloud.com/mycloud/signup?language=en&sourceType=:ow:lp:cpo::RC_NAMK190523P00161:APEX_ATP_HOL&intcmp=:ow:lp:cpo::RC_NAMK190523P00161:APEX_ATP_HOL" target="_trial_">Free Account</a>, and complete all the required steps to get your free Oracle Cloud Trial Account. When you complete the registration process you'll receive a $300 credit that will enable you to complete the lab for free.  Additionally, you'll have 1000s of hours left over to continue to explore the Oracle Cloud.
+1. If you already have an Oracle Cloud trial account, you may skip to the next part.
 
-  - Soon after requesting your trial you will receive the following email. Once you receive this email you can proceed to the next step.
+2. Please <a href="https://myservices.us.oraclecloud.com/mycloud/signup?language=en&sourceType=:ow:lp:cpo::RC_NAMK190523P00161:APEX_ATP_HOL&intcmp=:ow:lp:cpo::RC_NAMK190523P00161:APEX_ATP_HOL" target="_trial_">click this link to create your free account</a>. When you complete the registration process you'll receive an account with a $300 credit that will enable you to complete the lab for free. You can then use any remaining credit to continue to explore the Oracle Cloud.
 
-  ![](images/getstartednow.png)
+3. Soon after requesting your trial you will receive the following email. Once you receive this email you can proceed to Part 2.
 
-### **Step 2**: Navigate to Lab 1
+   ![](images/0/get-started-email.png)
 
-  - _You can see a list of Lab Guides_ by clicking on the **Menu Icon** in the upper left corner of the browser window.
+### **Part 2**: Navigate to Module 1
 
-	![](images/001.png)
+1. [Click here](1-create-an-apex-workspace.md) to navigate to Module 1. Alternatively, you can click the navigation menu icon in the upper-left corner of the browser window to see a list of modules in the lab.
+
+	 ![](images/0/lab-intro.png)
+
+2. Click **Module 1: Create an APEX Workspace**.
   
-  ![](images/002.png)
-
-
+   ![](images/0/lab-contents.png)
