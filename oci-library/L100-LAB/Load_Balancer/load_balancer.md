@@ -63,7 +63,7 @@ The following provide an overview of a simple Public Load Balancer:
        - **Destination Port Range:** *22*
    - Click on **Additional Egress Rule** and enter:
        - **Destination Type:** *CIDR*
-       - **Destinatiopn CIDR:** *0.0.0.0/0*
+       - **Destination CIDR:** *0.0.0.0/0*
        - **IP Protocol:** *All Protocols*
    - Click *Create Security List* 
 
