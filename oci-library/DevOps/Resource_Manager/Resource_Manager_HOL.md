@@ -26,7 +26,7 @@ The Oracle Cloud Infrastructure Resource Manager is a fully managed service that
 - Oracle Cloud Infrastructure account credentials (User, Password, and Tenant) 
 - To sign in to the Console, you need the following:
   -  Tenant, User name and Password
-  -  URL for the Console: [https://console.us-ashburn-1.oraclecloud.com/](https://console.us-ashburn-1.oraclecloud.com/)
+  -  URL for the Console: [https://console.eu-frankfurt-1.oraclecloud.com/](https://console.eu-frankfurt-1.oraclecloud.com/)
   -  Oracle Cloud Infrastructure supports the latest versions of Google Chrome, Firefox and Internet Explorer 11
 -  Basic concepts of Terraform
 
@@ -37,11 +37,11 @@ The Oracle Cloud Infrastructure Resource Manager is a fully managed service that
 1. Create a Policy by clicking on **Menu** --> **Identity** --> **Policies**
 2. Click **Create Policies**
 
-   - **Name:** *orm-demo-admin-policy*
+   - **Name:** *orm-admin-policy*
    - **Description:** *Admin policy over all Resource Manager Stacks and Jobs in the OCI-ORM compartment*
    - Add the following statements:
-     - `Allow group orm-demo-admin-group to manage orm-stacks in compartment OCI-ORM`
-     - `Allow group orm-demo-admin-group to manage orm-jobs in compartment OCI-ORM`
+     - `Allow group orm-admin-group to manage orm-stacks in compartment OCI-ORM`
+     - `Allow group orm-admin-group to manage orm-jobs in compartment OCI-ORM`
    - Click **Create**
   
 
@@ -54,22 +54,48 @@ The Oracle Cloud Infrastructure Resource Manager is a fully managed service that
 1. Create a Stack by clicking on **Menu** --> **Resource Manager** --> **Stack**
 2. Click **Create Stack**
 
+   - **Select a Terraform Configuration (.zip) File to Upload:** *Upload the zip file [orm-lbass-demo.zip](orm-lbaas-demo/orm-lbass-demo.zip)*
    - **Name:** *HA Load Balanced Simple Web App*
-   - **Description:** *Enter a description of your deployment*
-   - **Upload Zip File:** *Upload the zip file [orm-lbass-demo.zip](orm-lbaas-demo/orm-lbass-demo.zip)*
-   - **Variables:**
-     - **KEY:** compartment_ocid 
-     - **VALUE:** <*Enter the ocid of the compartment you want to deploy your HA Load Balanced Simple App*>
-     - **KEY:** region
-     - **VALUE:** us-phoenix-1
-     - **KEY:** ssh_public_key
-     - **VALUE:** <*Enter the content of your public ssh key*>
+   - **Description:** *Provisions a primary load balancer and a failover load balancer into public subnets distributing load across 2 compute instances hosting a simple web app each in different private subnets*
+   - **Create in Compartment:** *OCI-ORM*
+    
+    ![](img/CreateStack01.png)
+    
+3. Click **Next**   
+   - **Configure Variables:** (Information gathered from variables.tf file in orm-lbass-demo.zip)
+     - **REGION:** eu-frankfurt-1 
+     - **COMPARTMENT_OCID:** ocid1.compartment.oc1..aaaaaaaa... <*The OCID of OCI-ORM compartment*>
+     - **BACKENDSET_NAME:** ormdemobackendset
+     - **BACKENDSET_POLICY:** ROUND_ROBIN
+     - **BOOTSTRAP_FILE:** ./userdata/bootstrap
+     - **INSTANCE_IMAGE_OCID:** <*The OCIDs of instance images in different regions*>
+     - **INSTANCE_SHAPE:** VM.Standard2.1
+     - **LB_SHAPE:** 100Mbps
+     - **AVAILABILITY_DOMAINS:** 3
+     - **VCN_CIDR:** 10.0.0.0/16
+     - **PRIMARY_LB_CIDR:** 10.0.4.0/24
+     - **FAILOVER_LB_CIDR:** 10.0.5.0/24
+     - **BS2_SUBNET_CIDR:** 10.0.2.0/24
+     - **NON_SSL_LISTENER_PORT:** 80
+     - **HC_PROTOCOL:** HTTP
+     - **HC_PORT:** 80
+     - **HC_INTERVAL_MS:** 30000
+     - **HC_RETRIES:** 3
+     - **HC_RETURN_CODE:** 200
+     - **HC_TIMEOUT_IN_MILLIS:** 3000
+     - **HC_RESPONSE_BODY_REGEX:** .*
+     - **HC_URL_PATH:** /
+     - **SSH_PUBLIC_KEY:** <*Enter the content of your public ssh key*>
+     
+     ![](img/CreateStack02.png)
+
+4. Click **Next**
+   - **Verify your configuration variables**
    - Click **Create**
 
+     ![](img/CreateStack03.png)
 
-    ![](img/image001.png)
-
-3. Before moving on to executing a job, quickly review the newly configured stack and then click on the hyperlinked stack name. 
+5. Before moving on to executing a job, quickly review the newly configured stack and then click on the hyperlinked stack name. 
    
     ![](img/image002.png)
 
@@ -87,21 +113,22 @@ From the Stack Details page, we can completely manage the stack's configuration 
     ![](img/image003.png)
     ![](img/image004.png)
 
-    **Note:** Once the modal closes, notice the job's state appears as "Accepted" - which indicates that the platform is spinning up resources needed for executing the command  - followed by "In Progress" and then either "Succeeded" or "Failed". Hovering over the vertical ellipses displays the menu items related to the job. From this menu (or by clicking on the hyperlinked job name) you can view the job details and its logs containing the Terraform output.
+    **Note:** Once the modal closes, notice the job's state appears as "Accepted" - which indicates that the platform is spinning up resources needed for executing the command  - followed by "In Progress" and then either "Succeeded" or "Failed". 
 
     ![](img/image005.png)
 
-2. From the Job Details page, review the information and scroll through the logs.
+2. Once the job succeeded, on the Job Details page review the information and scroll through the logs containing the Terraform output. You may also edit the job or download the Terraform Configuration and logs. 
 
     ![](img/image006.png)
   
-3. Since the previous plan action succeeded, lets select the Apply from the Terraform Actions menu. Click on **Terraform Actions** --> **Apply**
+3. Since the previous plan action succeeded, lets go back to the Stack page by clicking the HA Load Balanced Simple Web App breadcrumb on top of the page. On the Stack details page you can select the Apply from the Terraform Actions menu. Click on **Terraform Actions** --> **Apply**
 
     ![](img/image007.png)
 
 4. Enter the following information:
    
    - **Name:** *HA LB App Apply*
+   - **Apply Job Plan Resolution** *HA LB App Plan* (you can select the latest succeed plan job to apply)
    - Click **Apply**
 
     ![](img/image008.png)
@@ -112,12 +139,12 @@ From the Stack Details page, we can completely manage the stack's configuration 
    ![](img/image010.png)
    ![](img/image011.png)
 
-6. Once the apply action succeeds, verify the resources have been provisioned by reading the Terraform output contained with the logs or navigate to Networking and view the different resources that now exist (VCN, load balancer, subnets, etc.) and that the 2 instances are listed in Compute. 
+6. Once the apply action succeeds, verify the resources have been provisioned by reading the Terraform output contained with the logs or navigate to Networking and view the different resources that now exist (VCN, load balancer, subnets, etc.) and that the 2 instances are listed in Compute. The Health Status of the Load Balancer will need a few minutes to get into OK status.
 
     ![](img/image012.png)
     ![](img/image013.png)
 
-7. Now that we've successfully applied our Terraform to build out our cloud resources, let's use the Resource Manager to tear it all down by clicking on **Terraform Actions** --> **Destroy** and enter the following information:
+7. Now that we've successfully applied our Terraform to build out our cloud resources, let's return to the Stack Details page and use the Resource Manager to tear it all down by clicking on **Terraform Actions** --> **Destroy** and enter the following information:
 
    - **Name:** *HA LB App Destroy*
    - Click **Destroy**
@@ -129,7 +156,7 @@ From the Stack Details page, we can completely manage the stack's configuration 
 
     ![](img/image016.png)
 
-9. The final step is to delete the stack by clicking on the Delete button on Stack Details. Click on **Menu** --> **Resource Manager** --> **Stack** Select the HA Load Balanced Simple Web App and then click **Delete Stack**
+9. The final step is to delete the stack by clicking on the Delete Stack button on Stack Details page. Click on **Delete Stack** and confirm it by clicking **Delete** on the modal window
 
     ![](img/image017.png)
     ![](img/image018.png)
