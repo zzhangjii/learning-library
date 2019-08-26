@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this module, you will create database objects using Quick SQL and then view the objects in SQL Developer Web. Then you will then use SQL Developer Web to create an additional table and view all the database objects as a data model.
+Memorizing the SQL to create and maintain database objects can be difficult. However, there are tools that can generate the code for you based on a shorthand syntax or a graphical user interface. In this module, you will create database objects using Quick SQL and then view the objects in SQL Developer Web. Then you will then use SQL Developer Web to create an additional table and view all the database objects as a data model.
 
 ***To log issues***, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
@@ -17,7 +17,7 @@ In this module, you will create database objects using Quick SQL and then view t
 
 ### **Part 1:** Create database objects using Quick SQL
 
-1. Click the down arrow in the **SQL Workshop** tab, then select **SQL Scripts**.
+1. Return to your APEX Workspace and click the down arrow in the **SQL Workshop** tab, then select **SQL Scripts**.
 
    ![](images/3/navigate-to-sql-scripts.png)
 
@@ -58,7 +58,7 @@ In this module, you will create database objects using Quick SQL and then view t
     view project_tasks projects tasks
     ```
 
-4. Review the shorthand code and click **Generate SQL** when ready. Note that the **Help** button provides details on the shorthand syntax along with several examples of its usage.
+4. Review the shorthand code. How many tables will be created and how are they related? What types of columns and constraints will be created for the tables? Note that the **Help** button provides details on the shorthand syntax along with several examples of its usage. Click **Generate SQL** when ready. 
 
    ![](images/3/generate-sql.png)
 
@@ -130,23 +130,22 @@ In this part, you will learn how to access SQL Developer Web and then use it to 
 
    ![](images/3/login-as-admin.png)
 
-3. You created your database objects in the DEMO schema so you will need to enable SQL Developer Web access for that schema. Copy and paste the following code into the  Worksheet:
+3. You created your database objects in the DEMO schema so you will need to enable SQL Developer Web access for that schema. Close the help popup, then copy and paste the following code into the  Worksheet:
 
-   ```sql
-   begin
- 
-     ords_admin.enable_schema(
-       p_enabled => true,
-       p_schema => 'DEMO', -- Actual name of the schema
-       p_url_mapping_type => 'BASE_PATH',
-       p_url_mapping_pattern => 'demo', -- Alias used in the URL for access
-       p_auto_rest_auth => true
-     );
- 
-     commit;
-     
-   end;
-   ```
+    ```sql
+    begin    
+      ords_admin.enable_schema(
+        p_enabled => true,
+        p_schema => 'DEMO', -- Actual name of the schema
+        p_url_mapping_type => 'BASE_PATH',
+        p_url_mapping_pattern => 'demo', -- Alias used in the URL for access
+        p_auto_rest_auth => true
+      );
+
+      commit;
+      
+    end;
+    ```
 
 4. Click the "Run Script" button to execute the code in the Worksheet. When the script finishes executing, you should see a success message under the Script Output tab at the bottom.
 
@@ -170,9 +169,10 @@ In this part, you will learn how to access SQL Developer Web and then use it to 
 
 9. Enter the following SQL query in the Worksheet and click the "Run Statement" icon to see the data in the table.
 
-   ```sql
-   select * from hol_projects;
-   ``` 
+    ```sql
+    select * from hol_projects;
+    ``` 
+   
    The data should be displayed in the Query Result tab at the bottom. 
    ![](images/3/query-results.png)
 
@@ -188,7 +188,7 @@ In this part, you will learn how to create an Entity Relationship Diagram (ERD) 
 
    ![](images/3/drop-hol-milestones.png)
 
-3. Drag the other three tables to the right. Use the diagram controls to adjust the zoom level and layout of the objects. Note that the foreign keys are detected and drawn on the diagram.
+3. Drag the other three **HOL_*** tables to the right. Use the diagram controls to adjust the zoom level and layout of the objects. Note that the foreign keys are detected and drawn on the diagram.
 
    ![](images/3/drop-remaining-tables.png)
 
@@ -269,4 +269,4 @@ In this part, you will use SQL Developer Web to create a new table. Then you'll 
 
 ## Summary
 
-This completes Module 3. At this point you know how to use both APEX's SQL Workshop as well as SQL Developer Web to create and modify database objects. You also know how to use the Data Modeler in SQL Developer Web to create an ERD. [Click here](4-create-and-modify-an-apex-app.md) to navigate to Module 4.
+This completes Module 3. At this point you know how to use Quick SQL to generate database objects using a SQL shorthand. You also know how to use SQL Developer Web to maintain database objects and generate ERDs. [Click here](4-create-and-modify-an-apex-app.md) to navigate to Module 4.

@@ -31,7 +31,7 @@ While APEX developers spend the majority of their time in the App Builder, you s
 
    ![](images/2/project-and-tasks-data.png)
 
-4. Review the parsed data. Set Table Name to **SPREADSHEET** and click **Load Data**. Note that the Error Table Name based on the Table Name with a postfix of \_ERR$.
+4. Review the parsed data. Set Table Name to **SPREADSHEET** and click **Load Data**. Note that the Error Table Name defaults to the Table Name with a postfix of \_ERR$.
 
    ![](images/2/load-data-settings.png)
 
@@ -41,7 +41,7 @@ While APEX developers spend the majority of their time in the App Builder, you s
 
 The Data Load wizard has created a new table and populated that table with the records from the sample data. Now you can create an app based on this new table.
 
-1. Click **Continue to Create Application Wizard**.
+1. Click **Continue to Create Application Wizard >**.
 
    ![](images/2/load-data-results.png)
 
