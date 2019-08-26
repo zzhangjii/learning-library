@@ -18,6 +18,8 @@ In this lab you will use Oracle Visual Builder which is a cloud-based software d
 
 - Lab 300 needs to be completed with the AlphaOffice REST application deployed.
 
+- **Works better with the Chrome browser so do this Lab outside of the VNC session of Labs 100, 200 an 300**.
+
 # Login in and Create the Application
 
 ## Verify the VBCS Instance

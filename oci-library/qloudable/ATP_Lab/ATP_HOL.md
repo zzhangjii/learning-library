@@ -166,7 +166,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 - **Availability Domain:** Select availability domain
 - **Image Operating System:** For the image, we recommend using the Latest Oracle Linux available.
 - **Choose Instance Type:** Select Virtual Machine
-- **Choose Instance Shape:** Select VM shape
+- **Choose Instance Shape:** Select VM shape (Choose from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1)
 - **Configure Boot Volume:** Leave the default
 - **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
 - **Virtual Cloud Network Compartment:** Choose your compartment
@@ -176,7 +176,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 9. Click **Create**
 
-**NOTE:** If 'Service limit' error is displayed choose a different shape such as VM.Standard.E2.2 OR VM.Standard2.2 OR choose a different AD
+**NOTE:** If 'Service limit' error is displayed choose a different shape from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1  OR choose a different AD
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text">
 
@@ -428,14 +428,17 @@ In this section we will generate auth token for the user of this lab. An Auth to
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_010.PNG" alt="image-alt-text">
 
-6. Create a new user called ocitest and grant the DWROLE to ocitest user. Enter commands:
-
+6. Create a new user called ocitest and grant the DWROLE to ocitest user. . Also grant this user table space quota to upload the data later on. Enter commands:
 ```
-create user ocitest identified by P#ssw0rd12##
+create user ocitest identified by P#ssw0rd12##;
 ```
 
 ```
 Grant dwrole to ocitest;
+```
+
+```
+Grant UNLIMITED TABLESPACE TO ocitest;
 ```
 
 7. Verify the user was created
@@ -454,7 +457,6 @@ Grant dwrole to ocitest;
 - Keystore password: Password you provided when downloading the client credentials file 
 
 **NOTE:** If using SQL devleoper 18.2.0 or higher this field is not available and not required
-
 
 - Service: YOUR_ATP_INSTANCE_NAME_medium 
 - Click **Save**

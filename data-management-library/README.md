@@ -1,4 +1,4 @@
-# Oracle Autonomous Database Workshop Catalog
+# Oracle Data Management Library
 
 The Oracle Autonomous Workshop Catalog is the central location for workshops related to Autonomous Database, including ATP and ADW.  All labs are designed to be modular in nature. To get started, choose one (or more!) of the defined learning paths below:
 
