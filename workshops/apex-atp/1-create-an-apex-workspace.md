@@ -19,7 +19,7 @@ Oracle Application Express (APEX) is a feature of Oracle Database, including the
 
 In this part, you will log into your Oracle Cloud account so that you can start working with various services.
 
-1. You should have signed up for your Oracle Cloud trial account. If not, return to the Workshop Introduction and complete Part 1.
+1. You should have signed up for your Oracle Cloud trial account. If not, return to the Lab Introduction and complete Part 1.
 
 2. Once you receive the **Get Started Now with Oracle Cloud** email, make note of your **Username**, **Password**, and **Cloud Account Name**.
 
@@ -45,7 +45,7 @@ In this part, you will create an instance of the Autonomous Transaction Processi
 
    ![](images/1/click-create-autonomous-database.png)
 
-3. Leave all of the default selections, enter **`SuperSecretPassw0rd`** for the ADMIN password, then click **Create Autonomous Database**.
+3. Leave all of the default selections, enter **`SecretPassw0rd`** for the ADMIN password, then click **Create Autonomous Database**.
 
    ![](images/1/atp-settings-1.png)
    ![](images/1/atp-settings-2.png)
