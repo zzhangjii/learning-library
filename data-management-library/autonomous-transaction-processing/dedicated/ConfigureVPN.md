@@ -2,7 +2,7 @@
 
 </td>
 <td class="td-banner">
-# Lab 5: Configuring VPN connectivity into your private ATP network
+# Lab 6: Configuring VPN connectivity into your private ATP network
 </td></tr><table>
 
 
@@ -221,6 +221,8 @@ Now that you have an IP address for your autonomous exadata infrastructure, upda
 
 
 Launch SQL Developer and connect using the downloaded credentials wallet as shown below
+
+**Note: Your SQL Developer version needs to be 18.3 or higher to connect to a cloud database using a wallet**
 
 ![](./images/1200/atpd_conn.png)
     
