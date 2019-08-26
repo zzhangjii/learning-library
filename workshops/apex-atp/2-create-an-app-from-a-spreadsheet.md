@@ -53,7 +53,7 @@ The Data Load wizard has created a new table and populated that table with the r
 
    When the wizard finishes creating the application, you will be redirected to the application's home page in the App Builder.
 
-3. Click **Run Application** to see how end users will view the app at runtime.
+3. Click **Run Application**. This will open the runtime application in a new browser tab, allowing you to see how end users will view the app.
 
    ![](images/2/run-app.png)
 
