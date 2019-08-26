@@ -3,7 +3,7 @@
 June 13, 2019
 </td>
 <td class="td-banner">
-# Lab 6: Configuring a development system for use with your dedicated autonomous database
+# Lab 5: Configuring a development system for use with your dedicated autonomous database
 </td></tr><table>
 
 To **log issues**, click [here](https://github.com/oracle/learning-library/issues/new) to go to the github oracle repository issue submission form.
@@ -145,10 +145,19 @@ You may either,
 - secure copy the file using scp, sftp or a windows ftp client
 
     ```
-        $ scp <wallet_filename.zip> -i <path/to/keyfile> opc@<ipaddress-of-dev-client>:/home/opc
+        $ scp -i <path/to/keyfile> <wallet_filename.zip>  opc@<ipaddress-of-dev-client>:/home/opc
 
     ```
-- or you may simply download it directly on the client once you connect over VNC
+
+    example, for mac users with a private key file named id_rsa in their home directoy,
+
+    ```
+        $ scp -i ~/id_rsa My-ATPDB-wallet.zip  opc@129.162.23.12:/home/opc
+
+    ```
+
+
+    or you may simply download it directly on the client once you connect over VNC
 
 
 Next, let's invoke the VNC server on the development system
