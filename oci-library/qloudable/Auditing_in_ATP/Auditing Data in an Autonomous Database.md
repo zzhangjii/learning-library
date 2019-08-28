@@ -4,7 +4,7 @@ You can base auditing on individual actions, such as the type of SQL statement e
 
 Unified Auditing is enabled by default. You can audit the several types of activities, using unified audit policies and the AUDIT SQL statement. All audit records are written to the unified audit trail in a uniform format and are made available through the UNIFIED_AUDIT_TRAIL view. The unified audit trail captures audit information from many types of object, from SQL statements to other Oracle Database Components, such as Recovery Manager, Oracle Data Pump, SQL*Loader.
 
-<img src="https://github.com/dojeunot/ZipLabs/blob/master/Audit_arch.png" alt="image-alt-text">
+<img src="./img/Audit_arch.png" alt="image-alt-text">
   
 ## Table of Contents
 
@@ -55,37 +55,37 @@ We will do the following:
 
 2. Enter your user name and password.
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
+<img src="./img/Cloud.png" alt="image-alt-text">
 
 ## Create an ATP instance
 
 1. From the Oracle Cloud Infrastructure console, create a database of the Autonomous Transaction Processing (ATP) type.
 
-   <img src="https://github.com/dojeunot/ZipLabs/blob/master/ATP_creation.png" alt="image-alt-text">
+   <img src="./img/ATP_creation.png" alt="image-alt-text">
 
 2. In the Create administrator credentials section, enter a password for the ADMIN user.
 
-   <img src="https://github.com/dojeunot/ZipLabs/blob/master/ADMIN_pass.png" alt="image-alt-text">
+   <img src="./img/ADMIN_pass.png" alt="image-alt-text">
 
 3. Click Create Autonomous Database. The ATP instance is being provisioned.
 
 4. Wait until the ATP instance is available. Your database is now ready.
 
-   <img src="https://github.com/dojeunot/ZipLabs/blob/master/ATP_instance.png" alt="image-alt-text">
+   <img src="./img/ATP_instance.png" alt="image-alt-text">
 
 ## Start using SQL Developer Web
 
 1. Click the Service Console tab.
 
-   <img src="https://github.com/dojeunot/ZipLabs/blob/master/Service_console.png" alt="image-alt-text">
+   <img src="./img/Service_console.png" alt="image-alt-text">
 
 2. Click the Development tab. Then click the SQL Developer Web.
 
-   <img src="https://github.com/dojeunot/ZipLabs/blob/master/Devt.png" alt="image-alt-text">
+   <img src="./img/Devt.png" alt="image-alt-text">
    
 3. In SQL Developer Web, sign in with the ADMIN user and the password that you defined during the instance creation. Then click Sign In.
 
-   <img src="https://github.com/dojeunot/ZipLabs/blob/master/SQLDevWeb_login.png" alt="image-alt-text">
+   <img src="./img/SQLDevWeb_login.png" alt="image-alt-text">
    
 4. Before starting auditing data, you create a new user and a table with sensitive data. Use the following commands in the Worksheet:
 ```
@@ -97,15 +97,15 @@ We will do the following:
       CREATE TABLE test.customers AS SELECT * FROM sh.customers;
    ```
       
-   <img src="https://github.com/dojeunot/ZipLabs/blob/master/Create_User_Test.png" alt="image-alt-text">
+   <img src="./img/Create_User_Test.png" alt="image-alt-text">
 
-   <img src="https://github.com/dojeunot/ZipLabs/blob/master/Create_table.png" alt="image-alt-text">
+   <img src="./img/Create_table.png" alt="image-alt-text">
    
 5. Display the data from the TEST.CUSTOMERS table, by copying, pasting, and executing the query in the Worksheet.
 ```
    SELECT cust_first_name, cust_last_name, cust_main_phone_number FROM test.customers;
 ``` 
-   <img src="https://github.com/dojeunot/ZipLabs/blob/master/Query_not_redacted.png" alt="image-alt-text">
+   <img src="./img/Query_not_redacted.png" alt="image-alt-text">
  
 ## Audit Data
 
@@ -117,7 +117,7 @@ We will do the following:
 ```
    The result should be TRUE. This shows that the unified auditing is enabled by default in your database.
 
-   <img src="https://github.com/dojeunot/ZipLabs/blob/master/TRUE.png" alt="image-alt-text">
+   <img src="./img/TRUE.png" alt="image-alt-text">
 
 2. Create an audit policy on the table and then enable the audit policy for all users who could update values in the table TEST.CUSTOMERS.
 ``` 
@@ -126,7 +126,7 @@ We will do the following:
    AUDIT POLICY audit_update_customers;
 ```
 
-   <img src="https://github.com/dojeunot/ZipLabs/blob/master/Create_enable_policy.png" alt="image-alt-text">
+   <img src="./img/Create_enable_policy.png" alt="image-alt-text">
 
    Note: When unified auditing is enabled in Oracle Database, the audit records are populated in this new audit trail. This view displays audit records in tabular form by retrieving the audit records from the audit trail. Be aware that if the audit trail mode is QUEUED, then audit records are not written to disk until the in-memory queues are full. 
 
@@ -142,7 +142,7 @@ EXEC SYS.DBMS_AUDIT_MGMT.FLUSH_UNIFIED_AUDIT_TRAIL
    ORDER BY user_name;
 ```
 
-   <img src="https://github.com/dojeunot/ZipLabs/blob/master/Policy.png" alt="image-alt-text">
+   <img src="./img/Policy.png" alt="image-alt-text">
 
 4. Execute an UPDATE operation on table TEST.CUSTOMERS.
 ```
@@ -156,7 +156,7 @@ EXEC SYS.DBMS_AUDIT_MGMT.FLUSH_UNIFIED_AUDIT_TRAIL
    WHERE  unified_audit_policies = 'AUDIT_UPDATE_CUSTOMERS';
 ```
 
-   <img src="https://github.com/dojeunot/ZipLabs/blob/master/Audit_record.png" alt="image-alt-text">
+   <img src="./img/Audit_record.png" alt="image-alt-text">
 
 6. The ENABLED_OPT shows if a user can access the policy. Exclude the user ADMIN from unified policy. You must first disable the policy for all users and then re-enable the policy for all users except ADMIN:
 ```
@@ -164,7 +164,7 @@ EXEC SYS.DBMS_AUDIT_MGMT.FLUSH_UNIFIED_AUDIT_TRAIL
    AUDIT POLICY audit_update_customers EXCEPT admin;
 ```
 
-   <img src="https://github.com/dojeunot/ZipLabs/blob/master/Users_except.png" alt="image-alt-text">
+   <img src="./img/Users_except.png" alt="image-alt-text">
 
 7. Re-execute an UPDATE operation on table TEST.CUSTOMERS. First delete the commands from the Worksheet and reload the UPDATE from the SQL History by clicking twice on the command and change the value for the phone number.
 ```
@@ -172,7 +172,7 @@ EXEC SYS.DBMS_AUDIT_MGMT.FLUSH_UNIFIED_AUDIT_TRAIL
    COMMIT;
 ```
 
-   <img src="https://github.com/dojeunot/ZipLabs/blob/master/Update2.png" alt="image-alt-text">
+   <img src="./img/Update2.png" alt="image-alt-text">
   
 8. View the audit records.
 ``` 
@@ -180,7 +180,7 @@ EXEC SYS.DBMS_AUDIT_MGMT.FLUSH_UNIFIED_AUDIT_TRAIL
    WHERE  unified_audit_policies = 'AUDIT_UPDATE_CUSTOMERS';
 ```
 
-   <img src="https://github.com/dojeunot/ZipLabs/blob/master/Audit_record.png" alt="image-alt-text">
+   <img src="./img/Audit_record.png" alt="image-alt-text">
    
    You can observe that the second UPDATE completed by ADMIN is not audited.
    
@@ -188,13 +188,13 @@ EXEC SYS.DBMS_AUDIT_MGMT.FLUSH_UNIFIED_AUDIT_TRAIL
 
 1. Log out SQL Developer Web.
 
-   <img src="https://github.com/dojeunot/ZipLabs/blob/master/SignOut.png" alt="image-alt-text">
+   <img src="./img/SignOut.png" alt="image-alt-text">
    
 2. Switch to OCI console window.
 
 2. From your ATP details page, hand over the action icon and click **Terminate**. In the confirmation window, provide the ATP instance name and click **Terminate Database**.
 
-   <img src="https://github.com/dojeunot/ZipLabs/blob/master/Terminate.png" alt="image-alt-text">
+   <img src="./img/Terminate.png" alt="image-alt-text">
    
 
 **Congratulations! You have successfully completed the lab.**
