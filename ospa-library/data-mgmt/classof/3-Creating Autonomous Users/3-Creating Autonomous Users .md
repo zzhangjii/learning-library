@@ -152,14 +152,24 @@ The labs will require each member of the group to create and query tables in the
 ```
 create user student1 identified by "2019Students";
 grant dwrole to student1;
+ALTER USER student1 QUOTA 100M ON DATA;
+GRANT UNLIMITED TABLESPACE TO student1;
 create user student2 identified by "2019Students";
 grant dwrole to student2;
+ALTER USER student2 QUOTA 100M ON DATA;
+GRANT UNLIMITED TABLESPACE TO student2;
 create user student3 identified by "2019Students";
 grant dwrole to student3;
+ALTER USER student3 QUOTA 100M ON DATA;
+GRANT UNLIMITED TABLESPACE TO student3;
 create user student4 identified by "2019Students";
 grant dwrole to student4;
+ALTER USER student4 QUOTA 100M ON DATA;
+GRANT UNLIMITED TABLESPACE TO student4
 create user student5 identified by "2019Students";
 grant dwrole to student5;
+ALTER USER student5 QUOTA 100M ON DATA;
+GRANT UNLIMITED TABLESPACE TO student5;
 ```
 
 In the picture below is an example of creating four accounts at once. I pasted and replicated the code for each user and then selected the Run Script button.

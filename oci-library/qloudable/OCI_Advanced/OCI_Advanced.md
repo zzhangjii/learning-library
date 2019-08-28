@@ -1,4 +1,4 @@
-# OCI Advanced (Configuring Virtual Cloud Network Peering )
+# OCI Advanced (Configuring Virtual Cloud Network Peering).
 
 ## Table of Contents
 
@@ -155,17 +155,25 @@ Local VCN peering is the process of connecting two VCNs in the same region and t
 - DHCP Options: Select the default.
 - Security Lists: Default Security List
 
-17. Add route table for second VCN, use below data
+17. Leave all other options as default, Click **Create Subnet**.
+
+18. Add route table for second VCN. Click **Route Table**, then **Create Route Table**. Fill out the dialog box:
 
 
-- Target Type: Internet Gateway (second VCN's internet gateway)
+- Name: Provide a Name
+- Compartment: Select your Compartment
+
+**CLick ++ Additional Route Rules**
+
+- Target Type: Internet Gateway 
 - Destination CIDR Block: 0.0.0.0/0
-- Compartment: Your Compartment.
+- Compartment: Select Your Compartment
+- Target Internet Gateway: Select second VCN's internet gateway
 
-18. Leave all other options as default, Click **Create Subnet**.
 
+19. Leave all other options as default, Click **Create Route Table**.
 
-19. Create second Local peering gateway. Once the Subnet is in the ‘Available’ state, Click **Local Peering Gateways**, then **Create Local Peering Gateway** (local peering gateway  is a component on a VCN for routing traffic to a locally peered VCN). Fill out the dialog box:
+20. Create second Local peering gateway. Once the Subnet is in the ‘Available’ state, Click **Local Peering Gateways**, then **Create Local Peering Gateway** (local peering gateway  is a component on a VCN for routing traffic to a locally peered VCN). Fill out the dialog box:
 
 
 - NAME: Provide a Name 
@@ -236,7 +244,7 @@ Fill out the dialog box:
 - **Availability Domain:** Select availability domain
 - **Image Operating System:** For the image, we recommend using the Latest Oracle Linux available.
 - **Choose Instance Type:** Select Virtual Machine
-- **Choose Instance Shape:** Select VM shape
+- **Choose Instance Shape:** Select VM shape (Choose from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1)
 - **Configure Boot Volume:** Leave the default
 - **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
 - **Virtual Cloud Network Compartment:** Choose your compartment
@@ -246,7 +254,7 @@ Fill out the dialog box:
 
 9. Click **Create**
 
-**NOTE:** If 'Service limit' error is displayed choose a different shape such as VM.Standard.E2.2 OR VM.Standard2.2 OR choose a different AD
+**NOTE:** If 'Service limit' error is displayed choose a different shape from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1  OR choose a different AD
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text">
 
@@ -347,6 +355,7 @@ Fill out the dialog box:
 ```
  cd /C/Users/PhotonUser/.ssh
 ```
+
 2. Enter **ls** and verify id_rsa file exists
 
 3. Enter command 

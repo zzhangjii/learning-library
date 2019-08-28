@@ -132,47 +132,38 @@ resource "oci_core_security_list" "ExampleSL" {
   display_name   = "ExampleSL"
   vcn_id         = "${oci_core_virtual_network.ExampleVCN.id}"
 
-  egress_security_rules = {
+  egress_security_rules {
     protocol    = "all"
-    destination = "0.0.0.0.0"
-  },
-  
+    destination = "0.0.0.0/0"
+  }
 
-  ingress_security_rules = {
+  ingress_security_rules {
     tcp_options {
-      "max" = 22
-      "min" = 22
+      max = 22
+      min = 22
     }
 
     protocol = "6"
     source   = "0.0.0.0/0"
-  },
-    {
+  }
+  ingress_security_rules  {
       icmp_options {
-        "type" = 0
+        type = 0
       }
 
       protocol = 1
       source   = "0.0.0.0/0"
-    },
-    {
+    }
+
+  ingress_security_rules  {
       icmp_options {
-        "type" = 3
-        "code" = 4
+        type = 8
       }
 
       protocol = 1
       source   = "0.0.0.0/0"
-    },
-    {
-      icmp_options {
-        "type" = 8
-      }
+    }
 
-      protocol = 1
-      source   = "0.0.0.0/0"
-    },
-  
 }
 
 
@@ -215,9 +206,9 @@ shape = "${var.InstanceShape}"
     display_name = "primaryvnic"
     assign_public_ip = true
     hostname_label = "tfexampleinstance${count.index}"
-  },
+  }
 
-  metadata {
+  metadata = {
     ssh_authorized_keys = "${var.ssh_public_key}"
     user_data = "${base64encode(var.user-data)}"
   }
@@ -227,7 +218,7 @@ shape = "${var.InstanceShape}"
   }
 }
 
- 
+
 ## REMOTE EXEC PROVISIONER ############################################################################################
 
 resource "null_resource" "remote-exec" {
@@ -259,5 +250,3 @@ value = ["${oci_core_instance.TFInstance.*.private_ip}"]
 output "InstancePublicIPs" {
 value = ["${oci_core_instance.TFInstance.*.public_ip}"]
 }
-
-

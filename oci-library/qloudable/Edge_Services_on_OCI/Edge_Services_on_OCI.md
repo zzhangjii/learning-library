@@ -172,7 +172,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 - **Name:** Enter a name 
 - **Availability Domain:** Select availability domain
 - **Image Operating System:** For the image, we recommend using the Latest Oracle Linux available.
-- **Choose Instance Type:** Select Virtual Machine
+- **Choose Instance Type:** Select Virtual Machine (Choose from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1)
 - **Choose Instance Shape:** Select VM shape
 - **Configure Boot Volume:** Leave the default
 - **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
@@ -183,7 +183,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 9. Click **Create**
 
-**NOTE:** If 'Service limit' error is displayed choose a different shape such as VM.Standard.E2.2 OR VM.Standard2.2 OR choose a different AD
+**NOTE:** If 'Service limit' error is displayed choose a different shape from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1  OR choose a different AD
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text">
 
@@ -249,10 +249,10 @@ echo 'WebServer1' >>/var/www/html/index.html
 ```
 (create index.html file. The content of the file will be displayed when the web server is accessed.)
 
-18. Bring up the SSH session for the second Compute instance and repeat commands:
+18. Bring up the SSH session for the second Compute instance and repeat commands:(Install Apache HTTP Server)
 
 ```
-sudo yum -y install httpd (Install Apache HTTP Server)
+sudo yum -y install httpd 
 ```
 ```
 sudo firewall-cmd --permanent  --add-port=80/tcp 

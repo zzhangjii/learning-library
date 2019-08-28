@@ -6,6 +6,8 @@
 
 In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump export file to Object Storage and leverage SQL Developer to import the Data Pump export file into an Autonomous Transaction Processing (ATP) Database.
 
+**NOTE: For Labs 100, 200 and 300 it would be a good idea to use your Lab Guides inside of the Client Image. This will eliminate any Copy and Paste issues that may come between your laptop environment and the VNC Viewer.**
+
 ## Lab 100 Objectives
 
 - Clone GIT Repository.
@@ -48,7 +50,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 ### **STEP 2**: Log in to your OCI dashboard and Switch Regions
 
-  - Open a new browser in the client window by selecting **Applications --> Firefox**.
+  - Open up the Firefox browser included in the Client Image by selecting **Applications --> Firefox**.
 
   ![](images/100/LabGuide100-7bb922b0.png)
   - From any browser go to
@@ -191,7 +193,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 	![](images/100/image25.png)
 
-  - Select `Save File` and Click **OK**
+  - Click **Save File**
 
 	![](images/100/image251.png)
 
@@ -205,9 +207,9 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 ### **STEP 8**: Create SQL Developer Connection to ATP Database
 
-  - Open **SQL Developer** available on the client image by double-clicking on the Desktop Icon
+  - Open **SQL Developer** available on the client image by selecting from the menu bar **Applications-->Programming-->SQL Developer**. Click **no** to the importing preferences prompt.
 
-	![](images/100/image261.png)  
+	![](images/100/image261.png)
 
   - In the **Connections** Pane, Click ![](images/100/image27.png)
 
@@ -215,7 +217,7 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
   - Enter/Select the following values, click **Test**. After a `Success` **Status**, click **Save**, then **Connect**.
 
-	- **Connection Name:**  ```atp-AlphaOffice-Admin```
+	- **Name:**  ```atp-AlphaOffice-Admin```
 	- **Username:**  ```admin```
 	- **Password:**  ```a1phaOffice1_```
 	- Select ```Save Password```
@@ -294,7 +296,15 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 
 	![](images/100/image38.png)
 
-  - Accept the Defaults and click **Next** on **Step 2** of the **Import Wizard**. It can take a minute for the **Next** button to be enabled.  You will see a `Waiting...` message until the **Next** button is enabled.
+  - It can take a minute for the **Next** button to be enabled.  You will see a `Waiting...` message until the **Next** button is enabled.
+
+	 **NOTE: If you get an error on the import double check that you entered the proper USERNAME and AUTH TOKEN in the prodecure in Step 10. If you have to create another DBMS_CLOUD credential you can always give the CREDENTIAL NAME a new name and use that new name here in Step 12. Also verify that your `impdp-ATP` user has been put into the Administrators Group (Step 5). If these all look good and it still doesn't read you can use this Public facing URL for the `File Names or URI` parameter:** 
+
+	```
+	https://objectstorage.us-ashburn-1.oraclecloud.com/p/wechxc-Li-TVh3K_wXU8NvwmSBHS8ka9lfP104OXN9s/n/natdcshjumpstartprod/b/atpData/o/expdp_alpha121.dmp
+	```
+
+ - On **Step 2** accept the Defaults and click **Next**.  
 
 	![](images/100/image40.png)
 
@@ -327,6 +337,10 @@ In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump e
 	```
 
 	![](images/100/image48.png)
+
+- The **Log Files** tab will show the results of the import. For this import you'll see a few errors and warnings but these are OK.
+
+	![](images/100/image48-2.png)
 
 **This completes the Lab!**
 

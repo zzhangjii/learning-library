@@ -49,7 +49,7 @@ Support is interested in a new app that provides insights into customer and serv
 
 ### **STEP 2:** Plot customers on Map
 
-- Leave the terminal open. Click on **config.py** file from the left pane and change the details in the file with your ATP information.
+- Leave the terminal open. Click on **config.py** file from the left pane and change the details in the file with your Autonomous Transaction Processing Database information.
 
   ![](images/200/9.png)
 

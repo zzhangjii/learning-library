@@ -25,7 +25,7 @@ During this lab, you will take the Docker image that you created in Lab 200 and 
 
 ### **STEP 1**: Prerequisite: Add a Policy Statement for OKE
 
-- You should already have a browser tab logged in to the OCI Console. If you do not, log in again:
+- You should already have a browser tab logged in to the OCI Console. If you do not, log in again **using the Firefox browser within the VNC session**.
 
     [https://cloud.oracle.com/en_US/sign-in](https://cloud.oracle.com/en_US/sign-in)
 
@@ -63,7 +63,7 @@ During this lab, you will take the Docker image that you created in Lab 200 and 
 
   ![](images/300/LabGuide200-2e2ab7ca.png)
 
-- We don't need to make any changes to the default values on this form, but let's look at what will be created when we submit it.
+- Double check the VM shape. Ensure it is using **VM Standard2.1**. let's look at what will be created when we submit it.
 
   ![](images/300/LabGuide300-cluster1-1.png)
   ![](images/300/LabGuide300-cluster1-2.png)
@@ -86,67 +86,44 @@ During this lab, you will take the Docker image that you created in Lab 200 and 
 
   ![](images/300/LabGuide300-cluster1-4.png)
 
-### **STEP 3**: Install and Configure OCI CLI on your OCI VM
+### **STEP 3**: Configure OCI CLI
 
-- You should still have an SSH session connected to the OCI VM where you installed Docker in the previous lab. If you have closed it, reopen it using either PuTTY or `ssh` from the command line, as you did in the previous lab.
-
-- From _inside the SSH session_, run the following commands to install the OCI CLI, which will allow you to interact with your cluster. **Type or Copy and Paste**:
-
-  ```
-  sudo -s
-  bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
-  ```
-
-  ![](images/300/LabGuide200-41638e46.png)
-
-- For each of the prompts, accept the default by **pressing enter**:
-
-  ![](images/300/LabGuide200-dd2c64cd.png)
-
-- **Type** the following to reset your SHELL environment:
-
-  ```
-  exec -l $SHELL
-  ```
-
-- In a web browser go back to the OCI Console and open your **User Settings** page: Use the navigation menu to go to **Identity->Users** and select **View User Details** from the three-dots menu for the Cloud user you logged in as. You will need some details from this page to complete the setup.
+- In this STEP you will configure the OCI Comamand Line Interface with parameters matching your Tenancy. In the web browser go back to the OCI Console and open your **User Settings** page: Use the navigation menu to go to **Identity->Users** and select **View User Details** from the three-dots menu for the Cloud user you logged in as. You will need some details from this page to complete the setup.
 
   ![](images/300/LabGuide200-f1749ef3.png)
 
-- In your SSH session **Type** `oci setup config` responding to the prompts as follows:
+- In yout Termain Window **Type:** `oci setup config` responding to the prompts as follows:
 
-  **NOTE:** (Your still the root user)
+  - Enter a location for your config: **Accept default by pressing enter**
+  - Enter a user OCID: Copy your user OCID retrieved above by clicking **Copy** in the **User Information** box in OCI Console. **Paste** into your oci setup for the user OCID and hit Return.
 
-  - Enter a location for your config: **accept default by pressing enter**
-  - Enter a user OCID: copy your OCID by clicking **Copy** in the **User Information** box in OCI Console. **Paste** into your oci setup for the user OCID and hit Return.
-
-  - Enter a tenancy OCID: copy the **Tenancy OCID** from the tenancy details page (found under the administration section of the OCI navigation menu)
+  - Enter a tenancy OCID: Copy the **Tenancy OCID** from the tenancy details page (found under the administration section of the OCI navigation menu)
 
     ![](images/300/LabGuide300-fefb896c.png)
 
     ![](images/300/LabGuide300-80c6b300.png)
 
-  - Enter your region: type the **region shown in the upper right** corner of OCI Console. (This will most likely be `us-phoenix-1` for this workshop)
+  - Enter your region: Type the **Region shown in the upper right** corner of OCI Console. (This will most likely be `us-phoenix-1` for this workshop)
   - Do you want to generate a new RSA key pair?: **Y**
-  - Enter a directory for your keys to be created: **accept default by pressing enter**
-  - Enter a name for your key: **accept default by pressing enter**
-  - Enter a passphrase for your private key: **accept default by pressing enter**
+  - Enter a directory for your keys to be created: **Accept default by pressing enter**
+  - Enter a name for your key: **Accept default by pressing enter**
+  - Enter a passphrase for your private key: **Accept default by pressing enter**
 
   Example:
 
   ![](images/300/LabGuide200-315d446f.png)
 
-- You've just generated an RSA key pair that we will use to authenticate you to the OCI API. Click **back** to get back to the User Settings page in your browser, click **Add Public Key**
+- You've just generated an RSA key pair that we will use to authenticate you to the OCI API. In the browser go back to your OCI user in the OCI Console. Under the Governance and Administration section select **Identity-->Users** and click your user to bring up the details. Click **Add Public Key**
 
   ![](images/300/LabGuide200-70626501.png)
 
-- We need to copy and paste the public key into this box. In your _SSH session_, run the following command to output the public key:
+- We need to **Copy and Paste the public key `oci_api_key_public.pem` file** into this box. **Type or Copy** the following command to output the public key:
 
-  `cat /root/.oci/oci_api_key_public.pem`
+  `cat /home/opc/.oci/oci_api_key_public.pem`
 
   ![](images/300/LabGuide200-6cead97f.png)
 
-- Select the entire key, beginning with: `-----BEGIN PUBLIC KEY-----` and ending with `-----END PUBLIC KEY-----`. **Copy it** and **paste it** into the Public Key text area in the OCI Console Add Public Key dialog. Then click **Add**.
+- Select the entire key, beginning with: `-----BEGIN PUBLIC KEY-----` and ending with `-----END PUBLIC KEY-----`. **Paste it** into the Public Key text area in the OCI Console Add Public Key dialog. Then click **Add**.
 
   ![](images/300/LabGuide200-cc48303b.png)
 
@@ -160,40 +137,39 @@ During this lab, you will take the Docker image that you created in Lab 200 and 
 
   ![](images/300/LabGuide200-2adad8f0.png)
 
-- Two commands are displayed in the dialog box. **Copy and paste** each command (one at a time) into your _SSH session_ and run them. The first creates a directory to store the `kubeconfig` file, and the second invokes the OCI CLI to download and store the `kubeconfig` file on your client virtual machine. Then click **Close**.
+- Two commands are displayed in the dialog box. **Copy and Paste** each command (one at a time) into yout Terminal Window. The first creates a directory to store the `kubeconfig` file, and the second invokes the OCI CLI to download and store the `kubeconfig` file on your client virtual machine. Then click **Close**.
 
   ![](images/300/LabGuide200-0c484a65.png)
 
+  Example:
+
   ![](images/300/LabGuide200-36da5eac.png)
-
-  **NOTE**: Copy and paste the commands from the OCI Console window -- the second command below is personalized with your cluster OCID. They are listed here for reference only.
-
-  >mkdir -p $HOME/.kube
-
-  >oci ce cluster create-kubeconfig --cluster-id <your-kubernetes-cluster-ocid\> --file $HOME/.kube/config
 
 - Your `kubeconfig` file was downloaded from OCI and stored in ~/.kube/config.
 
-- In your _SSH session_, **Type**
+- Open another Terminal Window by right-clicking on the Desktop and selecting **Open Terminal**.
+
+  ![](images/300/300-10.PNG)
+
+- In the new Terminal Window **Type:**
+
   ```
-  cat ~/.kube/config
+  cd
+  cp /home/opc/.kube/config .
+  export KUBECONFIG=`pwd`/config
   ```
+
+  ![](images/300/300-13.PNG)
+
+- We'll come back to this window in STEP 5.
   
-  This will output the contents of the file.
-  
-- **Copy** the contents and **paste** them into a new text file on your local machine. Name the file `kubeconfig` and **Save the file wherever you'd like ON YOUR LOCAL MACHINE**.
-
-  **NOTE**: Save the `kubeconfig` file as a plain text file, not as a .docx, .rtf, .html, etc.
-
-  ![](images/300/LabGuide200-8d14ba10.png)
-
-- While we are still connected to our OCI VM, let's push our Docker image that we created in the previous lab to our Docker registry on OCI (OCIR).
+- We are ready to push our Docker image created in Lab 200 to our Docker registry on OCI (OCIR).
 
 ## Store Docker image in OCI Repository (OCIR)
 
 ### **STEP 4**: Push Docker Image from your OCI VM to OCI Registry
 
-- In order to push our function Docker image into our OCI Registry, we will need to log in using the Docker CLI. The password we use to authenticate is an **OCI Auth Token**. Navigate to the **OCI Console** in a web browser on your local machine. Open your **User Settings** page by using the navigation menu to go to Identity->Users and select **View User Details** from the three-dots menu for your user.
+- In order to push our function Docker image into our OCI Registry, we will need to log in using the Docker CLI. The password we use to authenticate is an **OCI Auth Token**. Navigate to the **OCI Console** in a web browser on your local machine. Open your **User Settings** page by using the navigation menu to go to **Identity->Users** and select **View User Details** from the three-dots menu for your user.
 
   ![](images/300/LabGuide200-f1749ef3.png)
 
@@ -207,42 +183,55 @@ During this lab, you will take the Docker image that you created in Lab 200 and 
 
   ![](images/300/LabGuide500-dd88e19e.png)
 
-- The token is displayed in the dialog box. Leave it open, you will copy it in the next instruction.
+- The token is displayed in the dialog box. **Copy and Save** this auth token into your local editor. It will be used later in this step.
 
-    ![](images/300/LabGuide500-68cfd98c.png)
+![](images/300/LabGuide500-68cfd98c.png)
 
-- In your _SSH session_, run the following command, **substituting your OCI tenancy name and your Oracle Cloud username (probably your email address)** for `<your-tenancy-name> and <your-oracle-cloud-username>`, and  **replacing `iad` with your OCI region** :
+- Gather the Object Storage Namespace by going to the Governance and Administraton section from the OCI Console hamburger and selecting **Administration-->Tenancy Details**:
 
-  ```bash
-  docker login -u <your-tenancy-name>/<your-oracle-cloud-username> iad.ocir.io
+  ![](images/300/300-20.PNG)
+
+- Note or save off the **Object Storage Namespace** as it will be use in subsequent docker commands.
+
+  ![](images/300/300-21.PNG)
+
+- Run the following command from your first Terminal Window (Where you set up the opc linux user into the docker group (earlier in this lab)... you can verify by typing `docker images` and not getting an error that you can't connect to the Docker daemon).
+
+- If not able to run `docker images` from the Terminal Window then Type:
+
+  ```
+  sudo su opc
   ```
 
-  **NOTE**: If you are not currently using the Ashburn OCI region, replace `iad` in the preceding URL with the correct abbreviation for your OCI region:
+ - Now, **Substitute your Object Storage Namespace and your Oracle Cloud username (probably your email address)** for `<your-object-storage-name> and <your-oracle-cloud-username>`, and  **replacing `iad` with your OCI region**:
 
-  ```
-  London = lhr
-  Frankfurt = fra
-  Phoenix = phx
-  Ashburn = iad
-  Toronto = yyz
-  ```
+    **NOTE: If you are not currently using the Ashburn OCI region, replace `iad` in the preceding URL with the correct abbreviation for your OCI region**:
 
-- You will be prompted for your registry password. Click the **Copy** link from the OCI Console browser window displaying your newly-generated Auth Token. Then **paste** the token into the password prompt in your SSH session and press enter. (**You may not see anything displayed when pasting the password**)
+    ```
+    London = lhr
+    Frankfurt = fra
+    Phoenix = phx
+    Ashburn = iad
+    Toronto = yyz
+    ```
+
+    ```bash
+    docker login -u <your-object-storage-name>/<your-oracle-cloud-username> iad.ocir.io
+    ```
+- You will be prompted for your registry password. Then **Copy and Paste** the auth token you saved off earlier in this step into the password prompt and press enter. (**You may not see anything displayed when pasting the password**)
 
   ![](images/300/LabGuide300-ddf9d96f.png)
 
-- Now that you are logged in, we can push the Docker image of the Alpha Office microservice to the registry. Just use the standard **docker push** command, no need to pre-create the repository in OCIR:
+- Now that you are logged in, you can push the Docker image of the Alpha Office microservice to the registry. Just use the standard **docker push** command, no need to pre-create the repository in OCIR. **Remember to subsitute your region if it is not `iad`** as shown in the following commands:
 
-```bash
-docker tag alphaoffice-rest iad.ocir.io/<your-tenancy-name>/alphaoffice-rest:v1
-docker push iad.ocir.io/<your-tenancy-name>/alphaoffice-rest:v1
-```
-
-**NOTE**: If you are not currently using the Ashburn OCI region, replace `iad` in the preceding URLs with the correct abbreviation for your OCI region, as you did for the `docker login` step above.
+  ```bash
+  docker tag alphaoffice-rest iad.ocir.io/<your-object-storage-name>/alphaoffice-rest:v1
+  docker push iad.ocir.io/<your-object-storage-name>/alphaoffice-rest:v1
+  ```
 
   ![](images/300/LabGuide300-8b805a5e.png)
 
-- The push looked successful, but let's verify it in the OCI Console. Open the **OCI Console** website in a browser _on your local machine_. From the Developer Services section of the navigation menu, choose **Registry (OCIR)**
+- The push looked successful, but let's verify it in the OCI Console. From the `Developer Services` section of the navigation menu, choose **Registry (OCIR)**
 
   ![](images/300/LabGuide500-fc970891.png)
 
@@ -250,7 +239,7 @@ docker push iad.ocir.io/<your-tenancy-name>/alphaoffice-rest:v1
 
   ![](images/300/LabGuide300-71a70948.png)
 
-- From the Actions menu, click **Copy Pull Command**. Then, **paste** this command in a text file or note, where you can retrieve it later. We will use the URL for this image when we create our application specification in Kubernetes.
+- From the Actions menu, click **Copy Pull Command**. Then, **Paste** this command into your local text editor where you can retrieve it later. We will use this URL when we create our application specification in Kubernetes.
 
   ![](images/300/LabGuide300-132311a5.png)
 
@@ -268,57 +257,37 @@ docker push iad.ocir.io/<your-tenancy-name>/alphaoffice-rest:v1
 
 ### **STEP 5**: Install kubectl
 
-- In order to interact with your cluster and view the dashboard, you will need to **install the Kubernetes command line interface `kubectl`, ON YOUR LOCAL MACHINE**. We will do that now.
+- In order to interact with your cluster and view the dashboard, you will need to **install the Kubernetes command line interface `kubectl`.
 
 - The method you choose to install `kubectl` will depend on your operating system and any package managers that you may already use. The generic method of installation, downloading the binary file using `curl`, is given below (**run the appropriate command in a terminal or command prompt**). If you prefer to use a package manager such as apt-get, yum, homebrew, chocolatey, etc, please find the specific command in the [Kubernetes Documentation](https://kubernetes.io/docs/tasks/tools/install-kubectl/). The `cluster-info` and `get nodes` commands need to be working (returning information on your cluster) before you can proceed.
 
+- In your second Terminal Window (Where you ran the `export KUBECONFIG=$HOME/.kube/config` command at the end of step three, run the following two commands:
 
-  **Windows**
-    ```bash
-    curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.11.2/bin/windows/amd64/kubectl.exe
-    ```
-
-  **Mac**
-    ```bash
-    curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
-    chmod +x ./kubectl
-    ```
-
-  **Linux**
     ```bash
     curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
     chmod +x ./kubectl
     ```
 
-- In your terminal window or command prompt, run the following commands to verify that `kubectl` is able to communicate with your cluster. You should see `cluster-info` print out the URL of the Kubernetes Master node and `get nodes` prints out the Private IP address and status of each of the worker nodes.
+- Run the following commands to verify that `kubectl` is able to communicate with your cluster. You should see `cluster-info` print out the URL of the Kubernetes Master node and `get nodes` prints out the Private IP address and status of each of the worker nodes.
 
-  **Windows**
-    ```bash
-    set KUBECONFIG=.\kubeconfig
-    kubectl.exe cluster-info
-    kubectl.exe get nodes
     ```
-
-  **Mac/Linux**
-    ```bash
-    export KUBECONFIG=`pwd`/kubeconfig
     ./kubectl cluster-info
     ./kubectl get nodes
     ```
 
+  Example:
+
+  ![](images/300/300-11.PNG)
+
 ### **STEP 6**: Deploy application using Kubernetes dashboard
 
-- We can use `kubectl` to start a proxy that will give us access to the Kubernetes Dashboard through a web browser at a localhost URL. Run the following command in the same terminal window:
+- We can use `kubectl` to start a proxy that will give us access to the Kubernetes Dashboard through a web browser at a localhost URL. Run the following command in the **same Terminal Window**:
 
-  **Windows**
-    ```bash
-    kubectl.exe proxy
     ```
-
-  **Mac/Linux**
-    ```bash
     ./kubectl proxy
     ```
+
+  ![](images/300/300-12.PNG)
 
 - Leave the proxy server running and navigate to the [Kubernetes Dashboard by Right Clicking on this link](http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/), and choosing **open in a new browser tab**.
 
@@ -328,9 +297,11 @@ docker push iad.ocir.io/<your-tenancy-name>/alphaoffice-rest:v1
     http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/
     ```
 
-- You are asked to authenticate to view the dashboard. Click **Choose kubeconfig file** and select the `kubeconfig` configuration file you saved on your local server earlier. Click **Open**, then click **Sign In**.
+- You are asked to authenticate to view the dashboard. Click **Choose kubeconfig file** and select the `config` configuration file you copied to `/home/opc` in STEP 3. Click **Open**, then click **Sign In**.
 
-  ![](images/300/LabGuide200-2a1a02ce.png)
+  ![](images/300/300-14.PNG)
+
+  ![](images/300/300-15.PNG)
 
 - After authenticating, you are presented with the Kubernetes dashboard.
 
@@ -347,7 +318,7 @@ docker push iad.ocir.io/<your-tenancy-name>/alphaoffice-rest:v1
 - Fill out the form with the following values:
 
   - App name: **alphaoffice-rest** (this name can be anything we want, and will be used to address our application from other services inside the cluster)
-  - Container image: Example: **iad.ocir.io/{your-tenancy-name}/alphaoffice-rest:v1** (retrieve this URL from the `docker pull` command that you that you saved in the previous step. **Do not include the `docker pull` portion**, just the URL at the end, which is the location of our image in OCIR)
+  - Container image: Example: **phx.ocir.io/{your-object-storage-namespace}/alphaoffice-rest:v1** (Retrieve this URL from the `docker pull` command that you that you saved in the previous step. **Do not include the `docker pull` portion**, just the URL at the end, which is the location of our image in OCIR)
   - Number of Pods: **1** (this can be customized)
   - Service: **External** (this will create a load balancer for our service)
   - Port: **80** (this is the port that will be exposed by the load balancer)
@@ -361,10 +332,10 @@ docker push iad.ocir.io/<your-tenancy-name>/alphaoffice-rest:v1
 
   ![](images/300/LabGuide300-775cc9ba.png)
 
-  - The **deployment** represents the running containers that execute your application. Child objects including replica sets and pods are created by the deployment to satisfy the desired number of running instances you specified.
-  - The **service** represents the exposure of your application on the network, in this case to the internet via an OCI load balancer. It will take a couple of minutes to provision the load balancer, and once it is finished you will see an external endpoint link populated with its IP address.
+  - The **Deployments** represent the running containers that execute your application. Child objects including replica sets and pods are created by the deployment to satisfy the desired number of running instances you specified.
+  - The **Services** represent the exposure of your application on the network, in this case to the internet via an OCI load balancer. It will take a couple of minutes to provision the load balancer, and once it is finished you will see an external endpoint link populated with its IP address.
 
-- Refresh the dashboard overview page (it does not automatically update) to see the **External endpoint** of your load balancer. **Click the link** to open it in a new tab.
+- Refresh the dashboard overview page (it does not automatically update) to see the **External endpoint** of your load balancer. This is in the `Services` section. **Click the link** to open it in a new tab.
 
   ![](images/300/LabGuide300-35c477c7.png)
 
@@ -394,12 +365,6 @@ docker push iad.ocir.io/<your-tenancy-name>/alphaoffice-rest:v1
 
 - Run this command to get a list of the running pods in your cluster. You will need the full name of the alphaoffice-rest pod, including the string of numbers and letters at the end, in the next step.
 
-  **Windows**
-  ```bash
-  kubectl.exe get pods
-  ```
-
-  **Mac/Linux**
   ```bash
   ./kubectl get pods
   ```
@@ -408,13 +373,7 @@ docker push iad.ocir.io/<your-tenancy-name>/alphaoffice-rest:v1
 
 - Run the following to execute bash commands directly inside your container. Note that we address the container using its own hostname, not the IP address of the load balancer. Replace **<full-name-of-your-pod-from-previous-sub-step\>** with the name of the alphaoffice-rest pod, including the trailing numbers and letters.
 
-  **Windows**
-  ```bash
-  kubectl.exe exec -it <full-name-of-your-pod-from-previous-sub-step> -- /bin/sh -c "curl $HOSTNAME:8080/AlphaProductsRestService/webresources/restCall/1050"
   ```
-
-  **Mac/Linux**
-  ```bash
   ./kubectl exec -it <full-name-of-your-pod-from-previous-sub-step> -- /bin/sh -c 'curl $HOSTNAME:8080/AlphaProductsRestService/webresources/restCall/1050'
   ```
 
@@ -424,13 +383,7 @@ docker push iad.ocir.io/<your-tenancy-name>/alphaoffice-rest:v1
 
 - If you want to get back to the Kubernetes Dashboard then run the proxy command again:
 
-  **Windows**
-    ```bash
-    kubectl.exe proxy
     ```
-
-  **Mac/Linux**
-    ```bash
     ./kubectl proxy
     ```
 
