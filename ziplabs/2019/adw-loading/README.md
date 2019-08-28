@@ -102,7 +102,7 @@ Once complete, verify all *.dat files have a status of *`Finished`* and click **
 
 
 
-## Create an Object Store Auth Token##
+## Create an Object Store Auth Token ##
 
 To load data from the OCI object store, you need to create an Auth Token for your object store account. The
 communication between your Autonomous Database and the object store relies on this Auth Token and username/password authentication.
@@ -137,7 +137,7 @@ communication between your Autonomous Database and the object store relies on th
 
 
 
-## Create Object Store Credentials in your Autonomous Database##
+## Create Object Store Credentials in your Autonomous Database ##
 
 Now that you have created an object store Auth Token, its time to store the credentials of the object store in ADW instance.
 
@@ -184,7 +184,7 @@ Go back to your ADW instance via the menu.
 9.  Your object store's credentials are stored in
 your ADW instance now.  
 
-## Copy Data from Object Store to Autonomous Database Tables##
+## Copy Data from Object Store to Autonomous Database Tables ##
 
 Before data is copied, the tables and objects need to be created in ADW.  In this lab you will create the target objects.
 
