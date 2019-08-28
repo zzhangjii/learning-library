@@ -53,103 +53,75 @@ Storage using two of the procedures in the DBMS_CLOUD package:
 
 
 ### What Do You Need? ###
-* Access to an instance of Oracle Autonomous Data Warehouse Cloud
+* Access to an instance of Oracle Autonomous Data Warehouse (ADW)
 
 
 ## Load data files to your Object Store ##
-Upload to your cloud-based object store the data files that you want to load to
-your Autonomous Database database. This tutorial uses an object store in the
-Oracle Cloud Infrastructure Object Storage service.
+Oracle Cloud Infrastructure offers two distinct storage class tiers.  Object Storage, for data which you need fast, immediate and frequent access and Archive Storage, for data which you seldom or rarely access.  In this ziplab you will load data into an object store in the Oracle Cloud Infrastructure Object Storage service.
 
-1.  Log in to your Oracle Cloud Infrastructure Console (refer to first lab for
-    steps)
+1.  Log in to your Oracle Cloud Infrastructure Console
 
-2.  Select Service-\>Compute from the drop down on the top left of the Oracle
-    Cloud Infrastructure console
+2.  Select **Object Storage** -> **Object Storage** from the drop down menu on the top left of the Oracle Cloud Infrastructure console
+![](img/adw-loading-object-storage2.png)
 
-![](media/94c447806957d2b0947ba554091ef6e5.png)
-<p align="center">Figure 1-1</p>
+3.  Select **Create bucket** to create a bucket to load your data in.  This will be your staging area.  Later in this lab you will move the data from this staging area to your ADW instance.
+For this lab, we'll use the `root` compartment.
+![](img/adw-loading-create-bucket-screen.png)
 
-3.  Select **Object Storage** from the menu at the top left of the Oracle Cloud
-    Infrastructure console. Select **Object Storage** from the sub-menu. 
+4.  Enter the following information: 
+    * **Bucket Name**:  `bucket-[city you were born in]-[your initials]`  (example *bucket-london-kam*)
+    * **Storage Tier**:  `Standard`
+     * **Encryption**: `Encrypt using Oracle Managed Keys`
 
-![](media/643a999a616d7ef6315b5b8221bbec0d.png)
-<p align="center">Figure 1-2</p>
+     ![](img/adw-loading-create-bucket.png)
 
-4.  Select a compartment in which to create a bucket to upload your database
-    table data. For this exercise leave at the default compartment. However if
-    you want to experiment with compartments you can do so and select whatever
-    compartment you wish.
+5. Click **Create Bucket**.
 
-![](media/c25b8849ff00d5c9765149ba4c07f8d8.jpg)
-<p align="center">Figure 1-3</p>
+6.  Click on the bucket name you just created.  
 
+    ![](img/adw-loading-buckets.png)
 
+7. Review the screen. Note you have created an empty bucket with no objects in it and the visibility is set to private. 
+![](img/adw-loading-bucket-screen.png)
 
-5.  Click **Create Bucket** to create the storage bucket in which to upload your
-    source files. You will later copy this staged data into database tables in
-    your Autonomous Database. 
+8.  Click [here](https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/adwc/OBE_Loading%20Your%20Data/files/datafiles_for_sh_tables.zip) to download the zip file with your objects.  Open up your file browser and extract the zip file.
 
-![](media/152886401d49443b559bafbea3693139.jpg)
-<p align="center">Figure 1-4</p>
+9.  Click **Upload Object** to begin selecting the data files to upload to the bucket.  Click on **select files** to choose your extracted data files.
+    ![](img/adw-loading-select-files.png)
 
 
+10.  **Select all the files** in the extracted folder and click **ok**
+![](img/adw-loading-datafiles.png)
 
-6.  Enter a bucket name, select the standard storage tier, Encrypt using Oracle
-    Managed Keys, and click **Create Bucket**.
+11.  Click **Upload Objects** to load.   
+![](img/adw-loading-load-bucket.png)
+Please be patient, this may take a few seconds to complete.
+![](img/adw-loading-load-bucket-1.png)
+Once complete, verify all *.dat files have a status of *`Finished`* and click **Close**.
+![](img/adw-loading-load-bucket-2.png)
 
-    ![](media/2d451b2cfe095dbe0ba20d9016dd487e.png)
-    <p align="center">Figure 1-5</p>
+12. Your bucket should have 10 objects loaded.
+![](img/adw-loading-load-bucket-3.png)
 
-7.  When the bucket is created you will see all buckets that have been created
-    including yours. Click on the bucket name you just created
 
-    ![](media/0e88140b9548fa1de2059915449ed1f5.png)
-    <p align="center">Figure 1-6</p>
+12.  The final step will be to change the visibility of your bucket. Click the **Edit Visibility** button at the top of your Bucket Details screen.
+![](img/adw-loading-bucket-visibility.png)  
 
-8.  Click **Upload Object** to begin selecting the data files to upload to the
-    bucket.
+13. Change the visibility to **Public**, accept all other defaults.  Click **Save Changes**
+![](img/adw-loading-bucket-visibility2.png)  
 
-![](media/93f78b186f4d32e708b7861951022881.png)
-<p align="center">Figure 1-7</p>
+14. Your bucket should now be visible and public.  Verify and proceed to setting up your Auth token.
+![](img/adw-loading-bucket-info.png)  
 
-9.  Navigate to the location of the data files on your local computer. Drag and drop each file or click **Upload Object** to upload each file individually. This example uploads the data files of the SH tables (sales history tables
-    from an Oracle sample schema). Click
-    [here](https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/adwc/OBE_Loading%20Your%20Data/files/datafiles_for_sh_tables.zip)
-    to download a zipfile of the 10 SH data files for you to upload to the
-    object store. Download the zip file to your computer then extract the zip
-    file, you will upload these files into the object store.
 
-    ![upload data files to bucket](media/d947b9124322a312466e89c31b7ca192.jpg)
-    <p align="center">Figure 1-8</p>
 
-10.  The data files are uploaded to the bucket. These files staged in the cloud
-    are ready to be copied into the tables of your Autonomous Database. Remain
-    logged in to Oracle Cloud Infrastructure Object Storage.
-
-![](media/3872f7d2964480f9f46821dc6dace57c.png)
-<p align="center">Figure 1-9</p>
-
-11. The next step for is to make the bucket visible for loading. In this case we
-will make it public to make it easier to load and access all the files. In
-the same page above, Objects, click Edit Visibility and select Public and
-then Save Changes.
-
-![](media/c932c75d50285003eb4dc2f2e511ff67.png)
-<p align="center">Figure 1-10</p>
-
-[Back to Top](#table-of-contents) 
-
-## Module 2:  Create an Object Store Auth Token
+## Create an Object Store Auth Token
 ---------------------------------
 
-To load data from an Oracle Cloud Infrastructure Object Storage object store,
-you need to create an Auth Token for your object store account. The
-communication between your Autonomous Database and the object store relies on
-the Auth Token and username/password authentication.
+To load data from the OCI object store, you need to create an Auth Token for your object store account. The
+communication between your Autonomous Database and the object store relies on this Auth Token and username/password authentication.
 
-1.  If you have logged out of Oracle Cloud Infrastructure Object Storage, log
-    back in.
+1.  If you have logged out of Oracle Cloud Infrastructure Object Storage, pleasae log back in.
 
 2.  From the menu on the top left select Identity and users. Once on the Users
     Page click on your username
@@ -189,9 +161,9 @@ the Auth Token and username/password authentication.
 
 7. Copy the generated token, save into a text file, the token will not be displayed again
 
-[Back to Top](#table-of-contents) 
 
-## Module 3:  Create Object Store Credentials in your Autonomous Database
+
+## Create Object Store Credentials in your Autonomous Database
 -----------------------------------------------------------
 
 Now that you have created an object store Auth Token, store in your Autonomous database the credentials of the object store in which your data is staged.
@@ -227,466 +199,15 @@ end;
 After you run this script, your object store's credentials are stored in
 your Autonomous Database.
 
-[Back to Top](#table-of-contents) 
-
-## Module 4:  Copy Data from Object Store to Autonomous Database Tables
+## Copy Data from Object Store to Autonomous Database Tables
 ---------------------------------------------------------
 
 The copy_data procedure of the DBMS_CLOUD package requires that target tables
 must already exist in in your Autonomous database. To create the appropriate
 tables, run the code below in SQL Developer.
 
-1. Copy and paste all this code into the SQL worksheet in SQL Developer and click run script.
+1. Copy and paste all this code into the SQL worksheet window in SQL Developer Web.
 
-```
-CREATE TABLE sales (
-
-prod_id NUMBER NOT NULL,
-
-cust_id NUMBER NOT NULL,
-
-time_id DATE NOT NULL,
-
-channel_id NUMBER NOT NULL,
-
-promo_id NUMBER NOT NULL,
-
-quantity_sold NUMBER(10,2) NOT NULL,
-
-amount_sold NUMBER(10,2) NOT NULL);
-
-CREATE TABLE salestemp (
-
-prod_id NUMBER NOT NULL,
-
-cust_id NUMBER NOT NULL,
-
-time_id DATE NOT NULL,
-
-channel_id NUMBER NOT NULL,
-
-promo_id NUMBER NOT NULL,
-
-quantity_sold NUMBER(10,2) NOT NULL,
-
-amount_sold NUMBER(10,2) NOT NULL,
-
-unit_cost NUMBER(10,2) ,
-
-unit_price NUMBER(10,2) );
-
-CREATE TABLE costs (
-
-prod_id NUMBER NOT NULL,
-
-time_id DATE NOT NULL,
-
-promo_id NUMBER NOT NULL,
-
-channel_id NUMBER NOT NULL,
-
-unit_cost NUMBER(10,2) NOT NULL,
-
-unit_price NUMBER(10,2) NOT NULL);
-
-CREATE TABLE times (
-
-time_id DATE NOT NULL,
-
-day_name VARCHAR2(9) NOT NULL,
-
-day_number_in_week NUMBER(1) NOT NULL,
-
-day_number_in_month NUMBER(2) NOT NULL,
-
-calendar_week_number NUMBER(2) NOT NULL,
-
-fiscal_week_number NUMBER(2) NOT NULL,
-
-week_ending_day DATE NOT NULL,
-
-week_ending_day_id NUMBER NOT NULL,
-
-calendar_month_number NUMBER(2) NOT NULL,
-
-fiscal_month_number NUMBER(2) NOT NULL,
-
-calendar_month_desc VARCHAR2(8) NOT NULL,
-
-calendar_month_id NUMBER NOT NULL,
-
-fiscal_month_desc VARCHAR2(8) NOT NULL,
-
-fiscal_month_id NUMBER NOT NULL,
-
-days_in_cal_month NUMBER NOT NULL,
-
-days_in_fis_month NUMBER NOT NULL,
-
-end_of_cal_month DATE NOT NULL,
-
-end_of_fis_month DATE NOT NULL,
-
-calendar_month_name VARCHAR2(9) NOT NULL,
-
-fiscal_month_name VARCHAR2(9) NOT NULL,
-
-calendar_quarter_desc CHAR(7) NOT NULL,
-
-calendar_quarter_id NUMBER NOT NULL,
-
-fiscal_quarter_desc CHAR(7) NOT NULL,
-
-fiscal_quarter_id NUMBER NOT NULL,
-
-days_in_cal_quarter NUMBER NOT NULL,
-
-days_in_fis_quarter NUMBER NOT NULL,
-
-end_of_cal_quarter DATE NOT NULL,
-
-end_of_fis_quarter DATE NOT NULL,
-
-calendar_quarter_number NUMBER(1) NOT NULL,
-
-fiscal_quarter_number NUMBER(1) NOT NULL,
-
-calendar_year NUMBER(4) NOT NULL,
-
-calendar_year_id NUMBER NOT NULL,
-
-fiscal_year NUMBER(4) NOT NULL,
-
-fiscal_year_id NUMBER NOT NULL,
-
-days_in_cal_year NUMBER NOT NULL,
-
-days_in_fis_year NUMBER NOT NULL,
-
-end_of_cal_year DATE NOT NULL,
-
-end_of_fis_year DATE NOT NULL );
-
-CREATE TABLE products (
-
-prod_id NUMBER(6) NOT NULL,
-
-prod_name VARCHAR2(50) NOT NULL,
-
-prod_desc VARCHAR2(4000) NOT NULL,
-
-prod_subcategory VARCHAR2(50) NOT NULL,
-
-prod_subcategory_id NUMBER NOT NULL,
-
-prod_subcategory_desc VARCHAR2(2000) NOT NULL,
-
-prod_category VARCHAR2(50) NOT NULL,
-
-prod_category_id NUMBER NOT NULL,
-
-prod_category_desc VARCHAR2(2000) NOT NULL,
-
-prod_weight_class NUMBER(3) NOT NULL,
-
-prod_unit_of_measure VARCHAR2(20) ,
-
-prod_pack_size VARCHAR2(30) NOT NULL,
-
-supplier_id NUMBER(6) NOT NULL,
-
-prod_status VARCHAR2(20) NOT NULL,
-
-prod_list_price NUMBER(8,2) NOT NULL,
-
-prod_min_price NUMBER(8,2) NOT NULL,
-
-prod_total VARCHAR2(13) NOT NULL,
-
-prod_total_id NUMBER NOT NULL,
-
-prod_src_id NUMBER ,
-
-prod_eff_from DATE ,
-
-prod_eff_to DATE ,
-
-prod_valid VARCHAR2(1) );
-
-CREATE TABLE channels (
-
-channel_id NUMBER NOT NULL,
-
-channel_desc VARCHAR2(20) NOT NULL,
-
-channel_class VARCHAR2(20) NOT NULL,
-
-channel_class_id NUMBER NOT NULL,
-
-channel_total VARCHAR2(13) NOT NULL,
-
-channel_total_id NUMBER NOT NULL);
-
-CREATE TABLE promotions (
-
-promo_id NUMBER(6) NOT NULL,
-
-promo_name VARCHAR2(30) NOT NULL,
-
-promo_subcategory VARCHAR2(30) NOT NULL,
-
-promo_subcategory_id NUMBER NOT NULL,
-
-promo_category VARCHAR2(30) NOT NULL,
-
-promo_category_id NUMBER NOT NULL,
-
-promo_cost NUMBER(10,2) NOT NULL,
-
-promo_begin_date DATE NOT NULL,
-
-promo_end_date DATE NOT NULL,
-
-promo_total VARCHAR2(15) NOT NULL,
-
-promo_total_id NUMBER NOT NULL);
-
-CREATE TABLE customers (
-
-cust_id NUMBER NOT NULL,
-
-cust_first_name VARCHAR2(20) NOT NULL,
-
-cust_last_name VARCHAR2(40) NOT NULL,
-
-cust_gender CHAR(1) NOT NULL,
-
-cust_year_of_birth NUMBER(4) NOT NULL,
-
-cust_marital_status VARCHAR2(20) ,
-
-cust_street_address VARCHAR2(40) NOT NULL,
-
-cust_postal_code VARCHAR2(10) NOT NULL,
-
-cust_city VARCHAR2(30) NOT NULL,
-
-cust_city_id NUMBER NOT NULL,
-
-cust_state_province VARCHAR2(40) NOT NULL,
-
-cust_state_province_id NUMBER NOT NULL,
-
-country_id NUMBER NOT NULL,
-
-cust_main_phone_number VARCHAR2(25) NOT NULL,
-
-cust_income_level VARCHAR2(30) ,
-
-cust_credit_limit NUMBER ,
-
-cust_email VARCHAR2(50) ,
-
-cust_total VARCHAR2(14) NOT NULL,
-
-cust_total_id NUMBER NOT NULL,
-
-cust_src_id NUMBER ,
-
-cust_eff_from DATE ,
-
-cust_eff_to DATE ,
-
-cust_valid VARCHAR2(1) );
-
-CREATE TABLE countries (
-
-country_id NUMBER NOT NULL,
-
-country_iso_code CHAR(2) NOT NULL,
-
-country_name VARCHAR2(40) NOT NULL,
-
-country_subregion VARCHAR2(30) NOT NULL,
-
-country_subregion_id NUMBER NOT NULL,
-
-country_region VARCHAR2(20) NOT NULL,
-
-country_region_id NUMBER NOT NULL,
-
-country_total VARCHAR2(11) NOT NULL,
-
-country_total_id NUMBER NOT NULL,
-
-country_name_hist VARCHAR2(40));
-
-CREATE TABLE supplementary_demographics
-
-( CUST_ID NUMBER not null,
-
-EDUCATION VARCHAR2(21),
-
-OCCUPATION VARCHAR2(21),
-
-HOUSEHOLD_SIZE VARCHAR2(21),
-
-YRS_RESIDENCE NUMBER,
-
-AFFINITY_CARD NUMBER(10),
-
-bulk_pack_diskettes NUMBER(10),
-
-flat_panel_monitor NUMBER(10),
-
-home_theater_package NUMBER(10),
-
-bookkeeping_application NUMBER(10),
-
-printer_supplies NUMBER(10),
-
-y_box_games NUMBER(10),
-
-os_doc_set_kanji NUMBER(10),
-
-COMMENTS VARCHAR2(4000));
-
-ALTER TABLE promotions
-
-ADD CONSTRAINT promo_pk
-
-PRIMARY KEY (promo_id)
-
-RELY DISABLE NOVALIDATE;
-
-ALTER TABLE sales
-
-ADD CONSTRAINT sales_promo_fk
-
-FOREIGN KEY (promo_id) REFERENCES promotions (promo_id)
-
-RELY DISABLE NOVALIDATE;
-
-ALTER TABLE costs
-
-ADD CONSTRAINT costs_promo_fk
-
-FOREIGN KEY (promo_id) REFERENCES promotions (promo_id)
-
-RELY DISABLE NOVALIDATE;
-
-ALTER TABLE customers
-
-ADD CONSTRAINT customers_pk
-
-PRIMARY KEY (cust_id)
-
-RELY DISABLE NOVALIDATE;
-
-ALTER TABLE sales
-
-ADD CONSTRAINT sales_customer_fk
-
-FOREIGN KEY (cust_id) REFERENCES customers (cust_id)
-
-RELY DISABLE NOVALIDATE;
-
-ALTER TABLE products
-
-ADD CONSTRAINT products_pk
-
-PRIMARY KEY (prod_id)
-
-RELY DISABLE NOVALIDATE;
-
-ALTER TABLE sales
-
-ADD CONSTRAINT sales_product_fk
-
-FOREIGN KEY (prod_id) REFERENCES products (prod_id)
-
-RELY DISABLE NOVALIDATE;
-
-ALTER TABLE costs
-
-ADD CONSTRAINT costs_product_fk
-
-FOREIGN KEY (prod_id) REFERENCES products (prod_id)
-
-RELY DISABLE NOVALIDATE;
-
-ALTER TABLE times
-
-ADD CONSTRAINT times_pk
-
-PRIMARY KEY (time_id)
-
-RELY DISABLE NOVALIDATE;
-
-ALTER TABLE sales
-
-ADD CONSTRAINT sales_time_fk
-
-FOREIGN KEY (time_id) REFERENCES times (time_id)
-
-RELY DISABLE NOVALIDATE;
-
-ALTER TABLE costs
-
-ADD CONSTRAINT costs_time_fk
-
-FOREIGN KEY (time_id) REFERENCES times (time_id)
-
-RELY DISABLE NOVALIDATE;
-
-ALTER TABLE channels
-
-ADD CONSTRAINT channels_pk
-
-PRIMARY KEY (channel_id)
-
-RELY DISABLE NOVALIDATE;
-
-ALTER TABLE sales
-
-ADD CONSTRAINT sales_channel_fk
-
-FOREIGN KEY (channel_id) REFERENCES channels (channel_id)
-
-RELY DISABLE NOVALIDATE;
-
-ALTER TABLE costs
-
-ADD CONSTRAINT costs_channel_fk
-
-FOREIGN KEY (channel_id) REFERENCES channels (channel_id)
-
-RELY DISABLE NOVALIDATE;
-
-ALTER TABLE countries
-
-ADD CONSTRAINT countries_pk
-
-PRIMARY KEY (country_id)
-
-RELY DISABLE NOVALIDATE;
-
-ALTER TABLE customers
-
-ADD CONSTRAINT customers_country_fk
-
-FOREIGN KEY (country_id) REFERENCES countries (country_id)
-
-RELY DISABLE NOVALIDATE;
-
-ALTER TABLE supplementary_demographics
-
-ADD CONSTRAINT supp_demo_pk
-
-PRIMARY KEY (cust_id)
-
-RELY DISABLE NOVALIDATE;
-```
 
 Running the create statements and results will look like this in SQL Developer.
 
