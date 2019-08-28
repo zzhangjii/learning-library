@@ -73,16 +73,19 @@ For this lab, we'll use the `root` compartment.
 
 
 10.  **Select the data file** `channel.dat` and click **ok**
+
 ![](img/adw-loading-channels.png)
 
 11.  Click **Upload Objects** to load.   
 ![](img/adw-loading-load-bucket2.png)
-Please be patient, this may take a few seconds to complete.
-![](img/adw-loading-load-bucket-1.png)
-Once complete, verify all *.dat files have a status of *`Finished`* and click **Close**.
-![](img/adw-loading-load-bucket-2.png)
 
-12. Your bucket should have 10 objects loaded.
+    Please be patient, this may take a few seconds to complete.
+  ![](img/adw-loading-load-bucket-1.png)
+
+Once complete, verify all *.dat files have a status of *`Finished`* and click **Close**.
+  ![](img/adw-loading-load-bucket-2.png)
+
+12. Your bucket should have 1 object, the chan_v3.dat file loaded.  If this were a true data load, you may be loading hundreds of large files here.
 ![](img/adw-loading-view-bucket.png)
 
 
@@ -99,8 +102,7 @@ Once complete, verify all *.dat files have a status of *`Finished`* and click **
 
 
 
-## Create an Object Store Auth Token
----------------------------------
+## Create an Object Store Auth Token##
 
 To load data from the OCI object store, you need to create an Auth Token for your object store account. The
 communication between your Autonomous Database and the object store relies on this Auth Token and username/password authentication.
@@ -135,8 +137,7 @@ communication between your Autonomous Database and the object store relies on th
 
 
 
-## Create Object Store Credentials in your Autonomous Database
------------------------------------------------------------
+## Create Object Store Credentials in your Autonomous Database##
 
 Now that you have created an object store Auth Token, its time to store the credentials of the object store in ADW instance.
 
@@ -160,31 +161,30 @@ Go back to your ADW instance via the menu.
 ![](img/adw-loading-sql-developer-web.png)
 
 7.   In a SQL Developer worksheet, use the create_credential procedure of the DBMS_CLOUD package to store the object store credentials in your database.  This pl/sql procedure takes in the following arguments:
-- credential name
+*  credential name
 - Oracle cloud username
 - Authorization token created earlier
 
     Copy the pl/sql procedure below and fill in the username and password.  
-```
-begin  
-   DBMS_CLOUD.create_credential (  
-   credential_name => 'OBJ_STORE_CRED',  
-   username => '<your username\>',  
-   password => '\<your Auth Token\>'  
-   ) ;  
-end;  
-/
-```
+    ```
+    begin  
+    DBMS_CLOUD.create_credential (  
+    credential_name => 'OBJ_STORE_CRED',  
+    username => '<your username\>',  
+    password => '\<your Auth Token\>'  
+    ) ;  
+    end;  
+    /
+    ```
 ![](img/adw-loading-create-credential.png)
 
 8.  Press the green arrow to run the worksheet.  Once the correct information is entered, you should get a message that the ``PL/SQL procedure completed``
 ![](img/adw-loading-sql-output.png)
 
 9.  Your object store's credentials are stored in
-your Autonomous Database now.  
+your ADW instance now.  
 
-## Copy Data from Object Store to Autonomous Database Tables
----------------------------------------------------------
+## Copy Data from Object Store to Autonomous Database Tables##
 
 Before data is copied, the tables and objects need to be created in ADW.  In this lab you will create the target objects.
 
@@ -199,12 +199,13 @@ channel_total VARCHAR2(13) NOT NULL,
 channel_total_id NUMBER NOT NULL);
 ````
 2. Paste it in your SQL Developer Web worksheet area overwriting any existing commands.
-![](img/adw-loading-sql-worksheet-channels.png)
+![](img/adw-loading-sql-worksheet-channels-pre.png)
 
 3.  Select the entire script and press the green play button.
 ![](img/adw-loading-green-play.png)
 
 4. Once the script has run review the output to ensure the table has been created successfully.  You should see the CHANNEL table created and altered.
+![](img/adw-loading-sql-worksheet-channels-pre.png)
 
 5.  Issue a select statement to see if there are any objects in your table.  Your table should be empty.
     ````
