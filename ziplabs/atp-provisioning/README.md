@@ -24,32 +24,25 @@ Autonomous Transaction Processing is built upon the Oracle Database, so that all
 ## Create an ATP Instance ##
 1. Sign in to the Oracle Cloud Platform. 
 2. Click the menu icon to expand the menu on the left edge of the screen.
-3. Click **Services**.
-4. Click **Autonomous Transaction Processing**.
+3. Click **Autonomous Transaction Processing**.
 
-    ![](img/MyServicesMenu.png)
+    ![](img/OCIMenu.png)
 
-    [Description of the illustration MyServicesMenu.png](files/MyServicesMenu.txt)
+    [Description of the illustration OCIMenu.png](files/OCIMenu.txt)
 
-5. Click the **Create Autonomous Transaction Processing** button to start the instance creation process.
-6. In the Create Autonomous Transaction Processing dialog, enter the following information:
+4. Click the **Create Autonomous Transaction Processing** button to start the instance creation process.
+5. In the Create Autonomous Transaction Processing dialog, enter the following information:
      * **Compartment**: For this lab, we'll use the `root` compartment.
      * **Display Name**: `atpxweek`
      * **Database Name**: `atpxweek`
+     * **Workload Type**: `Transaction Processing`
+     * **Deploymen Type**: `Serverless`
      * **CPU Core Count**: `2`
      * **Storage (TB)**:  `1`
      * **Administrator Credentials**: Create a password for the ADMIN user of the service instance. You'll need this password in the upcoming steps to download the credential wallet and connect to the database from Oracle SQL Developer.
-     * **License Type**: `My organization already owns Oracle database software licenses`
-     * **Tags**: (Optional) You don't need to enter anything here. Tags can be used for additional security and segmentation.
-7. Click the **Create Autonomous Transaction Processing Database** button to start provisioning the instance. 
-8. The Create Autonomous Transaction Processing dialog closes. On the console, the State field indicates that the instance is **Provisioning**. When it's complete, the State field changes from **Provisioning** to **Available**. If the status doesn't change to available after few minutes, try refreshing the page.
-9. Click the name of your ATP instance.
-
-    ![](img/atp_provisioning_state.png)
-
-    [Description of the illustration atp_provisioning_state.png](files/atp_provisioning_state.txt)
-
-10. You're taken to the instance page which displays more information about your instance. Notice the ATP icon on the left. It's green to indicate the service is available. There are also various menu buttons that help you manage your new instance including buttons to start, stop, terminate, and scale the service.
+     * **License Type**: `Bring Your Own License`
+6. Click the **Create Autonomous Database** button to start provisioning the instance. 
+7. You're taken to the instance page which displays detail about your instance. This includes a State field indicating that the instance is **Provisioning**. When it's complete, the State field changes from **Provisioning** to **Available**. If the status doesn't change after few minutes, try refreshing the page.
 
     ![](img/atp_instance.png)
 
