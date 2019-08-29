@@ -9,7 +9,7 @@ permalink: /ziplabs/index.html
 ## Oracle Open World 2019 ##
 * [Access an Oracle Cloud Platform Trial Account](2019/new-account)
 * [Provisioning Autonomous Data Warehouse](2019/adw-provisioning)
-* [???]
+* [Loading Data into the Autonomous Database](2019/adw-loading)
 * [Getting Started With Oracle Machine Learning Notebooks](adw-machine-learning)
 * [Provisioning Autonomous Transaction Processing](2019/atp-provisioning)
 * [Using Performance Hub to Analyze Resource Demand from Queries](2019/atp-performance-hub)
