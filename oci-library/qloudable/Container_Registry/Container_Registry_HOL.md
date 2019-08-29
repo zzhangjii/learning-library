@@ -6,9 +6,9 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Sign in to OCI Console and create VCN, Auth token and Docker Registry](#sign-in-to-oci-console-and-create-vcn,-auth-token-and-docker-registry)
+[Sign in to OCI Console and create VCN Auth token and Docker Registry](#sign-in-to-oci-console-and-create-vcn-auth-token-and-docker-registry)
 
-[Create compute instance, install Docker and push images to registry](#create-compute-instance,-install-docker-and-push-images-to-registry)
+[Create compute instance install Docker and push images to registry](#create-compute-instance-install-docker-and-push-images-to-registry)
 
 [Delete the resources](#delete-the-resources)
 
@@ -54,7 +54,7 @@ Oracle Cloud Infrastructure Registry is an Oracle-managed registry that enables 
 6. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
 
 
-## Practice-1: Sign in to OCI Console and create VCN, Auth token and Docker Registry
+## Sign in to OCI Console and create VCN Auth token and Docker Registry
 
 
 * **Tenant Name:** {{Cloud Tenant}}
@@ -114,7 +114,7 @@ Oracle Cloud Infrastructure Registry is an Oracle-managed registry that enables 
 
 ***We now have a Docker registry and Auth token (to validate login to the registry). Next we will create a Public/Private key pair and then compute instance to test pushing and pulling images from the registry.***
 
-## Create compute instance, install Docker and push images to registry
+## Create compute instance install Docker and push images to registry
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
