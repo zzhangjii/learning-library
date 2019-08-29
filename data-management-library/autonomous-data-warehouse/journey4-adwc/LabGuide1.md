@@ -27,7 +27,7 @@ To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/iss
 
 -   The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
 
--   Oracle SQL Developer 19.2 or later (see <a href="http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html" target="_blank">Oracle Technology Network download site.</a>)
+-   Oracle SQL Developer 19.2 or later is recommended (see <a href="http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html" target="_blank">Oracle Technology Network download site.</a>)
     Please use SQL Developer version 18.3 or later as this version contains enhancements for key Autonomous Data Warehouse features, including using ADW behind a VPN or Firewall.
 
     **Note:** If you are a Windows user on 64-bit platform, download the 'Windows 64-bit with JDK 8 included' distribution as it includes both Java 8 and the Java Cryptography Extension (JCE) files necessary to run SQL Developer and connect to your Autonomous Data Warehouse.
@@ -56,7 +56,7 @@ In this section you will be provisioning an ADW instance using the cloud console
 
 -   Once you are logged in, you are taken to the cloud services dashboard where you can see all the services available to you. Click the navigation menu in the upper left to show top level navigation choices.
 
-__Note:__ You may also access your Autonomous Data Warehouse service by using **Customize Dashboard** to add the service to your dashboard.
+__Note:__ You can also directly access your Autonomous Data Warehouse service in the __Quick Actions__ section of the dashboard.
 
 ![](./images/100/Picture100-36.png)
 
@@ -65,8 +65,9 @@ __Note:__ You may also access your Autonomous Data Warehouse service by using **
 ![](images/100/LabGuide1-39fb4a5b.png)
 
 - Make sure your workload type is __Data Warehouse__ or __All__ to see your Autonomous Data Warehouse instances. You can use the __List Scope__ drop-down menu to select a compartment. Select your __root compartment__, or __another compartment of your choice__ where you will create your new ADW instance. If you want to create a new compartment or learn more about them, click <a href="https://docs.cloud.oracle.com/iaas/Content/Identity/Tasks/managingcompartments.htm#three" target="_blank">here</a>.
-__Note__ - Avoid the use of the ManagedCompartmentforPaaS compartment as this is an Oracle default used for Oracle Platform Services.
-- This console shows no databases. If there were a long list of databases, you could filter the list by the state of the databases (available, stopped, terminated, and so on). You can also sort by __Workload Type__. Here, __Data Warehouse__ is selected.
+
+ __Note__ - Avoid the use of the ManagedCompartmentforPaaS compartment as this is an Oracle default used for Oracle Platform Services.
+- This console shows that no databases yet exist. If there were a long list of databases, you could filter the list by the state of the databases (available, stopped, terminated, and so on). You can also sort by __Workload Type__. Here, the __Data Warehouse__ workload type is selected.
 
 ![](./images/100/Compartment.png)
 
@@ -74,31 +75,33 @@ __Note__ - Avoid the use of the ManagedCompartmentforPaaS compartment as this is
 
  ![](./images/100/Region.png)
 
--  Click the **Create Autonomous Database** button to start the instance creation process.
+-  Click **Create Autonomous Database** to start the instance creation process.
 
 ![](./images/100/Picture100-23.png)
 
--  This will bring up the Create Autonomous Database screen where you will specify the configurations of the instance.
-- Provide basic information for the Autonomous Database:
+-  This brings up the __Create Autonomous Database__ screen where you will specify the configuration of the instance.
+- Provide basic information for the autonomous database:
 
  - __Choose a compartment__ - Select a compartment for the database from the drop-down list.
  - __Display Name__ - Enter a memorable name for the database for display purposes. For this lab, use __ADW Finance Mart__.
  - __Database Name__ - Use letters and numbers only, starting with a letter. Maximum length is 14 characters. (Underscores not initially supported.) For this lab, use __ADWFINANCE__.
+
+ ![](./images/100/Picture100-26.png)
 
 - Choose a workload type. Select the workload type for your database from the choices:
 
  - __Data Warehouse__ - For this lab, choose __Data Warehouse__ as the workload type.
  - __Transaction Processing__ - Alternately, you could have chosen Transaction Processing as the workload type.
 
-- Choose a deployment type:
-
- - __Serverless__ - For this lab, choose __Serverless__. Serverless creates the autonomous database without provisioning a dedicated infrastructure. Alternately, for a Transaction Processing workload you could have chosen the Dedicated Infrastructure deployment type to create the autonomous database on a dedicated Exadata infrastructure.
+ ![](./images/100/Picture100-26b.png)
 
 - Configure the database:
 
  - __CPU core count__ - Number of CPUs for your service. For this lab, specify __2 CPUs__.
- - __Storage (TB)__ - Select your storage capacity in terabytes. It is the actual space available to your service instance, including system-related space allocations. For this lab, specify __1 TB__ of storage.
- - __Auto Scaling__ - For this lab, __do not__ specify auto scaling. If you select the auto scaling option, the Autonomous database can use up to three times more CPU and IO resources than specified by the number of OCPUs. When auto scaling is enabled, if your workload requires additional CPU and IO resources, the database automatically uses the resources without any manual intervention required.
+ - __Storage (TB)__ - Select your storage capacity in terabytes. For this lab, specify __1 TB__ of storage.
+ - __Auto Scaling__ - For this lab, __do not__ specify auto scaling.
+
+  ![](./images/100/Picture100-26c.png)
 
 - Create administrator credentials:
 
@@ -110,20 +113,18 @@ __Note__ - Avoid the use of the ManagedCompartmentforPaaS compartment as this is
  - The password must not be the same password that is set less than 24 hours ago.
  - Re-enter the password to confirm it. Make a note of this password.
 
-- Choose a license type:
+   ![](./images/100/Picture100-26d.png)
 
- - __Bring Your Own License__ - For this lab, we will select __Subscribe To A New Database License__. Select this type when your organization has existing database licenses.
- - __License Included__ - Alternately you could have selected this type if  you wanted to subscribe to new database software licenses and the database cloud service.
+- Choose a license type. For this lab, choose __License Included__. The two license types are:
+
+ - __Bring Your Own License (BYOL)__ - Select this type when your organization has existing database licenses.
+ - __License Included__ - Select this type when you want to subscribe to new database software licenses and the database cloud service.
 
 - Click __Create Autonomous Database__.
 
-![](./images/100/Picture100-26.png)
-
-
-
 ![](./images/100/Picture100-27.png)
 
--  Your instance will begin provisioning. In a few minutes the state will turn from Provisioning to Available. At this point, your Autonomous Data Warehouse database is ready to be used! Have a look at your instance's details here including its name, database version, CPU count and storage size.
+-  Your instance will begin provisioning. In a few minutes the state will turn from Provisioning to Available. At this point, your Autonomous Data Warehouse database is ready to use! Have a look at your instance's details here including its name, database version, CPU count and storage size.
 
 ![](./images/100/Picture100-32.png)
 
