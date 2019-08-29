@@ -1,14 +1,14 @@
 {
     "workshop": {
-        "title": "Low Code Application Development with Oracle Autonomous Database Hands on Lab",
+        "title": "Low Code  Development with Oracle Autonomous Database Hands-on Lab",
         "description": "Learn how to access and create applications using Oracle APEX and SQL Developer Web in the Oracle Cloud.",
         "theme": "default",
         "interactive":"https://launch.oracle.com/?apex-atp",
         "labs": [
             {
                 "number": "0",
-                "filename": "Intro.md",
-                "title": "Workshop Introduction",
+                "filename": "README.md",
+                "title": "Lab Introduction",
                 "description": "",
                 "labels": {
                     "version": "Instructor Led"
@@ -16,8 +16,8 @@
             },
             {
                 "number": "1",
-                "filename": "Lab1.md",
-                "title": "Lab 1: Obtain a Workspace",
+                "filename": "1-create-an-apex-workspace.md",
+                "title": "Module 1: Create an APEX Workspace",
                 "description": "",
                 "labels": {
                     "version": "Instructor Led"
@@ -25,8 +25,8 @@
             },
             {
                 "number": "2",
-                "filename": "Lab2.md",
-                "title": "Lab 2: Create an App from a Spreadsheet",
+                "filename": "2-create-an-app-from-a-spreadsheet.md",
+                "title": "Module 2: Create an App from a Spreadsheet",
                 "description": "",
                 "labels": {
                     "version": "Instructor Led"
@@ -34,8 +34,8 @@
             },
             {
                 "number": "3",
-                "filename": "Lab3.md",
-                "title": "Lab 3: Build Database Objects in SQL Developer Web",
+                "filename": "3-build-database-objects-in-autonomous-database.md",
+                "title": "Module 3: Build Database Objects in Autonomous Database",
                 "description": "",
                 "labels": {
                     "version": "Instructor Led"
@@ -43,8 +43,8 @@
             },
             {
                 "number": "4",
-                "filename": "Lab4.md",
-                "title": "Lab 4: Create and Modify APEX Application",
+                "filename": "4-create-and-modify-an-apex-app.md",
+                "title": "Module 4: Create and Modify APEX Application",
                 "description": "",
                 "labels": {
                     "version": "Instructor Led"
