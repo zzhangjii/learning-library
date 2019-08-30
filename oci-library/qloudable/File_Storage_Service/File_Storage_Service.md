@@ -10,7 +10,7 @@
 
 [Create File System Storage](#create-file-system-storage)
 
-[Creat ssh keys and compute instance](#create-ssh-keys-and-compute-instance)
+[Create ssh keys and compute instance](#create-ssh-keys-and-compute-instance)
 
 [Mount the File Storage System to Compute Instance](#mount-the-file-storage-system-to-compute-instance)
 
