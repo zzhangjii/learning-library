@@ -1,4 +1,4 @@
-# Using Machine Learning in ADW.
+# Using Machine Learning in ADW
 
 ## Table of Contents
 
@@ -116,7 +116,7 @@ Next, you'll import a Zeppelin Notebook into the Oracle Machine Learning instanc
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_USER_01.png" alt="image-alt-text">
 
-5. Enter "admin@oracle.com" in the E-mail Address field and click Save
+5. Enter "admin@oracle.com" in the E-mail Address field, and enter "AAbbcc12345b" in both passowrd fields and click Save
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_USER_02.png" alt="image-alt-text">
 
@@ -145,6 +145,10 @@ Next, you'll import a Zeppelin Notebook into the Oracle Machine Learning instanc
 2. Click the gear icon to open Interpreter Binding.
 
     <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_NOTEBOOK_INTER_BIND.png" alt="image-alt-text">
+
+3. Select <code>your_database_name</code>_medium and click **Save**.
+
+    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_NOTEBOOK_SELECT_BIND.png" alt="image-alt-text">
 
 3. Run each paragraph of the notebook by clicking on the run icon.
 
