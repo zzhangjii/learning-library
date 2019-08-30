@@ -8,7 +8,7 @@
 
 [Sign in to OCI Console and create VCN](#sign-in-to-oci-console-and-create-vcn)
 
-[ Creat ssh keys, compute instance and Block Volume. Attach block volume to compute instance](#creat-ssh-keys,-compute-instance-and-block-volume.-attach-block-volume-to-compute-instance)
+[Create ssh keys, compute instance and Block Volume. Attach block volume to compute instance](#create-ssh-keys,-compute-instance-and-block-volume.-attach-block-volume-to-compute-instance)
 
 [Install httpd on compute instance and install an app on Block Volume](#install-httpd-on-compute-instance-and-install-an-app-on-block-volume)
 
@@ -120,7 +120,7 @@ how easy it is to move additional storage with applicatons/tools installed betwe
 
 7. Click **Add Ingress Rule** at the bottom
               
-## Creat ssh keys, compute instance and Block Volume. Attach block volume to compute instance
+## Create ssh keys, compute instance and Block Volume. Attach block volume to compute instance
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
 
