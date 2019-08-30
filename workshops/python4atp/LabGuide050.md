@@ -201,35 +201,7 @@ We require a Database to store the Alpha Office data which is accessed later in 
 
 	![](images/050/041.png)
 
-### **STEP 8:** Download and install Visual Studio Code
-
-- Open Firefox inside the image.  You will need your Oracle OTN user account.
-
-	![](images/050/042.png)
-
-- Navigate to here:  `https://code.visualstudio.com/docs/?dv=linux64_rpm` to download vscode.  The download will take several seconds.
-
-	![](images/050/043.png)
-
-- Right Click on the desktop to open a new terminal window.
-
-	![](images/050/044.png)
-
-- Change directory to  **Downloads** ```cd Downloads```.
-
-    ![](images/050/045.png)
-
-- Install sudo yum install libXScrnSaver.  Enter `y` when prompted `sudo yum install libXScrnSaver`.
-
-	![](images/050/046.png)
-
-	![](images/050/047.png)
-
-- Install code.  Enter the following: `sudo rpm -ivh code-1.35.1-1560350390.el7.x86_64.rpm`.
-
-	![](images/050/048.png)
-
-### **STEP 9:** Download Files Used in this Workshop
+### **STEP 8:** Download Files Used in this Workshop
 
 **Click to Download.  Save the file to your Downloads directory.**
 

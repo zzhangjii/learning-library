@@ -62,17 +62,6 @@
   }
 }
 
-pre:not(.infra),
-code:not(.infra) {
-  font-family: Menlo, Monaco, "Courier New", monospace;
-}
-
-pre:not(.infra) {
-  padding: .5rem;
-  line-height: 1.25;
-  overflow-x: scroll;
-}
-
 a,
 a:visited {
   color: #3498db;
@@ -111,6 +100,32 @@ p:not(.infra),
   margin-bottom: 1.3rem;
   margin-left: 25px;
 }
+
+/*
+ * Added because tables were not indented with the 'p' tags.
+ */
+table:not(.infra){
+  font-size: 1rem;
+  margin-bottom: 1.3rem;
+  margin-left: 25px;
+}
+
+pre:not(.infra),
+code:not(.infra) {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  background-color: #f3f3f3;
+}
+
+pre:not(.infra) {
+  padding: .5rem;
+  line-height: 1.25;
+  overflow-x: auto;
+}
+
+pre:not(.infra) {
+  margin: .4rem .4rem .4rem 25px;
+}
+
 
 ul:not(.infra) {
     margin-left: 10px;
@@ -160,7 +175,7 @@ h3.first-in-section {
 }
 
 h3.first-in-section::after {
-    content: '+ Expand All Steps';
+    content: '+ Expand All Parts';
     position: absolute;
     top: -45px;
     left: -9px;
@@ -173,7 +188,7 @@ h3.first-in-section::after {
 }
 
 h3.first-in-section.minus::after {
-    content: '- Collapse All Steps';
+    content: '- Collapse All Parts';
 }
 
 h3:not(.infra),
@@ -312,15 +327,6 @@ h3:not(.infra) {
 blockquote:not(.infra) {
   border-left: 8px solid #fafafa;
   padding: 1rem;
-}
-
-pre:not(.infra) {
-  background-color: #f3f3f3;
-  margin: .4rem;
-}
-
-code:not(.infra) {
-  background-color: #f3f3f3;
 }
 
 #introduction {

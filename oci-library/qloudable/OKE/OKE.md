@@ -8,7 +8,7 @@
 
 [Sign in to OCI Console and create a VCN](#sign-in-to-oci-console-and-create-a-vcn)
 
-[Install OCI CLI in your enivornment](#install-oci-cli-in-your-enivornment)
+[Install OCI CLI in your enviornment](#install-oci-cli-in-your-enviornment)
 
 [Create Kubernetes Cluster](#create-kubernetes-cluster)
 
@@ -293,7 +293,7 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 **We now have a Virtual Cloud Network with all the necessary resources and configuration needed for Oracle Kubernetes Engine (OKE) deployment. Next we will create Kubernetes Cluster**
 
 
-## Install OCI CLI in your enivornment
+## Install OCI CLI in your enviornment
 
 1. Click the Apps icon in the toolbar and select Git-Bash to open a terminal window.
 
