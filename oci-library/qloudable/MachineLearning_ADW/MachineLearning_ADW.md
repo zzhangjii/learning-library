@@ -58,7 +58,9 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 * **Tenant Name:** {{Cloud Tenant}}
 * **User Name:** {{User Name}}
 * **Password:** {{Password}}
-* **Compartment:**{{Compartment}}
+* **Compartment:** {{Compartment}}
+* **Database Name:** {{Database Name}}
+* **Bucket Name:** {{Bucket Name}}
 
 Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
@@ -78,11 +80,11 @@ Sign in using your tenant name, user name and password. Use the login option und
 
 ## Download the Notebook from Object Storage
 
-1. Find the data file in Object Storage. Select Object Storage from the menu and select Object Storage.
+1. Find the data file in Object Storage. Select **Object Storage** from the menu, then choose **Object Storage** from pull right menu.
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_OBJ_000.png" alt="image-alt-text">
 
-2. Select your compartment from Scope and then click on the bucket.
+2. Under Scope, select the compartment assigned to you and then click on the bucket name assigned to you.
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_OBJ_001.png" alt="image-alt-text">
 
@@ -112,7 +114,7 @@ Next, you'll import a Zeppelin Notebook into the Oracle Machine Learning instanc
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_USER_01.png" alt="image-alt-text">
 
-5. Enter admin@oracle.com in the E-mail Address field and click Save
+5. Enter an e-mail address like "admin@oracle.com" in the E-mail Address field and click **Save**.
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_USER_02.png" alt="image-alt-text">
 
@@ -120,13 +122,13 @@ Next, you'll import a Zeppelin Notebook into the Oracle Machine Learning instanc
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_USER_03.png" alt="image-alt-text">
 
-7. Click **Development** then click **Oracle ML SQL Notebooks**
+7. Click **Development** then click **Oracle ML SQL Notebooks**.
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_OPEN_ML.png" alt="image-alt-text">
 
 8. Sign in with your OCITEST user.
 
-9. Click on Notebooks.
+9. Click on **Notebooks**.
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_NOTEBOOK.png" alt="image-alt-text">
 
@@ -143,7 +145,7 @@ Next, you'll import a Zeppelin Notebook into the Oracle Machine Learning instanc
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_NOTEBOOK_INTER_BIND.png" alt="image-alt-text">
 
-3. Select **orcl_medium** (if not selected) and click **Save**.
+3. Select **\<your database name\>_medium** (if not selected) and click **Save**.
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_NOTEBOOK_SELECT_BIND.png" alt="image-alt-text">
 
