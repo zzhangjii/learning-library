@@ -10,14 +10,6 @@
 
 [Download the Notebook from Object Storage](#download-the-notebook-from-object-storage)
 
-[Download and Import the Machine Learning Notebook](#download-and-import-the-machine-learning-notebook)
-
-[Download and Import the Machine Learning Notebook](#download-and-import-the-machine-learning-notebook)
-
-[Sign in to your OCI Console](#sign-in-to-your-oci-console)
-
-[Download the Notebook from Object Storage](#download-the-notebook-from-object-storage)
-
 [Import the Machine Learning Notebook](#import-the-machine-learning-notebook)
 
 [Run the Notebook](#run-the-notebook)
@@ -95,22 +87,6 @@ Sign in using your tenant name, user name and password. Use the login option und
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_OBJ_000.png" alt="image-alt-text">
 
 2. Select your compartment from Scope and then click on your bucket.
-
-   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_OBJ_001.png" alt="image-alt-text">
-
-3. Select the file <code>Pick_A_Good_Wine_for_Less_Than_20_dollars.json</code> and click the elipses to download the file.
-
-   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_download.png" alt="image-alt-text">
-
-6. Note the location where the file was downloaded.
-
-## Download and Import the Machine Learning Notebook
-
-1. Select **Object Storage** from the menu, then select **Object Storage** from the right menu.
-
-   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_OBJ_000.png" alt="image-alt-text">
-
-2. Under Scope, select the compartment assigned to you and then click on the bucket name assigned to you.
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_OBJ_001.png" alt="image-alt-text">
 
