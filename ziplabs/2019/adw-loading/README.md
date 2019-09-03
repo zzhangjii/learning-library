@@ -72,7 +72,7 @@ For this lab, we'll use the `root` compartment.
     ![](img/adw-loading-select-files.png)
 
 
-10.  **Select the data file** `channel.dat` and click **ok**
+10.  **Select the two data files** `customers.dat` and `sales.dat` and click **Open**
 
 ![](img/adw-loading-channels.png)
 
@@ -82,10 +82,10 @@ For this lab, we'll use the `root` compartment.
     Please be patient, this may take a few seconds to complete.
   ![](img/adw-loading-load-bucket-1.png)
 
-Once complete, verify all *.dat files have a status of *`Finished`* and click **Close**.
+Once complete, verify *both* *.dat files have a status of *`Finished`* and click **Close**.
   ![](img/adw-loading-load-bucket-2.png)
 
-12. Your bucket should have 1 object, the chan_v3.dat file loaded.  If this were a true data load, you may be loading hundreds of large files here.
+12. Your bucket should have 2 objects, customers.dat and sales.dat loaded.  If this were a true data load, you may be loading hundreds of large files here.
 ![](img/adw-loading-view-bucket.png)
 
 
@@ -188,15 +188,42 @@ your ADW instance now.
 
 Before data is copied, the tables and objects need to be created in ADW.  In this lab you will create the target objects.
 
-1. Copy the sql script below to create the CHANNEL table.
+1. Copy the sql script below to create the SALES and CUSTOMER table.
 ````
-CREATE TABLE channels (
+CREATE TABLE sales (
+prod_id NUMBER NOT NULL,
+cust_id NUMBER NOT NULL,
+time_id DATE NOT NULL,
 channel_id NUMBER NOT NULL,
-channel_desc VARCHAR2(20) NOT NULL,
-channel_class VARCHAR2(20) NOT NULL,
-channel_class_id NUMBER NOT NULL,
-channel_total VARCHAR2(13) NOT NULL,
-channel_total_id NUMBER NOT NULL);
+promo_id NUMBER NOT NULL,
+quantity_sold NUMBER(10,2) NOT NULL,
+amount_sold NUMBER(10,2) NOT NULL);
+
+CREATE TABLE customers (
+cust_id NUMBER NOT NULL,
+cust_first_name VARCHAR2(20) NOT NULL,
+cust_last_name VARCHAR2(40) NOT NULL,
+cust_gender CHAR(1) NOT NULL,
+cust_year_of_birth NUMBER(4) NOT NULL,
+cust_marital_status VARCHAR2(20) ,
+cust_street_address VARCHAR2(40) NOT NULL,
+cust_postal_code VARCHAR2(10) NOT NULL,
+cust_city VARCHAR2(30) NOT NULL,
+cust_city_id NUMBER NOT NULL,
+cust_state_province VARCHAR2(40) NOT NULL,
+cust_state_province_id NUMBER NOT NULL,
+country_id NUMBER NOT NULL,
+cust_main_phone_number VARCHAR2(25) NOT NULL,
+cust_income_level VARCHAR2(30) ,
+cust_credit_limit NUMBER ,
+cust_email VARCHAR2(50) ,
+cust_total VARCHAR2(14) NOT NULL,
+cust_total_id NUMBER NOT NULL,
+cust_src_id NUMBER ,
+cust_eff_from DATE ,
+cust_eff_to DATE ,
+cust_valid VARCHAR2(1) );
+
 ````
 2. Paste it in your SQL Developer Web worksheet area overwriting any existing commands.
 ![](img/adw-loading-sql-worksheet-channels-pre.png)
@@ -204,50 +231,56 @@ channel_total_id NUMBER NOT NULL);
 3.  Select the entire script and press the green play button.
 ![](img/adw-loading-green-play.png)
 
-4. Once the script has run review the output to ensure the table has been created successfully.  You should see the CHANNEL table created and altered.
+4. Once the script has run review the output to ensure the table has been created successfully.  You should see the two tables created.
 ![](img/adw-loading-sql-worksheet-channels-pre.png)
 
-5.  Issue a select statement to see if there are any objects in your table.  Your table should be empty.
-    ````
-    select * from CHANNELS;
-    ````
-    ![](img/adw-loading-select-from.png)
+Now you have empty tables and staged data in the OCI Object store. To get the data from the object store to your ADB instance, you need to get some information about the object. To move the data we will be using the dbms_cloud.copy_data procedure.  The procedure takes information about the location of the data you staged in your object store.
 
-6.  Now that you have created the CHANNEL table in your ADW instance, it's time to copy the data from the staging area (OCI Object Storage) to ADW.  Copy the pl/sql below and paste it into the SQL Worksheet window.  Do NOT press play yet.
-    ````
+ ````
     begin
     dbms_cloud.copy_data(
-        table_name =>'CHANNELS',
+        table_name =>'<ENTER_TABLE_NAME>',
         credential_name =>'OBJ_STORE_CRED',
         file_uri_list =>'https://swiftobjectstorage.<region name>.oraclecloud.com/v1/<tenant name>/tutorial_load_adwc/chan_v3.dat',
         format => json_object('ignoremissingcolumns' value 'true', 'removequotes' value 'true')
     );
     end;
     /
-    ````
-    ![](img/adw-loading-copy-data.png)
+````
 
-7. The arguments for the dbms_cloud.copy_data procedure that may change when you are using this procedure are `table_name` and `file_uri_list`. File_uri_list points to the location of the datafile in your object store.  You will need to go back to your Oracle Cloud tab to obtain this information.
-
-    ````
-    file_uri_list =>'https://swiftobjectstorage.<region name>.oraclecloud.com/v1/<tenant name>/tutorial_load_adwc/chan_v3.dat'
-    ````
-8. Select **Object Storage->Object Storage** from the menu.  Select your bucket. 
+5. Select **Object Storage->Object Storage** from the menu.  Select your bucket. 
 ![](img/adw-loading-view-bucket.png)
 
-8.  In the objects section, locate your data file.  Click on the three dots on the right to **View Object Details**
+6.  In the objects section, locate your data file.  Click on the three dots on the right to **View Object Details**
 ![](img/adw-loading-chan-dat.png)
 
-9. Copy the URL Path by pressing `<CTRL-C>`.  
+7. Copy the URL Path by pressing `<CTRL-C>`.  Copy the url to your notepad.
 
-10. On the SQL Worksheet tab replace the file_uri_list with the URL Path you copied.
-    ![](img/adw-loading-chan-dat2.png)
+8.  Repeat steps 6-8 for the 2nd table and return to your SQL Developer Workbench screen.  
 
-11. Highlight the pl/sql block and press the green play button
-    ![](img/adw-loading-copy-data.png)
+9.  Copy the dbms_cloud.copy_data code twice in your workbench window. Replace the table_name with each of your tables (CUSTOMERS and SALE) and the file_uri_list with the string you saved in notepad.  *Be sure to coy the correct file_uri_list to the correct table or you will receive an error*
+
+````
+begin
+    dbms_cloud.copy_data(
+        table_name =>'<ENTER_TABLE_NAME>',
+        credential_name =>'OBJ_STORE_CRED',
+        file_uri_list =>'https://swiftobjectstorage.<region name>.oraclecloud.com/v1/<tenant name>/tutorial_load_adwc/chan_v3.dat',
+        format => json_object('ignoremissingcolumns' value 'true', 'removequotes' value 'true')
+    );
+end;
+/
+````
+
+10. Select the commands and press the green play button.
+    ````
+    select * from CHANNELS;
+    ````
+    ![](img/adw-loading-select-from.png)
 
 
-11. In the Script Output, once you see the message `PL/SQL procedure successfully completed.`, highlight the ````select * from channels;```` statement again.  Success! Notice that the data has been copied from hte object store to the tables in your ADW instance.
+
+11. In the Script Output, once you see the message `PL/SQL procedure successfully completed.`, Query the tables to see the rows that were inserted.  Success! Notice that the data has been copied from the object store to the tables in your ADW instance.
 
     ![](img/adw-loading-select-from2.png)
 
