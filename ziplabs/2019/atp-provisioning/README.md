@@ -4,7 +4,7 @@ description: Learn how to provision and get started with Oracle Autonomous Trans
 tags: Oracle Cloud, Autonomous Transaction Processing, ATP, Oracle Cloud Infrastructure, OCI
 permalink: /ziplabs/2019/atp-provisioning/index.html
 ---
-# Provisioning Autonomous Transaction Processing#
+# Provisioning Autonomous Transaction Processing #
 
 ## Before You Begin ##
 This 10-minute lab walks you through the steps to get started using the Oracle Autonomous Transaction Processing (ATP) on Oracle Infrastructure Cloud (OCI). You will provision a new ATP database. Later, you may and connect to the database using Oracle SQL Developer or SQL Developer Web.
