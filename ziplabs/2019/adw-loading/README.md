@@ -79,7 +79,7 @@ For this lab, we'll use the `root` compartment.
 
 10.  **Select the two data files** `customers.dat` and `sales.dat` and click **Open**.  Once the files are finished loading, click **Upload Objects** to load. 
 
-    ![](img/adw-loading-load-bucket-2-new.png)
+   ![](img/adw-loading-load-bucket-2-new.png)
 
 11.  Once complete, verify *both* *.dat files have a status of *`Finished`* and click **Close**.
 
@@ -87,13 +87,17 @@ For this lab, we'll use the `root` compartment.
 ![](img/adw-loading-view-bucket.png)
 
 
+
 12.  The final step will be to change the visibility of your bucket. Click the **Edit Visibility** button at the top of your Bucket Details screen.
 ![](img/adw-loading-view-bucket.png)
+
+
 
 13. Change the visibility to **Public**, accept all other defaults.  Click **Save Changes**
 
 14. Your bucket should now be visible and public.  Verify and proceed to setting up your Auth token.
-![](img/adw-loading-bucket-info.png)  
+
+    <img src="img/adw-loading-bucket-info.png" width=280>
 
 
 
@@ -181,7 +185,7 @@ Go back to your ADW instance via the menu.
     <img src="img/adw-loading-create-credential.png" width=350>
 
 8.  Press the green arrow to run the worksheet.  Once the correct information is entered, you should get a message that the ``PL/SQL procedure completed``
-<img src="img/adw-loading-sql-output.png" width=350>
+<img src="img/adw-loading-sql-output.png" width=300>
 
 9.  Your object store's credentials are stored in
 your ADW instance now.  
