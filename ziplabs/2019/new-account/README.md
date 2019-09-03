@@ -20,7 +20,7 @@ These labs mostly focus on Autonomous Data Warehouse and Autonomous Transaction 
 
 
 ## Create Your Account ##
-In this section, you'll fill out the registration form at [oracle.com/oow19trial](https://oracle.com/oow19trial).
+In this section, you'll fill out the registration form at [oracle.com/oow19freetier](https://oracle.com/oow19freetier).
 
 1. Enter the appropriate information to create your account. 
      * Enter the same **email address** you used to register for Oracle Open World / Oracle Code.
@@ -57,5 +57,5 @@ In this section, you'll fill out the registration form at [oracle.com/oow19trial
     
     [Description of the illustration username.png](files/username.txt)
 
-    ## Return to the Zip Labs ##
-    Go back to the Zip Labs page and try some of the labs. These short labs walk you through various technologies found in your free trial.
+## Return to the Zip Labs ##
+Go back to the Zip Labs page and try some of the labs. These short labs walk you through various technologies found in your free trial.
