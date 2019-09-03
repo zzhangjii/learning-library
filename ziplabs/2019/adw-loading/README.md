@@ -48,54 +48,45 @@ Oracle Cloud Infrastructure offers two distinct storage class tiers.  Object Sto
 
 3.  Select **Create Bucket** to create a bucket to load your data in.  This will be your staging area.  Later in this lab you will move the data from this staging area to your ADW instance.
 For this lab, we'll use the `root` compartment.
-![](img/adw-loading-create-bucket-screen.png)
+<img src="img/adw-loading-create-bucket-screen.png" width=340>
+
 
 4.  Enter the following information: 
     * **Bucket Name**:  `bucket-<city you were born in>-<your initials>`  (example: *bucket-london-kam*)
     * **Storage Tier**:  `Standard`
      * **Encryption**: `Encrypt using Oracle Managed Keys`
+     <img src="img/adw-loading-create-bucket.png" width=300>
 
-     ![](img/adw-loading-create-bucket.png)
 
 5. Click **Create Bucket**.
 
 6.  Click on the bucket name you just created.  
-
-    ![](img/adw-loading-buckets.png)
+<img src="img/adw-loading-buckets.png" width=300>
+ 
 
 7. Review the screen. Note you have created an empty bucket with no objects in it and the visibility is set to private. 
 ![](img/adw-loading-bucket-screen.png)
 
 8.  Click [here](https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/adwc/OBE_Loading%20Your%20Data/files/datafiles_for_sh_tables.zip) to download the zip file with your objects.  Open up your file browser and extract the zip file.
 
-9.  Click **Upload Object** to begin selecting the data files to upload to the bucket.  Click on **select files** to choose your extracted data files.
-    ![](img/adw-loading-select-files.png)
+9.  Click **Upload Object** button to begin selecting the data files to upload to the bucket.  Click on **select files** to choose your extracted data files.
+<img src="img/adw-loading-select-files.png" width=300>
 
 
-10.  **Select the two data files** `customers.dat` and `sales.dat` and click **Open**
+10.  **Select the two data files** `customers.dat` and `sales.dat` and click **Open**.  Once the files are finished loading, click **Upload Objects** to load.
+![](img/adw-loading-load-bucket-2-new.png)
 
-![](img/adw-loading-channels.png)
 
-11.  Click **Upload Objects** to load.   
-![](img/adw-loading-load-bucket2.png)
-
-    Please be patient, this may take a few seconds to complete.
-  ![](img/adw-loading-load-bucket-1.png)
-
-Once complete, verify *both* *.dat files have a status of *`Finished`* and click **Close**.
-  ![](img/adw-loading-load-bucket-2.png)
+11.  Once complete, verify *both* *.dat files have a status of *`Finished`* and click **Close**.
 
 12. Your bucket should have 2 objects, customers.dat and sales.dat loaded.  If this were a true data load, you may be loading hundreds of large files here.
 ![](img/adw-loading-view-bucket.png)
 
 
 12.  The final step will be to change the visibility of your bucket. Click the **Edit Visibility** button at the top of your Bucket Details screen.
-    
-   ![](img/adw-loading-bucket-visibility.png)  
+![](img/adw-loading-view-bucket.png)
 
 13. Change the visibility to **Public**, accept all other defaults.  Click **Save Changes**
-
-    ![](img/adw-loading-bucket-visibility2.png)  
 
 14. Your bucket should now be visible and public.  Verify and proceed to setting up your Auth token.
 ![](img/adw-loading-bucket-info.png)  
@@ -114,7 +105,8 @@ communication between your Autonomous Database and the object store relies on th
 
 3.  Select your username.  Click **Auth Tokens** under **Resources** on the left of the console.
 ![](img/adw-loading-user-screen.png) 
-![](img/adw-loading-auth-token.png) 
+<img src="img/adw-loading-auth-token.png" width=180>
+
 
 4.  Click **Generate Token**.
 ![](img/adw-loading-user-token.png) 
@@ -123,10 +115,12 @@ communication between your Autonomous Database and the object store relies on th
     steps:
 
     -   In the pop-up dialog, enter a description.
-    ![](img/adw-loading-token-description.png) 
+    
+        <img src="img/adw-loading-token-description.png" width=200>
 
     -   Click the **Generate Token** button.
-    ![](img/adw-loading-generated-token.png)
+
+        <img src="img/adw-loading-generated-token.png" width=200>
 
     -   Copy the generated token to a text file. The token does not appear again and you WILL NEED this token to load your data into ADW.
 
@@ -149,13 +143,17 @@ Go back to your ADW instance via the menu.
 ![](img/adw-loading-adw-instance2.png)
 
 3.  Click on **Service Console**.  If the service console does not open a new tab, ensure pop up blocker is turned off for your browser.  Click on **Development** to access the developer tools for ADB.
-![](img/adw-loading-service-console.png)
+
+    <img src="img/adw-loading-service-console.png" width=250>
 
 4.  Click on **SQL Developer Web**.
-![](img/adw-loading-navigate-sql-dev.png)
+
+    <img src="img/adw-loading-navigate-sql-dev.png" width=250>
+
 
 5.  Enter your database admin username from the previous exercise and login to your ADW instance.
-![](img/adw-loading-sql-dev-logging-in.png)
+
+    <img src="img/adw-loading-sql-dev-logging-in.png" width=250>
 
 6. SQL Developer Web has an interface similar to the installed client.  Note where the Worksheet is and the Query Results.
 ![](img/adw-loading-sql-developer-web.png)
@@ -166,7 +164,7 @@ Go back to your ADW instance via the menu.
 - Authorization token created earlier
 
     Copy the pl/sql procedure below and fill in the username and password.  
-    ```
+    ```SQL
     begin  
     DBMS_CLOUD.create_credential (  
     credential_name => 'OBJ_STORE_CRED',  
@@ -176,10 +174,10 @@ Go back to your ADW instance via the menu.
     end;  
     /
     ```
-![](img/adw-loading-create-credential.png)
+    <img src="img/adw-loading-create-credential.png" width=350>
 
 8.  Press the green arrow to run the worksheet.  Once the correct information is entered, you should get a message that the ``PL/SQL procedure completed``
-![](img/adw-loading-sql-output.png)
+<img src="img/adw-loading-sql-output.png" width=350>
 
 9.  Your object store's credentials are stored in
 your ADW instance now.  
@@ -189,7 +187,7 @@ your ADW instance now.
 Before data is copied, the tables and objects need to be created in ADW.  In this lab you will create the target objects.
 
 1. Copy the sql script below to create the SALES and CUSTOMER table.
-````
+````SQL
 CREATE TABLE sales (
 prod_id NUMBER NOT NULL,
 cust_id NUMBER NOT NULL,
@@ -226,17 +224,19 @@ cust_valid VARCHAR2(1) );
 
 ````
 2. Paste it in your SQL Developer Web worksheet area overwriting any existing commands.
-![](img/adw-loading-sql-worksheet-channels-pre.png)
+![](img/adw-loading-sql-worksheet-tables.png)
 
 3.  Select the entire script and press the green play button.
-![](img/adw-loading-green-play.png)
+
+    <img src="img/adw-loading-green-play.png" width=50>
+
 
 4. Once the script has run review the output to ensure the table has been created successfully.  You should see the two tables created.
-![](img/adw-loading-sql-worksheet-channels-pre.png)
+![](img/adw-loading-sql-worksheet-tables.png)
 
 Now you have empty tables and staged data in the OCI Object store. To get the data from the object store to your ADB instance, you need to get some information about the object. To move the data we will be using the dbms_cloud.copy_data procedure.  The procedure takes information about the location of the data you staged in your object store.
 
- ````
+ ````SQL
     begin
     dbms_cloud.copy_data(
         table_name =>'<ENTER_TABLE_NAME>',
@@ -249,40 +249,39 @@ Now you have empty tables and staged data in the OCI Object store. To get the da
 ````
 
 5. Select **Object Storage->Object Storage** from the menu.  Select your bucket. 
-![](img/adw-loading-view-bucket.png)
 
-6.  In the objects section, locate your data file.  Click on the three dots on the right to **View Object Details**
-![](img/adw-loading-chan-dat.png)
+6.  In the objects section, locate your data file.  Click on the three dots on the right. 
+![](img/adw-loading-bucket-visibility-2.png)
 
-7. Copy the URL Path by pressing `<CTRL-C>`.  Copy the url to your notepad.
+7. Click **View Object Details**.  Copy the URL Path by pressing `<CTRL-C>`.  Copy the url to your notepad.
+![](img/adw-view-object-details.png)
+
+    <img src="img/adw-view-object-details-customers.png" width=250>
+
 
 8.  Repeat steps 6-8 for the 2nd table and return to your SQL Developer Workbench screen.  
 
 9.  Copy the dbms_cloud.copy_data code twice in your workbench window. Replace the table_name with each of your tables (CUSTOMERS and SALE) and the file_uri_list with the string you saved in notepad.  *Be sure to coy the correct file_uri_list to the correct table or you will receive an error*
 
-````
-begin
-    dbms_cloud.copy_data(
-        table_name =>'<ENTER_TABLE_NAME>',
-        credential_name =>'OBJ_STORE_CRED',
-        file_uri_list =>'https://swiftobjectstorage.<region name>.oraclecloud.com/v1/<tenant name>/tutorial_load_adwc/chan_v3.dat',
-        format => json_object('ignoremissingcolumns' value 'true', 'removequotes' value 'true')
-    );
-end;
-/
-````
-
-10. Select the commands and press the green play button.
+    ````SQL
+    begin
+        dbms_cloud.copy_data(
+            table_name =>'<ENTER_TABLE_NAME>',
+            credential_name =>'OBJ_STORE_CRED',
+            file_uri_list =>'https://swiftobjectstorage.<region name>.oraclecloud.com/v1/<tenant name>/tutorial_load_adwc/chan_v3.dat',
+            format => json_object('ignoremissingcolumns' value 'true', 'removequotes' value 'true')
+        );
+    end;
+    /
     ````
-    select * from CHANNELS;
-    ````
-    ![](img/adw-loading-select-from.png)
 
+10. Select both commands and press the green play button.
 
 
 11. In the Script Output, once you see the message `PL/SQL procedure successfully completed.`, Query the tables to see the rows that were inserted.  Success! Notice that the data has been copied from the object store to the tables in your ADW instance.
 
-    ![](img/adw-loading-select-from2.png)
+    ![](img/adw-sql-dev-copy-data.png)
+  
 
 This can be done for multiple tables providing an easy migration path from your existing databaset to Autonomous Database.
 
