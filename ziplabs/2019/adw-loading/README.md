@@ -48,14 +48,16 @@ Oracle Cloud Infrastructure offers two distinct storage class tiers.  Object Sto
 
 3.  Select **Create Bucket** to create a bucket to load your data in.  This will be your staging area.  Later in this lab you will move the data from this staging area to your ADW instance.
 For this lab, we'll use the `root` compartment.
-<img src="img/adw-loading-create-bucket-screen.png" width=340>
+
+    <img src="img/adw-loading-create-bucket-screen.png" width=340>
 
 
 4.  Enter the following information: 
     * **Bucket Name**:  `bucket-<city you were born in>-<your initials>`  (example: *bucket-london-kam*)
     * **Storage Tier**:  `Standard`
      * **Encryption**: `Encrypt using Oracle Managed Keys`
-     <img src="img/adw-loading-create-bucket.png" width=300>
+
+        <img src="img/adw-loading-create-bucket.png" width=300>
 
 
 5. Click **Create Bucket**.
