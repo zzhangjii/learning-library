@@ -63,7 +63,8 @@ For this lab, we'll use the `root` compartment.
 5. Click **Create Bucket**.
 
 6.  Click on the bucket name you just created.  
-<img src="img/adw-loading-buckets.png" width=300>
+
+    <img src="img/adw-loading-buckets.png" width=300>
  
 
 7. Review the screen. Note you have created an empty bucket with no objects in it and the visibility is set to private. 
@@ -72,12 +73,13 @@ For this lab, we'll use the `root` compartment.
 8.  Click [here](https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/adwc/OBE_Loading%20Your%20Data/files/datafiles_for_sh_tables.zip) to download the zip file with your objects.  Open up your file browser and extract the zip file.
 
 9.  Click **Upload Object** button to begin selecting the data files to upload to the bucket.  Click on **select files** to choose your extracted data files.
-<img src="img/adw-loading-select-files.png" width=300>
+
+    <img src="img/adw-loading-select-files.png" width=300>
 
 
-10.  **Select the two data files** `customers.dat` and `sales.dat` and click **Open**.  Once the files are finished loading, click **Upload Objects** to load.
-![](img/adw-loading-load-bucket-2-new.png)
+10.  **Select the two data files** `customers.dat` and `sales.dat` and click **Open**.  Once the files are finished loading, click **Upload Objects** to load. 
 
+    ![](img/adw-loading-load-bucket-2-new.png)
 
 11.  Once complete, verify *both* *.dat files have a status of *`Finished`* and click **Close**.
 
