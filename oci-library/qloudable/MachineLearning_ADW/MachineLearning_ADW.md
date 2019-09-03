@@ -1,4 +1,4 @@
-# Using Machine Learning in ADW.
+# Using Machine Learning in ADW
 
 ## Table of Contents
 
@@ -7,14 +7,6 @@
 [Pre-Requisites](#pre-requisites)
 
 [Sign in to OCI Console](#sign-in-to-your-oci-console)
-
-[Download the Notebook from Object Storage](#download-the-notebook-from-object-storage)
-
-[Download and Import the Machine Learning Notebook](#download-and-import-the-machine-learning-notebook)
-
-[Download and Import the Machine Learning Notebook](#download-and-import-the-machine-learning-notebook)
-
-[Sign in to your OCI Console](#sign-in-to-your-oci-console)
 
 [Download the Notebook from Object Storage](#download-the-notebook-from-object-storage)
 
@@ -41,11 +33,6 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 - Mac OS Users should use ctrl+C / ctrl+V to copy and paste inside the OCI Console
 
 - Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
-
-**Cloud Tenant Name**
-**User Name**
-**Password**
-**Compartment Name (Provided Later)**
 
 **Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
 
@@ -82,7 +69,6 @@ Sign in using your tenant name, user name and password. Use the login option und
 2. Click on the Clipboard icon and select **Paste to remote session**.
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_CLIP.png" alt="Qloudable clipboard icon">
-   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_CLIP.png" alt="Qloudable clipboard icon">
 
 3. Click into the pop up window and press Ctrl-V.
 
@@ -95,22 +81,6 @@ Sign in using your tenant name, user name and password. Use the login option und
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_OBJ_000.png" alt="image-alt-text">
 
 2. Select your compartment from Scope and then click on your bucket.
-
-   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_OBJ_001.png" alt="image-alt-text">
-
-3. Select the file <code>Pick_A_Good_Wine_for_Less_Than_20_dollars.json</code> and click the elipses to download the file.
-
-   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_download.png" alt="image-alt-text">
-
-6. Note the location where the file was downloaded.
-
-## Download and Import the Machine Learning Notebook
-
-1. Select **Object Storage** from the menu, then select **Object Storage** from the right menu.
-
-   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_OBJ_000.png" alt="image-alt-text">
-
-2. Under Scope, select the compartment assigned to you and then click on the bucket name assigned to you.
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_OBJ_001.png" alt="image-alt-text">
 
@@ -140,7 +110,7 @@ Next, you'll import a Zeppelin Notebook into the Oracle Machine Learning instanc
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_USER_01.png" alt="image-alt-text">
 
-5. Enter "admin@oracle.com" in the E-mail Address field and click Save
+5. Enter "admin@oracle.com" in the E-mail Address field, and enter "AAbbcc12345b" in both password fields and click **Save**.
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_USER_02.png" alt="image-alt-text">
 
@@ -152,7 +122,7 @@ Next, you'll import a Zeppelin Notebook into the Oracle Machine Learning instanc
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_OPEN_ML.png" alt="image-alt-text">
 
-8. Sign in with your OCITEST user.
+8. Sign in with your OCITEST user using the password "AAbbcc123456".
 
 9. Click on **Notebooks**.
 
@@ -170,63 +140,23 @@ Next, you'll import a Zeppelin Notebook into the Oracle Machine Learning instanc
 
     <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_NOTEBOOK_INTER_BIND.png" alt="image-alt-text">
 
-3. Run each paragraph of the notebook by clicking on the run icon.
+3. Select <code>your_database_name</code>_medium and click **Save**.
 
-    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_NOTEBOOK_RUN.png" alt="image-alt-text">
-
-4. Some paragraphs have graphs. If you find the graph is empty or missing, follow the instructions in the comment above the SQL command:
-
-    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_NOTEBOOK_RUN2.png" alt="image-alt-text">
-
-5. Experiment with the Keys, Groups and Values to change how you graph the data. For example, click **settings**, and remove COUNTRY and POINTS by clicking the **x** in each tag. Then drag POINTS to Keys, drag PRICE to Groups to see the distribution of price over the wine points ratings.
-
-    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_NOTEBOOK_RUN3.png" alt="image-alt-text">
-
-6. Run the remaining paragraphs to determine what is the right wine to bring to your party!
-
-7. When you have completed the Notebook, you can explore other example Notebooks by clicking **Home** from the menu, and then **Examples**.
-
-## Delete the resources
-
-**Delete Autonomous Data Warehouse**
-
-1. Navigate to Autonomous Data Warehouse menu, hover over the action icon(Three dots) and click **Terminate**
-
-   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Autonomous_Data_Warehouse/img/ADW_018.PNG" alt="image-alt-text">
-
-   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_NOTEBOOK.png" alt="image-alt-text">
-
-
-10. Click **Import** and locate the file <code>Pick_a_Good_Wine_for_less_than_20_dollars.json</code> that you downloaded earlier.
-
-## Run the Notebook
-
-1. From the Notebooks menu, click the notebook you imported to run it.
-
-   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_OPEN_NOTEBOOK.png" alt="image-alt-text">
-
-2. Click the gear icon to open Interpreter Binding.
-
-   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_NOTEBOOK_INTER_BIND.png" alt="image-alt-text">
-
-3. Select **\<your database name\>_medium** (if not selected) and click **Save**.
-
-   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_NOTEBOOK_SELECT_BIND.png" alt="image-alt-text">
-
+    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_NOTEBOOK_SELECT_BIND.png" alt="image-alt-text">
 
 4. Run each paragraph of the notebook by clicking on the run icon.
 
-   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_NOTEBOOK_RUN.png" alt="image-alt-text">
+    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_NOTEBOOK_RUN.png" alt="image-alt-text">
 
 5. Some paragraphs have graphs. If you find the graph is empty or missing, follow the instructions in the comment above the SQL command:
 
-   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_NOTEBOOK_RUN2.png" alt="image-alt-text">
+    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_NOTEBOOK_RUN2.png" alt="image-alt-text">
 
 6. Experiment with the Keys, Groups and Values to change how you graph the data. For example, click **settings**, and remove COUNTRY and POINTS by clicking the **x** in each tag. Then drag POINTS to Keys, drag PRICE to Groups to see the distribution of price over the wine points ratings.
 
-   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_NOTEBOOK_RUN3.png" alt="image-alt-text">
+    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_NOTEBOOK_RUN3.png" alt="image-alt-text">
 
-7. Run the remaining paragraphs to determine what is the right wine to bring to your party!
+7. Run the remaining paragraphs to determine which wine to bring to your party!
 
 8. When you have completed the Notebook, you can explore other example Notebooks by clicking **Home** from the menu, and then **Examples**.
 
