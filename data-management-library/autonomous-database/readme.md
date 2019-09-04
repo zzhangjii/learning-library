@@ -1,11 +1,9 @@
-Welcome to the Autonomous Database Github
+# Welcome to the Autonomous Database Labs #
 
-## Ziplabs ##
-Short 15-30 minute labs designed to support OOW 2019.
+[Oracle OpenWorld Ziplabs - 2019](ziplabs)
 
-Click [here](certification/Readme.md) to launch the lab
+[ADB Certification Labs](certification)
 
-## Certification ##
-Need hands-experience to get certified to implement Oracle's Autonomous Database?  Check out the ADB Certification labs. 
+[ADW Journey Labs]()
 
-Click [here](ziplabs/Readme.md) to launch the lab
+[ATP Dedicated Workshop]()
