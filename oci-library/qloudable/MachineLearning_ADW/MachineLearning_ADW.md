@@ -6,7 +6,7 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Sign in to OCI Console](#sign-in-to-your-oci-console)
+[Sign in to OCI Console](#sign-in-to-oci-console)
 
 [Download the Notebook from Object Storage](#download-the-notebook-from-object-storage)
 
@@ -49,7 +49,7 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 5. Connecting to a compute instance: https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/accessinginstance.htm
 
 
-## Sign in to your OCI Console
+## Sign in to OCI Console
 
 * **Tenant Name:** {{Cloud Tenant}}
 * **User Name:** {{User Name}}
@@ -102,33 +102,37 @@ Next, you'll import a Zeppelin Notebook into the Oracle Machine Learning instanc
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_Service_Console.png" alt="image-alt-text">
 
-3. Click **Adminstration** and then click **Manage Oracle ML Users**
+3. Note: you may have to disable the pop-up blocker. Click on the Popup-blocker icon and select **Allow all popups**.
+
+   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_POPUPS.png" alt="image-alt-text">
+
+4. Click **Adminstration** and then click **Manage Oracle ML Users**
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_OPEN_ADMIN.png" alt="image-alt-text">
 
-4. Click **Show All Users**, then click your OCITEST user
+5. Click **Show All Users**, then click your OCITEST user
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_USER_01.png" alt="image-alt-text">
 
-5. Enter "admin@oracle.com" in the E-mail Address field, and enter "AAbbcc12345b" in both password fields and click **Save**.
+6. Enter <code>admin@oracle.com</code> in the E-mail Address field, and enter <code>AAbbcc123456</code> in both password fields and click **Save**.
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_USER_02.png" alt="image-alt-text">
 
-6. Your OCITEST user is now added as an Oracle ML User.
+7. Your OCITEST user is now added as an Oracle ML User.
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_USER_03.png" alt="image-alt-text">
 
-7. Click **Development** then click **Oracle ML SQL Notebooks**
+8. Click **Development** then click **Oracle ML SQL Notebooks**
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_OPEN_ML.png" alt="image-alt-text">
 
-8. Sign in with your OCITEST user using the password "AAbbcc123456".
+9. Sign in with your OCITEST user using the password <code>AAbbcc123456</code>.
 
-9. Click on **Notebooks**.
+10. Click on **Notebooks**.
+    
+    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_NOTEBOOK.png" alt="image-alt-text">
 
-   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_NOTEBOOK.png" alt="image-alt-text">
-
-10. Click **Import** and locate the file <code>Pick_a_Good_Wine_for_less_than_20_dollars.json</code> that you downloaded earlier.
+11. Click **Import** and locate the file <code>Pick_a_Good_Wine_for_less_than_20_dollars.json</code> that you downloaded earlier.
 
 ## Run the Notebook
 
@@ -156,7 +160,7 @@ Next, you'll import a Zeppelin Notebook into the Oracle Machine Learning instanc
 
     <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_NOTEBOOK_RUN3.png" alt="image-alt-text">
 
-7. Run the remaining paragraphs to determine which wine to bring to your party!
+7. Run the remaining paragraphs to choose a wine to bring to your party!
 
 8. When you have completed the Notebook, you can explore other example Notebooks by clicking **Home** from the menu, and then **Examples**.
 
