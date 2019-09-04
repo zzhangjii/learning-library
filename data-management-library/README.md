@@ -4,9 +4,25 @@ The Oracle Data Management Library is the central location for workshops related
 
 ## **Autonomous Database Workshops**
 
-### ADW
+### OOW Drop-in Zip Labs ###
+Drop-In labs are short (15-20 mins), self-paced, hands-on labs for the Oracle Cloud. Choose from several labs to explore Autonomous Database using Oracle Trial accounts.
 
-Workshop goals:
+**[Click here to launch the lab series](ziplabs/Readme.md)**
+
+---
+
+### Certification Labs ###
+
+An Oracle Autonomous Database 2019 Specialist has demonstrated the knowledge required to provision, manage, and migrate to Autonomous Transaction Database (ATP) and Autonomous Data Warehouse (ADW).  It is designed for database administrators, monitors, and Dev Ops admins who want to validate their knowledge and skills. To learn more about this certification click here.  The Database PM team partnered with OSPA to create a series of labs to support the certification.
+
+**[Click here to launch the lab series](certification/Readme.md)**
+
+---
+
+
+### ADW Workshop ###
+
+#### Workshop goals: ####
 
 - Get comfortable with Oracle's public cloud services
 - Provision a new ADW instance
@@ -21,9 +37,11 @@ Workshop goals:
 
  **[Click here to launch the lab](https://github.com/oracle/learning-library/blob/master/data-management-library/autonomous-data-warehouse/journey4-adwc/README.md)**
 
- ### ATP - Dedicated
+ ---
 
-Workshop Goals:
+ ### ATP - Dedicated Workshop
+
+#### Workshop goals: ####
 
 - Prepare your private network in the Oracle Cloud Infrastructure
 - Provision Exadata Infrastructure in a private OCI network
@@ -42,6 +60,8 @@ Workshop Goals:
 - Setup live migration of business critical databases using Oracle Goldengate replication
 
  **[Click here to launch the lab](https://github.com/oracle/learning-library/blob/master/data-management-library/autonomous-transaction-processing/dedicated/README.md)**
+ 
+ ---
 
  ### Security
 
