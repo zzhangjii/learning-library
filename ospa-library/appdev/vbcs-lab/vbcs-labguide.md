@@ -46,25 +46,15 @@ these lab exercises.
     Becoming familiar with the expected flow will enhance your learning
     experience.
 
-  - Ask before you do. If you have any questions, please ask the
-    instructor before you march down a path that may lead to wasting
-    your time.
-
   - Follow the steps as shown in the Lab Guide. This is a live
     environment. If you want to do something that is not in the labs,
-    ask the lab instructor first. In particular, do not create, delete,
-    or alter any cloud objects without asking first.
+    it will not be supported by this documentation. We suggest that you do not create, delete, or alter any cloud objects without completing the lab as written first.
 
-  - There is no prize for finishing first; there is no penalty for
-    finishing last. The goal is to gain a firm understanding of Oracle
-    Visual Builder.
-
-  - Ask questions freely. The only dumb questions are those that are not
-    asked.
+  - There is no prize for finishing quickly. The goal is to gain a firm understanding of Oracle Visual Builder.
 
 # Labs
 
-In these labs you will use Visual Builder to help Mama Maggy’s (using data supporting the Mama Maggy use case, but, other data could be substituted) by adding product ordering and order tracking solutions.
+In these labs you will use Visual Builder to help a fictional Pizza company named Mama Maggy’s (using data supporting the Mama Maggy use case, but, other data could be substituted) by adding product ordering and order tracking solutions.
 
 Today when a manager or franchisee needs to order supplies everything is accomplished with a series of phone calls between the manager/franchisee and Mama Maggy headquarters. The only status checks available are by again calling headquarters. 
 1. Manager/franchisee determines need.
@@ -86,17 +76,18 @@ In the interest of time this lab focuses on creating apps to help managers/franc
 
 The lab is presented in four parts: Lab 1 – Introduction and Setup, Lab
 2 - Spreadsheet-based Business Objects, Lab 3 – Web and Mobile Apps, Lab
-4 – Data from Service. There are two additional “extra” labs available
-for anyone who happens to finish early. No prior experience with Visual
+4 – Data from Service. There are three additional “extra” labs available for those who would like more practice. 
+
+No prior experience with Visual
 Builder is assumed or necessary.
 
-**Prerequisite**: Before starting these labs, you should have an OCI
-login and "ServerDeveloper" or "ServerAdminstrator" access to our VBCS instance **"OSPA-VBCS-lab"**  (if you are doing this lab NOT with an OSPA Class; most formal classes will share an existing VBCS instance and your permissions will already be correct). 
+**Prerequisite**: Before starting these labs, you should have a login id to an OCI tenancy that is provisioned for VBCS and your
+login should have "ServerDeveloper" or "ServerAdminstrator" access  (if you are doing this lab as part of an OSPA Class; the facilitator will share an existing VBCS instance and your permissions will already be correct). 
 
-If you do not have a VBCS instance you may create one using the instructions in [Appendix A: Create VBCS Instance](#appendix-a-create-vbcs-instance)). 
+If you do not have a VBCS instance you may create one using the instructions in [Appendix A: Create VBCS Instance](#appendix-a-create-vbcs-instance). 
 
 **Data Files**:
-You will need four data files, three will be used in Lab 3 and one will be used in Lab 4. All four files are available in a single .zip file named [vbcsfiles.zip](https://github.com/oracle/learning-library/blob/master/ospa-library/appdev/application-development-lab/files/vbcsfiles.zip) on GitHub; download the file and expand it to find the following four files (keep them handy they will be used later in this lab):
+You will need four data files, three will be used in Lab 2 and one will be used in Lab 4. All four files are available in a single .zip file named [vbcsfiles.zip](https://github.com/oracle/learning-library/blob/master/ospa-library/appdev/vbcs-lab/files/vbcsfiles.zip) on GitHub; download the file and expand it to find the following four files (keep them handy they will be used later in this lab):
 - Lab 2 (data for VBCS Business Objects)
   - Product.csv
   - ProductOrder.csv
@@ -115,22 +106,23 @@ environment may not exactly match with the lab screenshots. Screenshots
 are provided solely for illustrative purposes to help guide you through
 the user interface.
 
-**Disclaimer:**  This lab is designed ONLY for large learning groups and assumes the groups are sharing the Oracle Cloud environment to execute this lab.
+**Disclaimer:**  This lab was designed for large learning groups and assumes the groups are sharing the Oracle Cloud environment to execute this lab. You may need to make adjustments to run this lab individually for instance you may need to:
+- Perform steps in [Appendix A: Create VBCS Instance](#appendix-a-create-vbcs-instance) to create a test environment
+- Perform steps in [Appendix C: Build Mama Maggy Data Application](#appendix-c-build-mama-maggy-data-application) before attempting Lab 4
  
 **Options**:
-- Who Should Complete This Lab:  All Participants (preferred)
-- Who Should Complete This Lab:  1 Participant for group
+- Working with a colleague may make these labs easier
+- Having two monitors available will make working through the labs easier
 
 # Lab 1: Introduction, setup, and demo
 
-In this lab you will make sure you can access the VBCS instance for your
-classroom and supporting lab files.
+In this lab you will make sure you can access the VBCS instance and supporting lab files.
 
-First, if you are part of an organized class, try using the URL from the Participant Guide (facilitator will also post on Slack); if that succeeds please jump to [Create Application](#create-application) (just before #6)
+First, if you are part of an organized class, try using the URL from the Participant Guide; if that succeeds please jump to [Create Application](#create-application) (just before #6)
 
 ### ***SKIP TO [Create Application](#create-application) UNLESS DOING THIS LAB OUTSIDE OF A FORMAL CLASS*** 
 
-1.  Log into class tenancy using cloud.oracle.com
+1.  Log into tenancy using cloud.oracle.com
 
 
     ![](./media/cloud-oracle-com-tenancy.png)
@@ -219,14 +211,12 @@ Dashboard”)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.3.3 – Service: Oracle Visual Builder Cloud Service<br/> 
 
-## ** For 2019 Class Of SE - All participants will share the "OSPA-Class-Of-SE" instance **
-4.  A VBCS instance has been created and designated for your class to
-    share **"OSPA-Class-Of-SE"** please create your VBCS application in the OSPA-Class-Of-SE instance unless your facilitator says differently (your instance name may be different than the one shown; the facilitator will let you know.) 
-    (see Appendix A for instructions on creating a VBCS instance)
+4.  Select the VBCS instance you will be using from the list presented (if you followed the instructions in Appendix A there will only be one instance in the list) 
+    (see [Appendix A: Create VBCS Instance](#appendix-a-create-vbcs-instance) for instructions on creating a VBCS instance)
 
     ![](./media/vbcs_instance_list.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.4 – VBCS Instances<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1.4 – VBCS Instance List<br/>
 
 #### Open VBCS Home Page  
 
@@ -259,14 +249,8 @@ Dashboard”)
 
 8.  When the “Create Application” page appears, provide a name for the
     application; you may call your applications anything you wish.
-    
-    ### ** Note you must be working within VBCS instance "OSPA-Class-Of-SE" for all labs to work properly **
 
     If you are sharing your lab environment with a group of people you might find it convenient to follow a naming convention to make it easier for you to find your work and for the facilitators to help you.
-    
-    Combine your name or initials with three characters representing your location to use as an application name or to add as a prefix to the names of all applications you create. Visual Builder's list of applications may be sorted and filtered easily.
-
-    (The facilitator will share a three-character code for you to use in your location.)
       
     Be sure the “Empty Application” template is selected and click
     “Finish” to continue.
@@ -297,7 +281,7 @@ files. These files get copied into an Oracle Database (under the covers
 of VBCS) and are actually accessed using the same type of RESTful APIs
 as those used for service connections (more on this in Lab 4).
 
- NOTE: For this lab you will need three data files (Product.csv, ProductOrder.csv, and ProductOrderLine.csv), if you have not already downloaded them they may be obtained from GitHub as a .zip file named [vbcsfiles.zip](https://github.com/oracle/learning-library/blob/master/ospa-library/appdev/application-development-lab/files/vbcsfiles.zip); download the file and expand it to find the following three files (keep them handy they will be used later in this lab):
+ NOTE: For this lab you will need three data files (Product.csv, ProductOrder.csv, and ProductOrderLine.csv), if you have not already downloaded them they may be obtained from GitHub as a .zip file named [vbcsfiles.zip](https://github.com/oracle/learning-library/blob/master/ospa-library/appdev/vbcs-lab/files/vbcsfiles.zip); download the file and expand it to find the following three files (keep them handy they will be used later in this lab):
 - Product.csv&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Products available for managers/franchisees to order
 - ProductOrder.csv&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Existing order information: date of order, status, and associate who made the order.
 - ProductOrderLine.csv&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Order lines showing the products requested in each of the current orders, 
@@ -607,7 +591,7 @@ Click the “Import” button to upload the selected file
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.17.3 – Confirm Import
 
-18. You should see success message like the following; if not, try again
+18. You should see a success message like the following; if not, try again
     or ask the instructor for help; click “OK” button when complete
 
 ![](./media/image58.png)
@@ -676,7 +660,7 @@ This concludes Lab 2.
 
 # Lab 3: Web and Mobile Apps
 
-Visual Builder provides an easy-to-use WSYIWG (What You See Is What You
+Visual Builder provides an easy-to-use WYSIWYG (What You See Is What You
 Get) graphical interface for “painting” applications and providing
 values declaratively allowing people who are not professional developers
 to create applications. Professional developers may use Visual Builder
@@ -1344,9 +1328,9 @@ access data for Mama Maggy stores and Mama Maggy associates. You will
 use these “Service Connections” to provide data services to your
 applications. 
 
- ### ** Note you must be working within VBCS instance "OSPA-Class-Of-SE" for this lab to work properly **
+ ### ** Note you must be working within the same VBCS instance as the "Mama Maggy" application (created in [Appendix C: Build Mama Maggy Data Application](#appendix-c-build-mama-maggy-data-application)) for this lab to work properly **
 
-Get the correct connection URL values for your class from the ["AppDev_Endpoints.txt" file in GitHub](https://github.com/oracle/learning-library/blob/master/ospa-library/appdev/application-development-lab/files/AppDev_Endpoints.txt) and copy them to your local machine to make the lab a little quicker to complete<br/> 
+Get the correct connection URL values for your class from the ["AppDev_Endpoints.txt" file in GitHub](https://github.com/oracle/learning-library/blob/master/ospa-library/appdev/vbcs-lab/files/AppDev_Endpoints.txt) and copy them to your local machine to make the lab a little quicker to complete<br/> 
 (please
 ask the instructor if you have questions here).
 
@@ -1658,8 +1642,7 @@ You may save today���s work using Visual Builder’s “export” capabili
 # Extra Lab 5: Add Data Using REST Call
 
 The “Extra” labs are intended to “flex” the mind-muscles of those who
-have finished the other labs early so, they are short on explanation and
-there are no example solutions provided.
+have finished the other labs and would like more practice. They are short on explanation and there are no example solutions provided.
 
 In this lab you will work more with RESTful API calls.
 
@@ -1688,8 +1671,7 @@ This concludes Extra Lab 5.
 # Extra Lab 6: Review and edit JavaScript code “under the covers” of VBCS
 
 The “Extra” labs are intended to “flex” the mind-muscles of those who
-have finished the other labs early so, they are short on explanation and
-there are no example solutions provided.
+have finished the other labs and would like more practice. They are short on explanation and there are no example solutions provided.
 
 In this lab you will work actually “code” (assuming you know something
 about JET or at least HTML5, JavaScript, and CSS).
@@ -1726,8 +1708,7 @@ This concludes Extra Lab 6.
 # Extra Lab 7: Publish Mobile App as PWA
 
 The “Extra” labs are intended to “flex” the mind-muscles of those who
-have finished the other labs early so, they are short on explanation and
-there are no example solutions provided.
+have finished the other labs and would like more practice. They are short on explanation and there are no example solutions provided.
 
 For a little "BONUS" activity; try "Publishing" your mobile application as a Progressive Web App; here's a video that will show you how: https://blogs.oracle.com/vbcs/creating-progressive-web-apps-with-oracle-visual-builder
 
@@ -1747,8 +1728,7 @@ For a little "BONUS" activity; try "Publishing" your mobile application as a Pro
 
 # Appendix A: Create VBCS Instance
 
-Creating a VBCS instance is not part of the current Labs; learners will
-be sharing a lab with others that has already been created.
+You may be taking part in an organized OSPA course where a VBCS instance has already been created.
 
 However, it is possible you may need to create a VBCS instance in order
 to learn more about VBCS or to create a customer demo. If you are
@@ -2039,7 +2019,7 @@ In this lab you will create:
   - An “Associate” Business Object containing fields and data for Mama
     Maggy associates
 
-  - You will need two data files stored in a single .zip file named [setupfiles.zip](https://github.com/oracle/learning-library/blob/master/ospa-library/appdev/application-development-lab/files/setupfiles.zip) on GitHub; download the file and expand it to find the following two files (keep them handy they will be used later to load data):
+  - You will need two data files stored in a single .zip file named [setupfiles.zip](https://github.com/oracle/learning-library/blob/master/ospa-library/appdev/vbcs-lab/files/setupfiles.zip) on GitHub; download the file and expand it to find the following two files (keep them handy they will be used later to load data):
       - Store.csv
       - Associate.csv
       
