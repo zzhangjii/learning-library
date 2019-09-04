@@ -1,11 +1,19 @@
 Welcome to the Autonomous Database Github
 
-## Ziplabs ##
-Short 15-30 minute labs designed to support OOW 2019.
+## Oracle OpenWorld Ziplabs ##
 
-Click [here](certification/Readme.md) to launch the lab
+* [Access an Oracle Cloud Platform Trial Account](2019/new-account)
+* [Provisioning Autonomous Data Warehouse](2019/adw-provisioning)
+* [Loading Data into the Autonomous Database](2019/adw-loading)
+* [Getting Started With Oracle Machine Learning Notebooks](adw-machine-learning)
+* [Provisioning Autonomous Transaction Processing](2019/atp-provisioning)
+* [Using Performance Hub to Analyze Resource Demand from Queries](2019/atp-performance-hub)
+* [Running APEX on ATP 1] - Comning soon
+* [Running APEX on ATP 2] - Comning soon
+* [Create a Virtual Machine Instance Using Oracle Cloud Infrastructure Compute](2019/oci-vm)
 
-## Certification ##
+
+## ADB Certification Labs ##
 Need hands-experience to get certified to implement Oracle's Autonomous Database?  Check out the ADB Certification labs. 
 
-Click [here](ziplabs/Readme.md) to launch the lab
+Click [here](certification/Readme.md) to launch the lab series
