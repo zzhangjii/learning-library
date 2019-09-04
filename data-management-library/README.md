@@ -1,45 +1,56 @@
 # Oracle Data Management Library
 
-The Oracle Autonomous Workshop Catalog is the central location for workshops related to Autonomous Database, including ATP and ADW.  All labs are designed to be modular in nature. To get started, choose one (or more!) of the defined learning paths below:
+The Oracle Data Management Library is the central location for workshops related to all things Database, Big Data, Data Integration, Machine Learning and Security.  Across multiple deployment options:  on-premises and in the cloud.  To get started, choose one (or more!) of the defined learning paths below:
 
-## **Autonomous Data Warehouse Learning Plan**
+## **Autonomous Database Workshops**
 
-### Lab 1: Getting Started and Provisioning a New Autonomous Data Warehouse
+### ADW
 
-  Key Objectives:
+Workshop goals:
 
-  - logging into OCI and console
-  - provision ADW
-  - Connect using Oracle SQL Developer.
+- Get comfortable with Oracle's public cloud services
+- Provision a new ADW instance
+- Run sample queries against the sample data sets
+- Load data from the object store
+- Query external data from the object store
+- Manage and Monitor an ADW instance
+- Scale an ADW instance
+- Use Oracle Machine Learning SQL notebooks
+- Use Oracle Data Visualization Desktop (DVD) with ADW
+- Use Oracle Data Integration Platform Cloud (DIPC) with ADW
 
-  **[Click here to launch the lab](https://oracle.github.io/learning-library/workshops/journey4-adwc/?page=LabGuide1.md)**
+ **[Click here to launch the lab](https://github.com/oracle/learning-library/blob/master/data-management-library/autonomous-data-warehouse/journey4-adwc/README.md)**
 
-### Lab 2: Working with Data Warehouse Services and the Free Sample Data Sets
+ ### ATP - Dedicated
 
-  Key Objectives:
+Workshop Goals:
 
-  - different levels of ADW service
-  - sample data setsStar Schema Benchmark (SSB) & Sales History (SH)
-  - How service level affect performance & concurrency
+- Prepare your private network in the Oracle Cloud Infrastructure
+- Provision Exadata Infrastructure in a private OCI network
+- Provision an Autonomous Container Database
+- Provision databases on your dedicated Autonomous Infrastructure
+- Setup VPN Connectivity to your Autonomous Exadata Infrastructure
+- Configure a development system for use with your dedicated autonomous database
+- Build and deploy Python application stacks on dedicated autonomous infrastructure
+- Build and deploy node.js application stacks on dedicated autonomous infrastructure
+- Build and deploy Java application stacks on dedicated autonomous infrastructure
+- Use OCI CLI commands to work with your Autonomous databases
+- Invoke and use the sqldevweb console
+- Build apex applications on dedicated autonomous database
+- Manage database & performance using SQL Developer Web and Performance Hub
+- Migrate an on-prem application schema using Data Pump
+- Setup live migration of business critical databases using Oracle Goldengate replication
 
-  **[Click here to launch the lab](https://oracle.github.io/learning-library/workshops/journey4-adwc/?page=LabGuide2.md)**
+ **[Click here to launch the lab](https://github.com/oracle/learning-library/blob/master/data-management-library/autonomous-transaction-processing/dedicated/README.md)**
+
+ ### Security
+
+Workshop Goals:
+
+- Coming soon
 
 
-## **Autonomous Transaction Processing Learning Plan**
-
-### Lab 1: Using Node.js with ATP
-
-  Key Objectives:
-
-  - Learn how to build a linux node.js application server and connect it to an Oracle ATP database service
-
-  **[Click here to launch the lab](https://cloudsolutionhubs.github.io/autonomous-transaction-processing/workshops/autonomous-transaction-processing/LabGuide500Configurenode.jsAppWithATP.md)**
 
 
-### Lab 2: Using Java with ATP
 
-  Key Objectives:
 
-  - Learn how to build a linux Java application server and connect it to an Oracle ATP database service
-
-  **[Click here to launch the lab](https://cloudsolutionhubs.github.io/autonomous-transaction-processing/workshops/autonomous-transaction-processing/LabGuide600ConfigureJavaAppWithATP.md)**
