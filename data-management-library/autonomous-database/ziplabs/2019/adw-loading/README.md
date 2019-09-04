@@ -2,7 +2,7 @@
 layout: ziplab
 description: Learn how to load data from an Oracle Object Store into the Oracle Autonomous Data Warehouse.
 tags: Oracle Cloud, Autonomous Data Warehouse, ADW, Oracle Cloud Infrastructure, OCI, Object Store, Data Load
-permalink: /ziplabs/2019/adw-loading/index.html
+permalink: /data-management-library/autonomous-database/ziplabs/2019/adw-loading/index.html
 ---
 # Loading Data into the Autonomous Database #
 
