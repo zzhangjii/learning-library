@@ -1,6 +1,6 @@
 <table class="tbl-heading"><tr><td class="td-logo">![](images/obe_tag.png)
 
-September 21, 2018
+<!--September 21, 2018-->
 </td>
 <td class="td-banner">
 # Lab 2: Working with Data Warehouse Services and the free Sample Data Sets
@@ -13,16 +13,16 @@ In this lab you will explore the provided sample data sets and learn more about 
 
 Autonomous Data Warehouse  provides three database services that you can choose when connecting to your database. These are named as HIGH, MEDIUM, and LOW services and provide different levels of performance and concurrency.
 <blockquote>
-The <strong>HIGH</strong> database service provides the maximum amount of CPU resources for a query, however this also means the number of concurrent queries you can run in this service will not be as much as the other services. The number of concurrent SQL statements that can be run in this service is 3, this number is independent of the number of CPUs in your database.
+The <strong>HIGH</strong> database service provides the maximum amount of CPU resources for a query; however this also means the number of concurrent queries you can run in this service will not be as much as the other services. The number of concurrent SQL statements that can be run in this service is 3; this number is independent of the number of CPUs in your database.
 <br><br>
-The <strong>MEDIUM</strong> database service provides multiple compute and IO resources for a query. This service provides more concurrency compared to the HIGH database service. The number of concurrent SQL statements that can be run in this service depends on the number of CPUs in your database and scales linearly with the number of CPUs.
+The <strong>MEDIUM</strong> database service provides multiple compute and IO resources for a query. This service provides more concurrency compared to the HIGH database service. The number of concurrent SQL statements that can be run in this service depends on the number of CPUs in your database, and scales linearly with the number of CPUs.
 <br><br>
-The <strong>LOW</strong> database service provides the least amount of resources for a query, and any number of concurrent queries you can run in this service.
+The <strong>LOW</strong> database service provides the least amount of resources for a query. You can run any number of concurrent queries in this service.
 <br>
 </blockquote>
 As a user you need to pick the database service based on your performance and concurrency requirements.
 
-The lab will use a HIGH database service to understand the performance and will demo queries on sample data sets provided out of the box with ADW. ADW provides the Oracle Sales History sample schema and the Star Schema Benchmark (SSB) data set, these data sets are in the SH and SSB schemas respectively.
+This lab will use the HIGH database service to focus on performance. The lab will demo queries on sample data sets provided out of the box with ADW. ADW provides the Oracle Sales History sample schema and the Star Schema Benchmark (SSB) data set; these data sets are in the SH and SSB schemas respectively.
 
 You will run a basic query on the SSB data set which is a 1TB data set with one fact table with around 6 billion rows, and several dimension tables.
 
@@ -38,12 +38,12 @@ To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/iss
 
 -   The following lab requires an Oracle Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
 
--   Oracle SQL Developer (see Lab 1 for more specifics on the version of SQL Developer and how to install and configure it).
+-   Oracle SQL Developer (see [Lab 1](LabGuide1.md) for more specifics on the version of SQL Developer and how to install and configure it).
 
 
 #### **STEP 1: Open up SQL Developer and connect to the admin_high database connection you previously created**
 
--   You can do this via expanding the list of connections and double-clicking on the admin_high connection.
+-   Expand the list of connections and double-click on the admin_high connection.
 
     ![](images/200/snap0014314.jpg)
 
