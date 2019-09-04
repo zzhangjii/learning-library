@@ -7,7 +7,7 @@ The Oracle Data Management Library is the central location for workshops related
 ### OOW Drop-in Zip Labs ###
 Drop-In labs are short (15-20 mins), self-paced, hands-on labs for the Oracle Cloud. Choose from several labs to explore Autonomous Database using Oracle Trial accounts.
 
-**[Click here to launch the lab series](ziplabs/Readme.md)**
+**[Click here to launch the lab series](autonomous-database/ziplabs/Readme.md)**
 
 ---
 
@@ -15,7 +15,7 @@ Drop-In labs are short (15-20 mins), self-paced, hands-on labs for the Oracle Cl
 
 An Oracle Autonomous Database 2019 Specialist has demonstrated the knowledge required to provision, manage, and migrate to Autonomous Transaction Database (ATP) and Autonomous Data Warehouse (ADW).  It is designed for database administrators, monitors, and Dev Ops admins who want to validate their knowledge and skills. To learn more about this certification click [here](https://education.oracle.com/oracle-autonomous-database-cloud-2019-certified-specialist/trackp_OADB19).  The Database PM team partnered with OSPA to create a series of labs to support the certification.
 
-**[Click here to launch the lab series](certification/Readme.md)**
+**[Click here to launch the lab series](autonomous-database/certification/Readme.md)**
 
 ---
 
@@ -35,7 +35,7 @@ An Oracle Autonomous Database 2019 Specialist has demonstrated the knowledge req
 - Use Oracle Data Visualization Desktop (DVD) with ADW
 - Use Oracle Data Integration Platform Cloud (DIPC) with ADW
 
- **[Click here to launch the lab](https://github.com/oracle/learning-library/blob/master/data-management-library/autonomous-data-warehouse/journey4-adwc/README.md)**
+ **[Click here to launch the lab](autonomous-data-warehouse/journey4-adwc/README.md)**
 
  ---
 
@@ -59,7 +59,7 @@ An Oracle Autonomous Database 2019 Specialist has demonstrated the knowledge req
 - Migrate an on-prem application schema using Data Pump
 - Setup live migration of business critical databases using Oracle Goldengate replication
 
- **[Click here to launch the lab](https://github.com/oracle/learning-library/blob/master/data-management-library/autonomous-transaction-processing/dedicated/README.md)**
+ **[Click here to launch the lab](autonomous-transaction-processing/dedicated/README.md)**
  
  ---
 
