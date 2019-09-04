@@ -81,7 +81,7 @@ The lab is presented in four parts: Lab 1 – Introduction and Setup, Lab
 No prior experience with Visual
 Builder is assumed or necessary.
 
-**Prerequisite**: Before starting these labs, you should have a a login id to an OCI tenancy that is provisioned for VBCS and your
+**Prerequisite**: Before starting these labs, you should have a login id to an OCI tenancy that is provisioned for VBCS and your
 login should have "ServerDeveloper" or "ServerAdminstrator" access  (if you are doing this lab as part of an OSPA Class; the facilitator will share an existing VBCS instance and your permissions will already be correct). 
 
 If you do not have a VBCS instance you may create one using the instructions in [Appendix A: Create VBCS Instance](#appendix-a-create-vbcs-instance). 
