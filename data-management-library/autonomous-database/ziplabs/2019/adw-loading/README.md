@@ -44,7 +44,8 @@ Oracle Cloud Infrastructure offers two distinct storage class tiers.  Object Sto
 1.  Log in to your Oracle Cloud Infrastructure Console
 
 2.  Select **Object Storage** -> **Object Storage** from the drop down menu on the top left of the Oracle Cloud Infrastructure console
-![](img/adw-loading-object-storage2.png)
+
+    ![](img/adw-loading-object-storage2.png)
 
 3.  Select **Create Bucket** to create a bucket to load your data in.  This will be your staging area.  Later in this lab you will move the data from this staging area to your ADW instance.
 For this lab, we'll use the `root` compartment.
@@ -113,7 +114,7 @@ communication between your Autonomous Database and the object store relies on th
 
 3.  Select your username.  Click **Auth Tokens** under **Resources** on the left of the console.
 ![](img/adw-loading-user-screen.png) 
-<img src="img/adw-loading-auth-token.png" width=180>
+
 
 
 4.  Click **Generate Token**.
@@ -122,15 +123,13 @@ communication between your Autonomous Database and the object store relies on th
 5.  A pop-up dialog appears. Set the Auth Token by performing the following
     steps:
 
-    -   In the pop-up dialog, enter a description.
+    -   In the pop-up dialog, enter a description.  Click the **Generate Token** button.
     
         <img src="img/adw-loading-token-description.png" width=200>
 
-    -   Click the **Generate Token** button.
+    -   Copy the generated token to notepad located on your desktop. The token does not appear again and you WILL NEED this token to load your data into ADW.
 
         <img src="img/adw-loading-generated-token.png" width=200>
-
-    -   Copy the generated token to a text file. The token does not appear again and you WILL NEED this token to load your data into ADW.
 
     -   Click **Close**.
 
