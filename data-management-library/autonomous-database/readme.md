@@ -4,6 +4,6 @@
 
 [ADB Certification Labs](certification)
 
-[ADW Journey Labs]()
+[ADW Journey Labs](autonomous-data-warehouse)
 
-[ATP Dedicated Workshop]()
+[ATP Dedicated Workshop](../autonomous-transaction-processing)
