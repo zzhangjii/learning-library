@@ -20,7 +20,7 @@ The Oracle Data Management Library is the central location for workshops related
 
 |  | |
 | ------------- | ------------- |
-| ![](common-template/img/autonomousdb.png)![](common-template/img/adb.png)      | An Oracle Autonomous Database 2019 Specialist has demonstrated the knowledge required to provision, manage, and migrate to Autonomous Transaction Database (ATP) and Autonomous Data Warehouse (ADW).  It is designed for database administrators, monitors, and Dev Ops admins who want to validate their knowledge and skills. To learn more about this certification click [here](https://education.oracle.com/oracle-autonomous-database-cloud-2019-certified-specialist/trackp_OADB19).  The Database PM team partnered with OSPA to create a series of labs to support the certification. |
+| <img src="common-template/img/autonomousdb.png" width=300><img src="common-template/img/adb.png" width=300>  | An Oracle Autonomous Database 2019 Specialist has demonstrated the knowledge required to provision, manage, and migrate to Autonomous Transaction Database (ATP) and Autonomous Data Warehouse (ADW).  It is designed for database administrators, monitors, and Dev Ops admins who want to validate their knowledge and skills. To learn more about this certification click [here](https://education.oracle.com/oracle-autonomous-database-cloud-2019-certified-specialist/trackp_OADB19).  The Database PM team partnered with OSPA to create a series of labs to support the certification. |
 | |**[Click here to launch the lab series](autonomous-database/certification)** |
 
 
