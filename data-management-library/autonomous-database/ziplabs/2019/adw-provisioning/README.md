@@ -2,7 +2,7 @@
 layout: ziplab
 description: Learn how to provision and get started with Oracle Autonomous Data Warehouse.
 tags: Oracle Cloud, Autonomous Data Warehouse, ADW, Oracle Cloud Infrastructure, OCI
-permalink: /ziplabs/2019/adw-provisioning/index.html
+permalink: /data-management-library/autonomous-database/ziplabs/2019/adw-provisioning/index.html
 ---
 # Provisioning Autonomous Data Warehouse #
 

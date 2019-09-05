@@ -1,6 +1,6 @@
 <table class="tbl-heading"><tr><td class="td-logo">![](images/obe_tag.png)
 
-September 21, 2018
+<!--September 21, 2018-->
 </td>
 <td class="td-banner">
 # Lab 3: Loading Data into Your New Autonomous Data Warehouse
@@ -16,15 +16,15 @@ You can load data into your new Autonomous Data Warehouse using Oracle Database 
 + from files local to your client computer, or
 + from files stored in a cloud-based object store
 
-For the fastest data loading experience Oracle recommends uploading the source files to a cloud-based object store, such as Oracle Cloud Infrastructure Object Storage, before loading the data into your Autonomous DW Cloud.
+For the fastest data loading experience Oracle recommends uploading the source files to a cloud-based object store, such as Oracle Cloud Infrastructure Object Storage, before loading the data into your Autonomous Data Warehouse Cloud.
 
-To load data from files in the cloud into your Autonomous Data Warehouse database, use the new PL/SQL DBMS_CLOUD package. The DBMS_CLOUD package supports loading data files from the following Cloud sources: Oracle Cloud Infrastructure Object Storage, Oracle Cloud Infrastructure Object Storage Classic, Amazon AWS S3 and Microsoft Azure Object Store.
+To load data from files in the cloud into your Autonomous Data Warehouse database, use the new PL/SQL `DBMS_CLOUD` package. The `DBMS_CLOUD` package supports loading data files from the following Cloud sources: Oracle Cloud Infrastructure Object Storage, Oracle Cloud Infrastructure Object Storage Classic, Amazon AWS S3, and Microsoft Azure Object Store.
 
-This lab shows how to load data from Oracle Cloud Infrastructure Object Storage using two of the procedures in the DBMS_CLOUD package:
+This lab shows how to load data from Oracle Cloud Infrastructure Object Storage using two of the procedures in the `DBMS_CLOUD` package:
 
-+ create_credential: Stores the object store credentials in your Autonomous Data Warehouse schema.
++ **create_credential**: Stores the object store credentials in your Autonomous Data Warehouse schema.
     + You will use this procedure to create object store credentials in your ADW admin schema.
-+ copy_data: Loads the specified source file to a table. The table must already exist in ADW.
++ **copy_data**: Loads the specified source file to a table. The table must already exist in ADW.
     + You will use this procedure to load tables in your admin schema with data from data files staged in the Oracle Cloud Infrastructure Object Storage cloud service.
 
 For more information about loading data, see the documentation <a href="https://www.oracle.com/pls/topic/lookup?ctx=en/cloud/paas/autonomous-data-warehouse-cloud&id=CSWHU-GUID-07900054-CB65-490A-AF3C-39EF45505802" target="_blank">Loading Data from Files in the Cloud</a>.
@@ -115,7 +115,7 @@ Note that you do not need to specify anything other than the list of columns whe
 
 #### **STEP 4: Navigate to Object Storage**
 
--  From the Autonomous Data Warehouse console, pull out the left side menu from the top-left corner and select **Object Storage**. To revisit signing-in and navigating to ADW, please see Lab 1.
+-  From the Autonomous Data Warehouse console, pull out the left side menu from the top-left corner and select **Object Storage**. To revisit signing-in and navigating to ADW, please see [Lab 1](LabGuide1.md).
 
   ![](images/300/snap0014294.jpg)
 
@@ -155,18 +155,22 @@ In OCI Object Storage, a bucket is the terminology for a container of multiple f
 
     ![](images/300/snap0014304.jpg)
 
-#### **STEP 7: Construct the URL for the Files in Your OCI Object Storage**
--   Copy following base URL that points to the location of your files staged in the OCI Object Storage. The URL can be constructed as below :
+#### **STEP 7: Copy the URL for the Files in Your OCI Object Storage**
+-   Copy following base URL that points to the location of your files staged in the OCI Object Storage. The simplest way to get this URL is from the "Object Details" in the right hand side ellipsis menu in the Object Store.
 
-    https://objectstorage.<**region_name**>.oraclecloud.com/n/<**tenant_name**>/b/<**bucket_name**>/o/
 
-- In our example, the **region name** is us-phoenix-1, the **tenant name** is adwctraining, and the **bucket name** is ADWCLab.
-<!--- (Pending URL display fix) ![](images/300/ConstructURLs.jpg)
+ ![](images/300/ConstructURLs.png)
 
- - Take a look at the URL you copied. In this example below, the **region name** is us-phoenix-1, the **tenant name** is adwctraining, and the **bucket name** is ADWCLab.
-*Note:* If you have an older Swift URL for your Oracle object store file, you may use that here
 
- ![](images/300/ConstructUrls-2.jpg) -->
+ ![](images/300/ConstructUrls-2.png)
+
+ - Take a look at the URL you copied. In this example above, the **region name** is us-phoenix-1, the **tenant name** is adwctraining8, and the **bucket name** is ADWCLab.
+
+*Note:* The URL can also be constructed as below:
+
+https://objectstorage.<**region_name**>.oraclecloud.com/n/<**tenant_name**>/b/<**bucket_name**>/o
+
+
 
 -   **Save** the base URL you copied in a note. We will use the base URL in following steps.
 
@@ -244,7 +248,7 @@ In order to access data in the Object Store you have to enable your database use
     -   Click the **Preview** button
 
 <!--![](./images/300/snap0014662.jpg)-->
-![](assets/LabGuide3-51e53dd3.png)
+![](./images/300/LabGuide3-51e53dd3.png)
 
 When you are satisfied with the data preview, click **NEXT**.
 
@@ -262,7 +266,7 @@ When you are satisfied with the data preview, click **NEXT**.
 
 When done with your investigation, click **NEXT**.
 
-![](./images/300/snap0014665.jpg)
+![](./images/300/snap0014665.png)
 
 
 -   The final screen reflects all your choices made in the Wizard. Click **FINISH** when you are ready to load the data into the table *CHANNELS_CLOUD*.
@@ -286,9 +290,9 @@ As an alternative to the wizard-guided data load, you can use the PL/SQL package
 
     - Run the script.
 
-    ![](./images/300/snap0014550.jpg)
+    ![](./images/300/snap0014550.png)
 
-    - You have successfully loaded the sample tables. You can now run any sample query in the <a href="https://docs.oracle.com/database/122/DWHSG/part-relational-analytics.htm#DWHSG8493" target="_blank">relational analytics</a> section of the Oracle documentation. For example, to analyze the cumulative amount sold for specific customer IDs in quarter 2000, you could run the query in <a href="./scripts/300/query_tables.txt" target="_blank">this code snippet</a>. (<a href="https://docs.oracle.com/en/database/oracle/oracle-database/12.2/dwhsg/introduction-data-warehouse-concepts.html#GUID-452FBA23-6976-4590-AA41-1369647AD14D" target="_blank">Click Here</a> to read the Data Warehousing documentation.
+    - You have successfully loaded the sample tables. You can now run any sample query in the <a href="https://docs.oracle.com/database/122/DWHSG/part-relational-analytics.htm#DWHSG8493" target="_blank">relational analytics</a> section of the Oracle documentation. For example, to analyze the cumulative amount sold for specific customer IDs in quarter 2000, you could run the query in <a href="./scripts/300/query_tables.txt" target="_blank">this code snippet</a>. <a href="https://docs.oracle.com/en/database/oracle/oracle-database/12.2/dwhsg/introduction-data-warehouse-concepts.html#GUID-452FBA23-6976-4590-AA41-1369647AD14D" target="_blank">Click Here</a> to read more about Data Warehousing.
 
     ![](./images/300/Picture300-20.png)
 
