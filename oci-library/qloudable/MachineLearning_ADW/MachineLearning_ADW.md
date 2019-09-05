@@ -80,7 +80,7 @@ Sign in using your tenant name, user name and password. Use the login option und
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_OBJ_000.png" alt="image-alt-text">
 
-2. Select your compartment from Scope and then click on your bucket.
+2. Select your compartment from Scope by expanding root, and then click on the bucket listed in Section 1.
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_OBJ_001.png" alt="image-alt-text">
 
@@ -98,41 +98,47 @@ Next, you'll import a Zeppelin Notebook into the Oracle Machine Learning instanc
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_Instance.png" alt="image-alt-text">
 
-2. Click the ADW instance name and then click **Service Console**
+2. Click the instance name listed in Section 1. Be sure to select the correct instance if more than one is listed.
+
+   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_ADW.png" alt="image-alt-text">
+
+3. Click **Service Console**.
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_Service_Console.png" alt="image-alt-text">
 
-3. Note: you may have to disable the pop-up blocker. Click on the Popup-blocker icon and select **Allow all popups**.
+4. Note: you have to disable the pop-up blocker. Click on the Popup-blocker icon and select **Always allow popups ...**
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_POPUPS.png" alt="image-alt-text">
 
-4. Click **Adminstration** and then click **Manage Oracle ML Users**
+5. Click **Adminstration** and then click **Manage Oracle ML Users**
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_OPEN_ADMIN.png" alt="image-alt-text">
 
-5. Click **Show All Users**, then click your OCITEST user
+6. Click **Show All Users**, then click your OCITEST user
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_USER_01.png" alt="image-alt-text">
 
-6. Enter <code>admin@oracle.com</code> in the E-mail Address field, and enter <code>AAbbcc123456</code> in both password fields and click **Save**.
+7. Enter <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_EMAIL.png" alt="admin@oracle.com"> in the E-mail Address field, and enter <code>AAbbcc123456</code> in both password fields and click **Save**.
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_USER_02.png" alt="image-alt-text">
 
-7. Your OCITEST user is now added as an Oracle ML User.
+8. Your OCITEST user is now added as an Oracle ML User.
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_USER_03.png" alt="image-alt-text">
 
-8. Click **Development** then click **Oracle ML SQL Notebooks**
+9. On the previous tab, click **Development** then click **Oracle ML SQL Notebooks**
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_OPEN_ML.png" alt="image-alt-text">
 
-9. Sign in with your OCITEST user using the password <code>AAbbcc123456</code>.
+10. Sign in with your OCITEST user using the password <code>AAbbcc123456</code>.
 
-10. Click on **Notebooks**.
+11. Click on **Notebooks**.
     
     <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_NOTEBOOK.png" alt="image-alt-text">
 
-11. Click **Import** and locate the file <code>Pick_a_Good_Wine_for_less_than_20_dollars.json</code> that you downloaded earlier.
+12. Click **Import** and locate the file <code>Pick_a_Good_Wine_for_less_than_20_dollars.json</code> in the Downloads folder.
+
+13. Select the file and click **Open**.
 
 ## Run the Notebook
 
