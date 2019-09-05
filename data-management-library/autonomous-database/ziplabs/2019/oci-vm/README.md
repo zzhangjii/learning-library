@@ -2,7 +2,7 @@
 layout: ziplab
 description: Learn how to launch a Virual Machine using Oracle Cloud Infrastructure Computer Service
 tags: Oracle Cloud, Oracle Cloud Infrastructure, OCI, Virtual Machine, VM, Virtual Cloud Network, VCN
-permalink: /ziplabs/oci-vm/index.html
+permalink: /data-management-library/autonomous-database/ziplabs/oci-vm/index.html
 ---
 # Create a Virtual Machine Instance Using Oracle Cloud Infrastructure Compute #
 

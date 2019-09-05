@@ -97,7 +97,7 @@ For this lab, we'll use the `root` compartment.
 
 14. Your bucket should now be visible and public.  Verify and proceed to setting up your Auth token.
 
-    <img src="img/adw-loading-bucket-info.png" width=280>
+    <img src="img/adw-loading-bucket-info.png" width=380>
 
 
 
@@ -159,7 +159,9 @@ Go back to your ADW instance via the menu.
     <img src="img/adw-loading-navigate-sql-dev.png" width=250>
 
 
-5.  Enter your database admin username from the previous exercise and login to your ADW instance.
+5.  Enter your database admin username from the previous exercise and login to your ADW instance. 
+
+    Note:  When you provisioned your ADW instance you wrote down an admin password for your new database.  Use this to log in to SQL Developer web.  You can go back to your ADW instance and reset your admin password via the menu.
 
     <img src="img/adw-loading-sql-dev-logging-in.png" width=250>
 
@@ -185,7 +187,8 @@ Go back to your ADW instance via the menu.
     <img src="img/adw-loading-create-credential.png" width=350>
 
 8.  Press the green arrow to run the worksheet.  Once the correct information is entered, you should get a message that the ``PL/SQL procedure completed``
-<img src="img/adw-loading-sql-output.png" width=300>
+
+    <img src="img/adw-loading-sql-output.png" width=300>
 
 9.  Your object store's credentials are stored in
 your ADW instance now.  
@@ -264,7 +267,7 @@ Now you have empty tables and staged data in the OCI Object store. To get the da
 7. Click **View Object Details**.  Copy the URL Path by pressing `<CTRL-C>`.  Copy the url to your notepad.
 ![](img/adw-view-object-details.png)
 
-    <img src="img/adw-view-object-details-customers.png" width=250>
+    <img src="img/adw-view-object-details-customers.png" width=350>
 
 
 8.  Repeat steps 6-8 for the 2nd table and return to your SQL Developer Workbench screen.  
