@@ -90,7 +90,7 @@ For this lab, we'll use the `root` compartment.
 12.  The final step will be to change the visibility of your bucket. Click the **Edit Visibility** button at the top of your Bucket Details screen.
 
 
-13. Change the visibility to **Public**, accept all other defaults.  Click **Save Changes**
+13. Change the visibility to **Public**, accept all other defaults.  Click **Save Changes**.
 
 14. Your bucket should now be visible and public.  Verify and proceed to setting up your Auth token.
 
@@ -178,7 +178,7 @@ Go back to your ADW instance via the menu.
     end;  
     /
     ```
-    <img src="img/adw-loading-create-credential.png" width=450>
+    <img src="img/adw-loading-create-credential.png" width=550>
 
 8.  Press the green arrow to run the worksheet.  Once the correct information is entered, you should get a message that the ``PL/SQL procedure completed``
 
@@ -292,7 +292,7 @@ This can be done for multiple tables providing an easy migration path from your 
 
 ## Want to Learn More? ##
 * [Autonomous Cloud Platform Courses](https://learn.oracle.com/pls/web_prod-plq-dad/dl4_pages.getpage?page=dl4homepage&get_params=offering:35573#filtersGroup1=&filtersGroup2=.f667&filtersGroup3=&filtersGroup4=&filtersGroup5=&filtersSearch=) from Oracle University 
-* [Autonomous Data Warehouse Cloud Certification]((https://education.oracle.com/en/data-management/autonomous-database/product_817?certPage=true) from Oracle University
+* [Autonomous Data Warehouse Cloud Certification](https://education.oracle.com/en/data-management/autonomous-database/product_817?certPage=true) from Oracle University
 * [ADW Test Drive Workshop](https://oracle.github.io/learning-library/workshops/journey4-adwc/?page=README.md)
 
 
