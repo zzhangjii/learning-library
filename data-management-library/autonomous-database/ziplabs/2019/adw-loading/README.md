@@ -10,7 +10,7 @@ permalink: /data-management-library/autonomous-database/ziplabs/2019/adw-loading
 This 15-minute lab walks you through the steps to get load data from external databases into the Oracle Autonomous Data Warehouse (ADW) on Oracle Cloud Infrastructure (OCI). This lab assumes you have already provisioned an ADW instance.
 
 ### Background ###
-You can load data into Autonomous Database using Oracle Database tools and 3rd party data integration tools. You can load data:
+You can load data into Autonomous Database using Oracle Database tools and 3rd party data integration tools. Data can be loaded:
 
 -   from files local to your client computer, or
 
@@ -44,12 +44,13 @@ Oracle Cloud Infrastructure offers two distinct storage class tiers.  Object Sto
 1.  Log in to your Oracle Cloud Infrastructure Console
 
 2.  Select **Object Storage** -> **Object Storage** from the drop down menu on the top left of the Oracle Cloud Infrastructure console
-![](img/adw-loading-object-storage2.png)
+
+    ![](img/adw-loading-object-storage2.png)
 
 3.  Select **Create Bucket** to create a bucket to load your data in.  This will be your staging area.  Later in this lab you will move the data from this staging area to your ADW instance.
 For this lab, we'll use the `root` compartment.
 
-    <img src="img/adw-loading-create-bucket-screen.png" width=340>
+    <img src="img/adw-loading-create-bucket-screen.png" width=400>
 
 
 4.  Enter the following information: 
@@ -64,7 +65,7 @@ For this lab, we'll use the `root` compartment.
 
 6.  Click on the bucket name you just created.  
 
-    <img src="img/adw-loading-buckets.png" width=300>
+    <img src="img/adw-loading-buckets.png" width=400>
  
 
 7. Review the screen. Note you have created an empty bucket with no objects in it and the visibility is set to private. 
@@ -79,25 +80,21 @@ For this lab, we'll use the `root` compartment.
 
 10.  **Select the two data files** `customers.dat` and `sales.dat` and click **Open**.  Once the files are finished loading, click **Upload Objects** to load. 
 
-   ![](img/adw-loading-load-bucket-2-new.png)
+![](img/adw-loading-load-bucket-2-new.png)
 
 11.  Once complete, verify *both* *.dat files have a status of *`Finished`* and click **Close**.
 
-12. Your bucket should have 2 objects, customers.dat and sales.dat loaded.  If this were a true data load, you may be loading hundreds of large files here.
-![](img/adw-loading-view-bucket.png)
-
+12. Your bucket should have 2 objects, customers.dat and sales.dat loaded.  *If this were a true data load, you may be loading hundreds of large files here.*
 
 
 12.  The final step will be to change the visibility of your bucket. Click the **Edit Visibility** button at the top of your Bucket Details screen.
-![](img/adw-loading-view-bucket.png)
 
 
-
-13. Change the visibility to **Public**, accept all other defaults.  Click **Save Changes**
+13. Change the visibility to **Public**, accept all other defaults.  Click **Save Changes**.
 
 14. Your bucket should now be visible and public.  Verify and proceed to setting up your Auth token.
 
-    <img src="img/adw-loading-bucket-info.png" width=280>
+    <img src="img/adw-loading-bucket-info.png" width=380>
 
 
 
@@ -113,7 +110,7 @@ communication between your Autonomous Database and the object store relies on th
 
 3.  Select your username.  Click **Auth Tokens** under **Resources** on the left of the console.
 ![](img/adw-loading-user-screen.png) 
-<img src="img/adw-loading-auth-token.png" width=180>
+
 
 
 4.  Click **Generate Token**.
@@ -122,15 +119,13 @@ communication between your Autonomous Database and the object store relies on th
 5.  A pop-up dialog appears. Set the Auth Token by performing the following
     steps:
 
-    -   In the pop-up dialog, enter a description.
+    -   In the pop-up dialog, enter a description.  Click the **Generate Token** button.
     
-        <img src="img/adw-loading-token-description.png" width=200>
+        <img src="img/adw-loading-token-description.png" width=300>
 
-    -   Click the **Generate Token** button.
+    -   Copy the generated token to notepad located on your desktop. The token does not appear again and you WILL NEED this token to load your data into ADW.
 
-        <img src="img/adw-loading-generated-token.png" width=200>
-
-    -   Copy the generated token to a text file. The token does not appear again and you WILL NEED this token to load your data into ADW.
+        <img src="img/adw-loading-generated-token.png" width=300>
 
     -   Click **Close**.
 
@@ -159,19 +154,20 @@ Go back to your ADW instance via the menu.
     <img src="img/adw-loading-navigate-sql-dev.png" width=250>
 
 
-5.  Enter your database admin username from the previous exercise and login to your ADW instance.
+5.  Enter your database admin username from the previous exercise and login to your ADW instance. 
+
+    Note:  When you provisioned your ADW instance you wrote down an admin password for your new database.  Use this to log in to SQL Developer web.  You can go back to your ADW instance and reset your admin password via the menu.
 
     <img src="img/adw-loading-sql-dev-logging-in.png" width=250>
 
 6. SQL Developer Web has an interface similar to the installed client.  Note where the Worksheet is and the Query Results.
-![](img/adw-loading-sql-developer-web.png)
 
-7.   In a SQL Developer worksheet, use the create_credential procedure of the DBMS_CLOUD package to store the object store credentials in your database.  This pl/sql procedure takes in the following arguments:
-*  credential name
+7.   In SQL Developer Web, use the create_credential procedure of the DBMS_CLOUD package to store the object store credentials in your database.  This pl/sql procedure takes in the following arguments:
+-  credential name
 - Oracle cloud username
 - Authorization token created earlier
 
-    Copy the pl/sql procedure below and fill in the username and password.  
+    Copy the pl/sql procedure (to the worksheet area of SQL Developer web below) and fill in the username and password.  
     ```SQL
     begin  
     DBMS_CLOUD.create_credential (  
@@ -182,10 +178,11 @@ Go back to your ADW instance via the menu.
     end;  
     /
     ```
-    <img src="img/adw-loading-create-credential.png" width=350>
+    <img src="img/adw-loading-create-credential.png" width=550>
 
 8.  Press the green arrow to run the worksheet.  Once the correct information is entered, you should get a message that the ``PL/SQL procedure completed``
-<img src="img/adw-loading-sql-output.png" width=300>
+
+    <img src="img/adw-loading-sql-output.png" width=300>
 
 9.  Your object store's credentials are stored in
 your ADW instance now.  
@@ -264,7 +261,7 @@ Now you have empty tables and staged data in the OCI Object store. To get the da
 7. Click **View Object Details**.  Copy the URL Path by pressing `<CTRL-C>`.  Copy the url to your notepad.
 ![](img/adw-view-object-details.png)
 
-    <img src="img/adw-view-object-details-customers.png" width=250>
+    <img src="img/adw-view-object-details-customers.png" width=350>
 
 
 8.  Repeat steps 6-8 for the 2nd table and return to your SQL Developer Workbench screen.  
@@ -295,7 +292,7 @@ This can be done for multiple tables providing an easy migration path from your 
 
 ## Want to Learn More? ##
 * [Autonomous Cloud Platform Courses](https://learn.oracle.com/pls/web_prod-plq-dad/dl4_pages.getpage?page=dl4homepage&get_params=offering:35573#filtersGroup1=&filtersGroup2=.f667&filtersGroup3=&filtersGroup4=&filtersGroup5=&filtersSearch=) from Oracle University 
-* [Autonomous Data Warehouse Cloud Certification]((https://education.oracle.com/en/data-management/autonomous-database/product_817?certPage=true) from Oracle University
+* [Autonomous Data Warehouse Cloud Certification](https://education.oracle.com/en/data-management/autonomous-database/product_817?certPage=true) from Oracle University
 * [ADW Test Drive Workshop](https://oracle.github.io/learning-library/workshops/journey4-adwc/?page=README.md)
 
 
