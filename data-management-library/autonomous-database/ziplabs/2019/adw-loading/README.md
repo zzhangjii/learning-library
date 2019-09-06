@@ -77,7 +77,8 @@ For this lab, we'll use the `root` compartment.
 
 
 10.  **Select the two data files** `customers.dat` and `sales.dat` and click **Open**.  Once the files are finished loading, click **Upload Objects** to load. 
-![](img/adw-loading-load-bucket-2-new.png)
+
+   ![](img/adw-loading-load-bucket-2-new.png)
 
 11.  Once complete, verify *both* *.dat files have a status of *`Finished`* and click **Close**.
 
