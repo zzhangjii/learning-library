@@ -273,9 +273,15 @@ Now you have empty tables and staged data in the OCI Object store. To get the da
 10. Select both commands and press the green play button.
 
 
-11. In the Script Output, once you see the message `PL/SQL procedure successfully completed.`, Query the tables to see the rows that were inserted.  Success! Notice that the data has been copied from the object store to the tables in your ADW instance.
+11. In the Script Output, once you see the message `PL/SQL procedure successfully completed.`, Query the tables to see the rows that were inserted.  
+    ````SQL
+    select * from sales;
+    select * from customers;
+    ````
 
-    ![](img/adw-sql-dev-copy-data.png)
+Success! Notice that the data has been copied from the object store to the tables in your ADW instance.
+
+
   
 
 This can be done for multiple tables providing an easy migration path from your existing databaset to Autonomous Database.
