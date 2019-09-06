@@ -2,7 +2,7 @@
 layout: ziplab
 description: Examine Database Services and work with Sample Data Sets.
 tags: Oracle Cloud, Autonomous Data Warehouse, ADW, Oracle Cloud Infrastructure, OCI
-permalink: /ziplabs/adw-services/index.html
+permalink: /data-management-library/autonomous-database/ziplabs/2018/adw-services/index.html
 ---
 # Working with Database Services and Sample Data Sets #
 
