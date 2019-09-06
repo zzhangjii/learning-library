@@ -72,10 +72,12 @@ For this lab, we'll use the `root` compartment.
 8.  Click [here](https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/adwc/OBE_Loading%20Your%20Data/files/datafiles_for_sh_tables.zip) to download the zip file with your objects.  Open up your file browser and extract the zip file.
 
 9.  Click **Upload Object** button to begin selecting the data files to upload to the bucket.  Click on **select files** to choose your extracted data files.
-![](img/adw-loading-select-files.png)
+
+    ![](img/adw-loading-select-files.png)
 
 
 10.  **Select the two data files** `customers.dat` and `sales.dat` and click **Open**.  Once the files are finished loading, click **Upload Objects** to load. 
+
     ![](img/adw-loading-load-bucket-2-new.png)
 
 11.  Once complete, verify *both* *.dat files have a status of *`Finished`* and click **Close**.
@@ -86,7 +88,8 @@ For this lab, we'll use the `root` compartment.
 12.  The final step will be to change the visibility of your bucket. Click the **Edit Visibility** button at the top of your Bucket Details screen.
 
 
-13. Change the visibility to **Public**, accept all other defaults.  Click **Save Changes**.
+13. Chan
+ge the visibility to **Public**, accept all other defaults.  Click **Save Changes**.
 
 14. Your bucket should now be visible and public.  Verify and proceed to setting up your Auth token.
 ![](img/adw-loading-bucket-info.png)
@@ -118,12 +121,10 @@ communication between your Autonomous Database and the object store relies on th
     ![](img/adw-loading-token-description.png)
 
     -   Copy the generated token to notepad located on your desktop. The token does not appear again and you WILL NEED this token to load your data into ADW.
-![](img/adw-loading-generated-token.png)
+
+    ![](img/adw-loading-generated-token.png)
 
     -   Click **Close**.
-
-
-
 
 
 
@@ -133,7 +134,8 @@ Now that you have created an object store Auth Token, its time to store the cred
 
 1.  Let's navigate to SQL Developer web to prepare your ADW instance for the staged data.  
 Go back to your ADW instance via the menu.
-![](img/adw-loading-adw-instance.png)
+
+    ![](img/adw-loading-adw-instance.png)
 
 2.  Click on the ADW instance you created in a previous exercise and verify it is still running.
 ![](img/adw-loading-adw-instance2.png)
