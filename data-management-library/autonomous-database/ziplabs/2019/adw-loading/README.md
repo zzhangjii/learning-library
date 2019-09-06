@@ -56,7 +56,8 @@ For this lab, we'll use the `root` compartment.
     * **Bucket Name**:  `bucket-<city you were born in>-<your initials>`  (example: *bucket-london-kam*)
     * **Storage Tier**:  `Standard`
      * **Encryption**: `Encrypt using Oracle Managed Keys`
-![](img/adw-loading-create-bucket.png)
+
+        ![](img/adw-loading-create-bucket.png)
 
 
 5. Click **Create Bucket**.
@@ -75,7 +76,7 @@ For this lab, we'll use the `root` compartment.
 
 
 10.  **Select the two data files** `customers.dat` and `sales.dat` and click **Open**.  Once the files are finished loading, click **Upload Objects** to load. 
-![](img/adw-loading-load-bucket-2-new.png)
+    ![](img/adw-loading-load-bucket-2-new.png)
 
 11.  Once complete, verify *both* *.dat files have a status of *`Finished`* and click **Close**.
 
@@ -138,16 +139,18 @@ Go back to your ADW instance via the menu.
 ![](img/adw-loading-adw-instance2.png)
 
 3.  Click on **Service Console**.  If the service console does not open a new tab, ensure pop up blocker is turned off for your browser.  Click on **Development** to access the developer tools for ADB.
-![](img/adw-loading-service-console.png)
+
+    ![](img/adw-loading-service-console.png)
 
 4.  Click on **SQL Developer Web**.
-![](img/adw-loading-navigate-sql-dev.png)
+
+    ![](img/adw-loading-navigate-sql-dev.png)
 
 
 5.  Enter your database admin username from the previous exercise and login to your ADW instance. 
 
     Note:  When you provisioned your ADW instance you wrote down an admin password for your new database.  Use this to log in to SQL Developer web.  You can go back to your ADW instance and reset your admin password via the menu.
-![](img/adw-loading-sql-dev-logging-in.png)
+    ![](img/adw-loading-sql-dev-logging-in.png)
 
 6. SQL Developer Web has an interface similar to the installed client.  Note where the Worksheet is and the Query Results.
 
@@ -170,7 +173,6 @@ Go back to your ADW instance via the menu.
     ![](img/adw-loading-create-credential.png)
 
 8.  Press the green arrow to run the worksheet.  Once the correct information is entered, you should get a message that the ``PL/SQL procedure completed``
-![](img/adw-loading-sql-output.png)
 
 9.  Your object store's credentials are stored in
 your ADW instance now.  
