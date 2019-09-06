@@ -4,7 +4,7 @@ description: Learn how to get an Oracle Cloud Free teir account account and sign
 tags: Oracle Cloud, Oracle Cloud Infrastructure, OCI
 permalink: /data-management-library/autonomous-database/ziplabs/2019/new-account/index.html
 ---
-# Access an Oracle Cloud Free Tier account #
+# Access an Oracle Cloud Free Tier Account #
 
 ## Before You Begin ##
 This 5-minute lab walks you through the steps of getting an Oracle Cloud Free Tier account and signing in.
