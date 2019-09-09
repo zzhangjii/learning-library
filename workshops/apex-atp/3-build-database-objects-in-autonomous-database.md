@@ -151,7 +151,7 @@ In this part, you will learn how to access SQL Developer Web and then use it to 
 
    ![](images/3/enable-schema.png)
 
-5. Change the URL by replacing **admin** with the value passed to the p_url_mapping_pattern parameter in the script above: **demo**. Then press enter to go to navigate to the new URL.
+5. Change the URL by replacing **admin** with **demo** (the value passed to the p_url_mapping_pattern parameter in the script above). Then press enter to go to the new URL.
 
    ![](images/3/url-before.png)
 
