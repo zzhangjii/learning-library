@@ -1,16 +1,16 @@
 ---
 layout: ziplab
-description: Learn how to get an Oracle Cloud Platform trial account and sign in.
+description: Learn how to get an Oracle Cloud Free teir account account and sign in.
 tags: Oracle Cloud, Oracle Cloud Infrastructure, OCI
 permalink: /data-management-library/autonomous-database/ziplabs/2019/new-account/index.html
 ---
-# Access an Oracle Cloud Platform Trial Account #
+# Access an Oracle Cloud Free Tier Account #
 
 ## Before You Begin ##
-This 20-minute lab walks you through the steps of getting an Oracle Cloud Platform trial account and signing in.
+This 5-minute lab walks you through the steps of getting an Oracle Cloud Free Tier account and signing in.
 
 ### Background ###
-Thanks for dropping by the Oracle University Zip Labs! Each lab is designed to build your familiairy with the Oracle Cloud Platform using step-by-step instructions. You'll need an Oracle Cloud Platform account to complete the labs. If you don't have one, follow these steps to get a free trial account. 
+Thanks for dropping by the Oracle University Zip Labs! Each lab is designed to build your familiairy with the Oracle Cloud Platform using step-by-step instructions. You'll need an Oracle Cloud account to complete the labs. If you don't have one, follow these steps to get a free tier account. 
 
 These labs mostly focus on Autonomous Data Warehouse and Autonomous Transaction Processing. But there's even more you can do with the Oracle Cloud Platform! This includes building production-ready workloads by using a variety of cloud services including Database, Compute, Blockchain, IoT, Big Data, API Management, Integration, Chatbots!
 
@@ -57,5 +57,5 @@ In this section, you'll fill out the registration form at [oracle.com/oow19freet
     
     [Description of the illustration username.png](files/username.txt)
 
-## Return to the Zip Labs ##
-Go back to the Zip Labs page and try some of the labs. These short labs walk you through various technologies found in your free trial.
+## Try More Zip Labs ##
+Go back and try some of the other labs. These short exercises walk you through various technologies and services found in your Cloud account.
