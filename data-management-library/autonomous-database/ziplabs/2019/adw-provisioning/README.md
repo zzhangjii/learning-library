@@ -7,7 +7,7 @@ permalink: /data-management-library/autonomous-database/ziplabs/2019/adw-provisi
 # Provisioning Autonomous Data Warehouse #
 
 ## Before You Begin ##
-This 10-minute lab walks you through the steps to get started using the Oracle Autonomous Data Warehouse (ADW) on Oracle Cloud Infrastructure (OCI). You will provision a new ADW database. Later labs show you how to connect and query the database with SQL Developer Web, and use other services.
+This 10-minute lab walks you through the steps to get started using the Oracle Autonomous Data Warehouse (ADW) on Oracle Cloud Infrastructure (OCI). You will provision a new ADW database. Later labs show you how to make use of Machine Learning (ML) services and load data into the database.
 
 ### Background ###
 Autonomous Data Warehouse is built around the market leading Oracle database and comes with fully automated data warehouse specific features that deliver outstanding query performance.  This environment is delivered as a fully managed cloud service running on optimized high-end Oracle hardware systems.  You don’t need to spend time thinking about how you should store your data, when or how to back it up or how to tune your queries.  We take care of everything for you.  You can select the exact combination of storage and CPUs to fit your project and your budget. We keep all of your data safe and secure.  It’s always backed up and always encrypted in Oracle’s cloud.  Using our client tools you load all kinds of different types of data from worksheets on your computer, webstore log files to data files stored in Oracle’s cloud-based object store and load that data into your Autonomous Data Warehouse.
