@@ -1,17 +1,19 @@
 ---
 layout: ziplab
 description: Creating an App from a Spreadsheet for Oracle Autonomous Cloud Service
+tags: Oracle Cloud, Autonomous Data Warehouse, ADW, ATP, Apex, Oracle Cloud Infrastructure, OCI, Object Store, Data Load
+permalink: /data-management-library/autonomous-database/ziplabs/2019/atp-apex-spreadsheet-app/index.html
+
 ---
-# Oracle APEX Hands-On Lab 
-## *Creating an App from a Spreadsheet* for Oracle Autonomous Cloud Service  - July, 2019 (v19.1.3)
+# Oracle APEX on ATP Hands-On Lab 
+## *Creating an App from a Spreadsheet* for Oracle Autonomous Transaction Processing Service
 ### Overview
 This lab walks you through uploading a spreadsheet into an Oracle database table, and then creating an application based on this new table. You will then play with the Interactive Report and improve the attached form. Lastly, you will add a Calendar page and then link it to the existing form page.
 
 Rather than trying to email a spreadsheet to gather information from different people, simply create an app in minutes, and email the URL. This single source-of-truth, multi-user, secured, scalable app is so much better than having 20 (incomplete) spreadsheets!
 
-Please note this lab assumes that you already have the Autonomous Data Warehouse (ADW) or Autonomous Transaction Processing – Serverless (ATP-S) service provisioned. 
-
-If you do not currently have a cloud service, sign up for a free trial account at https://cloud.oracle.com/try-autonomous-database
+### What Do You Need? ###
+* Access to an instance of Oracle Autonomous Data Transaction Processing (ATP) or Oracle Autonomous Data Warehouse (ADW)
 
 ## Section 1
 ### Getting Started - Obtaining a Workspace
@@ -248,6 +250,8 @@ _Note: Enter the Workspace Name and Database User entered in Step 2c above_
 
 
 ## Want to Learn More? ##
+* [Autonomous Database Cloud Certification](https://education.oracle.com/en/data-management/autonomous-database/product_817?certPage=true) from Oracle University
 * [Autonomous Cloud Platform Courses](https://learn.oracle.com/pls/web_prod-plq-dad/dl4_pages.getpage?page=dl4homepage&get_params=offering:35573#filtersGroup1=&filtersGroup2=.f667&filtersGroup3=&filtersGroup4=&filtersGroup5=&filtersSearch=) from Oracle University
 * [Oracle Application Express Training and Certification](https://education.oracle.com/database-application-development/oracle-apex/product_172) from Oracle University
+
 

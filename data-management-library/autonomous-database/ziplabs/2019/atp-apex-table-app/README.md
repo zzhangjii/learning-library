@@ -1,16 +1,16 @@
 ---
 layout: ziplab
 description: Creating an App from a Spreadsheet for Oracle Autonomous Cloud Service
+tags: Oracle Cloud, Autonomous Data Warehouse, ADW, ATP, Apex, Oracle Cloud Infrastructure, OCI, Object Store, Data Load
+permalink: /data-management-library/autonomous-database/ziplabs/2019/atp-apex-table-app/index.html
 ---
 # Oracle APEX Hands-On Lab 
-## *Creating an App based on Existing Tables* for Oracle Autonomous Cloud Service - July, 2019 (v19.1.3)
+## *Creating an App based on Existing Tables* for Oracle Autonomous Transaction Processing Service 
 ### Overview
 This lab walks you through creating an application based on existing tables in your Oracle Database. Go from zero to hero in a ridiculously short period of time!
 
-Please note this lab assumes that you already have the Autonomous Data Warehouse (ADW) or Autonomous Transaction Processing – Serverless (ATP-S) service provisioned. 
-
-If you do not currently have a cloud service, sign up for a free trial account at https://cloud.oracle.com/try-autonomous-database
-
+### What Do You Need? ###
+* Access to an instance of Oracle Autonomous Data Transaction Processing (ATP) or Oracle Autonomous Data Warehouse (ADW)
 
 ## Section 1
 ### Getting Started - Obtaining a Workspace
@@ -262,6 +262,8 @@ _Note: Enter the Workspace Name and Database User entered in Step 2c above_
 ![](img/section3/image15.png)
 
 ## Want to Learn More? ##
+* [Autonomous Database Cloud Certification](https://education.oracle.com/en/data-management/autonomous-database/product_817?certPage=true) from Oracle University
 * [Autonomous Cloud Platform Courses](https://learn.oracle.com/pls/web_prod-plq-dad/dl4_pages.getpage?page=dl4homepage&get_params=offering:35573#filtersGroup1=&filtersGroup2=.f667&filtersGroup3=&filtersGroup4=&filtersGroup5=&filtersSearch=) from Oracle University
 * [Oracle Application Express Training and Certification](https://education.oracle.com/database-application-development/oracle-apex/product_172) from Oracle University
+
 

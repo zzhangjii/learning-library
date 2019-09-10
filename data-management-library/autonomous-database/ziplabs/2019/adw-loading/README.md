@@ -4,7 +4,7 @@ description: Learn how to load data from an Oracle Object Store into the Oracle 
 tags: Oracle Cloud, Autonomous Data Warehouse, ADW, Oracle Cloud Infrastructure, OCI, Object Store, Data Load
 permalink: /data-management-library/autonomous-database/ziplabs/2019/adw-loading/index.html
 ---
-# Loading Data into ADW#
+# Loading Data into ADW #
 
 ## Before You Begin ##
 This 20-minute lab walks you through the steps to get load data from external databases into the Oracle Autonomous Data Warehouse (ADW) on Oracle Cloud Infrastructure (OCI). This lab assumes you have already provisioned an ADW instance.
@@ -211,7 +211,7 @@ cust_main_phone_number VARCHAR2(25),
 cust_income_level VARCHAR2(30) ,
 cust_credit_limit NUMBER,
 cust_email VARCHAR2(50),
-cust_total VARCHAR2(14,
+cust_total VARCHAR2(14),
 cust_total_id NUMBER,
 cust_src_id NUMBER,
 cust_eff_from DATE,
@@ -233,6 +233,8 @@ cust_valid VARCHAR2(1));
 Now you have empty tables and staged data in the OCI Object store. To get the data from the object store to your ADB instance, you need to get some information about the object. To move the data we will be using the dbms_cloud.copy_data procedure.  The procedure takes information about the location of the data you staged in your object store.
 
  ````SQL
+    select count(*) from <ENTER_TABLE_NAME>;
+    
     begin
     dbms_cloud.copy_data(
         table_name =>'<ENTER_TABLE_NAME>',
@@ -281,14 +283,11 @@ Now you have empty tables and staged data in the OCI Object store. To get the da
 
 Success! Notice that the data has been copied from the object store to the tables in your ADW instance.
 
-
-  
-
 This can be done for multiple tables providing an easy migration path from your existing databaset to Autonomous Database.
 
 ## Want to Learn More? ##
+* [Autonomous Database Cloud Certification](https://education.oracle.com/en/data-management/autonomous-database/product_817?certPage=true) from Oracle University
 * [Autonomous Cloud Platform Courses](https://learn.oracle.com/pls/web_prod-plq-dad/dl4_pages.getpage?page=dl4homepage&get_params=offering:35573#filtersGroup1=&filtersGroup2=.f667&filtersGroup3=&filtersGroup4=&filtersGroup5=&filtersSearch=) from Oracle University 
-* [Autonomous Data Warehouse Cloud Certification](https://education.oracle.com/en/data-management/autonomous-database/product_817?certPage=true) from Oracle University
-* [ADW Test Drive Workshop](https://oracle.github.io/learning-library/workshops/journey4-adwc/?page=README.md)
+
 
 
