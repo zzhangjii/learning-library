@@ -140,7 +140,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG" alt="image-alt-text">
 
-7. Switch to the OCI console. From OCI servies menu, Click **Instances** under **Compute** 
+7. Switch to the OCI console. From OCI services menu, Click **Instances** under **Compute** 
 
 8. Click Create Instance. Fill out the dialog box:
 
@@ -171,7 +171,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 12. Enter command 
 ```
-ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
+ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE>
 ```
 
 **HINT:** If 'Permission denied error' is seen, ensure you are using '-i' in the ssh command. You MUST type the command, do NOT copy and paste ssh command
@@ -194,7 +194,7 @@ sudo yum -y install httpd
 sudo systemctl start httpd 
 ```
 
-3. Verify hhtp status, Enter command:
+3. Verify http status, Enter command:
 
 ```
 sudo service httpd status
@@ -202,13 +202,13 @@ sudo service httpd status
 
 4. We now have installed httpd server on a compute instance and will create a custom image. Switch back to OCI Console window
 
-5. From OCI servies menu, Click **Instances** under **Compute** 
+5. From OCI services menu, Click **Instances** under **Compute** 
 
 6. Click your compute instance name and Click **Stop**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Custom_Image/img/Custom_Image_001.PNG" alt="image-alt-text">
 
-7. Once Stooped, Click **Create Custom Image** from **Actions** menu
+7. Once Stopped, Click **Create Custom Image** from **Actions** menu
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Custom_Image/img/Custom_Image_002.PNG" alt="image-alt-text">
 
@@ -241,7 +241,7 @@ sudo service httpd status
 
 2. If your Compute instance is not displayed, From OCI services menu Click Instances under Compute
 
-3. Locate first compute instance, Click Action icon and then **Terminat** 
+3. Locate first compute instance, Click Action icon and then **Terminate** 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text">
 
@@ -252,10 +252,12 @@ sudo service httpd status
 
 5. Repeat the step to delete second compute instance
 
-6. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will 
+6. From OCI Servies Menu Click **Compute** then **Custom Images**. Locate the custom image you created. Click the Action icon and then **Terminate**
+
+7. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will 
 appear.
 
-7. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
+8. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text">
 

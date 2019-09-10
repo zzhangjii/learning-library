@@ -245,7 +245,8 @@ Compute).
 
 
 - BLOCK VOLUME COMPARTMENT: Ensure correct compartment is selected
-- Block Volume: Choose the volume created earlire
+- Block Volume: Choose the volume created earlier
+- Device Path: Choose the first path
 - Access: Choose READ/WRITE
 
 21. Click **Attach**.
