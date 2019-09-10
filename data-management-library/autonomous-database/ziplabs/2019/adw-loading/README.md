@@ -4,10 +4,10 @@ description: Learn how to load data from an Oracle Object Store into the Oracle 
 tags: Oracle Cloud, Autonomous Data Warehouse, ADW, Oracle Cloud Infrastructure, OCI, Object Store, Data Load
 permalink: /data-management-library/autonomous-database/ziplabs/2019/adw-loading/index.html
 ---
-# Loading Data into the Autonomous Database #
+# Loading Data into ADW#
 
 ## Before You Begin ##
-This 15-minute lab walks you through the steps to get load data from external databases into the Oracle Autonomous Data Warehouse (ADW) on Oracle Cloud Infrastructure (OCI). This lab assumes you have already provisioned an ADW instance.
+This 20-minute lab walks you through the steps to get load data from external databases into the Oracle Autonomous Data Warehouse (ADW) on Oracle Cloud Infrastructure (OCI). This lab assumes you have already provisioned an ADW instance.
 
 ### Background ###
 You can load data into Autonomous Database using Oracle Database tools and 3rd party data integration tools. Data can be loaded:
@@ -185,38 +185,38 @@ Before data is copied, the tables and objects need to be created in ADW.  In thi
 1. Copy the sql script below to create the SALES and CUSTOMER table.
 ````SQL
 CREATE TABLE sales (
-prod_id NUMBER NOT NULL,
-cust_id NUMBER NOT NULL,
-time_id DATE NOT NULL,
-channel_id NUMBER NOT NULL,
-promo_id NUMBER NOT NULL,
-quantity_sold NUMBER(10,2) NOT NULL,
-amount_sold NUMBER(10,2) NOT NULL);
+prod_id NUMBER,
+cust_id NUMBER,
+time_id DATE,
+channel_id NUMBER,
+promo_id NUMBER,
+quantity_sold NUMBER(10,2),
+amount_sold NUMBER(10,2);
 
 CREATE TABLE customers (
-cust_id NUMBER NOT NULL,
-cust_first_name VARCHAR2(20) NOT NULL,
-cust_last_name VARCHAR2(40) NOT NULL,
-cust_gender CHAR(1) NOT NULL,
-cust_year_of_birth NUMBER(4) NOT NULL,
-cust_marital_status VARCHAR2(20) ,
-cust_street_address VARCHAR2(40) NOT NULL,
-cust_postal_code VARCHAR2(10) NOT NULL,
-cust_city VARCHAR2(30) NOT NULL,
-cust_city_id NUMBER NOT NULL,
-cust_state_province VARCHAR2(40) NOT NULL,
-cust_state_province_id NUMBER NOT NULL,
-country_id NUMBER NOT NULL,
-cust_main_phone_number VARCHAR2(25) NOT NULL,
+cust_id NUMBER,
+cust_first_name VARCHAR2(20),
+cust_last_name VARCHAR2(40),
+cust_gender CHAR(1),
+cust_year_of_birth NUMBER(4),
+cust_marital_status VARCHAR2(20),
+cust_street_address VARCHAR2(40),
+cust_postal_code VARCHAR2(10),
+cust_city VARCHAR2(30),
+cust_city_id NUMBER,
+cust_state_province VARCHAR2(40),
+cust_state_province_id NUMBER,
+country_id NUMBER,
+cust_main_phone_number VARCHAR2(25),
 cust_income_level VARCHAR2(30) ,
-cust_credit_limit NUMBER ,
-cust_email VARCHAR2(50) ,
-cust_total VARCHAR2(14) NOT NULL,
-cust_total_id NUMBER NOT NULL,
-cust_src_id NUMBER ,
-cust_eff_from DATE ,
-cust_eff_to DATE ,
-cust_valid VARCHAR2(1) );
+cust_credit_limit NUMBER,
+cust_email VARCHAR2(50),
+cust_total VARCHAR2(14,
+cust_total_id NUMBER,
+cust_src_id NUMBER,
+cust_eff_from DATE,
+cust_eff_to DATE,
+cust_valid VARCHAR2(1));
 
 ````
 2. Paste it in your SQL Developer Web worksheet area overwriting any existing commands.
