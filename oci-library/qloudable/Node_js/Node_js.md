@@ -10,7 +10,11 @@
 
 [Install the Oracle Instant Client](#install-the-oracle-instant-client)
 
-[Delete the resources](#delete-the-resources)
+[Sign in to the Oracle Cloud Infrastructure console](#sign-in-to-the-oracle-cloud-infrastructure-console)
+
+[Install and Configure the Example Node js Application](#install-and-configure-theexample-node-js-application)
+
+[Test your Node js Application](#test-your-node-js-application)
 
 
 ## Overview
@@ -37,17 +41,6 @@ Oracle Autonomous Transaction Processing delivers a self-driving, self-securing,
 **Password**
 **Compartment Name (Provided Later)**
 
-**Sign in to OCI Console**
-
-* **Tenant Name:** {{Cloud Tenant}}
-* **User Name:** {{User Name}}
-* **Password:** {{Password}}
-* **Compartment:**{{Compartment}}
-
-
-1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
 ## Installing Node js
 
@@ -61,7 +54,7 @@ For this hands on lab, Node.js version 12.9.1 for Microsoft Windows (x64) has al
 
 2. Click on the Clipboard icon and select **Paste to remote session**.
 
-   <img src="img/clipboard.png" alt="Qloudable clipboard icon">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Node_js/img/clipboard.png" alt="image-alt-text">
 
 3. Click into the pop up window and press Ctrl-V.
 
@@ -71,7 +64,7 @@ For this hands on lab, Node.js version 12.9.1 for Microsoft Windows (x64) has al
 
 1. Open a Git-Bash window.
 
-   <img src="img/gitBash.png" alt="Launching Git-Bash">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Node_js/img/gitBash.png" alt="image-alt-text">
 
 2. Navigate to the root folder of the C: drive.
 ```
@@ -149,7 +142,7 @@ cd /c/demo/instanctclient_19_3/network/admin
 unzip ~/Downloads/Wallet*.zip
 ```
 
-## Install and Configure the Example Node.js Application 
+## Install and Configure the Example Node js Application 
 
 1. Copy the example.js application to the **/c/demo** directory.
 ```
@@ -166,7 +159,7 @@ Make the following changes:
 * Change the connectString to \<database name\>_low. Your connection string will be the name of your database followed by **_low**. 
 Example: If your database name was **Demo** then your connection string would be set as follows:  **connectString : 'demo_low'**. Your database name is currently **{{Database Name}}**.
 
-## Test your Node.js Application
+## Test your Node js Application
 
 Use the following commands to run your Node.js application:
 ```
