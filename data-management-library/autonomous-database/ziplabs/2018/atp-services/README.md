@@ -2,7 +2,7 @@
 layout: ziplab
 description: Examine Database Services and ATP Consumer Groups.
 tags: Oracle Cloud, Autonomous Transaction Processing, ATP, Oracle Cloud Infrastructure, OCI
-permalink: /ziplabs/atp-services/index.html
+permalink: /data-management-library/autonomous-database/ziplabs/2018/atp-services/index.html
 ---
 # Working with Database Services and ATP Consumer Groups #
 

@@ -2,7 +2,7 @@
 layout: ziplab
 description: Examine Machine Learning Notebooks through Oracle Autonomous Data Warehouse.
 tags: Oracle Cloud, Autonomous Data Warehouse, ADW, Oracle Cloud Infrastructure, OCI, Machine Learning, ML
-permalink: /ziplabs/adw-machine-learning/index.html
+permalink: /data-management-library/autonomous-database/ziplabs/2018/adw-machine-learning/index.html
 ---
 # Getting Started With Oracle Machine Learning Notebooks #
 

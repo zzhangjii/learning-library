@@ -2,7 +2,7 @@
 layout: ziplab
 description: Examine Scaling, Performance, and Moonitoring in ATP.
 tags: Oracle Cloud, Autonomous Transaction Processing, ATP, Oracle Cloud Infrastructure, OCI
-permalink: /ziplabs/atp-scaling/index.html
+permalink: /data-management-library/autonomous-database/ziplabs/2018/atp-scaling/index.html
 ---
 # Scaling, Performance, and Monitoring in ATP #
 
