@@ -170,7 +170,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG" alt="image-alt-text">
 
-7. Switch to the OCI console. From OCI servies menu, Click **Instances** under **Compute** 
+7. Switch to the OCI console. From OCI services menu, Click **Instances** under **Compute** 
 
 8. Click Create Instance. Fill out the dialog box:
 
@@ -236,17 +236,16 @@ Compute).
 
 20. Fill out the dialog box:
 
+- Choose how you want to attach your block volume: Paravirtualized
 
-- Choose how you want to attach your block volume:Check Paravirtualized
-
-**NOTE:** We can also use ISCSI mode, in which case we will not have to use ISCSI commands as detailed later on. For more information please refer to ;
+**NOTE:** We can also use ISCSI mode. For more information please refer to ;
 
 **https://docs.cloud.oracle.com/iaas/Content/Block/Concepts/overview.htm#attachtype** OR refer Appendix section at the end of the lab.
 
 
 - BLOCK VOLUME COMPARTMENT: Ensure correct compartment is selected
 - Block Volume: Choose the volume created earlier
-- Device Path: Choose the first path
+- Device Path: Choose a device path. **Note down this device path as it will be used later on**
 - Access: Choose READ/WRITE
 
 21. Click **Attach**.
@@ -290,14 +289,14 @@ sudo systemctl start httpd
 
 5. To format the block volume, Enter Command: 
 ```            
-sudo fdisk /dev/<VOLUME_NAME> -l 
+sudo fdisk <DEVICE_PATH> -l 
 ```
 **For example sudo fdisk /dev/sdb -l**   
 Wait for formatting to complete
 
 6. Create a file system on the block volume, Enter Command: 
 ```
-sudo mkfs.ext4 -L datapartition /dev/<VOLUME_NAME>   
+sudo mkfs.ext4 -L datapartition <DEVICE_PATH> 
 ```         
 
 This will create the file system on the entire disk. Enter y when prompted with 'Proceed anyway'
@@ -381,7 +380,7 @@ http://<COMPUTE_INSTANCE_PUBLIC_IP>
 
 ## OPTIONAL: Detach the block volume and launch second compute instance using boot volume and attach Block Volume
 
-**In this section we will detach the block volume, Stop the compute instance, use its boot volume to launch a second compute instnace and delete the second compute instance**
+**In this section we will detach the block volume, Stop the compute instance, use its boot volume to launch a second compute instance and delete the second compute instance**
 
 1. In ssh session to the compute instance unmount the directory from block volume, Enter command:
 ```
@@ -457,7 +456,7 @@ sudo systemctl restart httpd
 
 2. If your Compute instance is not displayed, From OCI services menu Click **Instances** under **Compute**
 
-3. Locate first compute instance, Click Action icon and then **Terminat** 
+3. Locate first compute instance, Click Action icon and then **Terminate** 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text">
 
@@ -485,10 +484,6 @@ appear.
 11. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text">
-
-12. From OCI services menu Click **Networking**, then **Public IPs**,locate the Reserved Public IP you created. Click Action icon and then **Terminate**
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0019.PNG" alt="image-alt-text">
 
 
 ***Congratulations! You have successfully completed the lab. ***

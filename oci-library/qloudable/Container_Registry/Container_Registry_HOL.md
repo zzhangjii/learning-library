@@ -197,7 +197,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 12. Enter command 
 ```
-ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
+ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE>
 ```
 
 **HINT:** If 'Permission denied error' is seen, ensure you are using '-i' in the ssh command. You MUST type the command, do NOT copy and paste ssh command
@@ -216,7 +216,7 @@ sudo yum install -y yum-utils device-mapper-persistent-data lvm2
 
 15. Enter command:
 ```
-sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo**
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo*
 ```
 
 16. Enter command:
@@ -242,7 +242,7 @@ sudo usermod -aG docker opc
 
 20. Docker is installed and user opc enabled to use Docker. Enter Command 
 ```
-Exit
+exit
 ```
 
 to logout of ssh session on compute instance and then ssh back in to the compute instance. Enter command **Docker images** and ensure no error is displayed
@@ -256,7 +256,7 @@ docker image pull alpine
 ``` 
 Verify image pull was successful, Enter Command 
 ```
-Docker images
+docker images
 ``` 
 and verify alpine is present
 
@@ -298,9 +298,9 @@ docker tag <image_id>  <Region_Name_Code>.ocir.io/<TenancyName>/<docker_registry
 ```
 docker images
 ``` 
-and verify version x.y.test is present. x and y will be the numeric version number)
+and verify version<x.y>.test is present. 
 
-**NOTE:** In below example:
+**NOTE:** In below example (version4.0.test) x is 4 and y is 0 
 
 
 - <image_id> is **3fd9065eaf02** 
@@ -314,7 +314,7 @@ and verify version x.y.test is present. x and y will be the numeric version numb
 27. We will now push the image to docker registry in OCI. Enter command: 
 
 ```
-docker push <Region_Name_Code>.ocir.io/<Tenancy_Name>/<docker_registry_name>:<image_name>** (No Spaces)
+docker push <Region_Name_Code>.ocir.io/<Tenancy_Name>/<docker_registry_name>:<image_name>* (No Spaces)
 ```
 **NOTE:** In below example:
 
@@ -332,7 +332,7 @@ docker push <Region_Name_Code>.ocir.io/<Tenancy_Name>/<docker_registry_name>:<im
 
 29. Switch to compute instance ssh window. Enter command:
 ```
-docker pull <Region_Name_Code>.ocir.io/<Tenancy_Name>/<docker_registry_name>:<image_name>**  (No Spaces)    
+docker pull <Region_Name_Code>.ocir.io/<Tenancy_Name>/<docker_registry_name>:<image_name>*  (No Spaces)    
 ```
 30. Verify the pull command was successful
 
@@ -357,16 +357,14 @@ docker pull <Region_Name_Code>.ocir.io/<Tenancy_Name>/<docker_registry_name>:<im
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0017.PNG" alt="image-alt-text">
 
 
-5. Repeat the step to delete second compute instance
-
-6. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will 
+5. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will 
 appear.
 
-7. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
+6. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text">
 
-8. Navigate to your registry(**Registry(OCIR)** under **Developer Services**), Click Registry Name, Under **Actions** Click **Delete Repository**  ,Click **Delete** in confirmation window
+7. Navigate to your registry(**Registry(OCIR)** under **Developer Services**), Click Registry Name, Under **Actions** Click **Delete Repository**  ,Click **Delete** in confirmation window
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Container_Registry/img/OCIR_HOL0042.PNG" alt="image-alt-text">
 

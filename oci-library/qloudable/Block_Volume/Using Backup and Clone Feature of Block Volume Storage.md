@@ -180,7 +180,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 12. Enter command 
 ```
-ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
+ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE>
 ```
 
 **HINT:** If 'Permission denied error' is seen, ensure you are using '-i' in the ssh command. You MUST type the command, do NOT copy and paste ssh command
@@ -198,7 +198,7 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 
 - Name: Enter a name for the block volume 
 - Create in Compartment: Has the correct compartment selected.
-- Availability Domain: Select availability domain **(must be differetn from compute instance's AD)**
+- Availability Domain: Select availability domain **(must be different from compute instance's AD)**
 - SIZE: Set to 50
 - BACKUP POLICY: Leave as is
 - ENCRYPTION: ENCRYPT USING ORACLE-MANAGED KEYS
@@ -257,6 +257,7 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 - Choose how you want to attach your block volume: PARAVIRTUALIZED
 - BLOCK VOLUME COMPARTMENT: Choose your compartment
 - BLOCK VOLUME: Choose the block volume created in the same AD as the compute instance
+- Device Path: Choose a device path. **Note down this device path**
 - ACCESS: Read/Write
 
 30. Click **Attach**
@@ -318,7 +319,7 @@ Under **Volumes**
 
 2. If your Compute instance is not displayed, From OCI services menu Click Instances under Compute
 
-3. Locate first compute instance, Click Action icon and then **Terminat** 
+3. Locate first compute instance, Click Action icon and then **Terminate** 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text" >
 
@@ -344,7 +345,3 @@ appear.
 10. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text" >
-
-11. From OCI services menu Click **Networking**, then **Public IPs**,locate the Reserved Public IP you created. Click Action icon and then **Terminate**
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0019.PNG" alt="image-alt-text" >
