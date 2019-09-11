@@ -120,7 +120,8 @@ communication between your Autonomous Database and the object store relies on th
     ![](img/adw-loading-token-description.png)
 
     -   Copy the generated token to notepad located on your desktop. The token does not appear again and you WILL NEED this token to load your data into ADW.
-    ![](img/adw-loading-generated-token.png)
+
+        ![](img/adw-loading-generated-token.png)
 
     -   Click **Close**.
 
@@ -133,10 +134,10 @@ Now that you have created an object store Auth Token, its time to store the cred
 1.  Let's navigate to SQL Developer web to prepare your ADW instance for the staged data.  
 Go back to your ADW instance via the menu.
 
-    ![](img/adw-loading-adw-instance.png)
+    ![](img/adw-loading-view-dbs.png)
 
 2.  Click on the ADW instance you created in a previous exercise and verify it is still running.
-![](img/adw-loading-adw-instance2.png)
+![](img/adw-finance-mart.png)
 
 3.  Click on **Service Console**.  If the service console does not open a new tab, ensure pop up blocker is turned off for your browser.  Click on **Development** to access the developer tools for ADB.
 
@@ -182,10 +183,10 @@ your ADW instance now.
 
 Before data is copied, the tables and objects need to be created in ADW.  In this lab you will create the target objects.
 
-1. Open up the sql script [here](files/adw-loading.sql) in notepad.  This script will be used to create the tables and constraints.
+1. Open up the sql script [here](files/adw-loading.sql) in notepad.   _(Remember to click the back button to return to this window)_ This script will be used to create the tables and constraints.
 
 2. Copy and paste it in your SQL Developer Web worksheet area overwriting any existing commands.
-![](img/adw-loading-copy-data-2.png)
+![](img/adw-loading-paste-sql.png)
 
 3.  Select the entire script and press the green play button.
 
@@ -193,7 +194,7 @@ Before data is copied, the tables and objects need to be created in ADW.  In thi
 
 
 4. Once the script has run review the output to ensure the tables and constraints have been created successfully.  
-![](img/adw-loading-sql-worksheet-tables.png)
+![](img/adw-loading-create-tables-3.png)
 
 Now you have empty tables and staged data in the OCI Object store. To get the data from the object store to your ADB instance, you need to get some information about the object. To move the data we will be using the dbms_cloud.copy_data procedure.  The procedure takes information about the location of the data you staged in your object store.
 
@@ -209,6 +210,7 @@ Now you have empty tables and staged data in the OCI Object store. To get the da
     /
 ````
 
+
 5. Select **Object Storage->Object Storage** from the menu.  Select your bucket. 
 
 6.  In the objects section, locate your data file.  Click on the three dots on the right. 
@@ -219,24 +221,25 @@ Now you have empty tables and staged data in the OCI Object store. To get the da
 8. Copy the URL Path by pressing `<CTRL-C>`.  Copy the url to your notepad.
 ![](img/adw-view-object-details-customers.png)
 
-9.  Download this [sql script](files/adw-loading-copy-data.sql)  to load your tables.   Replace the file_uri_list with the string you saved in notepad. The script already has the correct table names, just replace the tenancy address. 
+9.  Download this [sql script](files/adw-loading-copy-data.sql)  to load your tables. _(Remember to click the back button to return)_.  Replace the file_uri_list with the string you saved in notepad. The script already has the correct table names, just replace the tenancy address. 
 
     ````SQL
     begin
         dbms_cloud.copy_data(
             table_name =>'<ENTER_TABLE_NAME>',
             credential_name =>'OBJ_STORE_CRED',
-            file_uri_list =>'<replace this urlpat'/chan_v3.dat',
+            file_uri_list =>'<replace this urlpart>'/chan_v3.dat',
             format => json_object('ignoremissingcolumns' value 'true', 'removequotes' value 'true')
         );
     end;
     /
     ````
 
-10. Select both commands and press the green play button.
+10. Replace **only** the first portion of the file_uri_list for all of **the tables**.  The table names are preset in the sql script.
+![](img/adw-loading-copy-data-2.png)
 
 
-11. In the Script Output, once you see the message `PL/SQL procedure successfully completed.`, Query the tables to see the rows that were inserted.  
+11. In the Script Output, once you see the message `PL/SQL procedure successfully completed.`, Query a few of the tables to see the rows that were inserted.  
     ````SQL
     select * from sales;
     select * from customers;
