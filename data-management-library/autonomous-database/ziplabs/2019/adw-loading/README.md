@@ -90,7 +90,8 @@ For this lab, we'll use the `root` compartment.
 ![](img/adw-loading-update-visibility.png)
 
 14. Your bucket should now be visible and public.  Verify and proceed to setting up your Auth token.
-![](img/adw-loading-bucket-info.png)
+
+    ![](img/adw-loading-bucket-info.png)
 
 
 
