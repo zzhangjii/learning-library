@@ -6,8 +6,8 @@
 * [Getting Started With Oracle Machine Learning Notebooks](2019/adw-machine-learning)
 * [Provisioning Autonomous Transaction Processing](2019/atp-provisioning)
 * [Using Performance Hub to Analyze Resource Demand from Queries](2019/atp-performance-hub)
-* [Running APEX on ATP 1] - Comning soon
-* [Running APEX on ATP 2] - Comning soon
+* [Buildin an APEX spreadsheet application on ATP](2019/atp-apex-spreadsheet-app)
+* [Buildin an APEX table application on ATP](2019/atp-apex-table-app)
 * [Create a Virtual Machine Instance Using Oracle Cloud Infrastructure Compute](2019/oci-vm)
 
 

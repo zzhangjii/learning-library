@@ -31,7 +31,7 @@ _Note: If you have a workspace on the Autonomous Database Cloud Service then you
 ![](img/section1/image3.png)
 
 * Click **Development**
-* Click **APEX** ***
+* Click **APEX**
 ![](img/section1/image4.png)
 
 ### Step 1.2 - Creating a Workspace
@@ -51,7 +51,7 @@ _Note: If you have a workspace on the Autonomous Database Cloud Service then you
 
 ![](img/section1/image7.png)
 
-_Note: The Database User will be used for the Workspace Name. If you want you can update the Workspace Name_
+_Note: The Database User will be used for the Workspace Name. If you want you can update the Workspace Name._
 
 ### Step 1.3 - Log into your New Workspace
 * Click on the link within the success message {easiest technique} OR Click on the Admin user (top right), click **Sign Out**, and then click **Return to Sign In Page**
@@ -71,7 +71,7 @@ _Note: The Database User will be used for the Workspace Name. If you want you ca
 
 ![](img/section1/image9.png)
 
-_Note: Enter the Workspace Name and Database User entered in Step 2c above_
+_Note: Enter the Workspace Name and Database User entered in Step 1.2 above_
 
 * Given this is your first time entering your new Workspace, click **Set APEX Account Password**
 ![](img/section1/image10.png)
