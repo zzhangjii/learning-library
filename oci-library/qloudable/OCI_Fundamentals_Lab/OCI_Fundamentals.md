@@ -146,7 +146,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG" alt="image-alt-text">
 
-7. Switch to the OCI console. From OCI servies menu, Click **Instances** under **Compute** 
+7. Switch to the OCI console. From OCI services menu, Click **Instances** under **Compute** 
 
 8. Click Create Instance. Fill out the dialog box:
 
@@ -180,7 +180,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 13.  ssh to **first** compute instance. Enter command:
             
 ```
-ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
+ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE>
 ```
 **NOTE:** User name is ‘opc’.
 
@@ -310,7 +310,7 @@ In this section we will create a new security list. This security list will be u
 
 7. Ensure the new route table appears in the list (Under Create Route Table).
 
-**We now have a route table that allows all traffic. Next we will attach this route table to two new subnets that we will create (These 2 subnets will be used by the Load Balancer).**
+**We now have a route table that allows all traffic. Next we will attach this route table to two new subnets that we will create (This subnet will be used by the Load Balancer).**
 
 8. Create First subnet:
 **First Subnet:** (Your Virtual Cloud Network should be visible in OCI Console window.) 
@@ -390,7 +390,7 @@ In this section we will create a new security list. This security list will be u
 
 4. Wait for the load balancer to become active and then note down it’s Public IP address.
 
-**We now have a load balancer that will manage the 2 subnets we had created earlier.**
+**We now have a load balancer that will manage the subnet we created earlier.**
 
 5. From OCI Services menu, Click **Virtual Cloud Network** under Networking. Locate the VCN you created.
 
@@ -421,24 +421,24 @@ Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure 
 
 11. Click **Add Egress Rule**.
 
-12. Click **Security Lists**, and locate the Default Security List of the VCN Click **Add Egress Rule**.  Click **+Additional Egress Rule** and Add below 2 Rules for Egress; Ensure to leave STATELESS flag un-checked.:
+12. Click **Security Lists**, and locate the Default Security List of the VCN Click **Add Egress Rule**.  Click **+Additional Egress Rule** and Add below 2 Rules for Ingress; Ensure to leave STATELESS flag un-checked.:
 
 **First Rule**
 
 
-- Destination Type: CIDR
-- Destination CIDR: 10.0.4.0/24
+- Source Type: CIDR
+- Source CIDR: 10.0.4.0/24
 - IP Protocol: Select TCP.
 - Source Port Range: All
 - Destination Port Range: 80
 
-13. Click **+Additional Egress Rule** and enter the following Egress rule; Ensure to leave STATELESS flag un-checked
+13. Click **+Additional Ingress Rule** and enter the following Egress rule; Ensure to leave STATELESS flag un-checked
 
 **Second Rule**
 
 
-- Destination Type: CIDR
-- Destination CIDR: 10.0.5.0/24
+- Source Type: CIDR
+- Source CIDR: 10.0.5.0/24
 - IP Protocol: Select TCP
 - Destination Port Range: 80
 
@@ -482,7 +482,7 @@ Delete Load Balancer and associated components:
 
 4. From OCI services menu Click **Instances** under Compute
 
-5. Locate first compute instance, Click Action icon and then **Terminat** 
+5. Locate first compute instance, Click Action icon and then **Terminate** 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text">
 
@@ -498,10 +498,6 @@ appear.
 9. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text">
-
-10. From OCI services menu Click **Networking**, then **Public IPs**,locate the Reserved Public IP you created. Click Action icon and then **Terminate**
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0019.PNG" alt="image-alt-text">
 
 
 ***Congratulations! You have successfully completed the lab. ***

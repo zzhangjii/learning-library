@@ -4,13 +4,21 @@
 
 [Overview](#overview)
 
+[Pre-Requisites](#pre-requisites)
+
 [Installing Node js](#installing-node-js)
 
-[Installing Oracle Database driver for Node js](#installing-oracle-database-driver-for-Node-js)
+[Installing Oracle Database driver for Node js](#installing-oracle-database-driver-for-node-js)
 
 [Install the Oracle Instant Client](#install-the-oracle-instant-client)
 
-[Delete the resources](#delete-the-resources)
+[Sign in to the Oracle Cloud Infrastructure console](#sign-in-to-the-oracle-cloud-infrastructure-console)
+
+[Install and Configure the Example Node.js Application](#install-and-configure-the-example-node.js-application)
+
+[Test your Node.js Application](#test-your-node.js-application)
+
+[References](#references)
 
 
 ## Overview
@@ -37,88 +45,99 @@ Oracle Autonomous Transaction Processing delivers a self-driving, self-securing,
 **Password**
 **Compartment Name (Provided Later)**
 
-**Sign in to OCI Console**
+**Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
 
-* **Tenant Name:** {{Cloud Tenant}}
-* **User Name:** {{User Name}}
-* **Password:** {{Password}}
-* **Compartment:**{{Compartment}}
+## Pre-Requisites
 
+1. OCI Training : https://cloud.oracle.com/en_US/iaas/training
 
-1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
+2. Familiarity with OCI console: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/console.htm
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
+3. Overview of Networking: https://docs.us-phoenix-1.oraclecloud.com/Content/Network/Concepts/overview.htm
+
+4. Familiarity with Compartment: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/concepts.htm
+
+5. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
 
 ## Installing Node js
 
-For this hands on lab, Node.js version 12.9.1 for Microsoft Windows (x64) has already been installed. Node.js is available for several different operating systems and can be downloaded from https://nodejs.org/en/downloads. There are techniques for installing Node.js with administrative privileges such as root or administrator access, and techniques for installing without special privileges. The Microsoft Windows platform has an additional requirement to install the Visual Studio 2017 Redistributable. This step has already been performed.
+1. For this hands on lab, Node.js version 12.9.1 for Microsoft Windows (x64) has already been installed. Node.js is available for several different operating systems and can be downloaded from https://nodejs.org/en/downloads. There are techniques for installing Node.js with administrative privileges such as root or administrator access, and techniques for installing without special privileges. The Microsoft Windows platform has an additional requirement to install the Visual Studio 2017 Redistributable. This step has already been performed.
+
 
 ## Installing Oracle Database driver for Node js
 
 **Using the Clipboard**
 
-1. To copy content from the lab instructions to your OCI instance, select the content and use Ctrl-C to copy the content.
+1. To copy content from the lab instructions to your OCI instance,select the content and use Ctrl-C to copy the content.
 
 2. Click on the Clipboard icon and select **Paste to remote session**.
 
-   <img src="img/clipboard.png" alt="Qloudable clipboard icon">
+<img src="img/clipboard.png" alt="Qloudable clipboard icon">
 
 3. Click into the pop up window and press Ctrl-V.
 
 4. Click in the tool or field where you want to paste and press Shift+Ins when inside a Git-Bash window, or you can right-click inside the Git-Bash windows and select paste.
 
-**Installing Oracle Database driver for Node.js**
+**Installing Oracle Database driver for Node js**
 
-1. Open a Git-Bash window.
+5. Open a Git-Bash window.
 
-   <img src="img/gitBash.png" alt="Launching Git-Bash">
+<img src="img/gitBash.png" alt="Launching Git-Bash">
 
-2. Navigate to the root folder of the C: drive.
+6. Navigate to the root folder of the C: drive.
+
 ```
 cd /c
 ```
 
-3. Create a new demo directory and change to that directory.
+7.  Create a new demo directory and change to that directory.
+
 ```
 mkdir demo
+```
+
+```
 cd demo
 ```
 
-4. Verify that Node.js is installed.
+8.  Verify that Node.js is installed.
 ``` 
 node --version 
 ```
 
-5. Determine the version of npm that is installed.
+9. Determine the version of npm that is installed.
 ```
 npm -v 
 ```
 
-6. Use npm to install the Oracle Database driver for Node.js.
+10. Use npm to install the Oracle Database driver for Node.js.
 ``` 
 npm install oracledb
 ```
 
-7. Verify that the Oracle Database driver for Node.js has been installed.
+11. Verify that the Oracle Database driver for Node.js has been installed.
 ```
 npm list
 ```
 
 ## Install the Oracle Instant Client
-For this hands on lab, the Oracle Instant Client for Microsoft Windows (x64) has already been downloaded and staged, but not installed. The Oracle Instant Client is typically downloaded from https://www.oracle.com/database/technologies/instant-client/downloads.html. It is currently stage in the **/c/OracleDB-Node.js-lab** folder.
+1. For this hands on lab, the Oracle Instant Client for Microsoft Windows (x64) has already been downloaded and staged, but not installed. The Oracle Instant Client is typically downloaded from https://www.oracle.com/database/technologies/instant-client/downloads.html. It is currently stage in the **/c/OracleDB-Node.js-lab** folder.
 
-1. Unzip the Oracle Instant into your **/c/demo** directory.
+2. Unzip the Oracle Instant into your **/c/demo** directory.
 ```
 unzip /c/OracleDB-Node.js-lab/instantclient-basic-windows.x64-19.3.0.0.0dbru.zip
 ```
 
-2. Change to the instantclient_19_3 subdirectory that was just created, and create network/admin subdirectories. The Oracle Wallet security credentials from the OCI database instance will need to be placed into the /c/demo/instanctclient_19_3/network/admin directory.
+3. Change to the instantclient_19_3 subdirectory that was just created, and create network/admin subdirectories. The Oracle Wallet security credentials from the OCI database instance will need to be placed into the /c/demo/instanctclient_19_3/network/admin directory.
+
 ```
 cd instantclient_19_3
+```
+```
 mkdir -p 
 ```
 
-3. Add the location of the installed Oracle Instant Client to the PATH variable persistently.
+4. Add the location of the installed Oracle Instant Client to the PATH variable persistently.
 ```
 echo "export PATH=/c/demo/instanctclient_19_3:\$PATH" >> ~/.bashrc
 source ~/.bashrc
@@ -129,6 +148,7 @@ source ~/.bashrc
 1. Launch the Chrome browser application (Same location that you launched Git-Bash). The home page should be set to the OCI sign in page.
 
 2. Sign in to the OCI console using the following information:
+
 * **Tenant Name:** {{Cloud Tenant}}
 * **User Name:** {{User Name}}
 * **Password:** {{Password}}
@@ -160,23 +180,28 @@ cp /c/OracleDB-Node.js-lab/example.js /c/demo
 ``` 
 vi /c/demo/example.js
 ```
-Make the following changes:
+
+3. Make the following changes:
 * Change the user to admin so it appears as follows: **user   : 'ADMIN'**
 * Change the password to the password you created when downloading the wallet.
 * Change the connectString to \<database name\>_low. Your connection string will be the name of your database followed by **_low**. 
 Example: If your database name was **Demo** then your connection string would be set as follows:  **connectString : 'demo_low'**. Your database name is currently **{{Database Name}}**.
+
 
 ## Test your Node.js Application
 
 Use the following commands to run your Node.js application:
 ```
 cd /c/demo
+```
+```
 node example.js
 ```
 
 You should see the follwing output indicating success: **[ [ 101, 'Alpha' ], [ 102, 'Beta' ], [ 103, 'Gamma' ] ]**.
 
 **Congratulations! You have successfully completed the lab.**
+
 
 ## References
 

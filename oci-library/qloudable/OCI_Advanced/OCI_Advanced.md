@@ -281,7 +281,7 @@ Fill out the dialog box:
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_005.PNG" alt="image-alt-text">
 
-14. Fill out the dialg box:
+14. Fill out the dialog box:
 
 
 - SPECIFY THE LOCAL PEERING GATEWAY: Browse below (To browse the list of available gateways)
