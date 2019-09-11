@@ -77,8 +77,7 @@ For this lab, we'll use the `root` compartment.
 
 
 10.  **Select the ten data files** and click **Open**.  Once the files are finished loading, click **Upload Objects** to load. 
-
-![](img/adw-loading-view-objects-3.png)
+![](img/adw-loading-view-objects-4.png)
 
 11.  Once complete, verify **all** *.dat files have a status of *`Finished`* and click **Close**.
 
