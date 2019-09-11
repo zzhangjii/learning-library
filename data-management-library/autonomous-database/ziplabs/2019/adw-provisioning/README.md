@@ -36,11 +36,7 @@ Oracle’s Autonomous Data Warehouse is the perfect quick-start service for fast
      * **CPU Core Count**: `1`
      * **Storage (TB)**:  `1`
      * **Auto Scaling**: Unchecked
-<<<<<<< HEAD
      * **Administrator Credentials**: Create a password for the ADMIN user of the service instance. You'll need this password in the upcoming steps to download the credential wallet and connect to the database from Oracle SQL Developer Web.  Use a password you can remember.
-=======
-     * **Administrator Credentials**: Create a password for the ADMIN user of the service instance. Remeber this password! You'll need it later to sign in to various services.
->>>>>>> upstream/master
      * **License Type**: `Bring Your Own License`
 6. Click the **Create Autonomous Database** button to start provisioning the instance. 
 7. You're taken to the instance's details page. Details include a State field, which indicates the instance is **Provisioning**. When it's complete, the State field changes from **Provisioning** to **Available**. If the status doesn't change after few minutes, try refreshing the page.
