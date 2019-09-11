@@ -76,19 +76,19 @@ For this lab, we'll use the `root` compartment.
     ![](img/adw-loading-select-files.png)
 
 
-10.  **Select the two data files** `customers.dat` and `sales.dat` and click **Open**.  Once the files are finished loading, click **Upload Objects** to load. 
+10.  **Select the ten data files** and click **Open**.  Once the files are finished loading, click **Upload Objects** to load. 
 
-   ![](img/adw-loading-load-bucket-2-new.png)
+![](img/adw-loading-view-objects-3.png)
 
-11.  Once complete, verify *both* *.dat files have a status of *`Finished`* and click **Close**.
+11.  Once complete, verify **all** *.dat files have a status of *`Finished`* and click **Close**.
 
-12. Your bucket should have 2 objects, customers.dat and sales.dat loaded.  *If this were a true data load, you may be loading hundreds of large files here.*
-
+12. Your bucket should have 10 objects loaded.  If this were a true data load, you may be loading *hundreds* of large files here.
 
 12.  The final step will be to change the visibility of your bucket. Click the **Edit Visibility** button at the top of your Bucket Details screen.
-
+![](img/adw-loading-edit-visibility.png)
 
 13. Change the visibility to **Public**, accept all other defaults.  Click **Save Changes**.
+![](img/adw-loading-update-visibility.png)
 
 14. Your bucket should now be visible and public.  Verify and proceed to setting up your Auth token.
 ![](img/adw-loading-bucket-info.png)
