@@ -40,7 +40,7 @@ The objective of this lab is to mask the CUST_LAST_NAME and CUST_MAIN_PHONE_NUMB
 * **Database Name:** {{Database Name}}
 * **Database Password:** {{Database Password}}
 
-1. In Oracle Cloud, click Sign In. Sign in using your tenant name. Then click Next.
+1. In Oracle Cloud, click Sign In. Sign in using your tenant name. Then click Continue.
 
 2. Enter your user name and password.
 

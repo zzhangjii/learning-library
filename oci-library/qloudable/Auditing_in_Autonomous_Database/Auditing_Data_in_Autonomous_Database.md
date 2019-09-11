@@ -51,7 +51,7 @@ We will do the following:
 * **Database Name:** {{Database Name}}
 * **Database Password:** {{Database Password}}
 
-1. In Oracle Cloud, click Sign In. Sign in using your tenant name. Then click Next.
+1. In Oracle Cloud, click Sign In. Sign in using your tenant name. Then click Continue.
 
 2. Enter your user name and password.
 
