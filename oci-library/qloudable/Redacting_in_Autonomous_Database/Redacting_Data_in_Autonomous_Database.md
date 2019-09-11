@@ -6,7 +6,7 @@ that Data Redaction finally brings. With Data Redaction is now possible to easil
 randomize the data and set the masking conditions.
 
 
-<img src="./img/carddetail.png" alt="image-alt-text">
+<img src="https://github.com/oracle/learning-library/tree/master/oci-library/qloudable/Redacting_in_Autonomous_Database/img/carddetail.png" alt="image-alt-text">
   
 ## Table of Contents
 
@@ -28,7 +28,7 @@ The objective of this lab is to mask the CUST_LAST_NAME and CUST_MAIN_PHONE_NUMB
 * The lab requires an Oracle Public Cloud account with Autonomous Transaction Processing Cloud Service.
 * Granting DBMS_REDACT access to the user creating the redaction policy is required to complete the operation. The user ADMIN is already granted the EXECUTE object privilege on SYS.DBMS_REDACT package.
 
-  <img src="./img/Priv_DBMS_REDACT.png" alt="image-alt-text">
+  <img src="https://github.com/oracle/learning-library/tree/master/oci-library/qloudable/Redacting_in_Autonomous_Database/img/Priv_DBMS_REDACT.png" alt="image-alt-text">
 
 
 ## Sign in to OCI Console
@@ -44,7 +44,7 @@ The objective of this lab is to mask the CUST_LAST_NAME and CUST_MAIN_PHONE_NUMB
 
 2. Enter your user name and password.
 
-<img src="./img/Cloud.png" alt="image-alt-text">
+<img src="https://github.com/oracle/learning-library/tree/master/oci-library/qloudable/Redacting_in_Autonomous_Database/img/Cloud.png" alt="image-alt-text">
 
 3. Click the hamburger menu at the upper right, and select Autonomous Transaction Processing.
 
@@ -56,17 +56,17 @@ The objective of this lab is to mask the CUST_LAST_NAME and CUST_MAIN_PHONE_NUMB
 
 1. Click the Service Console tab.
 
-   <img src="./img/Service_console.png" alt="image-alt-text">
+   <img src="https://github.com/oracle/learning-library/tree/master/oci-library/qloudable/Redacting_in_Autonomous_Database/img/Service_console.png" alt="image-alt-text">
 
    Note: You have to disable the pop-up blocker. Click on the Popup-blocker icon and select *Always allow popups ...*. Then click the Service Console tab again.
 
 2. Click the Development tab. Then click the SQL Developer Web.
 
-   <img src="./img/Devt.png" alt="image-alt-text">
+   <img src="https://github.com/oracle/learning-library/tree/master/oci-library/qloudable/Redacting_in_Autonomous_Database/img/Devt.png" alt="image-alt-text">
    
 3. In SQL Developer Web, sign in with the ADMIN user and the password provided above. Then click Sign In.
 
-   <img src="./img/SQLDevWeb_login.png" alt="image-alt-text">
+   <img src="https://github.com/oracle/learning-library/tree/master/oci-library/qloudable/Redacting_in_Autonomous_Database/img/SQLDevWeb_login.png" alt="image-alt-text">
    
 4. Before starting redacting data, you create a new user and a table with sensitive data. Use the following commands in the Worksheet: 
    
@@ -91,14 +91,14 @@ The objective of this lab is to mask the CUST_LAST_NAME and CUST_MAIN_PHONE_NUMB
       CREATE TABLE test.customers AS SELECT * FROM sh.customers;
    ```
       
-   <img src="./img/Create_User_Test.png" alt="image-alt-text">
-   <img src="./img/Enable_TEST_user_create_table.png" alt="image-alt-text">
+   <img src="https://github.com/oracle/learning-library/tree/master/oci-library/qloudable/Redacting_in_Autonomous_Database/img/Create_User_Test.png" alt="image-alt-text">
+   <img src="https://github.com/oracle/learning-library/tree/master/oci-library/qloudable/Redacting_in_Autonomous_Database/img/Enable_TEST_user_create_table.png" alt="image-alt-text">
 
 5. Display the data from the TEST.CUSTOMERS table, by copying, pasting, and executing the query in the Worksheet.
 ```
       SELECT cust_first_name, cust_last_name, cust_main_phone_number FROM test.customers;
 ``` 
-   <img src="./img/Query_not_redacted.png" alt="image-alt-text">
+   <img src="https://github.com/oracle/learning-library/tree/master/oci-library/qloudable/Redacting_in_Autonomous_Database/img/Query_not_redacted.png" alt="image-alt-text">
  
 ## Redact Sensitive Data
 
@@ -126,19 +126,19 @@ The objective of this lab is to mask the CUST_LAST_NAME and CUST_MAIN_PHONE_NUMB
                                      function_parameters  => 'VVVFVVVFVVVV,VVV-VVV-VVVV,*,6,7', expression => '1=1' )
 ```
 
-   <img src="./img/Create_alter_policy.png" alt="image-alt-text">
+   <img src="https://github.com/oracle/learning-library/tree/master/oci-library/qloudable/Redacting_in_Autonomous_Database/img/Create_alter_policy.png" alt="image-alt-text">
 
 2. Display the redacted values. First delete the commands from the Worksheet and reload the query from the SQL History by clicking twice on the command.
 
 
-   <img src="./img/Query2.png" alt="image-alt-text">
+   <img src="https://github.com/oracle/learning-library/tree/master/oci-library/qloudable/Redacting_in_Autonomous_Database/img/Query2.png" alt="image-alt-text">
    
    
-   <img src="./img/Query_not_redacted.png" alt="image-alt-text">
+   <img src="https://github.com/oracle/learning-library/tree/master/oci-library/qloudable/Redacting_in_Autonomous_Database/img/Query_not_redacted.png" alt="image-alt-text">
    
    What is the reason why the columns still display the values as they are stored in the database? This is because the ADMIN user is granted the EXEMPT REDACTION POLICY privilege.
    
-   <img src="./img/Priv_Exempt_Redact.png" alt="image-alt-text">
+   <img src="https://github.com/oracle/learning-library/tree/master/oci-library/qloudable/Redacting_in_Autonomous_Database/img/Priv_Exempt_Redact.png" alt="image-alt-text">
    
 3. Log in as TEST.
   
@@ -159,7 +159,7 @@ The objective of this lab is to mask the CUST_LAST_NAME and CUST_MAIN_PHONE_NUMB
 
    SELECT cust_first_name, cust_last_name, cust_main_phone_number FROM test.customers;
    
-   <img src="./img/TEST_redacted_columns.png" alt="image-alt-text">
+   <img src="https://github.com/oracle/learning-library/tree/master/oci-library/qloudable/Redacting_in_Autonomous_Database/img/TEST_redacted_columns.png" alt="image-alt-text">
    
    You can observe that you cannot view the customers lastname and that their phone numbers are partially redacted.
 
