@@ -6,9 +6,9 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Installing Node.js](#Installing-node.js)
+[Installing Node js](#installing-node-js)
 
-[Installing Oracle Database driver for Node.js](#installing-oracle-database-driver-for-node.js)
+[Installing Oracle Database driver for Node js](#installing-oracle-database-driver-for-node-js)
 
 [Install the Oracle Instant Client](#install-the-oracle-instant-client)
 
@@ -64,7 +64,7 @@ Oracle Autonomous Transaction Processing delivers a self-driving, self-securing,
 1. For this hands on lab, Node.js version 12.9.1 for Microsoft Windows (x64) has already been installed. Node.js is available for several different operating systems and can be downloaded from https://nodejs.org/en/downloads. There are techniques for installing Node.js with administrative privileges such as root or administrator access, and techniques for installing without special privileges. The Microsoft Windows platform has an additional requirement to install the Visual Studio 2017 Redistributable. This step has already been performed.
 
 
-## Installing Oracle Database driver for Node.js
+## Installing Oracle Database driver for Node js
 
 **Using the Clipboard**
 
@@ -78,7 +78,7 @@ Oracle Autonomous Transaction Processing delivers a self-driving, self-securing,
 
 4. Click in the tool or field where you want to paste and press Shift+Ins when inside a Git-Bash window, or you can right-click inside the Git-Bash windows and select paste.
 
-**Installing Oracle Database driver for Node.js**
+**Installing Oracle Database driver for Node js**
 
 5. Open a Git-Bash window.
 
