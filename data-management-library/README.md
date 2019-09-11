@@ -1,10 +1,11 @@
-# <span style="color:red">Oracle Data Management Library<span style="color:red">
+# Oracle Data Management Library
 
 The Oracle Data Management Library is the central location for workshops related to all things Database, Big Data, Data Integration, Machine Learning and Security.  Across multiple deployment options:  on-premises and in the cloud.  
 
 To get started, choose one (or more!) of the defined learning paths below:
 
-## **<span style="color:#f1923a">Autonomous Database Library</span>**
+
+## **Autonomous Database Workshop Library**
 
 ### OOW Drop-in Zip Labs ###
 
@@ -47,7 +48,6 @@ To get started, choose one (or more!) of the defined learning paths below:
 - Use Oracle Data Visualization Desktop (DVD) with ADW
 - Use Oracle Data Integration Platform Cloud (DIPC) with ADW
 
-
  **[Click here to launch the lab](autonomous-data-warehouse/journey4-adwc)**
 
  ---
@@ -76,7 +76,7 @@ To get started, choose one (or more!) of the defined learning paths below:
  
  ---
 
- ## <span style="color:#f1923a">Security Library</span> ##
+ ## Security Workshops Library ##
 
 Workshop Goals:
 
