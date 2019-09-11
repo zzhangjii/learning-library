@@ -7,7 +7,7 @@ permalink: /data-management-library/autonomous-database/ziplabs/2019/atp-perform
 # Using Performance Hub to Analyze Resource Demand from Queries #
 
 ## Before You Begin ##
-This 15-minute lab shows you how to run a few queries in SQL Developer Web and monitor those queries through the Performance Hub. SQL Developer Web and Performance Hub are available for both ADW and ATP.
+This 15-minute lab shows you how to run a few queries in SQL Developer Web and monitor those queries through the Performance Hub. SQL Developer Web and Performance Hub are available for both Autonomous Data Warehouse (ADW) and Autonomous Transaction Processing (ATP).
 
 ### Background ###
 SQL Developer Web is a browser-based interface of Oracle SQL Developer. It provides a subset of the features from the desktop version.
@@ -18,12 +18,12 @@ You'll perform your queries on the Star Schema Benchmark (SSB) sample data. This
 
 
 ### What Do You Need? ###
-* Access to an instance of Oracle Transaction Processing
-* You must have completed the previous lab **Provisioning Autonomous Transaction Processing**.
+* Access to an instance of Oracle ATP.
+* Have completed the previous lab **Provisioning Autonomous Transaction Processing**.
 
 
 ## Navigate to the Instance's Details Page ##
-1. Sign in to the Oracle Cloud Platform. 
+1. Sign in to the Oracle Cloud. 
 2. Click the menu icon to expand the menu on the left edge of the screen.
 3. Click **Autonomous Transaction Processing**.
 
@@ -156,7 +156,7 @@ You can close Performance Hub and SQL Developer Web. You've finished this lab.
 
 
 ## Want to Learn More? ##
-* [Autonomous Cloud Platform Courses](https://learn.oracle.com/pls/web_prod-plq-dad/dl4_pages.getpage?page=dl4homepage&get_params=offering:35573#filtersGroup1=&filtersGroup2=.f667&filtersGroup3=&filtersGroup4=&filtersGroup5=&filtersSearch=) from Oracle University 
+* [Data Management Cloud Courses](https://learn.oracle.com/pls/web_prod-plq-dad/dl4_pages.getpage?page=dl4homepage&get_params=offering:35573#filtersGroup1=&filtersGroup2=.f667&filtersGroup3=&filtersGroup4=&filtersGroup5=&filtersSearch=) from Oracle University 
 * [SQL Courses](https://education.oracle.com/database-application-development/sql-and-pl-sql/product_178) from Oracle University 
-* [Data Warehouse Courses](https://education.oracle.com/data-warehouse/data-warehousing/product_152) from Oracle University 
+* [Data Warehouse Courses and Certification](https://education.oracle.com/data-warehouse/data-warehousing/product_152) from Oracle University 
 * [ATP Self-Guided Hands-On Workshop](https://cloudsolutionhubs.github.io/autonomous-transaction-processing/workshops/?page=README.md)

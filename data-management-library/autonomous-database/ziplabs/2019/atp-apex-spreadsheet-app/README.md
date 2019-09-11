@@ -1,257 +1,227 @@
 ---
 layout: ziplab
-description: Creating an App from a Spreadsheet for Oracle Autonomous Cloud Service
-tags: Oracle Cloud, Autonomous Data Warehouse, ADW, ATP, Apex, Oracle Cloud Infrastructure, OCI, Object Store, Data Load
+description: Building an App from a Spreadsheet for Oracle Autonomous Cloud Service
+tags: Oracle Cloud, Autonomous Transaction Processing, Data Warehouse, ADW, ATP, Apex, Oracle Cloud Infrastructure, OCI, Object Store, Data Load
 permalink: /data-management-library/autonomous-database/ziplabs/2019/atp-apex-spreadsheet-app/index.html
 
 ---
-# Oracle APEX on ATP Hands-On Lab 
-## *Creating an App from a Spreadsheet* for Oracle Autonomous Transaction Processing Service
-### Overview
-This lab walks you through uploading a spreadsheet into an Oracle database table, and then creating an application based on this new table. You will then play with the Interactive Report and improve the attached form. Lastly, you will add a Calendar page and then link it to the existing form page.
+# Building an APEX Application from a Spreadsheet for ATP #
 
-Rather than trying to email a spreadsheet to gather information from different people, simply create an app in minutes, and email the URL. This single source-of-truth, multi-user, secured, scalable app is so much better than having 20 (incomplete) spreadsheets!
+## Before You Begin ##
+This 15-minute lab walks you through uploading a spreadsheet into an Oracle database table, and then creating an application based on this new table. You will then play with the Interactive Report and improve the attached form. Lastly, you will add a Calendar page and then link it to the existing form page. This lab is written for Autonomous Transaction Processing (ATP), but may also be completed in Autonomous Data Warehouse (ADW).
+
+## Background ##
+Rather than trying to email a spreadsheet to gather information from different people, simply use the Oracle Cloud to create an app in minutes, and email the URL. This single source-of-truth, multi-user, secured, scalable app is so much better than having 20 (incomplete) spreadsheets!
 
 ### What Do You Need? ###
-* Access to an instance of Oracle Autonomous Data Transaction Processing (ATP) or Oracle Autonomous Data Warehouse (ADW)
+* Access to an instance of Oracle ATP.
+* Complete the previous lab **Provisioning Autonomous Transaction Processing**.
 
-## Section 1
-### Getting Started - Obtaining a Workspace
-_Note: If you have a workspace on the Autonomous Database Cloud Service then you can skip this section and move to Section 2._
 
-### Step 1.1 - Accessing APEX
-* Sign into your Oracle Cloud service
-* Click the hamburger (top left),  select Autonomous Data Warehouse or Autonomous Transaction Processing, based on which service(s) you have defined.
-![](img/section1/image1.png)
+## Access Application Express (APEX) ##
+1. Sign in to the Oracle Cloud. 
+2. Click the menu icon to expand the menu on the left edge of the screen.
+3. Click **Autonomous Transaction Processing**.
 
-* Click **Your Database** from the list
-![](img/section1/image2.png)
+    ![](img/OCIMenu.png)
 
-* Click **Service Console** 
-![](img/section1/image3.png)
+    [Description of the illustration OCIMenu.png](files/OCIMenu.txt)
 
-* Click **Development**
-* Click **APEX** ***
-![](img/section1/image4.png)
+4. Click the name of the instance you created in the previous lab. 
+5. You're taken to the instance page which displays details about your instance. 
+6. Click the **Service Console** button.
+7. Depending on your browser settings, you may need to give permission for the Service Console to open in a new tab. In Firefox:
+     * Click **Preferences**
+     * Click the final option to **Show** the content.
 
-### Step 1.2 - Creating a Workspace
+    ![](img/ShowNewTab.png)
 
-* To sign into APEX Administrative Services for Password enter your OCI Password
-* Click **Sign In to Administration**
+    [Description of the illustration ShowNewTab.png](files/ShowNewTab.txt)
 
-![](img/section1/image5.png)
+8. The service console opens to the **Overview** page. Click **Development** in the left navigation pane.
+9. Click the **APEX** button.
 
-* Given this is your first time entering APEX, click **Create Workspace**
-![](img/section1/image6.png)
+    ![](img/section1/image4.png)
 
-* For Database User enter an appropriate name
-* Enter a Password *Click the ? Icon to see password complexity rules*
+10. Enter your OCI password to sign into APEX Administrative Services.
+11. Click **Sign In to Administration**.
 
-* Click **Create Workspace**
+    ![](img/section1/image5.png)
 
-![](img/section1/image7.png)
+## Create a Workspace for a New User ##
+1. If this is your first time entering APEX, you'll need to create a workspace. Click the **Create Workspace** button.
+2. Identify a user for the new workspace. Remember this information so you can log in later:
+     * **Database User**: `ZipLabs`
+     * **Password**: Click the **?** icon to see the password complexity rules. 
+     * **Workspace Name**: `ZipLabs`
+3. Click **Create Workspace**.
 
-_Note: The Database User will be used for the Workspace Name. If you want you can update the Workspace Name_
+    ![](img/section1/image7.png)
 
-### Step 1.3 - Log into your New Workspace
-* Click on the link within the success message {easiest technique} OR Click on the Admin user (top right), click **Sign Out**, and then click **Return to Sign In Page**
-![](img/section1/image8.png)
 
-* Sign into your new Workspace 
+## Log into your Workspace ##
+1. Click on the link within the success message {easiest technique} OR Click on the Admin user (top right), click **Sign Out**, and then click **Return to Sign In Page**.
 
-    - Workspace – enter ***Your Workspace Name***
+    ![](img/section1/image8.png)
 
-    - Username – enter ***Your Database User***
+2. Sign in using the credentials from the previous section.
+     * **Workspace**: `ZipLabs`
+     * **Username**: `ZipLabs`
+     * **Password**: 
+     * **Remember workspace and username**: Check this box.
+3. Click **Sign In**.
+4. If this is the first time entering a the Workspace, the new user must reset their password. Click the **Set APEX Account Password** button.
+5. Enter the following information for your new user profile:
+    * **Email Address**: Enter your email address
+    * **Password**: Click the **?** icon to see the password complexity rules. 
+6. Click **Apply Changes**.
 
-    - Password – enter ***Your OCI Password***
+    ![](img/section1/image12.png)
 
-    - Remember workspace and username - **Check**
 
-* Click **Sign In**
+## Create an App from a Spreadsheet ##
+1. Log in and create a new app.
+    * Log into your workspace
+    * Click **App Builder**
+    * Click **Create a New App**
 
-![](img/section1/image9.png)
+    ![](img/section2/image1.png)
 
-_Note: Enter the Workspace Name and Database User entered in Step 2c above_
+2. Click **From a File** as the application type.
 
-* Given this is your first time entering your new Workspace, click **Set APEX Account Password**
-![](img/section1/image10.png)
+    ![](img/section2/image2.png)
 
-* For your user profile enter the following:
+3. Load Sample Data
+    * Click **Copy and Paste**.
+    * Select **Project and Tasks** for the sample data set.
+    * Click **Next**.
 
-    - Email Address - enter ***your email address***
-![](img/section1/image11.png)
+    ![](img/section2/image3.png)
 
-    - Enter New Password - enter ***your OCI Password***
+4. Name the table.
+    * Enter Table Name `SPREADSHEET`
+    * Click **Load Data**.
 
-    - Confirm Password - enter ***your OCI Password***
+    ![](img/section2/image4.png)
 
-* Click **Apply Changes**
+5. Verify the records loaded.
+    * Check that 73 rows are loaded.
+    * Click **Continue to Create Application Wizard**.
 
-![](img/section1/image12.png)
+    ![](img/section2/image5.png)
 
-## Section 2
-### Building your first app - Creating an App from a Spreadsheet
+6. Name the application.
+    * Enter the name `App from a Spreadsheet`
+    * Next to Features, click **Check All**.
 
-### Step 2.1 - Logging In
-* Log into your workspace
-* Click **App Builder**
-* Click **Create a New App**
+    ![](img/section2/image6.png)
 
-![](img/section2/image1.png)
+7. Click **Create Application**.
 
-### Step 2.2 - Selecting App Type
-* Click **From a File**
+    ![](img/section2/image7.png)
 
-![](img/section2/image2.png)
+8. Your new application is displayed in Page Designer. This is where you can run the application from.
+    * Click **Run Application**.
+    * Enter your user credentials. This is for the user `ZipLabs`.
 
-### Step 2.3 - Loading Sample Data
-* Click **Copy and Paste**
+    ![](img/section2/image8.png)
 
-* For Sample Data Set select **Project and Tasks**
+9. Your application should be running and is displayed in Page Designer.
 
-![](img/section2/image3.png)
+    ![](img/section2/image9.png)
 
-* Click **Next**
 
-### Step 2.4 - Naming the Table
-* Enter Table Name ***SPREADSHEET***
+## Improve the Report and Form
+1. Sort the interactive report.
+    * Click **Spreadsheet**.
+    * Click **Actions**, select **Data**, select **Sort**.
 
-* Click **Load Data**
+    ![](img/section3/image1.png)
 
-![](img/section2/image4.png)
+    * For 1, select **Start Date**.
+    * For 2, select **End Date**.
+    * Click **Apply**.
 
-### Step 2.5 - Verifying Records Loaded
-* Check that 73 rows are loaded
+    ![](img/section3/image2.png)
 
-* Click **Continue to Create Application Wizard**
+2. Add a computation.
+    * Click **Actions**, select **Data**, select **Compute**.
+    * Column Label enter **Budget V Cost**.
+    * Format Mask select **$5,234.10**.
+    * Computation Expression enter **I – H**.
+    * Click **Apply**.
 
-![](img/section2/image5.png)
+    ![](img/section3/image3.png)
 
-### Step 2.6 - Naming the App
-* Enter Name ***App from a Spreadsheet***
+3. Add a chart.
+    * Click **Actions**, select **Chart**.
+    * Label select **Project**.
+    * Value select __**Budget V Cost__.
+    * Function select **Sum**.
+    * Sort select **Label – Ascending**.
+    * Orientation select **Horizontal**.
+    * Click **Apply**.
 
-* Next to Features, click **Check All**
+    ![](img/section3/image4.png)
 
-![](img/section2/image6.png)
+    * Use **View Report / View Chart** icons to switch views.
 
-### Step 2.7 - Create Application
-* Click **Create Application**
+    ![](img/section3/image5.png)
 
-![](img/section2/image7.png)
+    ![](img/section3/image6.png)
 
-### Step 2.8 - App in Page Designer
-* Your new application will be displayed in Page Designer
+4. Save the report.
+    * Click **Actions**, select **Report**, select **Save Report**.
+    * For Save, select **As Default Report Settings**.
 
-* Click **Run Application**
+    ![](img/section3/image7.png)
 
-![](img/section2/image8.png)
+    * Default Report Type, select **Alternative**.
+    * Name, enter **Date Review**.
+    * Click **Apply**.
 
-### Step 2.9 - Runtime App
-* Enter your user credentials
+    ![](img/section3/image8.png)
 
-* Play around with your new application
+5. Restrict the status.
+    * In the runtime environment, click the **edit** icon on a record. A modal page will be displayed.
+    * In the Developer Toolbar, click **Quick Edit**.
+    * Hover over the **Status** item (until a blue outline appears) and click the mouse. Page Designer displays with focus on the Status item.
 
-![](img/section2/image9.png)
+    ![](img/section3/image9.png)
 
-## Section 3
-### Using the Runtime Environment - Improving the Report and Form
+    * In Page Designer, within the Property Editor (right pane), for Type select **Select List**.
+    * Under List of Values, for Type select **SQL Query**.
+    * Next to SQL Query, click **Code Editor**.
 
-### Step 3.1 - Sort the Interactive Report
-* Your new application will be displayed in Page Designer
+    ![](img/section3/image10.png)
 
-* Click **Spreadsheet**
-* Click **Actions**, select **Data**, select **Sort**
+    * Within the Code Editor, enter the following:
+   ````SQL
+    select distinct status d, status r
+    from spreadsheet
+    order by 1
+   ````
+    * Click **Validate**.
+    * Click **OK**.
 
-![](img/section3/image1.png)
+    ![](img/section3/image11.png)
 
-* For 1, select **Start Date** 
-* For 2, select **End Date**
-* click **Apply**
+    * Display Extra Values, select **No**.
+    * Null Value Display, enter **- Select Status -**.
+    * Click **Save** (In the toolbar - top right).
 
-![](img/section3/image2.png)
+    ![](img/section3/image12.png)
 
-### Step 3.2 - Add a Computation
-* Click **Actions**, select **Data**, select **Compute**
-* Column Label enter **Budget V Cost**
-* Format Mask select **$5,234.10**
-* Computation Expression enter **I – H**
-* Click **Apply**
+6. Run the application.
+    * Navigate back to the runtime environment.
+    * Refresh the browser.
+    * Edit a record.
+    * Click **Status**.
 
-![](img/section3/image3.png)
-
-### Step 3.3 - Add a Chart
-* Click **Actions**, select **Chart**
-* Label select **Project**
-* Value select __**Budget V Cost__
-* Function select **Sum**
-* Sort select **Label – Ascending**
-* Orientation select **Horizontal**
-* Click **Apply**
-
-
-![](img/section3/image4.png)
-
-* Use **View Report / View Chart** icons to switch views ***
-
-![](img/section3/image5.png)
-![](img/section3/image6.png)
-
-### Step 3.4 - Save Report
-* Click **Actions**, select **Report**, select **Save Report**
-* For Save, select **As Default Report Settings**
-
-![](img/section3/image7.png)
-
-* Default Report Type, select **Alternative**
-* Name, enter **Date Review**
-* Click **Apply**
-
-![](img/section3/image8.png)
-
-### Step 3.5 - Restrict the Status
-* In the runtime environment, click the edit icon on a record
-* A modal page will be displayed
-* In the Developer Toolbar, click **Quick Edit**
-* Hover over the **Status** item (until a blue outline appears) and click the mouse
-* Page Designer displays with focus on the Status item
-
-![](img/section3/image9.png)
-
-* In Page Designer, within the Property Editor (right pane), for Type select **Select List**
-* Under List of Values, for Type select **SQL Query**
-* Next to SQL Query, click **Code Editor**
-
-![](img/section3/image10.png)
-
-* Within the Code Editor, enter the following:
-
-        select distinct status d, status r
-        from spreadsheet
-        order by 1
-
-* Click **Validate**
-* Click **OK**
-
-![](img/section3/image11.png)
-
-* Display Extra Values, select **No**
-* Null Value Display, enter **- Select Status -**
-* Click **Save** (In the toolbar - top right)
-
-![](img/section3/image12.png)
-
-### Step 3.6 - Run the App
-* Navigate back to the runtime environment
-* Refresh the browser
-* Edit a record
-* Click **Status**
-
-![](img/section3/image13.png)
+    ![](img/section3/image13.png)
 
 
 ## Want to Learn More? ##
 * [Autonomous Database Cloud Certification](https://education.oracle.com/en/data-management/autonomous-database/product_817?certPage=true) from Oracle University
-* [Autonomous Cloud Platform Courses](https://learn.oracle.com/pls/web_prod-plq-dad/dl4_pages.getpage?page=dl4homepage&get_params=offering:35573#filtersGroup1=&filtersGroup2=.f667&filtersGroup3=&filtersGroup4=&filtersGroup5=&filtersSearch=) from Oracle University
+* [Data Management Cloud Courses](https://learn.oracle.com/pls/web_prod-plq-dad/dl4_pages.getpage?page=dl4homepage&get_params=offering:35573#filtersGroup1=&filtersGroup2=.f667&filtersGroup3=&filtersGroup4=&filtersGroup5=&filtersSearch=) from Oracle University
 * [Oracle Application Express Training and Certification](https://education.oracle.com/database-application-development/oracle-apex/product_172) from Oracle University
-
-
