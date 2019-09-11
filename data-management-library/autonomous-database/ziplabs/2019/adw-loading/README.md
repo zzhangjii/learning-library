@@ -84,10 +84,11 @@ For this lab, we'll use the `root` compartment.
 12. Your bucket should have 10 objects loaded.  If this were a true data load, you may be loading *hundreds* of large files here.
 
 12.  The final step will be to change the visibility of your bucket. Click the **Edit Visibility** button at the top of your Bucket Details screen.
-![](img/adw-loading-edit-visibility.png)
+    ![](img/adw-loading-edit-visibility.png)
 
 13. Change the visibility to **Public**, accept all other defaults.  Click **Save Changes**.
-![](img/adw-loading-update-visibility.png)
+
+    ![](img/adw-loading-update-visibility.png)
 
 14. Your bucket should now be visible and public.  Verify and proceed to setting up your Auth token.
 
