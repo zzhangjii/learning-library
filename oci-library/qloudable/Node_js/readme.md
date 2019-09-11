@@ -4,56 +4,34 @@
 
 [Overview](#overview)
 
-[Installing Node js](#installing-node-js)
+[Installing Node.js](#installnode)
 
-[Installing Oracle Database driver for Node js](#installing-oracle-database-driver-for-Node-js)
+[Installing Oracle Database driver for Node.js](#installdriver)
 
-[Install the Oracle Instant Client](#install-the-oracle-instant-client)
+[Install the Oracle Instant Client](#installclient)
 
-[Delete the resources](#delete-the-resources)
+[Sign in to the Oracle Cloud Infrastructure console](#signin)
 
+[Install and Configure the Example Node.js Application](#installapp)
+
+[Test your Node.js Application](#testing)
+
+[References](#references)
+
+<a name="overview"/>
 
 ## Overview
 
 Oracle Autonomous Transaction Processing delivers a self-driving, self-securing, self-repairing database service that can instantly scale to meet demands of mission critical applications. In this hands on lab, you will use Node.js to run an example application that connects to an Oracle Autonomous Transaction Processing database using the Oracle Instant client.
 
-**Some Key points;**
+<a name="installnode"/>
 
-**We recommend using Chrome or Edge as the broswer. Also set your browser zoom to 80%**
-
-
-- All screen shots are examples ONLY. Screen shots can be enlarged by Clicking on them
-
-- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
-
-- Do NOT use compartment name and other data from screen shots.Only use  data(including compartment name) provided in the content section of the lab
-
-- Mac OS Users should use ctrl+C / ctrl+V to copy and paste inside the OCI Console
-
-- Login credentials are provided later in the guide (scroll down). Every User MUST keep these credentials handy.
-
-**Cloud Tenant Name**
-**User Name**
-**Password**
-**Compartment Name (Provided Later)**
-
-**Sign in to OCI Console**
-
-* **Tenant Name:** {{Cloud Tenant}}
-* **User Name:** {{User Name}}
-* **Password:** {{Password}}
-* **Compartment:**{{Compartment}}
-
-
-1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
-
-## Installing Node js
+## Installing Node.js
 
 For this hands on lab, Node.js version 12.9.1 for Microsoft Windows (x64) has already been installed. Node.js is available for several different operating systems and can be downloaded from https://nodejs.org/en/downloads. There are techniques for installing Node.js with administrative privileges such as root or administrator access, and techniques for installing without special privileges. The Microsoft Windows platform has an additional requirement to install the Visual Studio 2017 Redistributable. This step has already been performed.
 
-## Installing Oracle Database driver for Node js
+<a name="installdriver"/>
+## Installing Oracle Database driver for Node.js
 
 **Using the Clipboard**
 
@@ -104,6 +82,7 @@ npm install oracledb
 npm list
 ```
 
+<a name="installclient"/>
 ## Install the Oracle Instant Client
 For this hands on lab, the Oracle Instant Client for Microsoft Windows (x64) has already been downloaded and staged, but not installed. The Oracle Instant Client is typically downloaded from https://www.oracle.com/database/technologies/instant-client/downloads.html. It is currently stage in the **/c/OracleDB-Node.js-lab** folder.
 
@@ -124,6 +103,7 @@ echo "export PATH=/c/demo/instanctclient_19_3:\$PATH" >> ~/.bashrc
 source ~/.bashrc
 ```
 
+<a name="signin"/>
 ## Sign in to the Oracle Cloud Infrastructure console
 
 1. Launch the Chrome browser application (Same location that you launched Git-Bash). The home page should be set to the OCI sign in page.
@@ -149,6 +129,7 @@ cd /c/demo/instanctclient_19_3/network/admin
 unzip ~/Downloads/Wallet*.zip
 ```
 
+<a name="installapp"/>
 ## Install and Configure the Example Node.js Application 
 
 1. Copy the example.js application to the **/c/demo** directory.
@@ -166,6 +147,7 @@ Make the following changes:
 * Change the connectString to \<database name\>_low. Your connection string will be the name of your database followed by **_low**. 
 Example: If your database name was **Demo** then your connection string would be set as follows:  **connectString : 'demo_low'**. Your database name is currently **{{Database Name}}**.
 
+<a name="testing"/>
 ## Test your Node.js Application
 
 Use the following commands to run your Node.js application:
@@ -178,6 +160,7 @@ You should see the follwing output indicating success: **[ [ 101, 'Alpha' ], [ 1
 
 **Congratulations! You have successfully completed the lab.**
 
+<a name="references"/>
 ## References
 
 1. Youtube video of this hands on lab : https://www.youtube.com/embed/UG8z94vxYQE?rel=0&autoplay=1

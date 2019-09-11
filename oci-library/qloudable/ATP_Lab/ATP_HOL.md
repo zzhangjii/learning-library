@@ -251,7 +251,7 @@ instance created earlier**
 - DATABASE NAME: Provide a name
 - CPU CORE COUNT: 1
 - STORAGE(TB): 1
-- Auto Scaling: This flag can be checked to enable auto scaling though in this lab we will Dynamically scale the CPU using OCI console. This option can be used if user wants to test Auto scaling of CPU
+- Auto Scaling: Do NOT check this flag. (This flag can be checked to enable auto scaling though in this lab we will Dynamically scale the CPU using OCI console. This option can be used if user wants to test Auto scaling of CPU)
 - PASSWORD: Provide password per guideline 
 - CONFIRM PASSWORD: Provide same password 
 
