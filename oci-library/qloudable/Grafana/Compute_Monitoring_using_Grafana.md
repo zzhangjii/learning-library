@@ -192,14 +192,13 @@ ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE> -L 3000:localhost:3000
 **As part of preperation for this lab, a dynamic group and IAM policy was created. This configuration enables Grafana based monitoring on the compute instance. Below 2 policy statements are already configured though for any new deployment they must be configured under IAM Policy.**
 
 **allow group <GROUP_NAME> to read metrics in tenancy**
+
 **allow group <GROUP_NAME> to read compartments in tenancy**
 
 1. Switch to ssh session to compute install. Install Grafana, Enter Command:
 ```
 sudo yum install https://dl.grafana.com/oss/release/grafana-5.4.2-1.x86_64.rpm -y
 ```
-
-Enter **Y** when prompted
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_001.PNG" alt="image-alt-text">
 
@@ -224,7 +223,7 @@ sudo chmod 555 /var/lib/grafana/plugins/oci-datasource/dist/oci-plugin_linux_amd
 sudo systemctl start grafana-server
 ```
 
-5. Now we will login to Grafana Console, Open a new Broswer tab and enter URL **http://localhost:3000** , You should see grafana console
+5. Now we will login to Grafana Console, Open a new Broswer tab and enter URL http://localhost:3000 , You should see grafana console
 
 User name and password are 'admin' 
 
@@ -244,7 +243,7 @@ User name and password are 'admin'
 
 9. In the next screen you will be asked for some details of your OCI account. To get **Tenancy OCID** switch to OCI console window
 
-10. Click the Human icon on top right corener and then your tenacy name
+10. Click the Human icon on top right corner and then your tenacy name
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_007.PNG" alt="image-alt-text">
 
@@ -252,7 +251,7 @@ User name and password are 'admin'
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_008.PNG" alt="image-alt-text">
 
-12. Switch to Grafana tab and paste the OCID in **Tenancy OCID**. Choose your region for **Default Region**(IAD if us-ashburn, PHX if us-phoneix1, LHR if London etc). All region codes are listed at https://docs.cloud.oracle.com/iaas/Content/General/Concepts/regions.htm.
+12. Switch to Grafana tab and paste the OCID in **Tenancy OCID**. Choose your region for **Default Region**
 Choose **OCI Instance** for Enviornment.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_009.PNG" alt="image-alt-text">
@@ -272,11 +271,10 @@ Choose **OCI Instance** for Enviornment.
 16. Choose the appropriate fields;
 
 
-- Region: IAD if us-ashburn, PHX if us-phoneix1, LHR if London etc). All region codes are listed at https://docs.cloud.oracle.com/iaas/Content/General/Concepts/regions.htm.
-
- - Compartment: Choose your compartment
- - Namespace: oci_computeagent
- - Metric: CpuUtilization
+- Region: Choose your region
+- Compartment: Choose your compartment
+- Namespace: oci_computeagent
+- Metric: CpuUtilization
 
 17. Click **Add Query** to add a second Query
 
@@ -287,18 +285,20 @@ Choose **OCI Instance** for Enviornment.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_013.PNG" alt="image-alt-text">
 
-18. Switch to ssh session to compute instance and install tool called **stress**. We will use this tool to stress the CPU and Memory of the compute instance. Enter Command:
+18. Save the dashboard by clicking the save icon (disk icon). 
+
+19. Switch to ssh session to compute instance and install tool called **stress**. We will use this tool to stress the CPU and Memory of the compute instance. Enter Command:
 ```
 sudo yum install stress
 ```
 
-19. Now generate traffic, Enter Command:
+20. Now generate traffic, Enter Command:
 
 ```
 sudo stress --cpu 5 --io 12 --vm 5 --vm-bytes 256M --timeout 600s
 ```
 
-**We now have  completed our setup with a compute instance and installed and execetued a tool to stress the CPU and Memory. Next we will monitor observe Grafana dash board for this compute instance**
+**We now have  completed our setup with a compute instance and installed and executed a tool to stress the CPU and Memory. Next we will monitor  Grafana dash board for this compute instance**
 
 ## Adjust Parameters in Grafana dashboard
 
@@ -314,7 +314,7 @@ sudo stress --cpu 5 --io 12 --vm 5 --vm-bytes 256M --timeout 600s
 
 2. If your Compute instance is not displayed, From OCI services menu Click **Instances** under **Compute**
 
-3. Locate compute instance, Click Action icon and then **Terminat** 
+3. Locate compute instance, Click Action icon and then **Terminate** 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text">
 
@@ -329,9 +329,6 @@ appear.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text">
 
-7. From OCI services menu Click **Networking**, then **Public IPs**,locate the Reserved Public IP you created. Click Action icon and then **Terminate**
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0019.PNG" alt="image-alt-text">
 
 ***Congratulations! You have successfully completed the lab. ***
 

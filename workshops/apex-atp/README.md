@@ -25,7 +25,7 @@ Welcome to the Low Code Development with Oracle Autonomous Database hands-on lab
 
 ### **Part 2**: Navigate to Module 1
 
-1. [Click here](1-create-an-apex-workspace.md) to navigate to Module 1. Alternatively, you can click the navigation menu icon in the upper-left corner of the browser window to see a list of modules in the lab.
+1. [Click here](1-create-an-apex-workspace) to navigate to Module 1. Alternatively, you can click the navigation menu icon in the upper-left corner of the browser window to see a list of modules in the lab.
 
 	 ![](images/0/lab-intro.png)
 

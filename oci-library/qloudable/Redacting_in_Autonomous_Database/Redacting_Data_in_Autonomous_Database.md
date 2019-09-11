@@ -5,6 +5,7 @@ to use either custom made views or Virtual Private Database, all these solutions
 that Data Redaction finally brings. With Data Redaction is now possible to easily totally or partially mask the data, 
 randomize the data and set the masking conditions.
 
+
 <img src="./img/carddetail.png" alt="image-alt-text">
   
 ## Table of Contents
@@ -15,13 +16,9 @@ randomize the data and set the masking conditions.
 
 [Sign in to OCI Console](#sign-in-to-oci-console)
 
-[Create an ATP instance](#create-an-atp-instance)
-
 [Start using SQL Developer Web](#start-using-sql-developer-web)
 
 [Redact Sensitive Data](#redact-sensitive-data)
-
-[Delete the Resources](#delete-the-resources)
 
 ## Objectives
 The objective of this lab is to mask the CUST_LAST_NAME and CUST_MAIN_PHONE_NUMBER column values from the TEST.CUSTOMERS table.
@@ -33,11 +30,15 @@ The objective of this lab is to mask the CUST_LAST_NAME and CUST_MAIN_PHONE_NUMB
 
   <img src="./img/Priv_DBMS_REDACT.png" alt="image-alt-text">
 
+
 ## Sign in to OCI Console
 
 * **Tenant Name:** {{Cloud Tenant}}
 * **User Name:** {{User Name}}
 * **Password:** {{Password}}
+* **Compartment:** {{Compartment}}
+* **Database Name:** {{Database Name}}
+* **Database Password:** {{Database Password}}
 
 1. In Oracle Cloud, click Sign In. Sign in using your tenant name. Then click Next.
 
@@ -45,21 +46,11 @@ The objective of this lab is to mask the CUST_LAST_NAME and CUST_MAIN_PHONE_NUMB
 
 <img src="./img/Cloud.png" alt="image-alt-text">
 
-## Create an ATP instance
+3. Click the hamburger menu at the upper right, and select Autonomous Transaction Processing.
 
-1. From the Oracle Cloud Infrastructure console, create a database of the Autonomous Transaction Processing (ATP) type.
+4. Change the compartment to the one listed above.
 
-   <img src="./img/ATP_creation.png" alt="image-alt-text">
-
-2. In the Create administrator credentials section, enter a password for the ADMIN user.
-
-   <img src="./img/ADMIN_pass.png" alt="image-alt-text">
-
-3. Click Create Autonomous Database. The ATP instance is being provisioned.
-
-4. Wait until the ATP instance is available. Your database is now ready.
-
-   <img src="./img/ATP_instance.png" alt="image-alt-text">
+5. Select the database that is named above from the list of databases displayed.
 
 ## Start using SQL Developer Web
 
@@ -67,15 +58,20 @@ The objective of this lab is to mask the CUST_LAST_NAME and CUST_MAIN_PHONE_NUMB
 
    <img src="./img/Service_console.png" alt="image-alt-text">
 
+   Note: You have to disable the pop-up blocker. Click on the Popup-blocker icon and select *Always allow popups ...*. Then click the Service Console tab again.
+
 2. Click the Development tab. Then click the SQL Developer Web.
 
    <img src="./img/Devt.png" alt="image-alt-text">
    
-3. In SQL Developer Web, sign in with the ADMIN user and the password that you defined during the instance creation. Then click Sign In.
+3. In SQL Developer Web, sign in with the ADMIN user and the password provided above. Then click Sign In.
 
    <img src="./img/SQLDevWeb_login.png" alt="image-alt-text">
    
-4. Before starting redacting data, you create a new user and a table with sensitive data. Use the following commands in the Worksheet:
+4. Before starting redacting data, you create a new user and a table with sensitive data. Use the following commands in the Worksheet: 
+   
+   Note: Replace *your_password* with a password of your choice. The password must be at least 12 characters long, with upper and lower case letters, numbers, and a special character. It must start with a letter.
+
 ```
       DROP USER test CASCADE;
       CREATE USER test IDENTIFIED BY *your_password*;
@@ -134,6 +130,7 @@ The objective of this lab is to mask the CUST_LAST_NAME and CUST_MAIN_PHONE_NUMB
 
 2. Display the redacted values. First delete the commands from the Worksheet and reload the query from the SQL History by clicking twice on the command.
 
+
    <img src="./img/Query2.png" alt="image-alt-text">
    
    
@@ -166,17 +163,5 @@ The objective of this lab is to mask the CUST_LAST_NAME and CUST_MAIN_PHONE_NUMB
    
    You can observe that you cannot view the customers lastname and that their phone numbers are partially redacted.
 
-## Delete the Resources
-
-1. Log out SQL Developer Web.
-
-   <img src="./img/Log_out.png" alt="image-alt-text">
-   
-2. Switch to OCI console window.
-
-2. From your ATP details page, hand over the action icon and click **Terminate**. In the confirmation window, provide the ATP instance name and click **Terminate Database**.
-
-   <img src="./img/Terminate.png" alt="image-alt-text">
-   
-
 **Congratulations! You have successfully completed the lab.**
+**Finish Lab at the top of the page.**

@@ -94,7 +94,7 @@ Local VCN peering is the process of connecting two VCNs in the same region and t
 
 5. Virtual Cloud Network will be created and VCN name will appear on OCI Console. Scroll down to find your VCN if multiple VCN exist, and Click your VCN name.
 
-6. In VNC detials page,  Click **Internet Gateways** under Resources, and Click **Create Internet Gateway**. Fill out the dialog box. Click **Create Internet Gateway** (ensure correct compartment is selected).
+6. In VCN detials page,  Click **Internet Gateways** under Resources, and Click **Create Internet Gateway**. Fill out the dialog box. Click **Create Internet Gateway** (ensure correct compartment is selected).
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_002.PNG" alt="image-alt-text">
 
@@ -112,7 +112,7 @@ Local VCN peering is the process of connecting two VCNs in the same region and t
 
 9. Click **Add Route Rules**.
 
-10. Click **Subnets** then **Create Subnet**. Fill out the dialog box:
+10. Click **VCN** and then **Subnets** then **Create Subnet**. Fill out the dialog box:
 
 
 - Name: Enter a name (for example Management Peering subnet).
@@ -163,7 +163,7 @@ Local VCN peering is the process of connecting two VCNs in the same region and t
 - Name: Provide a Name
 - Compartment: Select your Compartment
 
-**CLick ++ Additional Route Rules**
+**CLick +Additional Route Rules**
 
 - Target Type: Internet Gateway 
 - Destination CIDR Block: 0.0.0.0/0
@@ -284,7 +284,7 @@ Fill out the dialog box:
 14. Fill out the dialg box:
 
 
-- SPECIFY THE LOCAL PEERING GATEWAY: Browse only (To browse the list of available gateways)
+- SPECIFY THE LOCAL PEERING GATEWAY: Browse below (To browse the list of available gateways)
 - VIRTUAL CLOUD NETWORK COMPARTMENT: Select your compartment
 - VIRTUAL CLOUD NETWORK: Choose the **second VCN** (Gateway1 needs to pair with Gateway2 that is in second VCN)
 - LOCAL PEERING GATEWAY COMPARTMENT: Choose the comprtment
@@ -292,15 +292,13 @@ Fill out the dialog box:
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_006.PNG" alt="image-alt-text">
 
-15. Repeat the step for second Local peering gateway and peer it with First peering gateway
-
-16. Verify the Local Peering Gateway shows Status as Peered and Peered information is correct.
+15. Verify the Local Peering Gateway shows Status as Peered and Peered information is correct.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_007.PNG" alt="image-alt-text">
 
-17. We now need to configure Route tables and Security Lists for the two VCNs. Navigate to First VCN's details page and clik **Route Tables**, then **Default Route table for <FIRST_VCN_NAME>**
+16. We now need to configure Route tables and Security Lists for the two VCNs. Navigate to First VCN's details page and click **Route Tables**, then **Default Route table for <FIRST_VCN_NAME>**
 
-18. Click **Add route rule** and add the followig rule
+17. Click **Add route rule** and add the followig rule
 
 
 - Target Type: Select **Local Peering gateway**
@@ -308,13 +306,13 @@ Fill out the dialog box:
 - Compartment:  Make sure the correct Compartment is selected: 
 - TARGET LOCAL PEERING GATEWAY: Select the Local peering Gateway of second VCN 
 
-19. Click **Add Route Rule**
+18. Click **Add Route Rule**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_009.PNG" alt="image-alt-text">
 
-20. Navigate to you VCN details page, Click **Security Lists**, then **Default Security list for <FIRST_VCN_NAME>**. Click **Add Ingress Rule**.
+29. Navigate to you VCN details page, Click **Security Lists**, then **Default Security list for <FIRST_VCN_NAME>**. Click **Add Ingress Rule**.
 
-21. Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure to leave STATELESS flag un-checked
+20. Enter the following ingress rule; Ensure to leave STATELESS flag un-checked
 
 
 - Source CIDR: 10.10.0.0/24
@@ -324,9 +322,9 @@ Fill out the dialog box:
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_008.PNG" alt="image-alt-text">
 
-22. Click **Add Ingress Rule**. 
+21. Click **Add Ingress Rule**. 
 
-23. Repeat the steps for second VCN Route table and security list. Use below data:
+22. Repeat the steps for second VCN Route table and security list. Use below data:
 
 **Second VCN Route table**
 
@@ -338,7 +336,7 @@ Fill out the dialog box:
 
 **Second VCN Security list rule** (Navigate to Security List and Click **Add Ingress Rule**.)
 
-24. Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure to leave STATELESS flag un-checked
+23. Enter the following ingress rule; Ensure to leave STATELESS flag un-checked
 
 
 - Source CIDR: 10.0.0.0/24
@@ -415,7 +413,7 @@ If ping is successful then we have successfuly created VCN peering across two di
 ssh -i /<path>/<ssh_key> -o ProxyCommand='ssh -i /<path>/<ssh_key> -W %h:%p -p 443...
 ```
 
-7. Switch to gitbash window, Enter command 
+7. Switch to gitbash window, If the ssh session to compute instance is active then type **Exit** to close the session.  Enter command 
 ```
 ls
 ```
@@ -450,7 +448,7 @@ init=/bin/bash
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_017.PNG" alt="image-alt-text">
 
-13. Now your instance is on Maintenance Mode and you can can replace your SSH.
+13. Now your instance is on Maintenance Mode and you can replace your SSH.
 
 14. From the Bash shell, run the following command to load the SELinux policies to preserve the context of the files you are modifying:
 ```
@@ -472,7 +470,7 @@ cd ~opc/.ssh
 mv authorized_keys authorized_keys.old
 ```
 
-18. Replace the contents of the public key file with the new public key file with the following command:
+18. Open a new Git bash window session and generate new ssh key pair. Replace the contents of the public key file with the new public key file with the following command:
 ```
 echo '<contents of .pub key file>' >> authorized_keys
 ```

@@ -1,6 +1,9 @@
 # Oracle Data Management Library
 
-The Oracle Data Management Library is the central repository for all workshop libraries related to all things Database, Big Data, Data Integration, Machine Learning and Security.  Across multiple deployment options:  on-premises and in the cloud.  To get started, choose one (or more!) of the defined learning paths below:
+The Oracle Data Management Library is the central location for workshops related to all things Database, Big Data, Data Integration, Machine Learning and Security.  Across multiple deployment options:  on-premises and in the cloud.  
+
+To get started, choose one (or more!) of the defined learning paths below:
+
 
 ## **Autonomous Database Workshop Library**
 

@@ -51,7 +51,7 @@ In this part, you will create an instance of the Autonomous Transaction Processi
    ![](images/1/atp-settings-2.png)
    ![](images/1/atp-settings-3.png)
 
-   After clicking **Create Autonomous Database**, you will be redirected to the Autonomous Database Details page for the new instance. Continue to the next part when the status changes from <span style="color:#F5A701;font-weight:800">PROVISIONING...</span> to <span style="color:#76b417;font-weight:800">AVAILABLE</span>.
+   After clicking **Create Autonomous Database**, you will be redirected to the Autonomous Database Details page for the new instance. Continue to the next part when the status changes from **PROVISIONING...** to **AVAILABLE**.
 
 ### **Part 3:** Create a new workspace in APEX
 
