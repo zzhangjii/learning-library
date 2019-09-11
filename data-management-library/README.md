@@ -1,6 +1,8 @@
 # <span style="color:red">Oracle Data Management Library<span style="color:red">
 
-The Oracle Data Management Library is the central location for workshops related to all things Database, Big Data, Data Integration, Machine Learning and Security.  Across multiple deployment options:  on-premises and in the cloud.  To get started, choose one (or more!) of the defined learning paths below:
+The Oracle Data Management Library is the central location for workshops related to all things Database, Big Data, Data Integration, Machine Learning and Security.  Across multiple deployment options:  on-premises and in the cloud.  
+
+To get started, choose one (or more!) of the defined learning paths below:
 
 ## **<span style="color:#f1923a">Autonomous Database Library</span>**
 

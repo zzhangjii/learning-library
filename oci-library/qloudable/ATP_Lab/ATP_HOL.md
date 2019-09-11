@@ -190,7 +190,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 ```
 ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE> -L 3000:localhost:3000
 ```
-**NOTE:** User name is opc. This will enable port forwarding on local host which is needed to access Grafana dash board later on
+**NOTE:** User name is opc.
 
 **HINT:** If 'Permission denied error' is seen, ensure you are using '-i' in the ssh command
 
@@ -242,7 +242,7 @@ instance with only 1 OCPU and scale it after generating load test from the compu
 instance created earlier**
 
 
-1. Switch to OCI console, from services menu Click **Autonomous Transaction Processing** under Databse.Click **Create Autonmous Trasnaction Processing Database**. Fill out the dialog box:
+1. Switch to OCI console, from services menu Click **Autonomous Transaction Processing** under Databse.Click **Create Autonomous Database**. Fill out the dialog box:
 
 
 - Workload Type: AUTONOMOUS TRANSACTION PROCESSING
@@ -251,12 +251,13 @@ instance created earlier**
 - DATABASE NAME: Provide a name
 - CPU CORE COUNT: 1
 - STORAGE(TB): 1
+- Auto Scaling: This flag can be checked to enable auto scaling though in this lab we will Dynamically scale the CPU using OCI console. This option can be used if user wants to test Auto scaling of CPU
 - PASSWORD: Provide password per guideline 
 - CONFIRM PASSWORD: Provide same password 
 
 **NOTE:** Do not use &, ), ( in the password due to script limitation that we will execute later.
 
-- LICENSE TYPE: SUBSCRIBE TO NEW DATABASE SOFTWARE LICENSES AND THE DATABASE CLOUD SERVICE
+- LICENSE TYPE: License Included
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_018.PNG" alt="image-alt-text">
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_019.PNG" alt="image-alt-text">
@@ -368,7 +369,7 @@ Then Enter command:
 
 2. Click the name of Autonomous Transaction Processing instance created earlier
 
-3. Click **Scale Up/Down**, in the pop up windowchange CPU CORE COUNT to **4** and Click **Update**. Also observe the Automatic backup that are being performed. Instance will be in 'Scaling in Progress' state for some time
+3. Click **Scale Up/Down**, in the pop up windowchange CPU CORE COUNT to **2** and Click **Update**. Also observe the Automatic backup that are being performed. Instance will be in 'Scaling in Progress' state for some time
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/ATP_Lab/img/ATP_014.PNG" alt="image-alt-text">
 

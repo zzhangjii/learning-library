@@ -122,11 +122,13 @@ A cooldown period between autoscaling events lets the system stabilize at the up
 
 <img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_006.PNG" alt="image-alt-text">
 
+*Click Next*
+
 **Under Choose Backends:**
 
 
 - SPECIFY A LOAD BALANCING POLICY: Weighted Round Robin
-- Don't add any backend. This will be managed by the instance pool. *
+- Don't add any backend. This will be managed by the instance pool. 
 
 <img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_007.PNG" alt="image-alt-text">
 
@@ -140,6 +142,7 @@ A cooldown period between autoscaling events lets the system stabilize at the up
 
 ***Leave other options as default***
 
+*Click Next*
 
 **Under Configure Listener**
 
@@ -159,7 +162,7 @@ A cooldown period between autoscaling events lets the system stabilize at the up
 
 7. Click **Security Lists**, and locate the Default Security List.
 
-8. Click Load Default Security List, Click **Add Ingress Rule**.
+8. Click **Default Security List**, Click **Add Ingress Rule**.
 Enter the following ingress rule; Ensure to leave STATELESS flag un-checked
 
 
@@ -226,7 +229,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG" alt="image-alt-text">
 
-7. Switch to the OCI console. From OCI servies menu, Click **Instances** under **Compute** 
+7. Switch to the OCI console. From OCI services menu, Click **Instances** under **Compute** 
 
 8. Click **Create Instance**. Fill out the dialog box:
 
@@ -283,7 +286,7 @@ Fill out the dialog box:
 
 13. Click **Create Instance Configuration**
 
-14. In the Instance Configuration page, Click **Create Instance Pools**
+14. In the Instance Configuration page, Click **Create Instance Pool**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_002.PNG" alt="image-alt-text">
 
@@ -361,7 +364,7 @@ Fill out the dialog box:
 - THRESHOLD PERCENTAGE : 5
 - NUMBER OF INSTANCES TO REMOVE  : 1
 
-**Leave other fileds as is**
+**Leave other fields as is**
 
 20. Click **Create**
 
@@ -432,18 +435,30 @@ sudo stress --cpu 4 --timeout 350
 
 1. Switch to  OCI console window
 
-2. From Instance Pool Details page, Click **Terminate** under **Action**. Provide Instance Pool name in the pop up dialog box and Click **Terminate**. This will delete the pool along with the compute instance and auto scale configuration.
+2. If your Compute instance is not displayed, From OCI services menu Click **Instances** under **Compute**
+
+3. Locate first compute instance, Click Action icon and then **Terminat** 
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text">
+
+4. Make sure Permanently delete the attached Boot Volume is checked, Click Terminate Instance. Wait for instance to fully Terminate
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0017.PNG" alt="image-alt-text">
+
+5. In OCI console window from Instance Pool Details page, Click **Terminate** under **Action**. Provide Instance Pool name in the pop up dialog box and Click **Terminate**. This will delete the pool along with the compute instance and auto scale configuration.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_011.PNG" alt="image-alt-text">
 
 
-3. Navigate to **Instance Configurations** Under **Compute**. For your Instance Configuration, Click Delete under the three Vertical dots.
+6. Navigate to **Instance Configurations** Under **Compute**. For your Instance Configuration, Click **Delete** under the three Vertical dots.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Configuring_Auto_Scaling/img/Auto_Scaling_012.PNG" alt="image-alt-text">
 
-4. From OCI services menu Click **Load Balancers** under Networking, locate your Load Balancer and Click Terminate under the three Vertical dots.
+7. Navigate to **AutoScaling Configurations** Under **Compute**. For your Instance Configuration, Click **Delete**
 
-5. From OCI services menu Click **Virtual Cloud Networks** under Networking, Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
+8. From OCI services menu Click **Load Balancers** under Networking, locate your Load Balancer and Click Terminate under the three Vertical dots.
+
+9. From OCI services menu Click **Virtual Cloud Networks** under Networking, Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text">
 
