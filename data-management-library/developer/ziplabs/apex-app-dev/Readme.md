@@ -3,7 +3,7 @@ layout: ziplab
 description: Building a Proof-of-concept
 ---
 
-# **Application Development in APEX **
+# Application Development in APEX 
 ## **Building a Proof-of-concept**
 ## Overview
 This lab starts with a napkin design of data structures we would
@@ -46,7 +46,8 @@ such as first initial and last name}*
 
   *{Note: For schema name enter the same name
 as you entered for workspace}*
-1. Complete the wizard
+
+4.  Complete the wizard
 
 ### **Step 1.3**
 
@@ -63,7 +64,7 @@ your email correctly}*
 
 ![](https://i.imgur.com/vnslkIt.png[/img])
 
-## **Section 2** - Defining new data structures - Using Quick SQL*
+## **Section 2** - Defining new data structures - Using Quick SQL 
 
 ## Oracle Spreadsheet Table
 ![](https://i.imgur.com/8TkzNms.png[/img])
@@ -158,7 +159,7 @@ enter the column names
 1. Copy the following URL into a new window in your browser:
 {Remember you are on Slide 21 if you click the link directly}
 
-https://www.oracle.com/technetwork/developer-tools/apex/application-express/apex-beginner-quicksql-5095785.txt
+  https://www.oracle.com/technetwork/developer-tools/apex/application-express/apex-beginner-quicksql-5095785.txt
 
 2. Copy and Paste the full script
 into the **Quick SQL Shorthand pane**
@@ -256,7 +257,7 @@ App from Script” button perform the following steps*:
 
 1. Click **New Application**
 
-### ** Step 4.2 - Load Blueprint**
+### **Step 4.2 - Load Blueprint**
 
 1. In the Create App Wizard, click **Load Blueprint**
 1. For Projects, click **Load**

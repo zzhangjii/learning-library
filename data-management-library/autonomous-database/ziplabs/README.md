@@ -1,6 +1,8 @@
 ## Oracle OpenWorld Ziplabs ##
 
-Welcome to the Data Management Zip Lab section.  With Oracle's Cloud you can have a full development environment spun up in a matter of minutes.  Check out these ziplabs and provision, load data and build an application on the world's best database.
+|  | |
+| ------------- | ------------- |
+| <img src="../../common-template/img/oow.png" width=200>   |Welcome to the Data Management Zip Lab section.  With Oracle's Cloud you can have a full development environment spun up in a matter of minutes.  Check out these ziplabs and provision, load data and build an application on the world's best database.|
 
 ### Autonomous Zip Labs
 
