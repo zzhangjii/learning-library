@@ -69,7 +69,7 @@ If you're signed in as an existing user, skip to the next section. Otherwise if 
 2. Sign in using the credentials from the previous section.
      * **Workspace**: `ZipLabs`
      * **Username**: `ZipLabs`
-     * **Password**: 
+     * **Password**: Use your password from the previous section.
      * **Remember workspace and username**: Check this box.
 3. Click **Sign In**.
 4. If this is the first time entering a the Workspace, the new user must reset their password. Click the **Set APEX Account Password** button.
@@ -83,9 +83,9 @@ If you're signed in as an existing user, skip to the next section. Otherwise if 
 
 ## Create an App from a Spreadsheet ##
 1. Log in and create a new app.
-    * Log into your workspace
-    * Click **App Builder**
-    * Click **Create a New App**
+    * Log into your workspace.
+    * Click **App Builder**.
+    * Click **Create a New App**.
 
     ![](img/section2/image1.png)
 
@@ -93,7 +93,7 @@ If you're signed in as an existing user, skip to the next section. Otherwise if 
 
     ![](img/section2/image2.png)
 
-3. Load Sample Data
+3. Load sample data.
     * Click **Copy and Paste**.
     * Select **Project and Tasks** for the sample data set.
     * Click **Next**.
@@ -101,7 +101,7 @@ If you're signed in as an existing user, skip to the next section. Otherwise if 
     ![](img/section2/image3.png)
 
 4. Name the table.
-    * Enter Table Name `SPREADSHEET`
+    * Enter the table name `SPREADSHEET`.
     * Click **Load Data**.
 
     ![](img/section2/image4.png)
@@ -113,7 +113,7 @@ If you're signed in as an existing user, skip to the next section. Otherwise if 
     ![](img/section2/image5.png)
 
 6. Name the application.
-    * Enter the name `App from a Spreadsheet`
+    * Enter the name `App from a Spreadsheet`.
     * Next to Features, click **Check All**.
 
     ![](img/section2/image6.png)
@@ -199,9 +199,9 @@ If you're signed in as an existing user, skip to the next section. Otherwise if 
 
     * Within the Code Editor, enter the following:
    ````SQL
-    select distinct status d, status r
-    from spreadsheet
-    order by 1
+   select distinct status d, status r
+   from spreadsheet
+   order by 1
    ````
     * Click **Validate**.
     * Click **OK**.
