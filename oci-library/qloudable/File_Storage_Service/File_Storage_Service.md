@@ -73,9 +73,10 @@ In this lab you will create and mount File Storage System to a compute instance 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
-2. Select the compartment assigned to you from drop down menu on left part of the screen
+2. From the OCI Services menu, Click **Virtual Cloud Network under Networking**, Select the compartment assigned to you from drop down menu on left part of the screen 
 
-3. From the OCI Services menu, Click **Virtual Cloud Network** under Networking and Click **Create Virtual Cloud Network**
+3. Click **Create Virtual Cloud Network**
+
 
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
@@ -278,9 +279,9 @@ to create a mount point.
 
 3. Mount the file system, Enter command: 
 ```
-sudo mount 10.x.x.x:/ <EXPORT_PATH_NAME>
+sudo mount 10.x.x.x:/<EXPORT_PATH_NAME> /mnt/nfs-data
 ```
-**NOTE:** The 10.x.x.x should be replaced with the  IP of File Storage system  and <EXPORT_PATH_NAME> should be replaced with Export path name used earlier(Example: sudo mount 10.0.0.3:/ /mnt/nfs-data).
+**NOTE:** The 10.x.x.x should be replaced with the  IP of File Storage system  and <EXPORT_PATH_NAME> should be replaced with Export path name used earlier(Example: If '/' was the EXPORT_PATH_NAME then **sudo mount 10.0.0.3:/ /mnt/nfs-data**).
 
 **NOTE:** Mount commands can also be seen by Clicking Action icon in File Storage detail, and selecting ‘Mount Commands’
 
@@ -325,9 +326,7 @@ In this section we will delete all the resources we created in this lab.
 3. Verify there is no data under **Exports** 
 
 
-4. Click **File Systems**
-
-5. Click **Mount Targets**, Select the Mount Target and Click **Delete**
+4. Click **File Systems**, select your File system and Click **Delete**
 
 
 **Delete Compute instance**
