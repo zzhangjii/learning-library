@@ -36,11 +36,7 @@ Oracle’s Autonomous Data Warehouse is the perfect quick-start service for fast
      * **CPU Core Count**: `1`
      * **Storage (TB)**:  `1`
      * **Auto Scaling**: Unchecked
-<<<<<<< HEAD
-     * **Administrator Credentials**: Create a password for the ADMIN user of the service instance. You'll need this password in the upcoming steps to download the credential wallet and connect to the database from Oracle SQL Developer Web.  Use a password you can remember.
-=======
      * **Administrator Credentials**: Create a password for the ADMIN user of the service instance. Remeber this password! You'll need it later to sign in to various services.
->>>>>>> upstream/master
      * **License Type**: `Bring Your Own License`
 6. Click the **Create Autonomous Database** button to start provisioning the instance. 
 7. You're taken to the instance's details page. Details include a State field, which indicates the instance is **Provisioning**. When it's complete, the State field changes from **Provisioning** to **Available**. If the status doesn't change after few minutes, try refreshing the page.
@@ -51,8 +47,8 @@ Oracle’s Autonomous Data Warehouse is the perfect quick-start service for fast
 
 
 ## Want to Learn More? ##
-* [Autonomous Cloud Platform Courses](https://learn.oracle.com/pls/web_prod-plq-dad/dl4_pages.getpage?page=dl4homepage&get_params=offering:35573#filtersGroup1=&filtersGroup2=.f667&filtersGroup3=&filtersGroup4=&filtersGroup5=&filtersSearch=) from Oracle University 
-* [Autonomous Data Warehouse Cloud Certification](https://education.oracle.com/en/data-management/autonomous-database/product_817?certPage=true) from Oracle University
+* [Data Management Cloud Courses](https://learn.oracle.com/pls/web_prod-plq-dad/dl4_pages.getpage?page=dl4homepage&get_params=offering:35573#filtersGroup1=&filtersGroup2=.f667&filtersGroup3=&filtersGroup4=&filtersGroup5=&filtersSearch=) from Oracle University 
+* [Autonomous Database Cloud Certification](https://education.oracle.com/en/data-management/autonomous-database/product_817?certPage=true) from Oracle University
 * [ADW Test Drive Workshop](https://oracle.github.io/learning-library/workshops/journey4-adwc/?page=README.md)
 
 
