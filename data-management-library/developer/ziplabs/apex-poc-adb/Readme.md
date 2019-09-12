@@ -3,8 +3,7 @@ layout: ziplab
 description: Building a Proof-of-concept for Oracle Autonomous Cloud Service
 ---
 
-# **Oracle APEX Hands-On Lab**
-## **Building a Proof-of-concept** for *Oracle Autonomous Cloud Service - July, 2019 (v19.1.3)*
+# **Building a Proof-of-concept for Oracle Autonomous Database**
 ## Overview
 This lab starts with a napkin design of data structures we would
 like to use for a proof-of-concept. Using Quick SQL you will quickly
@@ -17,63 +16,60 @@ components to improve the initial app.
 *From napkin design to demo-ready, proof-of-concept app,
 complete with some dummy data, in minutes - Viola!*
 
-Please note this lab assumes that you already have the
-Autonomous Data Warehouse (ADW) or Autonomous Transaction
-Processing – Serverless (ATP-S) service provisioned.
-If you do not currently have a cloud service, sign up for a free trial
-account at https://cloud.oracle.com/try-autonomous-database
+Please note this lab assumes that you already have ADB provisioned.
+If you do not currently have a cloud service account, sign up for a free trial
+account or a free-tier account at https://cloud.oracle.com/try-autonomous-database.
 
-## **Section 1**
-### Obtaining a Workspace
+## **Section 1** - Obtaining a Workspace
 *{Note: If you have a workspace on the Autonomous Database Cloud
 Service then you can skip this section and move to Section 2}*
 
 ### **Step 1.1 - Accessing APEX**
-- Sign into your **Oracle Cloud service**
-- Click the **hamburger** (top left), select **Autonomous Data
+1. Sign into your **Oracle Cloud service**
+3. Click the **hamburger** (top left), select **Autonomous Data
 Warehouse** or **Autonomous Transaction Processing**, based on
 which service(s) you have defined.
 
 ![](https://i.imgur.com/miLaEVQ.png[/img])
 
 ### **Step 1.1b - Accessing APEX**
-- Click <Your Database>
+1. Click <Your Database>
 from the **list**
 
 ![](https://i.imgur.com/CiBailY.png[/img])
 
-- Click **Service Console**
+2. Click **Service Console**
 
 ![](https://i.imgur.com/dZElcwr.png[/img])
 
 ### **Step 1.1c - Accessing APEX**
-- Click **Development**
-- Click **APEX**
+1. Click **Development**
+2. Click **APEX**
 
 ![](https://i.imgur.com/nRRloKA.png[/img])
 
 ### **Step 1.2 - Creating a Workspace**
 
-- To sign into **APEX Administrative Services**
+1. To sign into **APEX Administrative Services**
 for Password enter your OCI Password
-- Click **Sign In** to Administration
+2. Click **Sign In** to Administration
 
 ![](https://i.imgur.com/CS9KFil.png[/img])
 
 ### **Step 1.2b - Creating a Workspace**
-- Given this is your first time entering APEX,
+1. Given this is your first time entering APEX,
 click **Create Workspace**
 
 ![](https://i.imgur.com/hqMwKnC.png[/img])
 
 ### **Step 1.2c - Creating a Workspace**
 
-- For **Database User** enter an
+1. For **Database User** enter an
 appropriate name
-- Enter a **Password**
+2. Enter a **Password**
 {Click the ? Icon to see password
 complexity rules}
-- Click **Create Workspace**
+3. Click **Create Workspace**
 
 ![](https://i.imgur.com/xKBiWoy.png[/img])
 
@@ -82,17 +78,16 @@ Name. If you want you can update the Workspace Name*
 
 ### **Step 1.3 – Log into your New Workspace**
 
-- Click on the link within the success message {easiest technique}
+1. Click on the link within the success message {easiest technique}
 OR
-
-- Click on the Admin user (top right), click Sign Out,
+2. Click on the Admin user (top right), click Sign Out,
 and then click Return to Sign In Page
 
 ![](https://i.imgur.com/GyroBtG.png[/img])
 
 ### **Step 1.3b – Log into your New Workspace**
 
-- **Sign** into your new **Workspace**
+1. **Sign** into your new **Workspace**
 
   - Workspace – enter **Your Workspace Name**
 
@@ -102,7 +97,7 @@ and then click Return to Sign In Page
 
 *Remember workspace and username - Check*
 
-- Click **Sign In**
+2. Click **Sign In**
 
 ![](https://i.imgur.com/dvOwddN.png[/img])
 
@@ -110,28 +105,26 @@ and then click Return to Sign In Page
 Database User entered in Step 2c above*
 
 ### **Step 1.3c – Log into your New Workspace**
-- Given this is your first time entering your new **Workspace**,
+1. Given this is your first time entering your new **Workspace**,
 click **Set APEX Account Password**
 
 ![](https://i.imgur.com/60HA83B.png[/img])
 
 ### **Step 1.3d – Log into your New Workspace**
 
-- For your user profile enter the following:
+1. For your user profile enter the following:
 
   - Email Address – enter your email address
 
   - Enter New Password – enter your OCI Password
 
   - Confirm Password – enter your OCI Password
-- Click **Apply Changes**
+2. Click **Apply Changes**
 
 ![](https://i.imgur.com/QMbhf4v.png[/img])
 ![](https://i.imgur.com/LmaabSw.png[/img])
 
-## **Section 2**
-
-### **Defining new data structures** *Using Quick SQL*
+## **Section 2 - Defining new data structures** *Using Quick SQL**
 
 ## Oracle Spreadsheet Table
 ![](https://i.imgur.com/8TkzNms.png[/img])
@@ -140,16 +133,16 @@ click **Set APEX Account Password**
 ![](https://i.imgur.com/l8LEEtn.png[/img])
 
 ### **Step 2.1 - Open Quick SQL**
-- Log into your workspace
-- Click **SQL Workshop**
-- Click **SQL Scripts**
+1. Log into your workspace
+2. Click **SQL Workshop**
+3. Click **SQL Scripts**
 ![](https://i.imgur.com/4TBd8Rf.png[/img])
-- Click **Quick SQL**
+4. Click **Quick SQL**
 ![](https://i.imgur.com/Gdublvv.png[/img])
 
 ### **Step 2.2 - Enter shorthand for Team Members table**
-- Enter the Table Name {Team Members}
-- Indent 2 or more spaces and enter the column names
+1. Enter the Table Name {Team Members}
+2. Indent 2 or more spaces and enter the column names
 
 ![](https://i.imgur.com/CulnRgR.png[/img])
 
@@ -157,38 +150,38 @@ click **Set APEX Account Password**
 as you will load a complete script later in this lesson*
 
 ### **Step 2.3 - Enter details for Projects table**
-- Enter the Table Name in the first column {Projects}
-- Indent 2 or more spaces and enter the column names
+1. Enter the Table Name in the first column {Projects}
+2. Indent 2 or more spaces and enter the column names
 
 ![](https://i.imgur.com/jtu2T6K.png[/img])
 
 ### **Step 2.4 – Review Help**
 
-- Click **Help**
-- Click **Table Directives**
+1. Click **Help**
+2. Click **Table Directives**
 
 ![](https://i.imgur.com/55CTUHD.png[/img])
 
 ### **Step 2.4b – Review Help**
 
-- Click **Column Directives**
+1. Click **Column Directives**
 
 ![](https://i.imgur.com/pV4Sw3X.png[/img])
 
 ### **Step 2.4c – Review Help**
 
-- Click **Data Types**
+1. Click **Data Types**
 
 ![](https://i.imgur.com/6p8xUN6.png[/img])
 
 ### **Step 2.5 - Improve the Shorthand**
 
-- Close **Help**
-- Enter **/insert xx** for tables
-- Enter **/nn** for mandatory columns
-- Enter **/references team_members** for project lead column
-- Enter **num** for budget column
-- Enter **/vc30** and **/check ASSIGNED,
+1. Close **Help**
+1. Enter **/insert xx** for tables
+1. Enter **/nn** for mandatory columns
+1. Enter **/references team_members** for project lead column
+1. Enter **num** for budget column
+1. Enter **/vc30** and **/check ASSIGNED,
 IN-PROGRESS, COMPLETED** for
 status column
 
@@ -196,12 +189,12 @@ status column
 
 ### **Step 2.6 - Enter details for a child table**
 
-- Enter the Table Name indented
+1. Enter the Table Name indented
 {Milestones}
 
 ![](https://i.imgur.com/IEYZU5c.png[/img])
 
-- Indent 2 or more spaces and
+2. Indent 2 or more spaces and
 enter the column names
 
 
@@ -209,195 +202,191 @@ enter the column names
 
 ### **Step 2.7 - Enter details for another child table**
 
-- Enter the Table Name indented
+1. Enter the Table Name indented
 {Tasks}
-- Indent 2 or more spaces and
+1. Indent 2 or more spaces and
 enter the column names
 
 ![](https://i.imgur.com/VYYEL8e.png[/img])
 
 ### **Step 2.8 – Complete the Shorthand**
 
-- Copy the following URL into a new window in your browser:
+1. Copy the following URL into a new window in your browser:
 {Remember you are on Slide 21 if you click the link directly}
 
 https://www.oracle.com/technetwork/developer-tools/apex/application-express/apex-beginner-quicksql-5095785.txt
 
-- Copy and Paste the full script
+2. opy and Paste the full script
 into the **Quick SQL Shorthand pane**
 
-- Click **Generate SQL**
+3. Click **Generate SQL**
 
 ![](https://i.imgur.com/9lW6S17.png[/img])
 
 ### **Step 2.9 – Update the Settings**
 
-- Click **Settings**
-- Object Prefix, enter **hol**
-- On Delete, select **Restrict**
-- Primary Keys, select **12c Identity Data Types**
-- Date Data Type, select **TIMESTAMP WITH LOCAL TIME ZONE**
-- Audit Columns, check Include
-- Row Version Number, check Include
-- Click **Save Changes**
+1. Click **Settings**
+1. Object Prefix, enter **hol**
+1. On Delete, select **Restrict**
+1. Primary Keys, select **12c Identity Data Types**
+1. Date Data Type, select **TIMESTAMP WITH LOCAL TIME ZONE**
+1. Audit Columns, check Include
+1. Row Version Number, check Include
+1. Click **Save Changes**
 
 ![](https://i.imgur.com/nZVvx71.png[/img])
 
 ### **Step 2.10 – Save, Review, and Run the Script**
 
-- Click **Save SQL Script**
-- For Script Name, enter **hol**
-- Click **Save Script**
-- Click **Review** and **Run**
+1. Click **Save SQL Script**
+1. For Script Name, enter **hol**
+1. Click **Save Script**
+1. Click **Review** and **Run**
 
 ![](https://i.imgur.com/e2I6k3z.png[/img])
 
 *Note: The script will be displayed in
 the Script Editor within SQL Scripts*
 
-- Click **Run**
-- Click **Run Now**
+1. Click **Run**
+1. Click **Run Now**
 
 ![](https://i.imgur.com/CyYXjko.png[/img])
 
-## **Section 3**
-
-### **Creating an app on the tables from Quick SQL** - *Using the Create Application Wizard*
+## **Section 3 - Creating an app on the tables from Quick SQL** - *Using the Create Application Wizard*
 
 ### **Step 3.1 – Start the Create App Wizard**
 
-- Click **Create App** from Script
+1. Click **Create App** from Script
 
 ![](https://i.imgur.com/7TPFNiS.png[/img])
 
 *{Note: If you are back on SQL Scripts, and don’t see the “Create
 App from Script” button perform the following steps*:
-1. *Within the Results column, click “1” for the script you just ran*.
-2. *Under View Results, click the magnifying glass*.
+2. *Within the Results column, click “1” for the script you just ran*.
+3. *Under View Results, click the magnifying glass*.
 
 *The results page shown above should now be displayed again}*
 
 ### **Step 3.2 – Name the App and Update Appearance**
 
-- For Name, enter **Projects**
-- Click **Appearance**
-- For Theme Style, select **Vita-Slate**
+1. For Name, enter **Projects**
+1. Click **Appearance**
+1. For Theme Style, select **Vita-Slate**
 
 ![](https://i.imgur.com/EOCdLPq.png[/img])
 
 ### **Step 3.3 – Add Features**
 
-- For Features, click **Check All**
+1. For Features, click **Check All**
 
 ![](https://i.imgur.com/4ZadDjE.png[/img])
 
 ### **Step 3.4 - Create Application**
 
-- Click **Create Application**
+1. Click **Create Application**
 
 ![](https://i.imgur.com/P9SETCW.png[/img])
 
 ### **Step 3.5 – App in Page Designer**
 
-- Your new application will be displayed in Page Designer
-- Click **Run Application**
+1. Your new application will be displayed in Page Designer
+1. Click **Run Application**
 
 ![](https://i.imgur.com/gwEA0V5.png[/img])
 
 ### **Step 3.6 - Runtime App**
 
-- Enter your **credentials**
-- Play around with your new application
+1. Enter your **credentials**
+1. Play around with your new application
 
 ![](https://i.imgur.com/Zsgy9GN.png[/img])
 
-## **Section 4**
-
-### **Improving the App** - *Updating a Page*
+## **Section 4 - Improving the App** - *Updating a Page*
 
 ### **Step 4.1 - Restart the Create App Wizard**
 
-- From the development environment, click **App Builder**, and then select **Create**
+1. From the development environment, click **App Builder**, and then select **Create**
 
 ![](https://i.imgur.com/F0CAdtA.png[/img])
 
-- Click **New Application**
+2. Click **New Application**
 
 ### ** Step 4.2 - Load Blueprint**
 
-- In the Create App Wizard, click **Load Blueprint**
-- For Projects, click **Load**
+1. In the Create App Wizard, click **Load Blueprint**
+1. For Projects, click **Load**
 
 ![](https://i.imgur.com/7XSTr20.png[/img])
 
 ### **Step 4.3 – Add a Page**
 
-- Click **Add Page**
-- Click **Interactive Grid**
+1. Click **Add Page**
+1. Click **Interactive Grid**
 
 ![](https://i.imgur.com/Kq1R8CL.png[/img])
 
-- For Page Name,
+1. For Page Name,
 enter **Milestones**
-- For Table or View, select
+2. For Table or View, select
 **HOL_MILESTONES**
-- Click **Add Page**
+3. Click **Add Page**
 
 ![](https://i.imgur.com/MvavpGO.png[/img])
 
 ### **Step 4.4 – Reorder a Page**
 
-- Click and hold the mouse when hovering over the hamburger for
+1. Click and hold the mouse when hovering over the hamburger for
 the **Milestones – Interactive Grid** page
-- Move it up until the page is under Projects
-- Release the mouse
+1. Move it up until the page is under Projects
+1. Release the mouse
 
 ![](https://i.imgur.com/TfTn4Mv.png[/img])
 
 ### **Step 4.5 – Delete a Page**
 
-- For **Milestones – Interactive Report with Form** page, click **Edit**
-- Click **Delete**
+1. For **Milestones – Interactive Report with Form** page, click **Edit**
+1. Click **Delete**
 
 ![](https://i.imgur.com/vzjSc1z.png[/img])
 
 ### **Step 4.6 – Create App and Run**
 
-- Click **Create Application**
-- In Page Designer, click **Run Application**
+1. Click **Create Application**
+1. In Page Designer, click **Run Application**
 
 ![](https://i.imgur.com/CGbb0t1.png[/img])
 
 ### **Step 4.7 – Navigate to Milestones**
 
-- In the runtime environment, click **Milestones**
+1. In the runtime environment, click **Milestones**
 
 ![](https://i.imgur.com/3E0HN6u.png[/img])
 
-- In the Developer Toolbar, click **Edit Page 6**
+1. In the Developer Toolbar, click **Edit Page 6**
 
 ![](https://i.imgur.com/pu8QZ3m.png[/img])
 
 ### **Step 4.7 – Navigate to Milestones**
 
-- In the runtime environment, click **Milestone**
+1. In the runtime environment, click **Milestone**
 
 ![](https://i.imgur.com/zLnAiV6.png[/img])
 
-- In the developer toolbar, click **Edit Page 6**
+1. In the developer toolbar, click **Edit Page 6**
 
 ![](https://i.imgur.com/71NFdPc.png[/img])
 
 ### **Step 4.8 – Update Project ID Column**
 
-- In Page Designer, under Milestones, click **Columns**
-- Click **PROJECT_ID**
+1. In Page Designer, under Milestones, click **Columns**
+1. Click **PROJECT_ID**
 
 ![](https://i.imgur.com/hyzTFq6.png[/img])
 
 ### **Step 4.8b – Update Project ID Column**
 
-- In the Property Editor, update the following:
+1. In the Property Editor, update the following:
 
 
   - Identification: Type – select **Select List**
@@ -415,16 +404,16 @@ the **Milestones – Interactive Grid** page
 
 ### **Step 4.9 – Hide Columns**
 
-- In the runtime environment, click **Actions**, select **Columns**
-- Uncheck Displayed for **Id, Row Version, Created, Created By,
+1. In the runtime environment, click **Actions**, select **Columns**
+1. Uncheck Displayed for **Id, Row Version, Created, Created By,
 Updated**, and **Updated By**
-- Click **Save**
+1. Click **Save**
 
 ![](https://i.imgur.com/pAqSeax.png[/img])
 
 ### **Step 4.10 – Save the Report**
 
-- In the runtime environment, click **Actions**, select **Report**,
+1. In the runtime environment, click **Actions**, select **Report**,
 select **Save**
 
 ![](https://i.imgur.com/xvAVJPG.png[/img])
@@ -436,3 +425,5 @@ select **Save**
 - **Tutorials** https://apex.oracle.com/en/learn/tutorials
 - **Community** https://apex.oracle.com/community
 - **External Site + Slack** http://apex.world
+
+ July, 2019 (v19.1.3)*
