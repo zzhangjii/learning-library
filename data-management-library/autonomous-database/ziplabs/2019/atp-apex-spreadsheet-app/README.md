@@ -1,11 +1,11 @@
 ---
 layout: ziplab
-description: Building an App from a Spreadsheet for Oracle Autonomous Cloud Service
+description: Creating an App from a Spreadsheet for Oracle Autonomous Cloud Service
 tags: Oracle Cloud, Autonomous Transaction Processing, Data Warehouse, ADW, ATP, Apex, Oracle Cloud Infrastructure, OCI, Object Store, Data Load
 permalink: /data-management-library/autonomous-database/ziplabs/2019/atp-apex-spreadsheet-app/index.html
 
 ---
-# Building an APEX Application from a Spreadsheet for ATP #
+# Creating an APEX Application from a Spreadsheet for ATP #
 
 ## Before You Begin ##
 This 15-minute lab walks you through uploading a spreadsheet into an Oracle database table, and then creating an application based on this new table. You will then play with the Interactive Report and improve the attached form. Lastly, you will add a Calendar page and then link it to the existing form page. This lab is written for Autonomous Transaction Processing (ATP), but may also be completed in Autonomous Data Warehouse (ADW).
@@ -40,16 +40,16 @@ Rather than trying to email a spreadsheet to gather information from different p
 
 8. The service console opens to the **Overview** page. Click **Development** in the left navigation pane.
 9. Click the **APEX** button.
-
-    ![](img/section1/image4.png)
-
 10. Enter your OCI password to sign into APEX Administrative Services.
 11. Click **Sign In to Administration**.
 
     ![](img/section1/image5.png)
 
+
 ## Create a Workspace for a New User ##
-1. If this is your first time entering APEX, you'll need to create a workspace. Click the **Create Workspace** button.
+If this is your first time entering APEX, you'll need to create a workspace. Otherwise, skip to the next section.
+
+1. Click the **Create Workspace** button.
 2. Identify a user for the new workspace. Remember this information so you can log in later:
      * **Database User**: `ZipLabs`
      * **Password**: Click the **?** icon to see the password complexity rules. 
@@ -60,6 +60,8 @@ Rather than trying to email a spreadsheet to gather information from different p
 
 
 ## Log into your Workspace ##
+If you're signed in as an existing user, skip to the next section. Otherwise if you're a new user or signed in as Admin, follow these steps.
+
 1. Click on the link within the success message {easiest technique} OR Click on the Admin user (top right), click **Sign Out**, and then click **Return to Sign In Page**.
 
     ![](img/section1/image8.png)
