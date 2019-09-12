@@ -41,9 +41,9 @@ Storage using two of the procedures in the DBMS_CLOUD package:
 ## Load a data file to your Object Store ##
 Oracle Cloud Infrastructure offers two distinct storage class tiers.  Object Storage, for data which you need fast, immediate and frequent access and Archive Storage, for data which you seldom or rarely access.  In this ziplab you will stage data into an object store in the Oracle Cloud Infrastructure Object Storage service.
 
-1.  Log in to your Oracle Cloud Infrastructure Console
+1.  Login to your Oracle Cloud Infrastructure Console
 
-2.  Select **Object Storage** -> **Object Storage** from the drop down menu on the top left of the Oracle Cloud Infrastructure console
+2.  Select **Object Storage** -> **Object Storage** from the drop down menu on the top left of the Oracle Cloud Infrastructure console.
 
     ![](img/adw-loading-object-storage2.png)
 
@@ -55,7 +55,7 @@ For this lab, we'll use the `root` compartment.
 4.  Enter the following information: 
     * **Bucket Name**:  `bucket-<city you were born in>-<your initials>`  (example: *bucket-london-kam*)
     * **Storage Tier**:  `Standard`
-     * **Encryption**: `Encrypt using Oracle Managed Keys`
+    * **Encryption**: `Encrypt using Oracle Managed Keys`
 
         ![](img/adw-loading-create-bucket.png)
 
@@ -76,10 +76,10 @@ For this lab, we'll use the `root` compartment.
     ![](img/adw-loading-select-files.png)
 
 
-10.  **Select the ten data files** and click **Open**.  Once the files are finished loading, click **Upload Objects** to load. 
+10.  Select the ten data files and click **Open**.  Once the files are finished loading, click **Upload Objects** to load. 
 ![](img/adw-loading-view-objects-4.png)
 
-11.  Once complete, verify **all** *.dat files have a status of *`Finished`* and click **Close**.
+11.  Once complete, verify **all** *.dat files have a status of `Finished` and click **Close**.
 
 12. Your bucket should have 10 objects loaded.  If this were a true data load, you may be loading *hundreds* of large files here.
 
@@ -106,7 +106,7 @@ communication between your Autonomous Database and the object store relies on th
 2.  From the menu on the top left select **Identity->Users**. Once on the Users Page click on your username
 ![](img/adw-loading-identity-users.png) 
 
-3.  Select your username.  Click **Auth Tokens** under **Resources** on the left of the console. _Note: This will be the OCI user you created NOT ziplab_user_
+3.  Select your username.  Click **Auth Tokens** under **Resources** on the left of the console. _Note: This will be the the username you created when you launched your trial NOT ziplab_user_.
 ![](img/adw-loading-user-screen.png) 
 
 
@@ -117,14 +117,14 @@ communication between your Autonomous Database and the object store relies on th
 5.  A pop-up dialog appears. Set the Auth Token by performing the following
     steps:
 
-    -   In the pop-up dialog, enter a description.  Click the **Generate Token** button.
+    * In the pop-up dialog, enter a description.  Click the **Generate Token** button.
     ![](img/adw-loading-token-description.png)
 
-    -   Copy the generated token to notepad located on your desktop. The token does not appear again and you WILL NEED this token to load your data into ADW.
+    * Copy the generated token to notepad located on your desktop. The token does not appear again and you WILL NEED this token to load your data into ADW.
 
         ![](img/adw-loading-generated-token.png)
 
-    -   Click **Close**.
+    * Click **Close**.
 
 
 
@@ -151,7 +151,7 @@ Go back to your ADW instance via the menu.
 
 5.  Enter your database admin username from the previous exercise and login to your ADW instance. 
 
-    Note:  When you provisioned your ADW instance you wrote down an admin password for your new database.  Use this to log in to SQL Developer web.  You can go back to your ADW instance and reset your admin password via the menu.
+    _Note:  When you provisioned your ADW instance you wrote down an admin password for your new database.  Use this to log in to SQL Developer web.  You can go back to your ADW instance and reset your admin password via the menu._
     
     ![](img/adw-loading-sql-dev-logging-in.png)
 
@@ -163,6 +163,7 @@ Go back to your ADW instance via the menu.
 - Authorization token created earlier
 
     Copy the pl/sql procedure (to the worksheet area of SQL Developer web below) and fill in the username and password.  
+
     ```SQL
     begin  
     DBMS_CLOUD.create_credential (  
@@ -173,6 +174,7 @@ Go back to your ADW instance via the menu.
     end;  
     /
     ```
+
     ![](img/adw-loading-create-credential.png)
 
 8.  Press the green arrow to run the worksheet.  Once the correct information is entered, you should get a message that the ``PL/SQL procedure completed``
@@ -184,9 +186,9 @@ your ADW instance now.
 
 Before data is copied, the tables and objects need to be created in ADW.  In this lab you will create the target objects.
 
-1. Open up the sql script [here](files/adw-loading.sql) in notepad.   _(Remember to click the back button to return to this window)_ This script will be used to create the tables and constraints.
+1. Download the sql script to create the tables for your ADB instance [here](files/adw-loading.sql).  Open up the file in notepad.   _(Remember to click the back button to return to this window)_ This script will be used to create the tables and constraints.
 
-2. Copy and paste it in your SQL Developer Web worksheet area overwriting any existing commands.
+2. Copy and paste the commands in your SQL Developer Web worksheet area overwriting any existing commands.
 ![](img/adw-loading-paste-sql.png)
 
 3.  Select the entire script and press the green play button.
@@ -197,14 +199,14 @@ Before data is copied, the tables and objects need to be created in ADW.  In thi
 4. Once the script has run review the output to ensure the tables and constraints have been created successfully.  
 ![](img/adw-loading-create-tables-3.png)
 
-Now you have empty tables and staged data in the OCI Object store. To get the data from the object store to your ADB instance, you need to get some information about the object. To move the data we will be using the dbms_cloud.copy_data procedure.  The procedure takes information about the location of the data you staged in your object store.
+5. Now you have empty tables and staged data in the OCI Object store. To get the data from the object store to your ADB instance, you need to get some information about the object. To move the data we will be using the dbms_cloud.copy_data procedure.  The procedure takes information about the location of the data you staged in your object store.  Review the procedure.
 
  ````SQL    
     begin
     dbms_cloud.copy_data(
         table_name =>'<ENTER_TABLE_NAME>',
         credential_name =>'OBJ_STORE_CRED',
-        file_uri_list =>' <entertenancy-bucket-address>/chan_v3.dat',
+        file_uri_list =>'<entertenancy-bucket-address>/chan_v3.dat',
         format => json_object('ignoremissingcolumns' value 'true', 'removequotes' value 'true')
     );
     end;
@@ -214,12 +216,12 @@ Now you have empty tables and staged data in the OCI Object store. To get the da
 
 5. Select **Object Storage->Object Storage** from the menu.  Select your bucket. 
 
-6.  In the objects section, locate your data file.  Click on the three dots on the right. 
+6.  In the objects section, locate one of the data files.  Click on the three dots on the right. 
 ![](img/adw-loading-view-bucket-objects.png)
 
 7. Click **View Object Details**.  
 ![](img/adw-loading-view-object-details-3.png)
-8. Copy the URL Path by pressing `<CTRL-C>`.  Copy the url to your notepad.
+8. Copy the URL Path by pressing `<CTRL-C>`.  Paste the url to your notepad.
 ![](img/adw-view-object-details-customers.png)
 
 9.  Download this [sql script](files/adw-loading-copy-data.sql)  to load your tables. _(Remember to click the back button to return)_.  Replace the file_uri_list with the string you saved in notepad. The script already has the correct table names, just replace the tenancy address. 
@@ -229,14 +231,16 @@ Now you have empty tables and staged data in the OCI Object store. To get the da
         dbms_cloud.copy_data(
             table_name =>'<ENTER_TABLE_NAME>',
             credential_name =>'OBJ_STORE_CRED',
-            file_uri_list =>'<replace this urlpart>'/chan_v3.dat',
+            file_uri_list =>'<replace this urlpart>'/chan_v3.dat,
             format => json_object('ignoremissingcolumns' value 'true', 'removequotes' value 'true')
         );
     end;
     /
     ````
 
-10. Replace **only** the first portion of the file_uri_list for all of **the tables**.  The table names are preset in the sql script.
+10. Paste the sql script into SQL Workshet.
+
+11. Replace **only** the first portion of the file_uri_list for **all** of **the tables** in your sql worksheet window..  Leave the table names intact as they are preset for you in the sql script.
 ![](img/adw-loading-copy-data-2.png)
 
 
