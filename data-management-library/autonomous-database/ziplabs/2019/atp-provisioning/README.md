@@ -15,11 +15,11 @@ Oracle Autonomous Transaction Processing is a fully-managed, performance, and el
 Autonomous Transaction Processing is built upon the Oracle Database, so that all applications and tools that support Oracle Database also support Autonomous Transaction Processing. These tools and applications connect to the Autonomous Transaction Processing database using standard SQL*Net connections. The tools and applications can either be in your data center or in a public cloud. Oracle Analytics Cloud and other Oracle Cloud services are preconfigured for Autonomous Transaction Processing.
 
 ### What Do You Need? ###
-* Access to an instance of Oracle Transaction Processing
+* Access to an Oracle Cloud account, such as the [Oracle Cloud Free Tier](https://oracle.com/oow19freetier).
 
 
 ## Create an ATP Instance ##
-1. Sign in to the Oracle Cloud Platform. 
+1. Sign in to the [Oracle Cloud](https://cloud.oracle.com/home).
 2. Click the menu icon to expand the menu on the left edge of the screen.
 3. Click **Autonomous Transaction Processing**.
 

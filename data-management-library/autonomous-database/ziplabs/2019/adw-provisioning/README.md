@@ -15,11 +15,11 @@ The Oracle Autonomous Data Warehouse is built around the market leading Oracle d
 Oracle’s Autonomous Data Warehouse is the perfect quick-start service for fast data loading and sophisticated data reporting and analysis. Oracle manages everything for you so you can focus on your data.
 
 ### What Do You Need? ###
-* Access to an instance of Oracle Autonomous Data Warehouse Cloud
+* Access to an Oracle Cloud account, such as the [Oracle Cloud Free Tier](https://oracle.com/oow19freetier).
 
 
 ## Create an ADW Instance ##
-1. Sign in to the Oracle Cloud Platform https://cloud.oracle.com/home
+1. Sign in to the [Oracle Cloud](https://cloud.oracle.com/home).
 2. Click the menu icon to expand the menu on the left edge of the screen. If you just provisioned the tenancy this menu may not show all of the options because they are being installed and configured. Wait a couple of minutes and click on refresh.
 3. Click **Autonomous Date Warehouse**.
 
