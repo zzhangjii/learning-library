@@ -65,7 +65,7 @@ If you're signed in as an existing user, skip to the next section. Otherwise if 
 2. Sign in using the credentials from the previous section.
      * **Workspace**: `ZipLabs`
      * **Username**: `ZipLabs`
-     * **Password**: 
+     * **Password**: Use your password from the previous section.
      * **Remember workspace and username**: Check this box.
 3. Click **Sign In**.
 4. If this is the first time entering a the Workspace, the new user must reset their password. Click the **Set APEX Account Password** button.
@@ -110,12 +110,8 @@ If you're signed in as an existing user, skip to the next section. Otherwise if 
 
     ![](img/section3/image1.png)
 
-2. Select the app type.
-    * Click **New Application**.
-
-    ![](img/section3/image2.png)
-
-3. Name the app.
+2. Click **New Application**.
+3. Set the app's name an appearance.
     * For Name enter **Projects**.
     * Click **Appearance**.
 
@@ -130,50 +126,49 @@ If you're signed in as an existing user, skip to the next section. Otherwise if 
     ![](img/section3/image4.png)
 
 4. Add the Dashboard Page.
-    * Click **Add Page**
-    * Click **Dashboard**
+    * Click **Add Page**.
+    * Click **Dashboard**.
 
     ![](img/section3/image5.png)
 
     * For Chart 1, enter the following:
-        * Chart Type – select **Bar**.
-        * Chart Name – enter **Budget versus Cost**.
-        * Table or View – select **SAMPLE$PROJECTS_V**.
-        * Label Column – select **NAME**.
-        * Value Column – select **BUDGET_V_COST**.
+        * **Chart Type**: `Bar`
+        * **Chart Name**: `Budget versus Cost`
+        * **Table or View**: `SAMPLE$PROJECTS_V`
+        * **Label Column**: `NAME`
+        * **Value Column**: `BUDGET_V_COST`
 
     ![](img/section3/image6.png)
 
     * For Chart 2, enter the following:
-        * Chart Type – select **Pie**.
-        * Chart Name – enter **Project Status**.
-        * Table or View – select **SAMPLE$PROJECTS_V**.
-        * Label Column – select **Status**.
-        * Type – select **Count**.
+        * **Chart Type**: `Pie`
+        * **Chart Name**: `Project Status`
+        * **Table or View**: `SAMPLE$PROJECTS_V`
+        * **Label Column**: `Status`
+        * **Type**: `Count`
 
     ![](img/section3/image7.png)
 
-* For Chart 3, enter the following:
+    * For Chart 3, enter the following:
+        * **Chart Type**: `Bar`
+        * **Chart Name**: `Project Leads`
+        * **Table or View**: `SAMPLE$PROJECTS_V`
+        * **Label Column**: `PROJECT_LEAD`
+        * **Type**: `Count`
 
-    - Chart Type – select **Bar**.
-    - Chart Name – enter **Project Leads**.
-    - Table or View – select **SAMPLE$PROJECTS_V**.
-    - Label Column – select **PROJECT_LEAD**.
-    - Type – select **Count**.
-
-* Click **Add Page**.
+    * Click **Add Page**.
 
     ![](img/section3/image8.png)
 
-5. Add the Project Page
+5. Add the Project Page.
     * Click **Add Page**.
     * Click **Cards**.
     * Enter the following:
-        * Page Name - enter **Projects**.
-        * Table - select **SAMPLE$PROJECTS**.
-        * Card Title - select **NAME**.
-        * Description - select **Description**.
-        * Additional Text - select **PROJECT_LEAD**.
+        * **Page Name**: `Projects`
+        * **Table**: `SAMPLE$PROJECTS`
+        * **Card Title**: `NAME`
+        * **Description**: `Description`
+        * **Additional Text**: `PROJECT_LEAD`
     * Click **Add Page**.
 
     ![](img/section3/image9.png)
@@ -182,11 +177,11 @@ If you're signed in as an existing user, skip to the next section. Otherwise if 
     * Click **Add Page**.
     * Click **Report**.
     * Enter the following:
-        * Page Name - enter **Milestones**.
-        * Table - select **SAMPLE$PROJECT_MILESTONES**.
-        * Check **Include Form**.
-        * Lookup Key 1 - select **PROJECT_ID**.
-        * Display Col 1 - select **SAMPLE$PROJECTS.NAME**.
+        * **Page Name**: `Milestones`
+        * **Table**: `SAMPLE$PROJECT_MILESTONES`
+        * **Include Form**: Check this box.
+        * **Lookup Key 1**: `PROJECT_ID`
+        * **Display Col 1**: `SAMPLE$PROJECTS.NAME`
     * Click **Add Page**
 
     ![](img/section3/image10.png)
@@ -195,13 +190,13 @@ If you're signed in as an existing user, skip to the next section. Otherwise if 
     * Click **Add Page**.
     * Click **Report**.
     * Enter the following:
-        * Page Name - enter **Tasks**.
-        * Table - select **SAMPLE$PROJECT_TASKS**.
-        * Check **Include Form**.
-        * Lookup Key 1 - select **PROJECT_ID**.
-        * Display Col 1 - select **SAMPLE$PROJECTS.NAME**.
-        * Lookup Key 2 - select **MILESTONE_ID**.
-        * Display Col 2 - select **SAMPLE$PROJECT_MILESTONES.NAME**.
+        * **Page Name**: `Tasks`
+        * **Table**: `SAMPLE$PROJECT_TASKS`
+        * **Include Form**: Check this box.
+        * **Lookup Key 1**: `PROJECT_ID`
+        * **Display Col 1**: `SAMPLE$PROJECTS.NAME`
+        * **Lookup Key 2**: `MILESTONE_ID`
+        * **Display Col 2**: `SAMPLE$PROJECT_MILESTONES.NAME`
     * Click **Add Page**.
 
     ![](img/section3/image11.png)
@@ -210,11 +205,11 @@ If you're signed in as an existing user, skip to the next section. Otherwise if 
     * Click **Add Page**.
     * Click **Calendar**.
     * Enter the following:
-        * Page Name - enter **Tasks**.
-        * Table - select **SAMPLE$PROJECT_TASKS**.
-        * Display Column - select **NAME**.
-        * Start Date Column - select **START_DATE**.
-        * End Date Column - select **END_DATE**.
+        * **Page Name**: `Tasks`
+        * **Table**: `SAMPLE$PROJECT_TASKS`
+        * **Display Column**: `NAME`
+        * **Start Date Column**: `START_DATE`
+        * **End Date Column**: `END_DATE`
     * Click **Add Page**.
 
     ![](img/section3/image12.png)
