@@ -37,17 +37,17 @@ Storage using two of the procedures in the DBMS_CLOUD package:
 ## Load a data file to your Object Store ##
 Oracle Cloud Infrastructure offers two distinct storage class tiers.  Object Storage, for data which you need fast, immediate and frequent access and Archive Storage, for data which you seldom or rarely access.  In this ziplab you will stage data into an object store in the Oracle Cloud Infrastructure Object Storage service.
 
-1.  Login to your Oracle Cloud Infrastructure Console
-2.  Select **Object Storage** -> **Object Storage** from the drop down menu on the top left of the Oracle Cloud Infrastructure console.
+1. Login to your Oracle Cloud Infrastructure Console
+2. Select **Object Storage** -> **Object Storage** from the drop down menu on the top left of the Oracle Cloud Infrastructure console.
 
     ![](img/adw-loading-object-storage2.png)
 
-3.  Select **Create Bucket** to create a bucket to load your data in.  This will be your staging area.  Later in this lab you will move the data from this staging area to your ADW instance.
+3. Select **Create Bucket** to create a bucket to load your data in.  This will be your staging area.  Later in this lab you will move the data from this staging area to your ADW instance.
 For this lab, we'll use the `root` compartment.
 
     ![](img/adw-loading-create-bucket-screen.png)
 
-4.  Enter the following information: 
+4. Enter the following information: 
     * **Bucket Name**:  `bucket-<city you were born in>-<your initials>`  (example: *bucket-london-kam*)
     * **Storage Tier**:  `Standard`
     * **Encryption**: `Encrypt using Oracle Managed Keys`
@@ -55,7 +55,7 @@ For this lab, we'll use the `root` compartment.
     ![](img/adw-loading-create-bucket.png)
 
 5. Click **Create Bucket**.
-6.  Click on the bucket name you just created.  
+6. Click on the bucket name you just created.  
 
     ![](img/adw-loading-buckets.png)
  
@@ -63,18 +63,18 @@ For this lab, we'll use the `root` compartment.
 
     ![](img/adw-loading-bucket-screen.png)
 
-8.  Click [here](https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/adwc/OBE_Loading%20Your%20Data/files/datafiles_for_sh_tables.zip) to download the zip file with your objects.  Open up your file browser and extract the zip file.
-9.  Click **Upload Object** button to begin selecting the data files to upload to the bucket.  Click on **select files** to choose your extracted data files.
+8. Click [here](https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/adwc/OBE_Loading%20Your%20Data/files/datafiles_for_sh_tables.zip) to download the zip file with your objects.  Open up your file browser and extract the zip file.
+9. Click **Upload Object** button to begin selecting the data files to upload to the bucket.  Click on **select files** to choose your extracted data files.
 
     ![](img/adw-loading-select-files.png)
 
-10.  Select the ten data files and click **Open**.  Once the files are finished loading, click **Upload Objects** to load. 
+10. Select the ten data files and click **Open**.  Once the files are finished loading, click **Upload Objects** to load. 
 
     ![](img/adw-loading-view-objects-4.png)
 
-11.  Once complete, verify **all** *.dat files have a status of `Finished` and click **Close**.
+11. Once complete, verify **all** *.dat files have a status of `Finished` and click **Close**.
 12. Your bucket should have 10 objects loaded.  If this were a true data load, you may be loading *hundreds* of large files here.
-12.  The final step will be to change the visibility of your bucket. Click the **Edit Visibility** button at the top of your Bucket Details screen.
+12. The final step will be to change the visibility of your bucket. Click the **Edit Visibility** button at the top of your Bucket Details screen.
 
     ![](img/adw-loading-edit-visibility.png)
 
@@ -93,20 +93,20 @@ For this lab, we'll use the `root` compartment.
 To load data from the OCI object store, you need to create an Auth Token for your object store account. The
 communication between your Autonomous Database and the object store relies on this Auth Token and username/password authentication.
 
-1.  If you have logged out of Oracle Cloud Infrastructure Object Storage, please log back in.
-2.  From the menu on the top left select **Identity->Users**. Once on the Users Page click on your username
+1. If you have logged out of Oracle Cloud Infrastructure Object Storage, please log back in.
+2. From the menu on the top left select **Identity->Users**. Once on the Users Page click on your username
 
     ![](img/adw-loading-identity-users.png) 
 
-3.  Select your username.  Click **Auth Tokens** under **Resources** on the left of the console. _Note: This will be the the username you created when you launched your trial NOT ziplab_user_.
+3. Select your username.  Click **Auth Tokens** under **Resources** on the left of the console. _Note: This will be the the username you created when you launched your trial NOT ziplab_user_.
 
     ![](img/adw-loading-user-screen.png) 
 
-4.  Click **Generate Token**.
+4. Click **Generate Token**.
 
     ![](img/adw-loading-user-token.png) 
 
-5.  A pop-up dialog appears. Set the Auth Token by performing the following steps:
+5. A pop-up dialog appears. Set the Auth Token by performing the following steps:
     * In the pop-up dialog, enter a description.  Click the **Generate Token** button.
     
     ![](img/adw-loading-token-description.png)
@@ -123,24 +123,24 @@ communication between your Autonomous Database and the object store relies on th
 
 Now that you have created an object store Auth Token, its time to store the credentials of the object store in ADW instance.
 
-1.  Let's navigate to SQL Developer web to prepare your ADW instance for the staged data.  
+1. Let's navigate to SQL Developer web to prepare your ADW instance for the staged data.  
 Go back to your ADW instance via the menu.
 
     ![](img/adw-loading-view-dbs.png)
 
-2.  Click on the ADW instance you created in a previous exercise and verify it is still running.
+2. Click on the ADW instance you created in a previous exercise and verify it is still running.
 
     ![](img/adw-finance-mart.png)
 
-3.  Click on **Service Console**.  If the service console does not open a new tab, ensure pop up blocker is turned off for your browser.  Click on **Development** to access the developer tools for ADB.
+3. Click on **Service Console**.  If the service console does not open a new tab, ensure pop up blocker is turned off for your browser.  Click on **Development** to access the developer tools for ADB.
 
     ![](img/adw-loading-service-console.png)
 
-4.  Click on **SQL Developer Web**.
+4. Click on **SQL Developer Web**.
 
     ![](img/adw-loading-navigate-sql-dev.png)
 
-5.  Enter your database admin username from the previous exercise and login to your ADW instance. 
+5. Enter your database admin username from the previous exercise and login to your ADW instance. 
 
     _Note:  When you provisioned your ADW instance you wrote down an admin password for your new database.  Use this to log in to SQL Developer web.  You can go back to your ADW instance and reset your admin password via the menu._
     
@@ -165,8 +165,8 @@ Go back to your ADW instance via the menu.
 
     ![](img/adw-loading-create-credential.png)
 
-8.  Press the green arrow to run the worksheet.  Once the correct information is entered, you should get a message that the ``PL/SQL procedure completed``
-9.  Your object store's credentials are stored in
+8. Press the green arrow to run the worksheet.  Once the correct information is entered, you should get a message that the ``PL/SQL procedure completed``
+9. Your object store's credentials are stored in
 your ADW instance now.  
 
 
@@ -179,7 +179,7 @@ Before data is copied, the tables and objects need to be created in ADW.  In thi
 
     ![](img/adw-loading-paste-sql.png)
 
-3.  Select the entire script and press the green play button.
+3. Select the entire script and press the green play button.
 
     ![](img/adw-loading-green-play.png)
 
@@ -189,7 +189,7 @@ Before data is copied, the tables and objects need to be created in ADW.  In thi
 
 5. Now you have empty tables and staged data in the OCI Object store. To get the data from the object store to your ADB instance, you need to get some information about the object. To move the data we will be using the dbms_cloud.copy_data procedure.  The procedure takes information about the location of the data you staged in your object store.  Review the procedure.
 
- ````SQL    
+    ````SQL    
     begin
     dbms_cloud.copy_data(
         table_name =>'<ENTER_TABLE_NAME>',
@@ -199,11 +199,10 @@ Before data is copied, the tables and objects need to be created in ADW.  In thi
     );
     end;
     /
-````
-
+    ````
 
 5. Select **Object Storage->Object Storage** from the menu.  Select your bucket. 
-6.  In the objects section, locate one of the data files.  Click on the three dots on the right. 
+6. In the objects section, locate one of the data files.  Click on the three dots on the right. 
 
     ![](img/adw-loading-view-bucket-objects.png)
 
@@ -215,7 +214,7 @@ Before data is copied, the tables and objects need to be created in ADW.  In thi
 
     ![](img/adw-view-object-details-customers.png)
 
-9.  Download this [sql script](files/adw-loading-copy-data.sql)  to load your tables. _(Remember to click the back button to return)_.  Replace the file_uri_list with the string you saved in notepad. The script already has the correct table names, just replace the tenancy address. 
+9. Download this [sql script](files/adw-loading-copy-data.sql)  to load your tables. _(Remember to click the back button to return)_.  Replace the file_uri_list with the string you saved in notepad. The script already has the correct table names, just replace the tenancy address. 
 
     ````SQL
     begin
