@@ -21,7 +21,7 @@ Oracle Machine Learning SQL notebooks provide easy access to Oracle's paralleliz
 
 
 ## Create an OML User ##
-1. Sign in to the Oracle Cloud Platform. 
+1. Sign in to the [Oracle Cloud](https://cloud.oracle.com/home).
 2. Click the menu icon to expand the menu on the left edge of the screen.
 3. Click **Autonomous Date Warehouse**.
 
@@ -29,31 +29,34 @@ Oracle Machine Learning SQL notebooks provide easy access to Oracle's paralleliz
 
     [Description of the illustration OCIMenu.png](files/OCIMenu.txt)
 
-4. Make sure your ADW instance finished provisioning. It should have a status of Available. If it's still provisining please wait till this completes.
-5. Highlight the three dots across from the name of your data warehouse. This brings up a menu. Select **Service Console**.
+4. Click the name of the instance you created in the previous lab.
+5. You're taken to the instance page which displays details about your instance. Make sure your ADW instance finished provisioning. It should have a status of AVAILABLE. If it's still provisining, please wait until this completes.
+6. Click the **Service Console** button.
+7. Depending on your browser settings, you may need to give permission for the Service Console to open in a new tab. In Firefox:
+     * Click **Preferences**
+     * Click the final option to **Show** the content.
 
-    ![](img/open_service_console.png)
+    ![](img/ShowNewTab.png)
 
-    [Description of the illustration open_service_console.png](files/open_service_console.txt)
+    [Description of the illustration ShowNewTab.png](files/ShowNewTab.txt)
 
-6. Depending on your browser settings, you may need to give permission for the Service Console to open in a new tab.
-7. The service console opens in the **Overview** mode. Click **Administration** in the left navigation pane.
-8. Click **Manage Oracle ML Users**.
-9. If prompted login as the user admin with the password you specified when creating the ADW instance.
-10. Click the **Create** button to create a new OML user. This will also create a new database user with the same name. The newly created user will be able to use the OML notebook application.
+8. The service console opens in the **Overview** mode. Click **Administration** in the left navigation pane.
+9. Click **Manage Oracle ML Users**.
+10. If prompted login as the user admin with the password you specified when creating the ADW instance.
+11. Click the **Create** button to create a new OML user. This will also create a new database user with the same name. The newly created user will be able to use the OML notebook application.
 
     ![](img/CreateUser.png)
 
     [Description of the illustration CreateUser.png](files/CreateUser.txt)
 
-11. You're taken to the Create Users page. Enter the following information:
+12. You're taken to the Create Users page. Enter the following information:
      * **Username**: `omluser1`
      * **First Name**: `OML`
      * **Last Name**: `User1`
      * **Email Address**: For easy access, enter the same email address you used to login to your cloud account.
      * **Password:** Uncheck the box to auto generate a password. Instead create a new password yourself.
-12. You're taken back to the Users page where the new user is now listed.
-13. You'll also recieve a confirmation email that your OML user has been created. This email contains a direct link to the OML application sign in, and your password if you chose to auto-generate one.
+13. Click the **Create** button. You're taken back to the Users page where the new user is now listed.
+14. You'll also recieve a confirmation email that your OML user has been created. This email contains a direct link to the OML application sign in, and your password if you chose to auto-generate one.
 
 
 ## Sign in to OML ##
@@ -66,7 +69,7 @@ Oracle Machine Learning SQL notebooks provide easy access to Oracle's paralleliz
     [Description of the illustration CreateUser2.png](files/CreateUser2.txt)
 
 2. Sign in using these credentials:
-     * Part 1:
+     * Part 1 (This part may already be done):
         * **Tenant**: This is the Cloud Account name you chose when you first registered for your trial. 
         * **Database**: `ADWFINANCE`
      * Part 2:
@@ -76,7 +79,7 @@ Oracle Machine Learning SQL notebooks provide easy access to Oracle's paralleliz
     
 
 ## Open a New SQL Query Scratchpad ##
-1. Click **Run SQL Statement** in the Quick Actions window.
+1. Click **Run SQL Statements** in the Quick Actions window.
 
     ![](img/QuickActions.png)
 
@@ -113,7 +116,7 @@ Oracle Machine Learning SQL notebooks provide easy access to Oracle's paralleliz
 
     [Description of the illustration RunParagraph.png](files/RunParagraph.txt)
 
-7. Observe the results. You'll need this output to answer a Zip Lab quiz question.
+7. Observe the results. If the Zip Lab event has quizzes, you'll need this output to answer a quiz question.
 
     ![](img/SQLOutput.png)
 
@@ -169,9 +172,9 @@ panel.
 ## Save the Scratchpad as a New Notebook ##
 The SQL Scratchpad we're using is simply a default type notebook with a system generated name. You can change the name of the scratchpad and save it for later use by your team.
 
-1. Click the menu icon left corner of the page to expand a navigation menu, and select **Home**.
+1. Click the menu icon in left corner of the page to expand a navigation menu, and select **Home**.
 2. Click **Notebooks** in the Quick Actions panel.
-3. Click on the comment field of the SQL Query Scratchpad record. Don't click on the hyperlink of the notebook or it will launch it. After you click, the item becomes selected and the menu buttons above will activate.
+3. Click on the comment field of the SQL Query Scratchpad record. Don't click on the hyperlink of the notebook or it will launch it. After you click, the item becomes selected (highlighted in blue) and the menu buttons above will activate.
 4. Click the **Edit** button to pop-up the settings dialog for this notebook.
 5. Modify the details for this notebook to something more informative:
      * **Name**: `Sales Analysis Over Time`

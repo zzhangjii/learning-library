@@ -31,7 +31,7 @@ You'll perform your queries on the Star Schema Benchmark (SSB) sample data. This
 
     [Description of the illustration OCIMenu.png](files/OCIMenu.txt)
 
-4. Click the name of the instance you created in the previous lab.  
+4. Click the name of the instance you created in the previous lab. 
 5. You're taken to the instance page which displays details about your instance. Notice the buttons for Performance Hub and Service Console. You'll need both in the upcoming steps.
 
     ![](img/atp_instance.png)
