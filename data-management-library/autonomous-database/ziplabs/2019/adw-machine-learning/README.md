@@ -10,7 +10,7 @@ permalink: /ziplabs/adw-machine-learning/index.html
 In this 15-minute lab you will get started with the Oracle Machine Learning (OML) notebook application provided through ADW. This browser-based application provides a web interface to run SQL queries and scripts, which can be grouped together within a notebook. Notebooks can be used to build single reports, collections of reports, and dashboards.
 
 ### Background ###
-Oracle Machine Learning is a SQL notebook interface for data scientists to perform machine learning in the Oracle Autonomous Data Warehouse (ADW). Notebook technologies support the creation of scripts while supporting the documentation of assumptions, approaches and rationale to increase data science team productivity. Oracle Machine Learning SQL notebooks, based on Apache Zeppelin technology, enable teams to collaborate to build, evaluate and deploy predictive models and analytical methodologies in the Oracle ADW. Multi-user collaboration enables the same notebook to be opened simultaneously by different users. Changes made by one user are immediately updated for other team members.
+Oracle Machine Learning is a SQL notebook interface for data scientists to perform machine learning in the Oracle Autonomous Data Warehouse (ADW). Notebook technologies allows for the creation of scripts while supporting the documentation of assumptions, approaches and rationale to increase data science team productivity. Oracle Machine Learning SQL notebooks, based on Apache Zeppelin technology, enables collaborate allowing teams to build, evaluate and deploy predictive models and analytical methodologies in the Oracle Autonomous Data Warehouse. The same notebook can be opened simultaneously by different users and any changes made are immediately updated for other team members.
 
 Oracle Machine Learning SQL notebooks provide easy access to Oracle's parallelized, scalable in-database implementations of a library of Oracle Advanced Analytics' machine learning algorithms (classification, regression, anomaly detection, clustering, associations, attribute importance, feature extraction, times series, etc.), SQL, PL/SQL and Oracle's statistical and analytical SQL functions. Oracle Machine Learning SQL notebooks and Oracle Advanced Analytics' library of machine learning SQL functions combined with PL/SQL allow companies to automate their discovery of new insights, generate predictions and add "AI" to data viz dashboards and enterprise applications.
 
@@ -29,29 +29,31 @@ Oracle Machine Learning SQL notebooks provide easy access to Oracle's paralleliz
 
     [Description of the illustration OCIMenu.png](files/OCIMenu.txt)
 
-4. Highlight the three dots across from the name of your data warehouse. This brings up a menu. Select **Service Console**.
+4. Make sure your ADW instance finished provisioning. It should have a status of Available. If it's still provisining please wait till this completes.
+5. Highlight the three dots across from the name of your data warehouse. This brings up a menu. Select **Service Console**.
 
     ![](img/open_service_console.png)
 
     [Description of the illustration open_service_console.png](files/open_service_console.txt)
 
-5. Depending on your browser settings, you may need to give permission for the Service Console to open in a new tab.
-6. The service console opens in the **Overview** mode. Click **Administration** in the left navigation pane.
-7. Click **Manage Oracle ML Users**.
-8. Click the **Create** button to create a new OML user. This will also create a new database user with the same name. The newly created user will be able to use the OML notebook application.
+6. Depending on your browser settings, you may need to give permission for the Service Console to open in a new tab.
+7. The service console opens in the **Overview** mode. Click **Administration** in the left navigation pane.
+8. Click **Manage Oracle ML Users**.
+9. If prompted login as the user admin with the password you specified when creating the ADW instance.
+10. Click the **Create** button to create a new OML user. This will also create a new database user with the same name. The newly created user will be able to use the OML notebook application.
 
     ![](img/CreateUser.png)
 
     [Description of the illustration CreateUser.png](files/CreateUser.txt)
 
-9. You're taken to the Create Users page. Enter the following information:
+11. You're taken to the Create Users page. Enter the following information:
      * **Username**: `omluser1`
      * **First Name**: `OML`
      * **Last Name**: `User1`
      * **Email Address**: For easy access, enter the same email address you used to login to your cloud account.
      * **Password:** Uncheck the box to auto generate a password. Instead create a new password yourself.
-10. You're taken back to the Users page where the new user is now listed.
-11. You'll also recieve a confirmation email that your OML has been created. This email contains a direct link to the OML application sign in, and your password if you chose to auto-generate one.
+12. You're taken back to the Users page where the new user is now listed.
+13. You'll also recieve a confirmation email that your OML user has been created. This email contains a direct link to the OML application sign in, and your password if you chose to auto-generate one.
 
 
 ## Sign in to OML ##
@@ -138,10 +140,11 @@ allows you to control the layout of columns within the graph.
 Now that we're showing a bar graph, let's see how the output can be customized. To add a column to one of the Keys, Groups of Values panels just drag and drop the column name into the required panel. To remove a column from the Keys, Groups of Values panel just click on the **x** next to the column name displayed in the relevant
 panel.
 
-1. Remove all columns from the both the Keys and Values panels.
-2. Drag and drop **MONTH** into the **Keys** panel.
-3. Drag and drop **REVENUE** into the **Values** panel.
-4. Drag and drop **AVG_12M_REVENUE** into the **Values** panel.
+1. If you don't see the keys and values panel click on the settings drop down. This will show the columns available and the keys, groups and values columns.
+2. Remove all columns from the both the Keys and Values panels.
+3. Drag and drop **MONTH** into the **Keys** panel.
+4. Drag and drop **REVENUE** into the **Values** panel.
+5. Drag and drop **AVG_12M_REVENUE** into the **Values** panel.
 
     ![](img/BarChart2.png)
 
@@ -168,8 +171,7 @@ The SQL Scratchpad we're using is simply a default type notebook with a system g
 
 1. Click the menu icon left corner of the page to expand a navigation menu, and select **Home**.
 2. Click **Notebooks** in the Quick Actions panel.
-3. Click the text in the comments column to select
-the scratchpad. After you click, the item becomes selected and the menu buttons above will activate.
+3. Click on the comment field of the SQL Query Scratchpad record. Don't click on the hyperlink of the notebook or it will launch it. After you click, the item becomes selected and the menu buttons above will activate.
 4. Click the **Edit** button to pop-up the settings dialog for this notebook.
 5. Modify the details for this notebook to something more informative:
      * **Name**: `Sales Analysis Over Time`

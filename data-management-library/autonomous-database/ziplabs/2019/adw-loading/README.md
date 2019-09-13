@@ -7,7 +7,7 @@ permalink: /data-management-library/autonomous-database/ziplabs/2019/adw-loading
 # Loading Data into ADW #
 
 ## Before You Begin ##
-This 20-minute lab walks you through the steps to get load data from external databases into the Oracle Autonomous Data Warehouse (ADW) on Oracle Cloud Infrastructure (OCI). This lab assumes you have already provisioned an ADW instance.
+This 20-minute lab walks you through the steps to get data from external databases and load it into the Oracle Autonomous Data Warehouse (ADW) on Oracle Cloud Infrastructure (OCI). This lab assumes you have already provisioned an ADW instance.
 
 ### Background ###
 You can load data into Autonomous Database using Oracle Database tools and 3rd party data integration tools. Data can be loaded:
@@ -17,7 +17,7 @@ You can load data into Autonomous Database using Oracle Database tools and 3rd p
 For the fastest data loading experience Oracle recommends uploading the source
 files to a cloud-based object store before loading the data into your Autonomous Database.
 
-Today we will use the PL/SQL **DBMS_CLOUD** package. The DBMS_CLOUD package supports loading
+Today we will use the PL/SQL package **DBMS_CLOUD**. The DBMS_CLOUD package supports loading
 data files from the following Cloud sources: 
 1. Oracle Cloud Infrastructure Object Storage (OCI Object Storage)
 2. Oracle Cloud Infrastructure Object Storage Classic
@@ -147,7 +147,7 @@ Go back to your ADW instance via the menu.
     ![](img/adw-loading-sql-dev-logging-in.png)
 
 6. SQL Developer Web has an interface similar to the installed client.  Note where the Worksheet is and the Query Results.
-7. Copy the pl/sql procedure into SQL Developer Web. Fill in the username and password. The create_credential procedure of the DBMS_CLOUD package stores the object store credentials in your database. This pl/sql procedure takes in the following arguments:
+7. Copy the pl/sql procedure into SQL Developer Web. Fill in the username and password using the Oracle Cloud username you signed up with and the auth token you saved earlier. The create_credential procedure of the DBMS_CLOUD package stores the object store credentials in your database. This pl/sql procedure takes in the following arguments:
     * credential name
     * Oracle cloud username
     * Authorization token created earlier
@@ -201,7 +201,7 @@ Before data is copied, the tables and objects need to be created in ADW.  In thi
     /
     ````
 
-5. Select **Object Storage->Object Storage** from the menu.  Select your bucket. 
+5. Leave SQL Developer Web open in a tab and go back to your tenancy and select Object Storage->Object Storage from the menu. Select your bucket. 
 6. In the objects section, locate one of the data files.  Click on the three dots on the right. 
 
     ![](img/adw-loading-view-bucket-objects.png)
@@ -210,7 +210,7 @@ Before data is copied, the tables and objects need to be created in ADW.  In thi
 
     ![](img/adw-loading-view-object-details-3.png)
 
-8. Copy the URL Path by pressing `<CTRL-C>`.  Paste the url to your notepad.
+8. Right click on the URI Path and select Copy Link Location. Paste the URI into a notepad. In the script that will be provided the file and table names are already there. You are going to remove the file name from the end and that is the URI you will use in the following steps.
 
     ![](img/adw-view-object-details-customers.png)
 
@@ -229,11 +229,15 @@ Before data is copied, the tables and objects need to be created in ADW.  In thi
     ````
 
 10. Paste the sql script into SQL Workshet.
-11. Replace **only** the first portion of the file_uri_list for **all** of **the tables** in your sql worksheet window..  Leave the table names intact as they are preset for you in the sql script.
+11. For each of the URI in the script you will need to replace only the first portion of the file_uri_list leaving the file name as is. Leave the table names intact as they are preset for you in the sql script.
 
     ![](img/adw-loading-copy-data-2.png)
 
-12. In the Script Output, once you see the message `PL/SQL procedure successfully completed.`, Query a few of the tables to see the rows that were inserted.  
+12. This time click the run script button.
+
+    ![](img/adw_sql_dev_web_script_button.png)
+
+13. In the Script Output, once you see the message `PL/SQL procedure successfully completed.`, Query a few of the tables to see the rows that were inserted.  
     ````SQL
     select * from sales;
     select * from customers;

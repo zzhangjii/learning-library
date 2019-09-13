@@ -39,8 +39,8 @@ Rather than trying to email a spreadsheet to gather information from different p
     [Description of the illustration ShowNewTab.png](files/ShowNewTab.txt)
 
 8. The service console opens to the **Overview** page. Click **Development** in the left navigation pane.
-9. Click the **APEX** button.
-10. Enter your OCI password to sign into APEX Administrative Services.
+9. Click the **Application Express** button.
+10. Enter your database ADMIN password to sign into APEX Administrative Services.
 11. Click **Sign In to Administration**.
 
     ![](img/section1/image5.png)
@@ -146,8 +146,8 @@ If you're signed in as an existing user, skip to the next section. Otherwise if 
 2. Add a computation.
     * Click **Actions**, select **Data**, select **Compute**.
     * **Column Label**: `Budget V Cost`
-    * **Format Mask**: `$5,234.10`
-    * **Computation Expression enter** `I – H`
+    * **Format Mask**: Pick `$5,234.10`
+    * **Computation Expression** Choose column I then the minus symbol then column H
     * Click **Apply**.
 
     ![](img/section3/image3.png)
@@ -182,8 +182,8 @@ If you're signed in as an existing user, skip to the next section. Otherwise if 
     ![](img/section3/image8.png)
 
 5. Restrict the status.
-    * In the runtime environment, click the **edit** icon on a record. A modal page will be displayed.
-    * In the Developer Toolbar, click **Quick Edit**.
+    * Switch from the Chart to the View Report if you are not on it then click the **edit** icon on a record. A modal page will be displayed.
+    * At the bottom of the page in the Developer Toolbar, click **Quick Edit**.
     * Hover over the **Status** item (until a blue outline appears) and click the mouse. Page Designer displays with focus on the Status item.
 
     ![](img/section3/image9.png)

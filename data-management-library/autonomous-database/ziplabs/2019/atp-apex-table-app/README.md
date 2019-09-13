@@ -1,6 +1,6 @@
 ---
 layout: ziplab
-description: Creating an App from a Spreadsheet for Oracle Autonomous Cloud Service
+description: Creating an App from a table for Oracle Autonomous Cloud Service
 tags: Oracle Cloud, Autonomous Transaction Processing, ADW, ATP, Apex, Oracle Cloud Infrastructure, OCI, Object Store, Data Load
 permalink: /data-management-library/autonomous-database/ziplabs/2019/atp-apex-table-app/index.html
 ---
@@ -35,7 +35,7 @@ This 15-minute lab walks you through creating an application based on existing t
     [Description of the illustration ShowNewTab.png](files/ShowNewTab.txt)
 
 8. The service console opens to the **Overview** page. Click **Development** in the left navigation pane.
-9. Click the **APEX** button.
+9. Click the **Application Express** button.
 10. Enter your OCI password to sign into APEX Administrative Services.
 11. Click **Sign In to Administration**.
 
@@ -83,7 +83,7 @@ If you're signed in as an existing user, skip to the next section. Otherwise if 
 
     ![](img/section2/image1.png)
 
-2. Create the EMP and DEPT tables. Note that we do not want to create an application directly on the tables.
+2. Create the Project tables. Note that we do not want to create an application directly on the tables.
     * On the Project Data row, click **Install**.
 
     ![](img/section2/image2.png)
