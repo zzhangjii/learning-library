@@ -7,10 +7,10 @@ permalink: /data-management-library/autonomous-database/ziplabs/2019/atp-provisi
 # Provisioning Autonomous Transaction Processing #
 
 ## Before You Begin ##
-This 10-minute lab walks you through the steps to get started using the Oracle Autonomous Transaction Processing (ATP) on Oracle Infrastructure Cloud (OCI). You will provision a new ATP database. Later, you may and connect to the database using Oracle SQL Developer or SQL Developer Web.
+This 10-minute lab walks you through the steps to get started using the Oracle Autonomous Transaction Processing (ATP) on Oracle Infrastructure Cloud (OCI). You will provision a new ATP database. Later you may connect to the database using Oracle SQL Developer or SQL Developer Web.
 
 ### Background ###
-Oracle Autonomous Transaction Processing is fully-managed, offers high-performance, and is elastic. You have all of the performance of the market-leading Oracle Database in an environment that is tuned and optimized for transaction processing workloads.
+Oracle Autonomous Transaction Processing is a fully-managed, performance, and elastic database. You have all of the performance of the market-leading Oracle Database in an environment that is tuned and optimized for transaction processing workloads.
 
 Autonomous Transaction Processing is built upon the Oracle Database, so that all applications and tools that support Oracle Database also support Autonomous Transaction Processing. These tools and applications connect to the Autonomous Transaction Processing database using standard SQL*Net connections. The tools and applications can either be in your data center or in a public cloud. Oracle Analytics Cloud and other Oracle Cloud services are preconfigured for Autonomous Transaction Processing.
 

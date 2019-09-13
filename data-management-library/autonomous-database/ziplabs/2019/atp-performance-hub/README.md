@@ -47,7 +47,7 @@ In the next steps, you'll run a few queries in SQL Developer Web on the SSB samp
     * The top area will show actvity over a long-term. A slider lets you pick a timeframe to zoom in on. 
     * The middle area will showing the results of zooming in. 
     * The bottom area will list individual queries.
-3. Draw close Performance Hub by clicking **Close** in the top-right corner.
+3. Close Performance Hub by clicking **Close** in the top-right corner.
 4. Click the **Service Console** button.
 5. Depending on your browser settings, you may need to give permission for the Service Console to open in a new tab. In Firefox:
      * Click **Preferences**
@@ -117,7 +117,7 @@ order by d_year, p_brand1;
     [Description of the illustration Refresh.png](files/Refresh.txt)
 
 6. Scroll down to the second area for ASH Analytics, which zooms in on the timeframe you specify.
-7. SQL Developer Web provides many different dimensions and filters to help you analyze and troubleshoot. 
+7. Performance Hub provides many different dimensions and filters to help you analyze and troubleshoot. 
     * Use the dropdown to change the average active sessions filter from **Consumer Group** to **Wait Class**.
     * Click a green CPU bar to apply a filter for that source.
 
