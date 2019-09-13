@@ -2,7 +2,7 @@
 layout: ziplab
 description: Learn how to launch a Virual Machine using Oracle Cloud Infrastructure Computer Service
 tags: Oracle Cloud, Oracle Cloud Infrastructure, OCI, Virtual Machine, VM, Virtual Cloud Network, VCN
-permalink: /data-management-library/autonomous-database/ziplabs/2018/oci-vm/index.html
+permalink: /data-management-library/autonomous-database/ziplabs/2019/oci-vm/index.html
 ---
 # Create a Virtual Machine Instance Using Oracle Cloud Infrastructure Compute #
 
@@ -21,7 +21,7 @@ Before you can launch an instance, you need to have a VCN to launch it into. In 
 
 
 ## Create a Virtual Cloud Network ##
-1. Sign in to the Oracle Cloud Platform.
+1. Sign in to the Oracle Cloud.
 2. Click the menu icon to expand the menu on the left edge of the screen.
 3. Select **Networking**.
 4. Click **Virtual Cloud Networks**.
@@ -67,22 +67,20 @@ Before you can launch an instance, you need to have a VCN to launch it into. In 
 5. Click the button **Create Instance**.
 6. On the Create Compute Instance page, enter the following information:
      * **Name**: Keep the default value.
+     * **Operating System**: `Oracle Linux 7.7` (Or the latest Oracle Linux).
      * **Availability Domain**: Keep the default value.
-     * **Operating System**: `Oracle Linux 7.6` (Or the latest Oracle Linux).
      * **Instance Type**: `Virtual Machine`
      * **Instance Shape**: `VM.Standard2.1 (1 Core OCPU, 15 GB Memory)`
-     * **Boot Volume Configuration**: Keep the default values. The boxes should remain unchecked.
-     * **SSH Key**: Select `Paste SSH Keys`. An example SSH key you can paste is: 
+     * **Configure Networking**: Ensure your VCN compartment is set to **root** and VCN set to what you created earlier, `user01_Network`. Keep the default values for the remaining fields.
+     * **Boot Volume**: Keep the default values. The boxes should remain unchecked.
+     * **Add SSH Key**: Select `Paste SSH Keys`. An example SSH key you can paste is: 
      <pre><code>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDVNPh09u35ejTZun3FNEGhrjL/CovPsHAh79pN0QVprxEJaW2zjmaBZF1Q6lkuyTRvraomIlduCYxrlnwCe8oyER5dY1zuJATWm7ZiqgsvIkhj8L+ea9dBZRvFvcnFsNFnt4ALZYkW2nB2EeTdvqVMHERjFKfbRMCcO0dusmBUEsvaaqLtrvVuHBjwoXIDKkT/PFkix4DWRZRkZIjmZ/y9kwrHO4W1FYsFi4LP1xIB1c9y2H4w0SBXAMv4NCSFEIgWPQly2NywMsgEbddjW+zPz+7YjYqjWfz5Fgchu7+N1gejsIdzg1/aLvDpze6TN9xLcZx5gt04jA3TR+xfs2Ab Tim@Corsair</code></pre>
          
     ![](img/pastesshkey.png)
 
     [Description of the illustration pastesshkey.png](files/pastesshkey.txt)
 
-7. Scroll down to the Networking section:
-     * Ensure your VCN compartment is set to **root** VCN set to what you created earlier, `user01_Network`
-     * Keep the default values for the remaining fields.
-8. Click **Create** at the bottom of the page.
+7. Click **Create** at the bottom of the page.
      * While the instance is being created, its status displays as `PROVISIONING`.
      * The status changes to `RUNNING` when the instance is fully operational.
 
