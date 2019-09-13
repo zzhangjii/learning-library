@@ -148,20 +148,20 @@ If you're signed in as an existing user, skip to the next section. Otherwise if 
 
 2. Add a computation.
     * Click **Actions**, select **Data**, select **Compute**.
-    * Column Label enter **Budget V Cost**.
-    * Format Mask select **$5,234.10**.
-    * Computation Expression enter **I – H**.
+    * **Column Label**: `Budget V Cost`
+    * **Format Mask**: `$5,234.10`
+    * **Computation Expression enter** `I – H`
     * Click **Apply**.
 
     ![](img/section3/image3.png)
 
 3. Add a chart.
     * Click **Actions**, select **Chart**.
-    * Label select **Project**.
-    * Value select __**Budget V Cost__.
-    * Function select **Sum**.
-    * Sort select **Label – Ascending**.
-    * Orientation select **Horizontal**.
+    * **Label**: `Project`
+    * **Value**: `**Budget V Cost`
+    * **Function**: `Sum`.
+    * **Sort**: `Label – Ascending`
+    * **Orientation**: `Horizontal`
     * Click **Apply**.
 
     ![](img/section3/image4.png)
@@ -178,8 +178,8 @@ If you're signed in as an existing user, skip to the next section. Otherwise if 
 
     ![](img/section3/image7.png)
 
-    * Default Report Type, select **Alternative**.
-    * Name, enter **Date Review**.
+    * **Default Report Type**: `Alternative`.
+    * **Name**: `Date Review`.
     * Click **Apply**.
 
     ![](img/section3/image8.png)
@@ -208,8 +208,8 @@ If you're signed in as an existing user, skip to the next section. Otherwise if 
 
     ![](img/section3/image11.png)
 
-    * Display Extra Values, select **No**.
-    * Null Value Display, enter **- Select Status -**.
+    * **Display Extra Values**: `No`
+    * **Null Value Display**: `- Select Status -`
     * Click **Save** (In the toolbar - top right).
 
     ![](img/section3/image12.png)
