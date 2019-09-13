@@ -15,7 +15,7 @@ Thanks for dropping by the Oracle University Zip Labs! All Zip Labs are less tha
 These labs mostly focus on Autonomous Data Warehouse and Autonomous Transaction Processing. But there's even more you can do with the Oracle Cloud! This includes building production-ready workloads by using a variety of cloud services including Database, Compute, IoT, API Management, Integration, and Digital Assistant!
 
 ### What Do You Need? ###
-* Access to an email address
+* An email address
 * Ability to receive SMS text verification (only if your email isn't recognized)
 
 
@@ -23,18 +23,24 @@ These labs mostly focus on Autonomous Data Warehouse and Autonomous Transaction 
 In this section, you'll fill out the registration form at [oracle.com/oow19freetier](https://oracle.com/oow19freetier).
 
 1. Enter the appropriate information to create your account. 
-     * Enter the same **email address** you used to register for Oracle Open World / Oracle Code One.
+     * Enter the same **email address** you used to register for Oracle Open World / Oracle Code One. A popup should appear recognizing your email. If not, the registration form will ask for additional information later.
      * Select your **country/territory**.
      * Click **Next**. 
-2. Because you're using the same email address, you'll qualify for a special free account using a simplified registration form.
-     * Enter account details for a new personal account. 
+2. Enter a few details for a new personal account. 
      * You can choose almost anything for your Cloud Account Name. Remember what you wrote. You'll need this name later to sign in.
-     * Click **Review Terms and Conditions**.
-3. If your email isn't recognized or you're using a different email address, you'll need to provide additional information.
+     * Click **Enter Password**.  
+3. If your email wasn't recognized or you're using a different email address, you'll need to provide additional information.
      * Provide a mobile number and click **Next: Verify Mobile Number**. In a few seconds, you should receive a verification code through SMS-text. Enter this code in the appropriate field and click **Verify**.
      * Click **Add Credit Card Details**. You will NOT be charged unless you elect to upgrade the account later. Enter the billing information, card details, and click **Finish**.
-4. Read and agree to the Terms & Conditions by checking the box and click **Complete Sign-Up**.
-5. Your account is partitioning and should be available very soon! When it's ready, you'll be automatically signed in to your Cloud account and ready to start the Zip Labs. You'll also receive a confirmation email containing sign in information.
+4. Validate your address.
+5. Enter a password. Remeber this password so you can sign in to the Cloud later.
+6. Click **Review Terms and Conditions**. Read and agree to the Terms & Conditions by checking the box and click **Complete Sign-Up**.
+7. Your account is partitioning and should be available in a few seconds! When it's ready, you're automatically taken to a sign in page. You'll also receive a confirmation email containing sign in information.
+8. Sign in to your Cloud account and start the Zip Labs! Your **user name** is your email address.
+
+    ![](img/FirstSignIn.png)
+
+    [Description of the illustration FirstSignIn.png](files/firstSignIn.txt)
 
 
 ## Sign in to Your Account ##
