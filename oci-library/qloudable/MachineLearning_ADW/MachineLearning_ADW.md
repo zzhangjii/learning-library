@@ -68,7 +68,7 @@ Sign in using your tenant name, user name and password. Use the login option und
 
 2. Click on the Clipboard icon and select **Paste to remote session**.
 
-   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_CLIP.png" alt="Qloudable clipboard icon">
+   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_CLIP.PNG" alt="Qloudable clipboard icon">
 
 3. Click into the pop up window and press Ctrl-V.
 
@@ -110,7 +110,7 @@ Next, you'll import a Zeppelin Notebook into the Oracle Machine Learning instanc
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_ML_POPUPS.png" alt="image-alt-text">
 
-5. Click **Adminstration** and then click **Manage Oracle ML Users**
+5. Click **Administration** and then click **Manage Oracle ML Users**
 
    <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/MachineLearning_ADW/img/ADW_OPEN_ADMIN.png" alt="image-alt-text">
 
