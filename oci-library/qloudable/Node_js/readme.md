@@ -61,7 +61,7 @@ Oracle Autonomous Transaction Processing delivers a self-driving, self-securing,
 
 ## Installing Node js
 
-1. For this hands on lab, Node.js version 12.9.1 for Microsoft Windows (x64) has already been installed. Node.js is available for several different operating systems and can be downloaded from https://nodejs.org/en/downloads. There are techniques for installing Node.js with administrative privileges such as root or administrator access, and techniques for installing without special privileges. The Microsoft Windows platform has an additional requirement to install the Visual Studio 2017 Redistributable. This step has already been performed.
+1. For this hands on lab, Node.js version 12.9.1 for Microsoft Windows (x64) has already been installed. Node.js is available for several different operating systems and can be downloaded from **https://nodejs.org/en/downloads**  There are techniques for installing Node.js with administrative privileges such as root or administrator access, and techniques for installing without special privileges. The Microsoft Windows platform has an additional requirement to install the Visual Studio 2017 Redistributable. This step has already been performed.
 
 
 ## Installing Oracle Database driver for Node js
@@ -72,7 +72,7 @@ Oracle Autonomous Transaction Processing delivers a self-driving, self-securing,
 
 2. Click on the Clipboard icon and select **Paste to remote session**.
 
-<img src="img/clipboard.png" alt="Qloudable clipboard icon">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Node_js/img/clipboard.png" alt="image-alt-text">
 
 3. Click into the pop up window and press Ctrl-V.
 
@@ -82,7 +82,7 @@ Oracle Autonomous Transaction Processing delivers a self-driving, self-securing,
 
 5. Open a Git-Bash window.
 
-<img src="img/gitBash.png" alt="Launching Git-Bash">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Node_js/img/gitBash.png" alt="image-alt-text">
 
 6. Navigate to the root folder of the C: drive.
 
