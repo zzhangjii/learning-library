@@ -90,9 +90,6 @@ If you're signed in as an existing user, skip to the next section. Otherwise if 
     ![](img/section2/image1.png)
 
 2. Click **From a File** as the application type.
-
-    ![](img/section2/image2.png)
-
 3. Load sample data.
     * Click **Copy and Paste**.
     * Select **Project and Tasks** for the sample data set.
