@@ -31,7 +31,7 @@ You'll perform your queries on the Star Schema Benchmark (SSB) sample data. This
 
     [Description of the illustration OCIMenu.png](files/OCIMenu.txt)
 
-4. Click the name of the instance you created in the previous lab.  
+4. Click the name of the instance you created in the previous lab. 
 5. You're taken to the instance page which displays details about your instance. Notice the buttons for Performance Hub and Service Console. You'll need both in the upcoming steps.
 
     ![](img/atp_instance.png)
@@ -88,7 +88,7 @@ order by count(*);
 
 9. The results are reported below the worksheet.
 10. Go back to the browser tab for the ATP instance's details.
-11. Open Performance Hub.
+11. Open **Performance Hub**.
 12. Notice there is slight activity due to your query.
 
 
@@ -119,13 +119,13 @@ order by d_year, p_brand1;
 6. Scroll down to the second area for ASH Analytics, which zooms in on the timeframe you specify.
 7. Performance Hub provides many different dimensions and filters to help you analyze and troubleshoot. 
     * Use the dropdown to change the average active sessions filter from **Consumer Group** to **Wait Class**.
-    * Click a green CPU bar to apply a filter for that source.
 
     ![](img/WaitClass.png)
 
     [Description of the illustration WaitClass.png](files/WaitClass.txt)
-
-8. Remove the filter clicking the **x**.
+    
+    * Click a green CPU bar to apply a filter for that source.
+    * Remove the filter clicking the **x**.
 
     ![](img/RemoveFilter.png)
 

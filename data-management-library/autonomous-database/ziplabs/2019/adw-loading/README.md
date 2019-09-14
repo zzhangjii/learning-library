@@ -64,13 +64,13 @@ For this lab, we'll use the `root` compartment.
     ![](img/adw-loading-bucket-screen.png)
 
 8. Click [here](https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/adwc/OBE_Loading%20Your%20Data/files/datafiles_for_sh_tables.zip) to download the zip file with your objects.  Open up your file browser and extract the zip file.
-9. Click **Upload Object** button to begin selecting the data files to upload to the bucket.  Click on **select files** to choose your extracted data files.
-
-    ![](img/adw-loading-select-files.png)
-
-10. Select the ten data files and click **Open**.  Once the files are finished loading, click **Upload Objects** to load. 
+9. Click the **Upload Object** button at the bottom of the page to begin selecting the data files to upload to the bucket.  Click on **select files** to choose your extracted data files.
 
     ![](img/adw-loading-view-objects-4.png)
+    
+10. Select the ten data files and click **Open**.  Once the files are finished loading, click **Upload Objects** to load. 
+
+    ![](img/adw-loading-select-files.png)
 
 11. Once complete, verify **all** *.dat files have a status of `Finished` and click **Close**.
 12. Your bucket should have 10 objects loaded.  If this were a true data load, you may be loading *hundreds* of large files here.

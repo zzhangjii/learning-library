@@ -27,8 +27,8 @@ Autonomous Transaction Processing is built upon the Oracle Database, so that all
 
     [Description of the illustration OCIMenu.png](files/OCIMenu.txt)
 
-4. Click the **Create Autonomous Transaction Processing** button to start the instance creation process.
-5. In the Create Autonomous Transaction Processing dialog, enter the following information:
+4. Click the **Create Autonomous Database** button to start the instance creation process.
+5. On the Create Autonomous Database page, enter the following information:
      * **Compartment**: For this lab, we'll use the `root` compartment.
      * **Display Name**: `atpxweek`
      * **Database Name**: `atpxweek`
@@ -36,7 +36,7 @@ Autonomous Transaction Processing is built upon the Oracle Database, so that all
      * **Deploymen Type**: `Serverless`
      * **CPU Core Count**: `1`
      * **Storage (TB)**:  `1`
-     * **Administrator Credentials**: Create a password for the ADMIN user of the service instance. Remeber this password! You'll need it later to sign in to various services.
+     * **Administrator Credentials**: Create a password for the ADMIN user of the service instance. Remember this password! You'll need it in later labs to sign in to various services like Performance Hub and SQL Developer Web.
      * **License Type**: `Bring Your Own License`
 6. Click the **Create Autonomous Database** button to start provisioning the instance. 
 7. You're taken to the instance's details page. Details include a State field, which indicates the instance is **Provisioning**. When it's complete, the State field changes from **Provisioning** to **Available**. If the status doesn't change after few minutes, try refreshing the page.
