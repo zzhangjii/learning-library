@@ -42,6 +42,11 @@ Oracle Machine Learning SQL notebooks provide easy access to Oracle's paralleliz
 
 8. The service console opens in the **Overview** mode. Click **Administration** in the left navigation pane.
 9. Click **Manage Oracle ML Users**.
+
+    ![](img/ServiceConsole.png)
+
+    [Description of the illustration ServiceConsole.png](files/ServiceConsole.txt)
+
 10. If prompted login as the user admin with the password you specified when creating the ADW instance.
 11. Click the **Create** button to create a new OML user. This will also create a new database user with the same name. The newly created user will be able to use the OML notebook application.
 
