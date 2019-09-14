@@ -192,11 +192,12 @@ The SQL Scratchpad we're using is simply a default type notebook with a system g
 
     [Description of the illustration Notebooks.png](files/Notebooks.txt)
 
-You've opened quite a few tabs finishing this lab. Close the last three browser tabs for the Cloud. For the next labs, the only tab you'll need is for the ADW instance's details page.
+7. Close the excess tabs. You've opened quite a few tabs finishing this lab. Close the last three browser tabs for the Cloud. For the next labs, the only tab you'll need is for the ADW instance's details page.
 
-![](img/adw_instance.png)
+    ![](img/adw_instance.png)
 
-[Description of the illustration adw_instance.png](files/adw_instance.txt)
+    [Description of the illustration adw_instance.png](files/adw_instance.txt)
+
 
 ## Want to Learn More? ##
 * [Data Management Cloud Courses](https://learn.oracle.com/pls/web_prod-plq-dad/dl4_pages.getpage?page=dl4homepage&get_params=offering:35573#filtersGroup1=&filtersGroup2=.f667&filtersGroup3=&filtersGroup4=&filtersGroup5=&filtersSearch=) from Oracle University 
