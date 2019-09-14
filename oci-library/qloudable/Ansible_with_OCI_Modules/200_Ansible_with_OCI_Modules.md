@@ -61,7 +61,6 @@ This lab will demonstration both provisioning and configuration of your infrastr
 * **Compartment:**{{Compartment}}
 
 1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
-
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
 2. From the OCI Services menu,Click **Virtual Cloud Network** under Networking and Click **Create Virtual Cloud Network**
@@ -87,10 +86,9 @@ This lab will demonstration both provisioning and configuration of your infrastr
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text">
 
-## Create Compute instance, configure OCI CLI and upload API keys
+## Create Compute instance, configure OCI CLI, and upload API keys
 
 1. Click the Apps icon in the toolbar and select  Git-Bash to open a terminal window.
-
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL006.PNG" alt="image-alt-text">
 
 2. Enter command
@@ -108,33 +106,30 @@ git-bash sessions and any other application (Notepad, etc.) by Clicking the Swit
 
 4. You should now have the Public and Private keys:
 
-/C/Users/ PhotonUser/.ssh/id_rsa (Private Key)
+  ``/C/Users/ PhotonUser/.ssh/id_rsa (Private Key)``
 
-/C/Users/PhotonUser/.ssh/id_rsa.pub (Public Key)
+  ``/C/Users/PhotonUser/.ssh/id_rsa.pub (Public Key)``
 
-**NOTE:** id_rsa.pub will be used to create
-Compute instance and id_rsa to connect via SSH into compute instance.
+  **NOTE:** id_rsa.pub will be used to create the compute instance and id_rsa to connect via SSH into compute instance.
 
-**HINT:** Enter command
-```
-cd /C/Users/PhotonUser/.ssh (No Spaces)
-```
-and then
-```
-ls
-```
-to verify the two files exist.
+  **HINT:** Enter command
+  ```
+  cd /C/Users/PhotonUser/.ssh (No Spaces)
+  ```
+  and then
+  ```
+  ls
+  ```
+  to verify the two files exist.
 
 5. In git-bash Enter command
 ```
 cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 ```
  , highlight the key and copy
-
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL009.PNG" alt="image-alt-text">
 
 6. Click the apps icon, launch notepad and paste the key in Notepad (as backup)
-
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG" alt="image-alt-text">
 
 7. Switch to the OCI console. From OCI services menu, Click **Instances** under **Compute**
@@ -145,7 +140,6 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 - **Name:** Enter a name
 - **Availability Domain:** Select availability domain
 - **Image Operating System:** Click **Change Image Source**. In the new window, Click **Oracle Images** Choose **Oracle Cloud Developer Image**. Scroll down, Accept the Agreement and Click **Select Image**
-
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_009.PNG" alt="image-alt-text">
 
 
@@ -161,7 +155,6 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 9. Click **Create**
 
 **NOTE:** If 'Service limit' error is displayed choose a different shape from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1  OR choose a different AD
-
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text">
 
 10. Wait for Instance to be in **Running** state. In git-bash Enter Command:
@@ -178,7 +171,6 @@ ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE>
 **HINT:** If 'Permission denied error' is seen, ensure you are using '-i' in the ssh command
 
 13. Enter 'Yes' when prompted for security message
-
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0014.PNG" alt="image-alt-text">
 
 14. Verify opc@<COMPUTE_INSTANCE_NAME> appears on the prompt
@@ -187,226 +179,124 @@ ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE>
 ```
 oci -v
 ```
-**NOTE:** Version should be minimum 2.6.X (7/23/2019)
+  **NOTE:** Version should be minimum 2.6.X (7/23/2019)
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_CLI/img/100_CLI_001.png" alt="image-alt-text">
+  <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_CLI/img/100_CLI_001.png" alt="image-alt-text">
 
 16. Next we will configure OCI CLI. Enter command:
 ```
 oci setup config
 ```
 17. Accept the default location. For user OCI switch to OCI Console window. Click Human Icon and then your user name. In the user details page Click **copy** to copy the OCID. **Also note down your region name as shown in OCI Console window**. Paste the OCID in ssh session.
-
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_004.PNG" alt="image-alt-text">
 
 18. Repeat the step to find tenancy OCID (Human icon followed by Clicking Tenancy Name). Paste the Tenancy OCID in ssh session to compute instance followe by providing your region name (us-ashburn-1, us-phoneix-1 etc)
 
 19. When asked for **Do you want to generate a new RSA key pair?** answer Y. For the rest of the question accept default by pressing Enter
-
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_005.PNG" alt="image-alt-text">
 
 20. **oci setup config** also generated an API key. We will need to upload this API key into our OCI account for authentication of API calls. Switch to ssh session to compute instance, to display the conent of API key Enter command :
-
 ```
 cat ~/.oci/oci_api_key_public.pem
 ```
 
 21. Hightligh and copy the content from ssh session. Switch to OCI Console, Click Human icon followe by your user name. In user details page Click **Add Public Key**. In the dialg box paste the public key content and Click **Add**.
-
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_006.PNG" alt="image-alt-text">
-
+.
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_007.PNG" alt="image-alt-text">
 
 22. Return to your SSH terminal session.  To validate that the CLI is working properly run the following command.
-
 ```
 oci iam availability-domain list
 ```
 
+23. Finally - create an SSH key that Ansible will use when deploying new compute resources.  Press enter repeatedly to accept all default.
+```
+ssh-keygen
+```
+
+<img src="https://github.com/oracle/learning-library/blob/master/oci-library/qloudable/Ansible_with_OCI_Modules/img/ansible_002.png" alt="image-alt-text">
+
+
 ## Getting started with Ansible
+In this section we will download some sample Ansible resources and configure it to work with our OCI tenancy.
 
-1. Ansible will use your CLI credentials to authenticate and authorize access to OCI.  You will need to configure details of which Compartment to use and which Compute image.  Modify the **env-vars** file to update these values.
+1. Download and unzip the sample files.
+```
+wget https://github.com/oracle/learning-library/raw/master/oci-library/qloudable/Ansible_with_OCI_Modules/files/oci_ansible.zip
+unzip oci_ansible.unzip
+```
 
+2. Ansible will use your CLI credentials to authenticate and authorize access to OCI.  You will need to configure details of which Compartment to use and which Compute image.  Modify the **env-vars** file to update these values.
 ```
 # OCID of assigned compartment
 export compartment_ocid=[your compartment id goes here - without square brackets]
-
 # Oracle-Linux-7.7-2019.08-28-0
 #Ashburn
 export image_ocid=ocid1.image.oc1.iad.aaaaaaaayuihpsm2nfkxztdkottbjtfjqhgod7hfuirt2rqlewxrmdlgg75q
 #Phoenix
 export image_ocid=ocid1.image.oc1.phx.aaaaaaaadtmpmfm77czi5ghi5zh7uvkguu6dsecsg7kuo3eigc5663und4za
-
 # skip host verification prompts for demo
 export ANSIBLE_HOST_KEY_CHECKING=False
 ```
+
 **NOTE:** You should only need to modify the compartment OCID.  If running in Phoenix instead of Ashburn, just move the **#** to comment out the line for the region you are not using.
 
-2. Save and exit the file.
-3. Load the variables in the above file into the ENV
+3. Save and exit the file.
+4. Load the variables in the above file into ENV
 ```
 source env_vars
 ```
 
-4. Run the first sample playbook.  This will list some information about any compute resources you have in the compartment (should be the one you are using right now).
+5. You will also need to update the INI file for the dynamic inventory script.  Uncomment the compartment setting and replace the value with your compartment ocid.
 
+<img src="https://github.com/oracle/learning-library/blob/master/oci-library/qloudable/Ansible_with_OCI_Modules/img/ansible_002.png" alt="image-alt-text">
+
+6. Run the first sample playbook.  This will list some information about any compute resources you have in the compartment (should be the one you are using right now).
 ```
 ansible-playbook sample.yaml
 ```
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Ansible_with_OCI_Modules/img/ansible_001.jpg" alt="image-alt-text">
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/200_Ansible-Modules-on-OCI/img/ansible001.jpg" alt="image-alt-text">
-
-5.
-
-
-
-
-This will list all availability domains in the current region.  Make note of one of the availability domain names.  It should look something like this ``nESu:PHX-AD-3``.  You will use this in a future step.
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_CLI/img/100_CLI_001.png" alt="image-alt-text">
-
-2. Return to the OCI Console and navigate to Identity -> Compartments.  Retrieve the OCID of the assigned compartment.
-
-3. Enter the following command to list VCN's:
+7. If the output is devoid of errors, it is time to deploy our sample infrastructure.
 ```
-oci network vcn list --compartment-id <your compartment id>
+ansible-playbook instance_pool_example.yaml
 ```
 
- <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_CLI/img/100_CLI_003.png" alt="image-alt-text">
+**NOTE:** This will take about 5 minutes to provision the network and compute resources.  You can navigate to *Instance Pools* in the OCI Management Console to watch the resources if you'd like.  
 
-**NOTE:** It should return the details of the VCN you created at the start of this lab.  If you encounter an error message, please contact the instructor.
+8. When the playbook execution is complete, see the output near the end for the public IP address of the instance that was provisioned.  Copy the IP address.
 
-**TIP:** You can create an environment variable for your compartment ID to avoid having to paste it each time.
-```
-export cid=<your compartment ocid>
-oci network vcn list --compartment-id $cid
-```
+9. Open a new tab in the web browser and paste in the IP address; press enter.  You should encounter an error because nothing has been installed on the server yet.  Proceed to the next section.
 
-4. Create a new virtual cloud network with a unique CIDR block.  You will need the OCID of your compartment.
-```
-oci network vcn create --cidr-block 192.168.0.0/16 -c <your compartment OCID> --display-name CLI-Demo-VCN --dns-label clidemovcn
-```
-Record the ``id:`` of the resource after it is created.  You will need it in the upcoming steps.
 
-5. Create a new security list
-```
-oci network security-list create --display-name PubSub1 --vcn-id <your VCN OCID> -c $cid --egress-security-rules  '[{"destination": "0.0.0.0/0", "destination-type": "CIDR_BLOCK", "protocol": "all", "isStateless": false}]' --ingress-security-rules '[{"source": "0.0.0.0/0", "source-type": "CIDR_BLOCK", "protocol": 6, "isStateless": false, "tcp-options": {"destination-port-range": {"max": 80, "min": 80}}}]'
-```
-Make a note of the resource ``id:`` for use in the next step.
+## Deploying applications and code with Ansible
+Now that we have provisioned our infrastructure, it is time to deploy an application (Apache) and some code (a simple HTML page).
 
-6. Create a public subnet.
-```
-oci network subnet create --cidr-block 192.168.10.0/24 -c <your compartment OCID> --vcn-id <your VCN OCID> --security-list-ids '["<security list OCID from previous step>"]'
-```
-Record the ``id:`` of the resources after it is created.  You will need it in an upcoming step.
+1. Return to your SSH terminal session.
 
-**Note:** You have the option to specify up to 5 security lists and a custom route table.  In this case, we are only assigning one security list and allowing the system to automatically associate the default route table.
-
-7. Create an Internet Gateway.  You will need the OCID of your VCN and Compartment.
+2. Run the following command to deploy and configure Apache on each server in the instance pool.
 ```
-oci network internet-gateway create -c <your compartment OCID> --is-enabled true --vcn-id <your VCN OCID> --display-name DemoIGW
-```
-Make a note of the ``id:`` for this resource after it has been created.
-
-8. Next, we will update the default route table with a route to the internet gateway.  First, you will need to locate the OCID of the default route table.
-
-```
-oci network route-table list -c <your compartment OCID> --vcn-id <your VCN OCID>
-```
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_CLI/img/100_CLI_004.png" alt="image-alt-text">
-
-record the ``id:`` of the `Default Route Table`
-
-9. Update the route table with a route to the internet gateway.
-```
-oci network route-table update --rt-id <route table OCID> --route-rules '[{"cidrBlock":"0.0.0.0/0","networkEntityId":"<your Internet Gateway OCID"}]'
+ANSIBLE_INVENTORY=./oci_inventory.py ansible-playbook -u opc --become provision_web_server.yaml
 ```
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_CLI/img/100_CLI_004.png" alt="image-alt-text">
+3. After this completes (about 10 seconds) return to your web browser and refresh the sample web server page from earlier.  It should now display *Configured by Ansible*.
 
-**Note:** When updating route tables or security lists you cannot insert a single rule.  You must ``update`` with the entire set of rules.  The prompt shown in the screenshot above illustrates this point.
+**Challenge**
+In this tutorial, Ansible is deploying a simple HTML page.  You can make modifications to the page and run the command in step 2 to deploy the "new code".
 
-**Use QUERY to find Oracle Linux Image ID, then launch a compute instance**
+When finished, refresh your browser to see the changes.
 
-10. Use the CLI ``query`` command to retrieve the OCID for the latest Oracle Linux image.  Make a note of the image ID for future use.
+## Cleaning up your environment
+In this exercise, all of the resources provisioned by Ansible were also tagged.  The sample ``teardown.yaml`` script leverages these tags to find and destroy all the resources that were created.
+
+1. Run the following command to remove all the resources.
 ```
-oci compute image list --compartment-id <your compartment OCID> --query 'data[?contains("display-name",`Oracle-Linux-7.6-20`)]|[0:1].["display-name",id]'
-```
-
-You may find more information on the Query command here:
-https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/cliusing.htm#ManagingCLIInputandOutput
-
-11. Launch a compute instance with the following command.  We previously created a regional subnet because our command did not include a specific availability domain. For compute instances, we must specify an availability domain and subnet.
-
-You will need the following pieces of information:
-
-
-- Availability domain name
-- Subnet OCID
-- Valid compute shape (i.e. VM.Standard.E2.1)
-- Your public SSH key
-
-```
-oci compute instance launch --availability-domain <your AD name> --display-name demo-instance --image-id <ID from previous step> --subnet-id <subnet OCID> --shape VM.Standard.E2.1 --compartment-id <Compartment_ID> --assign-public-ip true --metadata '{"ssh_authorized_keys": "<your public ssh key here>"}'
-```
-Capture the ``id:`` of the compute instance launch output.
-
-12. Check the status of the instances
-```
-oci compute instance get --instance-id <the instance OCID> --query 'data."lifecycle-state"'
+ansible-playbook teardown.yaml
 ```
 
-13. Rerun the command every 30-60 seconds until the lifecycle-state is ``RUNNING``
+2. It should take 3-5 minutes to complete.
 
-***This completes the exercise for basic usage of the OCI CLI.***
-
-**Bonus Exercise: Use the CLI to create the rest of the VCN resources**
-
-This section is optional and does not contain detailed instructions.  Instead, there are a series of objectives that you will complete on your own.  Use the OCI CLI reference documentation for guidance.
-https://docs.cloud.oracle.com/iaas/tools/oci-cli/latest/oci_cli_docs/index.html
-
-14. Locate the public IP address of the instance using the CLI
-```
-oci compute instance list-vnics --instance-id <instance OCID> | grep "ip.:"
-```
-
-15. Attempt to connect via SSH.  Does it work? (hint: it should time out)
-
-16. Use the CLI to create an ingress rule for SSH traffic in your custom security list.  Don't forget the ``oci network security-list update`` command requires you to pass all current and new rules.  If you just pass one rule, it will overwrite the existing rules.
-
-17. Connect via SSH now.  Is it working?
-
-18. Create and attach a 50GB block volume to your instance.
-
-19. Terminate / destroy all of the resources you created in this lab.  Hint: the order in which you delete the resources is very important.
-
-20. Delete the Block volume, then compute instance and then VCN. Example command to delete VCN
-
-```
- oci network vcn delete --vcn-id <YOUR_VCN_OCID>
-```
-
-
-## Delete the resources
-
-1. Switch to  OCI console window
-
-2. If your Compute instance is not displayed, From OCI services menu Click **Instances** under **Compute**
-
-3. Locate first compute instance, Click Action icon and then **Terminate**
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text">
-
-4. Make sure Permanently delete the attached Boot Volume is checked, Click Terminate Instance. Wait for instance to fully Terminate
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0017.PNG" alt="image-alt-text">
-
-5. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will
-appear.
-
-6. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text">
-
+3. You did it!  Feel free to explore the code or repeat the steps above once more if you have time.
 
 ***Congratulations! You have successfully completed Getting Started with OCI CLI lab.***
