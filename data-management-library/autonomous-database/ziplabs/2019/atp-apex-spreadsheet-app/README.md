@@ -39,7 +39,7 @@ Rather than trying to email a spreadsheet to gather information from different p
     [Description of the illustration ShowNewTab.png](files/ShowNewTab.txt)
 
 8. The service console opens to the **Overview** page. Click **Development** in the left navigation pane.
-9. Click the **Application Express** button.
+9. Click the **Oracle Application Express** button.
 10. Enter your database ADMIN password to sign into APEX Administrative Services.
 11. Click **Sign In to Administration**.
 
@@ -51,9 +51,9 @@ If this is your first time entering APEX, you'll need to create a workspace. Oth
 
 1. Click the **Create Workspace** button.
 2. Identify a user for the new workspace. Remember this information so you can log in later:
-     * **Database User**: `ZipLabs`
+     * **Database User**: `ZIPLABS`
      * **Password**: Click the **?** icon to see the password complexity rules. 
-     * **Workspace Name**: `ZipLabs`
+     * **Workspace Name**: `ZIPLABS`
 3. Click **Create Workspace**.
 
     ![](img/section1/image7.png)
@@ -67,16 +67,16 @@ If you're signed in as an existing user, skip to the next section. Otherwise if 
     ![](img/section1/image8.png)
 
 2. Sign in using the credentials from the previous section.
-     * **Workspace**: `ZipLabs`
-     * **Username**: `ZipLabs`
+     * **Workspace**: `ZIPLABS`
+     * **Username**: `ZIPLABS`
      * **Password**: Use your password from the previous section.
      * **Remember workspace and username**: Check this box.
 3. Click **Sign In**.
-4. If this is the first time entering a the Workspace, the new user must reset their password. Click the **Set APEX Account Password** button.
-5. Enter the following information for your new user profile:
-    * **Email Address**: Enter your email address
-    * **Password**: Click the **?** icon to see the password complexity rules. 
-6. Click **Apply Changes**.
+4. If this is the first time entering a Workspace, the new user may need to reset their password. Click the **Set APEX Account Password** button.
+    * Enter the following information for your new user profile:
+        * **Email Address**: Enter your email address
+        * **Password**: Click the **?** icon to see the password complexity rules. 
+    * Click **Apply Changes**.
 
     ![](img/section1/image12.png)
 
@@ -115,13 +115,13 @@ If you're signed in as an existing user, skip to the next section. Otherwise if 
 
     ![](img/section2/image6.png)
 
-7. Click **Create Application**.
+7. Scroll down and click **Create Application** at the bottom of the page.
 
     ![](img/section2/image7.png)
 
 8. Your new application is displayed in Page Designer. This is where you can run the application from.
     * Click **Run Application**.
-    * Enter your user credentials. This is for the user `ZipLabs`.
+    * Enter your user credentials. This is for the username `ZIPLABS`.
 
     ![](img/section2/image8.png)
 
@@ -163,7 +163,7 @@ If you're signed in as an existing user, skip to the next section. Otherwise if 
 
     ![](img/section3/image4.png)
 
-    * Use **View Report / View Chart** icons to switch views.
+    * Use **View Report / View Chart** icons to toggle between `Chart` and `View Report` views.
 
     ![](img/section3/image5.png)
 
@@ -195,11 +195,11 @@ If you're signed in as an existing user, skip to the next section. Otherwise if 
     ![](img/section3/image10.png)
 
     * Within the Code Editor, enter the following:
-   ````SQL
-   select distinct status d, status r
-   from spreadsheet
-   order by 1
-   ````
+    ````SQL
+    select distinct status d, status r
+    from spreadsheet
+    order by 1
+    ````
     * Click **Validate**.
     * Click **OK**.
 

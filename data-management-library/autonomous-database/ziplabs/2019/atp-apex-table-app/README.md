@@ -35,7 +35,7 @@ This 15-minute lab walks you through creating an application based on existing t
     [Description of the illustration ShowNewTab.png](files/ShowNewTab.txt)
 
 8. The service console opens to the **Overview** page. Click **Development** in the left navigation pane.
-9. Click the **Application Express** button.
+9. Click the **Oracle Application Express** button.
 10. Enter your OCI password to sign into APEX Administrative Services.
 11. Click **Sign In to Administration**.
 
@@ -47,9 +47,9 @@ If this is your first time entering APEX, you'll need to create a workspace. Oth
 
 1. Click the **Create Workspace** button.
 2. Identify a user for the new workspace. Remember this information so you can log in later:
-     * **Database User**: `ZipLabs`
+     * **Database User**: `ZIPLABS`
      * **Password**: Click the **?** icon to see the password complexity rules. 
-     * **Workspace Name**: `ZipLabs`
+     * **Workspace Name**: `ZIPLABS`
 3. Click **Create Workspace**.
 
     ![](img/section1/image7.png)
@@ -63,16 +63,16 @@ If you're signed in as an existing user, skip to the next section. Otherwise if 
     ![](img/section1/image8.png)
 
 2. Sign in using the credentials from the previous section.
-     * **Workspace**: `ZipLabs`
-     * **Username**: `ZipLabs`
+     * **Workspace**: `ZIPLABS`
+     * **Username**: `ZIPLABS`
      * **Password**: Use your password from the previous section.
      * **Remember workspace and username**: Check this box.
 3. Click **Sign In**.
-4. If this is the first time entering a the Workspace, the new user must reset their password. Click the **Set APEX Account Password** button.
-5. Enter the following information for your new user profile:
-    * **Email Address**: Enter your email address
-    * **Password**: Click the **?** icon to see the password complexity rules. 
-6. Click **Apply Changes**.
+4. If this is the first time entering a Workspace, the new user may need to reset their password. Click the **Set APEX Account Password** button.
+    * Enter the following information for your new user profile:
+        * **Email Address**: Enter your email address
+        * **Password**: Click the **?** icon to see the password complexity rules. 
+    * Click **Apply Changes**.
 
     ![](img/section1/image12.png)
 
@@ -214,9 +214,9 @@ If you're signed in as an existing user, skip to the next section. Otherwise if 
 
     ![](img/section3/image12.png)
 
-9. Include All Features
+9. Include All Features.
     * Next to Features, click **Check All**.
-    * Click **Create Application**.
+    * Scroll down and click **Create Application** at the bottom of the page.
 
     ![](img/section3/image13.png)
 
@@ -225,7 +225,7 @@ If you're signed in as an existing user, skip to the next section. Otherwise if 
     ![](img/section3/image14.png)
 
 11. Run the application.
-    * Enter your user credentials.
+    * Enter your user credentials. This is for the username `ZIPLABS`.
     * Play around with your new application.
 
     ![](img/section3/image15.png)
