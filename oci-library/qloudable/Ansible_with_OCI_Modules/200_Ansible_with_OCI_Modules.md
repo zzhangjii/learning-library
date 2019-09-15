@@ -216,7 +216,7 @@ oci iam availability-domain list
 ```
 ssh-keygen
 ```
-<img src="https://github.com/oracle/learning-library/blob/master/oci-library/qloudable/Ansible_with_OCI_Modules/img/ansible_002.png" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Ansible_with_OCI_Modules/img/ansible_002.png" alt="image-alt-text">
 
 
 ## Getting started with Ansible
@@ -250,7 +250,7 @@ source env_vars
 ```
 
 5. You will also need to update the INI file for the dynamic inventory script.  Uncomment the compartment setting and replace the value with your compartment ocid.
-<img src="https://github.com/oracle/learning-library/blob/master/oci-library/qloudable/Ansible_with_OCI_Modules/img/ansible_002.png" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Ansible_with_OCI_Modules/img/ansible_004.png" alt="image-alt-text">
 
 6. Run the first sample playbook.  This will list some information about any compute resources you have in the compartment (should be the one you are using right now).
 ```
