@@ -46,20 +46,22 @@ In this section, you'll fill out the registration form at [oracle.com/oow19freet
 ## Sign in to Your Account ##
 If you've signed out of the Oracle Cloud, use these steps to sign back in.
 
-1. Go to [cloud.oracle.com](https://cloud.oracle.com) and click **Sign In**.
+1. Go to [cloud.oracle.com](https://cloud.oracle.com).
+2. Click the **Profile Icon** to bring up a menu.
+3. Click **Sign in to Cloud**.
 
-    ![](img/signin.png)
+    ![](img/RedwoodSignin.png)
 
-    [Description of the illustration signin.png](files/signin.txt)
+    [Description of the illustration signin.png](files/RedwoodSignin.txt)
 
 
-2. Enter your Cloud Account Name and click **Next**. This is the name you chose while creating your account in the previous section. It's not your email address. If you've forgotten the name, see the confirmation email.
+4. Enter your Cloud Account Name and click **Next**. This is the name you chose while creating your account in the previous section. It's not your email address. If you've forgotten the name, see the confirmation email.
 
     ![](img/accountname.png)
 
     [Description of the illustration accountname.png](files/accountname.txt)
 
-3. Enter your Cloud Account credentials and click **Sign In**. Your username is your email address. The password is what you chose when you signed up for an account.
+5. Enter your Cloud Account credentials and click **Sign In**. Your username is your email address. The password is what you chose when you signed up for an account.
 
     ![](img/username.png)
     
