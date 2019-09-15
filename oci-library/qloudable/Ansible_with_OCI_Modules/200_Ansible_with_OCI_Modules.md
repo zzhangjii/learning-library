@@ -202,33 +202,34 @@ oci setup config
 cat ~/.oci/oci_api_key_public.pem
 ```
 
-21. Hightligh and copy the content from ssh session. Switch to OCI Console, Click Human icon followe by your user name. In user details page Click **Add Public Key**. In the dialg box paste the public key content and Click **Add**.
+21. Highlight and copy the content from ssh session. Switch to OCI Console, Click Human icon followe by your user name. In user details page Click **Add Public Key**. In the dialg box paste the public key content and Click **Add**.
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_006.PNG" alt="image-alt-text">
 .
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_007.PNG" alt="image-alt-text">
 
-22. Return to your SSH terminal session.  To validate that the CLI is working properly run the following command.
+22. Navigate to ``Identity`` --> ``Compartments`` and locate the OCID for your assigned compartment.  Copy it.
+
+23. Return to your SSH terminal session.  To validate that the CLI is working properly run the following command.
 ```
-oci iam availability-domain list
+oci compute instance list --compartment-id <value you copied in previous step>
 ```
 
-23. Finally - create an SSH key that Ansible will use when deploying new compute resources.  Press enter repeatedly to accept all default.
+## Getting started with Ansible
+In this section we will download some sample Ansible resources and configure it to work with our OCI tenancy.  Before starting this section, make sure you are in your SSH connection to the server you created in the previous section.
+
+1. Create an SSH key that Ansible will use when deploying new compute resources.  Press enter repeatedly to accept all default.
 ```
 ssh-keygen
 ```
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Ansible_with_OCI_Modules/img/ansible_002.png" alt="image-alt-text">
 
-
-## Getting started with Ansible
-In this section we will download some sample Ansible resources and configure it to work with our OCI tenancy.
-
-1. Download and unzip the sample files.
+2. Download and unzip the sample files.
 ```
 wget https://github.com/oracle/learning-library/raw/master/oci-library/qloudable/Ansible_with_OCI_Modules/files/oci_ansible.zip
 unzip oci_ansible.unzip
 ```
 
-2. Ansible will use your CLI credentials to authenticate and authorize access to OCI.  You will need to configure details of which Compartment to use and which Compute image.  Modify the **env-vars** file to update these values.
+3. Ansible will use your CLI credentials to authenticate and authorize access to OCI.  You will need to configure details of which Compartment to use and which Compute image.  Modify the **env-vars** file to update these values.
 ```
 # OCID of assigned compartment
 export compartment_ocid=[your compartment id goes here - without square brackets]
@@ -243,31 +244,31 @@ export ANSIBLE_HOST_KEY_CHECKING=False
 
 **NOTE:** You should only need to modify the compartment OCID.  If running in Phoenix instead of Ashburn, just move the **#** to comment out the line for the region you are not using.
 
-3. Save and exit the file.
-4. Load the variables in the above file into ENV
+4. Save and exit the file.
+5. Load the variables in the above file into ENV
 ```
 source env_vars
 ```
 
-5. You will also need to update the INI file for the dynamic inventory script.  Uncomment the compartment setting and replace the value with your compartment ocid.
+6. You will also need to update the INI file for the dynamic inventory script.  Uncomment the compartment setting and replace the value with your compartment ocid.
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Ansible_with_OCI_Modules/img/ansible_004.png" alt="image-alt-text">
 
-6. Run the first sample playbook.  This will list some information about any compute resources you have in the compartment (should be the one you are using right now).
+7. Run the first sample playbook.  This will list some information about any compute resources you have in the compartment (should be the one you are using right now).
 ```
 ansible-playbook sample.yaml
 ```
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Ansible_with_OCI_Modules/img/ansible_001.jpg" alt="image-alt-text">
 
-7. If the output is devoid of errors, it is time to deploy our sample infrastructure.
+8. If the output is devoid of errors, it is time to deploy our sample infrastructure.
 ```
 ansible-playbook instance_pool_example.yaml
 ```
 
 **NOTE:** This will take about 5 minutes to provision the network and compute resources.  You can navigate to *Instance Pools* in the OCI Management Console to watch the resources if you'd like.  
 
-8. When the playbook execution is complete, see the output near the end for the public IP address of the instance that was provisioned.  Copy the IP address.
+9. When the playbook execution is complete, see the output near the end for the public IP address of the instance that was provisioned.  Copy the IP address.
 
-9. Open a new tab in the web browser and paste in the IP address; press enter.  You should encounter an error because nothing has been installed on the server yet.  Proceed to the next section.
+10. Open a new tab in the web browser and paste in the IP address; press enter.  You should encounter an error because nothing has been installed on the server yet.  Proceed to the next section.
 
 
 ## Deploying applications and code with Ansible
