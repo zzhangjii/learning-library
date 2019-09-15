@@ -12,13 +12,9 @@
 * [Getting Started With **Oracle Machine Learning** Notebooks](2019/adw-machine-learning) - 15 mins
 * [Provisioning Autonomous Transaction Processing](2019/atp-provisioning) - 15 mins
 * [Using Performance Hub to **Analyze Resource Demand** from Queries](2019/atp-performance-hub) - 15 mins
-* [Building an **APEX spreadsheet application** on ATP](2019/atp-apex-spreadsheet-app) - 20 nins
+* [Building an **APEX spreadsheet application** on ATP](2019/atp-apex-spreadsheet-app) - 20 mins
 * [Building an **APEX table application** on ATP](2019/atp-apex-table-app) - 20 mins
 
-### Developer Zip Labs
-
-* [Building an **APEX application**](/developer/ziplabs/apex_app_dev) - 20 nins
-* [Building a **POC** on ADB](/developer/ziplabs/apex_poc_adb) - 20 mins
 
 
 
