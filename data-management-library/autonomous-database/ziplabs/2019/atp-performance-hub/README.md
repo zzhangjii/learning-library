@@ -157,6 +157,6 @@ You can close Performance Hub and SQL Developer Web. You've finished this lab.
 
 ## Want to Learn More? ##
 * [Data Management Cloud Courses](https://learn.oracle.com/pls/web_prod-plq-dad/dl4_pages.getpage?page=dl4homepage&get_params=offering:35573#filtersGroup1=&filtersGroup2=.f667&filtersGroup3=&filtersGroup4=&filtersGroup5=&filtersSearch=) from Oracle University 
+* [Autonomous Database Cloud Certification](https://education.oracle.com/en/data-management/autonomous-database/product_817?certPage=true) from Oracle University
 * [SQL Courses](https://education.oracle.com/database-application-development/sql-and-pl-sql/product_178) from Oracle University 
 * [Data Warehouse Courses and Certification](https://education.oracle.com/data-warehouse/data-warehousing/product_152) from Oracle University 
-* [ATP Self-Guided Hands-On Workshop](https://cloudsolutionhubs.github.io/autonomous-transaction-processing/workshops/?page=README.md)
