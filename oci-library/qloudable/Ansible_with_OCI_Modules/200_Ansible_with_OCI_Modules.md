@@ -10,9 +10,11 @@
 
 [Create Compute instance, configure OCI CLI and upload API keys](#create-compute-instance,-configure-oci-cli-and-upload-api-keys)
 
-[Testing the CLI, Create another VCN with one public subnet](#testing-the-cli,-create-another-vcn-with-one-public-subnet)
+[Getting Started with Ansible](#getting-started-with-ansible)
 
-[Delete the resources](#delete-the-resources)
+[Deploying applicaitons and code with Ansible](deploying-applications-and-code-with-ansible)
+
+[Clean Up your environment](#clean-up-your-environment)
 
 ## Overview
 
@@ -50,7 +52,7 @@ This lab will demonstration both provisioning and configuration of your infrastr
 
 4. Familiarity with Compartments: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/concepts.htm
 
-5. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
+5. Connecting to a compute instance: https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/accessinginstance.htm
 
 ## Sign in to OCI Console and create a VCN
 
@@ -214,7 +216,6 @@ oci iam availability-domain list
 ```
 ssh-keygen
 ```
-
 <img src="https://github.com/oracle/learning-library/blob/master/oci-library/qloudable/Ansible_with_OCI_Modules/img/ansible_002.png" alt="image-alt-text">
 
 
@@ -249,7 +250,6 @@ source env_vars
 ```
 
 5. You will also need to update the INI file for the dynamic inventory script.  Uncomment the compartment setting and replace the value with your compartment ocid.
-
 <img src="https://github.com/oracle/learning-library/blob/master/oci-library/qloudable/Ansible_with_OCI_Modules/img/ansible_002.png" alt="image-alt-text">
 
 6. Run the first sample playbook.  This will list some information about any compute resources you have in the compartment (should be the one you are using right now).
