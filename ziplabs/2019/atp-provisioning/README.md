@@ -2,7 +2,7 @@
 layout: ziplab
 description: Learn how to provision and get started with Oracle Autonomous Transaction Processing.
 tags: Oracle Cloud, Autonomous Transaction Processing, ATP, Oracle Cloud Infrastructure, OCI
-permalink: /ziplabs/2019/atp-provisioning/index.html
+permalink: /data-management-library/autonomous-database/ziplabs/2019/atp-provisioning/index.html
 ---
 # Provisioning Autonomous Transaction Processing #
 
@@ -36,7 +36,7 @@ Autonomous Transaction Processing is built upon the Oracle Database, so that all
      * **Deploymen Type**: `Serverless`
      * **CPU Core Count**: `1`
      * **Storage (TB)**:  `1`
-     * **Administrator Credentials**: Create a password for the ADMIN user of the service instance. You'll need this password in the upcoming steps to download the credential wallet and connect to the database from Oracle SQL Developer.
+     * **Administrator Credentials**: Create a password for the ADMIN user of the service instance. Remeber this password! You'll need it later to sign in to various services.
      * **License Type**: `Bring Your Own License`
 6. Click the **Create Autonomous Database** button to start provisioning the instance. 
 7. You're taken to the instance's details page. Details include a State field, which indicates the instance is **Provisioning**. When it's complete, the State field changes from **Provisioning** to **Available**. If the status doesn't change after few minutes, try refreshing the page.

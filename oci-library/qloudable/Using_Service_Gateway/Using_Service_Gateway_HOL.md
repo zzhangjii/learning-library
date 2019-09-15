@@ -6,11 +6,11 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Sign in to OCI Console, create Object Storage Bucket and VCN](#sign-in-to-oci-console,-create-object-storage-bucket-and-vcn)
+[Sign in to OCI Console create Object Storage Bucket and VCN](#sign-in-to-oci-console-create-object-storage-bucket-and-vcn)
 
-[Create ssh keys, Create two Compute instances with OCI CLI pre installed](#create-ssh-keys,-create-two-compute-instances-with-oci-cli-pre-installed)
+[Create ssh keys Create two Compute instances with OCI CLI pre installed](#create-ssh-keys-create-two-compute-instances-with-oci-cli-pre-installed)
 
-[Upload API keys, Create Service gateway and verify functionality](#upload-api-keys,-create-service-gateway-and-verify-functionality)
+[Upload API keys Create Service gateway and verify functionality](#upload-api-keys-create-service-gateway-and-verify-functionality)
 
 [Delete the resources](#delete-the-resources)
 
@@ -62,69 +62,73 @@ Service Gateway alleviates the preceding concerns by enabling the following func
 
 6. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
 
-## Sign in to OCI Console, create Object Storage Bucket and VCN
+## Sign in to OCI Console create Object Storage Bucket and VCN
 
 * **Tenant Name:** {{Cloud Tenant}}
 * **User Name:** {{User Name}}
 * **Password:** {{Password}}
 * **Compartment:**{{Compartment}}
 
+1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
-1. From the OCI Services menu, Click **Object Storage**
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
+
+2. From the OCI Services menu, Click **Object Storage**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_031.PNG" alt="image-alt-text">
 
-2. Ensure correct Compartment (Left side of the OCI console).
+3. Ensure correct Compartment (Left side of the OCI console).
 
-3. Click **Create Bucket**, Fill out the dialog box:
+4. Click **Create Bucket**, Fill out the dialog box:
 
 
 - Bucket Name: Provide a name
 - Storage Tier: STANDARD 
 - Encryption: ENCRYPT USING ORACLE-MANAGED KEYS
 
-4.  Click **Create Bucket**
+5.  Click **Create Bucket**
 
-5. Click the Apps icon in the toolbar and select Git-Bash to open a terminal window.
+6. Click the Apps icon in the toolbar and select Git-Bash to open a terminal window.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/OBJECT-STORAGE004.PNG" alt="image-alt-text">
 
-6. Change directory to the Downloads folder Enter command:
+7. Change directory to the Downloads folder Enter command:
+
 ```
 $ cd /c/Users/PhotonUser/Downloads/
 ```
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/OBJECT-STORAGE005.PNG" alt="image-alt-text">
 
-7. Create a sample file, Enter command:
+8. Create a sample file, Enter command:
 ```
 touch samplefile
 ```
-This should create a file by the name"samplefile" in the Downloads folder
+This should create a file by the name "samplefile" in the Downloads folder
 
-8. Switch to OCI window and Click the Bucket Name.
+9. Switch to OCI window and Click the Bucket Name.
 
 **HINT:** You can swap between OCI window and any other application(git-bash etc) by Clicking switch window
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/OBJECT-STORAGE006.PNG" alt="image-alt-text">
 
-9. Bucket detail window should be visible. Click **Upload Object**
+10. Bucket detail window should be visible. Click **Upload Object**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/OBJECT-STORAGE007.PNG" alt="image-alt-text">
 
-10. Click on **Upload Object**. Fill out the dialog box
+11. Click on **Upload Object**. Fill out the dialog box
 
 
 - OBJECT NAME PREFIX: Provide a Prefix (Optional)
 - CHOOSE FILES FROM YOUR COMPUTER: Click **Select File** and then browse to the location where 'Sample File' was created
 
-11. Select the file, then Click **Upload Object** in the Dialog box.
+12. Select the file, then Click **Upload Object** in the Dialog box.
 
-12. File should be visible under Objects
+13. File should be visible under Objects
 
-13. From the OCI Services menu,Click **Virtual Cloud Network** under Networking and Click **Create Virtual Cloud Network**
+14. From the OCI Services menu,Click **Virtual Cloud Network** under Networking and Click **Create Virtual Cloud Network**
 
-14. Select the compartment assigned to you from drop down menu on left part of the screen
+15. Select the compartment assigned to you from drop down menu on left part of the screen
 
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
@@ -132,7 +136,7 @@ This should create a file by the name"samplefile" in the Downloads folder
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL002.PNG" alt="image-alt-text">
 
-15. Fill out the dialog box:
+16. Fill out the dialog box:
 
 
 - **Name:** Enter easy to remember name
@@ -145,11 +149,11 @@ This should create a file by the name"samplefile" in the Downloads folder
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text">
 
-16. We will now add a private subnet to this VCN which will be used to created a private compute instance later on.
+17. We will now add a private subnet to this VCN which will be used to created a private compute instance later on.
 
-17. Locate your VCN and Click VCN name. This will bring up VCN details page.
+18. Locate your VCN and Click VCN name. This will bring up VCN details page.
 
-18. Click **Create Subnet**. Fill out the dialog box:
+19. Click **Create Subnet**. Fill out the dialog box:
 
 
 - Name: Enter a name
@@ -166,7 +170,7 @@ This should create a file by the name"samplefile" in the Downloads folder
 
 **NOTE:** For Prodcution deployment we strongly recommendCreating a seperate security list.
 
-19. Leave all other options as default, Click **Create Subnet**.
+20. Leave all other options as default, Click **Create Subnet**.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_033.PNG" alt="image-alt-text">
 
@@ -340,7 +344,7 @@ the one in OCI console window and make sure they match
 
 5. Switch to git-bash window (ssh session to second compute instance) and download samplefile. Enter command:
 ```
-oci os object get --namespace <NAME_SPACE> --bucket-name <BUCKET_NAME> --name samplefile --file ./samplefile
+oci os object get --namespace <NAME_SPACE> --bucket-name <BUCKET_NAME> --name samplefile --file ./
 ```
 
 **HINT:** In this example the command will be:
@@ -350,7 +354,8 @@ Service-Gateway-Bucket --name samplefile --file ./samplefile
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_021.PNG" alt="image-alt-text">
 
 6. No output will be displayed and no file will be downloaded. Enter Ctrl+C to terminate the command. Enter command 
-```ls
+```
+ls
 ```
 and verify samplefile was not downloaded.
 
@@ -404,7 +409,7 @@ Fill out the dialog box:
 
 17. Re-enter download command:
 ```
-oci os object get --namespace <NAME_SPACE> --bucket-name<BUCKET_NAME> --name samplefile --file ./samplefile**
+oci os object get --namespace <NAME_SPACE> --bucket-name<BUCKET_NAME> --name samplefile --file ./
 ```
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Service_Gateway/img/SGW_029.PNG" alt="image-alt-text">
@@ -433,5 +438,9 @@ oci os object get --namespace <NAME_SPACE> --bucket-name<BUCKET_NAME> --name sam
 7. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text">
+
+8. From OCI services menu navigate to **OBject Storage**. Click your bucket name. Under **Objects** your file should be visible. Click the Action icon (3 vertical dots) and click **Delete** to delete the object
+
+9. Once the Object is deleted, click **Delete** to delete the bucket
 
 **Congratulations! You have successfully completed Using Service Gateway lab.**

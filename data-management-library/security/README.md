@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### Folder for Oracle Database Security
 
 # DB Security Labs
@@ -11,3 +12,8 @@
 - Audit Vault & Database Firewall (ADVF)
 - Data Masking & Subsetting (DMS)
 
+=======
+Folder for database security
+
+Richard's content is going to go here.
+>>>>>>> upstream/master
