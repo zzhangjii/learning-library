@@ -124,11 +124,10 @@ git-bash sessions and any other application (Notepad, etc.) by Clicking the Swit
   ```
   to verify the two files exist.
 
-5. In git-bash Enter command
+5. In git-bash Enter command, then highlight the key and copy it.
 ```
 cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 ```
- , highlight the key and copy
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL009.PNG" alt="image-alt-text">
 
 6. Click the apps icon, launch notepad and paste the key in Notepad (as backup)
@@ -146,7 +145,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 
 - **Choose Instance Type:** Select Virtual Machine
-- **Choose Instance Shape:** Select VM shape (Choose from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1)
+- **Choose Instance Shape:** Select VM shape (Choose from VM.Standard2.1, VM.Standard.E2.1, VM.Standard.B1.1)
 - **Configure Boot Volume:** Leave the default
 - **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
 - **Virtual Cloud Network Compartment:** Choose your compartment
@@ -156,7 +155,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 9. Click **Create**
 
-**NOTE:** If 'Service limit' error is displayed choose a different shape from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1  OR choose a different AD
+**NOTE:** If 'Service limit' error is displayed choose a different shape from VM.Standard2.1, VM.Standard.E2.1, VM.Standard.B1.1  OR choose a different AD
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text">
 
 10. Wait for Instance to be in **Running** state. In git-bash Enter Command:
@@ -226,7 +225,7 @@ ssh-keygen
 2. Download and unzip the sample files.
 ```
 wget https://github.com/oracle/learning-library/raw/master/oci-library/qloudable/Ansible_with_OCI_Modules/files/oci_ansible.zip
-unzip oci_ansible.unzip
+unzip oci_ansible.zip
 ```
 
 3. Ansible will use your CLI credentials to authenticate and authorize access to OCI.  You will need to configure details of which Compartment to use and which Compute image.  Modify the **env-vars** file to update these values.
@@ -250,7 +249,7 @@ export ANSIBLE_HOST_KEY_CHECKING=False
 source env_vars
 ```
 
-6. You will also need to update the INI file for the dynamic inventory script.  Uncomment the compartment setting and replace the value with your compartment ocid.
+6. You will also need to update the ``oci_inventory.ini`` file for the dynamic inventory script.  Uncomment the compartment setting and replace the value with your compartment ocid.
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Ansible_with_OCI_Modules/img/ansible_004.png" alt="image-alt-text">
 
 7. Run the first sample playbook.  This will list some information about any compute resources you have in the compartment (should be the one you are using right now).
