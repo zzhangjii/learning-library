@@ -63,8 +63,12 @@ For this lab, we'll use the `root` compartment.
 
     ![](img/adw-loading-bucket-screen.png)
 
-8. Click [here](https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/adwc/OBE_Loading%20Your%20Data/files/datafiles_for_sh_tables.zip) to download the zip file with your objects.  Open up your file browser and extract the zip file.
-9. Click the **Upload Object** button at the bottom of the page to begin selecting the data files to upload to the bucket.  Click on **select files** to choose your extracted data files.
+8. Click **[here](https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/adwc/OBE_Loading%20Your%20Data/files/datafiles_for_sh_tables.zip)** to download the zip file with the objects you will be importing into cloud storage.  The file will download to your desktop.  
+9. Double click and **extract** the folder to your desktop.
+
+9. Click the **Upload Object** button at the bottom of the page to begin selecting the data files to upload to the bucket.  
+
+10. Choose all the files you just extracted, drag and drop them into the upload objects window.
 
     ![](img/adw-loading-view-objects-4.png)
     
@@ -173,7 +177,7 @@ your ADW instance now.
 ## Copy Data from Object Store to Autonomous Database Tables ##
 Before data is copied, the tables and objects need to be created in ADW.  In this lab you will create the target objects.
 
-1. Download the sql script to create the tables for your ADB instance [here](files/adw-loading.sql).  Open up the file in notepad.   _(Remember to click the back button to return to this window)_ This script will be used to create the tables and constraints.
+1. Download the sql script to create the tables for your ADB instance **[here](files/adw-loading.sql)**.  Open up the file in notepad from your desktop.   _(Remember to click the back button to return to this window)_ This script will be used to create the tables and constraints.
 
 2. Copy and paste the commands in your SQL Developer Web worksheet area overwriting any existing commands.
 
@@ -201,7 +205,7 @@ Before data is copied, the tables and objects need to be created in ADW.  In thi
     /
     ````
 
-5. Leave SQL Developer Web open in a tab and go back to your tenancy and select Object Storage->Object Storage from the menu. Select your bucket. 
+5. Leave SQL Developer Web open in a tab and go back to your tenancy and select **Object Storage->Object Storage** from the menu. Select your bucket. 
 6. In the objects section, locate one of the data files.  Click on the three dots on the right. 
 
     ![](img/adw-loading-view-bucket-objects.png)
