@@ -14,9 +14,9 @@
 
 [Sign in to the Oracle Cloud Infrastructure console](#sign-in-to-the-oracle-cloud-infrastructure-console)
 
-[Install and Configure the Example Node.js Application](#install-and-configure-the-example-node.js-application)
+[Install and Configure the Example Node js Application](#install-and-configure-the-example-node-js-application)
 
-[Test your Node.js Application](#test-your-node.js-application)
+[Test your Node js Application](#test-your-node-js-application)
 
 [References](#references)
 
@@ -110,7 +110,12 @@ node --version
 npm -v 
 ```
 
-10. Use npm to install the Oracle Database driver for Node.js.
+10. Use npm to install the Oracle Database driver for Node.js. Enter Commands:
+
+```
+npm init -y
+```
+
 ``` 
 npm install oracledb
 ```
@@ -121,11 +126,12 @@ npm list
 ```
 
 ## Install the Oracle Instant Client
+
 1. For this hands on lab, the Oracle Instant Client for Microsoft Windows (x64) has already been downloaded and staged, but not installed. The Oracle Instant Client is typically downloaded from https://www.oracle.com/database/technologies/instant-client/downloads.html. It is currently stage in the **/c/OracleDB-Node.js-lab** folder.
 
 2. Unzip the Oracle Instant into your **/c/demo** directory.
 ```
-unzip /c/OracleDB-Node.js-lab/instantclient-basic-windows.x64-19.3.0.0.0dbru.zip
+unzip /c/OracleDB-node.js-lab/instantclient-basic-windows.x64-19.3.0.0.0dbru.zip
 ```
 
 3. Change to the instantclient_19_3 subdirectory that was just created, and create network/admin subdirectories. The Oracle Wallet security credentials from the OCI database instance will need to be placed into the /c/demo/instanctclient_19_3/network/admin directory.
@@ -169,11 +175,11 @@ cd /c/demo/instanctclient_19_3/network/admin
 unzip ~/Downloads/Wallet*.zip
 ```
 
-## Install and Configure the Example Node.js Application 
+## Install and Configure the Example Node js Application
 
 1. Copy the example.js application to the **/c/demo** directory.
 ```
-cp /c/OracleDB-Node.js-lab/example.js /c/demo
+cp /c/OracleDB-node.js-lab/example.js /c/demo
 ```
 
 2. Edit the example.js application and set the username, password, and connection string.
@@ -188,9 +194,9 @@ vi /c/demo/example.js
 Example: If your database name was **Demo** then your connection string would be set as follows:  **connectString : 'demo_low'**. Your database name is currently **{{Database Name}}**.
 
 
-## Test your Node.js Application
+## Test your Node js Application
 
-Use the following commands to run your Node.js application:
+1. Use the following commands to run your Node.js application:
 ```
 cd /c/demo
 ```
@@ -198,7 +204,7 @@ cd /c/demo
 node example.js
 ```
 
-You should see the follwing output indicating success: **[ [ 101, 'Alpha' ], [ 102, 'Beta' ], [ 103, 'Gamma' ] ]**.
+2. You should see the follwing output indicating success: **[ [ 101, 'Alpha' ], [ 102, 'Beta' ], [ 103, 'Gamma' ] ]**.
 
 **Congratulations! You have successfully completed the lab.**
 
