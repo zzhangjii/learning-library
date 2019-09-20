@@ -14,9 +14,9 @@
 
 [Sign in to the Oracle Cloud Infrastructure console](#sign-in-to-the-oracle-cloud-infrastructure-console)
 
-[Install and Configure the Example Node.js Application](#install-and-configure-the-example-node.js-application)
+[Install and Configure the Example Node js Application](#install-and-configure-the-example-node-js-application)
 
-[Test your Node.js Application](#test-your-node.js-application)
+[Test your Node js Application](#test-your-node-js-application)
 
 [References](#references)
 
@@ -61,7 +61,7 @@ Oracle Autonomous Transaction Processing delivers a self-driving, self-securing,
 
 ## Installing Node js
 
-1. For this hands on lab, Node.js version 12.9.1 for Microsoft Windows (x64) has already been installed. Node.js is available for several different operating systems and can be downloaded from **https://nodejs.org/en/downloads**  There are techniques for installing Node.js with administrative privileges such as root or administrator access, and techniques for installing without special privileges. The Microsoft Windows platform has an additional requirement to install the Visual Studio 2017 Redistributable. This step has already been performed.
+1. For this hands on lab, Node.js version 10.16.3 for Microsoft Windows (x64) has already been installed. Node.js is available for several different operating systems and can be downloaded from  https ://nodejs.org/en/downloads  There are techniques for installing Node.js with administrative privileges such as root or administrator access, and techniques for installing without special privileges. The Microsoft Windows platform has an additional requirement to install the Visual Studio 2017 Redistributable. This step has already been performed.
 
 
 ## Installing Oracle Database driver for Node js
@@ -110,7 +110,12 @@ node --version
 npm -v 
 ```
 
-10. Use npm to install the Oracle Database driver for Node.js.
+10. Use npm to install the Oracle Database driver for Node.js. Enter Commands:
+
+```
+npm init -y
+```
+
 ``` 
 npm install oracledb
 ```
@@ -121,11 +126,12 @@ npm list
 ```
 
 ## Install the Oracle Instant Client
-1. For this hands on lab, the Oracle Instant Client for Microsoft Windows (x64) has already been downloaded and staged, but not installed. The Oracle Instant Client is typically downloaded from https://www.oracle.com/database/technologies/instant-client/downloads.html. It is currently stage in the **/c/OracleDB-Node.js-lab** folder.
+
+1. For this hands on lab, the Oracle Instant Client for Microsoft Windows (x64) has already been downloaded and staged, but not installed. The Oracle Instant Client is typically downloaded from https://www.oracle.com/database/technologies/instant-client/downloads.html. It is currently stage in the **/c/OracleDB-node.js-lab** folder.
 
 2. Unzip the Oracle Instant into your **/c/demo** directory.
 ```
-unzip /c/OracleDB-Node.js-lab/instantclient-basic-windows.x64-19.3.0.0.0dbru.zip
+unzip /c/OracleDB-nodejs-lab/instantclient-basic-windows.x64-19.3.0.0.0dbru.zip
 ```
 
 3. Change to the instantclient_19_3 subdirectory that was just created, and create network/admin subdirectories. The Oracle Wallet security credentials from the OCI database instance will need to be placed into the /c/demo/instanctclient_19_3/network/admin directory.
@@ -134,7 +140,7 @@ unzip /c/OracleDB-Node.js-lab/instantclient-basic-windows.x64-19.3.0.0.0dbru.zip
 cd instantclient_19_3
 ```
 ```
-mkdir -p 
+mkdir -p network/admin
 ```
 
 4. Add the location of the installed Oracle Instant Client to the PATH variable persistently.
@@ -157,7 +163,7 @@ source ~/.bashrc
 * **Database User:** admin
 * **Database Password:** {{Database Password}}
 
-3. Go to the service details page for your instance and select **DB Connection**.
+3. Go to the service details page for your instance and select **DB Connection**. The service details page can be located by selecting Autonomous Transaction Processing in the menu. Then change the compartment name to the compartment you were assigned. Your database should be displayed. Click on your database name to display the service details page for your database. 
 
 4. Select **Download** and follow the on-screen instructions to create a password for this wallet. You will need this password in a later step.
 
@@ -165,15 +171,15 @@ source ~/.bashrc
 
 6. Change to the network/admin subdirectory for the Oracle Instant Client, and unzip the wallet. 
 ```
-cd /c/demo/instanctclient_19_3/network/admin
+cd /c/demo/instantclient_19_3/network/admin
 unzip ~/Downloads/Wallet*.zip
 ```
 
-## Install and Configure the Example Node.js Application 
+## Install and Configure the Example Node js Application
 
 1. Copy the example.js application to the **/c/demo** directory.
 ```
-cp /c/OracleDB-Node.js-lab/example.js /c/demo
+cp /c/OracleDB-nodejs-lab/example.js /c/demo
 ```
 
 2. Edit the example.js application and set the username, password, and connection string.
@@ -188,9 +194,9 @@ vi /c/demo/example.js
 Example: If your database name was **Demo** then your connection string would be set as follows:  **connectString : 'demo_low'**. Your database name is currently **{{Database Name}}**.
 
 
-## Test your Node.js Application
+## Test your Node js Application
 
-Use the following commands to run your Node.js application:
+1. Use the following commands to run your Node.js application:
 ```
 cd /c/demo
 ```
@@ -198,14 +204,14 @@ cd /c/demo
 node example.js
 ```
 
-You should see the follwing output indicating success: **[ [ 101, 'Alpha' ], [ 102, 'Beta' ], [ 103, 'Gamma' ] ]**.
+2. You should see the follwing output indicating success: **[ [ 101, 'Alpha' ], [ 102, 'Beta' ], [ 103, 'Gamma' ] ]**.
 
 **Congratulations! You have successfully completed the lab.**
 
 
 ## References
 
-1. Youtube video of this hands on lab : https://www.youtube.com/embed/UG8z94vxYQE?rel=0&autoplay=1
+1. YouTube video of this hands on lab : https://www.youtube.com/embed/UG8z94vxYQE?rel=0&autoplay=1
 
 2. Get Started and Provision an Autonomous Database : https://www.youtube.com/watch?v=Q6hxMaAPghI&autoplay=0&html5=1
 
