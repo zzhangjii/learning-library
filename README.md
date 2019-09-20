@@ -1,8 +1,6 @@
-![](common/images/customer.logo.png)
+![](common/images/learning-library-header.png)
 ---
-# ORACLE Learning Library #
-
-Note: Content in the README is under development !
+# Welcome to the ORACLE Learning Library #
 
 ## Introduction ##
 
