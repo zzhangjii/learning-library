@@ -1,33 +1,44 @@
-![](common/images/learning-library-header.png)
+![](common/images/learning-library-title.png)
 ---
-# Welcome to the ORACLE Learning Library #
+# Build, test and deploy applications on Oracle's Cloud! #
+The Oracle Learning Library is a place to explore Oracle's products and services.   This library of assests cover everything from the worlds first autonomous database to our world class Generation 2 infrastructure and much more.  Leverage our completely to build, test, and deploy applications on Oracle's Cloud—for free. Sign up here and pick one of the areas below to get started.
 
-## Introduction ##
+![https://www.oracle.com/free](common/images/freetier.png)
 
-Oracle Cloud is the industry’s broadest and most integrated public cloud. It offers best-in-class services across software as a service (SaaS), platform as a service (PaaS), and infrastructure as a service (IaaS), and even lets you put Oracle Cloud in your own data center. Oracle Cloud helps organizations drive innovation and business transformation by increasing business agility, lowering costs, and reducing IT complexity. The workshop content shows different aspects of Application Development in the cloud with different set of Oracle Cloud Services.
+## Libraries ## 
+| | | ||
+| ------------- | ------------- |------------- | ------------- |
+| ![data-management-library](common/images/adb.png)|![](common/images/baremetal.png)| ![](common/images/dev.png)|![](common/images/teach.png)|
+| [Data Management](data-management-library)|[Cloud Infrastructure](oci-library)| [NA Solution Workshops]()|[OSPA](ospa-library)|
+
+## Oracle Cloud Quick Start ##
+
+Just created an Oracle Cloud Free Tier account? Let us get you started.
+
+|  | Provision ADB|
+| ------------- | ------------- |
+| <img src="data-management-library/common-template/img/autonomousdb.png" width=150>   | Oracle Cloud's Free Tier includes 2 Oracle Autohomous Databases.  Create a world class database on Oracle's Exadata infrastructure in minutes (10 mins).  [Go!](data-management-library/autonomous-database/ziplab) |
 
 
-## Repository Folder Structure ##
+|  | Create a Compute Instance|
+| ------------- | ------------- |
+| <img src="common/images/baremetal.png" width=150>   | Oracle Cloud's Free Tier includes Oracle Cloud Infrastructure Compute VMs; Block, Object, and Archive Storage; Load Balancer; Monitoring and Notifications.  Create a compute instance now! (10 mins) [Go!](data-management-library/autonomous-database/ziplab) |
 
-The following directories are contained within this repository:
 
-**/articles**
-- This folder will contain interesting Articles on Oracle Technology
+|  | Load ADB fron OCI Object Storage with SQL Developer Web|
+| ------------- | ------------- |
+| <img src="common/images/sql-dev-web.png" width=150>   | Stage your cloud data in OCI Object Storage.  Provision an ADB instance, connect with SQL Developer Web and load your data directly to ADB. (25 minutes) [Go!](data-management-library/autonomous-database/ziplab) |
 
-**/common**
-- This folder contains common images and assets used by content in other folders
 
-**/oci-library**
-- This folder contains OCI Hands-on-Labs
 
-**/templates**
-- This folder contains templates used for Articles and Workshops
+|  | Monolithic to Microservices on ATP|
+| ------------- | ------------- |
+| <img src="common/images/container.png" width=150>   | Let's really explore what you can do in the cloud.  Create a docker application and move it to Kubernetes using all the new skills you've learned. (2 hours) [Go!](data-management-library/autonomous-database/ziplab) |
 
-**/workshops**
-- This folder will contain subfolders, each with documentation for individual workshops. The documentation is always in Markdown Format.
 
-**/ziplabs
-----This folder will contain subfolders, each with documentation for individual zip Labs in Markdown Format. Oracle Zip Labs are short 10-20 minute labs that guide users through a sequence of steps to accomplish a specific task using Oracle Cloud services.
+
+## How the Free Tier Works ##
+Use your Always Free resources as long as you want with no time constraints—subject only to the capacity limits noted. When your 30-day trial period for the expanded set of services ends, you can continue using Always Free services with no interruption.
 
 
 
