@@ -1,40 +1,46 @@
-![](common/images/customer.logo.png)
+![](common/images/learning-library-title.png)
 ---
-# ORACLE Learning Library #
+# Build, test and deploy applications on Oracle's Cloud! #
+The Oracle Learning Library is a place to explore Oracle's products and services using labs designed to enhance your experience building and deploying applications on the Cloud and On-Premises.   This library of assets covers everything from how to provision the world's first autonomous database to setting up a webserver on our world class Generation 2 infrastructure, machine learning and much more.  Use your existing Oracle Cloud account or a Free Tier account to build, test, and deploy applications on Oracle's Cloud. 
 
-Note: Content in the README is under development !
+### How do I get started? ###
 
-## Introduction ##
-
-Oracle Cloud is the industry’s broadest and most integrated public cloud. It offers best-in-class services across software as a service (SaaS), platform as a service (PaaS), and infrastructure as a service (IaaS), and even lets you put Oracle Cloud in your own data center. Oracle Cloud helps organizations drive innovation and business transformation by increasing business agility, lowering costs, and reducing IT complexity. The workshop content shows different aspects of Application Development in the cloud with different set of Oracle Cloud Services.
+First, you need an Oracle Cloud account.  Sign up [here](https://oracle.com/free) to create a free-tier account.  Second, visit one of our libraries below or start with one of our Quick Start labs. 
 
 
-## Repository Folder Structure ##
 
-The following directories are contained within this repository:
+## Oracle GitHub Libraries ## 
+| | | ||
+| ------------- | ------------- |------------- | ------------- |
+| <p align="center"><a href="data-management-library/"><img src="common/images/adb.png" width="100" title="Data Management Library"></a></p>|<p align="center"><a href="oci-library/"><img src="common/images/baremetal.png" width="80" title="OCI Library"></a></p>|<p align="center"><a href="workshops/"><img src="common/images/dev.png" width="100" title="North America Workshops"></a></p>|<p align="center"><a href="ospa-library/"><img src="common/images/teach.png" width="100" title="OSPA Library"></a></p>|
+| [Data Management](data-management-library)|[Cloud Infrastructure](oci-library)| [NA Solution Workshops]()|[OSPA](ospa-library)|
 
-**/articles**
-- This folder will contain interesting Articles on Oracle Technology
+## Oracle Cloud Quick Start ##
 
-**/common**
-- This folder contains common images and assets used by content in other folders
+Just created an Oracle Cloud Free Tier account? Let us help you get you started.
 
-**/oci-library**
-- This folder contains OCI Hands-on-Labs
 
-**/templates**
-- This folder contains templates used for Articles and Workshops
+|  | <p align="left">Provision ADB</p>| |
+| ------------- | ------------- | ---------------|
+| <p align="center"><a href="data-management-library/autonomous-database/ziplabs/2019/adw-provisioning/"><img src="common/images/autonomousdb.png" width="130" title="Github Logo"></a></p>  | Oracle Cloud's Free Tier includes two Oracle Autohomous Databases up to 20Gb in size.  Create a world class database on Oracle's Exadata infrastructure in minutes.  [Go!](data-management-library/autonomous-database/ziplabs/2019/adw-provisioning) | 5 mins|
+|  | **Create a Web Server on a Compute Instance**|
+| <p align="center"><a href="oci-library/L100-LAB/Compute_Services/Compute_HOL.md"><img src="common/images/baremetal.png" width="170" title="Github Logo"></a></p> | Oracle Cloud's Free Tier includes Oracle Cloud Infrastructure Compute VMs; Block, Object, and Archive Storage; Load Balancer; Monitoring and Notifications.  Create a compute instance running a webserver now!  [Go!](oci-library/L100-LAB/Compute_Services/Compute_HOL.md) | 20 mins|
+|  | **Load ADB fron OCI Object Storage with SQL Developer Web**||
+| <p align="center"><a href="data-management-library/autonomous-database/ziplabs/2019/adw-loading/"><img src="common/images/sql-dev-web.png" width="130" title="Github Logo"></a></p> | Stage your cloud data in OCI Object Storage.  Provision an ADB instance, connect with SQL Developer Web and load your data directly to ADB.  [Go!](data-management-library/autonomous-database/ziplabs/2019/adw-loading) | 25 mins|
+|  | **Monolithic to Microservices on ATP**||
+| <p align="center"><a href="workshops/monolithic-to-microservice/lab-guides/LabGuide050.md"><img src="common/images/container.png" width="135" title="Github Logo"></a></p>| Convert a portion of a legacy java application into a microservice based application leveraging ATP, Oracle Kubernetes Engine (OKE), Oracle Container Information Registry (OCIR) and OCI (2 hours) [Go!](workshops/monolithic-to-microservice/lab-guides/LabGuide050.md) | 120 mins|
 
-**/workshops**
-- This folder will contain subfolders, each with documentation for individual workshops. The documentation is always in Markdown Format.
 
-**/ziplabs
-----This folder will contain subfolders, each with documentation for individual zip Labs in Markdown Format. Oracle Zip Labs are short 10-20 minute labs that guide users through a sequence of steps to accomplish a specific task using Oracle Cloud services.
+
+## How does the Free Tier Work? ##
+Use your Always Free resources as long as you want with no time constraints—subject only to the capacity limits noted. When your 30-day trial period for the expanded set of services ends, you can continue using Always Free services with no interruption.
+
+
 
 
 
 ## [Contributing](CONTRIBUTING.md)
-Pull Requests are currently not being accepted. See [CONTRIBUTING](CONTRIBUTING.md) for details.
+Pull requests are currently not being accepted. See [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## [License](LICENSE.md)
 Copyright (c) 2014, 2016 Oracle and/or its affiliates
