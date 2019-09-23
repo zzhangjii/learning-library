@@ -47,14 +47,14 @@ You will create all required infrastructure components within your Oracle Cloud 
 
 ### **Step 1**: Your Oracle Cloud Account
 
-- You have already applied for and received you're Oracle Cloud Free Tier Account and will change the default password...
+- You have already applied for and received your Oracle Cloud Free Tier Account and will change the default password...
 
 
 ### **STEP 2**: Log in to your account
 
-- Once you receive the **Get Started with Oracle Cloud** Email, make note of your **Username, Password and Cloud Account Name**.
+- Once you receive the **Your Cloud Account is fully provisioned** Email, make note of your **Username and Cloud Account Name**.   *Note: `Usernames are usually your email address.`*  You can login by clicking the Sign In button or access it from any browser.
 
-  ![](images/050Linux/0.1.png)
+    ![](images/signup-email-provisioned.png)
 
 - From any browser go to oracle.com to access our Cloud.
 
