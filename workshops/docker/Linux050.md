@@ -24,13 +24,13 @@ Whereas, Containers include the application, all of its dependencies, but share 
 **Note:** At this time, Windows and Linux containers require that they run on their respective kernel base, therefore, Windows containers cannot run on Linux hosts and vice versa.
 
 ## Introduction
-In this lab we will obtain an Oracle Cloud Trial Account, create ssh key pairs, login into your Trial, create a VCN (Virtual Compute Network) and Compartment, create a new compute instance and finally install docker into the instance.
+In this lab we will obtain an Oracle Cloud Free Tier Account (if you haven't obtained one already), create ssh key pairs, login into your Cloud Account, create a VCN (Virtual Compute Network) and Compartment, create a new compute instance and finally install docker into the instance.
 
 ***To log issues***, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
 ## Objectives
 
-- Obtain an Oracle Cloud Trial Account
+- Obtain an Oracle Cloud Free Tier Account
 - Create the baseline infrastructure to support a Compute instance
 - Create a SSH key pair
 - SSH into the instance: Install Docker and GIT
@@ -39,40 +39,43 @@ In this lab we will obtain an Oracle Cloud Trial Account, create ssh key pairs, 
 
 - If running from Windows: [Putty and PuttyGen](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
-# Log into  your Trial Account and Create Infrastructure
+# Log into your new Oracle Cloud Account and Create Infrastructure
 
-You will create all required infrastructure components within your Trail account.
+You will create all required infrastructure components within your Oracle Cloud Free Tier account.
 
-## Your Trial Account
+## Your Oracle Cloud Free Tier Account
 
-### **Step 1**: Your Oracle Cloud Trial Account
+### **Step 1**: Your Oracle Cloud Account
 
-- You have already applied for and received you're Oracle Cloud Trial Account and will change the default password...
+- You have already applied for and received you're Oracle Cloud Free Tier Account and will change the default password...
 
 
-### **STEP 2**: Log in to your OCI dashboard
+### **STEP 2**: Log in to your account
 
 - Once you receive the **Get Started with Oracle Cloud** Email, make note of your **Username, Password and Cloud Account Name**.
 
   ![](images/050Linux/0.1.png)
 
-- From any browser go to. :
+- From any browser go to oracle.com to access our Cloud.
 
-    [https://cloud.oracle.com/en_US/sign-in](https://cloud.oracle.com/en_US/sign-in)
+    [https://www.oracle.com/](https://www.oracle.com/)
 
-- Enter your **Cloud Account Name** in the input field and click the **My Services** button. If you have a trial account, this can be found in your welcome email. Otherwise, this will be supplied by your workshop instructor.
+    ![](images/login-screen.png)
 
-  ![](images/050Linux/1.png)
+- Click the icon in the upper right corner.  Click on **Sign in to Cloud** at the bottom of the drop down.  *NOTE:  Do NOT click the Sign-In button, this will take you to Single Sign-On, not the Oracle Cloud*
+
+    ![](images/signup.png)    
+
+- Enter your **Cloud Account Name** in the input field and click the **My Services** button. If you have a Free Tier account provisioned, this can be found in your welcome email. Otherwise, this will be supplied by your workshop instructor.
+
+    ![](images/login-tenancy.png)  
 
 - Enter your **Username** and **Password** in the input fields and click **Sign In**.
 
-  ![](images/050Linux/2.png)
+    ![](images/cloud-login.png) 
 
-  **NOTE**: You may (probably) will be prompted to change the temporary password listed in the welcome email. In that case, enter the new password in the password field.
+  **NOTE**: You will likely be prompted to change the temporary password listed in the welcome email. In that case, enter the new password in the password field.
 
-- In the top left corner of the dashboard, click the **hamburger menu** and click **Compute**.
-
-  ![](images/050Linux/3.png)
 
 ### **STEP 3**: Create a Compartment
 
@@ -80,13 +83,11 @@ Compartments are used to isolate resources within your OCI tenant. User-based ac
 
 - Click the **hamburger icon** in the upper left corner to open the navigation menu. Under the **Identity** section of the menu, click **Compartments**
 
-  ![](images/050Linux/69.png)
-
-  ![](images/050Linux/70.png)
+    ![](images/create-compartment.png) 
 
 - Click **Create Compartment**
 
-  ![](images/050Linux/7.png)
+    ![](images/create-compartment-page.png) 
 
 - In the **Name** field, enter any name you want. For this example we will be using the name `Demo` going forward. Enter a **Description** of your choice. Click **Create Compartment**.
 
@@ -94,7 +95,7 @@ Compartments are used to isolate resources within your OCI tenant. User-based ac
 
 - In a moment, your new Compartment will show up in the list.
 
-  ![](images/050Linux/9.PNG)
+    ![](images/compartment-created.png) 
 
 ### **STEP 4**: Create a Virtual Compute Network
 
@@ -243,24 +244,35 @@ You will now create a Linux based Compute instance using the public key you just
 
 - **You will (Select / Leave Default) or Type** the following in the `Create Compute Instance` section of the dialog:
 
-  ```
-  Name: Docker
-  Availability Domain: AD 1 (Use default AD 1)
-  Boot Volume: Oracle-Provided OS Image
-  Image Operating System: Oracle Linux 7.6 (Default)
-  Shape Type: Virtual Machine (Default)
-  Shape: VM.Standard2.1 (Default)
-  SSH Keys: Choose SSH Key Files
-  ```
+  
+  - Name: Docker
+  - Image Operating System: Oracle Linux 7.6 (Default)
+    ![](images/create-compute.png)
+  - Expand the **Show Shape, Network and Storage Options** button, accept the defaults and ensure the `Always Free Eligible` is chosen.
+  - Availability Domain: AD 1 (Use default AD 1)
+  - Shape Type: Virtual Machine (Default)
+  - Shape: VM.Standard2.1 (Default)
+    ![](images/create-compute-2.png)
+ 
+  - Select the `demo` compartment you just created.  
+    ![](images/create-compute-3.png)
+  - The VCN network `DockerVCN` you created should populate.
+      ![](images/create-compute-4.png)
+  - Select the subnet compartment you created
+
+    ![](images/create-compute-5.png)
+  - Boot Volume: Oracle-Provided OS Image (accept all defaults)
+
+
+
+
+ 
 
 - Scroll down furthur on the page to add your PUBLIC SSH Key
 **NOTE:** You will paste the public key you copied in Step 7 into the SSH KEY field by selecting the **Paste SSH Keys** radio button. `The public key should all be on ONE LINE`
 
   ![](images/050Linux/28.PNG)
 
-- In the `Configure networking` section you will take ALL of the defaults as shown:
-
-  ![](images/050Linux/29.PNG)
 
 - Click **Create**
 
