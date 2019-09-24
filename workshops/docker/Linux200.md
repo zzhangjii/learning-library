@@ -227,7 +227,7 @@ HTTP access as been defined on port 5600.
 
 - We need the Public IP address to test the deployment. Navigate in a browser to your Oracle Trial account and from the hamburger menu in the upper left hand side of the page select go to **Compute-->Instances**:
 
-  ![](images/100Linux/26.png)
+  ![](images/compute-menu.png)
 
 - Click on the **Docker** instance link
 
