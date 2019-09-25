@@ -23,7 +23,7 @@ To get started, choose one (or more!) of the defined learning paths below:
 
 |  | OOW19 Data Safe Labs|
 | ------------- | ------------- |
-| <a href="autonomous-database/ziplabs/2019/adw-provisioning/"><img src="common-template/img/security.png" width=150></a>| Practice the main features in Oracle Data Safe, including Activity Auditing, Data Discovery, Data Masking, User Assessment, and Security Assessment.   **[Click here to launch the lab series](security/data-safe)**  |
+| <a href="autonomous-database/ziplabs/2019/adw-provisioning/"><img src="common-template/img/security.png" width=110></a>| Practice the main features in Oracle Data Safe, including Activity Auditing, Data Discovery, Data Masking, User Assessment, and Security Assessment.   **[Click here to launch the lab series](security/data-safe)**  |
 
 
 
@@ -33,8 +33,13 @@ To get started, choose one (or more!) of the defined learning paths below:
 | ------------- | ------------- |
 | <a href="autonomous-database/ziplabs/2019/adw-provisioning/"><img src="common-template/img/apex-apps-512.png" width=150></a>   |  Upload a spreadsheet into an Oracle database table and create an application based on this new table. You will then play with the Interactive Report and improve the attached form. Lastly add a Calendar page and then link it to the existing form page.   **[Click here to launch the lab series](autonomous-database/ziplabs/2019/atp-apex-spreadsheet-app)**  |
 
+## **Database Tools Library Highlights**
+
+New Library coming soon!
 
 
+
+## Helpful Links ##
 
 **Autonomous Database Cloud Specialist Certification** - [Learn More]([here](https://education.oracle.com/oracle-autonomous-database-cloud-2019-certified-specialist/trackp_OADB19))
 
