@@ -11,7 +11,7 @@
 
 In this lab, you will be uploading files to the Oracle Cloud Infrastructure (OCI) Object Storage, creating sample tables, loading data into them from files on the OCI Object Storage, and troubleshooting data loads with errors.
 
-You can load data into your new Autonomous Data Warehouse using Oracle Database tools, and Oracle and 3rd party data integration tools. You can load data:
+You can load data into your new Autonomous Data Warehouse (ADW) database using Oracle Database tools, and Oracle and 3rd party data integration tools. You can load data:
 
 + from files local to your client computer, or
 + from files stored in a cloud-based object store
@@ -29,7 +29,7 @@ This lab shows how to load data from Oracle Cloud Infrastructure Object Storage 
 
 For more information about loading data, see the documentation <a href="https://www.oracle.com/pls/topic/lookup?ctx=en/cloud/paas/autonomous-data-warehouse-cloud&id=CSWHU-GUID-07900054-CB65-490A-AF3C-39EF45505802" target="_blank">Loading Data from Files in the Cloud</a>.
 
-To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/issues/new" target="_blank"> here </a> to go to the github oracle repository issue submission form.
+To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/issues/new" target="_blank"> here </a> to go to the GitHub Oracle repository issue submission form.
 
 ## Objectives
 
@@ -63,7 +63,7 @@ To **log issues**, click <a href="https://github.com/millerhoo/journey4-adwc/iss
 
 #### **STEP 2: Loading Data Using the Data Import Wizard in SQL Developer**
 
--   Click ‘**Tables**’ in your user schema object tree. Clicking the right mouse button opens the context-sensitive menu in SQL Developer; select ‘**Import Data**’:
+-   Click ‘**Tables**’ in your user schema object tree. Click the right mouse button to open the context-sensitive menu in SQL Developer; select ‘**Import Data**’:
 
     ![](./images/300/Picture300-14b.jpg)
 
@@ -104,7 +104,7 @@ When you are satisfied with the file content view, click **NEXT**.
 
 -   Connected as your user in SQL Developer, copy and paste <a href="./scripts/300/create_tables.txt" target="_blank">this code snippet</a> to SQL Developer worksheet. Take a moment to examine the script. Then click the **Run Script** button to run it.
 
--   It is expected that you may get ORA-00942 errors during the DROP TABLE commands for the first execution of the script, but you should not see any other errors.
+-   It is expected that you may get ORA-00942 *table or view does not exist* errors during the DROP TABLE commands for the first execution of the script, but you should not see any other errors.
 
     ![](./images/300/Picture300-2.png)
 
@@ -115,7 +115,7 @@ Note that you do not need to specify anything other than the list of columns whe
 
 #### **STEP 4: Navigate to Object Storage**
 
--  From the Autonomous Data Warehouse console, pull out the left side menu from the top-left corner and select **Object Storage**. To revisit signing-in and navigating to ADW, please see [Lab 1](LabGuide1.md).
+-  From the Autonomous Data Warehouse console, pull out the left side menu from the top-left corner and select **Object Storage > Object Storage**. To revisit signing-in and navigating to ADW, please see [Lab 1](LabGuide1.md).
 
   ![](images/300/snap0014294.jpg)
 
@@ -137,19 +137,19 @@ In OCI Object Storage, a bucket is the terminology for a container of multiple f
 
 #### **STEP 6: Upload Files to Your OCI Object Store Bucket**
 
--   Click on your **bucket name** to open it:
+-   Click your **bucket name** to open it:
 
     ![](images/300/snap0014301.jpg)
 
--   Click on the **Upload Object** button:
+-   Click the **Upload Objects** button:
 
     ![](images/300/snap0014302.jpg)
 
--   Using the browse button or select all the files downloaded in the earlier step, click Upload and wait for the upload to complete:
+-   Drag and drop, or click  **select files**,  to select all the files downloaded in Step 1. Click **Upload Objects** and wait for the upload to complete:
 
     ![](images/300/snap0014303.jpg)
 
--   Repeat this for all files you downloaded for this lab.
+-   Repeat this for all files you downloaded in Step 1 for this lab. When the upload is complete, click **Close.**
 
 -   The end result should look like this with all files listed under Objects:
 
@@ -164,15 +164,15 @@ In OCI Object Storage, a bucket is the terminology for a container of multiple f
 
  ![](images/300/ConstructUrls-2.png)
 
- - Take a look at the URL you copied. In this example above, the **region name** is us-phoenix-1, the **tenant name** is adwctraining8, and the **bucket name** is ADWCLab.
+ - Take a look at the URL you copied. In this example above, the **region name** is us-ashburn-1, the **Namespace** is idthydc0kinr, and the **bucket name** is ADWCLab.
 
 *Note:* The URL can also be constructed as below:
 
-https://objectstorage.<**region_name**>.oraclecloud.com/n/<**tenant_name**>/b/<**bucket_name**>/o
+https://objectstorage.<**region_name**>.oraclecloud.com/n/<**namespace_name**>/b/<**bucket_name**>/o
 
 
 
--   **Save** the base URL you copied in a note. We will use the base URL in following steps.
+-   **Save** the base URL you copied in a note. We will use the base URL in upcoming steps.
 
 #### **STEP 8: Creating an Object Store Auth Token**
 
@@ -194,7 +194,7 @@ To load data from the Oracle Cloud Infrastructure(OCI) Object Storage you will n
 
     ![](./images/300/snap0015309.jpg)
 
--   Enter a friendly **description** for the token and click **Generate Token**.
+-   Enter a meaningful **description** for the token and click **Generate Token**.
 
     ![](./images/300/snap0015310.jpg)
 
@@ -202,6 +202,8 @@ To load data from the Oracle Cloud Infrastructure(OCI) Object Storage you will n
     *Note: You can't retrieve the Auth Token again after closing the dialog box.*
 
     ![](./images/300/snap0015311.jpg)
+
+-  Click **Close** to close the Generate Token dialog.
 
 #### **STEP 9: Create a Database Credential for Your User**
 
@@ -236,12 +238,14 @@ In order to access data in the Object Store you have to enable your database use
 
 -   The Data Import Wizard is started. Enter the following information:
 
-    -   Select **Oracle Cloud Storage** as source for the data load
+    -   Select **Oracle Cloud Storage** as source for the data load.
 
     -   Enter the URL of **channels.csv** as the file to load. You copied or constructed the URL in STEP 8 Copy the URLs of the Files on Your OCI Object Storage. For example, the URL might look something like:
-        https://objectstorage.us-phoenix-1.oraclecloud.com/n/labs/b/ADWCLab/o/channels.csv
+        https://YOUR OBJECT STORE.oraclecloud.com/n/idthydc0kinr/b/ADWCLab/o/channels.csv
 
     -   Select the Credential you previously created for authentication with the Object Store, **OBJ\_STORE\_CRED**
+
+  -   For this file, set the format as **csv** and encoding as **UTF8**.
 
     -   You might see a read error since channels.csv has lines terminated by ";", as is sometimes the case with certain data. Manually enter a semi-colon in the **line terminator** box to properly parse the data.
 
