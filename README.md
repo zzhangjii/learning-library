@@ -20,6 +20,7 @@ First, you need an Oracle Cloud account.  Sign up [here](https://oracle.com/free
 Just created an Oracle Cloud Free Tier account? Let us help you get you started.
 
 
+
 |  | Provision ADB| |
 | ------------- | ------------- | ---------------|
 | ![data-management-library/autonomous-database/ziplabs/2019/adw-provisioning/](common/images/autonomousdb.png) | Oracle Cloud's Free Tier includes two Oracle Autohomous Databases up to 20Gb in size.  Create a world class database on Oracle's Exadata infrastructure in minutes.  [Go!](data-management-library/autonomous-database/ziplabs/2019/adw-provisioning) | 5 mins|
