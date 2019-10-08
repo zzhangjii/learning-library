@@ -16,10 +16,9 @@ This lab walks you through the steps to upload the required datasets to the Auto
 -   Learn how to prepare datasets for training, validating and applying the machine learning models
 
 ## Required Artifacts
--   The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through a trial, or a training account whose details were given to you by an Oracle instructor.
+-   The following lab requires an Oracle Public Cloud account. You may use your own cloud account, a cloud account that you obtained through signing up for a Free Tier account, or a training account whose details were given to you by an Oracle instructor.
 
--   Oracle SQL Developer 18.3 or later (see <a href="http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html" target="\_blank">Oracle Technology Network download site</a>)
-Please use SQL Developer version 18.3 or later as this version contains enhancements for key Autonomous Data Warehouse features, including using ADW behind a VPN or Firewall.
+-   Oracle SQL Developer (see <a href="http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html" target="\_blank"> Oracle Technology Network download site</a>) - Please use the latest version of SQL Developer version as this version contains enhancements for key Autonomous Data Warehouse features, including using ADW behind a VPN or Firewall.  At time of update, the version of SQL Developer available for download is 19.2.
 
 
 # Connect to ADW and Prepare Data Using SQL Developer
