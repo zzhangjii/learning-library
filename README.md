@@ -10,9 +10,11 @@ First, you need an Oracle Cloud account.  Sign up [here](https://oracle.com/free
 
 
 ## Oracle GitHub Libraries ## 
-| [Data Management](data-management-library)|[Cloud Infrastructure](oci-library)| [NA Solution Workshops]()|[OSPA](ospa-library)|
-| ------------- | ------------- |------------- | ------------- |
-| ![](common/images/adb.png)|![](common/images/baremetal.png)|![](common/images/dev.png)|![](common/images/teach.png)|
+- [Data Management](data-management-library)
+- [Cloud Infrastructure](oci-library)
+- [NA Solution Workshops]()
+- [OSPA](ospa-library)
+
 
 
 ## Oracle Cloud Quick Start ##
