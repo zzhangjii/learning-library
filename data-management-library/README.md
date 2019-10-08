@@ -23,7 +23,7 @@ To get started, choose one (or more!) of the defined learning paths below:
 
 |  | OOW19 Data Safe Labs|
 | ------------- | ------------- |
-| ![security/data-safe/](common-template/img/security.png)| Practice the main features in Oracle Data Safe, including Activity Auditing, Data Discovery, Data Masking, User Assessment, and Security Assessment. Data Safe is a unified control center for your Oracle Databases which helps you understand the sensitivity of your data, evaluate risks to data, mask sensitive data, implement and monitor security controls, assess user security, monitor user activity, and address data security compliance requirements.  **[Click here to launch the lab series](security/data-safe)**  |
+| ![security/data-safe/](common-template/img/security.png)| Practice the main features in Oracle Data Safe, including Activity Auditing, Data Discovery, Data Masking, User Assessment, and Security Assessment.   **[Click here to launch the lab series](security/data-safe)**  |
 
 
 
