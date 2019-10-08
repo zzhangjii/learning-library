@@ -1,7 +1,7 @@
 # Data Preparation Using SQL Developer
 
 ![](images/200/Picture200-lab.png)  
-Updated: January 4, 2019
+Updated: October 8, 2019
 
 ## Introduction
 
@@ -83,7 +83,7 @@ example, if you the database you created was named adwfinance, select adwfinance
 
 -   Use the SQLDeveloper to import the [station_info.csv](./files/datasets/station_info.csv) dataset to a table (Station_Info) in the database.
 
--   Use the SQLDeveloper to import the [station_status_weather.csv](./files/datasets/station_status_weather.csv) dataset to a table (Station_Status_Weather) in the database. Make sure the LAST_REPORTED column is created as a DATE type column. (Note that this table has ~1M rows, so it may take about 30mins to import the table using the SQL Developer wizard.)
+-   Use the SQLDeveloper to import the [station_status_weather.csv](./files/datasets/station_status_weather.csv) dataset to a table (Station_Status_Weather) in the database. Make sure the LAST_REPORTED column is created as a TIMESTAMP type column with the following format: DD-MON-YY HH24:MI:SS (Note that this table has ~1M rows, so it may take about 30mins to import the table using the SQL Developer wizard.)
 
 
 
