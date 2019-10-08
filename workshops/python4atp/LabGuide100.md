@@ -21,9 +21,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
 ### **STEP 1:** Log in to your OCI dashboard and switch regions
 
-- To switch Regions, click on the Region Drop-Down in the upper right-hand corner and select **us-phoenix-1**
-
-  ![](images/100/001.png)
+- Login to your Oracle Cloud Account if you have not done so already.
 	
 ### **STEP 2:** Create object storage bucket
 
@@ -80,11 +78,11 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
 ### **STEP 4:** Download the Autonmous Transaction Processing Database DB Wallet Zip File
 
-- Open firefox from inside the image (you should still be in the image from the previous step) and log into your cloud account.  Note 
+- Open firefox from inside the image (you should still be in the image from the previous step) and log into your cloud account.  www.oracle.com
 	
   ![](images/100/025.png)
 
-  ![](images/100/026.png)
+  ![](images/login-screen.png)
 	
   Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Database** section, select **Autonomous Transaction Processing**.
 

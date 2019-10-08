@@ -19,49 +19,32 @@ In Lab 50 (as Derek) you will initiate the Oracle cloud environment that you wil
 
 ### **STEP 1:** Your Oracle Cloud Trial Account
 
-You have already applied for and received your Oracle Cloud Trial Account.
+You have already applied for and received your Oracle Cloud Free Tier Account.
 
 ### **STEP 2:** Log in to your OCI dashboard and Switch Regions
 
-- Once you receive the **Get Started Now with Oracle Cloud** Email, make note of your **Username, Password and Cloud Account Name**.
+- From any browser go to oracle.com to access the Oracle Cloud.
 
-  ![](images/050/001.png)
+    [https://www.oracle.com/](https://www.oracle.com/)
 
-- From any browser go to
+    ![](images/login-screen.png)
 
-  [https://cloud.oracle.com/en_US/sign-in](https://cloud.oracle.com/en_US/sign-in)
+- Click the icon in the upper right corner.  Click on **Sign in to Cloud** at the bottom of the drop down.   *NOTE:  Do NOT click the Sign-In button, this will take you to Single Sign-On, not the Oracle Cloud*
 
+    ![](images/signup.png)   
+ 
 - Enter your **Cloud Account Name** in the input field and click the **Next** button.
 
   ![](images/050/002.png)
 
-- Enter your **Username** and **Password** in the input fields and click **Sign In**.
-
+    `Note this is NOT your email. This is the nane of your tenancy noted in the email you received during signup`
+- Enter your username (this may be your email address) and password and click on **Sign In**.
   ![](images/050/003.png)
 
-- You are presented with the Oracle Cloud Infrastructure (OCI) Dashboard/Portal
+- Once you log in you will see a page similar to the one below.  Click on the hamburger icon in the upper left corner to reveal the menu.
 
-  ![](images/050/004.png)
+    ![](images/hamburger.png)  
 
-- To switch Regions, click on the Region Drop-Down in the upper right-hand corner and select **Manage Regions**
-  
-  ![](images/050/005.png)
-
-- On the Tenancy page, click on the **Subscibe To This Region** button for the **us-phoenix-1** Region.  Note - this is not in fact required, but does show how you can select region to co-locate services.
-  
-  ![](images/050/006.png)
-
-- Click **OK** to confirm the subscribtion to the region.
-  
-  ![](images/050/007.png)
-
-**NOTE:** Refresh the Page to verify the Region is now Active (Green Circle).  The subscribtion can take 1 minute to occur.
-	
-- Once the Region is Active (Green Circle), click on the Region Drop-Down in the upper right-hand corner and select **us-phoenix-1**
-
-  ![](images/050/008.png)
-	
-  ![](images/050/009.png)
 
 ### **STEP 3:** Create a Compartment
 
