@@ -40,41 +40,33 @@ Data Visualization makes it easy to visualize your data, so you can focus on exp
 
 >**Data Blending**: Combining two or more data sources for analysis.
 
-Now let’s get started!
+Now let’s get started!  Before beginning, ensure you have signed up for a free tier account.
 
 ### a) Provisioning an Oracle Analytics Cloud Instance
 
-1. Open your browser and navigate to [cloud.oracle.com](cloud.oracle.com). Click on **Sign In**.
+1. From any browser go to oracle.com to access the Oracle Cloud.
 
-    ![](images/100/img_1a_1_1.png)  
+    [https://www.oracle.com/](https://www.oracle.com/)
 
-2. Enter your cloud account name and click on **My Services**.
+    ![](images/login-screen.png)
 
-    ![](images/100/img_1a_2_1.png)  
+2.  Click the icon in the upper right corner.  Click on **Sign in to Cloud** at the bottom of the drop down.  *NOTE:  Do NOT click the Sign-In button, this will take you to Single Sign-On, not the Oracle Cloud*
+
+    ![](images/signup.png)   
 
 3. Enter your username and password and click on **Sign In**.
 
-    ![](images/100/img_1a_3_1.png)  
+4. Once you log in you will see a page similar to the one below.  Click on the hamburger icon in the upper left corner to reveal the menu.
 
-4. Once you log in you will see a page similar to the one below: -
+    ![](images/hamburger.png)  
 
-    ![](images/100/img_1a_4_1.png)  
+5. Click on **Platform Services** -> **Analytics**
 
-    Select **Customize Dashboard**. Ensure that **Analytics** is not hidden.
-
-    ![](images/100/img_1a_4_2.png)
-
-5. Click on the hamburger icon to reveal the menu. Select **Services**. The expanded menu will list all services available for provisioning.
-
-    ![](images/100/img_1a_5_1.png)
-
-    Select **Analytics**.
-
-    ![](images/100/img_1a_5_2.png)
+    ![](images/menu.png)
 
 6. On the next screen, click on **Create Instance**.
 
-    ![](images/100/img_1a_6_1.png)
+    ![](images/create-analytics-instance.png)
 
 7. Next, we will configure our instance. Click on the **Feature Set** dropdown.
 

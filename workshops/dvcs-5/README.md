@@ -2,6 +2,8 @@
 
 Welcome to the Oracle Analytics Cloud workshop. This workshop will introduce you to the data visualization capabilities included in OAC. Data Visualization allows you to analyze data coming directly from a wide variety of sources. These can include Oracle SaaS applications (e.g. ERP Cloud), databases, local files, and 3rd party applications (e.g. Salesforce), amongst others. For the purpose of this workshop, we will be using Excel files.
 
+***To log issues***, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
+
 ## Acquire an Oracle Cloud Free Tier Account or Workshop Account
 
 If you already have an account or an active trial, you may skip this section.  If not, you will be creating all required infrastructure components within your Oracle Cloud Free Tier account.
@@ -10,15 +12,26 @@ If you already have an account or an active trial, you may skip this section.  I
 
 ## Sign Up for a Free Tier Account
 
-- Open up a browser and navigate to www.oracle.com
+- Open up a browser and navigate to www.oracle.com. Click the **Oracle Cloud Free Tier** button in the upper right hand corner.
 
-![](/workshops/common-content/images/free-tier-account.png)
+    ![](images/free-tier-account.png)
 
-- Once you receive the **Your Cloud Account is fully provisioned** Email, make note of your **Username and Cloud Account Name**.   *Note: `Usernames are usually your email address.`*  You can login by clicking the Sign In button or access it from any browser.
+- Click on the **Start for Free** button
+
+    ![](images/free-tier-account-2.png)
+
+- Follow the instructions to create your account.  Be sure to enter an email you can access.  
+
+  ![](images/free-tier-account-3.png)
+
+
+- Once you complete the signup, you will receive the **Your Cloud Account is fully provisioned** Email, make note of your **Username and Cloud Account Name**.   *Note: `Usernames are usually your email address.`*  You can login by clicking the Sign In button or access it from any browser.
 
     ![](images/signup-email-provisioned.png)
 
-- From any browser go to oracle.com to access our Cloud.
+## Login to Oracle Cloud Account
+
+- From any browser go to oracle.com to access the Oracle Cloud.
 
     [https://www.oracle.com/](https://www.oracle.com/)
 
@@ -38,10 +51,7 @@ If you already have an account or an active trial, you may skip this section.  I
 
   **NOTE**: You will likely be prompted to change the temporary password listed in the welcome email. In that case, enter the new password in the password field.
 
-- Please click on the following link to create your <a class="trial-link" href="https://myservices.us.oraclecloud.com/mycloud/signup?language=en&sourceType=:ex:tb:::RC_NAMK180919P00028:OAC_HOL&SC=:ex:tb:::RC_NAMK180919P00028:OAC_HOL&pcode=NAMK180919P00028" target="\_trial">Free Account</a> and complete all the required steps to get your free Oracle Cloud Trial Account. When you complete the registration process you'll receive a $300 credit that will enable you to complete the lab for free. Additionally, you'll have 1000s of hours left over to continue to explore the Oracle Cloud.
-    - Soon after requesting your trial, you will receive the following email. You will not be able to start Lab 100 until you have received it.
-
-    ![](images/introduction/img_intro_1_1.png)
+- Proceed to Lab 100.
 
 ## Navigate to Lab 100
 
