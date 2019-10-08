@@ -12,7 +12,7 @@ First, you need an Oracle Cloud account.  Sign up [here](https://oracle.com/free
 ## Oracle GitHub Libraries ## 
 | | | ||
 | ------------- | ------------- |------------- | ------------- |
-| <p align="center"><a href="data-management-library/"><img src="common/images/adb.png" width="100" title="Data Management Library"></a></p>|<p align="center"><a href="oci-library/"><img src="common/images/baremetal.png" width="80" title="OCI Library"></a></p>|<p align="center"><a href="workshops/"><img src="common/images/dev.png" width="100" title="North America Workshops"></a></p>|<p align="center"><a href="ospa-library/"><img src="common/images/teach.png" width="100" title="OSPA Library"></a></p>|
+| ![](common/images/adb.png)|![](common/images/baremetal.png)|![](common/images/dev.png)|![](common/images/teach.png)|
 | [Data Management](data-management-library)|[Cloud Infrastructure](oci-library)| [NA Solution Workshops]()|[OSPA](ospa-library)|
 
 ## Oracle Cloud Quick Start ##
@@ -20,15 +20,15 @@ First, you need an Oracle Cloud account.  Sign up [here](https://oracle.com/free
 Just created an Oracle Cloud Free Tier account? Let us help you get you started.
 
 
-|  | <p align="left">Provision ADB</p>| |
+|  | Provision ADB| |
 | ------------- | ------------- | ---------------|
-| <p align="center"><a href="data-management-library/autonomous-database/ziplabs/2019/adw-provisioning/"><img src="common/images/autonomousdb.png" width="130" title="Github Logo"></a></p>  | Oracle Cloud's Free Tier includes two Oracle Autohomous Databases up to 20Gb in size.  Create a world class database on Oracle's Exadata infrastructure in minutes.  [Go!](data-management-library/autonomous-database/ziplabs/2019/adw-provisioning) | 5 mins|
+| ![data-management-library/autonomous-database/ziplabs/2019/adw-provisioning/](common/images/autonomousdb.png) | Oracle Cloud's Free Tier includes two Oracle Autohomous Databases up to 20Gb in size.  Create a world class database on Oracle's Exadata infrastructure in minutes.  [Go!](data-management-library/autonomous-database/ziplabs/2019/adw-provisioning) | 5 mins|
 |  | **Create a Web Server on a Compute Instance**|
-| <p align="center"><a href="oci-library/L100-LAB/Compute_Services/Compute_HOL.md"><img src="common/images/baremetal.png" width="170" title="Github Logo"></a></p> | Oracle Cloud's Free Tier includes Oracle Cloud Infrastructure Compute VMs; Block, Object, and Archive Storage; Load Balancer; Monitoring and Notifications.  Create a compute instance running a webserver now!  [Go!](oci-library/L100-LAB/Compute_Services/Compute_HOL.md) | 20 mins|
+|![oci-library/L100-LAB/Compute_Services/Compute_HOL.md](common/images/baremetal.png) | Oracle Cloud's Free Tier includes Oracle Cloud Infrastructure Compute VMs; Block, Object, and Archive Storage; Load Balancer; Monitoring and Notifications.  Create a compute instance running a webserver now!  [Go!](oci-library/L100-LAB/Compute_Services/Compute_HOL.md) | 20 mins|
 |  | **Load ADB fron OCI Object Storage with SQL Developer Web**||
-| <p align="center"><a href="data-management-library/autonomous-database/ziplabs/2019/adw-loading/"><img src="common/images/sql-dev-web.png" width="130" title="Github Logo"></a></p> | Stage your cloud data in OCI Object Storage.  Provision an ADB instance, connect with SQL Developer Web and load your data directly to ADB.  [Go!](data-management-library/autonomous-database/ziplabs/2019/adw-loading) | 25 mins|
+| ![data-management-library/autonomous-database/ziplabs/2019/adw-loading/](common/images/sql-dev-web.png) | Stage your cloud data in OCI Object Storage.  Provision an ADB instance, connect with SQL Developer Web and load your data directly to ADB.  [Go!](data-management-library/autonomous-database/ziplabs/2019/adw-loading) | 25 mins|
 |  | **Monolithic to Microservices on ATP**||
-| <p align="center"><a href="workshops/monolithic-to-microservice/lab-guides/LabGuide050.md"><img src="common/images/container.png" width="135" title="Github Logo"></a></p>| Convert a portion of a legacy java application into a microservice based application leveraging ATP, Oracle Kubernetes Engine (OKE), Oracle Container Information Registry (OCIR) and OCI (2 hours) [Go!](workshops/monolithic-to-microservice/lab-guides/LabGuide050.md) | 120 mins|
+| ![workshops/monolithic-to-microservice/lab-guides/LabGuide050.md](common/images/container.png)| Convert a portion of a legacy java application into a microservice based application leveraging ATP, Oracle Kubernetes Engine (OKE), Oracle Container Information Registry (OCIR) and OCI (2 hours) [Go!](workshops/monolithic-to-microservice/lab-guides/LabGuide050.md) | 120 mins|
 
 
 
