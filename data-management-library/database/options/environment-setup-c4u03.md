@@ -6,7 +6,7 @@ This lab will show you how to login to the cloud and setup your environment in p
 # Lab Sections #
 1. Login to the Oracle Cloud
 2. Create an ssh key pair
-3. Download Marketplace initialization zip
+3. Download Marketplace initialization zip and lab scripts
 2. Create a compute instnance
 
 # Lab Assumptions #
@@ -52,7 +52,9 @@ This lab will show you how to login to the cloud and setup your environment in p
 
 `Need to update for windows`
 1.  Open up puttygen 
-2.  ````
+
+2.  Enter the following commands in your terminal
+    ````
     cd ~
     ssh-keygen -b 2048 -t rsa -f optionskey
     cd .ssh
@@ -68,6 +70,8 @@ This lab will show you how to login to the cloud and setup your environment in p
 3.  Extract the folder and locate the Standardinitio.sh file. You will need this later when you create your compute instance.
 
   ![](img/db-marketplace.png)
+
+4. Click [here]() to download the scripts.zip file.  You will sftp this file to your compute instance later in this lab.
 
 
 ## Section 4 - Create a Compute Instance with the DB Marketplace Image
@@ -115,4 +119,10 @@ This lab will show you how to login to the cloud and setup your environment in p
 
 19.  Click the button to create your instance.  Your instance will be in provisioning state.  Verify that you chose the correct image.  In a few minutes you can also verify that you have a public IP address.  View the Work Requests at the bottom, this will show where your instance is.
 ![](img/create-compute-13.png)
+
+20.  Once you have a public IP address. Open up a terminal window.
+
+21.  We will use the key we generated earlier to SSH into the instance that is provisioning.  
+
+
 
