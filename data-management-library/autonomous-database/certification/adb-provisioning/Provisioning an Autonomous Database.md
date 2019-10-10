@@ -14,7 +14,7 @@
 In this section you will be provisioning an ATP database using the cloud
 console.
 
-1. Go to [cloud.oracle.com](https://cloud.oracle.com), click Sign In to sign in
+1. Go to [www.oracle.com](https://wwww.oracle.com), click Sign In to sign in
 with your Oracle Cloud account.
 
 ![](media/32da3d2a9a2066af692d571c6071efb6.png)
