@@ -174,7 +174,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG" alt="image-alt-text">
 
-7. Switch to the OCI console. From OCI servies menu, Click **Instances** under **Compute** 
+7. Switch to the OCI console. From OCI services menu, Click **Instances** under **Compute** 
 
 8. Click **Create Instance**. Fill out the dialog box:
 
@@ -230,7 +230,7 @@ In git-bash Enter Command:
 
 18. Enter command: **Make sure to use the Reserved Public IP that we assigned to the compute instane**
 ```
-ssh -i id_rsa_user opc@<RESERVED_PUBLIC_IP_OF_COMPUTE>
+ssh -i id_rsa opc@<RESERVED_PUBLIC_IP_OF_COMPUTE>
 ```
 
 **HINT:** If 'Permission denied error' is seen, ensure you are using '-i' in the ssh command
@@ -254,13 +254,17 @@ Reserved Public IP will be unassigned) . Click **Update**
 
 **Reserved Public IP has now been un-assigned from this compute instance. Next we will create a new compute instance and assign this same Public IP to it.**
 
-3. Create a second compute instance following same steps as for the first compute instnae. **Make sure to not assign a Public IP to this compute either**
+3. Create a second compute instance following same steps as for the first compute instance. **Make sure to not assign a Public IP to this compute either**
 
 4. Following same steps as earlier Edit the VNIC information for this compute instance and assign it the same Reserved Public IP that we created.
 
-5. Following same steps as earlier, ssh to the second compute instance using the Reserved Public IP address.
+5. Remove the known_hosts file to ensure old entry for the host is deleted. Enter Command:
 
-6. Verify you logged into the second compute instance.
+```
+rm /c/Users/PhotonUser/.ssh/known_hosts
+```
+
+6. Following same steps as earlier, ssh to the second compute instance using the Reserved Public IP address.Verify you logged into the second compute instance.
 
 **This demonstrated how to use Reserved IP address functionality in OCI to access different compute instances**
 

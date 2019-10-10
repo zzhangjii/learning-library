@@ -7,7 +7,7 @@ permalink: /data-management-library/autonomous-database/ziplabs/2019/atp-perform
 # Using Performance Hub to Analyze Resource Demand from Queries #
 
 ## Before You Begin ##
-This 15-minute lab shows you how to run a few queries in SQL Developer Web and monitor those queries through the Performance Hub. SQL Developer Web and Performance Hub are available for both ADW and ATP.
+This 15-minute lab shows you how to run a few queries in SQL Developer Web and monitor those queries through the Performance Hub. SQL Developer Web and Performance Hub are available for both Autonomous Data Warehouse (ADW) and Autonomous Transaction Processing (ATP).
 
 ### Background ###
 SQL Developer Web is a browser-based interface of Oracle SQL Developer. It provides a subset of the features from the desktop version.
@@ -18,12 +18,12 @@ You'll perform your queries on the Star Schema Benchmark (SSB) sample data. This
 
 
 ### What Do You Need? ###
-* Access to an instance of Oracle Transaction Processing
-* You must have completed the previous lab **Provisioning Autonomous Transaction Processing**.
+* Access to an instance of Oracle ATP.
+* Have completed the previous lab **Provisioning Autonomous Transaction Processing**.
 
 
 ## Navigate to the Instance's Details Page ##
-1. Sign in to the Oracle Cloud Platform. 
+1. Sign in to the Oracle Cloud. 
 2. Click the menu icon to expand the menu on the left edge of the screen.
 3. Click **Autonomous Transaction Processing**.
 
@@ -31,7 +31,7 @@ You'll perform your queries on the Star Schema Benchmark (SSB) sample data. This
 
     [Description of the illustration OCIMenu.png](files/OCIMenu.txt)
 
-4. Click the name of the instance you created in the previous lab.  
+4. Click the name of the instance you created in the previous lab. 
 5. You're taken to the instance page which displays details about your instance. Notice the buttons for Performance Hub and Service Console. You'll need both in the upcoming steps.
 
     ![](img/atp_instance.png)
@@ -47,7 +47,7 @@ In the next steps, you'll run a few queries in SQL Developer Web on the SSB samp
     * The top area will show actvity over a long-term. A slider lets you pick a timeframe to zoom in on. 
     * The middle area will showing the results of zooming in. 
     * The bottom area will list individual queries.
-3. Draw close Performance Hub by clicking **Close** in the top-right corner.
+3. Close Performance Hub by clicking **Close** in the top-right corner.
 4. Click the **Service Console** button.
 5. Depending on your browser settings, you may need to give permission for the Service Console to open in a new tab. In Firefox:
      * Click **Preferences**
@@ -88,7 +88,7 @@ order by count(*);
 
 9. The results are reported below the worksheet.
 10. Go back to the browser tab for the ATP instance's details.
-11. Open Performance Hub.
+11. Open **Performance Hub**.
 12. Notice there is slight activity due to your query.
 
 
@@ -117,15 +117,15 @@ order by d_year, p_brand1;
     [Description of the illustration Refresh.png](files/Refresh.txt)
 
 6. Scroll down to the second area for ASH Analytics, which zooms in on the timeframe you specify.
-7. SQL Developer Web provides many different dimensions and filters to help you analyze and troubleshoot. 
+7. Performance Hub provides many different dimensions and filters to help you analyze and troubleshoot. 
     * Use the dropdown to change the average active sessions filter from **Consumer Group** to **Wait Class**.
-    * Click a green CPU bar to apply a filter for that source.
 
     ![](img/WaitClass.png)
 
     [Description of the illustration WaitClass.png](files/WaitClass.txt)
-
-8. Remove the filter clicking the **x**.
+    
+    * Click a green CPU bar to apply a filter for that source.
+    * Remove the filter clicking the **x**.
 
     ![](img/RemoveFilter.png)
 
@@ -156,7 +156,7 @@ You can close Performance Hub and SQL Developer Web. You've finished this lab.
 
 
 ## Want to Learn More? ##
-* [Autonomous Cloud Platform Courses](https://learn.oracle.com/pls/web_prod-plq-dad/dl4_pages.getpage?page=dl4homepage&get_params=offering:35573#filtersGroup1=&filtersGroup2=.f667&filtersGroup3=&filtersGroup4=&filtersGroup5=&filtersSearch=) from Oracle University 
+* [Data Management Cloud Courses](https://learn.oracle.com/pls/web_prod-plq-dad/dl4_pages.getpage?page=dl4homepage&get_params=offering:35573#filtersGroup1=&filtersGroup2=.f667&filtersGroup3=&filtersGroup4=&filtersGroup5=&filtersSearch=) from Oracle University 
+* [Autonomous Database Cloud Certification](https://education.oracle.com/en/data-management/autonomous-database/product_817?certPage=true) from Oracle University
 * [SQL Courses](https://education.oracle.com/database-application-development/sql-and-pl-sql/product_178) from Oracle University 
-* [Data Warehouse Courses](https://education.oracle.com/data-warehouse/data-warehousing/product_152) from Oracle University 
-* [ATP Self-Guided Hands-On Workshop](https://cloudsolutionhubs.github.io/autonomous-transaction-processing/workshops/?page=README.md)
+* [Data Warehouse Courses and Certification](https://education.oracle.com/data-warehouse/data-warehousing/product_152) from Oracle University 

@@ -164,7 +164,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG" alt="image-alt-text">
 
-7. Switch to the OCI console. From OCI servies menu, Click **Instances** under **Compute** 
+7. Switch to the OCI console. From OCI services menu, Click **Instances** under **Compute** 
 
 8. Click Create Instance. Fill out the dialog box:
 
@@ -198,7 +198,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 13.  ssh to **first** compute instance. Enter command:
             
 ```
-ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
+ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE>
 ```
 **NOTE:** User name is ‘opc’.
 
@@ -362,17 +362,17 @@ Click **Add new**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Edge_Services_on_OCI/img/DNS_007.PNG" alt="image-alt-text">
 
-4. Once the health check runs after the interval specified in health check (30 seconds), the health status will update to show status of your webservers.
+5. Once the health check runs after the interval specified in health check (30 seconds), the health status will update to show status of your webservers.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Edge_Services_on_OCI/img/DNS_008.PNG" alt="image-alt-text">
 
-5. Launch a new browser tab, open up the domain specified in your traffic policy(for webserver1) and you will be directed to the webserver1
+6. Launch a new browser tab, open up the domain specified in your traffic policy(for webserver1) and you will be directed to the webserver1
 
-**http://<YOUR_USER_NAME>.Ocispl24.com**
+**http://<YOUR_USER_NAME>Ocispl24.com**
 
 **NOTE : <YOUR_USER_NAME> is what was specified as the sub domain**
 
-6. You should see 'Webserer1' displayed in the browser window
+7. You should see 'Webserver1' displayed in the browser window
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Edge_Services_on_OCI/img/DNS_009.PNG" alt="image-alt-text">
 

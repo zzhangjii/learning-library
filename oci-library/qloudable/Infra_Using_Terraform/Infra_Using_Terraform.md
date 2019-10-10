@@ -11,6 +11,8 @@
 
 [Configure OCI CLI Install Terraform Upload API keys and verify functionality](#configure-oci-cli-install-terraform-upload-api-keys-and-verify-functionality)
 
+[Delete the resources](#delete-the-resources)
+
 
 ## Overview
 
@@ -138,7 +140,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG" alt="image-alt-text">
 
-7. Switch to the OCI console. From OCI servies menu, Click **Instances** under **Compute** 
+7. Switch to the OCI console. From OCI services menu, Click **Instances** under **Compute** 
 
 8. Click Create Instance. Fill out the dialog box:
 
@@ -173,7 +175,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 12. Enter command 
 ```
-ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
+ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE>
 ```
 
 **HINT:** If 'Permission denied error' is seen, ensure you are using '-i' in the ssh command
@@ -322,7 +324,7 @@ terraform apply
 
 22. This script will take some time to execute. You can switch to OCI console and observe creation of VCN, Compute instance, Block Volume and attachment of block volume to the compute instance.
 
-23. Finally, destroty the infrastrucutre that we created. Enter Command:
+23. Finally, destroy the infrastructure that we created. Enter Command:
 ```
 terraform destroy
 ```
@@ -330,5 +332,28 @@ terraform destroy
 **NOTE:** You must type **yes** when prompted
 
 You can switch to OCI console and observe deletion of VCN, Compute instance, Block Volume
+
+## Delete the resources
+
+1. Switch to  OCI console window
+
+2. If your Compute instance is not displayed, From OCI services menu Click **Instances** under **Compute**
+
+3. Locate first compute instance, Click Action icon and then **Terminat** 
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text">
+
+4. Make sure Permanently delete the attached Boot Volume is checked, Click Terminate Instance. Wait for instance to fully Terminate
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0017.PNG" alt="image-alt-text">
+
+
+5. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will 
+appear.
+
+6. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text">
+
 
 **Congratulations! You have successfully completed the lab**

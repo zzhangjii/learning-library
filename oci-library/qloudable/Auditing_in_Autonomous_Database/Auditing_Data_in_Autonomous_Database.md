@@ -4,7 +4,7 @@ You can base auditing on individual actions, such as the type of SQL statement e
 
 Unified Auditing is enabled by default. You can audit the several types of activities, using unified audit policies and the AUDIT SQL statement. All audit records are written to the unified audit trail in a uniform format and are made available through the UNIFIED_AUDIT_TRAIL view. The unified audit trail captures audit information from many types of object, from SQL statements to other Oracle Database Components, such as Recovery Manager, Oracle Data Pump, SQL*Loader.
 
-<img src="./img/Audit_arch.png" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Auditing_in_Autonomous_Database/img/Audit_arch.png" alt="image-alt-text">
   
 ## Table of Contents
 
@@ -51,11 +51,11 @@ We will do the following:
 * **Database Name:** {{Database Name}}
 * **Database Password:** {{Database Password}}
 
-1. In Oracle Cloud, click Sign In. Sign in using your tenant name. Then click Next.
+1. In Oracle Cloud, click Sign In. Sign in using your tenant name. Then click Continue.
 
 2. Enter your user name and password.
 
-<img src="./img/Cloud.png" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Auditing_in_Autonomous_Database/img/Cloud.png" alt="image-alt-text">
 
 3. Click the hamburger menu at the upper right, and select Autonomous Transaction Processing.
 
@@ -67,17 +67,17 @@ We will do the following:
 
 1. Click the Service Console tab.
 
-   <img src="./img/Service_console.png" alt="image-alt-text">
+   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Auditing_in_Autonomous_Database/img/Service_console.png" alt="image-alt-text">
 
    Note: You have to disable the pop-up blocker. Click on the Popup-blocker icon and select *Always allow popups ...* . Then click the Service Console tab again.
 
 2. Click the Development tab. Then click the SQL Developer Web.
 
-   <img src="./img/Devt.png" alt="image-alt-text">
+   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Auditing_in_Autonomous_Database/img/Devt.png" alt="image-alt-text">
    
 3. In SQL Developer Web, sign in with the ADMIN user and the password provided above. Then click Sign In.
 
-   <img src="./img/SQLDevWeb_login.png" alt="image-alt-text">
+   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Auditing_in_Autonomous_Database/img/SQLDevWeb_login.png" alt="image-alt-text">
    
 4. Before starting auditing data, you create a new user and a table with sensitive data. Use the following commands in the Worksheet:
    
@@ -91,15 +91,15 @@ We will do the following:
       CREATE TABLE test.customers AS SELECT * FROM sh.customers;
    ```
       
-   <img src="./img/Create_User_Test.png" alt="image-alt-text">
+   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Auditing_in_Autonomous_Database/img/Create_User_Test.png" alt="image-alt-text">
 
-   <img src="./img/Create_table.png" alt="image-alt-text">
+   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Auditing_in_Autonomous_Database/img/Create_table.png" alt="image-alt-text">
    
 5. Display the data from the TEST.CUSTOMERS table, by copying, pasting, and executing the query in the Worksheet.
 ```
    SELECT cust_first_name, cust_last_name, cust_main_phone_number FROM test.customers;
 ``` 
-   <img src="./img/Query_not_redacted.png" alt="image-alt-text">
+   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Auditing_in_Autonomous_Database/img/Query_not_redacted.png" alt="image-alt-text">
  
 ## Audit Data
 
@@ -111,7 +111,7 @@ We will do the following:
 ```
    The result should be TRUE. This shows that the unified auditing is enabled by default in your database.
 
-   <img src="./img/TRUE.png" alt="image-alt-text">
+   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Auditing_in_Autonomous_Database/img/TRUE.png" alt="image-alt-text">
 
 2. Create an audit policy on the table and then enable the audit policy for all users who could update values in the table TEST.CUSTOMERS.
 ``` 
@@ -120,7 +120,7 @@ We will do the following:
    AUDIT POLICY audit_update_customers;
 ```
 
-   <img src="./img/Create_enable_policy.png" alt="image-alt-text">
+   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Auditing_in_Autonomous_Database/img/Create_enable_policy.png" alt="image-alt-text">
 
    Note: When unified auditing is enabled in Oracle Database, the audit records are populated in this new audit trail. This view displays audit records in tabular form by retrieving the audit records from the audit trail. Be aware that if the audit trail mode is QUEUED, then audit records are not written to disk until the in-memory queues are full. 
 
@@ -136,7 +136,7 @@ EXEC SYS.DBMS_AUDIT_MGMT.FLUSH_UNIFIED_AUDIT_TRAIL
    ORDER BY user_name;
 ```
 
-   <img src="./img/Policy.png" alt="image-alt-text">
+   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Auditing_in_Autonomous_Database/img/Policy.png" alt="image-alt-text">
 
 4. Execute an UPDATE operation on table TEST.CUSTOMERS.
 ```
@@ -150,7 +150,7 @@ EXEC SYS.DBMS_AUDIT_MGMT.FLUSH_UNIFIED_AUDIT_TRAIL
    WHERE  unified_audit_policies = 'AUDIT_UPDATE_CUSTOMERS';
 ```
 
-   <img src="./img/Audit_record.png" alt="image-alt-text">
+   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Auditing_in_Autonomous_Database/img/Audit_record.png" alt="image-alt-text">
 
 6. The ENABLED_OPT shows if a user can access the policy. Exclude the user ADMIN from unified policy. You must first disable the policy for all users and then re-enable the policy for all users except ADMIN:
 ```
@@ -158,7 +158,7 @@ EXEC SYS.DBMS_AUDIT_MGMT.FLUSH_UNIFIED_AUDIT_TRAIL
    AUDIT POLICY audit_update_customers EXCEPT admin;
 ```
 
-   <img src="./img/Users_except.png" alt="image-alt-text">
+   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Auditing_in_Autonomous_Database/img/Users_except.png" alt="image-alt-text">
 
 7. Re-execute an UPDATE operation on table TEST.CUSTOMERS. First delete the commands from the Worksheet and reload the UPDATE from the SQL History by clicking twice on the command and change the value for the phone number.
 ```
@@ -166,7 +166,7 @@ EXEC SYS.DBMS_AUDIT_MGMT.FLUSH_UNIFIED_AUDIT_TRAIL
    COMMIT;
 ```
 
-   <img src="./img/Update2.png" alt="image-alt-text">
+   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Auditing_in_Autonomous_Database/img/Update2.png" alt="image-alt-text">
   
 8. View the audit records.
 ``` 
@@ -174,9 +174,8 @@ EXEC SYS.DBMS_AUDIT_MGMT.FLUSH_UNIFIED_AUDIT_TRAIL
    WHERE  unified_audit_policies = 'AUDIT_UPDATE_CUSTOMERS';
 ```
 
-   <img src="./img/Audit_record.png" alt="image-alt-text">
+   <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Auditing_in_Autonomous_Database/img/Audit_record.png" alt="image-alt-text">
    
    You can observe that the second UPDATE completed by ADMIN is not audited.
    
-**Congratulations! You have successfully completed the lab.**
-**Finish Lab at the top of the page.**
+**Congratulations! You have successfully completed the lab. Finish Lab at the top of the page.**

@@ -174,7 +174,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 12. Enter command 
 ```
-ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
+ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE>
 ```
 
 **HINT:** If 'Permission denied error' is seen, ensure you are using '-i' in the ssh command
@@ -202,7 +202,7 @@ oci setup config
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_004.PNG" alt="image-alt-text">
 
-18. Repeat the step to find tenancy OCID (Human icon followed by Clicking Tenancy Name). Paste the Tenancy OCID in ssh session to compute instance followe by providing your region name (us-ashburn-1, us-phoneix-1 etc)
+18. Repeat the step to find tenancy OCID (Human icon followed by Clicking Tenancy Name). Paste the Tenancy OCID in ssh session to compute instance followe by providing your region name (us-ashburn-1, us-phoenix-1 etc)
 
 19. When asked for **Do you want to generate a new RSA key pair?** answer Y. For the rest of the question accept default by pressing Enter
 
@@ -214,11 +214,21 @@ oci setup config
 cat ~/.oci/oci_api_key_public.pem
 ```
 
-21. Hightlight and copy the content from ssh session. Switch to OCI Console, Click Human icon followe by your user name. In user details page Click **Add Public Key**. In the dialg box paste the public key content and Click **Add**.
+21. Hightlight and copy the content from ssh session. Switch to OCI Console, Click Human icon followed by your user name. In user details page Click **Add Public Key**. In the dialg box paste the public key content and Click **Add**.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_006.PNG" alt="image-alt-text">
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_007.PNG" alt="image-alt-text">
+
+22. This will generate a finger print, Copy and save the finger print in notepad using built in application in the platform.
+
+23. Switch back to ssh session to the compute instance and Enter command:
+
+```
+cat ~/.oci/oci_api_key.pem
+```
+
+Copy and save the content of the file 
 
 ## Install Jenkins, Configure Jenkins Master instance and create Jenkins Slave instance
 
@@ -258,7 +268,7 @@ sudo firewall-cmd --reload
 2.  To login to Jenkins master node we just set-up its password needs to be retrieved. Enter command:
 
 ```
-sudo cat /var/lib/jenkins/secrets/initialAdminPassword. 
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 Copy and paste the password to Notepad
 
@@ -272,7 +282,7 @@ Copy and paste the password to Notepad
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploy_Redis/img/Customer_Lab_001.PNG" alt="image-alt-text">)
 
-6. In Security list details page, Click **Add Ingress Rule**. Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure to leave STATELESS flag un-checked
+6. In Security list details page, Click **Add Ingress Rule** and enter the following ingress rule; Ensure to leave STATELESS flag un-checked
 
 
 - Source Type: CIDR 
@@ -344,7 +354,7 @@ from computeinstance earlier (32 character password)
 
 
 - **Name:** Use easy to remember name (This is the slave node that will be created)
-- **Fingerprint:** Copy/paste OCI_api_key_fingerprint file content save earlier
+- **Fingerprint:** Copy/paste OCI_api_key_fingerprint file content saved earlier
 - **APIKey:** Copy/paste OCI_api_key.pem file content saved earlier
 - **PassPhrase:** Leave empty
 - **Tenant Id:** Copy/Pare Tenant OCID saved earlier
@@ -362,7 +372,9 @@ from computeinstance earlier (32 character password)
 - Usage: Leave as is (use this node as much as possible)
 - Label: Provide label(Jenkins-Slave etc)
 - Compartment: Choose the compartment assigned to you from drop down
+- VCN Compartment: Choose your VCN compartment
 - Availability Domain: Choose the same Availability domain as the Compute instance created earlier
+- Image Compartment: Choose the compartment of your image
 - Image: Select latest Oracle Linux (Not anything with‘GPU’ in it)
 - Shape: Select a VM shape
 
@@ -430,10 +442,12 @@ from computeinstance earlier (32 character password)
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0017.PNG" alt="image-alt-text">
 
-5. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will 
+5. Repeat the steps to delete second compute instance
+
+6. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will 
 appear.
 
-6. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
+7. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text">
 

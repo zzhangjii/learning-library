@@ -158,8 +158,8 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 - Source Type: CIDR
 - Source CIDR: 0.0.0.0/0
 - IP Protocol: ICMP
-- Type: 3, 4
-- Code: 3, 4
+- Type: 3
+- Code: 4
 
 15. Click **+Additional Ingress Rule**
 
@@ -262,7 +262,7 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 
 29. Leave all other options as default, Click **Create Subnet**.
 
-30. Next we will create three load balancer. Click **Create Subnet**. Fill out the dialog box:
+30. Next we will create two load balancers. Click **Create Subnet**. Fill out the dialog box:
 
 
 **Load Balancer Subnet # 1**
@@ -478,9 +478,11 @@ mkdir -p $HOME/.kube
 ```
 cd $HOME/.kube
 ```
+
 ```
-curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.15.0/bin/windows/amd64/kubectl.exe
 ```
+
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OKE/img/OKE_004.PNG" alt="image-alt-text">
 
 2.  Wait for download to complete. Enter command 

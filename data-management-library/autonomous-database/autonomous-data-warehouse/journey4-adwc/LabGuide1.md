@@ -97,6 +97,7 @@ __Note:__ You can also directly access your Autonomous Data Warehouse service in
 
 - Configure the database:
 
+ - __Always Free__ - For this lab, do not select this option.
  - __CPU core count__ - Number of CPUs for your service. For this lab, specify __2 CPUs__.
  - __Storage (TB)__ - Select your storage capacity in terabytes. For this lab, specify __1 TB__ of storage.
  - __Auto Scaling__ - For this lab, __do not__ specify auto scaling.

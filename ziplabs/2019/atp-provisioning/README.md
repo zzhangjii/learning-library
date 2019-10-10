@@ -2,7 +2,7 @@
 layout: ziplab
 description: Learn how to provision and get started with Oracle Autonomous Transaction Processing.
 tags: Oracle Cloud, Autonomous Transaction Processing, ATP, Oracle Cloud Infrastructure, OCI
-permalink: /ziplabs/2019/atp-provisioning/index.html
+permalink: /data-management-library/autonomous-database/ziplabs/2019/atp-provisioning/index.html
 ---
 # Provisioning Autonomous Transaction Processing #
 

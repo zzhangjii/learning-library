@@ -73,9 +73,10 @@ In this lab you will create and mount File Storage System to a compute instance 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
-2. From the OCI Services menu,Click **Virtual Cloud Network** under Networking and Click **Create Virtual Cloud Network**
+2. From the OCI Services menu, Click **Virtual Cloud Network under Networking**, Select the compartment assigned to you from drop down menu on left part of the screen 
 
-3. Select the compartment assigned to you from drop down menu on left part of the screen
+3. Click **Create Virtual Cloud Network**
+
 
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
@@ -150,42 +151,19 @@ In this section we will create File System Storage.
 
 1. From OCI Services menu, Click **File System** under **File Storage**
 
-2. Click **Creat File System**
+2. Click **Create File System**
 
-3. Click **Edit Details**, under **Mount Target Information** and then **Show advanced options**
+3. Click **Edit Details**, under **Export Information**. Change **Export Path** to a easy to remember name and click **Create**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/File_Storage_Service/img/FSS_001.png" alt="image-alt-text">
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/File_Storage_Service/img/FSS_002.png" alt="image-alt-text">
 
-4. In Create File System dialog, under File System Information, enter the following:
-
-
-- Create in Compartment: Choose your compartment
-- Name: Provide a name
-- Availability Domain: Choose any AD.
-
-**Under Mount Target Information**
-
-
-- Select **Create Mount Target**
-- Name: Provide a name
-- Virtual Cloud Network: Select your VCN.
-- Subnet: Select a subnet for the mount target.
-- IP Address: Leave blank.
-- Hostname: Leave blank.
-- Path Name: Enter /
-- Maximum Free space: choose Recommended Size
-
-5. Click **Create File System**.
+4. OCI console will show your File System details. Under **Exports** Click your mount target name under **Mount Target**. In Mount Target details page, note down the IP address.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/File_Storage_Service/img/FSS_003.png" alt="image-alt-text">
               
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/File_Storage_Service/img/FSS_004.png" alt="image-alt-text">
-
-6. Once created, Click **File System Name** and under Mount Targets Note down the Private IP address
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/File_Storage_Service/img/FSS_005.png" alt="image-alt-text">
 
 **We now have a File Storage system created. Next we will create a SSH key pair that will be used to login to a compute instance and mount the file system.**
 
@@ -239,7 +217,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG" alt="image-alt-text">
 
-7. Switch to the OCI console. From OCI servies menu, Click **Instances** under **Compute** 
+7. Switch to the OCI console. From OCI services menu, Click **Instances** under **Compute** 
 
 8. Click Create Instance. Fill out the dialog box:
 
@@ -271,7 +249,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 12. Enter command 
 ```
-ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
+ssh -i id_rsa opc@<PUBLIC_IP_OF_COMPUTE>
 ```
 
 **HINT:** If 'Permission denied error' is seen, ensure you are using '-i' in the ssh command. You MUST type the command, do NOT copy and paste ssh command
@@ -286,13 +264,12 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 
 Users of Ubuntu and Linux operating systems (We launched a Oracle Linux instance) can use the command line to connect to a file system and write files. Mount targets serve as file system network access points. After your mount target is assigned an IP address, you can use it to mount the file system. You need to install an NFS client and create a mount point. When you mount the file system, the mount point effectively represents the root directory of the File Storage file system, allowing you to write files to the file system from the instance.
 
-1. In ssh session to Compute instance Enter command:
+1. In ssh session to Compute instance Enter command: 
 ``` 
 sudo yum install nfs-utils 
 ```
-to install nfs-utils. 
+(This is just to ensure nfs-utils is installed)
 
-**NOTE:** Type ‘y’ if prompted for ‘Is this OK’
 
 2. Enter command:
 ```
@@ -302,11 +279,12 @@ to create a mount point.
 
 3. Mount the file system, Enter command: 
 ```
-sudo mount 10.x.x.x:/ /mnt/nfs-data 
+sudo mount 10.x.x.x:/<EXPORT_PATH_NAME> /mnt/nfs-data
 ```
-**NOTE:** The 10.x.x.x should be replaced with the Private IP of File Storage system noted earlier (Example: sudo mount 10.0.0.3:/ /mnt/nfs-data).
+**NOTE:** The 10.x.x.x should be replaced with the  IP of File Storage system  and <EXPORT_PATH_NAME> should be replaced with Export path name used earlier(Example: If '/' was the EXPORT_PATH_NAME then **sudo mount 10.0.0.3:/ /mnt/nfs-data**).
 
-**NOTE:** Mount commands can also be see by Clicking Action icon  in File Storage detail page though 'localpath' in sudo mkdir and sudo mount MUST be replaced by the directory created (nfs-data).
+**NOTE:** Mount commands can also be seen by Clicking Action icon in File Storage detail, and selecting ‘Mount Commands’
+
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/File_Storage_Service/img/FSS_006.png" alt="image-alt-text">
 
@@ -341,40 +319,15 @@ In this section we will delete all the resources we created in this lab.
 **Delete File System Storage**
 1. From OCI Services menu, Click **File Systems**, then File System name that was created.
 
-2. Under Mount Target, Click the action icon and select **Detach**.
+2. Under Exports, Click the action icon and select **Delete**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/File_Storage_Service/img/FSS_010.png" alt="image-alt-text">
 
-3. Verify there is no data under ‘Mount Targets’, then Click Delete, Click **OK** in Confirmation window.
+3. Verify there is no data under **Exports** 
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/File_Storage_Service/img/FSS_011.png" alt="image-alt-text">
 
-4. Click **File Systems**
+4. Click **File Systems**, select your File system and Click **Delete**
 
-5. Click **Manage Mount Targets**, Select the Mount Target and Click **Delete**
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/File_Storage_Service/img/FSS_012.png" alt="image-alt-text">
-
-**Delete File System Storage**
-In this section we will delete all the resources we created in this lab.
-
-1. From OCI Services menu, Navigate to File System and Click File System name that was created.
-
-2. Under Mount Target, Click the action icon and select **Detach**.
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/File_Storage_Service/img/FSS_013.png" alt="image-alt-text">
-
-3. Verify there is no data under ‘Mount Targets’, then Click **Delete**, Click **OK** in Confirmation window.
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/File_Storage_Service/img/FSS_014.png" alt="image-alt-text">
-
-4. Click **File Systems**
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/File_Storage_Service/img/FSS_015.png" alt="image-alt-text">
-
-5. Click **Manage Mount Targets**, Select the Mount Target and Click **Delete**
- 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/File_Storage_Service/img/FSS_016.png" alt="image-alt-text">
 
 **Delete Compute instance**
 
@@ -382,7 +335,7 @@ In this section we will delete all the resources we created in this lab.
 
 2. If your Compute instance is not displayed, From OCI services menu Click **Instances** under Compute
 
-3. Locate compute instance, Click Action icon and then **Terminat** 
+3. Locate compute instance, Click Action icon and then **Terminate** 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text">
 
@@ -399,10 +352,6 @@ appear.
 2. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text">
-
-3. From OCI services menu Click **Networking**, then **Public IPs**,locate the Reserved Public IP you created. Click Action icon and then **Terminate**
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0019.PNG" alt="image-alt-text">
 
 
 ***Congratulations! You have successfully completed the lab. ***

@@ -147,7 +147,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG" alt="image-alt-text">
 
-7. Switch to the OCI console. From OCI servies menu, Click **Instances** under **Compute** 
+7. Switch to the OCI console. From OCI services menu, Click **Instances** under **Compute** 
 
 8. Click Create Instance. Fill out the dialog box:
 
@@ -280,7 +280,7 @@ copy and paste the public key content to Notepad. We will use this public key to
 
 13. Once the Instance is running, Note down privateIP address of the instance from instance detail page (by Clicking Instance name) 
 
-14. Switch to git-bash window with ssh session to Public compute instsance (first compute instance created earlier). Enter command:
+14. Switch to git-bash window with ssh session to Public compute instance (first compute instance created earlier). Enter command:
 ```
  cd ~/.ssh
 ``` 
@@ -321,7 +321,7 @@ and verify there is internet connectivity
 
 2. If your Compute instance is not displayed, From OCI services menu Click **Instances** under **Compute**
 
-3. Locate compute instance, Click Action icon and then **Terminat** 
+3. Locate compute instance, Click Action icon and then **Terminate** 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0016.PNG" alt="image-alt-text">
 
@@ -329,16 +329,16 @@ and verify there is internet connectivity
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0017.PNG" alt="image-alt-text">
 
-5. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will 
+5. Repeat the steps to delete the second compute instance.
+
+6. From OCI services menu Click **Virtual Cloud Networks** under Networking, list of all VCNs will 
 appear.
 
-6. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
+7. Locate your VCN , Click Action icon and then **Terminate**. Click **Delete All** in the Confirmation window. Click **Close** once VCN is deleted
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0018.PNG" alt="image-alt-text">
 
-7. From OCI services menu Click **Networking**, then **Public IPs**,locate the Reserved Public IP you created. Click Action icon and then **Terminate**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0019.PNG" alt="image-alt-text">
 
 ***Congratulations! You have successfully completed the lab. ***
 
