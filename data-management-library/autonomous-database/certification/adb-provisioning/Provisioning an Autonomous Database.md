@@ -1,4 +1,4 @@
-![](./media/adbtitle.png)
+![](./media/adb-certification-title.png)
 # Provisioning an Autonomous Database
 
 
