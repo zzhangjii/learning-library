@@ -75,7 +75,7 @@ The Oracle environment is already set up so sqlplus can be invoked directly from
     show sga
     ````
    
-   ![](img/inmemory/showsga.png) 
+     ![](img/inmemory/showsga.png) 
 
 2.  The size of the In-Memory column store is controlled by the init.ora parameter INMEMORY_SIZE.  Show the SGA, KEEP and INMEMORY parameters.  You can also run @02_show_parms.sql. 2GB of SGA has been assigned to the IM column store.
 
@@ -84,14 +84,58 @@ The Oracle environment is already set up so sqlplus can be invoked directly from
     show parameter keep
     show parameter inmemory 
     ````
-   ![](img/inmemory/showparms.png) 
+     ![](img/inmemory/showparms.png) 
 
 3.  The In-Memory area is sub-divided into two pools:  a 1MB pool used to store actual column formatted data populated into memory and a 64K pool to store metadata about the objects populated into the IM columns store.  V$INMEMORY_AREA shows the total IM column store.  
 
     ````
     select * from v$inmemory_area;
     ````
-   ![](img/inmemory/inmemoryarea.png) 
+     ![](img/inmemory/inmemoryarea.png) 
+
+4.  To check if the IM column store is populated with objects run the 05_im_segments.sql script 
+
+    ````
+    SQL> @05_im_segments.sql
+    ````
+     ![](img/inmemory/segments.png)   
+
+5.  To add objects to the IM column store the inmemory attribute needs to be set.  This tells the Oracle DB these tables should be populated into the IM column store.  You can also run `@06_im_alter_table.sql`
+
+    ````
+    ALTER TABLE lineorder INMEMORY;
+    ALTER TABLE part INMEMORY;
+    ALTER TABLE customer INMEMORY;
+    ALTER TABLE supplier INMEMORY;
+    ALTER TABLE date_dim INMEMORY;
+    ````
+     ![](img/inmemory/altertable.png)   
+
+6.  Run the `@07_im_attibutes.sql script`.  THis looks at the USER_TABLES view and queries attributes of tables in the SSB schema.
+
+    ````
+    SELECT table_name, cache, buffer_pool, compression, compress_for, inmemory,
+        inmemory_priority, inmemory_distribute, inmemory_compression 
+    FROM   user_tables; 
+    ````
+     ![](img/inmemory/imattributes.png)   
+
+By default the IM column store is only populated when the object is accessed.
+
+7.  Let's populate the store with some simple queries with the @08_im_start_pop.sql
+
+    ````
+    SELECT /*+ full(d)  noparallel (d )*/ Count(*)   FROM   date_dim d; 
+    SELECT /*+ full(s)  noparallel (s )*/ Count(*)   FROM   supplier s; 
+    SELECT /*+ full(p)  noparallel (p )*/ Count(*)   FROM   part p; 
+    SELECT /*+ full(c)  noparallel (c )*/ Count(*)   FROM   customer c; 
+    SELECT /*+ full(lo)  noparallel (lo )*/ Count(*) FROM   lineorder lo; 
+    ````
+     ![](img/inmemory/startpop.png) 
+
+page 14
+
+
 
 
 
