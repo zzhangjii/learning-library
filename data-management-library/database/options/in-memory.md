@@ -156,8 +156,13 @@ By default the IM column store is only populated when the object is accessed.
 
 Now that you’ve gotten familiar with the IM column store let’s look at the benefits of using it. You will execute a series of queries against the large fact table LINEORDER, in both the buffer cache and the IM column store, to demonstrate the different ways the IM column store can improve query performance above and beyond the basic performance benefits of accessing data in memory only.
 
-Exit your previous sqlplus session and change to the Part2 directory to access the SQL files for this part of the Lab.
- are 
+1. Exit your previous sqlplus session and change to the Part2 directory to access the SQL files for this part of the Lab.
+
+    ````
+    cd ../Part2
+    ls
+    sqlplus /nolog
+    ````
 
 
 
