@@ -67,9 +67,9 @@ When you first access APEX you will need to log in as an APEX instance administr
 
     ![](images/1/click-atp-service-console.png)
 
-2.  Click **Development** option in the menu on the left, then click the **Oracle Application Express** option.
+2.  Click **Development** option in the menu on the left, then click the **Oracle APEX** option.
 
-    ![](images/1/click-application-express.png)
+    ![](images/1/click-oracle-apex.png)
 
 3.  Enter the password for the Administration Services and click **Sign In to Administration**. The password is the same as the one entered for the ADMIN user when creating the ATP instance: **`SecretPassw0rd`**
 
