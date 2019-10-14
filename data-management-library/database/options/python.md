@@ -141,5 +141,112 @@ Pip is a package management system used to install and manage software packages 
 
 #### Installing cx_ORACLE
 
-1. Now that the prereqs are installed, it's time to install cx_Oracle.  Switch to the **oracle** user.
+1. Now that the prereqs are installed, it's time to install cx_Oracle.  Switch to the **oracle** user.  cx_Oracle is installed using pip, the utility you just installed.
+
+    ````
+    sudo su - oracle
+    . oraenv [ORCL]
+    export LD_RUN_PATH=/u01/app/oracle/product/19c/dbhome_1
+    exit
+    ````
+    ![](img/python/cxoracle.png)   
+    ![](img/python/cxoracle2.png)   
+
+2.  Then, install the cx_Oracle package with pip (as the opc user)
+
+    ````
+    sudo pip install cx_Oracle
+    ````
+
+3.  Install python tools
+
+    ````
+    sudo yum install python-tools
+    ````
+
+    ![](img/python/cxoracle4.png)  
+
+4.  Test your installation by launching the python console as the oracle user
+
+    ````
+    sudo su - oracle
+    . oraenv
+    export LD_RUN_PATH=/u01/app/oracle/product/19c/dbhome_1
+    python
+    > help('modules')
+    ````
+
+    ![](img/python/cxoracle5.png)  
+
+5.  Connect to the Oracle database and print the version of the database via python. THis confirms you are connected to an Oracle instance and returns the database version. 
+
+    ````
+    > import cx_Oracle
+    > con = cx_Oracle.connect('system/Ora_DB4U@orcl')
+    > print con.version
+    19.3.0.0.0 (example output)
+    > quit()
+    ````
+
+## Section 3 - Python Programming
+
+There are several ways to execute Python code.  Here, we start with the presentation of two ways to execute Python code from the command line. The first is to execute code interactively i.e. executing commands directly in the interpreter. The other way is to save your code in a .py file and invoke the interpreter to execute the file. Finally, we present how to execute Python code using IDLE.
+
+### Run Code Interactively
+
+1. To execute code from command line open the Python command line editor and type the following commands, one by one (each line is one command): 
+
+    ````
+    $ python
+    > var1 = "hello world"
+    > var1
+    ‘hello world’
+    ````
+
+    ![](img/python/python1.png)  
+
+2.  Open up a text editor (like vi) and type the following script.
+
+    ````
+    var1 = "hello world"
+    print var1
+    ````
+
+3.  Save the file as test.py in the /home/oracle directory.
+
+    ````
+    python /home/oracle/test.py
+    ````
+
+    ![](img/python/python2.png)  
+
+### Query the Oracle Database
+
+Retrieving records from Oracle database using cursors is a simple as embedding the SQL statement within the cursor().execute statement.
+
+1.  Open up a text editor and enter the following query.
+    ````
+    ## Run a first sample query
+    ## import module cx_Oracle
+    import cx_Oracle
+
+    ## Set up a DB connection
+    con = cx_Oracle.connect('oe/oe@pdb01')
+
+    ## Open a cursor
+    cur = con.cursor()
+
+    ## Run a query
+    cur.execute('select CUSTOMER_ID, CUST_FIRST_NAME, CUST_LAST_NAME from CUSTOMERS order by CUSTOMER_ID')
+
+    ## Display result set
+    for row in cur:
+    print row
+
+    ## Close cursor
+    cur.close()
+
+    ## Close DB connection
+    con.close()
+    ````
 
