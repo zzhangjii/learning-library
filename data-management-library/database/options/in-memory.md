@@ -64,7 +64,7 @@ All the scripts for this lab are located in the /home/oracle/inmemory/scripts fo
 
 ## Section 3 - Monitoring the In-Memory Column Store
 
-The focus of part 1 of this lab is to show how the lab environment is setup and to demonstrate how to monitor the different parts of the In-Memory column store (IM column store). 
+The focus of this section is to show how the lab environment is setup and to demonstrate how to monitor the different parts of the In-Memory column store (IM column store). 
 
 The Oracle environment is already set up so sqlplus can be invoked directly from the shell environment. Since the lab is being run in a pdb called orcl you must supply this alias when connecting to the ssb account. 
 
@@ -133,9 +133,31 @@ By default the IM column store is only populated when the object is accessed.
     ````
      ![](img/inmemory/startpop.png) 
 
-page 14
+8. Background processes are populating these segments into the IM column store.  To monitor this, you could query the V$IM_SEGMENTS.  Once the data population is complete, the BYTES_NOT_POPULATED should be 0 for each segment.
 
+    ````
+    SELECT v.owner, v.segment_name name, 
+       v.populate_status status, v.bytes on_disk_size,
+       v.inmemory_size in_mem_size, v.bytes_not_populated
+    FROM   v$im_segments v;
+    ````
 
+     ![](img/inmemory/im_populated.png) 
+
+9.  Now let's check the total space usage
+
+    ````
+    select * from v$inmemory_area;
+    ````
+
+    ![](img/inmemory/im_usage.png) 
+
+## Section 4 - Querying the In-Memory Column Store
+
+Now that you’ve gotten familiar with the IM column store let’s look at the benefits of using it. You will execute a series of queries against the large fact table LINEORDER, in both the buffer cache and the IM column store, to demonstrate the different ways the IM column store can improve query performance above and beyond the basic performance benefits of accessing data in memory only.
+
+Exit your previous sqlplus session and change to the Part2 directory to access the SQL files for this part of the Lab.
+ are 
 
 
 
