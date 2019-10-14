@@ -1,6 +1,16 @@
 ![](img/db-inmemory-title.png)  
 
-# Lab Introduction #
+# Table of Contents #
+
+- [Lab Introduction](#lab-introduction)
+- [Lab Sections](#lab-sections)
+- [Section 1: Login to Your Oracle Cloud Account](#section-1--login-to-your-oracle-cloud-account)
+- [Section 2 - Lab Setup](#section-2--lab-setup)
+- [Section 3 - Monitoring the In-Memory Column Store](#section-3--monitoring-the-in-memory-column-store)
+- [Section 4 - Querying the In-Memory Column Store](#section-4--querying-the-in-memory-column-store)
+
+
+## Lab Introduction 
 Oracle Database In-Memory provides a unique dual-format architecture that enables tables to be simultaneously represented in memory using traditional row format and a new in-memory column format. The Oracle SQL Optimizer automatically routes analytic queries to the column format and OLTP queries to the row format, transparently delivering best-of-both-worlds performance. Oracle Database automatically maintains full transactional consistency between the row and the column formats, just as it maintains consistency between tables and indexes today. The new column format is a pure in-memory format and is not persistent on disk, so there are no additional storage costs or storage synchronization issues.
 
 This series of labs will guide you through the basic configuration of the In-Memory column store (IM
@@ -16,7 +26,7 @@ The following 5 table star schema will be used during the lab and has been creat
 ![](img/inmemory/star-schema.png)  
 
 
-# Lab Sections #
+## Lab Sections 
 1. Login to the Oracle Cloud
 3. Monitoring the In-Memory Column Store
 2. Querying In-Memory Column Store Tables
@@ -27,7 +37,7 @@ The following 5 table star schema will be used during the lab and has been creat
 - Each participant has completed the Environment Setup lab.
 
 
-## Section 1: Login to your Oracle Cloud Account
+## Section 1: Login to Your Oracle Cloud Account
 
 1.  From any browser go to www.oracle.com to access the Oracle Cloud.
 
