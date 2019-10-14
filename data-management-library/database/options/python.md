@@ -1,18 +1,30 @@
 ![](img/python-title.png)  
 
-# Lab Introduction #
-Oracle Database In-Memory provides a unique dual-format architecture that enables tables to be simultaneously represented in memory using traditional row format and a new in-memory column format. The Oracle SQL Optimizer automatically routes analytic queries to the column format and OLTP queries to the row format, transparently delivering best-of-both-worlds performance. Oracle Database automatically maintains full transactional consistency between the row and the column formats, just as it maintains consistency between tables and indexes today. The new column format is a pure in-memory format and is not persistent on disk, so there are no additional storage costs or storage synchronization issues.
+# Table of Contents #
 
-This series of labs will guide you through the basic configuration of the In-Memory column store (IM
-column store) as well as illustrating the benefits of its key features:
-- In-Memory Column Store Tables
-- In-Memory Joins and Aggregation
-- In-Memory High Performance Features
+- [Lab Introduction](#lab-introduction)
+- [Lab Sections](#lab-sections)
+- [Section 1: Login to Your Oracle Cloud Account](#section-1--login-to-your-oracle-cloud-account)
+- [Section 2:  Lab Setup](#section-2--lab-setup)
+- [Section 3:  Monitoring the In-Memory Column Store](#section-3--monitoring-the-in-memory-column-store)
+- [Section 4:  Querying the In-Memory Column Store](#section-4--querying-the-in-memory-column-store)
+- [Conclusion](#conclusion)
+
+
+## Lab Introduction 
+This lab guide shows ways of interacting with Oracle Database 19c from Python. The exercise requires a running instance of Oracle 19c, and appropriate access privileges to the database for the user that is going to interact with it. The setup required on the Python side is part of the exercise. The script demonstrates Python on Oracle Database 19c capabilities through a set of exercises:
+- Setting up Python: Software download and installation
+- Introduction to Python Tools and IDE
+- Working with Python: Hello World
+- Querying data in Oracle Database 19c from Python
+- Parse JSON data stored in Oracle Database 19c with Python
+- Working with SDO_GEOMETRY objects in Python
+
 
 
 # Lab Sections #
 1. Login to the Oracle Cloud
-2. Lab setup
+2. Software Download and Installation
 3. Monitoring the In-Memory Column Store
 2. Querying In-Memory Column Store Tables
 4. In-Memory Joins and Aggregations
@@ -22,7 +34,7 @@ column store) as well as illustrating the benefits of its key features:
 - Each participant has completed the Environment Setup lab.
 
 
-## Section 1: Login to your Oracle Cloud Account
+## Section 1: Login to Your Oracle Cloud Account
 
 1.  From any browser go to www.oracle.com to access the Oracle Cloud.
 
@@ -43,8 +55,91 @@ column store) as well as illustrating the benefits of its key features:
 
 ## Section 2 - Lab Setup
 
-All the scripts for this lab were unzipped in the environment setup lab and extracted to the /home/oracle/inmemory/scripts folder.  This lab is also available via virtual box [here](http://retriever.us.oracle.com/apex/f?p=121:22:2345499146566662::NO:RP:P22_CONTAINER_ID,P22_PREV_PAGE:82044,112). 
+### Setup Python
 
-1. 
+Python comes preinstalled on most Linux distributions, and it is available as a package on others. The Python packages can be obtained from the software repository of your Linux distribution using the package manager. There are two Python versions available, 2.X and 3.X, the VM used for this lab comes preinstalled with Python 2.6.
 
+1. Open up a terminal and ssh into your compute instance as the opc user
+
+    ````
+    ssh -i optionskey opc@<your ip address>
+    python -V
+    ````
+
+2.  If python is not installed install it by running the command
+    ````
+    sudo yum install <package-name>
+
+### CX_ORACLE
+
+cx_Oracle is a python module that enables access to Oracle databses.  THis module is supported by Oracle 11.2 and higher and works for both Python 2.X and 3.X.  To install cx_Oracle, Oracle Instant Client and pip have to be installed.
+
+#### Oracle Instant Client
+
+A package that allows Python to interact with the Oracle Database. Oracle Instant Client enables development and production deployment of Oracle Database applications. It is used for popular languages and environments including Node.js, Python and PHP, as well as providing access for OCI, OCCI, JDBC, ODBC and Pro*C applications. In our case, Oracle Instant Client is used as a middle layer by the Python database module (cx_Oracle) to enable interaction with Oracle database from Python code.
+
+1.  Install the Oracle Instant client using the yjm repository
+
+    ````
+    sudo yum install oracle-instantclient18.3-basic.x86_64
+    ````
+
+    ![](img/python/cx_oracle.png)  
+
+2. Inside the directory where the Oracle Instant Client has been extracted, create a symbolic link:
+
+    ````
+    sudo ln -s /usr/lib/oracle/18.3/client64/lib/libclntsh.so.18.1 /usr/lib/oracle/18.3/client64/lib/libclntsh.so
+    ````
+
+    ![](img/python/cx_oracle_2.png)  
+
+#### PIP
+
+Pip is a package management system used to install and manage software packages written in Python. Pip will be used to install cx_Oracle.
+
+1. Switch user (su) to the Oracle user and make a downloads directory
+
+    ````
+    sudo su - oracle
+    cd /u01/app
+    mkdir downloads
+    exit
+    ````
+    ![](img/python/getpippy.png)  
+
+ 2. Download get-pip.py file from: https://bootstrap.pypa.io/get-pip.py
+
+    ````
+    sudo wget https://bootstrap.pypa.io/get-pip.py
+    ````
+    
+    ![](img/python/getpippy2.png)     
+
+
+ 3. The Pip installation file is a Python script and you can install it by invoking the Python interpreter and executing the script:
+
+    ````
+    sudo wget https://bootstrap.pypa.io/get-pip.py
+    ````
+    
+    ![](img/python/getpippy2.png)     
+
+ 4. The Pip installation file is a Python script and you can install it by invoking the Python interpreter and executing the script:
+
+    ````
+    sudo python get-pip.py
+    ````
+    
+    ![](img/python/getpippy3.png)  
+
+    ````
+    pip list
+    ````   
+
+    ![](img/python/getpippy4.png)        
+
+#### Installing cx_ORACLE
+
+1. Now that the prereqs are installed, it's time to install cx_Oracle.  Switch to the **oracle** user.
 
