@@ -2,7 +2,6 @@
 Oracle Resource Manager template to create a Quick Create OKE cluster
 # Resource Manager
 
-
 ## Table of Contents
 
 [Overview](#overview)
@@ -104,7 +103,7 @@ The Oracle Cloud Infrastructure Resource Manager is a fully managed service that
 
 ## Practice 3: Execute Jobs: Plan, Apply, Destroy
 
-Jobs perform actions against the Terraform configuration files associated with a stack. You can perform 3 actions and they are plan, apply and destroy. Since Terraform command execution is not atomic, it is crucial to prevent any race conditions or state corruption from occurring due to parallel execution. To prevent this from happening, the Resource Manager ensures only one job can run against a stack at a given time against a single state file.
+Jobs perform actions against the Terraform configuration files associated with a stack. You can perform 3 actions and they are plan, apply and destroy. Since Terraform command execution is not atomic, it is crucial to prevent any race conditions or state corruption from occurring due to parallel execution. To prevent this from happening, the Resource Manager ensures only one job can run against a stack at a given time against a single state file. 
 
 From the Stack Details page, we can completely manage the stack's configuration (i.e., update, delete, add tag/s, edit variables) and also download the zip archive containing the latest Terraform configuration - which can be especially helpful when troubleshooting.
 
