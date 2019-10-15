@@ -224,7 +224,7 @@ There are several ways to execute Python code.  Here, we start with the presenta
 
 Retrieving records from Oracle database using cursors is a simple as embedding the SQL statement within the cursor().execute statement.
 
-1.  Open up a text editor and enter the following query.
+1.  Open up a text editor and enter the following query.  Save the script as /home/oracle/db_connect.py.
     ````
     ## Run a first sample query
     ## import module cx_Oracle
@@ -250,3 +250,7 @@ Retrieving records from Oracle database using cursors is a simple as embedding t
     con.close()
     ````
 
+2.  Now run it.
+    ````
+    python /home/oracle/db_connect.py
+    ````
