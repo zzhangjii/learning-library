@@ -15,7 +15,7 @@ To get started, choose one (or more!) of the defined learning paths below:
 | | **ADW Journey Workshop**|
 | ![autononmous-database/autonomous-data-warehouse/journey4-adwc](common-template/img/adb.png) | Provision an ADW instance, run queries, load data, manage, scale and use various tools against the ADW instance (Oracle Machine Learning SQL Notebooks, Data Visualization Desktop and Data Integration Platform Cloud). **[Click here to launch the lab](https://www.oracle.com/goto/adw/tutorial)**
 | | **ADB Dedicated Workshop**|
-| ![autonomous-transaction-processing/dedicated](common-template/img/autonomousdb.png) | Provision Exadataa in a private OCI network, an Autonomous Container Database and databases on your dedicated Exadata Infrastructure.  Build and deploy Python, node.js and Java applications stacks on dedicated autonomoous, use OCI cli commands and more! **[Click here to launch the lab](autonomous-transaction-processing/dedicated/Readme.md)**
+| ![autonomous-transaction-processing/dedicated](common-template/img/autonomousdb.png) | Provision Exadataa in a private OCI network, an Autonomous Container Database and databases on your dedicated Exadata Infrastructure.  Build and deploy Python, node.js and Java applications stacks on dedicated autonomoous, use OCI cli commands and more! **[Click here to launch the lab](autonomous-transaction-processing/dedicated/README.md)**
  
 
 
