@@ -30,7 +30,7 @@ The Oracle Cloud Infrastructure Resource Manager is a fully managed service that
   -  URL for the Console: [https://console.eu-frankfurt-1.oraclecloud.com/](https://console.eu-frankfurt-1.oraclecloud.com/)
   -  Oracle Cloud Infrastructure supports the latest versions of Google Chrome, Firefox and Internet Explorer 11
 -  Basic concepts of Terraform
--  Policy for OKE Cluster Creation and Deployment: [Policy for OKE] (https://docs.cloud.oracle.comiaas/Content/ContEng/Concepts/contengpolicyconfig.htm#policyforoke)
+-  [Policy for OKE Cluster Creation and Deployment]: (https://docs.cloud.oracle.com/iaas/Content/ContEng/Concepts/contengpolicyconfig.htm#policyforoke)
  
 
 ## Practice 1: Configuring IAM to control user access in Resource Manager
