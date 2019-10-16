@@ -9,17 +9,23 @@ The automation is driven by the same framework that powers the decade long Oracl
 
 Automatically deploy a fully functional Database environment by leveraging a simple cloud-config script.  The deployment allows for basic customization of the environment, further configurations, like adding extra disks and NICs, is possible post-deployment.
 
-# Lab Sections #
-1. Login to the Oracle Cloud
-2. Create an ssh key pair
-3. Download Marketplace initialization zip and lab scripts
-2. Create a compute instnance
 
 # Lab Assumptions #
 - Each participant has been provided an account on the c4u03
 
+# Table of Contents #
 
-## Section 1: Login to your Oracle Cloud Account
+- [Section 1: Login to the Oracle Cloud](#lab-introduction)
+- [Section 2: Create an SSH key pair](#lab-sections)
+- [Section 3: Download Marketplace initialization zip and Script Zip File](#section-1--login-to-your-oracle-cloud-account)
+- [Section 4:  Create Networking](#section-2--lab-setup)
+- [Section 5:  Create Compute Instance](#section-3--monitoring-the-in-memory-column-store)
+- [Section 6:  Extract Lab Scripts and Prep Environment](#section-6--extract lab-scripts-and-prep-environment)
+
+
+
+## Section 1: Login to Your Oracle Cloud Account
+----------------
 
 1.  From any browser go to www.oracle.com to access the Oracle Cloud.
 
@@ -68,7 +74,7 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 
     ![](img/sshkeygen.png) 
 
-3.  Inspect your .ssh directory.  You should see two files.  optionskey and optionskey.pub.  Copy the contents of the pub file `optionskey.pub` into notepad.  Your key file should be one line. You will need this to access your instance in Section 3.  
+3.  Inspect your .ssh directory.  You should see two files.  optionskey and optionskey.pub.  Copy the contents of the pub file `optionskey.pub` into notepad.  Your key file should be one line. You will need this to access your instance in Section 5.  
 
     ````
     ls -l .ssh
@@ -100,7 +106,10 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 
 4. Click [here]() to download the scripts.zip file.  You will ftp this file to your newly created compute instance later in this lab.
 
-## Section 4 - Create VCN
+## Section 4 - Create Networking
+
+If you are in a PM sponsored Roadshow, skip this step.  Your VCN has already been created for you.
+
 1. Go back to your browser to the tab with your logged in access to the Oracle Cloud.  Click on the hamburger menu.
 ![](img/cloud-homepage.png) 
 
@@ -187,19 +196,17 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 8. Click **Show Shape, Network, Storage Options** if its hideen.  Accept the defaults.  The instance type we are creating is a Virtual Machine.  Keep the selected shape.
 ![](img/create-compute-5.png)
 
-9.  In the Configure networking section, select the dboptions compartment and the VCN you created in an earlier section.   Click on the radio button to **Assign a public address**.  This is important.  DO NOT OVERLOOK THIS STEP!!!!!!!
+9.  In the Configure networking section, select the dboptions compartment and the VCN you created in an earlier section. If you are in a Roadshow, use the VCN precreated by Product Management.  Click on the radio button to **Assign a public address**.  This is important.  DO NOT OVERLOOK THIS STEP!!!!!!!
 ![](img/computevcn.png)
 
 10.  Paste your SSH key pub file contents from the earlier section into this window.  It should be one line.
 ![](img/create-compute-9.png)
 
 11.  Click on **Show Advanced Options**.  Choose the dboptions compartment.  Click on the Choose cloud-init script file.  Click **Choose File**.
+![](img/create-compute-10.png)
 
-  ![](img/create-compute-10.png)
-
-12 .  Select the extracted StandardIO-cloud-init script.  There are multiple scripts dependent on the shape you want.  For this lab, we will be using the Standard IO.
-
-  ![](img/create-compute-11.png)
+12.  Select the extracted StandardIO-cloud-init script.  There are multiple scripts dependent on the shape you want.  For this lab, we will be using the Standard IO.
+![](img/create-compute-11.png)
 
 18.  Once your script is loaded, you should see it in the window.
 ![](img/create-compute-12.png)
@@ -209,7 +216,33 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 
 20.  Locate your public IP address and jot it down. 
 
+## Section 6:  Extract Lab Scripts and Prep Environment ##
+-------------------
+1.  Open up a terminal (MAC) or cygwin emulator as the opc user
 
+    ````
+    sftp -i ~/.ssh/optionskey opc@<Your Compute Instance Public IP Address>
+    ````
 
+2.  Use SFTP to transfer the zip file you downloaded earlier to your instance. 
+
+    ````
+    cd <Location where file was downloaded>
+    cp scripts.zip ~
+    cd ~
+    sftp -i ~/.ssh/optionskey opc@<Enter Your IP Address>
+    sftp> put scripts.zip
+    sftp> exit
+    ````
+
+3.  Once the transfer is complete.  SSH into your instance as the opc user 
+
+    ````
+    ssh -i ~/.ssh/optionskey opc@<Your Compute Instance Public IP Address>
+    chmod 777 scripts.zip
+    sudo su - oracle
+    unzip /home/opc/scripts.zip .
+  
+    ````
 
 
