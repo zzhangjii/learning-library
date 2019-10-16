@@ -258,7 +258,6 @@ Fill out the dialog box:
 
 9. Click **Create**
 
-9. Click **Create**
 
 **NOTE:** If 'Service limit' error is displayed choose a different shape from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1  OR choose a different AD
 
@@ -267,17 +266,22 @@ Fill out the dialog box:
 10. Repeate the steps to create a second compute instance in the **Second VCN**
 
 
-- **Name:** Enter a name 
-- **Availability Domain:** Select availability domain
-- **Image Operating System:** For the image, we recommend using the Latest Oracle Linux available.
-- **Choose Instance Type:** Select Virtual Machine
-- **Choose Instance Shape:** Select VM shape
-- **Configure Boot Volume:** Leave the default
-- **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
-- **Virtual Cloud Network Compartment:** Choose your compartment
-- **Virtual Cloud Network:** Select the Second VCN you created in the previous section. 
+- **Name your instance**: Enter a name 
+- **Choose an operating system or image source**: For the image, we recommend using the Latest Oracle Linux available.
+- **Availability Domain**: Select availability domain
+- **Instance Type**: Select Virtual Machine 
+- **Instance Shape**: Select VM shape (Choose from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1)
+
+**Under Configure Networking**
+- **Virtual cloud network compartment**: Select your compartment
+- **Virtual cloud network**: Choose the VCN 
 - **Subnet Compartment:** Choose your compartment. 
-- **Subnet:** Choose the Subnet
+- **Subnet:** Choose the first Subnet
+- **Use network security groups to control traffic** : Leave un-checked
+- **Assign a public IP address**: Check this option
+- **Boot Volume:** Leave the default
+- **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
+
 
 11. Click **Create**
 
