@@ -172,8 +172,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 7. Switch to the OCI console. From OCI services menu, Click **Instances** under **Compute** 
 
-8. Click Create Instance. Fill out the dialog box:
-
+8. Click **Create Instance**. Fill out the dialog box:
 
 - **Name your instance**: Enter a name 
 - **Choose an operating system or image source**: For the image, we recommend using the Latest Oracle Linux available.
@@ -410,20 +409,25 @@ sudo umount /dev/<VOLUME_NAME>
 
 7. In the Boot Volume Details window Click **Create Instance:**
 
-
-- **Name:** Enter a name (e.g. "boot volume instance").
-- **Availability Domain:** Make sure its same AD as where the block volume was created
+- **Name your instance**: Enter a name 
+- **Choose an operating system or image source**: For the image, we recommend using the Latest Oracle Linux available.
+- **Availability Domain**: Select availability domain
 
 **NOTE :** Boot Volume field is set to BOOT VOLUME and to the boot volume you detached from the original Instance.
 
+- **Instance Type**: Select Virtual Machine 
+- **Instance Shape**: Select VM shape (Choose from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1)
 
-- **Intance Type:** Select Virtual Machine
-- **Instance Shape:** Choose a VM shape (Choose from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1)
-- **SSH Keys:** Choose ‘Paste SSH Keys’ and paste the Public Key saved earlier.
-- **Virtual Cloud Network Compartment:** Select yor compartment 
-- **Virtual Cloud Network:** Select the VCN created earlier
-- **Subnet compartment:** Select yor compartment 
-- **Subnet:** Select the Public subnet.
+**Under Configure Networking**
+- **Virtual cloud network compartment**: Select your compartment
+- **Virtual cloud network**: Choose the VCN 
+- **Subnet Compartment:** Choose your compartment. 
+- **Subnet:** Choose the first Subnet
+- **Use network security groups to control traffic** : Leave un-checked
+- **Assign a public IP address**: Check this option
+- **Boot Volume:** Leave the default
+- **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
+
 
 8. Click **Create Instance**.
 

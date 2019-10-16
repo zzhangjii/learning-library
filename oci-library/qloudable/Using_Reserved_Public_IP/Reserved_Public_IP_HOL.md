@@ -179,27 +179,22 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 8. Click **Create Instance**. Fill out the dialog box:
 
 
-- Name: Enter a name 
-- Availability Domain: Select availability domain
-- Image Operating System: For the image, we recommend using the Latest Oracle Linux available.
-- Choose Instance Type: Select Virtual Machine
-- Choose Instance Shape: Select VM shape (Choose from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1)
-- Configure Boot Volume: Leave the default
-- Add SSH Keys: Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
-- Virtual Cloud Network Compartment: Choose your compartment
-- Virtual Cloud Network: Select the VCN you created in the previous section. 
-- Subnet Compartment: Choose your compartment. 
-- Subnet: Choose the first Subnet
+- **Name your instance**: Enter a name 
+- **Choose an operating system or image source**: For the image, we recommend using the Latest Oracle Linux available.
+- **Availability Domain**: Select availability domain
+- **Instance Type**: Select Virtual Machine 
+- **Instance Shape**: Select VM shape (Choose from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1)
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Reserved_Public_IP/img/RESERVEDIP_HOL0021.PNG" alt="image-alt-text">
+**Under Configure Networking**
+- **Virtual cloud network compartment**: Select your compartment
+- **Virtual cloud network**: Choose the VCN 
+- **Subnet Compartment:** Choose your compartment. 
+- **Subnet:** Choose the first Subnet
+- **Use network security groups to control traffic** : Leave un-checked
+- **Do not assign a public IP address**: Check this option
+- **Boot Volume:** Leave the default
+- **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlie
 
-9. Click **Show Advanced Options**. 
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Reserved_Public_IP/img/RESERVEDIP_HOL0022.PNG" alt="image-alt-text">
-
-10. Click **Networking**. Un-check **Assign Public IP address** option if it is checked
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Using_Reserved_Public_IP/img/RESERVEDIP_HOL0023.PNG" alt="image-alt-text">
 
 11. Click **Create**
 
