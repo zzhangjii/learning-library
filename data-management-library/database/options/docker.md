@@ -15,6 +15,9 @@ Lab courtesy of NATD Solution Engineering Team.  See original [here](http://go.o
 - Each participant has completed the Environment Setup lab.
 
 
+## Section 1: Create a Docker Account
+
+The docker account is needed 
 ## Section 1: Login to your Oracle Cloud Account 
 
 1.  From any browser go to www.oracle.com to access the Oracle Cloud.
@@ -95,12 +98,20 @@ Lab courtesy of NATD Solution Engineering Team.  See original [here](http://go.o
     ````
     ![](img/docker/dockerversion2.png) 
 
-2.  Place your server in permissive mode
+2.  Start your application, restclient, in docker on port 8002 in json format.  
+
 
     ````
     docker ps
     docker run -d -it --rm --name restclient -p=8002:8002 -e DS='json' wvbirder/restclient
     ````
+
+    - "-d" flag runs the container in the background
+    - "-it" flags instructs docker to allocate a pseudo-TTY connected to the container’s stdin, creating an interactive bash capable shell in the container (which we will use in a moment when we connect into the container)
+    - "-h" We give the container a hostname "oracledb-ao" to make it easier to start/stop/remove, reference from other containers, etc
+    - "-p" We map port 8002 from within the container to the same ports on the HOST for accessibility from outside of the container's private subnet (typically 172.17.0.0/16). This allows the container to be accessed from the HOST, for example. The default port for Oracle's tns listener is on port 1521 and port 5600 is used for HTTP access to Enterprise Manager Express
+    - "--name" The name of the container will be "restclient"
+    - "-v" This maps the directory where you downloaded the restclient setup.
     ![](img/docker/dockerps.png) 
 
 3.  Find the public IP address of your instances.  Conpute -> Instance
@@ -117,10 +128,49 @@ Lab courtesy of NATD Solution Engineering Team.  See original [here](http://go.o
 
     ![](img/docker/products.png)    
 
-5.  The restclient container was started earlier   
+5.  The `restclient` container was started earlier with the -rm option.  This means when stopping it will remove ALL allocated resources.  The `ps` command with the `-a` option shows the status of ALL containers that are running.  As you can see, there are no containers running.
 
+    ````
+    docker stop restclient
+    docker ps -a
+    ````
+    ![](img/docker/restclient2.png)
 
+ 6.  Let's start another container on your compute instance's 18002 port.  Type the following command:
 
+    ````
+    docker run -d -it --rm --name restclient -p=18002:8002 -e DS='json' wvbirder/restclient
+    docker ps -a
+    ```` 
+    ![](img/docker/restclient.png)
+
+7.  Go back to your browser and change the port to 18002.
+
+    ![](img/docker/18002.png)
+
+## Docker Networking Basics
+
+Now that you know how to start, stop and relocate a container, let's see how to get information abot the network.
+
+1.  Inspect the network bridge that docker created for you out of the box.  This shows network information about all the containers running on the default bridge. We see that our restclient container is assigned IP Address 172.17.0.2. You can ping that address from the Host server.
+
+    ````
+    docker network inspect bridge
+    ````
+    ![](img/docker/network.png)
+
+2.  Ping that address for your restclient container from your compute instance.
+
+    ````
+    ping 172.17.0.2 -c3
+    ````
+4.  Stop your restclient container
+
+    ````
+    docker stop restclient
+    ````  
+
+## Create 
 
 
 
