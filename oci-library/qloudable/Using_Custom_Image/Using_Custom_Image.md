@@ -4,7 +4,7 @@
 
 [Overview](#overview)
 
-[Pre-Requisites](#pre-requisites)
+[Pre Requisites](#pre-requisites)
 
 [Sign in to OCI Console and create VCN](#sign-in-to-oci-console-and-create-vcn)
 
@@ -40,7 +40,7 @@ In this lab we will use Custom image feature of OCI. Using this feature an exist
 
 **Note:** OCI UI is being updated thus some screenshots in the instructions might be different than actual UI
 
-## Pre-Requisites
+## Pre Requisites
 
 1. Oracle Cloud Infrastructure account credentials (User, Password, Tenant, and Compartment)  
 
@@ -73,6 +73,7 @@ In this lab we will use Custom image feature of OCI. Using this feature an exist
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text">
+
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL002.PNG" alt="image-alt-text">
 

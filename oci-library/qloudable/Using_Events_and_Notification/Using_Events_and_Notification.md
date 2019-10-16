@@ -5,7 +5,7 @@
 
 [Pre-Requisites](#pre-requisites)
 
-[Sign in to OCI Console and configure Notification and Event](#sign-in-to-oci-console-and-configur-notification-and-event)
+[Sign in to OCI Console and configure Notification and Event](#sign-in-to-oci-console-and-configure-notification-and-event)
 
 [Create VCN and compute instance and verify notifications](#create-vcn-and-compute-instance-and-verify-notifications)
 
