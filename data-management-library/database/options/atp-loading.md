@@ -1,4 +1,4 @@
-![](img/atploading/img/atp-title.png)  
+![](img/atp-title.png)  
 
 # Lab Introduction #
 This 20-minute lab walks you through the steps to provision an ATP database and get data from an external database and load it into the Oracle Autonomous Data Warehouse (ADW) on Oracle Cloud Infrastructure (OCI), using SQL Developer Web. 
