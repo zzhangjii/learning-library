@@ -1,7 +1,13 @@
 ![](img/db-options-title.png)  
 
 # Introduction #
-This lab will show you how to login to the cloud and setup your environment in preparation for the day.  Many of our on-premises labs have been moved into OCI.  In this lab, you will create an OCI Compute instnace using the 19c Developer image in the Oracle Marketplace. 
+This lab will show you how to login to the cloud and setup your environment in preparation for the day.  Many of our on-premises labs have been moved into OCI.  In this lab, you will create an OCI Compute instance using the [Oracle Database](https://cloudmarketplace.oracle.com/marketplace/en_US/listing/47726045) image in the Oracle Cloud Marketplace. 
+
+The Oracle Cloud Marketplace is an online store dedicated to marketing cloud business apps and professional services offered by Oracle and it's cloud partners. 
+
+The automation is driven by the same framework that powers the decade long Oracle VM Templates for Oracle Database which have thousands of downloads and customers using it.
+
+Automatically deploy a fully functional Database environment by leveraging a simple cloud-config script.  The deployment allows for basic customization of the environment, further configurations, like adding extra disks and NICs, is possible post-deployment.
 
 # Lab Sections #
 1. Login to the Oracle Cloud
@@ -10,7 +16,7 @@ This lab will show you how to login to the cloud and setup your environment in p
 2. Create a compute instnance
 
 # Lab Assumptions #
-- Each participant has been provided a username and password to the tenancy c4u03
+- Each participant has been provided an account on the c4u03
 
 
 ## Section 1: Login to your Oracle Cloud Account
@@ -27,26 +33,47 @@ This lab will show you how to login to the cloud and setup your environment in p
 
     ![](img/login-tenancy.png)  
 
-4.  Enter your **Username** and **Password** in the input fields and click **Sign In**.
+4.  If your username/password was provided follow step 4a.  If your password leverages single sign on, proceed to step 4b.
+
+    4A. USERNAME/PASSWORD
+    
+    Enter your **Username** and **Password** in the input fields and click **Sign In**.
 
     ![](img/cloud-login.png) 
 
-  **NOTE**: You will likely be prompted to change the temporary password listed in the welcome email. In that case, enter the new password in the password field.
+    **NOTE**: You will likely be prompted to change the temporary password listed in the welcome email. In that case, enter the new password in the password field.
 
-5. Once you successfully login, you will be presented with the Oracle Cloud homepage.  Click on the hamburger icon in the upper left corner.
+    4B. SINGLE SIGN ON
+    
+    Select the **Sign in with Oracle SSO** link and enter your SSO credentials.
+
+    ![](img/singlesignon.png) 
+    
+    ![](img/singlesignon2.png) 
+
+
+
+5. Once you successfully login, you will be presented with the Oracle Cloud homepage.  
   ![](img/cloud-homepage.png) 
 
 ## Section 2 - Create an SSH Key Pair
 
 ### MAC Users ###
-1.  Open up a terminal and type the following commands
-2.  ````
+1.  Open up a terminal and type the following commands.  When prompted for a passphrase click enter. Do not enter a passphrase.
+     ````
     cd ~
-    ssh-keygen -b 2048 -t rsa -f optionskey
     cd .ssh
+    ssh-keygen -b 2048 -t rsa -f optionskey
+    ````
+
+    ![](img/sshkeygen.png) 
+
+3.  Inspect your .ssh directory.  You should see two files.  optionskey and optionskey.pub.  Copy the contents of the pub file `optionskey.pub` into notepad.  Your key file should be one line. You will need this to access your instance in Section 3.  
+
+    ````
+    ls -l .ssh
     more optionskey.pub
     ````
-3.  Copy the contents of `optionskey.pub` into notepad.  Your key file should be one line. You will need this to access your instance.  
 
 ### Windows Users ###
 
@@ -62,57 +89,117 @@ This lab will show you how to login to the cloud and setup your environment in p
     ````
 3.  Copy the contents of `optionskey.pub` into notepad.  Your key file should be one line. You will need this to access your instance.  
 
-## Section 3 - Donwload Marketplace Initialization Zip File
-1.  Click  [here](https://community.oracle.com/servlet/JiveServlet/download/1031489-6-462822/oci-db-app-script-examples.zip) to download the marketplace zip file.
+## Section 3 - Download Marketplace Initialization & Script Zip File
+1.  Click  [here](https://community.oracle.com/servlet/JiveServlet/download/1031489-6-462822/oci-db-app-script-examples.zip) to download the marketplace initialization zip file.
 
 2.  Save it to your downloads folder
 
-3.  Extract the folder and locate the Standardinitio.sh file. You will need this later when you create your compute instance.
+3.  Unzip the folder and locate the StandardIO-db.cloud-init file. You will need this later when you create your compute instance.
 
   ![](img/db-marketplace.png)
 
-4. Click [here]() to download the scripts.zip file.  You will sftp this file to your compute instance later in this lab.
+4. Click [here]() to download the scripts.zip file.  You will ftp this file to your newly created compute instance later in this lab.
 
+## Section 4 - Create VCN
+1. Go back to your browser to the tab with your logged in access to the Oracle Cloud.  Click on the hamburger menu.
+![](img/cloud-homepage.png) 
 
-## Section 4 - Create a Compute Instance with the DB Marketplace Image
+2.  Click on **Networking** -> **Virtual Cloud Networks** to create a virtual cloud network for your instance.  Each particpant will create their own network, unless noted otherwise.
 
-1. Select **Compute** -> **Instances** to go to the screen to create your instance.
+3.  Before creating the VCN, it is important you **select the correct compartment**.  If you are in a roadshow, you will be provided with the correct compartment.  In this example we will use `dboptions1105`.  **Do NOT select the root compartment**.
+  
+    ![](img/create-compartment.png)
+  
+4.  Click the Create Virtual Cloud Network button.
+    ![](img/createvcn.png)
+
+5.  Enter the following:
+    - Name:  Enter the name for your vcn (i.e. first initial,middle initial, lastname)
+    - Create in Compartment: Select the dboptions compartment
+    - Select the 2nd radio button - Create VCN PLUS RELATED RESOURCES
+    - Uncheck DNS RESOLUTION
+    - Accept all other defaults
+
+    Scroll down and click the Create button.  Click Close after your VCN is created.
+  
+    ![](img/vcn.png)
+
+6. Once the VCN is created, create the security list.  Click on the Security Lists link under the Resources section.
+
+    ![](img/vcncreation.png)
+
+7.  Click **Add Ingress Rules** to create rules for a future lab.
+
+    ![](img/addingress.png)
+
+8.  Update the SOURCE CIDR and the PORT RANGE.  
+
+    ````
+    SOURCE RANGE: 0.0.0.0/0
+    PORT RANGE:  8085
+    ````
+    ![](img/addingress2.png)
+
+9.  Click on **Additional Ingress Rule** to add additional rules.  Under Ingress Rule 2, add the same SOURCE CIDR value and a destination port range of 9080.  Repeat step 8 and 9 until you've added 5 rules.
+
+    ````
+    SOURCE RANGE: 0.0.0.0/0
+    PORT RANGE:  9080
+
+    SOURCE RANGE: 0.0.0.0/0
+    PORT RANGE:  8002
+
+    SOURCE RANGE: 0.0.0.0/0
+    PORT RANGE:  18002
+
+    SOURCE RANGE: 0.0.0.0/0
+    PORT RANGE:  5600
+    ````
+    ![](img/addingress4.png)  
+
+10. Once complete, the Ingress Rules should have the following port range.  Double check these values to ensure they are correct.
+
+    ![](img/addingress5.png) 
+
+## Section 5 - Create a Compute Instance with the DB Marketplace Image
+
+1. Go back to your browser to the tab with your logged in access to the Oracle Cloud.  Click on the hamburger menu.
+![](img/cloud-homepage.png) 
+
+2. Select **Compute** -> **Instances** to go to the screen to create your instance.
   ![](img/compute-instance.png)
 
-7. Before creating the instance, it is important you **select the correct compartment**.  Your instructor will provide you the correct compartment.  In this example we will use `dboptions1105`.  
+3. Before creating the instance, it is important you **select the correct compartment**.  Your instructor will provide you the correct compartment.  In this example we will use `dboptions1105`.  **Do NOT select the root compartment**.
 ![](img/create-compartment.png)
 
-8. Click the **Create Instance** button.
+4. Click the **Create Instance** button.
 ![](img/create-compute.png)
 
-9. Enter your desired instance name.  Use your first initial, middle initial and last name.  *Do NOT enter kdmishra, that is for example purposed only*.  Click on the **Change Image Source** button.
+5. Enter your desired instance name.  Use your first initial, middle initial and last name.  *Do NOT enter kdmishra, that is for example purposes only*.  Click on the **Change Image Source** button.
 ![](img/create-compute-2.png)
 
-10.  This is the OCI Marketplace.  In the Browse All Images screen, click on **Oracle Images** to select your Oracle Database Marketplace image.  Select the **Oracle Database app** in the marketplace.
+6.  This is the OCI Marketplace library of images.  In the Browse All Images screen, click on **Oracle Images** to select your Oracle Database Marketplace image.  Select the **Oracle Database** app name in the marketplace.
 ![](img/create-compute-3.png)
 
-11. Accept the standards and conditions and click the **Select Image** button.
+7. Scroll down, accept the standards and conditions and click the **Select Image** button.
 ![](img/create-compute-4.png)
 
-12. Click **Show Shape, Network, Storage Options**.  Accept the defaults.  The instance type we are creating is a Virtual Machine.
+8. Click **Show Shape, Network, Storage Options** if its hideen.  Accept the defaults.  The instance type we are creating is a Virtual Machine.  Keep the selected shape.
 ![](img/create-compute-5.png)
 
-13.  In the VCN section, ensure you have the correct dboptions compartment selected.  Click on the radio button to **Create VCN Plus Related Resources**.
-![](img/create-compute-6.png)
+9.  In the Configure networking section, select the dboptions compartment and the VCN you created in an earlier section.   Click on the radio button to **Assign a public address**.  This is important.  DO NOT OVERLOOK THIS STEP!!!!!!!
+![](img/computevcn.png)
 
-  ![](img/create-compute-7.png)
-
-14.  Click on the radio button to **Assign a public address**
-![](img/create-compute-8.png)
-
-15.  Paste your SSH key pub file contents into this window.
+10.  Paste your SSH key pub file contents from the earlier section into this window.  It should be one line.
 ![](img/create-compute-9.png)
 
-16.  Click on **Show Advanced Options**.  Choose the dboptions compartment.  Click on the Choose cloud-init script file.  Click **Choose File**
-![](img/create-compute-10.png)
+11.  Click on **Show Advanced Options**.  Choose the dboptions compartment.  Click on the Choose cloud-init script file.  Click **Choose File**.
 
-17.  Select the extracted StandardIO-cloud-init script.  There are multiple scripts dependent on the shape you want
-![](img/create-compute-11.png)
+  ![](img/create-compute-10.png)
+
+12 .  Select the extracted StandardIO-cloud-init script.  There are multiple scripts dependent on the shape you want.  For this lab, we will be using the Standard IO.
+
+  ![](img/create-compute-11.png)
 
 18.  Once your script is loaded, you should see it in the window.
 ![](img/create-compute-12.png)
@@ -120,9 +207,9 @@ This lab will show you how to login to the cloud and setup your environment in p
 19.  Click the button to create your instance.  Your instance will be in provisioning state.  Verify that you chose the correct image.  In a few minutes you can also verify that you have a public IP address.  View the Work Requests at the bottom, this will show where your instance is.
 ![](img/create-compute-13.png)
 
-20.  Once you have a public IP address. Open up a terminal window.
+20.  Locate your public IP address and jot it down. 
 
-21.  We will use the key we generated earlier to SSH into the instance that is provisioning.  
+
 
 
 
