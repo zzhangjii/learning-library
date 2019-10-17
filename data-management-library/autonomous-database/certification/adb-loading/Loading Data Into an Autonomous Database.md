@@ -190,7 +190,7 @@ begin
    DBMS_CLOUD.create_credential (  
    credential_name =\> 'OBJ_STORE_CRED',  
    username =\> 'buket-user',  
-   password =\> 'h4Hh7d-4hZE:OGGob+At'  
+   password =\> 'etfUIb1}Na5P-lLhq(dQ'  
    ) ;  
 end;  
 /
@@ -680,7 +680,7 @@ Create Object Store Credentials earlier.
 For file_uri_list, specify the URL that points to the location of the file
 staged in your object store. See screenshots below for how to obtain this.
 
-[Click here](https://stbeehive.oracle.com/content/dav/st/DBPM_Repo/Public%20Documents/cert/adw-loading-copy-data.txt)
+[Right Click here to download](https://stbeehive.oracle.com/content/dav/st/DBPM_Repo/Public%20Documents/cert/adw-loading-copy-data.txt)
 for an example script. In the script, the only line you need to change for each
 table is the * `file_uri_list parameter` IF the credential you created is called
 OBJ_STORE_CRED. If you called your credential a different name, you also need to
@@ -703,24 +703,32 @@ the corresponding dbms_cloud.copy_data statement as shown below
 
 ```
 begin
-dbms_cloud.copy_data(table_name =\>'CHANNELS',credential_name=\>'OBJ_STORE_CRED',
-file_uri_list=\>'https://objectstorage.us-ashburn-1.oraclecloud.com/n/ospaadb/b/bucket-20190326-1401/o/chan_v3.dat',format =\> json_object('ignoremissingcolumns' value 'true', 'removequotes' value 'true')
+dbms_cloud.copy_data(table_name =\>'CHANNELS',
+credential_name=\>'OBJ_STORE_CRED',
+file_uri_list=\>'https://objectstorage.us-ashburn-1.oraclecloud.com/n/ospaadb/b/bucket-20190326-1401/o/chan_v3.dat',
+format =\> json_object('ignoremissingcolumns' value 'true', 'removequotes' value 'true')
 );
 end;
 /
 ```
 
-![data loading script](media/94a36524831e1e758a00eb3941afe8c5.jpg)
+![](img/find-and-replace.png)
 <p align="center">Figure 4-4</p>
 
-[](https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/adwc/OBE_Loading%20Your%20Data/files/data_loading_script.txt)
+After you have updated the `file_uri-list` values, copy and run the statements in your SQL Worksheet.
 
 3. After you run the procedure, observe that the data has been copied from the
 object store to the tables in your Autonomous database by clicking the table
 name in SQL Developer
 
-![result of loading table](media/6fdeb61588644d2d2acec31caf6c80a1.png)
+![](img/load-tables.png)
 <p align="center">Figure 4-5</p>
+
+4. You can now view your table data.
+
+![](img/view-downloaded-data.png)
+<p align="center">Figure 4-5</p>
+
 
 [Back to Top](#table-of-contents) 
 

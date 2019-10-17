@@ -26,7 +26,7 @@ begin
  dbms_cloud.copy_data(
     table_name =>'CUSTOMERS',
     credential_name =>'OBJ_STORE_CRED',
-    file_uri_list =>'https://swiftobjectstorage.<region name>.oraclecloud.com/v1/<tenant name>/tutorial_load_adwc/cust1v3.dat',
+    file_uri_list =>'https://objectstorage.us-*******-1.oraclecloud.com/n/*******/b/bucket-sanfran-*****/o/cust1v3.dat',
     format => json_object('ignoremissingcolumns' value 'true', 'removequotes' value 'true', 'dateformat' value 'YYYY-MM-DD-HH24-MI-SS')
  );
 end;
