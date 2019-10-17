@@ -681,9 +681,9 @@ For file_uri_list, specify the URL that points to the location of the file
 staged in your object store. See screenshots below for how to obtain this.
 
 [Click
-here](https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/adwc/OBE_Loading%20Your%20Data/files/data%20loading%20script.txt)
+here](files/adw-loading-copy-data.txt)
 for an example script. In the script, the only line you need to change for each
-table is the file_uri_list parameter IF the credential you created is called
+table is the * `file_uri_list parameter` IF the credential you created is called
 OBJ_STORE_CRED. If you called your credential a different name, you also need to
 change the credential_name line.
 
@@ -691,13 +691,13 @@ To obtain the file_uri_list for each file you want to load, go to your storage
 bucket (as described above when you created it), and for each object to load,
 click on the 3 dots to the right and select, View Object Details:
 
-![](media/446f0eefb0d689f09c58a1b68a07d3cb.png)
+![](img/bucket-object-view.png)
 <p align="center">Figure 4-2</p>
 
 The object details windows appears, copy the URL Path (URI), then past this on
 the corresponding dbms_cloud.copy_data statement as shown below
 
-![](media/1b0932000676b6023a7e31a5a5b72452.png)
+![](img/object-file-url.png)
 <p align="center">Figure 4-3</p>
 
 2. Below is an example of what your statement should look like when you run it, filled in with your information instead. Remember, one statement per table being loaded.
