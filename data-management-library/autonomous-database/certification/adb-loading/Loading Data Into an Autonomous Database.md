@@ -680,8 +680,7 @@ Create Object Store Credentials earlier.
 For file_uri_list, specify the URL that points to the location of the file
 staged in your object store. See screenshots below for how to obtain this.
 
-[Click
-here](files/adw-loading-copy-data.txt)
+[Click here](https://stbeehive.oracle.com/content/dav/st/DBPM_Repo/Public%20Documents/cert/adw-loading-copy-data.txt)
 for an example script. In the script, the only line you need to change for each
 table is the * `file_uri_list parameter` IF the credential you created is called
 OBJ_STORE_CRED. If you called your credential a different name, you also need to
