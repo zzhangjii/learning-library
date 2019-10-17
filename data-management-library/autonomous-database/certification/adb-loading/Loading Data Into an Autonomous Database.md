@@ -212,7 +212,6 @@ The copy_data procedure of the DBMS_CLOUD package requires that target tables
 must already exist in in your Autonomous database. To create the appropriate
 tables, run the code below in SQL Developer.
 
-Click **[here](files/adw-loading.sql)** to download the text file that contains the SQL statments to create the tables. 
 
 1. Copy and paste all this code into the SQL worksheet in SQL Developer and click run script.
 
@@ -668,11 +667,9 @@ RELY DISABLE NOVALIDATE;
 
 Running the create statements and results will look like this in SQL Developer.
 
-![](media/e94862b4d40362f7a21143d19c45c5dc.png)
+![](img/create-tables.png)
 <p align="center">Figure 4-1</p>
 
-Now run the copy_data procedure to copy the data staged in your object store to
-your Autonomous Database tables. 
 
 In a SQL Developer worksheet, use the copy_data procedure of the DBMS_CLOUD
 package to copy the data staged in your object store.
