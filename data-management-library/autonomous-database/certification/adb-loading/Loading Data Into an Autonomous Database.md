@@ -158,7 +158,7 @@ Because I created each of you as a federated user, you cannot create Auth Tokens
 ![](img/bucket-user.png)
     <p align="center">Figure 2-1</p>
 
-For the next part of our lab, you will need to use this Auth Token: h4Hh7d-4hZE:OGGob+At
+For the next part of our lab, you will need to use this Auth Token: etfUIb1}Na5P-lLhq(dQ
 
 
 [Back to Top](#table-of-contents) 
