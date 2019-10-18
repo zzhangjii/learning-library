@@ -189,7 +189,7 @@ Now that you have an object store Auth Token, you will store your credentail in 
 begin  
    DBMS_CLOUD.create_credential (  
    credential_name => 'OBJ_STORE_CRED',  
-   username => 'buket-user',  
+   username => 'bucket-user',  
    password => 'etfUIb1}Na5P-lLhq(dQ'  
    ) ;  
 end;  
