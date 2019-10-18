@@ -1,4 +1,4 @@
-![](./media/adbtitle.png)
+![](./media/adb-certification-title.png)
 # Connecting to Autonomous Database
 
 ## Table of Contents
@@ -12,37 +12,38 @@
 
 ## Module 1:  Download the Client Credentials (wallet)
 
-The connection wallet provides the only authentication information that
-can be used to connect to your ATP database. This wallet must be
-downloaded to the client that will be connecting to the database. The
+The connection wallet provides the authentication information that
+can be used to connect to your Autonomous database.  The
 wallet can be downloaded from two locations, the Database Details page
-or the Service Console
+or the Service Console, under the Administration tab.
 
-1. The wallet is downloaded from the **Administration** page in the ATP
-service console. Continuing from where we left off in the previous lab,
-select **Download Client Credentials:**
+1.  Let's download the wallet from the Database Details page. Click on **DB Connection**.
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.23.10%20PM.png](./media/image2.png)
+![](./media/adb-dbconnection.png)
 <p align="center">Figure 1-1</p>
 
-2. Specify a password of your choice for the wallet. Note that this
-password is separate from the **Admin** user password created earlier
-(but the same password can be used). Make sure you know where the file
-gets downloaded to so you can find it on your system.
+2. Here you will click on **Download** to download the wallet.  You can also veiw the connection strings to use with your TNS names.
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.23.30%20PM.png](./media/image3.png)
+![](./media/adb-db-connection-page.png)
 <p align="center">Figure 1-2</p>
 
-3. **Alternatively** use the DB Connection button in the main Database
-Details page to download the credentials:
+3. Specify a password of your choice for the wallet. Note that this
+password is separate from the **Admin** user password created earlier
+(but the same password can be used). 
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.23.36%20PM.png](./media/image4.png)
+![](./media/adb-wallet-pw.png)
 <p align="center">Figure 1-3</p>
 
-4. This step opens up a screen where the wallet can be downloaded as well as
-connection strings be copied from (more on this in other modules)
+4.  Make sure you know where the file  gets downloaded to so you can find it on your system.  Depending on your browser, you can open your file window or open the zip file by select the 'V' by the file name.
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.23.44%20PM.png](./media/image5.png)
+![](./media/adb-viewwallet-file.png)
+<p align="center">Figure 1-4</p>
+
+5. **Alternatively** you can download the wallet from the Service Console. The wallet is downloaded from the **Administration** page in the Autonomous Database service console. 
+
+![](./media/adb-serviceconsole-wallet.png)
+<p align="center">Figure 1-5</p>
+
 
 [Back to Top](#table-of-contents)
 
@@ -52,29 +53,31 @@ connection strings be copied from (more on this in other modules)
 
 1. Navigate to the location in your system where the file was downloaded
 (typically your DOWNLOADS directory). 
-2. In this example the file will be called *wallet\_ATPXWEEK.zip*, the format of the file is always
-“wallet\_$dbname.zip”. 
+
+2. The format of the file is always
+“wallet\_$dbname.zip”.   My zip file was called Wallet_DB201910111446.zip because that is the name of my database.
+
 3. Extract the contents of the wallet into a
 directory (using a zip utility, usually by right clicking on the file),
 you will find the following files:
 
-![](./media/image6.png)
+![](./media/wallet-contents.png)
 <p align="center">Figure 2-1</p>
 
 4. There are 4 files you will be working with during the different labs.
 Some tools use the wallet file (.zip) and some use specific files
-contained in the wallet. The files used in the labs are:
+contained in the wallet. 
 
-1.  **wallet\_ATPXWEEK.zip** – the wallet itself
+*  **Wallet_DB201910111446.zip** – the wallet itself
 
-2.  **sqlnet.ora** – points to the location of the wallet for sqlnet
+*  **sqlnet.ora** – points to the location of the wallet for sqlnet
     connections
 
-3.  **tnsnames.ora** – connection description for the database service
+*  **tnsnames.ora** – connection description for the database service
     (please note this file contains connection description for all the
-    databases that exist in that cloud account)
+    databases that exist in this cloud account)
 
-4.  **ojdbc.properties** – points to the location of the wallet for jdbc
+*  **ojdbc.properties** – points to the location of the wallet for jdbc
     connections
     
 [Back to Top](#table-of-contents)   
@@ -83,61 +86,35 @@ contained in the wallet. The files used in the labs are:
 
 ## Module 3:  Connecting to the Database using SQL Developer 
 
-*(Make sure you are running the latest version of SQL Developer 18.4. Some older versions will not work with ATP, see lab introductions on how to install)*
+We are going to use SQL Developer Web interface from the Oracle Cloud.  
 
-1. Start SQL Developer (by clicking the icon on your desktop or selecting
-from the Windows Start menu) and create a connection for your database
-using the default administrator account, ADMIN, by following these
-steps.
+1. From the **Service Console**, click on **Development**.  This will display the options that you can run directly from the Oracle Cloud.  Click on **SQL Developer Web**.
 
-2. Click the **Create Connection** icon in the Connections toolbox on the
-top left of the SQL Developer homepage.
 
-![](./media/image7.png)
+![](./media/startup-sqldevweb.png)
 <p align="center">Figure 3-1</p>
 
-3. The new Database Connection screen will appear:
+2.  Connect to SQL Dev Web by supplying your login credentials and press **Sign in**. For the Username/Password, you can use **admin** and the password when you provisioned your autonomomous database.
 
-![](./media/image8.png)
+![](./media/sqldevweb-login.png)
 <p align="center">Figure 3-2</p>
 
-4. Fill in the connection details as below:
+3.  Once you are connected, a new tab will open for Sql Developer Worksheet.    If this is the first time that you have logged in, you can view a quick highlight of the features.
 
-**Connection Name:** `admin`
-**Username:** `admin`
-**Password:** *The admin password you specified during database provisioning*
-**Connection Type:** *Cloud Wallet*
-**Configuration File:** Enter the full path for the wallet file you downloaded before (in my example wallet\_ATPXWEEK.zip), or click the Browse button to point to the location of the file.
-
-
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.24.09%20PM.png](./media/image9.png)
+![](./media/sqldevweb-worksheet-page.png)
 <p align="center">Figure 3-3</p>
 
-**Service:** *select the service configured specifically for ATP services ( **$dbname\_TP** service) for you database. Many services may be listed but make sure you pick the one for with the database name you created. In this example its **atpxweek\_TP.
+4. You can view the features at anytime, by clicking on the binoculars on the right had side of the page.
 
-5. Test your connection by clicking the **Test** button, if it succeeds
-
-6. Save your connection information by clicking **Save**
-
-7. Connect to your database by clicking the **Connect** button.
-
-8. See below for completed input and test. Notice also that after you save
-your connection it will appear on the list of connections on the top
-left corner of the main dashboard, under connections.
-
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.28.02%20PM.png](./media/image10.png)
+![](./media/sqldevweb-biniculars.png)
 <p align="center">Figure 3-4</p>
 
-9. Now that you are connected run test a query. The ATP (or ADW) database
+5. Now that you are connected, we will run a query. The Autonomus database
 you created contains the sample Oracle Sales History (SH) schema, we
 will use this schema to run a test query to make sure everything is
 working correctly. 
 
-10. Copy the SQL below and paste it on the query builder
-screen in SQL Developer (with standard Windows copy and paste), then
-click F5 or the “Run Script” button as indicated below. Make sure you
-are connected to your database, per the last step on the previous
-process.
+6. Copy the SQL below and paste it into the worksheet (with standard Windows copy and paste), then click on the “Run Script” button as indicated below. 
 
 ```
     SELECT channel_desc, TO_CHAR(SUM(amount_sold),'9,999,999,999')
@@ -157,24 +134,27 @@ process.
     GROUP BY channel_desc;
 ```
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.28.36%20PM.png](./media/image11.png)
-<p align="center">Figure 3-4</p>
-
-11. And you will see the result of your query on the bottom **Script Output** section
-
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.28.45%20PM.png](./media/image12.png)
+![](./media/sqldevweb-runquery.png)
 <p align="center">Figure 3-5</p>
 
-**You have successfully connected and run an operation against ATP with SQL Developer. We will use SQL Developer throughout other labs.**
+7. You will see the result of your query on the bottom **Query Result** section
+
+![](./media/sqldevweb-queryresult.png)
+<p align="center">Figure 3-6</p>
+
+8.  SQL Developer Web also has a feature called **Data Modeler**.  Click on the **Data Modeler** tab.  Change the schema from Admin to SH, and select Tables object.  You will see the sample data tables that are owned by SH.  Then drag the Channels table and Cost table into the Data Modeler section.  It will then pictorially show you the relationship between the two tables.
+
+![](./media/sqldevweb-datamodeler.png)
+<p align="center">Figure 3-7</p>
 
 [Back to Top](#table-of-contents) 
 ***** 
 
 ## Module 4:  Connecting to the Database using Oracle Machine Learning (OML)
 
-Another tool that can be used to connect and develop in ATP is the
+Another tool that can be used to connect and develop in Autonomous Database is the
 included Oracle Machine Learning OML Notebook based environment. Because
-OML is easy to access from anywhere and included with the ATP service it
+OML is easy to access from anywhere and included with the Autonomous service it
 provides an easy and fast environment to work with ATP. This
 browser-based application provides a web interface to run SQL queries
 and scripts, which can be grouped together within a notebook. Notebooks
@@ -200,24 +180,23 @@ users.
   - Enables and Supports Deployments of Enterprise Machine Learning
     Methodologies.
 
-Once you have a database created in ATP, we need to create an OML user,
+Once you have a database created in Autonomous Database, we need to create an OML user,
 which is equivalent to creating a database user.
 
-1. If you are not already logged into the ATP Service Console, in the main
-ATP service page select Service Console:
+1. If you are not already logged into the Service Console, in the main
+Autonomous Database details page select Service Console:
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.28.53%20PM.png](./media/image13.png)
+![](./media/adb-clickserviceconsole.png)
 <p align="center">Figure 4-1</p>
 
-2. On the next page log in with your ADMIN ATP user name/password and click **Sign in:**
 
-3. Select Administration from the top left and once on the Administration
+2. Select Administration from the top left and once on the Administration
 page select **Manage Oracle ML Users**:
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.29.00%20PM.png](./media/image14.png)
+![](./media/adb-manageoml-user.png)
 <p align="center">Figure 4-2</p>
 
-4. If required (you may not see this page), log into the OML Administration
+3. If required (you may not see this page), log into the OML Administration
 console which is different than the database administration console but
 uses the same ADMIN account created when the database was created. Fill
 in the **ADMIN password** and click **Sign In**
@@ -225,53 +204,55 @@ in the **ADMIN password** and click **Sign In**
 ![../Desktop/Screen%20Shot%202019-04-22%20at%2012.29.08%20PM.png](./media/image15.png)
 <p align="center">Figure 4-3</p>
 
-5. Next create the actual OML user. Click the **Create** button:
+4. Next create the actual OML user. Click the **Create** button:
 
 ![../Desktop/Screen%20Shot%202019-04-22%20at%2012.29.14%20PM.png](./media/image16.png)
 <p align="center">Figure 4-4</p>
 
-6. This will open up the user creation page, fill in the information for
+5. This will open up the user creation page, fill in the information for
 your new OML user and click **Create**. This is a completely new user
 account that will be used anytime you want to access OML. Make sure you
 keep this information. Notice that you can specify an email address
 where your user information and a direct link to the OML login will be
 emailed to you. This will help you later when you need to reconnect to
-OML.
+OML.  Unchceck Generate Password ... and supply a password for the new OML user.
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.29.21%20PM.png](./media/image17.png)
+![](./media/adb-createoml-user.png)
 <p align="center">Figure 4-5</p>
 
-7. **You now have a new OML user\!** To connect to OML as your new user,
+6. **You now have a new OML user\!** To connect to OML as your new user,
 click on the Home Icon on the top right, pointed at by the arrow (or the
 link you received by email). This will open up a new tab with the OML
 home page. This time log in with the user you just created.
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.29.27%20PM.png](./media/image18.png)
+![](./media/adb-omltbednar-created.png)
 <p align="center">Figure 4-6</p>
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.29.36%20PM.png](./media/image19.png)
+![](./media/oml-signin.png)
 <p align="center">Figure 4-7</p>
 
 
-8. You are connected as an OML Notebook user. Run the same query we ran in
+7. You are connected as an OML Notebook user. Run the same query we ran in
 SQL Developer now in OML. Select **Run SQL Scripts** from Quick Actions:
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.29.44%20PM.png](./media/image20.png)
+![](./media/oml-runsqlscript.png)
 <p align="center">Figure 4-8</p>
 
-9. Copy the same SQL statement you ran in SQL Developer above and paste it
+8. Copy the same SQL statement you ran in SQL Developer above and paste it
 right under the **%script** statement then select the **Run all
 Paragraphs** icon, as shown below:
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.29.49%20PM.png](./media/image21.png)
+![](./media/oml-runsqlscript-2.png)
 <p align="center">Figure 4-9</p>
 
-10. The results are shown below (and same as on SQL Developer):
+9. The results are shown below (and same as on SQL Developer):
 
-![../Desktop/Screen%20Shot%202019-04-22%20at%2012.29.55%20PM.png](./media/image22.png)
+![](./media/oml-script-results.png)
 <p align="center">Figure 4-10</p>
 
-**You have successfully connected and run an operation against ATP with Oracle OML. We will use OML in other labs.**
+**You have successfully connected and run an operation against an Autonomous Database with Oracle OML.  We will use OML in other labs.**
+
+**For an additional OML Hands on Lab experience, there is a Qloudable lab called: Using Machine Learning in ADW.  Go to: [Qloudable Login for Oracle](https://ocitraining.qloudable.com/private/publisher/oci-jumpstart?ch=OCIemp&token=PhoR4eoMLsTQvrRZLrwpUVYk8a6VgOSZM3kNKp4qp0sEPWVH).  If you do not have a Qlouable account, create one.  There are quite a few labs that can be run for free.**
 
 ***END OF LAB***
 
