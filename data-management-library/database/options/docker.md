@@ -138,11 +138,11 @@ The docker account is needed
 
  6.  Let's start another container on your compute instance's 18002 port.  Type the following command:
 
-    ````
-    docker run -d -it --rm --name restclient -p=18002:8002 -e DS='json' wvbirder/restclient
-    docker ps -a
-    ```` 
-    ![](img/docker/restclient.png)
+        ````
+        docker run -d -it --rm --name restclient -p=18002:8002 -e DS='json' wvbirder/restclient
+        docker ps -a
+        ```` 
+        ![](img/docker/restclient.png)
 
 7.  Go back to your browser and change the port to 18002.
 
