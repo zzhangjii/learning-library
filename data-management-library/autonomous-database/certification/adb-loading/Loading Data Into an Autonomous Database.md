@@ -680,8 +680,7 @@ Create Object Store Credentials earlier.
 For file_uri_list, specify the URL that points to the location of the file
 staged in your object store. See screenshots below for how to obtain this.
 
-[Right Click here to download](files/adw-loading-copy-data.txt)
-for an example script. In the script, the only line you need to change for each
+[Right click here to open in a new tab and copy the contents](files/adw-loading-copy-data.txt). In the script, the only line you need to change for each
 table is the * `file_uri_list parameter` IF the credential you created is called
 OBJ_STORE_CRED. If you called your credential a different name, you also need to
 change the credential_name line.
