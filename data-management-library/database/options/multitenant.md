@@ -106,7 +106,7 @@ alter pluggable database oe_dev close;
 drop pluggable database oe_dev including datafiles;
 ````
 
-9. Leave the ``OE`` open with the load running against it for the rest of the labs.
+9. Leave the ``OE`` pluggable database open with the load running against it for the rest of the labs.
 
 You can see that the clone of the pluggable database worked without having to stop the load on the source database. In the next lab you will look at how to refresh a clone.
 
@@ -161,7 +161,7 @@ alter pluggable database oe_refresh close;
 drop pluggable database oe_refresh including datafiles;
 ````
 
-7. Leave the ``OE`` open with the load running against it for the rest of the labs.
+7. Leave the ``OE`` pluggable database open with the load running against it for the rest of the labs.
 
 ## Section 3: PDB Relocation
 
