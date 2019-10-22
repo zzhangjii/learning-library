@@ -4,9 +4,15 @@
 
 - [Lab Introduction](#lab-introduction)
 - [Setup](#setup)
-- [Section 1: PDB Hot Clones](#section-1-pdb-hot-clones)
-- [section 2: PDB Refresh](#section-2-pdb-refresh)
-- [Section 3: PDB Relocation](#section-3-pdb-relocation)
+- [Section 1: Create PDB](#section-1-create-pdb)
+- [Section 2: Clone a PDB](#section-2-clone-a-pdb)
+- [Section 3: Unplug a PDB](#section-3-unplug-a-pdb)
+- [Section 4: Plug in a PDB](#section-4-plug-in-a-pdb)
+- [Section 5: Drop a PDB](#section-5-drop-a-pdb)
+- [Section 6: Clone an Unplugged PDB](#section-6-clone-an-unplugged-pdb)
+- [Section 7: PDB Hot Clones](#section-7-pdb-hot-clones)
+- [section 8: PDB Refresh](#section-8-pdb-refresh)
+- [Section 9: PDB Relocation](#section-9-pdb-relocation)
 
 
 ## Lab Introduction
@@ -46,7 +52,421 @@ All the scripts for this lab are located in the /home/oracle/multitenant/scripts
     ![](img/inmemory/cd-scripts.png) 
 
 
-## Section 1: PDB Hot Clones
+## Section 1: Create PDB
+This section looks at how to create a brand-new PDB.
+
+The tasks you will accomplish in this lab are:
+- Create a pluggable database ``PDB2`` in the container database ``CDB1``
+
+1. Connect to ``CDB1``
+````
+sqlplus /nolog
+connect sys/oracle@localhost:1523/cdb1 as sysdba
+````
+
+2. Check to see who you are connected as.
+````
+select
+     'DB Name: '  ||Sys_Context('Userenv', 'DB_Name')||
+  ' / CDB?: '     ||case
+                      when Sys_Context('Userenv', 'CDB_Name') is not null then 'YES'
+                      else                                                     'NO'
+                    end||
+  ' / Auth-ID: '   ||Sys_Context('Userenv', 'Authenticated_Identity')||
+  ' / Sessn-User: '||Sys_Context('Userenv', 'Session_User')||
+  ' / Container: ' ||Nvl(Sys_Context('Userenv', 'Con_Name'), 'n/a')
+   "Who am I?"
+from Dual
+/
+````
+
+3. Create a pluggable database ``PDB2``
+````
+show pdbs;
+create pluggable database PDB2 admin user PDB_Admin identified by oracle;
+alter pluggable database PDB2 open;
+show pdbs;
+````
+
+4. Change the session to point to ``PDB2``
+````
+alter session set container = PDB2;
+````
+
+5. Grant ``PDB_ADMIN`` the necessary privileges and create the ``USERS`` tablespace for ``PDB2``
+````
+grant SysDBA to pdb_admin;
+
+create tablespace Users
+datafile size 20M
+autoextend on next 1M maxsize unlimited
+segment space management auto;
+
+alter database default tablespace Users;
+
+grant create table, unlimited tablespace to pdb_admin;
+````
+
+6. Connect as ``PDB_ADMIN`` to ``PDB2``
+````
+connect pdb_admin/oracle@localhost:1523/pdb2
+````
+
+7. Create a table ``MY_TAB`` in ``PDB2``
+````
+create table my_tab(my_col number);
+
+insert into my_tab values (1);
+
+commit;
+````
+
+8. Change back to ``SYS`` in the container database ``CDB1`` and show the tablespaces and datafiles created
+````
+connect sys/oracle@localhost:1523/cdb1 as sysdba
+
+COLUMN "Con_Name" FORMAT A10
+COLUMN "T'space_Name" FORMAT A12
+COLUMN "File_Name" FORMAT A120
+
+with Containers as (
+  select PDB_ID Con_ID, PDB_Name Con_Name from DBA_PDBs
+  union
+  select 1 Con_ID, 'CDB$ROOT' Con_Name from Dual)
+select
+  Con_ID,
+  Con_Name "Con_Name",
+  Tablespace_Name "T'space_Name",
+  File_Name "File_Name"
+from CDB_Data_Files inner join Containers using (Con_ID)
+union
+select
+  Con_ID,
+  Con_Name "Con_Name",
+  Tablespace_Name "T'space_Name",
+  File_Name "File_Name"
+from CDB_Temp_Files inner join Containers using (Con_ID)
+order by 1, 3
+/
+````
+
+## Section 2: Clone a PDB
+This section looks at how to clone a PDB
+
+The tasks you will accomplish in this lab are:
+- Clone a pluggable database ``PDB2`` into ``PDB3``
+
+1. Connect to ``CDB1``
+````
+sqlplus /nolog
+connect sys/oracle@localhost:1523/cdb1 as sysdba
+````
+
+2. Change ``PDB2`` to read only
+````
+alter pluggable database PDB2 open read only force;
+show pdbs
+````
+
+3. Create a pluggable database ``PDB3`` from the read only database ``PDB2``
+````
+create pluggable database PDB3 from PDB2;
+alter pluggable database PDB3 open force;
+show pdbs
+````
+
+4. Change ``PDB2`` back to read write
+````
+alter pluggable database PDB2 open read write force;
+show pdbs
+````
+
+5. Connect to ``PDB2`` and show the table ``MY_Tab``
+````
+connect pdb_admin/oracle@localhost:1523/pdb2
+select * from my_tab;
+````
+
+6. Connect to ``PDB3`` and show the table ``MY_Tab``
+````
+connect pdb_admin/oracle@localhost:1523/pdb3
+select * from my_tab;
+````
+
+## Section 3: Unplug a PDB
+This section looks at how to unplug a PDB
+
+The tasks you will accomplish in this lab are:
+- Unplug ``PDB3`` from ``CDB1``
+
+1. Connect to ``CDB1``
+````
+sqlplus /nolog
+connect sys/oracle@localhost:1523/cdb1 as sysdba
+````
+
+2. Unplug ``PDB3`` from ``CDB1``
+````
+show pdbs
+alter pluggable database PDB3 close immediate;
+
+alter pluggable database PDB3
+unplug into
+'/u01/app/oracle/oradata/CDB1/pdb3.xml';
+
+show pdbs
+````
+
+3. Remove ``PDB3`` from ``CDB1``
+````
+drop pluggable database PDB3 keep datafiles;
+
+show pdbs
+````
+
+4. Show the datafiles in ``CDB1``
+````
+COLUMN "Con_Name" FORMAT A10
+COLUMN "T'space_Name" FORMAT A12
+COLUMN "File_Name" FORMAT A120
+
+with Containers as (
+  select PDB_ID Con_ID, PDB_Name Con_Name from DBA_PDBs
+  union
+  select 1 Con_ID, 'CDB$ROOT' Con_Name from Dual)
+select
+  Con_ID,
+  Con_Name "Con_Name",
+  Tablespace_Name "T'space_Name",
+  File_Name "File_Name"
+from CDB_Data_Files inner join Containers using (Con_ID)
+union
+select
+  Con_ID,
+  Con_Name "Con_Name",
+  Tablespace_Name "T'space_Name",
+  File_Name "File_Name"
+from CDB_Temp_Files inner join Containers using (Con_ID)
+order by 1, 3
+/
+````
+
+5. Look at the XML file for the pluggable database ``PDB3``
+````
+host cat /u01/app/oracle/oradata/CDB1/pdb3.xml
+````
+
+## Section 4: Plug in a PDB
+This section looks at how to plug in a PDB
+
+The tasks you will accomplish in this lab are:
+- Plug ``PDB3`` into ``CDB2``
+
+1. Connect to ``CDB2``
+````
+connect sys/oracle@localhost:1524/cdb2 as sysdba
+
+COLUMN "Who am I?" FORMAT A120
+select
+     'DB Name: '  ||Sys_Context('Userenv', 'DB_Name')||
+  ' / CDB?: '     ||case
+                      when Sys_Context('Userenv', 'CDB_Name') is not null then 'YES'
+                      else                                                     'NO'
+                    end||
+  ' / Auth-ID: '   ||Sys_Context('Userenv', 'Authenticated_Identity')||
+  ' / Sessn-User: '||Sys_Context('Userenv', 'Session_User')||
+  ' / Container: ' ||Nvl(Sys_Context('Userenv', 'Con_Name'), 'n/a')
+   "Who am I?"
+from Dual
+/
+
+show pdbs
+````
+
+2. Check the compatibility of ``PDB3`` with ``CDB2``
+````
+begin
+  if not
+    Sys.DBMS_PDB.Check_Plug_Compatibility
+    ('/u01/app/oracle/oradata/CDB1/pdb3.xml')
+  then
+    Raise_Application_Error(-20000, 'Incompatible');
+  end if;
+end;
+/
+````
+
+3. Plug ``PDB3`` into ``CDB2``
+````
+create pluggable database PDB3
+using '/u01/app/oracle/oradata/CDB1/pdb3.xml'
+move;
+show pdbs
+alter pluggable database PDB3 open;
+show pdbs
+````
+
+4. Review the datafiles in ``CDB2``
+````
+COLUMN "Con_Name" FORMAT A10
+COLUMN "T'space_Name" FORMAT A12
+COLUMN "File_Name" FORMAT A120
+
+with Containers as (
+  select PDB_ID Con_ID, PDB_Name Con_Name from DBA_PDBs
+  union
+  select 1 Con_ID, 'CDB$ROOT' Con_Name from Dual)
+select
+  Con_ID,
+  Con_Name "Con_Name",
+  Tablespace_Name "T'space_Name",
+  File_Name "File_Name"
+from CDB_Data_Files inner join Containers using (Con_ID)
+union
+select
+  Con_ID,
+  Con_Name "Con_Name",
+  Tablespace_Name "T'space_Name",
+  File_Name "File_Name"
+from CDB_Temp_Files inner join Containers using (Con_ID)
+order by 1, 3
+/
+````
+
+5. Connect as ``PDB_ADMIN`` to ``PDB3`` and look at ``MY_TAB``;
+````
+connect pdb_admin/oracle@localhost:1524/pdb3
+
+select * from my_tab;
+````
+
+## Section 5: Drop a PDB
+This section looks at how to drop a pluggable database.
+
+The tasks you will accomplish in this lab are:
+- Drop ``PDB3`` from ``CDB2``
+
+1. Connect to ``CDB2``
+````
+sqlplus /nolog
+connect sys/oracle@localhost:1524/cdb2 as sysdba
+````
+
+2. Drop ``PDB3`` from ``CDB2``
+````
+show pdbs
+
+alter pluggable database PDB3 close immediate;
+
+drop pluggable database PDB3 including datafiles;
+
+show pdbs
+````
+
+## Section 6: Clone an Unplugged PDB
+This section looks at how to create a gold copy of a PDB and clone it into another container.
+
+The tasks you will accomplish in this lab are:
+- Create a gold copy of ``PDB2`` in ``CDB1`` as ``GOLDPDB``
+- Clone ``GOLDPDB`` into ``COPYPDB1`` and ``COPYPDB2`` in ``CDB2``
+
+1. Connect to ``CDB1``
+````
+sqlplus /nolog
+connect sys/oracle@localhost:1523/cdb1 as sysdba
+````
+
+2. Change ``PDB2`` to read only
+````
+alter pluggable database PDB2 open read only force;
+show pdbs
+````
+
+3. Create a pluggable database ``GOLDPDB`` from the read only database ``PDB2``
+````
+create pluggable database GOLDPDB from PDB2;
+alter pluggable database GOLDPDB open force;
+show pdbs
+````
+
+4. Change ``PDB2`` back to read write
+````
+alter pluggable database PDB2 open read write force;
+show pdbs
+````
+
+5. Unplug ``GOLDPDB`` from ``CDB1``
+````
+show pdbs
+alter pluggable database GOLDPDB close immediate;
+
+alter pluggable database GOLDPDB
+unplug into
+'/u01/app/oracle/oradata/CDB1/goldpdb.xml';
+
+show pdbs
+````
+
+6. Remove ``GOLDPDB`` from ``CDB1``
+````
+drop pluggable database GOLDPDB keep datafiles;
+
+show pdbs
+````
+
+7. Connect to ``CDB2``
+````
+connect sys/oracle@localhost:1524/cdb2 as sysdba
+````
+
+8. Validate ``GOLDPDB`` is compatibile with ``CDB2``
+````
+begin
+  if not
+    Sys.DBMS_PDB.Check_Plug_Compatibility
+('/u01/app/oracle/oradata/CDB1/goldpdb.xml')
+  then
+    Raise_Application_Error(-20000, 'Incompatible');
+  end if;
+end;
+/
+````
+
+9. Create a clone of ``GOLDPDB`` as ``COPYPDB1``
+````
+create pluggable database COPYPDB1 as clone
+using '/u01/app/oracle/oradata/CDB1/goldpdb.xml'
+storage (maxsize unlimited max_shared_temp_size unlimited)
+copy;
+show pdbs
+````
+
+10. Create another clone of ``GOLDPDB`` as ``COPYPDB2``
+````
+create pluggable database COPYPDB2 as clone
+using '/u01/app/oracle/oradata/CDB1/goldpdb.xml'
+storage (maxsize unlimited max_shared_temp_size unlimited)
+copy;
+show pdbs
+````
+
+11. Open all of the pluggable databases
+````
+alter pluggable database all open;
+
+show pdbs
+````
+
+12. Look at the GUID for the two cloned databases
+````
+COLUMN "PDB Name" FORMAT A20
+select PDB_Name "PDB Name", GUID
+from DBA_PDBs
+order by Creation_Scn
+/
+````
+
+## Section 7: PDB Hot Clones
 This section looks at how to hot clone a pluggable database.
 
 The tasks you will accomplish in this lab are:
@@ -110,7 +530,7 @@ drop pluggable database oe_dev including datafiles;
 
 You can see that the clone of the pluggable database worked without having to stop the load on the source database. In the next lab you will look at how to refresh a clone.
 
-## Section 2: PDB Refresh
+## Section 8: PDB Refresh
 This section looks at how to hot clone a pluggable database, open it for read only and then refresh the database.
 
 The tasks you will accomplish in this lab are:
@@ -163,7 +583,7 @@ drop pluggable database oe_refresh including datafiles;
 
 7. Leave the ``OE`` pluggable database open with the load running against it for the rest of the labs.
 
-## Section 3: PDB Relocation
+## Section 9: PDB Relocation
 
 This section looks at how to relocate a pluggable database from one container database to another. One important note, either both container databases need to be using the same listener in order for sessions to keep connecting or local and remote listeners need to be setup correctly. For this lab we will change ``CDB2`` to use the same listener as ``CDB1``
 
