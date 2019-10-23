@@ -244,5 +244,5 @@ If you are in a PM sponsored Roadshow, skip this step.  Your VCN has already bee
     unzip /home/opc/scripts.zip .
   
     ````
-
+4.  To finish the setup of your environment, en
 

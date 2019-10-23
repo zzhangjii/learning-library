@@ -15,7 +15,7 @@
 =============================================
 
 This lab shows you how to load data from an Oracle Object Store into a database
-in Autonomous Database.
+in Autonomous Database. Steve Lemme
 
 You can load data into Autonomous Database using Oracle Database tools, and
 Oracle and 3rd party data integration tools. You can load data:
