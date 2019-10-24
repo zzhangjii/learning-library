@@ -33,12 +33,13 @@ The following 5 table star schema will be used during the lab and has been creat
 2. Querying In-Memory Column Store Tables
 4. In-Memory Joins and Aggregations
 
-# Lab Assumptions #
+## Lab Assumptions ##
 - Each participant has been provided a username and password to the tenancy c4u03
 - Each participant has completed the Environment Setup lab.
 
 
 ## Section 1: Login to Your Oracle Cloud Account
+-----------------------------
 
 1.  From any browser go to www.oracle.com to access the Oracle Cloud.
 
@@ -58,12 +59,13 @@ The following 5 table star schema will be used during the lab and has been creat
 
 
 ## Section 2 - Lab Setup
+----------------------
 
 All the scripts for this lab are located in the /home/oracle/inmemory/scripts folder.  
 
 1.  To access the scripts, secure shell into the OCI compute instance.
 
-2.  Change to the ssh directory and ssh into your instance.  THe public IP address can be found by going to Compute -> Instance.
+2.  Change to the ssh directory and ssh into your instance.  The public IP address can be found by going to Compute -> Instance.
 
     ````
     cd .ssh
@@ -74,6 +76,7 @@ All the scripts for this lab are located in the /home/oracle/inmemory/scripts fo
     ![](img/inmemory/cd-scripts.png) 
 
 ## Section 3 - Monitoring the In-Memory Column Store
+---------------------------
 
 The focus of this section is to show how the lab environment is setup and to demonstrate how to monitor the different parts of the In-Memory column store (IM column store). 
 

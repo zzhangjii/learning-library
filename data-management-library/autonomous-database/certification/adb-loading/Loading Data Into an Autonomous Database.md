@@ -40,7 +40,7 @@ Storage using two of the procedures in the DBMS_CLOUD package:
     Database schema.
 
     -   You will use this procedure to create object store credentials in your
-        Autonomous Database  adwc_user schema that you defined in a previous
+        Autonomous Database  adwc_user schema that you defined in a previous
         tutorial.
 
 -   * `copy_data`: Loads the specified source file to a table. The table must
@@ -61,7 +61,7 @@ Storage using two of the procedures in the DBMS_CLOUD package:
 ### What Do You Need?
 
 -   Access to an instance of Autonomous Database. See previous tutorials in this
-    series and the documentation: [Using Oracle Autonomous Database
+    series and the documentation: [Using Oracle Autonomous Database
     Cloud](http://www.oracle.com/pls/topic/lookup?ctx=en/cloud/paas/autonomous-data-warehouse-cloud&id=CSWHU-GUID-4B91499D-7C2B-46D9-8E4D-A6ABF2093414).
 
 -   Data files already uploaded to a staging area; otherwise follow the steps in
@@ -188,9 +188,9 @@ Now that you have an object store Auth Token, you will store your credentail in 
 ```
 begin  
    DBMS_CLOUD.create_credential (  
-   credential_name =\> 'OBJ_STORE_CRED',  
-   username =\> 'buket-user',  
-   password =\> 'etfUIb1}Na5P-lLhq(dQ'  
+   credential_name => 'OBJ_STORE_CRED',  
+   username => 'bucket-user',  
+   password => 'etfUIb1}Na5P-lLhq(dQ'  
    ) ;  
 end;  
 /
@@ -680,8 +680,7 @@ Create Object Store Credentials earlier.
 For file_uri_list, specify the URL that points to the location of the file
 staged in your object store. See screenshots below for how to obtain this.
 
-[Right Click here to download](https://stbeehive.oracle.com/content/dav/st/DBPM_Repo/Public%20Documents/cert/adw-loading-copy-data.txt)
-for an example script. In the script, the only line you need to change for each
+[Right click here to open in a new tab and copy the contents](files/adw-loading-copy-data.txt). In the script, the only line you need to change for each
 table is the * `file_uri_list parameter` IF the credential you created is called
 OBJ_STORE_CRED. If you called your credential a different name, you also need to
 change the credential_name line.
@@ -753,10 +752,10 @@ FROM user_load_operations WHERE type = 'COPY';
 
 2.  Examine the results. The log and bad files are accessible as tables:
 
-TABLE_NAME STATUS ROWS_LOADED LOGFILE_TABLE   BADFILE_TABLE  
----------- ------------ ----------- -------------   -------------  
-  CHANNELS FAILED COPY\$1_LOG      COPY\$1_BAD  
- CHANNELS COMPLETED 5   COPY\$2_LOG COPY\$2_BAD
+TABLE_NAME STATUS ROWS_LOADED LOGFILE_TABLE   BADFILE_TABLE  
+---------- ------------ ----------- -------------   -------------  
+  CHANNELS FAILED COPY\$1_LOG      COPY\$1_BAD  
+ CHANNELS COMPLETED 5   COPY\$2_LOG COPY\$2_BAD
 
 **This concludes the loading lab.**
 
