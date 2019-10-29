@@ -264,6 +264,7 @@ The tasks you will accomplish in this lab are:
 
 1. Connect to ``CDB2``
 ````
+sqlplus /nolog
 connect sys/oracle@localhost:1524/cdb2 as sysdba
 
 COLUMN "Who am I?" FORMAT A120
@@ -498,7 +499,11 @@ CREATE TABLE sale_orders
  CUSTOMER_ID   number);
  ````
  4. Open a new terminal window, sudo to the oracle user and execute write-load.sh. Leave this window open and running throughout the rest of the multitenant labs.
- <Image of script>
+ ````
+ sudo su - oracle
+ cd /u01/app/oracle/labs/multitenant
+ ./write-load.sh
+ ````
 
  5. Connect to ``CDB2`` and create the pluggable ``OE_DEV`` from the database link ``oe@cdb1_link``
 ````
