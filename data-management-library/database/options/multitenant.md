@@ -37,7 +37,7 @@ There are two container databases running:
 
 ### Lab Setup
 
-All the scripts for this lab are located in the /home/oracle/multitenant/scripts folder.  
+All the scripts for this lab are located in the /u01/app/oracle/labs/multitenant folder.  
 
 1.  To access the scripts, secure shell into the OCI compute instance.
 
@@ -47,9 +47,9 @@ All the scripts for this lab are located in the /home/oracle/multitenant/scripts
     cd .ssh
     ssh -i optionskey opc@<your public ip address>
     ls
+    sudo su - oracle
+    cd /u01/app/oracle/labs/multitenant
     ````
-
-    ![](img/inmemory/cd-scripts.png) 
 
 
 ## Section 1: Create PDB
@@ -64,7 +64,7 @@ sqlplus /nolog
 connect sys/oracle@localhost:1523/cdb1 as sysdba
 ````
 
-2. Check to see who you are connected as.
+2. Check to see who you are connected as. At any point in the lab you can run this script to see who or where you are connected.
 ````
 select
      'DB Name: '  ||Sys_Context('Userenv', 'DB_Name')||
