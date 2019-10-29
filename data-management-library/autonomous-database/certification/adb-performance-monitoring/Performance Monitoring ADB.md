@@ -1,15 +1,6 @@
-![](./media/adbtitle.png)
+![](./media/adb-certification-title.png)
 # Performance Monitoring with the Autonomous Console
 
-## Table of Contents
-
-- [Module 1: Learn how to use Cloud Management Console to monitor activity](#module-1--learn-how-to-use-cloud-management-console-to-monitor-activity)
-
-
-***** 
-
-
-## Module 1:  Learn how to use Cloud Management Console to monitor activity
 
 1. From the Cloud Console used during the provisioning exercise click on your
 Autonomous instance:
@@ -35,13 +26,11 @@ components on this page are:
 -   **Running SQL statements :** This chart shows the average number of running
     SQL statements historically.
 
--   **Average SQL statement response time :** This chart shows the average
-    response time of SQL statements historically.
+-   **Number of OCPUs allocated :** This chart shows the actual number of OCPUs allocated by the service.
 
--   **SQL statements executed per second :** This chart shows the SQL statements
-    executed per second.
+-   **SQL statement response time (s) :** SQL statement response time (s)
 
-    ![](media/9b7477b1d4b74db7fa45c67c54f1aed9.png)
+    ![](media/adb-overview-pg.png)
     <p align="center">Figure 1-3</p>
 
     3. After reviewing the information on this page, select **Activity** on the
@@ -94,46 +83,20 @@ anywhere in the row and then **Show Details:**
 7. The overview tab provides information about the SQL that was executed, user,
 times, and service used (consumer group). Notice that this was the query
 executed in the **\_TP** service and it executed in 6 seconds (look at Duration
-in the Time & Wait Statistics block, lower left). Low service does not use
-parallelization and to corroborate that click the **Parallel** button:
+in the Time & Wait Statistics block, lower left). 
 
-![](media/653d40021ea15a9011a2abf17fc58315.png)
+![](media/adb-sql-details.png)
 <p align="center">Figure 1-7</p>
 
-Which brings up an empty page, indicating there was no parallelization for this
-query.
+8. Click on **Plan Statistics**.  If there were statistics on the tables, they would be displayed here.
 
-![](media/c2ccdb309fc04276a22fd0737634d912.png)
+![](media/adb-sql-planstats.png)
 <p align="center">Figure 1-8</p>
 
-8. Close the parallel window and select the other statement, in this case 3 and hit
-**Show details** (this will be different in your environment, you can analyse
-any statement in the list):
+8. Click on the **Metrics** window.  **Metrics** will display four charts to view **CPU Used**, **Memory**, **IO Throughput** (**Storage** & **Buffer Cache** options), and **IO Requests**.
 
-![](media/62f9ff70338ee4e942b25b2d58dee9ca.png)
+![](media/adb-sql-metrics-pg.png)
 <p align="center">Figure 1-9</p>
-
-9. This query executed in the **\_HIGH** service (Consumer Group) and it executed
-in 2 seconds but used 6 seconds of Database time (look at Duration in the Time &
-Wait Statistics block, lower left). This indicates that the query ran in
-multiple CPU’s and was parallelized. Click on the **Parallel** button:
-
-![](media/f9a55bfc72cbe224cfb6b05443508c75.png)
-<p align="center">Figure 1-10</p>
-
-
-
-In this case you will notice that the query executed in parallel, with 4 parallel threads (indicated by the Parallel Server information) and each used about 1.5 seconds for the total of about 6 seconds. That is because the \_HIGH service will automatically parallelize transactions depending on the number of CPU’s available (4 in this case).
-
-
-![](media/b9d85aa47fa332947488b507293b348a.png)
-<p align="center">Figure 1-11</p>
-
-Continue to look at all the statements that appear to understand different
-execution and resource characteristics of the Autonomous Database.
-
-**This concludes the Performance Monitoring lab.**
 
 ***END OF LAB***
 
-[Back to Top](#table-of-contents) 
