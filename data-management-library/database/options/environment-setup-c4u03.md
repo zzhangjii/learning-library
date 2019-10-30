@@ -79,19 +79,31 @@ Automatically deploy a fully functional Database environment by leveraging a sim
     ````
     ![](img/optionskey.png) 
 
-### Windows Users ###
 
-`Need to update for windows`
-1.  Open up puttygen 
+### For Windows: Using GitBash or Windows Subsystem for Linux (WSL) ### 
 
-2.  Enter the following commands in your terminal
-    ````
-    cd ~
-    ssh-keygen -b 2048 -t rsa -f optionskey
-    cd .ssh
-    more optionskey.pub
-    ````
-3.  Copy the contents of `optionskey.pub` into notepad.  Your key file should be one line. You will need this to access your instance.  
+1. Open the terminal tool of your choice
+1. Type ssh-keygen -f optionskey at the prompt.
+1. Press enter to accept default values
+1. Do not assign a password for this exercise. (note you should always assign an SSH key password in production)
+1. Type cat ~/.ssh/optionskey.pub to retrieve your public key. Save it for future use.
+
+### For Windows: Using PuttyGen ### 
+
+1. Open PuttyGen
+1. Click the [Generate] button
+
+    ![](img/puttygen-generate.jpg) 
+1. Move your mouse around the screen randomly until the progress bar reaches 100%
+1. Click the [Save private key] button. Name the file `options`.  This file will not have an extension.
+
+    ![](img/puttygen-saveprivatekey.jpg) 
+1. Save the public key (displayed in the text field) by copying it to the clipboard and saving it manually to a new text file. Name the file id_rsa.pub
+
+1. Note: Sometimes PuttyGen does not save the public key in the correct format. The text string displayed in the window is correct so we just copy/paste.
+
+
+
 
 [Back to Top](#table-of-contents)
 
