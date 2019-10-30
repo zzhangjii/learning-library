@@ -1,7 +1,7 @@
 ![](img/db-options-title.png)  
 
 # Introduction #
-This lab will show you how to login to the cloud and setup your environment in preparation for the day.  Many of our on-premises labs have been moved into OCI.  In this lab, you will create an OCI Compute instance using the [Oracle Database](https://cloudmarketplace.oracle.com/marketplace/en_US/listing/47726045) image in the Oracle Cloud Marketplace. 
+This lab will show you how to login to the cloud and setup a DBCS VM running the Oracle 19c database.   In this lab, you will create an OCI Compute instance using the [Oracle Database](https://cloudmarketplace.oracle.com/marketplace/en_US/listing/47726045) image in the Oracle Cloud Marketplace. 
 
 The Oracle Cloud Marketplace is an online store dedicated to marketing cloud business apps and professional services offered by Oracle and it's cloud partners. 
 
@@ -11,20 +11,21 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 
 
 # Lab Assumptions #
-- Each participant has been provided an account on the c4u03
+- For PM sponsored roadshows, each participant has been provided an account on the c4u03
+- For self service, the user has access to a cloud account or free-tier account
 
-# Table of Contents #
+## Table of Contents 
 
-- [Section 1: Login to the Oracle Cloud](#lab-introduction)
-- [Section 2: Create an SSH key pair](#lab-sections)
-- [Section 3: Download Marketplace initialization zip and Script Zip File](#section-1--login-to-your-oracle-cloud-account)
-- [Section 4:  Create Networking](#section-2--lab-setup)
-- [Section 5:  Create Compute Instance](#section-3--monitoring-the-in-memory-column-store)
-- [Section 6:  Extract Lab Scripts and Prep Environment](#section-6--extract lab-scripts-and-prep-environment)
+- [Section 1: Login to the Oracle Cloud](#section-1---login)
+- [Section 2: Create an SSH key pair](#section-2---lsetup-ssh)
+- [Section 3: Download Marketplace initialization zip and Script Zip File](#section-3---oracle-marketplace)
+- [Section 4:  Create Networking](#section-4---networking)
+- [Section 5:  Create Compute Instance](#section-5---dbcs-vm)
+- [Section 6:  Extract Lab Scripts and Prep Environment](#section-6---lab-prep)
 
 
 
-## Section 1: Login to Your Oracle Cloud Account
+## Section 1 - Login
 ----------------
 
 1.  From any browser go to www.oracle.com to access the Oracle Cloud.
@@ -35,7 +36,7 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 
     ![](img/signup.png)    
 
-3. Enter your **Cloud Account Name**: `c4u03` in the input field and click the **My Services** button. 
+3. Enter your **Cloud Account Name**.  If you are in a PM sponsored roadshow, this will be provided by the PM team.  Otherwise, use your free-tier tenancy name or oracle cloud account. 
 
     ![](img/login-tenancy.png)  
 
@@ -53,19 +54,15 @@ Automatically deploy a fully functional Database environment by leveraging a sim
     
     Select the **Sign in with Oracle SSO** link and enter your SSO credentials.
 
-    ![](img/singlesignon.png) 
-    
-    ![](img/singlesignon2.png) 
-
-
-
 5. Once you successfully login, you will be presented with the Oracle Cloud homepage.  
   ![](img/cloud-homepage.png) 
 
-## Section 2 - Create an SSH Key Pair
+[Back to Top](#table-of-contents)
+
+## Section 2 - Setup SSH
 
 ### MAC Users ###
-1.  Open up a terminal and type the following commands.  When prompted for a passphrase click enter. Do not enter a passphrase.
+1.  Open up a terminal and type the following commands.  When prompted for a passphrase click **enter**. *Do not enter a passphrase*.
      ````
     cd ~
     cd .ssh
@@ -80,6 +77,7 @@ Automatically deploy a fully functional Database environment by leveraging a sim
     ls -l .ssh
     more optionskey.pub
     ````
+    ![](img/optionskey.png) 
 
 ### Windows Users ###
 
@@ -95,7 +93,9 @@ Automatically deploy a fully functional Database environment by leveraging a sim
     ````
 3.  Copy the contents of `optionskey.pub` into notepad.  Your key file should be one line. You will need this to access your instance.  
 
-## Section 3 - Download Marketplace Initialization & Script Zip File
+[Back to Top](#table-of-contents)
+
+## Section 3 - Oracle Marketplace
 1.  Click  [here](https://community.oracle.com/servlet/JiveServlet/download/1031489-6-462822/oci-db-app-script-examples.zip) to download the marketplace initialization zip file.
 
 2.  Save it to your downloads folder
@@ -106,7 +106,10 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 
 4. Click [here]() to download the scripts.zip file.  You will ftp this file to your newly created compute instance later in this lab.
 
-## Section 4 - Create Networking
+
+[Back to Top](#table-of-contents)
+
+## Section 4 - Networking
 
 If you are in a PM sponsored Roadshow, skip this step.  Your VCN has already been created for you.
 
@@ -119,29 +122,33 @@ If you are in a PM sponsored Roadshow, skip this step.  Your VCN has already bee
   
     ![](img/create-compartment.png)
   
-4.  Click the Create Virtual Cloud Network button.
+4.  Click the **Create Virtual Cloud Network** button.
     ![](img/createvcn.png)
 
 5.  Enter the following:
-    - Name:  Enter the name for your vcn (i.e. first initial,middle initial, lastname)
-    - Create in Compartment: Select the dboptions compartment
-    - Select the 2nd radio button - Create VCN PLUS RELATED RESOURCES
-    - Uncheck DNS RESOLUTION
+    - **Name**:  Enter the name for your vcn 
+    - **Create in Compartment**: Select the dboptions compartment
+    - Select the 2nd radio button - **Create VCN PLUS RELATED RESOURCES**
+    - Uncheck USE DNS HOSTNAMES IN THIS VCN
     - Accept all other defaults
 
     Scroll down and click the Create button.  Click Close after your VCN is created.
   
     ![](img/vcn.png)
 
-6. Once the VCN is created, create the security list.  Click on the Security Lists link under the Resources section.
+6. Now that the VCN is created, let's create the security list.  Click on the **Security Lists** link under the **Resources** section on the left hand side of your browser.
 
     ![](img/vcncreation.png)
 
-7.  Click **Add Ingress Rules** to create rules for a future lab.
+7.  Click on the **Default Security List**.
+
+    ![](img/securitylist.png)
+
+7. Click **Add Ingress Rules** to create rules for a future lab.
 
     ![](img/addingress.png)
 
-8.  Update the SOURCE CIDR and the PORT RANGE.  
+8.  Update the SOURCE CIDR and the PORT RANGE and click the **+Additional Ingress Rules** button.
 
     ````
     SOURCE RANGE: 0.0.0.0/0
@@ -149,7 +156,7 @@ If you are in a PM sponsored Roadshow, skip this step.  Your VCN has already bee
     ````
     ![](img/addingress2.png)
 
-9.  Click on **Additional Ingress Rule** to add additional rules.  Under Ingress Rule 2, add the same SOURCE CIDR value and a destination port range of 9080.  Repeat step 8 and 9 until you've added 5 rules.
+9.  Under Ingress Rule 2, add the same SOURCE CIDR value and a destination port range of 9080.  Repeat step 8 and 9 until you've added 5 rules.
 
     ````
     SOURCE RANGE: 0.0.0.0/0
@@ -166,11 +173,13 @@ If you are in a PM sponsored Roadshow, skip this step.  Your VCN has already bee
     ````
     ![](img/addingress4.png)  
 
-10. Once complete, the Ingress Rules should have the following port range.  Double check these values to ensure they are correct.
+10. Click **Add Ingress Rules** to proceed.  Once complete, the Ingress Rules should have the following port ranges.  Double check these values to ensure they are correct.
 
     ![](img/addingress5.png) 
 
-## Section 5 - Create a Compute Instance with the DB Marketplace Image
+[Back to Top](#table-of-contents)
+
+## Section 5 - DBCS-VM
 
 1. Go back to your browser to the tab with your logged in access to the Oracle Cloud.  Click on the hamburger menu.
 ![](img/cloud-homepage.png) 
@@ -178,7 +187,7 @@ If you are in a PM sponsored Roadshow, skip this step.  Your VCN has already bee
 2. Select **Compute** -> **Instances** to go to the screen to create your instance.
   ![](img/compute-instance.png)
 
-3. Before creating the instance, it is important you **select the correct compartment**.  Your instructor will provide you the correct compartment.  In this example we will use `dboptions1105`.  **Do NOT select the root compartment**.
+3. Before creating the instance, it is important you **select the correct compartment**.  If you are in a PM sponsored roadshow, this will be provided. In this example we will use `dboptions1105`.  **Do NOT select the root compartment**.
 ![](img/create-compartment.png)
 
 4. Click the **Create Instance** button.
@@ -187,14 +196,21 @@ If you are in a PM sponsored Roadshow, skip this step.  Your VCN has already bee
 5. Enter your desired instance name.  Use your first initial, middle initial and last name.  *Do NOT enter kdmishra, that is for example purposes only*.  Click on the **Change Image Source** button.
 ![](img/create-compute-2.png)
 
-6.  This is the OCI Marketplace library of images.  In the Browse All Images screen, click on **Oracle Images** to select your Oracle Database Marketplace image.  Select the **Oracle Database** app name in the marketplace.
+6.  This is the OCI Marketplace library of images.  In the **Browse All Images** screen, click on **Oracle Images** to select your Oracle Database Marketplace image.  Select the **Oracle Database** app name in the marketplace.  Click the down arrow to select the database version.
 ![](img/create-compute-3.png)
+
+6.  Select the 19c version.  18c is selected by default.  Ensure you choose 19c.
+![](img/marketplace1.png)
+
+    ![](img/marketplace2.png)
 
 7. Scroll down, accept the standards and conditions and click the **Select Image** button.
 ![](img/create-compute-4.png)
 
-8. Click **Show Shape, Network, Storage Options** if its hideen.  Accept the defaults.  The instance type we are creating is a Virtual Machine.  Keep the selected shape.
+8. Click **Show Shape, Network, Storage Options** if it is hidden.  Accept the defaults unless instructed otherwise.  The instance type we are creating is a **Virtual Machine**.  Keep the selected shape.
 ![](img/create-compute-5.png)
+
+9. In a PM sponsored roadshow, instances will need to be balanced across Availability Domains (ADs).
 
 9.  In the Configure networking section, select the dboptions compartment and the VCN you created in an earlier section. If you are in a Roadshow, use the VCN precreated by Product Management.  Click on the radio button to **Assign a public address**.  This is important.  DO NOT OVERLOOK THIS STEP!!!!!!!
 ![](img/computevcn.png)
@@ -211,12 +227,14 @@ If you are in a PM sponsored Roadshow, skip this step.  Your VCN has already bee
 18.  Once your script is loaded, you should see it in the window.
 ![](img/create-compute-12.png)
 
-19.  Click the button to create your instance.  Your instance will be in provisioning state.  Verify that you chose the correct image.  In a few minutes you can also verify that you have a public IP address.  View the Work Requests at the bottom, this will show where your instance is.
+19.  Click the **Create** button to create your instance.  Your instance will be in provisioning state.  Verify that you chose the correct image.  In a few minutes you can also verify that you have a public IP address.  View the Work Requests at the bottom, this will show where your instance is.
 ![](img/create-compute-13.png)
 
-20.  Locate your public IP address and jot it down. 
+20.  Locate your **public IP address** and jot it down. 
 
-## Section 6:  Extract Lab Scripts and Prep Environment ##
+[Back to Top](#table-of-contents)
+
+## Section 6 - Lab Prep
 -------------------
 1.  Open up a terminal (MAC) or cygwin emulator as the opc user
 
@@ -246,3 +264,4 @@ If you are in a PM sponsored Roadshow, skip this step.  Your VCN has already bee
     ````
 4.  To finish the setup of your environment, en
 
+[Back to Top](#table-of-contents)
