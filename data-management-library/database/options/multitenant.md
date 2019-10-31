@@ -80,7 +80,7 @@ from Dual
 /
 ````
 
-3. Create a pluggable database **PDB2**
+3. Create a pluggable database **PDB2**.
 ````
 show  pdbs;
 create pluggable database PDB2 admin user PDB_Admin identified by oracle;
@@ -88,13 +88,12 @@ alter pluggable database PDB2 open;
 show pdbs;
 ````
 
-4. Change the session to point to **PDB2**
+4. Change the session to point to **PDB2**.
 ````
 alter session set container = PDB2;
 ````
 
-5. Grant **PDB_ADMIN** the necessary privileges and create the **USERS** tablespace for **PDB2**
-
+5. Grant **PDB_ADMIN** the necessary privileges and create the **USERS** tablespace for **PDB2**.
 ````
 grant SysDBA to pdb_admin;
 
@@ -108,12 +107,12 @@ alter database default tablespace Users;
 grant create table, unlimited tablespace to pdb_admin;
 ````
 
-6. Connect as **PDB_ADMIN** to **PDB2**
+6. Connect as **PDB_ADMIN** to **PDB2**.
 ````
 connect pdb_admin/oracle@localhost:1523/pdb2
 ````
 
-7. Create a table **MY_TAB** in **PDB2**
+7. Create a table **MY_TAB** in **PDB2**.
 ````
 create table my_tab(my_col number);
 
@@ -122,7 +121,7 @@ insert into my_tab values (1);
 commit;
 ````
 
-8. Change back to **SYS** in the container database **CDB1** and show the tablespaces and datafiles created
+8. Change back to **SYS** in the container database **CDB1** and show the tablespaces and datafiles created.
 ````
 connect sys/oracle@localhost:1523/cdb1 as sysdba
 
@@ -157,38 +156,38 @@ This section looks at how to clone a PDB
 The tasks you will accomplish in this lab are:
 - Clone a pluggable database **PDB2** into **PDB3**
 
-1. Connect to **CDB1**
+1. Connect to **CDB1**.
 ````
 sqlplus /nolog
 connect sys/oracle@localhost:1523/cdb1 as sysdba
 ````
 
-2. Change **PDB2** to read only
+2. Change **PDB2** to read only.
 ````
 alter pluggable database PDB2 open read only force;
 show pdbs
 ````
 
-3. Create a pluggable database **PDB3** from the read only database **PDB2**
+3. Create a pluggable database **PDB3** from the read only database **PDB2**.
 ````
 create pluggable database PDB3 from PDB2;
 alter pluggable database PDB3 open force;
 show pdbs
 ````
 
-4. Change **PDB2** back to read write
+4. Change **PDB2** back to read write.
 ````
 alter pluggable database PDB2 open read write force;
 show pdbs
 ````
 
-5. Connect to **PDB2** and show the table **MY_TAB**
+5. Connect to **PDB2** and show the table **MY_TAB**.
 ````
 connect pdb_admin/oracle@localhost:1523/pdb2
 select * from my_tab;
 ````
 
-6. Connect to **PDB3** and show the table **MY_TAB**
+6. Connect to **PDB3** and show the table **MY_TAB**.
 ````
 connect pdb_admin/oracle@localhost:1523/pdb3
 select * from my_tab;
@@ -200,13 +199,13 @@ This section looks at how to unplug a PDB
 The tasks you will accomplish in this lab are:
 - Unplug **PDB3** from **CDB1**
 
-1. Connect to **CDB1**
+1. Connect to **CDB1**.
 ````
 sqlplus /nolog
 connect sys/oracle@localhost:1523/cdb1 as sysdba
 ````
 
-2. Unplug **PDB3** from **CDB1**
+2. Unplug **PDB3** from **CDB1**.
 ````
 show pdbs
 alter pluggable database PDB3 close immediate;
@@ -218,14 +217,14 @@ unplug into
 show pdbs
 ````
 
-3. Remove **PDB3** from **CDB1**
+3. Remove **PDB3** from **CDB1**.
 ````
 drop pluggable database PDB3 keep datafiles;
 
 show pdbs
 ````
 
-4. Show the datafiles in **CDB1**
+4. Show the datafiles in **CDB1**.
 ````
 COLUMN "Con_Name" FORMAT A10
 COLUMN "T'space_Name" FORMAT A12
@@ -252,7 +251,7 @@ order by 1, 3
 /
 ````
 
-5. Look at the XML file for the pluggable database **PDB3**
+5. Look at the XML file for the pluggable database **PDB3**.
 ````
 host cat /u01/app/oracle/oradata/CDB1/pdb3.xml
 ````
