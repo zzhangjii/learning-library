@@ -5,12 +5,13 @@
 - [Lab Assumptions](#lab-assumptions)
 - [Section 1-Login to the Oracle Cloud](#section-1-login-to-the-oracle-cloud)
 - [Section 2-Create an SSH key pair](#section-2-create-an-ssh-key-pair)
-- [Section 3: Download Marketplace initialization zip and Script Zip File](#section-3:-download-marketplace-initialization-zip-and-script-zip-file)
-- [Section 4: Create Networking](#section-4:-create-networking)
-- [Section 5: Create DBCS VM Compute Instance](#section-5:-create-dbcs-vm-compute-instance)
-- [Section 6: Setup OCI CLI and Prep for Labs](#section-6:-setup-oci-cli-and-prep-for-labs)
+- [Section 3-Download Marketplace initialization zip and Script Zip File](#section-3-download-marketplace-initialization-zip-and-script-zip-file)
+- [Section 4-Create Networking](#section-4-create-networking)
+- [Section 5-Create DBCS VM Compute Instance](#section-5-create-dbcs-vm-compute-instance)
+- [Section 6-Setup OCI CLI and Prep for Labs](#section-6-setup-oci-cli-and-prep-for-labs)
 
-## Introduction 
+## Introduction
+-------------------
 This lab will show you how to login to the cloud and setup a DBCS VM running the Oracle 19c database.   In this lab, you will create an OCI Compute instance using the [Oracle Database](https://cloudmarketplace.oracle.com/marketplace/en_US/listing/47726045) image in the Oracle Cloud Marketplace. 
 
 The Oracle Cloud Marketplace is an online store dedicated to marketing cloud business apps and professional services offered by Oracle and it's cloud partners. 
@@ -20,13 +21,14 @@ The automation is driven by the same framework that powers the decade long Oracl
 Automatically deploy a fully functional Database environment by leveraging a simple cloud-config script.  The deployment allows for basic customization of the environment, further configurations, like adding extra disks and NICs, is possible post-deployment.
 
 
-## Lab Assumptions 
+## Lab Assumptions
+------------------- 
 - For PM sponsored roadshows, each participant has been provided an account on the c4u03 tenancy and the VCN has been created.
 - For self service, the user has access to a cloud account or free-tier account
 
 
 ## Section 1-Login to the Oracle Cloud 
-
+-------------------
 1.  From any browser go to www.oracle.com to access the Oracle Cloud.
 
     ![](img/login-screen.png)
@@ -58,8 +60,8 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 
 [Back to Top](#table-of-contents)
 
-## Section 2: Create an SSH key pair
-
+## Section 2-Create an SSH key pair
+-------------------
 ### MAC Users ###
 1.  Open up a terminal and type the following commands.  When prompted for a passphrase click **enter**. *Do not enter a passphrase*.
      ````
@@ -107,7 +109,8 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 
 [Back to Top](#table-of-contents)
 
-## Section 3: Download Marketplace initialization zip and Script Zip File
+## Section 3-Download Marketplace initialization zip and Script Zip File
+-------------------
 1.  Click  [here](https://community.oracle.com/servlet/JiveServlet/download/1031489-6-462822/oci-db-app-script-examples.zip) to download the marketplace initialization zip file.
 
 2.  Save it to your downloads folder
@@ -121,9 +124,9 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 
 [Back to Top](#table-of-contents)
 
-## Section 4: Create Networking
-
-If you are in a PM sponsored Roadshow, **skip this step** and go directly to [Section 5: Create DBCS VM Compute Instance](#section-5:-create-dbcs-vm-compute-instance).  Your VCN has already been created for you. 
+## Section 4-Create Networking
+-------------------
+If you are in a PM sponsored Roadshow, **skip this step** and go directly to [Section 5-Create DBCS VM Compute Instance](#section-5-create-dbcs-vm-compute-instance).  Your VCN has already been created for you. 
 
 1. Go back to your browser to the tab with your logged in access to the Oracle Cloud.  Click on the hamburger menu.
 ![](img/cloud-homepage.png) 
@@ -206,8 +209,8 @@ If you are in a PM sponsored Roadshow, **skip this step** and go directly to [Se
 
 [Back to Top](#table-of-contents)
 
-## Section 5: Create DBCS VM Compute Instance
-
+## Section 5-Create DBCS VM Compute Instance
+-------------------
 1. Go back to your browser to the tab with your logged in access to the Oracle Cloud.  Click on the hamburger menu.
 ![](img/cloud-homepage.png) 
 
@@ -261,7 +264,7 @@ If you are in a PM sponsored Roadshow, **skip this step** and go directly to [Se
 
 [Back to Top](#table-of-contents)
 
-## Section 6: Setup OCI CLI and Prep for Labs
+## Section 6-Setup OCI CLI and Prep for Labs
 -------------------
 Now that you have your instance, once you are able to ssh in, you will set up the OCI Command Line interface.
 1.  Open up a terminal (MAC) or cygwin emulator as the opc user
