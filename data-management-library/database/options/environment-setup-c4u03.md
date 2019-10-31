@@ -384,6 +384,7 @@ Now that you have your instance, once you are able to ssh in, you will set up th
     sudo chown oracle:oinstall /home/oracle/ssb.dmp
     sudo su - oracle
     unzip labs.zip
+    ````
 
 12.  The next two labs, In-Memory and Multitenant need additional schemas and pluggable databases created.  Run the scripts in the background to create them as the oracle user.  Let's run the multitenant script.  This script takes approximately 15-30 minutes to complete.
 
