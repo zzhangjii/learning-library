@@ -356,10 +356,9 @@ Now that you have your instance, once you are able to ssh in, you will set up th
     Compare the fingerprint in the output of config file to the one in OCI console window and make sure they match.
 
 10.  Now let's test.  Enter the following command:
-
-    ````
-    oci iam availability-domain list
-    ````
+````
+oci iam availability-domain list
+````
     
    ![](img/clilistdomain.png) 
 
