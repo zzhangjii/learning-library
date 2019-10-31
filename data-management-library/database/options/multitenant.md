@@ -94,6 +94,7 @@ alter session set container = PDB2;
 ````
 
 5. Grant ``PDB_ADMIN`` the necessary privileges and create the ``USERS`` tablespace for ``PDB2``
+
 ````
 grant SysDBA to pdb_admin;
 
