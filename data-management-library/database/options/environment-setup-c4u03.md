@@ -168,7 +168,7 @@ If you are in a PM sponsored Roadshow, skip this step.  Your VCN has already bee
     ````
     ![](img/addingress2.png)
 
-9.  Under Ingress Rule 2, add the same SOURCE CIDR value and a destination port range of 9080.  Repeat step 8 and 9 until you've added 5 rules.
+9.  Under Ingress Rule 2, add the same SOURCE CIDR value and a destination port range of 9080.  Repeat step 8 and 9 until you've added 10 rules.
 
     ````
     SOURCE RANGE: 0.0.0.0/0
@@ -182,6 +182,21 @@ If you are in a PM sponsored Roadshow, skip this step.  Your VCN has already bee
 
     SOURCE RANGE: 0.0.0.0/0
     PORT RANGE:  5600
+
+    SOURCE RANGE: 0.0.0.0/0
+    PORT RANGE:  443
+
+    SOURCE RANGE: 0.0.0.0/0
+    PORT RANGE:  7803
+
+    SOURCE RANGE: 0.0.0.0/0
+    PORT RANGE:  4903
+
+    SOURCE RANGE: 0.0.0.0/0
+    PORT RANGE:  7301
+
+    SOURCE RANGE: 0.0.0.0/0
+    PORT RANGE:  9851
     ````
     ![](img/addingress4.png)  
 
