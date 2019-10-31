@@ -307,15 +307,15 @@ Now that you have your instance, once you are able to ssh in, you will set up th
     ![](img/pem.png) 
 
 10.  Congrats! You have command line access to your newly created instance!  Now we need to download the files for our public bucket.
-
     ````
     cd /home/opc/
     oci os object list -bn DBOptions
     oci os object bulk-download -bn DBOptions --download-dir /home/opc
     ````
-    ![](img/ssbdmp.png) 
+    
+![](img/ssbdmp.png) 
 
-    ![](img/download-bucket.png)  
+![](img/download-bucket.png)  
 
 12.  Now that your files are downloaded, run the scripts to import the schemas to prepare for the In-Memory lab.
 
