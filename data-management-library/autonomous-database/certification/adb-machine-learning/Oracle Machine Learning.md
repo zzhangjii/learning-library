@@ -1,5 +1,5 @@
 
-![](./media/adbtitle.png)
+![](./media/adb-certification-title.png)
 # Using Oracle Machine Learning
 
 ## Table of Contents
@@ -61,24 +61,9 @@ application provided with autonomous database.
 4. From the **Autonomous Data Warehouse Details** page, click on **Service
     Console** to sign in to the service console.
 
-![](media/b9224ddf217a80c337073994086fce71.png)
+![](media/adw-serviceconsole-button.png)
 <p align="center">Figure 1-3</p>
 
-5. If prompted to **Sign In**, fill in the following **User** and **Password**
-    and click **Sign In**:
-
-    -   Username: **ADMIN**
-
-    -   Password: **\<Password\>** specified during provisioning (e.g.
-        Welcome_123\#)
-
-![](media/be583405ef7f35967ea587b76e2b8a87.png)
-<p align="center">Figure 1-4</p>
-
--   You will be placed in the **Overview** page.
-
-![](media/9eb48ed2bfdf0548c12694fe771d7ed8.png)
-<p align="center">Figure 1-5</p>
 
 [Back to Top](#table-of-contents)
 
@@ -87,12 +72,12 @@ application provided with autonomous database.
 1. From the **Autonomous Data Warehouse Service Console**, click on
     **Administration** link in the left menu.
 
-  ![](media/dfdd9ad037004f637c8c2bacbcfe24ff.png)
+  ![](media/adw-resources.png)
   <p align="center">Figure 2-1</p>
 
 2. On the service **Administration** page, click **Manage Oracle ML Users**.
 
-    ![](media/85db707b4f76b233fb02bf4b8592a06c.png)
+    ![](media/adw-manage-mluser.png)
       <p align="center">Figure 2-2</p>
 
 3. You will be presented the **Machine Learning User Administration** page.
@@ -172,7 +157,7 @@ application provided with autonomous database.
 3. Once you have successfully signed-in to OML the **Oracle Machine Learning**
     home page will be displayed.
 
-    ![](media/8dbbc1cbe21bbd97a1811c93863c739b.png)
+    ![](media/oml-homepage.png)
            <p align="center">Figure 3-3</p>
 
 4. The grey menu bar at the top of the screen provides links to the main OML
