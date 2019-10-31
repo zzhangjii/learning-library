@@ -82,7 +82,7 @@ from Dual
 
 3. Create a pluggable database ``PDB2``
 ````
-show pdbs;
+show  pdbs;
 create pluggable database PDB2 admin user PDB_Admin identified by oracle;
 alter pluggable database PDB2 open;
 show pdbs;
