@@ -1,13 +1,13 @@
 ![](img/db-inmemory-title.png)  
 
-# Table of Contents #
+## Table of Contents 
 
 - [Lab Introduction](#lab-introduction)
 - [Lab Sections](#lab-sections)
-- [Section 1: Login to Your Oracle Cloud Account](#section-1--login-to-your-oracle-cloud-account)
-- [Section 2:  Lab Setup](#section-2--lab-setup)
-- [Section 3:  Monitoring the In-Memory Column Store](#section-3--monitoring-the-in-memory-column-store)
-- [Section 4:  Querying the In-Memory Column Store](#section-4--querying-the-in-memory-column-store)
+- [Section 1: Login to Your Oracle Cloud Account](#section-1:-login-to-your-oracle-cloud-account)
+- [Section 2:  Lab Setup](#section-2:-lab-setup)
+- [Section 3:  Monitoring the In-Memory Column Store](#section-3:-monitoring-the-in-memory-column-store)
+- [Section 4:  Querying the In-Memory Column Store](#section-4:-querying-the-in-memory-column-store)
 - [Conclusion](#conclusion)
 
 
@@ -26,6 +26,7 @@ The following 5 table star schema will be used during the lab and has been creat
 
 ![](img/inmemory/star-schema.png)  
 
+[Back to Top](#table-of-contents)
 
 ## Lab Sections 
 1. Login to the Oracle Cloud
@@ -33,12 +34,13 @@ The following 5 table star schema will be used during the lab and has been creat
 2. Querying In-Memory Column Store Tables
 4. In-Memory Joins and Aggregations
 
-# Lab Assumptions #
+## Lab Assumptions ##
 - Each participant has been provided a username and password to the tenancy c4u03
 - Each participant has completed the Environment Setup lab.
 
 
 ## Section 1: Login to Your Oracle Cloud Account
+-----------------------------
 
 1.  From any browser go to www.oracle.com to access the Oracle Cloud.
 
@@ -56,14 +58,16 @@ The following 5 table star schema will be used during the lab and has been creat
 
     ![](img/cloud-login.png) 
 
+[Back to Top](#table-of-contents)
 
 ## Section 2 - Lab Setup
+----------------------
 
 All the scripts for this lab are located in the /home/oracle/inmemory/scripts folder.  
 
 1.  To access the scripts, secure shell into the OCI compute instance.
 
-2.  Change to the ssh directory and ssh into your instance.  THe public IP address can be found by going to Compute -> Instance.
+2.  Change to the ssh directory and ssh into your instance.  The public IP address can be found by going to Compute -> Instance.
 
     ````
     cd .ssh
@@ -73,16 +77,25 @@ All the scripts for this lab are located in the /home/oracle/inmemory/scripts fo
 
     ![](img/inmemory/cd-scripts.png) 
 
+[Back to Top](#table-of-contents)    
+
 ## Section 3 - Monitoring the In-Memory Column Store
+---------------------------
 
 The focus of this section is to show how the lab environment is setup and to demonstrate how to monitor the different parts of the In-Memory column store (IM column store). 
 
 The Oracle environment is already set up so sqlplus can be invoked directly from the shell environment. Since the lab is being run in a pdb called orcl you must supply this alias when connecting to the ssb account. 
 
-1.  Sqlplus into the instance and show sga to see how much memory is in the database.  You can also run @01_show_sga.sql
+1.  Login to the orclpdb as the SSB user.  
+    ````
+    sqlplus ssb/Ora_DB4U@localhost:1521/orclpdb
+    show sga
+    ````
+
+2.  Login to the instance using sqlplus and type the how sga command to see how much memory is in the database.  
 
     ````
-    sqlplus ssb/oracle@orcl
+    set numwidth 20
     show sga
     ````
    
@@ -107,11 +120,11 @@ The Oracle environment is already set up so sqlplus can be invoked directly from
 4.  To check if the IM column store is populated with objects run the 05_im_segments.sql script 
 
     ````
-    SQL> @05_im_segments.sql
+    select v.owner, v.segment_name name, v.populate_status status from v$im_segments v; 
     ````
      ![](img/inmemory/segments.png)   
 
-5.  To add objects to the IM column store the inmemory attribute needs to be set.  This tells the Oracle DB these tables should be populated into the IM column store.  You can also run `@06_im_alter_table.sql`
+5.  To add objects to the IM column store the inmemory attribute needs to be set.  This tells the Oracle DB these tables should be populated into the IM column store.  
 
     ````
     ALTER TABLE lineorder INMEMORY;
@@ -125,6 +138,8 @@ The Oracle environment is already set up so sqlplus can be invoked directly from
 6.  Run the `@07_im_attibutes.sql script`.  THis looks at the USER_TABLES view and queries attributes of tables in the SSB schema.
 
     ````
+    set lines 200;
+    
     SELECT table_name, cache, buffer_pool, compression, compress_for, inmemory,
         inmemory_priority, inmemory_distribute, inmemory_compression 
     FROM   user_tables; 

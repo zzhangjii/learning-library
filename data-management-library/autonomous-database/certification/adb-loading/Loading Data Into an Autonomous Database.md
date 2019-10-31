@@ -1,4 +1,4 @@
-![](./media/adbtitle.png)
+![](./media/adb-certification-title.png)
 # Loading Data Into an Autonomous Database
 
 ## Table of Contents
@@ -36,14 +36,14 @@ Storage, Oracle Cloud Infrastructure Object Storage Classic, and Amazon AWS S3.
 This tutorial shows how to load data from Oracle Cloud Infrastructure Object
 Storage using two of the procedures in the DBMS_CLOUD package:
 
--   create_credential: Stores the object store credentials in your Autonomous
+-   * `create_credential`: Stores the object store credentials in your Autonomous
     Database schema.
 
     -   You will use this procedure to create object store credentials in your
-        Autonomous Database  adwc_user schema that you defined in a previous
+        Autonomous Database  adwc_user schema that you defined in a previous
         tutorial.
 
--   copy_data: Loads the specified source file to a table. The table must
+-   * `copy_data`: Loads the specified source file to a table. The table must
     already exist in Autonomous Database.
 
     -   You will use this procedure to load tables in the adwc_user schema with
@@ -61,7 +61,7 @@ Storage using two of the procedures in the DBMS_CLOUD package:
 ### What Do You Need?
 
 -   Access to an instance of Autonomous Database. See previous tutorials in this
-    series and the documentation: [Using Oracle Autonomous Database
+    series and the documentation: [Using Oracle Autonomous Database
     Cloud](http://www.oracle.com/pls/topic/lookup?ctx=en/cloud/paas/autonomous-data-warehouse-cloud&id=CSWHU-GUID-4B91499D-7C2B-46D9-8E4D-A6ABF2093414).
 
 -   Data files already uploaded to a staging area; otherwise follow the steps in
@@ -82,147 +82,98 @@ Storage using two of the procedures in the DBMS_CLOUD package:
 ## Module 1:  Upload Data Files to Your Object Store
 --------------------------------------
 
-Upload to your cloud-based object store the data files that you want to load to
-your Autonomous Database database. This tutorial uses an object store in the
-Oracle Cloud Infrastructure Object Storage service.
+## Load a data file to your Object Store ##
+Oracle Cloud Infrastructure offers two distinct storage class tiers.  Object Storage, for data which you need fast, immediate and frequent access and Archive Storage, for data which you seldom or rarely access.  In this ziplab you will stage data into an object store in the Oracle Cloud Infrastructure Object Storage service.
 
-1.  Log in to your Oracle Cloud Infrastructure Console (refer to first lab for
-    steps)
+1. Login to your Oracle Cloud Infrastructure Console
+2. Select **Object Storage** -> **Object Storage** from the drop down menu on the top left of the Oracle Cloud Infrastructure console.
 
-2.  Select Service-\>Compute from the drop down on the top left of the Oracle
-    Cloud Infrastructure console
+    ![](img/adw-loading-object-storage2.png)
+    <p align="center">Figure 1-1</p>
 
-![](media/94c447806957d2b0947ba554091ef6e5.png)
-<p align="center">Figure 1-1</p>
+3. Select **Create Bucket** to create a bucket to load your data in.  This will be your staging area.  Later in this lab you will move the data from this staging area to your ADW instance.
+For this lab, we'll use the `adb-certification` compartment.
 
-3.  Select **Object Storage** from the menu at the top left of the Oracle Cloud
-    Infrastructure console. Select **Object Storage** from the sub-menu. 
+    ![](img/adw-loading-create-bucket-screen.png)
+    <p align="center">Figure 1-2</p>
 
-![](media/643a999a616d7ef6315b5b8221bbec0d.png)
-<p align="center">Figure 1-2</p>
+4. Enter the following information: 
+    * **Bucket Name**:  `bucket-<city you were born in>-<your initials>`  (example: *bucket-london-kam*)
+    * **Storage Tier**:  `Standard`
+    * **Encryption**: `Encrypt using Oracle Managed Keys`
 
-4.  Select a compartment in which to create a bucket to upload your database
-    table data. For this exercise leave at the default compartment. However if
-    you want to experiment with compartments you can do so and select whatever
-    compartment you wish.
+    ![](img/adw-loading-create-bucket.png)
+    <p align="center">Figure 1-3</p>
 
-![](media/c25b8849ff00d5c9765149ba4c07f8d8.jpg)
-<p align="center">Figure 1-3</p>
+5. Click **Create Bucket**.
+6. Click on the bucket name you just created.  
 
+    ![](img/adw-loading-buckets.png)
+    <p align="center">Figure 1-4</p>
+ 
+7. Review the screen. Note you have created an empty bucket with no objects in it and the visibility is set to private. 
 
-
-5.  Click **Create Bucket** to create the storage bucket in which to upload your
-    source files. You will later copy this staged data into database tables in
-    your Autonomous Database. 
-
-![](media/152886401d49443b559bafbea3693139.jpg)
-<p align="center">Figure 1-4</p>
-
-
-
-6.  Enter a bucket name, select the standard storage tier, Encrypt using Oracle
-    Managed Keys, and click **Create Bucket**.
-
-    ![](media/2d451b2cfe095dbe0ba20d9016dd487e.png)
+    ![](img/adw-loading-bucket-screen.png)
     <p align="center">Figure 1-5</p>
 
-7.  When the bucket is created you will see all buckets that have been created
-    including yours. Click on the bucket name you just created
+8. Click **[here](https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/adwc/OBE_Loading%20Your%20Data/files/datafiles_for_sh_tables.zip)** to download the zip file with the objects you will be importing into cloud storage.  The file will download to your desktop.  
+9. Double click and **extract** the folder to your desktop.
 
-    ![](media/0e88140b9548fa1de2059915449ed1f5.png)
+10. Click the **Upload Object** button at the bottom of the page to begin selecting the data files to upload to the bucket.  
+
+11. Choose all the files you just extracted, drag and drop them into the upload objects window.
+
+    ![](img/adw-loading-view-objects-4.png)
     <p align="center">Figure 1-6</p>
+    
+12. Select the ten data files and click **Open**.  Once the files are finished loading, click **Upload Objects** to load. 
 
-8.  Click **Upload Object** to begin selecting the data files to upload to the
-    bucket.
+    ![](img/adw-loading-select-files.png)
+    <p align="center">Figure 1-7</p>
 
-![](media/93f78b186f4d32e708b7861951022881.png)
-<p align="center">Figure 1-7</p>
+13. Once complete, verify **all** *.dat files have a status of `Finished` and click **Close**.
+14. Your bucket should have 10 objects loaded.  If this were a true data load, you may be loading *hundreds* of large files here.
+15. The final step will be to change the visibility of your bucket. Click the **Edit Visibility** button at the top of your Bucket Details screen.
 
-9.  Navigate to the location of the data files on your local computer. Drag and drop each file or click **Upload Object** to upload each file individually. This example uploads the data files of the SH tables (sales history tables
-    from an Oracle sample schema). Click
-    [here](https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/adwc/OBE_Loading%20Your%20Data/files/datafiles_for_sh_tables.zip)
-    to download a zipfile of the 10 SH data files for you to upload to the
-    object store. Download the zip file to your computer then extract the zip
-    file, you will upload these files into the object store.
-
-    ![upload data files to bucket](media/d947b9124322a312466e89c31b7ca192.jpg)
+    ![](img/adw-loading-edit-visibility.png)
     <p align="center">Figure 1-8</p>
 
-10.  The data files are uploaded to the bucket. These files staged in the cloud
-    are ready to be copied into the tables of your Autonomous Database. Remain
-    logged in to Oracle Cloud Infrastructure Object Storage.
+16. Change the visibility to **Public**, accept all other defaults.  Click **Save Changes**.
 
-![](media/3872f7d2964480f9f46821dc6dace57c.png)
-<p align="center">Figure 1-9</p>
+    ![](img/adw-loading-update-visibility.png)
+    <p align="center">Figure 1-9</p>
 
-11. The next step for is to make the bucket visible for loading. In this case we
-will make it public to make it easier to load and access all the files. In
-the same page above, Objects, click Edit Visibility and select Public and
-then Save Changes.
+17. Your bucket should now be visible and public.  Verify and proceed to setting up your Auth token.
 
-![](media/c932c75d50285003eb4dc2f2e511ff67.png)
-<p align="center">Figure 1-10</p>
+    ![](img/adw-loading-bucket-info.png)
+    <p align="center">Figure 1-10</p>
 
 [Back to Top](#table-of-contents) 
 
-## Module 2:  Create an Object Store Auth Token
----------------------------------
+## Module 2: Create an Object Store Auth Token
+--------------------------------------
 
-To load data from an Oracle Cloud Infrastructure Object Storage object store,
-you need to create an Auth Token for your object store account. The
-communication between your Autonomous Database and the object store relies on
-the Auth Token and username/password authentication.
+Because I created each of you as a federated user, you cannot create Auth Tokens.  So I have created a local user.
 
-1.  If you have logged out of Oracle Cloud Infrastructure Object Storage, log
-    back in.
+![](img/bucket-user.png)
+    <p align="center">Figure 2-1</p>
 
-2.  From the menu on the top left select Identity and users. Once on the Users
-    Page click on your username
+For the next part of our lab, you will need to use this Auth Token: etfUIb1}Na5P-lLhq(dQ
 
-![](media/984b8e61924036999b826bcf7bfb36f1.png)
-<p align="center">Figure 2-1</p>
-
-3.  Click **Auth Tokens** under **Resources** on the left of the console.
-
-![](media/52e1da5618315168a5927cca42869fdd.png)
-<p align="center">Figure 2-2</p>
-
-4.  Click **Generate Token**.
-
-![](media/4eebbf902b33748076645485d0bfbd0a.png)
-<p align="center">Figure 2-3</p>
-
-5.  A pop-up dialog appears. Set the Auth Token by performing the following
-    steps:
-
-    -   In the pop-up dialog, enter a description.
-
-    -   Click the **Generate Token** button.
-
-    -   Copy the generated token to a text file. The token does not appear again
-        and you WILL NEED this token.
-
-    -   Click **Close**.
-
-![](media/4d4b3c3f59c9c69e2abe6bd4524bec50.jpg)
-<p align="center">Figure 2-4</p>
-
-6. Enter description and click Generate Token
-
-![](media/fed42f052bd9e9974b9decf5a5e9c185.jpg)
-<p align="center">Figure 2-5</p>
-
-7. Copy the generated token, save into a text file, the token will not be displayed again
 
 [Back to Top](#table-of-contents) 
 
 ## Module 3:  Create Object Store Credentials in your Autonomous Database
 -----------------------------------------------------------
 
-Now that you have created an object store Auth Token, store in your Autonomous database the credentials of the object store in which your data is staged.
+Now that you have an object store Auth Token, you will store your credentail in your Autonomous database.
 
-1.  Open SQL Developer and connect to your Autonomous Database as user admin
-    with the connection you created in the Connecting to ADB Lab
+1.  Open SQL Developer Web and connect to your Autonomous Database as user admin
+    with the connection you created in the Connecting to ADB Lab.
+    (Go to your Autonomous Database details page, click on Service Console,  Click on Developement, Select SQL Developer )
+
+    ![](img/select-sqldev-web.png)
+    <p align="center">Figure 3-1</p>
 
 2.  In a SQL Developer worksheet, use the create_credential procedure of the
     DBMS_CLOUD package to store the object store credentials in your database
@@ -231,22 +182,22 @@ Now that you have created an object store Auth Token, store in your Autonomous d
         copy_data procedure in the next step.
 
     -   Specify the credentials for your Oracle Cloud Infrastructure Object
-        Storage service: The username is your Oracle Cloud Login and the object
-        store Auth Token you generated in the previous step.
+        Storage service: The username will be buket-user and the object
+        store Auth Token is the one provided above.
 
 ```
 begin  
    DBMS_CLOUD.create_credential (  
-   credential_name =\> 'OBJ_STORE_CRED',  
-   username =\> '\<your username\>',  
-   password =\> '\<your Auth Token\>'  
+   credential_name => 'OBJ_STORE_CRED',  
+   username => 'bucket-user',  
+   password => 'etfUIb1}Na5P-lLhq(dQ'  
    ) ;  
 end;  
 /
 ```
 
-![](media/0046fbc52443e746a82eed722787b9b8.jpg)
-<p align="center">Figure 3-1</p>
+![](img/create-credential.png)
+<p align="center">Figure 3-2</p>
 
 
 After you run this script, your object store's credentials are stored in
@@ -260,6 +211,7 @@ your Autonomous Database.
 The copy_data procedure of the DBMS_CLOUD package requires that target tables
 must already exist in in your Autonomous database. To create the appropriate
 tables, run the code below in SQL Developer.
+
 
 1. Copy and paste all this code into the SQL worksheet in SQL Developer and click run script.
 
@@ -715,11 +667,9 @@ RELY DISABLE NOVALIDATE;
 
 Running the create statements and results will look like this in SQL Developer.
 
-![](media/e94862b4d40362f7a21143d19c45c5dc.png)
+![](img/create-tables.png)
 <p align="center">Figure 4-1</p>
 
-Now run the copy_data procedure to copy the data staged in your object store to
-your Autonomous Database tables. 
 
 In a SQL Developer worksheet, use the copy_data procedure of the DBMS_CLOUD
 package to copy the data staged in your object store.
@@ -730,10 +680,8 @@ Create Object Store Credentials earlier.
 For file_uri_list, specify the URL that points to the location of the file
 staged in your object store. See screenshots below for how to obtain this.
 
-[Click
-here](https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/adwc/OBE_Loading%20Your%20Data/files/data%20loading%20script.txt)
-for an example script. In the script, the only line you need to change for each
-table is the file_uri_list parameter IF the credential you created is called
+[Right click here to open in a new tab and copy the contents](files/adw-loading-copy-data.txt). In the script, the only line you need to change for each
+table is the * `file_uri_list parameter` IF the credential you created is called
 OBJ_STORE_CRED. If you called your credential a different name, you also need to
 change the credential_name line.
 
@@ -741,37 +689,45 @@ To obtain the file_uri_list for each file you want to load, go to your storage
 bucket (as described above when you created it), and for each object to load,
 click on the 3 dots to the right and select, View Object Details:
 
-![](media/446f0eefb0d689f09c58a1b68a07d3cb.png)
+![](img/bucket-object-view.png)
 <p align="center">Figure 4-2</p>
 
 The object details windows appears, copy the URL Path (URI), then past this on
 the corresponding dbms_cloud.copy_data statement as shown below
 
-![](media/1b0932000676b6023a7e31a5a5b72452.png)
+![](img/object-file-url.png)
 <p align="center">Figure 4-3</p>
 
 2. Below is an example of what your statement should look like when you run it, filled in with your information instead. Remember, one statement per table being loaded.
 
 ```
 begin
-dbms_cloud.copy_data(table_name =\>'CHANNELS',credential_name=\>'OBJ_STORE_CRED',
-file_uri_list=\>'https://objectstorage.us-ashburn-1.oraclecloud.com/n/ospaadb/b/bucket-20190326-1401/o/chan_v3.dat',format =\> json_object('ignoremissingcolumns' value 'true', 'removequotes' value 'true')
+dbms_cloud.copy_data(table_name =\>'CHANNELS',
+credential_name=\>'OBJ_STORE_CRED',
+file_uri_list=\>'https://objectstorage.us-ashburn-1.oraclecloud.com/n/ospaadb/b/bucket-20190326-1401/o/chan_v3.dat',
+format =\> json_object('ignoremissingcolumns' value 'true', 'removequotes' value 'true')
 );
 end;
 /
 ```
 
-![data loading script](media/94a36524831e1e758a00eb3941afe8c5.jpg)
+![](img/find-and-replace.png)
 <p align="center">Figure 4-4</p>
 
-[](https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/adwc/OBE_Loading%20Your%20Data/files/data_loading_script.txt)
+After you have updated the `file_uri-list` values, copy and run the statements in your SQL Worksheet.
 
 3. After you run the procedure, observe that the data has been copied from the
 object store to the tables in your Autonomous database by clicking the table
 name in SQL Developer
 
-![result of loading table](media/6fdeb61588644d2d2acec31caf6c80a1.png)
+![](img/load-tables.png)
 <p align="center">Figure 4-5</p>
+
+4. You can now view your table data.
+
+![](img/view-downloaded-data.png)
+<p align="center">Figure 4-5</p>
+
 
 [Back to Top](#table-of-contents) 
 
@@ -796,10 +752,10 @@ FROM user_load_operations WHERE type = 'COPY';
 
 2.  Examine the results. The log and bad files are accessible as tables:
 
-TABLE_NAME STATUS ROWS_LOADED LOGFILE_TABLE   BADFILE_TABLE  
----------- ------------ ----------- -------------   -------------  
-  CHANNELS FAILED COPY\$1_LOG      COPY\$1_BAD  
- CHANNELS COMPLETED 5   COPY\$2_LOG COPY\$2_BAD
+TABLE_NAME STATUS ROWS_LOADED LOGFILE_TABLE   BADFILE_TABLE  
+---------- ------------ ----------- -------------   -------------  
+  CHANNELS FAILED COPY\$1_LOG      COPY\$1_BAD  
+ CHANNELS COMPLETED 5   COPY\$2_LOG COPY\$2_BAD
 
 **This concludes the loading lab.**
 

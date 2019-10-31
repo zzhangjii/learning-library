@@ -151,15 +151,24 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_009.PNG" alt="image-alt-text">
 
+- **Name your instance**: Enter a name 
+- **Choose an operating system or image source**: Click **Change Image Source**. In the new window, Click **Oracle Images** Choose **Oracle Cloud Developer Image**. Scroll down, Accept the Agreement and Click **Select Image**
 
-- **Choose Instance Type:** Select Virtual Machine
-- **Choose Instance Shape:** Select VM shape (Choose from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1)
-- **Configure Boot Volume:** Leave the default
-- **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
-- **Virtual Cloud Network Compartment:** Choose your compartment
-- **Virtual Cloud Network:** Select the VCN you created in the previous section. 
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_009.PNG" alt="image-alt-text">
+
+- **Availability Domain**: Select availability domain
+- **Instance Type**: Select Virtual Machine 
+- **Instance Shape**: Select VM shape (Choose from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1)
+
+**Under Configure Networking**
+- **Virtual cloud network compartment**: Select your compartment
+- **Virtual cloud network**: Choose the VCN 
 - **Subnet Compartment:** Choose your compartment. 
 - **Subnet:** Choose the first Subnet
+- **Use network security groups to control traffic** : Leave un-checked
+- **Assign a public IP address**: Check this option
+- **Boot Volume:** Leave the default
+- **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
 
 9. Click **Create**
 

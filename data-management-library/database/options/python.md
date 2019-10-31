@@ -117,14 +117,6 @@ Pip is a package management system used to install and manage software packages 
     ![](img/python/getpippy2.png)     
 
 
- 3. The Pip installation file is a Python script and you can install it by invoking the Python interpreter and executing the script:
-
-    ````
-    sudo wget https://bootstrap.pypa.io/get-pip.py
-    ````
-    
-    ![](img/python/getpippy2.png)     
-
  4. The Pip installation file is a Python script and you can install it by invoking the Python interpreter and executing the script:
 
     ````
@@ -182,9 +174,9 @@ Pip is a package management system used to install and manage software packages 
 
     ````
     > import cx_Oracle
-    > con = cx_Oracle.connect('system/Ora_DB4U@orcl')
+    > con = cx_Oracle.connect('system/Ora_DB4U@localhost:1521/orclpdb')
     > print con.version
-    19.3.0.0.0 (example output)
+    19.4.0.0.0 (example output)
     > quit()
     ````
 
@@ -224,24 +216,24 @@ There are several ways to execute Python code.  Here, we start with the presenta
 
 Retrieving records from Oracle database using cursors is a simple as embedding the SQL statement within the cursor().execute statement.
 
-1.  Open up a text editor and enter the following query.  Save the script as /home/oracle/db_connect.py.
+1.  Open up a text editor and enter the following query.  Let's query the customer table you used in the In-Memory lab. Save the script as /home/oracle/db_connect.py.
     ````
     ## Run a first sample query
     ## import module cx_Oracle
     import cx_Oracle
 
     ## Set up a DB connection
-    con = cx_Oracle.connect('oe/oe@pdb01')
+    con = cx_Oracle.connect('ssb/Ora_DB4U@localhost:1521/orclpdb')
 
     ## Open a cursor
     cur = con.cursor()
 
     ## Run a query
-    cur.execute('select CUSTOMER_ID, CUST_FIRST_NAME, CUST_LAST_NAME from CUSTOMERS order by CUSTOMER_ID')
+    cur.execute('select c_name,c_address,c_city from customer where rownum < 100')
 
     ## Display result set
     for row in cur:
-    print row
+        ZZprint row
 
     ## Close cursor
     cur.close()
@@ -254,3 +246,5 @@ Retrieving records from Oracle database using cursors is a simple as embedding t
     ````
     python /home/oracle/db_connect.py
     ````
+
+Congratulations!  You've created a basic python application connecting to the oracle database.
