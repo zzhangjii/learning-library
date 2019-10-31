@@ -1,6 +1,17 @@
 ![](img/db-options-title.png)  
 
-# Introduction #
+## Table of Contents 
+- [Introduction](#introduction)
+- [Lab Assumptions](#lab-assumptions)
+- [Prerequisites](#prerequisites)
+- [Section 1: Login to the Oracle Cloud](#section-1:-login-to-the-oracle-cloud)
+- [Section 2: Create an SSH key pair](#section-2:-create-an-ssh-key-pair)
+- [Section 3: Download Marketplace initialization zip and Script Zip File](#section-3:-download-marketplace-initialization-zip-and-script-zip-file)
+- [Section 4: Create Networking](#section-4:-create-networking)
+- [Section 5: Create DBCS VM Compute Instance](#section-5:-create-dbcs-vm-compute-instance)
+- [Section 6: Setup OCI CLI and Prep for Labs](#section-6:-setup-oci-cli-and-prep-for-labs)
+
+## Introduction 
 This lab will show you how to login to the cloud and setup a DBCS VM running the Oracle 19c database.   In this lab, you will create an OCI Compute instance using the [Oracle Database](https://cloudmarketplace.oracle.com/marketplace/en_US/listing/47726045) image in the Oracle Cloud Marketplace. 
 
 The Oracle Cloud Marketplace is an online store dedicated to marketing cloud business apps and professional services offered by Oracle and it's cloud partners. 
@@ -10,23 +21,19 @@ The automation is driven by the same framework that powers the decade long Oracl
 Automatically deploy a fully functional Database environment by leveraging a simple cloud-config script.  The deployment allows for basic customization of the environment, further configurations, like adding extra disks and NICs, is possible post-deployment.
 
 
-# Lab Assumptions #
-- For PM sponsored roadshows, each participant has been provided an account on the c4u03
+## Lab Assumptions 
+- For PM sponsored roadshows, each participant has been provided an account on the c4u03 tenancy and the VCN has been created.
 - For self service, the user has access to a cloud account or free-tier account
 
-## Table of Contents 
-
-- [Section 1: Login to the Oracle Cloud](#section-1---login)
-- [Section 2: Create an SSH key pair](#section-2---setup-ssh)
-- [Section 3: Download Marketplace initialization zip and Script Zip File](#section-3---oracle-marketplace)
-- [Section 4:  Create Networking](#section-4---networking)
-- [Section 5:  Create Compute Instance](#section-5---dbcs-vm)
-- [Section 6:  Setup OCI CLI and Extract Lab Scripts](#section-6---lab-prep)
+## Prerequisites
+1.  Cloud Account or Free Tier Account
+2.  Docker Account (hub.docker.com)
+3.  Putty (Windows users)
+4.  Google Chrome with JSON Formatter Plugin
+5.  Familiarity with VI
 
 
-
-## Section 1 - Login
-----------------
+## Section 1: Login to the Oracle Cloud 
 
 1.  From any browser go to www.oracle.com to access the Oracle Cloud.
 
@@ -59,7 +66,7 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 
 [Back to Top](#table-of-contents)
 
-## Section 2 - Setup SSH
+## Section 2: Create an SSH key pair
 
 ### MAC Users ###
 1.  Open up a terminal and type the following commands.  When prompted for a passphrase click **enter**. *Do not enter a passphrase*.
@@ -80,6 +87,7 @@ Automatically deploy a fully functional Database environment by leveraging a sim
     ![](img/optionskey.png) 
 
 
+
 ### For Windows: Using GitBash or Windows Subsystem for Linux (WSL) ### 
 
 1. Open the terminal tool of your choice
@@ -87,6 +95,8 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 1. Press enter to accept default values
 1. Do not assign a password for this exercise. (note you should always assign an SSH key password in production)
 1. Type cat ~/.ssh/optionskey.pub to retrieve your public key. Save it for future use.
+
+
 
 ### For Windows: Using PuttyGen ### 
 
@@ -103,11 +113,9 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 1. Note: Sometimes PuttyGen does not save the public key in the correct format. The text string displayed in the window is correct so we just copy/paste.
 
 
-
-
 [Back to Top](#table-of-contents)
 
-## Section 3 - Oracle Marketplace
+## Section 3: Download Marketplace initialization zip and Script Zip File
 1.  Click  [here](https://community.oracle.com/servlet/JiveServlet/download/1031489-6-462822/oci-db-app-script-examples.zip) to download the marketplace initialization zip file.
 
 2.  Save it to your downloads folder
@@ -121,9 +129,9 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 
 [Back to Top](#table-of-contents)
 
-## Section 4 - Networking
+## Section 4: Create Networking
 
-If you are in a PM sponsored Roadshow, skip this step.  Your VCN has already been created for you.
+If you are in a PM sponsored Roadshow, **skip this step** and go directly to [Section 5: Create DBCS VM Compute Instance](#section-5:-create-dbcs-vm-compute-instance).  Your VCN has already been created for you. 
 
 1. Go back to your browser to the tab with your logged in access to the Oracle Cloud.  Click on the hamburger menu.
 ![](img/cloud-homepage.png) 
@@ -206,7 +214,7 @@ If you are in a PM sponsored Roadshow, skip this step.  Your VCN has already bee
 
 [Back to Top](#table-of-contents)
 
-## Section 5 - DBCS-VM
+## Section 5: Create DBCS VM Compute Instance
 
 1. Go back to your browser to the tab with your logged in access to the Oracle Cloud.  Click on the hamburger menu.
 ![](img/cloud-homepage.png) 
@@ -261,7 +269,7 @@ If you are in a PM sponsored Roadshow, skip this step.  Your VCN has already bee
 
 [Back to Top](#table-of-contents)
 
-## Section 6 - Lab Prep
+## Section 6: Setup OCI CLI and Prep for Labs
 -------------------
 Now that you have your instance, once you are able to ssh in, you will set up the OCI Command Line interface.
 1.  Open up a terminal (MAC) or cygwin emulator as the opc user
@@ -277,12 +285,16 @@ Now that you have your instance, once you are able to ssh in, you will set up th
     ````
     ![](img/cli-install.png) 
 
-3.  Accept all the defaults.  This will install packages like python, configparser, etc.  Install the cx_Oracle package when prompted to install additional packages.  We will need this later for the python lab.  Enter Y to update your $PATH and enable shell/tab completion.
+3.  Accept all the defaults.  This will install packages like python, configparser, etc.  Do not install any additional scripts.  Enter **Y** to update your $PATH and enable shell/tab completion.
 
     ![](img/cli-install-2.png) 
 
     ![](img/cli-install-3.png) 
 
+4.  You will be prompted at the end to run an exec command to restart your shell. Do that now.
+    ````
+    exec -l $SHELL
+    ````
 4.  Once you verify installation is successful, verify the install by running the oci command with the -v option.  This will tell you the version of oci installed (2.6.10 and later)
 
     ````
@@ -291,7 +303,7 @@ Now that you have your instance, once you are able to ssh in, you will set up th
 4.  Now that the binaries are complete.  You will need to provide your tenancy id and user id.  Go back to your browswer and click on the hamburger menu.
     ![](img/cloud-homepage.png) 
 
-5.  Click Administration -> Tenancy Details
+5.  Click **Administration** -> **Tenancy** Details
 
     ![](img/tenancy-details.png) 
 
@@ -303,25 +315,60 @@ Now that you have your instance, once you are able to ssh in, you will set up th
 
     ![](img/user-details.png) 
 
-8.  Go back to your terminal window and run the oci setup commands to complete configuration.  Accept the default location when prompted.  Enter *Y* to generate an RSA key pair (no passphrase needed).
+8.  Go back to your terminal window and run the oci setup commands to complete configuration.  Accept the default location when prompted.  Enter **Y** to generate an RSA key pair (no passphrase needed).
 
     ````
     oci setup config
     ````
+    - Location for your config: *Press enter*
+    - User OCID:  Paste your OCI ID from the previous step
+    - Tenancy OCID:  Paste your tenancy ID from the previous step
+    - Enter a region:  Find your region in your browser in the top right
+    - Generate a new RSA Key Pair:  Y
+    - Press enter for the last 3 questions accepting the defaults
+
+     **BE SURE TO PASTE THE CORRECT VALUES OR SETUP WILL NOT WORK**
+
     ![](img/oci-setup-config.png) 
 
 9. Go to the hidden .oci directory and examime the public key file and the config file.
 
     ````
     cd /home/opc/.oci
-    cat config
-    cat /home/opc/.oci/oci_api_key_public.pem
+    more config
+    more /home/opc/.oci/oci_api_key_public.pem
     ````
     ![](img/config.png) 
 
     ![](img/pem.png) 
 
-10.  Congrats! You have command line access to your newly created instance!  Now we need to download the files for our public bucket.
+10.  Now that you have installed cli and configured it, you need to add an API key to your user profile.  Go back to your browswer and click the user icon (top Rrght of your browswer) and click **User Settings**. Click **API Keys** and **Add Public Key**.
+
+  ![](img/usersettings.png) 
+
+  ![](img/addapikeys-1.png) 
+
+  ![](img/addapikeys.png) 
+
+  ![](img/apikey.png) 
+
+10. Paste the content of oci_api_key_public.pem copied earlier and click Add.A new finger print will be generated. Switch to the SSH terminal session and type:
+
+    ````
+    more /home/opc/.oci/config
+    ````
+
+    Compare the fingerprint in the output of config file to the one in OCI console window and make sure they match.
+
+10.  Now let's test.  Enter the following command:
+
+    ````
+    oci iam availability-domain list
+    ````
+    
+   ![](img/clilistdomain.png) 
+
+10.  Congrats! You have command line access to your newly created instance!  Let's  download the files you will need for these labs from object storage.
     ````
     cd /home/opc/
     oci os object list -bn DBOptions
@@ -332,14 +379,40 @@ Now that you have your instance, once you are able to ssh in, you will set up th
 
 ![](img/download-bucket.png)  
 
-12.  Now that your files are downloaded, run the scripts to import the schemas to prepare for the In-Memory lab.
+11.  Now that your files are downloaded, run the scripts to import the schemas to prepare for the In-Memory lab.
 
     ````
     cd /home/opc/
+    sudo mv labs.zip /home/oracle
+    sudo mv ssb.dmp /home/oracle
+    sudo chown oracle:oinstall /home/oracle/labs.zip 
+    sudo chown oracle:oinstall /home/oracle/ssb.dmp
+    sudo su - oracle
     unzip labs.zip
-    cd labs
-    ./setupinmem.sh &
-    ./setupmultitenant.sh &
+
+12.  The next two labs, In-Memory and Multitenant need additional schemas and pluggable databases created.  Run the scripts in the background to create them as the oracle user.  Let's run the multitenant script.  This script takes approximately 15-30 minutes to complete.
     ````
+    cd /home/oracle/labs/multitenant
+    ./createCDBs.sh &
+    ````
+
+13.  Open up a 2nd terminal window.  Let's run the script to setup the In-Memory lab.  This script takes approximately 10 minutes to complete.
+    ````
+    ssh -i ~/.ssh/optionskey opc@<Your Compute Instance Public IP Address>
+    sudo su - oracle
+    cd /home/oracle/labs/inmemory
+    ./importSSBschema.sh &
+    ````
+   ![](img/importssb.png)    
+
+14.  The 1st Multitenant setup script creates two additional listeners and 2 container databases, CDB1 and CDB2.
+    ````
+    ps -ef | grep tns
+    ps -ef | grep pmon
+    ````
+
+   ![](img/tnspmon.png)    
+
+Congratulations, you finished!  This is the end of the environment setup lab! 
 
 [Back to Top](#table-of-contents)
