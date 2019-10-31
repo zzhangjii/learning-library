@@ -53,7 +53,7 @@ All the scripts for this lab are located in the /u01/app/oracle/labs/multitenant
 
 
 ## Section 1: Create PDB
-This section looks at how to create a brand-new PDB.
+This section looks at how to create a new PDB.
 
 The tasks you will accomplish in this lab are:
 - Create a pluggable database **PDB2** in the container database **CDB1**
