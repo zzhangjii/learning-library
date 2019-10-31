@@ -250,7 +250,80 @@ Now that you know how to start, stop and relocate a container, let's see how to 
     Check the "as SYSDBA" checkbox
     ````
 
+## Section 7:  Deploy Application
 
+1.  Download the docker image, twitterfeed, extract it and run the container.  The download is from the wvbirder docker hub account where this application is staged.
+    ````
+    docker run -d --name=twitterfeed -p=9080:9080 wvbirder/twitterfeed
+    ````
+2.  Check to see which containers are running.  
+    ````
+    docker ps
+    ````
+
+3.  Open up a broswer to see the application with the stream of texts.  http://Public IP address:9080/statictweets
+
+4.  Let's run the restclient with the Oracle Database as the datasource.
+    ````
+    docker run -d -it --rm --name restclient -p=8002:8002 --link orcl:oracledb-ao -e ORACLE_CONNECT='oracledb-ao/orclpdb1.localdomain' -e DS='oracle' wvbirder/restclient
+
+    ````
+
+3.  Go back to your broswer to see the application with the stream of texts.  http://Public IP address:8002/products
+
+4.  An application called AlphaOfficeUI has been staged in wvbirders docker hub account.  Let's download it, extract and run it.
+    ````
+    docker run -d --name=alphaofficeui -p=8085:8085 wvbirder/alpha-office-ui-js
+    ````
+3.  Go back to your broswer to see the application running on port 8085.  http://Public IP address:8005.  Clickon one of the products to see the details and the twitterfeed comments. 
+
+## Section 8:  Change Application (optional)
+
+1. Copy a background image from your compute instance into the filesystem of the container.
+    ````
+    docker cp /home/opc/AlphaOfficeSetup/dark_blue.jpg alphaofficeui:/pipeline/source/public/Images
+    ````
+
+2.  wvbirder's container does not have vim installed.  So you will configure it.  First you need to login to the container.
+    ````
+    docker exec -it alphaofficeui bash
+    apt-get update
+    apt-get install vim
+    ````
+
+3.  Verify the dark_blue.jpg file is in the container and then use vim to edit the html file for the main page in your application.  Change the highlighted areas to your name.
+    ````
+    ls /pipeline/source/public/Images
+    vim /pipeline/source/public/alpha.html
+    ````
+
+4.  Let's edit the css file as well and change the background color of the app.
+    ````
+    vim /pipeline/source/public/css/alpha.css
+    exit
+    ````
+5.  Let's commit this new docker image to your docker hub now.  Wvbirder thanks but we have our own Docker account.  Once commited, list the images.  Note that your image is now listed.
+    ````
+    docker commit alphaofficeui (your-dockerhub-account)/(image-name)
+    docker images
+    ````
+6.  Let's start a container based on your image.  First we need to stop the existing container.
+    ````
+    docker stop alphaofficeui
+    docker rm alphaofficeui
+    ````
+
+7.  Let's download, extract and install the new container from your docker account
+    ````
+    docker run -d --name=alphaofficeui -p=8085:8085 (your-dockerhub-account)/(image-name)
+    ````
+3.  Go back to your broswer to view the application.  http://Public IP address:8085
+
+4.  Now let's push this image to your docker hub account
+    ````
+    docker push (your-dockerhub-account)/(image-name)
+    ````
+5.  Open up a new browswer tab and login to hub.docker.com.  Verify your new account is there.
 
 
 
