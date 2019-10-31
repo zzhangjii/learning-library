@@ -325,6 +325,14 @@ Now that you know how to start, stop and relocate a container, let's see how to 
     ````
 5.  Open up a new browswer tab and login to hub.docker.com.  Verify your new account is there.
 
+6.  Don't forget to restart your oracle listener!
+    ````
+    sudo su - oracle
+    . oraenv ORCL
+    lsnrctl start LISTENER
+    ps -ef | grep tns
+    ````
+
 
 
 
