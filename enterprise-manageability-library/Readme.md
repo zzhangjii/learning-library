@@ -1,1 +1,1 @@
-Coming soon!
+Coming soon - November 2019!
