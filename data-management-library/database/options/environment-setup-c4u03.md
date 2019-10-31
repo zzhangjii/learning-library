@@ -3,8 +3,8 @@
 ## Table of Contents 
 - [Introduction](#introduction)
 - [Lab Assumptions](#lab-assumptions)
-- [Section 1: Login to the Oracle Cloud](#section-1:-login-to-the-oracle-cloud)
-- [Section 2: Create an SSH key pair](#section-2:-create-an-ssh-key-pair)
+- [Section 1-Login to the Oracle Cloud](#section-1-login-to-the-oracle-cloud)
+- [Section 2-Create an SSH key pair](#section-2-create-an-ssh-key-pair)
 - [Section 3: Download Marketplace initialization zip and Script Zip File](#section-3:-download-marketplace-initialization-zip-and-script-zip-file)
 - [Section 4: Create Networking](#section-4:-create-networking)
 - [Section 5: Create DBCS VM Compute Instance](#section-5:-create-dbcs-vm-compute-instance)
@@ -25,7 +25,7 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 - For self service, the user has access to a cloud account or free-tier account
 
 
-## Section 1: Login to the Oracle Cloud 
+## Section 1-Login to the Oracle Cloud 
 
 1.  From any browser go to www.oracle.com to access the Oracle Cloud.
 
