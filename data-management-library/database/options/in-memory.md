@@ -4,10 +4,10 @@
 
 - [Lab Introduction](#lab-introduction)
 - [Lab Sections](#lab-sections)
-- [Section 1: Login to Your Oracle Cloud Account](#section-1--login-to-your-oracle-cloud-account)
-- [Section 2:  Lab Setup](#section-2--lab-setup)
-- [Section 3:  Monitoring the In-Memory Column Store](#section-3--monitoring-the-in-memory-column-store)
-- [Section 4:  Querying the In-Memory Column Store](#section-4--querying-the-in-memory-column-store)
+- [Section 1: Login to Your Oracle Cloud Account](#section-1:-login-to-your-oracle-cloud-account)
+- [Section 2:  Lab Setup](#section-2:-lab-setup)
+- [Section 3:  Monitoring the In-Memory Column Store](#section-3:-monitoring-the-in-memory-column-store)
+- [Section 4:  Querying the In-Memory Column Store](#section-4:-querying-the-in-memory-column-store)
 - [Conclusion](#conclusion)
 
 

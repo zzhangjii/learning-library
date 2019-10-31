@@ -17,11 +17,11 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 ## Table of Contents 
 
 - [Section 1: Login to the Oracle Cloud](#section-1---login)
-- [Section 2: Create an SSH key pair](#section-2---lsetup-ssh)
+- [Section 2: Create an SSH key pair](#section-2---setup-ssh)
 - [Section 3: Download Marketplace initialization zip and Script Zip File](#section-3---oracle-marketplace)
 - [Section 4:  Create Networking](#section-4---networking)
 - [Section 5:  Create Compute Instance](#section-5---dbcs-vm)
-- [Section 6:  Extract Lab Scripts and Prep Environment](#section-6---lab-prep)
+- [Section 6:  Setup OCI CLI and Extract Lab Scripts](#section-6---lab-prep)
 
 
 
@@ -248,32 +248,83 @@ If you are in a PM sponsored Roadshow, skip this step.  Your VCN has already bee
 
 ## Section 6 - Lab Prep
 -------------------
+Now that you have your instance, once you are able to ssh in, you will set up the OCI Command Line interface.
 1.  Open up a terminal (MAC) or cygwin emulator as the opc user
 
     ````
-    sftp -i ~/.ssh/optionskey opc@<Your Compute Instance Public IP Address>
-    ````
-
-2.  Use SFTP to transfer the zip file you downloaded earlier to your instance. 
-
-    ````
-    cd <Location where file was downloaded>
-    cp scripts.zip ~
-    cd ~
-    sftp -i ~/.ssh/optionskey opc@<Enter Your IP Address>
-    sftp> put scripts.zip
-    sftp> exit
-    ````
-
-3.  Once the transfer is complete.  SSH into your instance as the opc user 
-
-    ````
     ssh -i ~/.ssh/optionskey opc@<Your Compute Instance Public IP Address>
-    chmod 777 scripts.zip
-    sudo su - oracle
-    unzip /home/opc/scripts.zip .
-  
     ````
-4.  To finish the setup of your environment, en
+
+2.  Download the Oracle Cloud CLI install script.  
+
+    ````
+    bash -c "$(curl –L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
+    ````
+    ![](img/cli-install.png) 
+
+3.  Accept all the defaults.  This will install packages like python, configparser, etc.  Install the cx_Oracle package when prompted to install additional packages.  We will need this later for the python lab.  Enter Y to update your $PATH and enable shell/tab completion.
+
+    ![](img/cli-install-2.png) 
+
+    ![](img/cli-install-3.png) 
+
+4.  Once you verify installation is successful, verify the install by running the oci command with the -v option.  This will tell you the version of oci installed (2.6.10 and later)
+
+    ````
+    oci -v
+    ````
+4.  Now that the binaries are complete.  You will need to provide your tenancy id and user id.  Go back to your browswer and click on the hamburger menu.
+    ![](img/cloud-homepage.png) 
+
+5.  Click Administration -> Tenancy Details
+
+    ![](img/tenancy-details.png) 
+
+6.  Click **Show** to show the full tenancy id.  This is the unique identifier for the tenancy you are working in.  Click **Copy** and copy that to your notepad.
+
+    ![](img/tenancy-details-2.png)  
+
+7.  Repeat the same steps for your user.  To locate your user details go to Identity-> Users.  Note the region in which you are working (upper left corner)
+
+    ![](img/user-details.png) 
+
+8.  Go back to your terminal window and run the oci setup commands to complete configuration.  Accept the default location when prompted.  Enter *Y* to generate an RSA key pair (no passphrase needed).
+
+    ````
+    oci setup config
+    ````
+    ![](img/oci-setup-config.png) 
+
+9. Go to the hidden .oci directory and examime the public key file and the config file.
+
+    ````
+    cd /home/opc/.oci
+    cat config
+    cat /home/opc/.oci/oci_api_key_public.pem
+    ````
+    ![](img/config.png) 
+
+    ![](img/pem.png) 
+
+10.  Congrats! You have command line access to your newly created instance!  Now we need to download the files for our public bucket.
+
+    ````
+    cd /home/opc/
+    oci os object list -bn DBOptions
+    oci os object bulk-download -bn DBOptions --download-dir /home/opc
+    ````
+    ![](img/ssbdmp.png) 
+
+    ![](img/download-bucket.png)  
+
+12.  Now that your files are downloaded, run the scripts to import the schemas to prepare for the In-Memory lab.
+
+    ````
+    cd /home/opc/
+    unzip labs.zip
+    cd labs
+    ./setupinmem.sh &
+    ./setupmultitenant.sh &
+    ````
 
 [Back to Top](#table-of-contents)
