@@ -119,7 +119,6 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 
   ![](img/db-marketplace.png)
 
-4. Click [here]() to download the scripts.zip file.  You will ftp this file to your newly created compute instance later in this lab.
 
 
 [Back to Top](#table-of-contents)
@@ -266,7 +265,7 @@ If you are in a PM sponsored Roadshow, **skip this step** and go directly to [Se
 
 ## Section 6-Setup OCI CLI and Prep for Labs
 -------------------
-Now that you have your instance, once you are able to ssh in, you will set up the OCI Command Line interface.
+Now that you have your instance, once you are able to ssh in, you will set up the OCI Command Line interface. The initialization of the marketplace image takes around 5-7 minutes.  Once 5 minutes has passed, you should be able to ssh into the instance.
 1.  Open up a terminal (MAC) or cygwin emulator as the opc user
 
     ````
