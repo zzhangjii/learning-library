@@ -364,47 +364,47 @@ Now that you have your instance, once you are able to ssh in, you will set up th
    ![](img/clilistdomain.png) 
 
 10.  Congrats! You have command line access to your newly created instance!  Let's  download the files you will need for these labs from object storage.
-    ````
-    cd /home/opc/
-    oci os object list -bn DBOptions
-    oci os object bulk-download -bn DBOptions --download-dir /home/opc
-    ````
+````
+cd /home/opc/
+oci os object list -bn DBOptions
+oci os object bulk-download -bn DBOptions --download-dir /home/opc
+````
     
 ![](img/ssbdmp.png) 
 
 ![](img/download-bucket.png)  
 
 11.  Now that your files are downloaded, run the scripts to import the schemas to prepare for the In-Memory lab.
-    ````
-    cd /home/opc/
-    sudo mv labs.zip /home/oracle
-    sudo mv ssb.dmp /home/oracle
-    sudo chown oracle:oinstall /home/oracle/labs.zip 
-    sudo chown oracle:oinstall /home/oracle/ssb.dmp
-    sudo su - oracle
-    unzip labs.zip
-    ````
+````
+cd /home/opc/
+sudo mv labs.zip /home/oracle
+sudo mv ssb.dmp /home/oracle
+sudo chown oracle:oinstall /home/oracle/labs.zip 
+sudo chown oracle:oinstall /home/oracle/ssb.dmp
+sudo su - oracle
+unzip labs.zip
+````
 
 12.  The next two labs, In-Memory and Multitenant need additional schemas and pluggable databases created.  Run the scripts in the background to create them as the oracle user.  Let's run the multitenant script.  This script takes approximately 15-30 minutes to complete.
-    ````
-    cd /home/oracle/labs/multitenant
-    ./createCDBs.sh &
-    ````
+````
+cd /home/oracle/labs/multitenant
+./createCDBs.sh &
+````
 
 13.  Open up a 2nd terminal window.  Let's run the script to setup the In-Memory lab.  This script takes approximately 10 minutes to complete.
-    ````
-    ssh -i ~/.ssh/optionskey opc@<Your Compute Instance Public IP Address>
-    sudo su - oracle
-    cd /home/oracle/labs/inmemory
-    ./importSSBschema.sh &
-    ````
+````
+ssh -i ~/.ssh/optionskey opc@<Your Compute Instance Public IP Address>
+sudo su - oracle
+cd /home/oracle/labs/inmemory
+./importssb.sh &
+ ````
    ![](img/importssb.png)    
 
 14.  The 1st Multitenant setup script creates two additional listeners and 2 container databases, CDB1 and CDB2.
-    ````
-    ps -ef | grep tns
-    ps -ef | grep pmon
-    ````
+````
+ps -ef | grep tns
+ps -ef | grep pmon
+````
 
    ![](img/tnspmon.png)    
 
