@@ -375,7 +375,6 @@ Now that you have your instance, once you are able to ssh in, you will set up th
 ![](img/download-bucket.png)  
 
 11.  Now that your files are downloaded, run the scripts to import the schemas to prepare for the In-Memory lab.
-
     ````
     cd /home/opc/
     sudo mv labs.zip /home/oracle
@@ -387,14 +386,12 @@ Now that you have your instance, once you are able to ssh in, you will set up th
     ````
 
 12.  The next two labs, In-Memory and Multitenant need additional schemas and pluggable databases created.  Run the scripts in the background to create them as the oracle user.  Let's run the multitenant script.  This script takes approximately 15-30 minutes to complete.
-
     ````
     cd /home/oracle/labs/multitenant
     ./createCDBs.sh &
     ````
 
 13.  Open up a 2nd terminal window.  Let's run the script to setup the In-Memory lab.  This script takes approximately 10 minutes to complete.
-
     ````
     ssh -i ~/.ssh/optionskey opc@<Your Compute Instance Public IP Address>
     sudo su - oracle
