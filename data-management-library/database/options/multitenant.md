@@ -16,7 +16,7 @@
 
 
 ## Lab Introduction
-This series of labs will improve your operational efficiency with pluggable databases. We will cover PDB Hot clones, followed by PDB refresh and then finally a PDB relocate. 
+Multitenant will allow you to be able to manage a large environment with relative ease. You will start out learning the basics of Multitenant like creating, cloning, and plugging/unplugging a pluggable database. Then you will look at more advanced topics like the ones below.
 
 The time to provision a database can take days to weeks. The effort to keep that database in sync with critical, production data is yet another challenge, particularly as that data continues to grow. PDB hot cloning demonstrates the ease of online database provisioning of ‘hot’ data with little or no impact on the source database.OPEX saving with streamlined cloning operations, improved time to market through fast online database provisioning in sync with production data, CAPEX saving on robust, fully integrated cloning solution, easy integration with automation frameworks, DBaaS. OPEX saving with streamlined cloning operations, improved time to market through fast online database provisioning in sync with production data, CAPEX saving on robust, fully integrated cloning solution, easy integration with automation frameworks, DBaaS. 
 
@@ -504,6 +504,7 @@ CREATE TABLE sale_orders
  cd /u01/app/oracle/labs/multitenant
  ./write-load.sh
  ````
+Leave this window open and running for the next few labs.
 
  5. Connect to ``CDB2`` and create the pluggable ``OE_DEV`` from the database link ``oe@cdb1_link``
 ````
@@ -624,3 +625,6 @@ conn sys/oracle@localhost:1523/cdb2 as sysdba
 alter pluggable database oe close;
 drop pluggable database oe including datafiles;
 ````
+
+## Conclusion
+Now you've had a chance to try out the Multitenant option. You were able to create, clone, plug and unplug a pluggable database. You were then able to accomplish some advanced tasks that you could leverage when maintaining a large multitenant environment. 
