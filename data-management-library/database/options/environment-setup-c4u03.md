@@ -3,7 +3,6 @@
 ## Table of Contents 
 - [Introduction](#introduction)
 - [Lab Assumptions](#lab-assumptions)
-- [Prerequisites](#prerequisites)
 - [Section 1: Login to the Oracle Cloud](#section-1:-login-to-the-oracle-cloud)
 - [Section 2: Create an SSH key pair](#section-2:-create-an-ssh-key-pair)
 - [Section 3: Download Marketplace initialization zip and Script Zip File](#section-3:-download-marketplace-initialization-zip-and-script-zip-file)
@@ -24,13 +23,6 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 ## Lab Assumptions 
 - For PM sponsored roadshows, each participant has been provided an account on the c4u03 tenancy and the VCN has been created.
 - For self service, the user has access to a cloud account or free-tier account
-
-## Prerequisites
-1.  Cloud Account or Free Tier Account
-2.  Docker Account (hub.docker.com)
-3.  Putty (Windows users)
-4.  Google Chrome with JSON Formatter Plugin
-5.  Familiarity with VI
 
 
 ## Section 1: Login to the Oracle Cloud 
