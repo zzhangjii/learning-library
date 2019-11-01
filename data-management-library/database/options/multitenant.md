@@ -48,7 +48,7 @@ All the scripts for this lab are located in the /u01/app/oracle/labs/multitenant
     ssh -i optionskey opc@<your public ip address>
     ls
     sudo su - oracle
-    cd /u01/app/oracle/labs/multitenant
+    cd /home/oracle/labs/multitenant
     ````
 
 
@@ -59,12 +59,14 @@ The tasks you will accomplish in this lab are:
 - Create a pluggable database **PDB2** in the container database **CDB1**
 
 1. Connect to **CDB1**
+
 ````
 sqlplus /nolog
 connect sys/oracle@localhost:1523/cdb1 as sysdba
 ````
 
 2. Check to see who you are connected as. At any point in the lab you can run this script to see who or where you are connected.
+
 ````
 select
      'DB Name: '  ||Sys_Context('Userenv', 'DB_Name')||
@@ -81,6 +83,7 @@ from Dual
 ````
 
 3. Create a pluggable database **PDB2**.
+
 ````
 show  pdbs;
 create pluggable database PDB2 admin user PDB_Admin identified by oracle;
@@ -89,25 +92,22 @@ show pdbs;
 ````
 
 4. Change the session to point to **PDB2**.
+
 ````
 alter session set container = PDB2;
 ````
 
 5. Grant **PDB_ADMIN** the necessary privileges and create the **USERS** tablespace for **PDB2**.
+
 ````
-grant SysDBA to pdb_admin;
-
-create tablespace Users
-datafile size 20M
-autoextend on next 1M maxsize unlimited
-segment space management auto;
-
+grant sysdba to pdb_admin;
+create tablespace users datafile size 20M autoextend on next 1M maxsize unlimited segment space management auto;
 alter database default tablespace Users;
-
 grant create table, unlimited tablespace to pdb_admin;
 ````
 
 6. Connect as **PDB_ADMIN** to **PDB2**.
+
 ````
 connect pdb_admin/oracle@localhost:1523/pdb2
 ````
@@ -128,6 +128,7 @@ connect sys/oracle@localhost:1523/cdb1 as sysdba
 COLUMN "Con_Name" FORMAT A10
 COLUMN "T'space_Name" FORMAT A12
 COLUMN "File_Name" FORMAT A120
+SET LINESIZE 220
 
 with Containers as (
   select PDB_ID Con_ID, PDB_Name Con_Name from DBA_PDBs
