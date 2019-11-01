@@ -230,6 +230,7 @@ show pdbs
 COLUMN "Con_Name" FORMAT A10
 COLUMN "T'space_Name" FORMAT A12
 COLUMN "File_Name" FORMAT A120
+SET LINESIZE 220
 
 with Containers as (
   select PDB_ID Con_ID, PDB_Name Con_Name from DBA_PDBs
@@ -303,6 +304,7 @@ end;
 create pluggable database PDB3
 using '/u01/app/oracle/oradata/CDB1/pdb3.xml'
 move;
+
 show pdbs
 alter pluggable database PDB3 open;
 show pdbs
@@ -313,6 +315,7 @@ show pdbs
 COLUMN "Con_Name" FORMAT A10
 COLUMN "T'space_Name" FORMAT A12
 COLUMN "File_Name" FORMAT A120
+SET LINESIZE 220
 
 with Containers as (
   select PDB_ID Con_ID, PDB_Name Con_Name from DBA_PDBs
@@ -502,7 +505,7 @@ CREATE TABLE sale_orders
  4. Open a new terminal window, sudo to the oracle user and execute write-load.sh. Leave this window open and running throughout the rest of the multitenant labs.
  ````
  sudo su - oracle
- cd /u01/app/oracle/labs/multitenant
+ cd /home/oracle/labs/multitenant
  ./write-load.sh
  ````
 Leave this window open and running for the next few labs.
