@@ -125,7 +125,7 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 
 ## Section 4-Create Networking
 -------------------
-If you are in a PM sponsored Roadshow, **skip this step** and go directly to [Section 5-Create Compute Instance](#section-5-create-compute-instance).  Your VCN has already been created for you. 
+If you are in a PM sponsored Roadshow, **SKIP THIS STEP YOUR VCN (DBOPTIONSmmdd) HAS ALREADY BEEN CREATED FOR YOU,**  go directly to [Section 5-Create Compute Instance](#section-5-create-compute-instance).  Your VCN has already been created for you. 
 
 1. Go back to your browser to the tab with your logged in access to the Oracle Cloud.  Click on the hamburger menu.
 ![](img/cloud-homepage.png) 
@@ -236,10 +236,12 @@ If you are in a PM sponsored Roadshow, **skip this step** and go directly to [Se
 7. Scroll down, accept the standards and conditions and click the **Select Image** button.
 ![](img/create-compute-4.png)
 
-8. Click **Show Shape, Network, Storage Options** if it is hidden.  Accept the defaults unless instructed otherwise.  The instance type we are creating is a **Virtual Machine**.  Keep the selected shape.
-![](img/create-compute-5.png)
+8. Click **Show Shape, Network, Storage Options** if it is hidden.  
+    - **AD**:  Instances will need to be balanced across Availability Domains (ADs) to accomodate limits in the tenancy.  If your last name is A-J, select AD1, J-M, select AD2, N-Z, select AD3.
+    - **Instance Type**:  The instance type we are creating is a **Virtual Machine**.  
+    - **Instance Shape**:  Select the **change shape** button and select VMStandard 2.2.  Click the **Select Shape** button to apply the change.  
 
-9. In a PM sponsored roadshow, instances will need to be balanced across Availability Domains (ADs).
+![](img/createcompute.png)
 
 9.  In the Configure networking section, select the dboptions compartment and the VCN you created in an earlier section. If you are in a Roadshow, use the VCN precreated by Product Management.  Click on the radio button to **Assign a public address**.  This is important.  DO NOT OVERLOOK THIS STEP!!!!!!!
 ![](img/computevcn.png)
