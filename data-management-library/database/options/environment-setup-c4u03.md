@@ -281,7 +281,7 @@ Now that you have your instance, once you are able to ssh in, you will set up th
     ````
     ![](img/cli-install.png) 
 
-3.  Accept all the defaults.  This will install packages like python, configparser, etc.  Do not install any additional scripts.  Enter **Y** to update your $PATH and enable shell/tab completion.
+3.  Accept all the defaults.  This will install packages like python, configparser, etc.  Do not install any additional scripts.  When prompted to *Modify profile to update your $PATH and enable shell/tab completion now? (Y/n)* enter **Y** to update your $PATH and enable shell/tab completion.
 
     ![](img/cli-install-2.png) 
 
