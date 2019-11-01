@@ -39,19 +39,17 @@ There are two container databases running:
 
 All the scripts for this lab are located in the /u01/app/oracle/labs/multitenant folder.  
 
-{:start="1"}
 1.  To access the scripts, secure shell into the OCI compute instance.
 
-{:start="2"}
 2.  Change to the ssh directory and ssh into your instance.  The public IP address can be found by going to Compute -> Instance.
 
-    ````
-    cd .ssh
-    ssh -i optionskey opc@<your public ip address>
-    ls
-    sudo su - oracle
-    cd /home/oracle/labs/multitenant
-    ````
+  ````
+  cd .ssh
+  ssh -i optionskey opc@<your public ip address>
+  ls
+  sudo su - oracle
+  cd /home/oracle/labs/multitenant
+  ````
 
 
 ## Section 1: Create PDB
@@ -60,108 +58,101 @@ This section looks at how to create a new PDB.
 The tasks you will accomplish in this lab are:
 - Create a pluggable database **PDB2** in the container database **CDB1**  
 
-{:start="1"}
 1. Connect to **CDB1**  
 
-````
-sqlplus /nolog
-connect sys/oracle@localhost:1523/cdb1 as sysdba
-````
+  ````
+  sqlplus /nolog
+  connect sys/oracle@localhost:1523/cdb1 as sysdba
+  ````
 
-{:start="2"}
 2. Check to see who you are connected as. At any point in the lab you can run this script to see who or where you are connected.  
 
-````
-select
-     'DB Name: '  ||Sys_Context('Userenv', 'DB_Name')||
-  ' / CDB?: '     ||case
-                      when Sys_Context('Userenv', 'CDB_Name') is not null then 'YES'
-                      else                                                     'NO'
-                    end||
-  ' / Auth-ID: '   ||Sys_Context('Userenv', 'Authenticated_Identity')||
-  ' / Sessn-User: '||Sys_Context('Userenv', 'Session_User')||
-  ' / Container: ' ||Nvl(Sys_Context('Userenv', 'Con_Name'), 'n/a')
-   "Who am I?"
-from Dual
-/
-````
+  ````
+  select
+    'DB Name: '  ||Sys_Context('Userenv', 'DB_Name')||
+    ' / CDB?: '     ||case
+      when Sys_Context('Userenv', 'CDB_Name') is not null then 'YES'
+        else  'NO'
+        end||
+    ' / Auth-ID: '   ||Sys_Context('Userenv', 'Authenticated_Identity')||
+    ' / Sessn-User: '||Sys_Context('Userenv', 'Session_User')||
+    ' / Container: ' ||Nvl(Sys_Context('Userenv', 'Con_Name'), 'n/a')
+    "Who am I?"
+    from Dual
+    /
+  ````
 
-{:start="3"}
 3. Create a pluggable database **PDB2**.  
 
-````
-show  pdbs;
-create pluggable database PDB2 admin user PDB_Admin identified by oracle;
-alter pluggable database PDB2 open;
-show pdbs;
-````
+  ````
+  show  pdbs;
+  create pluggable database PDB2 admin user PDB_Admin identified by oracle;
+  alter pluggable database PDB2 open;
+  show pdbs;
+  ````
 
-{:start="4"}
 4. Change the session to point to **PDB2**.  
 
-````
-alter session set container = PDB2;
-````
+  ````
+  alter session set container = PDB2;
+  ````
 
-{:start="5"}
 5. Grant **PDB_ADMIN** the necessary privileges and create the **USERS** tablespace for **PDB2**.  
 
-````
-grant sysdba to pdb_admin;
-create tablespace users datafile size 20M autoextend on next 1M maxsize unlimited segment space management auto;
-alter database default tablespace Users;
-grant create table, unlimited tablespace to pdb_admin;
-````
+  ````
+  grant sysdba to pdb_admin;
+  create tablespace users datafile size 20M autoextend on next 1M maxsize unlimited segment space management auto;
+  alter database default tablespace Users;
+  grant create table, unlimited tablespace to pdb_admin;
+  ````
 
-{:start="6"}
 6. Connect as **PDB_ADMIN** to **PDB2**.  
 
-````
-connect pdb_admin/oracle@localhost:1523/pdb2
-````
+  ````
+  connect pdb_admin/oracle@localhost:1523/pdb2
+  ````
 
-{:start="7"}
 7. Create a table **MY_TAB** in **PDB2**.  
 
-````
-create table my_tab(my_col number);
+  ````
+  create table my_tab(my_col number);
 
-insert into my_tab values (1);
+  insert into my_tab values (1);
 
-commit;
-````
+  commit;
+  ````
 
-{:start="8"}
+
 8. Change back to **SYS** in the container database **CDB1** and show the tablespaces and datafiles created.  
 
-````
-connect sys/oracle@localhost:1523/cdb1 as sysdba
+  ````
+  connect sys/oracle@localhost:1523/cdb1 as sysdba
 
-COLUMN "Con_Name" FORMAT A10
-COLUMN "T'space_Name" FORMAT A12
-COLUMN "File_Name" FORMAT A120
-SET LINESIZE 220
+  COLUMN "Con_Name" FORMAT A10
+  COLUMN "T'space_Name" FORMAT A12
+  COLUMN "File_Name" FORMAT A120
+  SET LINESIZE 220
 
-with Containers as (
-  select PDB_ID Con_ID, PDB_Name Con_Name from DBA_PDBs
+  with Containers as (
+    select PDB_ID Con_ID, PDB_Name Con_Name from DBA_PDBs
+    union
+    select 1 Con_ID, 'CDB$ROOT' Con_Name from Dual)
+  select
+    Con_ID,
+    Con_Name "Con_Name",
+    Tablespace_Name "T'space_Name",
+    File_Name "File_Name"
+  from CDB_Data_Files inner join Containers using (Con_ID)
   union
-  select 1 Con_ID, 'CDB$ROOT' Con_Name from Dual)
-select
-  Con_ID,
-  Con_Name "Con_Name",
-  Tablespace_Name "T'space_Name",
-  File_Name "File_Name"
-from CDB_Data_Files inner join Containers using (Con_ID)
-union
-select
-  Con_ID,
-  Con_Name "Con_Name",
-  Tablespace_Name "T'space_Name",
-  File_Name "File_Name"
-from CDB_Temp_Files inner join Containers using (Con_ID)
-order by 1, 3
-/
-````
+  select
+    Con_ID,
+    Con_Name "Con_Name",
+    Tablespace_Name "T'space_Name",
+    File_Name "File_Name"
+  from CDB_Temp_Files inner join Containers using (Con_ID)
+  order by 1, 3
+  /
+  ````
 
 ## Section 2: Clone a PDB
 This section looks at how to clone a PDB
