@@ -4,11 +4,8 @@
 
 - [Lab Introduction](#lab-introduction)
 - [Lab Sections](#lab-sections)
-- [Section 1: Login to Your Oracle Cloud Account](#section-1--login-to-your-oracle-cloud-account)
-- [Section 2:  Lab Setup](#section-2--lab-setup)
-- [Section 3:  Monitoring the In-Memory Column Store](#section-3--monitoring-the-in-memory-column-store)
-- [Section 4:  Querying the In-Memory Column Store](#section-4--querying-the-in-memory-column-store)
-- [Conclusion](#conclusion)
+- [Section 1 - Lab Setup](#section-1---lab-setup)
+- [Section 2 - Python Programming](#section-2---python-programming)
 
 
 ## Lab Introduction 
@@ -34,26 +31,7 @@ This lab guide shows ways of interacting with Oracle Database 19c from Python. T
 - Each participant has completed the Environment Setup lab.
 
 
-## Section 1: Login to Your Oracle Cloud Account
-
-1.  From any browser go to www.oracle.com to access the Oracle Cloud.
-
-    ![](img/login-screen.png)
-
-2. Click the icon in the upper right corner.  Click on **Sign in to Cloud** at the bottom of the drop down.  *NOTE:  Do NOT click the Sign-In button, this will take you to Single Sign-On, not the Oracle Cloud*
-
-    ![](img/signup.png)    
-
-3. Enter your **Cloud Account Name**: `c4u03` in the input field and click the **My Services** button. 
-
-    ![](img/login-tenancy.png)  
-
-4.  Enter your **Username** and **Password** in the input fields and click **Sign In**.
-
-    ![](img/cloud-login.png) 
-
-
-## Section 2 - Lab Setup
+## Section 1 - Lab Setup
 
 ### Setup Python
 
@@ -180,7 +158,9 @@ Pip is a package management system used to install and manage software packages 
     > quit()
     ````
 
-## Section 3 - Python Programming
+[Back to Top](#table-of-contents)
+
+## Section 2 - Python Programming
 
 There are several ways to execute Python code.  Here, we start with the presentation of two ways to execute Python code from the command line. The first is to execute code interactively i.e. executing commands directly in the interpreter. The other way is to save your code in a .py file and invoke the interpreter to execute the file. Finally, we present how to execute Python code using IDLE.
 
@@ -246,5 +226,6 @@ Retrieving records from Oracle database using cursors is a simple as embedding t
     ````
     python /home/oracle/db_connect.py
     ````
+[Back to Top](#table-of-contents)
 
 Congratulations!  You've created a basic python application connecting to the oracle database.

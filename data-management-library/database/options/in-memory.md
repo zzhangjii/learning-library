@@ -73,9 +73,9 @@ In the previous lab, you imported a 5 table star schema, ssb, into your compute 
     show parameter inmemory; 
     show parameter keep
     ````
+[Back to Top](#table-of-contents)
 
 ## Section 2-Enabling In-Memory
-----------------------
 
 The Oracle environment is already set up so sqlplus can be invoked directly from the shell environment. Since the lab is being run in a pdb called orclpdb you must supply this alias when connecting to the ssb account. 
 
