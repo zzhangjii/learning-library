@@ -81,7 +81,6 @@ Pip is a package management system used to install and manage software packages 
     ````
     sudo su - oracle
     cd /u01/app
-    mkdir downloads
     exit
     ````
     ![](img/python/getpippy.png)  
@@ -188,9 +187,7 @@ There are several ways to execute Python code.  Here, we start with the presenta
 
     ````
     python /home/oracle/test.py
-    ````
-
-    ![](img/python/python2.png)  
+    ```` 
 
 ### Query the Oracle Database
 
@@ -213,7 +210,7 @@ Retrieving records from Oracle database using cursors is a simple as embedding t
 
     ## Display result set
     for row in cur:
-        ZZprint row
+        print row
 
     ## Close cursor
     cur.close()
@@ -226,6 +223,7 @@ Retrieving records from Oracle database using cursors is a simple as embedding t
     ````
     python /home/oracle/db_connect.py
     ````
+    
 [Back to Top](#table-of-contents)
 
 Congratulations!  You've created a basic python application connecting to the oracle database.
