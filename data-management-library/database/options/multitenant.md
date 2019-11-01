@@ -683,5 +683,16 @@ The tasks you will accomplish in this lab are:
     drop pluggable database oe including datafiles;
     ````
 
+5. The load program isn't needed anymore and that window can be closed.
+
+6. If you are going to continue to use this environment you will need to change **CDB2** back to use **LISTCDB2**
+
+    ````
+    sqlplus /nolog
+    conn sys/oracle@localhost:1523/cdb2 as sysdba;
+    alter system set local_listener='LISTCDB2' scope=both;
+    ````
+
+
 ## Conclusion
 Now you've had a chance to try out the Multitenant option. You were able to create, clone, plug and unplug a pluggable database. You were then able to accomplish some advanced tasks that you could leverage when maintaining a large multitenant environment. 
