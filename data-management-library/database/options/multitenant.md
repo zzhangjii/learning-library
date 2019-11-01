@@ -43,13 +43,13 @@ All the scripts for this lab are located in the /u01/app/oracle/labs/multitenant
 
 2.  Change to the ssh directory and ssh into your instance.  The public IP address can be found by going to Compute -> Instance.
 
-  ````
-  cd .ssh
-  ssh -i optionskey opc@<your public ip address>
-  ls
-  sudo su - oracle
-  cd /home/oracle/labs/multitenant
-  ````
+    ````
+    cd .ssh
+    ssh -i optionskey opc@<your public ip address>
+    ls
+    sudo su - oracle
+    cd /home/oracle/labs/multitenant
+    ````
 
 
 ## Section 1: Create PDB
@@ -60,36 +60,36 @@ The tasks you will accomplish in this lab are:
 
 1. Connect to **CDB1**  
 
-  ````
-  sqlplus /nolog
-  connect sys/oracle@localhost:1523/cdb1 as sysdba
-  ````
+    ````
+    sqlplus /nolog
+    connect sys/oracle@localhost:1523/cdb1 as sysdba
+    ````
 
 2. Check to see who you are connected as. At any point in the lab you can run this script to see who or where you are connected.  
 
-  ````
-  select
-    'DB Name: '  ||Sys_Context('Userenv', 'DB_Name')||
-    ' / CDB?: '     ||case
-      when Sys_Context('Userenv', 'CDB_Name') is not null then 'YES'
-        else  'NO'
-        end||
-    ' / Auth-ID: '   ||Sys_Context('Userenv', 'Authenticated_Identity')||
-    ' / Sessn-User: '||Sys_Context('Userenv', 'Session_User')||
-    ' / Container: ' ||Nvl(Sys_Context('Userenv', 'Con_Name'), 'n/a')
-    "Who am I?"
-    from Dual
-    /
-  ````
+    ````
+    select
+      'DB Name: '  ||Sys_Context('Userenv', 'DB_Name')||
+      ' / CDB?: '     ||case
+        when Sys_Context('Userenv', 'CDB_Name') is not null then 'YES'
+          else  'NO'
+          end||
+      ' / Auth-ID: '   ||Sys_Context('Userenv', 'Authenticated_Identity')||
+      ' / Sessn-User: '||Sys_Context('Userenv', 'Session_User')||
+      ' / Container: ' ||Nvl(Sys_Context('Userenv', 'Con_Name'), 'n/a')
+      "Who am I?"
+      from Dual
+      /
+    ````
 
 3. Create a pluggable database **PDB2**.  
 
-  ````
-  show  pdbs;
-  create pluggable database PDB2 admin user PDB_Admin identified by oracle;
-  alter pluggable database PDB2 open;
-  show pdbs;
-  ````
+    ````
+    show  pdbs;
+    create pluggable database PDB2 admin user PDB_Admin identified by oracle;
+    alter pluggable database PDB2 open;
+    show pdbs;
+    ````
 
 4. Change the session to point to **PDB2**.  
 
