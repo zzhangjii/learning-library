@@ -121,7 +121,7 @@ The Oracle environment is already set up so sqlplus can be invoked directly from
     ````
      ![](img/inmemory/altertable.png)   
 
-6.  This looks at the USER_TABLES view and queries attributes of tables in the SSB schema.  Alternative script:  @Part1/07_im_attibutes.sql 
+6.  This looks at the USER_TABLES view and queries attributes of tables in the SSB schema.  Alternative script:  @Part1/07_im_attributes.sql
 
     ````
     set pages 999
@@ -205,7 +205,7 @@ Now that you’ve gotten familiar with the IM column store let’s look at the b
     set lines 100
     ````
 
-2.  Let's begin with a simple query:  `What is the most expensive order we have received to date`?  There are no indexes or views setup for this.  So the execution plan will be to do a full table scan of the LINEORDER table.  Note the elapsed time.   Alternative script:  `@01_im_query_stats.sql`
+2.  Let's begin with a simple query:  `What is the most expensive order we have received to date`?  There are no indexes or views setup for this.  So the execution plan will be to do a full table scan of the LINEORDER table.  Note the elapsed time. 
 
     ````
     set timing on
@@ -225,7 +225,7 @@ Now that you’ve gotten familiar with the IM column store let’s look at the b
 
     ![](img/inmemory/lineorderquery.png) 
 
-3.  To execute the same query against the buffer cache you will need to disable the IM column store via a hint called NO_INMEMORY. If you don't, the Optimizer will try to access the data in the IM column store when the execution plan is a full table scan.  Alternative script:  `@02_buffer_query.sql`
+3.  To execute the same query against the buffer cache you will need to disable the IM column store via a hint called NO_INMEMORY. If you don't, the Optimizer will try to access the data in the IM column store when the execution plan is a full table scan. 
 
     ````
     set timing on
@@ -255,7 +255,7 @@ Now that you’ve gotten familiar with the IM column store let’s look at the b
 
     As our query did a full table scan of the LINEORDER table, that session statistic shows that we scanned 23 million rows from the IM column store. Notice that in our second buffer cache query that statistic does not show up. Only one statistic shows up, "IM scan segments disk" with a value of 1. This means that even though the LINEORDER table is in the IM column store (IM segment) we actually scan that segment outside of the column store either from disk or the buffer cache. In this case it’s from the buffer cache, as the query did no physical IO.
 
-3.  Let's look for a specific order in the LINEORDER table based on the order key.  Typically, a full table scan is not an efficient execution plan when looking for a specific entry in a table.  Alternative script:  `@03_single_key_im.sql`
+3.  Let's look for a specific order in the LINEORDER table based on the order key.  Typically, a full table scan is not an efficient execution plan when looking for a specific entry in a table.  
 
     ````
     set timing on
@@ -273,7 +273,7 @@ Now that you’ve gotten familiar with the IM column store let’s look at the b
    
     ![](img/inmemory/single_key_im.png) 
 
-4.  Think indexing lo_orderkey would provide the same performance as the IM column store? There is an invisible index already created on the lo_orderkey column of the LINEORDER table. By using the parameter OPTIMIZER_USE_INVISIBLE_INDEXES we can compare the performance of the IM column store and the index. Recall that we ran the script 03_single_key_im.sql in Step 3 to see the IM column store performance.  Run the script to see how well the index performs.  Alternative script:  `@05_index_comparison.sql`
+4.  Think indexing lo_orderkey would provide the same performance as the IM column store? There is an invisible index already created on the lo_orderkey column of the LINEORDER table. By using the parameter OPTIMIZER_USE_INVISIBLE_INDEXES we can compare the performance of the IM column store and the index. Recall that we ran the script 03_single_key_im.sql in Step 3 to see the IM column store performance.  Run the script to see how well the index performs.  
 
     ````
     alter session set optimizer_use_invisible_indexes=true;
@@ -293,7 +293,7 @@ Now that you’ve gotten familiar with the IM column store let’s look at the b
 
     ![](img/inmemory/index_comparison.png) 
 
-7.  Analytical queries have more than one equality WHERE clause predicate. What happens when there are multiple single column predicates on a table? Traditionally you would create a multi-column index. Can storage indexes compete with that?  Alternative script:  `@06_multi_preds.sql`
+7.  Analytical queries have more than one equality WHERE clause predicate. What happens when there are multiple single column predicates on a table? Traditionally you would create a multi-column index. Can storage indexes compete with that?  
 
     Let’s change our query to look for a specific line item in an order and monitor the session statistics:
 
@@ -337,7 +337,7 @@ Up until now we have been focused on queries that scan only one table, the LINEO
 
 1.  Let's switch to the Part2 folder and log back in to the PDB. 
     ````
-    cd /home/oracle/labs/inmemory/Part2
+    cd /home/oracle/labs/inmemory/Part3
     sqlplus ssb/Ora_DB4U@localhost:1521/orclpdb
     set pages 9999
     set lines 100
