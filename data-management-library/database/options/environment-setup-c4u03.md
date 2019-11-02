@@ -9,9 +9,9 @@
 - [Section 4-Create Networking](#section-4-create-networking)
 - [Section 5-Create Compute Instance](#section-5-create-compute-instance)
 - [Section 6-Setup OCI CLI and Prep for Labs](#section-6-setup-oci-cli-and-prep-for-labs)
+- [Section 7-Finish Environment Setup](#section-7-finish-environment-setup)
 
 ## Introduction
--------------------
 This lab will show you how to login to the cloud and setup a compute instance running the Oracle 19c database.   In this lab, you will create an OCI Compute instance using the [Oracle Database](https://cloudmarketplace.oracle.com/marketplace/en_US/listing/47726045) image in the Oracle Cloud Marketplace. 
 
 The Oracle Cloud Marketplace is an online store dedicated to marketing cloud business apps and professional services offered by Oracle and it's cloud partners. 
@@ -22,38 +22,21 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 
 
 ## Lab Assumptions
-------------------- 
 - For PM sponsored roadshows, each participant has been provided an account on the c4u03 tenancy and the VCN has been created.
 - For self service, the user has access to a cloud account or free-tier account
 
 
 ## Section 1-Login to the Oracle Cloud 
--------------------
-1.  From any browser go to www.oracle.com to access the Oracle Cloud.
+1.  You should have received an email from Oracle Cloud.  Click on the **Sign In to Oracle Cloud** link.  
 
-    ![](img/login-screen.png)
+    ![](img/welcome-email.png)
 
-2. Click the icon in the upper right corner.  Click on **Sign in to Cloud** at the bottom of the drop down.  *NOTE:  Do NOT click the Sign-In button, this will take you to Single Sign-On, not the Oracle Cloud*
+2.  For this event, we are using OCI IAM users.  You should have received a 2nd email with your one-time password.  Enter your username (found in the email) and your password.  You will then be taken to a screen to change your password.  Choose a new password that you can remember and click **Sign In**
 
-    ![](img/signup.png)    
+    ![](img/changepwd.png)
 
-3. Enter your **Cloud Account Name**.  If you are in a PM sponsored roadshow, this will be provided by the PM team.  Otherwise, use your free-tier tenancy name or oracle cloud account. 
 
-    ![](img/login-tenancy.png)  
-
-4.  If your username/password was provided follow step 4a.  If your password leverages single sign on, proceed to step 4b.
-
-    4A. USERNAME/PASSWORD
-    
-    Enter your **Username** and **Password** in the input fields and click **Sign In**.
-
-    ![](img/cloud-login.png) 
-
-    **NOTE**: You will likely be prompted to change the temporary password listed in the welcome email. In that case, enter the new password in the password field.
-
-    4B. SINGLE SIGN ON
-    
-    Select the **Sign in with Oracle SSO** link and enter your SSO credentials.
+ 
 
 5. Once you successfully login, you will be presented with the Oracle Cloud homepage.  
   ![](img/cloud-homepage.png) 
@@ -61,7 +44,7 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 [Back to Top](#table-of-contents)
 
 ## Section 2-Create an SSH key pair
--------------------
+
 ### MAC Users ###
 1.  Open up a terminal and type the following commands.  When prompted for a passphrase click **enter**. *Do not enter a passphrase*.
      ````
@@ -110,7 +93,6 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 [Back to Top](#table-of-contents)
 
 ## Section 3-Download Marketplace initialization zip and Script Zip File
--------------------
 1.  Click  [here](https://community.oracle.com/servlet/JiveServlet/download/1031489-6-462822/oci-db-app-script-examples.zip) to download the marketplace initialization zip file.
 
 2.  Save it to your downloads folder
@@ -124,7 +106,6 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 [Back to Top](#table-of-contents)
 
 ## Section 4-Create Networking
--------------------
 If you are in a PM sponsored Roadshow, **SKIP THIS STEP YOUR VCN (DBOPTIONSmmdd) HAS ALREADY BEEN CREATED FOR YOU,**  go directly to [Section 5-Create Compute Instance](#section-5-create-compute-instance).  Your VCN has already been created for you. 
 
 1. Go back to your browser to the tab with your logged in access to the Oracle Cloud.  Click on the hamburger menu.
@@ -209,7 +190,7 @@ If you are in a PM sponsored Roadshow, **SKIP THIS STEP YOUR VCN (DBOPTIONSmmdd)
 [Back to Top](#table-of-contents)
 
 ## Section 5-Create Compute Instance
--------------------
+
 1. Go back to your browser to the tab with your logged in access to the Oracle Cloud.  Click on the hamburger menu.
 ![](img/cloud-homepage.png) 
 
@@ -265,8 +246,8 @@ If you are in a PM sponsored Roadshow, **SKIP THIS STEP YOUR VCN (DBOPTIONSmmdd)
 
 [Back to Top](#table-of-contents)
 
-## Section 6-Setup OCI CLI and Prep for Labs
--------------------
+## Section 6-Setup OCI CLI 
+
 Now that you have your instance, once you are able to ssh in, you will set up the OCI Command Line interface. The initialization of the marketplace image takes around 5-7 minutes.  Once 5 minutes has passed, you should be able to ssh into the instance.
 1.  Open up a terminal (MAC) or cygwin emulator as the opc user
 
@@ -281,7 +262,7 @@ Now that you have your instance, once you are able to ssh in, you will set up th
     ````
     ![](img/cli-install.png) 
 
-3.  Accept all the defaults.  This will install packages like python, configparser, etc.  Do not install any additional scripts.  Enter **Y** to update your $PATH and enable shell/tab completion.
+3.  Accept all the defaults.  This will install packages like python, configparser, etc.  Do not install any additional scripts.  When prompted to *Modify profile to update your $PATH and enable shell/tab completion now? (Y/n)* enter **Y** to update your $PATH and enable shell/tab completion.
 
     ![](img/cli-install-2.png) 
 
@@ -363,7 +344,10 @@ oci iam availability-domain list
     
    ![](img/clilistdomain.png) 
 
-10.  Congrats! You have command line access to your newly created instance!  Let's  download the files you will need for these labs from object storage.
+
+## Section 7-Finish Environment Setup
+
+1. Congrats! You have command line access to your newly created instance!  Let's  download the files you will need for these labs from object storage. The third command downloads all the setup labs and schemas needed for the rest of the labs.  It may take some time (2-3 mins), please be patient.
 ````
 cd /home/opc/
 oci os object list -bn DBOptions
@@ -374,7 +358,7 @@ oci os object bulk-download -bn DBOptions --download-dir /home/opc
 
 ![](img/download-bucket.png)  
 
-11.  Now that your files are downloaded, run the scripts to import the schemas to prepare for the In-Memory lab.
+2. Now that your files are downloaded, run the scripts to import the schemas to prepare for the In-Memory lab.
 ````
 cd /home/opc/
 sudo mv labs.zip /home/oracle
@@ -385,13 +369,13 @@ sudo su - oracle
 unzip labs.zip
 ````
 
-12.  The next two labs, In-Memory and Multitenant need additional schemas and pluggable databases created.  Run the scripts in the background to create them as the oracle user.  Let's run the multitenant script.  This script takes approximately 15-30 minutes to complete.
+3.   The next two labs, In-Memory and Multitenant need additional schemas and pluggable databases created.  Run the scripts in the background to create them as the oracle user.  Let's run the multitenant script.  This script takes approximately 15-30 minutes to complete and runs as a unix job in the background.  Ignore the error about the SYS password.  To check status you can use the jobs command.
 ````
 cd /home/oracle/labs/multitenant
 ./createCDBs.sh &
 ````
 
-13.  Open up a 2nd terminal window.  Let's run the script to setup the In-Memory lab.  This script takes approximately 10 minutes to complete.
+4.   Open up a 2nd terminal window.  Let's run the script to setup the In-Memory lab.  This script takes approximately 10 minutes to complete.  This script also runs in the background. 
 ````
 ssh -i ~/.ssh/optionskey opc@<Your Compute Instance Public IP Address>
 sudo su - oracle
@@ -400,7 +384,7 @@ cd /home/oracle/labs/inmemory
  ````
    ![](img/importssb.png)    
 
-14.  The 1st Multitenant setup script creates two additional listeners and 2 container databases, CDB1 and CDB2.
+5.  The 1st Multitenant setup script creates two additional listeners and 2 container databases, CDB1 and CDB2.  After 20 minutes, go back to your terminal and check to see if the scripts completed using the comnands below,
 ````
 ps -ef | grep tns
 ps -ef | grep pmon
