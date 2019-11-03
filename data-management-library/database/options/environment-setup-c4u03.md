@@ -8,7 +8,7 @@
 - [Section 3-Download Marketplace Initialization Zip and Script Zip File](#section-3-download-marketplace-initialization-zip-and-script-zip-file)
 - [Section 4-Create Networking](#section-4-create-networking)
 - [Section 5-Create Compute Instance](#section-5-create-compute-instance)
-- [Section 6-Setup OCI CLI and Prep for Labs](#section-6-setup-oci-cli-and-prep-for-labs)
+- [Section 6-Setup OCI CLI](#section-6-setup-oci-cli)
 - [Section 7-Finish Environment Setup](#section-7-finish-environment-setup)
 
 ## Introduction
