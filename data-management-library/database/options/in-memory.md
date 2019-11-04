@@ -81,13 +81,13 @@ The Oracle environment is already set up so sqlplus can be invoked directly from
 
 1.  Login to the pdb as the SSB user.  
     ````
-    cd /home/oracle/labs/inmemory
+    cd /home/oracle/labs/inmemory/Part1
     sqlplus ssb/Ora_DB4U@localhost:1521/orclpdb
     set pages 9999
     set lines 200
     ````
 
-3.  The In-Memory area is sub-divided into two pools:  a 1MB pool used to store actual column formatted data populated into memory and a 64K pool to store metadata about the objects populated into the IM columns store.  V$INMEMORY_AREA shows the total IM column store.  The COLUMN command in these scripts identifies the column you want to format and the model you want to use.  Alternative script:  @Part1/03_im_usage.sql
+3.  The In-Memory area is sub-divided into two pools:  a 1MB pool used to store actual column formatted data populated into memory and a 64K pool to store metadata about the objects populated into the IM columns store.  V$INMEMORY_AREA shows the total IM column store.  The COLUMN command in these scripts identifies the column you want to format and the model you want to use.  Alternative script:  `@03_im_usage.sql`
 
     ````
     column alloc_bytes format 999,999,999,999;
@@ -99,7 +99,7 @@ The Oracle environment is already set up so sqlplus can be invoked directly from
     ````
      ![](img/inmemory/inmemoryarea.png) 
 
-4.  To check if the IM column store is populated with objects run the 05_im_segments.sql script. Alternative script:  @Part1/05_im_segments.sql 
+4.  To check if the IM column store is populated with objects run the 05_im_segments.sql script. Alternative script:  `@05_im_segments.sql` 
 
     ````
     column name format a30
@@ -110,7 +110,7 @@ The Oracle environment is already set up so sqlplus can be invoked directly from
     ````
      ![](img/inmemory/segments.png)   
 
-5.  To add objects to the IM column store the inmemory attribute needs to be set.  This tells the Oracle DB these tables should be populated into the IM column store.  
+5.  To add objects to the IM column store the inmemory attribute needs to be set.  This tells the Oracle DB these tables should be populated into the IM column store.   Alternative script:  `@06_im_alter_table.sql`
 
     ````
     ALTER TABLE lineorder INMEMORY;
@@ -121,7 +121,7 @@ The Oracle environment is already set up so sqlplus can be invoked directly from
     ````
      ![](img/inmemory/altertable.png)   
 
-6.  This looks at the USER_TABLES view and queries attributes of tables in the SSB schema.  Alternative script:  @Part1/07_im_attributes.sql
+6.  This looks at the USER_TABLES view and queries attributes of tables in the SSB schema.  Alternative script:  `@07_im_attributes.sql`
 
     ````
     set pages 999
@@ -143,7 +143,7 @@ The Oracle environment is already set up so sqlplus can be invoked directly from
 
 By default the IM column store is only populated when the object is accessed.
 
-7.  Let's populate the store with some simple queries.
+7.  Let's populate the store with some simple queries. Alternative script:  `@08_im_start_pop.sql`
 
     ````
     SELECT /*+ full(d)  noparallel (d )*/ Count(*)   FROM   date_dim d; 
@@ -154,7 +154,7 @@ By default the IM column store is only populated when the object is accessed.
     ````
      ![](img/inmemory/startpop.png) 
 
-8. Background processes are populating these segments into the IM column store.  To monitor this, you could query the V$IM_SEGMENTS.  Once the data population is complete, the BYTES_NOT_POPULATED should be 0 for each segment.  Alternative script:  @Part1/09_im_populated.sql 
+8. Background processes are populating these segments into the IM column store.  To monitor this, you could query the V$IM_SEGMENTS.  Once the data population is complete, the BYTES_NOT_POPULATED should be 0 for each segment.  Alternative script:  `@09_im_populated.sql`
 
     ````
     column name format a20
@@ -171,7 +171,7 @@ By default the IM column store is only populated when the object is accessed.
 
      ![](img/inmemory/im_populated.png) 
 
-9.  Now let's check the total space usage
+9.  Now let's check the total space usage. Alternative script:  `@10_im_usage.sql`
 
     ````
     column alloc_bytes format 999,999,999,999;
@@ -205,7 +205,7 @@ Now that you’ve gotten familiar with the IM column store let’s look at the b
     set lines 100
     ````
 
-2.  Let's begin with a simple query:  `What is the most expensive order we have received to date`?  There are no indexes or views setup for this.  So the execution plan will be to do a full table scan of the LINEORDER table.  Note the elapsed time. 
+2.  Let's begin with a simple query:  `What is the most expensive order we have received to date`?  There are no indexes or views setup for this.  So the execution plan will be to do a full table scan of the LINEORDER table.  Note the elapsed time. Alternative script:  `@01_im_query_stats.sql`
 
     ````
     set timing on
@@ -225,7 +225,7 @@ Now that you’ve gotten familiar with the IM column store let’s look at the b
 
     ![](img/inmemory/lineorderquery.png) 
 
-3.  To execute the same query against the buffer cache you will need to disable the IM column store via a hint called NO_INMEMORY. If you don't, the Optimizer will try to access the data in the IM column store when the execution plan is a full table scan. 
+3.  To execute the same query against the buffer cache you will need to disable the IM column store via a hint called NO_INMEMORY. If you don't, the Optimizer will try to access the data in the IM column store when the execution plan is a full table scan. Alternative script:  `@02_buffer_query_stats.sql`
 
     ````
     set timing on
@@ -242,12 +242,14 @@ Now that you’ve gotten familiar with the IM column store let’s look at the b
 
     @../imstats.sql
     ````
+    
+   
 
     As you can see the query executed extremely quickly in both cases because this is purely an in-memory scan. However, the performance of the query against the IM column store was significantly faster than the traditional buffer cache - why?  
 
     The IM column store only has to scan two columns - lo_ordtotalprice and lo_quantity - while the row store has to scan all of the columns in each of the rows until it reaches the lo_ordtotalprice and lo_quantity columns. The IM column store also benefits from the fact that the data is compressed so the volume of data scanned is much less.  Finally, the column format requires no additional manipulation for SIMD vector processing (Single Instruction processing Multiple Data values). Instead of evaluating each entry in the column one at a time, SIMD vector processing allows a set of column values to be evaluated together in a single CPU instruction.
 
-    ![](img/inmemory/lineorderquery-noinmem.png) 
+     ![](img/part2-02_buffer_query_stats.png)
 
     In order to confirm that the IM column store was used, we need to examine the session level statistics. Notice that in the INMEMORY run several IM statistics show up (for this lab we have only displayed some key statistics – there are lots more!). The only one we are really interested in now is the "IM scan CUs columns accessed" which has been highlighted.
 
@@ -255,7 +257,7 @@ Now that you’ve gotten familiar with the IM column store let’s look at the b
 
     As our query did a full table scan of the LINEORDER table, that session statistic shows that we scanned 23 million rows from the IM column store. Notice that in our second buffer cache query that statistic does not show up. Only one statistic shows up, "IM scan segments disk" with a value of 1. This means that even though the LINEORDER table is in the IM column store (IM segment) we actually scan that segment outside of the column store either from disk or the buffer cache. In this case it’s from the buffer cache, as the query did no physical IO.
 
-3.  Let's look for a specific order in the LINEORDER table based on the order key.  Typically, a full table scan is not an efficient execution plan when looking for a specific entry in a table.  
+3.  Let's look for a specific order in the LINEORDER table based on the order key.  Typically, a full table scan is not an efficient execution plan when looking for a specific entry in a table.  Alternative script:  `@03_single_key_im.sql`
 
     ````
     set timing on
@@ -273,7 +275,7 @@ Now that you’ve gotten familiar with the IM column store let’s look at the b
    
     ![](img/inmemory/single_key_im.png) 
 
-4.  Think indexing lo_orderkey would provide the same performance as the IM column store? There is an invisible index already created on the lo_orderkey column of the LINEORDER table. By using the parameter OPTIMIZER_USE_INVISIBLE_INDEXES we can compare the performance of the IM column store and the index. Recall that we ran the script 03_single_key_im.sql in Step 3 to see the IM column store performance.  Run the script to see how well the index performs.  
+4.  Think indexing lo_orderkey would provide the same performance as the IM column store? There is an invisible index already created on the lo_orderkey column of the LINEORDER table. By using the parameter OPTIMIZER_USE_INVISIBLE_INDEXES we can compare the performance of the IM column store and the index. Recall that we ran the script 03_single_key_im.sql in Step 3 to see the IM column store performance.  Run the script to see how well the index performs.  Alternative script: `@05_index_comparison.sql` 
 
     ````
     alter session set optimizer_use_invisible_indexes=true;
@@ -291,13 +293,13 @@ Now that you’ve gotten familiar with the IM column store let’s look at the b
     @../imstats.sql
     ````
 
-    ![](img/inmemory/index_comparison.png) 
+    ![](img/inmemory/part2-index_comparison.png) 
 
 7.  Analytical queries have more than one equality WHERE clause predicate. What happens when there are multiple single column predicates on a table? Traditionally you would create a multi-column index. Can storage indexes compete with that?  
 
     Let’s change our query to look for a specific line item in an order and monitor the session statistics:
 
-    To execute the query against the IM column store type:
+    To execute the query against the IM column store type.  Alternative script: `@06_multi_preds.sql`
 
     ````
     set timing on
@@ -323,7 +325,7 @@ Now that you’ve gotten familiar with the IM column store let’s look at the b
     ````
     You can see that the In-Memory storage index is still used. In fact, we are able to use multiple storage indexes together in a similar manner to how Oracle Database can combine multiple bitmap indexes.
 
-    ![](img/inmemory/multi-preds.png)   
+    ![](img/inmemory/part2-06_multi_preds.png)   
 
 In this section you had an opportunity to try out Oracle’s in-memory performance claims with queries that run against a table with over 23 million rows (i.e. LINEORDER), which resides in both the IM column store and the buffer cache. From a very simple aggregation, to more complex queries with multiple columns and filter predicates, the IM column store was able to out perform the buffer cache queries. Remember both sets of queries are executing completely within memory, so that’s quite an impressive improvement.
 
@@ -393,7 +395,7 @@ Up until now we have been focused on queries that scan only one table, the LINEO
 
     ![](img/inmemory/join_buffer.png) 
 
-3. Let’s try a more complex query that encompasses three joins and an aggregation to our query. This time our query will compare the revenue for different product classes, from suppliers in a certain region for the year 1997. This query returns more data than the others we have looked at so far so we will use parallel execution to speed up the elapsed times so we don’t need to wait too long for the results.  
+3. Let’s try a more complex query that encompasses three joins and an aggregation to our query. This time our query will compare the revenue for different product classes, from suppliers in a certain region for the year 1997. This query returns more data than the others we have looked at so far so we will use parallel execution to speed up the elapsed times so we don’t need to wait too long for the results.  Alternative script:  `@03_3join_im.sql`
 
     ````
     set timing on
