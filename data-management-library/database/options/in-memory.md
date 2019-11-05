@@ -62,7 +62,7 @@ In the previous lab, you imported a 5 table star schema, ssb, into your compute 
 
 4.  Enter the commands to enable In-Memory.  The database will need to be restarted for the changes to take effect.
     ````
-    alter system set inmemory_size=1G scope=spfile;
+    alter system set inmemory_size=2G scope=spfile;
     shutdown immediate;
     startup;
     ````
