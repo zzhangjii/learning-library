@@ -1,18 +1,23 @@
 ![](img/docker-title.png)  
 
-# Lab Introduction #
+## Table of Contents 
+- [Introduction](#lab-introduction)
+- [Lab Assumptions](#lab-assumptions)
+- [Section 1-Login to your Oracle Cloud Account](#section-1-login-to-your-oracle-cloud-account)
+- [Section 2-Lab Setup](#section-2-lab-setup)
+- [Section 3-Docker Basic Concepts](#section-3-docker-basic-concepts)
+- [Section 4-Docker Networking Basics](#section-4-docker-networking-basics)
+- [Section 5-Create an Oracle Database Container](#section-5-create-an-oracle-database-container)
+- [Section 6-Create A Schema in Container Running Oracle Database and Login to EM Express](#section-6-create-a-schema-in-container-running-oracle-database-and-login-to-em-express)
+- [Section 7-Deploy Application](#section-7-deploy-application)
+- [Section 8-Change Application (optional)](#section-8-change-application-(optional))
+
+## Lab Introduction 
 Docker is a set of platform-as-a-service products that use OS-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels.
 
 Lab courtesy of NATD Solution Engineering Team.  Check out the original lab [here!](http://go.oracle.com/docker).
 
-# Lab Sections #
-1. Install Docker and GIT
-2. Practice the basic concepts of Docker, container architectures and functions.
-3. Deploy an Oracle database in a container and access Enterprise Manager express
-3. Deploy a fully containerized version of an application on an Oracle Databasae
-
-# Lab Assumptions #
-- Each participant has been provided a username and password to a cloud tenancy or a free-tier account
+## Lab Assumptions
 - Each participant has completed the Environment Setup lab and succesfully created a compute instance
 - The Virtual Compute Network (VCN) has been created with the appropriate Ingress rules
 - Each participant has created a docker hub [account](http://docker.hub.com)
@@ -20,7 +25,7 @@ Lab courtesy of NATD Solution Engineering Team.  Check out the original lab [her
 - Participants are using Chrome as the preferred browser and have installed Chrome's JSON formatter
 
 
-## Section 1: Login to your Oracle Cloud Account 
+## Section 1-Login to your Oracle Cloud Account 
 
 1.  From any browser go to www.oracle.com to access the Oracle Cloud.
 
@@ -30,16 +35,17 @@ Lab courtesy of NATD Solution Engineering Team.  Check out the original lab [her
 
     ![](img/signup.png)    
 
-3. Enter your **Cloud Account Name**: `c4u03` in the input field and click the **My Services** button. 
+3. Enter your **Cloud Account Name**: `c4u03` in the input field
 
     ![](img/login-tenancy.png)  
 
-4.  Enter your **Username** and **Password** in the input fields and click **Sign In** or sign in using single sign on.
+4.  Enter your **Username** and **Password** in the input fields and click **Sign In**
 
     ![](img/cloud-login.png) 
 
+[Back to Top](#table-of-contents)
 
-## Section 2:  Lab Setup
+## Section 2-Lab Setup
 
 1. Login to the ssh terminal
 
@@ -104,7 +110,9 @@ Lab courtesy of NATD Solution Engineering Team.  Check out the original lab [her
     whoami
     `````
 
-## Section 3:  Docker Basic Concepts
+[Back to Top](#table-of-contents)
+
+## Section 3-Docker Basic Concepts
 
 1.  Check the version of docker
 
@@ -163,7 +171,9 @@ Lab courtesy of NATD Solution Engineering Team.  Check out the original lab [her
 
     ![](img/docker/18002.png)
 
-## Section 4:  Docker Networking Basics
+[Back to Top](#table-of-contents)
+
+## Section 4-Docker Networking Basics
 
 Now that you know how to start, stop and relocate a container, let's see how to get information about the network.
 
@@ -184,8 +194,9 @@ Now that you know how to start, stop and relocate a container, let's see how to 
     ````
     docker stop restclient
     ````  
+[Back to Top](#table-of-contents)
 
-## Section 5:  Create an Oracle Database Container
+## Section 5-Create an Oracle Database Container
 
 1.  Verify your docker version
     ````
@@ -220,7 +231,9 @@ Now that you know how to start, stop and relocate a container, let's see how to 
     ````
 5.  When the database creationg is complete, you will see "The database is ready for use".  Press control-c to continue.
 
-## Section 6:  Create A Schema in Container Running Oracle Database and Login to EM Express
+[Back to Top](#table-of-contents)
+
+## Section 6-Create A Schema in Container Running Oracle Database and Login to EM Express
 
 1.  To create the schema we need to "login" to the container.  Type the following:
     ````
@@ -249,8 +262,9 @@ Now that you know how to start, stop and relocate a container, let's see how to 
     Password: Oradoc_db1
     Check the "as SYSDBA" checkbox
     ````
+[Back to Top](#table-of-contents)
 
-## Section 7:  Deploy Application
+## Section 7-Deploy Application
 
 1.  Download the docker image, twitterfeed, extract it and run the container.  The download is from the wvbirder docker hub account where this application is staged.
     ````
@@ -277,7 +291,9 @@ Now that you know how to start, stop and relocate a container, let's see how to 
     ````
 3.  Go back to your broswer to see the application running on port 8085.  http://Public IP address:8005.  Clickon one of the products to see the details and the twitterfeed comments. 
 
-## Section 8:  Change Application (optional)
+[Back to Top](#table-of-contents)
+
+## Section 8-Change Application (optional)
 
 1. Copy a background image from your compute instance into the filesystem of the container.
     ````

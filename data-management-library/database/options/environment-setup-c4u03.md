@@ -5,7 +5,7 @@
 - [Lab Assumptions](#lab-assumptions)
 - [Section 1-Login to the Oracle Cloud](#section-1-login-to-the-oracle-cloud)
 - [Section 2-Create an SSH key pair](#section-2-create-an-ssh-key-pair)
-- [Section 3-Download Marketplace Initialization Zip and Script Zip File](#section-3-download-marketplace-initialization-zip-and-script-zip-file)
+- [Section 3-Download Marketplace Initialization Zip](#section-3-download-marketplace-initialization-zip)
 - [Section 4-Create Networking](#section-4-create-networking)
 - [Section 5-Create Compute Instance](#section-5-create-compute-instance)
 - [Section 6-Setup OCI CLI](#section-6-setup-oci-cli)
@@ -93,7 +93,7 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 
 [Back to Top](#table-of-contents)
 
-## Section 3-Download Marketplace Initialization Zip and Script Zip File
+## Section 3-Download Marketplace Initialization Zip
 1.  Click  [here](https://community.oracle.com/servlet/JiveServlet/download/1031489-6-462822/oci-db-app-script-examples.zip) to download the marketplace initialization zip file.
 
 2.  Save it to your downloads folder
