@@ -11,7 +11,7 @@
 - [Section 5: Drop a PDB](#section-5-drop-a-pdb)
 - [Section 6: Clone an Unplugged PDB](#section-6-clone-an-unplugged-pdb)
 - [Section 7: PDB Hot Clones](#section-7-pdb-hot-clones)
-- [section 8: PDB Refresh](#section-8-pdb-refresh)
+- [Section 8: PDB Refresh](#section-8-pdb-refresh)
 - [Section 9: PDB Relocation](#section-9-pdb-relocation)
 - [Conclusion](#conclusion)
 
@@ -83,6 +83,8 @@ The tasks you will accomplish in this lab are:
       /
     ````
 
+    ![](img/mt/whoisconnected.png)
+
 3. Create a pluggable database **PDB2**.  
 
     ````
@@ -91,12 +93,18 @@ The tasks you will accomplish in this lab are:
     alter pluggable database PDB2 open;
     show pdbs;
     ````
+    ![](img/mt/showpdbsbefore.png)
+
+    ![](img/mt/createpdb.png)
+
+    ![](img/mt/showpdbsafter.png)
 
 4. Change the session to point to **PDB2**.  
 
     ````
     alter session set container = PDB2;
     ````
+   ![](img/mt/altersession.png)
 
 5. Grant **PDB_ADMIN** the necessary privileges and create the **USERS** tablespace for **PDB2**.  
 
@@ -106,6 +114,8 @@ The tasks you will accomplish in this lab are:
     alter database default tablespace Users;
     grant create table, unlimited tablespace to pdb_admin;
     ````
+
+   ![](img/mt/grantsysdba.png)
 
 6. Connect as **PDB_ADMIN** to **PDB2**.  
 
@@ -123,6 +133,8 @@ The tasks you will accomplish in this lab are:
     commit;
     ````
 
+   ![](img/mt/createtable.png)
+
 8. Change back to **SYS** in the container database **CDB1** and show the tablespaces and datafiles created.  
 
     ````
@@ -132,6 +144,7 @@ The tasks you will accomplish in this lab are:
     COLUMN "T'space_Name" FORMAT A12
     COLUMN "File_Name" FORMAT A120
     SET LINESIZE 220
+    SET PAGES 9999
 
     with Containers as (
       select PDB_ID Con_ID, PDB_Name Con_Name from DBA_PDBs
@@ -153,6 +166,7 @@ The tasks you will accomplish in this lab are:
     order by 1, 3
     /
     ````
+   ![](img/mt/containers.png)
 
 [Back to Top](#table-of-contents)
 
@@ -178,6 +192,10 @@ The tasks you will accomplish in this lab are:
     show pdbs
     ````
 
+   ![](img/mt/alterplug.png)
+
+   ![](img/mt/showpdbs.png)
+   
 3. Create a pluggable database **PDB3** from the read only database **PDB2**.  
 
     ````
@@ -185,6 +203,7 @@ The tasks you will accomplish in this lab are:
     alter pluggable database PDB3 open force;
     show pdbs
     ````
+   ![](img/mt/createpdb3.png)
 
 4. Change **PDB2** back to read write.  
 
@@ -192,6 +211,7 @@ The tasks you will accomplish in this lab are:
     alter pluggable database PDB2 open read write force;
     show pdbs
     ````
+   ![](img/mt/pdb2write.png)
 
 5. Connect to **PDB2** and show the table **MY_TAB**.  
 
@@ -199,6 +219,8 @@ The tasks you will accomplish in this lab are:
     connect pdb_admin/oracle@localhost:1523/pdb2
     select * from my_tab;
     ````
+ 
+   ![](img/mt/pdb2mytab.png)
 
 6. Connect to **PDB3** and show the table **MY_TAB**.  
 
@@ -206,6 +228,8 @@ The tasks you will accomplish in this lab are:
     connect pdb_admin/oracle@localhost:1523/pdb3
     select * from my_tab;
     ````
+   ![](img/mt/pdb3mytab.png)
+
 
 [Back to Top](#table-of-contents)
 
@@ -235,6 +259,8 @@ The tasks you will accomplish in this lab are:
     show pdbs
     ````
 
+   ![](img/mt/unplugpdb3.png)
+
 3. Remove **PDB3** from **CDB1**.  
 
     ````
@@ -243,6 +269,8 @@ The tasks you will accomplish in this lab are:
     show pdbs
     ````
 
+   ![](img/mt/droppdb3.png)
+
 4. Show the datafiles in **CDB1**.  
 
     ````
@@ -250,6 +278,7 @@ The tasks you will accomplish in this lab are:
     COLUMN "T'space_Name" FORMAT A12
     COLUMN "File_Name" FORMAT A120
     SET LINESIZE 220
+    SET PAGES 9999
 
     with Containers as (
       select PDB_ID Con_ID, PDB_Name Con_Name from DBA_PDBs
@@ -272,11 +301,14 @@ The tasks you will accomplish in this lab are:
     /
     ````
 
+    ![](img/mt/cdb1data.png)
+
 5. Look at the XML file for the pluggable database **PDB3**.  
 
     ````
     host cat /u01/app/oracle/oradata/CDB1/pdb3.xml
     ````
+    ![](img/mt/xmlfile.png)
 
 [Back to Top](#table-of-contents)
 
@@ -309,6 +341,7 @@ The tasks you will accomplish in this lab are:
 
     show pdbs
     ````
+    ![](img/mt/whoamicdb2.png)
 
 2. Check the compatibility of **PDB3** with **CDB2**  
 
@@ -337,6 +370,8 @@ The tasks you will accomplish in this lab are:
     show pdbs
     ````
 
+    ![](img/mt/createwithxml.png)
+
 4. Review the datafiles in **CDB2**  
 
     ````
@@ -344,6 +379,8 @@ The tasks you will accomplish in this lab are:
     COLUMN "T'space_Name" FORMAT A12
     COLUMN "File_Name" FORMAT A120
     SET LINESIZE 220
+    SET PAGES 9999
+
 
     with Containers as (
       select PDB_ID Con_ID, PDB_Name Con_Name from DBA_PDBs
@@ -366,6 +403,8 @@ The tasks you will accomplish in this lab are:
     /
     ````
 
+    ![](img/mt/mtdbfcdb2.png)
+
 5. Connect as **PDB_ADMIN** to **PDB3** and look at **MY_TAB**;  
 
     ````
@@ -373,6 +412,9 @@ The tasks you will accomplish in this lab are:
 
     select * from my_tab;
     ````
+
+    ![](img/mt/pdb3mytab2.png)
+
 
 [Back to Top](#table-of-contents)
 
@@ -401,6 +443,8 @@ The tasks you will accomplish in this lab are:
 
     show pdbs
     ````
+
+    ![](img/mt/droppdb.png)
 
 [Back to Top](#table-of-contents)
 
@@ -434,12 +478,16 @@ The tasks you will accomplish in this lab are:
     show pdbs
     ````
 
+    ![](img/mt/goldpdb.png)
+
 4. Change **PDB2** back to read write  
 
     ````
     alter pluggable database PDB2 open read write force;
     show pdbs
     ````
+
+    ![](img/mt/mountgoldpdb.png)
 
 5. Unplug **GOLDPDB** from **CDB1**  
 
@@ -452,6 +500,8 @@ The tasks you will accomplish in this lab are:
 
     show pdbs
     ````
+
+    ![](img/mt/unpluggold.png)
 
 6. Remove **GOLDPDB** from **CDB1**  
 
@@ -491,6 +541,8 @@ The tasks you will accomplish in this lab are:
     show pdbs
     ````
 
+    ![](img/mt/clonegold1.png)
+
 10. Create another clone of **GOLDPDB** as **COPYPDB2**  
 
     ````
@@ -501,6 +553,8 @@ The tasks you will accomplish in this lab are:
     show pdbs
     ````
 
+    ![](img/mt/clonegold.png)
+
 11. Open all of the pluggable databases  
 
     ````
@@ -508,6 +562,7 @@ The tasks you will accomplish in this lab are:
 
     show pdbs
     ````
+    ![](img/mt/allopen.png)
 
 12. Look at the GUID for the two cloned databases  
 
@@ -518,6 +573,7 @@ The tasks you will accomplish in this lab are:
     order by Creation_Scn
     /
     ````
+    ![](img/mt/guid.png)
 
 [Back to Top](#table-of-contents)
 
@@ -546,6 +602,8 @@ The tasks you will accomplish in this lab are:
     alter user soe quota unlimited on system;
     ````
 
+    ![](img/mt/oe.png)
+
 3. Connect as **SOE** and create the **sale_orders** table  
 
     ````
@@ -565,7 +623,7 @@ The tasks you will accomplish in this lab are:
     ````
     Leave this window open and running for the next few labs.
 
-5. Connect to **CDB2** and create the pluggable **OE_DEV** from the database link **oe@cdb1_link**  
+5. Go back to your original terminal window.  Connect to **CDB2** and create the pluggable **OE_DEV** from the database link **oe@cdb1_link**  
 
     ````
     connect sys/oracle@localhost:1524/cdb2 as sysdba
