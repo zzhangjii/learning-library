@@ -19,7 +19,6 @@ These labs are designed to be executed in sequence.  Please do not do these out 
 5. [Docker](docker.md)
 4. [Python](python.md)
 6. [ADB Loading](../../autonomous-database/ziplabs/2019/adw-loading) - *Optional*
-7. [Enterprise Manager](/learning-library/enterprise-manageability-library)
 
 
 

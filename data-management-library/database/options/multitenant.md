@@ -16,13 +16,13 @@
 - [Conclusion](#conclusion)
 
 ## Lab Introduction
-Multitenant will allow you to be able to manage a large environment with relative ease. You will start out learning the basics of Multitenant like creating, cloning, and plugging/unplugging a pluggable database. Then you will look at more advanced topics like the ones below.
+From the point of view of an application, the PDB is the database, in which applications run unchanged. PDBs can be very rapidly provisioned and a pluggable database is a portable database, which makes it very easy to move around, perhaps for load balancing or migration to the Cloud.
 
-The time to provision a database can take days to weeks. The effort to keep that database in sync with critical, production data is yet another challenge, particularly as that data continues to grow. PDB hot cloning demonstrates the ease of online database provisioning of ‘hot’ data with little or no impact on the source database.OPEX saving with streamlined cloning operations, improved time to market through fast online database provisioning in sync with production data, CAPEX saving on robust, fully integrated cloning solution, easy integration with automation frameworks, DBaaS. OPEX saving with streamlined cloning operations, improved time to market through fast online database provisioning in sync with production data, CAPEX saving on robust, fully integrated cloning solution, easy integration with automation frameworks, DBaaS. 
+Many PDBs can be plugged into a single Multitenant Container Database or CDB. From the point of view of a DBA, the CDB is the database. Common operations are performed at the level of the CDB enabling the DBA to manage many as one for operations such as upgrade, configuration of high availability, taking backups; but we retain granular control when appropriate. This ability to manage many as one enables tremendous gains in operational efficiency.
 
-PDB Hot Cloning provides fast provisioning of hot data, however, to keep in sync with the source, hot cloning still requires one to drop and recreate the clone from source, or, unplug, archive and drop the PDB and then recreate from source. PDB hot cloning is a required technology for fast cloning on hot data, however, operationally speaking, hot clone by itself is cumbersome when there is a requirement to keep in sync with the source and incur little data copy costs. PDB refresh addresses this requirement. PDB refresh provides a means to hot clone a refreshable PDB master clone from which test, dev, UAT and BI environments can clone. A refreshable clone copies the base source once, and then maintains a synchronized copy based on iterative redo apply and transaction rollback at open to ensure transaction consistency. This lab walks you through creating a refreshable master clone and refreshing the master clone from a hot data source. In addition to the business benefits described above for PDB hot cloning, PDB refresh keeps a master clone in sync with an advancing hot data source with much less data copy than iterative hot clones. This allows agile development on hot data without impacting the source.
+Enormous gains in technical efficiency are enabled by a shared technical infrastructure. There’s a single set of background processes and a single, global memory area – the SGA – shared by all the PDBs. The result is that with this architecture we can consolidate more applications per server.
 
-It is not uncommon that a database may go down for planned maintenance, or non-critical workload would need to be stopped to satisfy the compute resource requirements of more important workload. Or, you simply want to migrate your database to new hardware. PDB Near Zero Downtime (NZD) Relocate is intended to address these use cases by providing online relocation of a PDB from one physical server to another with little or no impact to the connected clients. 
+![](img/multitenant.png)
 
 ## Setup
 
@@ -50,6 +50,7 @@ All the scripts for this lab are located in the /u01/app/oracle/labs/multitenant
     sudo su - oracle
     cd /home/oracle/labs/multitenant
     ````
+[Back to Top](#table-of-contents)
 
 
 ## Section 1: Create PDB
@@ -153,6 +154,9 @@ The tasks you will accomplish in this lab are:
     /
     ````
 
+[Back to Top](#table-of-contents)
+
+
 ## Section 2: Clone a PDB
 This section looks at how to clone a PDB
 
@@ -202,6 +206,8 @@ The tasks you will accomplish in this lab are:
     connect pdb_admin/oracle@localhost:1523/pdb3
     select * from my_tab;
     ````
+
+[Back to Top](#table-of-contents)
 
 ## Section 3: Unplug a PDB
 This section looks at how to unplug a PDB
@@ -271,6 +277,9 @@ The tasks you will accomplish in this lab are:
     ````
     host cat /u01/app/oracle/oradata/CDB1/pdb3.xml
     ````
+
+[Back to Top](#table-of-contents)
+
 
 ## Section 4: Plug in a PDB
 This section looks at how to plug in a PDB
@@ -365,6 +374,9 @@ The tasks you will accomplish in this lab are:
     select * from my_tab;
     ````
 
+[Back to Top](#table-of-contents)
+
+
 ## Section 5: Drop a PDB
 This section looks at how to drop a pluggable database.
 
@@ -389,6 +401,9 @@ The tasks you will accomplish in this lab are:
 
     show pdbs
     ````
+
+[Back to Top](#table-of-contents)
+
 
 ## Section 6: Clone an Unplugged PDB
 This section looks at how to create a gold copy of a PDB and clone it into another container.
@@ -504,6 +519,8 @@ The tasks you will accomplish in this lab are:
     /
     ````
 
+[Back to Top](#table-of-contents)
+
 ## Section 7: PDB Hot Clones
 This section looks at how to hot clone a pluggable database.
 
@@ -582,6 +599,9 @@ The tasks you will accomplish in this lab are:
 
 You can see that the clone of the pluggable database worked without having to stop the load on the source database. In the next lab you will look at how to refresh a clone.
 
+[Back to Top](#table-of-contents)
+
+
 ## Section 8: PDB Refresh
 This section looks at how to hot clone a pluggable database, open it for read only and then refresh the database.
 
@@ -641,6 +661,9 @@ The tasks you will accomplish in this lab are:
 
 7. Leave the **OE** pluggable database open with the load running against it for the rest of the labs.
 
+[Back to Top](#table-of-contents)
+
+
 ## Section 9: PDB Relocation
 
 This section looks at how to relocate a pluggable database from one container database to another. One important note, either both container databases need to be using the same listener in order for sessions to keep connecting or local and remote listeners need to be setup correctly. For this lab we will change **CDB2** to use the same listener as **CDB1**.
@@ -692,6 +715,8 @@ The tasks you will accomplish in this lab are:
     conn sys/oracle@localhost:1523/cdb2 as sysdba;
     alter system set local_listener='LISTCDB2' scope=both;
     ````
+
+[Back to Top](#table-of-contents)
 
 
 ## Conclusion
