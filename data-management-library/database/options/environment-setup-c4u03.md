@@ -398,6 +398,6 @@ Now that you have your instance, once you are able to ssh in, you will set up th
 
     ![](img/tnspmon.png)    
 
-Congratulations, you finished!  This is the end of the environment setup lab!   You may now proceed to the next lab, [In Memory](in-memory.md]).
+Congratulations, you finished!  This is the end of the environment setup lab!   You may now proceed to the next lab, [In Memory](in-memory.md).
 
 [Back to Top](#table-of-contents)
