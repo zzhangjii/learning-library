@@ -374,7 +374,7 @@ Now that you have your instance, once you are able to ssh in, you will set up th
 3. The next two labs, In-Memory and Multitenant need additional schemas and pluggable databases created.  Run the scripts in the background to create them as the oracle user.  Let's run the multitenant script.  This script takes approximately 15-30 minutes to complete and runs as a unix job in the background.  Ignore the error about the SYS password.  To check status you can use the jobs command.
     ````
     cd /home/oracle/labs/multitenant
-    ./createCDBs.sh &
+    nohup ./createCDBs.sh &
     ````
     ![](img/createdb1.png)   
 
