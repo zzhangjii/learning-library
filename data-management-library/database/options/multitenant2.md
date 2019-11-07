@@ -47,7 +47,7 @@ All the scripts for this lab are located in the /home/oracle/labs/multitenant/sc
 	sudo mv champion.zip /home/oracle
 	sudo chown oracle:oinstall /home/oracle/champion.zip 
     sudo su - oracle
-    unzip labs.zip
+    unzip champion.zip
     cd /home/oracle/labs/multitenant
     ````
 
