@@ -43,8 +43,11 @@ All the scripts for this lab are located in the /home/oracle/labs/multitenant/sc
     ````
     cd .ssh
     ssh -i optionskey opc@<your public ip address>
-    ls
+    oci os object bulk-download -bn Multitenant --download-dir /home/opc 
+	sudo mv champion.zip /home/oracle
+	sudo chown oracle:oinstall /home/oracle/champion.zip 
     sudo su - oracle
+    unzip champion.zip
     cd /home/oracle/labs/multitenant
     ````
 
