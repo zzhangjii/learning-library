@@ -15,7 +15,7 @@
 - [Section 9: Application Patches](#section-9-application-patches)
 - [Section 10: DBA Views](#section-10-dba-views)
 - [Section 11: Diagnosing, Correcting Problems, and Restarting Sync](#section-11-diagnosing-correcting-problems-and-restarting-sync)
-- [Section 3: Upgrade from v1 to v2](#section-12-upgrade-from-v1-to-v2)
+- [Section 12: Container Map](#section-12-container-map)
 
 
 ## Lab Introduction
@@ -34,7 +34,7 @@ There are two container databases running:
 
 ### Lab Setup
 
-All the scripts for this lab are located in the /home/oracle/multitenant/scripts folder.  
+All the scripts for this lab are located in the /home/oracle/labs/multitenant/scripts folder.  
 
 1.  To access the scripts, secure shell into the OCI compute instance.
 
@@ -613,6 +613,7 @@ The tasks you will accomplish in this lab are:
     column APP_ID                noprint
 
     select * from DBA_App_PDB_Status;
+    ````
 
 5. Connect to NYC and bring that up to the current version.
 
@@ -823,6 +824,7 @@ The tasks you will accomplish in this lab are:
     
     create pluggable database France
     admin user wm_admin identified by oracle;
+    ````
 
 12. Connect to the wmStore_West Application Root Replica (ARR) and create a database link from that ARR to the CDB of the Master Root
     
