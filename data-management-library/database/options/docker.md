@@ -147,7 +147,7 @@ Lab courtesy of NATD Solution Engineering Team.  Check out the original lab [her
 
 4.  Open up a browser on your laptop and go to your public URL on port 8002.  Go to http://Enter IP Address:8002/products. Depending on whether you have a JSON formatter, you should see the products in your application, in RAW or FORMATTED format.  `Note:  If you are on the VPN, disconnect`
 
-    ![](img/docker/products2.png) 
+    ![](img/docker/products2-8002.png) 
 
     ![](img/docker/products.png)    
 
@@ -207,6 +207,8 @@ Now that you know how to start, stop and relocate a container, let's see how to 
     ````
     pwd
     git clone https://github.com/wvbirder/AlphaOfficeSetup.git
+    cd /home/opc
+    chmod -R 777 Alpha*
     ````
 
 3.  Login with your Docker Hub credentials
@@ -229,7 +231,7 @@ Now that you know how to start, stop and relocate a container, let's see how to 
     ````
     docker logs --follow orcl
     ````
-5.  When the database creationg is complete, you will see "The database is ready for use".  Press control-c to continue.
+5.  When the database creationg is complete, you may see "The database is ready for use". The instance creation may happen quickly and that message may scroll past. Press control-c to continue.
 
 [Back to Top](#table-of-contents)
 
@@ -289,7 +291,7 @@ Now that you know how to start, stop and relocate a container, let's see how to 
     ````
     docker run -d --name=alphaofficeui -p=8085:8085 wvbirder/alpha-office-ui-js
     ````
-3.  Go back to your broswer to see the application running on port 8085.  http://Public IP address:8005.  Clickon one of the products to see the details and the twitterfeed comments. 
+3.  Go back to your broswer to see the application running on port 8085.  http://Public IP address:8085.  Clickon one of the products to see the details and the twitterfeed comments. 
 
 [Back to Top](#table-of-contents)
 
