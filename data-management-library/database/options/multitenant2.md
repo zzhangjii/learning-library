@@ -48,7 +48,7 @@ All the scripts for this lab are located in the /home/oracle/labs/multitenant/sc
     cd /home/oracle/labs/multitenant
     ````
 
-3. Reset the container databases back to their original ports if they were changed in a previous lab
+3. Reset the container databases back to their original ports if they were changed in a previous lab. If any errors about dropping databases appear they can be ignored.
 
     ````
     ./resetCDB.sh
@@ -242,7 +242,6 @@ The tasks you will accomplish in this lab are:
 
 1. Connect to **CDB1**.
     ````
-    sqlplus /nolog
     connect system/oracle@localhost:1523/cdb1
     ````
 
@@ -460,7 +459,6 @@ The tasks you will accomplish in this lab are:
 
 1. Connect to ``CDB1``.
     ````
-    sqlplus /nolog
     connect wmStore_Admin/oracle@localhost:1523/wmStore_Master
     ````
 
@@ -730,6 +728,7 @@ The tasks you will accomplish in this lab are:
 
     ````
     connect system/oracle@localhost:1523/cdb1
+
     create public database link CDB2_DBLink 
     connect to System identified by oracle
     using 'localhost:1524/cdb2';
@@ -747,7 +746,7 @@ The tasks you will accomplish in this lab are:
 
 6. Create and open Proxy PDBs for the Application Root Replicas
 
-    `````
+    ````
     create pluggable database wmStore_International_Proxy
     as proxy from wmStore_International@CDB2_DBLink;
 
@@ -757,15 +756,15 @@ The tasks you will accomplish in this lab are:
     alter pluggable database all open;
     ````
 
-7. Synchronize the ARRs via their proxies
+7. Synchronize the ARRs via their proxies. Notice you need to connect as sys to do this.
 
     ````
-    conn system/oracle@localhost:1523/CDB1;
-    alter session set container=wmStore_International_Proxy;
+    conn sys/oracle@localhost:1523/wmStore_International_Proxy as sysdba
         
     alter pluggable database application wmStore sync;
 
-    alter session set container=wmStore_West_Proxy;
+    conn sys/oracle@localhost:1523/wmStore_West_Proxy as sysdba
+
     alter pluggable database application wmStore sync;
     ````
 
@@ -1004,10 +1003,6 @@ The tasks you will accomplish in this lab are:
 
     delete from wm_Products  where Row_GUID in ('01','02','03','04');
 
-    --execute DBMS_PDB.set_data_linked(Schema_name => 'WMSTORE_ADMIN', Object_Name => 'WM_CAMPAIGNS', NameSpace => 1);
-
-    --execute DBMS_PDB.set_ext_data_linked(Schema_name => 'WMSTORE_ADMIN', Object_Name => 'WM_PRODUCTS', NameSpace => 1);
-
     insert into wm_Campaigns (Row_GUID, Name) values ('01', 'Locals vs Yokels');
 
     insert into wm_Campaigns (Row_GUID, Name) values ('02', 'Black Friday 2016');
@@ -1027,101 +1022,47 @@ The tasks you will accomplish in this lab are:
     alter pluggable database application wmStore end upgrade;
     ````
 
-2. Generate dynamic SQL Script for all of the databases that need to be synced on CDB1
+2. Sync some of the pluggable databases
 
     ````
-    connect system/oracle@localhost:1523/cdb1
-    set termout off
-    set heading off
-    set verify off
-    set feedback off
-    set echo off
-    set serveroutput on
+    connect system/oracle@localhost:1523/WMSTORE_MASTER$SEED
+    alter pluggable database application wmStore sync;
 
-    spool Dyn_Sync_App_PDBs.sql
+    connect system/oracle@localhost:1523/CALIFORNIA
+    alter pluggable database application wmStore sync;
 
-    declare
-    cursor AP_Curs is
-    select AP.PDB_Name PDB_Name
-    from DBA_PDBs AP
-    join DBA_PDBs AR
-    on AP.Application_Root_Con_ID = AR.Con_ID
-    where AP.Application_PDB = 'YES'
-    and   AP.Status = 'NORMAL'
-    and   AP.Application_Clone = 'NO'
-    order by AR.PDB_Name
-    ,        AP.Application_Seed desc
-    ,        AP.PDB_Name
-    ;
-    AP_Name varchar2(50);
-    begin
-    for AP_Rec in AP_Curs
-    loop
-        AP_Name := AP_Rec.PDB_Name;
-        dbms_output.put_line('connect system/oracle@localhost:1523/'||AP_Name);
-        dbms_output.put_line('alter pluggable database application wmStore sync;');
-    end loop;
-    end;
-    /
+    connect system/oracle@localhost:1523/NYC
+    alter pluggable database application wmStore sync;
 
-    spool off
+    connect system/oracle@localhost:1523/TULSA
+    alter pluggable database application wmStore sync;
 
-    set termout on
-    set heading on
-    set verify on
-    set feedback 6
+    connect system/oracle@localhost:1524/WMSTORE_INTERNATIONAL$SEED
+    alter pluggable database application wmStore sync;
 
-    @Dyn_Sync_App_PDBs.sql
+    connect system/oracle@localhost:1524/DENMARK
+    alter pluggable database application wmStore sync;
+
+    connect system/oracle@localhost:1524/FRANCE
+    alter pluggable database application wmStore sync;
+
+    connect system/oracle@localhost:1524/UK
+    alter pluggable database application wmStore sync;
+
+    connect system/oracle@localhost:1524/WMSTORE_WEST$SEED
+    alter pluggable database application wmStore sync;
+
+    connect system/oracle@localhost:1524/JAPAN
+    alter pluggable database application wmStore sync;
+
+    connect system/oracle@localhost:1524/SANTA_MONICA
+    alter pluggable database application wmStore sync;
+
+    connect system/oracle@localhost:1524/TAHOE
+    alter pluggable database application wmStore sync;
     ````
 
-3. Generate dynamic SQL Script for all of the databases that need to be synced on CDB2
-
-    ````
-    connect system/oracle@localhost:1524/cdb2
-    set termout off
-    set heading off
-    set verify off
-    set feedback off
-    set echo off
-    set serveroutput on
-
-    spool Dyn_Sync_App_PDBs.sql
-
-    declare
-    cursor AP_Curs is
-    select AP.PDB_Name PDB_Name
-    from DBA_PDBs AP
-    join DBA_PDBs AR
-    on AP.Application_Root_Con_ID = AR.Con_ID
-    where AP.Application_PDB = 'YES'
-    and   AP.Status = 'NORMAL'
-    and   AP.Application_Clone = 'NO'
-    order by AR.PDB_Name
-    ,        AP.Application_Seed desc
-    ,        AP.PDB_Name
-    ;
-    AP_Name varchar2(50);
-    begin
-    for AP_Rec in AP_Curs
-    loop
-        AP_Name := AP_Rec.PDB_Name;
-        dbms_output.put_line('connect system/oracle@localhost:1524/'||AP_Name);
-        dbms_output.put_line('alter pluggable database application wmStore sync;');
-    end loop;
-    end;
-    /
-
-    spool off
-
-    set termout on
-    set heading on
-    set verify on
-    set feedback 6
-
-    @Dyn_Sync_App_PDBs.sql
-    ````
-
-4. Queries against container CDB1
+3. Queries against container CDB1
 
     ````
     connect system/oracle@localhost:1523/cdb1
@@ -1137,7 +1078,7 @@ The tasks you will accomplish in this lab are:
     order by 1;
     ````
 
-5. Queries against container wmStore_Master
+4. Queries against container wmStore_Master
 
     ````
     connect wmStore_Admin/oracle@localhost:1523/wmStore_Master
@@ -1156,7 +1097,7 @@ The tasks you will accomplish in this lab are:
     ;
     ````
 
-6. Queries against container Tulsa
+5. Queries against container Tulsa
 
     ````
     connect wmStore_Admin/oracle@localhost:1523/Tulsa
@@ -1273,14 +1214,6 @@ The tasks you will accomplish in this lab are:
 2. Apply the patch to some but not all of the databases
 
     ````
-    connect system/oracle@localhost:1523/wmStore_International_Proxy
-
-    alter pluggable database application wmStore sync to patch 301;
-
-    connect system/oracle@localhost:1523/wmStore_West_Proxy
-
-    alter pluggable database application wmStore sync to patch 301;
-
     connect system/oracle@localhost:1523/Tulsa
 
     alter pluggable database application wmStore sync to patch 301;
@@ -1289,9 +1222,10 @@ The tasks you will accomplish in this lab are:
 
     alter pluggable database application wmStore sync to patch 301;
 
-    connect system/oracle@localhost:1523/Tahoe
+    connect system/oracle@localhost:1523/NYC
 
     alter pluggable database application wmStore sync to patch 301;
+
     ````
 
 ## Section 10: DBA Views
@@ -1563,7 +1497,7 @@ The tasks you will accomplish in this lab are:
     )
     ; 
 
-    alter database set Container_Map = 'c##System.tc_Kiosk_Map';
+    alter database set Container_Map = 'SYSTEM.tc_Kiosk_Map';
 
     create tablespace Terminal_TBS datafile size 100M autoextend on next 10M maxsize 200M;
     create user Terminal_Admin identified by oracle container=all;
