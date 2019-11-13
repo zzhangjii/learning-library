@@ -85,7 +85,7 @@ data "oci_identity_availability_domains" "ADs" {
 data "oci_core_images" "OL76ImageOCID" {
         compartment_id = "${var.compartment_ocid}"
         operating_system = "Oracle Linux"
-        operating_system_version = "7.6"
+        operating_system_version = "7.7"
         #compatible shape
         shape = "VM.Standard.E2.1"
 }
