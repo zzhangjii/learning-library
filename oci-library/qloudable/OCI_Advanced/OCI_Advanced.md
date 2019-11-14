@@ -314,7 +314,7 @@ Fill out the dialog box:
 - Target Type: Select **Local Peering gateway**
 - Destination CIDR Block: Enter 10.10.0.0/24
 - Compartment:  Make sure the correct Compartment is selected: 
-- TARGET LOCAL PEERING GATEWAY: Select the Local peering Gateway of second VCN 
+- TARGET LOCAL PEERING GATEWAY: Select the Local peering Gateway of First VCN 
 
 18. Click **Add Route Rule**
 
