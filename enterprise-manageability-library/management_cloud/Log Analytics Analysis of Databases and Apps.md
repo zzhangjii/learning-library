@@ -1,3 +1,5 @@
+![](media/rdwd-laheader.png)  
+
 PERFORM LOG ANALYTICS - ORACLE MANAGEMENT CLOUD DEMONSTRATION
 =============================================================
 
