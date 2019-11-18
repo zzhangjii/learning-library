@@ -1,5 +1,3 @@
-![](media/rdwd-emheader.png) 
-
 Introduction
 ============
 
@@ -10,8 +8,8 @@ Introduction
 Lab Assumptions
 ===============
 
--   Each participant has been provided an account on the c4u03 tenancy and the
-    network(VCN) has been pre-created (including ingress rules).
+-   Each participant has been provided an account on the *[provided tenancy]*
+    and the network (VCN) has been pre-created (including ingress rules).
 
 -   Each participant has a public/private key to login to instances post
     creation
@@ -20,8 +18,8 @@ Lab Assumptions
 Create Compute Instance
 =======================
 
-1.  Login to c4u03 using your account, once logged-in Click on the navigation
-    (hamburger) menu.
+1.  Login to *[provided tenancy]* using your account, once logged-in Click on
+    the navigation (hamburger) menu.
 
 ![](media/4e89be9c9981350f1a3612be4432aacd.jpg)
 
@@ -41,10 +39,10 @@ Create Compute Instance
 
 ![](media/67cdb773d62b0246e75ff98fde2dee9d.jpg)
 
-1.  Enter your desired instance name wich should be unique. Suggested name: Use
-    your guid EMworkshop (pchandir_em_workshop). *Do NOT enter name as-is from
-    below example, as that is for example purposes only*. Click on the **Change
-    Image Source** button.
+1.  Enter your desired instance name which should be unique. Suggested name:
+    [yourGUID]_em_workshop - *Do NOT enter name as-is like the example below, as
+    that is for demonstration purposes only*. Click on the **Change Image
+    Source** button.
 
 ![](media/64c77de4743fb8640528a260206481a9.png)
 
@@ -70,8 +68,7 @@ and click on **Select Image** button.
         **VMStandard 2.4** (4 OCPU and 60 GB memory). Click the **Select Shape**
         button to apply the change.
 
->   **Note:** If there is capacity issue with VMStandard 2.4, you can use
->   VMStandard 2.2
+>   **Note:** If there is capacity issue with VMStandard 2.4, use VMStandard 2.2
 
 ![](media/0510ee95794684fa3d67ae5668fd6818.jpg)
 
@@ -81,8 +78,8 @@ and click on **Select Image** button.
 
 1.  In the Configure networking section, select the dboptions compartment and
     the VCN you created in an earlier section or the default (dboption1105).
-    Click on the radio button to **assign a public address**. This is important.
-    **DO NOT OVERLOOK THIS STEP!!!!!!!**
+    *Click on the radio button to assign a public address. This is critical - DO
+    NOT OVERLOOK THIS STEP!!!!!!!*
 
 ![](media/18c530ae8dac002397ec9c46f1ff5706.png)
 
@@ -104,8 +101,8 @@ Paste or Choose your SSH key pub file contents
 
 ![](media/1ec471ec8adfa265e31cc88e64f6c809.jpg)
 
-1.  Once the instance moves to the Running state, locate your **public IP
-    address** and jot it down.
+1.  Once the instance moves to the running state, locate your **public IP
+    address** and write it down.
 
 ![](media/5147489a9317a2972646574b4dce26d1.jpg)
 
@@ -124,6 +121,3 @@ ahead (click on Advanced and then click on “Accept the risk and continue”)
 >   Once it’s up, you should see the login screen
 
 ![](media/e1030fc19dd82c84ac2924a9c284952a.jpg)
-
-
- [Return back for lab activities](../readme.md)

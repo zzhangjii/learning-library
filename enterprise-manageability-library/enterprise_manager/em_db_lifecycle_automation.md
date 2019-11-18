@@ -1,5 +1,3 @@
-![](media/rdwd-emheader.png) 
-
 Introduction
 ============
 
@@ -20,8 +18,8 @@ Table of Contents
 -   1.1 [Requesting a Pluggable Database
     (PDB)](#create-pluggable-oracle-database)
 
--   1.3 [Un-Plug a Pluggable Database and then Plug it back
-    ](#un-plugplug-an-existing-pluggable-oracle-database-pdb) (create
+-   1.3 [Un-Plug a Pluggable Database and then Plug
+    it](#un-plugplug-an-existing-pluggable-oracle-database-pdb) back (create
     from unplugged)
 
 -   1.3 [Creating Pluggable Database PDB Full
@@ -355,10 +353,10 @@ Click the Status link for each step to view the details of the execution of each
 
 ![](media/2e18c410493be6ec0b9352b94c0ceb9c.png)
 
-Click Click Compliance Click Library
+Click Click Compliance Click Library
 
-1.  Click Compliance Standards tab Choose the row “Corporate Database
-    Standard” Click
+1.  Click Compliance Standards tab Choose the row “Corporate Database
+    Standard” Click
 
 ![](media/8ed5400adb044b81194db800cfd4c953.jpg)
 
@@ -366,7 +364,7 @@ Click Click Compliance Click Library
 
 1.  Click OK button
 
-2.  In the Save Association box Click Yes button
+2.  In the Save Association box Click Yes button
 
 ![](media/0ccc894ff6c91bdd0aa1b7e5f78fbe6e.png)
 
@@ -381,19 +379,19 @@ Click OK button
 
         ![](media/c68b7cd9ff6272e2a1792aba8ac0e78b.jpg)
 
-        Click Databases Click View Click Expand All
+        Click Databases Click View Click Expand All
 
-    2.  Right click on PDB Click Oracle Database Click Configuration Click
+    2.  Right click on PDB Click Oracle Database Click Configuration Click
         Latest
 
->   Click Refresh icon on the page(it will take few minutes for refresh to
+>   Click Refresh icon on the page(it will take few minutes for refresh to
 >   complete)
 
 1.  Click
 
     ![](media/2e18c410493be6ec0b9352b94c0ceb9c.png)
 
-    Click Compliance Click Results
+    Click Compliance Click Results
 
 ![](media/1317deb228d80211d9e6a2edf2cbba9e.png)
 
@@ -409,7 +407,7 @@ Click Corporate Database Standard under Compliance Standards
 
 Click Violations link and then click on one of the Open Cursor Setting lines
 
-1.  You will see open cursors notification Scroll down if needed Click on
+1.  You will see open cursors notification Scroll down if needed Click on
     the link “Submit from Library” for corrective action.
 
 ![](media/19317a4da691bc2a1049ca7923414db3.png)
@@ -418,7 +416,7 @@ Click Violations link and then click on one of the Open Cursor Setting lines
 
 ![](media/61ea7b2393701bf4ce48bd301a67b332.jpg)
 
-1.  Choose the Named Credentials for Database and Host Click Submit button
+1.  Choose the Named Credentials for Database and Host Click Submit button
 
     1.  Named Credentials for Database: OEM_SYS (scroll down after Database
         Credentials to see Host Credentials
@@ -427,32 +425,32 @@ Click Violations link and then click on one of the Open Cursor Setting lines
 
 ![](media/6ccf17bb69cbc79dae30f95bc508f640.jpg)
 
-1.  You will see an popup as shown below Click on the link “Click here to view
+1.  You will see an popup as shown below Click on the link “Click here to view
     the execution details”
 
 ![](media/21e5a02e32296dd7dea196a7edfd29ac.jpg)
 
 >   Click on refresh icon if the job did not complete. The job will take about a
->   minute to complete 
+>   minute to complete 
 
 ![](media/3be714a84eeca17c22b2c786688b567a.jpg)
 
 >   You will see the status change to Succeeded
 
-1.  Once the status changes to Succeeded Click Databases Click View
-    Click Expand All Click on Your PDB that you choose in earlier step .
+1.  Once the status changes to Succeeded Click Click Databases Click View
+    Click Expand All Click on Your PDB that you choose in earlier step .
 
-2.  Under Administration drop down Click Initialization Parameters
+2.  Under Administration drop down Click Initialization Parameters
 
-3.  Scroll down You will see the “open_cursors” initialization parameter set
+3.  Scroll down You will see the “open_cursors” initialization parameter set
     to 300 as shown below
 
 ![](media/6b842b0948b11c52c1d56d2f9cdf1088.jpg)
 
->   Now that you have gone through the various lifecycle operation on PDB, we
+>   Now that you have gone through the various life cycle operation on PDB, we
 >   would switch focus and cover the use case of building a private cloud using
 >   Enterprise Manager and see how easy and quick it is to provision (with
->   minimal inputs) and manage PDB using PDB-as-a-Service (PDBaaS)
+>   minimal inputs) and manage PDB using PDB-as-a-service (PDBaaS)
 
 2.0 Self-Service to request PDB using PDBaaS
 ============================================
@@ -766,5 +764,3 @@ Service Templates
 ![](media/a0efb63a12d01e1254593656765ec52a.jpg)
 
 >   That concludes the lab. Thank you!
-
- [Return back for more lab activities](../readme.md)
