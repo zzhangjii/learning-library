@@ -1,10 +1,12 @@
-**Proactive Oracle Database Performance Management**
-====================================================
+![](media/rdwd-itanalytics.png)
+
+**Proactive Database Performance Management with IT Analytics** 
+================================================================
 
 In these hands-on lab activities, learn how to identify systemic database and
 SQL performance issues, and proactively forecast database resource utilization.
-See how to obtain complete and centralized visibility of your Oracle Databases
-whether they are on-premises or in the Oracle Cloud using Oracle IT Analytics.
+See how to obtain complete and centralized visibility of your databases whether
+they are on-premises or in the Oracle Cloud using Oracle IT Analytics.
 
 Lab Exercise Persona
 --------------------
@@ -187,5 +189,5 @@ because there is no “single source of truth”
 18. From here, you can review statistics, execution plan, trends and activity
     and further drill down and analyze root cause for the slowness.
 
->   That completes Lab 1 for Proactive Oracle Database Performance Management
+>   That completes Lab1 for Proactive Oracle Database Performance Management
 >   using Oracle IT Analytics.
