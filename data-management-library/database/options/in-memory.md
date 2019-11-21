@@ -32,7 +32,11 @@ In the previous lab, you imported a 5 table star schema, ssb, into your compute 
 - Each participant has completed the [Environment Setup](environment-setup-c4u03.md) lab successfully and imported the SSB schema
 
 ## Section 1-Logging In and Enabling In-Memory
-1.  Open up a terminal and ssh into the instance you created in the Environment Setup Lab.  The public IP address can be found by going to Compute -> Instance.
+1.  Open up a web browser and log back into the Oracle Cloud.  Navigate to **Compute**->**Instances**.  Find your instance and click the **Start** button to start it up.
+
+    ![](img/start-instance.png) 
+
+1.  Open up a terminal session or putty and ssh into the instance you created in the Environment Setup Lab.  The public IP address can be found by going to Compute -> Instance.
 
     ````
     cd ~

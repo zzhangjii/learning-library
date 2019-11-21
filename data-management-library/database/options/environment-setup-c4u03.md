@@ -387,6 +387,22 @@ Now that you have your instance, once you are able to ssh in, you will set up th
         sudo sed -i 's/:N/:Y/g' /etc/oratab
         ````    
 
-Congratulations, you finished!  This is the end of the environment setup lab!   You may now proceed to the next lab, [In Memory](in-memory.md).
+7. Congratulations, you finished!  This is the end of the environment setup lab!  Let's shut down your instance. You wil start it back up when the Roadshow begins.  
+
+8.  Go back to your instance in the web by clicking on the hamburger icon and selecting **Compute**->**Instances**.
+
+    ![](img/shut-instances.png)  
+
+9.  Click the **Stop** button. 
+
+    ![](img/shut-instances-4.png) 
+
+10.  Click **OK**
+![](img/shut-instances-2.png)  
+
+11. Once you confirm your instance has stopped, you can close your browser.
+
+![](img/shut-instances-3.png)   
+    
 
 [Back to Top](#table-of-contents)
