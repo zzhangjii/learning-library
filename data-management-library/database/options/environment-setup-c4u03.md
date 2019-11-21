@@ -316,11 +316,11 @@ Now that you have your instance, once you are able to ssh in, you will set up th
 
     Compare the fingerprint in the output of config file to the one in OCI console window and make sure they match.
 
-10. Now let's test.  Enter the following command:
+10. Now let's test.  Enter the following command.  Ignore any python related errors.  The --output table formats the cli to return the command results in table format.
     ````
-    oci iam availability-domain list
+    oci os object list -bn DBOptions --output table
     ````
-    ![](img/clilistdomain.png) 
+    ![](img/ssbdmp.png) 
 
 
 ## Section 7-Finish Environment Setup
@@ -328,11 +328,10 @@ Now that you have your instance, once you are able to ssh in, you will set up th
 1. Congrats! You have Oracle Cloud command line access to your newly created instance!  Let's  download the files you will need for these labs from object storage. A storage bucket `DBOptions` has been created that has all the files you need for the series of labs in this roadshow.  YOu will be downloading the files directly to the instance you just created using the oci cli `bulk-download` command.  It may take some time (2-3 mins), please be patient.
     ````
     cd /home/opc/
-    oci os object list -bn DBOptions
     oci os object bulk-download -bn DBOptions --download-dir /home/opc
     ````
         
-    ![](img/ssbdmp.png) 
+
 
     ![](img/download-bucket.png)  
 
