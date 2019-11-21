@@ -130,58 +130,62 @@ because there is no “single source of truth”
 
     ![](media/9ba04b9cf65063a5904e7173fab336c1.jpg)
 
-11. This tab shows activity in terms of active sessions and their breakup by
-    CPU, I/O and Inefficient waits. Reducing the Inefficient Waits improves the
-    performance of the database. Inefficient databases are databases where large
-    % of the database time in spent in application waits (not on CPU or I/O)
-    [Click on SQL Performance]
+11. The **Inefficiency** tab shows active sessions and their breakdown by CPU,
+    I/O and Inefficient Waits. Inefficient databases are those where a large
+    percentage of database time in spent waiting on the application and not on
+    CPU or I/O. Reduction of Inefficient Waits improves performance of a
+    database. Next, **Click** on the **SQL Performance** tab.
 
     ![](media/512836d6de651328c71e3cc38519cb51.jpg)
 
-12. This tab highlights the top degrading and highly variant SQLs on this
-    database. [Scroll Up] [Click on the back button “\<” on the top, next to DB
-    name]
+12. The **SQL Performance** tab highlights the top degrading and highly variant
+    SQLs in this database. Next, Scroll up the page and next to the database
+    name on the upper left (FLGT-XA-AU), **Click** on the back button (the
+    greater than sign)
 
     ![](media/83db8771f9f66aad1e88e095fd8c19df.jpg)
 
-13. This brings us back to the ‘Database Performance Analytics’ dashboard. Step
-    1: [Scroll Down] ‘Workload Variability’ section shows the SQL performance
-    variance summary for the DBs and highlights SQLs with high performance
-    variance. ‘Database Inefficiency’ section shows summary of the inefficiency
-    for all DBs and highlights the inefficient DBs. Step 2:[Click ‘2 DBs’ under
-    ‘Inefficient Databases’]
+13. That will return us back to the **Database Performance Analytics**
+    dashboard. **First, Scroll Down** to the **Workload Variability** section
+    that displays Workload by Variant SQL on each database and identifies SQLs
+    with **Highly Variant Performance** to its right. The **Database
+    Inefficiency** section shows a summary of inefficiency for all databases and
+    identifies the inefficient databases. **Second,** under Inefficient
+    Databases **Click** on the 2 DBs.
 
     ![](media/ab8aa025c2ac229e457a64c8f4cc438a.jpg)
 
-14. This gives the details of the DBs with high inefficiency. One can drill down
-    to a particular DB further by clicking the DB name as we saw in earlier
-    slides. [Click Close]. Similarly, one can get more details about the
-    ‘Increasingly Inefficient’ DBs.
+14. That then displays the percentage of database inefficiency. You can drill
+    down into to a specific database further by **Clicking** on one of the names
+    listed in the Databases Name column. Now **Click** the Close button to
+    return back to the **Database Performance Analytics** dashboard.
 
     ![](media/013a0453be65c15de40378f3787ebf5b.jpg)
 
-15. [Click ‘SQL Analytics’ from OMC Menu]
+15. From the navigation bar on the far left, now **Click** on **SQL Analytics**
 
     ![](media/52d57113ef4406ab53966d39442bf5d1.jpg)
 
-16. This opens another OOB dashboard provided by OMC for SQL performance
-    analysis. This shows the degrading, highly variant, inefficient SQLs and
-    SQLs with plan changes running across all DBs in ITAGSEDBAnalyticsDemogrp.
-    Also highlights top SQLs by CPU and I/O. At the bottom it shows performance
-    analysis chart for SQLs with various filter options. NOTE: this is a live
-    environment and the time range we have selected is relative i.e. last 90
-    days and not constant, so the data on live dashboard may differ from what is
-    shown in the screenshots. Please pay more attention to the steps, rather
-    than the exactness of data on the page.[Click on degrading SQLs count 47]
+16. That then displays another out of box dashboard provided by OMC for
+    performing SQL performance analysis. It shows the degrading, highly variant,
+    inefficient SQLs and SQLs with plan changes running across all databases in
+    the ITAGSEDBAnalyticsDemogrp and also highlights top SQLs by CPU and I/O. At
+    the bottom a performance analysis chart for SQL is displayed with filtering
+    options. **Note**: Since you’re using a live environment, data displayed in
+    the dashboard may differ from what is shown in screenshots. Please pay
+    attention to the functionality, rather than the exactness of data on a page.
+    **Next**, under the Degrading SQLs heading, **Click** on the count; in this
+    case 47.
 
     ![](media/9f60295615be481186c04f88ae34a4bb.jpg)
 
-17. Here one can view all these degrading SQLs and select one to analyze
-    further. [Click on SQL ID i.e. ‘g3wrkmxkxzhf2’]
+17. Here, degrading SQLs are displayed. To further analyze, **Click** on the SQL
+    ID – in this case **g3wrkmxkxzhf2**
 
     ![](media/58e9445c7567658d711ad9e2ef5b3ac2.jpg)
 
-18. From here one can drill down into a specific degrading SQL and analyze to
-    find the reason for slowness.
+18. From here, you can review statistics, execution plan, trends and activity
+    and further drill down and analyze root cause for the slowness.
 
-19. This completes Lab 1.
+>   That completes Lab 1 for Proactive Oracle Database Performance Management
+>   using Oracle IT Analytics.
