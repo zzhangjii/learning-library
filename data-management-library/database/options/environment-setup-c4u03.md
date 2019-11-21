@@ -145,7 +145,7 @@ The VCN, Virtual Cloud Network, has been precreated for you.
 6. This is the OCI Marketplace library of images.  In the **Browse All Images** screen, click on **Oracle Images** to select your Oracle Database Marketplace image.  Select the **Oracle Database** app name in the marketplace.  Click the down arrow to select the database version.
 ![](img/create-compute-3.png)
 
-6. Select the 19c version.  18c is selected by default.  Ensure you choose 19c.
+6. Select the 19c version.  18c is selected by default.  Ensure you choose 19c.  Version numbers subject to change from image.  
 ![](img/marketplace1.png)
 
     ![](img/choose-image-1.png)
@@ -191,7 +191,7 @@ The VCN, Virtual Cloud Network, has been precreated for you.
 
 ## Section 6-Setup OCI CLI 
 
-Now that you have your instance, once you are able to ssh in, you will set up the OCI Command Line interface. While the instance is being created, the ssh daemon is shut off.  This means you will not be able to login until the ssh daemon is started.  This could take around 5-7 minutes.  Once 5 minutes has passed, you should be able to ssh into the instance.  **YOU WILL NOT BE ABLE TO SSH INTO YOUR INSTANCE UNTIL THE INIT SCRIPT IS COMPLETE, PLEASE BE PATIENT AND DO NOT CREATE ANOTHER INSTANCE**
+Now that you have your instance, once you are able to ssh in, you will set up the OCI Command Line interface. While the instance is being created, the ssh daemon is shut off.  This means you will not be able to login until the ssh daemon is started.  This could take around 5-7 minutes.  Once 5 minutes has passed, you should be able to ssh into the instance.  **YOU MAY NOT BE ABLE TO SSH INTO YOUR INSTANCE UNTIL THE INIT SCRIPT IS COMPLETE, PLEASE BE PATIENT AND DO NOT CREATE ANOTHER INSTANCE**
 
 ### Connecting via MAC or Windows CYGWIN Emulator
 1.  Open up a terminal (MAC) or cygwin emulator as the opc user.  Enter yes when prompted.
