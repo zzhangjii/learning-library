@@ -32,7 +32,11 @@ In the previous lab, you imported a 5 table star schema, ssb, into your compute 
 - Each participant has completed the [Environment Setup](environment-setup-c4u03.md) lab successfully and imported the SSB schema
 
 ## Section 1-Logging In and Enabling In-Memory
-1.  Open up a terminal and ssh into the instance you created in the Environment Setup Lab.  The public IP address can be found by going to Compute -> Instance.
+1.  Open up a web browser and log back into the Oracle Cloud.  Navigate to **Compute**->**Instances**.  Find your instance and click the **Start** button to start it up.
+
+    ![](img/start-instance.png) 
+
+1.  Open up a terminal session or putty and ssh into the instance you created in the Environment Setup Lab.  The public IP address can be found by going to Compute -> Instance.
 
     ````
     cd ~
@@ -46,7 +50,9 @@ In the previous lab, you imported a 5 table star schema, ssb, into your compute 
     ls
     ````
 
-3.  In-Memory is integrated into Oracle Database 12c and higher.  The IM column store is not enabled by default, but can be easily enabled via a few steps.  Before you enable it, let's take a look at the default configuration. 
+3.  **If you are just starting the instance, it may take a moment for the instances and listeners to start.** 
+
+4. In-Memory is integrated into Oracle Database 12c and higher.  The IM column store is not enabled by default, but can be easily enabled via a few steps.  Before you enable it, let's take a look at the default configuration. 
 
     ````
     . oraenv
