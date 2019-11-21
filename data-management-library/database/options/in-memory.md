@@ -50,7 +50,9 @@ In the previous lab, you imported a 5 table star schema, ssb, into your compute 
     ls
     ````
 
-3.  In-Memory is integrated into Oracle Database 12c and higher.  The IM column store is not enabled by default, but can be easily enabled via a few steps.  Before you enable it, let's take a look at the default configuration. 
+3.  **If you are just starting the instance, it may take a moment for the instances and listeners to start.** 
+
+4. In-Memory is integrated into Oracle Database 12c and higher.  The IM column store is not enabled by default, but can be easily enabled via a few steps.  Before you enable it, let's take a look at the default configuration. 
 
     ````
     . oraenv
