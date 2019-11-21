@@ -6,7 +6,7 @@
 - [Section 1-Login to the Oracle Cloud](#section-1-login-to-the-oracle-cloud)
 - [Section 2-Create an SSH key pair](#section-2-create-an-ssh-key-pair)
 - [Section 3-Download Marketplace Initialization Zip](#section-3-download-marketplace-initialization-zip)
-- [Section 4-Create Networking](#section-4-create-networking)
+- [Section 4-Create Networking and Select Region](#section-4-create-networking-and-select-region)
 - [Section 5-Create Compute Instance](#section-5-create-compute-instance)
 - [Section 6-Setup OCI CLI](#section-6-setup-oci-cli)
 - [Section 7-Finish Environment Setup](#section-7-finish-environment-setup)
@@ -23,20 +23,28 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 
 ## Lab Assumptions
 - Each participant has been provided an account on the c4u03 tenancy and the network (VCN) has been pre-created.
-- Each participant has been sent two emails, one from Oracle Cloud with their username and another from one of the Database PMs with their temporary password.
+- Each participant has been sent two emails, one from noreply@accountrecovery.oci.oraclecloud.com  with their username and another from the Database PM gmail account with their temporary password.
+
+# Lab Settings
+- **Tenancy**:  c4u03
+- **Username/Password**:  Follow instructions below to access
+- **Compartment**: \<Provided by Oracle\>
+- **VCN**: \<Provided by Oracle\>
+- **Region**: \<Provided by Oracle\>
+
 
 
 ## Section 1-Login to the Oracle Cloud 
 1.  You should have received an email from Oracle Cloud with your tenancy and username.  Click on the **Sign In to Oracle Cloud** link.  
 
-    ![](img/welcome-email.png)
+    ![](img/welcome-email.jpg)
 
 2.  For this event, we are using OCI IAM users.  You should have received a 2nd email with your one-time password.  Enter your username (found in the first email) and your password (second email from DB PM).  You will then be taken to a screen to change your password.  Choose a new password that you can remember and click **Sign In**
 
     ![](img/changepwd.png)
 
 
-5. Once you successfully login, you will be presented with the Oracle Cloud homepage.  
+3. Once you successfully login, you will be presented with the Oracle Cloud homepage. If you get an *Email Activation Unsuccessful* message, check to see if you can still access the cloud by looking for the hamburger menu to the left. 
   ![](img/cloud-homepage.png) 
 
 [Back to Top](#table-of-contents)
@@ -94,7 +102,7 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 [Back to Top](#table-of-contents)
 
 ## Section 3-Download Marketplace Initialization Zip
-1.  Click  [here](https://community.oracle.com/servlet/JiveServlet/download/1031489-6-462822/oci-db-app-script-examples.zip) to download the marketplace initialization zip file.
+1.  Click  \<[**here**](https://community.oracle.com/servlet/JiveServlet/download/1031489-6-462822/oci-db-app-script-examples.zip)\> to download the marketplace initialization zip file.
 
 2.  Save it to your downloads folder
 
@@ -106,89 +114,15 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 
 [Back to Top](#table-of-contents)
 
-## Section 4-Create Networking
-These instructions are for PM sponsored Roadshows, **SKIP THIS STEP YOUR VCN (DBOPTIONSmmdd) HAS ALREADY BEEN CREATED FOR YOU,**  go directly to [Section 5-Create Compute Instance](#section-5-create-compute-instance).  The instructionsn are included for your edification.
+## Section 4-Create Networking and Select Region
 
-1. Go back to your browser to the tab with your logged in access to the Oracle Cloud.  Click on the hamburger menu.
-![](img/cloud-homepage.png) 
+The VCN, Virtual Cloud Network, has been precreated for you. 
 
-2.  Click on **Networking** -> **Virtual Cloud Networks** to create a virtual cloud network for your instance.  Each particpant will create their own network, unless noted otherwise.
+1.  Change your region to ensure you are creating your objects in the correct region.  
 
-3.  Before creating the VCN, it is important you **select the correct compartment**.  If you are in a roadshow, you will be provided with the correct compartment.  In this example we will use `dboptions1105`.  **Do NOT select the root compartment**.
-  
-    ![](img/create-compartment.png)
-  
-4.  Click the **Create Virtual Cloud Network** button.
-    ![](img/createvcn.png)
+2. Click on the US East(Ashburn) drop down.  Select the region that you are instructed by the PM team.
 
-5.  Enter the following:
-    - **Name**:  Enter the name for your vcn 
-    - **Create in Compartment**: Select the dboptions compartment
-    - Select the 2nd radio button - **Create VCN PLUS RELATED RESOURCES**
-    - Uncheck USE DNS HOSTNAMES IN THIS VCN
-    - Accept all other defaults
-
-    Scroll down and click the Create button.  Click Close after your VCN is created.
-  
-    ![](img/vcn.png)
-
-6. Now that the VCN is created, let's create the security list.  Click on the **Security Lists** link under the **Resources** section on the left hand side of your browser.
-
-    ![](img/vcncreation.png)
-
-7.  Click on the **Default Security List**.
-
-    ![](img/default-security-list.png)
-
-7. Click **Add Ingress Rules** to create rules for a future lab.
-
-    ![](img/addingress.png)
-
-8.  Update the SOURCE CIDR and the PORT RANGE and click the **+Additional Ingress Rules** button.
-
-    ````
-    SOURCE RANGE: 0.0.0.0/0
-    PORT RANGE:  8085
-    ````
-    ![](img/addingress2.png)
-
-9.  Under Ingress Rule 2, add the same SOURCE CIDR value and a destination port range of 9080.  Repeat step 8 and 9 until you've added 10 rules.
-
-    ````
-    SOURCE RANGE: 0.0.0.0/0
-    PORT RANGE:  9080
-
-    SOURCE RANGE: 0.0.0.0/0
-    PORT RANGE:  8002
-
-    SOURCE RANGE: 0.0.0.0/0
-    PORT RANGE:  18002
-
-    SOURCE RANGE: 0.0.0.0/0
-    PORT RANGE:  5600
-
-    SOURCE RANGE: 0.0.0.0/0
-    PORT RANGE:  443
-
-    SOURCE RANGE: 0.0.0.0/0
-    PORT RANGE:  7803
-
-    SOURCE RANGE: 0.0.0.0/0
-    PORT RANGE:  4903
-
-    SOURCE RANGE: 0.0.0.0/0
-    PORT RANGE:  7301
-
-    SOURCE RANGE: 0.0.0.0/0
-    PORT RANGE:  9851
-    ````
-    ![](img/addingress4.png)  
-
-10. Click **Add Ingress Rules** to proceed.  Once complete, the Ingress Rules should have the following port ranges.  Double check these values to ensure they are correct.
-
-    ![](img/addingress5.png) 
-
-[Back to Top](#table-of-contents)
+    ![](img/change-region.png)
 
 ## Section 5-Create Compute Instance
 
@@ -198,9 +132,9 @@ These instructions are for PM sponsored Roadshows, **SKIP THIS STEP YOUR VCN (DB
 2. Select **Compute** -> **Instances** to go to the screen to create your instance.
   ![](img/compute-instance.png)
 
-3. Before creating the instance, it is important you **select the correct compartment**.  If you are in a PM sponsored roadshow, this will be provided. In this example we will use `dboptions1105`.  **Do NOT select the root compartment**.
+3. Before creating your instance, it is important you **select the correct compartment**.  If you are in a PM sponsored roadshow, this will be provided to you.  **Do NOT select the c4u03 compartment, objects here will be deleted**.
    
-   ![](img/create-compartment.png)
+   ![](img/pick-a-compartment.png)
 
 4. Click the **Create Instance** button.
 ![](img/create-compute.png)
@@ -222,7 +156,12 @@ These instructions are for PM sponsored Roadshows, **SKIP THIS STEP YOUR VCN (DB
 ![](img/create-compute-4.png)
 
 8. Click **Show Shape, Network, Storage Options** if it is hidden.  
-    - **AD**:  Instances will need to be balanced across Availability Domains (ADs) to accomodate limits in the tenancy.  If your last name is A-J, select `AD1`, J-M, select `AD2`, N-Z, select `AD3`.
+    - **AD**:  Instances will need to be balanced across Availability Domains (ADs) to accomodate limits in the tenancy.  
+    - If your last name is:
+        - **A-I** -> select `AD1`
+        - **J-M** -> select `AD2`
+        - **N-Z** -> select `AD3`
+    - Each availability domain has a limit on the number of instances that can be created.  This ensures a balance across ADs.
     - **Instance Type**:  The instance type we are creating is a **Virtual Machine**.  
     - **Instance Shape**:  Select the **change shape** button and select `VMStandard 2.2`.  Click the **Select Shape** button to apply the change.  
 
@@ -252,14 +191,48 @@ These instructions are for PM sponsored Roadshows, **SKIP THIS STEP YOUR VCN (DB
 
 ## Section 6-Setup OCI CLI 
 
-Now that you have your instance, once you are able to ssh in, you will set up the OCI Command Line interface. The initialization of the marketplace image takes around 5-7 minutes.  Once 5 minutes has passed, you should be able to ssh into the instance.  **YOU WILL NOT BE ABLE TO SSH INTO YOUR INSTANCE UNTIL THE INIT SCRIPT IS COMPLETE, PLEASE BE PATIENT AND DO NOT CREATE ANOTHER INSTANCE**
-1.  Open up a terminal (MAC) or cygwin emulator as the opc user
+Now that you have your instance, once you are able to ssh in, you will set up the OCI Command Line interface. While the instance is being created, the ssh daemon is shut off.  This means you will not be able to login until the ssh daemon is started.  This could take around 5-7 minutes.  Once 5 minutes has passed, you should be able to ssh into the instance.  **YOU WILL NOT BE ABLE TO SSH INTO YOUR INSTANCE UNTIL THE INIT SCRIPT IS COMPLETE, PLEASE BE PATIENT AND DO NOT CREATE ANOTHER INSTANCE**
+
+### Connecting via MAC or Windows CYGWIN Emulator
+1.  Open up a terminal (MAC) or cygwin emulator as the opc user.  Enter yes when prompted.
 
     ````
     ssh -i ~/.ssh/optionskey opc@<Your Compute Instance Public IP Address>
     ````
+    ![](img/ssh-first-time.png) 
 
-2.  Download the Oracle Cloud CLI install script.  
+2.  Proceed to the Install CLI section.
+
+### Connecting via Windows
+
+1.  Open up putty and create a new connection.
+
+    ````
+    ssh -i ~/.ssh/optionskey opc@<Your Compute Instance Public IP Address>
+    ````
+    ![](img/ssh-first-time.png) 
+
+2.  Enter a name for the session and click **Save**.
+
+    ![](img/putty-setup.png) 
+
+3. Click **Connection** > **Data** in the left navigation pane and set the Auto-login username to root.
+
+4. Click **Connection** > **SSH** > **Auth** in the left navigation pane and configure the SSH private key to use by clicking Browse under Private key file for authentication.
+
+5. Navigate to the location where you saved your SSH private key file, select the file, and click Open.
+
+    ![](img/putty-auth.png) 
+
+6. The file path for the SSH private key file now displays in the Private key file for authentication field.
+
+7. Click Session in the left navigation pane, then click Save in the Load, save or delete a stored session section.
+
+8. Click Open to begin your session with the instance.
+
+### Install CLI
+
+1.  Download the Oracle Cloud CLI install script.  
 
     ````
     bash -c "$(curl –L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
@@ -281,6 +254,13 @@ Now that you have your instance, once you are able to ssh in, you will set up th
     ````
     oci -v
     ````
+
+7.  To setup OCI CLI you will need to provide your instance with your **OCI ID** and **Tenancy ID**. To locate your user details, go to the upper left corner and click on the circular icon-> **User Settings**.  Note the region in which you are working (upper left corner).  
+
+    ![](img/user-settings.png) 
+
+    ![](img/user-details.png) 
+
 4.  Now that the binaries are complete.  You will need to provide your tenancy id and user id.  Go back to your browswer and click on the hamburger menu.
     ![](img/cloud-homepage.png) 
 
@@ -291,10 +271,6 @@ Now that you have your instance, once you are able to ssh in, you will set up th
 6.  Click **Show** to show the full tenancy id.  This is the unique identifier for the tenancy you are working in.  Click **Copy** and copy that to your notepad.
 
     ![](img/tenancy-details-2.png)  
-
-7.  Repeat the same steps for your user.  To locate your user details go to **Identity**-> **Users**.  Note the region in which you are working (upper left corner)
-
-    ![](img/user-details.png) 
 
 8.  Go back to your terminal window and run the oci setup commands to complete configuration.  Accept the default location when prompted.  Enter **Y** to generate an RSA key pair (no passphrase needed).
 
@@ -374,21 +350,27 @@ Now that you have your instance, once you are able to ssh in, you will set up th
 3. The next two labs, In-Memory and Multitenant need additional schemas and pluggable databases created.  Run the scripts in the background to create them as the oracle user.  Let's run the multitenant script.  This script takes approximately 15-30 minutes to complete and runs as a unix job in the background.  Ignore the error about the SYS password.  To check status you can use the jobs command.
     ````
     cd /home/oracle/labs/multitenant
-    nohup ./createCDBs.sh &
+    nohup ./home/oracle/labs/multitenant/createCDBs.sh &> nohupmultitenant.out&
+    ```` 
+    
+4. Now let's run the script to setup the In-Memory lab.  This script takes approximately 10 minutes to complete.  This script also runs in the background. 
     ````
+    nohup ./home/oracle/labs/inmemory/importssb.sh &> nohupinmemory.out&
+    ````
+
+4. Type jobs to see the two scripts running.  Tail -f each output file to check the status.
+    ````
+    jobs
+    more nohupinmemory.out
+    tail -f nohupmultitenant.out
+    ````
+    ![](img/importssb.png)  
+
     ![](img/createdb1.png)   
 
     ![](img/createdb2.png)  
 
-    ![](img/createdb3.png)  
-4. Open up a 2nd terminal window.  Let's run the script to setup the In-Memory lab.  This script takes approximately 10 minutes to complete.  This script also runs in the background. 
-    ````
-    ssh -i ~/.ssh/optionskey opc@<Your Compute Instance Public IP Address>
-    sudo su - oracle
-    cd /home/oracle/labs/inmemory
-    ./importssb.sh &
-    ````
-    ![](img/importssb.png)    
+    ![](img/createdb3.png) 
 
 5. The 1st Multitenant setup script creates two additional listeners and 2 container databases, CDB1 and CDB2.  After 20 minutes, go back to your terminal and check to see if the scripts completed using the comnands below,
     ````
@@ -396,7 +378,13 @@ Now that you have your instance, once you are able to ssh in, you will set up th
     ps -ef | grep pmon
     ````
 
-    ![](img/tnspmon.png)    
+    ![](img/tnspmon.png)   
+
+ 6.  Set the databases to start upon boot.  Exit the oracle shell and modify the oratab file.
+    ````
+    exit
+    sudo sed -i 's/:N/:Y/g' /etc/oratab
+    ````    
 
 Congratulations, you finished!  This is the end of the environment setup lab!   You may now proceed to the next lab, [In Memory](in-memory.md).
 
