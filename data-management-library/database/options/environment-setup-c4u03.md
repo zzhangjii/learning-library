@@ -381,10 +381,11 @@ Now that you have your instance, once you are able to ssh in, you will set up th
     ![](img/tnspmon.png)   
 
  6.  Set the databases to start upon boot.  Exit the oracle shell and modify the oratab file.
-    ````
-    exit
-    sudo sed -i 's/:N/:Y/g' /etc/oratab
-    ````    
+
+        ````
+        exit
+        sudo sed -i 's/:N/:Y/g' /etc/oratab
+        ````    
 
 Congratulations, you finished!  This is the end of the environment setup lab!   You may now proceed to the next lab, [In Memory](in-memory.md).
 
