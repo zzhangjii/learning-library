@@ -23,30 +23,30 @@ Create Compute Instance
 
 ![](media/4e89be9c9981350f1a3612be4432aacd.jpg)
 
-1.  Select **Compute** then **Instances** to go to the screen to create your
+2.  Select **Compute** then **Instances** to go to the screen to create your
     instance.
 
 ![](media/3613c77757beacf10737ea4b34485d65.jpg)
 
-1.  Before creating the instance, it is important you **select the correct
+3.  Before creating the instance, it is important you **select the correct
     compartment**, which is **dboptions1105**. Go to the bottom left side of the
     page and expand the root drop down to select the **dboptions1105. Do NOT
     select the root compartment or any other compartment**.
 
 ![](media/1a4bdcea9aeb2f4faa2918ce0de034bb.jpg)
 
-1.  Click the **Create Instance** button.
+4.  Click the **Create Instance** button.
 
 ![](media/67cdb773d62b0246e75ff98fde2dee9d.jpg)
 
-1.  Enter your desired instance name which should be unique. Suggested name:
+5.  Enter your desired instance name which should be unique. Suggested name:
     [yourGUID]_em_workshop - *Do NOT enter name as-is like the example below, as
     that is for demonstration purposes only*. Click on the **Change Image
     Source** button.
 
 ![](media/64c77de4743fb8640528a260206481a9.png)
 
-1.  This is the OCI Marketplace library of images. In the **Browse All Images**
+6.  This is the OCI Marketplace library of images. In the **Browse All Images**
     screen, from the options along the top of the screen, click on **Custom
     Images** to select your Oracle Enterprise Workshop Image
 
@@ -55,7 +55,7 @@ Create Compute Instance
 From the list of available custom images, Select the **EM Workshop V1** image
 and click on **Select Image** button.
 
-1.  Click **Show Shape, Network, and Storage Options** if it is hidden.
+7.  Click **Show Shape, Network, and Storage Options** if it is hidden.
 
     -   **AD**: Instances will need to be balanced across Availability Domains
         (ADs) to accommodate limits in the tenancy. If your last name is A-J,
@@ -76,14 +76,14 @@ and click on **Select Image** button.
 
 ![](media/db534fcc781e9902a4bee140704da5a3.jpg)
 
-1.  In the Configure networking section, select the dboptions compartment and
+8.  In the Configure networking section, select the dboptions compartment and
     the VCN you created in an earlier section or the default (dboption1105).
     *Click on the radio button to assign a public address. This is critical - DO
     NOT OVERLOOK THIS STEP!!!!!!!*
 
 ![](media/18c530ae8dac002397ec9c46f1ff5706.png)
 
-1.  Use the default boot volume settings that comes along with image (changing
+9.  Use the default boot volume settings that comes along with image (changing
     the settings might cause issues)
 
 ![](media/e0ada02df829b5f76e17b2f2a71cee92.png)
@@ -92,7 +92,7 @@ and click on **Select Image** button.
 
 Paste or Choose your SSH key pub file contents
 
-1.  Click the **Create** button to create your instance. Your instance will be
+10.  Click the **Create** button to create your instance. Your instance will be
     in the provisioning state for about 4 minutes but it will take about 15 mins
     to start the databases as well as Enterprise Manager on your VM. Verify that
     you chose the correct image. In a few minutes, you can also verify that you
@@ -101,7 +101,7 @@ Paste or Choose your SSH key pub file contents
 
 ![](media/1ec471ec8adfa265e31cc88e64f6c809.jpg)
 
-1.  Once the instance moves to the running state, locate your **public IP
+11.  Once the instance moves to the running state, locate your **public IP
     address** and write it down.
 
 ![](media/5147489a9317a2972646574b4dce26d1.jpg)

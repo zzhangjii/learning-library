@@ -2,33 +2,33 @@
 
 #### **Table of Contents**
 
-##### A. Database Performance Management On-Premises & OCI User Managed DB Systems
+#### A. Database Performance Management On-Premises & OCI User Managed DB Systems
 
->   1. Performance Hub
+1. Performance Hub
 
->   2. Real-Time Database Operations Monitoring
+2. Real-Time Database Operations Monitoring
 
->   3. Tuning a SQL in a PDB
+3. Tuning a SQL in a PDB
 
-##### B. Real Application Testing
+#### B. Real Application Testing
 
->   4. SQL Performance Analyzer Optimizer Statistics
+4. SQL Performance Analyzer Optimizer Statistics
 
->   5. Database Replay (Optional, time permitting)
+5. Database Replay (Optional, time permitting)
 
 **Database Performance Management On-Premises & OCI User Managed Database Systems**
 ===================================================================================
 
 ### **Objective**:
 
->   The objective of this lab is for you to become familiar with Database
->   Performance Management capabilities in Oracle Enterprise Manager Cloud
->   Control 13c that supports On-premises and Oracle Cloud Databases
->   (VM/BM/ExaCS).
+The objective of this lab is for you to become familiar with Database
+Performance Management capabilities in Oracle Enterprise Manager Cloud
+Control 13c that supports On-premises and Oracle Cloud Databases
+(VM/BM/ExaCS).
 
->   Functional Coverage:
+Functional Coverage:
 
->   In this lab you will go through features in the following functional areas:
+In this lab you will go through features in the following functional areas:
 
 -   Performance Hub
 
@@ -45,13 +45,13 @@
 -   Replay multiple workloads concurrently against Pluggable Databases in the
     Container Database
 
->   Appendix A
+Appendix A
 
 -   Exercise overview and Business Case
 
->   Lab Environment Setup
+Lab Environment Setup
 
->   What You Need
+What You Need
 
 -   Windows or Mac
 
@@ -59,21 +59,21 @@
 
 -   Your service instance’s public IP address.
 
->   On Windows, you can use PuTTY as an SSH client. PuTTY allows Windows users
->   to connect to remote systems over the internet using SSH and Telnet. SSH is
->   supported in PuTTY, provides for a secure shell, and encrypting information
->   before it's transferred.
+On Windows, you can use PuTTY as an SSH client. PuTTY allows Windows users
+to connect to remote systems over the internet using SSH and Telnet. SSH is
+supported in PuTTY, provides for a secure shell, and encrypting information
+before it's transferred.
 
 1.  Download and install PuTTY.
 
->   Go to <http://www.putty.org/> and click the “You can download PuTTY here”
->   link.
+Go to <http://www.putty.org/> and click the “You can download PuTTY here”
+link.
 
-1.  Run the PuTTY program.
+2.  Run the PuTTY program.
 
->   On your computer, go to All Programs \> PuTTY \> PuTTY
+On your computer, go to All Programs \> PuTTY \> PuTTY
 
-1.  Select or enter the following information:
+3.  Select or enter the following information:
 
 -   Category: Session
 
@@ -87,28 +87,28 @@
 
 **Configuring Your Automatic Login**
 
-1.  In the Category section, click Connection and then select Data.
+4.  In the Category section, click Connection and then select Data.
 
-2.  As your Auto-login username, enter opc.
+5.  As your Auto-login username, enter opc.
 
 ![](media/36164be0029033be6d65f883bbf31713.jpg)
 
->   **Adding Your Private Key**
+**Adding Your Private Key**
 
-1.  In the Category section, click Auth.
+6.  In the Category section, click Auth.
 
-2.  Click Browse and find the private key file that matches your VM’s public
+7.  Click Browse and find the private key file that matches your VM’s public
     key. This private key should have a .ppk extension for PuTTy to work.
 
 ![](media/df56bc989ad85f9bfad17ddb6ed6038e.jpg)
 
->   To save all your settings:
+To save all your settings:
 
 -   In the Category section, click Session.
 
 -   In the Saved Sessions section, name your session EM13C-ABC and click Save.
 
->   **Connecting to Your VM from a Unix-style System (Mac)**
+**Connecting to Your VM from a Unix-style System (Mac)**
 
 ##### Use the following command to set the file permissions so that only you can read the file:
 
@@ -124,13 +124,13 @@
 -   *\<public-ip-address\>* is your instance IP address that you retrieved from
     the Console.
 
->   **Running your Workload**
+**Running your Workload**
 
 ##### Change to oracle user via sudo
 
 -   \$ sudo su - oracle
 
-1.  Change directory to scripts
+8.  Change directory to scripts
 
 -   \$ cd scripts
 
@@ -138,25 +138,25 @@
 
 -   \$ source SALESENV
 
-1.  Execute the script 1-db_lab_start.sh as shown below
+9.  Execute the script 1-db_lab_start.sh as shown below
 
 ![](media/c77440e3c5d8049abaed13e85897ad53.jpg)
 
-1.  **Performance Hub**
+10.  **Performance Hub**
 
->   Estimated Time to Complete Use Case: 15 minutes
+Estimated Time to Complete Use Case: 15 minutes
 
->   Business Case
+Business Case
 
->   Oracle Enterprise Manager 13c includes the Jet based Performance Hub, a
->   completely new unified interface for performance monitoring. It is the
->   single pane of glass view of database performance with access to ASH
->   Analytics, Real-Time SQL Monitoring and SQL Tuning under the same hood. A
->   flexible time picker allows the administrator to seamlessly switch between
->   Real-Time and Historical views of database performance.
+Oracle Enterprise Manager 13c includes the Jet based Performance Hub, a
+completely new unified interface for performance monitoring. It is the
+single pane of glass view of database performance with access to ASH
+Analytics, Real-Time SQL Monitoring and SQL Tuning under the same hood. A
+flexible time picker allows the administrator to seamlessly switch between
+Real-Time and Historical views of database performance.
 
->   In this lab we will use an Oracle Database 18c Container database with few
->   pluggable databases. You will be logging in as a CDBA.
+In this lab we will use an Oracle Database 18c Container database with few
+pluggable databases. You will be logging in as a CDBA.
 
 ![](media/61a454d94f190ddedd4541203290c242.jpg)
 
@@ -164,13 +164,13 @@ Figure 1: A Container database with PDBs
 
 ##### Understanding the Performance Hub
 
-1.  Log into Enterprise Manager Please type
+11.  Log into Enterprise Manager Please type
 
->   *Use the credentials [sysman/welcome1] to log into EM*
+*Use the credentials [sysman/welcome1] to log into EM*
 
 ![](media/1876be1823ca17d9ab7e663e128859c4.jpg)
 
-1.  Click on the Targets-\> Databases. You will be directed to the list of
+12.  Click on the Targets-\> Databases. You will be directed to the list of
     Databases in EM.
 
 ![](media/9b88b0ba0cefae75a2374d91dcbd4e2e.jpg)
@@ -178,7 +178,7 @@ Figure 1: A Container database with PDBs
 Here you will notice different databases listed, such as SALES, HR etc., we will
 work the sales container database
 
-1.  Select Sales database from the list, this will take you to the DB home page
+13.  Select Sales database from the list, this will take you to the DB home page
     for this database
 
 ![](media/95063e3082e730e54d957b9ff7575f49.jpg)
@@ -187,7 +187,7 @@ work the sales container database
 
 ![](media/89801010273a62f99a3da10de8bf5c71.jpg)
 
-1.  Click on the Containers tab. It is located at the upper right-hand corner of
+14.  Click on the Containers tab. It is located at the upper right-hand corner of
     the page, underneath the Performance tile. This will show the list of
     pluggable databases in the CDB and their activity
 
@@ -198,7 +198,7 @@ work the sales container database
 Notice that the PSALES database is the busiest. We focus our attention to this
 PDB. Let us now navigate to Performance Hub
 
-1.  Select Performance Hub from the Performance Menu and click on ASH Analytics
+15.  Select Performance Hub from the Performance Menu and click on ASH Analytics
     and use the sales_system credential name from the database login screen
 
 ![](media/e131e1ce965ab5bb248d5439529fc921.jpg)
@@ -228,26 +228,26 @@ the top dimension from wait class to SQL ID.
 
 ![](media/92849ffd0303c0490562f9ecbd506ae9.png)
 
-1.  Select the SQL ID dimension from the list of available dimensions (Under Top
+16.  Select the SQL ID dimension from the list of available dimensions (Under Top
     Dimensions) using the dropdown box that is currently displaying Wait Class.
     Top Dimensions SQL ID
 
 ![](media/32b079f89c002058721d0c8a3e41f993.jpg)
 
->   Hover your mouse on top of the SQL (one at the bottom) and you will be able
->   to see how much activity is consumed by this SQL.
+Hover your mouse on top of the SQL (one at the bottom) and you will be able
+to see how much activity is consumed by this SQL.
 
->   Now using the same list of filters select the PDB dimension. Session
->   Identifiers PDB
+Now using the same list of filters select the PDB dimension. Session
+Identifiers PDB
 
 ![](media/95cce3b331aa85fc893b8eecc9a6c0a6.jpg)
 
->   What do you see?
+What do you see?
 
->   The chart changes to activity by the different pluggable databases created
->   in this Container database. Click on the ‘PSALES” pluggable database on the
->   list to add it to the filter by list and drilldown to activity by this PDB
->   on the same page.
+The chart changes to activity by the different pluggable databases created
+in this Container database. Click on the ‘PSALES” pluggable database on the
+list to add it to the filter by list and drilldown to activity by this PDB
+on the same page.
 
 ![](media/92849ffd0303c0490562f9ecbd506ae9.png)
 
@@ -255,7 +255,7 @@ the top dimension from wait class to SQL ID.
 
 ![](media/07dcb138dcb6773ee6b560681a62ec5f.jpg)
 
-1.  Click on the SQL Monitoring Tab
+17.  Click on the SQL Monitoring Tab
 
 ![](media/6e47bf2703c3c1e4adffd39d2202045f.jpg)
 
@@ -277,15 +277,15 @@ this case try using the time-picker and pick last 24 hrs. time period to
 identify the historical SQL that was monitored. This is an issue being
 investigated.
 
-1.  Select “Parallel” tab. This will give details about parallel coordinator and
+18.  Select “Parallel” tab. This will give details about parallel coordinator and
     parallel slaves.
 
-2.  Click on the SQL Text tab. You can see the query text which got executed.
+19.  Click on the SQL Text tab. You can see the query text which got executed.
 
-3.  Click on the activity tab to understand about the activity breakdown for
+20.  Click on the activity tab to understand about the activity breakdown for
     this SQL
 
-4.  Click on “Save” button on top right corner of the page. This will help you
+21.  Click on “Save” button on top right corner of the page. This will help you
     to save this monitored execution in “.html” format, which you can use it to
     share or to diagnose the things offline.
 
@@ -294,70 +294,70 @@ investigated.
 
 ##### Environment Details:
 
->   The target database is running a load on the sample schema provided via the
->   Examples (or companion) software accompanying the Oracle database software.
->   There are other schemas created to simulate specific performance scenarios.
+The target database is running a load on the sample schema provided via the
+Examples (or companion) software accompanying the Oracle database software.
+There are other schemas created to simulate specific performance scenarios.
 
 ##### Estimated Time to Complete Use Case: 8 minutes
 
->   Business Case
+Business Case
 
->   Real-Time Database Operations Monitoring, introduced in Oracle database 12c,
->   enables an administrator to monitor long running database tasks such as
->   batch jobs, ETLs etc. as a composite business operation. It tracks the
->   progress of SQL and PL/SQL queries associated with the business operation
->   being monitored. Developers and DBAs can define business operations for
->   monitoring by explicitly specifying the start and end of operation or
->   implicitly through the use of tags that identify the operation.
+Real-Time Database Operations Monitoring, introduced in Oracle database 12c,
+enables an administrator to monitor long running database tasks such as
+batch jobs, ETLs etc. as a composite business operation. It tracks the
+progress of SQL and PL/SQL queries associated with the business operation
+being monitored. Developers and DBAs can define business operations for
+monitoring by explicitly specifying the start and end of operation or
+implicitly through the use of tags that identify the operation.
 
->   Start the Database Operation.
+Start the Database Operation.
 
 -   ssh using a terminal window or putty and log in as oracle. (see section
     above: Lab environment setup)
 
 -   Once Logged in perform the following
 
->   [oracle\@em12 \~]\$ cd scripts
+[oracle\@em12 \~]\$ cd scripts
 
->   [oracle\@em12 scripts]\$ . ./ SALESENV
+[oracle\@em12 scripts]\$ . ./ SALESENV
 
->   [oracle\@em12 scripts]\$ cd load/frame/queries/awrv [oracle\@em12 awrv]\$
->   pwd
+[oracle\@em12 scripts]\$ cd load/frame/queries/awrv [oracle\@em12 awrv]\$
+pwd
 
->   /home/oracle/scripts/load/frame/queries/awrv
+/home/oracle/scripts/load/frame/queries/awrv
 
->   Using SQLPlus connect to the sh2 account. [oracle\@em12 awrv]\$ sqlplus
->   sh2/sh2\@psales
+Using SQLPlus connect to the sh2 account. [oracle\@em12 awrv]\$ sqlplus
+sh2/sh2\@psales
 
->   Open the file (!vi DBOP.sql) from the SQL prompt and then review the content
->   of the file.
+Open the file (!vi DBOP.sql) from the SQL prompt and then review the content
+of the file.
 
->   At the beginning of the file you will notice how we have tagged the
->   operation with dbms_sql_monitor.begin_operation and ended it with
->   dbms_sql_monitor.end_operation
+At the beginning of the file you will notice how we have tagged the
+operation with dbms_sql_monitor.begin_operation and ended it with
+dbms_sql_monitor.end_operation
 
->   Now execute the file \@DBOP.sql
+Now execute the file \@DBOP.sql
 
 1.  You should already be logged on to Enterprise Manager. If you are not,
     please follow the instructions detailed in earlier section of this workbook.
 
 2.  Select the Monitored SQL tab.
 
->   Review the list of currently executing SQLs are visible click on the
->   DBOP_DEMO name. This will open the DBOP named DBOP_DEMO.
+Review the list of currently executing SQLs are visible click on the
+DBOP_DEMO name. This will open the DBOP named DBOP_DEMO.
 
 Note: You may need to scroll down or select “Database operations” from the type
 dropdown.
 
 ![](media/b10c056370e56dd1286ca1f556118c8f.jpg)
 
-1.  Review the details of the Database Operations.
+3.  Review the details of the Database Operations.
 
 ![](media/a59f28bdd1166978c41e9c9c6a5d9b93.jpg)
 
-1.  Click on the Activity tab.
+4.  Click on the Activity tab.
 
->   You will see all the activity for this operation.
+You will see all the activity for this operation.
 
 ![](media/1a32fbdd89e519c2b8401e7dd0626890.jpg)
 
@@ -366,115 +366,115 @@ dropdown.
 
 ##### **Environment Details:**
 
->   The target database is running a load on the sample schema provided via the
->   Examples (or companion) software accompanying the Oracle Database software.
->   There are other schemas created to simulate specific performance scenarios.
+The target database is running a load on the sample schema provided via the
+Examples (or companion) software accompanying the Oracle Database software.
+There are other schemas created to simulate specific performance scenarios.
 
->   Lab environment setup
+Lab environment setup
 
 #### Your environment should have a workload running. If EM 13c is not running please refer to Appendix B for the steps to start EM 13c.
 
 ##### Estimated Time to Complete Use Case: 10 minutes
 
->   Business Case
+Business Case
 
->   This use case is intended to give an idea of how the pluggable database
->   administrator will tune queries in a PDB. We are running a workload and this
->   flow will help you to identify a Top SQL and then tune it using SQL Tuning
->   Advisor. The PDBA will have no access to the Container and his/her view is
->   only restricted to the queries running in the PDB assigned to this user.
+This use case is intended to give an idea of how the pluggable database
+administrator will tune queries in a PDB. We are running a workload and this
+flow will help you to identify a Top SQL and then tune it using SQL Tuning
+Advisor. The PDBA will have no access to the Container and his/her view is
+only restricted to the queries running in the PDB assigned to this user.
 
 1.  Log into Enterprise Manager Cloud Control.
 
 2.  Please note that you will be using a new URL:
     *https://Your_Assign_IP:7803/em*
 
->   Login: sysman/welcome1
+Login: sysman/welcome1
 
 ![](media/8e45436e4fa48b9a5bda495da7b0a674.jpg)
 
-1.  Once logged into Enterprise Manager. Select Targets, Databases . Click on
+3.  Once logged into Enterprise Manager. Select Targets, Databases . Click on
     the expand icon on the left and click on the database
     sales.subnet.vcn.oraclevcn.com
 
 ![](media/63f4072fb3b311db561d2c284bc93ffe.png)
 
-1.  You should now see the Database Home page.
+4.  You should now see the Database Home page.
 
 ![](media/611d814ca29dfc9f327a7c8159608093.jpg)
 
-1.  From the Performance Menu click on Performance Hub-\> ASH Analytics
+5.  From the Performance Menu click on Performance Hub-\> ASH Analytics
 
 ![](media/92849ffd0303c0490562f9ecbd506ae9.png)
 
 ![](media/ea10a67618855f3e0ce1a5f5c7157d71.jpg)
 
-1.  Click on the activity bar for the SQL showing highest activity in the bottom
+6.  Click on the activity bar for the SQL showing highest activity in the bottom
     left region.
 
 ![](media/1530ad41444abf8120ba3a6bce8d9ba1.jpg)
 
-1.  Now schedule the SQL Tuning Advisor by clicking on the ‘Tune SQL’ button.
+7.  Now schedule the SQL Tuning Advisor by clicking on the ‘Tune SQL’ button.
 
 ![](media/4532cfdb72eeef8ade51f86d9974061e.jpg)
 
-1.  Accept the default and submit the SQL tuning Job.
+8.  Accept the default and submit the SQL tuning Job.
 
 ![](media/528d1e6ee4c55f477811c554c2eeff99.jpg)
 
 ![](media/8aaa9d1d202302cd87c3870ffe51b956.png)
 
-1.  Once the job completes. You should see the recommendations for either
+9.  Once the job completes. You should see the recommendations for either
     creating a profile or an index.
 
 ![](media/92849ffd0303c0490562f9ecbd506ae9.png)
 
 ![](media/64e4e02ca8258d7c1fc54bec446b691a.png)
 
-1.  Implement the SQL Profile recommendation. SQL Profiles are a great way of
+10.  Implement the SQL Profile recommendation. SQL Profiles are a great way of
     tuning a SQL without creating any new objects or making any code changes.
 
 ##### At this point let’s now turn off the load: Change directory to scripts and execute the script 1-db_lab_stop.sh as shown below
 
 ![](media/e032d591c5b1132ac156974c6abbe2f4.jpg)
 
->   This concludes section A Database Performance Management lab. You can now
->   move on to section B Real Application Testing lab.
+This concludes section A Database Performance Management lab. You can now
+move on to section B Real Application Testing lab.
 
->   **Objective:**
+**Objective:**
 
-**B. Real Application Testing**
+### **B. Real Application Testing** 
 
->   The objective of this lab to provide exercises designed to showcase the new
->   Real Application Testing capabilities in Oracle Enterprise Manager Cloud
->   Control 13c and Database 18c.
+The objective of this lab to provide exercises designed to showcase the new
+Real Application Testing capabilities in Oracle Enterprise Manager Cloud
+Control 13c and Database 18c.
 
->   Functional Coverage:
+Functional Coverage:
 
->   In this lab you will go through features in the following functional areas:
+In this lab you will go through features in the following functional areas:
 
->   3. SQL Performance Analyzer Optimizer Statistics
+SQL Performance Analyzer Optimizer Statistics
 
->   SQL Performance Analyzer Gather Optimizer Statistics Validation
+SQL Performance Analyzer Gather Optimizer Statistics Validation
 
->   4. Consolidated Database Replay
+Consolidated Database Replay
 
->   Replay multiple workloads concurrently against Pluggable Databases in the
->   Container Database
+Replay multiple workloads concurrently against Pluggable Databases in the
+Container Database
 
->   Appendix A
+Appendix A
 
->   Exercise overview and Business Case
+Exercise overview and Business Case
 
->   **3. SQL Performance Analyzer Optimizer Statistics**
+**3. SQL Performance Analyzer Optimizer Statistics**
 
 #### **SPA Lab Workflow**
 
 ##### Estimated Time to Complete Use Case: 9 minutes, Recommended workflow
 
->   In this exercise we need to configure the database to set up optimizer
->   statistics to be stale. So first step is to create and submit a job that
->   will configure the statistics to be stale.
+In this exercise we need to configure the database to set up optimizer
+statistics to be stale. So first step is to create and submit a job that
+will configure the statistics to be stale.
 
 1.  Execute SPA task using Optimizer statistics workflow
 
@@ -499,11 +499,11 @@ dropdown.
 
 1.  Select Tab “Credentials”
 
->   Select “Named”
+Select “Named”
 
->   Select “ORACLE_HOST”
+Select “ORACLE_HOST”
 
->   Click “Save to Library”
+Click “Save to Library”
 
 ![](media/954828645f8ad404b3350faa88ea93b4.jpg)
 
@@ -566,9 +566,9 @@ Check “Validate the impact of statistics on…..” Click “Next”
 
 1.  Click “Search”
 
->   Select: STAT1, STAT2
+Select: STAT1, STAT2
 
->   Click “OK”
+Click “OK”
 
 ![](media/5f8e1b0229f48747aa96998dbbe0aa87.jpg)
 
@@ -655,10 +655,10 @@ Details about newly published statistics can be found if you go to ‘Schema’ 
 
 #### Replay workloads against Pluggable Databases in the Container Database
 
->   Estimated Time to Complete Use Case: 10 minutes. Note this lab is optional,
->   if you have completed the other recommended labs, you can go through this
->   exercise. Database replay lab is a command line lab. There are two reasons
->   for this.
+Estimated Time to Complete Use Case: 10 minutes. Note this lab is optional,
+if you have completed the other recommended labs, you can go through this
+exercise. Database replay lab is a command line lab. There are two reasons
+for this.
 
 1.  We have seen that there is a majority of our customers preferring API and
     not Enterprise Manager.
@@ -668,14 +668,14 @@ Details about newly published statistics can be found if you go to ‘Schema’ 
     been fixed for 12.2 and older databases and the fix for 18.0 and beyond will
     be fixed in next monthly EM bundle patch
 
->   We have been asked to add 3 new indexes to the application, before these
->   indexes can be added we need to proof that the performance in the database
->   will be better. Since there are an additional cost to maintain indexes it is
->   not enough to validate the performance with SQL Performance analyzer only.
->   Replay will be done against the container database Sales. The changes need
->   to be done in the OLTP container against the DWH_TEST schema. The database
->   version is 18c so the capture is done against CDB and the replay will also
->   be done against the CDB.
+We have been asked to add 3 new indexes to the application, before these
+indexes can be added we need to proof that the performance in the database
+will be better. Since there are an additional cost to maintain indexes it is
+not enough to validate the performance with SQL Performance analyzer only.
+Replay will be done against the container database Sales. The changes need
+to be done in the OLTP container against the DWH_TEST schema. The database
+version is 18c so the capture is done against CDB and the replay will also
+be done against the CDB.
 
 1.  Create a Replay Task
 
@@ -689,7 +689,7 @@ Session 1 and session 2
 
 1.  Connect to user oracle from the OPC user sudo su – oracle
 
->   \*\*\*\*\*\*\*\* Session 1
+\*\*\*\*\*\*\*\* Session 1
 
 \*\*\*\*\*\*\*\*\*
 
@@ -804,27 +804,27 @@ Now switch to session 2. You should already be connected as user oracle
 wrc mode=calibrate
 replaydir=/home/oracle/scripts/dbpack/RAT_REPLAY/DBReplayWorkload_OLTP_CAP_1
 
->   \*\*\*\*\*\*\*\*\*\*\*\*\* Calibrate output
+\*\*\*\*\*\*\*\*\*\*\*\*\* Calibrate output
 
->   \*\*\*\*\*\*\*\*\*\*\*\*\*
+\*\*\*\*\*\*\*\*\*\*\*\*\*
 
->   Workload Replay Client: Release 18.0.0.0.0 - Production on Tue Nov 5
->   09:43:45 2019 Copyright (c) 1982, 2018, Oracle and/or its affiliates. All
->   rights reserved.
+Workload Replay Client: Release 18.0.0.0.0 - Production on Tue Nov 5
+09:43:45 2019 Copyright (c) 1982, 2018, Oracle and/or its affiliates. All
+rights reserved.
 
->   Report for Workload in:
+Report for Workload in:
 
 /home/oracle/scripts/dbpack/RAT_REPLAY/DBReplayWorkload_OLTP_CAP_1
 
 \-----------------------
 
->   Recommendation:
+Recommendation:
 
->   Consider using at least 1 client divided among 1 CPU(s)
+Consider using at least 1 client divided among 1 CPU(s)
 
->   You will need at least 112 MB of memory per client process.
+You will need at least 112 MB of memory per client process.
 
->   If your machine(s) cannot match that number, consider using more clients.
+If your machine(s) cannot match that number, consider using more clients.
 
 Workload Characteristics:
 
@@ -850,9 +850,9 @@ Assumptions:
 wrc system/welcome1\@sales mode=replay
 replaydir=/home/oracle/scripts/dbpack/RAT_REPLAY/DBReplayWorkload_OLTP_CAP_1
 
->   \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* Session 1
+\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* Session 1
 
->   \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
 
 1.  You should still be connected in the SQL\*Plus session as used before. From
     this window start the replay
@@ -915,9 +915,9 @@ cp compare_period_report.html /tmp
 
 and trailing lines after last row ending with
 
->   “\< b\> End of Report. \</b\>
+“\< b\> End of Report. \</b\>
 
->   \</body\>
+\</body\>
 
 \</html\> “
 
@@ -932,38 +932,38 @@ statements. We have also seen the extensive reporting that will help us to find
 and analyze bottlenecks or peaks during certain workloads. We hope that this
 have given you a good overview how to use the replay feature.
 
->   Appendix A. - Database Performance Overview and Business Cases
+Appendix A. - Database Performance Overview and Business Cases
 
 #### Oracle Enterprise Manager Express
 
->   Oracle Database 12c introduced Oracle Enterprise Manager Express, or simply
->   EM Express, a web based GUI tool optimized for performance Management. EM
->   Express is extremely light weight and is built inside the database so it
->   doesn’t require any additional install. With only a 20 MB disk footprint,
->   there is no resource usage when it is not invoked or used. You can use
->   Oracle Enterprise Manager Express to manage a single database while Cloud
->   Control 12c can be used to manage many databases and targets.
+Oracle Database 12c introduced Oracle Enterprise Manager Express, or simply
+EM Express, a web based GUI tool optimized for performance Management. EM
+Express is extremely light weight and is built inside the database so it
+doesn’t require any additional install. With only a 20 MB disk footprint,
+there is no resource usage when it is not invoked or used. You can use
+Oracle Enterprise Manager Express to manage a single database while Cloud
+Control 12c can be used to manage many databases and targets.
 
->   Oracle Enterprise Manager Database Express includes Performance Hub, a
->   completely new unified interface for performance monitoring. It is the
->   single pane of glass view of database performance with access to ADDM, SQL
->   Tuning, Real-Time SQL Monitoring and ASH Analytics under the same hood. A
->   flexible time picker allows the administrator to seamlessly switch between
->   Real-Time and Historical views of database performance. For Oracle RAC
->   databases, there is an additional RAC tab that allows the database
->   administrator to monitor cluster related performance problems.
+Oracle Enterprise Manager Database Express includes Performance Hub, a
+completely new unified interface for performance monitoring. It is the
+single pane of glass view of database performance with access to ADDM, SQL
+Tuning, Real-Time SQL Monitoring and ASH Analytics under the same hood. A
+flexible time picker allows the administrator to seamlessly switch between
+Real-Time and Historical views of database performance. For Oracle RAC
+databases, there is an additional RAC tab that allows the database
+administrator to monitor cluster related performance problems.
 
->   Diagnosing a slowly performing system or a sudden degradation in performance
->   is a time consuming task and often the activity where the DBAs spend most of
->   their time. A major component of the challenge is to simply identify what is
->   causing the problem in our increasingly complex business environments. There
->   is a need to sample the current state of all the sessions that are active in
->   our systems, but analyzing this data for transient problems that occur for
->   very short durations is not simple. EM Express allows the administrator to
->   rollup, drilldown, and slice or dice performance data across various
->   performance dimensions that are captured along with the session state. With
->   the ability to create filters on various dimensions, identifying performance
->   issues has never been easier.
+Diagnosing a slowly performing system or a sudden degradation in performance
+is a time consuming task and often the activity where the DBAs spend most of
+their time. A major component of the challenge is to simply identify what is
+causing the problem in our increasingly complex business environments. There
+is a need to sample the current state of all the sessions that are active in
+our systems, but analyzing this data for transient problems that occur for
+very short durations is not simple. EM Express allows the administrator to
+rollup, drilldown, and slice or dice performance data across various
+performance dimensions that are captured along with the session state. With
+the ability to create filters on various dimensions, identifying performance
+issues has never been easier.
 
 ### Real Application Testing Overview and Business Cases
 
@@ -971,46 +971,46 @@ have given you a good overview how to use the replay feature.
 
 ##### Business Case
 
->   When gathering new statistics, it is not uncommon that the new statistics
->   cause the optimizer to choose a new query plan. In most cases the new plan
->   will be more efficient but sometimes it causes query regression.
+When gathering new statistics, it is not uncommon that the new statistics
+cause the optimizer to choose a new query plan. In most cases the new plan
+will be more efficient but sometimes it causes query regression.
 
->   As a DBA it is important to proactively predict how new statistics will
->   change the overall performance in the database. With SQL Performance
->   Analyzer (SPA) you have the ability to execute most of your SQL statements
->   that occur in your database.
+As a DBA it is important to proactively predict how new statistics will
+change the overall performance in the database. With SQL Performance
+Analyzer (SPA) you have the ability to execute most of your SQL statements
+that occur in your database.
 
->   We have the ability to gather production SQL statements into SQL Tuning Sets
->   either incrementally from Cursor Cache or AWR history for the period of time
->   that we want to test. For the purpose of the lab, we have one pre- created
->   SQL Tuning Set which is representative of the peak workload of this
->   application. We have also gathered statistics in pending mode for
->   validation. So, let’s see if the new statistics will change the performance
->   for this application.
+We have the ability to gather production SQL statements into SQL Tuning Sets
+either incrementally from Cursor Cache or AWR history for the period of time
+that we want to test. For the purpose of the lab, we have one pre- created
+SQL Tuning Set which is representative of the peak workload of this
+application. We have also gathered statistics in pending mode for
+validation. So, let’s see if the new statistics will change the performance
+for this application.
 
 ##### Workflow overview
 
->   In this exercise we will learn to use the SPA guided workflow for Optimizer
->   Statistics validation, how to tune regressed statements and how to implement
->   pending statistics on tables.
+In this exercise we will learn to use the SPA guided workflow for Optimizer
+Statistics validation, how to tune regressed statements and how to implement
+pending statistics on tables.
 
->   This exercise will be done against a pluggable database, DW, in a container
->   database ‘test’.
+This exercise will be done against a pluggable database, DW, in a container
+database ‘test’.
 
->   The condition is that we have a warehouse based on 2 schemas ‘STAT1’ and
->   ‘STAT2’. The warehouse has been populated and used for a couple of month and
->   we have currently not updated the statistics. We want to make sure that when
->   we publish new statistics then we would not be surprised with a performance
->   regression.
+The condition is that we have a warehouse based on 2 schemas ‘STAT1’ and
+‘STAT2’. The warehouse has been populated and used for a couple of month and
+we have currently not updated the statistics. We want to make sure that when
+we publish new statistics then we would not be surprised with a performance
+regression.
 
->   Some of the activities that are associated with this exercise are time
->   consuming so we have performed those tasks in advance for lab purposes to
->   save some time. The following task has already been executed in the setup of
->   the environment:
+Some of the activities that are associated with this exercise are time
+consuming so we have performed those tasks in advance for lab purposes to
+save some time. The following task has already been executed in the setup of
+the environment:
 
 -   Gather Pending Optimizer Statistics on schema STAT1 and STAT2
 
->   Steps that we are going to perform in this exercise:
+Steps that we are going to perform in this exercise:
 
 -   Run SPA Optimizer Statistics workflow
 
@@ -1026,9 +1026,9 @@ have given you a good overview how to use the replay feature.
 
 -   Implement (Publish) new statistics
 
->   Database Replay
+Database Replay
 
->   Business Case
+Business Case
 
 During changes that can have impact on performance it is important to know that
 the server will handle all workloads. On this front we have the Database Replay
@@ -1045,7 +1045,7 @@ For the purpose of the lab, we’ve already setup the test system and the
 Container database appropriately to the point-in-time of captures so that replay
 can be started.
 
->   Lab Overview
+Lab Overview
 
 *Objective:*
 
@@ -1062,6 +1062,6 @@ capability that will make it possible to consolidate application into different
 pluggable databases within one container database. This allows us to reduce the
 footprint of each database and reduce resource usage on the server.
 
->   That concludes the lab. Thank you!
+That concludes the lab. Thank you!
 
  [Return back for more lab activities](../readme.md)
