@@ -88,21 +88,21 @@ Hands on Lab Activities
 
 ![](media/167e561726cc8d0a58d8b90a37274b06.jpg)
 
-1.  In the Database Provisioning page, in the Related Links section of the left
+3.  In the Database Provisioning page, in the Related Links section of the left
     menu pane, **click** “**Provision Pluggable Databases**”
 
-2.  In the Provision Pluggable Database Console, in the **Container Database**
+4.  In the Provision Pluggable Database Console, in the **Container Database**
     section, **select** the CDB (**CDB186 – 18.8 version**) within which you
     want to create new PDBs.
 
 ![](media/4a1835f78c064502ccac88138075133c.jpg)
 
-1.  In the PDB Operations section, **select** Create Pluggable Databases ,
+5.  In the PDB Operations section, **select** Create Pluggable Databases ,
     **Click** Launch
 
 ![](media/2248640eabc0efa2fb32293ec07fb389.jpg)
 
-1.  Use the named credentials (CDB186_SYS) for login
+6.  Use the named credentials (CDB186_SYS) for login
 
 ![](media/8741cbb813d375a296f8344f4beaeb7e.jpg)
 
@@ -113,18 +113,18 @@ section, **select** Create a new PDB . **Select** Named credentials “ORACLE”
 
 >   .
 
-1.  In the Identification page, **enter** a unique name for the PDB you are
+7.  In the Identification page, **enter** a unique name for the PDB you are
     creating (your initial_pdb). **Optionally**, **select** check box to “create
     multiple DBs” and put **2** as number of copies.
 
-2.  In the PDB Administrator section, **enter** the credentials of the admin
+8.  In the PDB Administrator section, **enter** the credentials of the admin
     user account you need to create for administering the PDB.
 
 **UserName**: pdbadmin **Password**: welcome1 **Click** Next.
 
 ![](media/7442f8d5bf4704af57849ae9741f5a36.jpg)
 
-1.  For storage option, **select** “Use Common Location for PDB Datafiles” and
+9.  For storage option, **select** “Use Common Location for PDB Datafiles” and
     leave defaults as-is.
 
 ![](media/e42b8bce3bdaac0c78fccbe24f1ede48.jpg)
@@ -136,16 +136,16 @@ system).
 
 ![](media/7d3fcabc8fe5f6f80fe20e55bb28655d.jpg)
 
-1.  In the Schedule page, **select** immediately check box next to Start.
+10.  In the Schedule page, **select** immediately check box next to Start.
     **Click** Next**.**
 
-2.  In the Review page, review the details you have provided for the deployment
+11.  In the Review page, review the details you have provided for the deployment
     procedure. If you are satisfied with the details, click Submit. You can now
     click on View Execution Details link to see details.
 
 ![](media/d12c1a1d5e3c3f394248da7d12813b6b.jpg)
 
-1.  In the Procedure Activity page, view the status of the procedure.
+12.  In the Procedure Activity page, view the status of the procedure.
 
 Click the Status link for each step to view the details of the execution of each step.
 --------------------------------------------------------------------------------------
@@ -165,29 +165,29 @@ Targets \> Databases, Click on CDB186** and you will see the newly created PDB
 
 ![](media/167e561726cc8d0a58d8b90a37274b06.jpg)
 
-1.  In the Database Provisioning page, in the Related Links section of the left
+2.  In the Database Provisioning page, in the Related Links section of the left
     menu pane, **click** “**Provision Pluggable Databases**”
 
 ![](media/33b77cf547caf09fe9c2d56b23fbaf43.jpg)
 
-1.  In the Provision Pluggable Database Console, in the Container Database
+3.  In the Provision Pluggable Database Console, in the Container Database
     section, **select** the CDB (**CDB186**) within which you want to create new
     PDBs.
 
 ![](media/4a1835f78c064502ccac88138075133c.jpg)
 
-1.  In the PDB Operations section, **select Unplug** Pluggable Databases ,
+4.  In the PDB Operations section, **select Unplug** Pluggable Databases ,
     **Click** Launch
 
 ![](media/b727e1673cfa38c85130ef6e2365055d.jpg)
 
-1.  In the **Select** PDB page of the Unplug Pluggable Database Wizard, in the
+5.  In the **Select** PDB page of the Unplug Pluggable Database Wizard, in the
     Select Pluggable Database section, select the PDB you want to unplug. Also
     **Select** Named credentials “ORACLE”
 
 ![](media/39102476b5e5915a1491e28525af88f5.jpg)
 
-1.  In the Destination page, select the type of PDB template you want to
+6.  In the Destination page, select the type of PDB template you want to
     generate for unplugging the PDB, and the location where you want to store
     it. The PDB template consists of all datafiles as well as the metadata XML
     file.
@@ -198,64 +198,64 @@ Targets \> Databases, Click on CDB186** and you will see the newly created PDB
 
 ![](media/4ad828f403bf702b7318f718ad98f117.jpg)
 
-1.  In the Schedule page,
+7.  In the Schedule page,
 
 **Select** immediately check box next to Start. **Click Next.**
 
-1.  In the Review page, review the details you have provided for the deployment
+8.  In the Review page, review the details you have provided for the deployment
     procedure. If you are satisfied with the details, click Submit.
 
-2.  In the Procedure Activity page, view the status of the procedure.
+9.  In the Procedure Activity page, view the status of the procedure.
 
 ![](media/bdbafe949b2bc880e2a09b82f9edaf8a.jpg)
 
-1.  You can **Navigate to Targets \> Databases,** Click on CDB186 and you will
+10.  You can **Navigate to Targets \> Databases,** Click on CDB186 and you will
     see the PDB you unplugged is no longer in the list.
 
 Let us continue to next steps and plug the same PDB back into the container database.
 -------------------------------------------------------------------------------------
 
-1.  Navigate to the “Enterprise menu \> Provisioning and Patching \> Database
+11.  Navigate to the “Enterprise menu \> Provisioning and Patching \> Database
     provisioning”.
 
 ![](media/167e561726cc8d0a58d8b90a37274b06.jpg)
 
-1.  In the Database Provisioning page, in the Related Links section of the left
+12.  In the Database Provisioning page, in the Related Links section of the left
     menu pane, **click** Provision Pluggable Databases
 
 ![](media/33b77cf547caf09fe9c2d56b23fbaf43.jpg)
 
-1.  In the Provision Pluggable Database Console, in the Container Database
+13.  In the Provision Pluggable Database Console, in the Container Database
     section, **select** the CDB (**CDB186**) within which you want to create new
     PDBs.
 
 ![](media/4a1835f78c064502ccac88138075133c.jpg)
 
-1.  In the PDB Operations section, **select** Create Pluggable Databases ,
+14.  In the PDB Operations section, **select** Create Pluggable Databases ,
     **Click** Launch
 
 ![](media/2248640eabc0efa2fb32293ec07fb389.jpg)
 
-1.  In the Source page of the Create Pluggable Database Wizard, in the Source
+15.  In the Source page of the Create Pluggable Database Wizard, in the Source
     Type section, select **Plug an unplugged PDB**. **Select** Named credentials
     “ORACLE”
 
 ![](media/5427807b6e4c677bd991497cfc5468ce.jpg)
 
-1.  In the Identification page, enter a unique name for the PDB you are plugging
+16.  In the Identification page, enter a unique name for the PDB you are plugging
     in.
 
-2.  **Select** Create As Clone to ensure that Oracle Database generates unique
+17.  **Select** Create As Clone to ensure that Oracle Database generates unique
     PDB DBID, GUID, and other identifiers expected for the new PDB.
 
 **Enter** PDB name like “clone_pdb”.
 
 ![](media/2ac79b220d664b868c62e4529791e187.jpg)
 
-1.  **Note**: We will keep pdbadmin as a default admin. So, don’t select
+18.  **Note**: We will keep pdbadmin as a default admin. So, don’t select
     anything in this section.
 
-2.  In the PDB Template Location section: **Select** “Software Library” radio
+19.  In the PDB Template Location section: **Select** “Software Library” radio
     button.
 
 >   **Click** on the torch icon placed on Location text box. **Select** the Name
@@ -263,19 +263,19 @@ Let us continue to next steps and plug the same PDB back into the container data
 
 ![](media/dad1846d73cd9ca339bab04718e09816.jpg)
 
-1.  **Select** “Use Common Location for PDB Datafiles” and use **/tmp as
+20.  **Select** “Use Common Location for PDB Datafiles” and use **/tmp as
     temporary working directory.**
 
 ![](media/a6353f812935eeb6148a79693ae0c4fd.jpg)
 
-1.  In the Schedule page, **select** immediately check box next to Start.
+21.  In the Schedule page, **select** immediately check box next to Start.
     **Click** Next.
 
-2.  In the Review page, review the details you have provided for the deployment
+22.  In the Review page, review the details you have provided for the deployment
     procedure. If you are satisfied with the details, **click** Submit. You can
     now click on View Execution Details link to see details.
 
-3.  In the Procedure Activity page, view the status of the procedure.
+23.  In the Procedure Activity page, view the status of the procedure.
 
 Optionally**, Click** the Status link for each step to view the details of the
 execution of each step. Once the procedure is completed, you can **Navigate to
@@ -292,34 +292,34 @@ Note: You do not have to wait until the steps complete and move on to the next s
 
 ![](media/167e561726cc8d0a58d8b90a37274b06.jpg)
 
-1.  In the Database Provisioning page, in the Related Links section of the left
+2.  In the Database Provisioning page, in the Related Links section of the left
     menu pane, **click** Provision Pluggable Databases
 
 ![](media/33b77cf547caf09fe9c2d56b23fbaf43.jpg)
 
-1.  In the Provision Pluggable Database Console, in the Container Database
+3.  In the Provision Pluggable Database Console, in the Container Database
     section, **select** the CDB (**CDB186**) within which you want to create new
     PDBs.
 
 ![](media/4a1835f78c064502ccac88138075133c.jpg)
 
-1.  In the PDB Operations section, **select** Create Pluggable Databases ,
+4.  In the PDB Operations section, **select** Create Pluggable Databases ,
     **Click** Launch
 
 ![](media/2248640eabc0efa2fb32293ec07fb389.jpg)
 
-1.  **Select** clone PDB and select source as CDB186 (if you choose any other
+5.  **Select** clone PDB and select source as CDB186 (if you choose any other
     CDB, this operation might fail). Please keep Database link box empty.
 
 >   Select named credentials “ORACLE”, **Click** Next.
 
 ![](media/472126037592bdeca5eaa6027ebb57a3.jpg)
 
-1.  **Enter** new PDB name
+6.  **Enter** new PDB name
 
 ![](media/4a4164d7ee405fed16dc5a0aeefe430f.jpg)
 
-1.  **Select** “Use Common Location for PDB Datafiles” in the Source page of the
+7.  **Select** “Use Common Location for PDB Datafiles” in the Source page of the
     Create Pluggable Database Wizard, please enter **/tmp** in temporary working
     directory
 
@@ -328,14 +328,14 @@ Optionally, you can select the postscript as we did in the creation flow.
 
 ![](media/ff556eb15570c55dfd477361c20051d6.jpg)
 
-1.  In the Schedule page, **select** immediately check box next to Start.
+8.  In the Schedule page, **select** immediately check box next to Start.
     **Click** Next.
 
-2.  In the Review page, review the details you have provided for the deployment
+9.  In the Review page, review the details you have provided for the deployment
     procedure. If you are satisfied with the details, click Submit. You can now
     click on View Execution Details link to see details.
 
-3.  In the Procedure Activity page, view the status of the procedure.
+10.  In the Procedure Activity page, view the status of the procedure.
 
 Click the Status link for each step to view the details of the execution of each step.
 --------------------------------------------------------------------------------------
@@ -360,11 +360,9 @@ Click Click Compliance Click Library
 
 ![](media/8ed5400adb044b81194db800cfd4c953.jpg)
 
->   3.
+2.  Click OK button
 
-1.  Click OK button
-
-2.  In the Save Association box Click Yes button
+3.  In the Save Association box Click Yes button
 
 ![](media/0ccc894ff6c91bdd0aa1b7e5f78fbe6e.png)
 
@@ -372,8 +370,8 @@ Click Click Compliance Click Library
 
 Click OK button
 
-1.  You have to refresh PDB statistics to see notifications, To refresh PDB
-    database,
+4.  You have to refresh PDB statistics to see notifications, To refresh PDB
+    database, 
 
     1.  click
 
