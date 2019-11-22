@@ -478,26 +478,26 @@ will configure the statistics to be stale.
 
 1.  Execute SPA task using Optimizer statistics workflow
 
-3.2 Login using username and password sysman/ welcome1
+Login using username and password sysman/ welcome1
 
 ![](media/6dc92e956b3d9cd7b140a588219ee285.jpg)
 
-1.  Navigate to Job library: From Enterprise \> Job \> Library
+2.  Navigate to Job library: From Enterprise \> Job \> Library
 
 ![](media/4037bd7209e67b936206da6f43991120.jpg)
 
-1.  Select “OS Command” in the Create library Job drop down list Click Go
+3.  Select “OS Command” in the Create library Job drop down list Click Go
 
 ![](media/a04978f5e6e7d3e03d34685c7212f413.jpg)
 
-1.  Provide Name: STAT_SETUP Click Add in Target section Select
+4.  Provide Name: STAT_SETUP Click Add in Target section Select
     “emcc.marketplace.com” Select Tab “Parameters”
 
     ![](media/e3bafcbbfdeb0df5f1921db3f6440dea.jpg)
 
 ![](media/b67d43eba55ba84b4758e4e02f809851.jpg)
 
-1.  Select Tab “Credentials”
+5.  Select Tab “Credentials”
 
 Select “Named”
 
@@ -517,22 +517,22 @@ The job is now running
 
 Continue with configuring SPA Quick Check
 
-1.  Navigate to Databases: From the menu, Targets -\> Databases
+6.  Navigate to Databases: From the menu, Targets -\> Databases
 
 ![](media/baa21e15a952e1b090944051c919d47e.jpg)
 
-1.  Expand the sales.subnet.vcn.oraclevcn.com database
+7.  Expand the sales.subnet.vcn.oraclevcn.com database
 
 Click on “sales.subnet.vcn.oraclevcn.com_HR” pluggable database
 
 ![](media/6273897d2614da4d3babab73299d5bc5.jpg)
 
-1.  In sales.subnet.vcn.oraclevcn.com_HR database Navigate to Performance -\>
+8.  In sales.subnet.vcn.oraclevcn.com_HR database Navigate to Performance -\>
     SQL -\> SQL Performance Analyzer Quick Check Setup
 
 ![](media/52d28e53edc6e12a26eefd6df1487d20.jpg)
 
-1.  This is the page where you configure SPA Quick Check. Make sure that the
+9.  This is the page where you configure SPA Quick Check. Make sure that the
     selected SQL Tuning Set includes as many SQL statements as possible. If the
     application has specific workloads that are executed during End of Month,
     End of Year or even certain period during the day, then make sure to collect
@@ -546,25 +546,25 @@ Select “Comparision Metric”: Buffer Gets Click “Save”.
 
 ![](media/dd8e59451bf9d2de14f07592d390da6a.jpg)
 
-1.  Go To Performance \> SQL \> Optimizer Statistics
+10.  Go To Performance \> SQL \> Optimizer Statistics
 
 ![](media/4e82b571a46f839223bca1f879643bb0.jpg)
 
-1.  Click “Gather”
+11.  Click “Gather”
 
 ![](media/1e54f21d483e95189477069278b54053.jpg)
 
-1.  Select “Schema”
+12.  Select “Schema”
 
 Check “Validate the impact of statistics on…..” Click “Next”
 
 ![](media/1d4b3ee3678078564de13336896fbe34.jpg)
 
-1.  Click “Add”
+13.  Click “Add”
 
 ![](media/07c9dde006c7bc0a1fc804ef62f5cd5a.jpg)
 
-1.  Click “Search”
+14.  Click “Search”
 
 Select: STAT1, STAT2
 
@@ -572,19 +572,19 @@ Click “OK”
 
 ![](media/5f8e1b0229f48747aa96998dbbe0aa87.jpg)
 
-1.  Click “Next”
+15.  Click “Next”
 
 ![](media/47d4db96f2a225723e405f06171d2c7d.jpg)
 
-1.  Click “Next”
+16.  Click “Next”
 
 ![](media/a4faddf1878e9f72df40f1bde4e54bdf.jpg)
 
-1.  Click “Submit”
+17.  Click “Submit”
 
 ![](media/d2c4f87d66682e3ecbb6b9c62e639281.jpg)
 
-1.  In the confirmation section on top, click on the ‘SQL Performance Analyzer
+18.  In the confirmation section on top, click on the ‘SQL Performance Analyzer
     Task’ that was started.
 
 If you accidentally closed or lost this page, go to DB Target -\> Performance
@@ -593,14 +593,14 @@ created at the bottom of the page.
 
 ![](media/24fee673a5a32b19e55b92dae376c233.jpg)
 
-1.  You have now a running SQL Performance Analyzer task. Wait until it “Last
+19.  You have now a running SQL Performance Analyzer task. Wait until it “Last
     Run Status” becomes Completed.
 
 Click on “Name”
 
 ![](media/d7b97d687f8d9a904ed2e7ee68f5da89.jpg)
 
-1.  As you can see there have been four SQL trials executed. The first two have
+20.  As you can see there have been four SQL trials executed. The first two have
     identified SQL statements with plan changes. In the last two trials it is
     only statements with plan changes that have been executed. This will reduce
     the amount of time and resources used in a production system.
@@ -609,7 +609,7 @@ Click on the eyeglasses icon for the second report.
 
 ![](media/e74bda3508f98dbfb69f1e9e196d9c01.jpg)
 
-1.  As we can see the majority of our statements had unchanged performance. We
+21.  As we can see the majority of our statements had unchanged performance. We
     have a significant improvement but most important to notice is that we have
     no regression.
 
@@ -623,11 +623,11 @@ implementing SQL Profile recommendations
 Since this application has used stale statistics for a long period, then it
 would be good to have new statistics implemented.
 
-1.  Click on “Publish Object Statistics”
+22.  Click on “Publish Object Statistics”
 
 ![](media/bfd46716f39ec820e1c9c0c9982d5218.jpg)
 
-1.  We can now change statistics for all tables where we have pending
+23.  We can now change statistics for all tables where we have pending
     statistics. For the scope of this exercise we will only change statistics
     for schema STAT1.
 
@@ -677,27 +677,27 @@ to be done in the OLTP container against the DWH_TEST schema. The database
 version is 18c so the capture is done against CDB and the replay will also
 be done against the CDB.
 
-1.  Create a Replay Task
+3.  Create a Replay Task
 
-    1.  You need to connect two sessions to you dedicated host as user OPC using
-        the provided SSH key. Use putty or similar to connect to your local
-        host. (see section above: Lab Environment Setup)
+    You need to connect two sessions to you dedicated host as user OPC using
+    the provided SSH key. Use putty or similar to connect to your local
+    host. (see section above: Lab Environment Setup)
 
-    2.  ssh -i [privatekey] opc\@[Your IP]
+    ssh -i [privatekey] opc\@[Your IP]
 
 Session 1 and session 2
 
-1.  Connect to user oracle from the OPC user sudo su – oracle
+4.  Connect to user oracle from the OPC user sudo su – oracle
 
 \*\*\*\*\*\*\*\* Session 1
 
 \*\*\*\*\*\*\*\*\*
 
-1.  Set Environment variables for sales database
+5.  Set Environment variables for sales database
 
 . ./sales.env
 
-1.  Connect to sales database and create indexes. (indexes are already created,
+6.  Connect to sales database and create indexes. (indexes are already created,
     just need to make them visible)
 
 sqlplus system/welcome\@oltp
@@ -709,7 +709,7 @@ dwh_test.OUTLETS_TAB3_IT_IDX visible;
 
 exit
 
-1.  We have already performed the capture it is stored in
+7.  We have already performed the capture it is stored in
     /home/oracle/scripts/dbpack/RAT_CAPTURE/ DBReplayWorkload_OLTP_CAP_1
     RAT_REPLAY. The capture directory should be copied to a Replay directory. In
     a normal situations replay is performed against a test server. This test
@@ -721,13 +721,13 @@ cd scripts/dbpack
 cp -r RAT_CAPTURE/DBReplayWorkload_OLTP_CAP_1 RAT_REPLAY cd
 RAT_REPLAY/DBReplayWorkload_OLTP_CAP_1
 
-1.  Connect to as sysdba and grant become user to system on all containers
+8. Connect to as sysdba and grant become user to system on all containers
 
 sqlplus sys/welcome1 as sysdba
 
 grant become user to system container=all;
 
-1.  Connect to system create a directory object to locate the capture and
+9. Connect to system create a directory object to locate the capture and
     preprocess the capture
 
 connect system/welcome1
@@ -738,19 +738,19 @@ CREATE DIRECTORY DBR_REPLAY AS
 
 exec DBMS_WORKLOAD_REPLAY.PROCESS_CAPTURE (capture_dir =\> 'DBR_REPLAY');
 
-1.  We can now start to replay the workload. Initialize replay will load replay
+10. We can now start to replay the workload. Initialize replay will load replay
     metadata created during preprocessing
 
-2.  exec DBMS_WORKLOAD_REPLAY.INITIALIZE_REPLAY (replay_name =\> 'REPLAY_1',
+11. exec DBMS_WORKLOAD_REPLAY.INITIALIZE_REPLAY (replay_name =\> 'REPLAY_1',
     replay_dir =\> 'DBR_REPLAY');
 
-3.  If the replay environment uses different connect strings compared to the
+12. If the replay environment uses different connect strings compared to the
     capture environment then we need to remap connections. Check connect
     strings.
 
 select \* from DBA_WORKLOAD_CONNECTION_MAP;
 
-1.  Remap connections
+13. Remap connections
 
 exec DBMS_WORKLOAD_REPLAY.REMAP_CONNECTION (connection_id =\> 1,
 replay_connection =\> 'HR'); exec DBMS_WORKLOAD_REPLAY.REMAP_CONNECTION
@@ -762,11 +762,11 @@ replay_connection =\> 'SALES'); exec DBMS_WORKLOAD_REPLAY.REMAP_CONNECTION
 DBMS_WORKLOAD_REPLAY.REMAP_CONNECTION (connection_id =\> 6, replay_connection
 =\> 'SALES');
 
-1.  Check new settings for connect strings
+14. Check new settings for connect strings
 
 select \* from DBA_WORKLOAD_CONNECTION_MAP;
 
-1.  Prepare the replay by setting replay options. This replay will use default
+15. Prepare the replay by setting replay options. This replay will use default
     synchronization which is time- based synchronization. With this setting we
     will as good as possible honor timing for each individual call. If a session
     has slow SQL statements then other sessions will still honor its timing but
@@ -774,7 +774,7 @@ select \* from DBA_WORKLOAD_CONNECTION_MAP;
     If divergence is less than 10 % then it should be considered as a good
     replay.
 
-2.  exec DBMS_WORKLOAD_REPLAY.PREPARE_REPLAY (synchronization =\> 'TIME');
+16. exec DBMS_WORKLOAD_REPLAY.PREPARE_REPLAY (synchronization =\> 'TIME');
 
 \*\*\*\*\*\*\*\*\*\*\*\*
 
@@ -782,17 +782,17 @@ Now switch to session 2. You should already be connected as user oracle
 
 \*\*\*\*\*\*\*\*\*\*\*\*\*
 
-1.  Set Environment variables for sales database and change to the replay
+17. Set Environment variables for sales database and change to the replay
     directory
 
-2.  . ./sales.env
+18.  . ./sales.env
 
-3.  cd scripts/dbpack/RAT_REPLAY/DBReplayWorkload_OLTP_CAP_1
+19.  cd scripts/dbpack/RAT_REPLAY/DBReplayWorkload_OLTP_CAP_1
 
-4.  Calibrate the replay and validate how many replay clients that are needed to
+20. Calibrate the replay and validate how many replay clients that are needed to
     replay the workload.
 
-5.  Note! Replay clients are the application tier and should not be co-allocated
+21. Note! Replay clients are the application tier and should not be co-allocated
     with the database due to resource usage. Our recommendation is to place
     replay clients close to the database to avoid none wanted delays between
     database and replay clients. This is regardless if the application tier is
@@ -844,8 +844,8 @@ Assumptions:
 
 -   connect time scale = 100
 
-    1.  synchronization = TRUE The workload is relatively small and it needs
-        only one replay client so we will start it from this session
+   synchronization = TRUE The workload is relatively small and it needs
+   only one replay client so we will start it from this session
 
 wrc system/welcome1\@sales mode=replay
 replaydir=/home/oracle/scripts/dbpack/RAT_REPLAY/DBReplayWorkload_OLTP_CAP_1
@@ -854,15 +854,15 @@ replaydir=/home/oracle/scripts/dbpack/RAT_REPLAY/DBReplayWorkload_OLTP_CAP_1
 
 \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
 
-1.  You should still be connected in the SQL\*Plus session as used before. From
+22. You should still be connected in the SQL\*Plus session as used before. From
     this window start the replay
 
 Exec DBMS_WORKLOAD_REPLAY.START_REPLAY ();
 
-1.  Monitor the replay in session 2 and when the replay has finished the
+23. Monitor the replay in session 2 and when the replay has finished the
     generate replay reports from session 1.
 
-2.  When replay has finished import capture AWR data. First create a common user
+24. When replay has finished import capture AWR data. First create a common user
     as staging schema
 
 Create user C\#\#CAP_AWR; grant DBA to C\#\#CAP_AWR;
@@ -870,7 +870,7 @@ Create user C\#\#CAP_AWR; grant DBA to C\#\#CAP_AWR;
 SELECT DBMS_WORKLOAD_CAPTURE.IMPORT_AWR (capture_id =\> 27,staging_schema =\>
 'C\#\#CAP_AWR') from dual;
 
-1.  Generate replay report as a text report. This report can also be generated
+25. Generate replay report as a text report. This report can also be generated
     in HTML or XML format.
 
 Set long 500000 Set linesize 200 Set pagesize 0
@@ -880,15 +880,15 @@ Spool replay_report.txt
 dbms_workload_replay.report (replay_id =\> 1, format=\> 'TEXT') from dual; spool
 off
 
-1.  Please open the text report with a Linux editor of your choice such as vi
+26. Please open the text report with a Linux editor of your choice such as vi
     and look at replay details.
 
 !vi replay_report.txt
 
-1.  Can you see if the replay uses more or less database time than the capture?
+27. Can you see if the replay uses more or less database time than the capture?
     Exit the report in vi use “ZZ” and you will return to SQL\*plus
 
-2.  Generate compare period report as HTML report.
+28. Generate compare period report as HTML report.
 
 spool compare_period_report.html VAR v_clob CLOB
 
@@ -903,12 +903,12 @@ print v_clob; spool off
 
 exit
 
-1.  To be able to read the report it needs to be downloaded change file
+29. To be able to read the report it needs to be downloaded change file
     permissions and copy the file to /tmp chmod 777 compare_period_report.html
 
 cp compare_period_report.html /tmp
 
-1.  Use a scp client to copy the file to your local machine. Open the file in a
+30. Use a scp client to copy the file to your local machine. Open the file in a
     text editor and remove initial lines before first row starting with
 
 “\<html lang="en"\>”
