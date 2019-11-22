@@ -258,7 +258,7 @@ Let us continue to next steps and plug the same PDB back into the container data
 19.  In the PDB Template Location section: **Select** “Software Library” radio
     button.
 
->   **Click** on the torch icon placed on Location text box. **Select** the Name
+>   **Click** on the magnifier icon placed on Location text box. **Select** the Name
 >   which you created During Unplug **Click** Next
 
 ![](media/dad1846d73cd9ca339bab04718e09816.jpg)

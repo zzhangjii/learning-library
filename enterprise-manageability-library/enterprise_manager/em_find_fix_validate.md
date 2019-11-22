@@ -4,17 +4,17 @@
 
 #### A. Database Performance Management On-Premises & OCI User Managed DB Systems
 
-1. Performance Hub
+- Performance Hub
 
-2. Real-Time Database Operations Monitoring
+- Real-Time Database Operations Monitoring
 
-3. Tuning a SQL in a PDB
+- Tuning a SQL in a PDB
 
 #### B. Real Application Testing
 
-4. SQL Performance Analyzer Optimizer Statistics
+- SQL Performance Analyzer Optimizer Statistics
 
-5. Database Replay (Optional, time permitting)
+- Database Replay (Optional, time permitting)
 
 **Database Performance Management On-Premises & OCI User Managed Database Systems**
 ===================================================================================
