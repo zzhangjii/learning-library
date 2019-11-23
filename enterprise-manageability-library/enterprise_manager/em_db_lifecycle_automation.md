@@ -761,4 +761,6 @@ Service Templates
 
 ![](media/a0efb63a12d01e1254593656765ec52a.jpg)
 
->   That concludes the lab. Thank you!
+>   That concludes this lab. 
+
+[Return back to top menu listing all available labs](../readme.md)

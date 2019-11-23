@@ -397,3 +397,7 @@ performance and cost.
 
 >   That completes Lab 3 for Proactive Oracle Database Performance Management
 >   using Oracle IT Analytics.
+
+That concludes this lab.
+
+[Return back to top menu listing all available labs](../readme.md)

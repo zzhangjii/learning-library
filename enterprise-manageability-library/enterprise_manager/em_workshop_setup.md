@@ -121,3 +121,7 @@ ahead (click on Advanced and then click on “Accept the risk and continue”)
 >   Once it’s up, you should see the login screen
 
 ![](media/e1030fc19dd82c84ac2924a9c284952a.jpg)
+
+That concludes this lab.
+
+[Return back to top menu listing all available labs](../readme.md)

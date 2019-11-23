@@ -418,3 +418,5 @@ follow the steps below.
 ![](media/70f9a0fba2f4a947254fc8f6491c2837.png)
 
 And that concludes this lab. Thank You
+
+[Return back to top menu listing all available labs](../readme.md)

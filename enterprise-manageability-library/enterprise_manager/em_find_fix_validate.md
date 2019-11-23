@@ -1064,6 +1064,6 @@ capability that will make it possible to consolidate application into different
 pluggable databases within one container database. This allows us to reduce the
 footprint of each database and reduce resource usage on the server.
 
-That concludes the lab. Thank you!
+That concludes this lab.
 
- [Return back for more lab activities](../readme.md)
+ [Return back to top menu listing all available labs](../readme.md)
