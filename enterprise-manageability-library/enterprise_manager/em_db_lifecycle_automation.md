@@ -18,41 +18,40 @@ Introduction
 
 ### Contents
 
-**Lab Activity 1:** [Requesting a Pluggable Database
-    (PDB)](#create-pluggable-oracle-database)
+**Lab Activity 1:** Requesting a Pluggable Database
+    (PDB)
 
-**Lab Activity 2:** [Un-Plug a Pluggable Database and then Plug
-    it back](#un-plugplug-an-existing-pluggable-oracle-database-pdb) (create from unplugged)
+**Lab Activity 2:** Unplug a Pluggable Database and then Plug
+    it Back In
 
-**Lab Activity 3:** [Creating Pluggable Database PDB Full
-    Clone](#clone-an-existing-pluggable-oracle-database-pdb)
+**Lab Activity 3:** Creating Pluggable Database PDB Full
+    Clone
 
-**Lab Activity 4:** [Compliance for PDB](#compliance-management-for-pdb)
+**Lab Activity 4:** Compliance for PDB
     
-**Lab Activity 5:** [Use Self-service to request a PDB using
-    PDBaaS](#self-service-to-request-pdb-using-pdbaas) (Private Cloud)
+**Lab Activity 5:** Use Self-service to request a PDB using
+    PDBaaS (Private Cloud)
 
-**Lab Activity 6:** [Administrative Setup for
-    PDBaaS](#administrative-setup-for-pdb-as-a-service-private-cloud) (Private Cloud)
+**Lab Activity 6:** Administrative Setup for
+    PDBaaS (Private Cloud)
     
 
 
 
 
 
->   The estimated time to complete the lab exercise is between 50-60 minutes.
+>   The estimated time to complete all the lab activites is approximately 60 minutes.
 
 | **No** | **Feature**                                                                | **Approx. Time** | **Details**                                                                                                                                                                      | **Value proposition**                                                                                                                                                                                                                   |
 |--------|----------------------------------------------------------------------------|------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1    | Requesting a Pluggable Database (PDB)                                      | 10min                     | Creation Pluggable database (PDB’s) within a CDB and run a post-script to lock/unlock accounts.                                                                                  | Create multiple PDB’s with few clicks while making sure they follow organization’s standards by using automated post-scripts.                                                                                                           |
-| 2    | Un-Plug a Pluggable Database and then Plug it back (create from unplugged) | 10min                     | Un-plug a PDB and later Plug it back in a CDB when needed                                                                                                                        | Unplug a PDB when not needed and plug it back as per need hence maximizing resource utilization in your organization.                                                                                                                   |
+| 2    | Un-Plug a Pluggable Database and then Plug it back (create from unplugged) | 10min                     | Un-plug a PDB and later Plug it back in a CDB when needed                                                                                                                        | Unplug a PDB when not needed and plug it back as per need hence maximizing resource utilization in your organization. Easily upgrade PDB’s with few clicks by moving from one container to another.                                                                                                                  |
 | 3    | Creating Pluggable Database PDB Full Clone                                 | 5min                      | Create multiple copies (Clones) of a PDB to dev/test purpose                                                                                                                     | Create multiple PDB’s clones for Dev/test with few clicks while making sure they follow organization’s standards by using automated post- scripts.                                                                                      |
 | 4    | Compliance for PDB                                                         | 10min                     | Apply a compliance standard on PDB and use corrective action to fix the violation                                                                                                | Make sure PDB’s comply with compliance standards and fix them with a click of a button of there is any anomaly.                                                                                                                         |
 | 5    | Use Self- service to request a PDB using PDBaaS (Private Cloud)            | 10min                     | Request PDB pluggable database using Service Catalog. Resize the PDB and then Delete the PDB while preserving the contents.                                                      | Review self-service option to provision PDB, which only requires minimal inputs.                                                                                                                                                        |
 | 6    | Administrative Setup for PDBaaS (Private Cloud)- Review only               | 10min                     | An overview of the administrative setup involved for PDBaaS which includes setting up a PaaS Infrastructure Zone, Pluggable Database Pool, Data Sources, Service Template, etc., | Setup private cloud using Enterprise Manager where admin can define resources and EM’s placement algorithm makes sure that resources are utilized to their best. It is complimented by metering, and show back/chargeback capabilities. |
 
->   Easily upgrade PDB’s with few clicks by moving from one container to
->   another.
+>   
 
 **Know your environment**
 =========================
@@ -80,8 +79,10 @@ Introduction
 
 >   su – oracle (password : Commit12\#)
 
-1.1 Create Pluggable Oracle Database
-====================================
+<br>**Lab Activity 1: Create Pluggable Oracle Database**
+======================================================================
+
+
 
 1.  Log into your Enterprise Manager VM using the IP provided on your cheat
     sheet. The Enterprise Manager credentials are “**sysman/welcome1**”.
@@ -111,19 +112,16 @@ Introduction
 
 ![](media/9be6823423a692b7e1f0e240c10567c9.jpg)
 
-In the Source page of the Create Pluggable Database Wizard, in the Source Type
-section, **select** Create a new PDB . **Select** Named credentials “ORACLE”
 
->   .
 
-7.  In the Identification page, **enter** a unique name for the PDB you are
+7.  In the Source page of the Create Pluggable Database Wizard, in the Source Type section, **select** Create a new PDB . **Select** Named credentials “ORACLE”In the Identification page, **enter** a unique name for the PDB you are
     creating (your initial_pdb). **Optionally**, **select** check box to “create
     multiple DBs” and put **2** as number of copies.
 
 8.  In the PDB Administrator section, **enter** the credentials of the admin
-    user account you need to create for administering the PDB.
+    user account you need to create for administering the PDB. **UserName**: pdbadmin **Password**: welcome1 **Click** Next.
 
-**UserName**: pdbadmin **Password**: welcome1 **Click** Next.
+
 
 ![](media/7442f8d5bf4704af57849ae9741f5a36.jpg)
 
@@ -132,36 +130,36 @@ section, **select** Create a new PDB . **Select** Named credentials “ORACLE”
 
 ![](media/e42b8bce3bdaac0c78fccbe24f1ede48.jpg)
 
-Optionally, you may also want to select a post-script, which will run post
+10. Optionally, you may also want to select a post-script, which will run post
 creation of PDB. Choose “Select from software library” and then search for
 “**unlock**” and select unlock.sql (Or you can upload a SQL file from your
 system).
 
 ![](media/7d3fcabc8fe5f6f80fe20e55bb28655d.jpg)
 
-10.  In the Schedule page, **select** immediately check box next to Start.
+11.  In the Schedule page, **select** immediately check box next to Start.
     **Click** Next**.**
 
-11.  In the Review page, review the details you have provided for the deployment
+12.  In the Review page, review the details you have provided for the deployment
     procedure. If you are satisfied with the details, click Submit. You can now
     click on View Execution Details link to see details.
 
 ![](media/d12c1a1d5e3c3f394248da7d12813b6b.jpg)
 
-12.  In the Procedure Activity page, view the status of the procedure.
+13.  In the Procedure Activity page, view the status of the procedure. Click the Status link for each step to view the details of the execution of each step.
 
-Click the Status link for each step to view the details of the execution of each step.
---------------------------------------------------------------------------------------
 
+ 
 ![](media/3657eb9bb536b26d163c148e40a99332.jpg)
 
-Once the procedure is completed (takes about 3-5 mins), you can **Navigate to
+14. Once the procedure is completed (takes about 3-5 mins), you can **Navigate to
 Targets \> Databases, Click on CDB186** and you will see the newly created PDB
 
 ![](media/657ef309d7087942b8d871256a359050.jpg)
 
-1.2 Un-plug/Plug an existing Pluggable Oracle Database (PDB)
-============================================================
+<br>**Lab Activity 2: Unplug/Plug an Exisiting Pluggable Database (PDB)**
+======================================================================
+
 
 1.  **Navigate** to the “Enterprise menu \> Provisioning and Patching \>
     Database provisioning”.
@@ -193,102 +191,101 @@ Targets \> Databases, Click on CDB186** and you will see the newly created PDB
 6.  In the Destination page, select the type of PDB template you want to
     generate for unplugging the PDB, and the location where you want to store
     it. The PDB template consists of all datafiles as well as the metadata XML
-    file.
+    file. **Select** radio button for software library. **Select** Generate PDB archive. **Enter** /tmp in location under Temporary working directory
 
-**Select** radio button for software library. **Select** Generate PDB archive.
 
-**Enter** /tmp in location under Temporary working directory
+
+
 
 ![](media/4ad828f403bf702b7318f718ad98f117.jpg)
 
-7.  In the Schedule page,
+7.  In the Schedule page, **Select** immediately check box next to Start. **Click Next.** In the Review page, review the details you have provided for the deployment
+    procedure. If you are satisfied with the details, click Submit. In the Procedure Activity page, view the status of the procedure.
 
-**Select** immediately check box next to Start. **Click Next.**
 
-8.  In the Review page, review the details you have provided for the deployment
-    procedure. If you are satisfied with the details, click Submit.
 
-9.  In the Procedure Activity page, view the status of the procedure.
 
 ![](media/bdbafe949b2bc880e2a09b82f9edaf8a.jpg)
 
-10.  You can **Navigate to Targets \> Databases,** Click on CDB186 and you will
+8.  You can **Navigate to Targets \> Databases,** Click on CDB186 and you will
     see the PDB you unplugged is no longer in the list.
 
-Let us continue to next steps and plug the same PDB back into the container database.
--------------------------------------------------------------------------------------
 
-11.  Navigate to the “Enterprise menu \> Provisioning and Patching \> Database
+
+
+9.  Let us continue to next steps and plug the same PDB back into the container database. Navigate to the “Enterprise menu \> Provisioning and Patching \> Database
     provisioning”.
 
 ![](media/167e561726cc8d0a58d8b90a37274b06.jpg)
 
-12.  In the Database Provisioning page, in the Related Links section of the left
+10. In the Database Provisioning page, in the Related Links section of the left
     menu pane, **click** Provision Pluggable Databases
 
 ![](media/33b77cf547caf09fe9c2d56b23fbaf43.jpg)
 
-13.  In the Provision Pluggable Database Console, in the Container Database
+11. In the Provision Pluggable Database Console, in the Container Database
     section, **select** the CDB (**CDB186**) within which you want to create new
     PDBs.
 
 ![](media/4a1835f78c064502ccac88138075133c.jpg)
 
-14.  In the PDB Operations section, **select** Create Pluggable Databases ,
+12. In the PDB Operations section, **select** Create Pluggable Databases ,
     **Click** Launch
 
 ![](media/2248640eabc0efa2fb32293ec07fb389.jpg)
 
-15.  In the Source page of the Create Pluggable Database Wizard, in the Source
+13. In the Source page of the Create Pluggable Database Wizard, in the Source
     Type section, select **Plug an unplugged PDB**. **Select** Named credentials
     “ORACLE”
 
 ![](media/5427807b6e4c677bd991497cfc5468ce.jpg)
 
-16.  In the Identification page, enter a unique name for the PDB you are plugging
-    in.
+14. In the Identification page, enter a unique name for the PDB you are plugging
+    in. **Select** Create As Clone to ensure that Oracle Database generates unique PDB DBID, GUID, and other identifiers expected for the new PDB. **Enter** PDB name like “clone_pdb”.
 
-17.  **Select** Create As Clone to ensure that Oracle Database generates unique
-    PDB DBID, GUID, and other identifiers expected for the new PDB.
 
-**Enter** PDB name like “clone_pdb”.
+
+
 
 ![](media/2ac79b220d664b868c62e4529791e187.jpg)
 
-18.  **Note**: We will keep pdbadmin as a default admin. So, don’t select
+**Note**: We will keep pdbadmin as a default admin. So, don’t select
     anything in this section.
 
-19.  In the PDB Template Location section: **Select** “Software Library” radio
-    button.
+17. On the Identification page, in the PDB Template Location section: **Select** “Software Library” radio
+    button. **Click** on the magnifier icon placed on Location text box. **Select** the Name which you created During Unplug **Click** Next
 
->   **Click** on the magnifier icon placed on Location text box. **Select** the Name
->   which you created During Unplug **Click** Next
+>   
 
 ![](media/dad1846d73cd9ca339bab04718e09816.jpg)
 
-20.  **Select** “Use Common Location for PDB Datafiles” and use **/tmp as
-    temporary working directory.**
+18.  **Select** “Use Common Location for PDB Datafiles” and use **/tmp** as
+    temporary working directory.
 
 ![](media/a6353f812935eeb6148a79693ae0c4fd.jpg)
 
 21.  In the Schedule page, **select** immediately check box next to Start.
     **Click** Next.
 
-22.  In the Review page, review the details you have provided for the deployment
+22.  In the review page, review the details you have provided for the deployment
     procedure. If you are satisfied with the details, **click** Submit. You can
     now click on View Execution Details link to see details.
 
 23.  In the Procedure Activity page, view the status of the procedure.
 
-Optionally**, Click** the Status link for each step to view the details of the
+24. Optionally **Click** the status link for each step to view the details of the
 execution of each step. Once the procedure is completed, you can **Navigate to
 Targets \> Databases,** Click on CDB186 and you will see the newly created PDB
 
-Note: You do not have to wait until the steps complete and move on to the next section.
----------------------------------------------------------------------------------------
 
-1.3 Clone an existing Pluggable Oracle Database (PDB)
-=====================================================
+
+Note: You do not have to wait until the steps complete and move on to the next section.
+
+
+<br>**Lab Activity 3: Clone an Exsiting Pluggable Database (PDB)**
+======================================================================
+
+
 
 1.  **Navigate** to the “Enterprise menu \> Provisioning and Patching \>
     Database provisioning”.
@@ -341,13 +338,14 @@ Optionally, you can select the postscript as we did in the creation flow.
 10.  In the Procedure Activity page, view the status of the procedure.
 
 Click the Status link for each step to view the details of the execution of each step.
---------------------------------------------------------------------------------------
+
 
 >   Once the procedure is completed, you can **Navigate** to Targets \>
 >   Databases**, Click** on CDB186 and you will see the newly created PDB
 
-1.4 Compliance Management for PDB
-=================================
+<br>**Lab Activity 4: Compliance Management for PDB**
+======================================================================
+
 
 >   Now database administrator applies a Corporate Standard on the newly created
 >   PDB database, which results in a “Violation”. Then, the DBA fixes the issue
@@ -453,8 +451,10 @@ Click Violations link and then click on one of the Open Cursor Setting lines
 >   Enterprise Manager and see how easy and quick it is to provision (with
 >   minimal inputs) and manage PDB using PDB-as-a-service (PDBaaS)
 
-2.0 Self-Service to request PDB using PDBaaS
-============================================
+<br>**Lab Activity 5: Self-Service to Request PDB Using PDBaaS**
+======================================================================
+
+
 
 >   With the Self-Service Portal, cloud users can request a Pluggable Database
 >   through a simple process, monitor resource consumptions, and manage the
@@ -480,7 +480,6 @@ New Empty Pluggable Database**”
 ![](media/ee694403e4c718e224a01ae91dbc88fd.jpg)
 
 Note: There are two service templates pertaining to Pluggable Database
-----------------------------------------------------------------------
 
 -   **Provision New Empty Pluggable Database**
 
@@ -667,8 +666,9 @@ You can use the connection details to connect to the PDB using SQL tools.
 
 ![](media/2b44dd4c41f594cddd9adc74dd193297.jpg)
 
-2.1 Administrative setup for PDB-as-a-Service (Private Cloud)
-=============================================================
+<br>**Lab Activity 6: Administrative setup for PDB-as-a-Service (Private Cloud)**
+======================================================================
+
 
 >   Previous exercises demonstrated the process of requesting PDBs using
 >   available service templates as done by a Self-Service user. In this section,
