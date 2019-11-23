@@ -637,97 +637,84 @@ few minutes instance resize is completed. Expand **Resource Usage** section on P
 ======================================================================
 
 
->   Previous exercises demonstrated the process of requesting PDBs using
->   available service templates as done by a Self-Service user. In this section,
->   we will see the Administrative setup for PDBaaS.
+Previous exercises demonstrated the process of requesting PDBs using
+available service templates as performed by a Self-Service user. In this section,
+we will see the Administrative setup for PDBaaS.
 
->   Login to EM Console as super administrator **sysman/welcome1**
+Login to the EM Console as super administrator **sysman/welcome1**
 
 PaaS Infrastructure Zone
 ------------------------
 
->   On the EM Console, go to Setup -\> Cloud -\> Database.
+1. On the EM Console, go to Setup -\> Cloud -\> Database.
 
 ![](media/edfbce40d3abb0f21705992cc042c3ee.jpg)
 
->   Select **Pluggable Database** from the drop-down menu.
+2. Select **Pluggable Database** from the drop-down menu.
 
 ![](media/cf57fcbd4fe1570c40a1ee7f9b75dcec.jpg)
 
->   And then click on ‘**PaaS Infrastructure Zone**’
+3. Then **Click** on **PaaS Infrastructure Zone** **Sales Infra Zone** is the zone where PDBs were provisioned in the
+previous sections. **Click** on name of the zone.
 
->   “**Sales Infra Zone**” is the zone where PDBs were provisioned in the
->   previous sections. Click on name of zone.
 
 ![](media/8ed6c692f382172bbc9f6e2b90179f9e.jpg)
 
->   You are taken to the Zone Home page; you can see all the details of Zone
->   such as the host members of this zone. You can explore more about the zone
->   on this page.
+4. You are taken to the Zone Home page; you can see all the details of a Zone
+such as the host members of this zone. You can explore more about the zone
+on this page.
 
 ![](media/b3ddc4d5e436d1e6dec7eb0ed795f0b7.jpg)
 
 Pluggable Database Pool
 -----------------------
 
->   On the EM Console, go to Setup -\> Cloud -\> Database.
-
->   Select Pluggable Database from the drop-down menu. And then click on
->   ‘**Pluggable Database Pool**’.
+5. On the EM Console, go to **Setup**, then **Cloud**, then **Database**. Select **Pluggable Database** from the drop-down menu. And then click on **Pluggable Database Pool**’.
 
 >   A Pluggable Database Pool consists of a set of Container Databases on which
 >   PDBs will be provisioned.
 
 ![](media/b49f455842d0fb11dd7de44fcaccfe26.jpg)
 
->   Click on Name of the pool to see more details.
+6. Click on name of the pool to see more details.
 
 ![](media/5fa7e9b6bb3648c664e4afc7aeac5670.jpg)
 
->   Scroll down to see details of Members and Service Templates.
+7. Scroll down to see details of Members and Service Templates.
 
 ![](media/243ed347412f16a2159b2184c2dacdf7.jpg)
 
 Data Sources
 ------------
 
->   On the EM Console, go to Setup -\> Cloud -\> Database.
-
->   Select Pluggable Database from the drop-down menu. And then click on ‘**Data
->   Sources**’
-
->   Observe that profile is based on Schema Export(s). This Data Profile was
->   used for provisioning PDB with data.
+8. On the EM Console, go to **Setup**, then **Cloud**, then **Database**. Select Pluggable Database from the drop-down menu. And then click on **Data Sources** observe that the profile is based on Schema Export(s). This Data Profile was used for provisioning a PDB with data.
 
 ![](media/d834209bf1c6a238679ae419098ee0f3.jpg)
 
->   Select the row with profile to see more details.
+9. Select the row with profile to see more details.
 
 ![](media/532db10bbaab85fcdd83f245bd317a6b.jpg)
 
 Service Templates
 -----------------
 
->   On the EM Console, go to Setup -\> Cloud -\> Database.
-
->   Select Pluggable Database from the drop-down menu. And then click on
->   **Service Templates from you left menu.**
+10. On the EM Console, go to **Setup**, then **Cloud**, then **Database**. Select Pluggable Database from the drop-down menu. And then click on **Service Templates from you left menu.**
 
 ![](media/47baba2a1e7567bfb0b5f89429a7831d.jpg)
 
 >   There are two service templates pertaining to Pluggable Database
 
--   Provision New Empty Pluggable Database
+-   **Provision New Empty Pluggable Database**
 
-    -   This template allows user to create a new pluggable database in a
+    -   This template enables the user to create a a new pluggable database in a
         container database configured by DBA
 
--   Provision Pluggable Database with Data
+-   **Provision Pluggable Database with Data**
 
-    -   This template allows user to create a new pluggable database with data
-        from non-container database.
+    -   This template enables user to create a new pluggable database with data
+        from a non-container database.
 
->   Click on name of any template to explore more details.
+11. Click on name of any template to explore more details.
 
 ![](media/a0efb63a12d01e1254593656765ec52a.jpg)
 
