@@ -1,12 +1,11 @@
 ![](media/rdwd-itanalytics.png) 
 
-**Proactive Database Performance Management with IT Analytics** 
+**PROACTIVE DATABASE PERFORMANCE MANAGEMENT using IT Analytics** 
 ================================================================
 
-In these hands-on lab activities, learn how to identify systemic database and
-SQL performance issues, and proactively forecast database resource utilization.
-See how to obtain complete and centralized visibility of your databases whether
-they are on-premises or in the Oracle Cloud using Oracle IT Analytics.
+In these hands-on lab activities, learn how to identify systemic database and SQL performance issues, and proactively forecast database resource utilization. See how to obtain complete and centralized visibility of your databases whether they are on-premises or in the Oracle Cloud using Oracle IT Analytics.
+
+=============================================================
 
 Lab Exercise Persona
 --------------------
@@ -24,8 +23,19 @@ Domain], then **Click** the Go button.
 
 [Enter Username and Password], then **Click** the Sign In button
 
-**Lab 1: Identifying Database Performance Bottlenecks**
-=======================================================
+### Contents
+
+**Lab Activity 1:** Identifying Database Performance Bottlenecks
+
+**Lab Activity 2:** Identify Database Resource & Capacity Planning Performance Bottlenecks
+
+**Lab Activity 3:** Maximizing Oracle Exadata Performance, Capacity Planning
+Cause
+
+
+
+<br>**Lab Activity 1: Identifying Database Performance Bottlenecks**
+======================================================================
 
 **Scenario Details**
 
@@ -189,11 +199,10 @@ because there is no “single source of truth”
 18. From here, you can review statistics, execution plan, trends and activity
     and further drill down and analyze root cause for the slowness.
 
->   That completes Lab1 for Proactive Oracle Database Performance Management
->   using Oracle IT Analytics.
 
-<br>**Lab 2: Database Resource and Capacity Planning Performance Bottlenecks**
-==============================================================================
+
+<br>**Lab Activity 2: Identify Database Resource &  Capacity Planning Performance Bottlenecks**
+======================================================================
 
 **Scenario Details**
 
@@ -304,7 +313,7 @@ database performance and cost.
 >   That completes Lab 2 for Proactive Oracle Database Performance Management
 >   using Oracle IT Analytics.
 
-<br>**Lab 3: Maximizing Oracle Exadata Performance, Capacity Planning** 
+<br>**Lab Activity 3: Maximizing Oracle Exadata Performance, Capacity Planning** 
 ========================================================================
 
 **Scenario Details**
@@ -397,9 +406,10 @@ performance and cost.
 9.  Under the **Hosted Entity Utilization** tab can be viewed all the databases
     running on this host and the top databases using the most CPU resources.
 
->   That completes Lab 3 for Proactive Oracle Database Performance Management
->   using Oracle IT Analytics.
-
 That concludes this lab.
 
-[Return back to top menu listing all available labs](../readme.md)
+
+>   [Return back to top menu listing all available labs](../readme.md)
+
+
+

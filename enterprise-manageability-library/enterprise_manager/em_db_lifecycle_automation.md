@@ -14,7 +14,9 @@ Introduction
 
 ![](media/ca612c296dce62109ae33de2f81110a7.jpg)
 
-Table of Contents
+=============================================================
+
+Lab Table of Contents
 =================
 
 -   1.1 [Requesting a Pluggable Database
@@ -763,6 +765,6 @@ Service Templates
 
 ![](media/a0efb63a12d01e1254593656765ec52a.jpg)
 
->   That concludes this lab. 
+That concludes this lab. 
 
-[Return back to top menu listing all available labs](../readme.md)
+>   [Return back to top menu listing all available labs](../readme.md)

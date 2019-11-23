@@ -1,12 +1,20 @@
 ![](media/rdwd-emheader.png) 
 
-#### **Table of Contents**
+**DATABASE PERFORMANCE MANAGEMENT OF ON-PREMISES & ORACLE CLOUD INFRASTRUCTURE USER MANAGED SYSTEMS using Oracle Enterprise Manager** 
+================================================================
+
+In these hands-on lab activities, become familiar with on-premises and cloud database performance management capabilities using Oracle Enterprise Manager Cloud. (VM/BM/ExaCS). 
+
+============================================================
+
+In this lab you will go through features in the following functional areas:
+
 
 #### A. Database Performance Management On-Premises & OCI User Managed DB Systems
 
 - Performance Hub
 
-- Real-Time Database Operations Monitoring
+- Real-time database operation monitoring
 
 - Tuning a SQL in a PDB
 
@@ -14,42 +22,13 @@
 
 - SQL Performance Analyzer Optimizer Statistics
 
-- Database Replay (Optional, time permitting)
+- Database Workload Replay (optional, time permitting)
 
-**Database Performance Management On-Premises & OCI User Managed Database Systems**
-===================================================================================
+Appendix A - Exercise overview and business case
 
-### **Objective**:
 
-The objective of this lab is for you to become familiar with Database
-Performance Management capabilities in Oracle Enterprise Manager Cloud
-Control 13c that supports On-premises and Oracle Cloud Databases
-(VM/BM/ExaCS).
-
-Functional Coverage:
-
-In this lab you will go through features in the following functional areas:
-
--   Performance Hub
-
--   Real-time database operation monitoring
-
--   Tuning a SQL in a PDB
-
--   SQL Performance Analyzer Optimizer Statistics
-
-##### SQL Performance Analyzer Gather Optimizer Statistics Validation
-
--   Consolidated Database Replay
-
--   Replay multiple workloads concurrently against Pluggable Databases in the
-    Container Database
-
-Appendix A
-
--   Exercise overview and Business Case
-
-Lab Environment Setup
+_____________________________________
+### **Lab Environment Setup**
 
 What You Need
 
@@ -87,26 +66,26 @@ On your computer, go to All Programs \> PuTTY \> PuTTY
 
 **Configuring Your Automatic Login**
 
-4.  In the Category section, click Connection and then select Data.
+4.  In the category section, **Click** Connection and then **Select** Data.
 
-5.  As your Auto-login username, enter opc.
+5.  As your auto-login username, enter **opc**.
 
 ![](media/36164be0029033be6d65f883bbf31713.jpg)
 
 **Adding Your Private Key**
 
-6.  In the Category section, click Auth.
+6.  In the category section, **Click** Auth.
 
-7.  Click Browse and find the private key file that matches your VM’s public
+7.  **Click** browse and find the private key file that matches your VM’s public
     key. This private key should have a .ppk extension for PuTTy to work.
 
 ![](media/df56bc989ad85f9bfad17ddb6ed6038e.jpg)
 
 To save all your settings:
 
--   In the Category section, click Session.
+- 8. In the category section, **Click** session.
 
--   In the Saved Sessions section, name your session EM13C-ABC and click Save.
+- 9.  In the saved sessions section, name your session EM13C-ABC and **Click** Save.
 
 **Connecting to Your VM from a Unix-style System (Mac)**
 
@@ -117,12 +96,12 @@ To save all your settings:
 -   *\<private_key\>* is the full path and name of the file that contains the
     private key associated with the instance you want to access.
 
-    1.  Use the following SSH command to access the instance
+    Use the following SSH command to access the instance
 
 -   ssh –i *\<private_key\> opc\@\<public-ip-address\>*
 
 -   *\<public-ip-address\>* is your instance IP address that you retrieved from
-    the Console.
+    the console.
 
 **Running your Workload**
 
@@ -130,7 +109,7 @@ To save all your settings:
 
 -   \$ sudo su - oracle
 
-8.  Change directory to scripts
+-   Change directory to scripts
 
 -   \$ cd scripts
 
@@ -138,11 +117,11 @@ To save all your settings:
 
 -   \$ source SALESENV
 
-9.  Execute the script 1-db_lab_start.sh as shown below
+-   Execute the script 1-db_lab_start.sh as shown below
 
 ![](media/c77440e3c5d8049abaed13e85897ad53.jpg)
 
-10.  **Performance Hub**
+10. Lab Activity 1 - **Performance Hub**
 
 Estimated Time to Complete Use Case: 15 minutes
 
@@ -1066,4 +1045,4 @@ footprint of each database and reduce resource usage on the server.
 
 That concludes this lab.
 
- [Return back to top menu listing all available labs](../readme.md)
+>   [Return back to top menu listing all available labs](../readme.md)

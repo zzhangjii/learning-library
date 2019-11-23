@@ -1,20 +1,24 @@
 ![](media/rdwd-laheader.png)  
 
-PERFORM LOG ANALYTICS - ORACLE MANAGEMENT CLOUD DEMONSTRATION
+**DATABASE TROUBLESHOOTING & ROOT-CAUSE ANALYSIS using Log Analytics** 
+================================================================
+
+In these hands-on lab activities, learn how to troubleshoot issues by searching log files leveraging pre-built machine learning algorithms, in-context and interactive dashboards to quickly pin-point problem root-cause using Oracle Log Analytics.  
+
 =============================================================
 
 ### Contents
 
-**Activity 1:** Analyzing Logs to Diagnose Database Issues
+**Lab Activity 1:** Analyzing Logs to Diagnose Database Issues
 
-**Activity 2:** Application Topology Approach to Locate Root Cause
+**Lab Activity 2:** Application Topology Approach to Locate Root Cause
 
-**Activity 3:** Use Machine Learning (Cluster and Cluster Compare) to Find Root
+**Lab Activity 3:** Use Machine Learning (Cluster and Cluster Compare) to Find Root
 Cause
 
-**Activity 4:** Machine Learning (Link) Approach to Find Root Cause – (Optional)
+**Lab Activity 4:** Machine Learning (Link) Approach to Find Root Cause – (Optional)
 
-Activity 1: Analyzing Logs to Diagnose Database Issues
+Lab Activity 1: Analyzing Logs to Diagnose Database Issues
 ======================================================
 
 User Persona: DBA, DevOps, ITOps
@@ -127,7 +131,7 @@ to find the possible root-cause.
 
 ![](media/a2680d388f54e67a4942d73d90d80e9b.png)
 
-Activity 2: Application Topology Approach to Locate Root Cause 
+Lab Activity 2: Application Topology Approach to Locate Root Cause 
 ===============================================================
 
 User Persona: DBA, DevOps, ITOps
@@ -218,7 +222,7 @@ error.
 
 ![](media/bdbd1088efadc883e06c26cf0956e9ed.png)
 
-Activity 3: Use Machine Learning (Cluster and Cluster Compare) to Find Root Cause 
+Lab Activity 3: Use Machine Learning (Cluster and Cluster Compare) to Find Root Cause 
 ==================================================================================
 
 User Persona: DBA, DevOps, ITOps
@@ -358,7 +362,7 @@ outliers found in this release.
 
 ![](media/fc7c2c4f5cda6009513559d92176443e.png)
 
-Activity 4: Machine Learning (Link) Approach to Find Root Cause – (Optional)
+Lab Activity 4: Machine Learning (Link) Approach to Find Root Cause – (Optional)
 ============================================================================
 
 User Persona: AppOwner, DevOps, ITOps
@@ -419,4 +423,4 @@ follow the steps below.
 
 And that concludes this lab. Thank You
 
-[Return back to top menu listing all available labs](../readme.md)
+>   [Return back to top menu listing all available labs](../readme.md)

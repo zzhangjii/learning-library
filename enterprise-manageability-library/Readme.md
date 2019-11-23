@@ -1,15 +1,13 @@
-![](img/rdwd-manageheader.png)  
+![](img/rdwd-entcloudmang.png)  
 
-# Welcome to Oracle Manageability Labs
+# Welcome to Oracle Enterprise and Cloud Manageability Labs
 
-These labs are designed to be executed in sequence. There are a number of assumptions associated with these labs that are documented.  Please pay attention to those assumptions.
+These labs are designed so each section can be done independently. Please look for the order of execution reccomended by your instructor when attending a roadshow workshop. Note: there are a number of assumptions associated and documented for these labs. Please pay attention to those.
 
 ## General Oracle Cloud Lab Prerequisites
 -  Cloud Account or Free Tier Account
--  Docker Account (hub.docker.com)
 -  Putty (Windows users)
--  Google Chrome with JSON Formatter Plugin
--  Familiarity with VI
+-  Google Chrome 
 
 ## Enterprise Manager Labs 
 1. [EM Environment Setup](enterprise_manager/em_workshop_setup.md)
@@ -17,8 +15,8 @@ These labs are designed to be executed in sequence. There are a number of assump
 3. [Find, Fix, and Validate](enterprise_manager/em_find_fix_validate.md)
 
 ## Oracle Management Cloud Labs 
-4. [Proactive Database Performance Management](management_cloud/pro-dbperf-ita.md)
-5. [Log Analytics for Database Troubleshooting](management_cloud/log_analytics_of_databases.md)
+4. [Proactive Database Performance Management with IT Analytics](management_cloud/pro-dbperf-ita.md)
+5. [Log Analytics for Database Troubleshooting and Root-Cause Analysis](management_cloud/log_analytics_of_databases.md)
 
 
 

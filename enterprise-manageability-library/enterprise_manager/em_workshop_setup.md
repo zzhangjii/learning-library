@@ -124,6 +124,6 @@ ahead (click on Advanced and then click on “Accept the risk and continue”)
 
 ![](media/e1030fc19dd82c84ac2924a9c284952a.jpg)
 
-That concludes this lab.
 
-[Return back to top menu listing all available labs](../readme.md)
+
+>   [Return back to top menu listing all available labs](../readme.md)
