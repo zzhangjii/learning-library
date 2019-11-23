@@ -309,9 +309,9 @@ Note: You do not have to wait until the steps complete and move on to the next s
 ![](media/2248640eabc0efa2fb32293ec07fb389.jpg)
 
 5.  **Select** clone PDB and select source as CDB186 (if you choose any other
-    CDB, this operation might fail). Please keep Database link box empty.
+    CDB, this operation might fail). Please keep Database link box empty. Select named credentials “ORACLE”, **Click** Next.
 
->   Select named credentials “ORACLE”, **Click** Next.
+
 
 ![](media/472126037592bdeca5eaa6027ebb57a3.jpg)
 
@@ -321,27 +321,28 @@ Note: You do not have to wait until the steps complete and move on to the next s
 
 7.  **Select** “Use Common Location for PDB Datafiles” in the Source page of the
     Create Pluggable Database Wizard, please enter **/tmp** in temporary working
-    directory
-
-Optionally, you can select the postscript as we did in the creation flow.
+    directory. Optionally, you can select the postscript as we did in the creation flow.
 **Click** Next
+
+
 
 ![](media/ff556eb15570c55dfd477361c20051d6.jpg)
 
-8.  In the Schedule page, **select** immediately check box next to Start.
-    **Click** Next.
+8.  When the see the Schedule page, just **select** the immediately check box next to Start. Then **Click** Next.
 
-9.  In the Review page, review the details you have provided for the deployment
-    procedure. If you are satisfied with the details, click Submit. You can now
-    click on View Execution Details link to see details.
-
-10.  In the Procedure Activity page, view the status of the procedure.
-
-Click the Status link for each step to view the details of the execution of each step.
+![](media/dblmschedulepage.jpg)
+    
 
 
->   Once the procedure is completed, you can **Navigate** to Targets \>
->   Databases**, Click** on CDB186 and you will see the newly created PDB
+9.  After the Review page appears, and you have confirmed the information is correct for your deployment, click Submit. You can now
+    click on View Execution Details link to see details and on the Procedure Activity page see the status of the procedure.
+    
+
+
+10.  Once the procedure is completed,  **Navigate** to Targets then
+**Databases**, then **Click** on CDB186 and you will see the newly created PDB
+
+
 
 <br>**Lab Activity 4: Compliance Management for PDB**
 ======================================================================
