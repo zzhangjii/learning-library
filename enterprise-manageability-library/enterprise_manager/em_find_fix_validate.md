@@ -587,144 +587,141 @@ Details about newly published statistics can be found if you navigate ‘Schema*
 
 #### Replay workloads against Pluggable Databases in the Container Database
 
-Estimated Time to Complete Use Case: 10 minutes. Note this lab is optional,
-if you have completed the other recommended labs, you can go through this
-exercise. Database replay lab is a command line lab. There are two reasons
-for this.
+Estimated Time to Complete Use Case: 10 minutes. Note this section is optional,
+if you have completed the other recommended labs, go through these activities next. Database Replay activities are command line driven as we have seen there are many customers that prefer to use API's and
+    not Enterprise Manager natively.
 
-1.  We have seen that there is a majority of our customers preferring API and
-    not Enterprise Manager.
 
-2.  There is currently a discrepancy between preprocessed version number and the
-    version number for same database presented in Enterprise Manager. This have
-    been fixed for 12.2 and older databases and the fix for 18.0 and beyond will
-    be fixed in next monthly EM bundle patch
 
-We have been asked to add 3 new indexes to the application, before these
-indexes can be added we need to proof that the performance in the database
-will be better. Since there are an additional cost to maintain indexes it is
+### Scenario ###
+You've been asked to add three new indexes for an  application, but before those indexes can be added we want  proof later that the performance in the database improved. Since there are an additional cost to maintain indexes it is
 not enough to validate the performance with SQL Performance analyzer only.
-Replay will be done against the container database Sales. The changes need
+Replay will be done against the Container database Sales. The changes need
 to be done in the OLTP container against the DWH_TEST schema. The database
-version is 18c so the capture is done against CDB and the replay will also
+version is 18c so the capture is done against a CDB and the replay will also
 be done against the CDB.
 
-3.  Create a Replay Task
+1.  Create a Replay Task
 
     You need to connect two sessions to you dedicated host as user OPC using
     the provided SSH key. Use putty or similar to connect to your local
     host. (see section above: Lab Environment Setup)
 
-    ssh -i [privatekey] opc\@[Your IP]
+    **ssh -i [privatekey] opc\@[Your IP]**
 
-Session 1 and session 2
+    Session 1 and session 2
 
-4.  Connect to user oracle from the OPC user sudo su – oracle
+2.  Connect to user oracle from the OPC: 
 
-\*\*\*\*\*\*\*\* Session 1
+    **user sudo su – oracle**
 
-\*\*\*\*\*\*\*\*\*
+    \*\*\*\*\*\*\*\*  Session 1  \*\*\*\*\*\*\*\*\*
 
-5.  Set Environment variables for sales database
+3.  Set Environment variables for sales database
 
-. ./sales.env
+    **. ./sales.env**
 
-6.  Connect to sales database and create indexes. (indexes are already created,
+4.  Connect to sales database and create indexes. (indexes are already created,
     just need to make them visible)
 
-sqlplus system/welcome\@oltp
+    **sqlplus system/welcome\@oltp**
 
-alter index dwh_test.DESIGN_DEPT_TAB2_IDX1 visible;
+    **alter index dwh_test.DESIGN_DEPT_TAB2_IDX1 visible;**
 
-alter index dwh_test.DISTRIBUTION_DEPT_TAB2_IDX visible; alter index
-dwh_test.OUTLETS_TAB3_IT_IDX visible;
+    **alter index dwh_test.DISTRIBUTION_DEPT_TAB2_IDX visible;** 
+    
+    **alter index dwh_test.OUTLETS_TAB3_IT_IDX visible;**
 
-exit
+    **exit**
 
-7.  We have already performed the capture it is stored in
-    /home/oracle/scripts/dbpack/RAT_CAPTURE/ DBReplayWorkload_OLTP_CAP_1
-    RAT_REPLAY. The capture directory should be copied to a Replay directory. In
-    a normal situations replay is performed against a test server. This test
+5.  We have already performed the capture and stored it in
+    **/home/oracle/scripts/dbpack/RAT_CAPTURE/DBReplayWorkload_OLTP_CAP_1
+    RAT_REPLAY** 
+    
+    The capture directory should be copied to a Replay directory. In
+    a normal situation replay is performed against a test server. This test
     environment is limited so we will only copy the directory to a replay path
     instead
 
-cd scripts/dbpack
+    **cd scripts/dbpack**
+    
+    **cp -r RAT_CAPTURE/DBReplayWorkload_OLTP_CAP_1 RAT_REPLAY** 
+    
+    **cd RAT_REPLAY/DBReplayWorkload_OLTP_CAP_1**
 
-cp -r RAT_CAPTURE/DBReplayWorkload_OLTP_CAP_1 RAT_REPLAY cd
-RAT_REPLAY/DBReplayWorkload_OLTP_CAP_1
+6. Connect to as sysdba and grant become user to system on all containers
 
-8. Connect to as sysdba and grant become user to system on all containers
+    **sqlplus sys/welcome1 as sysdba**
 
-sqlplus sys/welcome1 as sysdba
+    **grant become user to system container=all;**
 
-grant become user to system container=all;
-
-9. Connect to system create a directory object to locate the capture and
+7. Connect to system create a directory object to locate the capture and
     preprocess the capture
 
-connect system/welcome1
+    **connect system/welcome1**
 
-CREATE DIRECTORY DBR_REPLAY AS
+    **CREATE DIRECTORY DBR_REPLAY AS**
 
-'/home/oracle/scripts/dbpack/RAT_REPLAY/DBReplayWorkload_OLTP_CAP_1';
+    **'/home/oracle/scripts/dbpack/RAT_REPLAY/DBReplayWorkload_OLTP_CAP_1';**
 
-exec DBMS_WORKLOAD_REPLAY.PROCESS_CAPTURE (capture_dir =\> 'DBR_REPLAY');
+    **exec DBMS_WORKLOAD_REPLAY.PROCESS_CAPTURE (capture_dir =\> 'DBR_REPLAY');**
 
-10. We can now start to replay the workload. Initialize replay will load replay
+8. We can now start to replay the workload. Initialize replay will load replay
     metadata created during preprocessing
 
-11. exec DBMS_WORKLOAD_REPLAY.INITIALIZE_REPLAY (replay_name =\> 'REPLAY_1',
-    replay_dir =\> 'DBR_REPLAY');
+    **exec DBMS_WORKLOAD_REPLAY.INITIALIZE_REPLAY (replay_name =\> 'REPLAY_1',
+    replay_dir =\> 'DBR_REPLAY');**
 
-12. If the replay environment uses different connect strings compared to the
+9. If the replay environment uses different connect strings compared to the
     capture environment then we need to remap connections. Check connect
     strings.
 
-select \* from DBA_WORKLOAD_CONNECTION_MAP;
+    **select \* from DBA_WORKLOAD_CONNECTION_MAP;**
 
-13. Remap connections
+10. Next, remap connections
 
-exec DBMS_WORKLOAD_REPLAY.REMAP_CONNECTION (connection_id =\> 1,
-replay_connection =\> 'HR'); exec DBMS_WORKLOAD_REPLAY.REMAP_CONNECTION
-(connection_id =\> 2, replay_connection =\> 'OLTP'); exec
-DBMS_WORKLOAD_REPLAY.REMAP_CONNECTION (connection_id =\> 3, replay_connection
-=\> 'SALES'); exec DBMS_WORKLOAD_REPLAY.REMAP_CONNECTION (connection_id =\> 4,
-replay_connection =\> 'SALES'); exec DBMS_WORKLOAD_REPLAY.REMAP_CONNECTION
-(connection_id =\> 5, replay_connection =\> 'PSALES'); exec
-DBMS_WORKLOAD_REPLAY.REMAP_CONNECTION (connection_id =\> 6, replay_connection
-=\> 'SALES');
+    **exec DBMS_WORKLOAD_REPLAY.REMAP_CONNECTION (connection_id =\> 1,
+replay_connection =\> 'HR');** 
+    
+    **exec DBMS_WORKLOAD_REPLAY.REMAP_CONNECTION
+(connection_id =\> 2, replay_connection =\> 'OLTP');**
+    
+    **exec DBMS_WORKLOAD_REPLAY.REMAP_CONNECTION (connection_id =\> 3, replay_connection =\> 'SALES');** 
 
-14. Check new settings for connect strings
+    **exec DBMS_WORKLOAD_REPLAY.REMAP_CONNECTION (connection_id =\> 4,
+replay_connection =\> 'SALES');** 
 
-select \* from DBA_WORKLOAD_CONNECTION_MAP;
+    **exec DBMS_WORKLOAD_REPLAY.REMAP_CONNECTION (connection_id =\> 5, replay_connection =\> 'PSALES');** 
+
+    **exec DBMS_WORKLOAD_REPLAY.REMAP_CONNECTION (connection_id =\> 6, replay_connection=\> 'SALES');**
+
+14. Now check new settings for connect strings
+
+    **select \* from DBA_WORKLOAD_CONNECTION_MAP;**
 
 15. Prepare the replay by setting replay options. This replay will use default
-    synchronization which is time- based synchronization. With this setting we
-    will as good as possible honor timing for each individual call. If a session
-    has slow SQL statements then other sessions will still honor its timing but
+    synchronization which is time-based synchronization. With this setting we
+    honor timing for each individual call the best as possible. If a session
+    has slow SQL statements then other sessions will still honor timing but
     they will not wait for the slow session. This can cause higher divergence.
     If divergence is less than 10 % then it should be considered as a good
     replay.
 
-16. exec DBMS_WORKLOAD_REPLAY.PREPARE_REPLAY (synchronization =\> 'TIME');
+    **exec DBMS_WORKLOAD_REPLAY.PREPARE_REPLAY (synchronization =\> 'TIME');**
 
-\*\*\*\*\*\*\*\*\*\*\*\*
+### Now switch to session 2. You should already be connected as user oracle ###
 
-Now switch to session 2. You should already be connected as user oracle
-
-\*\*\*\*\*\*\*\*\*\*\*\*\*
-
-17. Set Environment variables for sales database and change to the replay
+13. Set Environment variables for sales database and change to the replay
     directory
 
-18.  . ./sales.env
+14.  . ./sales.env
 
-19.  cd scripts/dbpack/RAT_REPLAY/DBReplayWorkload_OLTP_CAP_1
+15.  cd scripts/dbpack/RAT_REPLAY/DBReplayWorkload_OLTP_CAP_1
 
-20. Calibrate the replay and validate how many replay clients that are needed to
+16. Calibrate the replay and validate how many replay clients that are needed to
     replay the workload.
 
-21. Note! Replay clients are the application tier and should not be co-allocated
+17. Note! Replay clients are the application tier and should not be co-allocated
     with the database due to resource usage. Our recommendation is to place
     replay clients close to the database to avoid none wanted delays between
     database and replay clients. This is regardless if the application tier is
