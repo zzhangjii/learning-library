@@ -353,61 +353,57 @@ Note: You do not have to wait until the steps complete and move on to the next s
 >   using corrective actions. Let us examine how a DBA applies the fixes in the
 >   following steps.
 
-![](media/2e18c410493be6ec0b9352b94c0ceb9c.png)
+**Click** ![](media/2e18c410493be6ec0b9352b94c0ceb9c.png) then **Click** Compliance, then **Click** Library to get started
 
-Click Click Compliance Click Library
+![](media/dblmcompliancelibrary.png) 
 
-1.  Click Compliance Standards tab Choose the row “Corporate Database
-    Standard” Click
+1.  **Select** the Compliance Standards tab,  then Choose the row “Corporate Database Standard” then **Click** the OK button
 
 ![](media/8ed5400adb044b81194db800cfd4c953.jpg)
 
-2.  Click OK button
 
-3.  In the Save Association box Click Yes button
+2.  In the Save Association box, **Click** the Yes button
 
 ![](media/0ccc894ff6c91bdd0aa1b7e5f78fbe6e.png)
 
+3. Then upon the Information prompt, **Click** the OK button
+
 ![](media/a01dffb956af685a866f02e68eff72b1.png)
 
-Click OK button
 
-4.  You have to refresh PDB statistics to see notifications, To refresh PDB
-    database, 
 
-    1.  click
+4.  You need to refresh PDB statistics to see notifications. To refresh: 
 
-        ![](media/c68b7cd9ff6272e2a1792aba8ac0e78b.jpg)
+    a.  **Click** the target icon, then **Click** Databases, then **Click** View, then **Click** Exapand All
 
-        Click Databases Click View Click Expand All
 
-    2.  Right click on PDB Click Oracle Database Click Configuration Click
-        Latest
+    b.  Then **Right Click** on PDB, then **Click** Oracle Database, then **Click**  Configuration, then **Click** Latest. 
+>   **Click** the Refresh icon on the page (it will take few minutes for refresh to complete)
 
->   Click Refresh icon on the page(it will take few minutes for refresh to
->   complete)
+5.  Now **Click** ![](media/2e18c410493be6ec0b9352b94c0ceb9c.png) then **Click** Compliance, then **Click** Results
 
-1.  Click
 
-    ![](media/2e18c410493be6ec0b9352b94c0ceb9c.png)
-
-    Click Compliance Click Results
 
 ![](media/1317deb228d80211d9e6a2edf2cbba9e.png)
 
+6. Click Corporate Database Standard under Compliance Standards
+
 ![](media/4fd761f917fd5b2374e852575b2fe99f.jpg)
 
-Click Corporate Database Standard under Compliance Standards
 
-1.  You will see the following screen as shown below
+7. And you  will see the following screen 
 
 ![](media/1376bfeae918518dbfd16d32ffc67b72.jpg)
 
+
+
+
+
+8.  Click Violations link 
+
 ![](media/e48f5a64f52812e23a631e0f3f270371.jpg)
 
-Click Violations link and then click on one of the Open Cursor Setting lines
-
-1.  You will see open cursors notification Scroll down if needed Click on
+9. and then click on one of the Open Cursor Setting lines. You will see open cursors notification Scroll down if needed Click on
     the link “Submit from Library” for corrective action.
 
 ![](media/19317a4da691bc2a1049ca7923414db3.png)
