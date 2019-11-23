@@ -277,17 +277,19 @@ this case try using the time-picker and pick last 24 hrs. time period to
 identify the historical SQL that was monitored. This is an issue being
 investigated.
 
-18.  Select “Parallel” tab. This will give details about parallel coordinator and
-    parallel slaves.
+18. Select “Parallel” tab. This will give details about parallel coordinator and parallel slaves.
 
-19.  Click on the SQL Text tab. You can see the query text which got executed.
+19. Click on the SQL Text tab. You can see the query text which got executed.
 
-20.  Click on the activity tab to understand about the activity breakdown for
-    this SQL
-
-21.  Click on “Save” button on top right corner of the page. This will help you
+20. Click on the activity tab to understand about the activity breakdown for this SQL
+    
+21. Click on “Save” button on top right corner of the page. This will help you
     to save this monitored execution in “.html” format, which you can use it to
     share or to diagnose the things offline.
+
+
+
+
 
 **2. Real-Time Database Operations Monitoring**
 ===============================================
@@ -329,8 +331,7 @@ pwd
 Using SQLPlus connect to the sh2 account. [oracle\@em12 awrv]\$ sqlplus
 sh2/sh2\@psales
 
-Open the file (!vi DBOP.sql) from the SQL prompt and then review the content
-of the file.
+Open the file (!vi DBOP.sql) from the SQL prompt and then review the content of the file.
 
 At the beginning of the file you will notice how we have tagged the
 operation with dbms_sql_monitor.begin_operation and ended it with
@@ -443,7 +444,7 @@ move on to section B Real Application Testing lab.
 
 **Objective:**
 
-### **B. Real Application Testing** 
+# **B. Real Application Testing** 
 
 The objective of this lab to provide exercises designed to showcase the new
 Real Application Testing capabilities in Oracle Enterprise Manager Cloud
@@ -462,15 +463,16 @@ Consolidated Database Replay
 Replay multiple workloads concurrently against Pluggable Databases in the
 Container Database
 
-Appendix A
+
+## Appendix A
 
 Exercise overview and Business Case
 
-**3. SQL Performance Analyzer Optimizer Statistics**
+#### **SQL Performance Analyzer Optimizer Statistics**
 
-#### **SPA Lab Workflow**
+SPA Lab Workflow
 
-##### Estimated Time to Complete Use Case: 9 minutes, Recommended workflow
+##### Estimated Time to Complete Use Case: 10 minutes 
 
 In this exercise we need to configure the database to set up optimizer
 statistics to be stale. So first step is to create and submit a job that
