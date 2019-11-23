@@ -714,28 +714,26 @@ replay_connection =\> 'SALES');**
 13. Set Environment variables for sales database and change to the replay
     directory
 
-14.  . ./sales.env
+    **. ./sales.env**
 
-15.  cd scripts/dbpack/RAT_REPLAY/DBReplayWorkload_OLTP_CAP_1
+    **cd scripts/dbpack/RAT_REPLAY/DBReplayWorkload_OLTP_CAP_1**
 
-16. Calibrate the replay and validate how many replay clients that are needed to
-    replay the workload.
+16. Calibrate the replay and validate how many replay clients that are needed to replay the workload. 
 
-17. Note! Replay clients are the application tier and should not be co-allocated
+    **wrc mode=calibrate replaydir=/home/oracle/scripts/dbpack/RAT_REPLAY/DBReplayWorkload_OLTP_CAP_1**
+
+    **Note:** Replay clients are the application tier and should not be co-allocated
     with the database due to resource usage. Our recommendation is to place
-    replay clients close to the database to avoid none wanted delays between
+    replay clients close to the database to avoid delays between
     database and replay clients. This is regardless if the application tier is
     located far away. The reason is that the replay clients communicate with the
     database to know when a certain database call should be replayed and if
     replay clients are located far away it will delay the call and create
     artificial delays during the replay.
 
-wrc mode=calibrate
-replaydir=/home/oracle/scripts/dbpack/RAT_REPLAY/DBReplayWorkload_OLTP_CAP_1
 
-\*\*\*\*\*\*\*\*\*\*\*\*\* Calibrate output
 
-\*\*\*\*\*\*\*\*\*\*\*\*\*
+\*\*\*\*\*\*\*\*\*\*\*\*\* Calibrate output \*\*\*\*\*\*\*\*\*\*\*\*\*
 
 Workload Replay Client: Release 18.0.0.0.0 - Production on Tue Nov 5
 09:43:45 2019 Copyright (c) 1982, 2018, Oracle and/or its affiliates. All
@@ -747,139 +745,141 @@ Report for Workload in:
 
 \-----------------------
 
-Recommendation:
+Recommendation: consider using at least 1 client divided among 1 CPU(s). You will need at least 112 MB of memory per client process. If your machine(s) cannot match that number, consider using more clients.
 
-Consider using at least 1 client divided among 1 CPU(s)
+    Workload Characteristics:
 
-You will need at least 112 MB of memory per client process.
+    - max concurrency: 30 sessions
 
-If your machine(s) cannot match that number, consider using more clients.
+    - total number of sessions: 534
 
-Workload Characteristics:
+    Assumptions:
 
--   max concurrency: 30 sessions
+    - 1 client process per 100 concurrent sessions
 
--   total number of sessions: 534
+    - 4 client processes per CPU
 
-Assumptions:
+    - 256 KB of memory cache per concurrent session
 
--   1 client process per 100 concurrent sessions
+    - think time scale = 100
 
--   4 client processes per CPU
+    - connect time scale = 100
 
--   256 KB of memory cache per concurrent session
-
--   think time scale = 100
-
--   connect time scale = 100
-
-   synchronization = TRUE The workload is relatively small and it needs
+    - synchronization = TRUE 
+   
+17. The workload is relatively small and it needs
    only one replay client so we will start it from this session
 
-wrc system/welcome1\@sales mode=replay
-replaydir=/home/oracle/scripts/dbpack/RAT_REPLAY/DBReplayWorkload_OLTP_CAP_1
+    **wrc system/welcome1\@sales mode=replay
+    replaydir=/home/oracle/scripts/dbpack/RAT_REPLAY/DBReplayWorkload_OLTP_CAP_1**
 
-\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* Session 1
+\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* Session 1  \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
 
-\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
-
-22. You should still be connected in the SQL\*Plus session as used before. From
+18. You should still be connected in the SQL\*Plus session as used before. From
     this window start the replay
 
-Exec DBMS_WORKLOAD_REPLAY.START_REPLAY ();
+    **Exec DBMS_WORKLOAD_REPLAY.START_REPLAY ();**
 
-23. Monitor the replay in session 2 and when the replay has finished the
+19. Monitor the replay in session 2 and when the replay has finished the
     generate replay reports from session 1.
 
-24. When replay has finished import capture AWR data. First create a common user
+20. When replay has finished import capture AWR data. First create a common user
     as staging schema
 
-Create user C\#\#CAP_AWR; grant DBA to C\#\#CAP_AWR;
+    **Create user C\#\#CAP_AWR;** 
+    
+    **Grant DBA to C\#\#CAP_AWR;**
 
-SELECT DBMS_WORKLOAD_CAPTURE.IMPORT_AWR (capture_id =\> 27,staging_schema =\>
-'C\#\#CAP_AWR') from dual;
+    **SELECT DBMS_WORKLOAD_CAPTURE.IMPORT_AWR (capture_id =\> 27,staging_schema =\>
+'C\#\#CAP_AWR') from dual;**
 
-25. Generate replay report as a text report. This report can also be generated
+21. Generate replay report as a text report. This report can also be generated
     in HTML or XML format.
 
-Set long 500000 Set linesize 200 Set pagesize 0
+    **Set long 500000** 
+    
+    **Set linesize 200** 
+    
+    **Set pagesize 0**
 
-Spool replay_report.txt
+    **Spool replay_report.txt**
 
-dbms_workload_replay.report (replay_id =\> 1, format=\> 'TEXT') from dual; spool
-off
+    **dbms_workload_replay.report (replay_id =\> 1, format=\> 'TEXT') from dual;** 
+    
+    **spool off**
 
-26. Please open the text report with a Linux editor of your choice such as vi
+22. Please open the text report with a Linux editor of your choice such as vi
     and look at replay details.
 
-!vi replay_report.txt
+    **!vi replay_report.txt**
 
-27. Can you see if the replay uses more or less database time than the capture?
-    Exit the report in vi use “ZZ” and you will return to SQL\*plus
+23. Can you see if the replay uses more or less database time than the capture?
+    Exit the report in vi use “ZZ” and you will return back to SQL\*plus
 
-28. Generate compare period report as HTML report.
+24. Generate compare period report as HTML report.
 
-spool compare_period_report.html VAR v_clob CLOB
+    **spool compare_period_report.html** 
 
-BEGIN dbms_workload_replay.compare_period_report(replay_id1 =\> 1, replay_id2
-=\> null, format =\> DBMS_WORKLOAD_REPLAY.TYPE_HTML, result =\> :v_clob);
+    **VAR v_clob CLOB**
 
-END;
+    **BEGIN dbms_workload_replay.compare_period_report(replay_id1 =\> 1, replay_id2
+=\> null, format =\> DBMS_WORKLOAD_REPLAY.TYPE_HTML, result =\> :v_clob);**
 
-/
+    **END;**
 
-print v_clob; spool off
+    **/**
 
-exit
+    **print v_clob;** 
 
-29. To be able to read the report it needs to be downloaded change file
-    permissions and copy the file to /tmp chmod 777 compare_period_report.html
+    **spool off**
 
-cp compare_period_report.html /tmp
+    **exit**
 
-30. Use a scp client to copy the file to your local machine. Open the file in a
+25. To be able to read the report it needs to be downloaded change file
+    permissions and copy the file to **/tmp chmod 777 compare_period_report.html**
+
+    **cp compare_period_report.html /tmp**
+
+26. Use a scp client to copy the file to your local machine. Open the file in a
     text editor and remove initial lines before first row starting with
 
-“\<html lang="en"\>”
+    **“\<html lang="en"\>”**
 
-and trailing lines after last row ending with
+    and trailing lines after last row ending with
 
-“\< b\> End of Report. \</b\>
+    **“\< b\> End of Report. \</b\>**
 
-\</body\>
+    **\</body\>**
 
-\</html\> “
+    **\</html\> “**
 
-You can now open the report in a browser and look at SQL statement with
+27. You can now open the report in a browser and look at SQL statement with
 performance improvements and regression.
 
-You have now finished the replay lab.
 
-We have now seen how you can use Real Application Testing Database Replay to
+We have seen how you can use Real Application Testing Database Replay to
 validate changes that may impact performance on both SQL statements and DML
-statements. We have also seen the extensive reporting that will help us to find
-and analyze bottlenecks or peaks during certain workloads. We hope that this
-have given you a good overview how to use the replay feature.
+statements. We have also seen the extensive reporting that will help you find
+and analyze bottlenecks or peaks during certain workloads. 
 
-Appendix A. - Database Performance Overview and Business Cases
+# Appendix A. - Database Performance Overview and Business Cases #
 
-#### Oracle Enterprise Manager Express
+## Oracle Enterprise Manager Express
 
-Oracle Database 12c introduced Oracle Enterprise Manager Express, or simply
-EM Express, a web based GUI tool optimized for performance Management. EM
+Oracle Enterprise Manager Express (or simply
+EM Express) was introduced in Oracle Database 12c. It is web based GUI tool optimized for performance Management. EM
 Express is extremely light weight and is built inside the database so it
 doesn’t require any additional install. With only a 20 MB disk footprint,
 there is no resource usage when it is not invoked or used. You can use
 Oracle Enterprise Manager Express to manage a single database while Cloud
-Control 12c can be used to manage many databases and targets.
+Control can be used to manage many databases and targets.
 
-Oracle Enterprise Manager Database Express includes Performance Hub, a
-completely new unified interface for performance monitoring. It is the
+Oracle Enterprise Manager Database Express includes Performance Hub, a unified interface for performance monitoring. It is the
 single pane of glass view of database performance with access to ADDM, SQL
 Tuning, Real-Time SQL Monitoring and ASH Analytics under the same hood. A
 flexible time picker allows the administrator to seamlessly switch between
 Real-Time and Historical views of database performance. For Oracle RAC
-databases, there is an additional RAC tab that allows the database
+databases, there is an additional RAC tab that enables the database
 administrator to monitor cluster related performance problems.
 
 Diagnosing a slowly performing system or a sudden degradation in performance
@@ -894,17 +894,11 @@ performance dimensions that are captured along with the session state. With
 the ability to create filters on various dimensions, identifying performance
 issues has never been easier.
 
-### Real Application Testing Overview and Business Cases
 
-#### SQL Performance Analyzer Optimizer Statistics
-
-##### Business Case
 
 When gathering new statistics, it is not uncommon that the new statistics
 cause the optimizer to choose a new query plan. In most cases the new plan
-will be more efficient but sometimes it causes query regression.
-
-As a DBA it is important to proactively predict how new statistics will
+will be more efficient but sometimes it causes query regression. As a DBA it is important to proactively predict how new statistics will
 change the overall performance in the database. With SQL Performance
 Analyzer (SPA) you have the ability to execute most of your SQL statements
 that occur in your database.
@@ -917,13 +911,13 @@ application. We have also gathered statistics in pending mode for
 validation. So, let’s see if the new statistics will change the performance
 for this application.
 
-##### Workflow overview
+#### SQL Performance Analyzer Optimizer Statistics Workflow 
 
-In this exercise we will learn to use the SPA guided workflow for Optimizer
-Statistics validation, how to tune regressed statements and how to implement
+In this activity you will use the SPA guided workflow for Optimizer
+Statistics validation, tune regressed statements and implement
 pending statistics on tables.
 
-This exercise will be done against a pluggable database, DW, in a container
+This activity will be done against a pluggable database, DW, in a container
 database ‘test’.
 
 The condition is that we have a warehouse based on 2 schemas ‘STAT1’ and
@@ -955,9 +949,8 @@ Steps that we are going to perform in this exercise:
 
 -   Implement (Publish) new statistics
 
-Database Replay
+## Database Replay ##
 
-Business Case
 
 During changes that can have impact on performance it is important to know that
 the server will handle all workloads. On this front we have the Database Replay
@@ -976,11 +969,7 @@ can be started.
 
 Lab Overview
 
-*Objective:*
 
-The objective of this document is to provide high-level guidelines on new
-features associated Real Application Testing in Oracle Enterprise Manager Cloud
-Control 13c.
 
 To perform real-world testing of Oracle databases, by capturing production
 workloads and replaying them on test systems enables you to perform real-world
