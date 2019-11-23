@@ -45,13 +45,13 @@ visibility to your data
 Logs have very valuable information that would be important in troubleshooting
 or finding a root cause
 
-**Duration**: 10 mins.
+**Duration**: >10 mins as this lab can further cover  query language and comparions which are more than just click and go. 
 
 1. Click on “Dashboards” link.
 
 Let us log into Oracle Management Cloud. Here we can see all the different
 integrated services on Oracle Management Cloud. We are going to start with a
-dashboard that shows Oracle Database.
+dashboard that shows Oracle Database. From the Management Cloud home screen, find Dashboards in the left navigation bar or in the menu.
 
 ![](media/f380c8f961cf6b7b1fc3fc9ecfe6b8e3.png)
 
@@ -60,15 +60,13 @@ variety of dashboards. (Built-in & custom ones).
 
 ![](media/90dde3ddef54e23765680268d4f06c76.png)
 
-1.3 Click on highlighted arrow below
+1.3 In the Oracle DB Common Issues widget on the top right, Click on open in log explorer highlighted arrow below 
 
->   In this dashboard, we have a lot of useful out-of-the-box information about
->   the database health and issues. Click on highlighted arrow “Oracle DB Common
->   Issues”
+>   In this pre-built dashboard has been built a lot of useful out-of-the-box information about the database health and issues. There are many pre-built dashboards, all of which are easily customizable to meet your specific needs. Find the Oracle DB Common Issues widget in the top left and click Click on highlighted arrow “Oracle DB Common Issues” 
 
 ![](media/4aa78e35bdcbeb8660800f1b1069587c.png)
 
->   Change visualization to “Record & View”
+>   In the Visualize menu, Change visualization to “Records & View with histogram”
 
 ![](media/f3bb88cd24b74ea7383c76ff019df984.png)
 

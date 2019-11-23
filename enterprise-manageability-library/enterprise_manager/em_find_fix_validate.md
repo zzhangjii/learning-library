@@ -144,52 +144,49 @@ pluggable databases. You will be logging in as a CDBA.
 
 ![](media/61a454d94f190ddedd4541203290c242.jpg)
 
-Figure 1: A Container database with PDBs
+Figure A: Container database with PDBs
 
-##### Understanding the Performance Hub
 
-11.  Log into Enterprise Manager Please type
 
-*Use the credentials [sysman/welcome1] to log into EM*
+1.  Log into Enterprise Manager:
+
+    *Use the credentials [sysman/welcome1] to log in*
 
 ![](media/1876be1823ca17d9ab7e663e128859c4.jpg)
 
-12.  Click on the Targets-\> Databases. You will be directed to the list of
+2.  **Click** on the Targets-\> Databases. You will be directed to the list of
     Databases in EM.
 
 ![](media/9b88b0ba0cefae75a2374d91dcbd4e2e.jpg)
 
-Here you will notice different databases listed, such as SALES, HR etc., we will
-work the sales container database
 
-13.  Select Sales database from the list, this will take you to the DB home page
+3. Here you will notice different databases listed, such as SALES, HR etc., we will work the sales container database. **Select** the Sales database from the list, this will take you to the DB home page
     for this database
 
 ![](media/95063e3082e730e54d957b9ff7575f49.jpg)
 
-![](media/92849ffd0303c0490562f9ecbd506ae9.png)
+
 
 ![](media/89801010273a62f99a3da10de8bf5c71.jpg)
 
-14.  Click on the Containers tab. It is located at the upper right-hand corner of
+4.  Click on the Containers tab. It is located at the upper right-hand corner of
     the page, underneath the Performance tile. This will show the list of
     pluggable databases in the CDB and their activity
 
-![](media/92849ffd0303c0490562f9ecbd506ae9.png)
+
 
 ![](media/c6bc11e91d6db9627a146b3e79d0ce19.jpg)
 
 Notice that the PSALES database is the busiest. We focus our attention to this
 PDB. Let us now navigate to Performance Hub
 
-15.  Select Performance Hub from the Performance Menu and click on ASH Analytics
+5.  Select Performance Hub from the Performance Menu and click on ASH Analytics
     and use the sales_system credential name from the database login screen
 
 ![](media/e131e1ce965ab5bb248d5439529fc921.jpg)
 
 ![](media/d4ec276ea05aceb2ff86f5b7ea71c36e.jpg)
 
-![](media/92849ffd0303c0490562f9ecbd506ae9.png)
 
 ![](media/58e81976fa9957ee57f89139a06c4841.jpg)
 
@@ -210,7 +207,7 @@ Let’s say you wanted to identify the SQL that was causing the biggest
 performance impact. You can do that by clicking the drop down list and changing
 the top dimension from wait class to SQL ID.
 
-![](media/92849ffd0303c0490562f9ecbd506ae9.png)
+
 
 16.  Select the SQL ID dimension from the list of available dimensions (Under Top
     Dimensions) using the dropdown box that is currently displaying Wait Class.
@@ -233,7 +230,7 @@ in this Container database. Click on the ‘PSALES” pluggable database on the
 list to add it to the filter by list and drilldown to activity by this PDB
 on the same page.
 
-![](media/92849ffd0303c0490562f9ecbd506ae9.png)
+
 
 ![](media/384fdb12e234cbc0d60df1639079dc3e.jpg)
 
@@ -243,7 +240,7 @@ on the same page.
 
 ![](media/6e47bf2703c3c1e4adffd39d2202045f.jpg)
 
-![](media/92849ffd0303c0490562f9ecbd506ae9.png)
+
 
 You can see all the executed SQL during that time along with different
 attributes like ‘user’,’Start’,’Ended’ etc. The test next to the \@ sign
@@ -390,7 +387,7 @@ Login: sysman/welcome1
 
 5.  From the Performance Menu click on Performance Hub-\> ASH Analytics
 
-![](media/92849ffd0303c0490562f9ecbd506ae9.png)
+
 
 ![](media/ea10a67618855f3e0ce1a5f5c7157d71.jpg)
 
@@ -412,7 +409,7 @@ Login: sysman/welcome1
 9.  Once the job completes. You should see the recommendations for either
     creating a profile or an index.
 
-![](media/92849ffd0303c0490562f9ecbd506ae9.png)
+
 
 ![](media/64e4e02ca8258d7c1fc54bec446b691a.png)
 
