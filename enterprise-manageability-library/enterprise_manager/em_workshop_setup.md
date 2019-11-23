@@ -1,3 +1,5 @@
+![](media/rdwd-emheader.png)
+
 Introduction
 ============
 

@@ -1,3 +1,5 @@
+![](media/rdwd-itanalytics.png) 
+
 **Proactive Database Performance Management with IT Analytics** 
 ================================================================
 
