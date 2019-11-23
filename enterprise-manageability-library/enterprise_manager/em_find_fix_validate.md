@@ -154,7 +154,7 @@ Figure A: Container database with PDBs
 
 ![](media/1876be1823ca17d9ab7e663e128859c4.jpg)
 
-2.  **Click** on the Targets-\> Databases. You will be directed to the list of
+2.  **Click** on the Targets, then Databases. You will be directed to the list of
     Databases in EM.
 
 ![](media/9b88b0ba0cefae75a2374d91dcbd4e2e.jpg)
@@ -169,7 +169,7 @@ Figure A: Container database with PDBs
 
 ![](media/89801010273a62f99a3da10de8bf5c71.jpg)
 
-4.  Click on the Containers tab. It is located at the upper right-hand corner of
+4.  **Click** on the Containers tab. It is located at the upper right-hand corner of
     the page, underneath the Performance tile. This will show the list of
     pluggable databases in the CDB and their activity
 
@@ -177,10 +177,10 @@ Figure A: Container database with PDBs
 
 ![](media/c6bc11e91d6db9627a146b3e79d0ce19.jpg)
 
-Notice that the PSALES database is the busiest. We focus our attention to this
-PDB. Let us now navigate to Performance Hub
 
-5.  Select Performance Hub from the Performance Menu and click on ASH Analytics
+
+5.  Notice that the PSALES database is the busiest. We focus our attention to this
+PDB. Let us now navigate to Performance Hub. **Select** Performance Hub from the Performance Menu and **Click** on ASH Analytics
     and use the sales_system credential name from the database login screen
 
 ![](media/e131e1ce965ab5bb248d5439529fc921.jpg)
@@ -190,43 +190,34 @@ PDB. Let us now navigate to Performance Hub
 
 ![](media/58e81976fa9957ee57f89139a06c4841.jpg)
 
-Make sure to slide the time picker on an area of high usage (e.g., CPU, IO or
+6. Make sure to slide the time picker on an area of high usage (e.g., CPU, IO or
 Waits). Notice how the corresponding selected time window also changes in the
-summary section.
+summary section. You can also resize the slider to entirely cover the time period of your interest. 
 
-You can also resize the slider to entirely cover the time period of your
-interest. Notice the graph at bottom, it is providing more detailed view of the
-time window you selected. By Default the wait class dimension is selected. On
-the right hand side of the graph you have a list of wait classes for the time
-window you selected (blue for user I/O, green for CPU etc.). Notice how the
-color changes if you hover over either the menu or the graph to highlight the
-particular wait class.
-
-Wait class isn’t the only dimension you can drill into the performance issue by.
-Let’s say you wanted to identify the SQL that was causing the biggest
-performance impact. You can do that by clicking the drop down list and changing
+    Notice the graph at bottom, it is providing more detailed view of the time window you selected. By Default the wait class dimension is selected. On the right hand side of the graph you have a list of wait classes for the time window you selected (blue for user I/O, green for CPU etc.). Notice how the color changes if you hover over either the menu or the graph to highlight the particular wait class. 
+    
+    Wait class isn’t the only dimension you can drill into the performance issue by. Let’s say you wanted to identify the SQL that was causing the biggest
+performance impact. You can do that by **Clicking** the drop down list and changing
 the top dimension from wait class to SQL ID.
 
 
 
-16.  Select the SQL ID dimension from the list of available dimensions (Under Top
+7.  **Select** the SQL ID dimension from the list of available dimensions (Under Top
     Dimensions) using the dropdown box that is currently displaying Wait Class.
     Top Dimensions SQL ID
 
 ![](media/32b079f89c002058721d0c8a3e41f993.jpg)
 
-Hover your mouse on top of the SQL (one at the bottom) and you will be able
-to see how much activity is consumed by this SQL.
-
-Now using the same list of filters select the PDB dimension. Session
+8. **Hover** your mouse on top of the SQL (one at the bottom) and you will be able
+to see how much activity is consumed by this SQL. Now using the same list of filters select the PDB dimension. Session
 Identifiers PDB
+
+
 
 ![](media/95cce3b331aa85fc893b8eecc9a6c0a6.jpg)
 
-What do you see?
-
-The chart changes to activity by the different pluggable databases created
-in this Container database. Click on the ‘PSALES” pluggable database on the
+9. What do you see? The chart changes to activity by the different pluggable databases created
+in this Container database. **Click** on the ‘PSALES” pluggable database on the
 list to add it to the filter by list and drilldown to activity by this PDB
 on the same page.
 
@@ -236,37 +227,34 @@ on the same page.
 
 ![](media/07dcb138dcb6773ee6b560681a62ec5f.jpg)
 
-17.  Click on the SQL Monitoring Tab
+10.  **Click** on the SQL Monitoring Tab
 
 ![](media/6e47bf2703c3c1e4adffd39d2202045f.jpg)
 
 
 
-You can see all the executed SQL during that time along with different
+11. You can see all the executed SQL during that time along with different
 attributes like ‘user’,’Start’,’Ended’ etc. The test next to the \@ sign
-indicates the name of the PDB. Click on any SQL of your choice (e.g.
+indicates the name of the PDB. **Click** on any SQL of your choice (e.g.
 6kd5jj7kr8swv)
 
 ![](media/533523dca8453a0ce246ac933fdb639c.jpg)
 
-It will navigate you to show the details of this particular query. You can see
+12. It will navigate you to show the details of this particular query. You can see
 the plan, parallelism and activity of the query. “Plan Statistics” tab is
-selected by default. You can see the plan of this query in graphical mode.
-
-In some cases, the Monitored SQL may have aged out and no rows are displayed, in
+selected by default. You can see the plan of this query in graphical mode. In some cases, the Monitored SQL may have aged out and no rows are displayed, in
 this case try using the time-picker and pick last 24 hrs. time period to
-identify the historical SQL that was monitored. This is an issue being
-investigated.
+identify the historical SQL that was monitored. 
 
-18. Select “Parallel” tab. This will give details about parallel coordinator and parallel slaves.
+13. **Select** “Parallel” tab. This will give details about parallel coordinator and parallel slaves.
 
-19. Click on the SQL Text tab. You can see the query text which got executed.
+14. **Click** on the SQL Text tab. You can see the query text which got executed.
 
-20. Click on the activity tab to understand about the activity breakdown for this SQL
+15. **Click** on the activity tab to understand about the activity breakdown for this SQL
     
-21. Click on “Save” button on top right corner of the page. This will help you
+16. **Click** on “Save” button on top right corner of the page. This will help you
     to save this monitored execution in “.html” format, which you can use it to
-    share or to diagnose the things offline.
+    share or to diagnose offline.
 
 
 <br>**Lab Activity 2: Real-Time Database Operations Monitorings**
@@ -274,15 +262,14 @@ investigated.
 
 
 
-##### Environment Details:
+#### Environment Details:
 
 The target database is running a load on the sample schema provided via the
 Examples (or companion) software accompanying the Oracle database software.
 There are other schemas created to simulate specific performance scenarios.
 
-##### Estimated Time to Complete Use Case: 8 minutes
+#### Estimated Time to Complete Use Case: 8 minutes
 
-Business Case
 
 Real-Time Database Operations Monitoring, introduced in Oracle database 12c,
 enables an administrator to monitor long running database tasks such as
