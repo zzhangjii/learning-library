@@ -399,158 +399,133 @@ Note: You do not have to wait until the steps complete and move on to the next s
 
 
 
-8.  Click Violations link 
+8.  Click Violations link and  click on one of the Open Cursor Setting lines on the left under the Corporate Database Standard heading (red x).
 
 ![](media/e48f5a64f52812e23a631e0f3f270371.jpg)
 
-9. and then click on one of the Open Cursor Setting lines. You will see open cursors notification Scroll down if needed Click on
-    the link “Submit from Library” for corrective action.
+9.  You will see open cursors notification. Scroll down as needed then **Click** on the link “Submit from Library” link under the Corrective Actions heading. 
 
 ![](media/19317a4da691bc2a1049ca7923414db3.png)
 
-1.  Choose “FIX OPEN CURSOR” corrective action from the pop-up
+10. From the Corrective Actions popup box, Select the “FIX OPEN CURSOR” corrective action.
 
 ![](media/61ea7b2393701bf4ce48bd301a67b332.jpg)
 
-1.  Choose the Named Credentials for Database and Host Click Submit button
+11. Then review/enter the Named Credentials for the database and host and **Click** the Submit button
 
-    1.  Named Credentials for Database: OEM_SYS (scroll down after Database
-        Credentials to see Host Credentials
+    a.  For the database named credentials use: OEM_SYS (scroll down after Database Credentials to see Host Credentials
 
-    2.  Host Credentials: ORACLE_HOST
+    b.  For the host credentials use: ORACLE_HOST
 
 ![](media/6ccf17bb69cbc79dae30f95bc508f640.jpg)
 
-1.  You will see an popup as shown below Click on the link “Click here to view
-    the execution details”
+13.  You will then see the popup as shown below. **Click** on the link “Click here to view the execution details”
 
 ![](media/21e5a02e32296dd7dea196a7edfd29ac.jpg)
 
->   Click on refresh icon if the job did not complete. The job will take about a
->   minute to complete 
+>    The job will take about a minute to complete. Click on refresh icon if the job did not complete. You will see the status change to Succeeded
 
 ![](media/3be714a84eeca17c22b2c786688b567a.jpg)
 
->   You will see the status change to Succeeded
 
-1.  Once the status changes to Succeeded Click Click Databases Click View
-    Click Expand All Click on Your PDB that you choose in earlier step .
+14. Once the status changes to Succeeded, **Click** Databases **Click** View
+    **Click** Expand All **Click** on Your PDB that you choose in the earlier step.
 
-2.  Under Administration drop down Click Initialization Parameters
+15. Under Administration drop down **Click** Initialization Parameters, then Scroll down and you will see the “open_cursors” initialization parameter set
+    to 400 as shown. 
 
-3.  Scroll down You will see the “open_cursors” initialization parameter set
-    to 300 as shown below
 
 ![](media/6b842b0948b11c52c1d56d2f9cdf1088.jpg)
 
->   Now that you have gone through the various life cycle operation on PDB, we
->   would switch focus and cover the use case of building a private cloud using
->   Enterprise Manager and see how easy and quick it is to provision (with
->   minimal inputs) and manage PDB using PDB-as-a-service (PDBaaS)
+>   Now that you have gone through PDB life cycle operations, we
+>   will switch focus and cover the use case of building a private cloud using
+>   Enterprise Manager and how to quickly provision (with
+>   minimal inputs) and manage PDBs using PDB-as-a-service (PDBaaS).
 
 <br>**Lab Activity 5: Self-Service to Request PDB Using PDBaaS**
 ======================================================================
 
 
 
->   With the Self-Service Portal, cloud users can request a Pluggable Database
->   through a simple process, monitor resource consumptions, and manage the
->   pluggable database through an intuitive graphical user interface.
+With the Self-Service Portal, cloud users can request an  Pluggable Database through a simple process, monitor resource consumptions, and manage the
+pluggable database through an intuitive graphical user interface. Expiry time is provided while requesting the PDB instance and PDB is automatically deleted based on the expiry time.
 
->   Expiry time is provided while requesting the PDB instance and PDB is
->   automatically deleted based on the expiry time.
+
 
 1.  Login into Enterprise Manager as a Self-Service User. Self-Service User
-    credentials are:
+    credentials are: **cyrus/welcome1**
 
-CYRUS/welcome1
---------------
 
-1.  By default, you will see the Database Cloud Self Service Portal landing page
+2.  By default, you'll see the Database Cloud Self Service Portal landing page
     as shown below.
 
 ![](media/2d9dd5550b4774b590ccb4b1815ac70d.jpg)
 
-Click “Create Instance” button and then click on Select icon for “**Provision
-New Empty Pluggable Database**”
+3. **Click** the “Create Instance” button and then **Click** on Select icon for “**Provision New Empty Pluggable Database**”
 
 ![](media/ee694403e4c718e224a01ae91dbc88fd.jpg)
 
-Note: There are two service templates pertaining to Pluggable Database
+**Note: There are two service templates pertaining to Pluggable Database**
 
 -   **Provision New Empty Pluggable Database**
 
-    -   This template allows user to create a new pluggable database in a
+    -   This template enables users to create a new pluggable database in a
         container database configured by DBA
 
--   Provision Pluggable Database with Data
+-   **Provision Pluggable Database with Data**
 
--   This template allows user to create a new pluggable database with data from
-    non-container database.
+    -   This template enables users to create a new pluggable database with data from non-container database.
+        
 
-1.  In the “**Pluggable Database Configuration**” section, enter Service and SID
-    details :
 
-2.  Name: YOUR INITIALS_PDB2 (e.g. AS_PDB2)
+4.  In the “**Pluggable Database Configuration**” section, enter Service and SID details :
 
-3.  Database Service Name**: SERVICE_YOUR INITIALS_PDB2 (e.g. SERVICE_AS_PDB2)**
+      Name: **YOUR INITIALS_PDB2** (e.g. AS_PDB2)
 
-4.  Workload Size: Choose **Small**
+      Database Service Name **: SERVICE_YOUR INITIALS_PDB2 (e.g. SERVICE_AS_PDB2)**
+
+      Workload Size: Choose **Small**
 
 ![](media/fd8fe73465009dbd65e2231503481e40.jpg)
 
-1.  Enter Credentials details in the “**Pluggable Database Administrator
+5.  Enter Credentials details in the “**Pluggable Database Administrator
     Account**”
 
-2.  Administrator Name: **PDBADMIN**
+      Administrator Name: **PDBADMIN**
 
-3.  Password: **welcome1**
+      Password: **welcome1**
 
-4.  Confirm Password: **welcome1**
+    Confirm Password: **welcome1**
 
-5.  (Tablespaces): **Accept default**
+     Tablespaces: **Accept default**
 
 ![](media/181bed80a9978ed3e02c050838749f2b.jpg)
 
-1.  Instance Details
+6.  Instance Details, keep all defaults as they are. The Properties Page has the properties for the instance. The Self-Service Administrator has configured
+        this as a optional step. However, properties can help users locate an instance more quickly. So Enter
 
-    1.  Keep all defaults as they are
+        Contact: **CYRUS**
 
-2.  Properties
-
-    1.  Enter properties for instance. Self-Service Administrator has configured
-        this as a optional step. However, properties help users find instances
-        quickly. Enter
-
-        1.  Contact: **CYRUS**
-
-        2.  Lifecycle Status: **Test**
+        Lifecycle Status: **Test**
 
 ![](media/f5f29e12efaaf8a1fce318e871d9009d.jpg)
 
-1.  Instance Duration
-
-    1.  (Instance Duration) Start: Accept default (Immediately)
-
-    2.  (Instance Duration) Duration: Specify duration of 4 hours from the
+7.  Instance Duration - For Instance Duration Start: Accept the default (Immediately). For Duration: Specify 4 hours from the
         current time by selecting the “Until” radio button, changing to current
-        date and specify time 4 hours from the current time
+        date and specify time to be 4 hours from the current time
+
+
 
 ![](media/3035739cd46353882939fd894197f2ed.jpg)
 
-1.  Click on Submit button
+8.  Click on Submit button
 
 >   What do these options represent? In most cases the PDBaaS options are
->   self-explanatory.
-
->   The self-service user should be able to provision a PDB by entering minimal
->   information.
-
->   Fields with an ‘\*’ represent mandatory input fields. Please refer to the
+>   self-explanatory. The self-service user should be able to provision a PDB by entering minimal information. Fields with an ‘\*’ represent mandatory input fields. Please refer to the
 >   table listed below for a description of each option:
 
-Note
-----
+
+
 
 | **Field**                   | **Description**                                                                                                                                                                                                                                                                                    |
 |-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -562,67 +537,65 @@ Note
 | Schedule Request            | Self-service user has the ability to create a PDB database immediately or choose to create at a later time. In this lab exercise, the administrator has defined a policy, so a self- service user has to specify time duration. The PDB database will be automatically deleted after the duration. |
 | Administrator Name/Password | A database user with required administrative privileges will be created on the provisioned PDB. A self-service user will be able to administer the PDB database by logging in as this database user.                                                                                               |
 
-1.  Once you submit a request, you will be redirected back to the “**Database
+9.  Once you submit a request, you will be redirected back to the “**Database
     Cloud Services**” Page. Your PDB creation request has been submitted to
     Enterprise Manager for execution. Under “**Requests**” region, you should
     see 2 requests: “**Create**” and “**Delete**” request
 
 ![](media/0d01a3a45ebb7f97fcc8752d52241b9d.jpg)
 
-1.  At this point, provisioning engine has received a request to create a PDB
-    based on the service template and input provided by self-service user.
-
-2.  You will also notice the delete operation is scheduled for future (not
+10. At this point, provisioning engine has received a request to create a PDB
+    based on the service template and input provided by self-service user. You will also notice the delete operation is scheduled for future (not
     started yet) time. Click on the **hourglass** icon under Status column for
     the Create Pluggable Database step. You will see details of request.
 
->   It will perform the following actions:
+11.  It will perform the following actions:
 
-1.  Create database roles and PDB
+>   
+        Create database roles and PDB
 
-2.  Create a resource plan based on the workload size
+        Create a resource plan based on the workload size
 
-3.  Create and register the database
+        Create and register the database
 
-4.  The request should take less than 10 minutes to complete. Click on refresh
-    icon or in the alternative set Refresh to 30 seconds. The success status
-    indicates that PDB database was successfully created. The new PDB database
-    should be visible under Database Cloud Services page.
+        The request should take less than 10 minutes to complete. Click on refresh
+        icon or as an alternative set Refresh to 30 seconds. The success status
+        indicates that PDB database was successfully created. The new PDB database 
+        should be visible under Database Cloud Services page.
 
 ![](media/3fc668c3d45cc0a1a7dc3c3f7233bfe6.jpg)
 
-1.  Click on Close button. You will see the following under Requests section.
+12. Click on Close button. You will see the following under Requests section.
 
 ![](media/9bd785e399889d2a53d9e7284bf6c329.jpg)
 
-1.  Click on the Home Icon. You will see new PDB instance.
+13. Click on the Home Icon. You will see new PDB instance.
 
 ![](media/ee3e8bccf25b8a836bea2f9a3a487cb7.jpg)
 
 Note
 ----
 
->   Following widgets are shown on the Database Cloud Services landing Page
+Following widgets are shown on the Database Cloud Services landing Page
 
->   **Instances** show the number and status (Up/Down) of the DB/PDB Instances
->   provisioned by the self-service user.
+    **Instances** show the number and status (Up/Down) of the DB/PDB Instances
+    provisioned by the self-service user.
 
->   **Expiry**, shows the expiration summary of DB/PDB Instances.
+    **Expiry**, shows the expiration summary of DB/PDB Instances.
 
->   **Usage**, resource usage status for the Self-Service user, status of the
->   resource consumption for this user.
+    **Usage**, resource usage status for the Self-Service user, status of the
+    resource consumption for this user.
 
->   **Memory**, current memory consumption against the Quota for this user.
+    **Memory**, current memory consumption against the Quota for this user.
 
->   **Storage**, current storage consumption against the Quota for this user.
+    **Storage**, current storage consumption against the Quota for this user.
 
-1.  Click on the name of the PDB.
+14. Click on the name of the PDB. You can use the connection details to connect to the PDB using SQL tools.
 
-You can use the connection details to connect to the PDB using SQL tools.
 
 ![](media/9ca31e90c86263e6cddde14da1c6954f.jpg)
 
-1.  Click on **Resize** button to resize PDB instance.
+15. Click on **Resize** button to resize a PDB instance.
 
 ![](media/20537907e3a274a9df16e7c54f73713f.jpg)
 
@@ -632,34 +605,31 @@ You can use the connection details to connect to the PDB using SQL tools.
 
 ![](media/cc03cc86d7e3d8146a3d799b52583a83.jpg)
 
->   One you click on **Resize**, a job will be submitted to resize instance. In
->   few minutes instance resize is completed.
+16. One you click on **Resize**, a job will be submitted to resize instance. In
+few minutes instance resize is completed. Expand **Resource Usage** section on PDB Home page. This shows now new resource usage limits.
 
->   Expand **Resource Usage** section on PDB Home page. This shows now new
->   resource usage limits.
 
+
+>   
 ![](media/64a8954df11d2e688a930fd92ae38cd8.jpg)
 
-1.  Delete the DB Instance:
-
-    1.  Go to the Database Cloud Services Home page by clicking on **Database
+17.  Next delete the database Instance: Go to the Database Cloud Services Home page by clicking on **Database
         Cloud Service Portal link**
+
+
 
 ![](media/a24b112c579e1df59bb4919a0bbe2b67.jpg)
 
-1.  Click on the action menu for new PDB and delete this instance.
+18. Click on the action menu for new PDB and delete this instance.
 
 ![](media/877bc45ab2f0ab8acd7ea6507baee575.jpg)
 
->   While deleting instance you can preserve a backup of the instance and create
->   a new instance using this backup.
+19. While deleting instance you can preserve a backup of the instance and create a new instance using this backup. To store backup of this instance, select check-box: **Preserve a backup of this instance**
 
->   To store backup of this instance, select check-box: **Preserve a backup of
->   this instance**
-
+  
 ![](media/2840b2e0869edc22af3245e98dba13eb.jpg)
 
->   Click OK. You will see confirmation to delete the instance.
+20. Click OK. You will see confirmation to delete the instance.
 
 ![](media/2b44dd4c41f594cddd9adc74dd193297.jpg)
 
