@@ -16,41 +16,40 @@ Introduction
 
 =============================================================
 
-Lab Table of Contents
-=================
+### Contents
 
--   1.1 [Requesting a Pluggable Database
+**Lab Activity 1:** [Requesting a Pluggable Database
     (PDB)](#create-pluggable-oracle-database)
 
--   1.3 [Un-Plug a Pluggable Database and then Plug
-    it](#un-plugplug-an-existing-pluggable-oracle-database-pdb) back (create
-    from unplugged)
+**Lab Activity 2:** [Un-Plug a Pluggable Database and then Plug
+    it back](#un-plugplug-an-existing-pluggable-oracle-database-pdb) (create from unplugged)
 
--   1.3 [Creating Pluggable Database PDB Full
+**Lab Activity 3:** [Creating Pluggable Database PDB Full
     Clone](#clone-an-existing-pluggable-oracle-database-pdb)
 
--   1.4 [Compliance for PDB](#compliance-management-for-pdb)
-
--   2.1 [Use Self- service to request a PDB using
+**Lab Activity 4:** [Compliance for PDB](#compliance-management-for-pdb)
+    
+**Lab Activity 5:** [Use Self-service to request a PDB using
     PDBaaS](#self-service-to-request-pdb-using-pdbaas) (Private Cloud)
 
--   2.2 [Administrative Setup for
-    PDBaaS](#administrative-setup-for-pdb-as-a-service-private-cloud) (Private
-    Cloud)
+**Lab Activity 6:** [Administrative Setup for
+    PDBaaS](#administrative-setup-for-pdb-as-a-service-private-cloud) (Private Cloud)
+    
 
-Hands on Lab Activities
-=======================
+
+
+
 
 >   The estimated time to complete the lab exercise is between 50-60 minutes.
 
-| **No** | **Feature**                                                                | **Approx. Time (min)** | **Details**                                                                                                                                                                      | **Value proposition**                                                                                                                                                                                                                   |
+| **No** | **Feature**                                                                | **Approx. Time** | **Details**                                                                                                                                                                      | **Value proposition**                                                                                                                                                                                                                   |
 |--------|----------------------------------------------------------------------------|------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.1    | Requesting a Pluggable Database (PDB)                                      | 10                     | Creation Pluggable database (PDB’s) within a CDB and run a post-script to lock/unlock accounts.                                                                                  | Create multiple PDB’s with few clicks while making sure they follow organization’s standards by using automated post-scripts.                                                                                                           |
-| 1.2    | Un-Plug a Pluggable Database and then Plug it back (create from unplugged) | 10                     | Un-plug a PDB and later Plug it back in a CDB when needed                                                                                                                        | Unplug a PDB when not needed and plug it back as per need hence maximizing resource utilization in your organization.                                                                                                                   |
-| 1.3    | Creating Pluggable Database PDB Full Clone                                 | 5                      | Create multiple copies (Clones) of a PDB to dev/test purpose                                                                                                                     | Create multiple PDB’s clones for Dev/test with few clicks while making sure they follow organization’s standards by using automated post- scripts.                                                                                      |
-| 1.4    | Compliance for PDB                                                         | 10                     | Apply a compliance standard on PDB and use corrective action to fix the violation                                                                                                | Make sure PDB’s comply with compliance standards and fix them with a click of a button of there is any anomaly.                                                                                                                         |
-| 2.1    | Use Self- service to request a PDB using PDBaaS (Private Cloud)            | 10                     | Request PDB pluggable database using Service Catalog. Resize the PDB and then Delete the PDB while preserving the contents.                                                      | Review self-service option to provision PDB, which only requires minimal inputs.                                                                                                                                                        |
-| 2.2    | Administrative Setup for PDBaaS (Private Cloud)- Review only               | 10                     | An overview of the administrative setup involved for PDBaaS which includes setting up a PaaS Infrastructure Zone, Pluggable Database Pool, Data Sources, Service Template, etc., | Setup private cloud using Enterprise Manager where admin can define resources and EM’s placement algorithm makes sure that resources are utilized to their best. It is complimented by metering, and show back/chargeback capabilities. |
+| 1    | Requesting a Pluggable Database (PDB)                                      | 10min                     | Creation Pluggable database (PDB’s) within a CDB and run a post-script to lock/unlock accounts.                                                                                  | Create multiple PDB’s with few clicks while making sure they follow organization’s standards by using automated post-scripts.                                                                                                           |
+| 2    | Un-Plug a Pluggable Database and then Plug it back (create from unplugged) | 10min                     | Un-plug a PDB and later Plug it back in a CDB when needed                                                                                                                        | Unplug a PDB when not needed and plug it back as per need hence maximizing resource utilization in your organization.                                                                                                                   |
+| 3    | Creating Pluggable Database PDB Full Clone                                 | 5min                      | Create multiple copies (Clones) of a PDB to dev/test purpose                                                                                                                     | Create multiple PDB’s clones for Dev/test with few clicks while making sure they follow organization’s standards by using automated post- scripts.                                                                                      |
+| 4    | Compliance for PDB                                                         | 10min                     | Apply a compliance standard on PDB and use corrective action to fix the violation                                                                                                | Make sure PDB’s comply with compliance standards and fix them with a click of a button of there is any anomaly.                                                                                                                         |
+| 5    | Use Self- service to request a PDB using PDBaaS (Private Cloud)            | 10min                     | Request PDB pluggable database using Service Catalog. Resize the PDB and then Delete the PDB while preserving the contents.                                                      | Review self-service option to provision PDB, which only requires minimal inputs.                                                                                                                                                        |
+| 6    | Administrative Setup for PDBaaS (Private Cloud)- Review only               | 10min                     | An overview of the administrative setup involved for PDBaaS which includes setting up a PaaS Infrastructure Zone, Pluggable Database Pool, Data Sources, Service Template, etc., | Setup private cloud using Enterprise Manager where admin can define resources and EM’s placement algorithm makes sure that resources are utilized to their best. It is complimented by metering, and show back/chargeback capabilities. |
 
 >   Easily upgrade PDB’s with few clicks by moving from one container to
 >   another.

@@ -18,8 +18,9 @@ Cause
 
 **Lab Activity 4:** Machine Learning (Link) Approach to Find Root Cause – (Optional)
 
-Lab Activity 1: Analyzing Logs to Diagnose Database Issues
-======================================================
+<br>**Lab Activity 1: Analyzing Logs to Diagnose Database Issues**
+======================================================================
+
 
 User Persona: DBA, DevOps, ITOps
 --------------------------------
@@ -46,7 +47,7 @@ or finding a root cause
 
 **Duration**: 10 mins.
 
-1.1 Click on “Dashboards” link.
+1. Click on “Dashboards” link.
 
 Let us log into Oracle Management Cloud. Here we can see all the different
 integrated services on Oracle Management Cloud. We are going to start with a
@@ -131,8 +132,8 @@ to find the possible root-cause.
 
 ![](media/a2680d388f54e67a4942d73d90d80e9b.png)
 
-Lab Activity 2: Application Topology Approach to Locate Root Cause 
-===============================================================
+<br>**Lab Activity 2: Application Topology Approach to Locate Root Cause**
+======================================================================
 
 User Persona: DBA, DevOps, ITOps
 --------------------------------
@@ -222,8 +223,9 @@ error.
 
 ![](media/bdbd1088efadc883e06c26cf0956e9ed.png)
 
-Lab Activity 3: Use Machine Learning (Cluster and Cluster Compare) to Find Root Cause 
-==================================================================================
+<br>**Lab Activity 3: Use Machine Learning (Cluster and Cluster Compare) to Find Root Cause**
+======================================================================
+
 
 User Persona: DBA, DevOps, ITOps
 --------------------------------
@@ -362,8 +364,10 @@ outliers found in this release.
 
 ![](media/fc7c2c4f5cda6009513559d92176443e.png)
 
-Lab Activity 4: Machine Learning (Link) Approach to Find Root Cause – (Optional)
-============================================================================
+<br>**Lab Activity 4: Machine Learning (Link) Approach to Find Root Cause – (Optional)**
+======================================================================
+
+
 
 User Persona: AppOwner, DevOps, ITOps
 -------------------------------------

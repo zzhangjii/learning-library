@@ -30,7 +30,7 @@ Domain], then **Click** the Go button.
 **Lab Activity 2:** Identify Database Resource & Capacity Planning Performance Bottlenecks
 
 **Lab Activity 3:** Maximizing Oracle Exadata Performance, Capacity Planning
-Cause
+
 
 
 
@@ -287,20 +287,12 @@ database performance and cost.
 
     ![](media/26074f6cbe6db99bec2cdc038a0a5d9e.jpg)
 
-10.  **First** - under the **CPU breakdown by individual databases** heading,
-    from the **Group By** dropdown, **Click** on **Target Version** to what
-    selections are available. You can use the Group By option to review specific
-    database properties (Lifecycle Status, Target Version…) in the treemap.
-    **Selecting Target Version** there further is a check box you can use to
-    filter and just display the **Top 10** databases. **Second** - go ahead and
-    **Check** the **Top 10** check box. **Third** - There is also the option to
-    view the databases in a table format. **Click** on the table icon (looks
-    like small cubes) just to the right of the treemap icon.
-
+10.  **First** - under the **CPU breakdown by individual databases** heading, from the **Group By** dropdown, **Click** on **Target Version** to what selections are available. You can use the Group By option to review specific database properties (Lifecycle Status, Target Version…) in the treemap. **Selecting Target Version** there further is a check box you can use to filter and just display the **Top 10** databases. **Second** - go ahead and **Check** the **Top 10** check box. **Third** - There is also the option to view the databases in a table format. **Click** on the table icon (looks like small cubes) just to the right of the treemap icon.
     ![](media/351bd6e1c46ac61e1922c8caf31259c7.jpg)
 
-11. Now under the CPU breakdown by individual databases heading, you can review
-    the information displayed for each database in a table format.
+
+
+11. Now under the CPU breakdown by individual databases heading, you can review the information displayed for each database in a table format.
 
     ![](media/8de71c0a946660b4c6df716b963c2a38.jpg)
 

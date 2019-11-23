@@ -7,22 +7,23 @@ In these hands-on lab activities, become familiar with on-premises and cloud dat
 
 ============================================================
 
+### Contents
 In this lab you will go through features in the following functional areas:
 
 
 #### A. Database Performance Management On-Premises & OCI User Managed DB Systems
 
-- Performance Hub
+- **Lab Activity 1:** Performance Hub
 
-- Real-time database operation monitoring
+- **Lab Activity 2:** Real-time database operation monitoring
 
-- Tuning a SQL in a PDB
+- **Lab Activity 3:** Tuning a SQL in a PDB
 
 #### B. Real Application Testing
 
-- SQL Performance Analyzer Optimizer Statistics
+- **Lab Activity 4:** SQL Performance Analyzer Optimizer Statistics
 
-- Database Workload Replay (optional, time permitting)
+- **Lab Activity 5:** Database Workload Replay (optional, time permitting)
 
 Appendix A - Exercise overview and business case
 
@@ -121,7 +122,11 @@ To save all your settings:
 
 ![](media/c77440e3c5d8049abaed13e85897ad53.jpg)
 
-10. Lab Activity 1 - **Performance Hub**
+# *A. Database Performance Management*
+
+
+<br>**Lab Activity 1: Performance Hub**
+======================================================================
 
 Estimated Time to Complete Use Case: 15 minutes
 
@@ -267,11 +272,10 @@ investigated.
     share or to diagnose the things offline.
 
 
+<br>**Lab Activity 2: Real-Time Database Operations Monitorings**
+======================================================================
 
 
-
-**2. Real-Time Database Operations Monitoring**
-===============================================
 
 ##### Environment Details:
 
@@ -341,8 +345,9 @@ You will see all the activity for this operation.
 
 ![](media/1a32fbdd89e519c2b8401e7dd0626890.jpg)
 
-**3. Tuning a SQL in a PDB**
-============================
+
+<br>**Lab Activity 3: Tuning a SQL in a PDB**
+======================================================================
 
 ##### **Environment Details:**
 
@@ -418,12 +423,11 @@ Login: sysman/welcome1
 
 ![](media/e032d591c5b1132ac156974c6abbe2f4.jpg)
 
-This concludes section A Database Performance Management lab. You can now
-move on to section B Real Application Testing lab.
+This concludes Database Performance Management lab activities. You can now move on to Real Application Testing lab activities.
 
-**Objective:**
 
-# **B. Real Application Testing** 
+
+# *B. Real Application Testing* 
 
 The objective of this lab to provide exercises designed to showcase the new
 Real Application Testing capabilities in Oracle Enterprise Manager Cloud
@@ -443,13 +447,13 @@ Replay multiple workloads concurrently against Pluggable Databases in the
 Container Database
 
 
-## Appendix A
+<br>**Lab Activity 4: SQL Performance Analyzer Optimizer Statistics**
+======================================================================
 
-Exercise overview and Business Case
 
-#### **SQL Performance Analyzer Optimizer Statistics**
 
-SPA Lab Workflow
+
+
 
 ##### Estimated Time to Complete Use Case: 10 minutes 
 
@@ -631,8 +635,9 @@ implement new changes in production with confidence.
 Details about newly published statistics can be found if you go to ‘Schema’ -\>
 ‘Database Object’ -\> ‘Tables’ and select tables for schema ‘STAT1’
 
-**4. Database Replay** (Optional, time permitting)
-==================================================
+<br>**Lab Activity 5: Database Workload Replay (optional)**
+======================================================================
+
 
 #### Replay workloads against Pluggable Databases in the Container Database
 
