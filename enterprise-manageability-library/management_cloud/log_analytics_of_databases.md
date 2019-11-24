@@ -248,7 +248,7 @@ User Persona: DBA, DevOps, ITOps
 
 **Scenario Details**
 
-In Activity 2a, we drilled into database and host logs to find issues and get
+In Activity 2, we drilled into database and host logs to find issues and get
 additional context around issues. In this scenario, we take a different approach
 and start from log clustering
 
@@ -272,103 +272,104 @@ to easily compare changes (clusters, potential issue, outliers & trends) based
 on time and/or other filtering attributes. These are some of the use cases for
 cluster compare:
 
--   Use cases:
+**Use cases:**
 
-    -   what is different this week compared to last week
+What is different this week compared to last week
 
-    -   what is the difference between set of entity A and entity B
+What is the difference between set of entity A and entity B
 
-    -   I know things were working fine for a giving week, what has changed this
+I know things were working fine for a giving week, what has changed this
         week
 
 **Duration**: 15 mins
 
-3.1 Go back to LA home screen and make sure there is no filter selected and
-replace the query with a wildcard asterisk “\*”
+Go back to the Log Analytics home screen and make sure there is no filter selected and
+replace the query with a wildcard asterisk “\*” ‘orderapp’ the select OrderApp
+
+Use timeline menu to select custom and input Dec 1 to Dec 31
+
 
 >   The only filter we need for this demo is “group: Order Application GC” since
 >   we are only focusing on the Order App data. Please pay attention to how many
 >   events we have for the Order App within that timeframe (Dec 1st – Dec 31st)
->   – it is 1,971,826 events (almost 2 Million events)
+>   – it is million of events.
 
 ![](media/4ad4c98235dd2de239f6634276662ed7.png)
 
-![](media/b1480dba71d1a4e53bf3d25520327553.png)
 
-3.2 Run “cluster” command. From the visualize panel select the “Cluster”
-visulization. As you see, from almost 8 millions events, we are down to 1108
+
+1. Run cluster command in the visualize menu under analyze section. From the visualize panel **Select** the Cluster
+visualization. As you see, from millions of events, we are down to 773
 clusters since there are so many events with the same pattern which get located
-into the same cluster. Going through 8 millions events is easier or 1108
+into the same cluster. Going through millions events is easier? or 1108
 clusters?
 
 ![](media/6f510b21edfc46e01bc602904e796ad1.png)
 
 ![](media/19e1b9f2ef9473a4e448fcf6809a4ea1.png)
 
-3.3 Switch to “Potential Issue” tab. LA automatically finds all potential issues
-OOTB. These are events with different variants of severity like “Error”,
+2. Switch to **Potential Issue** tab found above the histogram. Log Analytics automatically finds all potential issues
+out of the box. These are events with different variants of severity like “Error”,
 “Fault”, “Fatal”, “Warning” or set of terms that are semantically similar to
 these.
 
 ![](media/cd12c7b4b4042b74d5fe39b73fdb95e5.png)
 
-3.4 Switch to “Outliers” tab. We identify all events with 1 occurance and show
-them in Outliers tab. As shown below, by expanding one of the events you can
+3. Switch to **Outliers** tab. We identify all events with 1 occurence and show
+them in the **Outliers** tab. As shown below, by expanding one of the events you can
 tell when exatelly the event occurred.
 
 ![](media/625c7d8c799032f11c82572555a2958a.png)
 
-3.5 Switch to “Trends” tab. We monitor all log events and generate a trend graph
+4. Switch to **Trends** tab. We monitor all log events and generate a trend graph
 for each variant. The trend tab could be extremely valuable to users because
 they can find correlations between events based on their trend occurrence across
-multiple tiers. For instance, Let’s say a checkout tranaction failed which
-generated bunch of error logs in application logs, most probabley there are
+multiple tiers. For instance, Let’s say a checkout transaction failed which
+generated a bunch of error logs in application logs, most probably there are
 other errors which got generated at the web server level in the same time range.
-By going to “Trends” tab users may be able to see these events next to each
-other once they click on “Similar Trends”.
+By going to the **Trends** tab users may be able to see these events next to each
+other once they **Click** on Similar Trends.
 
 ![](media/db07333dbf330a25ccc64d79d9458121.png)
 
-3.6 Narrow down number of events before applying the clustering If users want
-they can narrow down their data by adding a few filters before running the
-clustering algorithm. For instnce, in vignatte 2a we selected the red database
-and its associated host as filters and then started our trobleshooting
-investigation, we can do the same thing in here to focus only on those two
+5. Narrow down number of events before applying clustering. You can narrow down data by adding a few filters before running the
+clustering algorithm. For instance, in Activity 2 you selected the red database
+and its associated host as filters and then started the troubleshooting
+investigation. You can do the same here to focus only on those same two
 entities and then run the cluster command to get more insight from data.
 
 ![](media/76dbee8329a5de4d646c6f69f8ee4c97.png)
 
-3.7 Go back to LA home screen and make sure there is no filter selected and
+6. Go back to Log Analysis home screen and make sure there is no filter already selected and
 replace the query with an asterisk “\*”
 
-While we were using “Cluster” capability as part of our Machine Learning
-offering in troubleshooting, there is another capability called “Cluster
+    While we were using the Cluster capability as part of troubleshooting with  Machine Learning activity, there is another capability called “Cluster
 Compare” to easily compare changes (clusters, potential issue, outliers &
 trends) based on time and/or other filtering attributes. Assume we just had a
 new release for our application “Order App” and we want to compare changes based
 on the latest release data vs older data to find the potential root-cause.
-Please make sure the time picker and the log filters are matching to your
-selection as below.
+Make sure the time picker and the log filters are matching to your
+selection as shown below.
 
 ![](media/394702608b96f2ca9456e1e8d3651694.png)
 
-3.8 Run “cluster” command. From the visualize panel select the “Cluster”
+7. Run “cluster” command. From the visualize panel **Select** the “Cluster”
 visulization. As you see, we found 136 unique clusters from those \~62K events.
 Also, we found 12 potential issue and 9 outliers
 
 ![](media/e2e625e2af8dca45039a631d8d9c0761.png)
 
-3.9 Select “Cluster Compare”. Since we are investigating an issue within our new
-release, we can take advantage of cluster compare capability to compare changes
+8. **Select** Cluster Compare at the bottom of the visualize menu. Leave both the query and time as-is to compare events to previous release (1 day before). Since we are investigating an issue within our new application
+release, we can take advantage of the cluster compare capability to compare changes
 (clusters, potential issue, outliers & trends) based on time to our previous
-release date as explained before. Cluster compare provides capability to change
-baseline query and time range for any comparison. For this use case, please make
-sure you leave both the query and time “As Is” to compare events to previour
+release date. Cluster compare provides capability to change
+baseline query and time range for any comparison. For this use case, make
+sure you leave both the query and time as-is to compare events to previous
 release (1 day before)
 
 ![](media/65377186b252fe10ad15fd34ac30334d.png)
 
-Cluster Compare Results. As you see in the picture below, there are 88 common
+9. Next **Click** Cluster Compare Results. As you see below, there are 88 common
 clusters between these two release. There are 1 new potentional issue and 2 new
 outliers found in this release.
 
