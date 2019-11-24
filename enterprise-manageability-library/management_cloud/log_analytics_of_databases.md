@@ -409,39 +409,36 @@ anomalies/outliers.
 
 **Duration**: 5 mins
 
-4.1 Go back to LA home screen and make sure there is no filter selected and
-replace the query with an asterisk “\*”
-
-You just need to change the global time picker to “last 24 hours”
+Return back to the Log Analytics home screen and make sure there is no filter selected and
+replace the query with an asterisk “\*” to clear out any prior data and change the global time picker to the “last 24 hours”
 
 ![](media/3a5f8dd8d0d1e04ced2c70bd4a942f9e.png)
 
-4.2 Select a specific log source. Click on log log source from the field tab on
-the left. Search for “EBS and select “EBS concurrent request logs”
+1. **Select** a specific log source. **Click** on log source from the field tab on
+the left. Search for “EBS and **Select** “EBS concurrent request logs”
 
 ![](media/a4adddb2bfdd3bf45b4f461cb5894ce1.png)
 
-4.3 Click on “Link”. Click on link visualization to link events together. Remove
-“Log source” from “link by”, drag “request ID” instead. Also, remove “classify
+2. **Click** on link visualization to link events together. Remove
+Log source from “link by”, drag “request ID” instead. Also, remove the “classify"
 part of the query. Once you run the query, it links events together based on
-shared “Request ID” and automatically calculate “start time”, “end time” and
+shared “Request ID” and automatically calculates “start time”, “end time” and
 “group duration” for each group.
 
 ![](media/240f46a2807a013b3f1c39b1e548907b.png)
 
-4.4 Build clasiffy part of the link. As mentioned above, link created unique
-groups that shared a common “Request ID”. In addition, link can analyze those
-events to any find potential anomalies, but to make sense of the data someties
-you need to change the query a little bit and rename some fields. Therefore, we
+3. Build classify part of the link. As mentioned above, link created unique
+groups that shared a common “Request ID”. Addtionally, link can analyze those
+events to any find potential anomalies, but to make sense of the data you sometimes need to change the query and rename some fields. Therefore, we
 have built a saved search to show how to analyze EBS events in terms of longer
 “time taken” to finish than usual, “job status” and “time taken” for each
-individual program and mark those events as anomaly. To open the saved search
+individual program and mark those events as an anomaly. To open the saved search
 follow the steps below.
 
 ![](media/5c4b7f9b89d7b5553ece04b4fd6668e4.png)
 
 ![](media/70f9a0fba2f4a947254fc8f6491c2837.png)
 
-And that concludes this lab. Thank You
+And that concludes this lab. 
 
 >   [Return back to top menu listing all available labs](../readme.md)
