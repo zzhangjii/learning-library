@@ -28,7 +28,7 @@ User Persona: DBA, DevOps, ITOps
 **Scenario Details**
 
 Users want to use OMC Log Analytics to troubleshoot database issues to find
-possible root cases through logs
+possible root cases through logs. **Note** use Google Chrome to perform activities in this lab.
 
 **Task**
 
@@ -47,82 +47,99 @@ or finding a root cause
 
 **Duration**: >10 mins as this lab can further cover  query language and comparions which are more than just click and go. 
 
-1. Click on “Dashboards” link.
+**Log in to Oracle Cloud to perform this lab**
 
-Let us log into Oracle Management Cloud. Here we can see all the different
+    https://omcdemo-omcinternal.management.us2.oraclecloud.com/emsaasui/emcpdfui/welcome.html 
+
+    identity domain:    omcinternal
+
+
+ ![](media/tradomcsignin.png)
+
+1. Enter tenant: **omcinternal** and **Click** Go
+
+![](media/tradomcusername.png)
+
+2. Enter user name and password, **Click** Sign in. Logging in to Oracle Management Cloud, we can see all the different
 integrated services on Oracle Management Cloud. We are going to start with a
-dashboard that shows Oracle Database. From the Management Cloud home screen, find Dashboards in the left navigation bar or in the menu.
+dashboard that shows Oracle Database. From the Management Cloud home screen, find Dashboards tile or in the left navigation bar. **Click** on Dashboards.
 
 ![](media/f380c8f961cf6b7b1fc3fc9ecfe6b8e3.png)
 
-1.2 Click on Dashboards and select the “Oracle Database Dashboard”. Here we see
-variety of dashboards. (Built-in & custom ones).
+
+
+ 
+
+4. Here we see
+variety of dashboards. (built-in & custom ones).
 
 ![](media/90dde3ddef54e23765680268d4f06c76.png)
 
-1.3 In the Oracle DB Common Issues widget on the top right, Click on open in log explorer highlighted arrow below 
-
->   In this pre-built dashboard has been built a lot of useful out-of-the-box information about the database health and issues. There are many pre-built dashboards, all of which are easily customizable to meet your specific needs. Find the Oracle DB Common Issues widget in the top left and click Click on highlighted arrow “Oracle DB Common Issues” 
+5. In the Oracle DB Common Issues widget on the top right, **Click** on open in log explorer highlighted arrow below. In this pre-built dashboard has been built a lot of useful out-of-the-box information about the database health and issues. There are many pre-built dashboards, all of which are easily customizable to meet your specific needs. Find the Oracle DB Common Issues widget in the top left and **Click** on highlighted arrow Oracle DB Common Issues 
 
 ![](media/4aa78e35bdcbeb8660800f1b1069587c.png)
 
->   In the Visualize menu, Change visualization to “Records & View with histogram”
+6. In the Visualize menu, Change visualization to Records & View with histogram
 
 ![](media/f3bb88cd24b74ea7383c76ff019df984.png)
 
-![](media/ce3d95bf99e7099a84312f46a21476b6.png)
 
-1.4 Change the query to match the highlighted part. There are a lot of
+
+7.  Change the query to match the highlighted part. There are a lot of
 “Connection Error” and “Hang” error in our DB logs and we are not interested in
-those for now so we can exclude them from our search.
+those for now so we can exclude them from our search. 
+
+    You can use the search command to eliminate specific logs we are not interested in. In the search field at the top, by….typing 'Entity Type' in ('Oracle Database Instance', 'Oracle Database') and 'Problem Priority' != null and Label not in (Hang, 'Connection Error') | timestats count by Label.  
+
+    Note: the ? will provide search help. 
 
 ![](media/4245d0471c7651223946809e0083a406.png)
 
-1.5 Click on “Field Summary” and hover your mouse on “Deadlock” “Field Summary”
-shows all “Deadlock” logs are coming from entity “orcl_unit50222” on “ec2tdsgc”
-host. This could be very useful information and to get to this detailed insight
-from the data this fast by just a few clicks is very powerful
+8.  **Click** on **Field Summary** tab above the histogram widget and hover your mouse on **Deadlock** . **Field Summary**
+shows all the “Deadlock” logs are coming from entity “orcl_unit50222” on “ec2tdsgc”
+host. This could be very useful informatio.
 
 ![](media/4d5fdee1ee0c7669751f4f9164b1cbe4.png)
 
-1.6 Now let us drill down into “Deadlock” logs by clicking on “Deadlock” from
+9.  Now drill down into “Deadlock” logs by **Clicking** on “Deadlock” from
 Field Summary Oracle deadlocks occur when one or more sessions attempt to
 acquire a resource to a database object that is currently being held by a second
 session, which is also attempting to acquire a resource held by the first
-session. As a DBA I want to make sure there is no Deadlock error in my
-application and need more information on specific error/issue
+session. A DBA wants to make sure there are no Deadlock errors for any
+applications and needs more information on specific error/issue
 
 >   If you notice, the query at top is updated.
 
 ![](media/47eee94e1962a936ea016bca09f25da9.png)
 
-![](media/7aebf304e8da88545cca2cf713dae6bd.png)
 
-1.7 If you click on Log Source”, you will see we have identified “deadlock”
-related logs coming from two log source types: “Alert logs” & “Trace logs”
 
-Based on the specific time selected by default, there are about 36 events
+10. If you **Click** on Log Source in the Search Fields menu, you will see we have identified “deadlock”
+related logs coming from two log source types: “Alert logs” & “Trace logs”. Based on the specific time selected by default, there are about 36 (24 + 12)
+events
 
 ![](media/d31ab25cfe5896b8f37569b8b812cf49.png)
 
-1.8 Scroll down to select the highlighted trace log. Trace logs are very
+11. Scroll down to select the highlighted trace log and **Click** apply. 
+
+    Trace logs are very
 informative with a lot of detail; however, it is not easy to read through all
 those log events and find or compare exact details. Log Analytics provides a
 very easy way to compare any two events. This comparison capability is very
-powerful and helps users to easily find differences in log events and possibly
-get to the root cause. It may take half a day of a dev ops or a developer to get
-to this stage and even if they get to this stage, they may easily miss the
+powerful and helps you easily find differences in log events and get
+ to the root cause. It might take half a day or more for a Devops or developer to get
+to this stage and even if they get to this stage, they can easily miss the
 difference between events.
 
 ![](media/217652a9d78df015fb1ac6c4a9df2587.png)
 
-1.9 Select the second interesting log event to the compare list and click on
-“Compare”**.** There is another trace logs with a few seconds time difference.
+12. Select the second interesting log event to the compare list and **Click** on
+Compare. There is another trace logs with a few seconds time difference.
 Let’s compare them to see what has changed related to “deadlock” error
 
 ![](media/7e45371b3002cd0cab300c4a110a2687.png)
 
-1.10 Click on “Compare”. By comparing these two selected logs, you can easily
+13. **Click** on Compare. By comparing these two selected logs, you can easily
 compare all the changes/difference with different color-coding in a table format
 to find the possible root-cause.
 
@@ -138,7 +155,7 @@ User Persona: DBA, DevOps, ITOps
 
 **Scenario Details**
 
-So far, we drilled into specific database issue to gather more context. To
+So far, we drilled into a specific database issue by sorting and filtering logs to gather more context around the issue. To
 expand our troubleshooting scenarios, this time we start from the topology
 diagram
 
@@ -161,19 +178,21 @@ specific entity to get more insight from available data
 
 **Duration**: 10 mins.
 
-2.1 Click on Log Analytics from the home screen Let us log into Oracle
+Click on Log Analytics from the home screen Let us log into Oracle
 Management Cloud. Here we can see all the different integrated services on
 Oracle Management Cloud. We’re going to start with Log Analytics
 
 ![](media/6984e5874b7813878335a77141ed09ed.png)
 
-2.2 Filter to only “Order App” application that we were troubleshooting. Click
-on Global Content bar and select “Order Application GC”
+1. Type in the Global Content bar type Order App to get to the application  we  want to troubleshoot. Click
+on Global Content bar and **Select** Order Application GC
 
 ![](media/cd8dab3a724bde35e969034c2e2c9b2b.png)
 
-2.3 Click on the topology icon on far left top. This time we start from
-Application topology to see if we can quickly find any possible root cause. The
+2. **Click** on the topology icon on far left top. **Click** on the timeline field top right, then custom then adjust date to: Feb 7th 12 am – Feb 8th 12 pm then **Click** apply. Under timeline field, **Click** medium to change topology map size. This time we start from
+Application topology to see if we can quickly find any possible root cause. 
+
+    The
 application topology helps us to understand how different entities are connected
 and we can easily filter down to data for a specific entities or entity
 associations by just clicking on them. **Note**: Make sure you have selected Feb
@@ -183,39 +202,38 @@ associations by just clicking on them. **Note**: Make sure you have selected Feb
 
 ![](media/826e4b18206623f1817c96fb876c20c0.png)
 
-2.5 Select the database entity which is shown as red. By selecting the red
+3.  **Select** the database entity which is shown as red in the middle of the map. By selecting the red
 database, we will add its entity to filter bar and show all the logs for that
 specific entity from the Order App.
 
 ![](media/e82dc1809183136c39ad16549b67dfbb.png)
 
-2.6 Select the association line between the red database and its host. Let us
-add the associated host log data with the red database by clicking on the line.
+4.  **Select** the association line between the red database and its host. Let us
+add the associated host log data with the red database by **Clicking** on the line.
 If you notice another filter gets added to the filter bar
 
 ![](media/3362203315b0f882facb658319b94600.png)
 
 ­
 
-2.7 Change the visualization to “Record with Histogram” to see all the relevant
-logs
+5.  Use the visualize menu to change the visualization to “Record with Histogram” to see all the relevant
+logs. Deselect topology view
 
 ![](media/2ff61df810bae89cdf2d30861a7409c1.png)
 
-2.8 Click on “Error ID”. It seems there are a few different errors we didn't
-know about. As you saw with only three clicks, we could find these errors that
-could be the root cause. Let’s select “ora-00343” to see logs events with this
+6. **Click** on Error ID in the fields menu on the far left and **Select** “ora-27091” in the error ID menu and apply. It seems there are a few different errors we didn't
+know about. As you saw with just three clicks, we could find these errors that
+could be the root cause. Let’s **Select** “ora-27091” to see logs events with this
 error.
 
 ![](media/8b57e736a199b59eb5f01be9d3928e90.png)
 
 ![](media/a559fab0343e9cc12e75097d7a3ad29b.png)
 
-2.9 Lets Create an alert to catch this error next time .
+7. Now, lets create an alert to catch this error the next time it occurs.  To do that you would normally click on “Save” and check “Creat Alert Rule” and fill up the alert configuration based on your requirements. 
 
 >   **Note: Do not save the alert, click cancel.** Let’s create an alert to
->   notify us if next time this error happened. Click on “Save” and check “Creat
->   Alert Rule” and fill up the alert configuration based on your requirement.
+>   notify us if next time this error happened. Click on “Save” and check 
 
 ![](media/edd3b56a8d3ca46f7765ee3d7b314988.png)
 
