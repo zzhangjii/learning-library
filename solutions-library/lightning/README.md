@@ -2,13 +2,13 @@
 
 |  | |
 | ------------- | ------------- |
-| ![Lightning Free](../solutions-library/lightning/img/lightning-logo.png) | The lightning CAF utilizes Terraform 0.12 and Resource Manager to launch functional always-free or enterprise infrastructure in a few minutes.    |
+| ![Lightning Free](./solutions-library/lightning/img/lightning-logo.png) | The lightning CAF utilizes Terraform 0.12 and Resource Manager to launch functional always-free or enterprise infrastructure in a few minutes.    |
 | 
 
 
-[Download **Always Free Tier** Resource Manager Stack zip file](../solutions-library/lightning/resource-manager-stacks/lightning-free-tier-1.0.2.zip)
+[Download **Always Free Tier** Resource Manager Stack zip file](./solutions-library/lightning/resource-manager-stacks/lightning-free-tier-1.0.2.zip)
 
-[Download **Enterprise Tier** Resource Manager Stack zip file](../solutions-library/lightning/resource-manager-stacks/lightning-enterprise-tier-1.0.2.zip)
+[Download **Enterprise Tier** Resource Manager Stack zip file](./solutions-library/lightning/resource-manager-stacks/lightning-enterprise-tier-1.0.2.zip)
 
 
 This simple framework leverages best practices used with
@@ -42,7 +42,7 @@ In the span of a few minutes, the stacks provide vast majority components requir
 
 Watch the 2 minute video below to watch the framework build out the free tier, _**Enterprise tier works exactly the same way**_ in a paid tenancy. In 5 Clicks you have an operational enviornment. Simple modifications of the *.tfvars files allow you to adapt the examples to your needs.
 
-[![Alt text](../solutions-library/lightning/img/lightning-video-thumbnail.png)](https://www.youtube.com/watch?v=T6iDGTWzEWk)
+[![Alt text](./solutions-library/lightning/img/lightning-video-thumbnail.png)](https://www.youtube.com/watch?v=T6iDGTWzEWk)
 
 
 ### Crawl
@@ -76,4 +76,4 @@ Now as you move on to the run, you're ready to start visualizing what your appli
 
 ### Topology and Components
 
-Descriptions of the components included in lightning can be found [here.](../solutions-library/lightning/components/README.md)
+Descriptions of the components included in lightning can be found [here.](./solutions-library/lightning/components/README.md)
