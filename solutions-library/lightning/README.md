@@ -2,13 +2,13 @@
 
 |  | |
 | ------------- | ------------- |
-| ![Lightning Free](../solutions-library/lightning/img/lightning-logo.png) | The lightning CAF utilizes Terraform 0.12 and Resource Manager to launch functional always-free or enterprise infrastructure in a few minutes.    |
+| ![Lightning Free](./img/lightning-logo.png) | The lightning CAF utilizes Terraform 0.12 and Resource Manager to launch functional always-free or enterprise infrastructure in a few minutes.    |
 | 
 
 
-[Download **Always Free Tier** Resource Manager Stack zip file](../solutions-library/lightning/resource-manager-stacks/lightning-free-tier-1.0.2.zip)
+[Download **Always Free Tier** Resource Manager Stack zip file](./resource-manager-stacks/lightning-free-tier-1.0.3.zip)
 
-[Download **Enterprise Tier** Resource Manager Stack zip file](../solutions-library/lightning/resource-manager-stacks/lightning-enterprise-tier-1.0.2.zip)
+[Download **Enterprise Tier** Resource Manager Stack zip file](./resource-manager-stacks/lightning-enterprise-tier-1.0.3.zip)
 
 
 This simple framework leverages best practices used with
@@ -18,9 +18,9 @@ In the span of a few minutes, the stacks provide vast majority components requir
 
 **lightning** utilizes Terraform 0.12 and Resource Manager contained in the ```resource-manager-stacks``` directory. 
 
-- **Want to spin up a compartment, user, group, policy, VCN, subnet, compute instance, and ATP database in *always free* in 3 minutes?** Upload ```lightning-free-tier-1.0.2.zip``` to Resource Manager.
+- **Want to spin up a compartment, user, group, policy, VCN, subnet, compute instance, and ATP database in *always free* in 3 minutes?** Upload ```lightning-free-tier-1.0.3.zip``` to Resource Manager.
 
-- **Already have a paid or trial tenancy and want to spin up a functional *Enterprise* landing zone in 10 minutes?** Upload ```lightning-enterprise-tier-1.0.2.zip``` to Resource Manager.
+- **Already have a paid or trial tenancy and want to spin up a functional *Enterprise* landing zone in 10 minutes?** Upload ```lightning-enterprise-tier-1.0.3.zip``` to Resource Manager.
 
 ## Dependencies
 
@@ -42,7 +42,7 @@ In the span of a few minutes, the stacks provide vast majority components requir
 
 Watch the 2 minute video below to watch the framework build out the free tier, _**Enterprise tier works exactly the same way**_ in a paid tenancy. In 5 Clicks you have an operational enviornment. Simple modifications of the *.tfvars files allow you to adapt the examples to your needs.
 
-[![Alt text](../solutions-library/lightning/img/lightning-video-thumbnail.png)](https://www.youtube.com/watch?v=T6iDGTWzEWk)
+[![Alt text](./img/lightning-video-thumbnail.png)](https://www.youtube.com/watch?v=T6iDGTWzEWk)
 
 
 ### Crawl
@@ -76,4 +76,4 @@ Now as you move on to the run, you're ready to start visualizing what your appli
 
 ### Topology and Components
 
-Descriptions of the components included in lightning can be found [here.](../solutions-library/lightning/components/README.md)
+Descriptions of the components included in lightning can be found [here.](./components/README.md)
