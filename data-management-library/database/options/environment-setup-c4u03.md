@@ -231,14 +231,63 @@ Now that you have your instance, once you are able to ssh in, you will set up th
 
 8. Click Open to begin your session with the instance.
 
+### Install Python3
+
+In the default Oracle Linux 7, we have Python version 2.7 installed. This version will reach the end of its life on Jnauary 1st, 2020. Fortunately it is easy to install Pyhton version 3 which is automatically used by our Oracle Cloud CLI script.
+
+````
+sudo yum -y install python3
+````
+
+Your VM will now download the required packages 
+     
+    Running transaction
+      Installing : python3-pip-9.0.3-5.el7.noarch1/4
+      Installing : python3-setuptools-39.2.0-10.el7.noarch   2/4
+      Installing : python3-3.6.8-10.0.1.el7.x86_64   3/4
+      Installing : python3-libs-3.6.8-10.0.1.el7.x86_64  4/4
+      Verifying  : python3-libs-3.6.8-10.0.1.el7.x86_64  1/4
+      Verifying  : python3-pip-9.0.3-5.el7.noarch2/4
+      Verifying  : python3-setuptools-39.2.0-10.el7.noarch   3/4
+      Verifying  : python3-3.6.8-10.0.1.el7.x86_64   4/4
+    
+    Installed:
+      python3.x86_64 0:3.6.8-10.0.1.el7
+    
+    Dependency Installed:
+      python3-libs.x86_64 0:3.6.8-10.0.1.el7python3-pip.noarch 0:9.0.3-5.el7python3-setuptools.noarch 0:39.2.0-10.el7
+    
+    Complete!
+    
+
 ### Install CLI
+
+Next step is to install the Oracle Cloud CLI. This can be done manually (see documentation) or through an automated script.
 
 1.  Download the Oracle Cloud CLI install script.  
 
     ````
-    bash -c "$(curl –L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
+    bash -c "$(curl -s –L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
     ````
-    ![](img/cli-install.png) 
+
+        ******************************************************************************
+        You have started the OCI CLI Installer in interactive mode. If you do not wish
+        to run this in interactive mode, please include the --accept-all-defaults option.
+        If you have the script locally and would like to know more about
+        input options for this script, then you can run:
+        ./install.sh -h
+        If you would like to know more about input options for this script, refer to:
+        https://github.com/oracle/oci-cli/blob/master/scripts/install/README.rst
+        ******************************************************************************
+    
+        Downloading Oracle Cloud Infrastructure CLI install script from https://raw.githubusercontent.com/oracle/oci-cli/v2.6.12/scripts/install/install.py to /tmp/oci_cli_install_tmp_ri6V.
+        ######################################################################## 100.0%
+        Running install script.
+        python3 /tmp/oci_cli_install_tmp_ri6V
+        -- Verifying Python version.
+        -- Python version 3.6.8 okay.
+        
+    
 
 3.  Accept all the defaults.  This will install packages like python, configparser, etc.  Do not install any additional scripts.  When prompted to *Modify profile to update your $PATH and enable shell/tab completion now? (Y/n)* enter **Y** to update your $PATH and enable shell/tab completion.
 
