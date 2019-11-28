@@ -32,7 +32,7 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 - **VCN**: \<Provided by Oracle\>
 - **Region**: \<Provided by Oracle\>
 
-
+[![Preview Lab](./img/video-snippet.png)](https://www.youtube.com/watch?v=-sqtoqhlGo0)
 
 ## Section 1-Login to the Oracle Cloud 
 1.  You should have received an email from Oracle Cloud with your tenancy and username.  Click on the **Sign In to Oracle Cloud** link.  
