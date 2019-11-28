@@ -25,7 +25,7 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 - Each participant has been provided an account on the c4u03 tenancy and the network (VCN) has been pre-created.
 - Each participant has been sent two emails, one from noreply@accountrecovery.oci.oraclecloud.com  with their username and another from the Database PM gmail account with their temporary password.
 
-# Lab Settings
+## Lab Settings
 - **Tenancy**:  c4u03
 - **Username/Password**:  Follow instructions below to access
 - **Compartment**: \<Provided by Oracle\>
