@@ -32,6 +32,7 @@ Automatically deploy a fully functional Database environment by leveraging a sim
 - **VCN**: \<Provided by Oracle\>
 - **Region**: \<Provided by Oracle\>
 
+## Lab Preview
 [![Preview Lab](./img/video-snippet.png)](https://www.youtube.com/watch?v=-sqtoqhlGo0)
 
 ## Section 1-Login to the Oracle Cloud 
