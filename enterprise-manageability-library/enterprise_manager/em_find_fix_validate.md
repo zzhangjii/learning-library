@@ -84,9 +84,9 @@ On your computer, go to All Programs \> PuTTY \> PuTTY
 
 To save all your settings:
 
-- 8. In the category section, **Click** session.
+ 8. In the category section, **Click** session.
 
-- 9.  In the saved sessions section, name your session EM13C-ABC and **Click** Save.
+ 9.  In the saved sessions section, name your session EM13C-ABC and **Click** Save.
 
 **Connecting to Your VM from a Unix-style System (Mac)**
 
@@ -108,6 +108,7 @@ To save all your settings:
 
 ##### Change to oracle user via sudo
 
+Option 1:
 -   \$ sudo su - oracle
 
 -   Change directory to scripts
@@ -121,6 +122,31 @@ To save all your settings:
 -   Execute the script 1-db_lab_start.sh as shown below
 
 ![](media/c77440e3c5d8049abaed13e85897ad53.jpg)
+
+Option 2:
+
+1. Log into Oracle Enterprise Manager
+-   https://*<<your assigned i/p address>>*: 7803/em/login
+
+-   Use the credentials  [sysman/welcome1] to log into Enterprise Manager 
+
+![](media/em13loginscreen.png)
+
+2. Navigate to Enterprise, then Job, then to Library
+
+![](media/emnav.png)
+
+3. Select job name 1-DB_LAB_START, then Click the Submit button
+
+![](media/emjobsubmit.png)
+
+4. Then Click the Submit button on the next screen
+
+![](media/emjobtarget.png)
+
+5. The workload is now started and will take a few minutes before it has fully ramped up.
+
+![](media/emjobconfirmed.png)
 
 # *A. Database Performance Management*
 
