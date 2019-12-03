@@ -234,8 +234,7 @@ Targets \> Databases, Click on CDB186** and you will see the newly created PDB
 
 ![](media/2248640eabc0efa2fb32293ec07fb389.jpg)
 
-13. In the Source page of the Create Pluggable Database Wizard, in the Source
-    Type section, select **Plug an unplugged PDB**. **Select** Named credentials
+13. In the Create Pluggable Database Wizard, in the Create Options section, select **Plug an unplugged PDB**. **Select** Named credentials
     “ORACLE”
 
 ![](media/5427807b6e4c677bd991497cfc5468ce.jpg)
