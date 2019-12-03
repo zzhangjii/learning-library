@@ -367,10 +367,13 @@ Next step is to install the Oracle Cloud CLI. This can be done manually (see doc
     Compare the fingerprint in the output of config file to the one in OCI console window and make sure they match.
 
 10. Now let's test.  Enter the following command.  Ignore any python related errors.  The --output table formats the cli to return the command results in table format.
-    ````
-    oci os object list -bn DBOptions --output table
-    ````
-    ![](img/ssbdmp.png) 
+
+    Enter the DBOptions Bucket Name that matches your compartment.  (e.g. dboptionsCN1203 or dboptionsUS-REST1211, etc)
+    
+        ````
+        oci os object list -bn <<Enter DBOptions Bucket Name>> --output table
+        ````
+        ![](img/ssbdmp.png) 
 
 
 ## Section 7-Finish Environment Setup
