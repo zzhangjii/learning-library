@@ -198,6 +198,9 @@ and we can easily filter down to data for a specific entities or entity
 associations by just clicking on them. **Note**: Make sure you have selected Feb
 7th 12 am – Feb 8th 12 pm
 
+    Note: if you don't see the result (ORA-27091) when moving the timepicker to Feb 8th 12pm, try setting to Feb 9th 12pm next.
+
+
 ![](media/623f33bcb955dd3dbe586395f37b8148.png)
 
 ![](media/826e4b18206623f1817c96fb876c20c0.png)
