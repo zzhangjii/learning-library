@@ -425,13 +425,28 @@ only restricted to the queries running in the PDB assigned to this user.
 8.  Implement the SQL Profile recommendation. SQL Profiles are a great way of
     tuning a SQL without creating any new objects or making any code changes. 
 
-9. At this point let’s now turn off the load: Change directory to scripts and execute the script 1-db_lab_stop.sh as shown below
+9. At this point let’s now turn off the load: Change directory to scripts and execute the script *1-db_lab_stop.sh* as shown below
 
 ![](media/e032d591c5b1132ac156974c6abbe2f4.jpg)
 
+Alternatively you can use the Enterprise Manager Job Scheduler capability to stop the job.	
+1. Navigate to Enterprise, then Job, then to Library
 
+![](media/emjoblibnav.png)
 
+2. Select the job *1-DB_LAB_STOP*
 
+![](media/emjoblabstop.png)
+
+3. And then Submit the job
+
+![](media/emlabstopsubmit.png)
+
+4. When the job is completed, the workload stops
+
+![](media/emlabstopped.png)
+
+This concludes the Database Performance Management lab activity. You can now move on to Real Application Testing lab activity.
 
 # *B. Real Application Testing* 
 
