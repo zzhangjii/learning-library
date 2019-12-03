@@ -357,22 +357,24 @@ Note: You do not have to wait until the steps complete and move on to the next s
 
 ![](media/dblmcompliancelibrary.png) 
 
-1.  **Select** the Compliance Standards tab,  then Choose the row “Corporate Database Standard” then **Click** the OK button
+1.  **Click** the Compliance Standards tab,  then **Select** the row “Corporate Database Standard” then **Click** the Associate Targets tab
 
 ![](media/8ed5400adb044b81194db800cfd4c953.jpg)
 
 
-2.  In the Save Association box, **Click** the Yes button
+2.  Afterwhich, **Click** Add and choose the row with your PDB, then **Click** the OK Button 
+
+3. In the Save Association dialog box, **Click** the Yes button
 
 ![](media/0ccc894ff6c91bdd0aa1b7e5f78fbe6e.png)
 
-3. Then upon the Information prompt, **Click** the OK button
+4. Then upon the Information processing prompt, **Click** the OK button
 
 ![](media/a01dffb956af685a866f02e68eff72b1.png)
 
 
 
-4.  You need to refresh PDB statistics to see notifications. To refresh: 
+5.  You need to refresh PDB statistics to see notifications. To refresh: 
 
     a.  **Click** the target icon, then **Click** Databases, then **Click** View, then **Click** Exapand All
 
@@ -380,18 +382,18 @@ Note: You do not have to wait until the steps complete and move on to the next s
     b.  Then **Right Click** on PDB, then **Click** Oracle Database, then **Click**  Configuration, then **Click** Latest. 
 >   **Click** the Refresh icon on the page (it will take few minutes for refresh to complete)
 
-5.  Now **Click** ![](media/2e18c410493be6ec0b9352b94c0ceb9c.png) then **Click** Compliance, then **Click** Results
+6.  Now **Click** ![](media/2e18c410493be6ec0b9352b94c0ceb9c.png) then **Click** Compliance, then **Click** Results
 
 
 
 ![](media/1317deb228d80211d9e6a2edf2cbba9e.png)
 
-6. Click Corporate Database Standard under Compliance Standards
+7. Click Corporate Database Standard under Compliance Standards
 
 ![](media/4fd761f917fd5b2374e852575b2fe99f.jpg)
 
 
-7. And you  will see the following screen 
+8. And you  will see the following screen 
 
 ![](media/1376bfeae918518dbfd16d32ffc67b72.jpg)
 
@@ -399,19 +401,19 @@ Note: You do not have to wait until the steps complete and move on to the next s
 
 
 
-8.  Click Violations link and  click on one of the Open Cursor Setting lines on the left under the Corporate Database Standard heading (red x).
+9.  Click Violations link and  click on one of the Open Cursor Setting lines on the left under the Corporate Database Standard heading (red x).
 
 ![](media/e48f5a64f52812e23a631e0f3f270371.jpg)
 
-9.  You will see open cursors notification. Scroll down as needed then **Click** on the link “Submit from Library” link under the Corrective Actions heading. 
+10. You will see open cursors notification. Scroll down as needed then **Click** on the link “Submit from Library” link under the Corrective Actions heading. 
 
 ![](media/19317a4da691bc2a1049ca7923414db3.png)
 
-10. From the Corrective Actions popup box, Select the “FIX OPEN CURSOR” corrective action.
+11. From the Corrective Actions popup box, Select the “FIX OPEN CURSOR” corrective action.
 
 ![](media/61ea7b2393701bf4ce48bd301a67b332.jpg)
 
-11. Then review/enter the Named Credentials for the database and host and **Click** the Submit button
+12. Then review/enter the Named Credentials for the database and host and **Click** the Submit button
 
     a.  For the database named credentials use: OEM_SYS (scroll down after Database Credentials to see Host Credentials
 
