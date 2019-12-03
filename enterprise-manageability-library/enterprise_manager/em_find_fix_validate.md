@@ -481,7 +481,7 @@ In this exercise we need to configure the database to set up optimizer
 statistics to be stale. So the first step is to create and submit a job that
 will configure the statistics to be stale.
 
-1.  Execute SPA task using Optimizer statistics - Login using username and password **sysman/ welcome1**
+1.  Execute SPA task using optimizer statistics - Login using username and password **sysman/ welcome1**
 
 
 
@@ -491,103 +491,115 @@ will configure the statistics to be stale.
 
 ![](media/4037bd7209e67b936206da6f43991120.jpg)
 
-3.  Select “OS Command” in the Create library Job drop down list **Click** Go
+3.  Select SPA_STAT_SETUP and **Click** the **Submit** button
+
+![](media/emspasetup.png)
+
+4. Select OS Command in the Create library Job drop down list **Click** Go
 
 ![](media/a04978f5e6e7d3e03d34685c7212f413.jpg)
 
-4.  Provide Name: STAT_SETUP **Click** Add in Target section Select
+5. **Click** the **Submit** button 
+
+![](media/spasubmit.png)
+
+6. The job then runs and completes
+
+![](media/emspajobconfirm.png)
+
+7.  Next configure SPA Quick Check. Provide Name: STAT_SETUP **Click** Add in Target section Select
     emcc.marketplace.com Select Tab **Parameters**
 
 ![](media/e3bafcbbfdeb0df5f1921db3f6440dea.jpg)
 
 ![](media/b67d43eba55ba84b4758e4e02f809851.jpg)
 
-5.  Select Tab **Credentials**, Select **Named**, Select **ORACLE_HOST**, and **Click** Save to Library
+8.  Select Tab **Credentials**, Select **Named**, Select **ORACLE_HOST**, and **Click** Save to Library
 
 ![](media/954828645f8ad404b3350faa88ea93b4.jpg)
 
 ![](media/339c058ab81443636e69e38f1f46627e.jpg)
 
-6.  Select ‘”STAT_SETUP” Click “Submit”
+9.  Select ‘”STAT_SETUP” Click “Submit”
 
 ![](media/f8b8fa1c13413a037468b536860cab66.jpg)
 
 
 
-7.  The job is now running. Continue with configuring SPA Quick Check. Navigate to Databases: from the menu, **Targets**, then **Databases**
+10. The job is now running. Continue with configuring SPA Quick Check. Navigate to Databases: from the menu, **Targets**, then **Databases**
 
 ![](media/baa21e15a952e1b090944051c919d47e.jpg)
 
-8.  Expand the sales.subnet.vcn.oraclevcn.com database. **Click** on “sales.subnet.vcn.oraclevcn.com_HR” pluggable database
+11. Expand the sales.subnet.vcn.oraclevcn.com database. **Click** on “sales.subnet.vcn.oraclevcn.com_HR” pluggable database
 
 ![](media/6273897d2614da4d3babab73299d5bc5.jpg)
 
-9.  In sales.subnet.vcn.oraclevcn.com_HR database Navigate to **Performance**, to **SQL**, to **SQL Performance Analyzer Quick Check Setup**
+12. In sales.subnet.vcn.oraclevcn.com_HR database Navigate to **Performance**, to **SQL**, to **SQL Performance Analyzer Quick Check Setup**
 
 ![](media/52d28e53edc6e12a26eefd6df1487d20.jpg)
 
-10.  This is the page where you configure SPA Quick Check. Make sure that the
+13.  This is the page where you configure SPA Quick Check. Make sure that the
     selected SQL Tuning Set includes as many SQL statements as possible. If the
     application has specific workloads that are executed during End of Month,
     End of Year or even certain period during the day, then make sure to collect
     the workload in separate SQL Tuning Sets and merge them into a “Total
     Workload Tuning set”
 
-11. In this example we are working with a SQL Tuning Set called PENDING_STATS_WKLD. Select: SQL Tuning Set: PENDING_STATS_WKLD. Select “Comparision Metric”: Buffer Gets **Click** Save.
+14. In this example we are working with a SQL Tuning Set called PENDING_STATS_WKLD. Select: SQL Tuning Set: PENDING_STATS_WKLD. Select “Comparision Metric”: Buffer Gets **Click** Save.
 
 ![](media/dd8e59451bf9d2de14f07592d390da6a.jpg)
 
-12.  Navigate To **Performance** , to **SQL** , to **Optimizer Statistics**
+15.  Navigate To **Performance** , to **SQL** , to **Optimizer Statistics**
 
 ![](media/4e82b571a46f839223bca1f879643bb0.jpg)
 
-13.  **Click** “Gather”
+16.  **Click** “Gather”
 
 ![](media/1e54f21d483e95189477069278b54053.jpg)
 
-14.  Select “Schema”. Check “Validate the impact of statistics on…..” **Click**  “Next”
+17.  Select “Schema”. Check “Validate the impact of statistics on…..” **Click**  “Next”
 
 ![](media/1d4b3ee3678078564de13336896fbe34.jpg)
 
-15.  **Click**  “Add”
+18.  **Click**  “Add”
 
 ![](media/07c9dde006c7bc0a1fc804ef62f5cd5a.jpg)
 
-16.  **Click**  “Search”. **Select:** STAT1, STAT2 **Click**  “OK”
+19.  **Click**  “Search”. **Select:** STAT1, STAT2 **Click**  “OK”
 
 ![](media/5f8e1b0229f48747aa96998dbbe0aa87.jpg)
 
-17.  **Click**  “Next”
+20.  **Click**  “Next”
 
 ![](media/47d4db96f2a225723e405f06171d2c7d.jpg)
 
-18.  **Click**  “Next”
+21.  **Click**  “Next”
 
 ![](media/a4faddf1878e9f72df40f1bde4e54bdf.jpg)
 
-17.  **Click**  “Submit”
+22.  **Click**  “Submit”
 
 ![](media/d2c4f87d66682e3ecbb6b9c62e639281.jpg)
 
-18. In the confirmation section on top, click on the SQL Performance Analyzer
+23. In the confirmation section on top, click on the SQL Performance Analyzer
     Task that was started. If you accidentally closed or lost this page, navigate to **DB Target** , then **Performance Menu** ,  then **SQL Performance Analyzer Home** , then **Select** the latest SPA task you just
 created at the bottom of the page.
 
 ![](media/24fee673a5a32b19e55b92dae376c233.jpg)
 
-19. You now have now a running SQL Performance Analyzer task. Wait until its Last
+24. You now have now a running SQL Performance Analyzer task. Wait until its Last
     Run Status is Completed. **Click**  on “Name”
 
 ![](media/d7b97d687f8d9a904ed2e7ee68f5da89.jpg)
 
-20.  As you can see there have been four SQL trials executed. The first two have
+25.  As you can see there have been four SQL trials executed. The first two have
     identified SQL statements with plan changes. In the last two trials it is
     only statements with plan changes that have been executed. This will reduce
     the amount of time and resources used in a production system. **Click** on the eyeglasses icon for the second report.
 
 ![](media/e74bda3508f98dbfb69f1e9e196d9c01.jpg)
 
-21.  As we can see the majority of our statements had unchanged performance. We
+26.  As we can see the majority of our statements had unchanged performance. We
     have a significant improvement but most important to notice is that we have
     no regression. If there had been regression then we have the ability to tune the regressed
 statement or use SQL Plan Baselines to remediate the identified regressions.
@@ -598,11 +610,11 @@ implementing SQL Profile recommendations
 
 
 
-22.  Since this application has used stale statistics for a long period, then it would be good to have new statistics implemented. **Click** on “Publish Object Statistics”
+27.  Since this application has used stale statistics for a long period, then it would be good to have new statistics implemented. **Click** on “Publish Object Statistics”
 
 ![](media/bfd46716f39ec820e1c9c0c9982d5218.jpg)
 
-23. We can now change statistics for all tables where we have pending
+28. We can now change statistics for all tables where we have pending
     statistics. For the scope of this exercise we will only change statistics
     for schema STAT1. **Click** the Checkbox for schema STAT1 **Click** Publish
 
