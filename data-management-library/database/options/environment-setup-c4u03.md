@@ -367,21 +367,24 @@ Next step is to install the Oracle Cloud CLI. This can be done manually (see doc
     Compare the fingerprint in the output of config file to the one in OCI console window and make sure they match.
 
 10. Now let's test.  Enter the following command.  Ignore any python related errors.  The --output table formats the cli to return the command results in table format.
-    ````
-    oci os object list -bn DBOptions --output table
-    ````
-    ![](img/ssbdmp.png) 
+
+    Enter the DBOptions Bucket Name that matches your compartment.  (e.g. dboptionsCN1203 or dboptionsUS-REST1211, etc)
+    
+        ````
+        oci os object list -bn <<Enter DBOptions Bucket Name>> --output table
+        ````
+        ![](img/ssbdmp.png) 
 
 
 ## Section 7-Finish Environment Setup
 
 1. Congrats! You have Oracle Cloud command line access to your newly created instance!  Let's  download the files you will need for these labs from object storage. A storage bucket `DBOptions` has been created that has all the files you need for the series of labs in this roadshow.  YOu will be downloading the files directly to the instance you just created using the oci cli `bulk-download` command.  It may take some time (2-3 mins), please be patient.
+
+    Enter the DBOptions Bucket Name that matches your compartment.  (e.g. dboptionsCN1203 or dboptionsUS-REST1211, etc)
     ````
     cd /home/opc/
-    oci os object bulk-download -bn DBOptions --download-dir /home/opc
+    oci os object bulk-download -bn <<Enter DBOptions Bucket Name>> --download-dir /home/opc
     ````
-        
-
 
     ![](img/download-bucket.png)  
 
