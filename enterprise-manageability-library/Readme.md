@@ -12,13 +12,14 @@ DO NOT EXPORT OR DELETE EM CUSTOM IMAGE - IT WILL REMOVE IT FOR EVERYONE.
 -  Google Chrome 
 
 ## Enterprise Manager Labs 
-1. Folow provided setup document for your specific class
-2. [Lifecycle Management for PDBs](enterprise_manager/em_db_lifecycle_automation.md)
-3. [Find, Fix, and Validate](enterprise_manager/em_find_fix_validate.md)
+Follow provided setup document for your specific class
+
+1. [Lifecycle Management for PDBs](enterprise_manager/em_db_lifecycle_automation.md)
+2. [Find, Fix, and Validate](enterprise_manager/em_find_fix_validate.md)
 
 ## Oracle Management Cloud Labs 
-3. [Proactive Database Performance Management with IT Analytics](management_cloud/pro_dbperf_ita.md)
-4. [Log Analytics for Database Troubleshooting and Root-Cause Analysis](management_cloud/log_analytics_of_databases.md)
+1. [Proactive Database Performance Management with IT Analytics](management_cloud/pro_dbperf_ita.md)
+2. [Log Analytics for Database Troubleshooting and Root-Cause Analysis](management_cloud/log_analytics_of_databases.md)
 
 
 
