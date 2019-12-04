@@ -4,6 +4,8 @@
 
 These labs are designed so each section can be done independently. Please look for the order of execution reccomended by your instructor when attending a roadshow workshop. Note: there are a number of assumptions associated and documented for these labs. Please pay attention to those.
 
+PLEASE DO NOT EXPORT OR DELETE THE EM CUSTOM IMAGE - IT WILL REMOVE IT FOR EVERYONE
+
 ## General Oracle Cloud Lab Prerequisites
 -  Cloud Account or Free Tier Account
 -  Putty (Windows users)
