@@ -237,13 +237,16 @@ sudo pip install virtualenv
 9. Now create a virtual environment, Enter command:
 
 ```
-virtualenv <Environment_Name >
+virtualenv <Environment_Name>
 ```
 For example **virtualenv stream_env**
 
 Now initialize the virtual enviornment, Enter command:
 
 **NOTE** : Below command assumes that the enviornment name is 'stream-env'
+```
+cd /home/opc/stream_env/bin
+```
 ```
 source ~/stream_env/bin/activate
 ```
