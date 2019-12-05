@@ -65,28 +65,32 @@ This lab will demonstration both provisioning and configuration of your infrastr
 1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
-2. From the OCI Services menu,Click **Virtual Cloud Network** under Networking and Click **Create Virtual Cloud Network**
-
-3. Select the compartment assigned to you from drop down menu on left part of the screen
-
-**NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
+2.  From the OCI Services menu,Click **Virtual Cloud Network**. Select the compartment assigned to you from drop down menu on left part of the screen under Networking and Click **Networking QuickStart**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text">
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL002.PNG" alt="image-alt-text">
+
+**NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
+
+3. Click **VCN with Internet Connectivity** and click **Start Workflow**
 
 4. Fill out the dialog box:
 
 
-- **Name:** Enter easy to remember name
-- **Create in Compartment:** Has the correct compartment
-- **Create Virtual Cloud Network Plus Related Resources:** Select this option.
-- Click **Create Virtual Cloud Network**
-- Click **Close**
+- **VCN NAME**: Provide a name
+- **COMPARTMENT**: Ensure your compartment is selected
+- **VCN CIDR BLOCK**: Provide a CIDR block (10.0.0.0/16)
+- **PUBLIC SUBNET CIDR BLOCK**: Provide a CIDR block (10.0.1.0/24)
+- **PRIVATE SUBNET CIDR BLOCK**: Provide a CIDR block (10.0.2.0/24)
+- Click **Next**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text">
+5. Verify all the information and  Click **Create**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text">
+6. This will create a VCN with followig components.
+
+**VCN**, **Public subnet**, **Private subnet**, **Internet gateway (IG)**, **NAT gateway (NAT)**, **Service gateway (SG)**
+
+7. Click **View Virtual Cloud Network** to display your VCN details.
 
 ## Create Compute instance, configure OCI CLI, and upload API keys
 
@@ -133,33 +137,34 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 6. Click the apps icon, launch notepad and paste the key in Notepad (as backup)
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0010.PNG" alt="image-alt-text">
 
-7. Switch to the OCI console. From OCI services menu, Click **Instances** under **Compute**
+7. Switch to the OCI console. From OCI services menu, Click **Instances** under **Compute** 
 
-8. Click Create Instance. Fill out the dialog box:
-
+8. Click **Create Instance**. Fill out the dialog box:
 
 - **Name your instance**: Enter a name 
-- **Choose an operating system or image source**: lick **Change Image Source**. In the new window, Click **Oracle Images** Choose **Oracle Cloud Developer Image**. Scroll down, Accept the Agreement and Click **Select Image**
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_OCI_Streaming_service/img/Stream_009.PNG" alt="image-alt-text">
-
+- **Choose an operating system or image source**: Click **Change Image Source**. In the new window, Click **Oracle Images** Choose **Oracle Cloud Developer Image**. Scroll down, Accept the Agreement and Click **Select Image**
 - **Availability Domain**: Select availability domain
 - **Instance Type**: Select Virtual Machine 
-- **Instance Shape**: Select VM shape (Choose from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1)
+- **Instance Shape**: Select VM shape 
 
 **Under Configure Networking**
 - **Virtual cloud network compartment**: Select your compartment
 - **Virtual cloud network**: Choose the VCN 
 - **Subnet Compartment:** Choose your compartment. 
-- **Subnet:** Choose the first Subnet
+- **Subnet:** Choose the Public Subnet under **Public Subnets** 
 - **Use network security groups to control traffic** : Leave un-checked
 - **Assign a public IP address**: Check this option
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text">
+
 - **Boot Volume:** Leave the default
 - **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
 
 9. Click **Create**
 
+
 **NOTE:** If 'Service limit' error is displayed choose a different shape from VM.Standard2.1, VM.Standard.E2.1, VM.Standard.B1.1  OR choose a different AD
+
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text">
 
 10. Wait for Instance to be in **Running** state. In git-bash Enter Command:

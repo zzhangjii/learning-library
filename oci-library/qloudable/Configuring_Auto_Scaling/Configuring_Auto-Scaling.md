@@ -75,28 +75,33 @@ A cooldown period between autoscaling events lets the system stabilize at the up
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
-2. From the OCI Services menu,Click **Virtual Cloud Network** under Networking and Click **Create Virtual Cloud Network**
-
-3. Select the compartment assigned to you from drop down menu on left part of the screen
-
-**NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
+2. From the OCI Services menu,Click **Virtual Cloud Network**. Select the compartment assigned to you from drop down menu on left part of the screen under Networking and Click **Networking QuickStart**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text">
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL002.PNG" alt="image-alt-text">
+
+**NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
+
+3. Click **VCN with Internet Connectivity** and click **Start Workflow**
 
 4. Fill out the dialog box:
 
 
-- **Name:** Enter easy to re¬member name
-- **Create in Compartment:** Has the correct compartment
-- **Create Virtual Cloud Network Plus Related Resources:** Select this option.
-- Click **Create Virtual Cloud Network**
-- Click **Close**
+- **VCN NAME**: Provide a name
+- **COMPARTMENT**: Ensure your compartment is selected
+- **VCN CIDR BLOCK**: Provide a CIDR block (10.0.0.0/16)
+- **PUBLIC SUBNET CIDR BLOCK**: Provide a CIDR block (10.0.1.0/24)
+- **PRIVATE SUBNET CIDR BLOCK**: Provide a CIDR block (10.0.2.0/24)
+- Click **Next**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text">
+5. Verify all the information and  Click **Create**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text">
+6. This will create a VCN with followig components.
+
+**VCN**, **Public subnet**, **Private subnet**, **Internet gateway (IG)**, **NAT gateway (NAT)**, **Service gateway (SG)**
+
+7. Click **View Virtual Cloud Network** to display your VCN details.
+             
 
 ## Create Load Balancer and update Security List
 
@@ -109,16 +114,16 @@ A cooldown period between autoscaling events lets the system stabilize at the up
 **Under Add Details**
 
 
-- LOAD BALANCER NAME: Enter a name for your load balancer.
-- CHOOSE VISIBILITY TYPE: Public
-- CHOOSE THE MAXIMUM TOTAL BANDWIDTH: Select 100Mbps. (This specifies the bandwidth of the load balancer.)
+- **LOAD BALANCER NAME**: Enter a name for your load balancer.
+- **CHOOSE VISIBILITY TYPE**: Public
+- **CHOOSE THE MAXIMUM TOTAL BANDWIDTH**: Select **SMALL** 100Mbps. (This specifies the bandwidth of the load balancer.)
 
 
 **NOTE:** Shape cannot be changed later.
 
 
-- VIRTUAL CLOUD NETWORK: Choose your Virtual Cloud Network
-- SUBNET: Choose the  Availability Domain specific subnet in AD1 as first subnet. Then choose the Availability Domain specific subnet in AD2 as second subnet.
+- **VIRTUAL CLOUD NETWORK**: Choose your Virtual Cloud Network
+- **SUBNET**: Choose the **Public Subnet**
 
 <img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_006.PNG" alt="image-alt-text">
 
@@ -127,8 +132,8 @@ A cooldown period between autoscaling events lets the system stabilize at the up
 **Under Choose Backends:**
 
 
-- SPECIFY A LOAD BALANCING POLICY: Weighted Round Robin
-- Don't add any backend. This will be managed by the instance pool. 
+- **SPECIFY A LOAD BALANCING POLICY**: Weighted Round Robin
+- **Add Backends**: Don't add any backend. This will be managed by the instance pool. 
 
 <img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_007.PNG" alt="image-alt-text">
 
@@ -136,9 +141,9 @@ A cooldown period between autoscaling events lets the system stabilize at the up
 ***Under SPECIFY HEALTH CHECK POLICY***
 
 
-- PROTOCOL: HTTP
-- Port: Enter 80 
-- URL PATH (URI): /
+- **PROTOCOL**: HTTP
+- **Port**: 80 
+- **URL PATH (URI)**: /
 
 ***Leave other options as default***
 
@@ -146,8 +151,8 @@ A cooldown period between autoscaling events lets the system stabilize at the up
 
 **Under Configure Listener**
 
-- SPECIFY THE TYPE OF TRAFFIC YOUR LISTENER HANDLES: HTTP
-- SPECIFY THE PORT YOUR LISTENER MONITORS FOR INGRESS TRAFFIC: 80
+- **SPECIFY THE TYPE OF TRAFFIC YOUR LISTENER HANDLES**: HTTP
+- **SPECIFY THE PORT YOUR LISTENER MONITORS FOR INGRESS TRAFFIC**: 80
 
 ***Leave other options as default***
 
@@ -158,7 +163,7 @@ A cooldown period between autoscaling events lets the system stabilize at the up
 
 5. From OCI Services menu, Click **Virtual Cloud Network** under Networking. Locate the VCN you created earlier.
 
-6. Click  VCN name to display VCN detail page.
+6. Click VCN name to display VCN detail page.
 
 7. Click **Security Lists**, and locate the Default Security List.
 
@@ -233,29 +238,30 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 8. Click **Create Instance**. Fill out the dialog box:
 
-
 - **Name your instance**: Enter a name 
 - **Choose an operating system or image source**: For the image, we recommend using the Latest Oracle Linux available.
 - **Availability Domain**: Select availability domain
 - **Instance Type**: Select Virtual Machine 
-- **Instance Shape**: Select VM shape (Choose from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1)
+- **Instance Shape**: Select VM shape 
 
 **Under Configure Networking**
 - **Virtual cloud network compartment**: Select your compartment
 - **Virtual cloud network**: Choose the VCN 
 - **Subnet Compartment:** Choose your compartment. 
-- **Subnet:** Choose the first Subnet
+- **Subnet:** Choose the Public Subnet under **Public Subnets** 
 - **Use network security groups to control traffic** : Leave un-checked
 - **Assign a public IP address**: Check this option
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text">
+
 - **Boot Volume:** Leave the default
 - **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
-
 
 9. Click  **Show Advanced Options**
 
 **Under Management**
 
-- User Data: Choose '*Paste cloud-init script*' and paste the below script. Cloud-init script will be executed at the first boot only to configure the instance. 
+- **User Data**: Choose '*Paste cloud-init script*' and paste the below script. Cloud-init script will be executed at the first boot only to configure the instance. 
 
 ```
 #cloud-config
@@ -298,41 +304,43 @@ Fill out the dialog box:
 15.  Click **Create Instance Pool**. A new dialog box will appear. This is used to create initial configuration of the instance pool such as how many compute instance to create initially, VCN, and Availability domain the instance pool should be created in. Fill out the dialog box:
 
 
-- CREATE IN COMPARTMENT: Choose your compartment
-- INSTANCE POOL NAME : Provide a suitable name
-- NUMBER OF INSTANCES : 0 
+- **CREATE IN COMPARTMENT**: Choose your compartment
+- **INSTANCE POOL NAME**: Provide a suitable name
+- **NUMBER OF INSTANCES**: 0 
 
 (This is the number of computes that should be launched when the pool is created. We will start with no compute)
 
 
-- INSTANCE CONFIGURATION COMPARTMENT : Provide your compartment
+- **INSTANCE CONFIGURATION COMPARTMENT** : Provide your compartment
 
 (This is the compartment where instance configuration will be placed and can only be used in this specific compartment)
 
 
-- INSTANCE CONFIGURATION: Choose the instance configuration created earlier
+- **INSTANCE CONFIGURATION**: Choose the instance configuration created earlier
 
 (Any computes launched in this pool will inherit shape, image and ssh keys of the compute whose instance configuration we are using)
 
-- ATTACH A LOAD BALANCER: Check it.
+- **ATTACH A LOAD BALANCER**: Select this option.
 
-- LOAD BALANCER COMPARTMENT : Choose your compartment
+- **LOAD BALANCER COMPARTMENT**: Choose your compartment
 
-- LOAD BALANCER : Choose the Load Balancer created earlier
+- **LOAD BALANCER**: Choose the Load Balancer created earlier
 
-- BACKEND SET : Choose the first backend set
+- **BACKEND SET**: Choose the first backend set
 
-- PORT : 80
+- **PORT**: 80
 
-- VNIC : Leave the default
+- **VNIC**: Leave the default
 
 
-- AVAILABILITY DOMAIN: Choose the AD you want to places instances (you can choose first AD)
-- VIRTUAL CLOUD NETWORK COMPARTMENT: Choose VCN's compartment
-- VIRTUAL CLOUD NETWORK: Choose your VCN
-- SUBNET COMPARTMENT: Choose your compartment
+- **AVAILABILITY DOMAIN**: Choose the AD you want to places instances (you can choose first AD if in Multi AD region)
+- **VIRTUAL CLOUD NETWORK COMPARTMENT**: Choose VCN's compartment
+- **VIRTUAL CLOUD NETWORK**: Choose your VCN
+- **SUBNET COMPARTMENT**: Choose your compartment
 
-- SUBNET: Choose the Public Subnet  
+- **SUBNET**: Choose the Public Subnet  
+
+**NOTE: Below step of adding second AD only applies if you are working in Multi AD Region. This step should be skipped for Single AD Region.**
 
 16. Click **+ Additional Selection** and select a different availability domain for the instance pool. Then, specify the VCN details for the second availability domain.
 
@@ -353,21 +361,21 @@ Fill out the dialog box:
 19. Fill out the dialog box:
 
 
-- COMPARTMENT: Choose your compartment
-- AUTOSCALING CONFIGURATION NAME : Provide a name
-- INSTANCE POOL : This should show your instance pool name created earlier
-- COOLDOWN IN SECONDS : 300 (This is he minimum period of time between scaling actions.)
-- AUTOSCALING POLICY NAME : Provide a name
-- PERFORMANCE METRIC : CPU Utilization (This is the Metric to use for triggering scaling actions.)
-- MINIMUM NUMBER OF INSTANCES : 1 (this is the minimum number of instances that the pool will always have)
-- MAXIMUM NUMBER OF INSTANCES : 2 (this is the maximum number of instances that the pool will always have)
-- INITIAL NUMBER OF INSTANCES : 1 (this is how many instances will be created in the instance pool initially)
-- SCALE-OUT OPERATOR : Greater than (>)
-- THRESHOLD PERCENTAGE : 10
-- NUMBER OF INSTANCES TO ADD : 1
-- SCALE-IN OPERATOR : Less than (<)
-- THRESHOLD PERCENTAGE : 5
-- NUMBER OF INSTANCES TO REMOVE  : 1
+- **COMPARTMENT**: Choose your compartment
+- **AUTOSCALING CONFIGURATION NAME** : Provide a name
+- **INSTANCE POOL** : This should show your instance pool name created earlier
+- **COOLDOWN IN SECONDS** : 300 (This is he minimum period of time between scaling actions.)
+- **AUTOSCALING POLICY NAME** : Provide a name
+- **PERFORMANCE METRIC** : CPU Utilization (This is the Metric to use for triggering scaling actions.)
+- **MINIMUM NUMBER OF INSTANCES** : 1 (this is the minimum number of instances that the pool will always have)
+- **MAXIMUM NUMBER OF INSTANCES** : 2 (this is the maximum number of instances that the pool will always have)
+- **INITIAL NUMBER OF INSTANCES** : 1 (this is how many instances will be created in the instance pool initially)
+- **SCALE-OUT OPERATOR** : Greater than (>)
+- **THRESHOLD PERCENTAGE** : 10
+- **NUMBER OF INSTANCES TO ADD** : 1
+- **SCALE-IN OPERATOR** : Less than (<)
+- **THRESHOLD PERCENTAGE** : 5
+- **NUMBER OF INSTANCES TO REMOVE**  : 1
 
 **Leave other fields as is**
 
