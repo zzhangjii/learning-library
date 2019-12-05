@@ -73,37 +73,40 @@ In this lab you will create and mount File Storage System to a compute instance 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
-2. From the OCI Services menu, Click **Virtual Cloud Network under Networking**, Select the compartment assigned to you from drop down menu on left part of the screen 
+2. From the OCI Services menu,Click **Virtual Cloud Network**. Select the compartment assigned to you from drop down menu on left part of the screen under Networking and Click **Networking QuickStart**
 
-3. Click **Create Virtual Cloud Network**
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text">
 
 
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text">
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL002.PNG" alt="image-alt-text">
+3. Click **VCN with Internet Connectivity** and click **Start Workflow**
 
 4. Fill out the dialog box:
 
 
-- **Name:** Enter easy to remember name
-- **Create in Compartment:** Has the correct compartment
-- **Create Virtual Cloud Network Plus Related Resources:** Select this option.
-- Click **Create Virtual Cloud Network**
-- Click **Close**
+- **VCN NAME**: Provide a name
+- **COMPARTMENT**: Ensure your compartment is selected
+- **VCN CIDR BLOCK**: Provide a CIDR block (10.0.0.0/16)
+- **PUBLIC SUBNET CIDR BLOCK**: Provide a CIDR block (10.0.1.0/24)
+- **PRIVATE SUBNET CIDR BLOCK**: Provide a CIDR block (10.0.2.0/24)
+- Click **Next**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL003.PNG" alt="image-alt-text">
+5. Verify all the information and  Click **Create**
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL004.PNG" alt="image-alt-text">
+6. This will create a VCN with followig components.
+
+**VCN**, **Public subnet**, **Private subnet**, **Internet gateway (IG)**, **NAT gateway (NAT)**, **Service gateway (SG)**
+
+7. Click **View Virtual Cloud Network** to display your VCN details.
               
-5. In your VCN details page, Click **Security List** and then **Default Security list for<YOUR_VCN_NAME>**
+8. In your VCN details page, Click **Security List** and then **Default Security list for<YOUR_VCN_NAME>**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/Customer_Lab_001.PNG" alt="image-alt-text">
 
 **NOTE:** Note down the Subnet and Availability domain.We will create File Storage system and compute instance in the same subnet and Availability domain later on​​
 
-6. In Security list details page, Click **Add Ingress Rule**.Click **+Additional Ingress Rule** and add below two rules:
+9. In Security list details page, Click **Add Ingress Rule**.Click **+Additional Ingress Rule** and add below two rules:
 
 **Rule # 1 for access of NFS and NLM traffic with Destination Port Range of 2048-2050. (Type the values).**
 
@@ -125,7 +128,7 @@ In this lab you will create and mount File Storage System to a compute instance 
 - **SOURCE PORT RANGE:** 2048-2050
 - **DESTINATION PORT RANGE:** All
 
-7. Click **+Additional Ingress Rule** to add third ingress rule allowing traffic to a Destination Port Range of 111 for the NFS rpcbind utility.
+10. Click **+Additional Ingress Rule** to add third ingress rule allowing traffic to a Destination Port Range of 111 for the NFS rpcbind utility.
 
 
 - Source CIDR: 10.0.0.0/16
@@ -133,7 +136,7 @@ In this lab you will create and mount File Storage System to a compute instance 
 - Source Port Range: All
 - Destination Port Range: 111
 
-8. Click **+Additional Ingress** Rule  to add fourth ingress rule allowing traffic to a Source Port Range of 111 for the NFS rpcbind utility.
+11. Click **+Additional Ingress** Rule  to add fourth ingress rule allowing traffic to a Source Port Range of 111 for the NFS rpcbind utility.
 
 
 - Source CIDR: 10.0.0.0/16
@@ -141,7 +144,7 @@ In this lab you will create and mount File Storage System to a compute instance 
 - Source Port Range: 111
 - Destination Port Range: All
 
-9. Click **Add Ingress Rule**
+12. Click **Add Ingress Rule**
 
 **NOTE:** Note down the Subnet and Availability domain. We will create File Storage system and compute instance in the same subnet and Availability domain later on.
 
@@ -221,20 +224,22 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 8. Click **Create Instance**. Fill out the dialog box:
 
-
 - **Name your instance**: Enter a name 
 - **Choose an operating system or image source**: For the image, we recommend using the Latest Oracle Linux available.
 - **Availability Domain**: Select availability domain
 - **Instance Type**: Select Virtual Machine 
-- **Instance Shape**: Select VM shape (Choose from VM.Standard2.1, VM.Standard.E2.1, VM.Standard1.1, VM.Standard.B1.1)
+- **Instance Shape**: Select VM shape 
 
 **Under Configure Networking**
 - **Virtual cloud network compartment**: Select your compartment
 - **Virtual cloud network**: Choose the VCN 
 - **Subnet Compartment:** Choose your compartment. 
-- **Subnet:** Choose the first Subnet
+- **Subnet:** Choose the Public Subnet under **Public Subnets** 
 - **Use network security groups to control traffic** : Leave un-checked
 - **Assign a public IP address**: Check this option
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text">
+
 - **Boot Volume:** Leave the default
 - **Add SSH Keys:** Choose 'Paste SSH Keys' and paste the Public Key saved earlier.
 

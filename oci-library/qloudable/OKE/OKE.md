@@ -73,59 +73,41 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
-2. From the OCI Services menu,Click **Virtual Cloud Network** under Networking and Click **Create Virtual Cloud Network**
-
-3. Select the compartment assigned to you from drop down menu on left part of the screen
-
-**NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
+From the OCI Services menu,Click **Virtual Cloud Network**. Select the compartment assigned to you from drop down menu on left part of the screen under Networking and Click **Create Virtual Cloud Network**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text">
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL002.PNG" alt="image-alt-text">
 
-4. Fill out the dialog box:
+**NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
+2. Fill out the dialog box:
 
- **Name:** Enter easy to re¬member name
+- **VCN NAME**: Provide a name
+- **COMPARTMENT**: Ensure your compartment is selected
+- **VCN CIDR BLOCK**: 172.16.0.0/16
 
-- **Create in Compartment:** Has the correct compartment
+3. Click **Create Virtual Cloud Network**
 
-- **Create Virtual Cloud Network Only:** Select this option.
-
--**CIDR BLOCK**: 172.16.0.0/16
-
-- Click **Create Virtual Cloud Network**
-
-- Click **Close**
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_001.PNG" alt="image-alt-text">
-
-5. Virtual Cloud Network will be created and VCN name will appear on OCI Console. Scroll down to find your VCN if multiple VCN exist, and Click your VCN name.
-
-6. In VNC detials page,  Click **Internet Gateways** under Resources, and Click **Create Internet Gateway**. Fill out the dialog box. Click **Create Internet Gateway** (ensure correct compartment is selected).
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_002.PNG" alt="image-alt-text">
-
-7. Click **Route tables**, and Click **Create Route Table**
+4. Click **Route tables**, and Click **Create Route Table**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Advanced/img/OCI_Advanced_003.PNG" alt="image-alt-text">
 
-8. **Click +Additional Route Rules**
+5. **Click +Additional Route Rules**
 - Target Type: Select **Internet Gateway** 
 - Destination CIDR Block: 0.0.0.0/0 
 - Compartment: Make sure the correct Compartment is selected
 - Target Internet Gateway: Select the Internet Gateway for your VCN. 
 
-9. Click **Add Route Rules**.
+6. Click **Add Route Rules**.
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_003.PNG" alt="image-alt-text">
 
-10. Click your VCN name, then **Security Lists** and then **Create Security List** (You will be creating a new security list). Fill out the dialog box:
+7. Click your VCN name, then **Security Lists** and then **Create Security List** (You will be creating a new security list). Fill out the dialog box:
 
 - Name: Provide a Name
 - CREATE IN COMPARTMENT: Choose your compartment
 
-11. Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure to leave STATELESS flag un-checked
+8. Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure to leave STATELESS flag un-checked
 
 
 - Source Type: CIDR
@@ -134,7 +116,7 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 - Source Port Range: All
 - Destination Port Range: All
 
-12. Click **+Additional Ingress Rule**
+9. Click **+Additional Ingress Rule**
 
 
 - Source Type: CIDR
@@ -143,7 +125,7 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 - Source Port Range: All
 - Destination Port Range: All
 
-13. Click **+Additional Ingress Rule**
+10. Click **+Additional Ingress Rule**
 
 
 - Source Type: CIDR
@@ -152,7 +134,7 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 - Source Port Range: All
 - Destination Port Range: All
 
-14. Click **+Additional Ingress Rule**
+11. Click **+Additional Ingress Rule**
 
 
 - Source Type: CIDR
@@ -161,7 +143,7 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 - Type: 3
 - Code: 4
 
-15. Click **+Additional Ingress Rule**
+12. Click **+Additional Ingress Rule**
 
 
 - Source Type: CIDR
@@ -170,7 +152,7 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 - Source Port Range: All
 - Destination Port Range: 22
 
-16. Click **+Additional Ingress Rule**
+13. Click **+Additional Ingress Rule**
 
 
 - Source Type: CIDR
@@ -179,7 +161,7 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 - Source Port Range: All
 - Destination Port Range: 22
 
-17. Click **+Additional Ingress Rule**
+14. Click **+Additional Ingress Rule**
 
 
 - Source Type: CIDR
@@ -188,7 +170,7 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 - Source Port Range: All
 - Destination Port Range: 22
 
-18. Click **+Additional Egress Rule** and enter the following Egress rule; Ensure to leave STATELESS flag un-checked
+15. Click **+Additional Egress Rule** and enter the following Egress rule; Ensure to leave STATELESS flag un-checked
 
 
 - Destination Type: CIDR
@@ -197,15 +179,15 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 - Source Port Range: All
 - Destination Port Range: All
 
-19. Click **Create Security List**.
+16. Click **Create Security List**.
 
-20. Next we will create another Security Lists for Load Balancer (to be created later). Click **Security Lists** and then **Create Security List** (You will be creating a new security list). Fill out the dialog box:
+17. Next we will create another Security Lists for Load Balancer (to be created later). Click **Security Lists** and then **Create Security List** (You will be creating a new security list). Fill out the dialog box:
 
 
 - Name: Provide a Name
 - CREATE IN COMPARTMENT: Choose your compartment
 
-21. Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure to leave STATELESS flag un-checked
+18. Click **+Additional Ingress Rule** and enter the following ingress rule; Ensure to leave STATELESS flag un-checked
 
 
 - Source Type: CIDR
@@ -214,11 +196,11 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 - Source Port Range: All
 - Destination Port Range: ALL
 
-22. Click **Create Security List**.
+19. Click **Create Security List**.
 
-23. Next we will create three worker subnets and two load balancer subnets for Oracle Kubernetes Engine (OKE) implementation. In your VCN details page Click **Subnets**.
+20. Next we will create three worker subnets and two load balancer subnets for Oracle Kubernetes Engine (OKE) implementation. In your VCN details page Click **Subnets**.
 
-24. Click **Create Subnet**. Fill out the dialog box:
+21. Click **Create Subnet**. Fill out the dialog box:
 
 
 **Worker  Subnet # 1**
@@ -232,9 +214,9 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_004.PNG" alt="image-alt-text">
 
-25. Leave all other options as default, Click **Create Subnet**.
+22. Leave all other options as default, Click **Create Subnet**.
 
-26. Click **Create Subnet**. Fill out the dialog box:
+23. Click **Create Subnet**. Fill out the dialog box:
 
 
 **Worker  Subnet # 2**
@@ -246,9 +228,9 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 - DHCP Options: Select the default.
 - Security Lists: Select the First Security List created earlier.
 
-27. Leave all other options as default, Click **Create Subnet**.
+24. Leave all other options as default, Click **Create Subnet**.
 
-28. Click **Create Subnet**. Fill out the dialog box:
+25. Click **Create Subnet**. Fill out the dialog box:
 
 
 **Worker  Subnet # 3**
@@ -260,9 +242,9 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 - DHCP Options: Select the default.
 - Security Lists: Select the First Security List created earlier.
 
-29. Leave all other options as default, Click **Create Subnet**.
+26. Leave all other options as default, Click **Create Subnet**.
 
-30. Next we will create two load balancers. Click **Create Subnet**. Fill out the dialog box:
+27. Next we will create two load balancers. Click **Create Subnet**. Fill out the dialog box:
 
 
 **Load Balancer Subnet # 1**
@@ -274,9 +256,9 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 - DHCP Options: Select the default.
 - Security Lists: Select the Second Security List created earlier.
 
-31. Click **Create Subnet**
+28. Click **Create Subnet**
 
-32. Click **Create Subnet**. Fill out the dialog box:
+29. Click **Create Subnet**. Fill out the dialog box:
 
 
 **Load Balancer Subnet # 2**
@@ -288,7 +270,7 @@ Oracle Cloud Infrastructure Container Engine for Kubernetes is a fully-managed, 
 - DHCP Options: Select the default.
 - Security Lists: Select the Second Security List created earlier.
 
-33. Click **Create Subnet**
+30. Click **Create Subnet**
 
 **We now have a Virtual Cloud Network with all the necessary resources and configuration needed for Oracle Kubernetes Engine (OKE) deployment. Next we will create Kubernetes Cluster**
 
