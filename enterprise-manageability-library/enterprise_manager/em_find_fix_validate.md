@@ -1035,4 +1035,4 @@ footprint of each database and reduce resource usage on the server.
 
 That concludes this lab.
 
->   [Return back to top menu listing all available labs](../readme.md)
+>   Use the back arrow on your browser to return back to top menu listing all available labs
