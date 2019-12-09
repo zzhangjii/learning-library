@@ -34,6 +34,7 @@ $(document).ready(function () {
             articleElement = makeAnchorLinksWork(articleElement); //if there are links to anchors (for example: #hash-name), this function will enable it work
             articleElement = addTargetBlank(articleElement); //setting target for all ahrefs to _blank
             articleElement = allowCodeCopy(articleElement); //adds functionality to copy code from codeblocks
+            articleElement = renderVideos(articleElement); //adds iframe to videos
             updateHeadContent(selectedTutorial); //changing document head based on the manifest
         }).done(function () {
             $("main").html(articleElement); //placing the article element inside the main tag of the Tutorial template                        
@@ -371,7 +372,7 @@ function expandSectionBasedOnHash(itemName) {
     if (anchorElement[0].tagName !== 'H2') {
         anchorElement = $(anchorElement).siblings('h2');
     }
-    expandSection(anchorElement, "fade");    
+    expandSection(anchorElement, "fade");
     $(anchorElement)[0].scrollIntoView();
     window.scrollTo(0, window.scrollY - anchorOffset);
     changeButtonState();
@@ -393,6 +394,15 @@ function allowCodeCopy(articleElement) {
         document.execCommand('copy');
         $(dummy).remove();
         $(this).parent().animate({ opacity: 0.2 }).animate({ opacity: 1 });
+    });
+    return articleElement;
+}
+/* adds iframe to videos so that it renders in the same page. 
+The MD code should be in the format [](https://www.youtube.com/embed/<enter_video_id>) for it to render as iframe */
+function renderVideos(articleElement) {
+    $(articleElement).find('a[href^="youtube:"]').each(function () {
+        $(this).before('<div class="video-container"><iframe src="https://www.youtube.com/embed/' + $(this).attr('href').split(":")[1] + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></div>').unwrap();
+        $(this).remove();
     });
     return articleElement;
 }
