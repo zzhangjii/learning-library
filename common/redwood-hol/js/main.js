@@ -30,7 +30,7 @@ $(document).ready(function () {
             articleElement = updateH1Title(articleElement); //adding the h1 title in the Tutorial before the container div and removing it from the articleElement
             articleElement = wrapSectionTagAndAddHorizonatalLine(articleElement); //adding each section within section tag and adding HR line
             articleElement = wrapImgWithFigure(articleElement); //Wrapping images with figure, adding figcaption to all those images that have title in the MD
-            articleElement = addPathToAllRelativeHref(articleElement, selectedTutorial.filename); //adding the path for all HREFs that are relative based on the filename in manifest
+            articleElement = addPathToAllRelativeHref(articleElement, selectedTutorial.filename); //adding the path for all HREFs based on the filename in manifest
             articleElement = makeAnchorLinksWork(articleElement); //if there are links to anchors (for example: #hash-name), this function will enable it work
             articleElement = addTargetBlank(articleElement); //setting target for all ahrefs to _blank
             articleElement = allowCodeCopy(articleElement); //adds functionality to copy code from codeblocks
@@ -133,21 +133,18 @@ function createShortNameFromTitle(title) {
     }
     return shortname;
 }
-/*the following function changes the relative path of images to the absolute path of the MD file.
+/*the following function changes the path of images as per the path of the MD file.
 This ensures that the images are picked up from the same location as the MD file.
 The manifest file can be in any location.*/
 function addPathToImageSrc(articleElement, myUrl) {
-    /*the following if condition is passed only when a path is specified in the filename of the manifest.
-    if "/" is not specified in the filename, it would mean that the index.html file is in the same location as the MD,
-    hence there is no need to replace relative images src */
-    if (myUrl.indexOf("http") >= 0) { //checking if url is absolute path
-        myUrl = myUrl.replace(/\/[^\/]+$/, "/"); //removing filename from the url        
-        $(articleElement).find('img').each(function () {
-            if ($(this).attr("src").indexOf("http") == -1) {
-                $(this).attr("src", myUrl + $(this).attr("src"));
-            }
-        });
-    }
+    myUrl = myUrl.replace(/\/[^\/]+$/, "/"); //removing filename from the url   
+    console.log(myUrl);
+    $(articleElement).find('img').each(function () {
+        if ($(this).attr("src").indexOf("http") == -1) {
+            $(this).attr("src", myUrl + $(this).attr("src"));
+        }
+    });
+
     return articleElement;
 }
 /* The following function adds the h1 title before the container div. It picks up the h1 value from the MD file. */
@@ -198,21 +195,17 @@ function wrapImgWithFigure(articleElement) {
     });
     return articleElement;
 }
-/*the following function changes the relative path of all relative HREFs to the absolute path of the MD file.
+/*the following function changes the path of the HREFs based on the absolute path of the MD file.
 This ensures that the files are linked correctly from the same location as the MD file.
 The manifest file can be in any location.*/
 function addPathToAllRelativeHref(articleElement, myUrl) {
-    /*the following if condition is passed only when a path is specified in the filename of the manifest.
-    if "/" is not specified in the filename, it would mean that the index.html file is in the same location as the MD,
-    hence there is no need to replace relative hrefs */
-    if (myUrl.indexOf("http") >= 0) { //checking if url is absolute path
-        myUrl = myUrl.replace(/\/[^\/]+$/, "/"); //removing filename from the url        
-        $(articleElement).find('a').each(function () {
-            if ($(this).attr("href").indexOf("http") == -1 && $(this).attr("href").indexOf("?") !== 0 && $(this).attr("href").indexOf("#") !== 0) {
-                $(this).attr("href", myUrl + $(this).attr("href"));
-            }
-        });
-    }
+    myUrl = myUrl.replace(/\/[^\/]+$/, "/"); //removing filename from the url        
+    $(articleElement).find('a').each(function () {
+        if ($(this).attr("href").indexOf("http") == -1 && $(this).attr("href").indexOf("?") !== 0 && $(this).attr("href").indexOf("#") !== 0) {
+            $(this).attr("href", myUrl + $(this).attr("href"));
+        }
+    });
+
     return articleElement;
 }
 /* the following function makes anchor links work by adding an event to all href="#...." */
@@ -372,7 +365,7 @@ function expandSectionBasedOnHash(itemName) {
     if (anchorElement[0].tagName !== 'H2') {
         anchorElement = $(anchorElement).siblings('h2');
     }
-    expandSection(anchorElement, "fade");    
+    expandSection(anchorElement, "fade");
     $(anchorElement)[0].scrollIntoView();
     window.scrollTo(0, window.scrollY - anchorOffset);
     changeButtonState();
@@ -399,8 +392,8 @@ function allowCodeCopy(articleElement) {
 }
 /* adds iframe to videos so that it renders in the same page. 
 The MD code should be in the format [](youtube:<enter_video_id>) for it to render as iframe */
-function renderVideos(articleElement) {    
-    $(articleElement).find('a[href^="youtube:"]').each(function() {              
+function renderVideos(articleElement) {
+    $(articleElement).find('a[href^="youtube:"]').each(function () {
         alert('a');
         $(this).before('<div class="video-container"><iframe src="https://www.youtube.com/embed/' + $(this).attr('href').split(":")[1] + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></div>').unwrap();
         $(this).remove();
