@@ -52,7 +52,15 @@ Section conclusion can come here.
 	<copy>Enclose the text you want to copy in &lt;copy&gt;&lt;/copy&gt;.</copy>
     ```
 	
-3. List item 3.
+3. List item 3. To add a video, follow the following format:
+    
+	```
+	<copy>[](youtube:&lt;video_id&gt;)</copy>
+	For example:
+	[](youtube:zNKxJjkq0Pw)
+    ```
+	
+    [](youtube:zNKxJjkq0Pw)
 
 Conclusion of section 2 here.
 
