@@ -372,7 +372,7 @@ function expandSectionBasedOnHash(itemName) {
     if (anchorElement[0].tagName !== 'H2') {
         anchorElement = $(anchorElement).siblings('h2');
     }
-    expandSection(anchorElement, "fade");
+    expandSection(anchorElement, "fade");    
     $(anchorElement)[0].scrollIntoView();
     window.scrollTo(0, window.scrollY - anchorOffset);
     changeButtonState();
@@ -398,9 +398,10 @@ function allowCodeCopy(articleElement) {
     return articleElement;
 }
 /* adds iframe to videos so that it renders in the same page. 
-The MD code should be in the format [](https://www.youtube.com/embed/<enter_video_id>) for it to render as iframe */
-function renderVideos(articleElement) {
-    $(articleElement).find('a[href^="youtube:"]').each(function () {
+The MD code should be in the format [](youtube:<enter_video_id>) for it to render as iframe */
+function renderVideos(articleElement) {    
+    $(articleElement).find('a[href^="youtube:"]').each(function() {              
+        alert('a');
         $(this).before('<div class="video-container"><iframe src="https://www.youtube.com/embed/' + $(this).attr('href').split(":")[1] + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></div>').unwrap();
         $(this).remove();
     });
