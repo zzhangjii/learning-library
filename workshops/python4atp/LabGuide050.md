@@ -81,9 +81,47 @@ In order to use Terraform, you will need a few different credentials which can b
 
 ### **STEP 4:** Download and Install Terraform
 
-See these instructions for [Download and Install of Terraform](https://learn.hashicorp.com/terraform/getting-started/install.html).
+See these instructions for [Download of Terraform](https://learn.hashicorp.com/terraform/getting-started/install.html).
 
-**Make sure to review the page before starting. Then verify that terraform was installed.**
+**Make sure to fully review the page before starting.**
+
+- First, click on the link to get to the downloads page.
+
+    ![](images/050/018.png)
+
+- Then, choose the appropriate package from your operating system.
+
+    ![](images/050/018.1.png)
+
+- Once the download finishes, in your home folder create a directory called `Terraform`. Then move the zip file you downloaded into this directory. Open the zip file and verify that you see the binary file in your newly created `Terraform` directory.
+
+    ![](images/050/019.png)
+
+The following steps are for Linux and Mac users. Windows users see [here](https://stackoverflow.com/questions/1618280/where-can-i-set-path-to-make-exe-on-windows) for instructions on setting the correct path.
+
+- Make sure you are in the home directory, then in the terminal run the following,
+
+    `$ nano .bash_profile`
+
+    If it doesn't exist, create it and then open the text editor.
+
+- Add the following path to your bash_profile, then save and exit.
+
+    `export PATH=$PATH:/Users/<your-user-name>/Terraform/`
+
+    ![](images/050/57.png)
+
+- Now, we need to source the profile so we can use that path in our environment.
+
+    `$ source .bash_profile`
+
+- Finally, make sure that Terraform was installed successfully.
+
+    `$ terraform`
+
+    ![](images/050/58.png)
+
+
 
 ### **STEP 5:** Download and Install the OCI CLI
 
@@ -177,10 +215,6 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
     ![](images/050/027.png)
 
-<!--
-![](images/050/018.png)
-![](images/050/018.1.png)
-![](images/050/019.png) -->
 
 ### **STEP 8:** Create Resources
 
