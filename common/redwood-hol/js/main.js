@@ -25,7 +25,8 @@ $(document).ready(function () {
         $.get(selectedTutorial.filename, function (markdownContent) { //reading MD file in the manifest and storing content in markdownContent variable
             setupAnalytics(); //enabling analytics
             console.log(selectedTutorial.filename + " loaded!");
-            $(articleElement).html(new showdown.Converter({ tables: true }).makeHtml(markdownContent)); //converting markdownContent to HTML by using showndown plugin
+            $(articleElement).html(new showdown.Converter({ tables: true }).makeHtml(markdownContent)); //converting markdownContent to HTML by using showndown plugin    
+            articleElement = renderVideos(articleElement); //adds iframe to videos
             articleElement = addPathToImageSrc(articleElement, selectedTutorial.filename); //adding the path for the image based on the filename in manifest
             articleElement = updateH1Title(articleElement); //adding the h1 title in the Tutorial before the container div and removing it from the articleElement
             articleElement = wrapSectionTagAndAddHorizonatalLine(articleElement); //adding each section within section tag and adding HR line
@@ -33,8 +34,7 @@ $(document).ready(function () {
             articleElement = addPathToAllRelativeHref(articleElement, selectedTutorial.filename); //adding the path for all HREFs based on the filename in manifest
             articleElement = makeAnchorLinksWork(articleElement); //if there are links to anchors (for example: #hash-name), this function will enable it work
             articleElement = addTargetBlank(articleElement); //setting target for all ahrefs to _blank
-            articleElement = allowCodeCopy(articleElement); //adds functionality to copy code from codeblocks
-            articleElement = renderVideos(articleElement); //adds iframe to videos
+            articleElement = allowCodeCopy(articleElement); //adds functionality to copy code from codeblocks               
             updateHeadContent(selectedTutorial); //changing document head based on the manifest
         }).done(function () {
             $("main").html(articleElement); //placing the article element inside the main tag of the Tutorial template                        
@@ -137,13 +137,14 @@ function createShortNameFromTitle(title) {
 This ensures that the images are picked up from the same location as the MD file.
 The manifest file can be in any location.*/
 function addPathToImageSrc(articleElement, myUrl) {
-    myUrl = myUrl.replace(/\/[^\/]+$/, "/"); //removing filename from the url   
-    console.log(myUrl);
-    $(articleElement).find('img').each(function () {
-        if ($(this).attr("src").indexOf("http") == -1) {
-            $(this).attr("src", myUrl + $(this).attr("src"));
-        }
-    });
+    if (myUrl.indexOf("/") !== -1) {
+        myUrl = myUrl.replace(/\/[^\/]+$/, "/"); //removing filename from the url       
+        $(articleElement).find('img').each(function () {
+            if ($(this).attr("src").indexOf("http") == -1) {
+                $(this).attr("src", myUrl + $(this).attr("src"));
+            }
+        });
+    }
 
     return articleElement;
 }
@@ -199,13 +200,14 @@ function wrapImgWithFigure(articleElement) {
 This ensures that the files are linked correctly from the same location as the MD file.
 The manifest file can be in any location.*/
 function addPathToAllRelativeHref(articleElement, myUrl) {
-    myUrl = myUrl.replace(/\/[^\/]+$/, "/"); //removing filename from the url        
-    $(articleElement).find('a').each(function () {
-        if ($(this).attr("href").indexOf("http") == -1 && $(this).attr("href").indexOf("?") !== 0 && $(this).attr("href").indexOf("#") !== 0) {
-            $(this).attr("href", myUrl + $(this).attr("href"));
-        }
-    });
-
+    if (myUrl.indexOf("/") !== -1) {
+        myUrl = myUrl.replace(/\/[^\/]+$/, "/"); //removing filename from the url        
+        $(articleElement).find('a').each(function () {
+            if ($(this).attr("href").indexOf("http") == -1 && $(this).attr("href").indexOf("?") !== 0 && $(this).attr("href").indexOf("#") !== 0) {
+                $(this).attr("href", myUrl + $(this).attr("href"));
+            }
+        });
+    }
     return articleElement;
 }
 /* the following function makes anchor links work by adding an event to all href="#...." */
@@ -394,7 +396,6 @@ function allowCodeCopy(articleElement) {
 The MD code should be in the format [](youtube:<enter_video_id>) for it to render as iframe */
 function renderVideos(articleElement) {
     $(articleElement).find('a[href^="youtube:"]').each(function () {
-        alert('a');
         $(this).before('<div class="video-container"><iframe src="https://www.youtube.com/embed/' + $(this).attr('href').split(":")[1] + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></div>').unwrap();
         $(this).remove();
     });
