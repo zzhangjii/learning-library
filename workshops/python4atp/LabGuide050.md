@@ -211,9 +211,19 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
 - Next, open variables.tf
 
+    `$ nano variables.tf`
+
     Go to the OBJECT_STORAGE section and change the default value for obj_store_namespace to yours.
 
     ![](images/050/027.png)
+
+- Finally, open compute.tf
+
+    `$ nano variables.tf`
+
+    Go to the ssh_authorized_keys variable and change the default path to yours.
+
+    ![](images/050/059.png)
 
 
 ### **STEP 8:** Create Resources
