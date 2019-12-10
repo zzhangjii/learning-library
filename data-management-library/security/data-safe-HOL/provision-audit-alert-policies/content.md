@@ -13,28 +13,28 @@ To complete this lab, you need to have the following:
 - A registered target database in Oracle Data Safe with sample audit data
 
 ### Assumptions
-This lab assumes that you are already signed in to the Oracle Data Safe Console. If not, see **View a Registered Target Database**, steps 1 and 2.
+This lab assumes that you are already signed in to the Oracle Data Safe Console. If not, see [View a Registered Target Database](?lab=lab-1-view-registered-target-database), steps 1 and 2.
 
 ## **STEP 1**: Provision audit and alert policies on a target database by using the Activity Auditing wizard
 
 - In the Oracle Data Safe Console, click the **Home** tab, and then click the **Activity Auditing** tab.
 
-  ![](./provision-audit-alert-policies/images/access-activity-auditing.png " ")
+  ![](./images/access-activity-auditing.png " ")
 
 - On the **Select Targets for Auditing** page, select the check box for your target database, and then click **Continue**.
 
-  ![](./provision-audit-alert-policies/images/select-targets-for-auditing.png " ")
+  ![](./images/select-targets-for-auditing.png " ")
 
 - On the **Retrieve Audit Policies** page, select the check box for your target database, and then click **Retrieve** to retrieve the audit policies for your database.
 
-  ![](./provision-audit-alert-policies/images/retrieve-audit-policies.png " ")
+  ![](./images/retrieve-audit-policies.png " ")
 
 - Wait until a green check mark is displayed in the **Retrieval Status** column, and then click **Continue**.
 
   The check mark means that all of the audit policies are successfully retrieved.
 
 
-  ![](./provision-audit-alert-policies/images/policies-retrieved.png " ")
+  ![](./images/policies-retrieved.png " ")
 
 - On the **Review and Provision Audit and Alert Policies** page, review the types of audit policies already enabled on your target database, and then click your target database name to provision more policies.
 
@@ -43,7 +43,7 @@ This lab assumes that you are already signed in to the Oracle Data Safe Console.
   Currently, there are no basic, admin activity, or user activity audit policies provisioned on your database, nor are there any alert policies.
 
 
-  ![](./provision-audit-alert-policies/images/additional-policies-cis.png " ")
+  ![](./images/additional-policies-cis.png " ")
 
 
 - On the **Audit Policies** tab in the **Edit Policies** dialog box, notice that the following **Basic Auditing** and **Admin Activity Auditing** policies are selected by default. Oracle recommends that you provision these policies. They are not provisioned by default.
@@ -54,7 +54,7 @@ This lab assumes that you are already signed in to the Oracle Data Safe Console.
   - **Admin Activity**
 
 
-  ![](./provision-audit-alert-policies/images/basic-admin-policies.png " ")
+  ![](./images/basic-admin-policies.png " ")
 
 
 - Expand **Custom Policies**.
@@ -66,7 +66,7 @@ This lab assumes that you are already signed in to the Oracle Data Safe Console.
   If a custom policy is selected, but greyed out, it means that the policy is already provisioned and enabled on your database and is mandatory. There are two such policies on an ATP database: `COMMON_USER` and `SYS_USER_ACTIONS`.
 
 
-  ![](./provision-audit-alert-policies/images/additional-audit-policies.png " ")
+  ![](./images/additional-audit-policies.png " ")
  
 
 
@@ -82,18 +82,18 @@ This lab assumes that you are already signed in to the Oracle Data Safe Console.
   - `ORA_LOGON_FAILURES`
 
  
-  ![](./provision-audit-alert-policies/images/oracle-predefined-policies.png " ")
+  ![](./images/oracle-predefined-policies.png " ")
 
 - Notice that the **Center for Internet Security (CIS) Configuration** policy is provisioned and enabled by default.
 
 
-  ![](./provision-audit-alert-policies/images/cis-provisioned-enabled.png " ")
+  ![](./images/cis-provisioned-enabled.png " ")
 
 
 - Click the **Alert Policies** tab.
 
 
-  ![](./provision-audit-alert-policies/images/alert-policies-tab.png " ")
+  ![](./images/alert-policies-tab.png " ")
 
 - Review the selected alert policies, and then click **Provision**. Oracle recommends that you provision all of these policies, which are as follows:
 
@@ -103,11 +103,11 @@ This lab assumes that you are already signed in to the Oracle Data Safe Console.
   - **User Creation/Deletion**
   - **User Entitlement Changes** 
 
-   ![](./provision-audit-alert-policies/images/selected-alert-policies.png " ")
+   ![](./images/selected-alert-policies.png " ")
 
 - On the **Review and Provision Audit and Alert Policies** page, wait for check marks to appear under all audit policy types, except for **All User Activity**, and then click **Continue**.
 
-  ![](./provision-audit-alert-policies/images/review-provision-audit-alert-policies.png " ")
+  ![](./images/review-provision-audit-alert-policies.png " ")
 
 
 
@@ -120,31 +120,31 @@ This lab assumes that you are already signed in to the Oracle Data Safe Console.
   The auto purge feature is enabled.
 
 
-  ![](./provision-audit-alert-policies/images/start-audit-collection-page.png " ")
+  ![](./images/start-audit-collection-page.png " ")
 
 
 - Turn off the auto purge feature by sliding the **Auto Purge Trail** slider to the left.
 
   You need to turn off this feature if you want to keep the audit data on your target database.
 
-   ![](./provision-audit-alert-policies/images/turn-off-auto-purge.png " ")
+   ![](./images/turn-off-auto-purge.png " ")
 
 - Click **Start** to start collecting audit data.
 
-  ![](./provision-audit-alert-policies/images/click-start-to-collect-audit-data.png " ")
+  ![](./images/click-start-to-collect-audit-data.png " ")
 
 - A message at the top of the page states the `UNIFIED_AUDIT_TRAIL` is successfully created.
 
   The **Collection State** column indicates that collection is **Loading**, then **STARTING**, and then **COLLECTING**.
 
 
-  ![](./provision-audit-alert-policies/images/audit-trail-created-audit-collecting.png " ")
+  ![](./images/audit-trail-created-audit-collecting.png " ")
 
 - While the audit data is being collected, click **Done**.
 
   You are directed to the **Audit Trails** page.
 
-   ![](./provision-audit-alert-policies/images/click-done-audit-collection.png " ")
+   ![](./images/click-done-audit-collection.png " ")
 
 
 
@@ -158,12 +158,12 @@ On the **Audit Trails** page, you can manage all of the audit trails for your ta
   Collection takes approximately 2 minutes. You can continue to the next step.
 
 
-  ![](./provision-audit-alert-policies/images/click-collecting-or-idle.png " ")
+  ![](./images/click-collecting-or-idle.png " ")
 
 - In the **Trail Log** dialog box, review the logs, and then click **X** to close the dialog box.
 
 
-  ![](./provision-audit-alert-policies/images/trail-log.png " ")
+  ![](./images/trail-log.png " ")
 
 
 
@@ -173,17 +173,17 @@ On the **Audit Trails** page, you can manage all of the audit trails for your ta
 - Click the **Audit Policies** tab.
 
 
-  ![](./provision-audit-alert-policies/images/click-audit-policies-tab.png " ")
+  ![](./images/click-audit-policies-tab.png " ")
 
 
 
 - On the **Review and Provision Audit and Alert Polices** page, click the name of your target database.
 
 
-  ![](./provision-audit-alert-policies/images/click-database-on-audit-policies-tab.png " ")
+  ![](./images/click-database-on-audit-policies-tab.png " ")
 
 
 - In the **Edit Policies** dialog box, expand **Custom Policies**, select the `APP_USER_NOT_APP_SERVER` unified auditing policy to enable it, and then click **Provision**.
 
 
-  ![](./provision-audit-alert-policies/images/enable-custom-audit-policy.png " ")  
+  ![](./images/enable-custom-audit-policy.png " ")  
