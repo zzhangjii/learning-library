@@ -12,10 +12,9 @@ In Lab 50 (as Derek) you will initiate the Oracle cloud environment that you wil
 
 ## Lab 050 Objectives
 
-- Setup your IAAS environment and create common components.
+- Setup your IAAS environment and create common components using Terraform.
 - Create a new Cloud Developer Image from Marketplace.
 - Create an Autonomous Transaction Processing (ATP) Database.
-- Install Visual Studio Code into the Cloud Developer Image.
 
 ## Steps
 
@@ -132,7 +131,7 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
 ### **STEP 6:** Generate your SSH key pair
 
-- On linux or a Mac enter this in a command shell.
+- On linux or Mac enter this in a command shell.
     
     `$ ssh-keygen -b 2048 -t rsa`
 
@@ -184,20 +183,23 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 ![](images/050/018.1.png)
 ![](images/050/019.png) -->
 
-### **STEP 7:** Create Resources
+### **STEP 8:** Create Resources
 
 - In the terminal, make sure you are inside the terraform-OCI-master folder
 
 - Run the following commands
 
     `$ terraform init`
+
     `$ source env.vars`
+    
     `$ terraform plan`
+    
     `$ terraform apply`
 
     When prompted, input yes and hit enter.
 
-### **STEP 8:** Connect to your marketplace developer image
+### **STEP 9:** Connect to your marketplace developer image
 
 [See this link for more info](https://cloudmarketplace.oracle.com/marketplace/en_US/listing/54030984).  This info is copied below.
 
@@ -231,7 +233,7 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
     
     For Windows, follow these [instructions](https://www.skyverge.com/blog/how-to-set-up-an-ssh-tunnel-with-putty/) for information on how to create a tunnel on Windows.
 
-     This example works on Linux and the MAC. Note: on Linux you will need to be su.
+     This example works on Linux and MAC. Note: on Linux you will need to be su.
 
      `$ ssh -i <your private key> -L 5901:localhost:5901 opc@<your marketplace compute IP>`
 
@@ -243,11 +245,17 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
 	![](images/050/041.png)
 
-### **STEP 9:** Download Files Used in this Workshop
+### **STEP 10:** Download Files Used in this Workshop
 
 **Click to Download.  Save the file to your Downloads directory.**
 
 [lab-resources.zip](https://oracle.github.io/learning-library/workshops/python4atp/lab-resources.zip)
+
+- Inside the Downloads folder, run this command
+
+    `$ scp lab-resources.zip -i privateKey opc@<your IP address>:/`
+
+    Now the zip file is in your instance!
 
 **This completes the Lab!**
 
