@@ -8,7 +8,6 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
 ## Lab 100 Objectives
 
-- Create an object store bucket.
 - Download data pump export file.
 - Upload data pump export file to the object store bucket.
 - Generate an auth token.
@@ -29,15 +28,11 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
   ![](images/100/002.png)
 
-- Select the **Compartment** `python4dev` and click **Create Bucket**
+- Select the **Compartment** `python4dev`.
 
   ![](images/100/003.png)
 
-- In the **Bucket Name** field, enter `py4dev` and click **Create Bucket**
-
-  ![](images/100/004.png)
-
-- In a moment, your new Object Storage Bucket will show up in the list. Once it appears click on the `atpData` bucket url to view the details.
+- Your new Object Storage Bucket should show up in the list. Once it appears click on the `py4dev` bucket url to view the details.
 
   ![](images/100/005.png)
 

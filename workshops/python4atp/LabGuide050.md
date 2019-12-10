@@ -38,7 +38,7 @@ You have already applied for and received your Oracle Cloud Free Tier Account.
 
   ![](images/050/002.png)
 
-    `Note this is NOT your email. This is the name of your tenancy noted in the email you received during signup`
+    **Note this is NOT your email. This is the name of your tenancy noted in the email you received during signup**
 - Enter your username (this may be your email address) and password and click on **Sign In**.
   ![](images/050/003.png)
 
@@ -83,8 +83,7 @@ In order to use Terraform, you will need a few different credentials which can b
 
 See these instructions for [Download and Install of Terraform](https://learn.hashicorp.com/terraform/getting-started/install.html).
 
-`Make sure to review the page before starting. Then verify that terraform was installed.`
-
+**Make sure to review the page before starting. Then verify that terraform was installed.**
 
 ### **STEP 5:** Download and Install the OCI CLI
 
@@ -162,7 +161,7 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
 **Note: For the next steps, you can also use your IDE of choice or any text editor.**
 
-`Open the config file you created earlier when you set up the OCI CLI. This contains most of the info you will need in the following steps.`
+**Open the config file you created earlier when you set up the OCI CLI. This contains most of the info you will need in the following steps.**
 
 - In the folder terraform-OCI-master, open env.vars
 
