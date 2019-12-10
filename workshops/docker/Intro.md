@@ -36,4 +36,4 @@ To learn more about this workshop please watch the video below.
 
   <img src="images/Introham.png" width="50%">
 
-  <img src="images/Introham.png" width="50%">
+  <img src="images/Introham2.png" width="50%">
