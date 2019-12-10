@@ -109,7 +109,7 @@ The following steps are for Linux and Mac users. Windows users see [here](https:
 
     `export PATH=$PATH:/Users/<your-user-name>/Terraform/`
 
-    ![](images/050/57.png)
+    ![](images/050/057.png)
 
 - Now, we need to source the profile so we can use that path in our environment.
 
@@ -119,7 +119,7 @@ The following steps are for Linux and Mac users. Windows users see [here](https:
 
     `$ terraform`
 
-    ![](images/050/58.png)
+    ![](images/050/058.png)
 
 
 
