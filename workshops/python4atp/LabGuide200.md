@@ -89,7 +89,7 @@ In Lab 200 you also continue to play the role of Derek, but now you get to the f
 
 ### **STEP 3:** Run frontend application
 
-- Open project in Visual Studio Code. Frontend application is created using ReactJS. Open the project in new window by clicking on **File** and then click on **New Window**
+- Open **customwebapp** project in Visual Studio Code. Frontend application is created using ReactJS. Open the project in new window by clicking on **File** and then click on **New Window**
 
     ![](images/200/12-1.png)
 

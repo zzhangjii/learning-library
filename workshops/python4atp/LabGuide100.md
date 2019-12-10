@@ -271,6 +271,18 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
   ![](images/100/062.png)
 
+- Repeat the step from above in this new user, and copy the following code into SQL Developer below the above URI, and then replace the uri from above and execute.
+  ```
+	begin
+	  DBMS_CLOUD.create_credential(
+		credential_name => 'py4dev_cred',
+		username => '<your cloud userid>',
+		password => '<Auth Token Generated in STEP 4>'
+	  );
+	end;
+	/
+	```
+
 - Copy the following code into SQL Developer below the above URI, and then replace the uri from above and execute.
 
 ```
