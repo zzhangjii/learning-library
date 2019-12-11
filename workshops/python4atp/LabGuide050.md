@@ -139,8 +139,6 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
     ![](images/050/020.png)
 
-<!--     ![](images/050/021.png) -->
-
     Then enter the **User OCID** you saved earlier and press enter.
 
     ![](images/050/030.png)
