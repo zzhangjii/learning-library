@@ -135,13 +135,13 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
     run `$ oci setup config`
 
-    ![](images/050/020.png)
-
     Press enter to choose the default location for the config file
 
-    ![](images/050/021.png)
+    ![](images/050/020.png)
 
-    Then enter the **User OCID** you saved earlier and press enter
+<!--     ![](images/050/021.png) -->
+
+    Then enter the **User OCID** you saved earlier and press enter.
 
     ![](images/050/030.png)
 
