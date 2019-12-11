@@ -48,7 +48,6 @@ You will create all required infrastructure components within your Oracle Cloud 
 
 - You have already applied for and received your Oracle Cloud Free Tier Account and will change the default password...
 
-
 ### **STEP 2**: Log in to your account
 
 - Once you receive the **Your Cloud Account is fully provisioned** Email, make note of your **Username and Cloud Account Name**. *`Note: Usernames are usually your email address.`* You can login by clicking the Sign In button or access it from any browser.
@@ -74,7 +73,6 @@ You will create all required infrastructure components within your Oracle Cloud 
   ![](images/cloud-login.png) 
 
   **NOTE**: You will likely be prompted to change the temporary password listed in the welcome email. In that case, enter the new password in the password field.
-
 
 ### **STEP 3**: Create a Compartment
 
@@ -156,8 +154,6 @@ For the purposes of the upcoming Docker deployments we need to add five Ingress 
 
   ![](images/050Linux/Linux050-c8ef545e.png)
 
-
-
 - **Add four more Ingress Rules**
 
   ```
@@ -190,7 +186,7 @@ Before we create the Compute instance that will contain Docker and application d
 
 **NOTE:** `This step focuses on key pair generation for Linux or Mac based terminal sessions. If your going to run your terminal sessions from a Windows client then skip to STEP 7`
 
-- In a `Linux/Mac` client terminal window **Type** the following (**You don't have to worry about any passphrases unless you want to enter one**)
+- In a `Linux/Mac` client terminal window **Run** the following command (**You don't have to worry about any passphrases unless you want to enter one**)
 
   ```
   ssh-keygen -b 2048 -t rsa -f dockerkey
@@ -200,7 +196,7 @@ Before we create the Compute instance that will contain Docker and application d
 
   ![](images/050Linux/24.PNG)
 
-  **NOTE for Linux and Mac Clients:** Just open up the pubic key file in an editor (vi) and select / copy the entire contents to be used in Step 8.   
+  **NOTE for Linux and Mac Clients:** Just open up the public key file in an editor (vi/vim) and select / copy the entire contents to be used in Step 8.   
 
   ![](images/050Linux/25-4.PNG)
 
@@ -237,7 +233,6 @@ You will now create a Linux based Compute instance using the public key you just
  ![](images/050Linux/27.PNG)
 
 - **You will (Select / Leave Default) or Type** the following in the `Create Compute Instance` section of the dialog:
-
   
   - Name: Docker
   - Image Operating System: Oracle Linux 7.6 (Default)
@@ -356,18 +351,18 @@ Docker and GIT are required for the subsuquent labs. You will install the Docker
 
 Set the server to Permissive mode and also ensure that permissive mode survives re-boots by editing `/etc/sysconfig/selinux`
 
-- Using vi, change the SELINUX line to **permissive**. **Run** the following commands: (**NOTE**: You need to be the root user to edit this file. Make sure your user in the terminal looks something like `[root@dockertest opc]#`)
+- Using vim, change the SELINUX line to **permissive**. **Run** the following commands: (**NOTE**: You need to be the root user to edit this file. Make sure your user in the terminal looks something like `[root@dockertest opc]#`)
 
   ```
   sudo -s
-  vi /etc/sysconfig/selinux
+  vim /etc/sysconfig/selinux
   ```
 
-  **NOTE:** If you are new to vi, press the letter `i` to edit text.
+  **NOTE:** If you are new to vim, press the letter `i` to edit text.
 
   ![](images/050Linux/42.PNG)
 
-- Save the file and exit out of vi.
+- Save the file and exit out of vim.
 
   **NOTE:** To save, press Escape, then type `:wq` to "write and quit".
 
