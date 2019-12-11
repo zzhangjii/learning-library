@@ -76,7 +76,7 @@ The following steps are for Linux and Mac users. Windows users see [here](https:
 
 - Add the following path to your bash_profile, then save and exit.
 
-    `export PATH=$PATH:/Users/<your-user-name>/Terraform/`
+    `export PATH=$PATH:/path-to/your-folder/Terraform/`
 
     ![](images/050/057.png)
 
@@ -134,6 +134,30 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
     ![](images/050/026.png)
 
+- Finally, go into your /User/path/.oci folder and open the oci_api_key_public pem file.
+
+    Copy the contents of the file.
+
+    Go back to the OCI console and click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Governance and Administration** section, select **Identity** and select **Users**.
+
+    ![](images/050/011.png)
+
+    Click on your username. It will usually be in the format **oracleidentitycloudservice/username**.
+
+    ![](images/050/012.png)
+
+    Scroll down and click on `Add Public Key`.
+
+    ![](images/050/061.png)
+
+    Paste in your public pem key and then click `add`.
+
+    ![](images/050/062.png)
+
+    Verify that your `Fingerprint` matches the one in your config file.
+
+    ![](images/050/063.png)
+
 
 ### **STEP 5:** Get Your Oracle Cloud Credentials
 
@@ -163,33 +187,9 @@ In order to use Terraform, you will need a few different credentials which can b
 
   ![](images/050/033.png)
 
-- Next, go back to the home console and make a note of your default region. For example, if your region is US West (Phoenix), note down Phoenix in your notes.
+- Finally, go back to the home console and make a note of your default region. For example, if your region is US West (Phoenix), note down Phoenix in your notes.
 
   ![](images/050/031.png)
-
-- Finally, go into your /User/path/.oci folder and open the oci_api_key_public pem file.
-
-    Copy the contents of the file.
-
-- Go back to the OCI console and click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Governance and Administration** section, select **Identity** and select **Users**.
-
-  ![](images/050/011.png)
-
-- Click on your username. It will usually be in the format **oracleidentitycloudservice/username**.
-
-  ![](images/050/012.png)
-
-- Scroll down and click on `Add Public Key`.
-
-    ![](images/050/061.png)
-
-- Paste in your public pem key and then click `add`.
-
-    ![](images/050/062.png)
-
-- Verify that your `Fingerprint` matches the one in your config file.
-
-    ![](images/050/063.png)
 
 
 ### **STEP 6:** Generate your SSH key pair
