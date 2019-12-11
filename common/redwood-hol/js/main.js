@@ -393,10 +393,10 @@ function allowCodeCopy(articleElement) {
     return articleElement;
 }
 /* adds iframe to videos so that it renders in the same page. 
-The MD code should be in the format [](youtube:<enter_video_id>) for it to render as iframe */
+The MD code should be in the format [](youtube:<enter_video_id>) for it to render as iframe. */
 function renderVideos(articleElement) {
     $(articleElement).find('a[href^="youtube:"]').each(function () {
-        $(this).before('<div class="video-container"><iframe src="https://www.youtube.com/embed/' + $(this).attr('href').split(":")[1] + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></div>').unwrap();
+        $(this).after('<div class="video-container"><iframe src="https://www.youtube.com/embed/' + $(this).attr('href').split(":")[1] + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></div>');
         $(this).remove();
     });
     return articleElement;
