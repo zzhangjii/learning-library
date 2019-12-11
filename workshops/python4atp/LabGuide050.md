@@ -22,6 +22,7 @@ In Lab 50 (as Derek) you will initiate the Oracle cloud environment that you wil
 
 You have already applied for and received your Oracle Cloud Free Tier Account.
 
+
 ### **STEP 2:** Log in to your OCI dashboard
 
 - From any browser go to oracle.com to access the Oracle Cloud.
@@ -42,44 +43,12 @@ You have already applied for and received your Oracle Cloud Free Tier Account.
 - Enter your username (this may be your email address) and password and click on **Sign In**.
   ![](images/050/003.png)
 
-- Once you log in you will see a page similar to the one below.  Click on the hamburger icon in the upper left corner to reveal the menu.
+- Once you log in you will see a page similar to the one below.
 
     ![](images/hamburger.png)  
 
-### **STEP 3:** Get Your Oracle Cloud Credentials
 
-In order to use Terraform, you will need a few different credentials which can be found on the OCI console.
-
-- Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Governance and Administration** section, select **Identity** and select **Users**.
-
-  ![](images/050/011.png)
-
-- Click on your username. It will usually be in the format **oracleidentitycloudservice/username**.
-
-  ![](images/050/012.png)
-
-- Click **Copy** next to OCID, and save this as your **User OCID** in your notes. Next, click on the profile icon in the top right. Then click into the tenancy link.
-
-  ![](images/050/013.png)
-
-- Click **Copy** next to OCID, and save this as your **Tenancy OCID** in your notes. Then, copy the **Object Storage Namespace** in your notes.
-
-  ![](images/050/014.png)
-
-- Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Governance and Administration** section, select **Identity** and select **Compartments**.
-
-  ![](images/050/032.png)
-
-- Click on the OCID next to your root tenancy, then click **Copy**, and save this as your **Compartment OCID** in your notes.
-
-  ![](images/050/033.png)
-
-- Finally, go back to the home console and make a note of your default region. For example, if your region is US West (Phoenix), note down Phoenix in your notes.
-
-  ![](images/050/031.png)
-
-
-### **STEP 4:** Download and Install Terraform
+### **STEP 3:** Download and Install Terraform
 
 See these instructions for [Download of Terraform](https://learn.hashicorp.com/terraform/getting-started/install.html).
 
@@ -122,8 +91,7 @@ The following steps are for Linux and Mac users. Windows users see [here](https:
     ![](images/050/058.png)
 
 
-
-### **STEP 5:** Download and Install the OCI CLI
+### **STEP 4:** Download and Install the OCI CLI
 
 Before downloading, make sure you meet the [requirements](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/cliconcepts.htm#Requirements) to install the OCI CLI.
 
@@ -165,6 +133,64 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
     Verify that your files are there
 
     ![](images/050/026.png)
+
+
+### **STEP 5:** Get Your Oracle Cloud Credentials
+
+In order to use Terraform, you will need a few different credentials which can be found on the OCI console.
+
+- Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Governance and Administration** section, select **Identity** and select **Users**.
+
+  ![](images/050/011.png)
+
+- Click on your username. It will usually be in the format **oracleidentitycloudservice/username**.
+
+  ![](images/050/012.png)
+
+- Click **Copy** next to OCID, and save this as your **User OCID** in your notes. Next, click on the profile icon in the top right. Then click into the tenancy link.
+
+  ![](images/050/013.png)
+
+- Click **Copy** next to OCID, and save this as your **Tenancy OCID** in your notes. Then, copy the **Object Storage Namespace** in your notes.
+
+  ![](images/050/014.png)
+
+- Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Governance and Administration** section, select **Identity** and select **Compartments**.
+
+  ![](images/050/032.png)
+
+- Click on the OCID next to your root tenancy, then click **Copy**, and save this as your **Compartment OCID** in your notes.
+
+  ![](images/050/033.png)
+
+- Next, go back to the home console and make a note of your default region. For example, if your region is US West (Phoenix), note down Phoenix in your notes.
+
+  ![](images/050/031.png)
+
+- Finally, go into your /User/path/.oci folder and open the oci_api_key_public pem file.
+
+    Copy the contents of the file.
+
+- Go back to the OCI console and click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Governance and Administration** section, select **Identity** and select **Users**.
+
+  ![](images/050/011.png)
+
+- Click on your username. It will usually be in the format **oracleidentitycloudservice/username**.
+
+  ![](images/050/012.png)
+
+- Scroll down and click on `Add Public Key`.
+
+    ![](images/050/061.png)
+
+- Paste in your public pem key and then click `add`.
+
+    ![](images/050/062.png)
+
+- Verify that your `Fingerprint` matches the one in your config file.
+
+    ![](images/050/063.png)
+
 
 ### **STEP 6:** Generate your SSH key pair
 
@@ -217,37 +243,13 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
     ![](images/050/027.png)
 
-- Then, open compute.tf
+- Finally, open compute.tf
 
     `$ nano variables.tf`
 
     Go to the ssh_authorized_keys variable and change the default path to yours. Then save and exit.
 
     ![](images/050/060.png)
-
-- Finally, go into your /User/path/.oci folder and open the oci_api_key_public pem file.
-
-    Copy the contents of the file.
-
-- Go back to the OCI console and click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Governance and Administration** section, select **Identity** and select **Users**.
-
-  ![](images/050/011.png)
-
-- Click on your username. It will usually be in the format **oracleidentitycloudservice/username**.
-
-  ![](images/050/012.png)
-
-- Scroll down and click on `Add Public Key`.
-
-    ![](images/050/061.png)
-
-- Paste in your public pem key and then click `add`.
-
-    ![](images/050/062.png)
-
-- Verify that your `Fingerprint` matches the one in your config file.
-
-    ![](images/050/063.png)
 
 
 ### **STEP 8:** Create Resources
@@ -265,6 +267,7 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
     `$ terraform apply`
 
     When prompted, input yes and hit enter.
+
 
 ### **STEP 9:** Connect to your marketplace developer image
 
@@ -311,6 +314,7 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 	![](images/050/040.png)
 
 	![](images/050/041.png)
+
 
 ### **STEP 10:** Download Files Used in this Workshop
 
