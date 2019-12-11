@@ -242,7 +242,7 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
 - Finally, open compute.tf
 
-    `$ nano variables.tf`
+    `$ nano compute.tf`
 
     Go to the ssh_authorized_keys variable and change the default path to yours. Then save and exit.
 
