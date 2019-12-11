@@ -134,7 +134,7 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
     ![](images/050/026.png)
 
-- Finally, go into your /User/path/.oci folder and open the oci_api_key_public pem file.
+- Lastly, go into your /User/path/.oci folder and open the oci_api_key_public pem file.
 
     Copy the contents of the file.
 
