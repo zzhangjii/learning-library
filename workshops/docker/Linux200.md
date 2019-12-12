@@ -1,5 +1,6 @@
-![](images/200Linux/Title200.png)  
-Updated: June 22, 2018
+# Docker Workshop
+
+![](images/200Linux/Title200.png)
 
 ## Introduction
 
@@ -214,61 +215,13 @@ In this step we will connect into the database container and run a script to cre
 
   ![](images/200Linux/Picture200-12.png)
 
-- **You can now proceed to the `Optional` next step OR proceed directly to the Deploy Supporting AlphaOffice Containers section after the MYSQL Database Setup section.**
-
-### **STEP 6**: Log into Enterprise Manager Express (**Optional**)
-
-Enterprise Manager Express comes bundled with the Oracle database you just created which is running in a container.
-HTTP access as been defined on port 5600.
-
-- Open a browser (in this example we are using Firefox).
-
-- **NOTE:** If you want to login to Enterprise Manager Express the browser needs the Shockwave add-on installed. Install this into your browser environment by going to the adobe webite and downloading the player from: [Shockwave](https://get.adobe.com/shockwave/)
-
-- We need the Public IP address to test the deployment. Navigate in a browser to your Oracle Trial account and from the hamburger menu in the upper left hand side of the page select go to **Compute-->Instances**:
-
-  ![](images/compute-menu.png)
-
-- Click on the **Docker** instance link
-
-  ![](images/100Linux/Picture100-5-4.png)
-
-- Note the Public IP address (In this example, `129.213.119.105`
-
-  ![](images/100Linux/Picture100-5-6.png)
-
-- In your browser **enter** (Substituting you Public IP address):
-
-  ```
-  http://<Public-IP>:5600/em
-  ```
-
-- You may get prompted to enable Adobe Flash. Click the link to do so.
-
-  ![](images/200Linux/Picture200-12.8.png)
-
-  ![](images/200Linux/Picture200-13.png)
-
-- **Enter** the following:
-
-  ```
-  Username: sys
-  Password: Oradoc_db1
-  Check the "as SYSDBA" checkbox
-  ```
-
-  ![](images/200Linux/Picture200-14.png)
-
 - **You can now proceed to the Deploy Supporting AlphaOffice Containers section after the MYSQL Database Setup section.**
 
 ## MYSQL Database Setup
 
 ### **STEP 1**: Create the database container
 
-**NOTE: Make sure to
-
-
- sure to use a 5.x version of MYSQL**
+**NOTE: Make sure to sure to use a 5.x version of MYSQL**
 
 This docker command will create a container based on the latest MYSQL database image file located in Docker Hub
 
@@ -576,11 +529,13 @@ Even though the orginal AlphaOfficeUI image could have been set up ahead of time
   vim /pipeline/source/public/alpha.html
   ```
 
-- Move the cursor to the text you wish to edit and press the letter __i__ to make changes. Fix the header title to read "**Alpha Office Product Catalog**". You can also change the body title to whatever you want:
+- Move the blinking cursor to the text you wish to edit via arrow controls (or using h,j,k,l for left, down, up, and right resp.) and press the letter __i__ to enter edit mode and make changes. Fix the header title to read "**Alpha Office Product Catalog**". You can also change the body title to whatever you want:
 
   ![](images/200Linux/Picture200-29.png)
 
-- Save the file and exit by hitting the **ESC** key and then holding the **SHIFT** key down and typing "**Z**" TWICE
+  **NOTE:** to view line numbers, press the **ESC** key to go into command mode, then run the command `:set number`. To remove the line numbers, run the command `:set nonumber`.
+
+- Save the file and exit by pressing the **ESC** key and then running the command `:wq` to write and quit. You can also exit by holding the **SHIFT** key down and typing "**Z**" TWICE while in command mode.
 
 ### **STEP 4**: Edit the alpha.css file
 
