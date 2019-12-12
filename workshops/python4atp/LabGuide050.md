@@ -74,7 +74,7 @@ The following steps are for Linux and Mac users. Windows users see [here](https:
 
     If it doesn't exist, create it and then open the text editor.
 
-- Add the following path to your bash_profile, then save and exit.
+- Add the following path to your bash_profile. Press ctrl + o to save, then press enter. Next, ctrl + x to exit.
 
     `export PATH=$PATH:/path-to/your-folder/Terraform/`
 
@@ -236,7 +236,7 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
     `$ nano variables.tf`
 
-    Go to the OBJECT_STORAGE section and change the default value for obj_store_namespace to yours. Then save and exit.
+    Go to the OBJECT_STORAGE section and change the default value for obj_store_namespace to yours. Press ctrl + o to save, then press enter. Next, ctrl + x to exit.
 
     ![](images/050/027.png)
 
@@ -244,7 +244,7 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
     `$ nano compute.tf`
 
-    Go to the ssh_authorized_keys variable and change the default path to yours. Then save and exit.
+    Go to the ssh_authorized_keys variable and change the default path to yours. Press ctrl + o to save, then press enter. Next, ctrl + x to exit.
 
     ![](images/050/060.png)
 
