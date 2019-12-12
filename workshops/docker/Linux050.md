@@ -44,7 +44,7 @@ You will create all required infrastructure components within your Oracle Cloud 
 
 ## Your Oracle Cloud Free Tier Account
 
-### **Step 1**: Your Oracle Cloud Account
+### **STEP 1**: Your Oracle Cloud Account
 
 - You have already applied for and received your Oracle Cloud Free Tier Account and will change the default password...
 
@@ -113,7 +113,7 @@ All the availability domains in a region are connected to each other by a low la
   ![](images/050Linux/11u1.PNG)
   ![](images/050Linux/11u2.PNG)
 
-- Fill in the follow values as highlighted below:
+- Fill in the following values as highlighted below:
 
   ![](images/050Linux/12u1.PNG)
 
@@ -235,7 +235,7 @@ You will now create a Linux based Compute instance using the public key you just
 - **You will (Select / Leave Default) or Type** the following in the `Create Compute Instance` section of the dialog:
   
   - Name: Docker
-  - Image Operating System: Oracle Linux 7.6 (Default)
+  - Image Operating System: Oracle Linux 7.6 or 7.7 (Default)
     ![](images/create-compute.png)
   - Expand the **Show Shape, Network and Storage Options** button, accept the defaults, and ensure the `Always Free Eligible` options are chosen.
   - Availability Domain: AD 1 or 2 (Use default)
@@ -270,39 +270,35 @@ You will now create a Linux based Compute instance using the public key you just
 
 The last set up piece will be to SSH into the Compute image and install Docker and GIT.
 
-- **For a Windows client session**: bring up Putty, select the **Session** section, and type in the IP address:
+- **For a Windows client session**:
 
-  ![](images/050Linux/31.PNG)
+  - Bring up Putty, select the **Session** section, and type in the IP address:
+    ![](images/050Linux/31.PNG)
 
-- Select the **Data** section and enter `opc` as the username:
+  - Select the **Data** section and enter `opc` as the username:
+    ![](images/050Linux/32.PNG)
 
-  ![](images/050Linux/32.PNG)
+  - Select **SSH-->Auth** and browse to the Private Key you created back in Step 7:
+    ![](images/050Linux/33.PNG)
 
-- Select **SSH-->Auth** and browse to the Private Key you created back in Step 7:
+  - Click the **Open** button. You will presented the first time with am alert message. Click **Yes**
+    ![](images/050Linux/35.PNG)
 
-  ![](images/050Linux/33.PNG)
+  - You will logged into the Compute image:
+    ![](images/050Linux/36.PNG)
 
-- Click the **Open** button. You will presented the first time with am alert message. Click **Yes**
+- **For Linux and Mac client sessions**:
 
-  ![](images/050Linux/35.PNG)
+  - Open a terminal window and "cd" into the directory where your key pair is. Make sure the dockerkey file has the permissions of "600" (read/write for the user only) and SSH into the compute instance `substituting your IP address`.
 
-- You will logged into the Compute image:
+    Example:
 
-  ![](images/050Linux/36.PNG)
-
-- **For Linux and Mac client sessions**: "cd" into the directory where your key pair is. Make sure the dockerkey file has the permissions of "600" (read/write for the user only) and SSH into the compute instance `substituting your IP address`.
-
-  Example:
-
-  ```
-  cd <directory of your key pair>
-  chmod 600 dockerkey
-  ssh -i ./dockerkey opc@<compute instance public ip address>
-  ```
-
-- Linux / Mac screenshot:
-
-  ![](images/050Linux/37.PNG)
+    ```
+    cd <directory of your key pair>
+    chmod 600 dockerkey
+    ssh -i ./dockerkey opc@<compute instance public ip address>
+    ```
+    ![](images/050Linux/37.PNG)
 
 ### **STEP 10**: Install and configure Docker and GIT
 
