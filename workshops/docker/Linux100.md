@@ -1,4 +1,3 @@
-
 # Docker Workshop
 
 ![](images/100Linux/Title100.png)
@@ -42,7 +41,7 @@ This Lab and Lab 200 assume you have went through the 050 Set Up Lab and have SS
 
 **NOTE: For the duration of the Labs it's OK that the login user (holuser vs. opc) and the Docker version may vary from the screenshots**
 
-- **Type** the following:
+- **Run** the following commands by typing them in the terminal window:
 
   ```
   cd
@@ -57,7 +56,7 @@ This Lab and Lab 200 assume you have went through the 050 Set Up Lab and have SS
 
 Let's take a quick look at what is running in the docker engine, if this is a new environment, you should see no docker containers running.
 
-- **Type** the following:
+- **Run** the following:
 
   ```
   docker ps
@@ -90,7 +89,7 @@ We will now download and create a container based on an existing docker image st
 
 Again using the `docker ps` command, we should see our newly spawned docker container
 
-- **Type** the following:
+- **Run** the following:
 
   ```
   docker ps
@@ -106,11 +105,11 @@ Again using the `docker ps` command, we should see our newly spawned docker cont
 
   ![](images/100Linux/26.png)
 
-- Click on the **Docker** instance link
+- Click on the **Docker** compute instance
 
   ![](images/100Linux/Picture100-5-4.png)
 
-- Note the Public IP address (In this example, `129.213.119.105`
+- Note the Public IP address (in this example, `129.213.119.105`)
 
   ![](images/100Linux/Picture100-5-6.png)
 
@@ -132,7 +131,7 @@ Again using the `docker ps` command, we should see our newly spawned docker cont
 
 - Since we started the `restclient` container with the --rm option upon stopping it docker will remove ALL allocated resources
 
-- **Type** the following:
+- **Run** the following:
 
   ```
   docker stop restclient
@@ -140,7 +139,7 @@ Again using the `docker ps` command, we should see our newly spawned docker cont
 
 - Now, entering "docker ps -a" (which will show the status of ALL containers RUNNING or STOPPED) shows nothing proving the container was deleted upon stopping it.
 
-- **Type** the following:
+- **Run** the following:
 
   ```
   docker ps -a
@@ -152,7 +151,7 @@ Again using the `docker ps` command, we should see our newly spawned docker cont
 
 - Start another container using the Host's 18002 port:
 
-- **Type** the following:
+- **Run** the following:
 
   ```
   docker run -d -it --rm --name restclient -p=18002:8002 -e DS='json' wvbirder/restclient
@@ -168,7 +167,7 @@ Again using the `docker ps` command, we should see our newly spawned docker cont
 
 - You can get various bits of information from the subnet that docker container is running on by inspecting the default network bridge docker creates out-of-the-box. You can create your own networks and assign containers to them but that is out of the scope of this lab.
 
- - **Type** the following:
+ - **Run** the following:
 
   ```
   docker network inspect bridge
@@ -180,7 +179,7 @@ Again using the `docker ps` command, we should see our newly spawned docker cont
 
 - Ping the `restclient` container IP Address: (in this example the IP was 172.17.0.2)
 
-- **Type** the following:
+- **Run** the following:
 
   ```
   ping 172.17.0.2 -c3
