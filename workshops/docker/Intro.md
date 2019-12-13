@@ -1,14 +1,14 @@
 # Containerized Development and Deployment with Docker
 
-Welcome to the **Oracle Public Cloud** Docker Development and Deployment workshop. This workshop will walk you through the process of creating an infrastructure to support deployment of a multi-container Docker application (AlphaOffice).
-
-To learn more about this workshop please watch the video below.  
+Welcome to the **Oracle Public Cloud** Docker Development and Deployment workshop. This workshop will walk you through the process of creating an infrastructure to support deployment of a multi-container Docker application (AlphaOffice). 
 
 ![](images/000JumpStart/JS5-2.PNG)
 
+To learn more about this workshop please watch the video below. 
+
 <a href="https://www.youtube.com/watch?v=ivNEREBsH9k&t=0s&index=3&list=PLPIzp-E1msrYGLKIgW3njO3uUkvXD0bAH" target="_video">Workshop Overview</a>
 
-**Step 1**: Acquire an Oracle Cloud Trial Account
+### **Step 1**: Acquire an Oracle Cloud Trial Account
 
 - Bookmark this page for future reference.
 
@@ -21,11 +21,11 @@ To learn more about this workshop please watch the video below.
 
 - Soon after requesting your Free Tier account you will receive the following emails.  The first one indicates you have requested an account and provisioning has begun.
 
-    ![](images/signup-email.png)
+  ![](images/signup-email.png)
 
 - The next email you receive will indicate your account is fully setup and ready to go.  Proceed to Step 2.
 
-    ![](images/signup-email-provisioned.png)
+  ![](images/signup-email-provisioned.png)
 
 
 
@@ -34,6 +34,6 @@ To learn more about this workshop please watch the video below.
 - [Click here to navigate to Lab 50](Linux050.md)
 - _You can see a list of Lab Guides_ by clicking on the **Menu Icon** hamburger in the upper left corner of the browser window. Then, **Select Lab 050: Cloud Infrastructure Configuration**.
 
-  ![](images/Introham.png)
+  <img src="images/Introham.png" width="50%">
 
-  ![](images/Introham2.png)
+  <img src="images/Introham2.png" width="50%">
