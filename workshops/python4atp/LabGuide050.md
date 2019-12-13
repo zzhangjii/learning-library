@@ -186,6 +186,8 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
     ![](images/050/062.png)
 
+    Finally, open the config file in your /User/path/.oci folder.
+
     Verify that your `Fingerprint` matches the one in your config file.
 
     ![](images/050/063.png)
@@ -339,6 +341,8 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
     Once inside, run `ls` to verify that you see your zip file.
 
     Now the zip file is in your instance!
+
+![](images/050/064.png)
 
 **This completes the Lab!**
 
