@@ -6,6 +6,8 @@
 
 In Lab 50 (as Derek) you will initiate the Oracle cloud environment that you will use to create and deploy your microservices applications. This environment will be contained within a cloud Compartment, and communication within the Compartment will be via a Virtual Cloud Network (VCN). The Compartment and VCN will isolate and secure the overall environment. You will deploy two Oracle Cloud Services for this environment. An Oracle Cloud Developer Image will be used to develop and deploy your microservices code. The microservices will access data within an Autonomous Transaction Processing (ATP) Cloud Service. 
 
+To deploy these services, you will be using Terraform, a tool for building, changing, and versioning infrastructure safely and efficiently. It is an important tool for anyone looking to standardize IaaS (Infrastructure as a Service) within their organization.
+
 ***To log issues***, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
 ***We recommend that you create a notes page to write down all of the credentials you will need***
@@ -123,7 +125,7 @@ In order to use Terraform, you will need a few different credentials which can b
 
   ![](images/050/031.png)
 
-### **STEP 5:** Download and Install the OCI CLI
+### **STEP 5:** Download and Install the OCI CLI (Oracle Cloud Infrastructure Command Line Interface)
 
 Before downloading, make sure you meet the [requirements](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/cliconcepts.htm#Requirements) to install the OCI CLI.
 
