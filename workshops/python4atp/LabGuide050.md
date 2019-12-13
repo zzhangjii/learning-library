@@ -62,7 +62,7 @@ See these instructions for [Download of Terraform](https://learn.hashicorp.com/t
 
     ![](images/050/018.1.png)
 
-- Once the download finishes, in your home folder create a directory called `Terraform`. Then move the zip file you downloaded into this directory. Open the zip file and verify that you see the binary file in your newly created `Terraform` directory.
+- Once the download finishes, in your home directory look for a folder called `bin`. Move the zip file you downloaded into this directory. Open the zip file and verify that you see the binary file in the `bin` directory.
 
     ![](images/050/019.png)
 
@@ -76,7 +76,7 @@ The following steps are for Linux and Mac users. Windows users see [here](https:
 
 - Add the following path to your bash_profile. Press ctrl + o to save, then press enter. Next, ctrl + x to exit.
 
-    `export PATH=$PATH:/path-to/your-folder/Terraform/`
+    `export PATH=$PATH:/path-to/your/bin/`
 
     ![](images/050/057.png)
 
@@ -133,7 +133,9 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
 - Once you have the CLI installed,
 
-    run `$ oci setup config`
+    Run `$ source .bash_profile`
+
+    Run `$ oci setup config`
 
     Press enter to choose the default location for the config file
 
@@ -283,7 +285,7 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 - SSH to the image. 
     **Note if you are on Windows you will need to use putty.**
     Open a terminal window on a Mac or command shell on Linux and enter the following command: 
-    `$ ssh -i privateKey opc@<your IP address>`.  
+    `$ ssh -i <your private key> opc@<your IP address>`
 
 	![](images/050/036.png)
 
@@ -304,7 +306,7 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
      This example works on Linux and MAC. Note: on Linux you will need to be su.
 
-     `$ ssh -i <your private key> -L 5901:localhost:5901 opc@<your marketplace compute IP>`
+     `$ ssh -i <your private key> -L 5901:localhost:5901 opc@<your IP address>`
 
     ![](images/050/039.png)
 
@@ -317,13 +319,24 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
 ### **STEP 10:** Download Files Used in this Workshop
 
-**Click to Download.  Save the file to your Downloads directory.**
+**[Click to Download](https://oracle.github.io/learning-library/workshops/python4atp/lab-resources.zip). Keep track of which directory this zip file gets saved to.**
 
-[lab-resources.zip](https://oracle.github.io/learning-library/workshops/python4atp/lab-resources.zip)
+<!-- [lab-resources.zip](https://oracle.github.io/learning-library/workshops/python4atp/lab-resources.zip) -->
+- Next, go back into your instance
 
-- Inside the Downloads folder, run this command
+    `$ ssh -i <your private key> opc@<your IP address>`
 
-    `$ scp lab-resources.zip -i privateKey opc@<your IP address>:/`
+    If you are prompted, enter `yes`.
+
+- Run `$ pwd` to view your home path. Then run `$ exit` to go back to your local environment. If your home path is different than the one below, then change it to yours.
+
+    `$ scp </path/to/lab-resources.zip> opc@<your IP address>:/home/opc`
+
+    If you are prompted, enter `yes`.
+
+- Finally, go back into your instance.
+    
+    Once inside, run `ls` to verify that you see your zip file.
 
     Now the zip file is in your instance!
 
