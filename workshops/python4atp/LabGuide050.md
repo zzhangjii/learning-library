@@ -53,6 +53,8 @@ You have already applied for and received your Oracle Cloud Free Tier Account.
 
 ### **STEP 3:** Download and Install Terraform
 
+In this section we will download Terraform. This allows us to provision infrastructure as code. It is a useful tool for standardizing the creation of resources and has many applications. In our case, we will use it to create the OCI resources needed to use Oracle Cloud compute and storage.
+
 See these instructions for [Download of Terraform](https://learn.hashicorp.com/terraform/getting-started/install.html).
 
 **Make sure to fully review the page before starting.**
@@ -77,7 +79,7 @@ The following steps are for Linux and Mac users. Windows users see [here](https:
 
     If it doesn't exist, create it and then open the text editor.
 
-- Add the following path to your bash_profile. Press ctrl + o to save, then press enter. Next, ctrl + x to exit.
+- Add the following path to your bash_profile. This is done so that Terraform's tools can be added to your environment. Press ctrl + o to save, then press enter. Next, ctrl + x to exit.
 
     `export PATH=$PATH:/path-to/your/bin/`
 
@@ -96,7 +98,7 @@ The following steps are for Linux and Mac users. Windows users see [here](https:
 
 ### **STEP 4:** Get Your Oracle Cloud Credentials
 
-In order to use Terraform, you will need a few different credentials which can be found on the OCI console.
+In order for Terraform to create resources for you, it needs to know how to access your cloud account and create resources in your name. Thus, you will need a few different credentials which can be found on the OCI console.
 
 - Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Governance and Administration** section, select **Identity** and select **Users**.
 
@@ -125,6 +127,7 @@ In order to use Terraform, you will need a few different credentials which can b
 - Finally, go back to the home console and make a note of your default region. For example, if your region is US West (Phoenix), note down Phoenix in your notes.
 
   ![](images/050/031.png)
+
 
 ### **STEP 5:** Download and Install the OCI CLI (Oracle Cloud Infrastructure Command Line Interface)
 
@@ -169,7 +172,7 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
     ![](images/050/026.png)
 
-- Lastly, go into your /User/path/.oci folder and open the oci_api_key_public pem file.
+- Lastly, go into your /User/path/.oci folder and open the oci_api_key_public pem file. We will use this file to create resources as the given user.
 
 **Note:** This is a hidden folder. If you don't know how to find hidden folders, go [here](https://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/) for Mac and Linux, or [here](https://support.microsoft.com/en-us/help/14201/windows-show-hidden-files) for Windows.
 
@@ -220,7 +223,9 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 	
 ### **STEP 7:** Prepare Terraform Script
 
-- First, create a folder on your computer to hold the files.
+Now, we will get the Terraform code. This code will show us the true power of Terraform as opposed to manual creation. By using Terraform, you have a reusable process for creating infrastructure. In some cases, like this one, you don't have to know anything about how the process works. You get the privilige of focusing on the results.
+
+- First, create a folder on your computer to hold the files. This is to have a workspace for the project.
     
     `$ mkdir OCI-terraform && cd OCI-terraform`
 
@@ -239,7 +244,7 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
 **Open the config file you created earlier when you set up the OCI CLI. This contains most of the info you will need in the following steps.**
 
-- In the folder terraform-OCI-master, open env.vars
+- In the folder terraform-OCI-master, open env.vars. Here is where we will use the variables needed to create a connection to OCI.
 
     `$ nano env.vars`
 
@@ -251,7 +256,7 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
     `$ nano variables.tf`
 
-    Go to the OBJECT_STORAGE section and change the default value for obj_store_namespace to yours. Press ctrl + o to save, then press enter. Next, ctrl + x to exit.
+    Go to the OBJECT_STORAGE section and change the default value for obj_store_namespace to yours. We need this to create the ATP database. Press ctrl + o to save, then press enter. Next, ctrl + x to exit.
 
     ![](images/050/027.png)
 
@@ -259,7 +264,7 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
     `$ nano compute.tf`
 
-    Go to the ssh_authorized_keys variable and change the default path to yours. Press ctrl + o to save, then press enter. Next, ctrl + x to exit.
+    Go to the ssh_authorized_keys variable and change the default path to yours. The ssh key will be added to the your Oracle Cloud Developer instance and will allow you to use it's pair to ssh into the instance. Press ctrl + o to save, then press enter. Next, ctrl + x to exit.
 
     ![](images/050/060.png)
 
@@ -272,13 +277,21 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
     `$ terraform init`
 
+    _You have now initialized a working directory containing Terraform configuration files._
+
     `$ source env.vars`
     
+    _Now the code has access to the variables needed to set up a connection and create the resources._
+
     `$ terraform plan`
     
+    _Terraform has now generated an execution plan._
+
     `$ terraform apply`
 
     When prompted, input yes and hit enter.
+
+    _Terraform is applying the changes required to reach the desired state of the configuration._
 
 **Wait a few minutes for all of the resources to be created.**
 
@@ -343,7 +356,6 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
 **[Click to Download](https://oracle.github.io/learning-library/workshops/python4atp/lab-resources.zip). Keep track of which directory this zip file gets saved to.**
 
-<!-- [lab-resources.zip](https://oracle.github.io/learning-library/workshops/python4atp/lab-resources.zip) -->
 - Next, go back into your instance
 
     **If you are already logged in, you do not need to run the command below.**
@@ -358,11 +370,11 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
     If you are prompted, enter `yes`.
 
+    Now the zip file has been copied into your instance!
+
 - Finally, go back into your instance.
     
     Once inside, run `$ ls` to verify that you see your zip file.
-
-    Now the zip file is in your instance!
 
 ![](images/050/064.png)
 
