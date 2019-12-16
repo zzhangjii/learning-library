@@ -23,7 +23,7 @@ Section 1 opening paragraph.
 One line with code example `HelloWorld.java`.
 
 1. Ordered list item 1.
-2. Ordered list item 2 with image and link to the text description below. The `sample1.txt` file is added to the `files` folder.
+2. Ordered list item 2 with image and link to the text description below. The `sample1.txt` file must be added to the `files` folder.
 
     ![Image alt text](images/sample1.png "Image title")
 
