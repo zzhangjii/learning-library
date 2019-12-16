@@ -245,7 +245,7 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
     ![](images/050/017.png)
 
-- Paste in the information matching the values in your notes/config file, then save and exit.
+- Paste in the information matching the values in your notes and config file, then save and exit.
 
 - Next, open variables.tf
 
@@ -297,7 +297,8 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
 - SSH to the image. 
     **Note if you are on Windows you will need to use putty.**
-    Open a terminal window on a Mac or command shell on Linux and enter the following command: 
+    Open a terminal window on a Mac or command shell on Linux and enter the following command:
+
     `$ ssh -i <your private key> opc@<your IP address>`
 
 	![](images/050/036.png)
@@ -325,7 +326,15 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
 - Open a vnc viewer session.  If you don't already have vncviewer you can download it [here](https://www.realvnc.com/en/connect/download/viewer/).
 
+    Enter `localhost::5901` into the browser and then press Enter.
+
+    ![](images/050/068.png)
+
+    Enter the **vncpasswd** password you created earlier. 
+
 	![](images/050/040.png)
+
+    Now you have a user interface for your instance.
 
 	![](images/050/041.png)
 
@@ -336,6 +345,8 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
 <!-- [lab-resources.zip](https://oracle.github.io/learning-library/workshops/python4atp/lab-resources.zip) -->
 - Next, go back into your instance
+
+    **If you are already logged in, you do not need to run the command below.**
 
     `$ ssh -i <your private key> opc@<your IP address>`
 
@@ -349,7 +360,7 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
 - Finally, go back into your instance.
     
-    Once inside, run `ls` to verify that you see your zip file.
+    Once inside, run `$ ls` to verify that you see your zip file.
 
     Now the zip file is in your instance!
 
