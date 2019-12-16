@@ -370,7 +370,7 @@ Now, we will get the Terraform code. This code will show us the true power of Te
 
     If you are prompted, enter `yes`.
 
-    Now the zip file has been copied into your instance!
+    _Now the zip file has been copied into your instance!_
 
 - Finally, go back into your instance.
     
