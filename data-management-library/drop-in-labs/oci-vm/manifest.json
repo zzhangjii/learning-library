@@ -1,0 +1,12 @@
+{
+    "tutorials": [
+        {         
+            "title": "Lab: Create a Virtual Machine Instance Using Oracle Cloud Infrastructure Compute",
+            "description": "Create a Virtual Machine Instance Using Oracle Cloud Infrastructure Compute",
+            "partnumber": "Ennnnn_01",
+            "publisheddate": "12/13/2019",
+            "contentid": "12nnnn",
+            "filename": "content.md"
+        }
+    ]
+}
