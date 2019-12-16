@@ -10,13 +10,14 @@ To deploy these services, you will be using Terraform, a tool for building, chan
 
 ***To log issues***, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
 
-***We recommend that you create a notes page to write down all of the credentials you will need***
+***We recommend that you create a notes page to write down all of the credentials you will need.***
 
 ## Lab 050 Objectives
 
-- Setup your IAAS environment and create common components using Terraform.
+- Setup your IAAS environment and create common components.
 - Create a new Cloud Developer Image from Marketplace.
 - Create an Autonomous Transaction Processing (ATP) Database.
+- Create an Object Storage bucket.
 
 ## Steps
 
@@ -170,7 +171,13 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
 - Lastly, go into your /User/path/.oci folder and open the oci_api_key_public pem file.
 
+**Note:** This is a hidden folder. If you don't know how to find hidden folders, go [here](https://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/) for Mac and Linux, or [here](https://support.microsoft.com/en-us/help/14201/windows-show-hidden-files) for Windows.
+
+    ![](images/050/065.png)
+
     Copy the contents of the file.
+
+    ![](images/050/066.png)
 
     Go back to the OCI console and click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Governance and Administration** section, select **Identity** and select **Users**.
 
@@ -189,6 +196,8 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
     ![](images/050/062.png)
 
     Finally, open the config file in your /User/path/.oci folder.
+
+    ![](images/050/067.png)
 
     Verify that your `Fingerprint` matches the one in your config file.
 
