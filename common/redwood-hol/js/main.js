@@ -159,7 +159,7 @@ function updateH1Title(articleElement) {
 }
 /* This function picks up the entire converted content in HTML, and break them into sections. */
 function wrapSectionTag(articleElement) {
-    $(articleElement).find('h2').each(function() {
+    $(articleElement).find('h2').each(function () {
         $(this).nextUntil('h2').andSelf().wrapAll('<section></section>');
     });
     return articleElement;
@@ -345,14 +345,14 @@ function changeButtonState() {
 }
 /* Expands section on page load based on the hash. Expands section when the leftnav item is clicked */
 function expandSectionBasedOnHash(itemName) {
-    let anchorElement = $('div[name="' + itemName + '"]').next(); //anchor element is always the next of div (eg. h2 or h3)
-
+    let anchorElement = $('div[name="' + itemName + '"]').next(); //anchor element is always the next of div (eg. h2 or h3)    
     if ($(anchorElement).hasClass('hol-ToggleRegions')) //if the next element is the collpase/expand button
         anchorElement = $(anchorElement).next();
     if (anchorElement[0].tagName !== 'H2') {
         anchorElement = $(anchorElement).siblings('h2');
     }
-    expandSection(anchorElement, "fade");
+    if ($(anchorElement).hasClass('minus') || $(anchorElement).hasClass('plus'))
+        expandSection(anchorElement, "fade");
     $(anchorElement)[0].scrollIntoView();
     window.scrollTo(0, window.scrollY - anchorOffset);
     changeButtonState();
