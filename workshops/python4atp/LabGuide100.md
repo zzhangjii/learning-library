@@ -21,6 +21,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
 **Please Note:** All steps are done on your Oracle Cloud Developer Image Instance.
 
+
 ### **STEP 1:** Log in to your OCI dashboard and switch regions
 
 - Open firefox from inside the image (you should still be in the image from the previous lab) and [login](https://www.oracle.com/index.html) to your cloud account.
@@ -30,6 +31,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
   ![](images/login-screen.png)
 
 - Login to your Oracle Cloud Account if you have not done so already.
+
 
 ### **STEP 2:** Add data to Object Storage Bucket
 
@@ -61,6 +63,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
   ![](images/100/019.png)
 
+
 ### **STEP 3:** Generate auth token for user
 
 - Navigate to `Identity` > `Users`.  
@@ -80,6 +83,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 - Copy the token and save it for later.  If you lose this you can always generate more tokens.
 
   ![](images/100/024.png)
+
 
 ### **STEP 4:** Download the Autonmous Transaction Processing Database DB Wallet Zip File
 <!-- **Remember:** All steps from now on are inside the instance (i.e. using the vnc viewer) -->
@@ -118,6 +122,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
   ![](images/100/033.png)
 
+
 ### **STEP 5:** Paste wallet files in InstantClient
 
 - Create new folder named wallet in Downloads directory.
@@ -144,6 +149,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
   ![](images/100/wallet/32.png)
 
+
 ### **STEP 6:** Create SQL Developer Connection to the Autonomous Transaction Processing Database
 
 - Open **SQL Developer** through the menu.
@@ -165,6 +171,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
 	![](images/100/042.png)
 
+
 ### **STEP 7:** Create Database User in the Autonomous Transaction Processing Database
 
 - You should see the **SQL Developer Worksheet** open. Once opened execute the following SQL Statements to create the `alpha` database user.
@@ -173,6 +180,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
   `grant dwrole to alpha;`
 
   ![](images/100/043.png)
+
 
 ### **STEP 8:** Create DBMS_CLOUD Credential
 
@@ -191,6 +199,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
   ![](images/100/044.png)
 
+
 ### **STEP 9:** Add DBA View and an Autonomous Transaction Processing Database SQL Developer Connection
 
 - In **SQL Developer**, click on the menu **View** and select **DBA**
@@ -204,6 +213,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
   ![](images/100/047.png)
 
   ![](images/100/048.png)
+
 
 ### **STEP 10:** Import Data into the Autonomous Transaction Processing Database Instance using Data Pump Import Wizard
 
@@ -266,6 +276,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
   ![](images/100/065.png)
 
+
 ### **STEP 11:** Create external table 
 
 - Repeat Step 8 from above in this new user, and execute the following SQL Statements to create the DBMS_CLOUD Credential `py4dev_cred`.
@@ -317,4 +328,3 @@ end;
 **This completes the Lab!**
 
 **You are ready to proceed to [Lab 200](LabGuide200.md)**
-	

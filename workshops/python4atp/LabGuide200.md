@@ -13,6 +13,7 @@ In Lab 200 you also continue to play the role of Derek, but now you get to the f
 
 ## Steps
 
+
 ### **STEP 1:** Configure project in Visual Studio Code
 
 - First we add the Visual Studio Code in the favorites so it can be easily accessible. Click on **Applications** and then click on **Activity Overview**
@@ -35,7 +36,7 @@ In Lab 200 you also continue to play the role of Derek, but now you get to the f
 
   ![](images/200/1.png)
 
--  In the Dialog box Open Downloads, click on **pythonWebService** and then click on **OK**.
+-  In the Dialog box go to the unzipped **lab-resources** folder, look inside of it, click on **pythonWebService**, and then click on **OK**.
 
   ![](images/200/2.png)
 
@@ -72,6 +73,7 @@ In Lab 200 you also continue to play the role of Derek, but now you get to the f
 
   ![](images/200/8.png)
 
+
 ### **STEP 2:** Run python web service
 
 - Leave the terminal open. Click on **config.py** file from the left pane and change the details in the file with your Autonomous Transaction Processing Database information.
@@ -87,11 +89,18 @@ In Lab 200 you also continue to play the role of Derek, but now you get to the f
     
   ![](images/200/11.png)
 
+
 ### **STEP 3:** Run frontend application
 
-- Open **customwebapp** project in Visual Studio Code. Frontend application is created using ReactJS. Open the project in new window by clicking on **File** and then click on **New Window**
+- Open **customwebapp** in Visual Studio Code by opening the project in a new window: click on **File** and then click on **New Window**. The frontend application is created using ReactJS.
 
     ![](images/200/12-1.png)
+
+- Click on **File** and then click on **Open Folder** 
+
+  ![](images/200/1.png)
+
+-  In the Dialog box go to the unzipped **lab-resources** folder, look inside of it, click on **customwebapp**, and then click on **OK**.
 
 - Open the inbuilt Visual Studio Code terminal by clicking on **View** and then click on **Terminal**. You can also open by keyboard shortcut **[Ctrl + `]**.
 
@@ -104,6 +113,7 @@ In Lab 200 you also continue to play the role of Derek, but now you get to the f
 - Run the command ``` npm start``` to start the application 
 
   ![](images/200/13.png)
+
 
 ### **STEP 4:** Create and view customer info
 
@@ -134,3 +144,8 @@ In Lab 200 you also continue to play the role of Derek, but now you get to the f
 - If everything is filled corrrectly success message is displayed at top.
     
   ![](images/200/20.png)
+
+
+**This completes the Lab!**
+
+**You are ready to proceed to [Lab 300](LabGuide300.md)**
