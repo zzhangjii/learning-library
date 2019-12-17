@@ -49,27 +49,27 @@ In Lab 200 you also continue to play the role of Derek, but now you get to the f
   ![](images/200/4.png)
 
 - First we need to intall pip in the image. Type/Copy the following command in the terminal. 
-```sudo curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py```
+`$ sudo curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py`
 
     ![](images/200/5-1.png)
 
-- Next type the following command ```sudo python get-pip.py```
+- Next type the following command `$ sudo python get-pip.py`.
 
     ![](images/200/5-2.png)
 
-- In the terminal enter command ```sudo pip install virtualenv```. This will create virtual enviornment to install and run the packages, so that we don't install packages globally.
+- In the terminal enter command `$ sudo pip install virtualenv`. This will create virtual enviornment to install and run the packages, so that we don't install packages globally.
 
   ![](images/200/5.png)
 
-- Next enter command ```virtualenv env``` to create entry point.
+- Next enter command `$ virtualenv env` to create entry point.
 
   ![](images/200/6.png)
 
-- To run the virtual enviornment type ``` source env/bin/activate```. If successfull you will see (env) before the path that means you are now in virtual env
+- To run the virtual enviornment type `$ source env/bin/activate`. If successfull you will see (env) before the path that means you are now in virtual env.
 
   ![](images/200/7.png)
 
-- We have all the required packages in requirements file. To install it run the command ``` pip install -r requirements.txt```
+- We have all the required packages in requirements file. To install it run the command `$ pip install -r requirements.txt`.
 
   ![](images/200/8.png)
 
@@ -81,7 +81,7 @@ In Lab 200 you also continue to play the role of Derek, but now you get to the f
   ![](images/200/9.png)
 
 - We are using **flask** library to create the web service and **cx-Oracle** to connect the Autonomous Transaction Processing Database to our application. The data then fetched from database it parsed and converted to JSON format to display.
-- If you closed the terminal, open it again and make sure to be in virtual env. Run the command ```python app.py```. Now we have our web service running. Leave the terminal as it is.
+- If you closed the terminal, open it again and make sure to be in virtual env. Run the command `$ python app.py`. Now we have our web service running. Leave the terminal as it is.
 
   ![](images/200/10.png)
 
@@ -106,11 +106,11 @@ In Lab 200 you also continue to play the role of Derek, but now you get to the f
 
   ![](images/200/4.png)
 
-- Run the command ``` npm install ``` to install the required packages to run the project.
+- Run the command `$ npm install` to install the required packages to run the project.
 
   ![](images/200/12.png)
 
-- Run the command ``` npm start``` to start the application 
+- Run the command `$ npm start` to start the application 
 
   ![](images/200/13.png)
 

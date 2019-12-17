@@ -13,6 +13,7 @@ Support is interested in a new app that provides insights into customer and serv
 
 ## Steps
 
+
 ### **STEP 1:** Configure project in Visual Studio Code
 
 - Open the terminal,click on **Applications**, select **Favorites** and then click on **Visual Studio**.
@@ -23,7 +24,7 @@ Support is interested in a new app that provides insights into customer and serv
 
   ![](images/200/1.png)
 
-- In the Dialog box Open Downloads, click on **mapplottingpy** and then click on **OK**.
+-  In the Dialog box go to the unzipped **lab-resources** folder, look inside of it, click on **mapplottingpy**, and then click on **OK**.
 
 - You will the see the files on the left panes.
 
@@ -31,21 +32,22 @@ Support is interested in a new app that provides insights into customer and serv
 
   ![](images/200/4.png)
 
-- In the terminal enter command ```pip install virtualenv```
+- In the terminal enter command `$ pip install virtualenv`
 
   ![](images/200/5.png)
 
-- Next enter command ```virtualenv env``` to create entry point.
+- Next enter command `$ virtualenv env` to create entry point.
 
   ![](images/200/6.png)
 
-- To run the virtual enviornment type ``` source env/bin/activate```. If successfull you will see (env) before the path that means you are now in virtual env
+- To run the virtual enviornment type `$ source env/bin/activate`. If successfull you will see (env) before the path that means you are now in virtual env
 
   ![](images/200/7.png)
 
-- We have all the required packages in requirements file. To install it run the command ``` pip install -r requirements.txt```
+- We have all the required packages in requirements file. To install it run the command `$ pip install -r requirements.txt`
 
   ![](images/200/8.png)
+
 
 ### **STEP 2:** Plot customers on Map
 
@@ -55,7 +57,7 @@ Support is interested in a new app that provides insights into customer and serv
 
 - We are using **Bokeh** open source library to plot the data we get from  on map. Bokeh is an interactive visualization library that targets modern web browsers for presentation. Its goal is to provide elegant, concise construction of versatile graphics, and to extend this capability with high-performance interactivity over very large or streaming datasets.
 
-- If you closed the terminal, open it again and make sure to be in virtual env. Run the command ```bokeh serve customers.py```. Now we have our web application running. Leave the terminal as it is.
+- If you closed the terminal, open it again and make sure to be in virtual env. Run the command `$ bokeh serve customers.py`. Now we have our web application running. Leave the terminal as it is.
 
   ![](images/300/3.png)
 
@@ -99,3 +101,8 @@ Support is interested in a new app that provides insights into customer and serv
 - Here are some useful links to show more about the Spatial Database features.
   - [Oracle docs](https://docs.oracle.com/database/121/SPATL/sdo_nn.htm#SPATL1032)
   - [Blog on Spatial Database](https://blogs.oracle.com/oraclespatial/spatial-with-python-and-geopandas-made-easy-with-cx_oracle)
+
+
+**This completes the Lab!**
+
+**You are ready to proceed to [Lab 400](LabGuide400.md)**
