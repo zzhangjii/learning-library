@@ -58,7 +58,9 @@ Support is interested in a new app that provides insights into customer and serv
 - We are using **Bokeh** open source library to plot the data we get from  on map. Bokeh is an interactive visualization library that targets modern web browsers for presentation. Its goal is to provide elegant, concise construction of versatile graphics, and to extend this capability with high-performance interactivity over very large or streaming datasets.
 
 - If you closed the terminal, open it again and make sure to be in virtual env. Run the command.
+    
     `$ bokeh serve customers.py`
+    
     Now we have our web application running. Leave the terminal as it is.
 
   ![](images/300/3.png)
