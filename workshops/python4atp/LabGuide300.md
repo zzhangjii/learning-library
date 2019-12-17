@@ -32,21 +32,29 @@ Support is interested in a new app that provides insights into customer and serv
 
   ![](images/200/4.png)
 
-- In the terminal enter command `$ pip install virtualenv`
+- In the terminal enter command 
 
-  ![](images/200/5.png)
+    `$ pip install virtualenv`
+
+    ![](images/200/5.png)
 
 - Next enter command `$ virtualenv env` to create entry point.
 
   ![](images/200/6.png)
 
-- To run the virtual enviornment type `$ source env/bin/activate`. If successfull you will see (env) before the path that means you are now in virtual env
+- To run the virtual enviornment type
 
-  ![](images/200/7.png)
+    `$ source env/bin/activate`.
+    
+    If successfull you will see (env) before the path that means you are now in virtual env.
 
-- We have all the required packages in requirements file. To install it run the command `$ pip install -r requirements.txt`
+    ![](images/200/7.png)
 
-  ![](images/200/8.png)
+- We have all the required packages in requirements file. To install it run the command
+
+    `$ pip install -r requirements.txt`
+
+    ![](images/200/8.png)
 
 
 ### **STEP 2:** Plot customers on Map
