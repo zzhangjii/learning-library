@@ -22,8 +22,14 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
 ### **STEP 1:** Log in to your OCI dashboard and switch regions
 
+- Open firefox from inside the image (you should still be in the image from the previous step) and log into your cloud account.  www.oracle.com
+
+  ![](images/100/025.png)
+
+  ![](images/login-screen.png)
+
 - Login to your Oracle Cloud Account if you have not done so already.
-	
+
 ### **STEP 2:** Add data to Object Storage Bucket
 
 - Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Core Infrastructure** section, select **Object Storage** then **Object Storage** .
@@ -78,12 +84,6 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
 **Remember:** All steps from now on are inside the instance (i.e. using the vnc viewer)
 
-- Open firefox from inside the image (you should still be in the image from the previous step) and log into your cloud account.  www.oracle.com
-	
-  ![](images/100/025.png)
-
-  ![](images/login-screen.png)
-	
   Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Database** section, select **Autonomous Transaction Processing**.
 
   ![](images/100/027.png)
@@ -207,7 +207,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
 ### **STEP 10:** Import Data into the Autonomous Transaction Processing Database Instance using Data Pump Import Wizard
 
-- On you instance browser navigate to object storage and select the py4dev bucket.
+- On you instance browser, navigate to object storage and select the py4dev bucket.
 
   ![](images/100/051.png)
 	
