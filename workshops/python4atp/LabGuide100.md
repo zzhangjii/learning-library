@@ -17,8 +17,9 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 - Create an external table.
 
 ## Steps
+<!-- **Please Note:** Steps 1-3 are done locally. Steps 4 and on are done on your Oracle Cloud Developer Image Instance. -->
 
-**Please Note:** Steps 1-3 are done locally. Steps 4 and on are done on your Oracle Cloud Developer Image Instance.
+**Please Note:** All steps are done on your Oracle Cloud Developer Image Instance.
 
 ### **STEP 1:** Log in to your OCI dashboard and switch regions
 
@@ -44,7 +45,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
   ![](images/100/005.png)
 
-- Unzip the lab-resources.zip file you downloaded earlier.
+- Unzip the lab-resources.zip file you copied from earlier.
 
 - Navigate to your object storage bucket and then click **Upload Object**
 
@@ -81,8 +82,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
   ![](images/100/024.png)
 
 ### **STEP 4:** Download the Autonmous Transaction Processing Database DB Wallet Zip File
-
-**Remember:** All steps from now on are inside the instance (i.e. using the vnc viewer)
+<!-- **Remember:** All steps from now on are inside the instance (i.e. using the vnc viewer) -->
 
   Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Database** section, select **Autonomous Transaction Processing**.
 
@@ -213,7 +213,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 	
   ![](images/100/052.png)
 
-- Then select the icon on the far right to retrieve details.
+- Then select the icon on the far right to retrieve details from `expdp_alpha.dmp`.
 
   ![](images/100/053.png)
 
@@ -268,15 +268,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
 ### **STEP 11:** Create external table 
 
-- Obtain the URI of the credit_scoring_100k_pq file from object storage in your console.
-
-  ![](images/100/061.png)
-
-- Copy the URI path into SQL Developer (temporarily)
-
-  ![](images/100/062.png)
-
-- Repeat the step from above in this new user, and copy the following code into SQL Developer below the above URI, and then replace the uri from above and execute.
+- Repeat Step 8 from above in this new user, and execute the following SQL Statements to create the DBMS_CLOUD Credential `py4dev_cred`.
   ```
 	begin
 	  DBMS_CLOUD.create_credential(
@@ -288,7 +280,15 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 	/
 	```
 
-- Copy the following code into SQL Developer below the above URI, and then replace the uri from above and execute.
+- Obtain the URI of the credit_scoring_100k_pq file from object storage in your console.
+
+  ![](images/100/061.png)
+
+- Copy the URI path into SQL Developer (temporarily)
+
+  ![](images/100/062.png)
+
+- Copy the following code into SQL Developer below the above URI, and then replace with the uri from above and execute.
 
 ```
 begin
