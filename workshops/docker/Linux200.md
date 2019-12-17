@@ -70,7 +70,7 @@ This will create a directory called AlphaOfficeSetup in your $HOME directory.
 
 ### **STEP 4**: Set Permissions
 
-- We will be mounting the AlphaOfficeSetup directory to a directory within the Docker database container. To ensure that the "oracle" user (Oracle database) or "root" user (MYSQL database) inside of your database container will have RW capabilites to the HOST's volume we'll set some permissions.
+- We will be mounting the AlphaOfficeSetup directory to a directory within the Docker database container. To ensure that the "oracle" user (Oracle database) or "root" user (MYSQL database) inside of your database container will have read-write capabilites to the HOST's volume we'll set some permissions.
 
 - **Type** the following:
 
@@ -125,15 +125,10 @@ This docker command will create a container based on the database image file loc
   docker run -d -it --name orcl -h='oracledb-ao' -p=1521:1521 -p=5600:5600 -v /home/opc/AlphaOfficeSetup:/dbfiles wvbirder/database-enterprise:12.2.0.1-slim
   ```
 
-  Example:
-  docker `run -d -it --name orcl -h='oracledb-ao' -p=1521:1521 -p=5600:5600 -v /home/opc/AlphaOfficeSetup:/dbfiles wvbirder/database-enterprise:12.2.0.1-slim`
-
   ***If you make a mistake with the volume path to where you downloaded the AlphaOfficeSetup files you can stop and remove the container once it's created and try again using the following commands***
 
-  ```
-  docker stop orcl
-  docker rm orcl
-  ```
+  _`docker stop orcl`_
+  _`docker rm orcl`_
 
   ***DON'T RUN THE TWO COMMANDS ABOVE UNLESS YOU'VE MADE AN ERROR***
 
@@ -143,7 +138,7 @@ This docker command will create a container based on the database image file loc
 
 ### **STEP 2**: Follow the progress of the creation
 
-Once the container is instantiated a default database is configured. Since we've indicated the -it flag on startup we can follow the database creation progess using the docker logs command
+Once the container is created a default database is configured. Since we've indicated the -it flag on startup we can follow the database creation progess using the docker logs command
 
 - **Type** the following:
 
@@ -153,7 +148,7 @@ Once the container is instantiated a default database is configured. Since we've
 
   ![](images/200Linux/Picture200-7.png)
 
-- When the database is created you will see "**The database is ready for use**" in the log output. Once you see it, press **Control-C** to stop watching the log and continue to the next step.
+- When the database is created you will see "**The database is ready for use**" in the log output. Once you see it, **press Ctrl+C** to stop watching the log and continue to the next step. **NOTE: MAC USERS SHOULD USE THE CONTROL KEY, NOT THE COMMAND KEY.**
 
   ![](images/200Linux/Picture200-8.png)
 
@@ -243,18 +238,14 @@ This docker command will create a container based on the latest MYSQL database i
   docker run -d -it --name mysql -h='mysqldb-ao' -p=3306:3306 -v /home/opc/AlphaOfficeSetup:/dbfiles --env="MYSQL_ROOT_PASSWORD=Alpha2017_" mysql:5.7
   ```
 
-  Example: `docker run -d -it --name mysql -h='mysqldb-ao' -p=3306:3306 -v /home/opc/AlphaOfficeSetup:/dbfiles --env="MYSQL_ROOT_PASSWORD=Alpha2017_" mysql:5.7`
+- This sets up a default MYSQL database using the "root" database users password as "Alpha2017\_"
 
-- This sets up a default MYSQL database using the "root" database users password as "Alpha2017_"
+  ***If you make a mistake with the volume path to where you downloaded the AlphaOfficeSetup files you can stop and remove the container once it's created and try again using the following commands***
 
-  **If you make a mistake with the volume path to where you downloaded the AlphaOfficeSetup files you can stop and remove the container once it's created and try again using the following commands**
+  _`docker stop mysql`_
+  _`docker rm mysql`_
 
-  ```
-  docker stop mysql
-  docker rm mysql
-  ```
-
-  **DON'T RUN THE TWO COMMANDS ABOVE UNLESS YOU'VE MADE AN ERROR**
+  ***DON'T RUN THE TWO COMMANDS ABOVE UNLESS YOU'VE MADE AN ERROR***
 
 - This will take a couple of minutes to download the image file (since it does not yet reside locally), extract the content and finally create and configure the default database
 
@@ -273,6 +264,8 @@ Once the container is instantiated a default database is configured. Since we've
 - When the database is created you will see "**mysqld.sock  port: 3306**" in the log output:
 
   ![](images/200Linux/Picture200-16.png)
+
+  Once you see this, **press Ctrl+C** to exit out of the logger.
 
 ### **STEP 3**: Create and populate alpha schema
 
@@ -485,7 +478,7 @@ Copy a background image file into the running AlphaOfficeUI container. This file
 
   Example: `docker cp /home/opc/AlphaOfficeSetup/dark_blue.jpg alphaofficeui:/pipeline/source/public/Images`
 
-### **STEP 2**: Install the VIM editor in the UI container
+### **STEP 2**: Install/Update the VIM editor in the UI container
 
 Even though the orginal AlphaOfficeUI image could have been set up ahead of time with any needed client tools we're adding the the environment on-the-fly to give you some idea that it can be done
 
@@ -494,6 +487,8 @@ Even though the orginal AlphaOfficeUI image could have been set up ahead of time
   ```
   docker exec -it alphaofficeui bash
   ```
+
+  At this point, you can run `which vim` to see which version of VIM the `alphaofficeui` container is. If the command returns something similar to `/usr/bin/vim`, then verify that "**dark_blue.jpg**" is in the container by **running** `ls /pipeline/source/public/Images`, and you can opt to skip to **STEP 3**.
 
 - **Type** the following:
 
