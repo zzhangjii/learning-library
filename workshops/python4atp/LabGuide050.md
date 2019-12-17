@@ -211,7 +211,7 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
 ### **STEP 6:** Generate your SSH key pair
 
-- On linux or Mac enter this in a command shell.
+- On Linux or Mac enter this in a command shell.
     
     `$ ssh-keygen -b 2048 -t rsa`
 
@@ -225,7 +225,7 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 	
 ### **STEP 7:** Prepare Terraform Script
 
-Now, we will get the Terraform code. This code will show us the true power of Terraform as opposed to manual creation. By using Terraform, you have a reusable process for creating infrastructure. In some cases, like this one, you don't have to know anything about how the process works. You get the privilige of focusing on the results.
+Now, we will get the Terraform code. Here is where we will see the true power of Terraform as opposed to manual creation. By using Terraform, you have a reusable process for creating infrastructure. In some cases, like this one, you don't have to know anything about how the process works. You can deploy different pre-designed infrastructure designs for many different purposes, which frees up users to focus on their projects.
 
 - First, create a folder on your computer to hold the files. This is to have a workspace for the project.
     
@@ -333,7 +333,7 @@ Now, we will get the Terraform code. This code will show us the true power of Te
     
     For Windows, follow these [instructions](https://www.skyverge.com/blog/how-to-set-up-an-ssh-tunnel-with-putty/) for information on how to create a tunnel on Windows.
 
-     This example works on Linux and MAC. Note: on Linux you will need to be su.
+     This example works on Linux and Mac. **Note:** on Linux you will need to be su.
 
      `$ ssh -i <your private key> -L 5901:localhost:5901 opc@<your IP address>`
 
