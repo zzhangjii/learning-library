@@ -14,6 +14,8 @@ To deploy these services, you will be using Terraform, a tool for building, chan
 
 ## Lab 050 Objectives
 
+- Set up Terraform
+- Set up Oracle Cloud Infrastructure Command Line Interface
 - Setup your IAAS environment and create common components.
 - Create a new Cloud Developer Image from Marketplace.
 - Create an Autonomous Transaction Processing (ATP) Database.
@@ -174,7 +176,7 @@ See these instructions for [Download and Install of CLI](https://docs.cloud.orac
 
 - Lastly, go into your /User/path/.oci folder and open the oci_api_key_public pem file. We will use this file to create resources as the given user.
 
-**Note:** This is a hidden folder. If you don't know how to find hidden folders, go [here](https://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/) for Mac and Linux, or [here](https://support.microsoft.com/en-us/help/14201/windows-show-hidden-files) for Windows.
+    **Note:** This is a hidden folder. If you don't know how to find hidden folders, go [here](https://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/) for Mac and Linux, or [here](https://support.microsoft.com/en-us/help/14201/windows-show-hidden-files) for Windows.
 
     ![](images/050/065.png)
 
