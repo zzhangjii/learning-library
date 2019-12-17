@@ -18,11 +18,13 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
 ## Steps
 
+**Please Note:** Steps 1-3 are done locally. Steps 4 and on are done on your Oracle Cloud Developer Image Instance.
+
 ### **STEP 1:** Log in to your OCI dashboard and switch regions
 
 - Login to your Oracle Cloud Account if you have not done so already.
 	
-### **STEP 2:** Create object storage bucket
+### **STEP 2:** Add data to Object Storage Bucket
 
 - Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Core Infrastructure** section, select **Object Storage** then **Object Storage** .
 
@@ -36,13 +38,15 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
   ![](images/100/005.png)
 
+- Unzip the lab-resources.zip file you downloaded earlier.
+
 - Navigate to your object storage bucket and then click **Upload Object**
 
   ![](images/100/015.png)
 
   ![](images/100/016.png)
 
-- Select your data pump file and click `Upload Objects`.  Select the `expdp_alpha.dmp` and the `credit_scoring_100k_pq` files from the git repository.  Note we will be importing data from the expdp_alpha.dmp file, and later querying data from the credit_scoring_100k_pq (big data parquet file).  The latter file will be used in a future lab.  This is just showing you how easy it is to query parquet (and avro) files.  Click `Open`, then `Upload Objects`.
+- Click `select files`, then select the `expdp_alpha.dmp` and the `credit_scoring_100k_pq`. Note we will be importing data from the expdp_alpha.dmp file, and later querying data from the credit_scoring_100k_pq (big data parquet file). The latter file will be used in a future lab. This is just showing you how easy it is to query parquet (and avro) files. Click `Open`, then `Upload Objects`.
 
   ![](images/100/017.png)
 
@@ -70,8 +74,9 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
   ![](images/100/024.png)
 
-
 ### **STEP 4:** Download the Autonmous Transaction Processing Database DB Wallet Zip File
+
+**Remember:** All steps from now on are inside the instance (i.e. using the vnc viewer)
 
 - Open firefox from inside the image (you should still be in the image from the previous step) and log into your cloud account.  www.oracle.com
 	
@@ -109,7 +114,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
   ![](images/100/034.png)
 
-- As information, the Autonmous Transaction Processing Database Wallet file **Wallet_orcl4py.zip** contains the following files
+- As information, the Autonomous Transaction Processing Database Wallet file **Wallet_orcl4py.zip** contains the following files
 
   ![](images/100/033.png)
 
@@ -202,7 +207,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
 ### **STEP 10:** Import Data into the Autonomous Transaction Processing Database Instance using Data Pump Import Wizard
 
-- On you desktop browser navigate to object storage and select the py4dev bucket.
+- On you instance browser navigate to object storage and select the py4dev bucket.
 
   ![](images/100/051.png)
 	
