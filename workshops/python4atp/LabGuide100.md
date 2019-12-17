@@ -318,7 +318,7 @@ end;
 
 - Test the view by executing the following:
 
-`select * from credit_scoring_100k_ext;`
+  `select * from credit_scoring_100k_ext;`
 
 - SQL Dev:
 
