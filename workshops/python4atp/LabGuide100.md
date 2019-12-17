@@ -22,7 +22,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
 ### **STEP 1:** Log in to your OCI dashboard and switch regions
 
-- Open firefox from inside the image (you should still be in the image from the previous step) and log into your cloud account.  www.oracle.com
+- Open firefox from inside the image (you should still be in the image from the previous lab) and [login](www.oracle.com) to your cloud account.
 
   ![](images/100/025.png)
 
