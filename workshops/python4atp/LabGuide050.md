@@ -339,7 +339,7 @@ Now, we will get the Terraform code. Here is where we will see the true power of
 
     ![](images/050/039.png)
 
-- Open a vnc viewer session.  If you don't already have vncviewer you can download it [here](https://www.realvnc.com/en/connect/download/viewer/).
+- Open a vnc viewer session.  If you don't already have vnc viewer you can download it [here](https://www.realvnc.com/en/connect/download/viewer/).
 
     Enter `localhost::5901` into the browser and then press Enter.
 
@@ -356,7 +356,7 @@ Now, we will get the Terraform code. Here is where we will see the true power of
 
 ### **STEP 10:** Download Files Used in this Workshop
 
-**[Click to Download](https://oracle.github.io/learning-library/workshops/python4atp/lab-resources.zip). Keep track of which directory this zip file gets saved to.**
+[Click to Download](https://oracle.github.io/learning-library/workshops/python4atp/lab-resources.zip). **Keep track of which directory this zip file gets saved to.**
 
 - Next, go back into your instance
 
