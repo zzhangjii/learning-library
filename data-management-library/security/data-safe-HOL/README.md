@@ -7,10 +7,11 @@ This workshop lets you practice the main features in Oracle Data Safe, including
 ## Access the Labs on the Repo
 Alternatively, you can follow the labs on this repo:
 - [About this lab](./about-this-lab/content.md)
-- [Introduction to Provisioning an ADW account](./intro-provision/content.md)
-- [Review Query Performance](./review-query-performance/content.md)
-- [Machine Learning](./machine-learning/content.md)
-- [Create Data Visualizations](./create-data-visualizations/content.md)
+- [View a Registered Target Database](./view-registered-target-db/content.md)
+- [Provision Audit and Alert Policies](./provision-audit-alert-policies/content.md)
+- [Assess Database Configurations and Users](./assess-db-config-users/content.md)
+- [Analyze Alerts and Audit Reports](./analyze-alerts-audit-reports/content.md)
+- [Discover and Mask Sensitive Data](./discover-mask-data/content.md)
 
 ## Oracle Cloud Account
 
