@@ -8,7 +8,6 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
 ## Lab 100 Objectives
 
-- Create an object store bucket.
 - Download data pump export file.
 - Upload data pump export file to the object store bucket.
 - Generate an auth token.
@@ -18,28 +17,37 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 - Create an external table.
 
 ## Steps
+<!-- **Please Note:** Steps 1-3 are done locally. Steps 4 and on are done on your Oracle Cloud Developer Image Instance. -->
+
+**Please Note:** All steps are done on your Oracle Cloud Developer Image Instance.
+
 
 ### **STEP 1:** Log in to your OCI dashboard and switch regions
 
+- Open firefox from inside the image (you should still be in the image from the previous lab) and [login](https://www.oracle.com/index.html) to your cloud account.
+
+  ![](images/100/025.png)
+
+  ![](images/login-screen.png)
+
 - Login to your Oracle Cloud Account if you have not done so already.
-	
-### **STEP 2:** Create object storage bucket
+
+
+### **STEP 2:** Add data to Object Storage Bucket
 
 - Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Core Infrastructure** section, select **Object Storage** then **Object Storage** .
 
   ![](images/100/002.png)
 
-- Select the **Compartment** `python4dev` and click **Create Bucket**
+- Select the **Compartment** `python4dev`.
 
   ![](images/100/003.png)
 
-- In the **Bucket Name** field, enter `py4dev` and click **Create Bucket**
-
-  ![](images/100/004.png)
-
-- In a moment, your new Object Storage Bucket will show up in the list. Once it appears click on the `atpData` bucket url to view the details.
+- Your new Object Storage Bucket should show up in the list. Once it appears click on the `py4dev` bucket url to view the details.
 
   ![](images/100/005.png)
+
+- Unzip the lab-resources.zip file you copied from earlier.
 
 - Navigate to your object storage bucket and then click **Upload Object**
 
@@ -47,13 +55,14 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
   ![](images/100/016.png)
 
-- Select your data pump file and click `Upload Objects`.  Select the `expdp_alpha.dmp` and the `credit_scoring_100k_pq` files from the git repository.  Note we will be importing data from the expdp_alpha.dmp file, and later querying data from the credit_scoring_100k_pq (big data parquet file).  The latter file will be used in a future lab.  This is just showing you how easy it is to query parquet (and avro) files.  Click `Open`, then `Upload Objects`.
+- Click `select files`, then select the `expdp_alpha.dmp` and the `credit_scoring_100k_pq`. Note we will be importing data from the expdp_alpha.dmp file, and later querying data from the credit_scoring_100k_pq (big data parquet file). The latter file will be used in a future lab. This is just showing you how easy it is to query parquet (and avro) files. Click `Open`, then `Upload Objects`.
 
   ![](images/100/017.png)
 
   ![](images/100/018.png)
 
   ![](images/100/019.png)
+
 
 ### **STEP 3:** Generate auth token for user
 
@@ -77,13 +86,8 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
 
 ### **STEP 4:** Download the Autonmous Transaction Processing Database DB Wallet Zip File
+<!-- **Remember:** All steps from now on are inside the instance (i.e. using the vnc viewer) -->
 
-- Open firefox from inside the image (you should still be in the image from the previous step) and log into your cloud account.  www.oracle.com
-	
-  ![](images/100/025.png)
-
-  ![](images/login-screen.png)
-	
   Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Database** section, select **Autonomous Transaction Processing**.
 
   ![](images/100/027.png)
@@ -114,9 +118,10 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
   ![](images/100/034.png)
 
-- As information, the Autonmous Transaction Processing Database Wallet file **Wallet_orcl4py.zip** contains the following files
+- As information, the Autonomous Transaction Processing Database Wallet file **Wallet_orcl4py.zip** contains the following files
 
   ![](images/100/033.png)
+
 
 ### **STEP 5:** Paste wallet files in InstantClient
 
@@ -144,6 +149,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
   ![](images/100/wallet/32.png)
 
+
 ### **STEP 6:** Create SQL Developer Connection to the Autonomous Transaction Processing Database
 
 - Open **SQL Developer** through the menu.
@@ -165,6 +171,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
 	![](images/100/042.png)
 
+
 ### **STEP 7:** Create Database User in the Autonomous Transaction Processing Database
 
 - You should see the **SQL Developer Worksheet** open. Once opened execute the following SQL Statements to create the `alpha` database user.
@@ -173,6 +180,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
   `grant dwrole to alpha;`
 
   ![](images/100/043.png)
+
 
 ### **STEP 8:** Create DBMS_CLOUD Credential
 
@@ -191,6 +199,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
   ![](images/100/044.png)
 
+
 ### **STEP 9:** Add DBA View and an Autonomous Transaction Processing Database SQL Developer Connection
 
 - In **SQL Developer**, click on the menu **View** and select **DBA**
@@ -205,15 +214,16 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
   ![](images/100/048.png)
 
+
 ### **STEP 10:** Import Data into the Autonomous Transaction Processing Database Instance using Data Pump Import Wizard
 
-- On you desktop browser navigate to object storage and select the py4dev bucket.
+- On you instance browser, navigate to object storage and select the py4dev bucket.
 
   ![](images/100/051.png)
 	
   ![](images/100/052.png)
 
-- Then select the icon on the far right to retrieve details.
+- Then select the icon on the far right to retrieve details from `expdp_alpha.dmp`.
 
   ![](images/100/053.png)
 
@@ -266,7 +276,20 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
   ![](images/100/065.png)
 
+
 ### **STEP 11:** Create external table 
+
+- Repeat Step 8 from above in this new user, and execute the following SQL Statements to create the DBMS_CLOUD Credential `py4dev_cred`.
+  ```
+	begin
+	  DBMS_CLOUD.create_credential(
+		credential_name => 'py4dev_cred',
+		username => '<your cloud userid>',
+		password => '<Auth Token Generated in STEP 4>'
+	  );
+	end;
+	/
+	```
 
 - Obtain the URI of the credit_scoring_100k_pq file from object storage in your console.
 
@@ -276,7 +299,7 @@ Derek is a Python developer, and so he avoids spending time in secondary tasks s
 
   ![](images/100/062.png)
 
-- Copy the following code into SQL Developer below the above URI, and then replace the uri from above and execute.
+- Copy the following code into SQL Developer below the above URI, and then replace with the uri from above and execute.
 
 ```
 begin
@@ -295,7 +318,7 @@ end;
 
 - Test the view by executing the following:
 
-`select * from credit_scoring_100k_ext;`
+  `select * from credit_scoring_100k_ext;`
 
 - SQL Dev:
 
@@ -305,4 +328,3 @@ end;
 **This completes the Lab!**
 
 **You are ready to proceed to [Lab 200](LabGuide200.md)**
-	
