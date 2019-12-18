@@ -1,19 +1,20 @@
 # Welcome to the \<title\> Hands-on Lab!
 <!-- Add text here to describe the labs at a high level. For example -->
-Get hands-on experience with Oracle Autonomous Data Warehouse through these hands-on labs.
+This workshop lets you practice the main features in Oracle Data Safe, including Activity Auditing, Data Discovery, Data Masking, User Assessment, and Security Assessment.
 
 ## Access the Labs Using Our Web Interface
 <!-- Add the link to the top level of your HOL folder -->
-**[Click here](https://ashwin-agarwal.github.io/tutorials/adw4dev-HOL/)** to use our easy to navigate HTML format.
+**[Click here](https://oracle.github.io/learning-library/data-management-library/security/data-safe-HOL)** to use our easy to navigate HTML format.
 
 ## Access the Labs on the Repo
-<!-- Add local links to the content.md files -->
+<!-- Add local links to the content.md files in your project -->
 Alternatively, you can follow the labs on this repo:
 - [About this lab](./about-this-lab/content.md)
-- [Introduction to Provisioning an ADW account](./intro-provision/content.md)
-- [Review Query Performance](./review-query-performance/content.md)
-- [Machine Learning](./machine-learning/content.md)
-- [Create Data Visualizations](./create-data-visualizations/content.md)
+- [View a Registered Target Database](./view-registered-target-db/content.md)
+- [Provision Audit and Alert Policies](./provision-audit-alert-policies/content.md)
+- [Assess Database Configurations and Users](./assess-db-config-users/content.md)
+- [Analyze Alerts and Audit Reports](./analyze-alerts-audit-reports/content.md)
+- [Discover and Mask Sensitive Data](./discover-mask-data/content.md)
 
 <!-- Keep this content -->
 ## Oracle Cloud Account
