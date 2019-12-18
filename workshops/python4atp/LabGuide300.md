@@ -13,63 +13,77 @@ Support is interested in a new app that provides insights into customer and serv
 
 ## Steps
 
+
 ### **STEP 1:** Configure project in Visual Studio Code
 
 - Open the terminal,click on **Applications**, select **Favorites** and then click on **Visual Studio**.
 
-  ![](images/200/1-1.png)
+    ![](images/200/1-1.png)
 
 - Click on **File** and then click on **Open Folder** 
 
-  ![](images/200/1.png)
+    ![](images/200/1.png)
 
-- In the Dialog box Open Downloads, click on **mapplottingpy** and then click on **OK**.
+-  In the Dialog box go to the unzipped **lab-resources** folder, look inside of it, click on **mapplottingpy**, and then click on **OK**.
 
 - You will the see the files on the left panes.
 
 - Open the inbuilt Visual Studio Code terminal by clicking on **View** and then click on **Terminal**. You can also open by keyboard shortcut **[Ctrl + `]**.
 
-  ![](images/200/4.png)
+    ![](images/200/4.png)
 
-- In the terminal enter command ```pip install virtualenv```
+- In the terminal enter command 
 
-  ![](images/200/5.png)
+    `$ pip install virtualenv`
 
-- Next enter command ```virtualenv env``` to create entry point.
+    ![](images/200/5.png)
 
-  ![](images/200/6.png)
+- Next enter command `$ virtualenv env` to create entry point.
 
-- To run the virtual enviornment type ``` source env/bin/activate```. If successfull you will see (env) before the path that means you are now in virtual env
+    ![](images/200/6.png)
 
-  ![](images/200/7.png)
+- To run the virtual enviornment type
 
-- We have all the required packages in requirements file. To install it run the command ``` pip install -r requirements.txt```
+    `$ source env/bin/activate`
+    
+    If successfull you will see (env) before the path that means you are now in virtual env.
 
-  ![](images/200/8.png)
+    ![](images/200/7.png)
+
+- We have all the required packages in requirements file. To install it run the command
+
+    `$ pip install -r requirements.txt`
+
+    ![](images/200/8.png)
+
 
 ### **STEP 2:** Plot customers on Map
 
 - Leave the terminal open. Click on **config.py** file from the left pane and change the details in the file with your Autonomous Transaction Processing Database information.
 
-  ![](images/200/9.png)
+    ![](images/200/9.png)
 
 - We are using **Bokeh** open source library to plot the data we get from  on map. Bokeh is an interactive visualization library that targets modern web browsers for presentation. Its goal is to provide elegant, concise construction of versatile graphics, and to extend this capability with high-performance interactivity over very large or streaming datasets.
 
-- If you closed the terminal, open it again and make sure to be in virtual env. Run the command ```bokeh serve customers.py```. Now we have our web application running. Leave the terminal as it is.
+- If you closed the terminal, open it again and make sure to be in virtual env. Run the command.
+    
+    `$ bokeh serve customers.py`
+    
+    Now we have our web application running. Leave the terminal as it is.
 
-  ![](images/300/3.png)
+    ![](images/300/3.png)
 
 - To confirm everything works fine, open firefox and go to URL [http://localhost:5006/customers](http://localhost:5006/customers).
     
-  ![](images/300/1.png)
+    ![](images/300/1.png)
 
 - Make sure to have zoom box selected by click the icon as below.
 
-  ![](images/300/2.png)
+    ![](images/300/2.png)
 
 - To zoom in drag and make square to get  better visibility of points.
 
-  ![](images/300/map.gif)
+    ![](images/300/map.gif)
 
 - Points on the map are the location of customer and service provider, when you hover over the points, it shows the customer address and the distance to the nearest service provider.
 
@@ -97,5 +111,10 @@ Support is interested in a new app that provides insights into customer and serv
 
 ### **Useful Links:**
 - Here are some useful links to show more about the Spatial Database features.
-  - [Oracle docs](https://docs.oracle.com/database/121/SPATL/sdo_nn.htm#SPATL1032)
-  - [Blog on Spatial Database](https://blogs.oracle.com/oraclespatial/spatial-with-python-and-geopandas-made-easy-with-cx_oracle)
+    - [Oracle docs](https://docs.oracle.com/database/121/SPATL/sdo_nn.htm#SPATL1032)
+    - [Blog on Spatial Database](https://blogs.oracle.com/oraclespatial/spatial-with-python-and-geopandas-made-easy-with-cx_oracle)
+
+
+**This completes the Lab!**
+
+**You are ready to proceed to [Lab 400](LabGuide400.md)**
