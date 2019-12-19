@@ -23,7 +23,8 @@ $(document).ready(function () {
         let selectedTutorial = setupRightNav(manifestFileContent); //populate side navigation based on content in the manifestFile
         let articleElement = document.createElement('article'); //creating an article that would contain MD to HTML converted content
         $.get(selectedTutorial.filename, function (markdownContent) { //reading MD file in the manifest and storing content in markdownContent variable
-            setupAnalytics(); //enabling analytics
+            //The setupAnalytics function is commented out as we are not using Google Analytics
+            //setupAnalytics(); //enabling analytics
             console.log(selectedTutorial.filename + " loaded!");
             $(articleElement).html(new showdown.Converter({ tables: true }).makeHtml(markdownContent)); //converting markdownContent to HTML by using showndown plugin                
             articleElement = renderVideos(articleElement); //adds iframe to videos    
@@ -48,6 +49,7 @@ $(document).ready(function () {
     });
 });
 /* The following functions are used for Google Analytics */
+/*
 function setupAnalytics() {
     $.getScript("https://www.googletagmanager.com/gtag/js?id=UA-153767729-1");
     window.dataLayer = window.dataLayer || [];
@@ -56,7 +58,9 @@ function setupAnalytics() {
 }
 function gtag() {
     dataLayer.push(arguments);
-}
+}*/
+/* Google Analytics functions end here */
+
 /* The following function increases the width of the side navigation div to open it. */
 function openRightSideNav() {
     $('#mySidenav').attr("style", "width: 270px; overflow-y: auto; box-shadow: 0 0 48px 24px rgba(0, 0, 0, .3);");
