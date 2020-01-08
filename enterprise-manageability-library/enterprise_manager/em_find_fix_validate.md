@@ -843,7 +843,7 @@ Recommendation: consider using at least 1 client divided among 1 CPU(s). You wil
     
     **Grant DBA to C\#\#CAP_AWR;**
 
-    **SELECT DBMS_WORKLOAD_CAPTURE.IMPORT_AWR (capture_id =\> 27,staging_schema =\>
+    **SELECT DBMS_WORKLOAD_CAPTURE.IMPORT_AWR (capture_id =\> 11,staging_schema =\>
 'C\#\#CAP_AWR') from dual;**
 
 21. Generate replay report as a text report. This report can also be generated
@@ -857,7 +857,7 @@ Recommendation: consider using at least 1 client divided among 1 CPU(s). You wil
 
     **Spool replay_report.txt**
 
-    **dbms_workload_replay.report (replay_id =\> 1, format=\> 'TEXT') from dual;** 
+    **select dbms_workload_replay.report (replay_id =\> 1, format=\> 'TEXT') from dual;** 
     
     **spool off**
 
