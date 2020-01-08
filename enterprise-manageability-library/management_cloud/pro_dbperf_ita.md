@@ -401,7 +401,7 @@ performance and cost.
 That concludes this lab.
 
 
->   Use the back arrow on your browser to return back to top menu listing all available labs
+>   [Return back to top menu listing all available labs](../readme.md)
 
 
 
