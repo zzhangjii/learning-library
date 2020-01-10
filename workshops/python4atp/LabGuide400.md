@@ -14,17 +14,21 @@ Marketing is also interested in a map like interface to assess and establish sal
 
 ### **STEP 1:** Plot customer based on region
 
-- If you closed the terminal, open it again and make sure to be in virtual env. Run the command ```bokeh serve regions.py```. Now we have our web service running. Leave the terminal as it is.
+- If you closed the terminal, open it again and make sure to be in virtual env. Run the command
 
-  ![](images/400/1.png)
+    `$ bokeh serve regions.py`
+
+    Now we have our web service running. Leave the terminal as it is.
+
+    ![](images/400/1.png)
 
 - To confirm everything works fine, open firefox and go to URL [http://localhost:5006/regions](http://localhost:5006/regions).
 
-  ![](images/400/3.png)
+    ![](images/400/3.png)
 
 - The regions you see in the map are plotted from the data in the shapefile. If you want to check the files it is in the application folder named demo_region. We are using **geopandas** to convert the shapefile in dataframe and perform operations on it.
 
 - To show/hide hover points click on the hover tool in the toolbar as shown below.
  
-  ![](images/400/2.png)
+    ![](images/400/2.png)
 

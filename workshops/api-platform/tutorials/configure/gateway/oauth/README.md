@@ -39,7 +39,7 @@ This lab also includes a Postman collection with the requests pre-configured, if
 #### Creating an Application for your Gateway
 1. Choose *Applications* from the side-menu
 1. Click *Add*
-1. Choose *Trusted Application*
+1. Choose *Confidential Application*
 1. Give your application a name like *API Gateway*.  If you are sharing this environment with others, make it unique, adding your name for example.  Click *Next*
 
 > The best practice is to create a resource application, then create one or more client applications that use that resource application.  You can create a client interface along with the resource as well.  In this case we will create both together and we will use the client application for our testing.  
