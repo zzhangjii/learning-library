@@ -13,7 +13,7 @@ In these hands-on lab activities, learn how to identify systemic EBS infrastruct
 Lab Exercise Persona
 --------------------
 ![](media/ebsadmin.png)
-Sarah is an Oracle EBS Applications Administrator. Often she gets calls asking why is EBS running so slow. She needs a quick way to determine if in fact its an EBS application issue or its something in the infrastructure. Her company Mama Maggy has recently started using Oracle Cloud for EBS staging, and the tools she has been using were not designed for cloud and she needs a solution that can span her cloud and on-premise environments.  
+Sarah is an Oracle EBS Applications Administrator. Often she gets calls asking why is EBS running so slow. She needs a way to determine if in fact its an EBS application issue or its something in the infrastructure. Her company Mama Maggy has recently started using Oracle Cloud for EBS staging, and the tools she has been using were not designed for cloud and she needs a solution that can span her cloud and on-premise environments.  
 
 **NOTE**: Use Google Chrome to perform the lab for the best hands on experience
 
