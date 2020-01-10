@@ -18,8 +18,12 @@ Follow provided setup document for your specific class
 2. [Find, Fix, and Validate](enterprise_manager/em_find_fix_validate.md)
 
 ## Oracle Management Cloud Labs 
-1. [Proactive Database Performance Management with IT Analytics](management_cloud/pro_dbperf_ita.md)
-2. [Log Analytics for Database Troubleshooting and Root-Cause Analysis](management_cloud/log_analytics_of_databases.md)
+
+3. [Proactive Database Performance Management with IT Analytics](management_cloud/pro_dbperf_ita.md)
+4. [Log Analytics for Database Troubleshooting and Root-Cause Analysis](management_cloud/log_analytics_of_databases.md)
+5. [Manage Oracle E-Business Suite Infrastructure](management_cloud/omcebs.md)
+6. [Unified Application Infrastructure Visability, Diagnostics Capacity](management_cloud/omcunified.md)
+
 
 
 
