@@ -108,7 +108,7 @@ Now let’s get started!  Before beginning, ensure you have signed up for a free
 
     Doing so will take you to the OAC home page which we will be reviewing in the next section.
 
-    ![](images/100/img_1a_10_2.png)
+    ![](images/100/img_1a_10_2v2.png)
 
 
 ### b) Reviewing the Home page and the primary menus
@@ -119,19 +119,19 @@ On logging into OAC, you will see the home page.
 
 1. Start by clicking on the hamburger menu in the top-left of the UI. This will open the drawer menu.
 
-    ![](images/100/img_1b_1_1.png)
+    ![](images/100/img_1b_1_1v2.png)
 
 2. You can use this menu to navigate through the application.
 
-    ![](images/100/img_1b_2_1.png)
+    ![](images/100/img_1b_2_1.1v2.png)
 
-    ![](images/100/img_1b_2_2.png)
+    ![](images/100/img_1b_2_1.2v2.png)
 
     The application follows standard web and application interface protocols, thus supporting both left and right click interactions. In terms of general navigation, there are 4 key menus accessible at the top of the screen or via a hamburger menu in the top left (not all screens will show the top menu bar but the hamburger navigation is always available).
 
     >**Home**: Application start up page from where you can view existing projects, data sets, data flows or create new ones.
 
-    >**Projects**:  Collections of visualizations and the underlying data sources. **Folders** are simply means by which to organize projects.
+    >**Catalog**:  Collections of visualizations and the underlying data sources. **Folders** are simply means by which to organize projects.
 
     >**Data**: Display or create **Data Sets** (instances of data such as a specific Excel file);
         >> **Connections** (connections to data sources such as a database or SaaS application to pull data files); or
@@ -139,25 +139,27 @@ On logging into OAC, you will see the home page.
 
     >**Machine Learning**: This page shows all the available machine learning models ready for use in projects.
 
+    >**Jobs**: This page shows all the status of data replication, data flow, and sequence operations.
+
     >**Console**: Administrative menu for managing **Custom Plugins** (e.g. new types of analyses obtained from the Oracle Analytics Store or custom built), **Maps** layers (e.g. new backgrounds for map-based analyses) and other administrative tasks.
 
     >**Academy**: Home to important links to the OAC documentation and videos that help you accomplish common tasks in the OAC.
 
 3. At the top-right of the UI, click on the **Create** button.
 
-    ![](images/100/img_1b_3_1.png)
+    ![](images/100/img_1b_3_1v2.png)
 
     This window allows you to create a Visualization project, a data set, a connection to an external source, a data flow, or a sequence.
 
 4. Click on hamburger icon at the top right of the UI, next to Create.
 
-    ![](images/100/img_1b_4_1.png)
+    ![](images/100/img_1b_4_1v2.png)
 
 5. Select the **Customize** option.
 
-    ![](images/100/img_1b_5_1.png)
+    ![](images/100/img_1b_5_1v2.png)
 
-    ![](images/100/img_1b_5_2.png)
+    ![](images/100/img_1b_5_2v2.png)
 
     This menu allows you to customize the components of your home page.
 
