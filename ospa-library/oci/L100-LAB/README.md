@@ -14,33 +14,33 @@ Click here to request your trial account: https://cloud.oracle.com/tryit
 
 ##
 
-**[ATP Lab](https://dankingsley001.github.io/oci-dev/L100-LAB/ATP_Lab/)**  
+**[ATP Lab](https://oracle.github.io/learning-library/ospa-library/oci/L100-LAB/ATP_Lab/)**  
 
-**[Audit Service](https://dankingsley001.github.io/oci-dev/L100-LAB/Audit_Service/)**  
+**[Audit Service](https://oracle.github.io/learning-library/ospa-library/oci/L100-LAB/Audit_Service/)**  
 
-**[Autonomous Data Warehouse Lab](https://dankingsley001.github.io/oci-dev/L100-LAB/Autonomous_Data_Warehouse/)**  
+**[Autonomous Data Warehouse Lab](https://oracle.github.io/learning-library/ospa-library/oci/L100-LAB/Autonomous_Data_Warehouse/)**  
 
-**[Block Volume Lab](https://dankingsley001.github.io/oci-dev/L100-LAB/Block_Volume/)**  
+**[Block Volume Lab](https://oracle.github.io/learning-library/ospa-library/oci/L100-LAB/Block_Volume/)**  
 
-**[Compute Services Lab](https://dankingsley001.github.io/oci-dev/L100-LAB/Compute_Services/)**  
+**[Compute Services Lab](https://oracle.github.io/learning-library/ospa-library/oci/L100-LAB/Compute_Services/)**  
 
-**[Redis Deployment Lab](https://dankingsley001.github.io/oci-dev/L100-LAB/Deploy_Redis/)**  
+**[Redis Deployment Lab](https://oracle.github.io/learning-library/ospa-library/oci/L100-LAB/Deploy_Redis/)**  
 
-**[File Storage Service Lab](https://dankingsley001.github.io/oci-dev/L100-LAB/File_Storage_Service/)**  
+**[File Storage Service Lab](https://oracle.github.io/learning-library/ospa-library/oci/L100-LAB/File_Storage_Service/)**  
 
-**[Grafana Lab](https://dankingsley001.github.io/oci-dev/L100-LAB/Grafana/)**  
+**[Grafana Lab](https://oracle.github.io/learning-library/ospa-library/oci/L100-LAB/Grafana/)**  
 
-**[Identity Access Management Lab](https://dankingsley001.github.io/oci-dev/L100-LAB/Identity_Access_Management/)**  
+**[Identity Access Management Lab](https://oracle.github.io/learning-library/ospa-library/oci/L100-LAB/Identity_Access_Management/)**  
 
-**[Load Balancer Lab](https://dankingsley001.github.io/oci-dev/L100-LAB/Load_Balancer/)**  
+**[Load Balancer Lab](https://oracle.github.io/learning-library/ospa-library/oci/L100-LAB/Load_Balancer/)**  
 
-**[Object Storage Lab](https://dankingsley001.github.io/oci-dev/L100-LAB/Object_Storage/)**  
+**[Object Storage Lab](https://oracle.github.io/learning-library/ospa-library/oci/L100-LAB/Object_Storage/)**  
 
-**[Reserved IP Lab](https://dankingsley001.github.io/oci-dev/L100-LAB/Using_Reserved_Public_IP/)**  
+**[Reserved IP Lab](https://oracle.github.io/learning-library/ospa-library/oci/L100-LAB/Using_Reserved_Public_IP/)**  
 
-**[Service Gateway Lab](https://dankingsley001.github.io/oci-dev/L100-LAB/Using_Service_Gateway/)**  
+**[Service Gateway Lab](https://oracle.github.io/learning-library/ospa-library/oci/L100-LAB/Using_Service_Gateway/)**  
 
-**[Virtual Cloud Network Lab](https://dankingsley001.github.io/oci-dev/L100-LAB/Virtual_Cloud_Network/)**  
+**[Virtual Cloud Network Lab](https://oracle.github.io/learning-library/ospa-library/oci/L100-LAB/Virtual_Cloud_Network/)**  
 
 
 <!--  comment out for testing purposes
