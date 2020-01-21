@@ -22,7 +22,7 @@ Oracle’s Autonomous Data Warehouse is the perfect quick-start service for fast
 
 
 ## Create an ADW Instance ##
-1. Sign in to the Oracle Cloud Platform. 
+1. Sign in to the Oracle Cloud Platform.
 2. Click the menu icon to expand the menu on the left edge of the screen.
 3. Click **Autonomous Date Warehouse**.
 
@@ -41,7 +41,7 @@ Oracle’s Autonomous Data Warehouse is the perfect quick-start service for fast
      * **Auto Scaling**: Unchecked
      * **Administrator Credentials**: Create a password for the ADMIN user of the service instance. You'll need this password in the upcoming steps to download the credential wallet and connect to the database from Oracle SQL Developer.
      * **License Type**: `Bring Your Own License`
-6. Click the **Create Autonomous Database** button to start provisioning the instance. 
+6. Click the **Create Autonomous Database** button to start provisioning the instance.
 7. You're taken to the instance page which displays detail about your instance. This includes a State field indicating that the instance is **Provisioning**. When it's complete, the State field changes from **Provisioning** to **Available**. If the status doesn't change after few minutes, try refreshing the page.
 
     ![](img/adw_provisioning_state.png)
@@ -65,7 +65,7 @@ Once you have created the data warehouse, download the credentials zip file for 
     ![](img/ShowNewTab.png)
 
     [Description of the illustration ShowNewTab.png](files/ShowNewTab.txt)
-    
+
 3. The service console opens to the **Overview** page. Click **Development** in the left navigation pane.
 4. Click **SQL Developer Web**.
 5. Sign in.
@@ -81,13 +81,13 @@ Once you have created the data warehouse, download the credentials zip file for 
 
 
 ## Connect to the Database using SQL Developer ##
-1. Open SQL Developer on your local computer. 
+1. Open SQL Developer on your local computer.
 2. In the Connections panel, right-click **Connections** and select **New Connection**.
 
     ![](img/select_new_connection.png)
 
     [Description of the illustration select_new_connection.png](files/select_new_connection.txt)
-    
+
 3. Fill in the connection details:
      * **Connection Name**: `admin_low`
      * **Username**: `admin`
@@ -114,8 +114,6 @@ Keep SQL Developer open. You'll need it in the next lab when you examine the dif
 
 
 ## Want to Learn More? ##
-* [Autonomous Cloud Platform Courses](https://learn.oracle.com/pls/web_prod-plq-dad/dl4_pages.getpage?page=dl4homepage&get_params=offering:35573#filtersGroup1=&filtersGroup2=.f667&filtersGroup3=&filtersGroup4=&filtersGroup5=&filtersSearch=) from Oracle University 
+* [Autonomous Cloud Platform Courses](https://learn.oracle.com/pls/web_prod-plq-dad/dl4_pages.getpage?page=dl4homepage&get_params=offering:35573#filtersGroup1=&filtersGroup2=.f667&filtersGroup3=&filtersGroup4=&filtersGroup5=&filtersSearch=) from Oracle University
 * [Autonomous Data Warehouse Cloud Certification]((https://education.oracle.com/en/data-management/autonomous-database/product_817?certPage=true) from Oracle University
 * [ADW Test Drive Workshop](https://oracle.github.io/learning-library/workshops/journey4-adwc/?page=README.md)
-
-
