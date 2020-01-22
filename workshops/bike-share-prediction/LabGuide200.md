@@ -5,7 +5,7 @@ Updated: October 8, 2019
 
 ## Introduction
 
-This lab walks you through the steps to upload the required datasets to the Autonomous Data Warehouse (ADW) instance that you provisioned in the previous lab. You will you SQL Developer as an interface to the ADW instance for uploading and preparing the dataset.
+This lab walks you through the steps to upload the required datasets to the Autonomous Data Warehouse (ADW) instance that you provisioned in the previous lab. You will use SQL Developer as an interface to the ADW instance for uploading and preparing the dataset.
 
 
 **_To log issues_**, click here to go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository issue submission form.
