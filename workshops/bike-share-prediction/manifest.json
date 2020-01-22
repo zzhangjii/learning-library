@@ -18,19 +18,19 @@
             },
             {
                 "title": "Lab 200: Data Preparation Using SQL Developer",
-                "description": "This lab walks you through the steps to upload the required datasets to the Autonomous Data Warehouse (ADW) instance that you provisioned in the previous lab. You will you SQL Developer as an interface to the ADW instance for uploading and preparing the dataset.",
+                "description": "This lab walks you through the steps to upload the required datasets to the Autonomous Data Warehouse (ADW) instance that you provisioned in the previous lab. You will use SQL Developer as an interface to the ADW instance for uploading and preparing the dataset.",
                 "partnumber": "200",
                 "publisheddate": "01/22/2020",
                 "contentid": "12nnnn",
-                "filename": "LabGuide200.md",
+                "filename": "LabGuide200.md"
                 },
             {
                 "title": "Lab 300: Getting Started with Oracle Analytics Cloud (OAC)",
-                "description": "This lab walks you through the steps to provision an Oracle Analytics Cloud (OAC) instance and connect it to your Autonomous Data Warehouse (ADW) instance. "
+                "description": "This lab walks you through the steps to provision an Oracle Analytics Cloud (OAC) instance and connect it to your Autonomous Data Warehouse (ADW) instance. ",
                 "number": "300",
                 "publisheddate": "01/22/2020",
                 "contentid": "12nnnn",
-                "filename": "LabGuide300.md",
+                "filename": "LabGuide300.md"
                 },
             {
                 "title": "Lab 400: Building Machine Learning Models in Oracle Analytics Cloud (OAC)",
@@ -38,7 +38,7 @@
                 "number": "400",
                 "publisheddate": "01/22/2020",
                 "contentid": "12nnnn",
-                "filename": "LabGuide400.md",
+                "filename": "LabGuide400.md"
                 },
 	          {
                 "title": "Lab 500: Building Machine Learning Models in Oracle Machine Learning Tool (OML)",
@@ -46,7 +46,7 @@
                 "number": "500",
                 "publisheddate": "01/22/2020",
                 "contentid": "12nnnn",
-                "filename": "LabGuide500.md",
+                "filename": "LabGuide500.md"
                 }
         ]
 }
