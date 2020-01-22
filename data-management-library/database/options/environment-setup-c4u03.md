@@ -168,7 +168,7 @@ The VCN, Virtual Cloud Network, has been precreated for you.
 
     ![](img/createcompute.png)
 
-9. In the Configure networking section, select the dboptions compartment and the VCN you created in an earlier section. If you are in a Roadshow, use the VCN precreated by Product Management.  Click on the radio button to **Assign a public address**.  This is important.  DO NOT OVERLOOK THIS STEP!!!!!!!
+9. In the Configure networking section, select the dboptions compartment and the VCN you created in an earlier section. If you are in a Roadshow, use the VCN precreated by Product Management.  Choose the **Public Subnet** and click on the radio button to **Assign a public address**.  This is important.  DO NOT OVERLOOK THIS STEP!!!!!!!
 ![](img/computevcn.png)
 
 10. Paste your SSH key pub file contents from the earlier section into this window.  It should be one line.
