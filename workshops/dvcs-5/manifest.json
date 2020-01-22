@@ -2,7 +2,7 @@
     "tutorials": [
             {
                 "title": "Lab 100: Getting Started with Oracle Analytics Cloud Data Visualization",
-                "description": "Learning how to provision an OAC instance. Getting acclimatized to the DV interface."
+                "description": "Learning how to provision an OAC instance. Getting acclimatized to the DV interface.",
                 "partnumber": "100",
                 "publisheddate": "01/15/2020",
                 "contentid": "12nnnn",
@@ -10,7 +10,7 @@
             },
             {
                 "title": "Lab 200:  Analyzing Sales - Basic Introduction to Core Features",
-                "description": "Creating projects with data sets and visualizations. Understanding the visualization capabilities of DV. Telling a story with annotated visualizations."
+                "description": "Creating projects with data sets and visualizations. Understanding the visualization capabilities of DV. Telling a story with annotated visualizations.",
                 "partnumber": "200",
                 "publisheddate": "01/15/2020",
                 "contentid": "12nnnn",
@@ -18,7 +18,7 @@
             },
             {
                 "title": "Lab 300:  Analyzing Social Media with Sales – Data Blending and Wrangling",
-                "description": "Learning to Wrangle Data Sets. Joining Multiple Data Sets for analysis."
+                "description": "Learning to Wrangle Data Sets. Joining Multiple Data Sets for analysis.",
                 "partnumber": "300",
                 "publisheddate": "01/15/2020",
                 "contentid": "12nnnn",
@@ -26,7 +26,7 @@
             },
             {
                 "title": "Lab 400: Analyzing Social Media with Sales – Visualize and Narrate",
-                "description": "Learning how to use Calculations. Using different visualizations to obtain insights from data set. Narrating a meaningful story using Narrate"
+                "description": "Learning how to use Calculations. Using different visualizations to obtain insights from data set. Narrating a meaningful story using Narrate",
                 "partnumber": "400",
                 "publisheddate": "01/15/2020",
                 "contentid": "12nnnn",
@@ -34,7 +34,7 @@
             },
             {
                 "title": "Lab 500: Predicting Subscriptions - Machine Learning",
-                "description": "Learning how to create data flows. Using the Machine Learning abilities of OAC."
+                "description": "Learning how to create data flows. Using the Machine Learning abilities of OAC.",
                 "partnumber": "500",
                 "publisheddate": "01/15/2020",
                 "contentid": "12nnnn",
