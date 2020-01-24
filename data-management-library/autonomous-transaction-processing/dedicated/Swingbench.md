@@ -83,9 +83,8 @@ Use instructions below to update drivers if needed, else move on to transfer DB 
 Unless you have already moved the wallet to your Dev Client machine in an earlier lab, 
 
 - Create a VNC connection to your machine following steps in [Lab2](20DeployImage.md)
-- Open up firefox in your VNC terminal sfrom the Applications menu on the top left.
+- Open up firefox in your VNC terminal from the Applications menu on the top left.
 
- ![](./images/800/terminal.jpeg)
 
  -  Once Firefox is open go to **cloud.oracle.com**
 
@@ -107,7 +106,6 @@ Unless you have already moved the wallet to your Dev Client machine in an earlie
 
 - The credentials zip file contains the encryption wallet, Java keystore and other relevant files to make a secure TLS 1.2 connection to your database from client applications. The wallet will be downloaded to your downloads directory.
 
-![](./images/800/walletdownload.jpeg)
 
 
 
@@ -140,7 +138,7 @@ Run the Order Entry wizard, replacing parameters as applicable to your environme
 ```
 
 
-![](./images/swingbench/loadsb.jpeg)
+![](./images/Swingbench/loadsb.jpeg)
 
 
 - cf speficies the location of the wallet file
@@ -155,12 +153,12 @@ Run the Order Entry wizard, replacing parameters as applicable to your environme
 
 Creation time will vary depending on where you are running it from and may take many minutes. The creation screen will look similar to this:
 
-![](./images/swingbench/creating.jpeg)
+![](./images/Swingbench/creating.jpeg)
 
 Ignore any creation or priviledges error messages that display during the creation process. When finished, your screen should look similar to this:
 
 
-![](./images/swingbench/creationfinish.jpeg)
+![](./images/Swingbench/creationfinish.jpeg)
 
 - Once complete verify the tables created correctly by running the following command (from the swingbench bin directory, make sure to use your wallet location, and password):
 
@@ -170,7 +168,7 @@ Ignore any creation or priviledges error messages that display during the creati
 
 Your output should be similar to this:
 
-![](./images/swingbench/oevalid.jpeg)
+![](./images/Swingbench/oevalid.jpeg)
 
 To collect statistics on the tables that were created run the command below. If you will be conducting performance testing with Swingbench it is recommended that you collect statistics.
 
@@ -201,7 +199,7 @@ There are atleast 2 options to run your swingbench workload.
 
 Simply fire up swingbench from a terminal window in your VNC session and select 'SOE_Client_Side' from the opening menu. This will use the Simple Order Entry workload using client side jdbc calls.
 
-![](./images/swingbench/swingbench1.png)
+![](./images/Swingbench/swingbench1.png)
 
 
 1. On the Configuration --> User Details tab, provide user/pass information as shown below. **Username needs to be soe and password as set in previous step**
@@ -213,11 +211,11 @@ Simply fire up swingbench from a terminal window in your VNC session and select 
     ```
     - Specify the location of credentials wallet
 
-    ![](./images/swingbench/TAC1.png)
+    ![](./images/Swingbench/TAC1.png)
 
 2. On the Configuration --> Connection Pooling tab, setup connection pooling as shown below. 
 
-      ![](./images/swingbench/TAC2.png)
+      ![](./images/Swingbench/TAC2.png)
 
 3. On the Configuration --> Properties tab, set the following parameter 
 
@@ -227,14 +225,14 @@ AppContinuityDriver  True
 FastFailover  True
 OnsConfiguration nodes=10.0.0.7:6200,10.0.0.8:6200
 
-![](./images/swingbench/TAC3.png)
+![](./images/Swingbench/TAC3.png)
 
 **Note: For the OnsConfiguration parameter, you will need to provide the private IP address of the RAC nodes in your Autonomous Exadata Infrastructure. For instructions on obtained node private IP, refer to Appendix**
 
 
 You may adjust the workload mix using the Transactions tab on the right.
 
-![](./images/swingbench/mix.png)
+![](./images/Swingbench/mix.png)
 
 That is it. You are now ready to fire up your transactional workload.
 
@@ -243,7 +241,7 @@ That is it. You are now ready to fire up your transactional workload.
 
 Fire up your workload and confirm all users are connected. Wait a few seconds while the charts load up.
 
-![](./images/swingbench/TAC4.png)
+![](./images/Swingbench/TAC4.png)
 
 To monitor client connections on each RAC node, open a terminal window, connect to your database instance using sql plus, sqlcl or sql developer and run the following sql command,
 
@@ -254,7 +252,7 @@ select i.inst_id, count(*) from gv$session s , gv$instance i where (i.inst_id=s.
 
 The output of the command should appear something like this
 
-![](./images/swingbench/sql.png)
+![](./images/Swingbench/sql.png)
 
 In this case you can see we have a 2 instance RAC cluster with 27 connections on instance 1 and 1 connection on instance 2. This may vary a bit in your configuration.
 
@@ -266,12 +264,12 @@ Next, we trigger a RAC rollover using Autonomous Container Database (ACD) restar
 
 Navigate to your ADB details page on the OCI console to locate the container database as shown,
 
-![](./images/swingbench/TAC5.png)
+![](./images/Swingbench/TAC5.png)
 
 
 When ready, restart the container database
 
-![](./images/swingbench/TAC6.png)
+![](./images/Swingbench/TAC6.png)
 
 
 Notice how the swingbench workload continues to run unaffected. 
