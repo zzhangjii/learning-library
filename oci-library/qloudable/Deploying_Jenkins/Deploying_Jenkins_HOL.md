@@ -353,16 +353,26 @@ from computeinstance earlier (32 character password)
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_Jenkins/img/Jenkins_020.PNG" alt="image-alt-text">
 
-18. In Manage Jenkins screen, Click **Configure System**, Scroll Down and Click **drop down arrow under Add a new cloud**. Click **Oracle Cloud Infrastructure Compute**. New dialog box will appear
+18. In Manage Jenkins screen, scroll down and Click **Manage Nodes and Clouds**. Click **Configure Clouds** in the left menu. 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_Jenkins/img/Jenkins_021.PNG" alt="image-alt-text">
 
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_Jenkins/img/Jenkins_022.PNG" alt="image-alt-text">
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_Jenkins/img/Jenkins_021b.PNG" alt="image-alt-text">
 
-19. Fill out the dialog box:
-
+19. Click **Add a new cloud** dropdown. Select **Oracle Cloud Infrastructure Compute**. Insert a name. 
 
 - **Name:** Use easy to remember name (This is the slave node that will be created)
+  
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_Jenkins/img/Jenkins_022.PNG" alt="image-alt-text">
+
+20.   Click **Add** dropdown. Select **Jenkins**. A new dialog box will appear.  
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_Jenkins/img/Jenkins_022b.PNG" alt="image-alt-text">
+
+21.   Click **Kind** dropdown. Select **Oracle Cloud Infrastructure Credentials**. Fill out the dialog box:
+
+<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_Jenkins/img/Jenkins_022c.PNG" alt="image-alt-text">
+
 - **Fingerprint:** Copy/paste OCI_api_key_fingerprint file content saved earlier
 - **APIKey:** Copy/paste OCI_api_key.pem file content saved earlier
 - **PassPhrase:** Leave empty
@@ -370,11 +380,11 @@ from computeinstance earlier (32 character password)
 - **User Id:** Copy/Pare User OCID saved earlier
 - **Region:** Type your region Name (Shown in OCI console window, us-ashburn-1 etc)
 
-20. Click **Test Connection** and verify ‘Successful’ message. We have now verified connectivityto OCI via the master Jenkins compute node. Next we will create a slave Jenkins node
+22.  Click **Verify Credentials** and verify ‘Successful’ message. Click **Add**. We have now verified connectivityto OCI via the master Jenkins compute node. Next we will create a slave Jenkins node
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_Jenkins/img/Jenkins_023.PNG" alt="image-alt-text">
 
-21. Click **Add a new instance template**. Fill out the dialog box:
+23. Click **Add a new instance template**. Fill out the dialog box:
 
 
 - **Instance Template Description**: Provide description (Jenkins-Slave etc)
@@ -405,7 +415,7 @@ from computeinstance earlier (32 character password)
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_Jenkins/img/Jenkins_026.PNG" alt="image-alt-text">
 
-23. Click **Advanced**, Fill out the dialog box:
+24. Click **Advanced**, Fill out the dialog box:
 
 
 - Remote FS Root: /tmp
@@ -419,17 +429,17 @@ from computeinstance earlier (32 character password)
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_Jenkins/img/Jenkins_027.PNG" alt="image-alt-text">
 
-24. Click **Save** . Main Jenkins page will appear
+25. Click **Save** . Main Jenkins page will appear
 
-25. In main Jenkins web page, Click Build Executor Status (Left Navigation pan). Click **drop down menu (Under master node information section)** and choose the Newly saved template.(Jenkins-Slave in this case)
+26. In main Jenkins web page, Click Build Executor Status (Left Navigation pan). Click **drop down menu (Under master node information section)** and choose the Newly saved template.(Jenkins-Slave in this case)
 
-26. Verify ‘Started Provisioning’ message is displayed
+27. Verify ‘Started Provisioning’ message is displayed
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_Jenkins/img/Jenkins_028.PNG" alt="image-alt-text">
 
-27. Switch to the OCI console. From OCI servies menu, Click **Instances** under **Compute**  Verify new compute node (Jenkins-Slave) is being provisioned.
+28. Switch to the OCI console. From OCI servies menu, Click **Instances** under **Compute**  Verify new compute node (Jenkins-Slave) is being provisioned.
 
-28. Once compute instance is fully provisioned, switch back to Jenkins window and verify the new node appears on the screen. Click **Refresh Status** a few times to ensure Node is fully accessible (no next to it). You have now successfully deployed Jenkins with two compute nodes
+29. Once compute instance is fully provisioned, switch back to Jenkins window and verify the new node appears on the screen. Click **Refresh Status** a few times to ensure Node is fully accessible (no next to it). You have now successfully deployed Jenkins with two compute nodes
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Deploying_Jenkins/img/Jenkins_030.PNG" alt="image-alt-text">
 
