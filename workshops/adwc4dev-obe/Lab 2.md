@@ -166,7 +166,7 @@ group by d.d_date
 
   ![](./images/IL-2/009.png)
 
-- Scoll down and expend Analytic Views.
+- Scroll down and expand Analytic Views.
 
   ![](./images/IL-2/010.png)
 
