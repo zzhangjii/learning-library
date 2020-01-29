@@ -15,11 +15,11 @@ The current OCI L100 labs with links to the updated Redwood format
 [OCI L100 Workshop](https://github.com/oracle/learning-library/tree/master/ospa-library/oci/L100-Workshop)
 Current OCI L100 Workshop in standard github format.
 
-[OCI L100 Workshop - Easy to Use Web Format](https://oracle.github.io/learning-library/ospa-library/oci/L100-Workshop/)
+[OCI L100 Workshop - html](https://oracle.github.io/learning-library/ospa-library/oci/L100-Workshop/)
 Current OCI L100 Workshop in easy to use web format.
 
 [OCI L200 Workshop](https://github.com/oracle/learning-library/tree/master/ospa-library/oci/L200-Workshop)
 Current OCI L200 Workshop in standard github format.
 
-[OCI L200 Workshop - Easy to Use Web Format](https://oracle.github.io/learning-library/ospa-library/oci/L200-Workshop/)
+[OCI L200 Workshop - html](https://oracle.github.io/learning-library/ospa-library/oci/L200-Workshop/)
 Current OCI L200 Workshop in easy to use web format.

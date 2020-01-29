@@ -14,15 +14,13 @@ Click here to request your trial account: https://cloud.oracle.com/tryit
 
 ##
 
-**[L200 Workshop Overview](https://dankingsley001.github.io/oci-dev/L200-Workshop/)** 
+**[L200 Workshop Overview](https://oracle.github.io/learning-library/ospa-library/oci/L200-Workshop/)** 
 
-**[ATP Lab](https://dankingsley001.github.io/oci-dev/L100-Workshop/Compute-Console-Connection/)**  
+**[Compute Console Connection Lab](https://oracle.github.io/learning-library/ospa-library/oci/L200-Workshop/Compute-Console-Connection/)**
 
-**[Audit Service](https://dankingsley001.github.io/oci-dev/L200-Workshop/NAT_Gateway/)**  
+**[NAT Gateway Lab](https://oracle.github.io/learning-library/ospa-library/oci/L200-Workshop/NAT_Gateway/)**
 
-**[Autonomous Data Warehouse Lab](https://dankingsley001.github.io/oci-dev/L200-Workshop/VCN_Local_Peering/)**  
-
-
+**[VCN Local Peering Lab](https://oracle.github.io/learning-library/ospa-library/oci/L200-Workshop/VCN_Local_Peering/)**
 
 <!--  comment out for testing purposes
 
