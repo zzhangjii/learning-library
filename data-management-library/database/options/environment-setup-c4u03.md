@@ -168,7 +168,7 @@ The VCN, Virtual Cloud Network, has been precreated for you.
 
     ![](img/createcompute.png)
 
-9. In the Configure networking section, select the dboptions compartment and the VCN you created in an earlier section. If you are in a Roadshow, use the VCN precreated by Product Management.  Click on the radio button to **Assign a public address**.  This is important.  DO NOT OVERLOOK THIS STEP!!!!!!!
+9. In the Configure networking section, select the dboptions compartment and the VCN you created in an earlier section. If you are in a Roadshow, use the VCN precreated by Product Management.  Choose the **Public Subnet** and click on the radio button to **Assign a public address**.  This is important.  DO NOT OVERLOOK THIS STEP!!!!!!!
 ![](img/computevcn.png)
 
 10. Paste your SSH key pub file contents from the earlier section into this window.  It should be one line.
@@ -439,23 +439,7 @@ Next step is to install the Oracle Cloud CLI. This can be done manually (see doc
         sudo sed -i 's/:N/:Y/g' /etc/oratab
         ````    
 
-7. Congratulations, you finished!  This is the end of the environment setup lab!  Let's shut down your instance. You wil start it back up when the Roadshow begins.  
-
-8.  Go back to your instance in the web by clicking on the hamburger icon and selecting **Compute**->**Instances**.
-
-    ![](img/shut-instances.png)  
-
-9.  Click the **Stop** button. 
-
-    ![](img/shut-instances-4.png) 
-
-10.  Click **OK**
-
-![](img/shut-instances-2.png)  
-
-11. Once you confirm your instance has stopped, you can close your browser.
-
-![](img/shut-instances-3.png)   
+7. Congratulations, you finished!  This is the end of the environment setup lab!  You will get instructions on the next set of labs to do from your instructor.  
     
 
 [Back to Top](#table-of-contents)

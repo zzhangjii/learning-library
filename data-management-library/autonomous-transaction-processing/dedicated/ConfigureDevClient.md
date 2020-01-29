@@ -30,7 +30,7 @@ Configure a secure connection from your development system to your dedicated aut
 ## Required Artifacts
 
 - An Oracle Cloud Infrastructure account with IAM privileges to provision compute instances
-- A pre-provisioned dedicated autonomous database instance. Refer <a href="./LabGuide100ProvisionAnATPDatabase.md" target="_blank">here</a> on how provision an ATP database.
+- A pre-provisioned dedicated autonomous database instance. Refer [Lab 4](./ProvisionADB.md) on how provision an ATP database.
 - VNC Viewer or other suitable VNC client on your local laptop
 
 
@@ -116,7 +116,7 @@ Let's first download the DB wallet to your local machine (laptop) and then scp /
 
 - From your local browser, navigate to OCI console
 
-- On the ATP console, select the dedicated ATP instance provisioned in <a href="./LabGuide400ProvisiondatabaseonyourdedicatedAutonomousInfrastructure.md" target="_blank">Lab 4</a>.
+- On the ATP console, select the dedicated ATP instance provisioned in [Lab 4](./ProvisionADB.md).
 
 ![](./images/500/doneprovision.png)
 
@@ -204,7 +204,7 @@ On your local laptop,
 **Windows Users**
 - Windows 10 users can use powershell to connect using command above.
 
-- Alternatively, you may create and ssh tunnel using putty. Detailed instructions on using putty for ssh tunnels are provided in the appendix
+- Alternatively, you may create and ssh tunnel using putty. Detailed instructions on using putty for ssh tunnels are provided in the [Appendix](./Appendix.md)
 
 
 You now have a secure ssh tunnel from your local laptop to your developement system in OCI on VNC port 5901
@@ -230,6 +230,11 @@ In your VNC session, invoke SQL Developer from the top left Applications menu as
 ![](./images/500/sql-developer-vnc.png)
 
 
+
+**Note: In the event you have issues launching SQL Developer and it prompts with a java classpath error, simply add the following line to ~/.sqldeveloper/19.1.0/product.conf and retry**
+````
+SetJavaHome /usr/java/jdk1.8.0_231-amd64
+````
 
 Create an new connection in sql*developer and provide the following information,
 

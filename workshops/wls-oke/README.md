@@ -1,30 +1,26 @@
-# On-premises WLS to OKE 
+# Welcome to the On-premises WebLogic to Oracle Container Engine for Kubernetes Workshop
+This workshop lets you practice through the process of moving an existing On-premises WebLogic application into to a Kubernetes cluster in the Oracle Public Cloud.
 
-Welcome to the on-premises WLS to OKE workshop. This workshop will walk you through the process of moving an existing On-premises WebLogic application into to a Kubernetes cluster in the Oracle Public Cloud. 
-To learn more about this workshop please watch the video below.
+## Access the Labs Using Our Web Interface
+**[Click here](https://github.com/oracle/learning-library/tree/master/workshops/wls-oke)** to use our easy to navigate HTML format.
 
-![](images/oraclecode/youtube.png)
-
-<a href="https://videohub.oracle.com/media/WLS+to+OKE+Overview+Video/1_z6ofm0s8" target="_video">Workshop Overview</a>
-
-### **Step 1**: Acquire an Oracle Cloud Trial or Workshop Account
-
-- Bookmark this page for future reference.
-
-- Please click on the following link to create your <a class="trial-link" href="https://myservices.us.oraclecloud.com/mycloud/signup?language=en&sourceType=:em:eo:ie:2t:RC_NAMK180921P00075:WLSonPrem_HOL" target="_trial">Free Account</a>, and complete all the required steps to get your free Oracle Cloud Trial Account. When you complete the registration process you'll receive a $300 credit that will enable you to complete the lab for free.  Additionally, you'll have 1000s of hours left over to continue to explore the Oracle Cloud.
-
-  - Soon after requesting your trial you will receive the following email. 
-
-  ![](images/oraclecode/code_9.png)
+## Access the Labs on the Repo
+Alternatively, you can follow the labs on this repo:
+- [On-premises WebLogic to Oracle Container Engine for Kubernetes Workshop](./lab-000/content.md)
+- [Pull the Docker image for the WebLogic and push to Oracle Cloud Infrastructure Registry (OCIR)](./lab-100/content.md)
+- [Create Oracle Container Engine for Kubernetes (OKE) on Oracle Cloud Infrastructure (OCI)](./lab-100/content.md)
+- [Prepare the WebLogic Kubernetes Operator environment](./lab-100/content.md)
 
 
+## Oracle Cloud Account
 
-### **Step 2**: Navigate to Lab 100
+### Trial Account
+If you don't have an Oracle Cloud account then you can quickly and easily sign up for a free trial account that provides:
+- $300 of free credits good for up to 3500 hours of Oracle Cloud usage
+- Credits can be used on all eligible Cloud Platform and Infrastructure services for the next 30 days
+- Your credit card will only be used for verification purposes and will not be charged unless you 'Upgrade to Paid' in My Services
+  
+Click here to request your trial account: https://cloud.oracle.com/tryit
 
-- _You can see a list of Lab Guides_ by clicking on the **Menu Icon** in the upper left corner of the browser window. You're now ready to continue with **Lab 100**.
-
-  ![](images/help1.png)
-
-  ![](images/help2.png)
-
-**You are now ready to move to the next lab: [Lab 100](LabGuide100.md)**
+### Self-Paced Labs 
+Self-paced labs provide hands-on experience with Oracle Cloud Infrastructure in real cloud environments. You can try self-paced labs here: https://ocitraining.qloudable.com/
