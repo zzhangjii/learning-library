@@ -102,7 +102,7 @@
             "partnumber": "E12345_01",
             "publisheddate": "12/18/2019",
             "contentid": "123456",
-            "filename": "./Audit_SErvice/AUDIT_HOL.md"
+            "filename": "./Audit_Service/AUDIT_HOL.md"
         },
         {            
             "title": "Deploy Redis Lab",
