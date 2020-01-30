@@ -10,7 +10,7 @@ Introduction
    lifecycle operations like clone, unplug etc. You will set up a private cloud
    for PDB’s, provision, resize and deleting a PDB using a self-service option.
 
-   Applicable User Roles in the Organization
+   Applicable User Roles in the Organization:
 
 ![](media/ca612c296dce62109ae33de2f81110a7.jpg)
 
