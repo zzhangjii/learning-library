@@ -8,19 +8,13 @@ If you don't have an Oracle Cloud account then you can quickly and easily sign u
 - Credits can be used on all eligible Cloud Platform and Infrastructure services for the next 30 days
 - Your credit card will only be used for verification purposes and will not be charged unless you 'Upgrade to Paid' in My Services
   
-Click here to request your trial account: https://cloud.oracle.com/tryit
+[Click here to request your trial account:](https://cloud.oracle.com/tryit)
 
 ## Access the Labs Using the updated Web Interface
 
 ##
 
-**[L200 Workshop Overview](https://oracle.github.io/learning-library/ospa-library/oci/L200-Workshop/)** 
-
-**[Compute Console Connection Lab](https://oracle.github.io/learning-library/ospa-library/oci/L200-Workshop/Compute-Console-Connection/)**
-
-**[NAT Gateway Lab](https://oracle.github.io/learning-library/ospa-library/oci/L200-Workshop/NAT_Gateway/)**
-
-**[VCN Local Peering Lab](https://oracle.github.io/learning-library/ospa-library/oci/L200-Workshop/VCN_Local_Peering/)**
+**[L200 Workshop - html](https://oracle.github.io/learning-library/ospa-library/oci/L200-Workshop/)** 
 
 <!--  comment out for testing purposes
 
