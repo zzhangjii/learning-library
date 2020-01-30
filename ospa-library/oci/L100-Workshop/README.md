@@ -1,4 +1,4 @@
-# Welcome to the OCI Level 100 Hands On Labs
+# Welcome to the OCI Level 100 Workshop
 
 These labs cover the basics of Oracle Cloud Infrastructure and will establish a base for more advanced concepts.  
 
