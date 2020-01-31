@@ -8,11 +8,15 @@ If you don't have an Oracle Cloud account then you can quickly and easily sign u
 - Credits can be used on all eligible Cloud Platform and Infrastructure services for the next 30 days
 - Your credit card will only be used for verification purposes and will not be charged unless you 'Upgrade to Paid' in My Services
   
-Click here to request your trial account: https://cloud.oracle.com/tryit
+[Click here to request your trial account:](https://cloud.oracle.com/tryit)
 
 ## Access the Labs Using the updated Web Interface
 
 ##
+
+**[L100 Workshop - html version](https://oracle.github.io/learning-library/ospa-library/oci/L100-Workshop/)
+
+<!-- comment out the links to my personal github repo
 
 **[ATP Lab](https://dankingsley001.github.io/oci-dev/L100-LAB/ATP_Lab/)**  
 
@@ -42,6 +46,7 @@ Click here to request your trial account: https://cloud.oracle.com/tryit
 
 **[Virtual Cloud Network Lab](https://dankingsley001.github.io/oci-dev/L100-LAB/Virtual_Cloud_Network/)**  
 
+-->
 
 <!--  comment out for testing purposes
 
