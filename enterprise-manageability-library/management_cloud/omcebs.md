@@ -17,14 +17,14 @@ Sarah is an Oracle EBS Applications Administrator. Often she gets calls asking w
 
 **NOTE**: Use Google Chrome to perform the lab for the best hands on experience
 
-![](media/74b0295152fd9f70d8bb3a9e36d69c1e.jpg)
+![](media/15fa0bfa0d8d5b0bb92fc3d7ec884f78.jpg)
 First, you need to get logged in to the Oracle Cloud. [Enter the Identity Domain], then **Click** the Go button.
 
 ![](media/74b0295152fd9f70d8bb3a9e36d69c1e.jpg)
 
 [Enter Username and Password], then **Click** the Sign In button
 
-### Contents
+## Contents
 
 **Lab Activity 1:** Within a Single View, Review Your EBS Infrastructure
 
@@ -55,9 +55,9 @@ Using and maintaining a whole bunch of tools, especially legacy ones, ones that 
 
 **Duration**: 15 mins.
 
-![](media/bf6cb6b2b6ee73dc2b7aeb6ac1a72eb1.jpg)
+![](media/omcdash.jpg)
 
-1. After you have entered your information, click the Sign In button. After login, go to the upper left of the window and use the navigation menu (looks like 3 stacked lines aka hamburger menu) to navigate to Oracle Management Cloud and its Dashboard tile.
+1. After you have entered your information, click the Sign In button. After login, go to the upper left of the window and use the navigation menu (looks like 3 stacked lines aka hamburger menu) to navigate to Oracle Management Cloud and its Dashboards.
 
 ![](media/7d61202715d4ef0c141f8768180c8097.jpg)
 
