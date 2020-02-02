@@ -178,10 +178,10 @@ Create user credential
 add credentialstore
 alter credentialstore add user ggadmin@DB11G password WELcome__12345 alias GG_DB11G domain OracleGoldenGate
 ```
-	Test this connection 
-	```
-	dblogin useridalias GG_DB11G
-	```
+Test this connection 
+```
+dblogin useridalias GG_DB11G
+```
 
 ## 3. Configure the env variable for Target ADW connection
 ssh to the GG admin server
@@ -189,7 +189,7 @@ Note: You need to check to database version of you ADW first. It could be versio
 
 Create connection credentials to target db
 
-	Create $TNS_ADMIN folder (network/admin) and copy the wallet file here
+Create $TNS_ADMIN folder (network/admin) and copy the wallet file here
 ```	
 cd /u01/app/client/oracle18
 Mkdir -p network/admin (DON’T NEED TO MKDIR; already exists)
@@ -224,8 +224,8 @@ Create username
 ```
 add credentialstore
 alter credentialstore add user ggadmin@ADW_low password WELcome__12345 alias GG_ADW
-	```
-	Test the connection
+```
+Test the connection
 ```
 	dblogin useridalias GG_ADW
 ```
@@ -242,18 +242,21 @@ add checkpointtable ggadmin.checkpointable
 	Successfully created checkpoint table ggadmin.checkpointtable
 ```
 Configure Extract process
+```
 edit param EXT (INSERT SCREENSHOT)
-	add extract EXT, tranlog, begin now
-	add exttrail ./dirdat/aa, extract EXT
-	
+add extract EXT, tranlog, begin now
+add exttrail ./dirdat/aa, extract EXT
+```
 Configure Pump process
+```
 edit param PMP (INSERT SCREENSHOT)
 add extract PMP, exttrailsource /home/opc/oracle11/dirdat/aa, begin now
 add rmttrail /home/opc/oracle18/dirdat/cc, extract PMP
 
 stop/start mgr
-
+```
 #Lab 400: Replicate process configuration
+
 dblogin useridalias ADW
 Configure mgr dynamic ports
 edit param mgr
