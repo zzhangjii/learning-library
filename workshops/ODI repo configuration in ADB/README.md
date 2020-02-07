@@ -92,6 +92,8 @@ Congrats, now you have the repo inside ADW, it’s ready to use.
 here’s the latest online doc about ODI market place image
 https://docs.oracle.com/en/middleware/fusion-middleware/data-integrator/12.2.1.4/odi-marketplace/getting-started-oracle-cloud-marketplace.html#GUID-1793F6A6-8581-465D-BBE3-8F0C8ADD6536
 
+also, you can read this article on Media:
+https://medium.com/@zzhangjii/configure-autonomous-database-adb-as-repo-for-oracle-data-integrator-odi-3d1a3dba412e
 
 
 
